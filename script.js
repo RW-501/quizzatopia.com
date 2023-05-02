@@ -61,7 +61,7 @@ answerElement.addEventListener("click", handleAnswerButtonClick);
 function handleAnswer(event) {
 const selectedAnswer = event.target.innerText;
 const currentQuestion = quizData[currentQuestionIndex];
-if (selectedAnswer === currentQuestion.answers[index].correct) {
+if (selectedAnswer === currentQuestion.answers[index].text) {
 score++;
 }
 showExplanation();
@@ -113,14 +113,11 @@ score++;
 
 // function to show quiz result
 function showResult() {
-const scorePercentage = (score / quizData.length) * 100;
-const resultText = document.getElementById('result-text');
-resultText.innerText = You scored ${scorePercentage}%;
-const quizContainer = document.getElementById('quiz-container');
-quizContainer.style.display = 'none';
-const resultContainer = document.getElementById('result-container');
-resultContainer.style.display = 'block';
+  const percentage = (score / quizData.length) * 100;
+  resultText.innerText = `You got ${score} out of ${quizData.length} questions correct (${percentage}%).`;
+  resultContainer.style.display = "block";
 }
+
 
 // function to handle retake button click
 function handleRetakeButtonClick() {
