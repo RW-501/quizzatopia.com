@@ -3,25 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz</title>
-    <link rel="stylesheet" href="style.css" />
+  <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="quiz-container">
-      <div class="question-container">
-        <h1 id="question"></h1>
-        <div class="answer-container">
-          <button class="answer-option" id="option1"></button>
-          <button class="answer-option" id="option2"></button>
-          <button class="answer-option" id="option3"></button>
-          <button class="answer-option" id="option4"></button>
-        </div>
-        <div class="explanation-container" id="explanation"></div>
-        <div class="button-container">
-          <button id="next-btn">Next</button>
-          <button id="skip-btn">Skip</button>
-        </div>
-      </div>
+    <div id="quiz-container">
+      <h1 id="question"></h1>
+      <ul>
+        <li><button class="answer-option"></button></li>
+        <li><button class="answer-option"></button></li>
+        <li><button class="answer-option"></button></li>
+        <li><button class="answer-option"></button></li>
+      </ul>
+      <p id="explanation"></p>
+      <button id="next-btn">Next</button>
+      <button id="skip-btn">Skip</button>
+    </div>
+    <div id="result-container">
+      <h2 id="result-text"></h2>
+      <button id="retake-btn">Retake Quiz</button>
+      <button class="other-quiz-btn" data-url="other-quiz.html">Try Another Quiz</button>
     </div>
     
    <script src="script.js"></script>
