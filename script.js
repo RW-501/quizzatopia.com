@@ -1,323 +1,262 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Define the questions and answers
-  const questions = [
-    {
-      question: "What is the capital of France?",
-      answers: [
-        { text: "Paris", correct: true },
-        { text: "Madrid", correct: false },
-        { text: "London", correct: false },
-        { text: "Berlin", correct: false },
-      ],
-      explanation: "Paris is the capital of France.",
-    },
-    {
-      question: "What is the largest country in the world?",
-      answers: [
-        { text: "China", correct: false },
-        { text: "Russia", correct: true },
-        { text: "Canada", correct: false },
-        { text: "USA", correct: false },
-      ],
-      explanation: "Russia is the largest country in the world.",
-    },
-    {
-      question: "What is the highest mountain in the world?",
-      answers: [
-        { text: "Mount Everest", correct: true },
-        { text: "K2", correct: false },
-        { text: "Makalu", correct: false },
-        { text: "Cho Oyu", correct: false },
-      ],
-      explanation: "Mount Everest is the highest mountain in the world.",
-    },
-  ];
-
-  // Define variables
-  const questionElement = document.getElementById("question");
-  const optionElements = document.querySelectorAll(".answer-option");
-  const explanationElement = document.getElementById("explanation");
-  const nextButton = document.getElementById("next-btn");
-  const skipButton = document.getElementById("skip-btn");
-  const retakeButton = document.getElementById("retake-btn");
-  const otherQuizButtons = document.querySelectorAll(".other-quiz-btn");
-  const quizContainer = document.getElementById("quiz-container");
-  const resultContainer = document.getElementById("result-container");
-  const resultText = document.getElementById("result-text");
-  let currentQuestionIndex = 0;
-  let correctAnswers = 0;
-  let wrongAnswers = 0;
-
-  // Initialize quiz
-  function initializeQuiz() {
-    // Shuffle the questions
-    shuffleQuestions(questions);
-
-    // Show the first question
-    showQuestion(currentQuestionIndex);
-
-    // Add click event listener to answer options
-    optionElements.forEach((option) => {
-      option.addEventListener("click", () => {
-        checkAnswer(option);
-      });
-    });
-
-    // Add click event listener to next button
-    nextButton.addEventListener("click", () => {
-      currentQuestionIndex++;
-      if (currentQuestionIndex < questions.length) {
-        showQuestion(currentQuestionIndex);
-      } else {
-        endQuiz();
-      }
-    });
-
-    // Add click event listener to skip button
-    skipButton.addEventListener("click", () => {
-      currentQuestionIndex++;
-      if (currentQuestionIndex < questions.length) {
-        showQuestion(currentQuestionIndex);
-      } else {
-        endQuiz();
-      }
-    });
-
-    // Add click event listener to retake button
-    retakeButton.addEventListener("click", () => {
-      // Reset quiz variables
-      currentQuestionIndex = 0;
-      correctAnswers = 0;
-      wrongAnswers = 0;
-
-      // Shuffle the questions
-      shuffleQuestions(questions);
-
-      // Show the first question
-      showQuestion(currentQuestionIndex);
-
-      // Hide the result container
-      resultContainer.style.display = "none";
-    });
-
-    // Add click event listener to other quiz buttons
-    otherQuizButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        // Redirect to other quiz page
-        window.location.href = button.dataset.url;
-      });
-    });
+// quiz data
+const quizData = [  {    question: "What is the capital of France?",    answers: ["Paris", "London", "New York", "Berlin"],
+    correctAnswer: "Paris",
+    explanation: "Paris is the capital of France."
+  },
+  {
+    question: "What is the largest planet in our solar system?",
+    answers: ["Venus", "Jupiter", "Mars", "Saturn"],
+    correctAnswer: "Jupiter",
+    explanation: "Jupiter is the largest planet in our solar system."
+  },
+  {
+    question: "What is the currency of Japan?",
+    answers: ["Dollar", "Euro", "Yen", "Pound"],
+    correctAnswer: "Yen",
+    explanation: "Yen is the currency of Japan."
   }
+];
 
- // Show a question
-function showQuestion(index) {
-console.log("?????22222222????????");
- const question = questions[index];
-questionElement.innerText = question.question;
-explanationElement.innerText = "";
-explanationElement.style.display = "none";
-nextButton.disabled = true;
-optionElements.forEach((option, i) => {
-  option.innerText = question.answers[i].text;
-  option.classList.remove("correct");
-  option.classList.remove("incorrect");
-  option.disabled = false;
-}); 
-  
-  }
+// variables
+let currentQuestionIndex = 0;
+let score = 0;
 
-function checkAnswer(selectedOption) {
-const question = questions[currentQuestionIndex];
-const selectedAnswer = question.answers.find(
-(answer) => answer.text === selectedOption.innerText
-);
-optionElements.forEach((option) => {
-if (option !== selectedOption) {
-option.disabled = true;
-}
-});
-if (selectedAnswer.correct) {
-selectedOption.classList.add("correct");
-explanationElement.innerText = "Correct!";
-explanationElement.style.color = "#4caf50";
-} else {
-const correctOptionIndex = question.answers.findIndex(
-(answer) => answer.correct === true
-);
-const correctOption = optionElements[correctOptionIndex];
-correctOption.classList.add("correct");
-selectedOption.classList.add("incorrect");
-explanationElement.innerText = `Sorry, the correct answer is ${correctOption.innerText}. ${question.explanation}`;
-explanationElement.style.color = "#f44336";
-}
-explanationElement.style.display = "block";
-nextButton.disabled = false;
-}
-
-function endQuiz() {
-// Calculate percentage of correct answers
-const correctAnswers = questions.filter((question) =>
-question.answers.find((answer) => answer.correct)
-);
-const percentage = ((correctAnswers.length / questions.length) * 100).toFixed(
-2
-);
-  // Display quiz results
-questionElement.innerText = `You answered ${correctAnswers.length} out of ${questions.length} questions correctly, which is ${percentage}%`;
-explanationElement.style.display = "none";
-nextButton.style.display = "none";
-skipButton.style.display = "none";
-
-// Add retake button
-const retakeButton = document.createElement("button");
-retakeButton.innerText = "Retake Quiz";
-retakeButton.classList.add("btn", "retake-btn");
-retakeButton.addEventListener("click", () => {
-  currentQuestionIndex = 0;
-  initializeQuiz();
-});
-document.getElementById("quiz-buttons").appendChild(retakeButton);
-
-// Add other quiz buttons
+// DOM elements
+const quizContainer = document.getElementById("quiz-container");
+const questionElement = document.getElementById("question");
+const answerElements = document.querySelectorAll(".answer-option");
+const explanationElement = document.getElementById("explanation");
+const nextButton = document.getElementById("next-btn");
+const skipButton = document.getElementById("skip-btn");
+const resultContainer = document.getElementById("result-container");
+const resultText = document.getElementById("result-text");
+const retakeButton = document.getElementById("retake-btn");
 const otherQuizButtons = document.querySelectorAll(".other-quiz-btn");
-otherQuizButtons.forEach((button) => {
-  button.style.display = "inline-block";
-  button.addEventListener("click", () => {
-    // Redirect to other quiz page
-    window.location.href = button.dataset.url;
-  });
-});
+
+// function to initialize quiz
+function initializeQuiz() {
+  showQuestion();
+  hideExplanation();
+  hideResult();
 }
 
-// Initialize quiz
-function initializeQuiz() {
-// Shuffle questions randomly
-questions.sort(() => Math.random() - 0.5);
-  
-  // Show the first question
-showQuestion(currentQuestionIndex);
-
-// Add click event listener to answer options
-optionElements.forEach((option) => {
-  option.addEventListener("click", () => {
-    checkAnswer(option);
+// function to show question
+function showQuestion() {
+  const currentQuestion = quizData[currentQuestionIndex];
+  questionElement.innerText = currentQuestion.question;
+  answerElements.forEach((answerElement, index) => {
+    answerElement.innerText = currentQuestion.answers[index];
+    answerElement.removeEventListener("click", handleAnswer);
+    answerElement.addEventListener("click", handleAnswer);
   });
-});
+}
 
-// Add click event listener to next button
-nextButton.addEventListener("click", () => {
-  console.log("??????????????????????????????????????????????");
-  currentQuestionIndex++;
-  if (currentQuestionIndex < questions.length) {
-    showQuestion(currentQuestionIndex);
-  } else {
-    endQuiz();
+// function to handle answer
+function handleAnswer(event) {
+  const selectedAnswer = event.target.innerText;
+  const currentQuestion = quizData[currentQuestionIndex];
+  if (selectedAnswer === currentQuestion.correctAnswer) {
+    score++;
   }
-});
+  showExplanation();
+  disableAnswerButtons();
+  showNextButton();
+}
 
-// Add click event listener to skip button
-skipButton.addEventListener("click", () => {
-  console.log("?11111111111");
+// function to show explanation
+function showExplanation() {
+  const currentQuestion = quizData[currentQuestionIndex];
+  explanationElement.innerText = currentQuestion.explanation;
+  explanationElement.style.display = "block";
+}
 
-  currentQuestionIndex++;
-  if (currentQuestionIndex < questions.length) {
-    showQuestion(currentQuestionIndex);
-  } else {
-    endQuiz();
-  }
-});
+// function to hide explanation
+function hideExplanation() {
+  explanationElement.style.display = "none";
+}
 
-// End quiz
-function endQuiz() {
-  console.log("?????33333333333333????????");
-  
-  const score = calculateScore();
-  const percentage = ((score / questions.length) * 100).toFixed(2);
-  questionElement.innerText = `Quiz complete! You scored ${percentage}%`;
-  explanationElement.innerText = "";
+// function to disable answer buttons
+function disableAnswerButtons() {
+  answerElements.forEach((answerElement) => {
+    answerElement.disabled = true;
+  });
+}
+
+// function to enable answer buttons
+function enableAnswerButtons() {
+  answerElements.forEach((answerElement) => {
+    answerElement.disabled = false;
+  });
+}
+
+// function to show next button
+function showNextButton() {
+  nextButton.style.display = "block";
+}
+
+// function to hide next button
+function hideNextButton() {
   nextButton.style.display = "none";
+}
+
+// function to show skip button
+function showSkipButton() {
+  skipButton.style.display = "block";
+}
+
+// function to hide skip button
+function hideSkipButton() {
   skipButton.style.display = "none";
-  retakeButton.style.display = "block";
-  otherQuizzesContainer.style.display = "block";
 }
 
-// Calculate score
-function calculateScore() {
-  let score = 0;
-  questions.forEach((question, index) => {
-    const selectedOption = optionElements[index].innerText;
-    const selectedAnswer = question.answers.find(answer => answer.text === selectedOption);
-    if (selectedAnswer.correct) {
-      score++;
-    }
-  });
-  return score;
-}
-
-// Shuffle questions
-function shuffleQuestions() {
-  for (let i = questions.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [questions[i], questions[j]] = [questions[j], questions[i]];
+// function to handle next button click
+function handleNextButtonClick() {
+  currentQuestionIndex++;
+  if (currentQuestionIndex < quizData.length) {
+    showQuestion();
+    hideExplanation();
+    hideNextButton();
+    enableAnswerButtons();
+    hideSkipButton();
+  } else {
+    showResult();
   }
 }
 
-// Initialize quiz
-function initializeQuiz() {
-  shuffleQuestions(); // shuffle the questions
-  // Show the first question
-  showQuestion(currentQuestionIndex);
-
-  // Add click event listener to answer options
-  optionElements.forEach(option => {
-    option.addEventListener("click", () => {
-      checkAnswer(option);
-    });
-  });
-
-  // Add click event listener to next button
-  nextButton.addEventListener("click", () => {
-    currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-      showQuestion(currentQuestionIndex);
-    } else {
-      endQuiz();
-    }
-  });
-
-  // Add click event listener to skip button
-  skipButton.addEventListener("click", () => {
-    currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-      showQuestion(currentQuestionIndex);
-    } else {
-      endQuiz();
-    }
-  });
-
-  // Add click event listener to retake button
-  retakeButton.addEventListener("click", () => {
-    currentQuestionIndex = 0;
-    shuffleQuestions(); // shuffle the questions
-    showQuestion(currentQuestionIndex);
-    nextButton.style.display = "block";
-    skipButton.style.display = "block";
-    retakeButton.style.display = "none";
-    otherQuizzesContainer.style.display = "none";
-  });
-
-  // Add click event listener to other quiz buttons
-  otherQuizzesButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      // Redirect to other quiz page
-      window.location.href = button.dataset.url;
-    });
-  });
+// function to handle skip button click
+function handleSkipButtonClick() {
+currentQuestionIndex++;
+if (currentQuestionIndex < quizData.length) {
+showQuestion();
+hideExplanation();
+hideNextButton();
+enableAnswerButtons();
+hideSkipButton();
+} else {
+showResult();
+}
 }
 
-initializeQuiz(); // initialize the quiz
+// function to handle answer button click
+function handleAnswerButtonClick(e) {
+const selectedAnswer = e.target.innerText;
+const correctAnswer = quizData[currentQuestionIndex].correctAnswer;
+
+disableAnswerButtons();
+
+if (selectedAnswer === correctAnswer) {
+e.target.classList.add('correct');
+incrementScore();
+} else {
+e.target.classList.add('incorrect');
+showExplanation();
+}
+
+showNextButton();
+showSkipButton();
+}
+
+// function to enable answer buttons
+function enableAnswerButtons() {
+const answerButtons = document.querySelectorAll('.answer-option');
+answerButtons.forEach(button => {
+button.disabled = false;
+button.classList.remove('correct', 'incorrect');
+});
+}
+
+// function to disable answer buttons
+function disableAnswerButtons() {
+const answerButtons = document.querySelectorAll('.answer-option');
+answerButtons.forEach(button => {
+button.disabled = true;
+});
+}
+
+// function to show explanation
+function showExplanation() {
+const explanation = document.getElementById('explanation');
+explanation.innerText = quizData[currentQuestionIndex].explanation;
+explanation.style.display = 'block';
+}
+
+// function to hide explanation
+function hideExplanation() {
+const explanation = document.getElementById('explanation');
+explanation.style.display = 'none';
+}
+
+// function to show next button
+function showNextButton() {
+const nextButton = document.getElementById('next-btn');
+nextButton.style.display = 'block';
+}
+
+// function to hide next button
+function hideNextButton() {
+const nextButton = document.getElementById('next-btn');
+nextButton.style.display = 'none';
+}
+
+// function to show skip button
+function showSkipButton() {
+const skipButton = document.getElementById('skip-btn');
+skipButton.style.display = 'block';
+}
+
+// function to hide skip button
+function hideSkipButton() {
+const skipButton = document.getElementById('skip-btn');
+skipButton.style.display = 'none';
+}
+
+// function to increment score
+function incrementScore() {
+score++;
+}
+
+// function to show quiz result
+function showResult() {
+const scorePercentage = (score / quizData.length) * 100;
+const resultText = document.getElementById('result-text');
+resultText.innerText = You scored ${scorePercentage}%;
+const quizContainer = document.getElementById('quiz-container');
+quizContainer.style.display = 'none';
+const resultContainer = document.getElementById('result-container');
+resultContainer.style.display = 'block';
+}
+
+// function to retake quiz
+function handleRetakeButtonClick() {
+currentQuestionIndex = 0;
+score = 0;
+showQuestion();
+hideExplanation();
+hideNextButton();
+enableAnswerButtons();
+hideSkipButton();
+const quizContainer = document.getElementById('quiz-container');
+quizContainer.style.display = 'block';
+const resultContainer = document.getElementById('result-container');
+resultContainer.style.display = 'none';
+}
+
+// function to try another quiz
+function handleOtherQuizButtonClick(e) {
+const quizUrl = e.target.dataset.url;
+window.location.href = quizUrl;
+}
 
 
-  
-  
-  
+// add event listeners to buttons
+
+document.getElementById("next-btn").addEventListener("click", handleNextButtonClick);
+document.getElementById("skip-btn").addEventListener("click", handleSkipButtonClick);
+document.getElementById("retake-btn").addEventListener("click", handleRetakeButtonClick);
+const otherQuizButtons = document.querySelectorAll(".other-quiz-btn");
+otherQuizButtons.forEach(function(button) {
+  button.addEventListener("click", handleOtherQuizButtonClick);
+});
+
+
+
