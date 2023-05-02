@@ -79,3 +79,23 @@ button:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
 }
+
+
+      .answer-option {
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .answer-option:hover {
+        background-color: #f2f2f2;
+      }
+      .correct {
+        background-color: #4caf50;
+        color: #fff;
+      }
+      .incorrect {
+        background-color: #f44336;
+        color: #fff;
+      }
