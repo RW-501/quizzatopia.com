@@ -111,13 +111,6 @@ function incrementScore() {
   score++;
 }
 
-// function to show quiz result
-function showResult() {
-  const percentage = (score / quizData.length) * 100;
-  resultText.innerText = `You got ${score} out of ${quizData.length} questions correct (${percentage}%).`;
-  resultContainer.style.display = "block";
-}
-
 // function to handle retake button click
 function handleRetakeButtonClick() {
   currentQuestionIndex = 0;
@@ -153,35 +146,6 @@ otherQuizButtons.forEach((button) => {
 
 // initialize quiz
 initializeQuiz();
-
-// Exporting the necessary variables and functions
-export {
-  quizData,
-  showQuestion,
-  handleAnswerButtonClick,
-  handleNextButtonClick,
-  handleSkipButtonClick,
-  handleRetakeButtonClick,
-  handleOtherQuizButtonClick
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
