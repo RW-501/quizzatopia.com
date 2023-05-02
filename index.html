@@ -1,36 +1,57 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Quiz</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div id="quiz-container">
-      <h1 id="question"></h1>
-      <ul>
-        <li><button class="answer-option"></button></li>
-        <li><button class="answer-option"></button></li>
-        <li><button class="answer-option"></button></li>
-        <li><button class="answer-option"></button></li>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Platform</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Quiz Platform</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Quizzes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
       </ul>
-      <p id="explanation"></p>
-      <button id="next-btn">Next</button>
-      <button id="skip-btn">Skip</button>
     </div>
-    <div id="result-container">
-      <h2 id="result-text"></h2>
-      <button id="retake-btn">Retake Quiz</button>
-      <button class="other-quiz-btn" data-url="other-quiz.html">Try Another Quiz</button>
-    </div>
-    <script>
-      // insert JavaScript code here
-         <script src="script.js"></script>
+  </nav>
 
-    </script>
-  </body>
-</html>
+  <div class="container mt-4" id="quiz-container">
+    <h1 id="question"></h1>
+    <ul class="list-unstyled">
+      <li><button class="btn btn-primary answer-option"></button></li>
+      <li><button class="btn btn-primary answer-option"></button></li>
+      <li><button class="btn btn-primary answer-option"></button></li>
+      <li><button class="btn btn-primary answer-option"></button></li>
+    </ul>
+    <p id="explanation"></p>
+    <button id="next-btn" class="btn btn-primary">Next</button>
+    <button id="skip-btn" class="btn btn-secondary">Skip</button>
+  </div>
 
+  <div class="container mt-4" id="result-container">
+    <h2 id="result-text"></h2>
+    <button id="retake-btn" class="btn btn-primary">Retake Quiz</button>
+    <button class="other-quiz-btn btn btn-secondary" data-url="other-quiz.html">Try Another Quiz</button>
+  </div>
 
-    
-    
+  <footer class="bg-light text-center py-3 mt-4">
+    <p>Quiz Platform &copy; 2023</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHT
+
