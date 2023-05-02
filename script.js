@@ -1,26 +1,26 @@
 // quiz data
 const quizData = [
-  {
-    question: "What is the capital of France?",
-    answers: [
-      { text: "New York", correct: false },
-      { text: "London", correct: false },
-      { text: "Paris", correct: true },
-      { text: "Berlin", correct: false }
-    ],
-    explanation: "Paris is the capital of France."
-  },
-  {
-    question: "What is the tallest mammal?",
-    answers: [
-      { text: "Giraffe", correct: true },
-      { text: "Elephant", correct: false },
-      { text: "Horse", correct: false },
-      { text: "Kangaroo", correct: false }
-    ],
-    explanation: "The giraffe is the tallest mammal in the world."
-  },
-  // add more question objects here
+{
+question: "What is the capital of France?",
+answers: [
+{ text: "New York", correct: false },
+{ text: "London", correct: false },
+{ text: "Paris", correct: true },
+{ text: "Berlin", correct: false }
+],
+explanation: "Paris is the capital of France."
+},
+{
+question: "What is the tallest mammal?",
+answers: [
+{ text: "Giraffe", correct: true },
+{ text: "Elephant", correct: false },
+{ text: "Horse", correct: false },
+{ text: "Kangaroo", correct: false }
+],
+explanation: "The giraffe is the tallest mammal in the world."
+},
+// add more question objects here
 ];
 
 // variables
@@ -41,142 +41,32 @@ const otherQuizButtons = document.querySelectorAll(".other-quiz-btn");
 
 // function to initialize quiz
 function initializeQuiz() {
-  showQuestion();
-  hideExplanation();
-  hideResult();
+showQuestion();
+hideExplanation();
+hideResult();
 }
 
 // function to show question
 function showQuestion() {
-  const currentQuestion = quizData[currentQuestionIndex];
-  questionElement.innerText = currentQuestion.question;
-  answerElements.forEach((answerElement, index) => {
-    answerElement.innerText = currentQuestion.answers[index];
-    answerElement.removeEventListener("click", handleAnswer);
-    answerElement.addEventListener("click", handleAnswer);
-  });
+const currentQuestion = quizData[currentQuestionIndex];
+questionElement.innerText = currentQuestion.question;
+answerElements.forEach((answerElement, index) => {
+answerElement.innerText = currentQuestion.answers[index].text;
+answerElement.removeEventListener("click", handleAnswerButtonClick);
+answerElement.addEventListener("click", handleAnswerButtonClick);
+});
 }
 
 // function to handle answer
 function handleAnswer(event) {
-  const selectedAnswer = event.target.innerText;
-  const currentQuestion = quizData[currentQuestionIndex];
-  if (selectedAnswer === currentQuestion.correctAnswer) {
-    score++;
-  }
-  showExplanation();
-  disableAnswerButtons();
-  showNextButton();
+const selectedAnswer = event.target.innerText;
+const currentQuestion = quizData[currentQuestionIndex];
+if (selectedAnswer === currentQuestion.answers[index].correct) {
+score++;
 }
-
-// function to show explanation
-function showExplanation() {
-  const currentQuestion = quizData[currentQuestionIndex];
-  explanationElement.innerText = currentQuestion.explanation;
-  explanationElement.style.display = "block";
-}
-
-// function to hide explanation
-function hideExplanation() {
-  explanationElement.style.display = "none";
-}
-
-// function to disable answer buttons
-function disableAnswerButtons() {
-  answerElements.forEach((answerElement) => {
-    answerElement.disabled = true;
-  });
-}
-
-// function to enable answer buttons
-function enableAnswerButtons() {
-  answerElements.forEach((answerElement) => {
-    answerElement.disabled = false;
-  });
-}
-
-// function to show next button
-function showNextButton() {
-  nextButton.style.display = "block";
-}
-
-// function to hide next button
-function hideNextButton() {
-  nextButton.style.display = "none";
-}
-
-// function to show skip button
-function showSkipButton() {
-  skipButton.style.display = "block";
-}
-
-// function to hide skip button
-function hideSkipButton() {
-  skipButton.style.display = "none";
-}
-
-// function to handle next button click
-function handleNextButtonClick() {
-  currentQuestionIndex++;
-  if (currentQuestionIndex < quizData.length) {
-    showQuestion();
-    hideExplanation();
-    hideNextButton();
-    enableAnswerButtons();
-    hideSkipButton();
-  } else {
-    showResult();
-  }
-}
-
-// function to handle skip button click
-function handleSkipButtonClick() {
-currentQuestionIndex++;
-if (currentQuestionIndex < quizData.length) {
-showQuestion();
-hideExplanation();
-hideNextButton();
-enableAnswerButtons();
-hideSkipButton();
-} else {
-showResult();
-}
-}
-
-// function to handle answer button click
-function handleAnswerButtonClick(e) {
-const selectedAnswer = e.target.innerText;
-const correctAnswer = quizData[currentQuestionIndex].correctAnswer;
-
-disableAnswerButtons();
-
-if (selectedAnswer === correctAnswer) {
-e.target.classList.add('correct');
-incrementScore();
-} else {
-e.target.classList.add('incorrect');
 showExplanation();
-}
-
+disableAnswerButtons();
 showNextButton();
-showSkipButton();
-}
-
-// function to enable answer buttons
-function enableAnswerButtons() {
-const answerButtons = document.querySelectorAll('.answer-option');
-answerButtons.forEach(button => {
-button.disabled = false;
-button.classList.remove('correct', 'incorrect');
-});
-}
-
-// function to disable answer buttons
-function disableAnswerButtons() {
-const answerButtons = document.querySelectorAll('.answer-option');
-answerButtons.forEach(button => {
-button.disabled = true;
-});
 }
 
 // function to show explanation
@@ -232,37 +122,41 @@ const resultContainer = document.getElementById('result-container');
 resultContainer.style.display = 'block';
 }
 
-// function to retake quiz
+// function to handle retake button click
 function handleRetakeButtonClick() {
 currentQuestionIndex = 0;
 score = 0;
+hideResult();
 showQuestion();
-hideExplanation();
-hideNextButton();
-enableAnswerButtons();
-hideSkipButton();
-const quizContainer = document.getElementById('quiz-container');
-quizContainer.style.display = 'block';
-const resultContainer = document.getElementById('result-container');
-resultContainer.style.display = 'none';
 }
 
-// function to try another quiz
-function handleOtherQuizButtonClick(e) {
-const quizUrl = e.target.dataset.url;
-window.location.href = quizUrl;
+// function to show result
+function showResult() {
+const percentage = (score / quizData.length) * 100;
+resultText.innerText = You got ${score} out of ${quizData.length} questions correct (${percentage}%).;
+resultContainer.style.display = "block";
 }
 
+// function to hide result
+function hideResult() {
+resultContainer.style.display = "none";
+}
 
-// add event listeners to buttons
+// function to handle other quiz button click
+function handleOtherQuizButtonClick() {
+window.location.reload();
+}
 
-document.getElementById("next-btn").addEventListener("click", handleNextButtonClick);
-document.getElementById("skip-btn").addEventListener("click", handleSkipButtonClick);
-document.getElementById("retake-btn").addEventListener("click", handleRetakeButtonClick);
-const otherQuizButtons = document.querySelectorAll(".other-quiz-btn");
-otherQuizButtons.forEach(function(button) {
-  button.addEventListener("click", handleOtherQuizButtonClick);
+// event listeners
+nextButton.addEventListener("click", handleNextButtonClick);
+skipButton.addEventListener("click", handleSkipButtonClick);
+retakeButton.addEventListener("click", handleRetakeButtonClick);
+otherQuizButtons.forEach((button) => {
+button.addEventListener("click", handleOtherQuizButtonClick);
 });
 
+// initialize quiz
+initializeQuiz();
 
-
+// Exporting the necessary variables and functions
+export { quizData, showQuestion, handleAnswerButtonClick, handleNextButtonClick, handleSkipButtonClick, handleRetakeButtonClick, handleOtherQuizButtonClick };
