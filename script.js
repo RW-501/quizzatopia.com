@@ -1,5 +1,4 @@
-
-    document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   // Define the questions and answers
   const questions = [
     {
@@ -67,7 +66,7 @@
 
     // Add click event listener to skip button
     skipButton.addEventListener("click", () => {
-            console.log("?11111111111");
+      console.log("?11111111111");
 
       currentQuestionIndex++;
       if (currentQuestionIndex < questions.length) {
@@ -80,7 +79,7 @@
 
   // Show a question
   function showQuestion(index) {
-          console.log("?????22222222????????");
+    console.log("?????22222222????????");
 
     const question = questions[index];
     questionElement.innerText = question.question;
@@ -123,10 +122,22 @@ function checkAnswer(selectedOption) {
   nextButton.disabled = false;
 }
 
-        });
-});
-initializeQuiz();
+  // End the quiz
+  function endQuiz() {
+    console.log("??????????????????????????????????????????????");
+    questionElement.innerText = "Quiz complete!";
+    explanationElement.innerText = "";
+    optionElements.forEach((option) => {
+      option.innerText = "";
+      option.disabled = true;
+    });
+    nextButton.disabled = true;
+    skipButton.disabled = true;
+  }
 
+  // Start the quiz
+  initializeQuiz();
+});
 
 
 
