@@ -89,47 +89,46 @@ function showQuestion(index) {
 }
 
 // Check if the selected answer is correct
+// Check if the selected answer is correct
 function checkAnswer(selectedOption) {
   const question = questions[currentQuestionIndex];
   const selectedAnswer = question.answers.find(
     (answer) => answer.text === selectedOption.innerText
   );
+  
+  // Disable all options except the selected one
   optionElements.forEach((option) => {
     if (option !== selectedOption) {
       option.disabled = true;
     }
   });
+  
+  // Check if the selected answer is correct
   if (selectedAnswer.correct) {
+    // Mark the selected option as correct
     selectedOption.classList.add("correct");
     explanationElement.innerText = "Correct!";
     explanationElement.style.color = "#4caf50";
   } else {
+    // Mark the selected option as incorrect
+    selectedOption.classList.add("incorrect");
+    
+    // Find the correct option and mark it as correct
     const correctOption = optionElements.find(
       (option) => question.answers.indexOf(option.innerText) === question.answers.findIndex((answer) => answer.correct === true)
     );
     correctOption.classList.add("correct");
-    selectedOption
-.classList.add("incorrect");
-explanationElement.innerText = Sorry, the correct answer is ${correctOption.innerText}. ${question.explanation};
-explanationElement.style.color = "#f44336";
-}
-explanationElement.style.display = "block";
-nextButton.disabled = false;
-}
-
-// End the quiz
-function endQuiz() {
-questionElement.innerText = "Quiz completed!";
-explanationElement.style.display = "none";
-nextButton.style.display = "none";
-skipButton.style.display = "none";
-optionElements.forEach((option) => {
-option.disabled = true;
-});
+    
+    // Display explanation for incorrect answer
+    explanationElement.innerText = `Sorry, the correct answer is ${correctOption.innerText}. ${question.explanation}`;
+    explanationElement.style.color = "#f44336";
+  }
+  
+  // Display the explanation and enable the next button
+  explanationElement.style.display = "block";
+  nextButton.disabled = false;
 }
 
-// Initialize the quiz
-initializeQuiz();
 
 
 /*
