@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Define the questions and answers
-  const questions = [
+  let questions = [
     {
       question: "What is the capital of France?",
       answers: [
@@ -39,10 +39,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const explanationElement = document.getElementById("explanation");
   const nextButton = document.getElementById("next-btn");
   const skipButton = document.getElementById("skip-btn");
+  const retakeButton = document.getElementById("retake-btn");
+  const otherQuizButtons = document.querySelectorAll(".other-quiz-btn");
   let currentQuestionIndex = 0;
+  let numCorrectAnswers = 0;
 
   // Initialize quiz
   function initializeQuiz() {
+    shuffleQuestions();
     // Show the first question
     showQuestion(currentQuestionIndex);
 
@@ -55,7 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Add click event listener to next button
     nextButton.addEventListener("click", () => {
-      console.log("??????????????????????????????????????????????");
       currentQuestionIndex++;
       if (currentQuestionIndex < questions.length) {
         showQuestion(currentQuestionIndex);
@@ -66,8 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Add click event listener to skip button
     skipButton.addEventListener("click", () => {
-      console.log("?11111111111");
-
       currentQuestionIndex++;
       if (currentQuestionIndex < questions.length) {
         showQuestion(currentQuestionIndex);
@@ -75,7 +76,26 @@ document.addEventListener("DOMContentLoaded", () => {
         endQuiz();
       }
     });
-  }
+
+    // Add click event listener to retake button
+    retakeButton.addEventListener("click", () => {
+      currentQuestionIndex = 0;
+      numCorrectAnswers = 0;
+      shuffleQuestions();
+      showQuestion(currentQuestionIndex);
+      explanationElement.style.display = "none";
+      retakeButton.style.display = "none";
+      nextButton.style.display = "inline-block";
+      skipButton.style.display = "inline-block";
+      optionElements.forEach((option) => {
+        option.classList.remove("correct");
+        option.classList.remove("incorrect");
+        option.disabled = false;
+      });
+    });
+
+    // Add click event listener to other quiz buttons
+    otherQuizButtons.forEach
 
   // Show a question
   function showQuestion(index) {
