@@ -1,4 +1,5 @@
- document.addEventListener("DOMContentLoaded", () => {
+
+    document.addEventListener("DOMContentLoaded", () => {
   // Define the questions and answers
   const questions = [
     {
@@ -55,6 +56,7 @@
 
     // Add click event listener to next button
     nextButton.addEventListener("click", () => {
+      console.log("??????????????????????????????????????????????");
       currentQuestionIndex++;
       if (currentQuestionIndex < questions.length) {
         showQuestion(currentQuestionIndex);
@@ -65,6 +67,8 @@
 
     // Add click event listener to skip button
     skipButton.addEventListener("click", () => {
+            console.log("?11111111111");
+
       currentQuestionIndex++;
       if (currentQuestionIndex < questions.length) {
         showQuestion(currentQuestionIndex);
@@ -76,6 +80,8 @@
 
   // Show a question
   function showQuestion(index) {
+          console.log("?????22222222????????");
+
     const question = questions[index];
     questionElement.innerText = question.question;
     explanationElement.innerText = "";
@@ -89,7 +95,6 @@
     });
   }
 
-// Check if the selected answer is correct
 function checkAnswer(selectedOption) {
   const question = questions[currentQuestionIndex];
   const selectedAnswer = question.answers.find(
@@ -105,9 +110,10 @@ function checkAnswer(selectedOption) {
     explanationElement.innerText = "Correct!";
     explanationElement.style.color = "#4caf50";
   } else {
-    const correctOption = optionElements.find(
-      (option) => question.answers.indexOf(option.innerText) === question.answers.findIndex((answer) => answer.correct === true)
+    const correctOptionIndex = question.answers.findIndex(
+      (answer) => answer.correct === true
     );
+    const correctOption = optionElements[correctOptionIndex];
     correctOption.classList.add("correct");
     selectedOption.classList.add("incorrect");
     explanationElement.innerText = `Sorry, the correct answer is ${correctOption.innerText}. ${question.explanation}`;
@@ -117,8 +123,7 @@ function checkAnswer(selectedOption) {
   nextButton.disabled = false;
 }
 
-
-
+initializeQuiz();
 
 /*
 
