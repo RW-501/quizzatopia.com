@@ -123,4 +123,6 @@ function checkAnswer(selectedOption) {
   nextButton.disabled = false;
 }
 
+        });
+});
 initializeQuiz();
