@@ -1,20 +1,26 @@
 // quiz data
-const quizData = [  {    question: "What is the capital of France?",    answers: ["Paris", "London", "New York", "Berlin"],
-    correctAnswer: "Paris",
+const quizData = [
+  {
+    question: "What is the capital of France?",
+    answers: [
+      { text: "New York", correct: false },
+      { text: "London", correct: false },
+      { text: "Paris", correct: true },
+      { text: "Berlin", correct: false }
+    ],
     explanation: "Paris is the capital of France."
   },
   {
-    question: "What is the largest planet in our solar system?",
-    answers: ["Venus", "Jupiter", "Mars", "Saturn"],
-    correctAnswer: "Jupiter",
-    explanation: "Jupiter is the largest planet in our solar system."
+    question: "What is the tallest mammal?",
+    answers: [
+      { text: "Giraffe", correct: true },
+      { text: "Elephant", correct: false },
+      { text: "Horse", correct: false },
+      { text: "Kangaroo", correct: false }
+    ],
+    explanation: "The giraffe is the tallest mammal in the world."
   },
-  {
-    question: "What is the currency of Japan?",
-    answers: ["Dollar", "Euro", "Yen", "Pound"],
-    correctAnswer: "Yen",
-    explanation: "Yen is the currency of Japan."
-  }
+  // add more question objects here
 ];
 
 // variables
