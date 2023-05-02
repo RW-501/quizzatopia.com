@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Define the questions and answers
-  let questions = [
+  const questions = [
     {
       question: "What is the capital of France?",
       answers: [
@@ -41,12 +41,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const skipButton = document.getElementById("skip-btn");
   const retakeButton = document.getElementById("retake-btn");
   const otherQuizButtons = document.querySelectorAll(".other-quiz-btn");
+  const quizContainer = document.getElementById("quiz-container");
+  const resultContainer = document.getElementById("result-container");
+  const resultText = document.getElementById("result-text");
   let currentQuestionIndex = 0;
-  let numCorrectAnswers = 0;
+  let correctAnswers = 0;
+  let wrongAnswers = 0;
 
   // Initialize quiz
   function initializeQuiz() {
-    shuffleQuestions();
+    // Shuffle the questions
+    shuffleQuestions(questions);
+
     // Show the first question
     showQuestion(currentQuestionIndex);
 
@@ -79,106 +85,239 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Add click event listener to retake button
     retakeButton.addEventListener("click", () => {
+      // Reset quiz variables
       currentQuestionIndex = 0;
-      numCorrectAnswers = 0;
-      shuffleQuestions();
+      correctAnswers = 0;
+      wrongAnswers = 0;
+
+      // Shuffle the questions
+      shuffleQuestions(questions);
+
+      // Show the first question
       showQuestion(currentQuestionIndex);
-      explanationElement.style.display = "none";
-      retakeButton.style.display = "none";
-      nextButton.style.display = "inline-block";
-      skipButton.style.display = "inline-block";
-      optionElements.forEach((option) => {
-        option.classList.remove("correct");
-        option.classList.remove("incorrect");
-        option.disabled = false;
-      });
+
+      // Hide the result container
+      resultContainer.style.display = "none";
     });
 
     // Add click event listener to other quiz buttons
-    otherQuizButtons.forEach
-
-  // Show a question
-  function showQuestion(index) {
-    console.log("?????22222222????????");
-
-    const question = questions[index];
-    questionElement.innerText = question.question;
-    explanationElement.innerText = "";
-    explanationElement.style.display = "none";
-    nextButton.disabled = true;
-    optionElements.forEach((option, i) => {
-      option.innerText = question.answers[i].text;
-      option.classList.remove("correct");
-      option.classList.remove("incorrect");
-      option.disabled = false;
+    otherQuizButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        // Redirect to other quiz page
+        window.location.href = button.dataset.url;
+      });
     });
+  }
+
+ // Show a question
+function showQuestion(index) {
+console.log("?????22222222????????");
+ const question = questions[index];
+questionElement.innerText = question.question;
+explanationElement.innerText = "";
+explanationElement.style.display = "none";
+nextButton.disabled = true;
+optionElements.forEach((option, i) => {
+  option.innerText = question.answers[i].text;
+  option.classList.remove("correct");
+  option.classList.remove("incorrect");
+  option.disabled = false;
+}); 
+  
   }
 
 function checkAnswer(selectedOption) {
-  const question = questions[currentQuestionIndex];
-  const selectedAnswer = question.answers.find(
-    (answer) => answer.text === selectedOption.innerText
-  );
-  optionElements.forEach((option) => {
-    if (option !== selectedOption) {
-      option.disabled = true;
-    }
-  });
-  if (selectedAnswer.correct) {
-    selectedOption.classList.add("correct");
-    explanationElement.innerText = "Correct!";
-    explanationElement.style.color = "#4caf50";
-  } else {
-    const correctOptionIndex = question.answers.findIndex(
-      (answer) => answer.correct === true
-    );
-    const correctOption = optionElements[correctOptionIndex];
-    correctOption.classList.add("correct");
-    selectedOption.classList.add("incorrect");
-    explanationElement.innerText = `Sorry, the correct answer is ${correctOption.innerText}. ${question.explanation}`;
-    explanationElement.style.color = "#f44336";
-  }
-  explanationElement.style.display = "block";
-  nextButton.disabled = false;
+const question = questions[currentQuestionIndex];
+const selectedAnswer = question.answers.find(
+(answer) => answer.text === selectedOption.innerText
+);
+optionElements.forEach((option) => {
+if (option !== selectedOption) {
+option.disabled = true;
+}
+});
+if (selectedAnswer.correct) {
+selectedOption.classList.add("correct");
+explanationElement.innerText = "Correct!";
+explanationElement.style.color = "#4caf50";
+} else {
+const correctOptionIndex = question.answers.findIndex(
+(answer) => answer.correct === true
+);
+const correctOption = optionElements[correctOptionIndex];
+correctOption.classList.add("correct");
+selectedOption.classList.add("incorrect");
+explanationElement.innerText = Sorry, the correct answer is ${correctOption.innerText}. ${question.explanation};
+explanationElement.style.color = "#f44336";
+}
+explanationElement.style.display = "block";
+nextButton.disabled = false;
 }
 
-  // End the quiz
-  function endQuiz() {
-    console.log("??????????????????????????????????????????????");
-    questionElement.innerText = "Quiz complete!";
-    explanationElement.innerText = "";
-    optionElements.forEach((option) => {
-      option.innerText = "";
-      option.disabled = true;
-    });
-    nextButton.disabled = true;
-    skipButton.disabled = true;
-  }
+function endQuiz() {
+// Calculate percentage of correct answers
+const correctAnswers = questions.filter((question) =>
+question.answers.find((answer) => answer.correct)
+);
+const percentage = ((correctAnswers.length / questions.length) * 100).toFixed(
+2
+);
+  // Display quiz results
+questionElement.innerText = `You answered ${correctAnswers.length} out of ${questions.length} questions correctly, which is ${percentage}%`;
+explanationElement.style.display = "none";
+nextButton.style.display = "none";
+skipButton.style.display = "none";
 
-  // Start the quiz
+// Add retake button
+const retakeButton = document.createElement("button");
+retakeButton.innerText = "Retake Quiz";
+retakeButton.classList.add("btn", "retake-btn");
+retakeButton.addEventListener("click", () => {
+  currentQuestionIndex = 0;
   initializeQuiz();
 });
+document.getElementById("quiz-buttons").appendChild(retakeButton);
+
+// Add other quiz buttons
+const otherQuizButtons = document.querySelectorAll(".other-quiz-btn");
+otherQuizButtons.forEach((button) => {
+  button.style.display = "inline-block";
+  button.addEventListener("click", () => {
+    // Redirect to other quiz page
+    window.location.href = button.dataset.url;
+  });
+});
+}
+
+// Initialize quiz
+function initializeQuiz() {
+// Shuffle questions randomly
+questions.sort(() => Math.random() - 0.5);
+  
+  // Show the first question
+showQuestion(currentQuestionIndex);
+
+// Add click event listener to answer options
+optionElements.forEach((option) => {
+  option.addEventListener("click", () => {
+    checkAnswer(option);
+  });
+});
+
+// Add click event listener to next button
+nextButton.addEventListener("click", () => {
+  console.log("??????????????????????????????????????????????");
+  currentQuestionIndex++;
+  if (currentQuestionIndex < questions.length) {
+    showQuestion(currentQuestionIndex);
+  } else {
+    endQuiz();
+  }
+});
+
+// Add click event listener to skip button
+skipButton.addEventListener("click", () => {
+  console.log("?11111111111");
+
+  currentQuestionIndex++;
+  if (currentQuestionIndex < questions.length) {
+    showQuestion(currentQuestionIndex);
+  } else {
+    endQuiz();
+  }
+});
+
+// End quiz
+function endQuiz() {
+  console.log("?????33333333333333????????");
+  
+  const score = calculateScore();
+  const percentage = ((score / questions.length) * 100).toFixed(2);
+  questionElement.innerText = `Quiz complete! You scored ${percentage}%`;
+  explanationElement.innerText = "";
+  nextButton.style.display = "none";
+  skipButton.style.display = "none";
+  retakeButton.style.display = "block";
+  otherQuizzesContainer.style.display = "block";
+}
+
+// Calculate score
+function calculateScore() {
+  let score = 0;
+  questions.forEach((question, index) => {
+    const selectedOption = optionElements[index].innerText;
+    const selectedAnswer = question.answers.find(answer => answer.text === selectedOption);
+    if (selectedAnswer.correct) {
+      score++;
+    }
+  });
+  return score;
+}
+
+// Shuffle questions
+function shuffleQuestions() {
+  for (let i = questions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [questions[i], questions[j]] = [questions[j], questions[i]];
+  }
+}
+
+// Initialize quiz
+function initializeQuiz() {
+  shuffleQuestions(); // shuffle the questions
+  // Show the first question
+  showQuestion(currentQuestionIndex);
+
+  // Add click event listener to answer options
+  optionElements.forEach(option => {
+    option.addEventListener("click", () => {
+      checkAnswer(option);
+    });
+  });
+
+  // Add click event listener to next button
+  nextButton.addEventListener("click", () => {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+      showQuestion(currentQuestionIndex);
+    } else {
+      endQuiz();
+    }
+  });
+
+  // Add click event listener to skip button
+  skipButton.addEventListener("click", () => {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+      showQuestion(currentQuestionIndex);
+    } else {
+      endQuiz();
+    }
+  });
+
+  // Add click event listener to retake button
+  retakeButton.addEventListener("click", () => {
+    currentQuestionIndex = 0;
+    shuffleQuestions(); // shuffle the questions
+    showQuestion(currentQuestionIndex);
+    nextButton.style.display = "block";
+    skipButton.style.display = "block";
+    retakeButton.style.display = "none";
+    otherQuizzesContainer.style.display = "none";
+  });
+
+  // Add click event listener to other quiz buttons
+  otherQuizzesButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      // Redirect to other quiz page
+      window.location.href = button.dataset.url;
+    });
+  });
+}
+
+initializeQuiz(); // initialize the quiz
 
 
-
-
-/*
-
-Let me go through the code and explain what each part does:
-
-1. We start by defining an array of objects called `questions`. Each object represents a question and contains a `question` property, an array of `answers`, and an `explanation` for the correct answer.
-
-2. We then define a bunch of variables that we will use later in the code. These include references to the HTML elements that we will manipulate, as well as a `currentQuestionIndex` variable that keeps track of the current question that the user is on.
-
-3. We define a function called `initializeQuiz` that initializes the quiz by showing the first question and adding event listeners to the answer options and buttons.
-
-4. We define a function called `showQuestion` that shows a question by updating the text of the `questionElement` and the text of each of the answer options.
-
-5. We define a function called `checkAnswer` that checks if the selected answer is correct and updates the UI accordingly.
-
-6. Finally, we define a function called `endQuiz` that displays a message indicating that the quiz has been completed and disables all the answer options.
-
-You'll notice that the code uses a lot of modern JavaScript features, like arrow functions, template literals, and the `const` and `let` keywords. We're also using the `querySelectorAll` method to select all the answer options and the `forEach` method to loop through them.
-
-I hope this helps! Let me know if you have any questions or if there's anything else I can help you with.
-*/
+  
+  
+  
