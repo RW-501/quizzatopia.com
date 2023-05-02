@@ -82,6 +82,7 @@
 
     // Add click event listener to next button
     nextButton.addEventListener("click", () => {
+      console.log("??????????????????????????????????????????????");
       currentQuestionIndex++;
       if (currentQuestionIndex < questions.length) {
         showQuestion(currentQuestionIndex);
@@ -92,6 +93,8 @@
 
     // Add click event listener to skip button
     skipButton.addEventListener("click", () => {
+            console.log("?11111111111");
+
       currentQuestionIndex++;
       if (currentQuestionIndex < questions.length) {
         showQuestion(currentQuestionIndex);
@@ -103,6 +106,8 @@
 
   // Show a question
   function showQuestion(index) {
+          console.log("?????22222222????????");
+
     const question = questions[index];
     questionElement.innerText = question.question;
     explanationElement.innerText = "";
@@ -144,7 +149,7 @@ function checkAnswer(selectedOption) {
   nextButton.disabled = false;
 }
 
-showQuestion("1");
+initializeQuiz();
     
     
     
