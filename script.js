@@ -147,7 +147,7 @@ const correctOptionIndex = question.answers.findIndex(
 const correctOption = optionElements[correctOptionIndex];
 correctOption.classList.add("correct");
 selectedOption.classList.add("incorrect");
-explanationElement.innerText = Sorry, the correct answer is ${correctOption.innerText}. ${question.explanation};
+explanationElement.innerText = `Sorry, the correct answer is ${correctOption.innerText}. ${question.explanation}`;
 explanationElement.style.color = "#f44336";
 }
 explanationElement.style.display = "block";
