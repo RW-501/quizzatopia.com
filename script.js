@@ -55,13 +55,40 @@ function showQuestion() {
 
 // Function to check the user's answer
 function checkAnswer() {
-  const answer = this.innerHTML;
+       const selectedOption = this;
+  const selectedAnswer = selectedOption.innerHTML;
   const questionObj = questions[currentQuestion];
+  const options = optionContainers[currentQuestion].children;
+  const explanation = questionObj.explanation;
+  
+  for (let i = 0; i < options.length; i++) {
+    options[i].classList.add('disabled');
+    if (options[i].innerHTML === questionObj.answer) {
+      options[i].classList.add('correct');
+    } else {
+      options[i].classList.add('incorrect');
+    }
+  }
+  
+  if (selectedAnswer === questionObj.answer) {
+    selectedOption.classList.add('correct');
+    score++;
+  } else {
+    selectedOption.classList.add('incorrect');
+  }
+    
+  const answer = this.innerHTML;
+   questionObj = questions[currentQuestion];
   if (answer === questionObj.answer) {
     score++;
   }
+ 
   showExplanation(questionObj.explanation);
 }
+
+
+
+
 
 // Function to show the explanation for the current question
 function showExplanation(explanation) {
@@ -147,7 +174,8 @@ function startTimer() {
 var progressBar = document.getElementById('progress-bar');
 
 // Get the total number of questions
-var totalQuestions = document.querySelectorAll('.quiz-question').length;
+ totalQuestions = document.querySelectorAll('.quiz-question').length;
+console.log(totalQuestions+"????????????????????????"); // Output: 3
 
 // Update the progress bar
 function updateProgressBar(currentQuestion) {
