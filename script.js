@@ -203,20 +203,19 @@ function calculateFeedback() {
 
 // Function to start the timer
 function startTimer() {
-  const timeDisplay = document.getElementById("timer");
-
-  timer = setInterval(function() {
-    totalTime--;
-    timeDisplay.innerHTML = totalTime;
-    if (totalTime === 0) {
-        if (countdownPerQuestion) { // add time bonus if the countdown was per question
-skipQuestion();
-  }else{
-          endQuiz();
-  }
+  let time = totalTime;
+  timer = setInterval(() => {
+    let minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+    document.getElementById("timer").innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    time--;
+    if (time < 0) {
+      clearInterval(timer);
+      endQuiz();
     }
   }, 1000);
 }
+
 
 
 // Event Listeners
