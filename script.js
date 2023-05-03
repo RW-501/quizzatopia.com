@@ -46,7 +46,7 @@ function setQuizTime() {
         console.log("????????????timerEnabled????"); // Output: 3
 
     questionTime = newQuizTime;
-    if (!countdownPerQuestion) {
+    if (countdownPerQuestion == false) {
       totalTime = questionTime;
       startTimer();
     }
@@ -252,13 +252,19 @@ function calculateFeedback() {
 
 // Function to start the timer
 function startTimer() {
-        if (timerEnabled) {
+        if (timerEnabled == true) {
   timer = setInterval(function() {
     totalTime--;
-    if (totalTime <= 0) {
+    const timerEl = document.getElementById("timer");
+      if (totalTime < 5) {
+    timerEl.style.color = "red";
+  } else {
+    timerEl.style.color = "black";
+  }
+    timerEl.innerHTML = totalTime;
+      if (totalTime <= 0) {
       endQuiz();
     }
-    document.getElementById("timer").innerHTML = totalTime;
   }, 1000);
 
         }
