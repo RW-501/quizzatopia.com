@@ -130,6 +130,8 @@ function nextQuestion() {
   }
       // update the progress bar
   updateProgressBar(currentQuestion);
+    console.log(currentQuestion+"????????????currentQuestion????"); // Output: 3
+
 }
 
 // Function to skip the current question
@@ -177,7 +179,7 @@ var progressBar = document.getElementById('progress-bar');
 
 // Get the total number of questions
  totalQuestions = document.querySelectorAll('.quiz-question').length;
-console.log(totalQuestions+"????????????????????????"); // Output: 3
+console.log(totalQuestions+"?????????????totalQuestions???????????"); // Output: 3
 
 // Update the progress bar
 function updateProgressBar(currentQuestion) {
