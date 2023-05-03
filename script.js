@@ -40,6 +40,8 @@ function setQuizTime() {
   const quizTimeInput = document.getElementById("quiz-time");
   const newQuizTime = parseInt(quizTimeInput.value);
   totalQuestions = questions.length;
+      console.log(totalQuestions+"????????????totalQuestions????"); // Output: 3
+
   if (!isNaN(newQuizTime)) {
     questionTime = newQuizTime;
     if (!countdownPerQuestion) {
@@ -72,6 +74,9 @@ function startQuiz() {
   }
   answeredQuestions = [];
   updateProgressBar(currentQuestion);
+      console.log(currentQuestion+"999??????????currentQuestion????"); // Output: 3
+    console.log(totalQuestions+"999???????totalQuestions????"); // Output: 3
+
 }
 
 
@@ -108,6 +113,8 @@ var progressBar = document.getElementById('progress-bar');
 function updateProgressBar(currentQuestion) {
   var percentage = (currentQuestion / totalQuestions) * 100;
   progressBar.style.width = percentage + '%';
+        console.log(currentQuestion+"updateProgressBar??????????currentQuestion????"); // Output: 3
+
 }   
 
 // Function to check the user's answer
@@ -166,11 +173,7 @@ function enableAnswerButtons() {
     answerButtons[i].addEventListener("click", checkAnswer);
     answerButtons[i].classList.remove("disabled", "correct", "incorrect");
   }
-         if (countdownPerQuestion) { // add time bonus if the countdown was per question
-skipQuestion();
-  }else{
-          endQuiz();
-  }
+   
 }
 
 // Function to show the next question
