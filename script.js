@@ -211,7 +211,7 @@ function endQuiz() {
   const resultMsg = `You scored ${score}/${totalQuestions} (${percentageScore}%)`;
   document.getElementById("result").innerHTML = resultMsg;
   document.getElementById("quiz-container").classList.add("d-none");
-  document.getElementById("result-container").classList.remove("d-none");
+  document.getElementById("end-container").classList.remove("d-none");
 }
 
 // Function to calculate the feedback for the quiz taker
