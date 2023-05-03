@@ -40,7 +40,8 @@ function setQuizTime() {
   const quizTimeInput = document.getElementById("quiz-time");
   const newQuizTime = parseInt(quizTimeInput.value);
   totalQuestions = questions.length;
-      console.log(totalQuestions+"????????????totalQuestions????"); // Output: 3
+      console.log(totalQuestions+"   ????????????totalQuestions????"); // Output: 3
+      console.log(timerEnabled+"   vvvtimerEnabled????"); // Output: 3
 
   if (timerEnabled == true) {
         console.log("     m????????????timerEnabled????"); // Output: 3
