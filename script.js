@@ -243,17 +243,17 @@ function calculateFeedback() {
 
 // Function to start the timer
 function startTimer() {
+        if (timerEnabled) {
   timer = setInterval(function() {
     totalTime--;
     if (totalTime <= 0) {
       endQuiz();
     }
-      if (timerEnabled) {
     document.getElementById("timer").innerHTML = totalTime;
-      }
   }, 1000);
-}
 
+        }
+}
 
 
 // Event Listeners
