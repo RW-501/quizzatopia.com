@@ -65,12 +65,7 @@ function startQuiz() {
   showQuestion();
 
   setQuizTime;
-  if (timerEnabled && !countdownPerQuestion) { // start timer only if countdown is for the whole test and timer is enabled
-    startTimer();
-    totalTime = questionTime * totalQuestions;
-  } else {
-    totalTime = questionTime;
-  }
+
   answeredQuestions = [];
   updateProgressBar(currentQuestion);
   
