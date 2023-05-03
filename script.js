@@ -21,13 +21,20 @@ const questions = [
 ];
 
 // Global Variables
+let questionTime = 30; // senconds
 let currentQuestion = 0;
 let score = 0;
 let quizStarted = false;
 let timer;
-let totalTime = 60; // seconds
+let totalTime = 3000; //seconds 
 let answeredQuestions = [];
 let countdownPerQuestion = false; // set to true if the countdown should happen for each question
+
+  if (!countdownPerQuestion) { // start timer only if countdown is for the whole test
+let totalTime = questionTime; 
+  }else{
+    totalTime = questionTime; 
+  }
 
 let totalQuestions = questions.length;
 
@@ -126,6 +133,11 @@ function enableAnswerButtons() {
     answerButtons[i].addEventListener("click", checkAnswer);
     answerButtons[i].classList.remove("disabled", "correct", "incorrect");
   }
+         if (countdownPerQuestion) { // add time bonus if the countdown was per question
+skipQuestion();
+  }else{
+          endQuiz();
+  }
 }
 
 // Function to show the next question
@@ -184,10 +196,7 @@ function calculateFeedback() {
     feedback = "Keep practicing. You'll get there!";
   }
 
-  if (countdownPerQuestion) { // add time bonus if the countdown was per question
-    const timeBonus = calculateTimeBonus();
-    feedback += ` You finished with ${timeBonus} seconds left!`;
-  }
+
 
   return feedback;
 }
@@ -200,17 +209,15 @@ function startTimer() {
     totalTime--;
     timeDisplay.innerHTML = totalTime;
     if (totalTime === 0) {
-      endQuiz();
+        if (countdownPerQuestion) { // add time bonus if the countdown was per question
+skipQuestion();
+  }else{
+          endQuiz();
+  }
     }
   }, 1000);
 }
 
-// Function to calculate the time bonus for finishing the quiz before the timer ends
-function calculateTimeBonus() {
-  const timeLeft = totalTime;
-  const timeBonus = timeLeft * 2; // 2 points per second
-  return timeBonus;
-}
 
 // Event Listeners
 document.getElementById("start-btn").addEventListener("click", startQuiz);
