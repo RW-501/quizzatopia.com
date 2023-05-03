@@ -121,14 +121,14 @@ function endQuiz() {
 
 // Function to start the timer
 function startTimer() {
-let timeLeft = totalTime;
-timer = setInterval(() => {
-document.getElementById("timer").innerHTML = ${timeLeft} seconds;
-timeLeft--;
-if (timeLeft < 0) {
-endQuiz();
-}
-}, 1000);
+  let timeLeft = totalTime;
+  timer = setInterval(() => {
+    document.getElementById("timer").innerHTML = `${timeLeft} seconds`;
+    timeLeft--;
+    if (timeLeft < 0) {
+      endQuiz();
+    }
+  }, 1000);
 }
 
 // Event Listeners
