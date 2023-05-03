@@ -38,6 +38,7 @@ let timerEnabled = true;
 function setQuizTime() {
   const quizTimeInput = document.getElementById("quiz-time");
   const newQuizTime = parseInt(quizTimeInput.value);
+  totalQuestions = questions.length;
   if (!isNaN(newQuizTime)) {
     questionTime = newQuizTime;
     if (!countdownPerQuestion) {
