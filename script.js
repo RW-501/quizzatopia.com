@@ -44,7 +44,7 @@ function setQuizTime() {
 
   if (timerEnabled) {
         console.log("????????????timerEnabled????"); // Output: 3
-
+    questionTime = newQuizTime;
     totalTime = newQuizTime;
    
       startTimer();
@@ -261,7 +261,13 @@ function startTimer() {
     let seconds = totalTime % 60;
     timerEl.innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
       if (totalTime <= 0) {
+          if (countdownPerQuestion && timerEnabled) { // start timer only if countdown is per question and timer is enabled
+   
+     totalTime = questionTime;
+    skipQuestion();
+  }else{
       endQuiz();
+  }
     }
   }, 1000);
 
