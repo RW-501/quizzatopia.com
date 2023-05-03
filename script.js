@@ -29,7 +29,7 @@ let totalTime = 60; // seconds
 let answeredQuestions = [];
 let countdownPerQuestion = false; // set to true if the countdown should happen for each question
 
-const totalQuestions = questions.length;
+let totalQuestions = questions.length;
 
 // Functions
 
@@ -86,9 +86,7 @@ function checkAnswer() {
     } else {
       options[i].classList.add('incorrect');
     }
-          // update the progress bar
-  updateProgressBar(currentQuestion);
-    console.log(currentQuestion+"????????????currentQuestion????"); // Output: 3
+      
 
   }
 
@@ -140,7 +138,26 @@ function nextQuestion() {
   } else {
     endQuiz();
   }
+  updateProgressBar(currentQuestion);
 }
+
+// Function to skip the current question
+function skipQuestion() {
+  currentQuestion++;
+
+  if (currentQuestion < totalQuestions) {
+    enableAnswerButtons();
+    showQuestion();
+    document.getElementById("next-btn").classList.add("d-none");
+  } else {
+    endQuiz();
+  }
+  updateProgressBar(currentQuestion);
+}
+
+    // update the progress bar
+  updateProgressBar(currentQuestion);
+    console.log(currentQuestion+"????????????currentQuestion????"); // Output: 3
 
 // Function to end the quiz
 function endQuiz() {
