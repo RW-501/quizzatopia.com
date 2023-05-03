@@ -1,5 +1,8 @@
 // Quiz Questions
-const questions = [  {    question: "What is the capital of France?",    options: ["Berlin", "Paris", "Rome", "Madrid"],
+const questions = [
+  {
+    question: "What is the capital of France?",
+    options: ["Berlin", "Paris", "Rome", "Madrid"],
     answer: "Paris",
     explanation: "Paris is the capital of France"
   },
@@ -24,7 +27,7 @@ let quizStarted = false;
 let timer;
 const totalTime = 60; // seconds
 
-var totalQuestions = questions.length;
+const totalQuestions = questions.length;
 
 console.log(totalQuestions); // Output: 3
 
@@ -32,7 +35,7 @@ console.log(totalQuestions); // Output: 3
 
 // Function to start the quiz
 function startQuiz() {
-    console.log("?????????mm???????????????"); // Output: 3
+  console.log("?????????mm???????????????"); // Output: 3
 
   quizStarted = true;
   document.getElementById("start-btn").classList.add("d-none");
@@ -52,19 +55,18 @@ function showQuestion() {
     answerButtons[i].addEventListener("click", checkAnswer);
   }
   document.getElementById("explanation").innerHTML = "";
-    
 }
 
 // Function to check the user's answer
 function checkAnswer() {
-       const selectedOption = this;
+  const selectedOption = this;
 
-    const optionContainers = document.querySelectorAll("#optionContainers button.answer-option");
+  const optionContainers = document.querySelectorAll("#optionContainers button.answer-option");
   const selectedAnswer = selectedOption.innerHTML;
-  const questionObj = questions[currentQuestion];
+  let questionObj = questions[currentQuestion];
   const options = optionContainers[currentQuestion].children;
   const explanation = questionObj.explanation;
-  
+
   for (let i = 0; i < options.length; i++) {
     options[i].classList.add('disabled');
     if (options[i].innerHTML === questionObj.answer) {
@@ -73,33 +75,28 @@ function checkAnswer() {
       options[i].classList.add('incorrect');
     }
   }
-  
+
   if (selectedAnswer === questionObj.answer) {
     selectedOption.classList.add('correct');
     score++;
   } else {
     selectedOption.classList.add('incorrect');
   }
-    
-  const answer = this.innerHTML;
-   questionObj = questions[currentQuestion];
-  if (answer === questionObj.answer) {
-    score++;
-  }
- 
+
   showExplanation(questionObj.explanation);
 }
 
-
-
-
-
 // Function to show the explanation for the current question
 function showExplanation(explanation) {
+      console.log("Here's why that's incorrect:");
+  console.log(explanation);
   document.getElementById("explanation").innerHTML = explanation;
   disableAnswerButtons();
   document.getElementById("next-btn").classList.remove("d-none");
 }
+
+// Function to disable answer buttons after
+
 
 // Function to disable answer buttons after user answers
 function disableAnswerButtons() {
@@ -154,14 +151,14 @@ function skipQuestion() {
   updateProgressBar(currentQuestion);
 }
 
-function clearAnswers(){
-      for (let i = 0; i < options.length; i++) {
-      options[i].classList.remove('correct');
-  
-      options[i].classList.remove('incorrect');
-    }
+function clearAnswers() {
+  const optionContainers = document.querySelectorAll("#optionContainers button.answer-option");
+  for (let i = 0; i < optionContainers.length; i++) {
+    optionContainers[i].classList.remove('correct');
+    optionContainers[i].classList.remove('incorrect');
   }
-    
+}
+
 
 
 
