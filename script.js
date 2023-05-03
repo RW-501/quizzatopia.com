@@ -112,11 +112,11 @@ function skipQuestion() {
 
 // Function to end the quiz
 function endQuiz() {
-clearInterval(timer);
-quizStarted = false;
-document.getElementById("quiz-container").classList.add("d-none");
-document.getElementById("end-container").classList.remove("d-none");
-document.getElementById("final-score").innerHTML = ${score} out of ${questions.length};
+  clearInterval(timer);
+  quizStarted = false;
+  document.getElementById("quiz-container").classList.add("d-none");
+  document.getElementById("end-container").classList.remove("d-none");
+  document.getElementById("final-score").innerHTML = `${score} out of ${questions.length}`;
 }
 
 // Function to start the timer
