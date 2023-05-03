@@ -25,8 +25,8 @@ let currentQuestion = 0;
 let score = 0;
 let quizStarted = false;
 let timer;
-const totalTime = 60; // seconds
-
+let totalTime = 60; // seconds
+let totalQuestions;
 const totalQuestions = questions.length;
 
 console.log(totalQuestions); // Output: 3
@@ -42,6 +42,9 @@ function startQuiz() {
   document.getElementById("quiz-container").classList.remove("d-none");
   showQuestion();
   startTimer();
+  // Get the total number of questions
+ totalQuestions = document.querySelectorAll('.quiz-question').length;
+console.log(totalQuestions+"?????????????totalQuestions???????????"); // Output: 3
 }
 
 // Function to show the current question
@@ -189,9 +192,7 @@ function startTimer() {
 // Get the progress bar element
 var progressBar = document.getElementById('progress-bar');
 
-// Get the total number of questions
- totalQuestions = document.querySelectorAll('.quiz-question').length;
-console.log(totalQuestions+"?????????????totalQuestions???????????"); // Output: 3
+
 
 // Update the progress bar
 function updateProgressBar(currentQuestion) {
