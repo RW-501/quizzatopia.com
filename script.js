@@ -26,25 +26,21 @@ let score = 0;
 let quizStarted = false;
 let timer;
 let totalTime = 60; // seconds
+let answeredQuestions = [];
 
 const totalQuestions = questions.length;
-
-console.log(totalQuestions); // Output: 3
 
 // Functions
 
 // Function to start the quiz
 function startQuiz() {
-  console.log("?????????mm???????????????"); // Output: 3
-
   quizStarted = true;
   document.getElementById("start-btn").classList.add("d-none");
   document.getElementById("quiz-container").classList.remove("d-none");
   showQuestion();
   startTimer();
   // Get the total number of questions
- totalQuestions = document.querySelectorAll('.quiz-question').length;
-console.log(totalQuestions+"?????????????totalQuestions???????????"); // Output: 3
+  totalQuestions = document.querySelectorAll('.quiz-question').length;
 }
 
 // Function to show the current question
@@ -66,7 +62,7 @@ function checkAnswer() {
 
   const optionContainers = document.querySelectorAll("#optionContainers button.answer-option");
   const selectedAnswer = selectedOption.innerHTML;
-  let questionObj = questions[currentQuestion];
+  const questionObj = questions[currentQuestion];
   const options = optionContainers[currentQuestion].children;
   const explanation = questionObj.explanation;
 
@@ -82,8 +78,10 @@ function checkAnswer() {
   if (selectedAnswer === questionObj.answer) {
     selectedOption.classList.add('correct');
     score++;
+    answeredQuestions.push(true);
   } else {
     selectedOption.classList.add('incorrect');
+    answeredQuestions.push(false);
   }
 
   showExplanation(questionObj.explanation);
@@ -91,15 +89,10 @@ function checkAnswer() {
 
 // Function to show the explanation for the current question
 function showExplanation(explanation) {
-      console.log("Here's why that's incorrect:");
-  console.log(explanation);
   document.getElementById("explanation").innerHTML = explanation;
   disableAnswerButtons();
   document.getElementById("next-btn").classList.remove("d-none");
 }
-
-// Function to disable answer buttons after
-
 
 // Function to disable answer buttons after user answers
 function disableAnswerButtons() {
@@ -113,112 +106,55 @@ function disableAnswerButtons() {
 // Function to enable answer buttons for next question
 function enableAnswerButtons() {
   const answerButtons = document.getElementsByClassName("answer-option");
-  for (let i = 0; i < answerButtons.length; i++) {
-    answerButtons[i].addEventListener("click", checkAnswer);
-    answerButtons[i].classList.remove("disabled");
-  }
+  for (let i= 0; i < answerButtons.length; i++) {
+answerButtons[i].addEventListener("click", checkAnswer);
+answerButtons[i].classList.remove("disabled", "correct", "incorrect");
+}
 }
 
-// Function to go to the next question
+// Function to move to the next question
 function nextQuestion() {
-  currentQuestion++;
-  if (currentQuestion === questions.length) {
-    endQuiz();
-  } else {
-    showQuestion();
-    enableAnswerButtons();
-    document.getElementById("next-btn").classList.add("d-none");
-    document.getElementById("skip-btn").classList.remove("d-none");
-  }
-        clearAnswers();
-
-      // update the progress bar
-  updateProgressBar(currentQuestion);
-    console.log(currentQuestion+"????????????currentQuestion????"); // Output: 3
-
+currentQuestion++;
+if (currentQuestion < totalQuestions) {
+enableAnswerButtons();
+showQuestion();
+document.getElementById("next-btn").classList.add("d-none");
+} else {
+endQuiz();
 }
-
-// Function to skip the current question
-function skipQuestion() {
-  currentQuestion++;
-  if (currentQuestion === questions.length) {
-    endQuiz();
-  } else {
-    showQuestion();
-    enableAnswerButtons();
-    document.getElementById("next-btn").classList.add("d-none");
-    document.getElementById("skip-btn").classList.remove("d-none");
-  }
-    clearAnswers();
-      // update the progress bar
-  updateProgressBar(currentQuestion);
-}
-
-function clearAnswers() {
-  const optionContainers = document.querySelectorAll("#optionContainers button.answer-option");
-  for (let i = 0; i < optionContainers.length; i++) {
-    optionContainers[i].classList.remove('correct');
-    optionContainers[i].classList.remove('incorrect');
-  }
-}
-
-
-
-
-// Function to end the quiz
-function endQuiz() {
-  clearInterval(timer);
-  quizStarted = false;
-  document.getElementById("quiz-container").classList.add("d-none");
-  document.getElementById("result-container").classList.remove("d-none");
-  document.getElementById("final-score").innerHTML = `${score} out of ${questions.length}`;
-    // Call the showFinalScore function with the final score when the quiz is completed
-showFinalScore();
-
 }
 
 // Function to start the timer
 function startTimer() {
-  let timeLeft = totalTime;
-  timer = setInterval(() => {
-    document.getElementById("timer").innerHTML = `${timeLeft} seconds`;
-    timeLeft--;
-    if (timeLeft < 0) {
-      endQuiz();
-    }
-  }, 1000);
+timer = setInterval(updateTimer, 1000);
 }
 
-// Get the progress bar element
-var progressBar = document.getElementById('progress-bar');
-
-
-
-// Update the progress bar
-function updateProgressBar(currentQuestion) {
-  var percentage = (currentQuestion / totalQuestions) * 100;
-  progressBar.style.width = percentage + '%';
+// Function to update the timer
+function updateTimer() {
+totalTime--;
+document.getElementById("timer").innerHTML = Time Remaining: ${totalTime}s;
+if (totalTime <= 0) {
+endQuiz();
+}
 }
 
-// Select the final score pop-up and close button elements
-const resultcontainer = document.getElementById('result-container');
-const closePopupBtn = document.getElementById('close-popup-btn');
-
-// Function to show the final score pop-up and set the final score text
-function showFinalScore() {
-
-  // Show the final score pop-up
-  resultcontainer.style.display = 'block';
+// Function to end the quiz
+function endQuiz() {
+clearInterval(timer);
+document.getElementById("quiz-container").classList.add("d-none");
+document.getElementById("end-container").classList.remove("d-none");
+document.getElementById("score").innerHTML = You scored ${score} out of ${totalQuestions}!;
+document.getElementById("accuracy").innerHTML = Accuracy: ${(score / totalQuestions) * 100}%;
+document.getElementById("time-taken").innerHTML = Time taken: ${60 - totalTime}s;
 }
-
-
-
-
 
 // Event Listeners
 document.getElementById("start-btn").addEventListener("click", startQuiz);
 document.getElementById("next-btn").addEventListener("click", nextQuestion);
-document.getElementById("skip-btn").addEventListener("click", skipQuestion);
-document.getElementById("retake-btn").addEventListener("click", () => {
-location.reload();
-});
+
+
+
+
+
+
+
