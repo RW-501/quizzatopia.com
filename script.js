@@ -45,11 +45,10 @@ function setQuizTime() {
   if (timerEnabled) {
         console.log("????????????timerEnabled????"); // Output: 3
 
-    questionTime = newQuizTime;
-    if (countdownPerQuestion == false) {
-      totalTime = questionTime;
+    totalTime = newQuizTime;
+   
       startTimer();
-    }
+    
   }
 }
 
