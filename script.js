@@ -24,6 +24,10 @@ let quizStarted = false;
 let timer;
 const totalTime = 60; // seconds
 
+const totalQuestions = questions.length;
+
+console.log(totalQuestions); // Output: 3
+
 // Functions
 
 // Function to start the quiz
