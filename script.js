@@ -58,8 +58,8 @@ function showQuestion() {
 // Function to check the user's answer
 function checkAnswer() {
        const selectedOption = this;
-    
-    const optionContainers = document.getElementById("optionContainers");
+
+    const optionContainers = document.querySelectorAll("#optionContainers button.answer-option");
   const selectedAnswer = selectedOption.innerHTML;
   const questionObj = questions[currentQuestion];
   const options = optionContainers[currentQuestion].children;
