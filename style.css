@@ -143,7 +143,7 @@ nav a:hover {
 
 /* Timer */
 #timer {
-  display: inline-block;
+  display: revert;
   font-size: 16px;
   padding: 10px 20px;
   margin-top: 10px;
