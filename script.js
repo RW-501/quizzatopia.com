@@ -119,7 +119,7 @@ var progressBar = document.getElementById('progress-bar');
 
 // Update the progress bar
 function updateProgressBar(currentQuestion) {
-  var percentage = (currentQuestion / totalQuestions) * 100;
+  var percentage = (currentQuestion + 1 / totalQuestions) * 100;
   progressBar.style.width = percentage + '%';
         console.log(currentQuestion+"updateProgressBar??????????currentQuestion????"); // Output: 3
 
