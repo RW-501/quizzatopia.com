@@ -185,7 +185,8 @@ nav a:hover {
   display: inline-block;
   height: 20px;
   margin-top: 20px;
-  width: 80%;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .progress-bar-fill {
