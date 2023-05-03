@@ -256,7 +256,11 @@ function startTimer() {
   } else {
     timerEl.style.color = "black";
   }
-    timerEl.innerHTML = totalTime;
+        console.log(totalTime+"    ????????????totalTime????  "); // Output: 3
+
+        let minutes = Math.floor(totalTime / 60);
+    let seconds = totalTime % 60;
+    timerEl.innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
       if (totalTime <= 0) {
       endQuiz();
     }
