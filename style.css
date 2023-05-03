@@ -103,23 +103,7 @@ nav a:hover {
   background-color: #555;
 }
 
-.timer-container {
-  display: inline-block;
-  background-color: #f8f8f8;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-  padding: 10px 20px;
-  margin-top: 10px;
-}
 
-.timer-container span {
-  color: #333;
-}
-
-.timer-container.timer-expiring span {
-  color: red;
-}
 
 /* Result styles */
 #result-container {
@@ -160,11 +144,19 @@ nav a:hover {
 
 /* Timer */
 .timer {
-  font-size: 30px;
-  text-align: center;
-  margin-top: 20px;
-  color: #f00;
-  font-weight: bold;
+  display: inline-block;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 10px;
+
+  color: #333;
+}
+
+.timer-container.timer-expiring span {
+  color: red;
 }
 
 /* Answer text */
@@ -184,6 +176,12 @@ nav a:hover {
 }
 
 /* Progress bar */
+
+progress-bar-container{
+  display:block;
+  
+}
+
 .progress-bar {
   background-color: #ddd;
   border-radius: 10px;
