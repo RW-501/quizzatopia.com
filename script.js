@@ -32,6 +32,8 @@ console.log(totalQuestions); // Output: 3
 
 // Function to start the quiz
 function startQuiz() {
+    console.log("?????????mm???????????????"); // Output: 3
+
   quizStarted = true;
   document.getElementById("start-btn").classList.add("d-none");
   document.getElementById("quiz-container").classList.remove("d-none");
