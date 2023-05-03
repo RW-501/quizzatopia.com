@@ -21,14 +21,14 @@ const questions = [
 ];
 
 // Global Variables
-let questionTime = 30; // seconds
+let questionTime ; // seconds
 let currentQuestion = 0;
 let score = 0;
 let quizStarted = false;
 let timer;
 let answeredQuestions = [];
 let countdownPerQuestion = false; // set to true if the countdown should happen for each question
-let totalTime = 3000; // seconds
+let totalTime ; // seconds
 let totalQuestions = questions.length;
 let timerEnabled = true;
 
@@ -42,7 +42,7 @@ function setQuizTime() {
   totalQuestions = questions.length;
       console.log(totalQuestions+"????????????totalQuestions????"); // Output: 3
 
-  if (!isNaN(newQuizTime)) {
+  if (timerEnabled) {
     questionTime = newQuizTime;
     if (!countdownPerQuestion) {
       totalTime = questionTime;
