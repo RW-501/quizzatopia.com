@@ -30,7 +30,7 @@ let answeredQuestions = [];
 let countdownPerQuestion = false; // set to true if the countdown should happen for each question
 let totalTime ; // seconds
 let totalQuestions = questions.length;
-let timerEnabled = true;
+let timerEnabled = false;
 
 // Functions
     console.log(totalQuestions+"????????????totalQuestions????"); // Output: 3
