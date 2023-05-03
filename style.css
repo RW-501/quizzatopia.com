@@ -106,18 +106,18 @@ nav a:hover {
 
 
 /* Result styles */
-#result-container {
+#end-container {
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
   margin-top: 50px;
 }
 
-#result-container h2 {
+#end-container h2 {
   margin-bottom: 20px;
 }
 
-#result-container p {
+#end-container p {
   font-size: 18px;
   color: #333;
   margin-bottom: 10px;
