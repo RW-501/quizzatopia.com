@@ -24,7 +24,7 @@ let quizStarted = false;
 let timer;
 const totalTime = 60; // seconds
 
-const totalQuestions = questions.length;
+var totalQuestions = questions.length;
 
 console.log(totalQuestions); // Output: 3
 
