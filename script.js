@@ -1,234 +1,140 @@
-// quiz data
-const quizData = [
-  {
-    question: "What is the capital of France?",
-    answers: [
-      { text: "New York", correct: false },
-      { text: "London", correct: false },
-      { text: "Paris", correct: true },
-      { text: "Berlin", correct: false }
-    ],
-    explanation: "Paris is the capital of France."
+// Quiz Questions
+const questions = [  {    question: "What is the capital of France?",    options: ["Berlin", "Paris", "Rome", "Madrid"],
+    answer: "Paris",
+    explanation: "Paris is the capital of France"
   },
   {
-    question: "What is the tallest mammal?",
-    answers: [
-      { text: "Giraffe", correct: true },
-      { text: "Elephant", correct: false },
-      { text: "Horse", correct: false },
-      { text: "Kangaroo", correct: false }
-    ],
-    explanation: "The giraffe is the tallest mammal in the world."
+    question: "What is the largest planet in our solar system?",
+    options: ["Mars", "Jupiter", "Earth", "Venus"],
+    answer: "Jupiter",
+    explanation: "Jupiter is the largest planet in our solar system"
   },
-  // add more question objects here
+  {
+    question: "What is the smallest country in the world?",
+    options: ["Monaco", "Vatican City", "San Marino", "Liechtenstein"],
+    answer: "Vatican City",
+    explanation: "Vatican City is the smallest country in the world"
+  }
 ];
 
-// variables
-let currentQuestionIndex = 0;
+// Global Variables
+let currentQuestion = 0;
 let score = 0;
+let quizStarted = false;
+let timer;
+const totalTime = 60; // seconds
 
-// DOM elements
-const quizContainer = document.getElementById("quiz-container");
-const questionElement = document.getElementById("question");
-const answerElements = document.querySelectorAll(".answer-option");
-const explanationElement = document.getElementById("explanation");
-const nextButton = document.getElementById("next-btn");
-const skipButton = document.getElementById("skip-btn");
-const resultContainer = document.getElementById("result-container");
-const resultText = document.getElementById("result-text");
-const retakeButton = document.getElementById("retake-btn");
-const otherQuizButtons = document.querySelectorAll(".other-quiz-btn");
+// Functions
 
-// function to initialize quiz
-function initializeQuiz() {
+// Function to start the quiz
+function startQuiz() {
+  quizStarted = true;
+  document.getElementById("start-btn").classList.add("d-none");
+  document.getElementById("quiz-container").classList.remove("d-none");
   showQuestion();
-  hideExplanation();
-  hideResult();
+  startTimer();
 }
 
-// function to show question
+// Function to show the current question
 function showQuestion() {
-  const currentQuestion = quizData[currentQuestionIndex];
-  questionElement.innerText = currentQuestion.question;
-  answerElements.forEach((answerElement, index) => {
-    answerElement.innerText = currentQuestion.answers[index].text;
-    answerElement.removeEventListener("click", handleAnswerButtonClick);
-    answerElement.addEventListener("click", handleAnswerButtonClick);
-  });
+  const questionObj = questions[currentQuestion];
+  document.getElementById("question").innerHTML = questionObj.question;
+  const options = questionObj.options;
+  const answerButtons = document.getElementsByClassName("answer-option");
+  for (let i = 0; i < options.length; i++) {
+    answerButtons[i].innerHTML = options[i];
+    answerButtons[i].addEventListener("click", checkAnswer);
+  }
+  document.getElementById("explanation").innerHTML = "";
 }
 
-// function to handle answer
-function handleAnswer(event, index) {
-  const selectedAnswer = event.target.innerText;
-  const currentQuestion = quizData[currentQuestionIndex];
-  if (selectedAnswer === currentQuestion.answers[index].text) {
+// Function to check the user's answer
+function checkAnswer() {
+  const answer = this.innerHTML;
+  const questionObj = questions[currentQuestion];
+  if (answer === questionObj.answer) {
     score++;
   }
-  showExplanation();
+  showExplanation(questionObj.explanation);
+}
+
+// Function to show the explanation for the current question
+function showExplanation(explanation) {
+  document.getElementById("explanation").innerHTML = explanation;
   disableAnswerButtons();
-  showNextButton();
+  document.getElementById("next-btn").classList.remove("d-none");
 }
 
-// function to show explanation
-function showExplanation() {
-  const explanation = document.getElementById("explanation");
-  explanation.innerText = quizData[currentQuestionIndex].explanation;
-  explanation.style.display = "block";
-}
-
-// function to hide explanation
-function hideExplanation() {
-  const explanation = document.getElementById("explanation");
-  explanation.style.display = "none";
-}
-
-// function to show next button
-function showNextButton() {
-  const nextButton = document.getElementById("next-btn");
-  nextButton.style.display = "block";
-}
-
-// function to hide next button
-function hideNextButton() {
-  const nextButton = document.getElementById("next-btn");
-  nextButton.style.display = "none";
-}
-
-// function to show skip button
-function showSkipButton() {
-  const skipButton = document.getElementById('skip-btn');
-  skipButton.style.display = 'block';
-}
-
-// function to hide skip button
-function hideSkipButton() {
-  const skipButton = document.getElementById('skip-btn');
-  skipButton.style.display = 'none';
-}
-
-// function to increment score
-function incrementScore() {
-  score++;
-}
-
-// function to handle retake button click
-function handleRetakeButtonClick() {
-  currentQuestionIndex = 0;
-  score = 0;
-  hideResult();
-  showQuestion();
-}
-
-// function to show result
-function showResult() {
-  const percentage = (score / quizData.length) * 100;
-  resultText.innerText = `You got ${score} out of ${quizData.length} questions correct (${percentage}%).`;
-  resultContainer.style.display = "block";
-}
-
-// function to hide result
-function hideResult() {
-  resultContainer.style.display = "none";
-}
-
-// function to handle other quiz button click
-function handleOtherQuizButtonClick() {
-  window.location.reload();
-}
-
-
-// function to handle skip button click
-function handleSkipButtonClick() {
-  currentQuestionIndex++;
-  if (currentQuestionIndex < quizData.length) {
-    showQuestion();
-    hideExplanation();
-    hideSkipButton();
-    hideNextButton();
-    enableAnswerButtons();
-  } else {
-    showResult();
-    hideExplanation();
-    hideSkipButton();
-    hideNextButton();
-  }
-}
-
-// function to enable answer buttons
-function enableAnswerButtons() {
-  answerElements.forEach(answerElement => {
-    answerElement.disabled = false;
-  });
-}
-
-// function to disable answer buttons
+// Function to disable answer buttons after user answers
 function disableAnswerButtons() {
-  answerElements.forEach(answerElement => {
-    answerElement.disabled = true;
-  });
-}
-
-// function to handle answer button click
-function handleAnswerButtonClick(event) {
-  const index = Array.from(answerElements).indexOf(event.target);
-  handleAnswer(event, index);
-}
-
-// function to handle next button click
-function handleNextButtonClick() {
-  currentQuestionIndex++;
-  if (currentQuestionIndex < quizData.length) {
-    showQuestion();
-    hideExplanation();
-    hideNextButton();
-    hideSkipButton();
-    enableAnswerButtons();
-  } else {
-    showResult();
-    hideExplanation();
-    hideNextButton();
-    hideSkipButton();
+  const answerButtons = document.getElementsByClassName("answer-option");
+  for (let i = 0; i < answerButtons.length; i++) {
+    answerButtons[i].removeEventListener("click", checkAnswer);
+    answerButtons[i].classList.add("disabled");
   }
 }
 
-// function to hide question container
-function hideQuestionContainer() {
-  quizContainer.style.display = 'none';
+// Function to enable answer buttons for next question
+function enableAnswerButtons() {
+  const answerButtons = document.getElementsByClassName("answer-option");
+  for (let i = 0; i < answerButtons.length; i++) {
+    answerButtons[i].addEventListener("click", checkAnswer);
+    answerButtons[i].classList.remove("disabled");
+  }
 }
 
-// function to show question container
-function showQuestionContainer() {
-  quizContainer.style.display = 'block';
+// Function to go to the next question
+function nextQuestion() {
+  currentQuestion++;
+  if (currentQuestion === questions.length) {
+    endQuiz();
+  } else {
+    showQuestion();
+    enableAnswerButtons();
+    document.getElementById("next-btn").classList.add("d-none");
+    document.getElementById("skip-btn").classList.remove("d-none");
+  }
 }
 
-// function to handle start button click
-function handleStartButtonClick() {
-  showQuestionContainer();
-  initializeQuiz();
+// Function to skip the current question
+function skipQuestion() {
+  currentQuestion++;
+  if (currentQuestion === questions.length) {
+    endQuiz();
+  } else {
+    showQuestion();
+    enableAnswerButtons();
+    document.getElementById("next-btn").classList.add("d-none");
+    document.getElementById("skip-btn").classList.remove("d-none");
+  }
 }
 
-// event listener for start button
-document.getElementById('start-btn').addEventListener('click', handleStartButtonClick);
 
+// Function to end the quiz
+function endQuiz() {
+clearInterval(timer);
+quizStarted = false;
+document.getElementById("quiz-container").classList.add("d-none");
+document.getElementById("end-container").classList.remove("d-none");
+document.getElementById("final-score").innerHTML = ${score} out of ${questions.length};
+}
 
-// event listeners
-nextButton.addEventListener("click", handleNextButtonClick);
-skipButton.addEventListener("click", handleSkipButtonClick);
-retakeButton.addEventListener("click", handleRetakeButtonClick);
-otherQuizButtons.forEach((button) => {
-  button.addEventListener("click", handleOtherQuizButtonClick);
+// Function to start the timer
+function startTimer() {
+let timeLeft = totalTime;
+timer = setInterval(() => {
+document.getElementById("timer").innerHTML = ${timeLeft} seconds;
+timeLeft--;
+if (timeLeft < 0) {
+endQuiz();
+}
+}, 1000);
+}
+
+// Event Listeners
+document.getElementById("start-btn").addEventListener("click", startQuiz);
+document.getElementById("next-btn").addEventListener("click", nextQuestion);
+document.getElementById("skip-btn").addEventListener("click", skipQuestion);
+document.getElementById("restart-btn").addEventListener("click", () => {
+location.reload();
 });
-
-// initialize quiz
-initializeQuiz();
-
-
-
-
-
-
-
-
-
-
-
