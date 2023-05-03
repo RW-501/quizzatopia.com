@@ -1,18 +1,34 @@
+/* Reset styles */
 * {
   user-select: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+html {
+  height: 100%;
 }
 
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
+.container {
+  flex: 1;
+}
+
+/* Navigation styles */
 nav {
   background-color: #333;
   color: #fff;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 10px;
 }
 
@@ -27,11 +43,16 @@ nav a:hover {
   color: #f8f8f8;
 }
 
+/* Quiz styles */
 #quiz-container {
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
   margin-top: 50px;
+}
+
+#quiz-container h1 {
+  margin-bottom: 20px;
 }
 
 #quiz-container ul {
@@ -80,6 +101,25 @@ nav a:hover {
   background-color: #555;
 }
 
+.timer-container {
+  display: inline-block;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.timer-container span {
+  color: #333;
+}
+
+.timer-container.timer-expiring span {
+  color: red;
+}
+
+/* Result styles */
 #result-container {
   display: none;
   max-width: 600px;
@@ -90,6 +130,12 @@ nav a:hover {
 
 #result-container h2 {
   margin-bottom: 20px;
+}
+
+#result-container p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
 }
 
 #retake-btn,
@@ -105,8 +151,53 @@ nav a:hover {
   padding: 10px 20px;
   transition: background-color 0.3s ease;
 }
-
 #retake-btn:hover,
 .other-quiz-btn:hover {
   background-color: #555;
+}
+
+/* Timer */
+.timer {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.timer span {
+  color: #f00;
+  font-weight: bold;
+}
+
+/* Answer text */
+.answer-text {
+  color: #333;
+  font-size: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.answer-text.correct {
+  color: #0a0;
+}
+
+.answer-text.incorrect {
+  color: #f00;
+}
+
+/* Progress bar */
+.progress-bar {
+  background-color: #ddd;
+  border-radius: 10px;
+  display: inline-block;
+  height: 20px;
+  margin-top: 20px;
+  width: 80%;
+}
+
+.progress-bar-fill {
+  background-color: #333;
+  border-radius: 10px;
+  height: 20px;
+  transition: width 0.3s ease;
+  width: 0%;
 }
