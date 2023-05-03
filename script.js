@@ -248,6 +248,9 @@ function calculateFeedback() {
 
 // Function to start the timer
 function startTimer() {
+          console.log(timerEnabled+"    timerEnabled????777???????????timerEnabled????  "); // Output: 3
+        console.log(totalTime+"    777totalTime777???????????totalTime????  "); // Output: 3
+
         if (timerEnabled == true) {
   timer = setInterval(function() {
     totalTime--;
@@ -264,7 +267,6 @@ function startTimer() {
     timerEl.innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
       if (totalTime <= 0) {
           if (countdownPerQuestion && timerEnabled) { // start timer only if countdown is per question and timer is enabled
-   
      totalTime = questionTime;
     skipQuestion();
   }else{
