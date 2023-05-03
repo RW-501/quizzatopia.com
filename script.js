@@ -209,7 +209,7 @@ function endQuiz() {
   quizStarted = false;
   const percentageScore = Math.round((score / totalQuestions) * 100);
   const resultMsg = `You scored ${score}/${totalQuestions} (${percentageScore}%)`;
-  document.getElementById("result").innerHTML = resultMsg;
+  document.getElementById("score").innerHTML = resultMsg;
   document.getElementById("quiz-container").classList.add("d-none");
   document.getElementById("end-container").classList.remove("d-none");
 }
