@@ -43,7 +43,8 @@ function startQuiz() {
     startTimer();
   }
     // Get the total number of questions
- totalQuestions = document.querySelectorAll('.quiz-question').length;
+totalQuestions = questions.length;
+  //totalQuestions = document.querySelectorAll('.quiz-question').length;
 console.log(totalQuestions+"?????????????totalQuestions???????????"); // Output: 3
 }
 
