@@ -214,6 +214,10 @@ function skipQuestion() {
 function endQuiz() {
   clearInterval(timer);
   quizStarted = false;
+
+    const feedback = calculateFeedback();
+    document.getElementById("feedback").innerHTML = feedback;
+  
   const percentageScore = Math.round((score / totalQuestions) * 100);
   const resultMsg = `You scored ${score}/${totalQuestions} (${percentageScore}%)`;
   document.getElementById("score").innerHTML = resultMsg;
@@ -242,7 +246,9 @@ function startTimer() {
     if (totalTime <= 0) {
       endQuiz();
     }
+      if (timerEnabled) {
     document.getElementById("timer").innerHTML = totalTime;
+      }
   }, 1000);
 }
 
