@@ -256,7 +256,7 @@ function startTimer() {
   } else {
     timerEl.style.color = "black";
   }
-        console.log(totalTime+"    ????????????totalTime????  "); // Output: 3
+        console.log(totalTime+"    777????777???????????totalTime????  "); // Output: 3
 
         let minutes = Math.floor(totalTime / 60);
     let seconds = totalTime % 60;
