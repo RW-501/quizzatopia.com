@@ -40,6 +40,21 @@ let totalQuestions = questions.length;
 
 // Functions
 
+// Function to set quiz time
+function setQuizTime() {
+  const quizTimeInput = document.getElementById("quiz-time");
+  const newQuizTime = parseInt(quizTimeInput.value);
+  if (!isNaN(newQuizTime)) {
+    questionTime = newQuizTime;
+    if (!countdownPerQuestion) {
+      totalTime = questionTime;
+      startTimer();
+    }
+  }
+}
+
+
+
 // Function to start the quiz
 function startQuiz() {
   quizStarted = true;
@@ -66,6 +81,10 @@ function showQuestion() {
     answerButtons[i].addEventListener("click", checkAnswer);
   }
   document.getElementById("explanation").innerHTML = "";
+  if (countdownPerQuestion) {
+    totalTime = questionTime;
+    startTimer();
+  }
 }
 
   // Get the progress bar element
@@ -175,13 +194,12 @@ function skipQuestion() {
 // Function to end the quiz
 function endQuiz() {
   clearInterval(timer);
+  quizStarted = false;
+  const percentageScore = Math.round((score / totalQuestions) * 100);
+  const resultMsg = `You scored ${score}/${totalQuestions} (${percentageScore}%)`;
+  document.getElementById("result").innerHTML = resultMsg;
   document.getElementById("quiz-container").classList.add("d-none");
-  document.getElementById("end-container").classList.remove("d-none");
-
-  // Show score and feedback
-  const feedback = calculateFeedback();
-  document.getElementById("score").innerHTML = `${score} / ${totalQuestions}`;
-  document.getElementById("feedback").innerHTML = feedback;
+  document.getElementById("result-container").classList.remove("d-none");
 }
 
 // Function to calculate the feedback for the quiz taker
@@ -195,24 +213,17 @@ function calculateFeedback() {
   } else {
     feedback = "Keep practicing. You'll get there!";
   }
-
-
-
   return feedback;
 }
 
 // Function to start the timer
 function startTimer() {
-  let time = totalTime;
-  timer = setInterval(() => {
-    let minutes = Math.floor(time / 60);
-    let seconds = time % 60;
-    document.getElementById("timer").innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-    time--;
-    if (time < 0) {
-      clearInterval(timer);
+  timer = setInterval(function() {
+    totalTime--;
+    if (totalTime <= 0) {
       endQuiz();
     }
+    document.getElementById("timer").innerHTML = totalTime;
   }, 1000);
 }
 
