@@ -54,11 +54,6 @@ function setQuizTime() {
 }
 
 
-const countdownCheckbox = document.getElementById("countdown-per-question");
-countdownCheckbox.addEventListener("change", function() {
-  countdownPerQuestion = countdownCheckbox.checked;
-});
-
 
 // Function to start the quiz
 function startQuiz() {
@@ -78,8 +73,7 @@ function startQuiz() {
   }
   answeredQuestions = [];
   updateProgressBar(currentQuestion);
-      console.log(currentQuestion+"999??????????currentQuestion????"); // Output: 3
-    console.log(totalQuestions+"999???????totalQuestions????"); // Output: 3
+  
 
 }
 
@@ -89,7 +83,22 @@ function startQuiz() {
 const timerCheckbox = document.getElementById("timer-checkbox");
 timerCheckbox.addEventListener("change", function () {
   timerEnabled = timerCheckbox.checked;
+          console.log(timerEnabled+"     timerEnabled??????????timerEnabled????     "); // Output: 3
+
 });
+
+
+const countdownCheckbox = document.getElementById("countdown-per-question");
+countdownCheckbox.addEventListener("change", function() {
+  countdownPerQuestion = countdownCheckbox.checked;
+            console.log(countdownPerQuestion+"     countdownPerQuestion??????????countdownPerQuestion????     "); // Output: 3
+
+});
+
+
+
+
+
 
 // Function to show the current question
 function showQuestion() {
