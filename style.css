@@ -77,7 +77,6 @@ nav a:hover {
   width: 100%;
   max-width: 400px;
   color: #292834;
-
 }
 
 .answer-option:hover {
@@ -102,8 +101,6 @@ nav a:hover {
 #skip-btn:hover {
   background-color: #555;
 }
-
-
 
 /* Result styles */
 #end-container {
@@ -136,6 +133,7 @@ nav a:hover {
   padding: 10px 20px;
   transition: background-color 0.3s ease;
 }
+
 #retake-btn:hover,
 .other-quiz-btn:hover {
   background-color: #555;
@@ -147,7 +145,6 @@ nav a:hover {
   font-size: 16px;
   padding: 10px 20px;
   margin-top: 10px;
-
   color: #333;
 }
 
@@ -157,117 +154,52 @@ nav a:hover {
 
 /* Answer text */
 .answer-text {
-  color: #333;
-  font-size: 20px;
-  margin-top: 20px;
-  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
 }
 
-.answer-text.correct {
-  color: #0a0;
-}
-
-.answer-text.incorrect {
-  color: #f00;
-}
-
-/* Progress bar */
-
-.progress-bar-container{
-  display:flex;
-  
-}
-
-
-
-/* Style for correct answer */
-.correct {
-  background-color: green  !important;
-}
-
-/* Style for incorrect answer */
-.incorrect {
-  background-color: red !important;
-}
-
-/* Style for correct answer option */
-.correct::before {
-  content: "\2713"; /* Unicode character for checkmark */
-  color: white;
-  display: inline-block;
-  margin-right: 10px;
-}
-
-/* Style for incorrect answer option */
-.incorrect::before {
-  content: "\2718"; /* Unicode character for cross mark */
-  color: white;
-  display: inline-block;
-  margin-right: 10px;
-}
-
-/* Reset styles for options */
-.options button {
-  background-color: white;
-}
-
-
-.progress-bar {
-  background-color: #ddd;
-  border-radius: 10px;
-  display: inline-block;
-  height: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 100%;
-}
-
-.progress-bar-fill {
-  background-color: #333;
-  border-radius: 10px;
-  height: 20px;
-  transition: width 0.3s ease;
-  width: 0%;
-}
-
-
-#final-score-popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 100;
-  text-align: center;
-}
-
-#final-score-popup h2 {
-  margin-top: 100px;
-  font-size: 30px;
-}
-
-#final-score-popup p {
-  font-size: 24px;
+/* Question text */
+.question-text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
   font-weight: bold;
-  margin-top: 50px;
 }
 
-#close-popup-btn {
-  background-color: #333;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
+/* Form input */
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+}
+
+/* Submit button */
+.submit-button {
   display: inline-block;
-  font-size: 16px;
-  margin-top: 50px;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
 }
 
-#close-popup-btn:hover {
-  background-color: #555;
+.submit-button:hover {
+  background-color: #0069d9;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  margin-bottom: 1rem;
 }
 
