@@ -26,9 +26,9 @@ let currentQuestion = 0;
 let score = 0;
 let quizStarted = false;
 let timer;
-let totalTime = 3000; //seconds 
 let answeredQuestions = [];
 let countdownPerQuestion = false; // set to true if the countdown should happen for each question
+let totalTime = 3000; //seconds 
 
   if (!countdownPerQuestion) { // start timer only if countdown is for the whole test
 let totalTime = questionTime; 
@@ -53,6 +53,10 @@ function setQuizTime() {
   }
 }
 
+const countdownCheckbox = document.getElementById("countdown-per-question");
+countdownCheckbox.addEventListener("change", function() {
+  countdownPerQuestion = countdownCheckbox.checked;
+});
 
 
 // Function to start the quiz
@@ -63,12 +67,14 @@ function startQuiz() {
   showQuestion();
   if (!countdownPerQuestion) { // start timer only if countdown is for the whole test
     startTimer();
+    totalTime = questionTime * totalQuestions;
+  } else {
+    totalTime = questionTime;
   }
-    // Get the total number of questions
-totalQuestions = questions.length;
-  //totalQuestions = document.querySelectorAll('.quiz-question').length;
-console.log(totalQuestions+"?????????????totalQuestions???????????"); // Output: 3
+  answeredQuestions = [];
+  updateProgressBar(currentQuestion);
 }
+
 
 // Function to show the current question
 function showQuestion() {
