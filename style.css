@@ -179,6 +179,40 @@ nav a:hover {
   
 }
 
+
+
+/* Style for correct answer */
+.correct {
+  background-color: green;
+}
+
+/* Style for incorrect answer */
+.incorrect {
+  background-color: red;
+}
+
+/* Style for correct answer option */
+.correct::before {
+  content: "\2713"; /* Unicode character for checkmark */
+  color: white;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Style for incorrect answer option */
+.incorrect::before {
+  content: "\2718"; /* Unicode character for cross mark */
+  color: white;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Reset styles for options */
+.options button {
+  background-color: white;
+}
+
+
 .progress-bar {
   background-color: #ddd;
   border-radius: 10px;
