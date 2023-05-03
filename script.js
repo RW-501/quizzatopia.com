@@ -136,6 +136,81 @@ function handleOtherQuizButtonClick() {
   window.location.reload();
 }
 
+
+// function to handle skip button click
+function handleSkipButtonClick() {
+  currentQuestionIndex++;
+  if (currentQuestionIndex < quizData.length) {
+    showQuestion();
+    hideExplanation();
+    hideSkipButton();
+    hideNextButton();
+    enableAnswerButtons();
+  } else {
+    showResult();
+    hideExplanation();
+    hideSkipButton();
+    hideNextButton();
+  }
+}
+
+// function to enable answer buttons
+function enableAnswerButtons() {
+  answerElements.forEach(answerElement => {
+    answerElement.disabled = false;
+  });
+}
+
+// function to disable answer buttons
+function disableAnswerButtons() {
+  answerElements.forEach(answerElement => {
+    answerElement.disabled = true;
+  });
+}
+
+// function to handle answer button click
+function handleAnswerButtonClick(event) {
+  const index = Array.from(answerElements).indexOf(event.target);
+  handleAnswer(event, index);
+}
+
+// function to handle next button click
+function handleNextButtonClick() {
+  currentQuestionIndex++;
+  if (currentQuestionIndex < quizData.length) {
+    showQuestion();
+    hideExplanation();
+    hideNextButton();
+    hideSkipButton();
+    enableAnswerButtons();
+  } else {
+    showResult();
+    hideExplanation();
+    hideNextButton();
+    hideSkipButton();
+  }
+}
+
+// function to hide question container
+function hideQuestionContainer() {
+  quizContainer.style.display = 'none';
+}
+
+// function to show question container
+function showQuestionContainer() {
+  quizContainer.style.display = 'block';
+}
+
+// function to handle start button click
+function handleStartButtonClick() {
+  showQuestionContainer();
+  initializeQuiz();
+}
+
+// event listener for start button
+document.getElementById('start-btn').addEventListener('click', handleStartButtonClick);
+
+
 // event listeners
 nextButton.addEventListener("click", handleNextButtonClick);
 skipButton.addEventListener("click", handleSkipButtonClick);
