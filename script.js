@@ -176,7 +176,7 @@ function calculateFeedback() {
 
 // Function to start the timer
 function startTimer() {
-  const timeDisplay = document.getElementById("time");
+  const timeDisplay = document.getElementById("timer");
 
   timer = setInterval(function() {
     totalTime--;
