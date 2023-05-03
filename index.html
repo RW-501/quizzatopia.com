@@ -32,24 +32,26 @@
   </nav>
   
   <div class="container mt-4">
-  <div class="quiz-options">
-    <label class="checkbox-container" for="timer-checkbox">Enable timer
-      <input type="checkbox" id="timer-checkbox" />
-      <span class="checkmark"></span>
-    </label>
-    <label class="checkbox-container" for="countdown-per-question">Countdown per question
-      <input type="checkbox" id="countdown-per-question" name="countdown-per-question">
-      <span class="checkmark"></span>
-    </label>
-    <div class="form-group">
-      <label for="quiz-time">Quiz Time:</label>
-      <input type="number" id="quiz-time" name="quiz-time" value="30" class="form-control">
+    <div class="quiz-options">
+      <label class="checkbox-container" for="timer-checkbox">
+        <input type="checkbox" id="timer-checkbox" />
+        <span class="checkmark"></span>
+        Enable timer
+      </label>
+      <label class="checkbox-container" for="countdown-per-question">
+        <input type="checkbox" id="countdown-per-question" name="countdown-per-question">
+        <span class="checkmark"></span>
+        Countdown per question
+      </label>
+      <div class="form-group">
+        <label for="quiz-time">Quiz Time:</label>
+        <input type="number" id="quiz-time" name="quiz-time" value="30" class="form-control">
+      </div>
+    </div>
+    <div class="text-center">
+      <button id="start-btn" class="btn btn-primary btn-lg">Start Quiz</button>
     </div>
   </div>
-  <div class="text-center">
-    <button id="start-btn" class="btn btn-primary btn-lg">Start Quiz</button>
-  </div>
-</div>
 
 
   <div class="container mt-4 d-none" id="quiz-container">
