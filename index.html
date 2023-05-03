@@ -27,9 +27,16 @@
         </li>
       </ul>
     </div>
+    <div id="timer" class="text-right pr-4"></div>
   </nav>
 
-  <div class="container mt-4" id="quiz-container">
+  <div class="container mt-4">
+    <div class="text-center">
+      <button id="start-btn" class="btn btn-primary btn-lg">Start Quiz</button>
+    </div>
+  </div>
+
+  <div class="container mt-4 d-none" id="quiz-container">
     <h1 id="question"></h1>
     <ul class="list-unstyled">
       <li><button class="btn btn-primary answer-option"></button></li>
@@ -42,7 +49,7 @@
     <button id="skip-btn" class="btn btn-secondary">Skip</button>
   </div>
 
-  <div class="container mt-4" id="result-container">
+  <div class="container mt-4 d-none" id="result-container">
     <h2 id="result-text"></h2>
     <button id="retake-btn" class="btn btn-primary">Retake Quiz</button>
     <button class="other-quiz-btn btn btn-secondary" data-url="other-quiz.html">Try Another Quiz</button>
@@ -52,7 +59,7 @@
     <p>Quiz Platform &copy; 2023</p>
   </footer>
   
- <script src="script.js"></script>
+  <script src="script.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTxFKTE+Pv2uY21i8WbI5UwwUA5" crossorigin="anonymous"></script>
 
