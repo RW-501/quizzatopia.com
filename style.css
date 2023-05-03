@@ -143,7 +143,7 @@ nav a:hover {
 }
 
 /* Timer */
-.timer {
+#timer {
   display: inline-block;
   background-color: #f8f8f8;
   border: 1px solid #ccc;
@@ -177,7 +177,7 @@ nav a:hover {
 
 /* Progress bar */
 
-progress-bar-container{
+.progress-bar-container{
   display:block;
   
 }
