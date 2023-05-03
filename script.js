@@ -46,6 +46,7 @@ function showQuestion() {
     answerButtons[i].addEventListener("click", checkAnswer);
   }
   document.getElementById("explanation").innerHTML = "";
+    
 }
 
 // Function to check the user's answer
@@ -94,6 +95,8 @@ function nextQuestion() {
     document.getElementById("next-btn").classList.add("d-none");
     document.getElementById("skip-btn").classList.remove("d-none");
   }
+      // update the progress bar
+  updateProgressBar(currentQuestion);
 }
 
 // Function to skip the current question
@@ -107,6 +110,8 @@ function skipQuestion() {
     document.getElementById("next-btn").classList.add("d-none");
     document.getElementById("skip-btn").classList.remove("d-none");
   }
+      // update the progress bar
+  updateProgressBar(currentQuestion);
 }
 
 
@@ -129,6 +134,18 @@ function startTimer() {
       endQuiz();
     }
   }, 1000);
+}
+
+// Get the progress bar element
+var progressBar = document.getElementById('progress-bar');
+
+// Get the total number of questions
+var totalQuestions = document.querySelectorAll('.quiz-question').length;
+
+// Update the progress bar
+function updateProgressBar(currentQuestion) {
+  var percentage = (currentQuestion / totalQuestions) * 100;
+  progressBar.style.width = percentage + '%';
 }
 
 // Event Listeners
