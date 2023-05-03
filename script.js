@@ -130,6 +130,8 @@ function nextQuestion() {
     document.getElementById("next-btn").classList.add("d-none");
     document.getElementById("skip-btn").classList.remove("d-none");
   }
+        clearAnswers();
+
       // update the progress bar
   updateProgressBar(currentQuestion);
     console.log(currentQuestion+"????????????currentQuestion????"); // Output: 3
@@ -147,9 +149,20 @@ function skipQuestion() {
     document.getElementById("next-btn").classList.add("d-none");
     document.getElementById("skip-btn").classList.remove("d-none");
   }
+    clearAnswers();
       // update the progress bar
   updateProgressBar(currentQuestion);
 }
+
+function clearAnswers(){
+      for (let i = 0; i < options.length; i++) {
+      options[i].classList.remove('correct');
+  
+      options[i].classList.remove('incorrect');
+    }
+  }
+    
+
 
 
 // Function to end the quiz
