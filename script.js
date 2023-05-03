@@ -42,6 +42,9 @@ function startQuiz() {
   if (!countdownPerQuestion) { // start timer only if countdown is for the whole test
     startTimer();
   }
+    // Get the total number of questions
+ totalQuestions = document.querySelectorAll('.quiz-question').length;
+console.log(totalQuestions+"?????????????totalQuestions???????????"); // Output: 3
 }
 
 // Function to show the current question
@@ -56,6 +59,15 @@ function showQuestion() {
   }
   document.getElementById("explanation").innerHTML = "";
 }
+
+  // Get the progress bar element
+var progressBar = document.getElementById('progress-bar');
+
+// Update the progress bar
+function updateProgressBar(currentQuestion) {
+  var percentage = (currentQuestion / totalQuestions) * 100;
+  progressBar.style.width = percentage + '%';
+}   
 
 // Function to check the user's answer
 function checkAnswer() {
@@ -74,6 +86,10 @@ function checkAnswer() {
     } else {
       options[i].classList.add('incorrect');
     }
+          // update the progress bar
+  updateProgressBar(currentQuestion);
+    console.log(currentQuestion+"????????????currentQuestion????"); // Output: 3
+
   }
 
   if (selectedAnswer === questionObj.answer) {
@@ -181,7 +197,10 @@ function calculateTimeBonus() {
 // Event Listeners
 document.getElementById("start-btn").addEventListener("click", startQuiz);
 document.getElementById("next-btn").addEventListener("click", nextQuestion);
-
+document.getElementById("skip-btn").addEventListener("click", skipQuestion);
+document.getElementById("retake-btn").addEventListener("click", () => {
+location.reload();
+});
 
 
 
