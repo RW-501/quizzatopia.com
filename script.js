@@ -21,14 +21,14 @@ const questions = [
 ];
 
 // Global Variables
-let questionTime ; // seconds
+let questionTime = 0; // seconds
 let currentQuestion = 0;
 let score = 0;
 let quizStarted = false;
-let timer;
+let timer = 0;
 let answeredQuestions = [];
 let countdownPerQuestion = false; // set to true if the countdown should happen for each question
-let totalTime ; // seconds
+let totalTime = 0; // seconds
 let totalQuestions = questions.length;
 let timerEnabled = false;
 
