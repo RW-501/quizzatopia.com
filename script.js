@@ -21,22 +21,16 @@ const questions = [
 ];
 
 // Global Variables
-let questionTime = 30; // senconds
+let questionTime = 30; // seconds
 let currentQuestion = 0;
 let score = 0;
 let quizStarted = false;
 let timer;
 let answeredQuestions = [];
 let countdownPerQuestion = false; // set to true if the countdown should happen for each question
-let totalTime = 3000; //seconds 
-
-  if (!countdownPerQuestion) { // start timer only if countdown is for the whole test
-let totalTime = questionTime; 
-  }else{
-    totalTime = questionTime; 
-  }
-
+let totalTime = 3000; // seconds
 let totalQuestions = questions.length;
+let timerEnabled = true;
 
 // Functions
 
@@ -53,6 +47,7 @@ function setQuizTime() {
   }
 }
 
+
 const countdownCheckbox = document.getElementById("countdown-per-question");
 countdownCheckbox.addEventListener("change", function() {
   countdownPerQuestion = countdownCheckbox.checked;
@@ -65,7 +60,9 @@ function startQuiz() {
   document.getElementById("start-btn").classList.add("d-none");
   document.getElementById("quiz-container").classList.remove("d-none");
   showQuestion();
-  if (!countdownPerQuestion) { // start timer only if countdown is for the whole test
+
+  setQuizTime;
+  if (timerEnabled && !countdownPerQuestion) { // start timer only if countdown is for the whole test and timer is enabled
     startTimer();
     totalTime = questionTime * totalQuestions;
   } else {
@@ -75,6 +72,13 @@ function startQuiz() {
   updateProgressBar(currentQuestion);
 }
 
+
+
+// Add an event listener to the timer checkbox to update the timerEnabled variable
+const timerCheckbox = document.getElementById("timer-checkbox");
+timerCheckbox.addEventListener("change", function () {
+  timerEnabled = timerCheckbox.checked;
+});
 
 // Function to show the current question
 function showQuestion() {
@@ -87,11 +91,13 @@ function showQuestion() {
     answerButtons[i].addEventListener("click", checkAnswer);
   }
   document.getElementById("explanation").innerHTML = "";
-  if (countdownPerQuestion) {
+  if (countdownPerQuestion && timerEnabled) { // start timer only if countdown is per question and timer is enabled
     totalTime = questionTime;
     startTimer();
   }
 }
+
+
 
   // Get the progress bar element
 var progressBar = document.getElementById('progress-bar');
