@@ -33,6 +33,7 @@ let totalQuestions = questions.length;
 let timerEnabled = true;
 
 // Functions
+    console.log(totalQuestions+"????????????totalQuestions????"); // Output: 3
 
 // Function to set quiz time
 function setQuizTime() {
