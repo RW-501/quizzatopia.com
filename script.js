@@ -212,6 +212,6 @@ closePopupBtn.addEventListener('click', function() {
 document.getElementById("start-btn").addEventListener("click", startQuiz);
 document.getElementById("next-btn").addEventListener("click", nextQuestion);
 document.getElementById("skip-btn").addEventListener("click", skipQuestion);
-document.getElementById("restart-btn").addEventListener("click", () => {
+document.getElementById("retake-btn").addEventListener("click", () => {
 location.reload();
 });
