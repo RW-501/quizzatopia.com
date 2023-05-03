@@ -170,7 +170,7 @@ function endQuiz() {
   clearInterval(timer);
   quizStarted = false;
   document.getElementById("quiz-container").classList.add("d-none");
-  document.getElementById("end-container").classList.remove("d-none");
+  document.getElementById("result-container").classList.remove("d-none");
   document.getElementById("final-score").innerHTML = `${score} out of ${questions.length}`;
     // Call the showFinalScore function with the final score when the quiz is completed
 showFinalScore();
@@ -201,20 +201,16 @@ function updateProgressBar(currentQuestion) {
 }
 
 // Select the final score pop-up and close button elements
-const finalScorePopup = document.getElementById('final-score-popup');
+const resultcontainer = document.getElementById('result-container');
 const closePopupBtn = document.getElementById('close-popup-btn');
 
 // Function to show the final score pop-up and set the final score text
 function showFinalScore() {
 
   // Show the final score pop-up
-  finalScorePopup.style.display = 'block';
+  resultcontainer.style.display = 'block';
 }
 
-// Event listener for the close button to hide the final score pop-up
-closePopupBtn.addEventListener('click', function() {
-  finalScorePopup.style.display = 'none';
-});
 
 
 
