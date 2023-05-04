@@ -15,6 +15,15 @@ fetch("q/MCU.json")
 
 */
 
+// Custom function to compare two elements randomly
+function shuffle(a, b) {
+  return Math.random() - 0.5;
+}
+
+// Shuffle the array using the custom comparison function
+questions.sort(shuffle);
+
+console.log("questions    mm  "+questions); // Outputs a random order of the words
 
 
 // Global Variables
