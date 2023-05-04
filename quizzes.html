@@ -30,9 +30,9 @@
 
   </nav>
 
-  <div class="container mt-4">
+  <div id="card_container" class="container mt-4">
     <h1>Choose a quiz</h1>
-    <div class="row">
+  <div id="card_content" class="row">
       <div class="col-md-4 mb-4">
         <div class="card">
           <img src="https://via.placeholder.com/150x150.png" class="card-img-top" alt="Quiz Image">
@@ -43,17 +43,57 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4 mb-4">
+    <div class="col-md-4 mb-4">
         <div class="card">
           <img src="https://via.placeholder.com/150x150.png" class="card-img-top" alt="Quiz Image">
           <div class="card-body">
             <h5 class="card-title">National Council Licensure Examination (NCLEX)</h5>
-            <p class="card-text">Aspiring architects must pass this comprehensive exam to become licensed professionals and design the buildings of tomorrow.</p>
+            <p class="card-text">Aspiring nurses must pass this comprehensive exam to become licensed professionals and provide compassionate care to patients.</p>
             <a href="index.html?q=nclex" class="btn btn-primary">Start Quiz</a>
           </div>
         </div>
       </div>
   
+            <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/150x150.png" class="card-img-top" alt="Quiz Image">
+          <div class="card-body">
+            <h5 class="card-title">Strength Training Quiz</h5>
+            <p class="card-text">Fitness enthusiasts can test their knowledge of strength training techniques and principles with this quiz.</p>
+            <a href="index.html?q=strength_training_quiz" class="btn btn-primary">Start Quiz</a>
+          </div>
+        </div>
+      </div>
+        <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/150x150.png" class="card-img-top" alt="Quiz Image">
+          <div class="card-body">
+            <h5 class="card-title">Drivers License Test</h5>
+            <p class="card-text">Aspiring drivers can test their knowledge of traffic rules and regulations with this test and earn their license.</p>
+            <a href="index.html?q=drivers_license_test" class="btn btn-primary">Start Quiz</a>
+          </div>
+        </div>
+      </div>
+        <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/150x150.png" class="card-img-top" alt="Quiz Image">
+          <div class="card-body">
+            <h5 class="card-title">Project Management Professional</h5>
+            <p class="card-text">Professionals can demonstrate their project management expertise and skills by passing this challenging certification exam.</p>
+            <a href="index.html?q=project_management_professional" class="btn btn-primary">Start Quiz</a>
+          </div>
+        </div>
+      </div>
+         <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/150x150.png" class="card-img-top" alt="Quiz Image">
+          <div class="card-body">
+            <h5 class="card-title">Architect Registration Examination</h5>
+            <p class="card-text">Aspiring architects must pass this comprehensive exam to become licensed professionals and design the buildings of tomorrow.</p>
+            <a href="index.html?q=architect_registration_examination" class="btn btn-primary">Start Quiz</a>
+          </div>
+        </div>
+      </div>
       <div class="col-md-4 mb-4">
         <div class="card">
           <img src="https://via.placeholder.com/150x150.png" class="card-img-top" alt="Quiz Image">
@@ -545,14 +585,53 @@
   <footer class="bg-light text-center py-3 mt-4">
     <p>Quiz Platform &copy; 2023</p>
   </footer>
-  
+    <!-- Initialize the Bootstrap navbar toggler -->
+
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
 
   
   
-  <!-- Initialize the Bootstrap navbar toggler -->
 <script>
+  // Get the card container and all the cards
+const cardContainer = document.getElementById("card_container");
+const cards = cardContainer.querySelectorAll(".card");
+
+// Pick two random cards to swap out initially
+let cardIndex1 = Math.floor(Math.random() * cards.length);
+let cardIndex2 = Math.floor(Math.random() * cards.length);
+while (cardIndex2 === cardIndex1) {
+  cardIndex2 = Math.floor(Math.random() * cards.length);
+}
+
+// Swap the two initial cards
+cards[cardIndex1].style.display = "none";
+cards[cardIndex2].style.display = "none";
+
+// Set up the interval to swap cards every 5 seconds
+setInterval(() => {
+  // Pick two random cards to swap out
+  let cardIndex1 = Math.floor(Math.random() * cards.length);
+  let cardIndex2 = Math.floor(Math.random() * cards.length);
+  while (cardIndex2 === cardIndex1) {
+    cardIndex2 = Math.floor(Math.random() * cards.length);
+  }
+
+  // Swap the two cards
+  cards[cardIndex1].style.display = "none";
+  cards[cardIndex2].style.display = "none";
+
+  // Wait for 1 second before showing the swapped cards again
+  setTimeout(() => {
+    cards[cardIndex1].style.display = "block";
+    cards[cardIndex2].style.display = "block";
+  }, 1000);
+}, 5000);
+
+  
+  
+  
+  
   
   // Show or hide the button depending on the scroll position
 window.addEventListener("scroll", function () {
