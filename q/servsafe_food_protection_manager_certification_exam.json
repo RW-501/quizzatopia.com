@@ -1,1 +1,124 @@
+[
+  {
+    "question": "What is the temperature danger zone for potentially hazardous food?",
+    "options": [
+      "32°F to 40°F",
+      "41°F to 50°F",
+      "70°F to 125°F",
+      "135°F to 165°F"
+    ],
+    "answer": "70°F to 125°F",
+    "explanation": "The temperature danger zone is the temperature range at which bacteria can grow most rapidly, between 70°F and 125°F. Potentially hazardous foods should be kept out of this range as much as possible."
+  },
+  {
+    "question": "What is the minimum internal temperature for ground beef?",
+    "options": [
+      "130°F",
+      "145°F",
+      "155°F",
+      "165°F"
+    ],
+    "answer": "155°F",
+    "explanation": "Ground beef should be cooked to a minimum internal temperature of 155°F to kill harmful bacteria like E. coli and Salmonella."
+  },
+  {
+    "question": "What is the recommended method for thawing frozen food?",
+    "options": [
+      "At room temperature on the counter",
+      "In hot water",
+      "In the refrigerator",
+      "In a microwave"
+    ],
+    "answer": "In the refrigerator",
+    "explanation": "The recommended method for thawing frozen food is to do so in the refrigerator, which allows for a slow and safe thawing process. Thawing at room temperature or in hot water can lead to bacteria growth."
+  },
+  {
+    "question": "What is the maximum water temperature for manual dishwashing?",
+    "options": [
+      "90°F",
+      "100°F",
+      "110°F",
+      "120°F"
+    ],
+    "answer": "120°F",
+    "explanation": "The maximum water temperature for manual dishwashing is 120°F. Water that is too hot can cause burns or scalds, and can also damage equipment or melt plastics."
+  },
+  {
+    "question": "What is the recommended method for storing food in a cooler?",
+    "options": [
+      "On the floor",
+      "On shelves above ready-to-eat food",
+      "In the same container as raw meat",
+      "In uncovered containers"
+    ],
+    "answer": "On shelves above ready-to-eat food",
+    "explanation": "Food should be stored in a cooler on shelves above ready-to-eat food to prevent cross-contamination. Raw meat should be stored in a separate container to avoid contamination of other foods, and all food should be covered to prevent contamination from dust or debris."
+  },
+  {
+    "question": "What is the recommended temperature for hot-holding potentially hazardous food?",
+    "options": [
+      "32°F to 40°F",
+      "41°F to 50°F",
+      "70°F to 125°F",
+      "135°F or higher"
+    ],
+    "answer": "135°F or higher",
+    "explanation": "Potentially hazardous food that is being hot-held for service should be kept at a temperature of 135°F or higher to prevent bacteria growth."
+  },
+ {
+  "question": "What are the four types of pathogens that can contaminate food?",
+  "options": [
+    "Bacteria, viruses, fungi, parasites",
+    "Chemicals, allergens, radiation, pathogens",
+    "Acids, bases, toxins, enzymes",
+    "Salts, sugars, fats, oils"
+  ],
+  "answer": "Bacteria, viruses, fungi, parasites",
+  "explanation": "These are the four types of pathogens that can contaminate food, leading to foodborne illness. It is important for food handlers to understand how to prevent and control the growth and spread of these pathogens in order to maintain food safety."
+},
+{
+  "question": "What is the temperature danger zone for food?",
+  "options": [
+    "0-32°F (-18-0°C)",
+    "41-135°F (5-57°C)",
+    "135-165°F (57-74°C)",
+    "165-212°F (74-100°C)"
+  ],
+  "answer": "41-135°F (5-57°C)",
+  "explanation": "The temperature danger zone for food is the range of temperatures at which bacteria can grow most rapidly, between 41-135°F (5-57°C). Keeping hot foods hot and cold foods cold can help prevent the growth of harmful bacteria in food."
+},
+{
+  "question": "What is the proper way to wash your hands?",
+  "options": [
+    "Wash with soap and water for at least 10 seconds",
+    "Wash with soap and water for at least 20 seconds",
+    "Wash with soap and water for at least 30 seconds",
+    "Wash with soap and water for at least 60 seconds"
+  ],
+  "answer": "Wash with soap and water for at least 20 seconds",
+  "explanation": "Proper handwashing is essential for preventing the spread of bacteria and viruses in food service settings. The CDC recommends washing hands with soap and water for at least 20 seconds, making sure to scrub all surfaces of the hands and fingers."
+},
+{
+  "question": "What is cross-contamination?",
+  "options": [
+    "The transfer of harmful bacteria from one food to another",
+    "The mixing of different types of food in a single container",
+    "The use of expired or spoiled ingredients in food preparation",
+    "The exposure of food to air or sunlight"
+  ],
+  "answer": "The transfer of harmful bacteria from one food to another",
+  "explanation": "Cross-contamination occurs when harmful bacteria from one food item are transferred to another, usually through contact with contaminated surfaces, utensils, or hands. It is important to prevent cross-contamination in order to maintain food safety."
+},
+{
+  "question": "What is the maximum allowable temperature for hot holding food?",
+  "options": [
+    "110°F (43°C)",
+    "130°F (54°C)",
+    "150°F (65°C)",
+    "165°F (74°C)"
+  ],
+  "answer": "165°F (74°C)",
+  "explanation": "The maximum allowable temperature for hot holding food is 165°F (74°C), in order to prevent the growth of harmful bacteria. Food should be checked regularly with a thermometer to ensure it remains at a safe temperature."
+}
+  ]
 
