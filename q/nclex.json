@@ -1,1 +1,134 @@
-
+[
+{
+"question": "What is the primary function of the respiratory system?",
+"options": [
+"To transport oxygen and remove carbon dioxide from the body",
+"To regulate the body's fluid and electrolyte balance",
+"To produce and secrete hormones",
+"To filter waste products from the blood"
+],
+"answer": "To transport oxygen and remove carbon dioxide from the body",
+"explanation": "The respiratory system is responsible for the exchange of gases between the body and the environment. Its primary function is to transport oxygen from the air into the bloodstream, and remove carbon dioxide from the bloodstream and release it into the air."
+},
+{
+"question": "What is the normal range for blood glucose levels?",
+"options": [
+"70-100 mg/dL",
+"100-125 mg/dL",
+"126-150 mg/dL",
+"150-200 mg/dL"
+],
+"answer": "70-100 mg/dL",
+"explanation": "Normal blood glucose levels are typically between 70-100 mg/dL when fasting, and can rise to around 140 mg/dL after eating."
+},
+{
+"question": "What is the primary function of the kidneys?",
+"options": [
+"To regulate the body's fluid and electrolyte balance",
+"To produce and secrete hormones",
+"To transport oxygen and remove carbon dioxide from the body",
+"To filter waste products from the blood"
+],
+"answer": "To filter waste products from the blood",
+"explanation": "The kidneys are responsible for filtering waste products from the blood and excreting them in the urine. They also help to regulate fluid and electrolyte balance, blood pressure, and the production of red blood cells."
+},
+{
+"question": "What is the normal range for blood pressure in adults?",
+"options": [
+"Less than 120/80 mmHg",
+"Less than 130/90 mmHg",
+"Less than 140/90 mmHg",
+"Less than 160/100 mmHg"
+],
+"answer": "Less than 120/80 mmHg",
+"explanation": "Normal blood pressure in adults is less than 120/80 mmHg. High blood pressure, or hypertension, is defined as a reading of 130/80 mmHg or higher."
+},
+{
+"question": "What is the most common cause of pneumonia?",
+"options": [
+"Bacterial infection",
+"Fungal infection",
+"Viral infection",
+"Allergic reaction"
+],
+"answer": "Viral infection",
+"explanation": "Viral infections, particularly from the influenza virus, are the most common cause of pneumonia. Bacterial infections can also cause pneumonia, but are less common."
+},
+{
+"question": "What is the normal range for adult respiratory rate?",
+"options": [
+"12-20 breaths per minute",
+"20-30 breaths per minute",
+"30-40 breaths per minute",
+"40-50 breaths per minute"
+],
+"answer": "12-20 breaths per minute",
+"explanation": "The normal range for adult respiratory rate is typically between 12-20 breaths per minute. Higher respiratory rates may indicate an underlying health condition."
+},
+{
+"question": "What is the most common type of stroke?",
+"options": [
+"Ischemic stroke",
+"Hemorrhagic stroke",
+"Transient ischemic attack",
+"Subarachnoid hemorrhage"
+],
+"answer": "Ischemic stroke",
+"explanation": "Ischemic stroke is the most common type of stroke, accounting for about 87% of all strokes. It occurs when a blood clot blocks blood flow to the brain."
+},
+{
+"question": "What is the primary function of insulin?",
+"options": [
+"To break down glucose into energy",
+"To convert glycogen to glucose",
+"To stimulate the pancreas to produce glucagon",
+"To transport glucose from the bloodstream into cells"
+],
+"answer": "To transport glucose from the bloodstream into cells",
+"explanation": "Insulin is a hormone produced by the pancreas that helps regulate blood sugar levels by allowing cells to take in and use glucose for energy. Without insulin, glucose builds up in the bloodstream, leading to hyperglycemia, which can cause a range of health problems over time."
+},
+{
+"question": "What is the purpose of a urinalysis?",
+"options": [
+"To detect infections in the urinary tract",
+"To measure kidney function",
+"To diagnose diabetes",
+"To screen for cancer"
+],
+"answer": "To detect infections in the urinary tract",
+"explanation": "Urinalysis is a common diagnostic test that examines urine for signs of disease or infection. It can detect a wide range of conditions, including urinary tract infections, kidney problems, and metabolic disorders. The test involves examining urine under a microscope and analyzing its chemical composition." 
+},
+{
+"question": "What is the proper technique for hand washing?",
+"options": [
+"Wash hands for at least 10 seconds with soap and water",
+"Wash hands for at least 20 seconds with soap and water",
+"Wash hands for at least 30 seconds with soap and water",
+"Wash hands for at least 1 minute with soap and water"
+],
+"answer": "Wash hands for at least 20 seconds with soap and water",
+"explanation": "Proper hand hygiene is critical to preventing the spread of infectious diseases. The CDC recommends washing hands for at least 20 seconds with soap and water, making sure to lather all surfaces of the hands, including between fingers and under nails. This should be done frequently throughout the day, especially after using the bathroom, coughing or sneezing, or handling food." 
+},
+{
+"question": "What is the normal range for a resting adult heart rate?",
+"options": [
+"60-80 beats per minute",
+"80-100 beats per minute",
+"100-120 beats per minute",
+"120-140 beats per minute"
+],
+"answer": "60-80 beats per minute",
+"explanation": "The normal resting heart rate for an adult is typically between 60 and 80 beats per minute. However, factors such as age, fitness level, and underlying medical conditions can affect heart rate. An unusually high or low heart rate may be a sign of an underlying health problem and should be evaluated by a healthcare provider." 
+},
+{
+"question": "What is the primary function of the kidneys?",
+"options": [
+"To regulate blood sugar levels",
+"To produce insulin",
+"To filter waste and excess fluids from the bloodstream",
+"To transport oxygen to the body's tissues"
+],
+"answer": "To filter waste and excess fluids from the bloodstream",
+"explanation": "The kidneys are a pair of organs that filter waste and excess fluids from the bloodstream, helping to maintain a healthy balance of water, electrolytes, and other substances in the body. They also help regulate blood pressure and produce hormones that stimulate the production of red blood cells." 
+}
+  ]
