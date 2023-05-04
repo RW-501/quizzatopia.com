@@ -1,1 +1,145 @@
-
+[
+  {
+    "question": "What should you do when approaching a steady yellow traffic light?",
+    "options": [
+      "Stop immediately",
+      "Accelerate to make it through the intersection before the light turns red",
+      "Slow down and prepare to stop",
+      "Honk your horn to warn other drivers"
+    ],
+    "answer": "Slow down and prepare to stop",
+    "explanation": "A steady yellow traffic light means that the light is about to turn red. Drivers should slow down and prepare to stop unless it is unsafe to do so."
+  },
+  {
+    "question": "What should you do if your brakes fail?",
+    "options": [
+      "Shift into neutral",
+      "Pump the brakes rapidly",
+      "Turn off the engine",
+      "Use the parking brake"
+    ],
+    "answer": "Use the parking brake",
+    "explanation": "If your brakes fail, the first thing you should do is try to slow the vehicle down by shifting into a lower gear and pumping the brakes rapidly. If this does not work, use the parking brake to bring the vehicle to a stop."
+  },
+  {
+    "question": "What is the most common cause of traffic crashes?",
+    "options": [
+      "Speeding",
+      "Weather conditions",
+      "Driver distraction",
+      "Vehicle malfunctions"
+    ],
+    "answer": "Driver distraction",
+    "explanation": "Driver distraction is the most common cause of traffic crashes. Examples of driver distraction include texting while driving, eating while driving, and talking on the phone while driving."
+  },
+  {
+    "question": "When should you use your headlights?",
+    "options": [
+      "Only at night",
+      "Only in fog or rain",
+      "At any time you have trouble seeing other cars",
+      "Never"
+    ],
+    "answer": "At any time you have trouble seeing other cars",
+    "explanation": "You should use your headlights any time you have trouble seeing other cars, including during the day in heavy rain or fog."
+  },
+  {
+    "question": "What is the maximum speed limit on interstate highways in most states?",
+    "options": [
+      "50 mph",
+      "55 mph",
+      "65 mph",
+      "70 mph"
+    ],
+    "answer": "70 mph",
+    "explanation": "The maximum speed limit on interstate highways in most states is 70 mph."
+  },
+  {
+    "question": "What is the purpose of a crosswalk?",
+    "options": [
+      "To give pedestrians the right-of-way",
+      "To indicate a parking area",
+      "To mark the center of a road",
+      "To designate a bike lane"
+    ],
+    "answer": "To give pedestrians the right-of-way",
+    "explanation": "A crosswalk is a designated area for pedestrians to cross the road. Drivers are required to stop for pedestrians in a crosswalk and give them the right-of-way."
+  },
+  {
+    "question": "When should you use your turn signal?",
+    "options": [
+      "Only when changing lanes",
+      "Only when turning",
+      "Whenever you change direction",
+      "Never"
+    ],
+    "answer": "Whenever you change direction",
+    "explanation": "You should use your turn signal whenever you change direction, including when turning, changing lanes, and entering or exiting a highway."
+  },
+{
+    "question": "What does a yellow diamond-shaped sign indicate?",
+    "options": [
+        "A yield sign",
+        "A stop sign",
+        "A warning sign",
+        "A speed limit sign"
+    ],
+    "answer": "A warning sign",
+    "explanation": "A yellow diamond-shaped sign indicates a warning. These signs are used to alert drivers of upcoming hazards or dangerous conditions, such as sharp turns, school zones, or construction zones."
+},
+{
+    "question": "What is the speed limit in a residential area unless otherwise posted?",
+    "options": [
+        "20 mph",
+        "25 mph",
+        "30 mph",
+        "35 mph"
+    ],
+    "answer": "25 mph",
+    "explanation": "The speed limit in a residential area unless otherwise posted is generally 25 mph. However, it's important to always check for posted speed limit signs and adjust your speed accordingly."
+},
+{
+    "question": "What is the proper way to enter a freeway?",
+    "options": [
+        "Stop at the end of the on-ramp and wait for an opening",
+        "Accelerate to the speed of traffic and merge smoothly into the lane",
+        "Drive in the emergency lane until a gap appears in traffic",
+        "Slow down and wait for a gap in traffic before merging"
+    ],
+    "answer": "Accelerate to the speed of traffic and merge smoothly into the lane",
+    "explanation": "The proper way to enter a freeway is to use the on-ramp to accelerate to the speed of traffic and then merge smoothly into the lane. You should always check your blind spots and use your turn signal to signal your intention to merge."
+},
+{
+    "question": "What should you do if you miss your exit on a freeway?",
+    "options": [
+        "Continue driving and exit at the next available off-ramp",
+        "Make a U-turn and try again",
+        "Stop on the freeway and wait for traffic to clear",
+        "Back up to the previous exit"
+    ],
+    "answer": "Continue driving and exit at the next available off-ramp",
+    "explanation": "If you miss your exit on a freeway, you should continue driving and exit at the next available off-ramp. It's unsafe and illegal to back up or make a U-turn on a freeway."
+},
+{
+    "question": "What is the proper hand position on the steering wheel?",
+    "options": [
+        "9 and 3 o'clock",
+        "10 and 2 o'clock",
+        "11 and 5 o'clock",
+        "12 and 6 o'clock"
+    ],
+    "answer": "9 and 3 o'clock",
+    "explanation": "The proper hand position on the steering wheel is at the 9 and 3 o'clock positions. This position allows for the greatest control and maneuverability of the vehicle."
+},
+{
+    "question": "What is the penalty for driving under the influence (DUI) of alcohol or drugs?",
+    "options": [
+        "A warning",
+        "A fine",
+        "License suspension or revocation",
+        "Community service"
+    ],
+    "answer": "License suspension or revocation",
+    "explanation": "The penalty for driving under the influence (DUI) of alcohol or drugs can vary depending on the state, but typically involves license suspension or revocation, fines, and possible jail time."
+}
+  ]
