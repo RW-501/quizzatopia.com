@@ -3,11 +3,11 @@
 const questions = [];
 
 // fetch and assign the data
-fetch("./q/MCU.json")
+fetch("Q-A/q/MCU.json")
   .then(response => response.json())
   .then(data => {
     // Use the questions data here
-   // console.log("????????????????DATA"   + data);
+    console.log("????????????????DATA"   + data);
     questions.push(...data);
   })
   .catch(error => console.error(error));
