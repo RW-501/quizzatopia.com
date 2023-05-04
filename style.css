@@ -371,11 +371,7 @@ nav a:hover {
 
 
 #card_row .col-md-4.mb-4:nth-of-type(n+4) {
-  display: none;
-}
-  
-  .none{
-    display:none !important;
+  display: none !important;
     
   }
   
