@@ -223,7 +223,7 @@ function skipQuestion() {
 function endQuiz() {
   clearInterval(timer);
   quizStarted = false;
-
+document.getElementById("timer").innerHTML = "";
     const feedback = calculateFeedback();
     document.getElementById("feedback").innerHTML = feedback;
   
@@ -270,7 +270,7 @@ function startTimer() {
      totalTime = questionTime;
     skipQuestion();
   }else{
-    timerEl.innerHTML = "";
+   
       endQuiz();
   }
     }
