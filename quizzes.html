@@ -593,37 +593,27 @@
   
   
 <script>
-  $(document).ready(function() {
-    // Create an array of all the card elements
-    var cardArray = $(".card_Q");
-    var cardRow = $("#card_row");
-    var currentCards = [];
+const cards = document.querySelectorAll('.col-md-4');
+let currentCardIndex = 0;
 
-    // Show 3 random cards and add them to the currentCards array
-    for (var i = 0; i < 3; i++) {
-        var randomIndex = Math.floor(Math.random() * cardArray.length);
-        var randomCard = cardArray.splice(randomIndex, 1)[0];
-        currentCards.push(randomCard);
-        $(randomCard).addClass("active_Q");
-    }
+setInterval(() => {
+  // Get the current, next, and previous cards
+  const currentCard = cards[currentCardIndex];
+  const nextCard = cards[(currentCardIndex + 1) % cards.length];
+  const prevCard = cards[(currentCardIndex - 1 + cards.length) % cards.length];
 
-    // Every 5 seconds, remove 2 cards and add 2 new ones
-    setInterval(function() {
-        // Remove 2 cards from the currentCards array and hide them
-        for (var i = 0; i < 2; i++) {
-            var removedCard = currentCards.splice(i, 1)[0];
-            $(removedCard).removeClass("active_Q");
-        }
+  // Set the appropriate classes to slide the cards
+  currentCard.classList.remove('active');
+  currentCard.classList.add('prev');
+  nextCard.classList.add('active');
+  nextCard.classList.remove('next');
+  prevCard.classList.remove('prev');
+  prevCard.classList.add('next');
 
-        // Add 2 new cards to the currentCards array and show them
-        for (var i = 0; i < 2; i++) {
-            var randomIndex = Math.floor(Math.random() * cardArray.length);
-            var randomCard = cardArray.splice(randomIndex, 1)[0];
-            currentCards.push(randomCard);
-            $(randomCard).addClass("active_Q");
-        }
-    }, 5000);
-});
+  // Update the current card index
+  currentCardIndex = (currentCardIndex + 1) % cards.length;
+}, 5000);
+
 
 
   
