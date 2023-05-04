@@ -115,6 +115,14 @@ fetch("q/"+q+".json")
   })
   .catch(error => console.error(error));
     
+    console.log("questions 1    mm  "+questions); // Outputs a random order of the words
+
+const questions = shuffleArray([...questions]);
+
+
+
+console.log("questions 2    mm  "+questions); // Outputs a random order of the words
+    
     </script>
 
   <script src="script.js"></script>
