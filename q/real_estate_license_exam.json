@@ -1,1 +1,101 @@
-
+[
+{
+"question": "What is the legal definition of real property?",
+"options": [
+"Real estate and anything permanently attached to it",
+"Personal property",
+"Tangible property",
+"Intangible property"
+],
+"answer": "Real estate and anything permanently attached to it",
+"explanation": "Real property is defined as land, and anything attached to it, including buildings and natural resources."
+},
+{
+"question": "What is the difference between a deed and a title?",
+"options": [
+"A deed is proof of ownership, while a title is a legal document that gives ownership rights.",
+"A title is proof of ownership, while a deed is a legal document that transfers ownership rights.",
+"A deed is a legal document that grants ownership rights, while a title is a legal document that verifies ownership.",
+"A title is a legal document that grants ownership rights, while a deed is a legal document that verifies ownership."
+],
+"answer": "A title is proof of ownership, while a deed is a legal document that transfers ownership rights.",
+"explanation": "A deed is a legal document that transfers ownership of a property from one party to another, while a title is a legal document that proves ownership of a property."
+},
+{
+"question": "What is the purpose of a property appraisal?",
+"options": [
+"To determine the property's market value",
+"To determine the property's tax value",
+"To determine the property's rental value",
+"To determine the property's replacement value"
+],
+"answer": "To determine the property's market value",
+"explanation": "A property appraisal is an estimate of a property's market value, which is the price it would likely sell for on the open market."
+},
+{
+"question": "What is a mortgage?",
+"options": [
+"A loan used to purchase real estate",
+"A legal document that transfers ownership of real estate",
+"A document that outlines the terms of a lease",
+"A document that outlines the terms of a sale"
+],
+"answer": "A loan used to purchase real estate",
+"explanation": "A mortgage is a loan used to purchase real estate. The borrower pledges the property as collateral for the loan, and the lender has the right to foreclose on the property if the borrower fails to make payments."
+},
+{
+"question": "What is a contingency in a real estate contract?",
+"options": [
+"A condition that must be met before the contract is binding",
+"A requirement for the buyer to obtain financing",
+"A requirement for the seller to make repairs",
+"A clause that allows the buyer to cancel the contract for any reason"
+],
+"answer": "A condition that must be met before the contract is binding",
+"explanation": "A contingency is a condition that must be met before the real estate contract becomes binding. Common contingencies include the buyer obtaining financing or the property passing a home inspection."
+},
+{
+"question": "What is a home inspection?",
+"options": [
+"A visual examination of a property's condition",
+"A legal examination of a property's ownership",
+"A financial examination of a property's value",
+"A survey of a property's boundaries"
+],
+"answer": "A visual examination of a property's condition",
+"explanation": "A home inspection is a visual examination of a property's condition. The inspector looks for defects in the structure, systems, and components of the property and provides a report to the buyer."
+},
+{
+    "question": "What is the difference between a warranty deed and a quitclaim deed?",
+    "options": [
+        "A warranty deed transfers ownership with certain guarantees, while a quitclaim deed makes no guarantees about the title.",
+        "A quitclaim deed can only be used for commercial properties, while a warranty deed is used for residential properties.",
+        "A warranty deed is only used when the seller is a corporation, while a quitclaim deed is used for individual sellers.",
+        "A quitclaim deed guarantees that the property being transferred is free of liens and encumbrances."
+    ],
+    "answer": "A warranty deed transfers ownership with certain guarantees, while a quitclaim deed makes no guarantees about the title.",
+    "explanation": "A warranty deed is a legal document that transfers ownership of real estate from the seller to the buyer and provides certain guarantees about the title, such as that it is free of liens and encumbrances. A quitclaim deed, on the other hand, transfers ownership without any guarantees about the title, and is often used when the transfer is between family members or in other situations where the parties know and trust each other."
+}, 
+{
+    "question": "What is the purpose of the Truth in Lending Act?",
+    "options": [
+        "To ensure that borrowers are provided with clear and accurate information about the costs of a loan.",
+        "To regulate the interest rates that lenders can charge on loans.",
+        "To require that all loans be secured by collateral.",
+        "To prohibit lenders from discriminating on the basis of race or ethnicity."
+    ],
+    "answer": "To ensure that borrowers are provided with clear and accurate information about the costs of a loan.",
+    "explanation": "The Truth in Lending Act (TILA) is a federal law that requires lenders to disclose the terms and costs of a loan to borrowers in a clear and accurate manner. The purpose of TILA is to ensure that borrowers are able to make informed decisions about whether to take out a loan and to compare different loan offers. TILA applies to most types of consumer credit, including mortgage loans, car loans, and credit card debt."
+},
+{
+    "question": "What is a fixture in real estate?",
+    "options": [
+        "A piece of personal property that is attached to the land or a building and becomes part of the real property.",
+        "A type of loan that is used to finance the purchase of a commercial property.",
+        "A document that establishes an interest in real property and is recorded with the county recorder's office.",
+        "A zoning ordinance that limits the use of a property to certain types of activities."
+    ],
+    "answer": "A piece of personal property that is attached to the land or a building and becomes part of the real property.",
+    "explanation": "A fixture is a piece of personal property that is attached to the land or a building in such a way that it becomes part of the real property. Examples of fixtures include built-in bookcases, ceiling fans, and light fixtures. The key factor in determining whether an item is a fixture is whether it is attached to the property in a permanent manner, rather than being easily removable like furniture or appliances."
+}
+  ]
