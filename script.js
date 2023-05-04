@@ -130,23 +130,24 @@ function updateProgressBar(currentQuestion) {
 // Function to check the user's answer
 function checkAnswer() {
   const selectedOption = this;
-
   const optionContainers = document.querySelectorAll("#optionContainers button.answer-option");
   const selectedAnswer = selectedOption.innerHTML;
   const questionObj = questions[currentQuestion];
-const options = optionContainers[currentQuestion]?.children;
+  const options = optionContainers[currentQuestion]?.children;
   const explanation = questionObj.explanation;
 
-  for (let i = 0; i < options.length; i++) {
-    options[i].classList.add('disabled');
-    if (options[i].innerHTML === questionObj.answer) {
-      options[i].classList.add('correct');
-    } else {
-      options[i].classList.add('incorrect');
+  if (options) {
+    for (let i = 0; i < options.length; i++) {
+      options[i].classList.add('disabled');
+      if (options[i].innerHTML === questionObj.answer) {
+        options[i].classList.add('correct');
+      } else {
+        options[i].classList.add('incorrect');
+      }
     }
-      
-
   }
+
+
 
   if (selectedAnswer === questionObj.answer) {
     selectedOption.classList.add('correct');
