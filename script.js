@@ -1,24 +1,21 @@
 // Quiz Questions
-const questions = [
-  {
-    question: "What is the capital of France?",
-    options: ["Berlin", "Paris", "Rome", "Madrid"],
-    answer: "Paris",
-    explanation: "Paris is the capital of France"
-  },
-  {
-    question: "What is the largest planet in our solar system?",
-    options: ["Mars", "Jupiter", "Earth", "Venus"],
-    answer: "Jupiter",
-    explanation: "Jupiter is the largest planet in our solar system"
-  },
-  {
-    question: "What is the smallest country in the world?",
-    options: ["Monaco", "Vatican City", "San Marino", "Liechtenstein"],
-    answer: "Vatican City",
-    explanation: "Vatican City is the smallest country in the world"
-  }
-];
+
+
+fetch("/q/MCU.json")
+  .then(response => response.json())
+  .then(data => {
+    // Use the questions data here
+    console.log("????????????????DATA"   + data);
+  const questions = data;
+  })
+  .catch(error => console.error(error));
+
+
+
+
+
+
+
 
 // Global Variables
 let questionTime = 0; // seconds
