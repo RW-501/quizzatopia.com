@@ -190,7 +190,7 @@ function enableAnswerButtons() {
 function nextQuestion() {
   currentQuestion++;
 
-  if (currentQuestion <= totalQuestions) {
+  if (currentQuestion < totalQuestions) {
     enableAnswerButtons();
     showQuestion();
     document.getElementById("next-btn").classList.add("d-none");
@@ -204,7 +204,7 @@ function nextQuestion() {
 function skipQuestion() {
   currentQuestion++;
 
-  if (currentQuestion <= totalQuestions) {
+  if (currentQuestion < totalQuestions) {
     enableAnswerButtons();
     showQuestion();
     document.getElementById("next-btn").classList.add("d-none");
