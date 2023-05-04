@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Platform</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Quiz Platform</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="quizzes.html">Quizzes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Welcome to Quiz Platform!</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod eu
+            magna vel condimentum. Quisque pharetra, nisi sed semper accumsan,
+            libero purus molestie tellus, ut aliquam enim nunc sed elit. Vivamus
+            tincidunt tristique nisi, vel bibendum tortor tempor non.
+          </p>
+          <a href="#" class="btn btn-primary">Get Started</a>
+        </div>
+        <div class="col-md-6">
+          <img src="https://picsum.photos/id/237/400/300" alt="Quiz Platform Image" class="img-fluid">
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-light text-center py-3 mt-4">
+      <p>Quiz Platform &copy; 2023</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    ></script>
+
+    <!-- Initialize the Bootstrap navbar toggler -->
+    <script>
+      $(document).ready(function () {
+        $(".navbar-toggler").click(function () {
+          $("#navbarNav").toggleClass("collapse");
+        });
+      });
+    </script>
+  </body>
+</html>
 
