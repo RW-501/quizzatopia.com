@@ -137,7 +137,7 @@ function checkAnswer() {
 const options = optionContainers[currentQuestion]?.children;
   const explanation = questionObj.explanation;
 
-  for (let i = 0; i < options.length; i++) {
+  for (let i = 0; i <= options.length; i++) {
     options[i].classList.add('disabled');
     if (options[i].innerHTML === questionObj.answer) {
       options[i].classList.add('correct');
