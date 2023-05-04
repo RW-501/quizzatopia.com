@@ -257,7 +257,6 @@ function startTimer() {
         if (timerEnabled == true) {
             clearInterval(timer);
   timer = setInterval(function() {
-    totalTime--;
     const timerEl = document.getElementById("timer");
       if (totalTime < 5) {
     timerEl.style.color = "red";
@@ -276,6 +275,7 @@ function startTimer() {
       endQuiz();
   }
     }
+        totalTime--;
   }, 1000);
 
         }
