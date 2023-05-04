@@ -252,10 +252,10 @@ function calculateFeedback() {
 
 // Function to start the timer
 function startTimer() {
-          console.log(timerEnabled+"    timerEnabled????777???????????timerEnabled????  "); // Output: 3
-        console.log(totalTime+"    777totalTime777???????????totalTime????  "); // Output: 3
+      
 
         if (timerEnabled == true) {
+            clearInterval(timer);
   timer = setInterval(function() {
     totalTime--;
     const timerEl = document.getElementById("timer");
@@ -264,13 +264,12 @@ function startTimer() {
   } else {
     timerEl.style.color = "black";
   }
-        console.log(totalTime+"    777????777???????????totalTime????  "); // Output: 3
 
         let minutes = Math.floor(totalTime / 60);
     let seconds = totalTime % 60;
     timerEl.innerHTML = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
       if (totalTime <= 0) {
-          if (countdownPerQuestion && timerEnabled) { // start timer only if countdown is per question and timer is enabled
+          if (countdownPerQuestion == true && timerEnabled == true) { // start timer only if countdown is per question and timer is enabled
      totalTime = questionTime;
     skipQuestion();
   }else{
