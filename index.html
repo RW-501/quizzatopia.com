@@ -91,7 +91,32 @@
   <footer class="bg-light text-center py-3 mt-4">
     <p>Quiz Platform &copy; 2023</p>
   </footer>
-  
+  <script>
+// Get the current URL and parse its search parameters
+const urlParams = new URLSearchParams(window.location.search);
+
+// Get the value of the "q" parameter
+const q = urlParams.get('q');
+
+// Use the value of "q"
+console.log("urlParams     "+q); // will output "pop_culture" if the URL contains "?q=pop_culture"
+
+    // Quiz Questions
+
+const questions = [];
+
+// fetch and assign the data
+fetch("q/"+q+".json")
+  .then(response => response.json())
+  .then(data => {
+    // Use the questions data here
+    //console.log("????????????????DATA"   + data);
+    questions.push(...data);
+  })
+  .catch(error => console.error(error));
+    
+    </script>
+
   <script src="script.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
