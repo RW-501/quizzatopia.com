@@ -369,4 +369,10 @@ nav a:hover {
   margin-bottom: 1rem;
 }
 
+.card_Q {
+    display: none;
+}
 
+.card.active {
+    display: block;
+}
