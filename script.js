@@ -134,7 +134,7 @@ function checkAnswer() {
   const optionContainers = document.querySelectorAll("#optionContainers button.answer-option");
   const selectedAnswer = selectedOption.innerHTML;
   const questionObj = questions[currentQuestion];
-  const options = optionContainers[currentQuestion].children;
+const options = optionContainers[currentQuestion]?.children;
   const explanation = questionObj.explanation;
 
   for (let i = 0; i < options.length; i++) {
