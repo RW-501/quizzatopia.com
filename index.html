@@ -102,10 +102,8 @@ const q = urlParams.get('q');
 console.log("urlParams     "+q); // will output "pop_culture" if the URL contains "?q=pop_culture"
 
     // Quiz Questions
-
 const questions = [];
-    
-    
+
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -113,25 +111,19 @@ function shuffleArray(array) {
   }
   return array;
 }
-    
-    
+
 // fetch and assign the data
-fetch("q/"+q+".json")
+fetch("q/" + q + ".json")
   .then(response => response.json())
   .then(data => {
     // Use the questions data here
-    console.log("??working??????????????DATA"   + data);
     questions.push(...data);
+    console.log("questions 1    mm  ", questions); // Outputs the original order of the questions
+    shuffleArray(questions);
+    console.log("questions 2    mm  ", questions); // Outputs a random order of the questions
   })
   .catch(error => console.error(error));
-    
-    console.log("questions 1    mm  "+questions); // Outputs a random order of the words
 
- shuffleArray(questions);
-
-
-
-console.log("questions 2    mm  "+questions); // Outputs a random order of the words
     
     </script>
 
