@@ -14,16 +14,13 @@ fetch("q/MCU.json")
 
 
 */
+console.log("questions 1    mm  "+questions); // Outputs a random order of the words
 
-// Custom function to compare two elements randomly
-function shuffle(a, b) {
-  return Math.random() - 0.5;
-}
+const questions = shuffleArray([...questions]);
 
-// Shuffle the array using the custom comparison function
-questions.sort(shuffle);
 
-console.log("questions    mm  "+questions); // Outputs a random order of the words
+
+console.log("questions 2    mm  "+questions); // Outputs a random order of the words
 
 
 // Global Variables
