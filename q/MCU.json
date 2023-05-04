@@ -1,192 +1,30 @@
-[
-  {
-    "question": "What year was the first Iron Man movie released?",
-    "options": ["2006", "2007", "2008", "2009"],
-    "answer": "2008",
-    "explanation": "Iron Man was released in 2008, and kicked off the Marvel Cinematic Universe."
-  },
-  {
-    "question": "What is the name of Thor's hammer?",
-    "options": ["Stormbreaker", "Mjolnir", "Gungnir", "Yaka Arrow"],
-    "answer": "Mjolnir",
-    "explanation": "Mjolnir is Thor's magical hammer that can only be wielded by those who are worthy."
-  },
-  {
-    "question": "Who plays Black Widow in the MCU?",
-    "options": ["Scarlett Johansson", "Jennifer Lawrence", "Emma Stone", "Gal Gadot"],
-    "answer": "Scarlett Johansson",
-    "explanation": "Scarlett Johansson has played Black Widow in several MCU movies."
-  },
-  {
-    "question": "What is the name of the villain in the first Avengers movie?",
-    "options": ["Loki", "Thanos", "Ultron", "Red Skull"],
-    "answer": "Loki",
-    "explanation": "Loki, Thor's adopted brother, was the main villain in the first Avengers movie."
-  },
-  {
-    "question": "What is the name of the organization that Nick Fury leads?",
-    "options": ["S.H.I.E.L.D.", "H.A.M.M.E.R.", "A.I.M.", "HYDRA"],
-    "answer": "S.H.I.E.L.D.",
-    "explanation": "S.H.I.E.L.D. (Strategic Homeland Intervention, Enforcement, and Logistics Division) is a secret government agency that deals with superhuman threats."
-  },
-  {
-    "question": "What is the name of Tony Stark's AI assistant?",
-    "options": ["J.A.R.V.I.S.", "F.R.I.D.A.Y.", "K.A.R.E.N.", "E.D.I.T.H."],
-    "answer": "J.A.R.V.I.S.",
-    "explanation": "J.A.R.V.I.S. (Just A Rather Very Intelligent System) is an AI assistant created by Tony Stark."
-  },
-  {
-    "question": "What is the name of the superhero team that Ant-Man joins in the second Ant-Man movie?",
-    "options": ["The Avengers", "The Defenders", "The Inhumans", "The Wasp Corps"],
-    "answer": "The Wasp Corps",
-    "explanation": "In the second Ant-Man movie, Ant-Man joins forces with the original Wasp, Hope van Dyne, and her father, Hank Pym, to form a superhero team called the Wasp Corps."
-  },
-  {
-    "question": "What is the name of the Wakandan princess who becomes a superhero known as the Black Panther?",
-    "options": ["Nakia", "Shuri", "Okoye", "Ramonda"],
-    "answer": "Shuri",
-    "explanation": "Shuri is the younger sister of T'Challa (the current Black Panther) and a brilliant scientist and inventor."
-  },    
-    {    "question": "What is the name of the villain in the first Avengers movie?",    "options": ["Loki", "Thanos", "Ultron", "Red Skull"],
-    "answer": "Loki",
-    "explanation": "Loki is the villain in the first Avengers movie"
-  },
-  {
-    "question": "What is the real name of the character played by Tom Holland in the MCU?",
-    "options": ["Peter Parker", "Miles Morales", "Ben Reilly", "Eddie Brock"],
-    "answer": "Peter Parker",
-    "explanation": "Peter Parker is the real name of the character played by Tom Holland in the MCU"
-  },
-  {
-    "question": "What is the name of the metal used to make Captain America's shield?",
-    "options": ["Adamantium", "Vibranium", "Promethium", "Carbonadium"],
-    "answer": "Vibranium",
-    "explanation": "Vibranium is the metal used to make Captain America's shield"
-  },
-  {
-    "question": "What is the name of the device that allows the user to travel through time in Avengers: Endgame?",
-    "options": ["Time Stone", "Quantum Realm", "Pym Particles", "Tesseract"],
-    "answer": "Quantum Realm",
-    "explanation": "The Quantum Realm is the device that allows the user to travel through time in Avengers: Endgame"
-  },
-  {
-    "question": "Who played the character of Tony Stark in the MCU?",
-    "options": ["Tom Cruise", "Robert Downey Jr.", "Tom Hiddleston", "Chris Evans"],
-    "answer": "Robert Downey Jr.",
-    "explanation": "Robert Downey Jr. played the character of Tony Stark in the MCU"
-  },
-  {
-    "question": "What is the name of the purple-skinned villain who appears in Guardians of the Galaxy?",
-    "options": ["Ronan", "Yondu", "Nebula", "Gamora"],
-    "answer": "Ronan",
-    "explanation": "Ronan is the name of the purple-skinned villain who appears in Guardians of the Galaxy"
-  },
-  {
-    "question": "What is the name of the powerful artifact that appears in Thor: Ragnarok and Avengers: Infinity War?",
-    "options": ["Infinity Gauntlet", "Eternal Flame", "Odinforce", "Cosmic Cube"],
-    "answer": "Infinity Gauntlet",
-    "explanation": "The Infinity Gauntlet is the name of the powerful artifact that appears in Thor: Ragnarok and Avengers: Infinity War"
-  },
-  {
-    "question": "What is the name of the character played by Tessa Thompson in Thor: Ragnarok and Avengers: Endgame?",
-    "options": ["Valkyrie", "Gamora", "Nebula", "Mantis"],
-    "answer": "Valkyrie",
-    "explanation": "Valkyrie is the name of the character played by Tessa Thompson in Thor: Ragnarok and Avengers: Endgame"
-  },
-  {
-    "question": "What is the name of the mystical land that Doctor Strange visits to learn magic?",
-    "options": ["Atlantis", "Wakanda", "Asgard", "Kamar-Taj"],
-    "answer": "Kamar-Taj",
-    "explanation": "Kamar-Taj is the name of the mystical land that Doctor Strange visits to learn magic"
-  },
-  {
-"questions": [
 {
-"question": "In which film does Black Widow first appear?",
-"options": [
-"Iron Man 2",
-"Avengers",
-"Captain America: The Winter Soldier",
-"Captain America: Civil War"
-],
-"answer": "Iron Man 2",
-"explanation": "Black Widow, played by Scarlett Johansson, first appeared in the 2010 film Iron Man 2."
+  "question": "Who is the main villain in 'The Avengers'?",
+  "options": ["Loki", "Thanos", "Ultron", "Red Skull"],
+  "answer": "Loki",
+  "explanation": "Loki is the main villain in 'The Avengers'"
 },
 {
-"question": "What is the name of Thor's hammer?",
-"options": [
-"Stormbreaker",
-"Mjolnir",
-"Gungnir",
-"Jarnbjorn"
-],
-"answer": "Mjolnir",
-"explanation": "Mjolnir is the name of Thor's hammer, which was crafted by the Dwarves of Nidavellir and possesses immense power."
+  "question": "What is the name of Tony Stark's father?",
+  "options": ["Howard", "Henry", "Harold", "Hank"],
+  "answer": "Howard",
+  "explanation": "Tony Stark's father's name is Howard"
 },
 {
-"question": "Who was the first Avenger to be introduced in the Marvel Cinematic Universe?",
-"options": [
-"Iron Man",
-"Captain America",
-"Hulk",
-"Thor"
-],
-"answer": "Iron Man",
-"explanation": "Robert Downey Jr. played the role of Tony Stark, aka Iron Man, in the 2008 film that launched the Marvel Cinematic Universe."
+  "question": "What is the name of the group of intergalactic criminals that includes Gamora, Drax, and Groot?",
+  "options": ["The Ravagers", "The Brood", "The Skrulls", "The Guardians of the Galaxy"],
+  "answer": "The Guardians of the Galaxy",
+  "explanation": "The group that includes Gamora, Drax, and Groot is called The Guardians of the Galaxy"
 },
 {
-"question": "What is the real name of the villainous Loki?",
-"options": [
-"Laufeyson",
-"Odinsson",
-"Friggson",
-"Thorson"
-],
-"answer": "Laufeyson",
-"explanation": "Loki's full name is Loki Laufeyson, and he is the adopted brother of Thor."
+  "question": "Who is the director of S.H.I.E.L.D. in the Marvel Cinematic Universe?",
+  "options": ["Nick Fury", "Maria Hill", "Phil Coulson", "Alexander Pierce"],
+  "answer": "Nick Fury",
+  "explanation": "Nick Fury is the director of S.H.I.E.L.D. in the Marvel Cinematic Universe"
 },
 {
-"question": "What is the name of Tony Stark's AI assistant?",
-"options": [
-"Hal",
-"JARVIS",
-"Ultron",
-"Vision"
-],
-"answer": "JARVIS",
-"explanation": "JARVIS (Just A Rather Very Intelligent System) is the name of Tony Stark's AI assistant, voiced by Paul Bettany."
-},
-{
-"question": "Who plays the role of Hawkeye?",
-"options": [
-"Chris Evans",
-"Chris Hemsworth",
-"Mark Ruffalo",
-"Jeremy Renner"
-],
-"answer": "Jeremy Renner",
-"explanation": "Jeremy Renner plays the role of Clint Barton, aka Hawkeye, who is a skilled archer and member of the Avengers."
-},
-{
-"question": "What is the name of the AI program created by Tony Stark that goes rogue in Avengers: Age of Ultron?",
-"options": [
-"JARVIS",
-"FRIDAY",
-"ULTRON",
-"VISION"
-],
-"answer": "ULTRON",
-"explanation": "Ultron is the name of the AI program created by Tony Stark and Bruce Banner that becomes self-aware and decides to eliminate humanity."
-},
-{
-"question": "What is the name of the planet that the Hulk is exiled to in Thor: Ragnarok?",
-"options": [
-"Sakaar",
-"Vormir",
-"Nidavellir",
-"Ego"
-],
-"answer": "Sakaar",
-"explanation": "In Thor: Ragnarok, the Hulk is exiled to the planet Sakaar after the events of Avengers: Age of Ultron."
+  "question": "What is the name of the villainous organization that opposes S.H.I.E.L.D. in the Marvel Cinematic Universe?",
+  "options": ["HYDRA", "A.I.M.", "The Hand", "The Brotherhood of Mutants"],
+  "answer": "HYDRA",
+  "explanation": "HYDRA is the villainous organization that opposes S.H.I.E.L.D. in the Marvel Cinematic Universe"
 }
-]
