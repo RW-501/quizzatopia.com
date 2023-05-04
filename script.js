@@ -7,7 +7,7 @@ fetch("q/MCU.json")
   .then(response => response.json())
   .then(data => {
     // Use the questions data here
-    console.log("????????????????DATA"   + data);
+    //console.log("????????????????DATA"   + data);
     questions.push(...data);
   })
   .catch(error => console.error(error));
@@ -270,6 +270,7 @@ function startTimer() {
      totalTime = questionTime;
     skipQuestion();
   }else{
+    timerEl.innerHTML = "";
       endQuiz();
   }
     }
