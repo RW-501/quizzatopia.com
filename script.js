@@ -3,7 +3,7 @@
 const questions = [];
 
 // fetch and assign the data
-fetch("/MCU.json")
+fetch("MCU.json")
   .then(response => response.json())
   .then(data => {
     // Use the questions data here
