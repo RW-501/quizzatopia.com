@@ -1,17 +1,16 @@
 // Quiz Questions
 
-const questions;
+const questions = [];
 
+// fetch and assign the data
 fetch("../q/MCU.json")
   .then(response => response.json())
   .then(data => {
     // Use the questions data here
     console.log("????????????????DATA"   + data);
-   questions = data;
+    questions.push(...data);
   })
   .catch(error => console.error(error));
-
-
 
 
 
