@@ -116,9 +116,9 @@
 document.getElementById('show-more').addEventListener('click', function() {
   var hiddenCards = document.querySelectorAll('#card_row .col-md-4.mb-4:nth-of-type(n+4)');
   for (var i = 0; i < hiddenCards.length; i++) {
-    hiddenCards[i].style.display = 'none';
+    hiddenCards[i].style.display = 'block';
   }
-  this.style.display = 'block';
+  this.style.display = 'none';
 });
 </script>
 
