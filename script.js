@@ -119,11 +119,11 @@ var progressBar = document.getElementById('progress-bar');
 
 // Update the progress bar
 function updateProgressBar(currentQuestion) {
-  //let QuestionNewNum = currentQuestion + 1;
+  let QuestionNewNum = currentQuestion + 1;
   var percentage = (currentQuestion / totalQuestions) * 100;
   progressBar.style.width = percentage + '%';
-        console.log(QuestionNewNum+"  updateProgressBar??????????currentQuestion????"); // Output: 3
-        console.log(totalQuestions+"  totalQuestions??????????totalQuestions????"); // Output: 3
+  //      console.log(QuestionNewNum+"  updateProgressBar??????????currentQuestion????"); // Output: 3
+    //    console.log(totalQuestions+"  totalQuestions??????????totalQuestions????"); // Output: 3
 
 }   
 
@@ -216,7 +216,7 @@ function skipQuestion() {
 
     // update the progress bar
   updateProgressBar(currentQuestion);
-    console.log(currentQuestion+"????????????currentQuestion????"); // Output: 3
+//    console.log(currentQuestion+"????????????currentQuestion????"); // Output: 3
 
 // Function to end the quiz
 function endQuiz() {
