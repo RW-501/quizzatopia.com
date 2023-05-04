@@ -64,7 +64,7 @@ function startQuiz() {
 
   showQuestion();
 
-  setQuizTime;
+  setQuizTime();
 
   answeredQuestions = [];
   updateProgressBar(currentQuestion);
