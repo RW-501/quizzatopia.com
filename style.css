@@ -369,26 +369,5 @@ nav a:hover {
   margin-bottom: 1rem;
 }
 
-#card_row {
-  display: flex;
-  justify-content: space-between;
-  overflow: hidden;
-}
 
-.col-md-4 {
-  flex-basis: 33.33%;
-  transition: transform 0.5s ease-in-out;
-}
-
-.col-md-4.active {
-  transform: translateX(0%);
-}
-
-.col-md-4.next {
-  transform: translateX(100%);
-}
-
-.col-md-4.prev {
-  transform: translateX(-100%);
-}
 
