@@ -1,5 +1,5 @@
 // Quiz Questions
-
+/*
 const questions = [];
 
 // fetch and assign the data
@@ -13,7 +13,7 @@ fetch("q/MCU.json")
   .catch(error => console.error(error));
 
 
-
+*/
 
 
 
