@@ -99,7 +99,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const q = urlParams.get('q');
 
 // Use the value of "q"
-console.log("urlParams     "+q); // will output "pop_culture" if the URL contains "?q=pop_culture"
+//console.log("urlParams     "+q); // will output "pop_culture" if the URL contains "?q=pop_culture"
 
     // Quiz Questions
 const questions = [];
@@ -118,9 +118,9 @@ fetch("q/" + q + ".json")
   .then(data => {
     // Use the questions data here
     questions.push(...data);
-    console.log("questions 1    mm  ", questions); // Outputs the original order of the questions
+ //   console.log("questions 1    mm  ", questions); // Outputs the original order of the questions
     shuffleArray(questions);
-    console.log("questions 2    mm  ", questions); // Outputs a random order of the questions
+  //  console.log("questions 2    mm  ", questions); // Outputs a random order of the questions
   })
   .catch(error => console.error(error));
 
