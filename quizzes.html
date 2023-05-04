@@ -32,9 +32,10 @@
 
   <div id="card_container" class="container mt-4">
     <h1>Choose a quiz</h1>
+        <div class="card-wrapper">
   <div id="card_content" class="row">
       <div class="col-md-4 mb-4">
-        <div class="card">
+        <div class="card_Q">
           <img src="https://via.placeholder.com/150x150.png" class="card-img-top" alt="Quiz Image">
           <div class="card-body">
             <h5 class="card-title">CompTIA A+, Network+, and Security+</h5>
@@ -44,7 +45,7 @@
         </div>
       </div>
     <div class="col-md-4 mb-4">
-        <div class="card">
+        <div class="card_Q">
           <img src="https://via.placeholder.com/150x150.png" class="card-img-top" alt="Quiz Image">
           <div class="card-body">
             <h5 class="card-title">National Council Licensure Examination (NCLEX)</h5>
@@ -55,7 +56,7 @@
       </div>
   
             <div class="col-md-4 mb-4">
-        <div class="card">
+        <div class="card_Q">
           <img src="https://via.placeholder.com/150x150.png" class="card-img-top" alt="Quiz Image">
           <div class="card-body">
             <h5 class="card-title">Strength Training Quiz</h5>
@@ -65,7 +66,7 @@
         </div>
       </div>
         <div class="col-md-4 mb-4">
-        <div class="card">
+        <div class="card_Q">
           <img src="https://via.placeholder.com/150x150.png" class="card-img-top" alt="Quiz Image">
           <div class="card-body">
             <h5 class="card-title">Drivers License Test</h5>
@@ -75,7 +76,7 @@
         </div>
       </div>
         <div class="col-md-4 mb-4">
-        <div class="card">
+        <div class="card_Q">
           <img src="https://via.placeholder.com/150x150.png" class="card-img-top" alt="Quiz Image">
           <div class="card-body">
             <h5 class="card-title">Project Management Professional</h5>
@@ -85,7 +86,7 @@
         </div>
       </div>
          <div class="col-md-4 mb-4">
-        <div class="card">
+        <div class="card_Q">
           <img src="https://via.placeholder.com/150x150.png" class="card-img-top" alt="Quiz Image">
           <div class="card-body">
             <h5 class="card-title">Architect Registration Examination</h5>
@@ -95,12 +96,13 @@
         </div>
       </div>
       <div class="col-md-4 mb-4">
-        <div class="card">
+        <div class="card_Q">
           <img src="https://via.placeholder.com/150x150.png" class="card-img-top" alt="Quiz Image">
           <div class="card-body">
             <h5 class="card-title">ServSafe Food Protection Manager</h5>
             <p class="card-text">Ensure the safety of your foodservice establishment and customers with this nationally-recognized certification exam.</p>
             <a href="index.html?q=servsafe_food_protection_manager_certification_exam" class="btn btn-primary">Start Quiz</a>
+                  </div>
                   </div>
                   </div>
                   </div>
@@ -593,40 +595,38 @@
   
   
 <script>
-  // Get the card container and all the cards
-const cardContainer = document.getElementById("card_container");
-const cards = cardContainer.querySelectorAll(".card");
+  $(document).ready(function() {
+    // Create an array of all the card elements
+    var cardArray = $(".card_Q");
+    var cardRow = $("#card_row");
+    var currentCards = [];
 
-// Pick two random cards to swap out initially
-let cardIndex1 = Math.floor(Math.random() * cards.length);
-let cardIndex2 = Math.floor(Math.random() * cards.length);
-while (cardIndex2 === cardIndex1) {
-  cardIndex2 = Math.floor(Math.random() * cards.length);
-}
+    // Show 3 random cards and add them to the currentCards array
+    for (var i = 0; i < 3; i++) {
+        var randomIndex = Math.floor(Math.random() * cardArray.length);
+        var randomCard = cardArray.splice(randomIndex, 1)[0];
+        currentCards.push(randomCard);
+        $(randomCard).addClass("active_Q");
+    }
 
-// Swap the two initial cards
-cards[cardIndex1].style.display = "none";
-cards[cardIndex2].style.display = "none";
+    // Every 5 seconds, remove 2 cards and add 2 new ones
+    setInterval(function() {
+        // Remove 2 cards from the currentCards array and hide them
+        for (var i = 0; i < 2; i++) {
+            var removedCard = currentCards.splice(i, 1)[0];
+            $(removedCard).removeClass("active_Q");
+        }
 
-// Set up the interval to swap cards every 5 seconds
-setInterval(() => {
-  // Pick two random cards to swap out
-  let cardIndex1 = Math.floor(Math.random() * cards.length);
-  let cardIndex2 = Math.floor(Math.random() * cards.length);
-  while (cardIndex2 === cardIndex1) {
-    cardIndex2 = Math.floor(Math.random() * cards.length);
-  }
+        // Add 2 new cards to the currentCards array and show them
+        for (var i = 0; i < 2; i++) {
+            var randomIndex = Math.floor(Math.random() * cardArray.length);
+            var randomCard = cardArray.splice(randomIndex, 1)[0];
+            currentCards.push(randomCard);
+            $(randomCard).addClass("active_Q");
+        }
+    }, 5000);
+});
 
-  // Swap the two cards
-  cards[cardIndex1].style.display = "none";
-  cards[cardIndex2].style.display = "none";
-
-  // Wait for 1 second before showing the swapped cards again
-  setTimeout(() => {
-    cards[cardIndex1].style.display = "block";
-    cards[cardIndex2].style.display = "block";
-  }, 1000);
-}, 5000);
 
   
   
