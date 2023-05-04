@@ -14,13 +14,7 @@ fetch("q/MCU.json")
 
 
 */
-console.log("questions 1    mm  "+questions); // Outputs a random order of the words
 
-const questions = shuffleArray([...questions]);
-
-
-
-console.log("questions 2    mm  "+questions); // Outputs a random order of the words
 
 
 // Global Variables
