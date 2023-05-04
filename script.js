@@ -87,7 +87,10 @@ const countdownCheckbox = document.getElementById("countdown-per-question");
 countdownCheckbox.addEventListener("change", function() {
   countdownPerQuestion = countdownCheckbox.checked;
             console.log(countdownPerQuestion+"     countdownPerQuestion??????????countdownPerQuestion????     "); // Output: 3
+  timerCheckbox.checked = true;
 timerEnabled = true;
+            console.log(timerEnabled+"     timerEnabled??????????timerEnabled????     "); // Output: 3
+
 });
 
 
