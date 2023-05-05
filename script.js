@@ -30,16 +30,7 @@ let totalQuestions = questions.length;
 let timerEnabled = false;
 
 // Functions
-const timerCheckbox = document.querySelector('#timer-checkbox');
-const quizTimeInput = document.querySelector('#quiz-time');
 
-timerCheckbox.addEventListener('change', () => {
-  if (timerCheckbox.checked) {
-    quizTimeInput.style.display = 'block';
-  } else {
-    quizTimeInput.style.display = 'none';
-  }
-});
 
 // Function to set quiz time
 function setQuizTime() {
@@ -78,24 +69,29 @@ function startQuiz() {
 
 }
 
+const quizTimeInput = document.querySelector('#quiz-time');
 
 
 // Add an event listener to the timer checkbox to update the timerEnabled variable
 const timerCheckbox = document.getElementById("timer-checkbox");
 timerCheckbox.addEventListener("change", function () {
   timerEnabled = timerCheckbox.checked;
-          console.log(timerEnabled+"     timerEnabled??????????timerEnabled????     "); // Output: 3
-
+  
+  if (timerCheckbox.checked) {
+    quizTimeInput.style.display = 'block';
+  } else {
+    quizTimeInput.style.display = 'none';
+  }
+  
 });
 
 
 const countdownCheckbox = document.getElementById("countdown-per-question");
 countdownCheckbox.addEventListener("change", function() {
   countdownPerQuestion = countdownCheckbox.checked;
-            console.log(countdownPerQuestion+"     countdownPerQuestion??????????countdownPerQuestion????     "); // Output: 3
   timerCheckbox.checked = true;
 timerEnabled = true;
-            console.log(timerEnabled+"     timerEnabled??????????timerEnabled????     "); // Output: 3
+           // console.log(timerEnabled+"     timerEnabled??????????timerEnabled????     "); // Output: 3
 
 });
 
