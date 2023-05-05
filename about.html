@@ -145,13 +145,19 @@ $(document).ready(function(){
     
     
     
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  var $j = jQuery.noConflict();
+  $j(document).ready(function() {
+    $j('.carousel').carousel({
+      interval: 3000
+    });
+    // ...
+  });
+</script>
       <script>
 
-$(document).ready(function() {
-  // Set the interval for the carousel to slide every 3 seconds
-  $('.carousel').carousel({
-    interval: 3000
-  });
 
   // When the carousel slides
   $('.carousel').on('slide.bs.carousel', function() {
