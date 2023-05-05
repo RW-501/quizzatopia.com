@@ -10,7 +10,7 @@ $(document).ready(function(){
 });
 
   $(function(){
-    $("#navbar").load("navbar.html");
+    $("#navbar").load("https://rw-501.github.io/Q-A/navbar.html");
   });
 
 
