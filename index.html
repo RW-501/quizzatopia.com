@@ -19,29 +19,36 @@
 
 <div id="optionContainer" class="container mt-4">
   <div class="row">
-    <div class="col-lg-6">
-      <div class="quiz-options" id="quiz-options">
-        <label class="checkbox-container" for="timer-checkbox">
-          <input type="checkbox" id="timer-checkbox" />
-          <span class="checkmark"></span>
-          Enable timer
-        </label>
-        <label class="checkbox-container" for="countdown-per-question">
-          <input type="checkbox" id="countdown-per-question" name="countdown-per-question">
-          <span class="checkmark"></span>
-          Countdown per question
-        </label>
+    <div class="col-md-6">
+      <div class="quiz-options">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="timer-checkbox">
+          <label class="form-check-label" for="timer-checkbox">
+            Enable Timer
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="countdown-per-question">
+          <label class="form-check-label" for="countdown-per-question">
+            Countdown per Question
+          </label>
+        </div>
         <div class="form-group">
           <label for="quiz-time">Quiz Time:</label>
-          <input type="number" id="quiz-time" name="quiz-time" value="30" class="form-control">
+          <div class="input-group">
+            <input type="number" id="quiz-time" name="quiz-time" value="30" class="form-control">
+            <div class="input-group-append">
+              <span class="input-group-text">Minutes</span>
+            </div>
+          </div>
         </div>
       </div>
       <div class="text-center">
         <button id="start-btn" class="btn btn-primary btn-lg">Start Quiz</button>
       </div>
     </div>
-    <div class="col-lg-6">
-      <img src="path/to/image" alt="Quiz Image" class="img-fluid">
+    <div class="col-md-6">
+      <img src="image-url" alt="quiz-image" class="img-fluid">
     </div>
   </div>
 </div>
