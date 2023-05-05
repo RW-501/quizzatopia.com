@@ -128,8 +128,21 @@ fetch("q/" + q + ".json")
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
 
-  <script src="helpScript.js"></script>
   
+  <script>
+  
+<!-- Initialize the Bootstrap navbar toggler <script src="helpScript.js"></script> -->
+$(document).ready(function(){
+    $('.navbar-toggler').click(function(){
+        $('#navbarNav').toggleClass('collapse');
+    });
+});
+
+  $(function(){
+    $("#navbar").load("https://rw-501.github.io/Q-A/navbar.html");
+  });
+
+    </script>
 
   </body>
 
