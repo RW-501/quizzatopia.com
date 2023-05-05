@@ -190,13 +190,13 @@ $(document).ready(function() {
     var input = $(this).closest(".input-group").find("input");
     var icon = $(this).find("i");
 
-    if (input.attr("type") === "password") {
-      input.attr("type", "text");
-      icon.removeClass("fa fa-eye-slash").addClass("bi bi-eye-fill");
-    } else {
-      input.attr("type", "password");
-      icon.removeClass("bi bi-eye-fill").addClass("fa fa-eye-slash");
-    }
+  if (input.attr("type") === "password") {
+    input.attr("type", "text");
+    icon.removeClass("bi bi-eye").addClass("bi bi-eye-slash");
+  } else {
+    input.attr("type", "password");
+    icon.removeClass("bi bi-eye-slash").addClass("bi bi-eye");
+  }
   });
 });
 
