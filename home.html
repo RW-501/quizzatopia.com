@@ -170,18 +170,34 @@
 	
 	
 	
-	
 $(document).ready(function() {
+  // Show sign up form when "Sign up" button is clicked
+  $("#show-signup-form").click(function() {
+    $("#login-form").addClass("d-none");
+    $("#signup-form").removeClass("d-none");
+  });
+
+  // Show login form when "Login" button is clicked
+  $("#show-login-form").click(function() {
+    $("#signup-form").addClass("d-none");
+    $("#login-form").removeClass("d-none");
+  });
+
+  // Toggle password visibility when eye icon is clicked
   $(".toggle-password").click(function() {
-    $(this).toggleClass("bi-eye bi-eye-slash");
-    var input = $($(this).parent().prev("input"));
-    if (input.attr("type") == "password") {
+    var input = $(this).closest(".input-group").find("input");
+    var icon = $(this).find("i");
+
+    if (input.attr("type") === "password") {
       input.attr("type", "text");
+      icon.removeClass("bi-eye").addClass("bi-eye-slash");
     } else {
       input.attr("type", "password");
+      icon.removeClass("bi-eye-slash").addClass("bi-eye");
     }
   });
 });
+
 
 </script>
 
