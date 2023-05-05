@@ -35,47 +35,39 @@
     </div>
 
     
-    <div class="container-fluid">
+   <div class="container-fluid">
   <div class="row">
-    <div class="col-md-4 bg-dark" style="box-shadow: 5px 5px 10px grey;">
-      <!-- Empty div with shadow -->
-    </div>
-    <div class="col-md-8">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Login / Sign Up</h5>
-          <!-- Login form -->
-          <form>
-            <div class="form-group">
-              <label for="username">Username</label>
-              <input type="text" class="form-control" id="username" placeholder="Enter username">
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" id="password" placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-primary">Login</button>
-          </form>
-          <hr>
-          <!-- Sign-up form -->
-          <form>
-            <div class="form-group">
-              <label for="fullname">Full Name</label>
-              <input type="text" class="form-control" id="fullname" placeholder="Enter your full name">
-            </div>
-            <div class="form-group">
-              <label for="email">Email address</label>
-              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <div class="form-group">
-              <label for="newpassword">Password</label>
-              <input type="password" class="form-control" id="newpassword" placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-primary">Sign Up</button>
-          </form>
+    <div class="col-md-6 shadow p-5">
+      <h2>Login</h2>
+      <form id="login-form">
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" name="username">
         </div>
-      </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+    </div>
+    <div class="col-md-6 shadow">
+      <h2>Sign Up</h2>
+      <form id="signup-form">
+        <div class="mb-3">
+          <label for="new-username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="new-username" name="new-username">
+        </div>
+        <div class="mb-3">
+          <label for="new-email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="new-email" name="new-email">
+        </div>
+        <div class="mb-3">
+          <label for="new-password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="new-password" name="new-password">
+        </div>
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+      </form>
     </div>
   </div>
 </div>
@@ -190,6 +182,52 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     ></script>
 
+  <script>
+    $(document).ready(function() {
+  // handle login form submission
+  $('#login-form').submit(function(event) {
+    event.preventDefault(); // prevent the default form submit behavior
+    var formData = $(this).serialize(); // get the form data
+    $.ajax({
+      type: 'POST',
+      url: '/login',
+      data: formData,
+      success: function(response) {
+        console.log(response);
+        // handle successful login
+      },
+      error: function(xhr, status, error) {
+        console.log(xhr.responseText);
+        // handle login error
+      }
+    });
+  });
+
+  // handle sign up form submission
+  $('#signup-form').submit(function(event) {
+    event.preventDefault(); // prevent the default form submit behavior
+    var formData = $(this).serialize(); // get the form data
+    $.ajax({
+      type: 'POST',
+      url: '/signup',
+      data: formData,
+      success: function(response) {
+        console.log(response);
+        // handle successful sign up
+      },
+      error: function(xhr, status, error) {
+        console.log(xhr.responseText);
+        // handle sign up error
+      }
+    });
+  });
+});
+
+    
+    
+  </script>
+  
+  
     <script src="helpScript.js"></script>
   
 
