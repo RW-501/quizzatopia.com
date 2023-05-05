@@ -173,10 +173,18 @@ function checkAnswer() {
         console.log(selectedOption.innerHTML+"   ????????????selectedOption.answer????"); // Output: 3
   }
   
+    const answerO = document.getElementsByClassName("answer-option");
+  for (let i = 0; i < answerO.length; i++) {
+    if(answerO[i].innerHTML == questionObj.answer){
+              answerO[i].classList.add('missed');
+
+    }
+  }
+  
+  
+  
   /*
-   if (options[i].innerHTML === questionObj.answer) {
-        options[i].classList.add('missed');
-      } 
+ 
 */
 
   if (selectedAnswer === questionObj.answer) {
