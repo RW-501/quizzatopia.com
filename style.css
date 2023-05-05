@@ -84,6 +84,10 @@
       .answer-option:hover {
         background-color: #ddd;
       }
+#btn_container{
+ display:flex;
+ 
+}
 
       #next-btn,
       #skip-btn {
@@ -104,10 +108,7 @@
         background-color: #555;
       }
 
-#next-btn {
-    float: right;
-  }
-}
+
 
 
       /* Result styles */
