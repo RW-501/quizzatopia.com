@@ -261,7 +261,9 @@ function skipQuestion() {
 function endQuiz() {
   clearInterval(timer);
   quizStarted = false;
+if(document.getElementById("timer").innerHTML){
 document.getElementById("timer").innerHTML = "";
+}
     const feedback = calculateFeedback();
     document.getElementById("feedback").innerHTML = feedback;
   
