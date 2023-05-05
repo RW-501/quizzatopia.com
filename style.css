@@ -22,27 +22,7 @@
         flex: 1;
       }
 
-      /* Navigation styles */
-      nav {
-        background-color: #333;
-        color: #fff;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-      }
-
-      nav a {
-        color: #fff;
-        text-decoration: none;
-        margin-right: 20px;
-        font-weight: bold;
-      }
-
-      nav a:hover {
-        color: #f8f8f8;
-      }
-
+    
       /* Quiz styles */
       #quiz-container {
         max-width: 600px;
