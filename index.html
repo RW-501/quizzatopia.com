@@ -121,7 +121,7 @@ const q = urlParams.get('q');
 
                 const newStr = q.replace(/_/g, " ");
 
-           document.getElementById("optionQuizName").innerHTML =   newStr;                                                                                      
+document.getElementById("optionsQuizName").innerHTML = newStr;
                                                                                                     
     // Quiz Questions
 const questions = [];
@@ -158,6 +158,6 @@ fetch("q/" + q + ".json")
     <script src="helpScript.js"></script>
  
 
-  </body>
+    </body>
+</html>
 
-  </html>
