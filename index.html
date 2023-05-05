@@ -130,7 +130,10 @@ fetch("q/" + q + ".json")
   
   <script>
   
-  
+  $(document).ready(function() {
+    $('#navbar').load('navbar.html');
+});
+    
   
 $(document).ready(function(){
     $('.navbar-toggler').click(function(){
@@ -139,10 +142,7 @@ $(document).ready(function(){
 });
 
   
-$(document).ready(function() {
-    $('#navbar').load('https://rw-501.github.io/Q-A/navbar.html');
-});
-    
+
     
     </script>
 
