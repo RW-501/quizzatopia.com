@@ -91,16 +91,26 @@
     
     
     
-
-  <div class="container mt-4 d-none" id="end-container">
-    <h2 id="result-text"></h2>
-      <h2>Your Final Score</h2>
+<div class="container mt-4 d-none" id="end-container">
+  <h2 id="result-text"></h2>
+  <h2>Your Final Score</h2>
   <p id="score"></p>
   <p id="feedback"></p>
-    <button id="retake-btn" class="btn btn-primary">Retake Quiz</button>
-    <button class="other-quiz-btn btn btn-secondary" onclick="window.location.href = 'quizzes.html'">Try Another Quiz</button>
+  <button id="retake-btn" class="btn btn-primary">Retake Quiz</button>
+  <button class="other-quiz-btn btn btn-secondary" onclick="window.location.href = 'quizzes.html'">Try Another Quiz</button>
+  <div id="social-sharing">
+    <a id="social_fb" href="" target="_blank" class="btn btn-social btn-facebook"><i class="fab fa-facebook-f"></i> Share on Facebook</a>
+ <a id="social_tw" href="" target="_blank" class="btn btn-social btn-twitter"><i class="fab fa-twitter"></i> Share on Twitter</a>
+     <a id="social_ln"  href="" target="_blank" class="btn btn-social btn-linkedin"><i class="fab fa-linkedin"></i> Share on LinkedIn</a>
+  <a id="social_red"  href="" target="_blank" class="btn btn-social btn-reddit"><i class="fab fa-reddit"></i> Share on Reddit</a>
 
+  </div>
 </div>
+
+	
+	
+	
+	
 
   <footer class="bg-light text-center py-3 mt-4">
     <p>Quiztopia Platform &copy; 2023</p>
@@ -121,8 +131,16 @@ const q = urlParams.get('q');
 
                 const newStr = q.replace(/_/g, " ");
 
+	  
 document.getElementById("optionsQuizName").innerHTML = newStr;
-                                                                                                    
+	  
+document.getElementById("social_fb").href = "https://www.facebook.com/sharer/sharer.php?u=https://rw-501.github.io/Q-A/index.html?q="+q;
+document.getElementById("social_tw").href = "https://twitter.com/intent/tweet?url=https://rw-501.github.io/Q-A/index.html?q="+q;
+document.getElementById("social_ln").href = "ttps://www.linkedin.com/shareArticle?url=https://rw-501.github.io/Q-A/index.html?q="+q";
+document.getElementById("social_red").href = "https://www.reddit.com/submit?url=https://rw-501.github.io/Q-A/index.html?q="+q";
+                          
+	  
+
     // Quiz Questions
 const questions = [];
 
