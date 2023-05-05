@@ -159,6 +159,11 @@ function checkAnswer() {
         options[i].classList.add('correct');
       } else {
         options[i].classList.add('incorrect');
+        
+       if (options[i].innerHTML === questionObj.answer) {
+        options[i].classList.add('missed');
+      } 
+        
       }
     }
   }
@@ -198,7 +203,7 @@ function enableAnswerButtons() {
   const answerButtons = document.getElementsByClassName("answer-option");
   for (let i = 0; i < answerButtons.length; i++) {
     answerButtons[i].addEventListener("click", checkAnswer);
-    answerButtons[i].classList.remove("disabled", "correct", "incorrect");
+    answerButtons[i].classList.remove("disabled", "correct", "incorrect", "missed" );
   }
    
 }
