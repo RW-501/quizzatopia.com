@@ -74,13 +74,15 @@ const quizTimeInput = document.querySelector('#quiz-time');
 
 // Add an event listener to the timer checkbox to update the timerEnabled variable
 const timerCheckbox = document.getElementById("timer-checkbox");
+const timeGroup = document.getElementById("timer-timeGroup");
+
 timerCheckbox.addEventListener("change", function () {
   timerEnabled = timerCheckbox.checked;
   
   if (timerCheckbox.checked) {
-    quizTimeInput.style.display = 'block';
+    timeGroup.style.display = 'block';
   } else {
-    quizTimeInput.style.display = 'none';
+    timeGroup.style.display = 'none';
   }
   
 });
@@ -91,6 +93,12 @@ countdownCheckbox.addEventListener("change", function() {
   countdownPerQuestion = countdownCheckbox.checked;
   timerCheckbox.checked = true;
 timerEnabled = true;
+  
+    if (timerCheckbox.checked) {
+    timeGroup.style.display = 'block';
+  } else {
+    timeGroup.style.display = 'none';
+  }
            // console.log(timerEnabled+"     timerEnabled??????????timerEnabled????     "); // Output: 3
 
 });
