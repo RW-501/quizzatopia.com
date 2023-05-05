@@ -20,25 +20,47 @@
 <div id="optionContainer" class="container mt-4">
   <div id="timer" class="text-right pr-4"></div>
   <div class="quiz-options" id="quiz-options">
-    <label class="checkbox-container" for="timer-checkbox">
-      <input type="checkbox" id="timer-checkbox" />
-      <span class="checkmark"></span>
-      Enable timer
-    </label>
-    <label class="checkbox-container" for="countdown-per-question">
-      <input type="checkbox" id="countdown-per-question" name="countdown-per-question">
-      <span class="checkmark"></span>
-      Countdown per question
-    </label>
-    <div class="form-group quiz-time-container" style="display: none;">
-      <label for="quiz-time">Quiz Time:</label>
-      <input type="number" id="quiz-time" name="quiz-time" value="30" class="form-control">
+    <div class="option-group">
+      <div class="option-left">
+        <i class="fas fa-stopwatch"></i>
+        <span>Enable timer</span>
+      </div>
+      <div class="option-right">
+        <label class="switch">
+          <input type="checkbox" id="timer-checkbox">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+    <div class="option-group">
+      <div class="option-left">
+        <i class="fas fa-clock"></i>
+        <span>Countdown per question</span>
+      </div>
+      <div class="option-right">
+        <label class="switch">
+          <input type="checkbox" id="countdown-per-question">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+    <div class="option-group">
+      <div class="option-left">
+        <i class="fas fa-hourglass-start"></i>
+        <span>Quiz Time</span>
+      </div>
+      <div class="option-right">
+        <div class="form-group">
+          <input type="number" id="quiz-time" name="quiz-time" value="30" class="form-control" placeholder="Enter time in minutes" style="display: none">
+        </div>
+      </div>
     </div>
   </div>
   <div class="text-center">
     <button id="start-btn" class="btn btn-primary btn-lg">Start Quiz</button>
   </div>
 </div>
+
 
 
 
