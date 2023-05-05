@@ -1,3 +1,7 @@
+
+
+
+
 <!-- Initialize the Bootstrap navbar toggler -->
 $(document).ready(function(){
     $('.navbar-toggler').click(function(){
@@ -8,3 +12,6 @@ $(document).ready(function(){
   $(function(){
     $("#navbar").load("navbar.html");
   });
+
+
+console.log("???helpScript?????????????DATA" );
