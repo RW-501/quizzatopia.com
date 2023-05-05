@@ -85,7 +85,7 @@
         background-color: #ddd;
       }
 #btn_container{
- display:flex;
+ display:block;
  
 }
 
