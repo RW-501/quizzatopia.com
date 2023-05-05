@@ -1,35 +1,202 @@
-/* Quiz Options Styles */
-
+/* Style for the quiz option container */
 #optionContainer {
-  background-color: #f5f5f5;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-  margin-top: 50px;
-}
-
-#quiz-options {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the quiz options section */
+.quiz-options {
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the checkbox container */
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 2.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Style for the checkboxes */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Style for the checkmark */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.25rem;
+  width: 1.25rem;
+  background-color: #fff;
+  border: 1px solid #6c757d;
+  border-radius: 0.25rem;
+}
+
+/* Style for the checked checkboxes */
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style for the checkmark icon */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Style for the checkbox label */
+.checkbox-container span {
+  position: absolute;
+  top: 0;
+  left: 2.5rem;
+}
+
+/* Style for the quiz time input */
+.form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+
+/* Style for the start quiz button */
+#start-btn {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Style for the quiz image */
+.quiz-image {
+  display: inline-block;
+  height: auto;
+  width: 8rem;
+  margin-right: 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Add hover effect for checkboxes */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* Add focus effect for checkboxes */
+.checkbox-container input:focus ~ .checkmark {
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+/* Add active effect for checkboxes */
+.checkbox-container input:active ~ .checkmark {
+  background-color: #007bff;
+}
+
+/* Add hover effect for start button */
+#start-btn:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+/* Add focus effect for start button */
+#start-btn:focus {
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+/* Add active effect for start button */
+#start-btn:active {
+  background-color: #0062cc;
+  border-color: #005cbf;
+}
+
+/* Quiz option container styles */
+#optionContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #f8f9fa;
+  border: 1px solid #e2e6ea;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Quiz options styles */
+.quiz-options {
+  display: flex;
+  align-items: center;
 }
 
 .quiz-options label {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  cursor: pointer;
-  margin-bottom: 10px;
-  font-size: 18px;
+  margin-right: 15px;
+  margin-bottom: 0;
+  font-size: 16px;
+  color: #343a40;
 }
 
-.checkbox-container {
+.quiz-options label:last-child {
+  margin-right: 0;
+}
+
+.quiz-options .form-group {
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+
+.quiz-options .form-group label {
+  display: block;
+  font-size: 16px;
+  color: #343a40;
+  margin-bottom: 5px;
+}
+
+.quiz-options .form-control {
   display: inline-block;
+  width: 70px;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.quiz-options .form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Checkbox styles */
+.checkbox-container {
+  display: block;
   position: relative;
   padding-left: 35px;
-  margin-right: 20px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  user-select: none;
 }
 
 .checkbox-container input {
@@ -45,29 +212,27 @@
   height: 25px;
   width: 25px;
   background-color: #eee;
-  border: 1px solid #ccc;
-  border-radius: 5px;
 }
 
-.checkbox-container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-.checkbox-container input:checked ~ .checkmark {
+/* When the checkbox is checked, add a blue background */
+.checkmark input:checked + .checkmark {
   background-color: #2196F3;
 }
 
+/* Show the checkmark when the checkbox is checked */
+.checkmark input:checked + .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-.checkbox-container input:checked ~ .checkmark:after {
-  display: block;
-}
-
-.checkbox-container .checkmark:after {
+/* Position the checkmark inside the checkbox */
+.checkmark:after {
   left: 9px;
   top: 5px;
   width: 5px;
@@ -77,63 +242,72 @@
   transform: rotate(45deg);
 }
 
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 18px;
-}
-
-.form-group input {
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid #ccc;
-  padding: 10px;
-  font-size: 16px;
-  font-weight: 400;
-  color: #333;
-  background: transparent;
-  transition: border-color 0.3s ease-in-out;
-}
-
-.form-group input:focus {
-  outline: none;
-  border-color: #007bff;
-}
-
-/* Styling for slider switch */
-.slider {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  margin-left: 20px;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: #fff;
-  -webkit-transition: .4s;
-  transition: .4s;
-  border-radius: 50%;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.slider input {
+/* Countdown styles */
+#countdown-per-question {
   display: none;
 }
 
-.slider input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+#countdown-per-question:checked ~ .form-group {
+  display: block;
+}
+
+.form-group {
+  display: none;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 60px;
+  margin-left: 10px;
+}
+
+/* Start button styles */
+#start-btn {
   background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+  font-size: 1.25rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.3rem;
+  transition: all 0.2s ease-in-out;
+  margin-top: 1rem;
+}
+
+/* Add hover effect for start button */
+#start-btn:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+  color: #fff;
+}
+
+/* Add active effect for start button */
+#start-btn:active {
+  background-color: #0062cc;
+  border-color: #005cbf;
+}
+
+/* Option container styles */
+#optionContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+@media (max-width: 767px) {
+  #optionContainer {
+    flex-wrap: wrap;
+  }
+
+  .quiz-options {
+    margin-top: 20px;
+    width: 100%;
+  }
 }
