@@ -9,6 +9,13 @@
     font-weight: bold;
 
 }
+.form-check {
+  
+    margin: 1%;
+      
+      
+}
+
 
 /* Customize the checkbox */
 .form-check-input[type="checkbox"] {
