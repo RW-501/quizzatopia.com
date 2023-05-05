@@ -57,7 +57,7 @@ function startQuiz() {
   quizStarted = true;
   document.getElementById("start-btn").classList.add("d-none");
   document.getElementById("quiz-container").classList.remove("d-none");
-    document.getElementById("quiz-options").classList.add("d-none");
+    document.getElementById("optionContainer").classList.add("d-none");
 
   showQuestion();
 
