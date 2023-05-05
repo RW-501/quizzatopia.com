@@ -159,19 +159,21 @@ function checkAnswer() {
         options[i].classList.add('correct');
       } else {
         options[i].classList.add('incorrect');
-        
-     console.log(options[i].innerHTML+"   ????????????options[i].innerHTM????"); // Output: 3
+      }
+      
+           console.log(options[i].innerHTML+"   ????????????options[i].innerHTM????"); // Output: 3
 
         console.log(questionObj.answer+"   ????????????questionObj.answer????"); // Output: 3
-      }
+      
+      
     }
   }
   
-  
+  /*
    if (options[i].innerHTML === questionObj.answer) {
         options[i].classList.add('missed');
       } 
-
+*/
 
   if (selectedAnswer === questionObj.answer) {
     selectedOption.classList.add('correct');
