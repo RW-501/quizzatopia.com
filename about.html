@@ -6,30 +6,16 @@
   <title>About | Quiztopia Platform</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+  
+    <link rel="import" href="navbar.html">
 </head>
 
+<body>
+  <div id="navbar"></div>
+    <!-- rest of the page content -->
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="home.html">Quiztopia Platform</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="home.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="quizzes.html">Quizzes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="about.html">About</a>
-        </li>
-      </ul>
-    </div>
+  
 
-  </nav>
-  <body>
   <div class="container mt-4">
     <h1>About Quiztopia Platform</h1>
     <p>Step into the world of quizzes with Quiztopia - your ultimate destination for all things trivia! With a vast array of categories to choose from, including history, science, pop culture, and more, Quiztopia offers a one-stop-shop for all your quiz needs. Whether you're looking to test your knowledge, challenge your friends, or simply pass the time, our user-friendly platform makes it easy to get started.
@@ -203,16 +189,9 @@ With our seamless integration of gamification and learning, Quiztopia is more th
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
 
-  <!-- Initialize the Bootstrap navbar toggler -->
-<script>
-$(document).ready(function(){
-    $('.navbar-toggler').click(function(){
-        $('#navbarNav').toggleClass('collapse');
-    });
-});
+<script src="helpScript.js"></script>
+  
 
-        
-</script>
 
     
   </body>
