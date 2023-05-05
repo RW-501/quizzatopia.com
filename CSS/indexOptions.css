@@ -15,7 +15,9 @@
       
       
 }
-
+#timer-timeGroup{
+      display: none;
+}
 
 /* Customize the checkbox */
 .form-check-input[type="checkbox"] {
