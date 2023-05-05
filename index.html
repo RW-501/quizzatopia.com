@@ -6,6 +6,7 @@
   <title>Quiztopia Platform</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/CSS/indexOptions.css">
   
     <link rel="import" href="https://rw-501.github.io/Q-A/navbar.html">
 </head>
@@ -15,30 +16,30 @@
     <!-- rest of the page content -->
 
   
-  
 
-  <div class="container mt-4">
-        <div id="timer" class="text-right pr-4"></div>
-    <div class="quiz-options" id="quiz-options">
-      <label class="checkbox-container" for="timer-checkbox">
-        <input type="checkbox" id="timer-checkbox" />
-        <span class="checkmark"></span>
-        Enable timer
-      </label>
-      <label class="checkbox-container" for="countdown-per-question">
-        <input type="checkbox" id="countdown-per-question" name="countdown-per-question">
-        <span class="checkmark"></span>
-        Countdown per question
-      </label>
-      <div class="form-group">
-        <label for="quiz-time">Quiz Time:</label>
-        <input type="number" id="quiz-time" name="quiz-time" value="30" class="form-control">
-      </div>
-    </div>
-    <div class="text-center">
-      <button id="start-btn" class="btn btn-primary btn-lg">Start Quiz</button>
+<div id="optionContainer" class="container mt-4">
+  <div id="timer" class="text-right pr-4"></div>
+  <div class="quiz-options" id="quiz-options">
+    <label class="checkbox-container" for="timer-checkbox">
+      <input type="checkbox" id="timer-checkbox" />
+      <span class="checkmark"></span>
+      Enable timer
+    </label>
+    <label class="checkbox-container" for="countdown-per-question">
+      <input type="checkbox" id="countdown-per-question" name="countdown-per-question">
+      <span class="checkmark"></span>
+      Countdown per question
+    </label>
+    <div class="form-group quiz-time-container" style="display: none;">
+      <label for="quiz-time">Quiz Time:</label>
+      <input type="number" id="quiz-time" name="quiz-time" value="30" class="form-control">
     </div>
   </div>
+  <div class="text-center">
+    <button id="start-btn" class="btn btn-primary btn-lg">Start Quiz</button>
+  </div>
+</div>
+
 
 
     
