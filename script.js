@@ -30,7 +30,16 @@ let totalQuestions = questions.length;
 let timerEnabled = false;
 
 // Functions
-    console.log(totalQuestions+"????????????totalQuestions????"); // Output: 3
+const timerCheckbox = document.querySelector('#timer-checkbox');
+const quizTimeInput = document.querySelector('#quiz-time');
+
+timerCheckbox.addEventListener('change', () => {
+  if (timerCheckbox.checked) {
+    quizTimeInput.style.display = 'block';
+  } else {
+    quizTimeInput.style.display = 'none';
+  }
+});
 
 // Function to set quiz time
 function setQuizTime() {
