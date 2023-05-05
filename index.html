@@ -60,23 +60,114 @@
   </div>
 
 
-  <div class="container mt-4 d-none" id="quiz-container">
-        <div class="progress-bar-container">
-  <div class="progress-bar" id="progress-bar" ></div>
-</div>
     
-    <h1 id="question"></h1>
-    <ul class="list-unstyled" id="optionContainers">
-      <li><button class="btn btn-primary answer-option"></button></li>
-      <li><button class="btn btn-primary answer-option"></button></li>
-      <li><button class="btn btn-primary answer-option"></button></li>
-      <li><button class="btn btn-primary answer-option"></button></li>
-    </ul>
-    <p id="explanation"></p>
-    <button id="skip-btn" class="btn btn-secondary">Skip</button>
-     <button id="next-btn" class="btn btn-primary">Next</button>
-
+    
+    <div class="container mt-4 d-none" id="quiz-container">
+  <div class="layer-1">
+    <div class="layer-2">
+      <div class="layer-3">
+        <div class="layer-4">
+          <div class="progress-bar-container">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+          <h1 id="question"></h1>
+          <ul class="list-unstyled" id="optionContainers">
+            <li><button class="btn btn-primary answer-option"></button></li>
+            <li><button class="btn btn-primary answer-option"></button></li>
+            <li><button class="btn btn-primary answer-option"></button></li>
+            <li><button class="btn btn-primary answer-option"></button></li>
+          </ul>
+          <p id="explanation"></p>
+          <button id="skip-btn" class="btn btn-secondary">Skip</button>
+          <button id="next-btn" class="btn btn-primary">Next</button>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
+
+<style>
+  #quiz-container {
+    position: relative;
+  }
+
+  .layer-1 {
+    background-color: #F8F9FA;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    padding: 20px;
+  }
+
+  .layer-2 {
+    background-color: #FFFFFF;
+    border: 1px solid #E9ECEF;
+    border-radius: 4px;
+    padding: 20px;
+  }
+
+  .layer-3 {
+    background-color: #F8F9FA;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    padding: 20px;
+  }
+
+  .layer-4 {
+    background-color: #FFFFFF;
+    border: 1px solid #E9ECEF;
+    border-radius: 4px;
+    padding: 20px;
+  }
+
+  .progress-bar-container {
+    height: 10px;
+    width: 100%;
+    background-color: #E9ECEF;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+
+  .progress-bar {
+    height: 10px;
+    background-color: #007BFF;
+    border-radius: 4px;
+    width: 0%;
+  }
+
+  #question {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .list-unstyled {
+    margin-bottom: 20px;
+  }
+
+  .answer-option {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  #explanation {
+    margin-bottom: 20px;
+  }
+
+  #skip-btn {
+    margin-right: 10px;
+  }
+
+  #next-btn {
+    float: right;
+  }
+</style>
+
+    
+    
+    
+    
+    
 
   <div class="container mt-4 d-none" id="end-container">
     <h2 id="result-text"></h2>
