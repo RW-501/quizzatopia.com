@@ -57,22 +57,11 @@
             
     
     
-    <button id="show-more">Show More</button>
-
-<script>
-document.getElementById('show-more').addEventListener('click', function() {
-  var hiddenCards = document.querySelectorAll('#card_row .col-md-4.mb-4:nth-of-type(n+4)');
-  for (var i = 0; i < hiddenCards.length; i++) {
-    hiddenCards[i].style.display = 'block';
-  }
-  this.style.display = 'none';
-});
-</script>
-
+ 
     
     
     
-    <div class="container" id="categories_main">
+  <div class="container d-flex justify-content-center" id="categories_main">
   <div class="row">
     <div class="col-md-4 mb-3">
       <img src="path/to/image.jpg" class="img-fluid" alt="Picture">
@@ -126,6 +115,9 @@ document.getElementById('show-more').addEventListener('click', function() {
         </div>   
         <div class="col-sm-6 mb-3">
           <a href="#fitness" class="btn btn-primary btn-block">Fitness</a>
+        </div>        
+	<div class="col-sm-6 mb-3">
+          <a href="#school" class="btn btn-primary btn-block">School</a>
         </div>
         <div class="col-sm-6 mb-3">
           <a href="#random" class="btn btn-primary btn-block">Random</a>
