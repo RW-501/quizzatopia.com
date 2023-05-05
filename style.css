@@ -66,6 +66,21 @@
         margin: 10px 0;
       }
 
+ .layer-1 {
+    background-color: #F8F9FA;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    padding: 20px;
+  }
+
+  .layer-2 {
+    background-color: #FFFFFF;
+    border: 1px solid #E9ECEF;
+    border-radius: 4px;
+    padding: 20px;
+  }
+
+
       .answer-option {
         background-color: #f8f8f8;
         border: 1px solid #ccc;
