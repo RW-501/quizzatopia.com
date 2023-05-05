@@ -160,14 +160,17 @@ function checkAnswer() {
       } else {
         options[i].classList.add('incorrect');
         
-       if (options[i].innerHTML === questionObj.answer) {
-        options[i].classList.add('missed');
-      } 
-        
+     console.log(options[i].innerHTML+"   ????????????options[i].innerHTM????"); // Output: 3
+
+        console.log(questionObj.answer+"   ????????????questionObj.answer????"); // Output: 3
       }
     }
   }
-
+  
+  
+   if (options[i].innerHTML === questionObj.answer) {
+        options[i].classList.add('missed');
+      } 
 
 
   if (selectedAnswer === questionObj.answer) {
