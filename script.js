@@ -75,6 +75,7 @@ const quizTimeInput = document.querySelector('#quiz-time');
 // Add an event listener to the timer checkbox to update the timerEnabled variable
 const timerCheckbox = document.getElementById("timer-checkbox");
 const timeGroup = document.getElementById("timer-timeGroup");
+const perQtimeCheckbox = document.getElementById("countdown-per-question");
 
 timerCheckbox.addEventListener("change", function () {
   timerEnabled = timerCheckbox.checked;
@@ -83,6 +84,8 @@ timerCheckbox.addEventListener("change", function () {
     timeGroup.style.display = 'block';
   } else {
     timeGroup.style.display = 'none';
+      perQtimeCheckbox.checked = fasle;
+
   }
   
 });
