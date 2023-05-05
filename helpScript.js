@@ -12,9 +12,8 @@ fetch('navbar.html')
 
 
 $(document).ready(function(){
-    $('.navbar-toggler').click(function(){
-                console.log("????????????????DATA" );
-
-        $('#navbarNav').toggleClass('collapse');
-    });
+  console.log($('.navbar-toggler')); // add this line
+  $('.navbar-toggler').click(function(){
+    $('#navbarNav').toggleClass('collapse');
+  });
 });
