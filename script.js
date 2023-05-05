@@ -84,7 +84,7 @@ timerCheckbox.addEventListener("change", function () {
     timeGroup.style.display = 'block';
   } else {
     timeGroup.style.display = 'none';
-      perQtimeCheckbox.checked = fasle;
+      perQtimeCheckbox.checked = 0;
 
   }
   
