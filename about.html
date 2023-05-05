@@ -122,7 +122,73 @@ With our seamless integration of gamification and learning, Quiztopia is more th
   </a>
 </div>
 
-  
+  <div class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card_Q">
+            <!-- card content -->
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card_Q">
+            <!-- card content -->
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card_Q">
+            <!-- card content -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card_Q">
+            <!-- card content -->
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card_Q">
+            <!-- card content -->
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card_Q">
+            <!-- card content -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  var $j = jQuery.noConflict();
+  $j(document).ready(function() {
+    $j('.carousel').carousel({
+      interval: 3000
+    });
+    $j('.carousel-item').each(function(){
+      var next = $j(this).next();
+      if (!next.length) {
+        next = $j(this).siblings(':first');
+      }
+      next.children(':first-child').clone().appendTo($j(this));
+      for (var i=0;i<2;i++) {
+        next=next.next();
+        if (!next.length) {
+          next = $j(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($j(this));
+      }
+    });
+  });
+</script>
+
     
     
     
