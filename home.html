@@ -95,7 +95,7 @@
           <div class="input-group">
             <input type="password" class="form-control" id="signup-password" placeholder="Enter password">
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary toggle-password" type="button"><i class="bi bi-eye"></i></button>
+              <button class="btn btn-outline-secondary toggle-password" type="button"><i class="fa fa-eye-slash"></i></button>
             </div>
           </div>
         </div>
@@ -191,10 +191,10 @@ $(document).ready(function() {
 
     if (input.attr("type") === "password") {
       input.attr("type", "text");
-      icon.removeClass("bi-eye").addClass("bi-eye-slash");
+      icon.removeClass("fa fa-eye-slash").addClass("bi bi-eye-fill");
     } else {
       input.attr("type", "password");
-      icon.removeClass("bi-eye-slash").addClass("bi-eye");
+      icon.removeClass("bi bi-eye-fill").addClass("fa fa-eye-slash");
     }
   });
 });
