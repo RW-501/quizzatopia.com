@@ -312,12 +312,12 @@ function nextQuestion() {
   currentQuestion++;
 
   if (currentQuestion < totalQuestions) {
-    showQuestion();
      enableAnswerButtons();
+    showQuestion();
 
-   // if(document.getElementById("next-btn")){
+    if(document.getElementById("next-btn")){
     document.getElementById("next-btn").classList.add("d-none");
-//    }
+    }
   } else {
     endQuiz();
   }
@@ -328,11 +328,11 @@ function skipQuestion() {
   currentQuestion++;
 
   if (currentQuestion < totalQuestions) {
-    showQuestion();
      enableAnswerButtons();
-       // if(document.getElementById("next-btn")){
+    showQuestion();
+        if(document.getElementById("next-btn")){
     document.getElementById("next-btn").classList.add("d-none");
-  //      }
+        }
   } else {
     endQuiz();
   }
