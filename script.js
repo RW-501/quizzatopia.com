@@ -179,6 +179,8 @@ function generateQuizAdPattern(numQuestions, numAds) {
 
 
 function showQuestion() {
+   console.log(adQuestionNumbers+"  adQuestionNumbers??????????currentQuestion????   "+currentQuestion); // Output: 3
+  
   // Check if the current question number is in the adQuestionNumbers array
   if (adQuestionNumbers.includes(currentQuestion + 1)) {
     showAdsFunc();
