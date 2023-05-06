@@ -146,7 +146,7 @@ var quiz_main_area = document.getElementById("quiz_main_area").innerHTML;
     let countdown = adDuration;
     const countdownInterval = setInterval(() => {
       
-        document.getElementById("quiz_main_area").innerHTML = "<div class='ad-container'><span class='ad-text'>This will be an ad <br> Ad ends in " + countdown + " seconds.</span></div>";
+        document.getElementById("ad-container").innerHTML = "<div class='ad-view'><span class='ad-text'>This will be an ad <br> Ad ends in " + countdown + " seconds.</span></div>";
 
       console.log("Ad ends in " + countdown + " seconds.");
       countdown--;
