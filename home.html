@@ -24,7 +24,75 @@
 	</style>
   
   
+<script>
+	
+	
+	var files = [
+  "job_interviews",
+  "mcu",
+  "middle_school_math",
+  "movies",
+  "nclex",
+  "pop_culture"
+];
 
+function getRandomFile(files) {
+  return files[Math.floor(Math.random() * files.length)];
+}	
+	
+	
+	
+	
+	
+	
+    // Quiz Questions
+const questions = [];
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+	
+	
+const randomFile;
+// fetch and assign the data
+function fetchData(q) {
+	      
+	randomFile = getRandomFile(files);
+
+  fetch("q/" + randomFile+ ".json")
+    .then(response => response.json())
+    .then(data => {
+      if (data.length === 0) {
+        // Handle empty data
+        console.log("Empty data");
+
+        // Get a new random file name
+         randomFile = getRandomFile(files);
+
+        // Recursively call fetchData with the new q value
+        fetchData(randomFile);
+      } else {
+        // Use the questions data here
+        questions.push(...data);
+        shuffleArray(questions);
+        console.log("Questions:", questions);
+      }
+    })
+    .catch(error => console.error(error));
+}
+
+// Call fetchData with the initial q value
+fetchData(q);
+
+    
+    </script>
+
+    
+    
 <div class="container mt-4 mb-5">
   <div class="row">
     <div class="col-md-6">
@@ -46,6 +114,44 @@
   <div class="row">
     <div class="col-md-6 d-none d-md-block">
       <!-- Empty div on the left -->
+	    
+	    
+	      <div class="container mt-4 d-none" id="quiz-container">
+	 
+  <div class="layer-1">
+    <div class="layer-2" id="quiz_main_area" >
+	         <div id="ad-container">
+		        <div id="ad-box">
+				
+				
+				
+		      </div>
+	    </div>
+	    
+      <div id="timer"></div>
+          <div class="progress-bar-container">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+          <h1 id="question"></h1>
+          <ul class="list-unstyled" id="optionContainers">
+            <li><button class="btn btn-primary answer-option"></button></li>
+            <li><button class="btn btn-primary answer-option"></button></li>
+            <li><button class="btn btn-primary answer-option"></button></li>
+            <li><button class="btn btn-primary answer-option"></button></li>
+          </ul>
+          <p id="explanation"></p>
+      <div id="btn_container">
+          <button id="skip-btn" class="btn btn-secondary">Skip</button>
+          <button id="next-btn" class="btn btn-primary d-none">Next</button>
+      </div>
+        </div>
+     
+    
+  </div>
+</div>
+	    
+	    
+	    
     </div>
     <div class="col-md-6 px-4">
       <form id="login-form">
@@ -204,29 +310,25 @@ $(document).ready(function() {
 });
 
 
-</script>
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-   
-    
-    
-    
-    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+    </script>
+
     
     
     
@@ -300,6 +402,7 @@ $(document).ready(function() {
   </script>
   
   
+  <script src="script.js"></script>
     <script src="helpScript.js"></script>
   
 
