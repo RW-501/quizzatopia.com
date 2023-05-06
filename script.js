@@ -160,8 +160,7 @@ var quiz_main_area = document.getElementById("quiz_main_area").innerHTML;
     }, 1000);
   }
 
-  // Initial call to display the first ad
-  displayAd();
+  
 }
 
 
