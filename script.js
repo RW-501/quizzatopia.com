@@ -186,12 +186,15 @@ function generateQuizAdPattern(numQuestions, numAds) {
 function showQuestion() {
    console.log(adQuestionNumbers+"  adQuestionNumbers??????????currentQuestion????   "+currentQuestion); // Output: 3
   
-  // Check if the current question number is in the adQuestionNumbers array
-  if (adQuestionNumbers.includes(currentQuestion)) {
-    currentQuestion.splice(index, 0);
-    showAdsFunc();
-    return;
+// Check if the current question number is in the adQuestionNumbers array
+if (adQuestionNumbers.includes(currentQuestion)) {
+  const index = adQuestionNumbers.indexOf(currentQuestion);
+  if (index !== -1) {
+    adQuestionNumbers.splice(index, 1);
   }
+  showAdsFunc();
+  return;
+}
 
   // Continue showing the question if it's the first one
   const questionObj = questions[currentQuestion];
