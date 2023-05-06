@@ -14,21 +14,15 @@
   <div id="navbar"></div>
     <!-- rest of the page content -->
 <style>
-	#carouselExample{
-		    display: none;
-
-	}
-	
-	
-	#number-container{
-	    user-select: none;
+  #number-container {
+    user-select: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     width: 100%;
     display: block;
-	
-	}
+  }
+
   .number-div {
     display: none;
     width: 100%;
@@ -47,26 +41,22 @@
   <div class="number-div">1</div>
   <div class="number-div">2</div>
   <div class="number-div">3</div>
-		
-  <div class="number-div"> 
-	  
-	  <div id="card_row" class="row">
+  <div class="number-div">
+    <div id="card_row" class="row">
       <div class="col-md-4 mb-4">
         <div class="card_Q">
           <img src="https://via.placeholder.com/150x150.png" class="card-img-top" alt="Quiz Image">
           <div class="card-body">
             <h5 class="card-title">CompTIA A+, Network+, and Security+</h5>
-            <p class="card-text"> Boost your IT career with these respected certifications covering hardware, networking, and cybersecurity fundamentals.</p>
+            <p class="card-text">Boost your IT career with these respected certifications covering hardware, networking, and cybersecurity fundamentals.</p>
             <a href="index.html?q=comptia_a_network_security_plus" class="btn btn-primary">Start Quiz</a>
           </div>
         </div>
       </div>
-	  
-	  </div>
+    </div>
+  </div>
   <div class="number-div">5</div>
 </div>
-
-
 	    
 	    
 	    
@@ -674,25 +664,24 @@ scrollToTopBtn.addEventListener("click", function () {
   
 
 </script>
-   
-	 <script>
-function swoopDiv() {
-  var divs = document.getElementsByClassName('number-div');
-  var activeDiv = document.querySelector('.number-div.active');
+   <script>
+  function swoopDiv() {
+    var divs = document.getElementsByClassName('number-div');
+    var activeDiv = document.querySelector('.number-div.active');
 
-  // Hide the currently active div
-  activeDiv.classList.remove('active');
+    // Hide the currently active div
+    activeDiv.classList.remove('active');
 
-  // Calculate the index of the next div to show
-  var nextIndex = (Array.from(divs).indexOf(activeDiv) + 1) % divs.length;
-  var nextDiv = divs[nextIndex];
+    // Calculate the index of the next div to show
+    var nextIndex = (Array.from(divs).indexOf(activeDiv) + 1) % divs.length;
+    var nextDiv = divs[nextIndex];
 
-  // Show the next div
-  nextDiv.classList.add('active');
-}
+    // Show the next div
+    nextDiv.classList.add('active');
+  }
 
-// Call the swoopDiv function every 5 seconds
-setInterval(swoopDiv, 5000);
+  // Call the swoopDiv function every 5 seconds
+  setInterval(swoopDiv, 5000);
 </script>
 	 
 	 
