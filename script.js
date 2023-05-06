@@ -122,7 +122,7 @@ timerEnabled = true;
 
 
 function showAdsFunc() {
-  const adDuration = 5; // Duration of each ad in seconds
+  const adDuration = 10; // Duration of each ad in seconds
   let adCount = 0; // Counter for the number of ads shown
 var quiz_main_area = document.getElementById("quiz_main_area").innerHTML;
   
@@ -139,6 +139,9 @@ var quiz_main_area = document.getElementById("quiz_main_area").innerHTML;
     // Start the countdown timer for the ad duration
     let countdown = adDuration;
     const countdownInterval = setInterval(() => {
+      
+        document.getElementById("quiz_main_area").innerHTML = "<div class='ad-container'><span class='ad-text'>This will be an ad <br> Ad ends in " + countdown + " seconds.</span></div>";
+
       console.log("Ad ends in " + countdown + " seconds.");
       countdown--;
 
