@@ -134,7 +134,7 @@ function showAdsFunc() {
   
     document.getElementById("ad-container").style.display = 'block';
   document.getElementById("ad-container").innerHTML = "<div id='ad-view'><span class='ad-text'>This will be an ad</span></div>";
-
+/*
   function displayAd() {
     adCount++;
     console.log("Ad " + adCount + " is being shown.");
@@ -165,6 +165,8 @@ function showAdsFunc() {
   }
 
   displayAd();
+  
+  */
 }
 
 
