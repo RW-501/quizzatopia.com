@@ -111,9 +111,7 @@
         padding: 10px 20px;
         transition: background-color 0.3s ease;
       }
-#next-btn{
-display:none;
-}
+
       #next-btn:hover,
       #skip-btn:hover {
         background-color: #555;
