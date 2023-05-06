@@ -14,7 +14,6 @@ fetch("q/MCU.json")
 
 
 */
-
 // Global Variables
 let questionTime = 0; // seconds
 let currentQuestion = 0;
@@ -93,8 +92,6 @@ countdownCheckbox.addEventListener("change", function() {
   }
 });
 
-
-
 // Function to generate a random pattern with ads placed between questions
 function generateQuizAdPattern(numQuestions, numAds) {
   const adInterval = Math.floor(numQuestions / (numAds + 1));
@@ -122,22 +119,17 @@ function generateQuizAdPattern(numQuestions, numAds) {
   return pattern;
 }
 
-
-
 function showQuestion() {
+ 
    console.log(adQuestionNumbers+"  adQuestionNumbers??????????currentQuestion????   "+currentQuestion); // Output: 3
   
-  // Check if the current question number is in the adQuestionNumbers array
+  // Check if the 
   if (adQuestionNumbers.includes(currentQuestion + 1)) {
     showAdsFunc();
     return;
   }
 
-  // Continue showing the question if it's the first one
   const questionObj = questions[currentQuestion];
-  // Rest of the function code...
-  
-  
   document.getElementById("question").innerHTML = questionObj.question;
   const options = questionObj.options;
   const answerButtons = document.getElementsByClassName("answer-option");
@@ -193,10 +185,6 @@ return pattern;
 }
 
 
-function showQuestion() {
-   console.log(adQuestionNumbers+"  adQuestionNumbers??????????currentQuestion????   "+currentQuestion); // Output: 3
-  
-  // Check if the 
 
 function showAdsFunc() {
   const adDuration = 10; // Duration of each ad in seconds
