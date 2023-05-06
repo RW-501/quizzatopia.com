@@ -2,6 +2,8 @@
     width: 100%;
     display: block;
     text-align: center;
+      position: absolute;
+          z-index: 500;
   }
 
   .ad-text {
