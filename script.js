@@ -60,9 +60,16 @@ function startQuiz() {
 
 
    console.log(totalQuestions+"   ????????????totalQuestions????"); // Output: 3
-
+  
+ var numAd;
+  
+  if(totalQuestions < 15){
+    numAds = 2;
+  }else{
+    numAds = totalQuestions / 3;
+  }
   // Example usage
- var numAds = totalQuestions / 3;
+
   var intvalue = Math.round(numAds);
   
   quizAdPattern = generateQuizAdPattern(totalQuestions, intvalue);
