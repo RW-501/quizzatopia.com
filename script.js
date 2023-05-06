@@ -160,7 +160,7 @@ var quiz_main_area = document.getElementById("quiz_main_area").innerHTML;
     }, 1000);
   }
 
-  
+  displayAd();
 }
 
 
@@ -188,6 +188,7 @@ function showQuestion() {
   
   // Check if the current question number is in the adQuestionNumbers array
   if (adQuestionNumbers.includes(currentQuestion)) {
+    currentQuestion.splice(index, 0);
     showAdsFunc();
     return;
   }
