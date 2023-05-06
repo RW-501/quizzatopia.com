@@ -141,8 +141,11 @@ function showAdsFunc() {
     // Insert code here to display the ad (e.g., show a modal, render an ad component, etc.)
 
 
-    
-    
+       document.getElementById("ad-view").innerHTML = "<div class='ad-view'><span class='ad-text'>This will be an ad <br> Ad ends in " + countdown + " seconds.</span></div>";
+            document.getElementById("ad-view").style.display = 'block';
+
+      console.log("Ad ends in " + countdown + " seconds.");
+    /*
     // Start the countdown timer for the ad duration
     let countdown = adDuration;
     const countdownInterval = setInterval(() => {
@@ -163,7 +166,8 @@ function showAdsFunc() {
       }
     }, 1000);
   }
-
+*/
+    
   displayAd();
 }
 
