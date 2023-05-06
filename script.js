@@ -161,29 +161,18 @@ var quiz_main_area = document.getElementById("quiz_main_area").innerHTML;
 
 // Function to generate a random pattern with ads placed between questions
 function generateQuizAdPattern(numQuestions, numAds) {
-  var pattern = [];
-  
-  // Calculate the number of intervals between questions
-  var numIntervals = numQuestions - 1;
+  const adInterval = Math.floor(numQuestions / (numAds + 1));
+  const pattern = [];
 
-  // Calculate the average interval between questions
-  var avgInterval = Math.floor(numIntervals / numAds);
-
-  // Generate the pattern
-  for (var i = 0; i < numAds; i++) {
-    pattern.push(avgInterval);
-  }
-
-  // Distribute the remaining intervals randomly
-  var remainingIntervals = numIntervals - (avgInterval * numAds);
-  while (remainingIntervals > 0) {
-    var randomIndex = Math.floor(Math.random() * numAds);
-    pattern[randomIndex]++;
-    remainingIntervals--;
+  let currentPosition = adInterval;
+  while (pattern.length < numAds) {
+    pattern.push(currentPosition);
+    currentPosition += adInterval;
   }
 
   return pattern;
 }
+
 
 
 
