@@ -311,7 +311,9 @@ function nextQuestion() {
   if (currentQuestion < totalQuestions) {
     enableAnswerButtons();
     showQuestion();
+    if(document.getElementById("next-btn")){
     document.getElementById("next-btn").classList.add("d-none");
+    }
   } else {
     endQuiz();
   }
@@ -324,7 +326,9 @@ function skipQuestion() {
   if (currentQuestion < totalQuestions) {
     enableAnswerButtons();
     showQuestion();
+        if(document.getElementById("next-btn")){
     document.getElementById("next-btn").classList.add("d-none");
+        }
   } else {
     endQuiz();
   }
