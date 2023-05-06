@@ -13,7 +13,30 @@
 <body>
   <div id="navbar"></div>
     <!-- rest of the page content -->
+<style>
+  .number-div {
+    display: none;
+    width: 100%;
+    text-align: center;
+    font-size: 48px;
+    padding: 20px;
+  }
 
+  .number-div.active {
+    display: block;
+  }
+</style>
+
+	
+	<div id="number-container">
+  <div class="number-div">1</div>
+  <div class="number-div">2</div>
+  <div class="number-div">3</div>
+  <div class="number-div">4</div>
+  <div class="number-div">5</div>
+</div>
+
+	
   <!-- HTML code for the carousel -->
 <div id="carouselExample" class="carousel slide" data-ride="carousel">
   <!-- Carousel inner content -->
@@ -733,14 +756,23 @@ scrollToTopBtn.addEventListener("click", function () {
 </script>
    
 	 <script>
-  // JavaScript code to enable carousel auto-rotation
-  document.addEventListener('DOMContentLoaded', function() {
-    var carousel = document.querySelector('.carousel');
-    var carouselInstance = new bootstrap.Carousel(carousel, {
-      interval: 5000 // Set the interval (in milliseconds) between slides
-    });
-    carouselInstance.cycle(); // Start the carousel rotation
-  });
+function swoopDiv() {
+  var divs = document.getElementsByClassName('number-div');
+  var activeDiv = document.querySelector('.number-div.active');
+
+  // Hide the currently active div
+  activeDiv.classList.remove('active');
+
+  // Calculate the index of the next div to show
+  var nextIndex = (Array.from(divs).indexOf(activeDiv) + 1) % divs.length;
+  var nextDiv = divs[nextIndex];
+
+  // Show the next div
+  nextDiv.classList.add('active');
+}
+
+// Call the swoopDiv function every 5 seconds
+setInterval(swoopDiv, 5000);
 </script>
 	 
 	 
