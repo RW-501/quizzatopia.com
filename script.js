@@ -15,8 +15,6 @@ fetch("q/MCU.json")
 
 */
 
-
-
 // Global Variables
 let questionTime = 0; // seconds
 let currentQuestion = 0;
@@ -28,28 +26,20 @@ let countdownPerQuestion = false; // set to true if the countdown should happen 
 let totalTime = 0; // seconds
 let totalQuestions = questions.length;
 let timerEnabled = false;
-
-var quizAdPattern;
-// Array to store the question numbers where the ad should be shown
- let adQuestionNumbers ;
-
+let quizAdPattern;
+let adQuestionNumbers;
 
 // Function to set quiz time
 function setQuizTime() {
   const quizTimeInput = document.getElementById("quiz-time");
   const newQuizTime = parseInt(quizTimeInput.value);
-   
-  
   
   if (timerEnabled == true) {
     questionTime = newQuizTime;
     totalTime = newQuizTime;
-   
-      startTimer();
-    
+    startTimer();
   }
 }
-
 
 // Function to start the quiz
 function startQuiz() {
@@ -59,31 +49,20 @@ function startQuiz() {
   document.getElementById("optionContainer").classList.add("d-none");
   totalQuestions = questions.length;
 
-
-   console.log(totalQuestions+"   ????????????totalQuestions????"); // Output: 3
-
-  // Example usage
-var numAds =  totalQuestions / 3;
+  var numAds = totalQuestions / 3;
   var intvalue = Math.round(numAds);
   
-   console.log(intvalue+"   numAds????"); // Output: 3
-
-var quizAdPattern = generateQuizAdPattern(totalQuestions, intvalue);
-console.log(quizAdPattern +" pattern");
-
-// Array to store the question numbers where the ad should be shown
-  adQuestionNumbers = quizAdPattern; // Example: Show ad after questions 3, 7, and 11
-
+  quizAdPattern = generateQuizAdPattern(totalQuestions, intvalue);
+  adQuestionNumbers = quizAdPattern;
+  
   showQuestion();
   setQuizTime();
 
   answeredQuestions = [];
   updateProgressBar(currentQuestion);
-  
 }
 
 const quizTimeInput = document.querySelector('#quiz-time');
-
 
 // Add an event listener to the timer checkbox to update the timerEnabled variable
 const timerCheckbox = document.getElementById("timer-checkbox");
@@ -97,69 +76,22 @@ timerCheckbox.addEventListener("change", function () {
     timeGroup.style.display = 'block';
   } else {
     timeGroup.style.display = 'none';
-      perQtimeCheckbox.checked = 0;
-
+    perQtimeCheckbox.checked = false;
   }
-  
 });
-
 
 const countdownCheckbox = document.getElementById("countdown-per-question");
 countdownCheckbox.addEventListener("change", function() {
   countdownPerQuestion = countdownCheckbox.checked;
   timerCheckbox.checked = true;
-timerEnabled = true;
+  timerEnabled = true;
   
-    if (timerCheckbox.checked) {
+  if (timerCheckbox.checked) {
     timeGroup.style.display = 'block';
   } else {
     timeGroup.style.display = 'none';
   }
-           // console.log(timerEnabled+"     timerEnabled??????????timerEnabled????     "); // Output: 3
-
 });
-
-
-
-
-
-function showAdsFunc() {
-  const adDuration = 10; // Duration of each ad in seconds
-  let adCount = 0; // Counter for the number of ads shown
-var quiz_main_area = document.getElementById("quiz_main_area").innerHTML;
-  
-  document.getElementById("quiz_main_area").innerHTML = "<div class='ad-container'><span class='ad-text'>This will be an ad</span></div>";
-
-  function displayAd() {
-    adCount++;
-    console.log("Ad " + adCount + " is being shown.");
-    // Insert code here to display the ad (e.g., show a modal, render an ad component, etc.)
-
-
-    
-    
-    // Start the countdown timer for the ad duration
-    let countdown = adDuration;
-    const countdownInterval = setInterval(() => {
-      
-        document.getElementById("quiz_main_area").innerHTML = "<div class='ad-container'><span class='ad-text'>This will be an ad <br> Ad ends in " + countdown + " seconds.</span></div>";
-
-      console.log("Ad ends in " + countdown + " seconds.");
-      countdown--;
-
-      if (countdown < 0) {
-        document.getElementById("quiz_main_area").innerHTML = quiz_main_area;
-        clearInterval(countdownInterval);
-        showQuestion(); // Call the showQuestion function after the ad ends
-      }
-    }, 1000);
-  }
-
-  // Initial call to display the first ad
-  displayAd();
-}
-
-
 
 
 // Function to generate a random pattern with ads placed between questions
@@ -217,7 +149,135 @@ function showQuestion() {
     startTimer();
   }
 }
+  document.getElementById("quiz_main_area").innerHTML = quiz_main_area;
+        clearInterval(countdownInterval);
+        showQuestion(); // Call the showQuestion function after the ad ends
+      }
+    }, 1000);
+  }
 
+  // Initial call to display the first ad
+  displayAd();
+}
+
+
+
+
+// Function to generate a random pattern with ads placed between questions
+function generateQuizAdPattern(numQuestions, numAds) {
+  const adInterval = Math.floor(numQuestions / (numAds + 1));
+  const pattern = [];
+// Calculate the number of intervals between questions
+var numIntervals = numQuestions - 1;
+
+// Calculate the average interval between questions
+var avgInterval = Math.floor(numIntervals / numAds);
+
+// Generate the pattern
+for (var i = 0; i < numAds; i++) {
+  pattern.push(avgInterval);
+}
+
+// Distribute the remaining intervals randomly
+var remainingIntervals = numIntervals - (avgInterval * numAds);
+while (remainingIntervals > 0) {
+  var randomIndex = Math.floor(Math.random() * numAds);
+  pattern[randomIndex]++;
+  remainingIntervals--;
+}
+
+return pattern;
+
+}
+
+
+function showQuestion() {
+   console.log(adQuestionNumbers+"  adQuestionNumbers??????????currentQuestion????   "+currentQuestion); // Output: 3
+  
+  // Check if the 
+
+function showAdsFunc() {
+  const adDuration = 10; // Duration of each ad in seconds
+  let adCount = 0; // Counter for the number of ads shown
+  var quiz_main_area = document.getElementById("quiz_main_area").innerHTML;
+  
+  document.getElementById("quiz_main_area").innerHTML = "<div class='ad-container'><span class='ad-text'>This will be an ad</span></div>";
+
+  function displayAd() {
+    adCount++;
+    console.log("Ad " + adCount + " is being shown.");
+    // Insert code here to display the ad (e.g., show a modal, render an ad component, etc.)
+
+    // Start the countdown timer for the ad duration
+    let countdown = adDuration;
+    const countdownInterval = setInterval(() => {
+      document.getElementById("quiz_main_area").innerHTML = "<div class='ad-container'><span class='ad-text'>This will be an ad <br> Ad ends in " + countdown + " seconds.</span></div>";
+
+      console.log("Ad ends in " + countdown + " seconds.");
+      countdown--;
+
+      if (countdown < 0) {
+        document.getElementById("quiz_main_area").innerHTML = quiz_main_area;
+        clearInterval(countdownInterval);
+        showQuestion(); // Call the showQuestion function after the ad ends
+      }
+    }, 1000);
+  }
+
+  // Initial call to display the first ad
+  displayAd();
+}
+
+// Function to generate a random pattern with ads placed between questions
+function generateQuizAdPattern(numQuestions, numAds) {
+  const adInterval = Math.floor(numQuestions / (numAds + 1));
+  const pattern = [];
+
+  // Calculate the number of intervals between questions
+  var numIntervals = numQuestions - 1;
+
+  // Calculate the average interval between questions
+  var avgInterval = Math.floor(numIntervals / numAds);
+
+  // Generate the pattern
+  for (var i = 0; i < numAds; i++) {
+    pattern.push(avgInterval);
+  }
+
+  // Distribute the remaining intervals randomly
+  var remainingIntervals = numIntervals - (avgInterval * numAds);
+  while (remainingIntervals > 0) {
+    var randomIndex = Math.floor(Math.random() * numAds);
+    pattern[randomIndex]++;
+    remainingIntervals--;
+  }
+
+  return pattern;
+}
+
+function showQuestion() {
+  if (adQuestionNumbers.includes(currentQuestion + 1)) {
+    showAdsFunc();
+    return;
+  }
+
+  const questionObj = questions[currentQuestion];
+  document.getElementById("question").innerHTML = questionObj.question;
+  const options = questionObj.options;
+  const answerButtons = document.getElementsByClassName("answer-option");
+
+  for (let i = 0; i < options.length; i++) {
+    answerButtons[i].innerHTML = options[i];
+    answerButtons[i].addEventListener("click", checkAnswer);
+  }
+
+  document.getElementById("explanation").innerHTML = "";
+
+  if (countdownPerQuestion && timerEnabled) {
+    totalTime = questionTime;
+    startTimer();
+  }
+}
 
 
   // Get the progress bar element
