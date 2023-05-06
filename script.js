@@ -312,8 +312,9 @@ function nextQuestion() {
   currentQuestion++;
 
   if (currentQuestion < totalQuestions) {
-    enableAnswerButtons();
     showQuestion();
+     enableAnswerButtons();
+
    // if(document.getElementById("next-btn")){
     document.getElementById("next-btn").classList.add("d-none");
 //    }
@@ -327,8 +328,8 @@ function skipQuestion() {
   currentQuestion++;
 
   if (currentQuestion < totalQuestions) {
-    enableAnswerButtons();
     showQuestion();
+     enableAnswerButtons();
        // if(document.getElementById("next-btn")){
     document.getElementById("next-btn").classList.add("d-none");
   //      }
