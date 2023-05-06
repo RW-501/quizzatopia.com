@@ -124,12 +124,18 @@ timerEnabled = true;
 function showAdsFunc() {
   const adDuration = 5; // Duration of each ad in seconds
   let adCount = 0; // Counter for the number of ads shown
+var quiz_main_area = document.getElementById("quiz_main_area").innerHTML;
+  
+  document.getElementById("quiz_main_area").innerHTML = "<div class='ad-container'><span class='ad-text'>This will be an ad</span></div>";
 
   function displayAd() {
     adCount++;
     console.log("Ad " + adCount + " is being shown.");
     // Insert code here to display the ad (e.g., show a modal, render an ad component, etc.)
 
+
+    
+    
     // Start the countdown timer for the ad duration
     let countdown = adDuration;
     const countdownInterval = setInterval(() => {
@@ -137,6 +143,7 @@ function showAdsFunc() {
       countdown--;
 
       if (countdown < 0) {
+        document.getElementById("quiz_main_area").innerHTML = quiz_main_area;
         clearInterval(countdownInterval);
         showQuestion(); // Call the showQuestion function after the ad ends
       }
