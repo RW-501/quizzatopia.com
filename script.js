@@ -62,11 +62,11 @@ function startQuiz() {
    console.log(totalQuestions+"   ????????????totalQuestions????"); // Output: 3
 
   // Example usage
-var numAds =  totalQuestions / 3;
-   console.log(numAds+"   numAds????"); // Output: 3
-
-var quizAdPattern = generateQuizAdPattern(totalQuestions, numAds);
-console.log(quizAdPattern +" pattern");
+ var numAds = totalQuestions / 3;
+  var intvalue = Math.round(numAds);
+  
+  quizAdPattern = generateQuizAdPattern(totalQuestions, intvalue);
+  adQuestionNumbers = quizAdPattern;
 
 // Array to store the question numbers where the ad should be shown
   adQuestionNumbers = quizAdPattern; // Example: Show ad after questions 3, 7, and 11
