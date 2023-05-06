@@ -23,73 +23,6 @@
 		}
 	</style>
   
-  
-<script>
-	
-	
-	var files = [
-  "job_interviews",
-  "mcu",
-  "middle_school_math",
-  "movies",
-  "nclex",
-  "pop_culture"
-];
-
-function getRandomFile(files) {
-  return files[Math.floor(Math.random() * files.length)];
-}	
-	
-	
-	
-	
-	
-	
-    // Quiz Questions
-const questions = [];
-
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
-	
-	
-const randomFile;
-// fetch and assign the data
-function fetchData(q) {
-	      
-	randomFile = getRandomFile(files);
-
-  fetch("q/" + randomFile+ ".json")
-    .then(response => response.json())
-    .then(data => {
-      if (data.length === 0) {
-        // Handle empty data
-        console.log("Empty data");
-
-        // Get a new random file name
-         randomFile = getRandomFile(files);
-
-        // Recursively call fetchData with the new q value
-        fetchData(randomFile);
-      } else {
-        // Use the questions data here
-        questions.push(...data);
-        shuffleArray(questions);
-        console.log("Questions:", questions);
-      }
-    })
-    .catch(error => console.error(error));
-}
-
-// Call fetchData with the initial q value
-fetchData(q);
-
-    
-    </script>
 
     
     
@@ -316,20 +249,70 @@ $(document).ready(function() {
 	
 	
 	
+	var files = [
+  "job_interviews",
+  "mcu",
+  "middle_school_math",
+  "movies",
+  "nclex",
+  "pop_culture"
+];
+
+function getRandomFile(files) {
+  return files[Math.floor(Math.random() * files.length)];
+}	
 	
 	
 	
 	
 	
 	
+    // Quiz Questions
+const questions = [];
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
 	
 	
-	
-	
-	
-    </script>
+const randomFile;
+// fetch and assign the data
+function fetchData(q) {
+	      
+	randomFile = getRandomFile(files);
+
+  fetch("q/" + randomFile+ ".json")
+    .then(response => response.json())
+    .then(data => {
+      if (data.length === 0) {
+        // Handle empty data
+        console.log("Empty data");
+
+        // Get a new random file name
+         randomFile = getRandomFile(files);
+
+        // Recursively call fetchData with the new q value
+        fetchData(randomFile);
+      } else {
+        // Use the questions data here
+        questions.push(...data);
+        shuffleArray(questions);
+        console.log("Questions:", questions);
+      }
+    })
+    .catch(error => console.error(error));
+}
+
+// Call fetchData with the initial q value
+fetchData(q);
 
     
+    </script>
+
     
     
     
