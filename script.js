@@ -64,7 +64,9 @@ function startQuiz() {
 
   // Example usage
 var numAds =  totalQuestions / 3;
-   console.log(numAds+"   numAds????"); // Output: 3
+  var intvalue = Math.round(numAds);
+  
+   console.log(intvalue+"   numAds????"); // Output: 3
 
 var quizAdPattern = generateQuizAdPattern(totalQuestions, numAds);
 console.log(quizAdPattern +" pattern");
@@ -162,8 +164,18 @@ var quiz_main_area = document.getElementById("quiz_main_area").innerHTML;
 
 // Function to generate a random pattern with ads placed between questions
 function generateQuizAdPattern(numQuestions, numAds) {
-  var pattern = [];
-  
+  const adInterval = Math.floor(numQuestions / (numAds + 1));
+  const pattern = [];
+
+  let currentPosition = adInterval;
+  while (pattern.length < numAds) {
+    pattern.push(currentPosition);
+    currentPosition += adInterval;
+  }
+
+  return pattern;
+}
+
   // Calculate the number of intervals between questions
   var numIntervals = numQuestions - 1;
 
