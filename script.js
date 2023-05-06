@@ -132,7 +132,7 @@ function showAdsFunc() {
   let adCount = 0; // Counter for the number of ads shown
 var quiz_main_area = document.getElementById("quiz_main_area").innerHTML;
   
-  document.getElementById("quiz_main_area").innerHTML = "<div class='ad-container'><span class='ad-text'>This will be an ad</span></div>";
+  document.getElementById("ad-container").innerHTML = "<div id='ad-view'><span class='ad-text'>This will be an ad</span></div>";
 
   function displayAd() {
     adCount++;
