@@ -29,8 +29,17 @@ let totalTime = 0; // seconds
 let totalQuestions = questions.length;
 let timerEnabled = false;
 
-let adQuestionNumbers;
+   console.log(totalQuestions+"   ????????????totalQuestions????"); // Output: 3
 
+  // Example usage
+var numAds =  totalQuestions / 3;
+   console.log(numAds+"   numAds????"); // Output: 3
+
+var quizAdPattern = generateQuizAdPattern(totalQuestions, numAds);
+console.log(quizAdPattern +" patter");
+
+// Array to store the question numbers where the ad should be shown
+ let adQuestionNumbers = quizAdPattern; // Example: Show ad after questions 3, 7, and 11
 
 
 // Function to set quiz time
@@ -38,20 +47,7 @@ function setQuizTime() {
   const quizTimeInput = document.getElementById("quiz-time");
   const newQuizTime = parseInt(quizTimeInput.value);
   totalQuestions = questions.length;
-      console.log(totalQuestions+"   ????????????totalQuestions????"); // Output: 3
-
-  
-  
-  
-  // Example usage
-var numAds =  totalQuestions / 3;
-   console.log(numAds+"   numAds????"); // Output: 3
-
-var quizAdPattern = generateQuizAdPattern(totalQuestions, numAds);
-console.log(quizAdPattern);
-
-// Array to store the question numbers where the ad should be shown
- adQuestionNumbers = quizAdPattern; // Example: Show ad after questions 3, 7, and 11
+   
   
   
   if (timerEnabled == true) {
