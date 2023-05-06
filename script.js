@@ -310,7 +310,9 @@ function enableAnswerButtons() {
 // Function to show the next question
 function nextQuestion() {
   currentQuestion++;
-
+console.log(totalQuestions+"   ????????????totalQuestions????"); // Output: 3
+console.log(currentQuestion+"   ????????????currentQuestion????"); // Output: 3
+  
   if (currentQuestion < totalQuestions) {
      enableAnswerButtons();
     showQuestion();
