@@ -29,7 +29,8 @@ let totalTime = 0; // seconds
 let totalQuestions = questions.length;
 let timerEnabled = false;
 
-// Functions
+const adQuestionNumbers;
+
 
 
 // Function to set quiz time
@@ -38,10 +39,22 @@ function setQuizTime() {
   const newQuizTime = parseInt(quizTimeInput.value);
   totalQuestions = questions.length;
       console.log(totalQuestions+"   ????????????totalQuestions????"); // Output: 3
-      console.log(timerEnabled+"   vvvtimerEnabled????"); // Output: 3
 
+  
+  
+  
+  // Example usage
+var numAds =  totalQuestions / 3;
+   console.log(numAds+"   numAds????"); // Output: 3
+
+var quizAdPattern = generateQuizAdPattern(totalQuestions, numAds);
+console.log(quizAdPattern);
+
+// Array to store the question numbers where the ad should be shown
+ adQuestionNumbers = quizAdPattern; // Example: Show ad after questions 3, 7, and 11
+  
+  
   if (timerEnabled == true) {
-        console.log("     m????????????timerEnabled????"); // Output: 3
     questionTime = newQuizTime;
     totalTime = newQuizTime;
    
@@ -51,22 +64,22 @@ function setQuizTime() {
 }
 
 
-
 // Function to start the quiz
 function startQuiz() {
   quizStarted = true;
   document.getElementById("start-btn").classList.add("d-none");
   document.getElementById("quiz-container").classList.remove("d-none");
-    document.getElementById("optionContainer").classList.add("d-none");
+  document.getElementById("optionContainer").classList.add("d-none");
+
+
+
 
   showQuestion();
-
   setQuizTime();
 
   answeredQuestions = [];
   updateProgressBar(currentQuestion);
   
-
 }
 
 const quizTimeInput = document.querySelector('#quiz-time');
@@ -110,10 +123,75 @@ timerEnabled = true;
 
 
 
+function showAdsFunc() {
+  const adDuration = 5; // Duration of each ad in seconds
+  let adCount = 0; // Counter for the number of ads shown
 
-// Function to show the current question
+  function displayAd() {
+    adCount++;
+    console.log("Ad " + adCount + " is being shown.");
+    // Insert code here to display the ad (e.g., show a modal, render an ad component, etc.)
+
+    // Start the countdown timer for the ad duration
+    let countdown = adDuration;
+    const countdownInterval = setInterval(() => {
+      console.log("Ad ends in " + countdown + " seconds.");
+      countdown--;
+
+      if (countdown < 0) {
+        clearInterval(countdownInterval);
+        showQuestion(); // Call the showQuestion function after the ad ends
+      }
+    }, 1000);
+  }
+
+  // Initial call to display the first ad
+  displayAd();
+}
+
+
+
+
+// Function to generate a random pattern with ads placed between questions
+function generateQuizAdPattern(numQuestions, numAds) {
+  var pattern = [];
+  
+  // Calculate the number of intervals between questions
+  var numIntervals = numQuestions - 1;
+
+  // Calculate the average interval between questions
+  var avgInterval = Math.floor(numIntervals / numAds);
+
+  // Generate the pattern
+  for (var i = 0; i < numAds; i++) {
+    pattern.push(avgInterval);
+  }
+
+  // Distribute the remaining intervals randomly
+  var remainingIntervals = numIntervals - (avgInterval * numAds);
+  while (remainingIntervals > 0) {
+    var randomIndex = Math.floor(Math.random() * numAds);
+    pattern[randomIndex]++;
+    remainingIntervals--;
+  }
+
+  return pattern;
+}
+
+
+
 function showQuestion() {
+  // Check if the current question number is in the adQuestionNumbers array
+  if (adQuestionNumbers.includes(currentQuestion + 1)) {
+    showAdsFunc();
+    return;
+  }
+
+  // Continue showing the question if it's the first one
   const questionObj = questions[currentQuestion];
+  // Rest of the function code...
+  
+  
   document.getElementById("question").innerHTML = questionObj.question;
   const options = questionObj.options;
   const answerButtons = document.getElementsByClassName("answer-option");
@@ -162,15 +240,10 @@ function checkAnswer() {
       }
       
         
-             console.log(options[i].innerHTML+"   ????????????options[i].innerHTM????"); // Output: 3
-
-      
     }
     
     
 
-        console.log(questionObj.answer+"   ????????????questionObj.answer????"); // Output: 3
-        console.log(selectedOption.innerHTML+"   ????????????selectedOption.answer????"); // Output: 3
   }
   
     const answerO = document.getElementsByClassName("answer-option");
@@ -239,7 +312,6 @@ function nextQuestion() {
   updateProgressBar(currentQuestion);
 }
 
-// Function to skip the current question
 function skipQuestion() {
   currentQuestion++;
 
@@ -252,6 +324,7 @@ function skipQuestion() {
   }
   updateProgressBar(currentQuestion);
 }
+
 
     // update the progress bar
   updateProgressBar(currentQuestion);
