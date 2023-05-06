@@ -732,6 +732,18 @@ scrollToTopBtn.addEventListener("click", function () {
 
 </script>
    
+	 <script>
+  // JavaScript code to enable carousel auto-rotation
+  document.addEventListener('DOMContentLoaded', function() {
+    var carousel = document.querySelector('.carousel');
+    var carouselInstance = new bootstrap.Carousel(carousel, {
+      interval: 5000 // Set the interval (in milliseconds) between slides
+    });
+    carouselInstance.cycle(); // Start the carousel rotation
+  });
+</script>
+	 
+	 
     <script src="helpScript.js"></script>
   
 
