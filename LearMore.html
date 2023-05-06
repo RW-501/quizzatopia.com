@@ -1,1 +1,167 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiztopia Buy the Full Quiz</title>
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./CSS/indexOptions.css">
+  
+    <link rel="import" href="navbar.html">
+</head>
+
+<body>
+	<main_section>
+  <div id="navbar"></div>
+    <!-- rest of the page content -->
+<style>
+
+ #social-sharing {
+    padding: 10%;
+}
+	.shadow {
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		}
+	</style>
+
+<div class="container shadow py-4">
+
+    
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Buy the Full Quiz</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#description">Description</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#benefits">Benefits</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#pricing">Pricing</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="description" class="row">
+            <div class="col-md-12">
+                <h2>Description</h2>
+                <p>Our mini quiz is just a sample of what's to come in our full quiz. The full quiz contains over 100 questions and covers a wide range of topics. It's perfect for testing your knowledge and challenging yourself.</p>
+            </div>
+        </div>
+
+        <div id="benefits" class="row">
+            <div class="col-md-12">
+                <h2>Benefits</h2>
+                <ul>
+                    <li>Over 100 questions</li>
+                    <li>Covers a wide range of topics</li>
+                    <li>Test your knowledge and challenge yourself</li>
+                    <li>Perfect for students, professionals, and anyone who loves learning</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="pricing" class="row">
+            <div class="col-md-12">
+                <h2>Pricing</h2>
+                <p>The full quiz is available for purchase for just $9.99. That's a great deal for over 100 questions! Click the button below to buy now.</p>
+                <a href="https://example.com/buy" class="btn btn-primary">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container mt-4" id="">
+  
+  <div id="social-sharing">
+	  <p>
+    <a id="social_fb" href="" target="_blank" class="btn btn-social btn-facebook btn-primary"><i class="fab fa-facebook-f"></i> Share on Facebook</a>
+    <a id="social_tw" href="" target="_blank" class="btn btn-social btn-twitter btn-success"><i class="fab fa-twitter"></i> Share on Twitter</a>
+	  </p><p>
+    <a id="social_red" href="" target="_blank" class="btn btn-social btn-reddit btn-danger"><i class="fab fa-reddit"></i> Share on Reddit</a>
+	  <a id="social_ln" href="" target="_blank" class="btn btn-social btn-linkedin btn-primary" style="margin-right: 10px;"><i class="fab fa-linkedin"></i> Share on LinkedIn</a>
+	  </p>
+  </div>
+	      <button class=" btn btn-primary " onclick="window.location.href = 'LearMore.html'">Get Full Quiz</button>
+
+</div>
+
+	
+	
+	
+	</main_section>
+
+  <footer class="bg-light text-center py-3 mt-4">
+    <p>Quiztopia Platform &copy; 2023</p>
+  </footer>
+
+  <script>
+    
+    
+    
+// Get the current URL and parse its search parameters
+const urlParams = new URLSearchParams(window.location.search);
+
+// Get the value of the "q" parameter
+const q = urlParams.get('q');
+
+// Use the value of "q"
+//console.log("urlParams     "+q); 
+
+                const newStr = q.replace(/_/g, " ");
+
+	  
+document.getElementById("optionsQuizName").innerHTML = newStr;
+	  
+document.getElementById("social_fb").href = "https://www.facebook.com/sharer/sharer.php?u=https://rw-501.github.io/Q-A/index.html?q="+q;
+document.getElementById("social_tw").href = "https://twitter.com/intent/tweet?url=https://rw-501.github.io/Q-A/index.html?q="+q;
+document.getElementById("social_ln").href = "ttps://www.linkedin.com/shareArticle?url=https://rw-501.github.io/Q-A/index.html?q="+q;
+document.getElementById("social_red").href = "https://www.reddit.com/submit?url=https://rw-501.github.io/Q-A/index.html?q="+q;
+                          
+	  
+
+
+// fetch and assign the data
+fetch("q/" + q + ".json")
+  .then(response => response.json())
+  .then(data => {
+    // Use the questions data here
+    questions.push(...data);
+ //   console.log("questions 1    mm  ", questions); // Outputs the original order of the questions
+    shuffleArray(questions);
+  //  console.log("questions 2    mm  ", questions); // Outputs a random order of the questions
+  })
+  .catch(error => console.error(error));
+
+    
+    </script>
+
+  <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+
+
+    <script src="helpScript.js"></script>
+ 
+
+    </body>
+</html>
