@@ -29,7 +29,7 @@ let totalTime = 0; // seconds
 let totalQuestions = questions.length;
 let timerEnabled = false;
 
-const adQuestionNumbers;
+let adQuestionNumbers;
 
 
 
