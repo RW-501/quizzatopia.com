@@ -165,10 +165,11 @@ var files = [
   "pop_culture"
 ];
 
-var randomFile = files[Math.floor(Math.random() * files.length)];
-console.log(randomFile);
+function getRandomFile(files) {
+  return files[Math.floor(Math.random() * files.length)];
+}	
 		  
-		q =  randomFile;
+		
 	  }
 // Use the value of "q"
 //console.log("urlParams     "+q); 
@@ -206,7 +207,7 @@ function fetchData(q) {
         console.log("Empty data");
 
         // Get a new random file name
-        const randomFile = getRandomFile();
+        const randomFile = getRandomFile(files);
 
         // Recursively call fetchData with the new q value
         fetchData(randomFile);
