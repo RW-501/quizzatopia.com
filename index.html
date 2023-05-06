@@ -197,16 +197,31 @@ function shuffleArray(array) {
 }
 
 // fetch and assign the data
-fetch("q/" + q + ".json")
-  .then(response => response.json())
-  .then(data => {
-    // Use the questions data here
-    questions.push(...data);
- //   console.log("questions 1    mm  ", questions); // Outputs the original order of the questions
-    shuffleArray(questions);
-  //  console.log("questions 2    mm  ", questions); // Outputs a random order of the questions
-  })
-  .catch(error => console.error(error));
+function fetchData(q) {
+  fetch("q/" + q + ".json")
+    .then(response => response.json())
+    .then(data => {
+      if (data.length === 0) {
+        // Handle empty data
+        console.log("Empty data");
+
+        // Get a new random file name
+        const randomFile = getRandomFile();
+
+        // Recursively call fetchData with the new q value
+        fetchData(randomFile);
+      } else {
+        // Use the questions data here
+        questions.push(...data);
+        shuffleArray(questions);
+        console.log("Questions:", questions);
+      }
+    })
+    .catch(error => console.error(error));
+}
+
+// Call fetchData with the initial q value
+fetchData(q);
 
     
     </script>
