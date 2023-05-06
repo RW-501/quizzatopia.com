@@ -133,6 +133,7 @@ function showAdsFunc() {
 var quiz_main_area = document.getElementById("quiz_main_area").innerHTML;
   
   document.getElementById("ad-container").innerHTML = "<div id='ad-view'><span class='ad-text'>This will be an ad</span></div>";
+    document.getElementById("ad-container").style.display = 'block';
 
   function displayAd() {
     adCount++;
@@ -153,6 +154,8 @@ var quiz_main_area = document.getElementById("quiz_main_area").innerHTML;
 
       if (countdown < 0) {
                 clearInterval(countdownInterval);
+            document.getElementById("ad-container").style.display = 'none';
+
        //  console.log("Admm "+ quiz_main_area);
        // document.getElementById("quiz_main_area").innerHTML = quiz_main_area;
         showQuestion(); // Call the showQuestion function after the ad ends
