@@ -154,6 +154,22 @@ const urlParams = new URLSearchParams(window.location.search);
 // Get the value of the "q" parameter
 const q = urlParams.get('q');
 
+	  if(q == nil){
+		  (File)
+var files = [
+  "job_interviews",
+  "mcu",
+  "middle_school_math",
+  "movies",
+  "nclex",
+  "pop_culture"
+];
+
+var randomFile = files[Math.floor(Math.random() * files.length)];
+console.log(randomFile);
+		  
+		q =  randomFile;
+	  }
 // Use the value of "q"
 //console.log("urlParams     "+q); 
 
