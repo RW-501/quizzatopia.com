@@ -1,4 +1,15 @@
- /* Reset styles */
+   .ad-container {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  .ad-text {
+    font-weight: bold;
+  }
+
+
+/* Reset styles */
       * {
         user-select: none;
         margin: 0;
