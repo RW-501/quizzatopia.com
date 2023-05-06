@@ -133,11 +133,10 @@ function showAdsFunc() {
 //var quiz_main_area = document.getElementById("quiz_main_area").innerHTML;
      let countdown = adDuration;
     document.getElementById("ad-container").style.display = 'block';
-  document.getElementById("ad-container").innerHTML = "<div id='ad-view'><span class='ad-text'>This will be an ad</span></div>";
-          document.getElementById("ad-view").innerHTML = "<div class='ad-view'><span class='ad-text'>This will be an ad <br> Ad ends in " + countdown + " seconds.</span></div>";
-    console.log("Ad " + adCount + " is being shown.");
+  document.getElementById("ad-box").innerHTML = "<div id='ad-view'><span class='ad-text'>This will be an ad</span></div>";
 
-/*
+
+
   function displayAd() {
     adCount++;
     console.log("Ad " + adCount + " is being shown.");
@@ -150,15 +149,15 @@ function showAdsFunc() {
     let countdown = adDuration;
     const countdownInterval = setInterval(() => {
       
-        document.getElementById("ad-view").innerHTML = "<div class='ad-view'><span class='ad-text'>This will be an ad <br> Ad ends in " + countdown + " seconds.</span></div>";
-            document.getElementById("ad-view").style.display = 'block';
+                document.getElementById("ad-box").innerHTML = "<div class='ad-view'><span class='ad-text'>This will be an ad <br> Ad ends in " + countdown + " seconds.</span></div>";
+    console.log("Ad " + adCount + " is being shown.");
 
       console.log("Ad ends in " + countdown + " seconds.");
       countdown--;
 
       if (countdown < 0) {
                 clearInterval(countdownInterval);
-            document.getElementById("ad-view").style.display = 'none';
+            document.getElementById("ad-container").style.display = 'none';
 
        //  console.log("Admm "+ quiz_main_area);
        // document.getElementById("quiz_main_area").innerHTML = quiz_main_area;
@@ -169,7 +168,7 @@ function showAdsFunc() {
 
   displayAd();
   
-  */
+ 
 }
 
 
