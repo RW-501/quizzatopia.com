@@ -131,9 +131,11 @@ function showAdsFunc() {
   const adDuration = 10; // Duration of each ad in seconds
   let adCount = 0; // Counter for the number of ads shown
 //var quiz_main_area = document.getElementById("quiz_main_area").innerHTML;
-  
+     let countdown = adDuration;
     document.getElementById("ad-container").style.display = 'block';
   document.getElementById("ad-container").innerHTML = "<div id='ad-view'><span class='ad-text'>This will be an ad</span></div>";
+          document.getElementById("ad-view").innerHTML = "<div class='ad-view'><span class='ad-text'>This will be an ad <br> Ad ends in " + countdown + " seconds.</span></div>";
+
 /*
   function displayAd() {
     adCount++;
