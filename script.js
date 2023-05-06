@@ -154,7 +154,7 @@ var quiz_main_area = document.getElementById("quiz_main_area").innerHTML;
       if (countdown < 0) {
                 clearInterval(countdownInterval);
        //  console.log("Admm "+ quiz_main_area);
-        document.getElementById("quiz_main_area").innerHTML = quiz_main_area;
+       // document.getElementById("quiz_main_area").innerHTML = quiz_main_area;
         showQuestion(); // Call the showQuestion function after the ad ends
       }
     }, 1000);
