@@ -1,12 +1,4 @@
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<script>
-if (window.location.search.substr(1) === 'q') {
-  var newUrl = window.location.origin + '/quiz?q=' + window.location.search.substr(1);
-  window.location.replace(newUrl);
-}
-</script>
-<script src="helpScript.js"></script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +7,19 @@ if (window.location.search.substr(1) === 'q') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quizzatopia Platform</title>
 
+	  
+	  
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+if (window.location.search.substr(1) === 'q') {
+  var newUrl = window.location.origin + '/quiz?q=' + window.location.search.substr(1);
+  window.location.replace(newUrl);
+}
+</script>
+	  
+	  
+	  
 	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="style.css" />
@@ -296,7 +301,8 @@ $(document).ready(function() {
     
   </script>
   
-  
+  <script src="helpScript.js"></script>  
+
   
 	
 	<script>
