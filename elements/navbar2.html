@@ -1,0 +1,75 @@
+<script>
+if (window.location.pathname.substr(-5) === '.html' && window.location.pathname.length > 5) {
+  var newPath = window.location.pathname.slice(0, -5);
+  window.history.replaceState({}, '', newPath);
+}
+</script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-...your-integrity-hash..." crossorigin="anonymous" />
+
+<!-- Enhanced navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="/">Quizzatopia </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="quiz">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="quizzes">Quizzes </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about">About</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+  /* Navigation styles */
+  nav {
+    background-color: #0D47A1;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav a:hover {
+    color: #F44336;
+  }
+
+  .navbar-brand {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .navbar-nav {
+    text-align: right;
+  }
+
+  .nav-link {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .active .nav-link {
+    color: #F44336;
+  }
+</style>
+
+
