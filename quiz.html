@@ -153,27 +153,27 @@
 const urlParams = new URLSearchParams(window.location.search);
 
 // Get the value of the "q" parameter
-const q = urlParams.get('q');
+let q = urlParams.get('q');
 
 if (q === null) {
-		 
-var files = [
-  "job_interviews",
-  "mcu",
-  "middle_school_math",
-  "movies",
-  "nclex",
-  "pop_culture"
-];
+  const files = [
+    "job_interviews",
+    "mcu",
+    "middle_school_math",
+    "movies",
+    "nclex",
+    "pop_culture"
+  ];
 
-function getRandomFile(files) {
-  return files[Math.floor(Math.random() * files.length)];
-}	
-		  
-q = getRandomFile(files);	
-	  }
+  function getRandomFile(files) {
+    return files[Math.floor(Math.random() * files.length)];
+  }
+
+  q = getRandomFile(files);
+}
+
 // Use the value of "q"
-//console.log("urlParams     "+q); 
+console.log("urlParams     "+q); 
 
                 const newStr = q.replace(/_/g, " ");
 
