@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookies Policy  | Quizzatopia Platform</title>
+    <meta name="robots" content="nofollow">
+
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./style.css" />
+  
+    <link rel="import" href="./elements/navbar.html">
+    <link rel="import" href="./elements/footer.html">
+    </head>
+
+<body>
+  <div id="navbar"></div>
+    <!-- rest of the page content -->
+  	<style>
+	
+
+		.shadow {
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		}
+	</style>
+
+<div class="container shadow py-4">
+  	  <h2>Cookies Policy Quizzatopia.com<h2>
+	  
+		  <hr>
+		  
+  <div id="main">
+<h1>Cookies Policy</h1>
+
+	<p>At Quizzatopia, we use cookies to enhance your browsing experience and to provide personalized services. Cookies are small text files that are placed on your device when you visit our website. They allow us to recognize you and remember your preferences, such as your language and font size, which makes your visit more convenient.</p>
+
+	<h2>Types of cookies we use</h2>
+	<p>We use the following types of cookies on our website:</p>
+	<ul>
+		<li><strong>Strictly necessary cookies:</strong> These cookies are essential for our website to function properly. They enable you to browse our website and use its features, such as accessing secure areas.</li>
+		<li><strong>Analytics cookies:</strong> These cookies help us understand how you use our website by collecting information about the pages you visit and how long you stay on them. We use this data to improve our website and provide better services.</li>
+		<li><strong>Functional cookies:</strong> These cookies allow us to remember your preferences, such as your language and font size, and provide personalized services based on your interactions with our website.</li>
+		<li><strong>Advertising cookies:</strong> These cookies are used to show you relevant ads on our website and other sites you visit. They help us deliver targeted ads based on your interests and browsing behavior.</li>
+	</ul>
+
+	<h2>Managing cookies</h2>
+	<p>You can control cookies by adjusting your browser settings. You can choose to block all cookies, accept only certain types of cookies, or delete cookies when you close your browser. However, please note that some features of our website may not function properly if you disable cookies.</p>
+
+	<h2>Changes to this policy</h2>
+	<p>We may update this Cookies Policy from time to time. We encourage you to review this policy periodically to stay informed about our use of cookies.</p>
+
+	<h2>Contact us</h2>
+	<p>If you have any questions or concerns about our Cookies Policy, please contact us at quizzatopia@gmail.com.</p>
+  </div>
+  
+  
+  </div>
+   		  </body>
+	  <div id="mainFooter"></div>
+	  
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
+
+
+
+    <script src="/helpScript2.js"></script>
+  
+
+</html>
