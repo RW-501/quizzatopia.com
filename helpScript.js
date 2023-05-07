@@ -1,6 +1,6 @@
 
 
-fetch('navbar.html')
+fetch('./elements/navbar.html')
   .then(response => response.text())
   .then(data => {
     document.querySelector('#navbar').innerHTML = data;
@@ -12,3 +12,11 @@ fetch('navbar.html')
       });
     });
   });
+
+
+fetch('./elements/footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.querySelector('#mainFooter').innerHTML = data;
+
+ 
