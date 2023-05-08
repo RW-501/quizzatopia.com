@@ -59,10 +59,9 @@ main_section{
         display: flex;
         flex-direction: column;
            font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
+    position: absolute;
+    width: 100% !important;
     height: 100% !important;
-    min-height: 100% !important;
       }
 
       .container {
