@@ -160,7 +160,7 @@ function showAdsFunc() {
 
        //  console.log("Admm "+ quiz_main_area);
        // document.getElementById("quiz_main_area").innerHTML = quiz_main_area;
-      //  showQuestion(); // Call the showQuestion function after the ad ends
+        showQuestion(); // Call the showQuestion function after the ad ends
       }
     }, 1000);
   }
