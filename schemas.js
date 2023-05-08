@@ -18,10 +18,12 @@
     "https://www.instagram.com/Quizzatopia"
   ]
 }
-   
+   </script>
+
 
 
     <!-- Blog Schema -->
+<script type="application/ld+json">
 
     {
         "@context": "https://schema.org",
@@ -30,11 +32,13 @@
         "description": "The official blog of Quizzatopia, providing additional quiz-related content and insights.",
         "url": "https://quizzatopia.blogspot.com"
     }
-  
+  </script>
+
   
 
 	  
-	
+	<script type="application/ld+json">
+
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -56,10 +60,12 @@
     "https://www.instagram.com/Quizzatopia"
   ]
 }
+</script>
 
 
 	  
 	  
+<script type="application/ld+json">
 
 {
   "@context": "https://schema.org",
@@ -91,11 +97,13 @@
     }
   ]
 }
+</script>
 
 
 	  
 	  
 	
+<script type="application/ld+json">
 
 {
   "@context": "https://schema.org",
