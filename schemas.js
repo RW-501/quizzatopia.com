@@ -1,4 +1,4 @@
-<script>
+	<script type="application/ld+json">
     <!-- Organization Schema -->
     
   {
