@@ -130,7 +130,6 @@ timerEnabled = true;
 function showAdsFunc() {
   const adDuration = 10; // Duration of each ad in seconds
   let adCount = 0; // Counter for the number of ads shown
-//var quiz_main_area = document.getElementById("quiz_main_area").innerHTML;
      let countdown = adDuration;
     document.getElementById("ad-container").style.display = 'block';
 //  document.getElementById("ad-box").innerHTML = "<div id='ad-view'><span class='ad-text'>This will be an ad</span></div>";
@@ -157,11 +156,11 @@ function showAdsFunc() {
 
       if (countdown < 0) {
                 clearInterval(countdownInterval);
-            document.getElementById("ad-container").style.display = 'none';
+           // document.getElementById("ad-container").style.display = 'none';
 
        //  console.log("Admm "+ quiz_main_area);
        // document.getElementById("quiz_main_area").innerHTML = quiz_main_area;
-        showQuestion(); // Call the showQuestion function after the ad ends
+      //  showQuestion(); // Call the showQuestion function after the ad ends
       }
     }, 1000);
   }
