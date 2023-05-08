@@ -58,7 +58,11 @@ main_section{
         font-family: Arial, sans-serif;
         display: flex;
         flex-direction: column;
-        min-height: 100%;
+           font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100% !important;
+    min-height: 100% !important;
       }
 
       .container {
