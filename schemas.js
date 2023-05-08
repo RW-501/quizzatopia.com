@@ -1,4 +1,4 @@
-
+<script>
     <!-- Organization Schema -->
     
   {
@@ -247,7 +247,7 @@
     }
   ]
 }
-
+</script>
 	  
 	  
 	  
