@@ -62,6 +62,9 @@ main_section{
     width: 100% !important;
       }
 
+#footer_XL {
+  flex-shrink: 0;
+}
       .container {
         flex: 1;
       }
