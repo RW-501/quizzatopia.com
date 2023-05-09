@@ -43,8 +43,13 @@
       <!-- Buttons -->
       <div class="d-flex justify-content-center mt-4">
         <!-- Message User button -->
-        <button class="btn btn-primary mr-2">Message User</button>
-        
+	          <button onclick="redirectToMessaging()" class="btn btn-primary mr-2">Go to Messaging</button>
+
+          <script>
+    function redirectToMessaging() {
+      window.location.href = "messaging.index.html";
+    }
+  </script>
         <!-- Add User button -->
         <button class="btn btn-success">Add User</button>
       </div>
