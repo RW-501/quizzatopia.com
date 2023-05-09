@@ -137,10 +137,15 @@ function showAdsFunc() {
     adCount++;
     // Insert code here to display the ad (e.g., show a modal, render an ad component, etc.)
 
+    
 
-     document.getElementById("ad-container").style.display = 'block';
+
+    // Show the hidden div
+      document.getElementById("ad-container").style.display = 'block';
+    
 //  document.getElementById("ad-box").innerHTML = "<div id='ad-view'><span class='ad-text'>This will be an ad</span></div>";
-
+    // Trigger the ad to load
+    (adsbygoogle = window.adsbygoogle || []).push({});
 
         console.log("Ad " + adCount + " is being shown.");
 
@@ -167,6 +172,9 @@ function showAdsFunc() {
 
   displayAd();
   
+  
+ 
+
  
 }
 
