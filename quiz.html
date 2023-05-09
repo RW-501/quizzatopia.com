@@ -224,50 +224,79 @@
 	
 	
 	</main_section>
- <div class="container mt-5">
+	
+	
+	
+	
+	
+ <style>
+    .message-card {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
     <h2 class="mb-4">Quiz Message Board</h2>
     <div class="row">
       <div class="col-lg-8 offset-lg-2">
         <!-- Message Form -->
-        <form>
-          <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        <div class="card mb-4">
+          <div class="card-header">
+            <h5 class="card-title mb-0">Create a New Post</h5>
           </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" rows="4" placeholder="Type your message here"></textarea>
+          <div class="card-body">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Type your message here"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-        
-        <hr>
+        </div>
         
         <!-- Message List -->
-        <div class="mt-4">
-          <div class="card mb-3">
-            <div class="card-header">
-              <h5 class="card-title">John Doe</h5>
-              <p class="card-text"><small class="text-muted">Posted on January 15, 2023</small></p>
-            </div>
-            <div class="card-body">
-              <p class="card-text">I really enjoyed the quiz! It was challenging yet fun. Looking forward to more quizzes like this.</p>
-            </div>
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title mb-0">Latest Posts</h5>
           </div>
-  
-          <div class="card mb-3">
-            <div class="card-header">
-              <h5 class="card-title">Jane Smith</h5>
-              <p class="card-text"><small class="text-muted">Posted on January 16, 2023</small></p>
+          <div class="card-body">
+            <div class="message-card">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h5 class="card-title">John Doe</h5>
+                  <p class="card-text">I really enjoyed the quiz! It was challenging yet fun. Looking forward to more quizzes like this.</p>
+                  <p class="card-text"><small class="text-muted">Posted on January 15, 2023</small></p>
+                </div>
+              </div>
             </div>
-            <div class="card-body">
-              <p class="card-text">The quiz questions were well-crafted and thought-provoking. Can't wait to share it with my friends!</p>
+  
+            <div class="message-card">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h5 class="card-title">Jane Smith</h5>
+                  <p class="card-text">The quiz questions were well-crafted and thought-provoking. Can't wait to share it with my friends!</p>
+                  <p class="card-text"><small class="text-muted">Posted on January 16, 2023</small></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+	
+	
+	
+	
+	
+	
  </body>
   <div id="mainFooter"></div>
 
