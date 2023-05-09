@@ -817,11 +817,9 @@
     
     
     
-    
-    <button id="scroll-to-top-btn" class="btn btn-primary btn-lg back-to-top" type="button">
-  <i class="fas fa-chevron-up"></i>
-</button>
-    
+    <button type="button" class="btn btn-primary" onclick="scrollToDiv()"><i class="fas fa-chevron-up"></i></button>
+
+   
     
     
     
@@ -840,31 +838,17 @@
 <script>
 
 
-  
-  
-  
-  
-  
-  // Show or hide the button depending on the scroll position
-window.addEventListener("scroll", function () {
-  var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
-  var scrollToTopBtn = document.getElementById("scroll-to-top-btn");
-  if (scrollPos > 100) {
-    scrollToTopBtn.style.display = "block";
-  } else {
-    scrollToTopBtn.style.display = "none";
-  }
-});
+  // Scroll to top when the button is clicked
+  function scrollToDiv() {
 
-// Scroll to top when the button is clicked
-var scrollToTopBtn = document.getElementById("scroll-to-top-btn");
-scrollToTopBtn.addEventListener("click", function () {
-  window.scrollTo({
+    window.scrollTo({
     top: 0,
     behavior: "smooth"
   });
-});
- 
+	  
+  }
+  
+  
   
 
 </script>
