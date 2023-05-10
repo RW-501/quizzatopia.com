@@ -5,6 +5,7 @@ const questions = [];
 const questionData = quizArray.questions.map(questionObj => ({
       question: questionObj.question,
       options: questionObj.options,
+      questionNumber: questionObj.questionNumber,
       explanation: questionObj.explanation
 	      
 	      
