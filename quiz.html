@@ -415,6 +415,10 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
   } else {
     // Quiz code matches, retrieve existing quiz info from storage
     quizInfo = JSON.parse(localStorage.getItem('quizInfo'));
+	  
+	 
+	      
+	      
   }
 
   return quizInfo;
@@ -446,6 +450,9 @@ function fetchData(q) {
         quizName = data.quizName;
         numberOfQuestions = data.numberOfQuestions;
 
+	
+	      
+	      
         // Check quiz code and retrieve or save quiz info
         const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
 
@@ -456,7 +463,7 @@ function fetchData(q) {
         const questionNumber = quizInfo.questionNumber;
         const questionsCompleted = quizInfo.questionsCompleted;
         // ...
-        
+  
         // Display the stored test information
         displayTestInfo();
       }
