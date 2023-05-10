@@ -140,6 +140,8 @@
             </div>
           </div>
         </div>
+	      <div id="testInfo"></div>
+
       </div>
       <div class="text-center">
         <button id="start-btn" class="btn btn-primary btn-lg">Start Quiz</button>
@@ -339,6 +341,9 @@ if (q === null) {
 console.log("urlParams     "+q); 
 
                 const newStr = q.replace(/_/g, " ");
+	  
+	  
+	  
 
 	  
 document.getElementById("msg_quiz_name").innerHTML = newStr;
@@ -349,6 +354,29 @@ document.getElementById("social_tw").href = "https://twitter.com/intent/tweet?ur
 document.getElementById("social_ln").href = "ttps://www.linkedin.com/shareArticle?url=https://rw-501.github.io/Q-A/index.html?q="+q;
 document.getElementById("social_red").href = "https://www.reddit.com/submit?url=https://rw-501.github.io/Q-A/index.html?q="+q;
                           
+	
+	// Retrieve the stored test information and display it
+function displayTestInfo() {
+  const storedTestInfo = localStorage.getItem('testInfo');
+  if (storedTestInfo) {
+    const testInfo = JSON.parse(storedTestInfo);
+    const testInfoDiv = document.getElementById('testInfo');
+    testInfoDiv.innerHTML = `
+      <p>Quiz Code: ${testInfo.quizCode}</p>
+      <p>Quiz Name: ${testInfo.quizName}</p>
+      <p>Number of Questions: ${testInfo.numberOfQuestions}</p>
+      <p>Questions Completed: ${testInfo.questionsCompleted}</p>
+      <p>Question Number: ${testInfo.questionNumber}</p>
+      <p>Question Correct: ${testInfo.questionCorrect}</p>
+      <p>Timestamp: ${testInfo.timestamp}</p>
+    `;
+  }
+}
+
+
+	  
+	  
+	  
 	  
 
     // Quiz 
@@ -366,7 +394,37 @@ function shuffleArray(array) {
   return array;
 }
 
-// fetch and assign the data
+// Check if quizCode matches and retrieve or save quiz info
+function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
+  const savedQuizCode = localStorage.getItem('quizCode');
+  let quizInfo;
+
+  if (savedQuizCode !== quizCode) {
+    // Quiz code doesn't match, save new quiz info to storage
+    quizInfo = {
+      quizCode: quizCode,
+      quizName: quizName,
+      numberOfQuestions: numberOfQuestions,
+      questionsCompleted: [],
+      questionNumber: null,
+      questionCorrect: null,
+      timestamp: null
+    };
+    localStorage.setItem('quizCode', quizCode);
+    localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
+  } else {
+    // Quiz code matches, retrieve existing quiz info from storage
+    quizInfo = JSON.parse(localStorage.getItem('quizInfo'));
+	  
+	  // Call the displayTestInfo function to display the stored test information
+displayTestInfo();
+  
+  }
+
+  return quizInfo;
+}
+
+// Fetch and assign the data
 function fetchData(q) {
   fetch("q/" + q + ".json")
     .then(response => response.json())
@@ -374,45 +432,34 @@ function fetchData(q) {
       if (data.length === 0) {
         // Handle empty data
         console.log("Empty data");
-
-        // Get a new random file name
         const randomFile = getRandomFile(files);
-
-        // Recursively call fetchData with the new q value
         fetchData(randomFile);
       } else {
         // Use the questions data here
-	  
-	      
-   const questionData = data.questions.map(questionObj => ({
-      question: questionObj.question,
-      options: questionObj.options,
-      explanation: questionObj.explanation
-	   
-	   
-            console.log("data.questions:", data.questions);
+        const questionData = data.questions.map(questionObj => ({
+          question: questionObj.question,
+          questionNumber: questionObj.questionNumber,
+          options: questionObj.options,
+          explanation: questionObj.explanation
+        }));
 
-	quizCode = data.quizCode;
-     quizName = data.quizName;
-     numberOfQuestions = data.numberOfQuestions;
-	          }));
+        console.log("questionData:", questionData);
 
+        // Update quizCode, quizName, numberOfQuestions
+        quizCode = data.quizCode;
+        quizName = data.quizName;
+        numberOfQuestions = data.numberOfQuestions;
 
+        // Check quiz code and retrieve or save quiz info
+        const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
 
- 
+        questions.push(...questionData);
+        shuffleArray(questions);
 
-	      
-	        console.log("questionData:", questionData);
-
-	   questions.push(...questionData);
-          shuffleArray(questions);
-
-
-
-	      
-	      
-	
-
+        // Access and use the retrieved quiz information
+        const questionNumber = quizInfo.questionNumber;
+        const questionsCompleted = quizInfo.questionsCompleted;
+        // ...
       }
     })
     .catch(error => console.error(error));
@@ -420,6 +467,7 @@ function fetchData(q) {
 
 // Call fetchData with the initial q value
 fetchData(q);
+
 
     
     </script>
