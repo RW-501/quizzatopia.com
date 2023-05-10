@@ -170,8 +170,9 @@
      data-ad-layout-key="-6t+ed+2i-1n-4w"
      data-ad-client="ca-pub-4968673576211489"
      data-ad-slot="5743816421"></ins>
+				<script>
     (adsbygoogle = window.adsbygoogle || []).push({});
-
+				</script>
 			<!--	<span class='ad-text'>This will be an ad</span>-->
 				
 				</div>
@@ -241,7 +242,7 @@
 </head>
 <body>
   <div class="container mt-5">
-    <h2 class="mb-4">Quiz Message Board</h2>
+    <h2 id="msg_quiz_name" class="mb-4">Quiz Message Board</h2>
     <div class="row">
       <div class="col-lg-8 offset-lg-2">
         <!-- Message Form -->
@@ -338,6 +339,7 @@ console.log("urlParams     "+q);
                 const newStr = q.replace(/_/g, " ");
 
 	  
+document.getElementById("msg_quiz_name").innerHTML = newStr;
 document.getElementById("optionsQuizName").innerHTML = newStr;
 	  
 document.getElementById("social_fb").href = "https://www.facebook.com/sharer/sharer.php?u=https://rw-501.github.io/Q-A/index.html?q="+q;
@@ -367,7 +369,6 @@ function fetchData(q) {
         // Handle empty data
         console.log("Empty data");
 
-document.getElementById("optionContainer").style.display = 'none';
         // Get a new random file name
         const randomFile = getRandomFile(files);
 
