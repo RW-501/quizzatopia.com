@@ -384,23 +384,25 @@ function fetchData(q) {
         // Use the questions data here
 	  
 	      
+   const questionData = data.questions.map(questionObj => ({
+      question: questionObj.question,
+      options: questionObj.options,
+      explanation: questionObj.explanation
+	   
+	   
             console.log("data.questions:", data.questions);
 
-		 quizCode = data.quizCode;
+	quizCode = data.quizCode;
      quizName = data.quizName;
      numberOfQuestions = data.numberOfQuestions;
-	      
+	          }));
+
     console.log("Quiz Name: " + quizName);
     console.log("Number of Questions: " + numberOfQuestions);
-	      console.log("new Quiz Code: " + quizCode);
+ console.log("new Quiz Code: " + quizCode);
 
  
 
- const questionData = data.questions.map(questionObj => ({
-      question: questionObj.question,
-      options: questionObj.options,
-      questionNumber: questionObj.questionNumber,
-      explanation: questionObj.explanation
 	      
 	        console.log("questionData:", questionData);
               console.log("data.questions:", data.questions);
