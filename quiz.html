@@ -386,7 +386,14 @@ function fetchData(q) {
 	      
             console.log("data:", data);
 
-	
+		 quizCode = data.quizCode;
+     quizName = data.quizName;
+     numberOfQuestions = data.numberOfQuestions;
+	      
+    console.log("Quiz Name: " + quizName);
+    console.log("Number of Questions: " + numberOfQuestions);
+	      console.log("new Quiz Code: " + quizCode);
+
  
 
  questions = data.questions.map(questionObj => ({
@@ -402,13 +409,6 @@ function fetchData(q) {
           shuffleArray(questions);
 
 
-	 quizCode = data.quizCode;
-     quizName = data.quizName;
-     numberOfQuestions = data.numberOfQuestions;
-	      
-    console.log("Quiz Name: " + quizName);
-    console.log("Number of Questions: " + numberOfQuestions);
-	      console.log("new Quiz Code: " + quizCode);
 
 	      
 	      
