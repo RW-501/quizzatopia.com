@@ -351,8 +351,8 @@ document.getElementById("social_red").href = "https://www.reddit.com/submit?url=
                           
 	  
 
-    // Quiz Questions
-const questions = [];
+    // Quiz 
+const quizArray = [];
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -378,23 +378,14 @@ function fetchData(q) {
         fetchData(randomFile);
       } else {
         // Use the questions data here
-	     
-const questionData = data.questions.map(questionObj => ({
-      question: questionObj.question,
-      options: questionObj.options,
-      explanation: questionObj.explanation
+	  
 	      
+    
+	    quizArray.push(...data);
+          shuffleArray(quizArray);
+
 	      
-	      
-        questions.push(...questionData);
-	      
-	      
-        shuffleArray(questions);
-    console.log("Quiz Code: " + quizCode);
-    console.log("Quiz Name: " + quizName);
-    console.log("Number of Questions: " + numberOfQuestions);
-	      
-        console.log("Questions:", questions);
+
       }
     })
     .catch(error => console.error(error));
