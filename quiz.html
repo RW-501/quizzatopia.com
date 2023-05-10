@@ -378,8 +378,22 @@ function fetchData(q) {
         fetchData(randomFile);
       } else {
         // Use the questions data here
-        questions.push(...data);
+	     
+const questionData = data.questions.map(questionObj => ({
+      question: questionObj.question,
+      options: questionObj.options,
+      explanation: questionObj.explanation
+	      
+	      
+	      
+        questions.push(...questionData);
+	      
+	      
         shuffleArray(questions);
+    console.log("Quiz Code: " + quizCode);
+    console.log("Quiz Name: " + quizName);
+    console.log("Number of Questions: " + numberOfQuestions);
+	      
         console.log("Questions:", questions);
       }
     })
