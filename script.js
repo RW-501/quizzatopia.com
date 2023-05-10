@@ -1,26 +1,5 @@
 // Quiz Questions
 
-const questions = [];
-
-const questionData = quizArray.questions.map(questionObj => ({
-      question: questionObj.question,
-      options: questionObj.options,
-      questionNumber: questionObj.questionNumber,
-      explanation: questionObj.explanation
-	      
-	      
-	      
-   //     questions.push(...questionData);
-	          const quizCode = data.quizCode;
-    const quizName = data.quizName;
-    const numberOfQuestions = data.numberOfQuestions;
-	      
-       // shuffleArray(questions);
-    console.log("Quiz Name: " + quizName);
-    console.log("Number of Questions: " + numberOfQuestions);
-	    console.log("new Quiz Code: " + quizCode);
-
-        console.log("Questions:", questions);
 
 // Global Variables
 let questionTime = 0; // seconds
