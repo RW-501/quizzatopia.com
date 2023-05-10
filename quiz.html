@@ -353,6 +353,7 @@ document.getElementById("social_red").href = "https://www.reddit.com/submit?url=
 
     // Quiz 
 const quizArray = [];
+const questions = [];
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -382,10 +383,33 @@ function fetchData(q) {
 	      
             console.log("data:", data);
 
-	    quizArray.push(...data);
-          shuffleArray(quizArray);
-
+	
  
+
+const questionData = quizArray.questions.map(questionObj => ({
+      question: questionObj.question,
+      options: questionObj.options,
+      questionNumber: questionObj.questionNumber,
+      explanation: questionObj.explanation
+	      
+	      
+	          questions.push(...questionData);
+          shuffleArray(questions);
+
+
+	const quizCode = data.quizCode;
+    const quizName = data.quizName;
+    const numberOfQuestions = data.numberOfQuestions;
+	      
+       // shuffleArray(questions);
+    console.log("Quiz Name: " + quizName);
+    console.log("Number of Questions: " + numberOfQuestions);
+	    console.log("new Quiz Code: " + quizCode);
+
+        console.log("Questions:", questions);
+	      
+	      
+	      
 
       }
     })
