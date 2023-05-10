@@ -395,7 +395,9 @@ function fetchData(q) {
       questionNumber: questionObj.questionNumber,
       explanation: questionObj.explanation
 	      
-	      
+	        console.log("Questions:", questions);
+              console.log("data.questions:", data.questions);
+
 	   questions.push(...questions);
           shuffleArray(questions);
 
@@ -408,7 +410,6 @@ function fetchData(q) {
     console.log("Number of Questions: " + numberOfQuestions);
 	      console.log("new Quiz Code: " + quizCode);
 
-        console.log("Questions:", questions);
 	      
 	      
 	
