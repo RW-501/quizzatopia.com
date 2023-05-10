@@ -19,6 +19,13 @@
       display: none;
 }
 
+#timer-timeGroup label{
+      margain:2%;     
+      
+}
+
+
+
 /* Customize the checkbox */
 .form-check-input[type="checkbox"] {
   width: 20px;
@@ -52,6 +59,7 @@
   margin-top: 20px;
   background-color: #007bff;
   border: none;
+  margin-bottom: 15%;
 }
 
 /* Style the quiz options container */
@@ -67,3 +75,11 @@
     margin-top: 20px;
   }
 }
+
+
+#msg_quiz_name {
+    font-size: 1.5em;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+	
