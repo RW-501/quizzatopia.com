@@ -1,20 +1,23 @@
 // Quiz Questions
-/*
+
 const questions = [];
 
-// fetch and assign the data
-fetch("q/MCU.json")
-  .then(response => response.json())
-  .then(data => {
-    // Use the questions data here
-    //console.log("????????????????DATA"   + data);
-    questions.push(...data);
-  })
-  .catch(error => console.error(error));
-
-
-*/
-
+const questionData = quizArray.questions.map(questionObj => ({
+      question: questionObj.question,
+      options: questionObj.options,
+      explanation: questionObj.explanation
+	      
+	      
+	      
+   //     questions.push(...questionData);
+	      
+	      
+       // shuffleArray(questions);
+    console.log("new Quiz Code: " + quizCode);
+    console.log("Quiz Name: " + quizName);
+    console.log("Number of Questions: " + numberOfQuestions);
+	      
+        console.log("Questions:", questions);
 
 // Global Variables
 let questionTime = 0; // seconds
