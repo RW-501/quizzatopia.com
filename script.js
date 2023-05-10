@@ -10,12 +10,15 @@ const questionData = quizArray.questions.map(questionObj => ({
 	      
 	      
    //     questions.push(...questionData);
-	      
+	          const quizCode = data.quizCode;
+    const quizName = data.quizName;
+    const numberOfQuestions = data.numberOfQuestions;
 	      
        // shuffleArray(questions);
     console.log("Quiz Name: " + quizName);
     console.log("Number of Questions: " + numberOfQuestions);
-	      
+	    console.log("new Quiz Code: " + quizCode);
+
         console.log("Questions:", questions);
 
 // Global Variables
