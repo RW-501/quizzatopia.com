@@ -1,5 +1,7 @@
 // Quiz Questions
-
+    console.log("Quiz Name: " + quizName);
+    console.log("Number of Questions: " + numberOfQuestions);
+ console.log("new Quiz Code: " + quizCode);
 
 // Global Variables
 let questionTime = 0; // seconds
