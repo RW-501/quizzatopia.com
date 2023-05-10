@@ -13,7 +13,6 @@ const questionData = quizArray.questions.map(questionObj => ({
 	      
 	      
        // shuffleArray(questions);
-    console.log("new Quiz Code: " + quizCode);
     console.log("Quiz Name: " + quizName);
     console.log("Number of Questions: " + numberOfQuestions);
 	      
