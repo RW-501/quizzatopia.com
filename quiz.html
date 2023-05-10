@@ -352,8 +352,11 @@ document.getElementById("social_red").href = "https://www.reddit.com/submit?url=
 	  
 
     // Quiz 
-var quizArray = [];
-var questions = [];
+const questions = [];
+	
+	const quizCode;
+    const quizName;
+    const numberOfQuestions;
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -386,20 +389,20 @@ function fetchData(q) {
 	
  
 
-const questionData = quizArray.questions.map(questionObj => ({
+const questionData = data.questions.map(questionObj => ({
       question: questionObj.question,
       options: questionObj.options,
       questionNumber: questionObj.questionNumber,
       explanation: questionObj.explanation
 	      
 	      
-	          questions.push(...questionData);
+	   questions.push(...questionData);
           shuffleArray(questions);
 
 
-	const quizCode = data.quizCode;
-    const quizName = data.quizName;
-    const numberOfQuestions = data.numberOfQuestions;
+	 quizCode = data.quizCode;
+     quizName = data.quizName;
+     numberOfQuestions = data.numberOfQuestions;
 	      
        // shuffleArray(questions);
     console.log("Quiz Name: " + quizName);
@@ -409,7 +412,7 @@ const questionData = quizArray.questions.map(questionObj => ({
         console.log("Questions:", questions);
 	      
 	      
-	      
+	
 
       }
     })
