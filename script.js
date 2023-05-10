@@ -152,7 +152,7 @@ function showAdsFunc() {
     let countdown = adDuration;
     const countdownInterval = setInterval(() => {
       
-                document.getElementById("ad-text").innerHTML = "This will be an ad <br> Ad ends in " + countdown + " seconds.;
+                document.getElementById("ad-text").innerHTML = "This will be an ad <br> Ad ends in " + countdown + " seconds";
     console.log("Ad " + adCount + " is being shown.");
 
       console.log("Ad ends in " + countdown + " seconds.");
