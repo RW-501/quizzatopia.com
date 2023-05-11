@@ -472,7 +472,6 @@ function saveQuizInfo(quizCode, quizInfo) {
   const savedQuizCode = localStorage.getItem('quizCode');
 
   if (savedQuizCode !== quizCode) {
-    localStorage.setItem('quizCode', quizCode);
     localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
   }
 }
@@ -520,6 +519,7 @@ function displayTestInfo() {
       <p><strong>Question Correct:</strong> ${testInfo.questionCorrect || 'Not answered yet'}</p>
       <p><strong>Timestamp:</strong> ${testInfo.timestamp || 'Not started yet'}</p>
     `;
+  logStorageContents("Start");
 
     // Calculate and display quiz completion percentage
     const completionPercentage = (testInfo.questionsCompleted.length / testInfo.numberOfQuestions) * 100;
