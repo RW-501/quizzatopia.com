@@ -122,7 +122,7 @@
     transition: width 0.5s ease-in-out;
   }
 </style>
-<div class="container">
+<div id="optionContainer" class="container">
   <div class="row">
     <div class="col-md-6">
       <div class="quiz-options">
@@ -427,7 +427,7 @@ function displayTestInfo() {
       <p><strong>Questions Completed:</strong> ${testInfo.questionsCompleted.length}</p>
       <p><strong>Question Number:</strong> ${testInfo.questionNumber || 'Not answered yet'}</p>
       <p><strong>Question Correct:</strong> ${testInfo.questionCorrect || 'Not answered yet'}</p>
-      <p><strong>Timestamp:</strong> ${testInfo.timestamp}</p>
+      <p><strong>Timestamp:</strong> ${testInfo.timestamp || 'Not started yet'}</p>
     `;
 
     // Calculate and display quiz completion percentage
