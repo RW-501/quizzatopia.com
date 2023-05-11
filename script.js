@@ -222,7 +222,8 @@ function checkAnswer() {
   const selectedAnswer = selectedOption.innerHTML;
   const questionObj = questions[currentQuestion];
   const options = optionContainers[currentQuestion]?.children;
-
+let correct_bool;
+  
   // Disable all options and apply appropriate classes
   if (options) {
     for (let i = 0; i < options.length; i++) {
@@ -240,8 +241,10 @@ function checkAnswer() {
     selectedOption.classList.add('correct');
     score++;
     questionCorrect++;
+    correct_bool = "Correct";
   } else {
     selectedOption.classList.add('incorrect');
+    correct_bool = "incorrect";
 
     // Highlight the missed answer
     const answerOptions = document.getElementsByClassName("answer-option");
@@ -251,20 +254,17 @@ function checkAnswer() {
       }
     }
       console.log("Highlighted missed answer:", questionObj.answer);
+      console.log("questionObj.questionNumber:", questionObj.questionNumber);
 
   }
 
-  // Update the number of completed questions
-  questionsCompleted = answeredQuestions.length;
+ 
 
-  // Save the progress (e.g., to local storage)
-  localStorage.setItem('questionsCompleted', questionsCompleted);
-  localStorage.setItem('answeredQuestions', JSON.stringify(answeredQuestions));
 
   // Update the quizInfo array if necessary
   if (quizInfo) {
-    quizInfo[0] = questionNumber + 1; // Update the questionNumber
-    quizInfo[1] = score; // Update the score
+    quizInfo[0] = questionObj.questionNumber; // Update the questionNumber
+    quizInfo[1] = correct_bool; // Update the score
     quizInfo[2] = totalTime; // Update the totalTime
     localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
   }
