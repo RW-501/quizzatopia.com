@@ -121,6 +121,13 @@
   #progressBarValue {
     transition: width 0.5s ease-in-out;
   }
+	#quiz-timer-qn{
+		display:flex;
+	}
+	
+	#question-number{
+		
+	}
 </style>
 <div id="optionContainer" class="container">
   <div class="row">
@@ -207,13 +214,15 @@
           </div>
         </div>
       </div>
+	    <div id="quiz-timer-qn" >
       <div id="timer"></div>
       <!-- Timer element -->
+	    	      <div id="question-number"></div>
+	    </div>
       <div class="progress-bar-container">
         <!-- Progress Bar Container -->
         <div class="progress-bar" id="progress-bar"></div>
         <!-- Progress Bar -->
-	      <div id="question-number"></div>
 
       </div>
       <h1 id="question"></h1>
