@@ -259,7 +259,7 @@ if (quizInfo) {
 
   quizInfo.questionsCompleted.push({
     questionNumber: questionObj.questionNumber,
-    correctness: correct_bool
+    questionCorrect: questionCorrect
   });
 
   // Update other properties
