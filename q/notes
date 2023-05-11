@@ -10,6 +10,7 @@ Add the quiz information for the specific quiz:
 Include the 'questions' array with the respective question objects, each containing:
 'question': The question text
 'options': The array of options
+'questionNumber': question Number
 'difficulty': The difficulty level of the question (to be added for each question)
 Ensure that the JSON structure is properly nested and formatted."
 After reading the writing, the chat bot will fill in the placeholders with the appropriate values. For example:
@@ -30,6 +31,7 @@ add:
 
 question:
  And  add  "questionNumber", and the question number.
+'difficulty': The difficulty level of the question (to be added for each question)
 
 After reading the writing, the chatbot will fill in the placeholders with the appropriate values. 
 
