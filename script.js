@@ -1,15 +1,9 @@
-// Quiz Questions
-//    console.log("Quiz Name: " + quizName);
-//    console.log("Number of Questions: " + numberOfQuestions);
-// console.log("new Quiz Code: " + quizCode);
-
 // Global Variables
 let questionTime = 0; // seconds
 let currentQuestion = 0;
 let score = 0;
 let quizStarted = false;
 let timer = 0;
-let answeredQuestions = [];
 let countdownPerQuestion = false; // set to true if the countdown should happen for each question
 let totalTime = 0; // seconds
 let totalQuestions = questions.length;
@@ -17,25 +11,23 @@ let timerEnabled = false;
 
 var quizAdPattern;
 // Array to store the question numbers where the ad should be shown
- let adQuestionNumbers ;
+let adQuestionNumbers;
 
+// Array to store test information
+let quizInfo = [];
 
 // Function to set quiz time
 function setQuizTime() {
   const quizTimeInput = document.getElementById("quiz-time");
   const newQuizTime = parseInt(quizTimeInput.value);
-   
-  
-  
+
   if (timerEnabled == true) {
     questionTime = newQuizTime;
     totalTime = newQuizTime;
-   
-      startTimer();
-    
+
+    startTimer();
   }
 }
-
 
 // Function to start the quiz
 function startQuiz() {
@@ -45,36 +37,37 @@ function startQuiz() {
   document.getElementById("optionContainer").classList.add("d-none");
   totalQuestions = questions.length;
 
+  // Hide the MessageBoard
+  document.getElementById("MessageBoard").style.display = "none";
 
-   console.log(totalQuestions+"   ????????????totalQuestions????"); // Output: 3
-  
- var numAd;
-  
-  if(totalQuestions < 15){
+  console.log(totalQuestions + "   ????????????totalQuestions????"); // Output: 3
+
+  var numAd;
+
+  if (totalQuestions < 15) {
     numAds = 2;
-  }else{
+  } else {
     numAds = totalQuestions / 3;
   }
-  // Example usage
 
   var intvalue = Math.round(numAds);
-  
+
   quizAdPattern = generateQuizAdPattern(totalQuestions, intvalue);
   adQuestionNumbers = quizAdPattern;
 
-// Array to store the question numbers where the ad should be shown
+  // Array to store the question numbers where the ad should be shown
   adQuestionNumbers = quizAdPattern; // Example: Show ad after questions 3, 7, and 11
 
   showQuestion();
   setQuizTime();
 
-  answeredQuestions = [];
   updateProgressBar(currentQuestion);
-  
 }
 
-const quizTimeInput = document.querySelector('#quiz-time');
 
+
+
+const quizTimeInput = document.querySelector('#quiz-time');
 
 // Add an event listener to the timer checkbox to update the timerEnabled variable
 const timerCheckbox = document.getElementById("timer-checkbox");
@@ -83,87 +76,27 @@ const perQtimeCheckbox = document.getElementById("countdown-per-question");
 
 timerCheckbox.addEventListener("change", function () {
   timerEnabled = timerCheckbox.checked;
-  
+
   if (timerCheckbox.checked) {
     timeGroup.style.display = 'block';
   } else {
     timeGroup.style.display = 'none';
-      perQtimeCheckbox.checked = 0;
-
+    perQtimeCheckbox.checked = 0;
   }
-  
 });
 
-
 const countdownCheckbox = document.getElementById("countdown-per-question");
-countdownCheckbox.addEventListener("change", function() {
+countdownCheckbox.addEventListener("change", function () {
   countdownPerQuestion = countdownCheckbox.checked;
   timerCheckbox.checked = true;
-timerEnabled = true;
-  
-    if (timerCheckbox.checked) {
+  timerEnabled = true;
+
+  if (timerCheckbox.checked) {
     timeGroup.style.display = 'block';
   } else {
     timeGroup.style.display = 'none';
   }
-           // console.log(timerEnabled+"     timerEnabled??????????timerEnabled????     "); // Output: 3
-
 });
-
-
-
-
-
-function showAdsFunc() {
-  const adDuration = 10; // Duration of each ad in seconds
-  let adCount = 0; // Counter for the number of ads shown
-     let countdown = adDuration;
-   
-
-  function displayAd() {
-    adCount++;
-    // Insert code here to display the ad (e.g., show a modal, render an ad component, etc.)
-
-    
-
-
-    // Show the hidden div
-      document.getElementById("ad-container").style.display = 'block';
-    
-//  document.getElementById("ad-box").innerHTML = "<div id='ad-view'><span class='ad-text'>This will be an ad</span></div>";
-    // Trigger the ad to load
-
-        console.log("Ad " + adCount + " is being shown.");
-
-    // Start the countdown timer for the ad duration
-    let countdown = adDuration;
-    const countdownInterval = setInterval(() => {
-      
-                document.getElementById("ad-text").innerHTML = "This will be an ad <br> Ad ends in " + countdown + " seconds";
-    console.log("Ad " + adCount + " is being shown.");
-
-      console.log("Ad ends in " + countdown + " seconds.");
-      countdown--;
-
-      if (countdown < 0) {
-                clearInterval(countdownInterval);
-            document.getElementById("ad-container").style.display = 'none';
-
-       //  console.log("Admm "+ quiz_main_area);
-       // document.getElementById("quiz_main_area").innerHTML = quiz_main_area;
-        showQuestion(); // Call the showQuestion function after the ad ends
-      }
-    }, 1000);
-  }
-
-  displayAd();
-  
-  
- 
-
- 
-}
-
 
 
 
@@ -184,24 +117,60 @@ function generateQuizAdPattern(numQuestions, numAds) {
 
 
 
-function showQuestion() {
-   console.log(adQuestionNumbers+"  adQuestionNumbers??????????currentQuestion????   "+currentQuestion); // Output: 3
-  
-// Check if the current question number is in the adQuestionNumbers array
-if (adQuestionNumbers.includes(currentQuestion)) {
-  const index = adQuestionNumbers.indexOf(currentQuestion);
-  if (index !== -1) {
-    adQuestionNumbers.splice(index, 1);
+// Function to display ads
+function showAdsFunc() {
+  const adDuration = 10; // Duration of each ad in seconds
+  let adCount = 0; // Counter for the number of ads shown
+  let countdown = adDuration;
+
+  function displayAd() {
+    adCount++;
+    // Insert code here to display the ad (e.g., show a modal, render an ad component, etc.)
+
+    // Show the hidden div
+    document.getElementById("ad-container").style.display = 'block';
+    document.getElementById("ad-text").innerHTML = "This will be an ad <br> Ad ends in " + countdown + " seconds";
+
+    // Start the countdown timer for the ad duration
+    const countdownInterval = setInterval(() => {
+      console.log("Ad " + adCount + " is being shown.");
+      console.log("Ad ends in " + countdown + " seconds.");
+      countdown--;
+
+      if (countdown < 0) {
+        clearInterval(countdownInterval);
+        document.getElementById("ad-container").style.display = 'none';
+        showQuestion(); // Call the showQuestion function after the ad ends
+      } else {
+        document.getElementById("ad-text").innerHTML = "This will be an ad <br> Ad ends in " + countdown + " seconds";
+      }
+    }, 1000);
   }
-  showAdsFunc();
-  return;
+
+  displayAd();
 }
+
+// Call the showAdsFunc() to start displaying ads
+showAdsFunc();
+
+
+function showQuestion() {
+  console.log(adQuestionNumbers + "  adQuestionNumbers??????????currentQuestion????   " + currentQuestion);
+
+  // Check if the current question number is in the adQuestionNumbers array
+  if (adQuestionNumbers.includes(currentQuestion)) {
+    const index = adQuestionNumbers.indexOf(currentQuestion);
+    if (index !== -1) {
+      adQuestionNumbers.splice(index, 1);
+    }
+    showAdsFunc();
+    return;
+  }
 
   // Continue showing the question if it's the first one
   const questionObj = questions[currentQuestion];
   // Rest of the function code...
-  
-  
+
   document.getElementById("question").innerHTML = questionObj.question;
   const options = questionObj.options;
   const answerButtons = document.getElementsByClassName("answer-option");
@@ -210,12 +179,11 @@ if (adQuestionNumbers.includes(currentQuestion)) {
     answerButtons[i].addEventListener("click", checkAnswer);
   }
   document.getElementById("explanation").innerHTML = "";
-  if (countdownPerQuestion && timerEnabled) { // start timer only if countdown is per question and timer is enabled
+  if (countdownPerQuestion && timerEnabled) {
     totalTime = questionTime;
     startTimer();
   }
 }
-
 
 
   // Get the progress bar element
@@ -230,7 +198,6 @@ function updateProgressBar(currentQuestion) {
     //    console.log(totalQuestions+"  totalQuestions??????????totalQuestions????"); // Output: 3
 
 }   
-
 // Function to check the user's answer
 function checkAnswer() {
   const selectedOption = this;
@@ -238,8 +205,8 @@ function checkAnswer() {
   const selectedAnswer = selectedOption.innerHTML;
   const questionObj = questions[currentQuestion];
   const options = optionContainers[currentQuestion]?.children;
-  const explanation = questionObj.explanation;
 
+  // Disable all options and apply appropriate classes
   if (options) {
     for (let i = 0; i < options.length; i++) {
       options[i].classList.add('disabled');
@@ -248,68 +215,50 @@ function checkAnswer() {
       } else {
         options[i].classList.add('incorrect');
       }
-      
-        
-    }
-    
-    
-
-  }
-  
-    const answerO = document.getElementsByClassName("answer-option");
-  for (let i = 0; i < answerO.length; i++) {
-    if(answerO[i].innerHTML == questionObj.answer){
-              answerO[i].classList.add('missed');
-
     }
   }
-  
-  
-  
-  /*
- 
-*/
 
+  // Check if the selected answer is correct
   if (selectedAnswer === questionObj.answer) {
     selectedOption.classList.add('correct');
     score++;
     answeredQuestions.push(true);
+    questionCorrect++;
   } else {
     selectedOption.classList.add('incorrect');
     answeredQuestions.push(false);
+
+    // Highlight the missed answer
+    const answerOptions = document.getElementsByClassName("answer-option");
+    for (let i = 0; i < answerOptions.length; i++) {
+      if (answerOptions[i].innerHTML === questionObj.answer) {
+        answerOptions[i].classList.add('missed');
+      }
+    }
   }
 
+  // Update the number of completed questions
+  questionsCompleted = answeredQuestions.length;
+
+  // Save the progress (e.g., to local storage)
+  localStorage.setItem('questionsCompleted', questionsCompleted);
+  localStorage.setItem('answeredQuestions', JSON.stringify(answeredQuestions));
+
+  // Update the quizInfo array if necessary
+  if (quizInfo) {
+    quizInfo[0] = questionNumber + 1; // Update the questionNumber
+    quizInfo[1] = score; // Update the score
+    quizInfo[2] = totalTime; // Update the totalTime
+    localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
+  }
+
+  // Show the explanation
   showExplanation(questionObj.explanation);
-}
-
-// Function to show the explanation for the current question
-function showExplanation(explanation) {
-  document.getElementById("explanation").innerHTML = explanation;
-  disableAnswerButtons();
-  document.getElementById("next-btn").classList.remove("d-none");
-}
-
-// Function to disable answer buttons after user answers
-function disableAnswerButtons() {
-  const answerButtons = document.getElementsByClassName("answer-option");
-  for (let i = 0; i < answerButtons.length; i++) {
-    answerButtons[i].removeEventListener("click", checkAnswer);
-    answerButtons[i].classList.add("disabled");
-  }
-}
-
-// Function to enable answer buttons for next question
-function enableAnswerButtons() {
-  const answerButtons = document.getElementsByClassName("answer-option");
-  for (let i = 0; i < answerButtons.length; i++) {
-    answerButtons[i].addEventListener("click", checkAnswer);
-    answerButtons[i].classList.remove("disabled", "correct", "incorrect", "missed" );
-  }
-   
 }
 
 // Function to show the next question
 function nextQuestion() {
+
   currentQuestion++;
 console.log(totalQuestions+"   ????????????totalQuestions????"); // Output: 3
 console.log(currentQuestion+"   ????????????currentQuestion????"); // Output: 3
@@ -325,9 +274,12 @@ console.log(currentQuestion+"   ????????????currentQuestion????"); // Output: 3
     endQuiz();
   }
   updateProgressBar(currentQuestion);
+   updateQuestionNumber();
+
 }
 
 function skipQuestion() {
+
   currentQuestion++;
 
   if (currentQuestion < totalQuestions) {
@@ -340,9 +292,17 @@ function skipQuestion() {
     endQuiz();
   }
   updateProgressBar(currentQuestion);
+   updateQuestionNumber();
+
 }
 
 
+// Update the question number display
+function updateQuestionNumber() {
+  const questionNumberDisplay = document.getElementById("question-number");
+  const currentQuestionNumber = currentQuestion + 1;
+  questionNumberDisplay.innerHTML = `Question ${currentQuestionNumber}/${totalQuestions}`;
+}
     // update the progress bar
   updateProgressBar(currentQuestion);
 //    console.log(currentQuestion+"????????????currentQuestion????"); // Output: 3
@@ -351,18 +311,41 @@ function skipQuestion() {
 function endQuiz() {
   clearInterval(timer);
   quizStarted = false;
-if(document.getElementById("timer").innerHTML){
-document.getElementById("timer").innerHTML = "";
-}
-    const feedback = calculateFeedback();
-    document.getElementById("feedback").innerHTML = feedback;
+  if (document.getElementById("timer").innerHTML) {
+    document.getElementById("timer").innerHTML = "";
+  }
+  
+  const feedback = calculateFeedback();
+  document.getElementById("feedback").innerHTML = feedback;
   
   const percentageScore = Math.round((score / totalQuestions) * 100);
   const resultMsg = `You scored ${score}/${totalQuestions} (${percentageScore}%)`;
   document.getElementById("score").innerHTML = resultMsg;
   document.getElementById("quiz-container").classList.add("d-none");
   document.getElementById("end-container").classList.remove("d-none");
+  
+  // Show pie chart for correct and incorrect answers
+  showPieChart();
+  
+  // Unhide the message board
+  document.getElementById("message-board").classList.remove("d-none");
 }
+
+function showPieChart() {
+  // Calculate the percentage of correct and incorrect answers
+  const correctPercentage = (score / totalQuestions) * 100;
+  const incorrectPercentage = 100 - correctPercentage;
+  
+  // Create the data array for the pie chart
+  const data = [
+    { label: "Correct", value: correctPercentage },
+    { label: "Incorrect", value: incorrectPercentage }
+  ];
+  
+  // Insert code here to display the pie chart (e.g., using a chart library like Chart.js)
+  // You'll need to add a chart element in your HTML where the chart will be displayed
+}
+
 
 // Function to calculate the feedback for the quiz taker
 function calculateFeedback() {
