@@ -478,11 +478,11 @@ function saveQuizInfo(quizCode, quizInfo) {
 }
 
 // Log the contents of the storage
-function logStorageContents() {
+function logStorageContents(xxx) {
   const savedQuizCode = localStorage.getItem('quizCode');
   const savedQuizInfo = localStorage.getItem('quizInfo');
 
-  console.log('Saved Quiz Code:', savedQuizCode);
+  console.log('Saved Quiz Code:  '+xxx+"   ", savedQuizCode);
   console.log('Saved Quiz Info:', savedQuizInfo);
 }
 
