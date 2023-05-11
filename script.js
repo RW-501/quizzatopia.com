@@ -218,7 +218,7 @@ function updateProgressBar(currentQuestion) {
 // Function to check the user's answer
 function checkAnswer() {
   const selectedOption = this;
-  const optionContainers = document.querySelectorAll("#optionContainers button.answer-option");
+  const optionContainers = document.querySelectorAll("#quiz-container button.answer-option");
   const selectedAnswer = selectedOption.innerHTML;
   const questionObj = questions[currentQuestion];
   const options = optionContainers[currentQuestion]?.children;
