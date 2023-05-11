@@ -521,20 +521,20 @@ function displayTestInfo() {
       <p><strong>Quiz Code:</strong> ${testInfo.quizCode}</p>
       <p><strong>Quiz Name:</strong> ${testInfo.quizName}</p>
       <p><strong>Number of Questions:</strong> ${testInfo.numberOfQuestions}</p>
-      <p><strong>Questions Completed:</strong> ${testInfo.questionsCompleted.length}</p>
+      <p><strong>Questions Completed:</strong> ${testInfo.questionsCompleted ? testInfo.questionsCompleted.length : 0}</p>
       <p><strong>Question Number:</strong> ${testInfo.questionNumber || 'Not answered yet'}</p>
       <p><strong>Question Correct:</strong> ${testInfo.questionCorrect || 'Not answered yet'}</p>
       <p><strong>Timestamp:</strong> ${testInfo.timestamp || 'Not started yet'}</p>
     `;
-  logStorageContents("Start");
+    
+    logStorageContents("Start");
 
     // Calculate and display quiz completion percentage
-    const completionPercentage = (testInfo.questionsCompleted.length / testInfo.numberOfQuestions) * 100;
+    const completionPercentage = (testInfo.questionsCompleted ? testInfo.questionsCompleted.length : 0) / testInfo.numberOfQuestions * 100;
     progressBar.style.width = completionPercentage + '%';
     progressBar.setAttribute('aria-valuenow', completionPercentage);
   }
 }
-
 
 // Check if quizCode matches and retrieve or save quiz info
 function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
