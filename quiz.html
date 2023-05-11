@@ -468,6 +468,24 @@ document.getElementById("social_red").href = "https://www.reddit.com/submit?url=
 	
 	  
 	  
+function saveQuizInfo(quizCode, quizInfo) {
+  const savedQuizCode = localStorage.getItem('quizCode');
+
+  if (savedQuizCode !== quizCode) {
+    localStorage.setItem('quizCode', quizCode);
+    localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
+  }
+}
+
+// Log the contents of the storage
+function logStorageContents() {
+  const savedQuizCode = localStorage.getItem('quizCode');
+  const savedQuizInfo = localStorage.getItem('quizInfo');
+
+  console.log('Saved Quiz Code:', savedQuizCode);
+  console.log('Saved Quiz Info:', savedQuizInfo);
+}
+
 
     // Quiz 
 questions = [];
@@ -515,7 +533,7 @@ function displayTestInfo() {
 function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
   const savedQuizCode = localStorage.getItem('quizCode');
   let quizInfo;
-  
+  logStorageContents();
   let timestamp = new Date().toLocaleString();
 
   if (savedQuizCode !== quizCode) {
