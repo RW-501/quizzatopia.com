@@ -235,6 +235,8 @@ function checkAnswer() {
         answerOptions[i].classList.add('missed');
       }
     }
+      console.log("Highlighted missed answer:", questionObj.answer);
+
   }
 
   // Update the number of completed questions
