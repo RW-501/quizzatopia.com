@@ -2,126 +2,14 @@
   "quizCode": "QZ2066",
   "quizName": "Science Quiz",
   "numberOfQuestions": 10,
-  "questions": [
-    {
-      "questionNumber": 1,
-      "question": "What is the largest planet in our solar system?",
-      "options": [
-        "Mars",
-        "Saturn",
-        "Jupiter",
-        "Neptune"
-      ],
-      "answer": "Jupiter",
-      "explanation": "Jupiter is the largest planet in our solar system. It is a gas giant with a diameter of about 143,000 kilometers, making it more than 11 times the diameter of Earth."
-    },
-    {
-      "questionNumber": 2,
-      "question": "What is the chemical symbol for gold?",
-      "options": [
-        "Au",
-        "Ag",
-        "Fe",
-        "Cu"
-      ],
-      "answer": "Au",
-      "explanation": "The chemical symbol for gold is Au, which comes from the Latin word 'aurum'. Gold is a highly valued precious metal known for its beauty and rarity."
-    },
-    {
-      "questionNumber": 3,
-      "question": "What is the formula for water?",
-      "options": [
-        "H2O",
-        "CO2",
-        "CH4",
-        "NaCl"
-      ],
-      "answer": "H2O",
-      "explanation": "The formula for water is H2O. It consists of two hydrogen atoms bonded to one oxygen atom. Water is essential for life and exists in all three states: solid, liquid, and gas."
-    },
-    {
-      "questionNumber": 4,
-      "question": "What is the main function of red blood cells?",
-      "options": [
-        "Transport of oxygen",
-        "Digestion of food",
-        "Protection against diseases",
-        "Production of hormones"
-      ],
-      "answer": "Transport of oxygen",
-      "explanation": "The main function of red blood cells is to transport oxygen from the lungs to all parts of the body. They contain a protein called hemoglobin, which binds to oxygen and carries it through the bloodstream."
-    },
-    {
-      "questionNumber": 5,
-      "question": "What is the process by which plants convert sunlight into chemical energy?",
-      "options": [
-        "Photosynthesis",
-        "Respiration",
-        "Fermentation",
-        "Transpiration"
-      ],
-      "answer": "Photosynthesis",
-      "explanation": "Photosynthesis is the process by which plants convert sunlight, carbon dioxide, and water into glucose (a form of chemical energy) and oxygen. It takes place in the chloroplasts of plant cells."
-    },
-    {
-      "questionNumber": 6,
-      "question": "What is the largest organ in the human body?",
-      "options": [
-        "Liver",
-        "Brain",
-        "Skin",
-        "Heart"
-      ],
-      "answer": "Skin",
-      "explanation": "The largest organ in the human body is the skin. It serves as a protective barrier, regulates body temperature, and is involved in sensory perception."
-    },
-    {
-      "questionNumber": 7,
-      "question": "What is carbon?",
-      "options": [
-        "A metal",
-        "A gas",
-        "A non-metal",
-        "A liquid"
-      ],
-      "answer": "A non-metal",
-      "explanation": "Carbon is a non-metal. It is a chemical element with the symbol 'C' and atomic number 6. Carbon is the basis of organic compounds and is essential for life on Earth. It is found in various forms, including graphite and diamond."
-},
-{
-"questionNumber": 8,
-"question": "What is the unit of measurement for electric current?",
-"options": [
-"Volt",
-"Watt",
-"Ampere",
-"Ohm"
-],
-"answer": "Ampere",
-"explanation": "The unit of measurement for electric current is the ampere (A). It is named after the French physicist André-Marie Ampère and represents the flow of electric charge through a conductor."
-},
-{
-"questionNumber": 9,
-"question": "What is the smallest unit of matter?",
-"options": [
-"Atom",
-"Molecule",
-"Cell",
-"Electron"
-],
-"answer": "Atom",
-"explanation": "The smallest unit of matter is the atom. It is the basic building block of all elements and consists of a nucleus (containing protons and neutrons) surrounded by electrons."
-},
-{
-"questionNumber": 10,
-"question": "What is the speed of light?",
-"options": [
-"300,000 kilometers per hour",
-"300,000 meters per second",
-"300,000 miles per hour",
-"300,000 kilometers per second"
-],
-"answer": "300,000 kilometers per second",
-"explanation": "The speed of light in a vacuum is approximately 300,000 kilometers per second (or about 186,000 miles per second). It is a fundamental constant of nature and plays a crucial role in many physical phenomena."
-}
-]
+   "questions": [
+    {"question": "What is the largest planet in our solar system?", "options": ["Jupiter", "Saturn", "Neptune", "Earth"], "answer": "Jupiter", "explanation": "Jupiter is the largest planet in our solar system.", "difficulty": "medium"},
+    {"question": "What is the chemical symbol for the element gold?", "options": ["Go", "Au", "Gl", "Ag"], "answer": "Au", "explanation": "The chemical symbol for gold is Au.", "difficulty": "easy"},
+    {"question": "What is the powerhouse of the cell?", "options": ["Nucleus", "Ribosome", "Mitochondrion", "Endoplasmic reticulum"], "answer": "Mitochondrion", "explanation": "The mitochondrion is known as the powerhouse of the cell.", "difficulty": "medium"},
+    {"question": "What is the largest organ in the human body?", "options": ["Heart", "Liver", "Brain", "Skin"], "answer": "Skin", "explanation": "The skin is the largest organ in the human body.", "difficulty": "easy"},
+    {"question": "What is the primary component of natural gas?", "options": ["Methane", "Carbon dioxide", "Nitrogen", "Oxygen"], "answer": "Methane", "explanation": "Methane is the primary component of natural gas.", "difficulty": "medium"},
+    {"question": "What is the unit of measurement for electric current?", "options": ["Volt", "Watt", "Ampere", "Ohm"], "answer": "Ampere", "explanation": "The unit of measurement for electric current is the ampere (A).", "difficulty": "easy"},
+    {"question": "What is the smallest unit of matter?", "options": ["Atom", "Molecule", "Cell", "Electron"], "answer": "Atom", "explanation": "The smallest unit of matter is the atom.", "difficulty": "easy"},
+    {"question": "What is the speed of light?", "options": ["300,000 kilometers per hour", "300,000 meters per second", "300,000 miles per hour", "300,000 kilometers per second"], "answer": "300,000 kilometers per second", "explanation": "The speed of light in a vacuum is approximately 300,000 kilometers per second.", "difficulty": "medium"}
+  ]
 }
