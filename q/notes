@@ -21,3 +21,16 @@ After reading the writing, the chat bot will fill in the placeholders with the a
 "Please ensure that the JSON is written in a minified format without any line breaks or word wrapping. I prefer a compact representation without unnecessary whitespace."
 
 The format of placing the JSON structure on a single line without any line breaks or word wrapping is commonly referred to as "minified" or "compressed" JSON. It is a compact representation of the JSON data that aims to reduce whitespace and line breaks, resulting in a more condensed form. Minified JSON is often used in scenarios where space is limited or network transmission efficiency is crucial.
+
+
+add:
+'quizCode': [quiz_code_placeholder]
+'quizName': [quiz_name_placeholder]
+'numberOfQuestions': [number_of_questions_placeholder]
+
+question:
+ And  add  "questionNumber", and the question number.
+
+After reading the writing, the chatbot will fill in the placeholders with the appropriate values. 
+
+minified format
