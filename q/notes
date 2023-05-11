@@ -1,0 +1,19 @@
+
+Certainly! Here's an updated version where the chat bot fills in the placeholders after reading the writing:
+
+"Please format the JSON to match the following structure:
+
+Add the quiz information for the specific quiz:
+'quizCode': [quiz_code_placeholder]
+'quizName': [quiz_name_placeholder]
+'numberOfQuestions': [number_of_questions_placeholder]
+Include the 'questions' array with the respective question objects, each containing:
+'question': The question text
+'options': The array of options
+'difficulty': The difficulty level of the question (to be added for each question)
+Ensure that the JSON structure is properly nested and formatted."
+After reading the writing, the chat bot will fill in the placeholders with the appropriate values. For example:
+
+[quiz_code_placeholder] might be replaced with "QZ001"
+[quiz_name_placeholder] might be replaced with "Construction and Architecture Quiz"
+[number_of_questions_placeholder] might be replaced with 13
