@@ -240,7 +240,6 @@ function checkAnswer() {
     questionCorrect++;
   } else {
     selectedOption.classList.add('incorrect');
-    answeredQuestions.push(false);
 
     // Highlight the missed answer
     const answerOptions = document.getElementsByClassName("answer-option");
