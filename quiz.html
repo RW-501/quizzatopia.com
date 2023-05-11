@@ -490,6 +490,7 @@ function fetchData(q) {
     // Use the questions data here
     const questionData = data.questions.map(questionObj => ({
       question: questionObj.question,
+      question: questionObj.answer,
       questionNumber: questionObj.questionNumber,
       options: questionObj.options,
       explanation: questionObj.explanation
