@@ -1,0 +1,154 @@
+{
+  "quizCode": "SS001",
+  "quizName": "Six Sigma Certification Test",
+  "numberOfQuestions": 18,
+  "questions": [
+    {
+      "question": "What is the purpose of the Define phase in the DMAIC methodology?",
+      "options": ["To define the problem statement and project goals", "To analyze the current process", "To implement improvement solutions", "To control and sustain the improvements"],
+      "answer": "To define the problem statement and project goals",
+      "explanation": "The Define phase in the DMAIC methodology is focused on defining the problem statement and project goals.",
+      "questionNumber": 1,
+      "difficulty": "Easy"
+    },
+    {
+      "question": "Which statistical tool is commonly used for analyzing process variation?",
+      "options": ["Histogram", "Pareto chart", "Control chart", "Scatter plot"],
+      "answer": "Control chart",
+      "explanation": "Control charts are commonly used for analyzing process variation and identifying special and common causes of variation.",
+      "questionNumber": 2,
+      "difficulty": "Medium"
+    },
+    {
+      "question": "What does the acronym DMAIC stand for?",
+      "options": ["Define, Measure, Analyze, Improve, Control", "Data, Measure, Analyze, Improve, Control", "Design, Measure, Analyze, Improve, Control", "Define, Monitor, Analyze, Improve, Control"],
+      "answer": "Define, Measure, Analyze, Improve, Control",
+      "explanation": "DMAIC stands for Define, Measure, Analyze, Improve, Control. It is a problem-solving methodology used in Six Sigma projects.",
+      "questionNumber": 3,
+      "difficulty": "Easy"
+    },
+    {
+      "question": "What is the main goal of the Analyze phase in the DMAIC methodology?",
+      "options": ["To identify root causes of the problem", "To establish process control measures", "To define project goals and objectives", "To improve the process"],
+      "answer": "To identify root causes of the problem",
+      "explanation": "The main goal of the Analyze phase is to identify and understand the root causes of the problem through data analysis.",
+      "questionNumber": 4,
+      "difficulty": "Medium"
+    },
+    {
+      "question": "What is the acceptable defect rate for a Six Sigma process?",
+      "options": ["3.4 defects per million opportunities", "99.9997% defect-free", "1 defect per million opportunities", "99.99966% defect-free"],
+      "answer": "3.4 defects per million opportunities",
+      "explanation": "A Six Sigma process aims to achieve a defect rate of 3.4 defects per million opportunities, which corresponds to a 99.9997% defect-free rate.",
+      "questionNumber": 5,
+      "difficulty": "Hard"
+    },
+    {
+      "question": "Which tool is used to prioritize improvement opportunities based on their impact and frequency?",
+      "options": ["Pareto chart", "Scatter plot", "Control chart", "Histogram"],
+      "answer": "Pareto chart",
+      "explanation": "A Pareto chart is used to prioritize improvement opportunities by displaying the frequency and impact of different factors or causes.",
+      "questionNumber": 6,
+      "difficulty": "Medium"
+    },
+    {
+      "question": "What is the purpose of the Control phase in the DMAIC methodology?",
+      "options": ["To establish process control measures", "To define project goals and objectives", "To improve the process", "To identify root causes of the problem"],
+      "answer": "To establish process control measures",
+      "explanation": "The Control phase in the DMAIC methodology aims to establish process control measures to ensure the improvements made during the project are sustained over time.",
+      "questionNumber": 7,
+      "difficulty": "Easy"
+    },
+    {
+      "question": "What is the formula for calculating process capability index (Cpk)?",
+      "options": ["(USL - LSL) / (6 * standard deviation)", "(USL - LSL) / (3 * standard deviation)", "(USL - LSL) / (2 * standard deviation)", "(USL - LSL) / (4 * standard deviation)"],
+      "answer": "(USL - LSL) / (6 * standard deviation)",
+      "explanation": "The formula for calculating process capability index (Cpk) is (USL - LSL) / (6 * standard deviation), where USL is the upper specification limit, LSL is the lower specification limit, and standard deviation is a measure of process variability.",
+      "questionNumber": 8,
+      "difficulty": "Hard"
+    },
+    {
+      "question": "Which DMAIC phase involves conducting experiments to test improvement solutions?",
+      "options": ["Improve", "Define", "Control", "Analyze"],
+      "answer": "Improve",
+      "explanation": "The Improve phase in the DMAIC methodology involves implementing and testing improvement solutions through the use of experiments.",
+      "questionNumber": 9,
+      "difficulty": "Medium"
+    },
+    {
+      "question": "What is the primary objective of the Measure phase in the DMAIC methodology?",
+      "options": ["To collect data and measure the current process performance", "To implement improvement solutions", "To define project goals and objectives", "To establish process control measures"],
+      "answer": "To collect data and measure the current process performance",
+      "explanation": "The Measure phase focuses on collecting data and measuring the current process performance to establish a baseline for improvement.",
+      "questionNumber": 10,
+      "difficulty": "Easy"
+    },
+    {
+      "question": "What is the purpose of a fishbone diagram in Six Sigma?",
+      "options": ["To visually display the potential causes of a problem", "To control and sustain improvements", "To analyze process variation", "To prioritize improvement opportunities"],
+      "answer": "To visually display the potential causes of a problem",
+      "explanation": "A fishbone diagram, also known as a cause-and-effect diagram, is used in Six Sigma to visually display the potential causes of a problem or outcome.",
+      "questionNumber": 11,
+      "difficulty": "Medium"
+    },
+    {
+      "question": "What is the role of a Green Belt in Six Sigma?",
+      "options": ["Leads and manages Six Sigma projects", "Provides subject matter expertise", "Performs statistical analysis", "Executes improvement activities"],
+      "answer": "Executes improvement activities",
+      "explanation": "A Green Belt in Six Sigma is a team member who works on process improvement projects and executes improvement activities under the guidance of a Black Belt.",
+      "questionNumber": 12,
+      "difficulty": "Easy"
+    },
+    {
+      "question": "What is the primary objective of a hypothesis test in Six Sigma?",
+      "options": ["To determine if there is sufficient evidence to reject or accept a null hypothesis", "To establish process control measures", "To identify root causes of a problem", "To prioritize improvement opportunities"],
+      "answer": "To determine if there is sufficient evidence to reject or accept a null hypothesis",
+      "explanation": " {
+  "question": "What is the primary objective of a hypothesis test in Six Sigma?",
+  "options": ["To determine if there is sufficient evidence to reject or accept a null hypothesis", "To establish process control measures", "To identify root causes of a problem", "To prioritize improvement opportunities"],
+  "answer": "To determine if there is sufficient evidence to reject or accept a null hypothesis",
+  "explanation": "A hypothesis test in Six Sigma is used to analyze sample data and determine if there is sufficient evidence to reject or accept a null hypothesis, which helps in making data-driven decisions.",
+  "questionNumber": 13,
+  "difficulty": "Medium"
+},
+{
+  "question": "What is the primary goal of the Lean Six Sigma approach?",
+  "options": ["To reduce waste and improve process efficiency", "To analyze process variation", "To establish process control measures", "To prioritize improvement opportunities"],
+  "answer": "To reduce waste and improve process efficiency",
+  "explanation": "The primary goal of the Lean Six Sigma approach is to identify and eliminate waste in processes, thereby improving process efficiency and overall performance.",
+  "questionNumber": 14,
+  "difficulty": "Easy"
+},
+{
+  "question": "Which tool is used to visualize the relationship between two continuous variables?",
+  "options": ["Scatter plot", "Control chart", "Pareto chart", "Histogram"],
+  "answer": "Scatter plot",
+  "explanation": "A scatter plot is used to visualize the relationship between two continuous variables and identify any correlation or patterns between them.",
+  "questionNumber": 15,
+  "difficulty": "Medium"
+},
+{
+  "question": "What does the acronym DPMO stand for?",
+  "options": ["Defects Per Million Opportunities", "Defects Per Million Outputs", "Defects Per Minute Outputs", "Defects Per Minute Opportunities"],
+  "answer": "Defects Per Million Opportunities",
+  "explanation": "DPMO stands for Defects Per Million Opportunities, which is a metric used to measure the defect rate in a process.",
+  "questionNumber": 16,
+  "difficulty": "Easy"
+},
+{
+  "question": "Which tool is used to identify and prioritize the vital few factors contributing to a problem?",
+  "options": ["Pareto chart", "Control chart", "Scatter plot", "Histogram"],
+  "answer": "Pareto chart",
+  "explanation": "A Pareto chart is used to identify and prioritize the vital few factors or causes that contribute to a problem, allowing for focused improvement efforts.",
+  "questionNumber": 17,
+  "difficulty": "Medium"
+},
+{
+  "question": "What is the role of a Black Belt in Six Sigma?",
+  "options": ["Leads and manages Six Sigma projects", "Provides subject matter expertise", "Performs statistical analysis", "Executes improvement activities"],
+  "answer": "Leads and manages Six Sigma projects",
+  "explanation": "A Black Belt in Six Sigma is a project leader who has expertise in the application of Six Sigma methodology and is responsible for leading and managing Six Sigma projects within an organization.",
+  "questionNumber": 18,
+  "difficulty": "Easy"
+}
+]
