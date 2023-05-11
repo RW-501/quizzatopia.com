@@ -1,123 +1,95 @@
-[
-  {
-    "question": "What is the definition of a project?",
-    "options": [
-      "A collection of programs",
-      "A set of activities that are ongoing",
-      "A temporary endeavor to create a unique product, service or result",
-      "A recurring process to maintain or improve a product, service or result"
-    ],
-    "answer": "A temporary endeavor to create a unique product, service or result",
-    "explanation": "A project is a temporary endeavor undertaken to create a unique product, service, or result."
-  },
-  {
-    "question": "What is the difference between a project and operations?",
-    "options": [
-      "Operations are ongoing, while projects are temporary",
-      "Projects are ongoing, while operations are temporary",
-      "Operations are focused on creating a unique product, service or result, while projects are focused on routine work",
-      "Projects are focused on creating a unique product, service or result, while operations are focused on routine work"
-    ],
-    "answer": "Operations are ongoing, while projects are temporary",
-    "explanation": "Operations are ongoing and repetitive, while projects are temporary and unique."
-  },
-  {
-    "question": "What is the purpose of a project charter?",
-    "options": [
-      "To identify the stakeholders",
-      "To define the project objectives and scope",
-      "To create the project schedule",
-      "To monitor project progress"
-    ],
-    "answer": "To define the project objectives and scope",
-    "explanation": "A project charter is a document that defines the project objectives, scope, stakeholders, and deliverables."
-  },
-  {
-    "question": "What is a work breakdown structure (WBS)?",
-    "options": [
-      "A list of project risks",
-      "A hierarchical decomposition of project deliverables",
-      "A list of project requirements",
-      "A document that identifies project stakeholders"
-    ],
-    "answer": "A hierarchical decomposition of project deliverables",
-    "explanation": "A WBS is a hierarchical decomposition of project deliverables that organizes and defines the scope of the project."
-  },
-  {
-    "question": "What is the critical path in a project network diagram?",
-    "options": [
-      "The path with the most activities",
-      "The path with the longest duration",
-      "The path with the most resources",
-      "The path with the most risks"
-    ],
-    "answer": "The path with the longest duration",
-    "explanation": "The critical path in a project network diagram is the path with the longest duration, which determines the minimum amount of time required to complete the project."
-  },
-  {
-    "question": "What is the purpose of a project schedule?",
-    "options": [
-      "To allocate project resources",
-      "To identify project risks",
-      "To monitor project progress",
-      "To define project scope"
-    ],
-    "answer": "To allocate project resources",
-    "explanation": "A project schedule is a document that identifies project activities, their durations, and their dependencies, and allocates resources to those activities."
-  },
-  {
-    "question": "What is the purpose of a project budget?",
-    "options": [
-      "To identify project risks",
-      "To allocate project resources",
-      "To define project scope",
-      "To monitor project progress"
-    ],
-    "answer": "To allocate project resources",
-    "explanation": "A project budget is a document that identifies the total cost of the project and allocates that cost to specific activities and resources."
-  },
-  {
-  "question": "What is the critical path in project management?",
-  "options": [
-    "The path that determines the overall duration of the project",
-    "The path that involves the most tasks",
-    "The path that is least likely to experience delays",
-    "The path that is easiest to complete"
-  ],
-  "answer": "The path that determines the overall duration of the project",
-  "explanation": "The critical path is the sequence of tasks in a project that determines the overall duration of the project. It is the longest path of tasks from start to finish that must be completed in order for the project to be completed on time. Tasks on the critical path cannot be delayed without delaying the entire project."
-},
 {
-  "question": "What is the difference between a milestone and a deliverable?",
-  "options": [
-    "A milestone is a task that must be completed, while a deliverable is an outcome or result of a task",
-    "A milestone is an outcome or result of a task, while a deliverable is a task that must be completed",
-    "A milestone and a deliverable are the same thing",
-    "A milestone is a task that must be completed by a certain date, while a deliverable is an outcome or result of the project"
-  ],
-  "answer": "A milestone is a task that must be completed, while a deliverable is an outcome or result of a task",
-  "explanation": "A milestone is a significant point or event in a project that marks progress towards a specific goal. It is a task that must be completed by a certain date or time. A deliverable is an outcome or result of a task or group of tasks. It is a tangible or intangible object or service that is produced as a result of the project and is intended to be delivered to a customer, client, or stakeholder."
-},
-{
-  "question": "What is the purpose of a project charter?",
-  "options": [
-    "To define the objectives, scope, and stakeholders of a project",
-    "To outline the budget and resources required for a project",
-    "To create a schedule and timeline for a project",
-    "To assign roles and responsibilities to team members"
-  ],
-  "answer": "To define the objectives, scope, and stakeholders of a project",
-  "explanation": "A project charter is a formal document that defines the objectives, scope, and stakeholders of a project. It outlines the purpose of the project, the goals that the project is intended to achieve, and the major deliverables that will be produced. The project charter also identifies key stakeholders and their roles and responsibilities, as well as the resources and budget required for the project."
-},
-{
-  "question": "What is a change request in project management?",
-  "options": [
-    "A formal request to change the objectives or scope of a project",
-    "A request to add new tasks or deliverables to a project",
-    "A request to change the budget or resources allocated to a project",
-    "A request to change the timeline or schedule of a project"
-  ],
-  "answer": "A formal request to change the objectives or scope of a project",
-  "explanation": "A change request is a formal request to modify the objectives or scope of a project. It can also include requests to change project tasks, deliverables, budget, resources, timeline, or other project-related components. Change requests are evaluated and approved or rejected by the project sponsor or project manager, based on their impact on the project's objectives, scope, timeline, budget, and resources."
-}
+  "quizCode": "QZ001",
+  "quizName": "Project Management Quiz",
+  "numberOfQuestions": 13,
+  "questions": [
+    {
+      "question": "What is the definition of a project?",
+      "options": ["A collection of programs", "A set of activities that are ongoing", "A temporary endeavor to create a unique product, service or result", "A recurring process to maintain or improve a product, service or result"],
+      "answer": "A temporary endeavor to create a unique product, service or result",
+      "explanation": "A project is a temporary endeavor undertaken to create a unique product, service, or result.",
+      "questionNumber": 1,
+      "difficulty": "Easy"
+    },
+    {
+      "question": "What is the difference between a project and operations?",
+      "options": ["Operations are ongoing, while projects are temporary", "Projects are ongoing, while operations are temporary", "Operations are focused on creating a unique product, service or result, while projects are focused on routine work", "Projects are focused on creating a unique product, service or result, while operations are focused on routine work"],
+      "answer": "Operations are ongoing, while projects are temporary",
+      "explanation": "Operations are ongoing and repetitive, while projects are temporary and unique.",
+      "questionNumber": 2,
+      "difficulty": "Medium"
+    },
+    {
+      "question": "What is the purpose of a project charter?",
+      "options": ["To identify the stakeholders", "To define the project objectives and scope", "To create the project schedule", "To monitor project progress"],
+      "answer": "To define the project objectives and scope",
+      "explanation": "A project charter is a document that defines the project objectives, scope, stakeholders, and deliverables.",
+      "questionNumber": 3,
+      "difficulty": "Easy"
+    },
+    {
+      "question": "What is a work breakdown structure (WBS)?",
+      "options": ["A list of project risks", "A hierarchical decomposition of project deliverables", "A list of project requirements", "A document that identifies project stakeholders"],
+      "answer": "A hierarchical decomposition of project deliverables",
+      "explanation": "A WBS is a hierarchical decomposition of project deliverables that organizes and defines the scope of the project.",
+      "questionNumber": 4,
+      "difficulty": "Medium"
+    },
+    {
+      "question": "What is the critical path in a project network diagram?",
+      "options": ["The path with the most activities", "The path with the longest duration", "The path with the most resources", "The path with the most risks"],
+      "answer": "The path with the longest duration",
+      "explanation": "The critical path in a project network diagram is the path with the longest duration, which determines the minimum amount of time required to complete the project.",
+      "questionNumber": 5,
+      "difficulty": "Easy"
+    },
+    {
+      "question": "What is the purpose of a project schedule?",
+      "options": ["To allocate project resources", "To identify project risks", "To monitor project progress", "To define project scope"],
+      "answer": "To allocate project resources",
+      "explanation": "A project schedule is a document that identifies project activities, their durations, and their dependencies, and allocates resources to those activities.",
+      "questionNumber": 6,
+      "difficulty": "Easy"
+    },
+    {
+      "question": "What is the purpose of a project budget?",
+      "options": ["To identify project risks", "To allocate project resources", "To define project scope", "To monitor project progress"],
+      "answer": "To allocate project resources",
+      "explanation": "A project budget is a document that identifies the total cost of the project and allocates that cost to specific activities and resources.",
+      "questionNumber": 7,
+      "difficulty": "Medium"
+    },
+    {
+      "question": "What is the critical path in project management?",
+      "options": ["The path that determines the overall duration of the project", "The path that involves the most tasks", "The path that is least likely to experience delays", "The path that is easiest to complete"],
+      "answer": "The path that determines the overall duration of the project",
+      "explanation": "The critical path is the sequence of tasks in a project that determines the overall duration of the project. It is the longest path of tasks from start to finish that must be completed in order for the project to be completed on time. Tasks on the critical path cannot be delayed without delaying the entire project.",
+      "questionNumber": 8,
+      "difficulty": "Hard"
+    },
+    {
+      "question": "What is the difference between a milestone and a deliverable?",
+      "options": ["A milestone is a task that must be completed, while a deliverable is an outcome or result of a task", "A milestone is an outcome or result of a task, while a deliverable is a task that must be completed", "A milestone and a deliverable are the same thing", "A milestone is a task that must be completed by a certain date, while a deliverable is an outcome or result of the project"],
+      "answer": "A milestone is a task that must be completed, while a deliverable is an outcome or result of a task",
+      "explanation": "A milestone is a significant point or event in a project that marks progress towards a specific goal. It is a task that must be completed by a certain date or time. A deliverable is an outcome or result of a task or group of tasks. It is a tangible or intangible object or service that is produced as a result of the project and is intended to be delivered to a customer, client, or stakeholder.",
+      "questionNumber": 9,
+      "difficulty": "Medium"
+    },
+    {
+      "question": "What is the purpose of a project charter?",
+      "options": ["To define the objectives, scope, and stakeholders of a project", "To outline the budget and resources required for a project", "To create a schedule and timeline for a project", "To assign roles and responsibilities to team members"],
+      "answer": "To define the objectives, scope, and stakeholders of a project",
+      "explanation": "A project charter is a formal document that defines the objectives, scope, and stakeholders of a project. It outlines the purpose of the project, the goals that the project is intended to achieve, and the major deliverables that will be produced. The project charter also identifies key stakeholders and their roles and responsibilities, as well as the resources and budget required for the project.",
+      "questionNumber": 10,
+      "difficulty": "Easy"
+    },
+    {
+      "question": "What is a change request in project management?",
+      "options": ["A formal request to change the objectives or scope of a project", "A request to add new tasks or deliverables to a project", "A request to change the budget or resources allocated to a project", "A request to change the timeline or schedule of a project"],
+      "answer": "A formal request to change the objectives or scope of a project",
+      "explanation": "A change request is a formal request to modify the objectives or scope of a project. It can also include requests to change project tasks, deliverables, budget, resources, timeline, or other project-related components. Change requests are evaluated and approved or rejected by the project sponsor or project manager, based on their impact on the project's objectives, scope, timeline, budget, and resources.",
+      "questionNumber": 11,
+      "difficulty": "Medium"
+    }
   ]
+}
