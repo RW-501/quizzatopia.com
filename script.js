@@ -390,8 +390,8 @@ function endQuiz() {
 
 // Function to show the pie chart of correct and incorrect answers
 function showPieChart() {
-  const correctAnswers = answeredQuestions.filter(answer => answer).length;
-  const incorrectAnswers = answeredQuestions.filter(answer => !answer).length;
+  const correctAnswers = questionCorrect;
+  const incorrectAnswers = totalQuestions - questionCorrect;
 
   // Create a div for the pie chart
   const chartContainer = document.createElement('div');
