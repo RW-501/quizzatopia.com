@@ -192,24 +192,6 @@ function showQuestion() {
 }
 
 
-function saveQuizInfo(quizCode, quizInfo) {
-  const savedQuizCode = localStorage.getItem('quizCode');
-
-  if (savedQuizCode !== quizCode) {
-    localStorage.setItem('quizCode', quizCode);
-    localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
-  }
-}
-
-// Log the contents of the storage
-function logStorageContents() {
-  const savedQuizCode = localStorage.getItem('savedQuizCode');
-  const savedQuizInfo = localStorage.getItem('quizInfo');
-
-  console.log('Saved Quiz Code:', savedQuizCode);
-  console.log('Saved Quiz Info:', savedQuizInfo);
-}
-
 
 
   // Get the progress bar element
@@ -232,7 +214,7 @@ function checkAnswer() {
   const questionObj = questions[currentQuestion];
   const options = optionContainers[currentQuestion]?.children;
 let correct_bool;
-   console.log(options+"  options??????????totalQuestions????"); // Output: 3
+   //console.log(options+"  options??????????totalQuestions????"); // Output: 3
         console.log("questionObj:", questionObj);
 
   // Disable all options and apply appropriate classes
@@ -286,6 +268,8 @@ if (quizInfo) {
   quizInfo.numberOfQuestions = numberOfQuestions;
 
   localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
+  
+  logStorageContents("1");
 }
 
 
@@ -295,7 +279,7 @@ if (quizInfo) {
   
   // Show the explanation
   showExplanation(questionObj.explanation);
-    logStorageContents();
+    logStorageContents("2");
 
 }
 
