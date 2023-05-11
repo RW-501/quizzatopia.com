@@ -1,83 +1,60 @@
-[
 {
-"question": "What is the name of the hip hop artist who founded the record label Def Jam Recordings in 1984?",
-"options": [
-"Russell Simmons",
-"Sean Combs",
-"Dr. Dre",
-"Jay-Z"
-],
-"answer": "Russell Simmons",
-"explanation": "Russell Simmons is an American entrepreneur, record executive, and co-founder of the hip hop music label Def Jam Recordings."
-},
-  {
-    "question": "What is the name of the rapper who won the Pulitzer Prize in Music in 2018?",
-    "options": [
-      "Kendrick Lamar",
-      "Drake",
-      "J. Cole",
-      "Chance the Rapper"
-    ],
-    "answer": "Kendrick Lamar",
-    "explanation": "Kendrick Lamar won the Pulitzer Prize in Music in 2018 for his album 'DAMN.'"
-  },
-  {
-    "question": "Who was the first female rapper to have a solo album certified platinum?",
-    "options": [
-      "Queen Latifah",
-      "Lauryn Hill",
-      "Missy Elliott",
-      "MC Lyte"
-    ],
-    "answer": "Lauryn Hill",
-    "explanation": "Lauryn Hill was the first female rapper to have a solo album certified platinum with her album 'The Miseducation of Lauryn Hill'."
-  },
-  {
-    "question": "What is the name of the hip hop group that includes rappers Andre 3000 and Big Boi?",
-    "options": [
-      "Run-DMC",
-      "A Tribe Called Quest",
-      "Outkast",
-      "Wu-Tang Clan"
-    ],
-    "answer": "Outkast",
-    "explanation": "Outkast is a hip hop group that includes rappers Andre 3000 and Big Boi, known for hits like 'Hey Ya!' and 'Ms. Jackson'."
-  },
-  {
-    "question": "What is the term used to describe the rhythmic spoken delivery used in hip hop music?",
-    "options": [
-      "Rapping",
-      "Singing",
-      "Chanting",
-      "Screaming"
-    ],
-    "answer": "Rapping",
-    "explanation": "Rapping is the term used to describe the rhythmic spoken delivery used in hip hop music."
-  },
-  {
-    "question": "What is the name of the DJ who is considered one of the pioneers of hip hop music?",
-    "options": [
-      "Grandmaster Flash",
-      "DJ Kool Herc",
-      "Afrika Bambaataa",
-      "DJ Premier"
-    ],
-    "answer": "DJ Kool Herc",
-    "explanation": "DJ Kool Herc is considered one of the pioneers of hip hop music, credited with originating the breakbeat technique."
-  },
-  {
-    "question": "What is the name of the record label founded by Dr. Dre?",
-    "options": [
-      "Bad Boy Records",
-      "Aftermath Entertainment",
-      "Death Row Records",
-      "Roc Nation"
-    ],
-    "answer": "Aftermath Entertainment",
-    "explanation": "Aftermath Entertainment is the record label founded by Dr. Dre, known for signing artists such as Eminem and Kendrick Lamar."
-  },
-{
-"question": "What is the name of the legendary rapper who released the album 'Illmatic' in 1994?",
+  "quizCode": "[quiz_code_placeholder]",
+  "quizName": "[quiz_name_placeholder]",
+  "numberOfQuestions": [number_of_questions_placeholder],
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the name of the hip hop artist who founded the record label Def Jam Recordings in 1984?",
+      "options": ["Russell Simmons", "Sean Combs", "Dr. Dre", "Jay-Z"],
+      "answer": "Russell Simmons",
+      "explanation": "Russell Simmons is an American entrepreneur, record executive, and co-founder of the hip hop music label Def Jam Recordings."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the name of the rapper who won the Pulitzer Prize in Music in 2018?",
+      "options": ["Kendrick Lamar", "Drake", "J. Cole", "Chance the Rapper"],
+      "answer": "Kendrick Lamar",
+      "explanation": "Kendrick Lamar won the Pulitzer Prize in Music in 2018 for his album 'DAMN.'"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Who was the first female rapper to have a solo album certified platinum?",
+      "options": ["Queen Latifah", "Lauryn Hill", "Missy Elliott", "MC Lyte"],
+      "answer": "Lauryn Hill",
+      "explanation": "Lauryn Hill was the first female rapper to have a solo album certified platinum with her album 'The Miseducation of Lauryn Hill'."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the name of the hip hop group that includes rappers Andre 3000 and Big Boi?",
+      "options": ["Run-DMC", "A Tribe Called Quest", "Outkast", "Wu-Tang Clan"],
+      "answer": "Outkast",
+      "explanation": "Outkast is a hip hop group that includes rappers Andre 3000 and Big Boi, known for hits like 'Hey Ya!' and 'Ms. Jackson'."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the term used to describe the rhythmic spoken delivery used in hip hop music?",
+      "options": ["Rapping", "Singing", "Chanting", "Screaming"],
+      "answer": "Rapping",
+      "explanation": "Rapping is the term used to describe the rhythmic spoken delivery used in hip hop music."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the name of the DJ who is considered one of the pioneers of hip hop music?",
+      "options": ["Grandmaster Flash", "DJ Kool Herc", "Afrika Bambaataa", "DJ Premier"],
+      "answer": "DJ Kool Herc",
+      "explanation": "DJ Kool Herc is considered one of the pioneers of hip hop music, credited with originating the breakbeat technique."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the name of the record label founded by Dr. Dre?",
+      "options": ["Bad Boy Records", "Aftermath Entertainment", "Death Row Records", "Roc Nation"],
+      "answer": "Aftermath Entertainment",
+      "explanation": "Aftermath Entertainment is the record label founded by Dr. Dre, known for signing artists such as Eminem and Kendrick Lamar."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is thename of the legendary rapper who released the album 'Illmatic' in 1994?",
 "options": [
 "Jay-Z",
 "Nas",
@@ -86,7 +63,9 @@
 ],
 "answer": "Nas",
 "explanation": "Nas is a legendary rapper who is known for his intricate rhymes and storytelling abilities. His debut album 'Illmatic' is considered one of the greatest hip hop albums of all time."
-},{
+},
+{
+"questionNumber": 9,
 "question": "What is the name of the first commercially successful hip hop song?",
 "options": [
 "The Breaks",
@@ -97,8 +76,9 @@
 "answer": "Rapper's Delight",
 "explanation": "Rapper's Delight was released by The Sugarhill Gang in 1979 and is widely considered to be the first commercially successful hip hop song."
 },
-  {
-    "question": "What is the name of the first Hip Hop song to reach number one on the Billboard Hot 100 chart?",
+{
+"questionNumber": 10,
+"question": "What is the name of the first Hip Hop song to reach number one on the Billboard Hot 100 chart?",
 "options": [
 "Rapper's Delight",
 "The Message",
@@ -107,4 +87,6 @@
 ],
 "answer": "Rapper's Delight",
 "explanation": "Rapper's Delight, by the Sugarhill Gang, was the first Hip Hop song to achieve mainstream success, reaching number one on the Billboard Hot 100 chart in 1980."
-  } ]
+}
+]
+}
