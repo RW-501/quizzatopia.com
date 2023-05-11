@@ -1,0 +1,150 @@
+{
+  "quizCode": "QZ001",
+  "quizName": "General Knowledge Quiz",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "question": "Who was the first president of the United States?",
+      "options": ["George Washington", "Abraham Lincoln", "Thomas Jefferson", "John Adams"],
+      "answer": "George Washington",
+      "explanation": "George Washington was the first president of the United States. He served from 1789 to 1797 and played a crucial role in the formation of the country."
+    },
+    {
+      "question": "In what year did World War II end?",
+      "options": ["1945", "1939", "1941", "1943"],
+      "answer": "1945",
+      "explanation": "World War II ended in 1945. The war began in 1939 and involved many countries around the world, resulting in significant global changes."
+    },
+    {
+      "question": "Who was the leader of the Soviet Union during World War II?",
+      "options": ["Joseph Stalin", "Vladimir Lenin", "Nikita Khrushchev", "Mikhail Gorbachev"],
+      "answer": "Joseph Stalin",
+      "explanation": "Joseph Stalin was the leader of the Soviet Union during World War II. He played a critical role in the war effort and led the country through a period of significant political and social changes."
+    },
+    {
+      "question": "What was the name of the ancient Egyptian writing system?",
+      "options": ["Hieroglyphics", "Cuneiform", "Katakana", "Hiragana"],
+      "answer": "Hieroglyphics",
+      "explanation": "Hieroglyphics was the name of the ancient Egyptian writing system. It used pictorial symbols to represent words and sounds."
+    },
+    {
+      "question": "Who was the primary figure associated with the Protestant Reformation?",
+      "options": ["Martin Luther", "Christopher Columbus", "Galileo Galilei", "Leonardo da Vinci"],
+      "answer": "Martin Luther",
+      "explanation": "Martin Luther was the primary figure associated with the Protestant Reformation. He challenged the practices and teachings of the Roman Catholic Church and played a significant role in the religious and cultural changes of the time."
+    },
+    {
+      "question": "In what year did the Industrial Revolution begin?",
+      "options": ["1760", "1800", "1848", "1900"],
+      "answer": "1760",
+      "explanation": "The Industrial Revolution began around 1760. It marked a period of significant technological advancements and changes in manufacturing and transportation."
+    },
+    {
+      "question": "Who was the first woman to win the Nobel Prize?",
+      "options": ["Marie Curie", "Rosa Parks", "Amelia Earhart", "Jane Austen"],
+      "answer": "Marie Curie",
+      "explanation": "Marie Curie was the first woman to win the Nobel Prize. She was awarded the prize in Physics in 1903 and in Chemistry in 1911 for her groundbreaking research on radioactivity."
+    },
+    {
+      "question": "Which ancient civilization built the Great Wall of China?",
+      "options": ["The Qin Dynasty", "The Ming Dynasty", "The Han Dynasty", "The Tang Dynasty"],
+      "answer": "The Qin Dynasty",
+      "explanation": "The Great Wall of China was built by the Qin Dynasty. It was constructed as a defensive structure to protect against invasions from the north."
+    },
+    {
+      "question": "Who was the founder of the Mongol Empire?
+      "options": ["Genghis Khan", "Attila the Hun", "Kublai Khan", "Timur"],
+      "answer": "Genghis Khan",
+      "explanation": "Genghis Khan was the founder of the Mongol Empire. He established and led the empire, which became the largest contiguous empire in history, stretching across Asia and Europe."
+    },
+    {
+      "question": "Which scientist developed the theory of relativity?",
+      "options": ["Albert Einstein", "Isaac Newton", "Galileo Galilei", "Charles Darwin"],
+      "answer": "Albert Einstein",
+      "explanation": "Albert Einstein developed the theory of relativity, which revolutionized our understanding of space, time, and gravity. His famous equation, E=mc², is one of the most well-known scientific formulas."
+    },
+    {
+      "question": "What is the largest planet in our solar system?",
+      "options": ["Jupiter", "Saturn", "Mars", "Neptune"],
+      "answer": "Jupiter",
+      "explanation": "Jupiter is the largest planet in our solar system. It is a gas giant with a mass more than two and a half times that of all the other planets combined."
+    },
+    {
+      "question": "Which artist painted the Mona Lisa?",
+      "options": ["Leonardo da Vinci", "Vincent van Gogh", "Pablo Picasso", "Michelangelo"],
+      "answer": "Leonardo da Vinci",
+      "explanation": "Leonardo da Vinci painted the Mona Lisa, one of the most famous and iconic paintings in the world. It is known for its enigmatic smile and artistic excellence."
+    },
+    {
+      "question": "What is the capital city of Australia?",
+      "options": ["Canberra", "Sydney", "Melbourne", "Perth"],
+      "answer": "Canberra",
+      "explanation": "Canberra is the capital city of Australia. It was purpose-built as the capital and is located in the Australian Capital Territory, within the southeastern part of the country."
+    },
+    {
+      "question": "Which novel is authored by Jane Austen?",
+      "options": ["Pride and Prejudice", "To Kill a Mockingbird", "1984", "The Great Gatsby"],
+      "answer": "Pride and Prejudice",
+      "explanation": "Jane Austen authored the novel 'Pride and Prejudice.' It is a classic work of English literature, known for its exploration of social class, marriage, and the role of women in society."
+    },
+    {
+      "question": "What is the chemical symbol for the element gold?",
+      "options": ["Au", "Ag", "Fe", "Cu"],
+      "answer": "Au",
+      "explanation": "The chemical symbol for the element gold is 'Au.' It comes from the Latin word 'aurum,' which means 'shining dawn' or 'glow of sunrise.'"
+    },
+    {
+      "question": "Which country is known as the 'Land of the Rising Sun'?",
+      "options": ["Japan", "China", "South Korea", "Thailand"],
+      "answer": "Japan",
+      "explanation": "Japan is known as the 'Land of the Rising Sun.' This name comes from its location east of the Asian continent, where the sunrise is visible first."
+    },
+    {
+      "question": "Who wrote the play 'Romeo and Juliet'?",
+      "options": ["William Shakespeare", "George Bernard Shaw", "Arthur Miller", "Tennessee Williams"],"answer": "William Shakespeare",
+      "explanation": "William Shakespeare wrote the play 'Romeo and Juliet.' He is widely regarded as one of the greatest playwrights in history and his works have had a significant impact on literature and theater."
+    },
+    {
+      "question": "What is the largest ocean on Earth?",
+      "options": ["Pacific Ocean", "Atlantic Ocean", "Indian Ocean", "Arctic Ocean"],
+      "answer": "Pacific Ocean",
+      "explanation": "The Pacific Ocean is the largest ocean on Earth. It spans a vast area, covering more than 63 million square miles, and is larger than all the other oceans combined."
+    },
+    {
+      "question": "Who is the author of the 'Harry Potter' book series?",
+      "options": ["J.K. Rowling", "Stephen King", "George R.R. Martin", "Roald Dahl"],
+      "answer": "J.K. Rowling",
+      "explanation": "J.K. Rowling is the author of the 'Harry Potter' book series. The series follows the adventures of the young wizard Harry Potter and has gained immense popularity worldwide."
+    },
+    {
+      "question": "What is the largest organ in the human body?",
+      "options": ["Skin", "Heart", "Liver", "Brain"],
+      "answer": "Skin",
+      "explanation": "The largest organ in the human body is the skin. It covers the entire body and serves as a protective barrier, regulating temperature, and facilitating various sensory functions."
+    },
+    {
+      "question": "Who was the first person to walk on the moon?",
+      "options": ["Neil Armstrong", "Buzz Aldrin", "Yuri Gagarin", "Alan Shepard"],
+      "answer": "Neil Armstrong",
+      "explanation": "Neil Armstrong was the first person to walk on the moon. He took his historic steps on July 20, 1969, during the Apollo 11 mission."
+    },
+    {
+      "question": "Which instrument is known as the 'king of musical instruments'?",
+      "options": ["Pipe organ", "Piano", "Violin", "Trumpet"],
+      "answer": "Pipe organ",
+      "explanation": "The pipe organ is known as the 'king of musical instruments.' It is renowned for its vast range of sounds, complexity, and ability to fill large spaces with majestic music."
+    },
+    {
+      "question": "Who is the artist behind the famous painting 'The Starry Night'?",
+      "options": ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
+      "answer": "Vincent van Gogh",
+      "explanation": "Vincent van Gogh is the artist behind the famous painting 'The Starry Night.' It is considered one of his masterpieces and is known for its swirling brushstrokes and vibrant colors."
+    },
+    {
+      "question": "What is the chemical symbol for the element oxygen?",
+      "options": ["O", "Os", "Om", "Ox"],
+      "answer": "O",
+      "explanation": "The chemical symbol for the element oxygen is 'O.' It is a vital element for life, making up a significant portion of the Earth's atmosphere and playing a crucial role in respiration."
+    }]}
+
+
