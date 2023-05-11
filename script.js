@@ -201,6 +201,14 @@ function saveQuizInfo(quizCode, quizInfo) {
   }
 }
 
+// Log the contents of the storage
+function logStorageContents() {
+  const savedQuizCode = localStorage.getItem('savedQuizCode');
+  const savedQuizInfo = localStorage.getItem('quizInfo');
+
+  console.log('Saved Quiz Code:', savedQuizCode);
+  console.log('Saved Quiz Info:', savedQuizInfo);
+}
 
 
 
@@ -287,6 +295,8 @@ if (quizInfo) {
   
   // Show the explanation
   showExplanation(questionObj.explanation);
+    logStorageContents();
+
 }
 
 
