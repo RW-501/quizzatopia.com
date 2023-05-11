@@ -359,12 +359,11 @@ document.getElementById("social_red").href = "https://www.reddit.com/submit?url=
 	  
 
     // Quiz 
-const questions = [];
-	
+questions = [];
+
 let quizCode;
 let quizName;
 let numberOfQuestions;
-
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -377,19 +376,32 @@ function shuffleArray(array) {
 // Retrieve the stored test information and display it
 function displayTestInfo() {
   const storedTestInfo = localStorage.getItem('testInfo');
+  let testInfo;
+
   if (storedTestInfo) {
-    const testInfo = JSON.parse(storedTestInfo);
-    const testInfoDiv = document.getElementById('testInfo');
-    testInfoDiv.innerHTML = `
-      <p>Quiz Code: ${testInfo.quizCode}</p>
-      <p>Quiz Name: ${testInfo.quizName}</p>
-      <p>Number of Questions: ${testInfo.numberOfQuestions}</p>
-      <p>Questions Completed: ${testInfo.questionsCompleted}</p>
-      <p>Question Number: ${testInfo.questionNumber}</p>
-      <p>Question Correct: ${testInfo.questionCorrect}</p>
-      <p>Timestamp: ${testInfo.timestamp}</p>
-    `;
+    testInfo = JSON.parse(storedTestInfo);
+  } else {
+    testInfo = {
+      quizCode,
+      quizName,
+      numberOfQuestions,
+      questionsCompleted: [],
+      questionNumber: null,
+      questionCorrect: null,
+      timestamp: null
+    };
   }
+
+  const testInfoDiv = document.getElementById('testInfo');
+  testInfoDiv.innerHTML = `
+    <p>Quiz Code: ${testInfo.quizCode}</p>
+    <p>Quiz Name: ${testInfo.quizName}</p>
+    <p>Number of Questions: ${testInfo.numberOfQuestions}</p>
+    <p>Questions Completed: ${testInfo.questionsCompleted}</p>
+    <p>Question Number: ${testInfo.questionNumber}</p>
+    <p>Question Correct: ${testInfo.questionCorrect}</p>
+    <p>Timestamp: ${testInfo.timestamp}</p>
+  `;
 }
 
 // Check if quizCode matches and retrieve or save quiz info
@@ -397,29 +409,25 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
   const savedQuizCode = localStorage.getItem('quizCode');
   let quizInfo;
 
-	 // Set the timestamp for the test information
-        let timestamp = new Date().toLocaleString();
-	
+  // Set the timestamp for the test information
+  let timestamp = new Date().toLocaleString();
+
   if (savedQuizCode !== quizCode) {
     // Quiz code doesn't match, save new quiz info to storage
     quizInfo = {
-      quizCode: quizCode,
-      quizName: quizName,
-      numberOfQuestions: numberOfQuestions,
+      quizCode,
+      quizName,
+      numberOfQuestions,
       questionsCompleted: [],
       questionNumber: null,
       questionCorrect: null,
-      timestamp: timestamp
+      timestamp
     };
     localStorage.setItem('quizCode', quizCode);
     localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
   } else {
     // Quiz code matches, retrieve existing quiz info from storage
     quizInfo = JSON.parse(localStorage.getItem('quizInfo'));
-	  
-	 
-	      
-	      
   }
 
   return quizInfo;
@@ -451,11 +459,10 @@ function fetchData(q) {
         quizName = data.quizName;
         numberOfQuestions = data.numberOfQuestions;
 
-	    console.log("start Quiz Name: " + quizName);
-    console.log("Number of Questions: " + numberOfQuestions);
- console.log("new Quiz Code: " + quizCode);
-	      
-	      
+        console.log("start Quiz Name: " + quizName);
+        console.log("Number of Questions: " + numberOfQuestions);
+        console.log("new Quiz Code: " + quizCode);
+
         // Check quiz code and retrieve or save quiz info
         const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
 
@@ -466,21 +473,30 @@ function fetchData(q) {
         const questionNumber = quizInfo.questionNumber;
         const questionsCompleted = quizInfo.questionsCompleted;
         // ...
-  
-        // Display the stored test information
+
+        // Display the stored or fetched test information
         displayTestInfo();
       }
     })
     .catch(error => console.error(error));
 }
 
-	  
-	  
-	  
-	  
 // Call fetchData with the initial q value
 fetchData(q);
-    
+
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
+	      
     </script>
 
   <script src="script.js"></script>
