@@ -58,10 +58,11 @@ function startQuiz() {
   // Array to store the question numbers where the ad should be shown
   adQuestionNumbers = quizAdPattern; // Example: Show ad after questions 3, 7, and 11
 
-  showQuestion();
   setQuizTime();
 
   updateProgressBar(currentQuestion);
+    showQuestion();
+
 }
 
 
@@ -433,6 +434,52 @@ function startTimer() {
 
         }
 }
+
+
+function saveQuizCode(quizCode) {
+  try {
+    localStorage.setItem('savedQuizCode', quizCode);
+    console.log('Quiz code saved successfully.');
+  } catch (error) {
+    console.error('Error saving quiz code:', error);
+  }
+}
+
+function retrieveQuizCode() {
+  try {
+    const savedQuizCode = localStorage.getItem('savedQuizCode');
+    if (savedQuizCode !== null) {
+      console.log('Quiz code retrieved successfully:', savedQuizCode);
+      return savedQuizCode;
+    } else {
+      console.log('No saved quiz code found.');
+      return null;
+    }
+  } catch (error) {
+    console.error('Error retrieving quiz code:', error);
+    return null;
+  }
+}
+
+function retrieveQuizInfo() {
+  try {
+    const savedQuizInfo = localStorage.getItem('quizInfo');
+    if (savedQuizInfo !== null) {
+      const quizInfo = JSON.parse(savedQuizInfo);
+      console.log('Quiz info retrieved successfully:', quizInfo);
+      return quizInfo;
+    } else {
+      console.log('No saved quiz info found.');
+      return null;
+    }
+  } catch (error) {
+    console.error('Error retrieving quiz info:', error);
+    return null;
+  }
+}
+
+
+
 
 
 // Event Listeners
