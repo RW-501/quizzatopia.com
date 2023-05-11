@@ -279,6 +279,31 @@ let correct_bool;
 
 
 
+// Function to show the explanation for the current question
+function showExplanation(explanation) {
+  document.getElementById("explanation").innerHTML = explanation;
+  disableAnswerButtons();
+  document.getElementById("next-btn").classList.remove("d-none");
+}
+
+// Function to disable answer buttons after user answers
+function disableAnswerButtons() {
+  const answerButtons = document.getElementsByClassName("answer-option");
+  for (let i = 0; i < answerButtons.length; i++) {
+    answerButtons[i].removeEventListener("click", checkAnswer);
+    answerButtons[i].classList.add("disabled");
+  }
+}
+
+// Function to enable answer buttons for next question
+function enableAnswerButtons() {
+  const answerButtons = document.getElementsByClassName("answer-option");
+  for (let i = 0; i < answerButtons.length; i++) {
+    answerButtons[i].addEventListener("click", checkAnswer);
+    answerButtons[i].classList.remove("disabled", "correct", "incorrect", "missed" );
+  }
+   
+}
 
 
 // Function to show the next question
@@ -320,15 +345,6 @@ function skipQuestion() {
    updateQuestionNumber();
 
 }
-
-function enableAnswerButtons() {
-  // Enable all answer buttons
-  const answerButtons = document.querySelectorAll('.answer-button');
-  answerButtons.forEach((button) => {
-    button.disabled = false;
-  });
-}
-
 
 
 
