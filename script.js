@@ -269,13 +269,12 @@ if (quizInfo) {
 
   localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
   
-  logStorageContents("1");
+  logStorageContents("SET ");
 }
-
 
   
   // Call the saveQuizInfo function to save the data
-  saveQuizInfo( quizInfo);
+ // saveQuizInfo( quizInfo);
   
   // Show the explanation
   showExplanation(questionObj.explanation);
