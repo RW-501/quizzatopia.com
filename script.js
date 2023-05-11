@@ -261,15 +261,17 @@ let correct_bool;
   }
 
  
-
-
   // Update the quizInfo array if necessary
   if (quizInfo) {
-    quizInfo[0] = questionObj.questionNumber; // Update the questionNumber
-    quizInfo[1] = correct_bool; // Update the score
-    quizInfo[2] = totalTime; // Update the totalTime
+    quizInfo.questionsCompleted.push({
+      questionNumber: questionObj.questionNumber,
+      correctness: correct_bool
+    });
     localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
   }
+
+
+  
   // Call the saveQuizInfo function to save the data
   saveQuizInfo( quizInfo);
   
