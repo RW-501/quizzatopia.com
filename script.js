@@ -224,6 +224,8 @@ function checkAnswer() {
   const options = optionContainers[currentQuestion]?.children;
 let correct_bool;
   
+        console.log("questionObj:", questionObj);
+
   // Disable all options and apply appropriate classes
   if (options) {
     for (let i = 0; i < options.length; i++) {
