@@ -101,6 +101,7 @@ countdownCheckbox.addEventListener("change", function () {
 
 
 // Function to generate a random pattern with ads placed between questions
+// Function to generate a random pattern with ads placed between questions
 function generateQuizAdPattern(numQuestions, numAds) {
   const adInterval = Math.floor(numQuestions / (numAds + 1));
   const pattern = [];
@@ -113,6 +114,7 @@ function generateQuizAdPattern(numQuestions, numAds) {
 
   return pattern;
 }
+
 
 
 
@@ -222,7 +224,6 @@ function checkAnswer() {
   if (selectedAnswer === questionObj.answer) {
     selectedOption.classList.add('correct');
     score++;
-    answeredQuestions.push(true);
     questionCorrect++;
   } else {
     selectedOption.classList.add('incorrect');
