@@ -1,6 +1,6 @@
 // Global Variables
 let questionTime = 0; // seconds
-let currentQuestion = 0;
+let currentQuestion = 1;
 let score = 0;
 let quizStarted = false;
 let timer = 0;
@@ -318,6 +318,19 @@ function skipQuestion() {
    updateQuestionNumber();
 
 }
+
+function enableAnswerButtons() {
+  // Enable all answer buttons
+  const answerButtons = document.querySelectorAll('.answer-button');
+  answerButtons.forEach((button) => {
+    button.disabled = false;
+  });
+}
+
+
+
+
+
 
 
 // Update the question number display
