@@ -261,14 +261,24 @@ let correct_bool;
   }
 
  
-  // Update the quizInfo array if necessary
-  if (quizInfo) {
-    quizInfo.questionsCompleted.push({
-      questionNumber: questionObj.questionNumber,
-      correctness: correct_bool
-    });
-    localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
+// Update the quizInfo array if necessary
+if (quizInfo) {
+  if (!quizInfo.questionsCompleted) {
+    quizInfo.questionsCompleted = []; // Initialize the array if it's undefined
   }
+
+  quizInfo.questionsCompleted.push({
+    questionNumber: questionObj.questionNumber,
+    correctness: correct_bool
+  });
+
+  // Update other properties
+  quizInfo.quizCode = quizCode;
+  quizInfo.quizName = quizName;
+  quizInfo.numberOfQuestions = numberOfQuestions;
+
+  localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
+}
 
 
   
