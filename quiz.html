@@ -467,14 +467,21 @@ document.getElementById("social_red").href = "https://www.reddit.com/submit?url=
                           
 	
 	  
-	  
-function saveQuizInfo(quizCode, quizInfo) {
+	  function saveQuizInfo(quizCode, quizInfo) {
   const savedQuizCode = localStorage.getItem('quizCode');
 
   if (savedQuizCode !== quizCode) {
     localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
+  } else {
+    const savedQuizInfo = JSON.parse(localStorage.getItem('quizInfo'));
+    savedQuizInfo.questionsCompleted = quizInfo.questionsCompleted;
+    savedQuizInfo.questionCorrect = quizInfo.questionCorrect;
+    savedQuizInfo.timestamp = quizInfo.timestamp;
+    localStorage.setItem('quizInfo', JSON.stringify(savedQuizInfo));
   }
 }
+
+
 
 // Log the contents of the storage
 function logStorageContents(xxx) {
@@ -552,10 +559,16 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
   } else {
     // Quiz code matches, retrieve existing quiz info from storage
     quizInfo = JSON.parse(localStorage.getItem('quizInfo'));
+    quizInfo.quizName = quizName;
+    quizInfo.numberOfQuestions = numberOfQuestions;
+    quizInfo.timestamp = timestamp;
+    localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
   }
 
   return quizInfo;
 }
+
+
 
 // Fetch and assign the data
 function fetchData(q) {
