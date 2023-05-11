@@ -1,93 +1,26 @@
-[
-  {
-    "question": "What is the process by which green plants use sunlight to convert carbon dioxide and water into glucose and oxygen?",
-    "options": ["Photosynthesis", "Cellular respiration", "Fermentation", "Mitosis"],
-    "answer": "Photosynthesis",
-    "explanation": "Photosynthesis is the process by which green plants use sunlight, chlorophyll, carbon dioxide, and water to produce glucose (energy-rich molecule) and release oxygen as a byproduct."
-  },
-  {
-    "question": "What is the fundamental unit of life?",
-    "options": ["Cell", "Atom", "Molecule", "Organism"],
-    "answer": "Cell",
-    "explanation": "The cell is the fundamental unit of life. It is the smallest structural and functional unit of an organism, capable of carrying out all essential life processes."
-  },
-  {
-    "question": "What is the term for the force that opposes the motion of objects through a fluid, such as air or water?",
-    "options": ["Drag", "Gravity", "Friction", "Inertia"],
-    "answer": "Drag",
-    "explanation": "Drag is the force that opposes the motion of objects through a fluid (liquid or gas). It acts in the opposite direction to the object's motion, increasing with speed and surface area."
-  },
-  {
-    "question": "What is the SI unit of electric current?",
-    "options": ["Ampere", "Volt", "Ohm", "Watt"],
-    "answer": "Ampere",
-    "explanation": "The SI unit of electric current is the ampere (A). It is a measure of the flow rate of electric charge through a conductor."
-  },
-  {
-    "question": "What is the term for the measure of the average kinetic energy of particles in a substance?",
-    "options": ["Temperature", "Pressure", "Density", "Heat"],
-    "answer": "Temperature",
-    "explanation": "Temperature is the measure of the average kinetic energy of particles in a substance. It determines the direction of heat transfer, with heat flowing from objects at higher temperatures to objects at lower temperatures."
-  },
-  {
-    "question": "What is the process by which an unstable atomic nucleus loses energy by emitting radiation?",
-    "options": ["Radioactivity", "Fusion", "Fission", "Decay"],
-    "answer": "Radioactivity",
-    "explanation": "Radioactivity is the process by which an unstable atomic nucleus loses energy by emitting radiation in the form of alpha particles, beta particles, or gamma rays."
-  },
-  {
-    "question": "What is the term for the change in direction of a wave as it enters a different medium at an angle?",
-    "options": ["Refraction", "Reflection", "Diffraction", "Interference"],
-    "answer": "Refraction",
-    "explanation": "Refraction is the change in direction of a wave as it enters a different medium at an angle due to a change in its speed. It occurs because of the change in the wave's velocity."
-  },
-  {
-    "question": "What is the term for the force of attraction between any two objects with mass?",
-    "options": ["Gravity", "Magnetism", "Friction", "Tension"],
-    "answer": "Gravity",
-    "explanation": "Gravity is the force of attraction between any two objects with mass. It is responsible for the motion of planets, the tides, and the downward force experienced on Earth."
-  },{
-    "question": "What is the process by which a cell divides into two daughter cells, each with the same number of chromosomes as the parent cell?",
-    "options": ["Mitosis", "Meiosis", "Transcription", "Translation"],
-    "answer": "Mitosis",
-    "explanation": "Mitosis is the process of cell division in which a single cell divides into two daughter cells, each with the same number of chromosomes as the parent cell. It is involved in growth, repair, and asexual reproduction."
-  },
-  {
-    "question": "What is the term for the total potential and kinetic energy of the particles in an object?",
-    "options": ["Internal energy", "Mechanical energy", "Thermal energy", "Electrical energy"],
-    "answer": "Internal energy",
-    "explanation": "Internal energy is the total potential and kinetic energy of the particles within an object. It includes the energy associated with the motion and arrangement of the particles."
-  },
-  {
-    "question": "What is the principle that states that the total energy of an isolated system remains constant over time?",
-    "options": ["Law of Conservation of Energy", "Law of Inertia", "Law of Gravity", "Law of Thermodynamics"],
-    "answer": "Law of Conservation of Energy",
-    "explanation": "The Law of Conservation of Energy states that the total energy of an isolated system remains constant over time. Energy can neither be created nor destroyed, only transferred or transformed from one form to another."
-  },
-  {
-    "question": "What is the unit of measure for the amount of electric charge?",
-    "options": ["Coulomb", "Ohm", "Volt", "Ampere"],
-    "answer": "Coulomb",
-    "explanation": "The Coulomb (C) is the unit of measure for the amount of electric charge. It is defined as the charge transferred by a current of one ampere in one second."
-  },
-  {
-    "question": "What is the term for the process by which plants release water vapor through their leaves?",
-    "options": ["Transpiration", "Photosynthesis", "Respiration", "Evaporation"],
-    "answer": "Transpiration",
-    "explanation": "Transpiration is the process by which plants release water vapor through their leaves. It plays a crucial role in the movement of water through a plant and the regulation of temperature."
-  },
-  {
-    "question": "What is the term for the bending of light waves around an obstacle or through an opening?",
-    "options": ["Diffraction", "Refraction", "Reflection", "Interference"],
-    "answer": "Diffraction",
-    "explanation": "Diffraction is the bending of light waves around an obstacle or through an opening. It occurs when waves encounter an obstacle or opening that is comparable in size to their wavelength."
-  },
-  {
-    "question": "What is the term for the ability of an object to float in a fluid?",
-    "options": ["Buoyancy", "Viscosity", "Tension", "Inertia"],
-    "answer": "Buoyancy",
-    "explanation": "Buoyancy is the ability of an object to float in a fluid. It is determined by the relative densities of the object and the fluid and is governed by Archimedes' principle."
-  }
+{
+  "quizCode": "13133",
+  "quizName": "High School Science",
+  "numberOfQuestions": 15,
+  "questions": [
+    {"questionNumber":1,"question":"What is the process by which green plants use sunlight to convert carbon dioxide and water into glucose and oxygen?","options":["Photosynthesis","Cellular respiration","Fermentation","Mitosis"],"answer":"Photosynthesis","explanation":"Photosynthesis is the process by which green plants use sunlight, chlorophyll, carbon dioxide, and water to produce glucose (energy-rich molecule) and release oxygen as a byproduct."},
+    {"questionNumber":2,"question":"What is the fundamental unit of life?","options":["Cell","Atom","Molecule","Organism"],"answer":"Cell","explanation":"The cell is the fundamental unit of life. It is the smallest structural and functional unit of an organism, capable of carrying out all essential life processes."},
+    {"questionNumber":3,"question":"What is the term for the force that opposes the motion of objects through a fluid, such as air or water?","options":["Drag","Gravity","Friction","Inertia"],"answer":"Drag","explanation":"Drag is the force that opposes the motion of objects through a fluid (liquid or gas). It acts in the opposite direction to the object's motion, increasing with speed and surface area."},
+    {"questionNumber":4,"question":"What is the SI unit of electric current?","options":["Ampere","Volt","Ohm","Watt"],"answer":"Ampere","explanation":"The SI unit of electric current is the ampere (A). It is a measure of the flow rate of electric charge through a conductor."},
+    {"questionNumber":5,"question":"What is the term for the measure of the average kinetic energy of particles in a substance?","options":["Temperature","Pressure","Density","Heat"],"answer":"Temperature","explanation":"Temperature is the measure of the average kinetic energy of particles in a substance. It determines the direction of heat transfer, with heat flowing from objects at higher temperatures to objects at lower temperatures."},
+    {"questionNumber":6,"question":"What is the process by which an unstable atomic nucleus loses energy by emitting radiation?","options":["Radioactivity","Fusion","Fission","Decay"],"answer":"Radioactivity","explanation":"Radioactivity is the process by which an unstable atomic nucleus loses energy by emitting radiation in the form of alpha particles, beta particles, or gamma rays."},
+    {"questionNumber":7,"question":"What is the term for the change in direction of a wave as it enters a different medium at an angle?","options":["Refraction","Reflection","Diffraction","Interference"],"answer":"Refraction","explanation":"Refraction is the change in direction of a wave as it enters a different medium at an angle due to a change in its speed. It occurs because of the change in the wave's velocity."},
+    {"questionNumber":8,"question":"What is the term for the force of attraction between any two objects with mass?","options":["Gravity","Magnetism","Friction","Tension"],"answer":"Gravity","explanation":"Gravity is the force of attraction between any two objects with mass. It is responsible for the motion of planets, the tides, and the downward force experienced on Earth."},
+    {"questionNumber":9,"question":"What is the process by which a cell divides into two daughter cells, each with the same number of chromosomes as the parent cell?","options":["Mitosis","Meiosis","Transcription","Translation"],"answer":"Mitosis","explanation":"Mitosis is the process of cell division in which a single cell divides into two daughter cells, each withthe same number of chromosomes as the parent cell. It is involved in growth, repair, and asexual reproduction."},
+{"questionNumber":10,"question":"What is the term for the total potential and kinetic energy of the particles in an object?","options":["Internal energy","Mechanical energy","Thermal energy","Electrical energy"],"answer":"Internal energy","explanation":"Internal energy is the total potential and kinetic energy of the particles within an object. It includes the energy associated with the motion and arrangement of the particles."},
+{"questionNumber":11,"question":"What is the principle that states that the total energy of an isolated system remains constant over time?","options":["Law of Conservation of Energy","Law of Inertia","Law of Gravity","Law of Thermodynamics"],"answer":"Law of Conservation of Energy","explanation":"The Law of Conservation of Energy states that the total energy of an isolated system remains constant over time. Energy can neither be created nor destroyed, only transferred or transformed from one form to another."},
+{"questionNumber":12,"question":"What is the unit of measure for the amount of electric charge?","options":["Coulomb","Ohm","Volt","Ampere"],"answer":"Coulomb","explanation":"The Coulomb (C) is the unit of measure for the amount of electric charge. It is defined as the charge transferred by a current of one ampere in one second."},
+{"questionNumber":13,"question":"What is the term for the process by which plants release water vapor through their leaves?","options":["Transpiration","Photosynthesis","Respiration","Evaporation"],"answer":"Transpiration","explanation":"Transpiration is the process by which plants release water vapor through their leaves. It plays a crucial role in the movement of water through a plant and the regulation of temperature."},
+{"questionNumber":14,"question":"What is the term for the bending of light waves around an obstacle or through an opening?","options":["Diffraction","Refraction","Reflection","Interference"],"answer":"Diffraction","explanation":"Diffraction is the bending of light waves around an obstacle or through an opening. It occurs when waves encounter an obstacle or opening that is comparable in size to their wavelength."},
+{"questionNumber":15,"question":"What is the term for the ability of an object to float in a fluid?","options":["Buoyancy","Viscosity","Tension","Inertia"],"answer":"Buoyancy","explanation":"Buoyancy is the ability of an object to float in a fluid. It is determined by the relative densities of the object and the fluid and is governed by Archimedes' principle."}
 ]
- 
+}
+
+
+
 
