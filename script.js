@@ -139,7 +139,7 @@ function showAdsFunc() {
     // Start the countdown timer for the ad duration
     const countdownInterval = setInterval(() => {
       console.log("Ad " + adCount + " is being shown.");
-      console.log("Ad ends in " + countdown + " seconds.");
+   //   console.log("Ad ends in " + countdown + " seconds.");
       countdown--;
 
       if (countdown < 0) {
@@ -159,7 +159,7 @@ function showAdsFunc() {
 
 
 function showQuestion() {
-  console.log(adQuestionNumbers + "  adQuestionNumbers??????????currentQuestion????   " + currentQuestion);
+//  console.log(adQuestionNumbers + "  adQuestionNumbers??????????currentQuestion????   " + currentQuestion);
 
   // Check if the current question number is in the adQuestionNumbers array
   if (adQuestionNumbers.includes(currentQuestion)) {
