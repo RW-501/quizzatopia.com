@@ -122,14 +122,14 @@
     transition: width 0.5s ease-in-out;
   }
 </style>
-
 <div id="optionContainer" class="container mt-4">
   <div class="row">
     <div class="col-md-6">
       <div class="quiz-options">
+        <h2 class="mb-4">Quiz Options</h2>
         <div class="form-check">
           <div id="optionsQuizNameWrap">
-            <div id="optionsQuizName">Quiz Name</div>
+            <div id="optionsQuizName" class="h4">Quiz Name</div>
             <!-- Quiz Name -->
           </div>
         </div>
@@ -159,30 +159,43 @@
         </div>
       </div>
 	    
-      <div class="container">
+      <div class="container mt-4">
         <div class="row justify-content-center">
-          <div class="col-md-6">
-            <div id="testInfo" class="text-center"></div>
-            <!-- Test Information Placeholder -->
-            <div id="progressBar" class="progress mt-4">
-              <div id="progressBarValue" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          <div class="col-md-8">
+            <div id="testInfo" class="card p-4">
+              <h2 class="mb-4">Quiz Information</h2>
+              <div class="progress mb-4">
+                <div id="progressBarValue" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <div class="text-center">
+                <p><strong>Quiz Code:</strong> <span id="quizCodeValue"></span></p>
+                <p><strong>Quiz Name:</strong> <span id="quizNameValue"></span></p>
+                <p><strong>Number of Questions:</strong> <span id="numberOfQuestionsValue"></span></p>
+                <p><strong>Questions Completed:</strong> <span id="questionsCompletedValue"></span></p>
+                <p><strong>Question Number:</strong> <span id="questionNumberValue"></span></p>
+                <p><strong>Question Correct:</strong> <span id="questionCorrectValue"></span></p>
+                <p><strong>Timestamp:</strong> <span id="timestampValue"></span></p>
+              </div>
             </div>
-            <!-- Progress Bar -->
           </div>
         </div>
       </div>
 	    
-      <div class="text-center">
+      <div class="text-center mt-4">
         <button id="start-btn" class="btn btn-primary btn-lg">Start Quiz</button>
         <!-- Start Quiz Button -->
       </div>
     </div>
     <div class="col-md-6">
-      <img src="/images/lan/9.png" alt="quiz-image" class="img-fluid">
-      <!-- Quiz Image -->
+      <div class="quiz-image-container
+      <div class="quiz-image-container">
+        <img src="/images/lan/9.png" alt="quiz-image" class="img-fluid">
+        <!-- Quiz Image -->
+      </div>
     </div>
   </div>
 </div>
+
 
 
     
@@ -240,17 +253,17 @@
   <!-- End Container -->
   <h2 id="result-text"></h2>
   <!-- Result Text -->
-  <h2>Your Final Score</h2>
+  <h2 class="mt-4">Your Final Score</h2>
   <!-- Final Score Heading -->
   <p id="score"></p>
   <!-- Score Placeholder -->
   <p id="feedback"></p>
   <!-- Feedback Placeholder -->
-  <button id="retake-btn" class="btn btn-primary">Retake Quiz</button>
+  <button id="retake-btn" class="btn btn-primary mt-4">Retake Quiz</button>
   <!-- Retake Quiz Button -->
-  <button class="other-quiz-btn btn btn-secondary" onclick="window.location.href = 'quizzes'">Try Another Quiz</button>
+  <button class="other-quiz-btn btn btn-secondary mt-4" onclick="window.location.href = 'quizzes'">Try Another Quiz</button>
   <!-- Try Another Quiz Button -->
-  <div id="social-sharing">
+  <div id="social-sharing" class="mt-4">
     <!-- Social Sharing Section -->
     <p>
       <a id="social_fb" href="" target="_blank" class="btn btn-social btn-facebook btn-primary"><i class="fab fa-facebook-f"></i> Share on Facebook</a>
@@ -265,7 +278,7 @@
       <!-- Share on LinkedIn Button -->
     </p>
   </div>
-  <button id="getFull_BTN" class="btn btn-primary" onclick="window.location.href = 'LearnMore'">Get Full Quiz</button>
+  <button id="getFull_BTN" class="btn btn-primary mt-4" onclick="window.location.href = 'LearnMore'">Get Full Quiz</button>
   <!-- Get Full Quiz Button -->
 </div>
 
