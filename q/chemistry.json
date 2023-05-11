@@ -1,236 +1,127 @@
-[
 {
-  "question": "What is an atom?",
-  "options": ["A tiny particle that makes up everything", "A large molecule", "A cell in the human body", "A type of chemical bond"],
-  "answer": "A tiny particle that makes up everything",
-  "explanation": "An atom is the basic unit of matter, consisting of a nucleus and electrons, and it is the fundamental building block of all substances."
-},
+  "quizCode": "QZ002",
+  "quizName": "Chemistry Basics Quiz",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is an atom?",
+      "options": [
+        "A tiny particle that makes up everything",
+        "A large molecule",
+        "A cell in the human body",
+        "A type of chemical bond"
+      ],
+      "answer": "A tiny particle that makes up everything",
+      "explanation": "An atom is the basic unit of matter, consisting of a nucleus and electrons, and it is the fundamental building block of all substances."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the chemical symbol for gold?",
+      "options": [
+        "Au",
+        "Ag",
+        "Fe",
+        "Cu"
+      ],
+      "answer": "Au",
+      "explanation": "The chemical symbol for gold is Au, which comes from the Latin word 'aurum.'"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the pH scale used for?",
+      "options": [
+        "Measuring acidity or alkalinity of a solution",
+        "Determining molecular weight",
+        "Calculating reaction rates",
+        "Quantifying energy changes"
+      ],
+      "answer": "Measuring acidity or alkalinity of a solution",
+      "explanation": "The pH scale is a measure of the acidity or alkalinity of a solution. It ranges from 0 to 14, with values below 7 indicating acidity, 7 being neutral, and values above 7 indicating alkalinity."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the chemical formula for water?",
+      "options": [
+        "H2O2",
+        "CO2",
+        "H2O",
+        "NaCl"
+      ],
+      "answer": "H2O",
+      "explanation": "The chemical formula for water is H2O, representing two hydrogen atoms bonded to one oxygen atom."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which gas makes up the majority of Earth's atmosphere?",
+      "options": [
+        "Oxygen",
+        "Carbon dioxide",
+        "Nitrogen",
+        "Hydrogen"
+      ],
+      "answer": "Nitrogen",
+      "explanation": "Nitrogen (N2) makes up about 78% of Earth's atmosphere, while oxygen is the second most abundant gas at around 21%."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the process by which a solid changes directly into a gas called?",
+      "options": [
+        "Sublimation",
+        "Condensation",
+        "Evaporation",
+        "Crystallization"
+      ],
+      "answer": "Sublimation",
+      "explanation": "Sublimation is the process by which a solid substance changes directly into a gas without passing through the liquid state. Examples include dry ice (solid carbon dioxide) turning into carbon dioxide gas."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which element is the main constituent of organic compounds?",
+      "options": [
+        "Carbon",
+        "Oxygen",
+        "Hydrogen",
+        "Nitrogen"
+      ],
+      "answer": "Carbon",
+      "explanation": "Carbon is the primary element found in organic compounds, 
+    },
 {
-  "question": "What is the chemical symbol for gold?",
-  "options": ["Au", "Ag", "Fe", "Cu"],
-  "answer": "Au",
-  "explanation": "The chemical symbol for gold is Au, which comes from the Latin word 'aurum.'"
-},
-{
-  "question": "What is the pH scale used for?",
-  "options": ["Measuring acidity or alkalinity of a solution", "Determining molecular weight", "Calculating reaction rates", "Quantifying energy changes"],
-  "answer": "Measuring acidity or alkalinity of a solution",
-  "explanation": "The pH scale is a measure of the acidity or alkalinity of a solution. It ranges from 0 to 14, with values below 7 indicating acidity, 7 being neutral, and values above 7 indicating alkalinity."
-},
-{
-  "question": "What is the chemical formula for water?",
-  "options": ["H2O2", "CO2", "H2O", "NaCl"],
-  "answer": "H2O",
-  "explanation": "The chemical formula for water is H2O, representing two hydrogen atoms bonded to one oxygen atom."
-},
-{
-  "question": "Which gas makes up the majority of Earth's atmosphere?",
-  "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
-  "answer": "Nitrogen",
-  "explanation": "Nitrogen (N2) makes up about 78% of Earth's atmosphere, while oxygen is the second most abundant gas at around 21%."
-},
-{
-  "question": "What is the process by which a solid changes directly into a gas called?",
-  "options": ["Sublimation", "Condensation", "Evaporation", "Crystallization"],
-  "answer": "Sublimation",
-  "explanation": "Sublimation is the process by which a solid substance changes directly into a gas without passing through the liquid state. Examples include dry ice (solid carbon dioxide) turning into carbon dioxide gas."
-},
-{
-  "question": "Which element is the main constituent of organic compounds?",
-  "options": ["Carbon", "Oxygen", "Hydrogen", "Nitrogen"],
-  "answer": "Carbon",
-  "explanation": "Carbon is the primary element found in organic compounds, which are the basis of life on Earth. It has the unique ability to form diverse and stable bonds with other elements, allowing for the formation of complex molecules."
-},
-{
-  "question": "What is the chemical formula for methane?",
-  "options": ["CH4", "CO2", "H2O", "C6H12O6"],
-  "answer": "CH4",
-  "explanation": "The chemical formula for methane, the simplest hydrocarbon, is CH4, which consists of one carbon atom bonded to four hydrogen atoms."
-},
-{
-  "question": "What is the process of splitting light into its component colors called?",
-  "options": ["Dispersion", "Reflection", "Refraction", "Diffusion"],
-  "answer": "Dispersion",
-  "explanation": "Dispersion is the phenomenon of splitting white light into its constituent colors, such as red, orange, yellow, green, blue, indigo, and violet. This occurs when light passes through a prism or a water droplet, causing different wavelengths to bend at different angles."
-},
-{
+  "questionNumber": 8,
   "question": "What is the atomic number of hydrogen?",
-  "options": ["1", "2", "3", "4"],
+  "options": [
+    "1",
+    "2",
+    "6",
+    "8"
+  ],
   "answer": "1",
-  "explanation": "The atomic number of hydrogen is 1, indicating that it has one proton in its nucleus. It is the lightest and most abundant element in the universe."
+  "explanation": "The atomic number of hydrogen is 1, which means it has one proton in its nucleus. Hydrogen is the lightest and most abundant element in the universe."
 },
 {
-  "question": "What is the process by which a liquid changes into a solid called?",
-  "options": ["Freezing", "Melting", "Condensation", "Sublimation"],
-  "answer": "Freezing",
-  "explanation": "Freezing is the process in which a liquid substance loses heat and changes into a solid state. This occurs when the temperature of the substance reaches its freezing point."
+  "questionNumber": 9,
+  "question": "What is the unit of measurement for electric current?",
+  "options": [
+    "Volt",
+    "Ampere",
+    "Watt",
+    "Ohm"
+  ],
+  "answer": "Ampere",
+  "explanation": "The unit of measurement for electric current is the ampere (A). It represents the rate at which electric charge flows in a circuit."
 },
 {
-  "question": "Which gas is responsible for the characteristic smell of rotten eggs?",
-  "options": ["Hydrogen sulfide", "Carbon dioxide", "Oxygen", "Methane"],
-  "answer": "Hydrogen sulfide",
-  "explanation": "The gas responsible for the foul smell of rotten eggs is hydrogen sulfide (H2S). It is produced by the decay of organic matter and is highly toxic in high concentrations."
-},
-{
-  "question": "What is the process by which plants convert sunlight into chemical energy?",
-  "options": ["Photosynthesis", "Respiration", "Fermentation", "Transpiration"],
-  "answer": "Photosynthesis",
-  "explanation": "Photosynthesis is the process by which plants, algae, and some bacteria convert sunlight, carbon dioxide, and water into glucose (sugar) and oxygen. This process is vital for the production of oxygen and the synthesis of organic compounds."
-},
-{
-  "question": "What is the chemical formula for table salt?",
-  "options": ["NaCl", "HCl", "CaCO3", "MgSO4"],
-  "answer": "NaCl",
-  "explanation": "The chemical formula for table salt, or sodium chloride, is NaCl. It consists of one sodium atom (Na) bonded to one chlorine atom (Cl)."
-},
-{
-  "question": "Which element is essential for the process of respiration in living organisms?",
-  "options": ["Oxygen", "Carbon", "Hydrogen", "Nitrogen"],
-  "answer": "Oxygen",
-  "explanation": "Oxygen (O2) is essential for the process of respiration in living organisms. It serves as the final electron acceptor in the electron transport chain, enabling the production of ATP, the energy currency of cells."
-},
-{
-  "question": "What is the SI unit of measuring the amount of a substance?",
-  "options": ["Mole", "Gram", "Liter", "Newton"],
-  "answer": "Mole",
-  "explanation": "The mole (mol) is the SI unit for measuring the amount of a substance. It represents a specific number of atoms, molecules, ions, or other entities, similar to how a dozen represents 12 objects."
-},
-{
-  "question": "What is the process by which a gas changes into a liquid called?",
-  "options": ["Condensation", "Vaporization", "Sublimation", "Evaporation"],
-  "answer": "Condensation",
-  "explanation": "Condensation is the process in which a gas loses heat and changes into a liquid state. This occurs when the temperature of the gas decreases below its dew point or when it comes into contact with a colder surface."
-},
-{
-  "question": "Which element is the most abundant in Earth's crust?",
-  "options": ["Oxygen", "Silicon", "Aluminum", "Iron"],
-  "answer": "Oxygen",
-  "explanation": "Oxygen is the most abundant element in Earth's crust, accounting for about 46% of its mass. It is primarily found in the form of oxygen compounds, such as silicon dioxide (silica) and aluminum oxide."
-},
-{
-  "question": "What is the process of combining two or more elements to form a new substance called?",
-  "options": ["Chemical reaction", "Physical change", "Ionization", "Redox reaction"],
-  "answer": "Chemical reaction",
-  "explanation": "A chemical reaction is the process in which two or more elements or compounds interact to form new substances with different chemical and physical properties. It involves the breaking and formation of chemical bonds."
-},
-{
-  "question": "Which type of bonding involves the sharing of electrons between atoms?",
-  "options": ["Covalent bonding", "Ionic bonding", "Metallic bonding", "Hydrogen bonding"],
-  "answer": "Covalent bonding",
-  "explanation": "Covalent bonding occurs when atoms share electrons to achieve a more stable electron configuration. It is commonly found in molecules and non-metallic compounds."
-},
-{
-  "question": "What is the law that states that the total mass of reactants is equal to the total mass of products in a chemical reaction?",
-  "options": ["Law of Conservation of Mass", "Law of Definite Proportions", "Law of Multiple Proportions", "Avogadro's Law"],
-  "answer": "Law of Conservation of Mass",
-  "explanation": "The Law of Conservation of Mass states that in a chemical reaction, the total mass of the reactants is equal to the total mass of the products. This principle demonstrates the conservation of matter during chemical transformations."
-},
-{
-  "question": "What is the unit of measurement for the amount of heat energy required to raise the temperature of a substance?",
-  "options": ["Joule", "Calorie", "Watt", "Kilogram"],
-  "answer": "Joule",
-  "explanation": "The joule (J) is the unit of measurement for the amount of heat energy required to raise the temperature of a substance. It is also used to quantify other forms of energy, such as mechanical and electrical energy."
-},
-{
-  "question": "What is the term for a substance that speeds up a chemical reaction without being consumed in the process?",
-  "options": ["Catalyst", "Reactant", "Product", "Enzyme"],
-  "answer": "Catalyst",
-  "explanation": "A catalyst is a substance that increases the rate of a chemical reaction by lowering the activation energy required for the reaction to occur. It participates in the reaction but remains unchanged at the end."
-},
-{
-  "question": "What is the term for a homogeneous mixture of two or more substances?",
-  "options": ["Solution", "Compound", "Suspension", "Colloid"],
-  "answer": "Solution",
-  "explanation": "A solution is a homogeneous mixture of two or more substances, where one substance (solute) is dissolved in another substance (solvent). It is characterized by particles that are uniformly dispersed and cannot be easily separated by filtration."
-},
-{
-  "question": "Which gas is responsible for the characteristic smell of rotten apples?",
-  "options": ["Ethylene", "Acetylene", "Methane", "Butane"],
-"answer": "Ethylene",
-  "explanation": "The gas responsible for the characteristic smell of rotten apples is ethylene (C2H4). It is a plant hormone that is produced during the ripening process and is involved in fruit ripening and senescence."
-},
-{
-  "question": "What is the process of converting a solid directly into a gas without passing through the liquid phase called?",
-  "options": ["Sublimation", "Evaporation", "Condensation", "Vaporization"],
-  "answer": "Sublimation",
-  "explanation": "Sublimation is the process in which a solid substance transitions directly into a gas without going through the liquid phase. Examples include dry ice (solid carbon dioxide) subliming into carbon dioxide gas."
-},
-{
-  "question": "What is the term for a substance that can act as both an acid and a base depending on the conditions?",
-  "options": ["Amphiprotic", "Neutral", "Alkaline", "Ionic"],
-  "answer": "Amphiprotic",
-  "explanation": "An amphiprotic substance is one that can behave as both an acid and a base. It can donate a proton (H+) in an acidic environment and accept a proton in a basic environment."
-},
-{
-  "question": "Which process involves the separation of a mixture into its individual components based on their different boiling points?",
-  "options": ["Distillation", "Filtration", "Decantation", "Crystallization"],
-  "answer": "Distillation",
-  "explanation": "Distillation is the process of separating a mixture by heating it to vaporize the components with different boiling points and then condensing and collecting the vapors. It is commonly used in purifying liquids and separating mixtures of liquids."
-},
-{
-  "question": "What is the term for a substance that speeds up a chemical reaction by lowering the activation energy but is regenerated in the process?",
-  "options": ["Enzyme", "Catalyst", "Reactant", "Product"],
-  "answer": "Enzyme",
-  "explanation": "An enzyme is a biological catalyst that accelerates chemical reactions in living organisms. It lowers the activation energy required for the reaction to occur, allowing it to proceed at a faster rate. Enzymes are specific to certain reactions and are not consumed in the process."
-},
-{
-  "question": "What is the term for a measure of the average kinetic energy of the particles in a substance?",
-  "options": ["Temperature", "Pressure", "Volume", "Density"],
-  "answer": "Temperature",
-  "explanation": "Temperature is a measure of the average kinetic energy of the particles in a substance. It determines the direction of heat transfer and is commonly measured in Celsius (°C) or Kelvin (K) scales."
-},
-{
-  "question": "Which type of chemical reaction involves the combination of oxygen with another substance and often produces heat and light?",
-  "options": ["Combustion", "Redox", "Decomposition", "Synthesis"],
-  "answer": "Combustion",
-  "explanation": "Combustion is a chemical reaction in which a substance reacts rapidly with oxygen, typically producing heat and light. It is often associated with the burning of fuels, such as wood, gasoline, or natural gas."
-},
-{
-  "question": "What is the term for the measure of the concentration of hydrogen ions in a solution?",
-  "options": ["pH", "Molarity", "Acidity", "Basicity"],
-  "answer": "pH",
-  "explanation": "pH is a measure of the acidity or alkalinity of a solution, indicating the concentration of hydrogen ions (H+) present. It is a logarithmic scale ranging from 0 to 14, where a pH of 7 is considered neutral, pH values below 7 are acidic, and pH values above 7 are basic or alkaline."
-},
-{
-  "question": "What is the term for the process in which a substance gains electrons?",
-  "options": ["Reduction", "Oxidation", "Ionization", "Hydrolysis"],
-  "answer": "Reduction",
-  "explanation": "Reduction is the process in which a substance gains electrons, resulting in a decrease in its oxidation state. It often occurs simultaneously with oxidation in a chemical reaction, forming a redox pair."
-},
-{
-  "question": "What is the term for a substance that cannot be broken down into simpler substances by chemical means?",
-  "options": ["Element", "Compound", "Mixture", "Ion"],
-  "answer": "Element",
-  "explanation": "An element is a pure substance that consists of only one type of atom. It cannot be broken down into simpler substances by chemical means. Examples include oxygen, carbon, and gold."
-},
-{
-  "question": "Which acid is found in citrus fruits such as lemons and oranges?",
-  "options": ["Citric acid", "Acetic acid", "Lactic acid", "Sulfuric acid"],
-  "answer": "Citric acid",
-  "explanation": "Citric acid is the acid found in citrus fruits such as lemons and oranges. It gives these fruits their sour taste and is commonly used as a flavoring agent in food and beverages."
-},
-{
-  "question": "What is the term for the measure of the amount of solute dissolved in a solvent?",
-  "options": ["Concentration", "Density", "Viscosity", "Molarity"],
-  "answer": "Concentration",
-  "explanation": "Concentration is a measure of the amount of solute dissolved in a given amount of solvent. It can be expressed in various units, such as molarity, mass percent, or parts per million (ppm)."
-},
-{
-  "question": "Which subatomic particle has a positive charge?",
-  "options": ["Proton", "Neutron", "Electron", "Nucleus"],
-  "answer": "Proton",
-  "explanation": "A proton is a subatomic particle found in the nucleus of an atom. It carries a positive charge and determines the atomic number of an element. The number of protons in an atom defines its identity as a specific element."
-},
-{
-  "question": "What is the term for a substance formed by the chemical combination of two or more elements in definite proportions?",
-  "options": ["Compound", "Mixture", "Solution", "Element"],
-  "answer": "Compound",
-  "explanation": "A compound is a substance that is formed when two or more elements chemically combine in fixed proportions. It has distinct properties different from the constituent elements and can be represented by a chemical formula."
-},
-{
-  "question": "Which gas is produced during the process of respiration in living organisms?",
-  "options": ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
-  "answer": "Carbon dioxide",
-  "explanation": "Carbon dioxide (CO2) is produced as a waste product during the process of respiration in living organisms. It is released when organic molecules, such as glucose, are broken down to produce energy in cells."
+  "questionNumber": 10,
+  "question": "What is the SI unit for temperature?",
+  "options": [
+    "Kelvin",
+    "Celsius",
+    "Fahrenheit",
+    "Rankine"
+  ],
+  "answer": "Kelvin",
+  "explanation": "The SI unit for temperature is the Kelvin (K). It is based on the absolute scale, where 0 Kelvin represents absolute zero, the lowest possible temperature."
 }
-  ]
+]
+}
