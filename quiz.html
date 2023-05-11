@@ -122,17 +122,17 @@
     transition: width 0.5s ease-in-out;
   }
 </style>
-<div id="optionContainer" class="container mt-4">
+<div class="container">
   <div class="row">
     <div class="col-md-6">
       <div class="quiz-options">
-        <h2 class="mb-4">Quiz Options</h2>
         <div class="form-check">
           <div id="optionsQuizNameWrap">
-            <div id="optionsQuizName" class="h4">Quiz Name</div>
+            <div id="optionsQuizName" class="text-center mb-4">Quiz Name</div>
             <!-- Quiz Name -->
           </div>
         </div>
+        <hr>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="timer-checkbox">
           <label class="form-check-label" for="timer-checkbox">
@@ -157,38 +157,25 @@
           </div>
           <!-- Quiz Time Input -->
         </div>
-      </div>
-	    
-      <div class="container mt-4">
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            <div id="testInfo" class="card p-4">
-              <h2 class="mb-4">Quiz Information</h2>
-              <div class="progress mb-4">
-                <div id="progressBarValue" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <div class="text-center">
-                <p><strong>Quiz Code:</strong> <span id="quizCodeValue"></span></p>
-                <p><strong>Quiz Name:</strong> <span id="quizNameValue"></span></p>
-                <p><strong>Number of Questions:</strong> <span id="numberOfQuestionsValue"></span></p>
-                <p><strong>Questions Completed:</strong> <span id="questionsCompletedValue"></span></p>
-                <p><strong>Question Number:</strong> <span id="questionNumberValue"></span></p>
-                <p><strong>Question Correct:</strong> <span id="questionCorrectValue"></span></p>
-                <p><strong>Timestamp:</strong> <span id="timestampValue"></span></p>
-              </div>
-            </div>
-          </div>
+        
+        <hr>
+        
+        <div id="testInfo" class="text-center mb-4"></div>
+        <!-- Test Information Placeholder -->
+        
+        <div id="progressBar" class="progress mb-4">
+          <div id="progressBarValue" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
-      </div>
-	    
-      <div class="text-center mt-4">
-        <button id="start-btn" class="btn btn-primary btn-lg">Start Quiz</button>
-        <!-- Start Quiz Button -->
+        <!-- Progress Bar -->
+        
+        <div class="text-center">
+          <button id="start-btn" class="btn btn-primary btn-lg">Start Quiz</button>
+          <!-- Start Quiz Button -->
+        </div>
       </div>
     </div>
     <div class="col-md-6">
-      <div class="quiz-image-container
-      <div class="quiz-image-container">
+      <div class="quiz-image-container text-center">
         <img src="/images/lan/9.png" alt="quiz-image" class="img-fluid">
         <!-- Quiz Image -->
       </div>
