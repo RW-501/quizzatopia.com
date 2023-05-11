@@ -188,6 +188,18 @@ function showQuestion() {
 }
 
 
+function saveQuizInfo(quizCode, quizInfo) {
+  const savedQuizCode = localStorage.getItem('quizCode');
+
+  if (savedQuizCode !== quizCode) {
+    localStorage.setItem('quizCode', quizCode);
+    localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
+  }
+}
+
+
+
+
   // Get the progress bar element
 var progressBar = document.getElementById('progress-bar');
 
@@ -254,10 +266,16 @@ function checkAnswer() {
     quizInfo[2] = totalTime; // Update the totalTime
     localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
   }
-
+  // Call the saveQuizInfo function to save the data
+  saveQuizInfo( quizInfo);
+  
   // Show the explanation
   showExplanation(questionObj.explanation);
 }
+
+
+
+
 
 // Function to show the next question
 function nextQuestion() {
