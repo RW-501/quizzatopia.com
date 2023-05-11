@@ -1,7 +1,7 @@
 // Global Variables
 let questionTime = 0; // seconds
 let currentQuestion = 1;
-let score = 0;
+let questionCorrect = 0;
 let quizStarted = false;
 let timer = 0;
 let countdownPerQuestion = false; // set to true if the countdown should happen for each question
@@ -242,7 +242,6 @@ let correct_bool;
   // Check if the selected answer is correct
   if (selectedAnswer === questionObj.answer) {
     selectedOption.classList.add('correct');
-    score++;
     questionCorrect++;
     correct_bool = "Correct";
   } else {
@@ -373,8 +372,8 @@ function endQuiz() {
   const feedback = calculateFeedback();
   document.getElementById("feedback").innerHTML = feedback;
   
-  const percentageScore = Math.round((score / totalQuestions) * 100);
-  const resultMsg = `You scored ${score}/${totalQuestions} (${percentageScore}%)`;
+  const percentageScore = Math.round((questionCorrect / totalQuestions) * 100);
+  const resultMsg = `You scored ${questionCorrect}/${totalQuestions} (${percentageScore}%)`;
   document.getElementById("score").innerHTML = resultMsg;
   document.getElementById("quiz-container").classList.add("d-none");
   document.getElementById("end-container").classList.remove("d-none");
@@ -426,9 +425,9 @@ function showPieChart() {
 function calculateFeedback() {
   let feedback = "";
 
-  if (score === totalQuestions) {
+  if (questionCorrect === totalQuestions) {
     feedback = "Great job! You got all the questions right!";
-  } else if (score > totalQuestions / 2) {
+  } else if (questionCorrect > totalQuestions / 2) {
     feedback = "Good job! You did well, but there is room for improvement.";
   } else {
     feedback = "Keep practicing. You'll get there!";
