@@ -394,8 +394,10 @@ function endQuiz() {
   showPieChart();
   
   // Unhide the message board
-  document.getElementById("message-board").classList.remove("d-none");
+  document.getElementById("MessageBoard").classList.remove("d-none");
 }
+
+
 
 
 
