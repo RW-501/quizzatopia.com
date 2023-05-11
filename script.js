@@ -54,6 +54,7 @@ function startQuiz() {
 
   quizAdPattern = generateQuizAdPattern(totalQuestions, intvalue);
   adQuestionNumbers = quizAdPattern;
+  console.log(adQuestionNumbers + "   ?????xx???????adQuestionNumbers????"); // Output: 3
 
   // Array to store the question numbers where the ad should be shown
   adQuestionNumbers = quizAdPattern; // Example: Show ad after questions 3, 7, and 11
@@ -153,8 +154,7 @@ function showAdsFunc() {
   displayAd();
 }
 
-// Call the showAdsFunc() to start displaying ads
-showAdsFunc();
+
 
 
 function showQuestion() {
@@ -166,6 +166,8 @@ function showQuestion() {
     if (index !== -1) {
       adQuestionNumbers.splice(index, 1);
     }
+    // Call the showAdsFunc() to start displaying ads
+
     showAdsFunc();
     return;
   }
