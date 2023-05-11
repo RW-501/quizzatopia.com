@@ -38,7 +38,7 @@ function startQuiz() {
   totalQuestions = questions.length;
 
   // Hide the MessageBoard
-  document.getElementById("MessageBoard").style.display = "none";
+  document.getElementById("MessageBoard").classList.add("d-none");
 
   console.log(totalQuestions + "   ????????????totalQuestions????"); // Output: 3
 
