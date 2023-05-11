@@ -90,32 +90,37 @@
 	<main_section>
   <div id="navbar"></div>
     <!-- rest of the page content -->
+		
+		
 <style>
-
- #social-sharing {
+  /* Styles for the social-sharing section */
+  #social-sharing {
     padding: 5%;
-	 
-	}
-	 #social-sharing .btn {
+  }
+  
+  /* Styles for the social-sharing buttons */
+  #social-sharing .btn {
     display: inline-block;
     padding: 2%;
     margin: 1%;
-	}
-	
-	#getFull_BTN{
-	width: 80%;
+  }
+  
+  /* Styles for the getFull_BTN element */
+  #getFull_BTN {
+    width: 80%;
     padding: 2%;
     margin: 5% 0 10% 0;
-	}
-	
-	#progressBar {
-  height: 20px;
-}
-
-#progressBarValue {
-  transition: width 0.5s ease-in-out;
-}
-
+  }
+  
+  /* Styles for the progressBar element */
+  #progressBar {
+    height: 20px;
+  }
+  
+  /* Styles for the progressBarValue element */
+  #progressBarValue {
+    transition: width 0.5s ease-in-out;
+  }
 </style>
 
 <div id="optionContainer" class="container mt-4">
@@ -124,57 +129,55 @@
       <div class="quiz-options">
         <div class="form-check">
           <div id="optionsQuizNameWrap">
-            <div id="optionsQuizName">Quiz Name
-            </div>
-          </div>          
+            <div id="optionsQuizName">Quiz Name</div>
+            <!-- Quiz Name -->
+          </div>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="timer-checkbox">
           <label class="form-check-label" for="timer-checkbox">
             Enable Timer
           </label>
+          <!-- Enable Timer Checkbox -->
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="countdown-per-question">
           <label class="form-check-label" for="countdown-per-question">
             Countdown per Question
           </label>
+          <!-- Countdown per Question Checkbox -->
         </div>
         <div id="timer-timeGroup" class="form-group">
           <label for="quiz-time">Quiz Time:</label>
-          <div  class="input-group">
+          <div class="input-group">
             <input type="number" id="quiz-time" name="quiz-time" value="30" class="form-control">
             <div class="input-group-append">
               <span class="input-group-text">Seconds</span>
             </div>
           </div>
+          <!-- Quiz Time Input -->
         </div>
-	      
-	      
-	      
-	      
-	<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <div id="testInfo" class="text-center"></div>
-      <div id="progressBar" class="progress mt-4">
-        <div id="progressBarValue" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
-    </div>
-  </div>
-</div>      
-	      
-	      
-	      
-	      
-
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div id="testInfo" class="text-center"></div>
+            <!-- Test Information Placeholder -->
+            <div id="progressBar" class="progress mt-4">
+              <div id="progressBarValue" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <!-- Progress Bar -->
+          </div>
+        </div>
       </div>
       <div class="text-center">
         <button id="start-btn" class="btn btn-primary btn-lg">Start Quiz</button>
+        <!-- Start Quiz Button -->
       </div>
     </div>
     <div class="col-md-6">
       <img src="/images/lan/9.png" alt="quiz-image" class="img-fluid">
+      <!-- Quiz Image -->
     </div>
   </div>
 </div>
@@ -182,81 +185,88 @@
 
     
     
-    <div class="container mt-4 d-none" id="quiz-container">
-	 
+  <div class="container mt-4 d-none" id="quiz-container">
+  <!-- Quiz Container -->
   <div class="layer-1">
-    <div class="layer-2" id="quiz_main_area" >
-	         <div id="ad-container">
-		        <div id="ad-box" >Google Ads
-				<div id='ad-view' style="min-width:255px">
-					<span id='ad-text'>Is the ad Showing?</span>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4968673576211489"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="-6t+ed+2i-1n-4w"
-     data-ad-client="ca-pub-4968673576211489"
-     data-ad-slot="5743816421"></ins>
-				<script>
-    (adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
-			<!--	<span class='ad-text'>This will be an ad</span>-->
-				
-				</div>
-				
-				
-		      </div>
-	    </div>
-	    
-      <div id="timer"></div>
-          <div class="progress-bar-container">
-            <div class="progress-bar" id="progress-bar"></div>
+    <!-- First Layer -->
+    <div class="layer-2" id="quiz_main_area">
+      <!-- Second Layer: Main Quiz Area -->
+      <div id="ad-container">
+        <!-- Ad Container -->
+        <div id="ad-box">
+          Google Ads
+          <div id='ad-view' style="min-width:255px">
+            <span id='ad-text'>Is the ad Showing?</span>
+            <!-- Google Ad Code -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4968673576211489" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-6t+ed+2i-1n-4w" data-ad-client="ca-pub-4968673576211489" data-ad-slot="5743816421"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            <!-- <span class='ad-text'>This will be an ad</span> -->
           </div>
-          <h1 id="question"></h1>
-          <ul class="list-unstyled" id="optionContainers">
-            <li><button class="btn btn-primary answer-option"></button></li>
-            <li><button class="btn btn-primary answer-option"></button></li>
-            <li><button class="btn btn-primary answer-option"></button></li>
-            <li><button class="btn btn-primary answer-option"></button></li>
-          </ul>
-	  
-          <div id="explanation"></div>
-	  
-      <div id="btn_container">
-          <button id="skip-btn" class="btn btn-secondary">Skip</button>
-          <button id="next-btn" class="btn btn-primary d-none">Next</button>
-      </div>
         </div>
-     
-    
+      </div>
+      <div id="timer"></div>
+      <!-- Timer element -->
+      <div class="progress-bar-container">
+        <!-- Progress Bar Container -->
+        <div class="progress-bar" id="progress-bar"></div>
+        <!-- Progress Bar -->
+      </div>
+      <h1 id="question"></h1>
+      <!-- Question heading -->
+      <ul class="list-unstyled" id="optionContainers">
+        <!-- Answer option containers -->
+        <li><button class="btn btn-primary answer-option"></button></li>
+        <li><button class="btn btn-primary answer-option"></button></li>
+        <li><button class="btn btn-primary answer-option"></button></li>
+        <li><button class="btn btn-primary answer-option"></button></li>
+      </ul>
+      <div id="explanation"></div>
+      <!-- Explanation area -->
+      <div id="btn_container">
+        <!-- Button container -->
+        <button id="skip-btn" class="btn btn-secondary">Skip</button>
+        <!-- Skip button -->
+        <button id="next-btn" class="btn btn-primary d-none">Next</button>
+        <!-- Next button (initially hidden) -->
+      </div>
+    </div>
   </div>
 </div>
 
-
-    
-    <div class="container mt-4 d-none" id="end-container">
+<div class="container mt-4 d-none" id="end-container">
+  <!-- End Container -->
   <h2 id="result-text"></h2>
+  <!-- Result Text -->
   <h2>Your Final Score</h2>
+  <!-- Final Score Heading -->
   <p id="score"></p>
+  <!-- Score Placeholder -->
   <p id="feedback"></p>
+  <!-- Feedback Placeholder -->
   <button id="retake-btn" class="btn btn-primary">Retake Quiz</button>
+  <!-- Retake Quiz Button -->
   <button class="other-quiz-btn btn btn-secondary" onclick="window.location.href = 'quizzes'">Try Another Quiz</button>
+  <!-- Try Another Quiz Button -->
   <div id="social-sharing">
-	  <p>
-    <a id="social_fb" href="" target="_blank" class="btn btn-social btn-facebook btn-primary"><i class="fab fa-facebook-f"></i> Share on Facebook</a>
-    <a id="social_tw" href="" target="_blank" class="btn btn-social btn-twitter btn-info"><i class="fab fa-twitter"></i> Share on Twitter</a>
-	  </p><p>
-    <a id="social_red" href="" target="_blank" class="btn btn-social btn-reddit btn-danger"><i class="fab fa-reddit"></i> Share on Reddit</a>
-	  <a id="social_ln" href="" target="_blank" class="btn btn-social btn-linkedin btn-primary" style="margin-right: 10px;"><i class="fab fa-linkedin"></i> Share on LinkedIn</a>
-	  </p>
+    <!-- Social Sharing Section -->
+    <p>
+      <a id="social_fb" href="" target="_blank" class="btn btn-social btn-facebook btn-primary"><i class="fab fa-facebook-f"></i> Share on Facebook</a>
+      <!-- Share on Facebook Button -->
+      <a id="social_tw" href="" target="_blank" class="btn btn-social btn-twitter btn-info"><i class="fab fa-twitter"></i> Share on Twitter</a>
+      <!-- Share on Twitter Button -->
+    </p>
+    <p>
+      <a id="social_red" href="" target="_blank" class="btn btn-social btn-reddit btn-danger"><i class="fab fa-reddit"></i> Share on Reddit</a>
+      <!-- Share on Reddit Button -->
+      <a id="social_ln" href="" target="_blank" class="btn btn-social btn-linkedin btn-primary" style="margin-right: 10px;"><i class="fab fa-linkedin"></i> Share on LinkedIn</a>
+      <!-- Share on LinkedIn Button -->
+    </p>
   </div>
-	      <button id="getFull_BTN" class=" btn btn-primary " onclick="window.location.href = 'LearnMore'">Get Full Quiz</button>
-
+  <button id="getFull_BTN" class="btn btn-primary" onclick="window.location.href = 'LearnMore'">Get Full Quiz</button>
+  <!-- Get Full Quiz Button -->
 </div>
 
-	
-	
 	
 	</main_section>
 	
