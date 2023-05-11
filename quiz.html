@@ -107,6 +107,15 @@
     padding: 2%;
     margin: 5% 0 10% 0;
 	}
+	
+	#progressBar {
+  height: 20px;
+}
+
+#progressBarValue {
+  transition: width 0.5s ease-in-out;
+}
+
 </style>
 
 <div id="optionContainer" class="container mt-4">
@@ -153,7 +162,16 @@
   </div>
 </div>
 
-
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div id="testInfo" class="text-center"></div>
+      <div id="progressBar" class="progress mt-4">
+        <div id="progressBarValue" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </div>
+  </div>
+</div>
     
     
     <div class="container mt-4 d-none" id="quiz-container">
@@ -376,52 +394,46 @@ function shuffleArray(array) {
 // Retrieve the stored test information and display it
 function displayTestInfo() {
   const storedTestInfo = localStorage.getItem('testInfo');
-  let testInfo;
-
   if (storedTestInfo) {
-    testInfo = JSON.parse(storedTestInfo);
-  } else {
-    testInfo = {
-      quizCode,
-      quizName,
-      numberOfQuestions,
-      questionsCompleted: [],
-      questionNumber: null,
-      questionCorrect: null,
-      timestamp: null
-    };
-  }
+    const testInfo = JSON.parse(storedTestInfo);
+    const testInfoDiv = document.getElementById('testInfo');
+    const progressBar = document.getElementById('progressBarValue');
+    
+    testInfoDiv.innerHTML = `
+      <h3>Quiz Information</h3>
+      <p><strong>Quiz Code:</strong> ${testInfo.quizCode}</p>
+      <p><strong>Quiz Name:</strong> ${testInfo.quizName}</p>
+      <p><strong>Number of Questions:</strong> ${testInfo.numberOfQuestions}</p>
+      <p><strong>Questions Completed:</strong> ${testInfo.questionsCompleted.length}</p>
+      <p><strong>Question Number:</strong> ${testInfo.questionNumber || 'Not answered yet'}</p>
+      <p><strong>Question Correct:</strong> ${testInfo.questionCorrect || 'Not answered yet'}</p>
+      <p><strong>Timestamp:</strong> ${testInfo.timestamp}</p>
+    `;
 
-  const testInfoDiv = document.getElementById('testInfo');
-  testInfoDiv.innerHTML = `
-    <p>Quiz Code: ${testInfo.quizCode}</p>
-    <p>Quiz Name: ${testInfo.quizName}</p>
-    <p>Number of Questions: ${testInfo.numberOfQuestions}</p>
-    <p>Questions Completed: ${testInfo.questionsCompleted}</p>
-    <p>Question Number: ${testInfo.questionNumber}</p>
-    <p>Question Correct: ${testInfo.questionCorrect}</p>
-    <p>Timestamp: ${testInfo.timestamp}</p>
-  `;
+    // Calculate and display quiz completion percentage
+    const completionPercentage = (testInfo.questionsCompleted.length / testInfo.numberOfQuestions) * 100;
+    progressBar.style.width = completionPercentage + '%';
+    progressBar.setAttribute('aria-valuenow', completionPercentage);
+  }
 }
 
 // Check if quizCode matches and retrieve or save quiz info
 function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
   const savedQuizCode = localStorage.getItem('quizCode');
   let quizInfo;
-
-  // Set the timestamp for the test information
+  
   let timestamp = new Date().toLocaleString();
 
   if (savedQuizCode !== quizCode) {
     // Quiz code doesn't match, save new quiz info to storage
     quizInfo = {
-      quizCode,
-      quizName,
-      numberOfQuestions,
+      quizCode: quizCode,
+      quizName: quizName,
+      numberOfQuestions: numberOfQuestions,
       questionsCompleted: [],
       questionNumber: null,
       questionCorrect: null,
-      timestamp
+      timestamp: timestamp
     };
     localStorage.setItem('quizCode', quizCode);
     localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
@@ -443,48 +455,39 @@ function fetchData(q) {
         console.log("Empty data");
         const randomFile = getRandomFile(files);
         fetchData(randomFile);
-      } else {
-        // Use the questions data here
-        const questionData = data.questions.map(questionObj => ({
-          question: questionObj.question,
-          questionNumber: questionObj.questionNumber,
-          options: questionObj.options,
-          explanation: questionObj.explanation
-        }));
+  } else {
+    // Use the questions data here
+    const questionData = data.questions.map(questionObj => ({
+      question: questionObj.question,
+      questionNumber: questionObj.questionNumber,
+      options: questionObj.options,
+      explanation: questionObj.explanation
+    }));
 
-        console.log("questionData:", questionData);
+    // Update quizCode, quizName, numberOfQuestions
+    quizCode = data.quizCode;
+    quizName = data.quizName;
+    numberOfQuestions = data.numberOfQuestions;
 
-        // Update quizCode, quizName, numberOfQuestions
-        quizCode = data.quizCode;
-        quizName = data.quizName;
-        numberOfQuestions = data.numberOfQuestions;
+    // Check quiz code and retrieve or save quiz info
+    const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
 
-        console.log("start Quiz Name: " + quizName);
-        console.log("Number of Questions: " + numberOfQuestions);
-        console.log("new Quiz Code: " + quizCode);
+    questions.push(...questionData);
+    shuffleArray(questions);
 
-        // Check quiz code and retrieve or save quiz info
-        const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
+    // Access and use the retrieved quiz information
+    const questionNumber = quizInfo.questionNumber;
+    const questionsCompleted = quizInfo.questionsCompleted;
 
-        questions.push(...questionData);
-        shuffleArray(questions);
-
-        // Access and use the retrieved quiz information
-        const questionNumber = quizInfo.questionNumber;
-        const questionsCompleted = quizInfo.questionsCompleted;
-        // ...
-
-        // Display the stored or fetched test information
-        displayTestInfo();
-      }
-    })
-    .catch(error => console.error(error));
+    // Display the stored test information
+    displayTestInfo();
+  }
+})
+.catch(error => console.error(error));
 }
 
 // Call fetchData with the initial q value
 fetchData(q);
-
-	      
 	      
 	      
 	      
