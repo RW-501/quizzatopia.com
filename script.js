@@ -60,6 +60,7 @@ function startQuiz() {
   adQuestionNumbers = quizAdPattern; // Example: Show ad after questions 3, 7, and 11
 
   setQuizTime();
+   updateQuestionNumber();
 
   updateProgressBar(currentQuestion);
     showQuestion();
@@ -255,8 +256,8 @@ let correct_bool;
         answerOptions[i].classList.add('missed');
       }
     }
-      console.log("Highlighted missed answer:", questionObj.answer);
-      console.log("questionObj.questionNumber:", questionObj.questionNumber);
+    //  console.log("Highlighted missed answer:", questionObj.answer);
+      //console.log("questionObj.questionNumber:", questionObj.questionNumber);
 
   }
 
