@@ -257,26 +257,27 @@ if (quizInfo) {
     quizInfo.questionsCompleted = []; // Initialize the array if it's undefined
   }
 
-   // Update the question's correct status in the questionsCompleted array
-      const currentQuestionNumber = questionObj.questionNumber;
-      const existingQuestion = quizInfo.questionsCompleted.find(
-        (q) => q.questionNumber === currentQuestionNumber
-      );
-      if (existingQuestion) {
-        existingQuestion.questionCorrect = questionCorrect;
-      } else {
-        quizInfo.questionsCompleted.push({
-          questionNumber: currentQuestionNumber,
-          questionCorrect: questionCorrect
-        });
-      }
+const currentQuestionNumber = questionObj.questionNumber;
+const existingQuestion = quizInfo.questionsCompleted.find(
+  (q) => q.questionNumber === currentQuestionNumber
+);
+if (existingQuestion) {
+  existingQuestion.questionCorrect = questionCorrect;
+} else {
+  quizInfo.questionsCompleted.push({
+    questionNumber: currentQuestionNumber,
+    questionCorrect: questionCorrect,
+  });
+}
 
-      // Update other properties
-      quizInfo.quizCode = quizCode;
-      quizInfo.quizName = quizName;
-      quizInfo.numberOfQuestions = numberOfQuestions;
+// Update other properties
+quizInfo.quizCode = quizCode;
+quizInfo.quizName = quizName;
+quizInfo.numberOfQuestions = numberOfQuestions;
 
-      localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
+localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
+
+  
   
   logStorageContents("SET ");
 }
