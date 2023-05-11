@@ -251,33 +251,26 @@ let correct_bool;
   }
 
  
-// Update the quizInfo array if necessary
-if (quizInfo) {
-  if (!quizInfo.questionsCompleted) {
-    quizInfo.questionsCompleted = []; // Initialize the array if it's undefined
-  }
+  // Update the quizInfo array if necessary
+  if (quizInfo) {
+    if (!quizInfo.questionsCompleted) {
+      quizInfo.questionsCompleted = []; // Initialize the array if it's undefined
+    }
 
-const currentQuestionNumber = questionObj.questionNumber;
-const existingQuestion = quizInfo.questionsCompleted.find(
-  (q) => q.questionNumber === currentQuestionNumber
-);
-if (existingQuestion) {
-  existingQuestion.questionCorrect = questionCorrect;
-} else {
-  quizInfo.questionsCompleted.push({
-    questionNumber: currentQuestionNumber,
-    questionCorrect: questionCorrect,
-  });
-}
+    const currentQuestionNumber = questionObj.questionNumber;
+    const existingQuestion = quizInfo.questionsCompleted.find(
+      (q) => q.questionNumber === currentQuestionNumber
+    );
+    if (existingQuestion) {
+      existingQuestion.questionCorrect = questionCorrect;
+    } else {
+      quizInfo.questionsCompleted.push({
+        questionNumber: currentQuestionNumber,
+        questionCorrect: questionCorrect,
+      });
+    }
 
-// Update other properties
-quizInfo.quizCode = quizCode;
-quizInfo.quizName = quizName;
-quizInfo.numberOfQuestions = numberOfQuestions;
-
-localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
-
-  
+    saveQuizInfo(quizCode, quizInfo);
   
   logStorageContents("SET ");
 }
