@@ -120,12 +120,12 @@ function generateQuizAdPattern(numQuestions, numAds) {
 
 
 
-
+  const adDuration = 10; // Duration of each ad in seconds
+  let adCount = 0; // Counter for the number of ads shown
 
 // Function to display ads
 function showAdsFunc() {
-  const adDuration = 10; // Duration of each ad in seconds
-  let adCount = 0; // Counter for the number of ads shown
+
   let countdown = adDuration;
 
   function displayAd() {
