@@ -213,9 +213,6 @@ function checkAnswer() {
   const selectedAnswer = selectedOption.innerHTML;
   const questionObj = questions[currentQuestion];
   const options = optionContainers[currentQuestion]?.children;
-let correct_bool;
-   //console.log(options+"  options??????????totalQuestions????"); // Output: 3
-        console.log("questionObj:", questionObj);
 
   // Disable all options and apply appropriate classes
   if (options) {
@@ -230,9 +227,10 @@ let correct_bool;
   }
 
   // Check if the selected answer is correct
+  let correct_bool;
   if (selectedAnswer === questionObj.answer) {
     selectedOption.classList.add('correct');
-    questionCorrect++;
+    quizInfo.questionCorrect = (quizInfo.questionCorrect || 0) + 1;
     correct_bool = "Correct";
   } else {
     selectedOption.classList.add('incorrect');
@@ -245,45 +243,22 @@ let correct_bool;
         answerOptions[i].classList.add('missed');
       }
     }
-    //  console.log("Highlighted missed answer:", questionObj.answer);
-      //console.log("questionObj.questionNumber:", questionObj.questionNumber);
-
   }
 
- 
-  // Update the quizInfo array if necessary
+  // Save the quiz info if the new score is better
   if (quizInfo) {
-    if (!quizInfo.questionsCompleted) {
-      quizInfo.questionsCompleted = []; // Initialize the array if it's undefined
+    const currentScore = quizInfo.questionCorrect || 0;
+    if (quizInfo.questionCorrect === undefined || currentScore < quizInfo.questionCorrect) {
+      saveQuizInfo(quizCode, quizInfo);
     }
+  }
 
-    const currentQuestionNumber = questionObj.questionNumber;
-    const existingQuestion = quizInfo.questionsCompleted.find(
-      (q) => q.questionNumber === currentQuestionNumber
-    );
-    if (existingQuestion) {
-      existingQuestion.questionCorrect = questionCorrect;
-    } else {
-      quizInfo.questionsCompleted.push({
-        questionNumber: currentQuestionNumber,
-        questionCorrect: questionCorrect,
-      });
-    }
-
-    saveQuizInfo(quizCode, quizInfo);
-  
-  logStorageContents("SET ");
-}
-
-  
-  // Call the saveQuizInfo function to save the data
- // saveQuizInfo( quizInfo);
-  
   // Show the explanation
   showExplanation(questionObj.explanation);
-    logStorageContents("2");
-
+  logStorageContents("2");
 }
+
+
 
 
 
