@@ -494,13 +494,9 @@ document.getElementById("social_tw").href = "https://twitter.com/intent/tweet?ur
 document.getElementById("social_ln").href = "ttps://www.linkedin.com/shareArticle?url=https://rw-501.github.io/Q-A/index.html?q="+q;
 document.getElementById("social_red").href = "https://www.reddit.com/submit?url=https://rw-501.github.io/Q-A/index.html?q="+q;
                  
-	  
 function calculateScore(quizInfo) {
-  const questionsCompleted = quizInfo.questionsCompleted || [];
   const totalQuestions = quizInfo.numberOfQuestions || 0;
-  const correctAnswers = questionsCompleted.reduce((total, question) => {
-    return total + (question.questionCorrect ? 1 : 0);
-  }, 0);
+  const correctAnswers = quizInfo.questionCorrect || 0;
 
   const score = correctAnswers;
   const percentage = (correctAnswers / totalQuestions) * 100;
@@ -510,6 +506,7 @@ function calculateScore(quizInfo) {
     percentage,
   };
 }
+
   
 	  
 	  
@@ -606,7 +603,6 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
       quizCode: quizCode,
       quizName: quizName,
       numberOfQuestions: numberOfQuestions,
-      questionsCompleted: [], // Initialize the questionsCompleted property to an empty array
       questionNumber: null,
       questionCorrect: 0,
       timestamp: timestamp
@@ -625,7 +621,6 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
 
   return quizInfo;
 }
-
 
 
 // Fetch and assign the data
