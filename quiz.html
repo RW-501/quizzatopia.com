@@ -507,8 +507,8 @@ function calculateScore(quizInfo) {
   };
 }
 
+
   
-	  
 	  
 	  
 	  
@@ -521,15 +521,16 @@ function saveQuizInfo(quizCode, quizInfo) {
   }
 
   const savedQuizInfo = JSON.parse(localStorage.getItem('quizInfo')) || {};
-  const savedScore = savedQuizInfo.questionsCorrect || 0;
-  const newScore = quizInfo.questionsCorrect || 0;
+  const savedScore = savedQuizInfo.questionCorrect || 0;
+  const newScore = quizInfo.questionCorrect || 0;
 
-  if (newScore > savedScore || (newScore === savedScore && newScore === totalQuestions)) {
+  if (newScore > savedScore || savedScore === 0 || savedScore === null) {
     savedQuizInfo.quizCode = quizCode;
     savedQuizInfo.quizInfo = quizInfo;
     localStorage.setItem('quizInfo', JSON.stringify(savedQuizInfo));
   }
 }
+
 
 
 // Log the contents of the storage
@@ -561,33 +562,39 @@ function shuffleArray(array) {
 function displayTestInfo() {
   const storedQuizInfo = localStorage.getItem('quizInfo');
   if (storedQuizInfo) {
-    const quizInfo = JSON.parse(storedQuizInfo);
-    const testInfoDiv = document.getElementById('testInfo');
-    const progressBar = document.getElementById('progressBarValue');
+    try {
+      const quizInfo = JSON.parse(storedQuizInfo);
+      const testInfoDiv = document.getElementById('testInfo');
+      const progressBar = document.getElementById('progressBarValue');
 
-    // Calculate user score and completion percentage
-    const { score, percentage } = calculateScore(quizInfo);
+      // Calculate user score and completion percentage
+      const { score, percentage } = calculateScore(quizInfo);
 
-    testInfoDiv.innerHTML = `
-      <h3>Quiz Information</h3>
-      <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
-      <p><strong>Quiz Name:</strong> ${quizInfo.quizName}</p>
-      <p><strong>Number of Questions:</strong> ${quizInfo.numberOfQuestions}</p>
-      <p><strong>Questions Completed:</strong> ${quizInfo.questionsCompleted ? quizInfo.questionsCompleted.length : 0}</p>
-      <p><strong>Question Number:</strong> ${quizInfo.questionNumber || 'Not answered yet'}</p>
-      <p><strong>Question Correct:</strong> ${quizInfo.questionCorrect || 0}</p>
-      <p><strong>Score:</strong> ${score}</p>
-      <p><strong>Completion Percentage:</strong> ${percentage.toFixed(2)}%</p>
-    `;
-    logStorageContents("Start");
+      testInfoDiv.innerHTML = `
+        <h3>Quiz Information</h3>
+        <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
+        <p><strong>Quiz Name:</strong> ${quizInfo.quizName}</p>
+        <p><strong>Number of Questions:</strong> ${quizInfo.numberOfQuestions}</p>
+        <p><strong>Questions Completed:</strong> ${quizInfo.questionsCompleted ? quizInfo.questionsCompleted.length : 0}</p>
+        <p><strong>Score:</strong> ${score}</p>
+        <p><strong>Completion Percentage:</strong> ${percentage.toFixed(2)}%</p>
+      `;
+      logStorageContents("Start");
 
-    // Update the progress bar
-    if (progressBar) {
-      const progressPercentage = (quizInfo.questionsCompleted ? quizInfo.questionsCompleted.length : 0) / quizInfo.numberOfQuestions * 100;
-      progressBar.style.width = progressPercentage + '%';
+      // Update the progress bar
+      if (progressBar) {
+        const progressPercentage = (quizInfo.questionsCompleted ? quizInfo.questionsCompleted.length : 0) / quizInfo.numberOfQuestions * 100;
+        progressBar.style.width = progressPercentage + '%';
+      }
+    } catch (error) {
+      console.error('Error parsing stored quiz info:', error);
+      // Handle error, display appropriate message or fallback behavior
     }
+  } else {
+    // Handle case where there is no stored quiz info, display appropriate message or fallback behavior
   }
 }
+
 
 
 
