@@ -531,6 +531,8 @@ function saveQuizInfo(quizCode, quizInfo) {
   if (newScore > savedScore || savedScore === 0 || savedScore === null) {
     savedQuizInfo.quizCode = quizCode;
     savedQuizInfo.quizInfo = quizInfo;
+	  console.log("quizInfo UPDATED     "); 
+
     localStorage.setItem('quizInfo', JSON.stringify(savedQuizInfo));
   }
 }
