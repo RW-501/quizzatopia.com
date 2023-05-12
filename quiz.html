@@ -769,7 +769,6 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
       numberOfQuestions: numberOfQuestions,
       questionCorrect: 0,
       timestamp: timestamp,
-      questionsCompleted: []
     };
 
     savedQuizInfo[quizCode] = quizInfo;
@@ -820,7 +819,7 @@ function fetchData(q) {
         shuffleArray(questions);
 
         // Access and use the retrieved quiz information
-        const questionsCompleted = quizInfo.quizInfo.questionsCompleted;
+    //    const questionsCompleted = quizInfo.quizInfo.questionsCompleted;
 
         // Display the stored test information
         displayTestInfo();
