@@ -236,6 +236,7 @@ function checkAnswer() {
   if (selectedAnswer === questionObj.answer) {
     selectedOption.classList.add('correct');
     const newQuestionCorrect = (quizInfo.questionCorrect || 0) + 1;
+    
     if (newQuestionCorrect > (savedQuizInfo.questionCorrect || 0)) {
       savedQuizInfo.questionCorrect = newQuestionCorrect;
       saveQuizInfo(quizCode, savedQuizInfo);
@@ -255,6 +256,9 @@ function checkAnswer() {
       }
     }
   }
+ console.log(totalQuestions+"  totalQuestions??????????questionCorrect????"); // Output: 3
+ console.log(questionCorrect+"  questionCorrect??????????questionCorrect????"); // Output: 3
+ console.log(newQuestionCorrect+"  newQuestionCorrect??????????questionCorrect????"); // Output: 3
 
   // Update the question number
   quizInfo.questionNumber = currentQuestion + 1;
@@ -366,7 +370,6 @@ function endQuiz() {
   // Unhide the message board
   document.getElementById("MessageBoard").classList.remove("d-none");
 }
-
 
 
 
