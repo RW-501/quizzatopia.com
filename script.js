@@ -192,6 +192,10 @@ function showQuestion() {
     totalTime = questionTime;
     startTimer();
   }
+  
+    // Update the label of the skip-next-btn
+  const skipNextBtn = document.getElementById('skip-next-btn');
+  skipNextBtn.innerHTML = questionCorrect > currentQuestion ? 'Next' : 'Skip';
 }
 
 
@@ -260,8 +264,8 @@ function checkAnswer() {
       }
     }
   }
- console.log(totalQuestions+"  totalQuestions??????????questionCorrect????"); // Output: 3
- console.log(questionCorrect+"  questionCorrect??????????questionCorrect????"); // Output: 3
+ //console.log(totalQuestions+"  totalQuestions??????????questionCorrect????"); // Output: 3
+ //console.log(questionCorrect+"  questionCorrect??????????questionCorrect????"); // Output: 3
  //console.log(newQuestionCorrect+"  newQuestionCorrect??????????questionCorrect????"); // Output: 3
 
   // Update the question number
@@ -333,6 +337,18 @@ function skipQuestion() {
   updateQuestionNumber();
 }
 
+// Function to handle skip or next action
+function skipOrNext() {
+  if (this.innerHTML === 'Skip') {
+    skipQuestion();
+  } else {
+    nextQuestion();
+  }
+}
+
+// Add event listener to the skip-next-btn
+const skipNextBtn = document.getElementById('skip-next-btn');
+skipNextBtn.addEventListener('click', skipOrNext);
 
 
 
@@ -476,8 +492,7 @@ function startTimer() {
 
 // Event Listeners
 document.getElementById("start-btn").addEventListener("click", startQuiz);
-document.getElementById("next-btn").addEventListener("click", nextQuestion);
-document.getElementById("skip-btn").addEventListener("click", skipQuestion);
+
 document.getElementById("retake-btn").addEventListener("click", () => {
 location.href = "/quiz?q="+q;
 });
