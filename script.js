@@ -402,33 +402,37 @@ function showPieChart() {
   const correctAnswers = questionCorrect;
   const incorrectAnswers = totalQuestions - questionCorrect;
 
-  // Create a div for the pie chart
-  const chartContainer = document.createElement('div');
-  chartContainer.id = 'pie-chart';
+// Create a canvas element for the pie chart
+const chartCanvas = document.createElement('canvas');
+chartCanvas.id = 'pie-chart';
 
-  // Set the inner HTML of the chart container
-  chartContainer.innerHTML = `
-    <h3>Question Results</h3>
-    <div class="chart">
-      <div class="slice correct" style="--slice-value: ${correctAnswers}"></div>
-      <div class="slice incorrect" style="--slice-value: ${incorrectAnswers}"></div>
-    </div>
-    <div class="legend">
-      <div class="legend-item">
-        <span class="legend-color correct"></span>
-        <span class="legend-label">Correct: ${correctAnswers}</span>
-      </div>
-      <div class="legend-item">
-        <span class="legend-color incorrect"></span>
-        <span class="legend-label">Incorrect: ${incorrectAnswers}</span>
-      </div>
-    </div>
-  `;
+// Append the canvas to the chart container
+const chartContainer = document.getElementById('score');
+chartContainer.appendChild(chartCanvas);
 
-  // Append the chart container to the quiz container
-  const quizContainer = document.getElementById('score');
-  quizContainer.appendChild(chartContainer);
-}
+// Get the 2D context of the canvas
+const ctx = chartCanvas.getContext('2d');
+
+// Create the data for the pie chart
+const data = {
+  labels: ['Correct', 'Incorrect'],
+  datasets: [{
+    data: [correctAnswers, incorrectAnswers],
+    backgroundColor: ['#36a2eb', '#ff6384']
+  }]
+};
+
+// Configure the options for the pie chart
+const options = {
+  responsive: true
+};
+
+// Create the pie chart using Chart.js
+new Chart(ctx, {
+  type: 'pie',
+  data: data,
+  options: options
+});
 
 
 // Function to calculate the feedback for the quiz taker
