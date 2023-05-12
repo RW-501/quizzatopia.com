@@ -769,7 +769,7 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
       numberOfQuestions: numberOfQuestions,
       questionCorrect: 0,
       timestamp: timestamp,
-      questionsCompleted: {}
+      questionsCompleted: []
     };
 
     savedQuizInfo[quizCode] = quizInfo;
@@ -786,6 +786,7 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
 
   return quizInfo;
 }
+
 
 
 // Fetch and assign the data
