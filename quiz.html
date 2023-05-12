@@ -372,8 +372,55 @@
   <!-- Get Full Quiz Button -->
 </div>
 
+		
+		
+		
+		
+		<!-- Button to trigger the pop-up -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#reportModal">
+  Report Problem
+</button>
 	
 	</main_section>
+	
+	
+	
+	
+<!-- Report Problem Modal -->
+<div class="modal fade" id="reportModal" tabindex="-1" role="dialog" aria-labelledby="reportModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content rounded-3">
+      <div class="modal-header">
+        <h5 class="modal-title" id="reportModalLabel">Report Problem</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="reportForm">
+          <div class="form-group">
+            <label for="reportType">Report Type</label>
+            <select class="form-control" id="reportType" required>
+              <option value="">Select...</option>
+              <option value="question">Report Question</option>
+              <option value="quiz">Report Quiz Error</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="reportDetails">Details</label>
+            <textarea class="form-control" id="reportDetails" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Report</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+	
+	
+	
+	
 	
 	
 	
@@ -718,7 +765,20 @@ fetchData(q);
 	      
 	      
 	      
-	      
+	      // Handle form submission
+document.getElementById('reportForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  // Perform report submission logic here
+  
+  // Close the modal after submission
+  $('#reportModal').modal('hide');
+});
+
+// Clear form values on modal close
+$('#reportModal').on('hidden.bs.modal', function() {
+  document.getElementById('reportForm').reset();
+});
+
 	      
 	      
 	      
