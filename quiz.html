@@ -165,6 +165,65 @@
 	}
 
 </style>
+		
+		
+		
+		
+		
+		
+		
+		
+					
+	
+<!-- Report Problem Modal -->
+<div class="modal fade" id="reportModal" tabindex="-1" role="dialog" aria-labelledby="reportModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content rounded-3">
+      <div class="modal-header">
+        <h5 class="modal-title" id="reportModalLabel">Report Problem</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="reportForm">
+          <div class="form-group">
+            <label for="reportType">Report Type</label>
+            <select class="form-control" id="reportType" required>
+              <option value="">Select...</option>
+              <option value="question">Report Question</option>
+              <option value="quiz">Report Quiz Error</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="reportDetails">Details</label>
+            <textarea class="form-control" id="reportDetails" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Report</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 <div id="optionContainer" class="container">
   <div class="row" style="
     padding: 2%;
@@ -384,40 +443,7 @@
 </div>
 
 		
-			
-	
-<!-- Report Problem Modal -->
-<div class="modal fade" id="reportModal" tabindex="-1" role="dialog" aria-labelledby="reportModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-sm">
-    <div class="modal-content rounded-3">
-      <div class="modal-header">
-        <h5 class="modal-title" id="reportModalLabel">Report Problem</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form id="reportForm">
-          <div class="form-group">
-            <label for="reportType">Report Type</label>
-            <select class="form-control" id="reportType" required>
-              <option value="">Select...</option>
-              <option value="question">Report Question</option>
-              <option value="quiz">Report Quiz Error</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="reportDetails">Details</label>
-            <textarea class="form-control" id="reportDetails" rows="4" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Submit Report</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-	
+
 	
 		
 		
