@@ -283,7 +283,6 @@ function checkAnswer() {
 function showExplanation(explanation) {
   document.getElementById("explanation").innerHTML = explanation;
   disableAnswerButtons();
-  document.getElementById("next-btn").classList.remove("d-none");
 }
 
 // Function to disable answer buttons after user answers
