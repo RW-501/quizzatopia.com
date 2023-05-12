@@ -829,11 +829,14 @@ reportForm.addEventListener('submit', function (e) {
 // Function to open the modal
 function openModal() {
   reportModal.style.display = 'block';
+  reportModal.style.opacity = '1';
 }
 
 // Function to close the modal
 function closeModal() {
   reportModal.style.display = 'none';
+  reportModal.style.opacity = '0';
+
 }
 
 // Add click event listener to the report button
