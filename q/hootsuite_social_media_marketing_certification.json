@@ -1,0 +1,47 @@
+{
+  "quizCode": "QZ001",
+  "quizName": "Hootsuite Social Media Marketing Certification Quiz",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "question": "What is social media marketing?",
+      "options": ["Marketing through social media platforms", "Traditional marketing techniques", "Email marketing campaigns", "Print advertising"],
+      "answer": "Marketing through social media platforms",
+      "explanation": "Social media marketing involves promoting products or services through social media platforms to reach and engage with the target audience.",
+      "questionNumber": 1,
+      "difficulty": "Easy"
+    },
+    {
+      "question": "What is a key benefit of using social media for marketing?",
+      "options": ["Increased brand awareness", "Reduced marketing costs", "Improved search engine rankings", "All of the above"],
+      "answer": "All of the above",
+      "explanation": "Using social media for marketing can lead to increased brand awareness, reduced marketing costs, and improved search engine rankings.",
+      "questionNumber": 2,
+      "difficulty": "Easy"
+    },
+    {
+      "question": "What is social listening?",
+      "options": ["Monitoring social media conversations for mentions of a brand or topic", "Listening to music while using social media", "Listening to customer feedback through surveys", "Listening to podcasts about social media"],
+      "answer": "Monitoring social media conversations for mentions of a brand or topic",
+      "explanation": "Social listening is the process of monitoring social media platforms to gather insights and track mentions of a brand or topic.",
+      "questionNumber": 3,
+      "difficulty": "Medium"
+    },
+    {
+      "question": "What is a social media content calendar?",
+      "options": ["A calendar for scheduling social media posts", "A calendar for personal social events", "A calendar for tracking social media followers", "A calendar for content creation"],
+      "answer": "A calendar for scheduling social media posts",
+      "explanation": "A social media content calendar is a tool used to plan and organize social media content, including scheduling posts, tracking campaigns, and maintaining a consistent publishing schedule.",
+      "questionNumber": 4,
+      "difficulty": "Medium"
+    },
+    {
+      "question": "What is the purpose of social media analytics?",
+      "options": ["To measure the performance and effectiveness of social media campaigns", "To track competitors' social media activities", "To analyze social media algorithms", "To manage social media accounts"],
+      "answer": "To measure the performance and effectiveness of social media campaigns",
+      "explanation": "Social media analytics provides insights into the performance of social media campaigns, helping marketers measure the impact and effectiveness of their strategies and make data-driven decisions.",
+      "questionNumber": 5,
+      "difficulty": "Hard"
+    }
+  ]
+}
