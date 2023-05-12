@@ -523,6 +523,10 @@ function saveQuizInfo(quizCode, quizInfo) {
   const savedQuizInfo = JSON.parse(localStorage.getItem('quizInfo')) || {};
   const savedScore = savedQuizInfo.questionCorrect || 0;
   const newScore = quizInfo.questionCorrect || 0;
+	
+  console.log('saveQuizInfo Quiz Info:', quizInfo);
+  console.log('saveQuizInfo savedScore:', savedScore);
+  console.log('saveQuizInfo newScore:', newScore);
 
   if (newScore > savedScore || savedScore === 0 || savedScore === null) {
     savedQuizInfo.quizCode = quizCode;
@@ -538,8 +542,8 @@ function logStorageContents(xxx) {
   const savedQuizCode = localStorage.getItem('quizCode');
   const savedQuizInfo = localStorage.getItem('quizInfo');
 
-  console.log('Saved Quiz Code:  '+xxx+"   ", savedQuizCode);
-  console.log('Saved Quiz Info:', savedQuizInfo);
+  console.log('logStorageContents Quiz Code:  '+xxx+"   ", savedQuizCode);
+  console.log('logStorageContents Quiz Info:', savedQuizInfo);
 }
 
 
