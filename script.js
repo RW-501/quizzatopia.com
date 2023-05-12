@@ -241,8 +241,8 @@ function checkAnswer() {
     //quizInfo.questionsCompleted[currentQuestion].questionCorrect = true; // Update the questionCorrect value in questionsCompleted
     
     if (questionCorrect > (quizInfo.questionCorrect || 0)) {
-      savedQuizInfo.questionCorrect = questionCorrect;
-      saveQuizInfo(quizCode, savedQuizInfo);
+      quizInfo.questionCorrect = questionCorrect;
+      quizInfo(quizCode, savedQuizInfo);
     }
 
   } else {
