@@ -211,6 +211,7 @@ function updateProgressBar(currentQuestion) {
 }   
 // Function to check the user's answer
 // Function to check the user's answer
+
 function checkAnswer() {
   const selectedOption = this;
   const optionContainers = document.querySelectorAll("#optionContainers button.answer-option");
@@ -237,7 +238,6 @@ function checkAnswer() {
     quizInfo.questionCorrect = (quizInfo.questionCorrect || 0) + 1;
     correct_bool = "Correct";
     questionCorrect++; // Increment the questionCorrect variable
-    quizInfo.questionsCompleted[currentQuestion].questionCorrect = true; // Update the questionCorrect value in questionsCompleted
 
     // Save the quiz info if the new score is better or saved score is 0 or null
     saveQuizInfo(quizCode, quizInfo);
@@ -261,8 +261,11 @@ function checkAnswer() {
   showExplanation(questionObj.explanation);
   logStorageContents("2");
 }
+```
 
+This version removes the unnecessary `quizInfo.questionsCompleted[currentQuestion].questionCorrect` line, as well as the unused variable `questionsCompleted`.
 
+Please incorporate this updated function into your code and test it to ensure it functions correctly. Let me know if you need any further assistance!
 
 // Function to show the explanation for the current question
 function showExplanation(explanation) {
