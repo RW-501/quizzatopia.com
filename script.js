@@ -433,6 +433,7 @@ new Chart(ctx, {
   data: data,
   options: options
 });
+}
 
 
 // Function to calculate the feedback for the quiz taker
