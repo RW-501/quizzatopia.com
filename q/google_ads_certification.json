@@ -1,1 +1,37 @@
-{"quizCode":"GADS001","quizName":"Google Ads Certification","numberOfQuestions":18,"questions":[{"question":"What is the purpose of Google Ads?","options":["To display ads on Google search results and partner websites","To create and manage social media profiles","To optimize website content for search engines","To track website analytics"],"answer":"To display ads on Google search results and partner websites","explanation":"Google Ads allows advertisers to display ads on Google search results pages and partner websites.","questionNumber":1,"difficulty":"Medium"},{"question":"What is the minimum age requirement to create a Google Ads account?","options":["18 years old","21 years old","16 years old","No age requirement"],"answer":"18 years old","explanation":"To create a Google Ads account, you must be at least 18 years old.","questionNumber":2,"difficulty":"Easy"},{"question":"What is the primary goal of a Google Ads campaign?","options":["To drive relevant traffic and conversions","To increase social media followers","To improve website design and user experience","To create brand awareness"],"answer":"To drive relevant traffic and conversions","explanation":"The primary goal of a Google Ads campaign is to drive relevant traffic to a website and increase conversions.","questionNumber":3,"difficulty":"Medium"},{"question":"What is the Quality Score in Google Ads?","options":["A metric that measures the quality and relevance of ads and landing pages","The total budget allocated to a Google Ads campaign","The number of clicks an ad receives","The position of an ad on the search results page"],"answer":"A metric that measures the quality and relevance of ads and landing pages","explanation":"The Quality Score is a metric in Google Ads that measures the quality and relevance of ads and landing pages.","questionNumber":4,"difficulty":"Easy"},{"question":"What is the maximum number of characters allowed in a Google Ads headline?","options":["30 characters","40 characters","50 characters","60 characters"],"answer":"30 characters","explanation":"Google Ads allows a maximum of 30 characters for a headline.","questionNumber":5,"difficulty":"Medium"},{"question":"What is the purpose of ad extensions in Google Ads?","options":["To provide additional information and options in ads","To target specific audience demographics","To optimize landing page performance","To track ad performance"],"answer":"To provide additional information and options in ads","explanation":"Ad extensions in Google Ads allow advertisers to provide additional information and options, such as phone numbers, site links, and location information, in their ads.","questionNumber":6,"difficulty":"Easy"},{"question":"What is the recommended image file format for display ads in Google Ads?","options":["JPEG","PNG","GIF","PDF"],"answer":"JPEG","explanation":"The recommended image file format for display ads in Google Ads is JPEG (Joint Photographic Experts Group).","questionNumber":7,"difficulty":"Medium"},{"question":"What is the purpose of the Google Display Network in Google Ads?","options":["To show ads on a network of websites and apps","To track website traffic","To target specific keywords in search results","To optimize ad performance"],"answer":"To show ads on a network of websites and apps","explanation":"The Google Display Network allows advertisers to show ads on a vast network of websites and apps.","questionNumber":8,"difficulty":"Easy"},{"question":"What is the primary goal of remarketing in Google Ads?","
+{
+  "quizCode": "GA001",
+  "quizName": "Google Ads Certification Quiz",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "question": "What is the purpose of Google Ads?",
+      "options": ["To increase website traffic", "To improve search engine rankings", "To create social media campaigns", "To sell products directly"],
+      "answer": "To increase website traffic",
+      "explanation": "Google Ads is an advertising platform that helps businesses increase website traffic by displaying their ads on Google's search results and partner websites."
+    },
+    {
+      "question": "What is the quality score in Google Ads?",
+      "options": ["A score indicating the overall performance of an ad campaign", "A score based on the relevance of keywords to ad copy", "A score reflecting the ad's click-through rate", "A score measuring the conversion rate of the ad"],
+      "answer": "A score based on the relevance of keywords to ad copy",
+      "explanation": "The quality score in Google Ads is a metric that evaluates the relevance of keywords to ad copy. A higher quality score can lead to better ad rankings and lower costs."
+    },
+    {
+      "question": "What is the maximum number of characters for a Google Ads headline?",
+      "options": ["25 characters", "35 characters", "50 characters", "60 characters"],
+      "answer": "30 characters",
+      "explanation": "The maximum number of characters for a Google Ads headline is 30. It's important to craft concise and compelling headlines to capture users' attention."
+    },
+    {
+      "question": "What is the recommended image file format for Google Display Ads?",
+      "options": ["JPEG", "GIF", "PNG", "TIFF"],
+      "answer": "JPEG",
+      "explanation": "The recommended image file format for Google Display Ads is JPEG. It provides a good balance between image quality and file size."
+    },
+    {
+      "question": "What is the primary goal of remarketing in Google Ads?",
+      "options": ["To reach new customers", "To increase brand awareness", "To target competitors' customers", "To re-engage past website visitors"],
+      "answer": "To re-engage past website visitors",
+      "explanation": "The primary goal of remarketing in Google Ads is to re-engage past website visitors by showing them relevant ads, encouraging them to return and complete a desired action."
+    }
+  ]
+}
