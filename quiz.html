@@ -507,9 +507,6 @@ function calculateScore() {
 	  
 	  
 	  
-	  
-	
-	  
 function saveQuizInfo(quizCode, quizInfo) {
   const savedQuizCode = localStorage.getItem('quizCode');
 
@@ -518,10 +515,10 @@ function saveQuizInfo(quizCode, quizInfo) {
   }
 
   const savedQuizInfo = JSON.parse(localStorage.getItem('quizInfo')) || {};
-  const savedScore = savedQuizInfo.questionCorrect || 0;
-  const newScore = quizInfo.questionCorrect || 0;
+  const savedScore = savedQuizInfo.questionsCorrect || 0;
+  const newScore = quizInfo.questionsCorrect || 0;
 
-  if (newScore >= savedScore) {
+  if (newScore > savedScore || (newScore === savedScore && newScore === totalQuestions)) {
     savedQuizInfo.quizCode = quizCode;
     savedQuizInfo.quizInfo = quizInfo;
     localStorage.setItem('quizInfo', JSON.stringify(savedQuizInfo));
@@ -596,15 +593,14 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
 
   if (savedQuizCode !== quizCode) {
     // Quiz code doesn't match, save new quiz info to storage
-    quizInfo = {
-      quizCode: quizCode,
-      quizName: quizName,
-      numberOfQuestions: numberOfQuestions,
-      questionsCompleted: [],
-      questionNumber: null,
-      questionCorrect: null,
-      timestamp: timestamp
-    };
+ quizInfo = {
+  quizCode: quizCode,
+  quizName: quizName,
+  numberOfQuestions: numberOfQuestions,
+  questionsCorrect: 0, // Initialize the questionsCorrect property to 0
+  timestamp: timestamp
+};
+
     localStorage.setItem('quizCode', quizCode);
     localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
   } else {
