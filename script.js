@@ -244,6 +244,8 @@ function checkAnswer() {
       quizInfo.questionCorrect = questionCorrect;
       
       saveQuizInfo(quizCode, quizInfo);
+        console.log("  update !!quizInfo!quizInfo!!!!!??   " +quizInfo); 
+ 
     }
 
   } else {
