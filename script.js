@@ -347,8 +347,6 @@ function updateQuestionNumber() {
   updateProgressBar(currentQuestionNumber);
 }
 
-
-// Function to end the quiz
 function endQuiz() {
   clearInterval(timer);
   quizStarted = false;
@@ -370,13 +368,22 @@ function endQuiz() {
   document.getElementById("quiz-container").classList.add("d-none");
   document.getElementById("end-container").classList.remove("d-none");
 
-  // Show the pie chart for correct and incorrect answers
-  showPieChart();
+  // Show the badge if all answers are correct
+  if (questionCorrect === totalQuestions) {
+    const badgeImage = document.createElement("img");
+    badgeImage.src = "/images/lan/37.png";
+    badgeImage.alt = "Badge";
+    badgeImage.classList.add("badge-img");
+    document.getElementById("score").innerHTML = "";
+    document.getElementById("score").appendChild(badgeImage);
+  } else {
+    // Show the pie chart for correct and incorrect answers
+    showPieChart();
+  }
 
   // Unhide the message board
   document.getElementById("MessageBoard").classList.remove("d-none");
 }
-
 
 
 
