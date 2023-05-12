@@ -556,10 +556,10 @@ console.log("urlParams     "+q);
 document.getElementById("msg_quiz_name").innerHTML = newStr;
 document.getElementById("optionsQuizName").innerHTML = newStr;
 	  
-document.getElementById("social_fb").href = "https://www.facebook.com/sharer/sharer.php?u=https://rw-501.github.io/Q-A/index.html?q="+q;
-document.getElementById("social_tw").href = "https://twitter.com/intent/tweet?url=https://rw-501.github.io/Q-A/index.html?q="+q;
-document.getElementById("social_ln").href = "ttps://www.linkedin.com/shareArticle?url=https://rw-501.github.io/Q-A/index.html?q="+q;
-document.getElementById("social_red").href = "https://www.reddit.com/submit?url=https://rw-501.github.io/Q-A/index.html?q="+q;
+document.getElementById("social_fb").href = "https://www.facebook.com/sharer/sharer.php?u=https://quizzatopia.com/quiz?q="+q;
+document.getElementById("social_tw").href = "https://twitter.com/intent/tweet?url=https://quizzatopia.com/quiz?q="+q;
+document.getElementById("social_ln").href = "ttps://www.linkedin.com/shareArticle?url=https://quizzatopia.com/quiz?q="+q;
+document.getElementById("social_red").href = "https://www.reddit.com/submit?url=https://quizzatopia.com/quiz?q="+q;
                  
 function calculateScore(quizInfo) {
   const totalQuestions = quizInfo.numberOfQuestions || 0;
@@ -701,8 +701,9 @@ function displayTestInfo() {
 
 
 // Check if quizCode matches and retrieve or save quiz info
-function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
-  const savedQuizCode = localStorage.getItem('quizCode');
+function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizCode) {
+  const savedQuizCode = localStorage.getItem(quizCode);
+  //const savedQuizCode = localStorage.getItem('quizCode');
   let quizInfo;
   logStorageContents();
   let timestamp = new Date().toLocaleString();
@@ -757,7 +758,7 @@ function fetchData(q) {
     numberOfQuestions = data.numberOfQuestions;
 
     // Check quiz code and retrieve or save quiz info
-    const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
+    const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizCode);
 
     questions.push(...questionData);
     shuffleArray(questions);
