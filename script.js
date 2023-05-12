@@ -232,12 +232,13 @@ function checkAnswer() {
 
   // Check if the selected answer is correct
   let correct_bool;
- if (selectedAnswer === questionObj.answer) {
-  selectedOption.classList.add('correct');
-  correct_bool = "Correct";
-  questionCorrect++; // Increment the questionCorrect variable
-  quizInfo.questionsCorrect++; // Update the questionsCorrect property of quizInfo
-}else {
+  if (selectedAnswer === questionObj.answer) {
+    selectedOption.classList.add('correct');
+    quizInfo.questionCorrect = (quizInfo.questionCorrect || 0) + 1;
+    correct_bool = "Correct";
+    questionCorrect++; // Increment the questionCorrect variable
+    quizInfo.questionsCompleted[currentQuestion].questionCorrect = true; // Update the questionCorrect value in questionsCompleted
+  } else {
     selectedOption.classList.add('incorrect');
     correct_bool = "incorrect";
 
@@ -249,6 +250,9 @@ function checkAnswer() {
       }
     }
   }
+
+  // Update the question number
+  quizInfo.questionNumber = currentQuestion + 1;
 
   // Save the quiz info if the new score is better
   if (quizInfo) {
@@ -262,6 +266,7 @@ function checkAnswer() {
   showExplanation(questionObj.explanation);
   logStorageContents("2");
 }
+
 
 // Function to show the explanation for the current question
 function showExplanation(explanation) {
