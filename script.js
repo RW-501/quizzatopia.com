@@ -243,7 +243,7 @@ function checkAnswer() {
     }
     correct_bool = "Correct";
     questionCorrect++; // Increment the questionCorrect variable
-    quizInfo.questionsCompleted[currentQuestion].questionCorrect = true; // Update the questionCorrect value in questionsCompleted
+    //quizInfo.questionsCompleted[currentQuestion].questionCorrect = true; // Update the questionCorrect value in questionsCompleted
   } else {
     selectedOption.classList.add('incorrect');
     correct_bool = "incorrect";
