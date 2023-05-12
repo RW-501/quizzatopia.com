@@ -340,7 +340,7 @@ function skipQuestion() {
 // Function to update the question number and progress bar
 function updateQuestionNumber() {
   const questionNumberDisplay = document.getElementById("question-number");
-  const currentQuestionNumber = currentQuestion + 1;
+  const currentQuestionNumber = currentQuestion ;
   questionNumberDisplay.innerHTML = `Question ${currentQuestionNumber}/${totalQuestions}`;
 
   // Update the progress bar
