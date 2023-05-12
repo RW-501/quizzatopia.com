@@ -534,5 +534,5 @@ document.getElementById("start-btn").addEventListener("click", startQuiz);
 document.getElementById("next-btn").addEventListener("click", nextQuestion);
 document.getElementById("skip-btn").addEventListener("click", skipQuestion);
 document.getElementById("retake-btn").addEventListener("click", () => {
-location.href = "/quiz?="+q;
+location.href = "/quiz?q="+q;
 });
