@@ -235,10 +235,10 @@ function checkAnswer() {
   let correct_bool;
   if (selectedAnswer === questionObj.answer) {
     selectedOption.classList.add('correct');
-    const newQuestionCorrect = (quizInfo.questionCorrect || 0) + 1;
+   // const newQuestionCorrect = (quizInfo.questionCorrect || 0) + 1;
     
-    if (newQuestionCorrect > (savedQuizInfo.questionCorrect || 0)) {
-      savedQuizInfo.questionCorrect = newQuestionCorrect;
+    if (questionCorrect > (quizInfo.questionCorrect || 0)) {
+      savedQuizInfo.questionCorrect = questionCorrect;
       saveQuizInfo(quizCode, savedQuizInfo);
     }
     correct_bool = "Correct";
