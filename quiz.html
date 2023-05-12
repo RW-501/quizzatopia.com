@@ -559,35 +559,36 @@ function shuffleArray(array) {
 
 // Retrieve the stored test information and display it
 function displayTestInfo() {
-  const storedTestInfo = localStorage.getItem('quizInfo');
-  if (storedTestInfo) {
-    const testInfo = JSON.parse(storedTestInfo);
+  const storedQuizInfo = localStorage.getItem('quizInfo');
+  if (storedQuizInfo) {
+    const quizInfo = JSON.parse(storedQuizInfo);
     const testInfoDiv = document.getElementById('testInfo');
     const progressBar = document.getElementById('progressBarValue');
 
     // Calculate user score and completion percentage
-    const { score, percentage } = calculateScore();
+    const { score, percentage } = calculateScore(quizInfo);
 
     testInfoDiv.innerHTML = `
       <h3>Quiz Information</h3>
-      <p><strong>Quiz Code:</strong> ${testInfo.quizCode}</p>
-      <p><strong>Quiz Name:</strong> ${testInfo.quizName}</p>
-      <p><strong>Number of Questions:</strong> ${testInfo.numberOfQuestions}</p>
-      <p><strong>Questions Completed:</strong> ${testInfo.questionsCompleted ? testInfo.questionsCompleted.length : 0}</p>
-      <p><strong>Question Number:</strong> ${testInfo.questionNumber || 'Not answered yet'}</p>
-      <p><strong>Question Correct:</strong> ${testInfo.questionCorrect || 'Not answered yet'}</p>
+      <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
+      <p><strong>Quiz Name:</strong> ${quizInfo.quizName}</p>
+      <p><strong>Number of Questions:</strong> ${quizInfo.numberOfQuestions}</p>
+      <p><strong>Questions Completed:</strong> ${quizInfo.questionsCompleted ? quizInfo.questionsCompleted.length : 0}</p>
+      <p><strong>Question Number:</strong> ${quizInfo.questionNumber || 'Not answered yet'}</p>
+      <p><strong>Question Correct:</strong> ${quizInfo.questionCorrect || 0}</p>
       <p><strong>Score:</strong> ${score}</p>
       <p><strong>Completion Percentage:</strong> ${percentage.toFixed(2)}%</p>
-      <p><strong>Timestamp:</strong> ${testInfo.timestamp || 'Not started yet'}</p>
     `;
-
     logStorageContents("Start");
 
     // Update the progress bar
-    progressBar.style.width = percentage + '%';
-    progressBar.setAttribute('aria-valuenow', percentage);
+    if (progressBar) {
+      const progressPercentage = (quizInfo.questionsCompleted ? quizInfo.questionsCompleted.length : 0) / quizInfo.numberOfQuestions * 100;
+      progressBar.style.width = progressPercentage + '%';
+    }
   }
 }
+
 
 
 // Check if quizCode matches and retrieve or save quiz info
