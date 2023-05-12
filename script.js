@@ -235,12 +235,14 @@ function checkAnswer() {
   let correct_bool;
   if (selectedAnswer === questionObj.answer) {
     selectedOption.classList.add('correct');
-    quizInfo.questionCorrect = (quizInfo.questionCorrect || 0) + 1;
+    const newQuestionCorrect = (quizInfo.questionCorrect || 0) + 1;
+    if (newQuestionCorrect > (savedQuizInfo.questionCorrect || 0)) {
+      savedQuizInfo.questionCorrect = newQuestionCorrect;
+      saveQuizInfo(quizCode, savedQuizInfo);
+    }
     correct_bool = "Correct";
     questionCorrect++; // Increment the questionCorrect variable
-
-    // Save the quiz info if the new score is better or saved score is 0 or null
-    saveQuizInfo(quizCode, quizInfo);
+    quizInfo.questionsCompleted[currentQuestion].questionCorrect = true; // Update the questionCorrect value in questionsCompleted
   } else {
     selectedOption.classList.add('incorrect');
     correct_bool = "incorrect";
@@ -261,7 +263,6 @@ function checkAnswer() {
   showExplanation(questionObj.explanation);
   logStorageContents("2");
 }
-
 
 
 // Function to show the explanation for the current question
