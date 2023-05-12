@@ -575,15 +575,14 @@ function displayTestInfo() {
         <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
         <p><strong>Quiz Name:</strong> ${quizInfo.quizName}</p>
         <p><strong>Number of Questions:</strong> ${quizInfo.numberOfQuestions}</p>
-        <p><strong>Questions Completed:</strong> ${quizInfo.questionsCompleted ? quizInfo.questionsCompleted.length : 0}</p>
-        <p><strong>Score:</strong> ${score}</p>
+        <p><strong>Question Correct:</strong> ${score}</p>
         <p><strong>Completion Percentage:</strong> ${percentage.toFixed(2)}%</p>
       `;
       logStorageContents("Start");
 
       // Update the progress bar
       if (progressBar) {
-        const progressPercentage = (quizInfo.questionsCompleted ? quizInfo.questionsCompleted.length : 0) / quizInfo.numberOfQuestions * 100;
+        const progressPercentage = ( quizInfo.questionCorrect : 0) / quizInfo.numberOfQuestions * 100;
         progressBar.style.width = progressPercentage + '%';
       }
     } catch (error) {
@@ -611,7 +610,6 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
       quizCode: quizCode,
       quizName: quizName,
       numberOfQuestions: numberOfQuestions,
-      questionNumber: null,
       questionCorrect: 0,
       timestamp: timestamp
     };
@@ -646,7 +644,6 @@ function fetchData(q) {
     const questionData = data.questions.map(questionObj => ({
       question: questionObj.question,
       answer: questionObj.answer,
-      questionNumber: questionObj.questionNumber,
       options: questionObj.options,
       explanation: questionObj.explanation
     }));
@@ -663,7 +660,6 @@ function fetchData(q) {
     shuffleArray(questions);
 
     // Access and use the retrieved quiz information
-    const questionNumber = quizInfo.questionNumber;
     const questionsCompleted = quizInfo.questionsCompleted;
 
     // Display the stored test information
