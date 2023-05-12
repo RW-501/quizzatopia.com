@@ -534,8 +534,9 @@ function saveQuizInfo(quizCode, quizInfo) {
 	  console.log("quizInfo UPDATED     "); 
   console.log(savedQuizInfo +'  saveQuizInfo newScore:  '+ newScore);
 
-   // localStorage.setItem('quizInfo', questionCorrect.newScore);
-    localStorage.setItem('quizInfo', JSON.stringify(savedQuizInfo));
+    localStorage.setItem('quizInfo.questionCorrect', newScore);
+   // localStorage.setItem('quizInfo', JSON.stringify(savedQuizInfo));
+   // localStorage.setItem('quizInfo', JSON.stringify(savedQuizInfo));
   }
 }
 
