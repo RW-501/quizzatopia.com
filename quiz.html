@@ -315,11 +315,11 @@
         </div>
       </div>
 	    
- <div id="quiz-timer-qn" >
-      <div id="timer"></div>  <div id="question-number"></div>
-      <!-- Timer element -->
-	    	     
-	    </div>
+<div id="quiz-timer-qn" class="d-flex justify-content-between">
+  <div id="question-number" class="font-weight-bold"></div>
+  <div id="timer" class="text-right"></div>
+</div>
+
 
       <div class="progress-bar-container">
         <!-- Progress Bar Container -->
@@ -340,10 +340,8 @@
       <!-- Explanation area -->
       <div id="btn_container">
         <!-- Button container -->
-        <button id="skip-btn" class="btn btn-secondary">Skip</button>
-        <!-- Skip button -->
-        <button id="next-btn" class="btn btn-primary d-none">Next</button>
-        <!-- Next button (initially hidden) -->
+<button id="skip-next-btn" class="btn btn-primary">Skip</button>
+
       </div>
     </div>
   </div>
@@ -383,18 +381,7 @@
 </div>
 
 		
-		
-		
-		
-		<!-- Button to trigger the pop-up -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#reportModal">
-  Report Problem
-</button>
-	
-	</main_section>
-	
-	
-	
+			
 	
 <!-- Report Problem Modal -->
 <div class="modal fade" id="reportModal" tabindex="-1" role="dialog" aria-labelledby="reportModalLabel" aria-hidden="true">
@@ -429,6 +416,20 @@
 </div>
 	
 	
+		
+		
+	<div class="text-right">
+  <!-- Button to trigger the pop-up -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#reportModal">
+    Report Problem
+  </button>
+</div>
+
+	 
+	</main_section>
+	
+	
+
 	
 	
 	
@@ -581,15 +582,15 @@ function saveQuizInfo(quizCode, quizInfo) {
   const savedScore = savedQuizInfo.questionCorrect || 0;
   const newScore = quizInfo.questionCorrect || 0;
 	
-  console.log('saveQuizInfo Quiz Info:', quizInfo);
-  console.log('saveQuizInfo savedScore:', savedScore);
-  console.log('saveQuizInfo newScore:', newScore);
+//  console.log('saveQuizInfo Quiz Info:', quizInfo);
+  //console.log('saveQuizInfo savedScore:', savedScore);
+  //console.log('saveQuizInfo newScore:', newScore);
 
   if (newScore > savedScore || savedScore === 0 || savedScore === null) {
     savedQuizInfo.quizCode = quizCode;
     savedQuizInfo.quizInfo = quizInfo;
-	  console.log("quizInfo UPDATED     "); 
-  console.log(savedQuizInfo +'  saveQuizInfo newScore:  '+ newScore);
+//	  console.log("quizInfo UPDATED     "); 
+ // console.log(savedQuizInfo +'  saveQuizInfo newScore:  '+ newScore);
 
 	  
 	  // Retrieve the stored quizInfo from localStorage
@@ -621,9 +622,6 @@ if (storedQuizInfo) {
 
 	  
 	  
-    ///localStorage.setItem('quizInfo', newScore);
-   // localStorage.setItem('quizInfo', JSON.stringify(savedQuizInfo));
-   // localStorage.setItem('quizInfo', JSON.stringify(savedQuizInfo));
   }
 }
 
@@ -634,8 +632,8 @@ function logStorageContents(xxx) {
   const savedQuizCode = localStorage.getItem('quizCode');
   const savedQuizInfo = localStorage.getItem('quizInfo');
 
-  console.log('logStorageContents Quiz Code:  '+xxx+"   ", savedQuizCode);
-  console.log('logStorageContents Quiz Info:', savedQuizInfo);
+  //console.log('logStorageContents Quiz Code:  '+xxx+"   ", savedQuizCode);
+//  console.log('logStorageContents Quiz Info:', savedQuizInfo);
 }
 
 
