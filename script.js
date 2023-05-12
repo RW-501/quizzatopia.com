@@ -44,8 +44,11 @@ function startQuiz() {
 
   var numAd;
 
-  if (totalQuestions < 15) {
+  if (totalQuestions <= 15) {
     numAds = 2;
+      if (totalQuestions <= 5) {
+            numAds = 1;
+      }
   } else {
     numAds = totalQuestions / 3;
   }
@@ -229,13 +232,12 @@ function checkAnswer() {
 
   // Check if the selected answer is correct
   let correct_bool;
-  if (selectedAnswer === questionObj.answer) {
-    selectedOption.classList.add('correct');
-    quizInfo.questionCorrect = (quizInfo.questionCorrect || 0) + 1;
-    correct_bool = "Correct";
-     questionCorrect++; // Increment the questionCorrect variable
-
-  } else {
+ if (selectedAnswer === questionObj.answer) {
+  selectedOption.classList.add('correct');
+  correct_bool = "Correct";
+  questionCorrect++; // Increment the questionCorrect variable
+  quizInfo.questionsCorrect++; // Update the questionsCorrect property of quizInfo
+}else {
     selectedOption.classList.add('incorrect');
     correct_bool = "incorrect";
 
