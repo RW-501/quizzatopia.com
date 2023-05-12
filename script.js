@@ -242,7 +242,8 @@ function checkAnswer() {
     
     if (questionCorrect > (quizInfo.questionCorrect || 0)) {
       quizInfo.questionCorrect = questionCorrect;
-      quizInfo(quizCode, savedQuizInfo);
+      
+      saveQuizInfo(quizCode, quizInfo);
     }
 
   } else {
