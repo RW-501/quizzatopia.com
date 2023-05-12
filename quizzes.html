@@ -350,7 +350,21 @@
 		
 		
 		
-	    
+	    <script>
+		    // Get all the card elements
+const cards = document.querySelectorAll('.card_Q');
+
+// Attach a click event listener to each card
+cards.forEach(card => {
+  card.addEventListener('click', function() {
+    // Get the href value of the clicked card's link
+    const link = this.querySelector('a').getAttribute('href');
+    
+    // Open the link
+    window.location.href = link;
+  });
+});
+		    </script>
 	    
 	    
 	    
