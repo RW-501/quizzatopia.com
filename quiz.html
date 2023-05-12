@@ -485,8 +485,7 @@ document.getElementById("social_ln").href = "ttps://www.linkedin.com/shareArticl
 document.getElementById("social_red").href = "https://www.reddit.com/submit?url=https://rw-501.github.io/Q-A/index.html?q="+q;
                  
 	  
-	  
-function calculateScore() {
+function calculateScore(quizInfo) {
   const questionsCompleted = quizInfo.questionsCompleted || [];
   const totalQuestions = quizInfo.numberOfQuestions || 0;
   const correctAnswers = questionsCompleted.reduce((total, question) => {
@@ -495,13 +494,13 @@ function calculateScore() {
 
   const score = correctAnswers;
   const percentage = (correctAnswers / totalQuestions) * 100;
-  
+
   return {
     score,
     percentage,
   };
 }
-	  
+  
 	  
 	  
 	  
