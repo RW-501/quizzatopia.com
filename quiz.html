@@ -756,37 +756,36 @@ function displayTestInfo() {
 
 // Check if quizCode matches and retrieve or save quiz info
 function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
-  const savedQuizCode = localStorage.getItem('quizCode');
+  const savedQuizInfo = JSON.parse(localStorage.getItem('quizInfo')) || {};
 
   let quizInfo;
-  logStorageContents();
-  let timestamp = new Date().toLocaleString();
+  const timestamp = new Date().toLocaleString();
 
-  if (savedQuizCode !== quizCode) {
-    // Quiz code doesn't match, save new quiz info to storage
+  if (!savedQuizInfo.hasOwnProperty(quizCode)) {
+    // Quiz code doesn't exist, save new quiz info to storage
     quizInfo = {
       quizCode: quizCode,
       quizName: quizName,
       numberOfQuestions: numberOfQuestions,
       questionCorrect: 0,
-      timestamp: timestamp
+      timestamp: timestamp,
+      questionsCompleted: {}
     };
 
-    saveQuizInfo(quizCode, quizInfo); // Save the quiz info using the updated saveQuizInfo function
+    savedQuizInfo[quizCode] = quizInfo;
+    localStorage.setItem('quizInfo', JSON.stringify(savedQuizInfo));
   } else {
-    // Quiz code matches, retrieve existing quiz info from storage
-    const savedQuizInfo = JSON.parse(localStorage.getItem('quizInfo'));
+    // Quiz code exists, retrieve existing quiz info from storage
     quizInfo = savedQuizInfo[quizCode];
     quizInfo.quizName = quizName;
     quizInfo.numberOfQuestions = numberOfQuestions;
     quizInfo.timestamp = timestamp;
 
-    saveQuizInfo(quizCode, quizInfo); // Save the quiz info using the updated saveQuizInfo function
+    localStorage.setItem('quizInfo', JSON.stringify(savedQuizInfo));
   }
 
   return quizInfo;
 }
-
 
 
 // Fetch and assign the data
