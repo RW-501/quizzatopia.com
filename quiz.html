@@ -483,7 +483,31 @@ document.getElementById("social_fb").href = "https://www.facebook.com/sharer/sha
 document.getElementById("social_tw").href = "https://twitter.com/intent/tweet?url=https://rw-501.github.io/Q-A/index.html?q="+q;
 document.getElementById("social_ln").href = "ttps://www.linkedin.com/shareArticle?url=https://rw-501.github.io/Q-A/index.html?q="+q;
 document.getElementById("social_red").href = "https://www.reddit.com/submit?url=https://rw-501.github.io/Q-A/index.html?q="+q;
-                          
+                 
+	  
+	  
+function calculateScore() {
+  const questionsCompleted = quizInfo.questionsCompleted || [];
+  const totalQuestions = quizInfo.numberOfQuestions || 0;
+  const correctAnswers = questionsCompleted.reduce((total, question) => {
+    return total + (question.questionCorrect ? 1 : 0);
+  }, 0);
+
+  const score = correctAnswers;
+  const percentage = (correctAnswers / totalQuestions) * 100;
+  
+  return {
+    score,
+    percentage,
+  };
+}
+	  
+	  
+	  
+	  
+	  
+	  
+	  
 	
 	  
 	  function saveQuizInfo(quizCode, quizInfo) {
@@ -529,12 +553,15 @@ function shuffleArray(array) {
 
 // Retrieve the stored test information and display it
 function displayTestInfo() {
-  const storedTestInfo = localStorage.getItem('quizInfo'); // Updated key to 'quizInfo'
+  const storedTestInfo = localStorage.getItem('quizInfo');
   if (storedTestInfo) {
     const testInfo = JSON.parse(storedTestInfo);
     const testInfoDiv = document.getElementById('testInfo');
     const progressBar = document.getElementById('progressBarValue');
-    
+
+    // Calculate user score and completion percentage
+    const { score, percentage } = calculateScore();
+
     testInfoDiv.innerHTML = `
       <h3>Quiz Information</h3>
       <p><strong>Quiz Code:</strong> ${testInfo.quizCode}</p>
@@ -543,17 +570,19 @@ function displayTestInfo() {
       <p><strong>Questions Completed:</strong> ${testInfo.questionsCompleted ? testInfo.questionsCompleted.length : 0}</p>
       <p><strong>Question Number:</strong> ${testInfo.questionNumber || 'Not answered yet'}</p>
       <p><strong>Question Correct:</strong> ${testInfo.questionCorrect || 'Not answered yet'}</p>
+      <p><strong>Score:</strong> ${score}</p>
+      <p><strong>Completion Percentage:</strong> ${percentage.toFixed(2)}%</p>
       <p><strong>Timestamp:</strong> ${testInfo.timestamp || 'Not started yet'}</p>
     `;
-    
+
     logStorageContents("Start");
 
-    // Calculate and display quiz completion percentage
-    const completionPercentage = (testInfo.questionsCompleted ? testInfo.questionsCompleted.length : 0) / testInfo.numberOfQuestions * 100;
-    progressBar.style.width = completionPercentage + '%';
-    progressBar.setAttribute('aria-valuenow', completionPercentage);
+    // Update the progress bar
+    progressBar.style.width = percentage + '%';
+    progressBar.setAttribute('aria-valuenow', percentage);
   }
 }
+
 
 // Check if quizCode matches and retrieve or save quiz info
 function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
