@@ -499,7 +499,7 @@ function calculateScore(quizInfo) {
   const correctAnswers = quizInfo.questionCorrect || 0;
 
   const score = correctAnswers;
-  const percentage = (correctAnswers / totalQuestions) * 100;
+  const percentage = totalQuestions > 0 ? (correctAnswers / totalQuestions) * 100 : 0;
 
   return {
     score,
