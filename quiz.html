@@ -510,20 +510,23 @@ function calculateScore() {
 	  
 	
 	  
-	  function saveQuizInfo(quizCode, quizInfo) {
+function saveQuizInfo(quizCode, quizInfo) {
   const savedQuizCode = localStorage.getItem('quizCode');
 
   if (savedQuizCode !== quizCode) {
-    localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
-  } else {
-    const savedQuizInfo = JSON.parse(localStorage.getItem('quizInfo'));
-    savedQuizInfo.questionsCompleted = quizInfo.questionsCompleted;
-    savedQuizInfo.questionCorrect = quizInfo.questionCorrect;
-    savedQuizInfo.timestamp = quizInfo.timestamp;
+    localStorage.setItem('quizCode', quizCode);
+  }
+
+  const savedQuizInfo = JSON.parse(localStorage.getItem('quizInfo')) || {};
+  const savedScore = savedQuizInfo.questionCorrect || 0;
+  const newScore = quizInfo.questionCorrect || 0;
+
+  if (newScore >= savedScore) {
+    savedQuizInfo.quizCode = quizCode;
+    savedQuizInfo.quizInfo = quizInfo;
     localStorage.setItem('quizInfo', JSON.stringify(savedQuizInfo));
   }
 }
-
 
 
 // Log the contents of the storage
