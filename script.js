@@ -236,14 +236,15 @@ function checkAnswer() {
   if (selectedAnswer === questionObj.answer) {
     selectedOption.classList.add('correct');
    // const newQuestionCorrect = (quizInfo.questionCorrect || 0) + 1;
+        correct_bool = "Correct";
+    questionCorrect++; // Increment the questionCorrect variable
+    //quizInfo.questionsCompleted[currentQuestion].questionCorrect = true; // Update the questionCorrect value in questionsCompleted
     
     if (questionCorrect > (quizInfo.questionCorrect || 0)) {
       savedQuizInfo.questionCorrect = questionCorrect;
       saveQuizInfo(quizCode, savedQuizInfo);
     }
-    correct_bool = "Correct";
-    questionCorrect++; // Increment the questionCorrect variable
-    //quizInfo.questionsCompleted[currentQuestion].questionCorrect = true; // Update the questionCorrect value in questionsCompleted
+
   } else {
     selectedOption.classList.add('incorrect');
     correct_bool = "incorrect";
@@ -258,14 +259,16 @@ function checkAnswer() {
   }
  console.log(totalQuestions+"  totalQuestions??????????questionCorrect????"); // Output: 3
  console.log(questionCorrect+"  questionCorrect??????????questionCorrect????"); // Output: 3
- console.log(newQuestionCorrect+"  newQuestionCorrect??????????questionCorrect????"); // Output: 3
+ //console.log(newQuestionCorrect+"  newQuestionCorrect??????????questionCorrect????"); // Output: 3
 
   // Update the question number
   quizInfo.questionNumber = currentQuestion + 1;
 
   // Show the explanation
   showExplanation(questionObj.explanation);
-  logStorageContents("2");
+  logStorageContents("   updated ?   ");
+  
+  console.log("  !!!!!!!!??"); 
 }
 
 
