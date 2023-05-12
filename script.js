@@ -263,6 +263,7 @@ function checkAnswer() {
 }
 
 
+
 // Function to show the explanation for the current question
 function showExplanation(explanation) {
   document.getElementById("explanation").innerHTML = explanation;
