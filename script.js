@@ -261,11 +261,7 @@ function checkAnswer() {
   showExplanation(questionObj.explanation);
   logStorageContents("2");
 }
-```
 
-This version removes the unnecessary `quizInfo.questionsCompleted[currentQuestion].questionCorrect` line, as well as the unused variable `questionsCompleted`.
-
-Please incorporate this updated function into your code and test it to ensure it functions correctly. Let me know if you need any further assistance!
 
 // Function to show the explanation for the current question
 function showExplanation(explanation) {
