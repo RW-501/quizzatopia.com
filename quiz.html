@@ -582,7 +582,7 @@ function displayTestInfo() {
 
       // Update the progress bar
       if (progressBar) {
-        const progressPercentage = ( quizInfo.questionCorrect : 0) / quizInfo.numberOfQuestions * 100;
+        const progressPercentage =  quizInfo.questionCorrect  / quizInfo.numberOfQuestions * 100;
         progressBar.style.width = progressPercentage + '%';
       }
     } catch (error) {
