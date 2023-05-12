@@ -779,21 +779,48 @@ fetchData(q);
 	      
 
 
-	      
-	      
-	      
-	      // Handle form submission
-document.getElementById('reportForm').addEventListener('submit', function(event) {
-  event.preventDefault();
-  // Perform report submission logic here
-  
-  // Close the modal after submission
-  $('#reportModal').modal('hide');
+	      // Get the modal element
+const reportModal = document.getElementById('reportModal');
+
+// Get the form element
+const reportForm = document.getElementById('reportForm');
+
+// Add submit event listener to the form
+reportForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  // Get the selected report type and details
+  const reportType = document.getElementById('reportType').value;
+  const reportDetails = document.getElementById('reportDetails').value;
+
+  // Perform any necessary actions with the report data
+  // For example, you can send an AJAX request to report the problem
+
+  // Close the modal
+  closeModal();
 });
 
-// Clear form values on modal close
-$('#reportModal').on('hidden.bs.modal', function() {
-  document.getElementById('reportForm').reset();
+// Function to open the modal
+function openModal() {
+  reportModal.style.display = 'block';
+}
+
+// Function to close the modal
+function closeModal() {
+  reportModal.style.display = 'none';
+}
+
+// Add click event listener to the report button
+document.getElementById('reportBtn').addEventListener('click', openModal);
+
+// Add click event listener to the close button
+document.getElementById('closeBtn').addEventListener('click', closeModal);
+
+// Add click event listener to the modal overlay
+document.addEventListener('click', function (e) {
+  if (e.target === reportModal) {
+    closeModal();
+  }
 });
 
 	      
