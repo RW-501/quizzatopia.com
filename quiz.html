@@ -600,7 +600,6 @@ function calculateScore(quizInfo) {
   };
 }
 
-
   
 	
 function saveQuizInfo(quizCode, quizInfo) {
@@ -711,29 +710,40 @@ function displayTestInfo() {
   if (savedQuizInfo && savedQuizCode) {
     try {
       const quizInfo = JSON.parse(savedQuizInfo)[savedQuizCode];
-      const testInfoDiv = document.getElementById('testInfo');
-      const progressBar = document.getElementById('progressBarValue');
 
-      const { score, percentage } = calculateScore(quizInfo.quizInfo);
+      if (quizInfo && quizInfo.quizInfo && quizInfo.quizInfo.numberOfQuestions) {
+        const testInfoDiv = document.getElementById('testInfo');
+        const progressBar = document.getElementById('progressBarValue');
 
-      testInfoDiv.innerHTML = `
-        <h3>Quiz Information</h3>
-        <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
-        <p><strong>Quiz Name:</strong> ${quizInfo.quizInfo.quizName}</p>
-        <p><strong>Number of Questions:</strong> ${quizInfo.quizInfo.numberOfQuestions}</p>
-        <p><strong>Question Correct:</strong> ${score}</p>
-        <p><strong>Best Score:</strong> ${percentage.toFixed(0)}%</p>
-      `;
+        const { score, percentage } = calculateScore(quizInfo.quizInfo);
 
-      logStorageContents();
+        testInfoDiv.innerHTML = `
+          <h3>Quiz Information</h3>
+          <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
+          <p><strong>Quiz Name:</strong> ${quizInfo.quizInfo.quizName}</p>
+          <p><strong>Number of Questions:</strong> ${quizInfo.quizInfo.numberOfQuestions}</p>
+          <p><strong>Question Correct:</strong> ${score}</p>
+          <p><strong>Best Score:</strong> ${percentage.toFixed(0)}%</p>
+        `;
 
-      if (progressBar) {
-        const progressPercentage = quizInfo.quizInfo.questionCorrect / quizInfo.quizInfo.numberOfQuestions * 100;
-        progressBar.style.width = progressPercentage + '%';
+        logStorageContents("Start");
+
+        if (progressBar) {
+          const progressPercentage = quizInfo.quizInfo.questionCorrect / quizInfo.quizInfo.numberOfQuestions * 100;
+          progressBar.style.width = progressPercentage + '%';
+        }
+      } else {
+        // Handle case where required properties are missing
+        console.error('Stored quiz info is missing required properties');
+        // You can display an appropriate message or fallback behavior here
       }
     } catch (error) {
       console.error('Error parsing stored quiz info:', error);
+      // Handle error, display appropriate message or fallback behavior
     }
+  } else {
+    // Handle case where there is no stored quiz info or quiz code
+    // You can display an appropriate message or fallback behavior here
   }
 }
 
