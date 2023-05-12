@@ -207,6 +207,7 @@ function updateProgressBar(currentQuestion) {
 
 }   
 // Function to check the user's answer
+// Function to check the user's answer
 function checkAnswer() {
   const selectedOption = this;
   const optionContainers = document.querySelectorAll("#optionContainers button.answer-option");
@@ -232,6 +233,8 @@ function checkAnswer() {
     selectedOption.classList.add('correct');
     quizInfo.questionCorrect = (quizInfo.questionCorrect || 0) + 1;
     correct_bool = "Correct";
+     questionCorrect++; // Increment the questionCorrect variable
+
   } else {
     selectedOption.classList.add('incorrect');
     correct_bool = "incorrect";
@@ -248,7 +251,7 @@ function checkAnswer() {
   // Save the quiz info if the new score is better
   if (quizInfo) {
     const currentScore = quizInfo.questionCorrect || 0;
-    if (quizInfo.questionCorrect === undefined || currentScore < quizInfo.questionCorrect) {
+    if (currentScore < quizInfo.questionCorrect) {
       saveQuizInfo(quizCode, quizInfo);
     }
   }
@@ -257,10 +260,6 @@ function checkAnswer() {
   showExplanation(questionObj.explanation);
   logStorageContents("2");
 }
-
-
-
-
 
 // Function to show the explanation for the current question
 function showExplanation(explanation) {
@@ -283,87 +282,83 @@ function enableAnswerButtons() {
   const answerButtons = document.getElementsByClassName("answer-option");
   for (let i = 0; i < answerButtons.length; i++) {
     answerButtons[i].addEventListener("click", checkAnswer);
-    answerButtons[i].classList.remove("disabled", "correct", "incorrect", "missed" );
+    answerButtons[i].classList.remove("disabled", "correct", "incorrect", "missed");
   }
-   
 }
-
 
 // Function to show the next question
 function nextQuestion() {
-
   currentQuestion++;
-console.log(totalQuestions+"   ????????????totalQuestions????"); // Output: 3
-console.log(currentQuestion+"   ????????????currentQuestion????"); // Output: 3
-  
-  if (currentQuestion < totalQuestions) {
-     enableAnswerButtons();
-    showQuestion();
 
-    if(document.getElementById("next-btn")){
-    document.getElementById("next-btn").classList.add("d-none");
+  if (currentQuestion < totalQuestions) {
+    enableAnswerButtons();
+    showQuestion();
+    if (document.getElementById("next-btn")) {
+      document.getElementById("next-btn").classList.add("d-none");
     }
   } else {
     endQuiz();
   }
   updateProgressBar(currentQuestion);
-   updateQuestionNumber();
-
+  updateQuestionNumber();
 }
 
 function skipQuestion() {
-
   currentQuestion++;
 
   if (currentQuestion < totalQuestions) {
-     enableAnswerButtons();
+    enableAnswerButtons();
     showQuestion();
-        if(document.getElementById("next-btn")){
-    document.getElementById("next-btn").classList.add("d-none");
-        }
+    if (document.getElementById("next-btn")) {
+      document.getElementById("next-btn").classList.add("d-none");
+    }
   } else {
     endQuiz();
   }
   updateProgressBar(currentQuestion);
-   updateQuestionNumber();
-
+  updateQuestionNumber();
 }
 
 
 
 
 
-
-// Update the question number display
+// Function to update the question number and progress bar
 function updateQuestionNumber() {
   const questionNumberDisplay = document.getElementById("question-number");
-  const currentQuestionNumber = currentQuestion;
+  const currentQuestionNumber = currentQuestion + 1;
   questionNumberDisplay.innerHTML = `Question ${currentQuestionNumber}/${totalQuestions}`;
+
+  // Update the progress bar
+  updateProgressBar(currentQuestionNumber);
 }
-    // update the progress bar
-  updateProgressBar(currentQuestion);
-//    console.log(currentQuestion+"????????????currentQuestion????"); // Output: 3
+
 
 // Function to end the quiz
 function endQuiz() {
   clearInterval(timer);
   quizStarted = false;
-  if (document.getElementById("timer").innerHTML) {
-    document.getElementById("timer").innerHTML = "";
-  }
-  
+
+  // Clear the timer display
+  const timerDisplay = document.getElementById("timer");
+  timerDisplay.innerHTML = "";
+
+  // Calculate feedback and display it
   const feedback = calculateFeedback();
   document.getElementById("feedback").innerHTML = feedback;
-  
+
+  // Calculate and display the score
   const percentageScore = Math.round((questionCorrect / totalQuestions) * 100);
   const resultMsg = `You scored ${questionCorrect}/${totalQuestions} (${percentageScore}%)`;
   document.getElementById("score").innerHTML = resultMsg;
+
+  // Hide the quiz container and show the end container
   document.getElementById("quiz-container").classList.add("d-none");
   document.getElementById("end-container").classList.remove("d-none");
-  
-  // Show pie chart for correct and incorrect answers
+
+  // Show the pie chart for correct and incorrect answers
   showPieChart();
-  
+
   // Unhide the message board
   document.getElementById("MessageBoard").classList.remove("d-none");
 }
@@ -456,51 +451,6 @@ function startTimer() {
 
         }
 }
-
-
-function saveQuizCode(quizCode) {
-  try {
-    localStorage.setItem('savedQuizCode', quizCode);
-    console.log('Quiz code saved successfully.');
-  } catch (error) {
-    console.error('Error saving quiz code:', error);
-  }
-}
-
-function retrieveQuizCode() {
-  try {
-    const savedQuizCode = localStorage.getItem('savedQuizCode');
-    if (savedQuizCode !== null) {
-      console.log('Quiz code retrieved successfully:', savedQuizCode);
-      return savedQuizCode;
-    } else {
-      console.log('No saved quiz code found.');
-      return null;
-    }
-  } catch (error) {
-    console.error('Error retrieving quiz code:', error);
-    return null;
-  }
-}
-
-function retrieveQuizInfo() {
-  try {
-    const savedQuizInfo = localStorage.getItem('quizInfo');
-    if (savedQuizInfo !== null) {
-      const quizInfo = JSON.parse(savedQuizInfo);
-      console.log('Quiz info retrieved successfully:', quizInfo);
-      return quizInfo;
-    } else {
-      console.log('No saved quiz info found.');
-      return null;
-    }
-  } catch (error) {
-    console.error('Error retrieving quiz info:', error);
-    return null;
-  }
-}
-
-
 
 
 
