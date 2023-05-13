@@ -712,24 +712,21 @@ function shuffleArray(array) {
 
 	  
 // Retrieve the stored test information and display it
+// Retrieve the stored test information and display it
 function displayTestInfo() {
-  const storedQuizInfo = localStorage.getItem('quizInfo');
+  const storedQuizInfo = localStorage.getItem(`quizInfo_${quizCode}`);
   if (storedQuizInfo) {
     try {
       const quizInfo = JSON.parse(storedQuizInfo);
       const testInfoDiv = document.getElementById('testInfo');
-   
 
+      // Calculate user score and completion percentage
+      const { score, percentage } = calculateScore(quizInfo);
+      let ansWrong = numberOfQuestions - score;
 
-	        // Calculate user score and completion percentage
-   const { score, percentage } = calculateScore(quizInfo);  
-	    	  let ansWrong = numberOfQuestions - score;
+      // Show the pie chart for correct and incorrect answers
+      showPieChartFront(score, ansWrong);
 
-	
-	      // Show the pie chart for correct and incorrect answers
-    showPieChartFront(score,ansWrong);
-
-	    
       testInfoDiv.innerHTML = `
         <h3>Quiz Information</h3>
         <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
@@ -740,17 +737,16 @@ function displayTestInfo() {
       `;
       logStorageContents("Start");
 
- 
-	    
     } catch (error) {
       console.error('Error parsing stored quiz info:', error);
       // Handle error, display appropriate message or fallback behavior
     }
   } else {
     // Handle case where there is no stored quiz info, display appropriate message or fallback behavior
+    const testInfoDiv = document.getElementById('testInfo');
+    testInfoDiv.innerHTML = '<p>No quiz information found.</p>';
   }
 }
-
 
 // Check if quizCode matches and retrieve or save quiz info
 function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
@@ -779,7 +775,6 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
   }
 
   return quizInfo;
-}
 
 
 
