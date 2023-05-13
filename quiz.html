@@ -689,7 +689,8 @@ function shuffleArray(array) {
 	  
 	  
 let pieData;
-	  
+	   let score, percentage; 
+	   let ansWrong;
 	  
 // Retrieve the stored test information and display it
 function displayTestInfo() {
@@ -702,13 +703,12 @@ function displayTestInfo() {
 
 
 	        // Calculate user score and completion percentage
-      const { score, percentage } = calculateScore(quizInfo);  
-	    	    let ansWrong = numberOfQuestions - score;
+       { score, percentage } = calculateScore(quizInfo);  
+	    	     ansWrong = numberOfQuestions - score;
 	    
 	    
 
-	      // Show the pie chart for correct and incorrect answers
-    showPieChart("false",score,ansWrong);
+	
 	    
       testInfoDiv.innerHTML = `
         <h3>Quiz Information</h3>
@@ -871,7 +871,8 @@ document.addEventListener('click', function (e) {
 	
 	    <script>
 
-	
+	      // Show the pie chart for correct and incorrect answers
+    showPieChart("false",score,ansWrong);
 
     </script>
 
