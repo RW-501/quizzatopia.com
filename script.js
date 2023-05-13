@@ -217,7 +217,7 @@ function updateProgressBar(currentQuestion) {
 // Function to check the user's answer
 
 function checkAnswer() {
-          document.getElementById("skip-next-btn").innerHTML = "Next";
+  document.getElementById("skip-next-btn").innerHTML = "Next";
 
   const selectedOption = this;
   const optionContainers = document.querySelectorAll("#optionContainers button.answer-option");
@@ -241,19 +241,11 @@ function checkAnswer() {
   let correct_bool;
   if (selectedAnswer === questionObj.answer) {
     selectedOption.classList.add('correct');
-   // const newQuestionCorrect = (quizInfo.questionCorrect || 0) + 1;
-        correct_bool = "Correct";
+    correct_bool = "Correct";
     questionCorrect++; // Increment the questionCorrect variable
-    //quizInfo.questionsCompleted[currentQuestion].questionCorrect = true; // Update the questionCorrect value in questionsCompleted
-    
-    if (questionCorrect > (quizInfo.questionCorrect || 0)) {
-      quizInfo.questionCorrect = questionCorrect;
-      
-      saveQuizInfo(quizCode, quizInfo);
-       // console.log("  update !!quizInfo!quizInfo!!!!!??   " +quizInfo); 
- 
-    }
+    quizInfo.questionCorrect = questionCorrect; // Update the questionCorrect value in quizInfo
 
+    saveQuizInfo(quizCode, quizInfo);
   } else {
     selectedOption.classList.add('incorrect');
     correct_bool = "incorrect";
@@ -266,22 +258,14 @@ function checkAnswer() {
       }
     }
   }
- //console.log(totalQuestions+"  totalQuestions??????????questionCorrect????"); // Output: 3
- //console.log(questionCorrect+"  questionCorrect??????????questionCorrect????"); // Output: 3
- //console.log(newQuestionCorrect+"  newQuestionCorrect??????????questionCorrect????"); // Output: 3
 
-  
-  
   // Update the question number
   quizInfo.questionNumber = currentQuestion;
 
   // Show the explanation
   showExplanation(questionObj.explanation);
   logStorageContents("   updated ?   ");
-  
- // console.log("  !!!!!!!!??"); 
 }
-
 
 // Function to show the explanation for the current question
 function showExplanation(explanation) {
