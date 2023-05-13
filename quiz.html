@@ -123,15 +123,7 @@
     margin: 5% 0 10% 0;
   }
   
-  /* Styles for the progressBar element */
-  #progressBar {
-    height: 20px;
-  }
-  
-  /* Styles for the progressBarValue element */
-  #progressBarValue {
-    transition: width 0.5s ease-in-out;
-  }
+
 	#quiz-timer-qn{
 		display:flex;
 	}
@@ -382,12 +374,13 @@
 </div>
 
 
-      <div class="progress-bar-container">
-        <!-- Progress Bar Container -->
-        <div class="progress-bar" id="progress-bar"></div>
-        <!-- Progress Bar -->
+      <div class="pie_graph_front">
 
+	      
       </div>
+	    
+	    
+	    
       <h1 id="question"></h1>
       <!-- Question heading -->
       <ul class="list-unstyled" id="optionContainers">
@@ -691,7 +684,11 @@ function shuffleArray(array) {
   }
   return array;
 }
-
+	  
+	  
+let pieData;
+	  
+	  
 // Retrieve the stored test information and display it
 function displayTestInfo() {
   const storedQuizInfo = localStorage.getItem('quizInfo');
@@ -699,11 +696,19 @@ function displayTestInfo() {
     try {
       const quizInfo = JSON.parse(storedQuizInfo);
       const testInfoDiv = document.getElementById('testInfo');
-      const progressBar = document.getElementById('progressBarValue');
+   
 
-      // Calculate user score and completion percentage
-      const { score, percentage } = calculateScore(quizInfo);
-
+	    let ansWrong = numberOfQuestions - score;
+	     pieData = {
+  labels: ['Correct', 'Incorrect'],
+  datasets: [{
+    data: [score, ansWrong],
+    backgroundColor: ['#36a2eb', '#ff6384']
+  }]
+};
+	    
+	    
+	    
       testInfoDiv.innerHTML = `
         <h3>Quiz Information</h3>
         <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
@@ -714,11 +719,9 @@ function displayTestInfo() {
       `;
       logStorageContents("Start");
 
-      // Update the progress bar
-      if (progressBar) {
-        const progressPercentage =  quizInfo.questionCorrect  / quizInfo.numberOfQuestions * 100;
-        progressBar.style.width = progressPercentage + '%';
-      }
+  // Show the pie chart for correct and incorrect answers
+    showPieChart();
+	    
     } catch (error) {
       console.error('Error parsing stored quiz info:', error);
       // Handle error, display appropriate message or fallback behavior
