@@ -540,9 +540,11 @@
   <script>
     
     function  showPieChartFront(score,ansWrong){
+  score = parseInt(score);
+  ansWrong = parseInt(ansWrong);
 
-   const chartCanvas = document.createElement('canvas');
-chartCanvas.id = 'pie-chart_1';
+   const chartCanvas1 = document.createElement('canvas');
+chartCanvas1.id = 'pie-chart_1';
    
  
    
@@ -558,7 +560,7 @@ chartCanvas.id = 'pie-chart_1';
 const chartContainer = document.getElementById('pie_graph_front');
 chartContainer.appendChild(chartCanvas);
 	    
-    console.log("showPieChartFront UPDATED     "); 
+    console.log(score+" showPieChartFront info     "+ ansWrong); 
   
   // Get the 2D context of the canvas
 const ctx = chartCanvas.getContext('2d');
