@@ -263,7 +263,7 @@ function checkAnswer() {
 
   // Show the explanation
   showExplanation(questionObj.explanation);
-  logStorageContents("   updated ?   ");
+  logStorageContents(quizCode);
 }
 
 // Function to show the explanation for the current question
