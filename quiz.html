@@ -174,14 +174,13 @@
 		
 		
 					
-	
-<!-- Report Problem Modal -->
+	<!-- Report Problem Modal -->
 <div class="modal fade" id="reportModal" tabindex="-1" role="dialog" aria-labelledby="reportModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-sm">
     <div class="modal-content rounded-3">
-      <div class="modal-header">
+      <div class="modal-header bg-primary text-white">
         <h5 class="modal-title" id="reportModalLabel">Report Problem</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button id="closeReportBTN" type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -200,14 +199,13 @@
             <label for="reportDetails">Details</label>
             <textarea class="form-control" id="reportDetails" rows="4" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Submit Report</button>
+          <button type="submit" class="btn btn-primary btn-block">Submit Report</button>
         </form>
       </div>
     </div>
   </div>
 </div>
-		
-		
+
 		
 		
 		
@@ -854,7 +852,7 @@ function closeModal() {
 document.getElementById('report_BTN').addEventListener('click', openModal);
 
 // Add click event listener to the close button
-document.getElementById('report_BTN').addEventListener('click', closeModal);
+document.getElementById('closeReportBTN').addEventListener('click', closeModal);
 
 // Add click event listener to the modal overlay
 document.addEventListener('click', function (e) {
