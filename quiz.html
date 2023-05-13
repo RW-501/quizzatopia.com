@@ -604,115 +604,10 @@ function calculateScore(quizInfo) {
   };
 }
 
+
   
-	
-	  
-	  /*
-function saveQuizInfo(quizCode, quizInfo) {
-  const savedQuizCode = localStorage.getItem('quizCode');
-
-  if (savedQuizCode !== quizCode) {
-    localStorage.setItem('quizCode', quizCode);
-  }
-
-  const savedQuizInfo = JSON.parse(localStorage.getItem('quizInfo')) || {};
-  const savedScore = savedQuizInfo[quizCode]?.questionCorrect || 0;
-  const newScore = quizInfo.questionCorrect || 0;
-
-  if (newScore > savedScore || savedScore === 0 || savedScore === null) {
-    savedQuizInfo[quizCode] = {
-      quizCode: quizCode,
-      quizInfo: quizInfo
-    };
-
-	  
-	  	  // Retrieve the stored quizInfo from localStorage
-const storedQuizInfo = localStorage.getItem('quizInfo');
-	  
-	  console.log("storedQuizInfo     "+storedQuizInfo); 
-	  console.log("quizCode     "+quizCode); 
-	  console.log("quizInfo     "+quizInfo); 
-
-if (storedQuizInfo) {
-  try {
-    // Parse the quizInfo JSON string into an object
-    const quizInfo = JSON.parse(storedQuizInfo);
-
-    // Update the questionCorrect property with the new value
-    const newQuestionCorrect = newScore; // Replace with the new value
-    quizInfo.questionCorrect = newQuestionCorrect;
-
-    // Stringify the updated quizInfo object back into a JSON string
-    const updatedQuizInfo = JSON.stringify(quizInfo);
-
-    // Store the updated quizInfo JSON string back in localStorage
-    localStorage.setItem('quizInfo', updatedQuizInfo);
-
-    console.log('Successfully updated questionCorrect in quizInfo.');
-  } catch (error) {
-    console.error('Error parsing stored quizInfo:', error);
-    // Handle error, display appropriate message or fallback behavior
-  }
-} else {
-  // Handle case where there is no stored quizInfo, display appropriate message or fallback behavior
-}
-
-	
-	  saveQuizInfo(quizCode, { questionCorrect: newScore });
-
 	  
 	  
-    //localStorage.setItem('quizInfo', JSON.stringify(savedQuizInfo));
-  }
-}
-
-*/
-	  
-	  
-	  function saveQuizInfo(quizCode, quizInfo) {
-  const savedQuizCode = localStorage.getItem('quizCode');
-
-  if (savedQuizCode !== quizCode) {
-    localStorage.setItem('quizCode', quizCode);
-  }
-
-  const savedQuizInfo = JSON.parse(localStorage.getItem('quizInfo')) || {};
-  const savedScore = savedQuizInfo[quizCode]?.quizInfo?.questionCorrect || 0;
-  const newScore = quizInfo.questionCorrect || 0;
-
-  if (newScore > savedScore || savedScore === 0 || savedScore === null) {
-    savedQuizInfo[quizCode] = {
-      quizCode: quizCode,
-      quizInfo: {
-        ...savedQuizInfo[quizCode]?.quizInfo,
-        questionCorrect: newScore,
-      },
-    };
-
-    localStorage.setItem('quizInfo', JSON.stringify(savedQuizInfo));
-  }
-}
-
-
-
-
-
-function logStorageContents() {
-  const savedQuizCode = localStorage.getItem('quizCode');
-  const savedQuizInfo = localStorage.getItem('quizInfo');
-
-  console.log('Quiz Code:', savedQuizCode);
-  console.log('Quiz Info:', savedQuizInfo);
-}
-	
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  /*
 	  
 	  
 function saveQuizInfo(quizCode, quizInfo) {
@@ -726,6 +621,9 @@ function saveQuizInfo(quizCode, quizInfo) {
   const savedScore = savedQuizInfo.questionCorrect || 0;
   const newScore = quizInfo.questionCorrect || 0;
 	
+//  console.log('saveQuizInfo Quiz Info:', quizInfo);
+  //console.log('saveQuizInfo savedScore:', savedScore);
+  //console.log('saveQuizInfo newScore:', newScore);
 
   if (newScore > savedScore || savedScore === 0 || savedScore === null) {
     savedQuizInfo.quizCode = quizCode;
@@ -765,7 +663,17 @@ if (storedQuizInfo) {
 	  
   }
 }
-*/
+
+
+
+// Log the contents of the storage
+function logStorageContents(xxx) {
+  const savedQuizCode = localStorage.getItem('quizCode');
+  const savedQuizInfo = localStorage.getItem('quizInfo');
+
+  //console.log('logStorageContents Quiz Code:  '+xxx+"   ", savedQuizCode);
+//  console.log('logStorageContents Quiz Info:', savedQuizInfo);
+}
 
 
 
@@ -786,119 +694,114 @@ function shuffleArray(array) {
 
 // Retrieve the stored test information and display it
 function displayTestInfo() {
-  const savedQuizCode = localStorage.getItem('quizCode');
-  const savedQuizInfo = localStorage.getItem('quizInfo');
-
-  if (savedQuizInfo && savedQuizCode) {
+  const storedQuizInfo = localStorage.getItem('quizInfo');
+  if (storedQuizInfo) {
     try {
-      const parsedQuizInfo = JSON.parse(savedQuizInfo);
-      if (!parsedQuizInfo.hasOwnProperty(savedQuizCode)) {
-        console.error('Stored quiz info does not contain the specified quiz code');
-        // Handle case where the stored quiz info does not contain the specified quiz code
-        return;
-      }
-
-      const quizInfo = parsedQuizInfo[savedQuizCode];
-
-      if (!quizInfo.quizInfo || !quizInfo.quizInfo.numberOfQuestions) {
-        console.error('Stored quiz info is missing required properties');
-        // Handle case where required properties are missing
-        return;
-      }
-
+      const quizInfo = JSON.parse(storedQuizInfo);
       const testInfoDiv = document.getElementById('testInfo');
       const progressBar = document.getElementById('progressBarValue');
 
-      const { score, percentage } = calculateScore(quizInfo.quizInfo);
+      // Calculate user score and completion percentage
+      const { score, percentage } = calculateScore(quizInfo);
 
       testInfoDiv.innerHTML = `
         <h3>Quiz Information</h3>
         <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
-        <p><strong>Quiz Name:</strong> ${quizInfo.quizInfo.quizName}</p>
-        <p><strong>Number of Questions:</strong> ${quizInfo.quizInfo.numberOfQuestions}</p>
+        <p><strong>Quiz Name:</strong> ${quizInfo.quizName}</p>
+        <p><strong>Number of Questions:</strong> ${quizInfo.numberOfQuestions}</p>
         <p><strong>Question Correct:</strong> ${score}</p>
         <p><strong>Best Score:</strong> ${percentage.toFixed(0)}%</p>
       `;
-
       logStorageContents("Start");
 
+      // Update the progress bar
       if (progressBar) {
-        const progressPercentage = quizInfo.quizInfo.questionCorrect / quizInfo.quizInfo.numberOfQuestions * 100;
+        const progressPercentage =  quizInfo.questionCorrect  / quizInfo.numberOfQuestions * 100;
         progressBar.style.width = progressPercentage + '%';
       }
     } catch (error) {
-      console.error('Error parsing or accessing stored quiz info:', error);
+      console.error('Error parsing stored quiz info:', error);
       // Handle error, display appropriate message or fallback behavior
     }
   } else {
-    // Handle case where there is no stored quiz info or quiz code
-    // You can display an appropriate message or fallback behavior here
+    // Handle case where there is no stored quiz info, display appropriate message or fallback behavior
   }
 }
 
 
 // Check if quizCode matches and retrieve or save quiz info
 function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
-  const savedQuizInfo = JSON.parse(localStorage.getItem('quizInfo')) || {};
-
+  const savedQuizCode = localStorage.getItem('quizCode');
   let quizInfo;
-  const timestamp = new Date().toLocaleString();
+  logStorageContents();
+  let timestamp = new Date().toLocaleString();
 
-  if (!savedQuizInfo.hasOwnProperty(quizCode)) {
+  if (savedQuizCode !== quizCode) {
+    // Quiz code doesn't match, save new quiz info to storage
     quizInfo = {
       quizCode: quizCode,
       quizName: quizName,
-         numberOfQuestions: numberOfQuestions,
+      numberOfQuestions: numberOfQuestions,
       questionCorrect: 0,
-      timestamp: timestamp,
+      timestamp: timestamp
     };
 
-    savedQuizInfo[quizCode] = quizInfo;
-    localStorage.setItem('quizInfo', JSON.stringify(savedQuizInfo));
+    localStorage.setItem('quizCode', quizCode);
+    localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
   } else {
-    quizInfo = savedQuizInfo[quizCode];
+    // Quiz code matches, retrieve existing quiz info from storage
+    quizInfo = JSON.parse(localStorage.getItem('quizInfo'));
     quizInfo.quizName = quizName;
-     quizInfo.questionCorrect= 0;
     quizInfo.numberOfQuestions = numberOfQuestions;
     quizInfo.timestamp = timestamp;
-
-    localStorage.setItem('quizInfo', JSON.stringify(savedQuizInfo));
+    localStorage.setItem('quizInfo', JSON.stringify(quizInfo));
   }
 
   return quizInfo;
 }
 
+
+// Fetch and assign the data
 function fetchData(q) {
   fetch("q/" + q + ".json")
     .then(response => response.json())
     .then(data => {
       if (data.length === 0) {
+        // Handle empty data
         console.log("Empty data");
         const randomFile = getRandomFile(files);
         fetchData(randomFile);
-      } else {
-        const questionData = data.questions.map(questionObj => ({
-          question: questionObj.question,
-          answer: questionObj.answer,
-          options: questionObj.options,
-          explanation: questionObj.explanation
-        }));
+  } else {
+    // Use the questions data here
+    const questionData = data.questions.map(questionObj => ({
+      question: questionObj.question,
+      answer: questionObj.answer,
+      options: questionObj.options,
+      explanation: questionObj.explanation
+    }));
 
-        quizCode = data.quizCode;
-        quizName = data.quizName;
-        numberOfQuestions = data.numberOfQuestions;
+    // Update quizCode, quizName, numberOfQuestions
+    quizCode = data.quizCode;
+    quizName = data.quizName;
+    numberOfQuestions = data.numberOfQuestions;
 
-        const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
+    // Check quiz code and retrieve or save quiz info
+    const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
 
-        questions.push(...questionData);
-        shuffleArray(questions);
+    questions.push(...questionData);
+    shuffleArray(questions);
 
-        displayTestInfo();
-      }
-    })
-    .catch(error => console.error(error));
+    // Access and use the retrieved quiz information
+    const questionsCompleted = quizInfo.questionsCompleted;
+
+    // Display the stored test information
+    displayTestInfo();
+  }
+})
+.catch(error => console.error(error));
 }
 
+// Call fetchData with the initial q value
 fetchData(q);
 
 	      
