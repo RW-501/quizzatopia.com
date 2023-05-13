@@ -395,7 +395,7 @@ function endQuiz() {
     document.getElementById("score").appendChild(badgeImage);
   } else {
     // Show the pie chart for correct and incorrect answers
-    showPieChart();
+    showPieChart("done");
   }
 
   // Unhide the message board
@@ -405,7 +405,7 @@ function endQuiz() {
 
 
 // Function to show the pie chart of correct and incorrect answers
-function showPieChart() {
+function showPieChart(xxx) {
   const correctAnswers = questionCorrect;
   const incorrectAnswers = totalQuestions - questionCorrect;
 
@@ -414,7 +414,7 @@ const chartCanvas = document.createElement('canvas');
 chartCanvas.id = 'pie-chart';
 
   
- if(quizStarted == false){
+ if(xxx == "done"){
    // Create the data for the pie chart
  pieData = {
   labels: ['Correct', 'Incorrect'],
