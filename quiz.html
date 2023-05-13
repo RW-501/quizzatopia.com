@@ -399,6 +399,7 @@
       </ul>
       <div id="explanation"></div>
       <!-- Explanation area -->
+	    
       <div id="btn_container">
         <!-- Button container -->
 <button id="skip-next-btn" class="btn btn-primary">Skip</button>
@@ -621,7 +622,12 @@ function saveQuizInfo(quizCode, quizInfo) {
 	  
 	  	  // Retrieve the stored quizInfo from localStorage
 const storedQuizInfo = localStorage.getItem('quizInfo');
+	  
+	  console.log("storedQuizInfo     "+storedQuizInfo); 
+	  console.log("quizCode     "+quizCode); 
+	  console.log("quizInfo     "+quizInfo); 
 
+/*
 if (storedQuizInfo) {
   try {
     // Parse the quizInfo JSON string into an object
@@ -646,8 +652,9 @@ if (storedQuizInfo) {
   // Handle case where there is no stored quizInfo, display appropriate message or fallback behavior
 }
 
-	  
-	  
+	  */
+	  saveQuizInfo(quizCode, { questionCorrect: newScore });
+
 	  
 	  
     //localStorage.setItem('quizInfo', JSON.stringify(savedQuizInfo));
