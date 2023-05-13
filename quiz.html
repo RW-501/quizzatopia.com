@@ -279,7 +279,7 @@
     </div>
     <div class="col-md-6">
       <div class="quiz-image-container text-center">
-        <img src="/images/lan/10.png" alt="quiz-image" class="w-100">
+        <img src="/images/lan/10.png" alt="quiz-image" class="w-100 d-md-block">
         <!-- Quiz Image -->
       </div>
 	   
@@ -776,8 +776,12 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
 
   return quizInfo;
 
-
-
+}
+	  
+	  
+	  
+	  
+	  
 // Fetch and assign the data
 function fetchData(q) {
   fetch("q/" + q + ".json")
@@ -788,34 +792,34 @@ function fetchData(q) {
         console.log("Empty data");
         const randomFile = getRandomFile(files);
         fetchData(randomFile);
-  } else {
-    // Use the questions data here
-    const questionData = data.questions.map(questionObj => ({
-      question: questionObj.question,
-      answer: questionObj.answer,
-      options: questionObj.options,
-      explanation: questionObj.explanation
-    }));
+      } else {
+        // Use the questions data here
+        const questionData = data.questions.map(questionObj => ({
+          question: questionObj.question,
+          answer: questionObj.answer,
+          options: questionObj.options,
+          explanation: questionObj.explanation
+        }));
 
-    // Update quizCode, quizName, numberOfQuestions
-    quizCode = data.quizCode;
-    quizName = data.quizName;
-    numberOfQuestions = data.numberOfQuestions;
+        // Update quizCode, quizName, numberOfQuestions
+        quizCode = data.quizCode;
+        quizName = data.quizName;
+        numberOfQuestions = data.numberOfQuestions;
 
-    // Check quiz code and retrieve or save quiz info
-    const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
+        // Check quiz code and retrieve or save quiz info
+        const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
 
-    questions.push(...questionData);
-    shuffleArray(questions);
+        questions.push(...questionData);
+        shuffleArray(questions);
 
-    // Access and use the retrieved quiz information
-    const questionsCompleted = quizInfo.questionsCompleted;
+        // Access and use the retrieved quiz information
+        const questionsCompleted = quizInfo.questionsCompleted;
 
-    // Display the stored test information
-    displayTestInfo();
-  }
-})
-.catch(error => console.error(error));
+        // Display the stored test information
+        displayTestInfo();
+      }
+    })
+    .catch(error => console.error(error));
 }
 
 // Call fetchData with the initial q value
