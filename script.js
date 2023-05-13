@@ -277,7 +277,7 @@ function checkAnswer() {
   showExplanation(questionObj.explanation);
   logStorageContents("   updated ?   ");
   
-  console.log("  !!!!!!!!??"); 
+ // console.log("  !!!!!!!!??"); 
 }
 
 
@@ -312,6 +312,7 @@ function nextQuestion() {
   if (currentQuestion <= totalQuestions) {
     enableAnswerButtons();
     showQuestion();
+      console.log("currentQuestion " + currentQuestion + " is being shown.");
 
   } else {
     endQuiz();
