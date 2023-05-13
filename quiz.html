@@ -651,36 +651,19 @@ function calculateScore(quizInfo) {
 
   
 	  
-	  
-	  
-	  
 function saveQuizInfo(quizCode, quizInfo) {
-
   const savedQuizInfo = JSON.parse(localStorage.getItem(`quizInfo_${quizCode}`)) || {};
   const savedScore = savedQuizInfo.questionCorrect || 0;
   const newScore = quizInfo.questionCorrect || 0;
-	
-  console.log('saveQuizInfo Quiz Info:', savedQuizInfo);
-  console.log('income  quizCode:', quizCode);
-  //console.log('saveQuizInfo newScore:', newScore);
 
   if (newScore > savedScore || savedScore === 0 || savedScore === null) {
     savedQuizInfo.quizCode = quizCode;
     savedQuizInfo.quizInfo = quizInfo;
 
-//	  console.log("quizInfo UPDATED     "); 
- // console.log(savedQuizInfo +'  saveQuizInfo newScore:  '+ newScore);
-
-	  
-
-  // Update the quiz information for the specific quiz code
+    // Update the quiz information for the specific quiz code
     localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(savedQuizInfo));
-	  
-	  
   }
 }
-
-
 
 // Log the contents of the storage
 function logStorageContents(quizCode) {
@@ -689,10 +672,20 @@ function logStorageContents(quizCode) {
   console.log('logStorageContents Quiz Info:', savedQuizInfo);
 }
 
-
-
-
-
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
  
 let questions = [];
 let quizCode;
