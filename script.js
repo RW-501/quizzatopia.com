@@ -1,6 +1,6 @@
 // Global Variables
 let questionTime = 0; // seconds
-let currentQuestion = 1;
+let currentQuestion = 0;
 let questionCorrect = 0;
 let quizStarted = false;
 let timer = 0;
@@ -57,7 +57,7 @@ function startQuiz() {
 
   quizAdPattern = generateQuizAdPattern(totalQuestions, intvalue);
   adQuestionNumbers = quizAdPattern;
-  console.log(adQuestionNumbers + "   ?????xx???????adQuestionNumbers????"); // Output: 3
+  //console.log(adQuestionNumbers + "   ?????xx???????adQuestionNumbers????"); // Output: 3
 
   // Array to store the question numbers where the ad should be shown
   adQuestionNumbers = quizAdPattern; // Example: Show ad after questions 3, 7, and 11
