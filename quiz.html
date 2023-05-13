@@ -689,7 +689,7 @@ function shuffleArray(array) {
 	  
 	  
 let pieData;
-	   let score, percentage; 
+	   let score1, percentage1; 
 	   let ansWrong;
 	  
 // Retrieve the stored test information and display it
@@ -703,10 +703,10 @@ function displayTestInfo() {
 
 
 	        // Calculate user score and completion percentage
-       { score, percentage } = calculateScore(quizInfo);  
+   const { score, percentage } = calculateScore(quizInfo);  
 	    	     ansWrong = numberOfQuestions - score;
-	    
-	    
+	    score1 = score;
+	    percentage1 = percentage;    
 
 	
 	    
