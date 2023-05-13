@@ -273,7 +273,7 @@ function checkAnswer() {
   
   
   // Update the question number
-  quizInfo.questionNumber = currentQuestion + 1;
+  quizInfo.questionNumber = currentQuestion;
 
   // Show the explanation
   showExplanation(questionObj.explanation);
@@ -311,7 +311,7 @@ function enableAnswerButtons() {
 function nextQuestion() {
   currentQuestion++;
 
-  if (currentQuestion <= totalQuestions) {
+  if (currentQuestion < totalQuestions) {
     enableAnswerButtons();
     showQuestion();
       console.log("currentQuestion " + currentQuestion + " is being shown.");
@@ -327,7 +327,7 @@ function nextQuestion() {
 function skipQuestion() {
   currentQuestion++;
 
-  if (currentQuestion <= totalQuestions) {
+  if (currentQuestion < totalQuestions) {
     enableAnswerButtons();
     showQuestion();
 
