@@ -586,7 +586,11 @@ document.getElementById("social_fb").href = "https://www.facebook.com/sharer/sha
 document.getElementById("social_tw").href = "https://twitter.com/intent/tweet?url=https://quizzatopia.com/quiz?q="+q;
 document.getElementById("social_ln").href = "ttps://www.linkedin.com/shareArticle?url=https://quizzatopia.com/quiz?q="+q;
 document.getElementById("social_red").href = "https://www.reddit.com/submit?url=https://quizzatopia.com/quiz?q="+q;
-                 
+    
+	  
+	  
+	  
+	  
 function calculateScore(quizInfo) {
   const totalQuestions = quizInfo.numberOfQuestions || 0;
   const correctAnswers = quizInfo.questionCorrect || 0;
@@ -602,6 +606,8 @@ function calculateScore(quizInfo) {
 
   
 	
+	  
+	  /*
 function saveQuizInfo(quizCode, quizInfo) {
   const savedQuizCode = localStorage.getItem('quizCode');
 
@@ -627,7 +633,6 @@ const storedQuizInfo = localStorage.getItem('quizInfo');
 	  console.log("quizCode     "+quizCode); 
 	  console.log("quizInfo     "+quizInfo); 
 
-/*
 if (storedQuizInfo) {
   try {
     // Parse the quizInfo JSON string into an object
@@ -652,7 +657,7 @@ if (storedQuizInfo) {
   // Handle case where there is no stored quizInfo, display appropriate message or fallback behavior
 }
 
-	  */
+	
 	  saveQuizInfo(quizCode, { questionCorrect: newScore });
 
 	  
@@ -661,6 +666,37 @@ if (storedQuizInfo) {
   }
 }
 
+*/
+	  
+	  
+	  function saveQuizInfo(quizCode, quizInfo) {
+  const savedQuizCode = localStorage.getItem('quizCode');
+
+  if (savedQuizCode !== quizCode) {
+    localStorage.setItem('quizCode', quizCode);
+  }
+
+  const savedQuizInfo = JSON.parse(localStorage.getItem('quizInfo')) || {};
+  const savedScore = savedQuizInfo[quizCode]?.quizInfo?.questionCorrect || 0;
+  const newScore = quizInfo.questionCorrect || 0;
+
+  if (newScore > savedScore || savedScore === 0 || savedScore === null) {
+    savedQuizInfo[quizCode] = {
+      quizCode: quizCode,
+      quizInfo: {
+        ...savedQuizInfo[quizCode]?.quizInfo,
+        questionCorrect: newScore,
+      },
+    };
+
+    localStorage.setItem('quizInfo', JSON.stringify(savedQuizInfo));
+  }
+}
+
+
+
+
+
 function logStorageContents() {
   const savedQuizCode = localStorage.getItem('quizCode');
   const savedQuizInfo = localStorage.getItem('quizInfo');
@@ -668,6 +704,14 @@ function logStorageContents() {
   console.log('Quiz Code:', savedQuizCode);
   console.log('Quiz Info:', savedQuizInfo);
 }
+	
+	  
+	  
+	  
+	  
+	  
+	  
+	  
 	  /*
 	  
 	  
