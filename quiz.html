@@ -657,8 +657,11 @@ function saveQuizInfo(quizCode, quizInfo) {
   const savedQuizInfo = JSON.parse(localStorage.getItem(`quizInfo_${quizCode}`)) || {};
   const savedScore = savedQuizInfo.questionCorrect || 0;
   const newScore = quizInfo.questionCorrect || 0;
+	
+    console.log(savedScore+" savedScore | newScore     "+ newScore); 
 
 	
+console.log('saveQuizInfo Quiz quizInfo:'+ quizInfo);
 console.log('saveQuizInfo Quiz Code:'+ quizCode);
   console.log('saveQuizInfo Quiz Info:'+ savedQuizInfo);
 	
