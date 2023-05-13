@@ -706,15 +706,9 @@ function displayTestInfo() {
 	    	    let ansWrong = numberOfQuestions - score;
 	    
 	    
-	     pieData = {
-  labels: ['Correct', 'Incorrect'],
-  datasets: [{
-    data: [score, ansWrong],
-    backgroundColor: ['#36a2eb', '#ff6384']
-  }]
-};
-	    
-	       console.log(score+" sc " +ansWrong+'   pieData:   '+ pieData);
+
+	      // Show the pie chart for correct and incorrect answers
+    showPieChart("false",score,ansWrong);
 	    
       testInfoDiv.innerHTML = `
         <h3>Quiz Information</h3>
@@ -878,8 +872,7 @@ document.addEventListener('click', function (e) {
 	    <script>
 
 	
-  // Show the pie chart for correct and incorrect answers
-    showPieChart();
+
     </script>
 
    
