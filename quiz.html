@@ -707,36 +707,43 @@ function displayTestInfo() {
 
   if (savedQuizInfo && savedQuizCode) {
     try {
-      const quizInfo = JSON.parse(savedQuizInfo)[savedQuizCode];
+      const parsedQuizInfo = JSON.parse(savedQuizInfo);
+      if (!parsedQuizInfo.hasOwnProperty(savedQuizCode)) {
+        console.error('Stored quiz info does not contain the specified quiz code');
+        // Handle case where the stored quiz info does not contain the specified quiz code
+        return;
+      }
 
-      if (quizInfo && quizInfo.quizInfo && quizInfo.quizInfo.numberOfQuestions) {
-        const testInfoDiv = document.getElementById('testInfo');
-        const progressBar = document.getElementById('progressBarValue');
+      const quizInfo = parsedQuizInfo[savedQuizCode];
 
-        const { score, percentage } = calculateScore(quizInfo.quizInfo);
-
-        testInfoDiv.innerHTML = `
-          <h3>Quiz Information</h3>
-          <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
-          <p><strong>Quiz Name:</strong> ${quizInfo.quizInfo.quizName}</p>
-          <p><strong>Number of Questions:</strong> ${quizInfo.quizInfo.numberOfQuestions}</p>
-          <p><strong>Question Correct:</strong> ${score}</p>
-          <p><strong>Best Score:</strong> ${percentage.toFixed(0)}%</p>
-        `;
-
-        logStorageContents("Start");
-
-        if (progressBar) {
-          const progressPercentage = quizInfo.quizInfo.questionCorrect / quizInfo.quizInfo.numberOfQuestions * 100;
-          progressBar.style.width = progressPercentage + '%';
-        }
-      } else {
-        // Handle case where required properties are missing
+      if (!quizInfo.quizInfo || !quizInfo.quizInfo.numberOfQuestions) {
         console.error('Stored quiz info is missing required properties');
-        // You can display an appropriate message or fallback behavior here
+        // Handle case where required properties are missing
+        return;
+      }
+
+      const testInfoDiv = document.getElementById('testInfo');
+      const progressBar = document.getElementById('progressBarValue');
+
+      const { score, percentage } = calculateScore(quizInfo.quizInfo);
+
+      testInfoDiv.innerHTML = `
+        <h3>Quiz Information</h3>
+        <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
+        <p><strong>Quiz Name:</strong> ${quizInfo.quizInfo.quizName}</p>
+        <p><strong>Number of Questions:</strong> ${quizInfo.quizInfo.numberOfQuestions}</p>
+        <p><strong>Question Correct:</strong> ${score}</p>
+        <p><strong>Best Score:</strong> ${percentage.toFixed(0)}%</p>
+      `;
+
+      logStorageContents("Start");
+
+      if (progressBar) {
+        const progressPercentage = quizInfo.quizInfo.questionCorrect / quizInfo.quizInfo.numberOfQuestions * 100;
+        progressBar.style.width = progressPercentage + '%';
       }
     } catch (error) {
-      console.error('Error parsing stored quiz info:', error);
+      console.error('Error parsing or accessing stored quiz info:', error);
       // Handle error, display appropriate message or fallback behavior
     }
   } else {
