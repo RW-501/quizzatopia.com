@@ -544,14 +544,13 @@
    const chartCanvas = document.createElement('canvas');
 chartCanvas.id = 'pie-chart_1';
    
-     const correctAnswers = questionCorrect;
-  const incorrectAnswers = totalQuestions - questionCorrect;
+ 
    
    // Create the data for the pie chart
  let pieData1 = {
   labels: ['Correct', 'Incorrect'],
   datasets: [{
-    data: [correctAnswers, incorrectAnswers],
+    data: [score, ansWrong],
     backgroundColor: ['#36a2eb', '#ff6384']
   }]
 };
