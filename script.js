@@ -405,7 +405,8 @@ function endQuiz() {
 
 
 // Function to show the pie chart of correct and incorrect answers
-function showPieChart(xxx) {
+function  showPieChart(xxx,score,ansWrong){
+
 
 
 // Create a canvas element for the pie chart
@@ -413,7 +414,7 @@ const chartCanvas = document.createElement('canvas');
 chartCanvas.id = 'pie-chart';
 
    
-
+console.log(xxx+"  txxxxx???????totalQuestions????"); // Output: 3
   
  if(xxx == "done"){
      const correctAnswers = questionCorrect;
@@ -432,7 +433,14 @@ const chartContainer = document.getElementById('score');
 chartContainer.appendChild(chartCanvas);
    
  }else{
-   
+   	     pieData = {
+  labels: ['Correct', 'Incorrect'],
+  datasets: [{
+    data: [score, ansWrong],
+    backgroundColor: ['#36a2eb', '#ff6384']
+  }]
+};
+
    
    
  // Append the canvas to the chart container
