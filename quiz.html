@@ -706,7 +706,8 @@ function displayTestInfo() {
     backgroundColor: ['#36a2eb', '#ff6384']
   }]
 };
-	    
+	        // Calculate user score and completion percentage
+      const { score, percentage } = calculateScore(quizInfo);  
 	    
 	    
       testInfoDiv.innerHTML = `
