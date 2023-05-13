@@ -215,7 +215,6 @@ function updateProgressBar(currentQuestion) {
 }   
 // Function to check the user's answer
 // Function to check the user's answer
-
 function checkAnswer() {
   document.getElementById("skip-next-btn").innerHTML = "Next";
 
