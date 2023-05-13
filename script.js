@@ -436,7 +436,7 @@ const options2 = {
 };
 
 // Create the pie chart using Chart.js
-new Chart2(ctx2, {
+new Chart(ctx2, {
   type: 'pie',
   data: pieData2,
   options: options2
