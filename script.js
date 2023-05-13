@@ -309,7 +309,7 @@ function enableAnswerButtons() {
 function nextQuestion() {
   currentQuestion++;
 
-  if (currentQuestion < totalQuestions) {
+  if (currentQuestion <= totalQuestions) {
     enableAnswerButtons();
     showQuestion();
 
@@ -323,7 +323,7 @@ function nextQuestion() {
 function skipQuestion() {
   currentQuestion++;
 
-  if (currentQuestion < totalQuestions) {
+  if (currentQuestion <= totalQuestions) {
     enableAnswerButtons();
     showQuestion();
 
