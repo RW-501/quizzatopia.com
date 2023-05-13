@@ -721,8 +721,7 @@ function displayTestInfo() {
       `;
       logStorageContents("Start");
 
-  // Show the pie chart for correct and incorrect answers
-    showPieChart();
+ 
 	    
     } catch (error) {
       console.error('Error parsing stored quiz info:', error);
@@ -869,7 +868,14 @@ document.addEventListener('click', function (e) {
 
   <script src="script.js"></script>
 
- 
+	
+	
+	    <script>
+
+	
+  // Show the pie chart for correct and incorrect answers
+    showPieChart();
+    </script>
 
    
 </html>
