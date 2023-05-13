@@ -656,6 +656,11 @@ function saveQuizInfo(quizCode, quizInfo) {
   const savedScore = savedQuizInfo.questionCorrect || 0;
   const newScore = quizInfo.questionCorrect || 0;
 
+	
+console.log('saveQuizInfo Quiz Code:', quizCode);
+  console.log('saveQuizInfo Quiz Info:', savedQuizInfo);
+	
+	
   if (newScore > savedScore || savedScore === 0 || savedScore === null) {
     savedQuizInfo.quizCode = quizCode;
     savedQuizInfo.quizInfo = quizInfo;
