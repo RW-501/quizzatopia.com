@@ -557,18 +557,18 @@ chartCanvas1.id = 'pie-chart_1';
   }]
 };
    // Append the canvas to the chart container
-const chartContainer = document.getElementById('pie_graph_front');
-chartContainer.appendChild(chartCanvas);
+const chartContainer1 = document.getElementById('pie_graph_front');
+chartContainer1.appendChild(chartCanvas1);
 	    
     console.log(score+" showPieChartFront info     "+ ansWrong); 
   
   // Get the 2D context of the canvas
-const ctx = chartCanvas.getContext('2d');
+const ctx = chartCanvas1.getContext('2d');
 
 
 
 // Configure the options for the pie chart
-const options = {
+const options1 = {
   responsive: true
 };
 
@@ -576,7 +576,7 @@ const options = {
 new Chart(ctx, {
   type: 'pie',
   data: pieData1,
-  options: options
+  options: options1
 });
   
  
