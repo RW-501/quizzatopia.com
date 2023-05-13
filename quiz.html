@@ -704,6 +704,8 @@ function displayTestInfo() {
 	        // Calculate user score and completion percentage
       const { score, percentage } = calculateScore(quizInfo);  
 	    	    let ansWrong = numberOfQuestions - score;
+	    
+	    
 	     pieData = {
   labels: ['Correct', 'Incorrect'],
   datasets: [{
@@ -711,6 +713,9 @@ function displayTestInfo() {
     backgroundColor: ['#36a2eb', '#ff6384']
   }]
 };
+	    
+	       console.log(score+" sc " +ansWrong+'   pieData:   '+ pieData);
+	    
       testInfoDiv.innerHTML = `
         <h3>Quiz Information</h3>
         <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
