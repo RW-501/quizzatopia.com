@@ -433,6 +433,10 @@ chartCanvas.id = 'pie-chart';
 const chartContainer = document.getElementById('score');
 chartContainer.appendChild(chartCanvas);
    
+  
+  // Get the 2D context of the canvas
+const ctx = chartCanvas.getContext('2d');
+
  }else{
    // Create a canvas element for the pie chart
 const chartCanvas1 = document.createElement('canvas');
@@ -451,12 +455,14 @@ chartCanvas1.id = 'pie-chart1';
  // Append the canvas to the chart container
 const chartContainer1 = document.getElementById('pie_graph_front');
 chartContainer1.appendChild(chartCanvas1);
- }
-
-
+   
+   
   
   // Get the 2D context of the canvas
-const ctx = chartCanvas.getContext('2d');
+const ctx = chartCanvas1.getContext('2d');
+
+ }
+
 
 
 
