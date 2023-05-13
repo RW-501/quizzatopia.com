@@ -413,21 +413,34 @@ function showPieChart() {
 const chartCanvas = document.createElement('canvas');
 chartCanvas.id = 'pie-chart';
 
-// Append the canvas to the chart container
-const chartContainer = document.getElementById('score');
-chartContainer.appendChild(chartCanvas);
-
-// Get the 2D context of the canvas
-const ctx = chartCanvas.getContext('2d');
-
-// Create the data for the pie chart
-const data = {
+  
+ if(quizStarted == false){
+   // Create the data for the pie chart
+ pieData = {
   labels: ['Correct', 'Incorrect'],
   datasets: [{
     data: [correctAnswers, incorrectAnswers],
     backgroundColor: ['#36a2eb', '#ff6384']
   }]
 };
+   // Append the canvas to the chart container
+const chartContainer = document.getElementById('score');
+chartContainer.appendChild(chartCanvas);
+ }else{
+   
+ // Append the canvas to the chart container
+const chartContainer = document.getElementById('pie_graph_front');
+chartContainer.appendChild(chartCanvas);
+ }
+
+
+  
+  
+  
+// Get the 2D context of the canvas
+const ctx = chartCanvas.getContext('2d');
+
+
 
 // Configure the options for the pie chart
 const options = {
@@ -437,7 +450,7 @@ const options = {
 // Create the pie chart using Chart.js
 new Chart(ctx, {
   type: 'pie',
-  data: data,
+  data: pieData,
   options: options
 });
 }
