@@ -618,7 +618,39 @@ function saveQuizInfo(quizCode, quizInfo) {
       quizInfo: quizInfo
     };
 
-    localStorage.setItem('quizInfo', JSON.stringify(savedQuizInfo));
+	  
+	  	  // Retrieve the stored quizInfo from localStorage
+const storedQuizInfo = localStorage.getItem('quizInfo');
+
+if (storedQuizInfo) {
+  try {
+    // Parse the quizInfo JSON string into an object
+    const quizInfo = JSON.parse(storedQuizInfo);
+
+    // Update the questionCorrect property with the new value
+    const newQuestionCorrect = newScore; // Replace with the new value
+    quizInfo.questionCorrect = newQuestionCorrect;
+
+    // Stringify the updated quizInfo object back into a JSON string
+    const updatedQuizInfo = JSON.stringify(quizInfo);
+
+    // Store the updated quizInfo JSON string back in localStorage
+    localStorage.setItem('quizInfo', updatedQuizInfo);
+
+    console.log('Successfully updated questionCorrect in quizInfo.');
+  } catch (error) {
+    console.error('Error parsing stored quizInfo:', error);
+    // Handle error, display appropriate message or fallback behavior
+  }
+} else {
+  // Handle case where there is no stored quizInfo, display appropriate message or fallback behavior
+}
+
+	  
+	  
+	  
+	  
+    //localStorage.setItem('quizInfo', JSON.stringify(savedQuizInfo));
   }
 }
 
@@ -775,6 +807,7 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
   } else {
     quizInfo = savedQuizInfo[quizCode];
     quizInfo.quizName = quizName;
+     quizInfo.questionCorrect= 0;
     quizInfo.numberOfQuestions = numberOfQuestions;
     quizInfo.timestamp = timestamp;
 
