@@ -1,1 +1,151 @@
-{"quizCode":"QZ0631211","quizName":"Movie Trivia Quiz","numberOfQuestions":13,"questions":[{"question":"Who directed the movie 'Jaws'?","options":["Steven Spielberg","Martin Scorsese","Francis Ford Coppola","Quentin Tarantino"],"answer":"Steven Spielberg","explanation":"Steven Spielberg directed the movie 'Jaws'.","difficulty":"Easy"},{"question":"What is the name of the protagonist in 'The Godfather'?","options":["Tony Montana","Don Corleone","Michael Corleone","Vito Corleone"],"answer":"Michael Corleone","explanation":"Michael Corleone is the protagonist in 'The Godfather'.","difficulty":"Easy"},{"question":"What is the name of the main character in 'Forrest Gump'?","options":["Forrest Gump","Tom Hanks","Jenny Curran","Bubba Blue"],"answer":"Forrest Gump","explanation":"Forrest Gump is the name of the main character in the movie 'Forrest Gump'.","difficulty":"Easy"},{"question":"Which movie won the Academy Award for Best Picture in 2020?","options":["Parasite","The Irishman","Once Upon a Time in Hollywood","Nomadland"],"answer":"Nomadland","explanation":"Nomadland won the Academy Award for Best Picture in 2020.","difficulty":"Easy"},{"question":"Who played the role of The Joker in the movie 'The Dark Knight'?","options":["Jack Nicholson","Joaquin Phoenix","Heath Ledger","Mark Hamill"],"answer":"Heath Ledger","explanation":"Heath Ledger played the role of The Joker in the movie 'The Dark Knight'.","difficulty":"Easy"},{"question":"What is the name of the fictional city where the Batman movies take place?","options":["Metropolis","Gotham","Central City","Star City"],"answer":"Gotham","explanation":"The fictional city where the Batman movies take place is called Gotham.","difficulty":"Easy"},{"question":"What is the name of the main character in 'Rocky'?","options":["Adrian","Apollo Creed","Mickey Goldmill","Rocky Balboa"],"answer":"Rocky Balboa","explanation":"Rocky Balboa is the name of the main character in the movie 'Rocky'.","difficulty":"Easy"},{"question":"Which movie is known for the line 'Here's Johnny!'?","options":["The Shining","Psycho","Halloween","Friday the 13th"],"answer":"The Shining","explanation":"The movie 'The Shining' is known for the line 'Here's Johnny!'.","difficulty":"Medium"},{"question":"Who played the role of Indiana Jones in the 'Indiana Jones' movies?","options":["Harrison Ford","Tom Cruise","Johnny Depp","Brad Pitt"],"answer":"Harrison Ford","explanation":"Harrison Ford played the role of Indiana Jones in the 'Indiana Jones' movies.","difficulty":"Medium"},{"question":"What is the name of the main character in 'The Matrix'?","options":["Neo","Trinity","Morpheus","Agent Smith"],"answer":"Neo","explanation":"The main character in 'The Matrix' is named Neo.","difficulty":"Medium"},{"question":"Which actor plays the role of Batman in 'The Dark Knight' trilogy?","options":["Christian Bale","Ben Affleck","Michael Keaton","Val Kilmer"],"answer":"Christian Bale","explanation":"Christian Bale plays the role of Batman in 'The Dark Knight' trilogy.","difficulty":"Medium"},{"question":"What is the name of the lion in 'The Lion King'?","options":["Simba","Mufasa
+{
+  "quizCode": "QZ0631211",
+  "quizName": "Movie Trivia Quiz",
+  "numberOfQuestions": 13,
+  "questions": [
+    {
+      "question": "Who directed the movie 'Jaws'?",
+      "options": [
+        "Steven Spielberg",
+        "Martin Scorsese",
+        "Francis Ford Coppola",
+        "Quentin Tarantino"
+      ],
+      "answer": "Steven Spielberg",
+      "explanation": "Steven Spielberg directed the movie 'Jaws'.",
+      "difficulty": "Easy"
+    },
+    {
+      "question": "What is the name of the protagonist in 'The Godfather'?",
+      "options": [
+        "Tony Montana",
+        "Don Corleone",
+        "Michael Corleone",
+        "Vito Corleone"
+      ],
+      "answer": "Michael Corleone",
+      "explanation": "Michael Corleone is the protagonist in 'The Godfather'.",
+      "difficulty": "Easy"
+    },
+    {
+      "question": "What is the name of the main character in 'Forrest Gump'?",
+      "options": [
+        "Forrest Gump",
+        "Tom Hanks",
+        "Jenny Curran",
+        "Bubba Blue"
+      ],
+      "answer": "Forrest Gump",
+      "explanation": "Forrest Gump is the name of the main character in the movie 'Forrest Gump'.",
+      "difficulty": "Easy"
+    },
+    {
+      "question": "Which movie won the Academy Award for Best Picture in 2020?",
+      "options": [
+        "Parasite",
+        "The Irishman",
+        "Once Upon a Time in Hollywood",
+        "Nomadland"
+      ],
+      "answer": "Nomadland",
+      "explanation": "Nomadland won the Academy Award for Best Picture in 2020.",
+      "difficulty": "Easy"
+    },
+    {
+      "question": "Who played the role of The Joker in the movie 'The Dark Knight'?",
+      "options": [
+        "Jack Nicholson",
+        "Joaquin Phoenix",
+        "Heath Ledger",
+        "Mark Hamill"
+      ],
+      "answer": "Heath Ledger",
+      "explanation": "Heath Ledger played the role of The Joker in the movie 'The Dark Knight'.",
+      "difficulty": "Easy"
+    },
+    {
+      "question": "What is the name of the fictional city where the Batman movies take place?",
+      "options": [
+        "Metropolis",
+        "Gotham",
+        "Central City",
+        "Star City"
+      ],
+      "answer": "Gotham",
+      "explanation": "The fictional city where the Batman movies take place is called Gotham.",
+      "difficulty": "Easy"
+    },
+    {
+      "question": "What is the name of the main character in 'Rocky'?",
+      "options": [
+        "Adrian",
+        "Apollo Creed",
+        "Mickey Goldmill",
+        "Rocky Balboa"
+      ],
+      "answer": "Rocky Balboa",
+      "explanation": "Rocky Balboa is the name of the main character in the movie 'Rocky'.",
+      "difficulty": "Easy"
+    },
+    {
+      "question": "Which movie is known for the line 'Here's Johnny!'?",
+      "options": [
+        "The Shining",
+        "Psycho",
+        "Halloween",
+        "Friday the 13th"
+      ],
+      "answer": "The Shining",
+      "explanation": "The movie 'The Shining' is known for the line 'Here's Johnny!'.",
+      "difficulty": "Medium"
+    },
+    {
+      "question": "Who played the role of Indiana Jones in the 'Indiana Jones' movies?",
+      "options": [
+        "Harrison Ford",
+        "Tom Cruise",
+        "Johnny Depp",
+        "Brad Pitt"
+      ],
+      "answer": "Harrison Ford",
+      "explanation": "Harrison Ford played the role of Indiana Jones in the 'Indiana Jones' movies.",
+      "difficulty": "Medium"
+    },
+    {
+      "question": "What is the name of the main character in 'The Matrix'?",
+      "options": [
+        "Neo",
+        "Trinity",
+        "Morpheus",
+        "Agent Smith"
+      ],
+      "answer": "Neo",
+      "explanation": "The main character in 'The Matrix' is named Neo.",
+      "difficulty": "Medium"
+    },
+    {
+      "question": "Which actor plays the role of Batman in 'The Dark Knight' trilogy?",
+      "options": [
+        "Christian Bale",
+        "Ben Affleck",
+        "Michael Keaton",
+        "Val Kilmer"
+      ],
+      "answer": "Christian Bale",
+      "explanation": "Christian Bale plays the role of Batman in 'The Dark Knight' trilogy.",
+      "difficulty": "Medium"
+    },
+    {
+      "question": "What is the name of the lion in 'The Lion King'?",
+      "options": [
+        "Simba",
+        "Mufasa",
+        "Scar",
+        "Nala"
+      ],
+      "answer": "Simba",
+      "explanation": "Simba is the name of the lion in 'The Lion King'.",
+      "difficulty": "Medium"
+    }
+  ]
+}
