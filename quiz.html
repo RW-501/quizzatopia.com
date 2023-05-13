@@ -556,9 +556,10 @@ chartCanvas.id = 'pie-chart_1';
   }]
 };
    // Append the canvas to the chart container
-const chartContainer = document.getElementById('score');
+const chartContainer = document.getElementById('pie_graph_front');
 chartContainer.appendChild(chartCanvas);
-   
+	    
+    console.log("showPieChartFront UPDATED     "); 
   
   // Get the 2D context of the canvas
 const ctx = chartCanvas.getContext('2d');
