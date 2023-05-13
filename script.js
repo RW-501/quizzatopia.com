@@ -250,7 +250,7 @@ function checkAnswer() {
       quizInfo.questionCorrect = questionCorrect;
       
       saveQuizInfo(quizCode, quizInfo);
-        console.log("  update !!quizInfo!quizInfo!!!!!??   " +quizInfo); 
+       // console.log("  update !!quizInfo!quizInfo!!!!!??   " +quizInfo); 
  
     }
 
@@ -436,7 +436,7 @@ const options2 = {
 };
 
 // Create the pie chart using Chart.js
-new Chart(ctx, {
+new Chart2(ctx, {
   type: 'pie',
   data: pieData2,
   options: options2
