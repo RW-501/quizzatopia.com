@@ -406,15 +406,19 @@ function endQuiz() {
 
 // Function to show the pie chart of correct and incorrect answers
 function showPieChart(xxx) {
-  const correctAnswers = questionCorrect;
-  const incorrectAnswers = totalQuestions - questionCorrect;
+
 
 // Create a canvas element for the pie chart
 const chartCanvas = document.createElement('canvas');
 chartCanvas.id = 'pie-chart';
 
+   
+
   
  if(xxx == "done"){
+     const correctAnswers = questionCorrect;
+  const incorrectAnswers = totalQuestions - questionCorrect;
+   
    // Create the data for the pie chart
  pieData = {
   labels: ['Correct', 'Incorrect'],
@@ -426,7 +430,10 @@ chartCanvas.id = 'pie-chart';
    // Append the canvas to the chart container
 const chartContainer = document.getElementById('score');
 chartContainer.appendChild(chartCanvas);
+   
  }else{
+   
+   
    
  // Append the canvas to the chart container
 const chartContainer = document.getElementById('pie_graph_front');
@@ -435,9 +442,7 @@ chartContainer.appendChild(chartCanvas);
 
 
   
-  
-  
-// Get the 2D context of the canvas
+  // Get the 2D context of the canvas
 const ctx = chartCanvas.getContext('2d');
 
 
@@ -453,6 +458,8 @@ new Chart(ctx, {
   data: pieData,
   options: options
 });
+  
+ 
 }
 
 
