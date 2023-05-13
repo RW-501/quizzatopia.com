@@ -409,14 +409,15 @@ function  showPieChart(xxx,score,ansWrong){
 
 
 
-// Create a canvas element for the pie chart
-const chartCanvas = document.createElement('canvas');
-chartCanvas.id = 'pie-chart';
+
 
    
 console.log(xxx+"  txxxxx???????totalQuestions????"); // Output: 3
   
  if(xxx == "done"){
+   const chartCanvas = document.createElement('canvas');
+chartCanvas.id = 'pie-chart';
+   
      const correctAnswers = questionCorrect;
   const incorrectAnswers = totalQuestions - questionCorrect;
    
@@ -433,6 +434,10 @@ const chartContainer = document.getElementById('score');
 chartContainer.appendChild(chartCanvas);
    
  }else{
+   // Create a canvas element for the pie chart
+const chartCanvas1 = document.createElement('canvas');
+chartCanvas1.id = 'pie-chart1';
+   
    	     pieData = {
   labels: ['Correct', 'Incorrect'],
   datasets: [{
@@ -445,7 +450,7 @@ chartContainer.appendChild(chartCanvas);
    
  // Append the canvas to the chart container
 const chartContainer = document.getElementById('pie_graph_front');
-chartContainer.appendChild(chartCanvas);
+chartContainer.appendChild(chartCanvas1);
  }
 
 
