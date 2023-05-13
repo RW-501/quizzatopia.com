@@ -670,6 +670,7 @@ console.log('saveQuizInfo Quiz Code:'+ quizCode);
   if (newScore > savedScore || savedScore === 0 || savedScore === null) {
     savedQuizInfo.quizCode = quizCode;
     savedQuizInfo.quizInfo = quizInfo;
+	console.log('?????????savedn????????//');
 
     // Update the quiz information for the specific quiz code
     localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(savedQuizInfo));
