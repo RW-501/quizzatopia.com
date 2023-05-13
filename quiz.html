@@ -540,9 +540,9 @@
 	
   <script>
     
-    function  showPieChartFront(score,ansWrong){
- let score = parseInt(score);
- let ansWrong = parseInt(ansWrong);
+    function  showPieChartFront(Correct1,Incorrect1){
+ let Correct1 = parseInt(Correct1);
+ let Incorrect1 = parseInt(Incorrect1);
 
    const chartCanvas1 = document.createElement('canvas');
 chartCanvas1.id = 'pie-chart_1';
@@ -553,7 +553,7 @@ chartCanvas1.id = 'pie-chart_1';
  let pieData1 = {
   labels: ['Correct', 'Incorrect'],
   datasets: [{
-    data: [score, ansWrong],
+    data: [Correct1, Incorrect1],
     backgroundColor: ['#36a2eb', '#ff6384']
   }]
 };
