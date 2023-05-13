@@ -268,6 +268,8 @@ function checkAnswer() {
  //console.log(questionCorrect+"  questionCorrect??????????questionCorrect????"); // Output: 3
  //console.log(newQuestionCorrect+"  newQuestionCorrect??????????questionCorrect????"); // Output: 3
 
+  
+  
   // Update the question number
   quizInfo.questionNumber = currentQuestion + 1;
 
