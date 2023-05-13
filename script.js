@@ -449,8 +449,8 @@ chartCanvas1.id = 'pie-chart1';
    
    
  // Append the canvas to the chart container
-const chartContainer = document.getElementById('pie_graph_front');
-chartContainer.appendChild(chartCanvas1);
+const chartContainer1 = document.getElementById('pie_graph_front');
+chartContainer1.appendChild(chartCanvas1);
  }
 
 
