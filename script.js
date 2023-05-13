@@ -395,7 +395,7 @@ function endQuiz() {
     document.getElementById("score").appendChild(badgeImage);
   } else {
     // Show the pie chart for correct and incorrect answers
-    showPieChart("done");
+    showPieChartEnd();
   }
 
   // Unhide the message board
@@ -405,16 +405,10 @@ function endQuiz() {
 
 
 // Function to show the pie chart of correct and incorrect answers
-function  showPieChart(xxx,score,ansWrong){
+function  showPieChartEnd(){
 
-
-
-
-
-   
 console.log(xxx+"  txxxxx???????totalQuestions????"); // Output: 3
   
- if(xxx == "done"){
    const chartCanvas = document.createElement('canvas');
 chartCanvas.id = 'pie-chart';
    
@@ -436,35 +430,6 @@ chartContainer.appendChild(chartCanvas);
   
   // Get the 2D context of the canvas
 const ctx = chartCanvas.getContext('2d');
-
- }else{
-   // Create a canvas element for the pie chart
-const chartCanvas1 = document.createElement('canvas');
-chartCanvas1.id = 'pie-chart1';
-   
-   	     pieData = {
-  labels: ['Correct', 'Incorrect'],
-  datasets: [{
-    data: [score, ansWrong],
-    backgroundColor: ['#36a2eb', '#ff6384']
-  }]
-};
-
-   
-   
- // Append the canvas to the chart container
-const chartContainer1 = document.getElementById('pie_graph_front');
-chartContainer1.appendChild(chartCanvas1);
-   
-   
-  
-  // Get the 2D context of the canvas
-const ctx = chartCanvas1.getContext('2d');
-
- }
-
-
-
 
 // Configure the options for the pie chart
 const options = {
