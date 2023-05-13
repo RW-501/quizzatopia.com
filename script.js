@@ -407,7 +407,6 @@ function endQuiz() {
 // Function to show the pie chart of correct and incorrect answers
 function  showPieChartEnd(){
 
-console.log(xxx+"  txxxxx???????totalQuestions????"); // Output: 3
   
    const chartCanvas = document.createElement('canvas');
 chartCanvas.id = 'pie-chart';
