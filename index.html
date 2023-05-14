@@ -774,15 +774,11 @@ padding:2%;
 
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  var carousel = document.querySelector('.carousel');
-  if (carousel) {
-    var carouselInstance = new bootstrap.Carousel(carousel, {
+write this in js...   $(document).ready(function() {
+    $('.carousel').carousel({
       interval: 5000 // change the slide every 5 seconds
     });
-  }
-});
-	
+  });
 	
 	
 	
