@@ -810,6 +810,28 @@ document.getElementById('signup-form').addEventListener('submit', function(event
   formData.append('e', email);
   formData.append('p', password);
 
+	
+	
+	
+	
+		var ajax = ajaxObj("POST","http://quizzatopia.lovestoblog.com/Signup/");
+        ajax.onreadystatechange = function() {
+	        if(ajaxReturn(ajax) == true) {
+				
+			//alert('???????????????????????   '+ajax.responseText);
+
+			
+				var returnText  = ajax.responseText.trim();
+				const myArray = returnText.split("/");
+						 console.log('returnText' + returnText);
+	
+		}
+	}
+	
+	
+	
+	
+	/*
   var xhr = new XMLHttpRequest();
   xhr.open('POST', 'http://quizzatopia.lovestoblog.com/Signup/', true); // Update the URL to use HTTPS
    xhr.onload = function() {
@@ -828,7 +850,7 @@ document.getElementById('signup-form').addEventListener('submit', function(event
     xhr.send(formData);
   });
 	
-	
+	*/
 	
 	
 	
