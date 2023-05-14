@@ -796,16 +796,14 @@ padding:2%;
 
 	
 	
-	
-	
-// handle sign up form submission
+	// handle sign up form submission
 document.getElementById('signup-form').addEventListener('submit', function(event) {
   event.preventDefault(); // prevent the default form submit behavior
   var e = document.getElementById('signup-email').value; // get the email input value
   var p = document.getElementById('signup-password').value; // get the password input value
 
   var uIP;
-	
+
   var ajax = new XMLHttpRequest();
   ajax.open('POST', 'http://quizzatopia.lovestoblog.com/Signup/');
   ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -822,38 +820,6 @@ document.getElementById('signup-form').addEventListener('submit', function(event
   ajax.send(params);
 });
 
-	
-	
-	/*
-	
-  // Construct the form data
-  var formData = new FormData();
-  formData.append('e', email);
-  formData.append('p', password);
-  
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'http://quizzatopia.lovestoblog.com/Signup/', true); // Update the URL to use HTTPS
-   xhr.onload = function() {
-      if (xhr.status === 200) {
-        console.log(xhr.responseText);
-        // handle successful sign up
-      } else {
-        console.log(xhr.responseText);
-        // handle sign up error
-      }
-    };
-    xhr.onerror = function() {
-      console.log(xhr.responseText);
-      // handle sign up error
-    };
-    xhr.send(formData);
-  });
-	
-	*/
-	
-	
-	
-
 // handle login form submission
 document.getElementById('login-form').addEventListener('submit', function(event) {
   event.preventDefault(); // prevent the default form submit behavior
@@ -867,74 +833,51 @@ document.getElementById('login-form').addEventListener('submit', function(event)
 
   var xhr = new XMLHttpRequest();
   xhr.open('POST', 'https://quizzatopia.lovestoblog.com/Login/', true); // Update the URL to use HTTPS
- xhr.onload = function() {
-      if (xhr.status === 200) {
-        console.log(xhr.responseText);
-        // handle successful login
-      } else {
-        console.log(xhr.responseText);
-        // handle login error
-      }
-    };
-    xhr.onerror = function() {
+
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      console.log(xhr.responseText);
+      // handle successful login
+    } else {
       console.log(xhr.responseText);
       // handle login error
-    };
-    xhr.send(formData);
-  });
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-  // Toggle password visibility
-     // Toggle password visibility when eye icon is clicked
-    $(".toggle-password").click(function() {
-      var input = $(this).closest(".input-group").find("input");
-      var icon = $(this).find("i");
+    }
+  };
 
-      if (input.attr("type") === "password") {
-        input.attr("type", "text");
-        icon.removeClass("bi bi-eye").addClass("bi bi-eye-slash");
-      } else {
-        input.attr("type", "password");
-        icon.removeClass("bi bi-eye-slash").addClass("bi bi-eye");
-      }
-    });
-  
+  xhr.onerror = function() {
+    console.log(xhr.responseText);
+    // handle login error
+  };
 
-  // Show sign up form
-  document.getElementById('show-signup-form').addEventListener('click', function() {
-    document.getElementById('login-form').classList.add('d-none');
-    document.getElementById('signup-form').classList.remove('d-none');
-  });
+  xhr.send(formData);
+});
 
-  // Show login form
-  document.getElementById('show-login-form').addEventListener('click', function() {
-    document.getElementById('signup-form').classList.add('d-none');
-    document.getElementById('login-form').classList.remove('d-none');
-  });
+// Toggle password visibility
+$(".toggle-password").click(function() {
+  var input = $(this).closest(".input-group").find("input");
+  var icon = $(this).find("i");
 
+  if (input.attr("type") === "password") {
+    input.attr("type", "text");
+    icon.removeClass("bi bi-eye").addClass("bi bi-eye-slash");
+  } else {
+    input.attr("type", "password");
+    icon.removeClass("bi bi-eye-slash").addClass("bi bi-eye");
+  }
+});
 
-	
-	
+// Show sign up form
+document.getElementById('show-signup-form').addEventListener('click', function() {
+  document.getElementById('login-form').classList.add('d-none');
+  document.getElementById('signup-form').classList.remove('d-none');
+});
+
+// Show login form
+document.getElementById('show-login-form').addEventListener('click', function() {
+  document.getElementById('signup-form').classList.add('d-none');
+  document.getElementById('login-form').classList.remove('d-none');
+});
+
 	
 	
 	
