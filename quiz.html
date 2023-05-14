@@ -694,7 +694,7 @@ function calculateScore(quizInfo) {
     savedQuizInfo.quizCode = quizCode;
     savedQuizInfo.quizInfo = quizInfo;
     savedQuizInfo.questionCorrect = newScore; // Update the questionCorrect value
-    savedQuizInfo.q = q; // Add the "q" parameter to the quizInfo object
+    savedQuizInfo.quizLink = q; // Add the "q" parameter to the quizInfo object
 
     // Update the quiz information for the specific quiz code
     localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(savedQuizInfo));
