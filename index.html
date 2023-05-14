@@ -843,7 +843,7 @@ document.getElementById('signup-form').addEventListener('submit', function(event
   formData.append('p', password);
 
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'https://quizzatopia.lovestoblog.com/Signup/', true); // Update the URL to use HTTPS
+  xhr.open('POST', 'http://quizzatopia.lovestoblog.com/Signup/', true); // Update the URL to use HTTPS
    xhr.onload = function() {
       if (xhr.status === 200) {
         console.log(xhr.responseText);
