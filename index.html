@@ -825,89 +825,9 @@ padding:2%;
     });
   });
 
-  $(document).ready(function() {
-    // Show sign up form when "Sign up" button is clicked
-    $("#show-signup-form").click(function() {
-      $("#login-form").addClass("d-none");
-      $("#signup-form").removeClass("d-none");
-    });
 
-    // Show login form when "Login" button is clicked
-    $("#show-login-form").click(function() {
-      $("#signup-form").addClass("d-none");
-      $("#login-form").removeClass("d-none");
-    });
-
-    // Toggle password visibility when eye icon is clicked
-    $(".toggle-password").click(function() {
-      var input = $(this).closest(".input-group").find("input");
-      var icon = $(this).find("i");
-
-      if (input.attr("type") === "password") {
-        input.attr("type", "text");
-        icon.removeClass("bi bi-eye").addClass("bi bi-eye-slash");
-      } else {
-        input.attr("type", "password");
-        icon.removeClass("bi bi-eye-slash").addClass("bi bi-eye");
-      }
-    });
-  });
-
- $(document).ready(function() {
-  // handle sign up form submission
-  $('#signup-form').submit(function(event) {
-    event.preventDefault(); // prevent the default form submit behavior
-    var e = $('#signup-email').val(); // get the email input value
-    var p = $('#signup-password').val(); // get the password input value
-    
-    // Construct the form data
-    var formData = {
-      email: e,
-      password: p
-    };
-    
-    $.ajax({
-      type: 'POST',
-      url: 'http://quizzatopia.lovestoblog.com/Signup/index.php',
-      data: formData,
-      success: function(response) {
-        console.log(response);
-        // handle successful sign up
-        // window.location.replace("https://www.quizzatopia.com/user/?u="+result);
-      },
-      error: function(xhr, status, error) {
-        console.log(xhr.responseText);
-        // handle sign up error
-      }
-    });
-  });
-
-  // handle login form submission
-  $('#login-form').submit(function(event) {
-    event.preventDefault(); // prevent the default form submit behavior
-    var email = $('#login-email').val(); // get the email input value
-    var password = $('#login-password').val(); // get the password input value
-    
-    // Construct the form data
-    var formData = {
-      email: email,
-      password: password
-    };
-    
-    $.ajax({
-      type: 'POST',
-      url: '/login',
-      data: formData,
-      success: function(response) {
-        console.log(response);
-        // handle successful login
-      },
-      error: function(xhr, status, error) {
-        console.log(xhr.responseText);
-        // handle login error
-      }
-    });
-  });
+	
+	
     // Clear status on focus
     const formElements = document.querySelectorAll('#login-form input, #signup-form input');
     formElements.forEach(function(element) {
@@ -916,6 +836,123 @@ padding:2%;
       });
     });
   });
+	
+	
+	
+	
+	
+	document.addEventListener('DOMContentLoaded', function() {
+  // handle sign up form submission
+  document.getElementById('signup-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // prevent the default form submit behavior
+    var email = document.getElementById('signup-email').value; // get the email input value
+    var password = document.getElementById('signup-password').value; // get the password input value
+
+    // Construct the form data
+    var formData = new FormData();
+    formData.append('e', email);
+    formData.append('p', password);
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'http://quizzatopia.lovestoblog.com/Signup/index.php', true);
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        console.log(xhr.responseText);
+        // handle successful sign up
+      } else {
+        console.log(xhr.responseText);
+        // handle sign up error
+      }
+    };
+    xhr.onerror = function() {
+      console.log(xhr.responseText);
+      // handle sign up error
+    };
+    xhr.send(formData);
+  });
+
+  // handle login form submission
+  document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // prevent the default form submit behavior
+    var email = document.getElementById('login-email').value; // get the email input value
+    var password = document.getElementById('login-password').value; // get the password input value
+
+    // Construct the form data
+    var formData = new FormData();
+    formData.append('email', email);
+    formData.append('password', password);
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/login', true);
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        console.log(xhr.responseText);
+        // handle successful login
+      } else {
+        console.log(xhr.responseText);
+        // handle login error
+      }
+    };
+    xhr.onerror = function() {
+      console.log(xhr.responseText);
+      // handle login error
+    };
+    xhr.send(formData);
+  });
+
+  // Toggle password visibility
+  var togglePasswordBtns = document.querySelectorAll('.toggle-password');
+  togglePasswordBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var passwordInput = this.closest('.input-group').querySelector('input[type="password"]');
+      var passwordFieldType = passwordInput.getAttribute('type');
+
+      if (passwordFieldType === 'password') {
+        passwordInput.setAttribute('type', 'text');
+        this.innerHTML = '<i class="bi bi-eye-slash"></i>';
+      } else {
+        passwordInput.setAttribute('type', 'password');
+        this.innerHTML = '<i class="bi bi-eye"></i>';
+      }
+    });
+  });
+
+  // Show sign up form
+  document.getElementById('show-signup-form').addEventListener('click', function() {
+    document.getElementById('login-form').classList.add('d-none');
+    document.getElementById('signup-form').classList.remove('d-none');
+  });
+
+  // Show login form
+  document.getElementById('show-login-form').addEventListener('click', function() {
+    document.getElementById('signup-form').classList.add('d-none');
+    document.getElementById('login-form').classList.remove('d-none');
+  });
+});
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </script>
 
 	<script src="helpScript.js"></script>
