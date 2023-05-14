@@ -768,13 +768,6 @@ padding:2%;
   <div id="mainFooter"></div>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-
-    <script  src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
-
-	
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
 <script>
   $(document).ready(function() {
     $('.carousel').carousel({
@@ -785,9 +778,8 @@ padding:2%;
 	
 	
 	
-	
-	
-	  // Email validation function
+	<script>
+  // Email validation function
   function validateEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
@@ -798,7 +790,7 @@ padding:2%;
     e.preventDefault();
     const loginEmail = document.getElementById('login-email').value;
     if (!validateEmail(loginEmail)) {
-          document.getElementById('status').innerHTML = 'Please enter a valid email address for login.';
+      document.getElementById('status').innerHTML = 'Please enter a valid email address for login.';
       return;
     }
     // Process login form submission
@@ -816,38 +808,6 @@ padding:2%;
     // Process signup form submission
     // ...
   });
-	
-	
-	
-	
-	
-$(document).ready(function() {
-  // Show sign up form when "Sign up" button is clicked
-  $("#show-signup-form").click(function() {
-    $("#login-form").addClass("d-none");
-    $("#signup-form").removeClass("d-none");
-  });
-
-  // Show login form when "Login" button is clicked
-  $("#show-login-form").click(function() {
-    $("#signup-form").addClass("d-none");
-    $("#login-form").removeClass("d-none");
-  });
-
-  // Toggle password visibility when eye icon is clicked
-  $(".toggle-password").click(function() {
-    var input = $(this).closest(".input-group").find("input");
-    var icon = $(this).find("i");
-
-  if (input.attr("type") === "password") {
-    input.attr("type", "text");
-    icon.removeClass("bi bi-eye").addClass("bi bi-eye-slash");
-  } else {
-    input.attr("type", "password");
-    icon.removeClass("bi bi-eye-slash").addClass("bi bi-eye");
-  }
-  });
-});
 
   // Clear status on focus
   const formElements = document.querySelectorAll('#login-form input, #signup-form input');
@@ -857,65 +817,89 @@ $(document).ready(function() {
     });
   });
 
-	
+  $(document).ready(function() {
+    // Show sign up form when "Sign up" button is clicked
+    $("#show-signup-form").click(function() {
+      $("#login-form").addClass("d-none");
+      $("#signup-form").removeClass("d-none");
+    });
 
-    
-    </script>
+    // Show login form when "Login" button is clicked
+    $("#show-login-form").click(function() {
+      $("#signup-form").addClass("d-none");
+      $("#login-form").removeClass("d-none");
+    });
 
-    
-    
-	
-	
-	
-	
-	
-	
-  <script>
-    $(document).ready(function() {
-  // handle login form submission
-  $('#login-form').submit(function(event) {
-    event.preventDefault(); // prevent the default form submit behavior
-    var formData = $(this).serialize(); // get the form data
-    $.ajax({
-      type: 'POST',
-      url: '/login',
-      data: formData,
-      success: function(response) {
-        console.log(response);
-        // handle successful login
-      },
-      error: function(xhr, status, error) {
-        console.log(xhr.responseText);
-        // handle login error
+    // Toggle password visibility when eye icon is clicked
+    $(".toggle-password").click(function() {
+      var input = $(this).closest(".input-group").find("input");
+      var icon = $(this).find("i");
+
+      if (input.attr("type") === "password") {
+        input.attr("type", "text");
+        icon.removeClass("bi bi-eye").addClass("bi bi-eye-slash");
+      } else {
+        input.attr("type", "password");
+        icon.removeClass("bi bi-eye-slash").addClass("bi bi-eye");
       }
     });
   });
 
-  // handle sign up form submission
-  $('#signup-form').submit(function(event) {
-    event.preventDefault(); // prevent the default form submit behavior
-    var formData = $(this).serialize(); // get the form data
-    $.ajax({
-      type: 'POST',
-      url: '/signup',
-      data: formData,
-      success: function(response) {
-        console.log(response);
-        // handle successful sign up
-      },
-      error: function(xhr, status, error) {
-        console.log(xhr.responseText);
-        // handle sign up error
-      }
+  $(document).ready(function() {
+    // handle login form submission
+    $('#login-form').submit(function(event) {
+      event.preventDefault(); // prevent the default form submit behavior
+      var formData = $(this).serialize(); // get the form data
+      $.ajax({
+        type: 'POST',
+        url: '/login',
+        data: formData,
+        success: function(response) {
+          console.log(response);
+          // handle successful login
+        },
+        error: function(xhr, status, error) {
+          console.log(xhr.responseText);
+          // handle login error
+        }
+      });
+    });
+
+    // handle sign up form submission
+    $('#signup-form').submit(function(event) {
+      event.preventDefault(); // prevent the default form submit behavior
+      var formData = $(this).serialize(); // get the form data
+      $.ajax({
+        type: 'POST',
+        url: '/signup',
+        data: formData,
+        success: function(response) {
+          console.log(response);
+          // handle successful sign up
+        },
+        error: function(xhr, status, error) {
+          console.log(xhr.responseText);
+          // handle sign up error
+        }
+      });
+   
+
+     });
+
+    // Clear status on focus
+    const formElements = document.querySelectorAll('#login-form input, #signup-form input');
+    formElements.forEach(function(element) {
+      element.addEventListener('focus', function() {
+        document.getElementById('status').textContent = '';
+      });
     });
   });
-});
+</script>
 
-    
-    
-  </script>
-  
-  <script src="helpScript.js"></script>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"></script>
+<script src="helpScript.js"></script>
 
   
 	
