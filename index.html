@@ -797,36 +797,30 @@ padding:2%;
 	
 	
 	
-	
-	
-	// handle sign up form submission
+// handle sign up form submission
 document.getElementById('signup-form').addEventListener('submit', function(event) {
   event.preventDefault(); // prevent the default form submit behavior
   var e = document.getElementById('signup-email').value; // get the email input value
   var p = document.getElementById('signup-password').value; // get the password input value
 
-var uIP;
-	
-	
-	
-	
-		var ajax = ajaxObj("POST","http://quizzatopia.lovestoblog.com/Signup/");
-        ajax.onreadystatechange = function() {
-	        if(ajaxReturn(ajax) == true) {
-				
-			//alert('???????????????????????   '+ajax.responseText);
+  var uIP;
 
-			
-				var returnText  = ajax.responseText.trim();
-				const myArray = returnText.split("/");
-						 console.log('returnText' + returnText);
-	
-		}
-	        ajax.send("u="+u+"&e="+e+"&p="+p1+"&uIP="+uIP);
-	}
-	
-	
-	
+  var ajax = new XMLHttpRequest();
+  ajax.open('POST', 'https://quizzatopia.lovestoblog.com/Signup/');
+  ajax.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+  ajax.onreadystatechange = function() {
+    if (ajax.readyState === 4 && ajax.status === 200) {
+      var returnText = ajax.responseText.trim();
+      const myArray = returnText.split('/');
+      console.log('returnText', returnText);
+    }
+  };
+
+  var params = 'u=' + u + '&e=' + e + '&p=' + p1 + '&uIP=' + uIP;
+  ajax.send(params);
+});
+
 	
 	/*
 	
