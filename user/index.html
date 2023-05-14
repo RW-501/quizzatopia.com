@@ -37,6 +37,14 @@
       max-height: 200px;
       overflow-y: auto;
     }
+	  
+	      .localStorage-usage {
+      background-color: #f8f9fa;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
   </style>
 <div class="container shadow py-4">
   	 
@@ -138,7 +146,12 @@
     height: 400px;
     overflow: auto;
 "></div>
-
+  <div class="container d-flex flex-column align-items-center justify-content-center vh-100">
+    <h2 class="text-center">LocalStorage Usage</h2>
+    <div id="localStorageUsage" class="localStorage-usage"></div>
+  </div>
+		  
+		  
         </div>
       </div>
 	  </div>
@@ -206,6 +219,37 @@
 
     // Call the function to display quiz information on page load
     document.addEventListener('DOMContentLoaded', getQuizInfo);    
+		    
+		    
+		    
+		  function formatBytes(bytes, decimals = 2) {
+      if (bytes === 0) return '0 Bytes';
+
+      const k = 1024;
+      const dm = decimals < 0 ? 0 : decimals;
+      const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+    }
+
+    function getLocalStorageUsage() {
+      const localStorageUsage = document.getElementById('localStorageUsage');
+      const totalBytes = JSON.stringify(localStorage).length;
+      const totalUsage = formatBytes(totalBytes);
+
+      localStorageUsage.innerHTML = `
+        <h4>LocalStorage Usage</h4>
+        <p>Total Data: ${totalUsage}</p>
+      `;
+    }
+
+    document.addEventListener('DOMContentLoaded', getLocalStorageUsage);
+		    
+		    
+		    
+		    
 		    
 		    
 		    
