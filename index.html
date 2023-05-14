@@ -528,6 +528,7 @@ if (window.location.search.substr(1) === 'q') {
         </div>
         <button id="signup_btn" type="submit" class="btn btn-primary">Sign Up</button>
       </form>
+	    <div id="status" ></div>
       <hr>
       <div class="text-center">
   <button id="show-signup-form" class="btn btn-link">Don't have an account yet? Sign Up</button>
@@ -848,7 +849,13 @@ $(document).ready(function() {
   });
 });
 
-
+  // Clear status on focus
+  const formElements = document.querySelectorAll('#login-form input, #signup-form input');
+  formElements.forEach(function(element) {
+    element.addEventListener('focus', function() {
+      document.getElementById('status').textContent = '';
+    });
+  });
 
 	
 
