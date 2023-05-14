@@ -33,7 +33,7 @@ if (window.location.pathname.substr(-5) === '.html' && window.location.pathname.
     <!-- Profile pic and name area -->
     <div class="profile-area">
       <img id="profile-pic" src="/images/pics/4.png" alt="Profile Picture" class="profile-pic">
-      <span id="profile-name" class="profile-name"></span>
+      <span id="profile-name" class="profile-name">Username</span>
     </div>
   </div>
 </nav>
@@ -100,11 +100,15 @@ if (window.location.pathname.substr(-5) === '.html' && window.location.pathname.
   
   .profile-pic {
     width: 30px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    border-radius: 50%; /* Make the profile picture circular */
+    object-fit: cover; /* Ensure the image fills the circular container */
   }
   
   .profile-name {
     width: 80px; /* Adjust the width as needed */
     color: #fff; /* Set the font color to match the navbar */
+    margin-left: 5px; /* Add some spacing between the profile picture and name */
   }
   
   .profile-link {
