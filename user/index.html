@@ -146,8 +146,7 @@
     height: 400px;
     overflow: auto;
 "></div>
-  <div class="container d-flex flex-column align-items-center justify-content-center vh-100">
-    <h2 class="text-center">LocalStorage Usage</h2>
+  <div class="">
     <div id="localStorageUsage" class="localStorage-usage"></div>
   </div>
 		  
@@ -202,14 +201,18 @@
           const quizName = quizInfo.quizName;
           const questionCorrect = quizInfo.questionCorrect;
           const numberOfQuestions = quizInfo.numberOfQuestions;
+          const quizLink = quizInfo.quizLink;
 
-          const quizInfoElement = document.createElement('div');
+          const quizInfoElement = document.createElement('a');
           quizInfoElement.classList.add('quiz-info');
           quizInfoElement.innerHTML = `
             <h4>${quizName}</h4>
             <p>Quiz Code: ${quizCode}</p>
             <p>Score: ${questionCorrect}/${numberOfQuestions} questions</p>
           `;
+
+// Set href attribute of the <a> tag to the quiz URL
+quizInfoElement.href = "/quiz?q="+quizLink;
 
 
           quizInfoContainer.appendChild(quizInfoElement);
@@ -240,7 +243,7 @@
       const totalUsage = formatBytes(totalBytes);
 
       localStorageUsage.innerHTML = `
-        <h4>LocalStorage Usage</h4>
+        <h2 class="text-center">LocalStorage Usage</h2>
         <p>Total Data: ${totalUsage}</p>
       `;
     }
