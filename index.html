@@ -770,11 +770,14 @@ padding:2%;
 
 
 <script>
-  $(document).ready(function() {
-    $('.carousel').carousel({
+document.addEventListener('DOMContentLoaded', function() {
+  var carousel = document.querySelector('.carousel');
+  if (carousel) {
+    var carouselInstance = new bootstrap.Carousel(carousel, {
       interval: 5000 // change the slide every 5 seconds
     });
-  });
+  }
+});
 	
 	
 	
