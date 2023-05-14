@@ -24,7 +24,15 @@
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 		}
 	</style>
-
+  <style>
+    .quiz-info {
+      background-color: #f8f9fa;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
 <div class="container shadow py-4">
   	 
   <div id="main">
@@ -45,11 +53,7 @@
         <!-- Message User button -->
 	          <button onclick="redirectToMessaging()" class="btn btn-primary mr-2">Go to Messaging</button>
 
-          <script>
-    function redirectToMessaging() {
-      window.location.href = "../messaging";
-    }
-  </script>
+
         <!-- Add User button -->
         <button class="btn btn-success">Add User</button>
       </div>
@@ -116,6 +120,21 @@
       </div>
     </div>
 
+	  
+	  <div class="col-md-6">
+        <h5>Quizzes Taken</h5>
+        <div class="card-deck">
+          <!-- quizInfoContainer 1 -->
+          <div class="card">
+           
+		      <div id="quizInfoContainer"></div>
+
+        </div>
+      </div>
+	  
+	  
+	  
+	  
     <div class="text-center mt-5">
       <button class="btn btn-danger">Report User</button>
     </div>
@@ -137,6 +156,44 @@
 
 
     <script src="/helpScript2.js"></script>
-  
+            <script>
+		    
+		    
+		    
+		   // Retrieve quiz information from localStorage
+    function getQuizInfo() {
+      const quizInfoContainer = document.getElementById('quizInfoContainer');
+      quizInfoContainer.innerHTML = ''; // Clear previous content
+
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key.startsWith('quizInfo_')) {
+          const quizInfo = JSON.parse(localStorage.getItem(key));
+          const quizCode = quizInfo.quizCode;
+          const quizName = quizInfo.quizName;
+          const questionCorrect = quizInfo.questionCorrect;
+
+          const quizInfoElement = document.createElement('div');
+          quizInfoElement.classList.add('quiz-info');
+          quizInfoElement.innerHTML = `
+            <h4>${quizName}</h4>
+            <p>Quiz Code: ${quizCode}</p>
+            <p>Score: ${questionCorrect}</p>
+          `;
+
+          quizInfoContainer.appendChild(quizInfoElement);
+        }
+      }
+    }
+
+    // Call the function to display quiz information on page load
+    document.addEventListener('DOMContentLoaded', getQuizInfo);    
+		    
+		    
+		    
+    function redirectToMessaging() {
+      window.location.href = "../messaging";
+    }
+  </script>
 
 </html>
