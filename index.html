@@ -783,6 +783,43 @@ padding:2%;
 	
 	
 	
+	
+	
+	
+	  // Email validation function
+  function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  // Login form submit event handler
+  document.getElementById('login-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const loginEmail = document.getElementById('login-email').value;
+    if (!validateEmail(loginEmail)) {
+          document.getElementById('status').innerHTML = 'Please enter a valid email address for login.';
+      return;
+    }
+    // Process login form submission
+    // ...
+  });
+
+  // Signup form submit event handler
+  document.getElementById('signup-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const signupEmail = document.getElementById('signup-email').value;
+    if (!validateEmail(signupEmail)) {
+      document.getElementById('status').innerHTML = 'Please enter a valid email address for signup.';
+      return;
+    }
+    // Process signup form submission
+    // ...
+  });
+	
+	
+	
+	
+	
 $(document).ready(function() {
   // Show sign up form when "Sign up" button is clicked
   $("#show-signup-form").click(function() {
