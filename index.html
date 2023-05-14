@@ -505,7 +505,7 @@ if (window.location.search.substr(1) === 'q') {
             <i class="bi bi-facebook me-2"></i>
             Facebook
           </button>
-          <button type="button" class="btn btn-outline-danger">
+          <button id="login_btn"type="button" class="btn btn-outline-danger">
             <i class="bi bi-google me-2"></i>
             Google
           </button>
@@ -526,7 +526,7 @@ if (window.location.search.substr(1) === 'q') {
             </div>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary">Sign Up</button>
+        <button id="signup_btn" type="submit" class="btn btn-primary">Sign Up</button>
       </form>
       <hr>
       <div class="text-center">
@@ -815,129 +815,10 @@ $(document).ready(function() {
 
 	
 
+    
+    </script>
 
-    function ValidateEmail()
-{
-	var inputText = _('signup-email').value;
-	
-
-	
-var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-if(inputText.match(mailformat))
-{
-_('signup_btn').style.display= 'block';
-return true;
-}
-else
-{
-_('signup_btn').style.display= 'none';
-return false;
-}
-}
-
-	
-		ValidateEmail();
-	
-		$('#signup-email').keypress(function(event) {
-    if (event.keyCode == 13 || event.which == 13) {
-
-        $('#signup-password').focus();
-
-        event.preventDefault();
-    }
-});
-		
-		
-		
-	$('#signup-password').keypress(function(event) {
-    if (event.keyCode == 13 || event.which == 13) {
-
-        $('#signup_btn').focus();
-
-        event.preventDefault();
-    }
-});
-		
-				
-
-		
-		//_______________________login__________________________-
-		
-				$('#login-email').keypress(function(event) {
-    if (event.keyCode == 13 || event.which == 13) {
-        $('#login-password').focus();
-        event.preventDefault();
-    }
-});
-		
-		
-		
-		$('#login-password').keypress(function(event) {
-    if (event.keyCode == 13 || event.which == 13) {
-        $('#login_btn').focus();
-        event.preventDefault();
-    }
-});
-		
-		
-
-
-
-
-function _(x){
-	return document.getElementById(x);
-}
-
-
-
-
-
-
-	function ajaxObj( meth, url ) {
-	var x = new XMLHttpRequest();
-	x.open( meth, url, true );
-	x.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	return x;
-}
-function ajaxReturn(x){
-	if(x.readyState == 4 && x.status == 200){
-	    return true;	
-	}
-}
-function restrict(elem){
-
-	var tf = _(elem);
-	var rx = new RegExp;
-	if(elem == "userEmail"){
-		rx = /[' "]/gi;
-		ValidateEmail();
-	} 
-		
-
-	}
-	
-
-function emptyElement(x){
-	_(x).innerHTML = "";
-	//_('status').innerHTML = '';
-
-}
-	
-	
-
-
-
-
-
-</script>
-
-
-
-
-
-
-
-
+    
     
 	
 	
@@ -972,7 +853,7 @@ function emptyElement(x){
     var formData = $(this).serialize(); // get the form data
     $.ajax({
       type: 'POST',
-      url: 'http://quizzatopia.lovestoblog.com/Signup/index.php',
+      url: '/signup',
       data: formData,
       success: function(response) {
         console.log(response);
@@ -986,7 +867,6 @@ function emptyElement(x){
   });
 });
 
-	  //	window.location.replace("https://www.MyLinks.Buzz/prices/?n="+result);
     
     
   </script>
