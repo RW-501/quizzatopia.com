@@ -33,7 +33,7 @@ if (window.location.pathname.substr(-5) === '.html' && window.location.pathname.
     <!-- Profile pic and name area -->
     <div class="profile-area">
       <img id="profile-pic" src="/images/pics/4.png" alt="Profile Picture" class="profile-pic">
-      <span id="profile-name" class="profile-name">Username</span>
+      <a id="profile-name" class="profile-name" href="/login/">Username</a>
     </div>
   </div>
 </nav>
@@ -89,7 +89,7 @@ if (window.location.pathname.substr(-5) === '.html' && window.location.pathname.
     text-align: right;
   }
 
-  .nav-link {
+    .nav-link {
     font-size: 20px;
     font-weight: bold;
   }
@@ -105,10 +105,17 @@ if (window.location.pathname.substr(-5) === '.html' && window.location.pathname.
     object-fit: cover; /* Ensure the image fills the circular container */
   }
   
+  .profile-area {
+    display: flex; /* Use flexbox to align the profile picture and name horizontally */
+    align-items: center; /* Center align vertically */
+  }
+  
   .profile-name {
     width: 80px; /* Adjust the width as needed */
     color: #fff; /* Set the font color to match the navbar */
     margin-left: 5px; /* Add some spacing between the profile picture and name */
+    font-weight: bold; /* Add the desired font weight */
+    text-decoration: none; /* Remove underline from the link */
   }
   
   .profile-link {
