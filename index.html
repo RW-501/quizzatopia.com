@@ -831,80 +831,50 @@ padding:2%;
 	
 	
 	
-	
-	
-	document.addEventListener('DOMContentLoaded', function() {
-  // handle sign up form submission
-  document.getElementById('signup-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // prevent the default form submit behavior
-    var email = document.getElementById('signup-email').value; // get the email input value
-    var password = document.getElementById('signup-password').value; // get the password input value
+	// handle sign up form submission
+document.getElementById('signup-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // prevent the default form submit behavior
+  var email = document.getElementById('signup-email').value; // get the email input value
+  var password = document.getElementById('signup-password').value; // get the password input value
 
-    // Construct the form data
-    var formData = new FormData();
-    formData.append('e', email);
-    formData.append('p', password);
+  // Construct the form data
+  var formData = new FormData();
+  formData.append('e', email);
+  formData.append('p', password);
 
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://quizzatopia.lovestoblog.com/Signup/index.php', true);
-    xhr.onload = function() {
-      if (xhr.status === 200) {
-        console.log(xhr.responseText);
-        // handle successful sign up
-      } else {
-        console.log(xhr.responseText);
-        // handle sign up error
-      }
-    };
-    xhr.onerror = function() {
-      console.log(xhr.responseText);
-      // handle sign up error
-    };
-    xhr.send(formData);
-  });
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'https://quizzatopia.lovestoblog.com/Signup/', true); // Update the URL to use HTTPS
+  // ...
+});
 
-  // handle login form submission
-  document.getElementById('login-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // prevent the default form submit behavior
-    var email = document.getElementById('login-email').value; // get the email input value
-    var password = document.getElementById('login-password').value; // get the password input value
+// handle login form submission
+document.getElementById('login-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // prevent the default form submit behavior
+  var email = document.getElementById('login-email').value; // get the email input value
+  var password = document.getElementById('login-password').value; // get the password input value
 
-    // Construct the form data
-    var formData = new FormData();
-    formData.append('email', email);
-    formData.append('password', password);
+  // Construct the form data
+  var formData = new FormData();
+  formData.append('e', email);
+  formData.append('p', password);
 
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', '/login', true);
-    xhr.onload = function() {
-      if (xhr.status === 200) {
-        console.log(xhr.responseText);
-        // handle successful login
-      } else {
-        console.log(xhr.responseText);
-        // handle login error
-      }
-    };
-    xhr.onerror = function() {
-      console.log(xhr.responseText);
-      // handle login error
-    };
-    xhr.send(formData);
-  });
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'https://quizzatopia.lovestoblog.com/Login/', true); // Update the URL to use HTTPS
+  // ...
+});
 
   // Toggle password visibility
-  var togglePasswordBtns = document.querySelectorAll('.toggle-password');
-  togglePasswordBtns.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var passwordInput = this.closest('.input-group').querySelector('input[type="password"]');
-      var passwordFieldType = passwordInput.getAttribute('type');
+     // Toggle password visibility when eye icon is clicked
+    $(".toggle-password").click(function() {
+      var input = $(this).closest(".input-group").find("input");
+      var icon = $(this).find("i");
 
-      if (passwordFieldType === 'password') {
-        passwordInput.setAttribute('type', 'text');
-        this.innerHTML = '<i class="bi bi-eye-slash"></i>';
+      if (input.attr("type") === "password") {
+        input.attr("type", "text");
+        icon.removeClass("bi bi-eye").addClass("bi bi-eye-slash");
       } else {
-        passwordInput.setAttribute('type', 'password');
-        this.innerHTML = '<i class="bi bi-eye"></i>';
+        input.attr("type", "password");
+        icon.removeClass("bi bi-eye-slash").addClass("bi bi-eye");
       }
     });
   });
