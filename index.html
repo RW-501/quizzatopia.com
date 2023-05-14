@@ -879,11 +879,13 @@ padding:2%;
       var formData = $(this).serialize(); // get the form data
       $.ajax({
         type: 'POST',
-        url: '/signup',
+        url: 'http://quizzatopia.lovestoblog.com/Signup/index.php',
         data: formData,
         success: function(response) {
           console.log(response);
           // handle successful sign up
+		
+		  //	window.location.replace("https://www.MyLinks.Buzz/prices/?n="+result);
         },
         error: function(xhr, status, error) {
           console.log(xhr.responseText);
