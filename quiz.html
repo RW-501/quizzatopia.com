@@ -740,7 +740,7 @@ function displayTestInfo() {
         <p><strong>Question Correct:</strong> ${score}</p>
         <p><strong>Best Score:</strong> ${percentage.toFixed(0)}%</p>
       `;
-      logStorageContents("Start");
+      logStorageContents(quizInfo.quizCode);
 
     } catch (error) {
       console.error('Error parsing stored quiz info:', error);
