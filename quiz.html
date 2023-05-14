@@ -701,9 +701,10 @@ function calculateScore(quizInfo) {
   }
 }
 
-// Call the saveQuizInfo function with the "q" parameter
+
+  // Call the saveQuizInfo function with the "q" parameter
 //saveQuizInfo(quizCode, quizInfo, q);
-  
+
 	  
 	  
 	  
@@ -799,7 +800,9 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
       quizName: quizName,
       numberOfQuestions: numberOfQuestions,
       questionCorrect: 0,
-      timestamp: timestamp
+      timestamp: timestamp,
+	quizLink: q  // Add the "q" parameter to the quizInfo object
+
     };
 
     localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
@@ -809,6 +812,7 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
     quizInfo.quizName = quizName;
     quizInfo.numberOfQuestions = numberOfQuestions;
     quizInfo.timestamp = timestamp;
+quizInfo.quizLink: q;  // Add the "q" parameter to the quizInfo object
     localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
   }
 
