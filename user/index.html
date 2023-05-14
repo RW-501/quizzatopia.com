@@ -32,6 +32,11 @@
       padding: 10px;
       margin-bottom: 10px;
     }
+
+    .quiz-list {
+      max-height: 200px;
+      overflow-y: auto;
+    }
   </style>
 <div class="container shadow py-4">
   	 
@@ -118,9 +123,9 @@
           </div>
         </div>
       </div>
-    </div>
-
-	  
+	    
+	    
+	      
 	  <div class="col-md-6">
         <h5>Quizzes Taken</h5>
         <div class="card-deck">
@@ -131,7 +136,13 @@
 
         </div>
       </div>
-	  
+	  </div>
+	    
+	    
+	    
+    </div>
+
+	
 	  
 	  
 	  
@@ -165,21 +176,23 @@
       const quizInfoContainer = document.getElementById('quizInfoContainer');
       quizInfoContainer.innerHTML = ''; // Clear previous content
 
-      for (let i = 0; i < localStorage.length; i++) {
+        for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         if (key.startsWith('quizInfo_')) {
           const quizInfo = JSON.parse(localStorage.getItem(key));
           const quizCode = quizInfo.quizCode;
           const quizName = quizInfo.quizName;
           const questionCorrect = quizInfo.questionCorrect;
+          const numberOfQuestions = quizInfo.numberOfQuestions;
 
           const quizInfoElement = document.createElement('div');
           quizInfoElement.classList.add('quiz-info');
           quizInfoElement.innerHTML = `
             <h4>${quizName}</h4>
             <p>Quiz Code: ${quizCode}</p>
-            <p>Score: ${questionCorrect}</p>
+            <p>Score: ${questionCorrect}/${numberOfQuestions} questions</p>
           `;
+
 
           quizInfoContainer.appendChild(quizInfoElement);
         }
