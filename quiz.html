@@ -648,7 +648,7 @@ function calculateScore(quizInfo) {
   };
 }
 
-
+/*
   
 	function saveQuizInfo(quizCode, quizInfo) {
   console.log('???????????????????????????saveQuizInfo???????????????????????????????????????????????//');
@@ -674,7 +674,41 @@ function calculateScore(quizInfo) {
     localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(savedQuizInfo));
   }
 }
+*/
+	  
+	function saveQuizInfo(quizCode, quizInfo, q) {
+  console.log('???????????????????????????saveQuizInfo???????????????????????????????????????????????//');
 
+  const savedQuizInfo = JSON.parse(localStorage.getItem(`quizInfo_${quizCode}`)) || {};
+  const savedScore = savedQuizInfo.questionCorrect || 0;
+  const newScore = quizInfo.questionCorrect || 0;
+
+  console.log(savedScore + " savedScore | newScore " + newScore);
+
+  console.log('saveQuizInfo Quiz quizInfo:' + quizInfo);
+  console.log('saveQuizInfo Quiz Code:' + quizCode);
+  console.log('saveQuizInfo Quiz Info:' + savedQuizInfo);
+  console.log('JSON.stringify(savedQuizInfo)) Quiz Info:' + JSON.stringify(savedQuizInfo));
+
+  if (newScore > savedScore || savedScore === 0 || savedScore === null) {
+    savedQuizInfo.quizCode = quizCode;
+    savedQuizInfo.quizInfo = quizInfo;
+    savedQuizInfo.questionCorrect = newScore; // Update the questionCorrect value
+    savedQuizInfo.q = q; // Add the "q" parameter to the quizInfo object
+
+    // Update the quiz information for the specific quiz code
+    localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(savedQuizInfo));
+  }
+}
+
+// Call the saveQuizInfo function with the "q" parameter
+//saveQuizInfo(quizCode, quizInfo, q);
+  
+	  
+	  
+	  
+	  
+	  
 // Log the contents of the storage
 function logStorageContents(quizCode) {
   const savedQuizInfo = localStorage.getItem(`quizInfo_${quizCode}`);
