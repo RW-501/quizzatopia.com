@@ -650,27 +650,25 @@ function calculateScore(quizInfo) {
 
 
   
-	  
-function saveQuizInfo(quizCode, quizInfo) {
-	console.log('???????????????????????????saveQuizInfo???????????????????????????????????????????????//');
+	function saveQuizInfo(quizCode, quizInfo) {
+  console.log('???????????????????????????saveQuizInfo???????????????????????????????????????????????//');
 
   const savedQuizInfo = JSON.parse(localStorage.getItem(`quizInfo_${quizCode}`)) || {};
   const savedScore = savedQuizInfo.questionCorrect || 0;
   const newScore = quizInfo.questionCorrect || 0;
 	
-    console.log(savedScore+" savedScore | newScore     "+ newScore); 
+  console.log(savedScore + " savedScore | newScore " + newScore); 
 
-	
-console.log('saveQuizInfo Quiz quizInfo:'+ quizInfo);
-console.log('saveQuizInfo Quiz Code:'+ quizCode);
-  console.log('saveQuizInfo Quiz Info:'+ savedQuizInfo);
-  console.log('JSON.stringify(savedQuizInfo)) Quiz Info:'+ JSON.stringify(savedQuizInfo));
+  console.log('saveQuizInfo Quiz quizInfo:' + quizInfo);
+  console.log('saveQuizInfo Quiz Code:' + quizCode);
+  console.log('saveQuizInfo Quiz Info:' + savedQuizInfo);
+  console.log('JSON.stringify(savedQuizInfo)) Quiz Info:' + JSON.stringify(savedQuizInfo));
 	
 	
   if (newScore > savedScore || savedScore === 0 || savedScore === null) {
     savedQuizInfo.quizCode = quizCode;
     savedQuizInfo.quizInfo = quizInfo;
-	console.log('?????????savedn????????//');
+    savedQuizInfo.questionCorrect = newScore; // Update the questionCorrect value
 
     // Update the quiz information for the specific quiz code
     localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(savedQuizInfo));
@@ -683,6 +681,7 @@ function logStorageContents(quizCode) {
   console.log('logStorageContents Quiz Code:', quizCode);
   console.log('logStorageContents Quiz Info:', savedQuizInfo);
 }
+
 
 	  
 	  
