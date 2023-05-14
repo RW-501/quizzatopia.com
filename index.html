@@ -793,38 +793,6 @@ padding:2%;
     return emailRegex.test(email);
   }
 
-  // Login form submit event handler
-  document.getElementById('login-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const loginEmail = document.getElementById('login-email').value;
-    if (!validateEmail(loginEmail)) {
-      document.getElementById('status').innerHTML = 'Please enter a valid email address for login.';
-      return;
-    }
-    // Process login form submission
-    // ...
-  });
-
-  // Signup form submit event handler
-  document.getElementById('signup-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const signupEmail = document.getElementById('signup-email').value;
-    if (!validateEmail(signupEmail)) {
-      document.getElementById('status').innerHTML = 'Please enter a valid email address for signup.';
-      return;
-    }
-    // Process signup form submission
-    // ...
-  });
-
-  // Clear status on focus
-  const formElements = document.querySelectorAll('#login-form input, #signup-form input');
-  formElements.forEach(function(element) {
-    element.addEventListener('focus', function() {
-      document.getElementById('status').textContent = '';
-    });
-  });
-
 
 	
 	
