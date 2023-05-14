@@ -844,8 +844,26 @@ document.getElementById('signup-form').addEventListener('submit', function(event
 
   var xhr = new XMLHttpRequest();
   xhr.open('POST', 'https://quizzatopia.lovestoblog.com/Signup/', true); // Update the URL to use HTTPS
-  // ...
-});
+   xhr.onload = function() {
+      if (xhr.status === 200) {
+        console.log(xhr.responseText);
+        // handle successful sign up
+      } else {
+        console.log(xhr.responseText);
+        // handle sign up error
+      }
+    };
+    xhr.onerror = function() {
+      console.log(xhr.responseText);
+      // handle sign up error
+    };
+    xhr.send(formData);
+  });
+	
+	
+	
+	
+	
 
 // handle login form submission
 document.getElementById('login-form').addEventListener('submit', function(event) {
@@ -860,9 +878,43 @@ document.getElementById('login-form').addEventListener('submit', function(event)
 
   var xhr = new XMLHttpRequest();
   xhr.open('POST', 'https://quizzatopia.lovestoblog.com/Login/', true); // Update the URL to use HTTPS
-  // ...
-});
-
+ xhr.onload = function() {
+      if (xhr.status === 200) {
+        console.log(xhr.responseText);
+        // handle successful login
+      } else {
+        console.log(xhr.responseText);
+        // handle login error
+      }
+    };
+    xhr.onerror = function() {
+      console.log(xhr.responseText);
+      // handle login error
+    };
+    xhr.send(formData);
+  });
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
   // Toggle password visibility
      // Toggle password visibility when eye icon is clicked
     $(".toggle-password").click(function() {
