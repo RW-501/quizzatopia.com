@@ -853,49 +853,61 @@ padding:2%;
     });
   });
 
-  $(document).ready(function() {
-    // handle login form submission
-    $('#login-form').submit(function(event) {
-      event.preventDefault(); // prevent the default form submit behavior
-      var formData = $(this).serialize(); // get the form data
-      $.ajax({
-        type: 'POST',
-        url: '/login',
-        data: formData,
-        success: function(response) {
-          console.log(response);
-          // handle successful login
-        },
-        error: function(xhr, status, error) {
-          console.log(xhr.responseText);
-          // handle login error
-        }
-      });
+ $(document).ready(function() {
+  // handle sign up form submission
+  $('#signup-form').submit(function(event) {
+    event.preventDefault(); // prevent the default form submit behavior
+    var e = $('#signup-email').val(); // get the email input value
+    var p = $('#signup-password').val(); // get the password input value
+    
+    // Construct the form data
+    var formData = {
+      email: e,
+      password: p
+    };
+    
+    $.ajax({
+      type: 'POST',
+      url: 'http://quizzatopia.lovestoblog.com/Signup/index.php',
+      data: formData,
+      success: function(response) {
+        console.log(response);
+        // handle successful sign up
+        // window.location.replace("https://www.quizzatopia.com/user/?u="+result);
+      },
+      error: function(xhr, status, error) {
+        console.log(xhr.responseText);
+        // handle sign up error
+      }
     });
+  });
 
-    // handle sign up form submission
-    $('#signup-form').submit(function(event) {
-      event.preventDefault(); // prevent the default form submit behavior
-      var formData = $(this).serialize(); // get the form data
-      $.ajax({
-        type: 'POST',
-        url: 'http://quizzatopia.lovestoblog.com/Signup/index.php',
-        data: formData,
-        success: function(response) {
-          console.log(response);
-          // handle successful sign up
-		
-		  //	window.location.replace("https://www.MyLinks.Buzz/prices/?n="+result);
-        },
-        error: function(xhr, status, error) {
-          console.log(xhr.responseText);
-          // handle sign up error
-        }
-      });
-   
-
-     });
-
+  // handle login form submission
+  $('#login-form').submit(function(event) {
+    event.preventDefault(); // prevent the default form submit behavior
+    var email = $('#login-email').val(); // get the email input value
+    var password = $('#login-password').val(); // get the password input value
+    
+    // Construct the form data
+    var formData = {
+      email: email,
+      password: password
+    };
+    
+    $.ajax({
+      type: 'POST',
+      url: '/login',
+      data: formData,
+      success: function(response) {
+        console.log(response);
+        // handle successful login
+      },
+      error: function(xhr, status, error) {
+        console.log(xhr.responseText);
+        // handle login error
+      }
+    });
+  });
     // Clear status on focus
     const formElements = document.querySelectorAll('#login-form input, #signup-form input');
     formElements.forEach(function(element) {
