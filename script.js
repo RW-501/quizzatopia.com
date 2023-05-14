@@ -176,15 +176,17 @@ function showQuestion() {
     return;
   }
 
-  // Continue showing the question if it's the first one
+ 
   const questionObj = questions[currentQuestion];
-  // Rest of the function code...
-
   document.getElementById("question").innerHTML = questionObj.question;
+  
+  // Randomize the order of the answer options
   const options = questionObj.options;
+  const shuffledOptions = shuffleArrayAnswers(options);
+
   const answerButtons = document.getElementsByClassName("answer-option");
-  for (let i = 0; i < options.length; i++) {
-    answerButtons[i].innerHTML = options[i];
+  for (let i = 0; i < shuffledOptions.length; i++) {
+    answerButtons[i].innerHTML = shuffledOptions[i];
     answerButtons[i].addEventListener("click", checkAnswer);
   }
   document.getElementById("explanation").innerHTML = "";
@@ -198,7 +200,15 @@ function showQuestion() {
   skipNextBtn.innerHTML = questionCorrect > currentQuestion ? 'Next' : 'Skip';
 }
 
-
+// Function to shuffle an array using Fisher-Yates algorithm
+function shuffleArrayAnswers(array) {
+  const shuffledArray = [...array];
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+  return shuffledArray;
+}
 
 
   // Get the progress bar element
