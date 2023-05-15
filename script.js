@@ -221,7 +221,7 @@ var progressBar = document.getElementById('progress-bar');
 
 // Update the progress bar
 function updateProgressBar(currentQuestion) {
-  let QuestionNewNum = currentQuestion ;
+  let QuestionNewNum  = currentQuestion === 0 ? 1 : currentQuestion;
   var percentage = (currentQuestion / totalQuestions) * 100;
   progressBar.style.width = percentage + '%';
   //      console.log(QuestionNewNum+"  updateProgressBar??????????currentQuestion????"); // Output: 3
@@ -379,11 +379,15 @@ function displayEarnedPoints(earnedPoints) {
 }
 
   const initialPoints = localStorage.getItem('points');
+console.log(initialPoints+"  initialPoints??????????totalQuestions????"); // Output: 3
 
 function calculateEarnedPoints() {
   const currentPoints = localStorage.getItem('points');
   const earnedPoints = currentPoints - initialPoints;
+console.log(earnedPoints+"  earnedPoints??????????totalQuestions????"); // Output: 3
+
   return earnedPoints > 0 ? earnedPoints : 0;
+	
 }
 
 
