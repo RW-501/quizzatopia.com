@@ -389,6 +389,9 @@ if (percentageScore === 100) {
   updatePointsAndRank();
   updateQuizzesTaken(1);
 	
+const earnedPoints = calculateEarnedPoints();
+displayEarnedPoints(earnedPoints);
+
 	
   // Hide the quiz container and show the end container
   document.getElementById("quiz-container").classList.add("d-none");
@@ -502,20 +505,33 @@ function startTimer() {
 }
 
 // Calculate the earned points in the quiz
-const earnedPoints = calculateEarnedPoints();
+function displayEarnedPoints(earnedPoints) {
+  const earnedPointsElement = document.getElementById("earnedPoints");
+  earnedPointsElement.textContent = `+${earnedPoints}`;
+  earnedPointsElement.classList.add("animate-earned-points");
 
-// Display the earned points on the page
-const earnedPointsElement = document.getElementById("earnedPoints");
-earnedPointsElement.textContent = `+${earnedPoints}`;
+  setTimeout(() => {
+    updatePoints(earnedPoints);
+    earnedPointsElement.classList.remove("animate-earned-points");
+  }, 1000);
+}
 
-// Trigger the animation
-earnedPointsElement.classList.add("animate-earned-points");
+function calculateEarnedPoints(questionCorrect, totalQuestions, pointsRewards) {
+  const initialPoints = localStorage.getItem('points');
+  const percentageScore = Math.round((questionCorrect / totalQuestions) * 100);
 
-// Wait for the animation to complete and update the user's points
-setTimeout(() => {
-  updatePoints(earnedPoints);
-  earnedPointsElement.classList.remove("animate-earned-points");
-}, 1000); // Adjust the timeout value as needed
+  if (percentageScore === 100) {
+    const halfQuestionTotal = totalQuestions / 2;
+    const allRightBonus = pointsRewards * halfQuestionTotal;
+    const earnedPoints = allRightBonus - initialPoints;
+    return earnedPoints > 0 ? earnedPoints : 0;
+  }
+
+  return 0; // No bonus points earned if not a perfect score
+}
+
+
+
 
 
 // Event Listeners
