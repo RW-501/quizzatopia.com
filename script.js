@@ -363,6 +363,9 @@ const currentQuestionNumber = currentQuestion === 0 ? 1 : currentQuestion;
   updateProgressBar(currentQuestionNumber);
 }
 
+
+
+
 // Calculate the earned points in the quiz
 function displayEarnedPoints(earnedPoints) {
   const earnedPointsElement = document.getElementById("earnedPoints");
@@ -370,13 +373,14 @@ function displayEarnedPoints(earnedPoints) {
   earnedPointsElement.classList.add("animate-earned-points");
 
   setTimeout(() => {
-    updatePoints(earnedPoints);
+   // updatePoints(earnedPoints);
     earnedPointsElement.classList.remove("animate-earned-points");
-  }, 1000);
+  }, 5000);
 }
 
-function calculateEarnedPoints() {
   const initialPoints = localStorage.getItem('points');
+
+function calculateEarnedPoints() {
   const currentPoints = localStorage.getItem('points');
   const earnedPoints = currentPoints - initialPoints;
   return earnedPoints > 0 ? earnedPoints : 0;
