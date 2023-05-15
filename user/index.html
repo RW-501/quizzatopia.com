@@ -111,28 +111,11 @@
     overflow: auto;
 ">
         <h5>Badges</h5>
-        <div class="card-deck">
-          <!-- Badge 1 -->
-          <div class="card">
-            <!-- Place badge image here -->
-            <img src="badge-1.jpg" alt="Badge 1" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">Badge 1</h5>
-              <p class="card-text">Earned on May 1, 2023</p>
-            </div>
-          </div>
-          
-          <!-- Badge 2 -->
-          <div class="card">
-            <!-- Place badge image here -->
-            <img src="badge-2.jpg" alt="Badge 2" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">Badge 2</h5>
-              <p class="card-text">Earned on May 5, 2023</p>
-            </div>
-          </div>
-        </div>
-      </div>
+
+      <div class="card-deck" id="badgeContainer">
+  <!-- Badges will be dynamically added here -->
+</div>
+ 
 	    
 	    
 	      
@@ -266,7 +249,63 @@ function removeQuiz(key) {
 		    
 		    
 		    
-		    
+		    // Define the badge data structure
+// Retrieve badge information from localStorage
+const badges = JSON.parse(localStorage.getItem('badges')) || [];
+
+// Function to display badges
+function displayBadges() {
+  const badgesContainer = document.getElementById("badgesContainer");
+  badgesContainer.innerHTML = ""; // Clear previous content
+
+  // Loop through the badges and create the badge cards
+  for (const badge of badges) {
+    const badgeCard = document.createElement("div");
+    badgeCard.classList.add("card");
+
+    // Create the badge image element
+    const badgeImage = document.createElement("img");
+    badgeImage.src = badge.imageUrl;
+    badgeImage.alt = badge.name;
+    badgeImage.classList.add("card-img-top");
+    badgeCard.appendChild(badgeImage);
+
+    // Create the badge card body
+    const badgeCardBody = document.createElement("div");
+    badgeCardBody.classList.add("card-body");
+
+    // Add the badge name
+    const badgeTitle = document.createElement("h5");
+    badgeTitle.classList.add("card-title");
+    badgeTitle.textContent = badge.name;
+    badgeCardBody.appendChild(badgeTitle);
+
+    // Add the badge description
+    const badgeDescription = document.createElement("p");
+    badgeDescription.classList.add("card-text");
+    badgeDescription.textContent = badge.description;
+    badgeCardBody.appendChild(badgeDescription);
+
+    // Add the quantity
+    const badgeQuantity = document.createElement("p");
+    badgeQuantity.classList.add("card-text");
+    badgeQuantity.textContent = "Quantity: " + badge.quantity;
+    badgeCardBody.appendChild(badgeQuantity);
+
+    // Add the earned date
+    const badgeDate = document.createElement("p");
+    badgeDate.classList.add("card-text");
+    badgeDate.textContent = "Earned on " + badge.earnedDate;
+    badgeCardBody.appendChild(badgeDate);
+
+    badgeCard.appendChild(badgeCardBody);
+    badgesContainer.appendChild(badgeCard);
+  }
+}
+
+// Call the displayBadges function to show the badges
+displayBadges();
+
 		    
 		    
     function redirectToMessaging() {
