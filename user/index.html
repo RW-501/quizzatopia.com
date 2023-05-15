@@ -171,7 +171,6 @@
   document.getElementById('userPointsQ').innerHTML = userInfo.points;
   document.getElementById('userQuzziesTaken').innerHTML = userInfo.quizzesTaken;
 
-  console.log('Quizzes Taken:', userInfo.quizzesTaken);
   // Display additional user information as needed
 }
 		    
@@ -249,7 +248,7 @@ function removeQuiz(key) {
       const totalUsage = formatBytes(totalBytes);
 
       localStorageUsage.innerHTML = `
-        <h2 class="text-center">LocalStorage Usage</h2>
+        <h2 class="text-center">Storage</h2>
         <p>Total Data: ${totalUsage}</p>
       `;
     }
