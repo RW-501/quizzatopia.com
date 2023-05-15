@@ -262,7 +262,7 @@ function removeQuiz(key) {
 		    
 		    // Define the badge data structure
 // Retrieve badge information from localStorage
- badges = JSON.parse(localStorage.getItem('badges')) || [];
+let badges = JSON.parse(localStorage.getItem('badges')) || [];
 
 // Function to display badges
 function displayBadges() {
@@ -270,7 +270,7 @@ function displayBadges() {
   badgesContainer.innerHTML = ""; // Clear previous content
 
   // Loop through the badges and create the badge cards
-  for (const badge of badges) {
+  for (let badge of badges) {
     const badgeCard = document.createElement("div");
     badgeCard.classList.add("card");
 
