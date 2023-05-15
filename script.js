@@ -431,7 +431,7 @@ const currentQuestionNumber = currentQuestion === 0 ? 1 : currentQuestion;
 function displayEarnedPoints(earnedPoints) {
 	if(earnedPoints > 0){
   const earnedPointsElement = document.getElementById("earnedPoints");
-  earnedPointsElement.textContent = `+${earnedPoints}`+" Points!;
+earnedPointsElement.textContent = `+${earnedPoints} Points!`;
   earnedPointsElement.classList.add("animate-earned-points");
 
   setTimeout(() => {
