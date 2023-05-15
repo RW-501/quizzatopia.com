@@ -158,6 +158,28 @@
 		
 	}
 
+	
+	
+	
+	.animate-earned-points {
+  animation: pointsAnimation 1s ease-in-out;
+}
+
+@keyframes pointsAnimation {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-20px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+}
+
 </style>
 		
 		
@@ -420,6 +442,8 @@
   <!-- Score Placeholder -->
   <p id="feedback"></p>
   <!-- Feedback Placeholder -->
+	<span id="earnedPoints"></span>
+
   <button id="retake-btn" class="btn btn-primary mt-4">Retake Quiz</button>
   <!-- Retake Quiz Button -->
   <button class="other-quiz-btn btn btn-secondary mt-4" onclick="window.location.href = 'quizzes'">Try Another Quiz</button>
