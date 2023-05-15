@@ -119,9 +119,15 @@ function awardBadge(badgeId) {
   const maxQuantity = getBadgeMaxQuantity(badgeId);
 
   if (!earnedBadges.includes(badgeId) && earnedBadges.length < maxQuantity) {
-    earnedBadges.push(badgeId);
+    earnedBadges.push({ id: badgeId, earnedDate: getCurrentDate() });
     localStorage.setItem('earnedBadges', JSON.stringify(earnedBadges));
   }
+}
+
+function getCurrentDate() {
+  const now = new Date();
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return now.toLocaleDateString(undefined, options);
 }
 
 // Helper function to get the maximum quantity of a badge
