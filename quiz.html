@@ -812,7 +812,7 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
     quizInfo.quizName = quizName;
     quizInfo.numberOfQuestions = numberOfQuestions;
     quizInfo.timestamp = timestamp;
-quizInfo.quizLink: q;  // Add the "q" parameter to the quizInfo object
+quizInfo.quizLink = q;  // Add the "q" parameter to the quizInfo object
     localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
   }
 
