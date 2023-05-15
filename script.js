@@ -388,6 +388,7 @@ let initialPoints = userStartPoints;
 console.log(initialPoints+"  initialPoints??????????totalQuestions????  "+userStartPoints); // Output: 3
 
 function calculateEarnedPoints() {
+  const userInfo = getUserInfo();
   let currentPoints = userInfo.points;
   let earnedPoints = currentPoints - initialPoints;
 	
