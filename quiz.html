@@ -727,7 +727,11 @@ function calculateScore(quizInfo) {
     savedQuizInfo.quizInfo = quizInfo;
     savedQuizInfo.questionCorrect = newScore; // Update the questionCorrect value
     savedQuizInfo.quizLink = q; // Add the "q" parameter to the quizInfo object
-
+ if (newScore > savedScore ){
+	  	  updatePoints(pointsRewards);
+ }
+	  
+	  
     // Update the quiz information for the specific quiz code
     localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(savedQuizInfo));
   }
