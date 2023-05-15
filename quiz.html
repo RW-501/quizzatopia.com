@@ -861,6 +861,8 @@ quizInfo.quizLink = q;  // Add the "q" parameter to the quizInfo object
 	  
 	  
 	  
+	  let quizInfo;
+	//  const quizInfo;
 	  
 // Fetch and assign the data
 function fetchData(q) {
@@ -887,7 +889,7 @@ function fetchData(q) {
         numberOfQuestions = data.numberOfQuestions;
 
         // Check quiz code and retrieve or save quiz info
-        const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
+       /// const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
 
         questions.push(...questionData);
         shuffleArray(questions);
