@@ -29,14 +29,60 @@ function setQuizTime() {
   }
 }
 
+
+
+
+
+// Check if quizCode matches and retrieve or save quiz info
+function setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions) {
+  const savedQuizInfo = localStorage.getItem(`quizInfo_${quizCode}`);
+  let quizInfo;
+  let timestamp = new Date().toLocaleString();
+
+  if (!savedQuizInfo) {
+    // Quiz info doesn't exist, save new quiz info to storage
+    quizInfo = {
+      quizCode: quizCode,
+      quizName: quizName,
+      numberOfQuestions: numberOfQuestions,
+      questionCorrect: 0,
+      timestamp: timestamp,
+      quizLink: q  // Add the "q" parameter to the quizInfo object
+    };
+
+    localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
+  } else {
+    // Quiz info exists, retrieve existing quiz info from storage
+    quizInfo = JSON.parse(savedQuizInfo);
+    quizInfo.quizName = quizName;
+    quizInfo.numberOfQuestions = numberOfQuestions;
+    quizInfo.timestamp = timestamp;
+    quizInfo.quizLink = q;  // Add the "q" parameter to the quizInfo object
+    localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
+  }
+
+  return quizInfo;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Function to start the quiz
 function startQuiz() {
-	         quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
-  
-  quizStarted = true;
-	  updatePointsAndRank();
 
 	
+   quizStarted = true;
+  updatePointsAndRank();
+
   document.getElementById("start-btn").classList.add("d-none");
   document.getElementById("quiz-container").classList.remove("d-none");
   document.getElementById("optionContainer").classList.add("d-none");
@@ -44,6 +90,16 @@ function startQuiz() {
 
   // Hide the MessageBoard
   document.getElementById("MessageBoard").classList.add("d-none");
+
+  // Retrieve the quizInfo from the array quiz
+  const quizInfo = quiz.find((item) => item.quizCode === quizCode);
+
+	/*       quizCode = quizInfo.quizCode;
+        quizName = quizInfo.quizName;
+        numberOfQuestions = quizInfo.numberOfQuestions;
+	*/
+  // Check quiz code and retrieve or save quiz info
+  setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions);
 
 //  console.log(totalQuestions + "   ????????????totalQuestions????"); // Output: 3
 
