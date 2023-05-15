@@ -399,6 +399,8 @@ if (window.location.search.substr(1) === 'q') {
       <p>
         Explore a world of quizzes like never before with Quizzatopia - the ultimate destination for all your quizzing needs. From fun trivia to professional exam preparation, Quizzatopia has it all. With our user-friendly interface and extensive question bank, learning has never been more enjoyable. So, step into the world of quizzes with Quizzatopia and discover the thrill of learning through quizzing.
       </p>
+	    <p><div id="welcomeBack"></div>
+	    </p>
       <a href="quizzes" class="btn btn-primary" style="
     margin-bottom: 2%;
 ">Get Started</a>
@@ -883,12 +885,56 @@ document.getElementById('show-login-form').addEventListener('click', function() 
 	
 	
 	
+let daysCount = 0;
+const maxDays = 5;
+
+function checkVisitStatus() {
+  const previousVisitDate = localStorage.getItem('previousVisitDate');
+  
+  // Fetch current date and time from the API
+  fetch('https://worldtimeapi.org/api/ip')
+    .then(response => response.json())
+    .then(data => {
+      const currentDate = new Date(data.datetime);
+      
+      // Check if the previous visit date is available
+      if (previousVisitDate) {
+        const previousDate = new Date(previousVisitDate);
+        
+        // Compare the current date with the previous visit date
+        if (currentDate.toDateString() === previousDate.toDateString()) {
+          // User has visited two days in a row
+          // Display a welcome back message or perform any other actions
+          const welcomeBackElement = document.getElementById('welcomeBack');
+          welcomeBackElement.textContent = 'Welcome back, user!';
+        }
+      }
+      
+      // Store the current visit date
+      localStorage.setItem('previousVisitDate', currentDate.toISOString());
+      
+      daysCount++;
+      if (daysCount === maxDays) {
+        clearInterval(interval);
+      }
+    })
+    .catch(error => console.error(error));
+}
+
+// Run the function immediately
+checkVisitStatus();
+
+// Schedule the function to run once a day
+const interval = setInterval(checkVisitStatus, 24 * 60 * 60 * 1000); // 24 hours in milliseconds
+
+
 	
 	
 	
 	
-	
-	
+	 window.onload = function() {
+    checkVisitStatus();
+  };
 	
 	
 	
