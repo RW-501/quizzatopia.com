@@ -253,6 +253,7 @@ function checkAnswer() {
     correct_bool = "Correct";
     questionCorrect++; // Increment the questionCorrect variable
     quizInfo.questionCorrect = questionCorrect; // Update the questionCorrect value in quizInfo
+	  updatePoints(pointsRewards);
 
     saveQuizInfo(quizCode, quizInfo);
   } else {
@@ -366,6 +367,10 @@ function endQuiz() {
   const timerDisplay = document.getElementById("timer");
   timerDisplay.innerHTML = "";
 
+  updatePointsAndRank();
+  updateQuizzesTaken(1);
+
+  
   // Calculate feedback and display it
   const feedback = calculateFeedback();
   document.getElementById("feedback").innerHTML = feedback;
