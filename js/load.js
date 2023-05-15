@@ -67,12 +67,12 @@ function updateQuizzesTaken(quizzesTaken) {
       displayUserInfo();
 
 
+  let pointsRewards;
 
 
 
 function updatePointsAndRank() {
   const userInfo = getUserInfo();
-  let pointsRewards;
 
   if (userInfo.points <= 100) {
     updateRank('Beginner');
