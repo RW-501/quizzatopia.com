@@ -458,10 +458,27 @@ function calculateEarnedPoints() {
   return earnedPoints > 0 ? earnedPoints : 0;
 	
 }
+let earnedBadges;
 
+// Function to check if a badge has been earned
+function hasEarnedBadgeQ() {
+  earnedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
+}
 
+let newBadges;
 
-
+function displayBadge(badgeId) {
+  // Retrieve the badge information using the badgeId
+  const badgeInfo = badges.find(badge => badge.id === badgeId);
+  if (badgeInfo) {
+    // Display the badge information
+    console.log('New Badge Earned:');
+    console.log('Name:', badgeInfo.name);
+    console.log('Description:', badgeInfo.description);
+    console.log('Image URL:', badgeInfo.imageUrl);
+    console.log('Earned Date:', badgeInfo.earnedDate);
+  }
+}
 
 
 function endQuiz() {
@@ -483,7 +500,8 @@ function endQuiz() {
   const percentageScore = Math.round((questionCorrect / totalQuestions) * 100);
   const resultMsg = `You scored ${questionCorrect}/${totalQuestions} (${percentageScore}%)`;
   document.getElementById("score").innerHTML = resultMsg;
-
+ 
+	updatePointsAndRank();
 	// bonus
 if (percentageScore === 100) {
   let halfQuestionTotal = totalQuestions / 2;
@@ -491,9 +509,9 @@ if (percentageScore === 100) {
   
   updatePoints(allRightBonus);
 }
-  updatePointsAndRank();
   updateQuizzesTaken(1);
-	
+	checkTier();
+
 const earnedPoints = calculateEarnedPoints();
 displayEarnedPoints(earnedPoints);
 
@@ -515,9 +533,29 @@ displayEarnedPoints(earnedPoints);
     showPieChartEnd();
   }
 
+  function justEarnedBadgeQ() {
+    newBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
+  }
+
+  // Check if any new badges were earned
+  const newlyEarnedBadges = newBadges.filter(badgeId => !earnedBadges.includes(badgeId));
+
+  // Display the newly earned badges
+  for (const badgeId of newlyEarnedBadges) {
+    displayBadge(badgeId);
+  }	
+	
+	
+	
   // Unhide the message board
   document.getElementById("MessageBoard").classList.remove("d-none");
 }
+
+
+
+
+
+
 
 
 
