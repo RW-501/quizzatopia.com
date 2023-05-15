@@ -34,7 +34,7 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
     console.log('Quizzes Taken:', userInfo.quizzesTaken);
 
     // Display additional user information as needed
-    const profilePicElement = document.getElementById('profile-pic');
+    const profilePicElement = document.getElementById('profile-pic').src;
     const profileNameElement = document.getElementById('profile-name');
 
     if (userInfo[PROFILE_PIC_KEY]) {
