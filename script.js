@@ -382,8 +382,8 @@ function displayEarnedPoints(earnedPoints) {
 console.log(initialPoints+"  initialPoints??????????totalQuestions????"); // Output: 3
 
 function calculateEarnedPoints() {
-  const currentPoints = userInfo.points;
-  const earnedPoints = currentPoints - initialPoints;
+  let currentPoints = userInfo.points;
+  let earnedPoints = currentPoints - initialPoints;
 console.log(earnedPoints+"  earnedPoints???????estionscurrentPoints    "+currentPoints ); // Output: 3
 
   return earnedPoints > 0 ? earnedPoints : 0;
