@@ -367,19 +367,29 @@ function endQuiz() {
   const timerDisplay = document.getElementById("timer");
   timerDisplay.innerHTML = "";
 
-  updatePointsAndRank();
-  updateQuizzesTaken(1);
+
 
   
   // Calculate feedback and display it
   const feedback = calculateFeedback();
   document.getElementById("feedback").innerHTML = feedback;
 
-  // Calculate and display the score
+  // Calculate and display the score 
   const percentageScore = Math.round((questionCorrect / totalQuestions) * 100);
   const resultMsg = `You scored ${questionCorrect}/${totalQuestions} (${percentageScore}%)`;
   document.getElementById("score").innerHTML = resultMsg;
 
+	// bonus
+if (percentageScore === 100) {
+  let halfQuestionTotal = totalQuestions / 2;
+  let allRightBonus = pointsRewards * halfQuestionTotal;
+  
+  updatePoints(allRightBonus);
+}
+  updatePointsAndRank();
+  updateQuizzesTaken(1);
+	
+	
   // Hide the quiz container and show the end container
   document.getElementById("quiz-container").classList.add("d-none");
   document.getElementById("end-container").classList.remove("d-none");
@@ -491,6 +501,21 @@ function startTimer() {
         }
 }
 
+// Calculate the earned points in the quiz
+const earnedPoints = calculateEarnedPoints();
+
+// Display the earned points on the page
+const earnedPointsElement = document.getElementById("earnedPoints");
+earnedPointsElement.textContent = `+${earnedPoints}`;
+
+// Trigger the animation
+earnedPointsElement.classList.add("animate-earned-points");
+
+// Wait for the animation to complete and update the user's points
+setTimeout(() => {
+  updatePoints(earnedPoints);
+  earnedPointsElement.classList.remove("animate-earned-points");
+}, 1000); // Adjust the timeout value as needed
 
 
 // Event Listeners
