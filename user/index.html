@@ -58,8 +58,8 @@
       <img src="/images/pics/4.png" alt="User Picture" class="img-fluid rounded-circle mt-3">
       
       <!-- User tagline -->
-      <h4 class="mt-3">John Doe</h4>
-      <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <h4 id="userNameQ" class="mt-3">John Doe</h4>
+      <p class="text-muted">Unlock Your Knowledge Potential with Quizzatopia!</p>
       
       <!-- Buttons -->
       <div class="d-flex justify-content-center mt-4">
@@ -79,7 +79,7 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Rank</h5>
-            <p class="card-text">Ultimate Grandmaster</p>
+            <p id="userRankQ" class="card-text">Ultimate Grandmaster</p>
           </div>
         </div>
       </div>
@@ -89,7 +89,7 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Points</h5>
-            <p class="card-text">10,000</p>
+            <p id="userPointsQ" class="card-text">10,000</p>
           </div>
         </div>
       </div>
@@ -98,7 +98,7 @@
       <div class="col-md-4">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">Quizzes Taken</h5>
+            <h5 id="userQuzziesTaken" class="card-title">Quizzes Taken</h5>
             <p class="card-text">50</p>
           </div>
         </div>
@@ -116,7 +116,7 @@
   <!-- Badges will be dynamically added here -->
 </div>
  
-	    
+	    </div>
 	    
 	      
 	  <div class="col-md-6">
@@ -129,6 +129,7 @@
     height: 400px;
     overflow: auto;
 "></div>
+		  
   <div class="">
     <div id="localStorageUsage" class="localStorage-usage"></div>
   </div>
@@ -164,10 +165,31 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
 
+	    
+		    
+		    
+		    
+		    
+		    
+		    
+ <script src="/helpScript2.js"></script>
+            <script>		
+		    
+		    function displayUserInfo() {
+  const userInfo = getUserInfo();
+  document.getElementById('userNameQ').innerHTML = userInfo.userName;
+  document.getElementById('userRankQ').innerHTML = userInfo.rank;
+  document.getElementById('userPointsQ').innerHTML = userInfo.points;
+  document.getElementById('userQuzziesTaken').innerHTML = userInfo.quizzesTaken;
 
-
-    <script src="/helpScript2.js"></script>
-            <script>
+  console.log('Quizzes Taken:', userInfo.quizzesTaken);
+  // Display additional user information as needed
+}
+		    
+		displayUserInfo();    
+		    
+		    
+		    
 		    
 		    
 		    
