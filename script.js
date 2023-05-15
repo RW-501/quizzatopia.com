@@ -253,7 +253,6 @@ function checkAnswer() {
     correct_bool = "Correct";
     questionCorrect++; // Increment the questionCorrect variable
     quizInfo.questionCorrect = questionCorrect; // Update the questionCorrect value in quizInfo
-	  updatePoints(pointsRewards);
 
     saveQuizInfo(quizCode, quizInfo);
   } else {
@@ -516,21 +515,12 @@ function displayEarnedPoints(earnedPoints) {
   }, 1000);
 }
 
-function calculateEarnedPoints(questionCorrect, totalQuestions, pointsRewards) {
+function calculateEarnedPoints() {
   const initialPoints = localStorage.getItem('points');
-  const percentageScore = Math.round((questionCorrect / totalQuestions) * 100);
-
-  if (percentageScore === 100) {
-    const halfQuestionTotal = totalQuestions / 2;
-    const allRightBonus = pointsRewards * halfQuestionTotal;
-    const earnedPoints = allRightBonus - initialPoints;
-    return earnedPoints > 0 ? earnedPoints : 0;
-  }
-
-  return 0; // No bonus points earned if not a perfect score
+  const currentPoints = localStorage.getItem('points');
+  const earnedPoints = currentPoints - initialPoints;
+  return earnedPoints > 0 ? earnedPoints : 0;
 }
-
-
 
 
 
