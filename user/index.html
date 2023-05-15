@@ -202,12 +202,13 @@
           const questionCorrect = quizInfo.questionCorrect;
           const numberOfQuestions = quizInfo.numberOfQuestions;
           const quizLink = quizInfo.quizLink;
+          const quizTime = quizInfo.timestamp;
 
 const quizInfoElement = document.createElement('div');
 quizInfoElement.classList.add('quiz-info');
 quizInfoElement.innerHTML = `
   <a href="/quiz?q=${quizLink}" class=""><h4>${quizName}</h4></a>
-  <p>Quiz Code: ${quizCode}</p>
+  <p>Quiz Taken: ${quizTime}</p>
   <p>Score: ${questionCorrect}/${numberOfQuestions} questions</p>
 `;
 
@@ -230,6 +231,7 @@ function removeQuiz(key) {
   localStorage.removeItem(key);
   // Refresh the quiz information display
   getQuizInfo();
+	getLocalStorageUsage();
 }
     // Call the function to display quiz information on page load
     document.addEventListener('DOMContentLoaded', getQuizInfo);    
