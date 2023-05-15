@@ -58,6 +58,23 @@ if (window.location.pathname.substr(-5) === '.html' && window.location.pathname.
 
   // Call the function to update profile name and link
   updateProfileInfo();
+  
+  
+  function getUserInfo() {
+  let userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
+  if (!userInfo) {
+    userInfo = {
+      userName: '',
+      rank: '',
+      points: 0,
+      quizzesTaken: 0
+      // Add more properties for additional user information as needed
+    };
+    localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
+  }
+  return userInfo;
+}
+
 </script>
 
 <style>
