@@ -764,7 +764,7 @@ function shuffleArray(array) {
 // Retrieve the stored test information and display it
 // Retrieve the stored test information and display it
 // Retrieve the stored test information and display it
-function displayTestInfo() {
+function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
   const storedQuizInfo = localStorage.getItem(`quizInfo_${quizCode}`);
   if (storedQuizInfo) {
     try {
@@ -795,13 +795,11 @@ function displayTestInfo() {
   } else {
     // Handle case where there is no stored quiz info, display appropriate message or fallback behavior
     const testInfoDiv = document.getElementById('testInfo');
-    testInfoDiv.innerHTML = '';
-	  
-	        testInfoDiv.innerHTML = `
+    testInfoDiv.innerHTML = `
         <h3>Quiz Information</h3>
-        <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
-        <p><strong>Quiz Name:</strong> ${quizInfo.quizName}</p>
-        <p><strong>Number of Questions:</strong> ${quizInfo.numberOfQuestions}</p>
+        <p><strong>Quiz Code:</strong> ${quizCodeNS}</p>
+        <p><strong>Quiz Name:</strong> ${quizNameNS}</p>
+        <p><strong>Number of Questions:</strong> ${numberOfQuestionsNS}</p>
         <p><strong>Difficulty:</strong> </p>
         <p><strong>No quiz information found.</strong></p>
       `;
@@ -881,8 +879,8 @@ function fetchData(q) {
         // Access and use the retrieved quiz information
         const questionsCompleted = quizInfo.questionsCompleted;
 
-        // Display the stored test information
-        displayTestInfo();
+        // Display the  test information
+        displayTestInfo(quizCode, quizName, numberOfQuestions);
       }
     })
     .catch(error => console.error(error));
