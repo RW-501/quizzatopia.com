@@ -31,6 +31,8 @@ function setQuizTime() {
 
 // Function to start the quiz
 function startQuiz() {
+	  
+	  updatePointsAndRank();
   quizStarted = true;
   document.getElementById("start-btn").classList.add("d-none");
   document.getElementById("quiz-container").classList.remove("d-none");
