@@ -372,14 +372,16 @@ const currentQuestionNumber = currentQuestion === 0 ? 1 : currentQuestion;
 
 // Calculate the earned points in the quiz
 function displayEarnedPoints(earnedPoints) {
+	if(earnedPoints > 0){
   const earnedPointsElement = document.getElementById("earnedPoints");
-  earnedPointsElement.textContent = `+${earnedPoints}`;
+  earnedPointsElement.textContent = `+${earnedPoints}`+" Points!;
   earnedPointsElement.classList.add("animate-earned-points");
 
   setTimeout(() => {
    // updatePoints(earnedPoints);
     earnedPointsElement.classList.remove("animate-earned-points");
   }, 5000);
+	}
 }
   const userInfo = getUserInfo();
   const userStartPoints = userInfo.points;
