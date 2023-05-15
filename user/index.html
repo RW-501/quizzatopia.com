@@ -203,16 +203,13 @@
           const numberOfQuestions = quizInfo.numberOfQuestions;
           const quizLink = quizInfo.quizLink;
 
-          const quizInfoElement = document.createElement('a');
-          quizInfoElement.classList.add('quiz-info');
-          quizInfoElement.innerHTML = `
-            <h4>${quizName}</h4>
-            <p>Quiz Code: ${quizCode}</p>
-            <p>Score: ${questionCorrect}/${numberOfQuestions} questions</p>
-          `;
-
-// Set href attribute of the <a> tag to the quiz URL
-quizInfoElement.href = "/quiz?q="+quizLink;
+const quizInfoElement = document.createElement('div');
+quizInfoElement.classList.add('quiz-info');
+quizInfoElement.innerHTML = `
+  <a href="/quiz?q=${quizLink}" class=""><h4>${quizName}</h4></a>
+  <p>Quiz Code: ${quizCode}</p>
+  <p>Score: ${questionCorrect}/${numberOfQuestions} questions</p>
+`;
 
 
           quizInfoContainer.appendChild(quizInfoElement);
