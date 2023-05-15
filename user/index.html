@@ -262,7 +262,7 @@ function removeQuiz(key) {
 		    
 		    // Define the badge data structure
 // Retrieve badge information from localStorage
-let badges = JSON.parse(localStorage.getItem('badges')) || [];
+const savedBadges = JSON.parse(localStorage.getItem('badges')) || [];
 
 // Function to display badges
 function displayBadges() {
@@ -270,14 +270,14 @@ function displayBadges() {
   badgesContainer.innerHTML = ""; // Clear previous content
 
   // Loop through the badges and create the badge cards
-  for (let badge of badges) {
+  for (let newBadge of savedBadges) {
     const badgeCard = document.createElement("div");
     badgeCard.classList.add("card");
 
     // Create the badge image element
     const badgeImage = document.createElement("img");
-    badgeImage.src = badge.imageUrl;
-    badgeImage.alt = badge.name;
+    badgeImage.src = newBadge.imageUrl;
+    badgeImage.alt = newBadge.name;
     badgeImage.classList.add("card-img-top");
     badgeCard.appendChild(badgeImage);
 
@@ -288,25 +288,25 @@ function displayBadges() {
     // Add the badge name
     const badgeTitle = document.createElement("h5");
     badgeTitle.classList.add("card-title");
-    badgeTitle.textContent = badge.name;
+    badgeTitle.textContent = newBadge.name;
     badgeCardBody.appendChild(badgeTitle);
 
     // Add the badge description
     const badgeDescription = document.createElement("p");
     badgeDescription.classList.add("card-text");
-    badgeDescription.textContent = badge.description;
+    badgeDescription.textContent = newBadge.description;
     badgeCardBody.appendChild(badgeDescription);
 
     // Add the quantity
     const badgeQuantity = document.createElement("p");
     badgeQuantity.classList.add("card-text");
-    badgeQuantity.textContent = "Quantity: " + badge.quantity;
+    badgeQuantity.textContent = "Quantity: " + newBadge.quantity;
     badgeCardBody.appendChild(badgeQuantity);
 
     // Add the earned date
     const badgeDate = document.createElement("p");
     badgeDate.classList.add("card-text");
-    badgeDate.textContent = "Earned on " + badge.earnedDate;
+    badgeDate.textContent = "Earned on " + newBadge.earnedDate;
     badgeCardBody.appendChild(badgeDate);
 
     badgeCard.appendChild(badgeCardBody);
