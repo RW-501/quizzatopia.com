@@ -104,4 +104,3 @@ function updatePointsAndRank() {
  //userInfo.pointsRewards = pointsRewards;
  // saveUserInfo(userInfo);
 }
-
