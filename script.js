@@ -34,7 +34,7 @@ function setQuizTime() {
 
 
 // Check if quizCode matches and retrieve or save quiz info
-function setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions) {
+function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
   const savedQuizInfo = localStorage.getItem(`quizInfo_${quizCode}`);
   let quizInfo;
   let timestamp = new Date().toLocaleString();
@@ -42,9 +42,9 @@ function setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions) {
   if (!savedQuizInfo) {
     // Quiz info doesn't exist, save new quiz info to storage
     quizInfo = {
-      quizCode: quizCode,
-      quizName: quizName,
-      numberOfQuestions: numberOfQuestions,
+      quizCode: quizCodeNS,
+      quizName: quizNameNS,
+      numberOfQuestions: numberOfQuestionsNS,
       questionCorrect: 0,
       timestamp: timestamp,
       quizLink: q  // Add the "q" parameter to the quizInfo object
