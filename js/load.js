@@ -29,9 +29,9 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
   
     function displayUserInfo() {
     const userInfo = getUserInfo();
-    console.log('Rank:', userInfo.rank);
-    console.log('Points:', userInfo.points);
-    console.log('Quizzes Taken:', userInfo.quizzesTaken);
+    //console.log('Rank:', userInfo.rank);
+   // console.log('Points:', userInfo.points);
+ //   console.log('Quizzes Taken:', userInfo.quizzesTaken);
 
     // Display additional user information as needed
     //const profilePicElement = document.getElementById('profile-pic').src;
@@ -48,7 +48,7 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
   
   function updateRank(rank) {
   const userInfo = getUserInfo();
-  userInfo.rank += rank;
+  userInfo.rank = rank;
   localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
 }
 
