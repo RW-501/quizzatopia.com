@@ -40,7 +40,7 @@ function startQuiz() {
   // Hide the MessageBoard
   document.getElementById("MessageBoard").classList.add("d-none");
 
-  console.log(totalQuestions + "   ????????????totalQuestions????"); // Output: 3
+//  console.log(totalQuestions + "   ????????????totalQuestions????"); // Output: 3
 
   var numAd;
 
@@ -195,7 +195,7 @@ function showQuestion() {
   const options = questionObj.options;
   const shuffledOptions = shuffleArrayAnswers(options);
 	
-   console.log(shuffledOptions[1]+"  options   "+options[1]); // Output: 3
+  // console.log(shuffledOptions[1]+"  options   "+options[1]); // Output: 3
 	
 	
   const answerButtons = document.getElementsByClassName("answer-option");
@@ -356,12 +356,36 @@ skipNextBtn.addEventListener('click', skipOrNext);
 // Function to update the question number and progress bar
 function updateQuestionNumber() {
   const questionNumberDisplay = document.getElementById("question-number");
-  const currentQuestionNumber = currentQuestion ;
+const currentQuestionNumber = currentQuestion === 0 ? 1 : currentQuestion;
   questionNumberDisplay.innerHTML = `Question ${currentQuestionNumber}/${totalQuestions}`;
 
   // Update the progress bar
   updateProgressBar(currentQuestionNumber);
 }
+
+// Calculate the earned points in the quiz
+function displayEarnedPoints(earnedPoints) {
+  const earnedPointsElement = document.getElementById("earnedPoints");
+  earnedPointsElement.textContent = `+${earnedPoints}`;
+  earnedPointsElement.classList.add("animate-earned-points");
+
+  setTimeout(() => {
+    updatePoints(earnedPoints);
+    earnedPointsElement.classList.remove("animate-earned-points");
+  }, 1000);
+}
+
+function calculateEarnedPoints() {
+  const initialPoints = localStorage.getItem('points');
+  const currentPoints = localStorage.getItem('points');
+  const earnedPoints = currentPoints - initialPoints;
+  return earnedPoints > 0 ? earnedPoints : 0;
+}
+
+
+
+
+
 
 function endQuiz() {
   clearInterval(timer);
@@ -506,25 +530,6 @@ function startTimer() {
   }, 1000);
 
         }
-}
-
-// Calculate the earned points in the quiz
-function displayEarnedPoints(earnedPoints) {
-  const earnedPointsElement = document.getElementById("earnedPoints");
-  earnedPointsElement.textContent = `+${earnedPoints}`;
-  earnedPointsElement.classList.add("animate-earned-points");
-
-  setTimeout(() => {
-    updatePoints(earnedPoints);
-    earnedPointsElement.classList.remove("animate-earned-points");
-  }, 1000);
-}
-
-function calculateEarnedPoints() {
-  const initialPoints = localStorage.getItem('points');
-  const currentPoints = localStorage.getItem('points');
-  const earnedPoints = currentPoints - initialPoints;
-  return earnedPoints > 0 ? earnedPoints : 0;
 }
 
 
