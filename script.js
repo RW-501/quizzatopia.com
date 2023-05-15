@@ -50,7 +50,7 @@ function setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions) {
       quizLink: q  // Add the "q" parameter to the quizInfo object
     };
 
-   // localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
+    localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
   } else {
     // Quiz info exists, retrieve existing quiz info from storage
     quizInfo = JSON.parse(savedQuizInfo);
@@ -58,7 +58,7 @@ function setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions) {
     quizInfo.numberOfQuestions = numberOfQuestions;
     quizInfo.timestamp = timestamp;
     quizInfo.quizLink = q;  // Add the "q" parameter to the quizInfo object
-    //localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
+    localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
   }
 
   return quizInfo;
