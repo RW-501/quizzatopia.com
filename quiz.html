@@ -465,6 +465,7 @@
       <!-- Share on LinkedIn Button -->
     </p>
   </div>
+	<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="Quizzatopia" data-color="#5F7FFF" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
   <button id="getFull_BTN" class="btn btn-primary mt-4" onclick="window.location.href = 'LearnMore'">Get Full Quiz</button>
   <!-- Get Full Quiz Button -->
 </div>
@@ -689,12 +690,12 @@ if(quizStarted == true){
   const savedScore = savedQuizInfo.questionCorrect || 0;
   const newScore = quizInfo.questionCorrect || 0;
 
-  console.log(savedScore + " savedScore | newScore " + newScore);
+ // console.log(savedScore + " savedScore | newScore " + newScore);
 
-  console.log('saveQuizInfo Quiz quizInfo:' + quizInfo);
-  console.log('saveQuizInfo Quiz Code:' + quizCode);
-  console.log('saveQuizInfo Quiz Info:' + savedQuizInfo);
-  console.log('JSON.stringify(savedQuizInfo)) Quiz Info:' + JSON.stringify(savedQuizInfo));
+  //console.log('saveQuizInfo Quiz quizInfo:' + quizInfo);
+  //console.log('saveQuizInfo Quiz Code:' + quizCode);
+  //console.log('saveQuizInfo Quiz Info:' + savedQuizInfo);
+ // console.log('JSON.stringify(savedQuizInfo)) Quiz Info:' + JSON.stringify(savedQuizInfo));
 
   if (newScore > savedScore || savedScore === 0 || savedScore === null) {
     savedQuizInfo.quizCode = quizCode;
@@ -724,7 +725,7 @@ if(quizStarted == true){
 // Log the contents of the storage
 function logStorageContents(quizCode) {
   const savedQuizInfo = localStorage.getItem(`quizInfo_${quizCode}`);
-  console.log('logStorageContents Quiz Code:', quizCode);
+//  console.log('logStorageContents Quiz Code:', quizCode);
   console.log('logStorageContents Quiz Info:', savedQuizInfo);
 }
 
