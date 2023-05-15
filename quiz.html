@@ -809,7 +809,7 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
 }
 
 // Check if quizCode matches and retrieve or save quiz info
-function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
+function checkQuizCodeAndGetInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
   const savedQuizInfo = localStorage.getItem(`quizInfo_${quizCode}`);
   let quizInfo;
   let timestamp = new Date().toLocaleString();
@@ -817,9 +817,9 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
   if (!savedQuizInfo) {
     // Quiz info doesn't exist, save new quiz info to storage
     quizInfo = {
-      quizCode: quizCode,
-      quizName: quizName,
-      numberOfQuestions: numberOfQuestions,
+      quizCode: quizCodeNS,
+      quizName: quizNameNS,
+      numberOfQuestions: numberOfQuestionsNS,
       questionCorrect: 0,
       timestamp: timestamp,
 	quizLink: q  // Add the "q" parameter to the quizInfo object
@@ -830,8 +830,8 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions) {
   } else {
     // Quiz info exists, retrieve existing quiz info from storage
     quizInfo = JSON.parse(savedQuizInfo);
-    quizInfo.quizName = quizName;
-    quizInfo.numberOfQuestions = numberOfQuestions;
+    quizInfo.quizName = quizNameNS;
+    quizInfo.numberOfQuestions = numberOfQuestionsNS;
     quizInfo.timestamp = timestamp;
 quizInfo.quizLink = q;  // Add the "q" parameter to the quizInfo object
     localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
