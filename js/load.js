@@ -46,6 +46,22 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
     }
   }
   
-  
+  function updateRank(rank) {
+  const userInfo = getUserInfo();
+  userInfo.rank += rank;
+  localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
+}
+
+function updatePoints(points) {
+  const userInfo = getUserInfo();
+  userInfo.points += points;
+  localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
+}
+
+function updateQuizzesTaken(quizzesTaken) {
+  const userInfo = getUserInfo();
+  userInfo.quizzesTaken += quizzesTaken;
+  localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
+}
   
       displayUserInfo();
