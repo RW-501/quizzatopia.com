@@ -31,7 +31,8 @@ function setQuizTime() {
 
 // Function to start the quiz
 function startQuiz() {
-	  
+	         quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
+  
   quizStarted = true;
 	  updatePointsAndRank();
 
