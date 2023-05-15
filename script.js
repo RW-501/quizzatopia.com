@@ -378,8 +378,10 @@ function displayEarnedPoints(earnedPoints) {
   }, 5000);
 }
   const userInfo = getUserInfo();
-  const initialPoints = userInfo.points;
-console.log(initialPoints+"  initialPoints??????????totalQuestions????"); // Output: 3
+  const userStartPoints = userInfo.points;
+let initialPoints = userStartPoints;
+
+console.log(initialPoints+"  initialPoints??????????totalQuestions????  "+userStartPoints); // Output: 3
 
 function calculateEarnedPoints() {
   let currentPoints = userInfo.points;
