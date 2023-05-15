@@ -302,45 +302,49 @@ function trackConsecutiveDays() {
 
 
 // Function to reward points for each returning day up to 5 days
+// Function to reward points for each returning day up to 5 days
 function rewardPointsForReturningDays() {
   const consecutiveDays = parseInt(localStorage.getItem('consecutiveDays') || '0');
   const pointsPerDay = 10; // Points to be awarded per day
 
   if (consecutiveDays < 5) {
     const pointsEarned = consecutiveDays * pointsPerDay;
-   
-     updatePoints(pointsEarned);
-
-    // Update the user's points
-    // updatePoints(pointsEarned);
+    updatePoints(pointsEarned);
     console.log(`Earned ${pointsEarned} points for returning ${consecutiveDays} day(s).`);
   } else if (consecutiveDays === 5) {
     const pointsEarned = consecutiveDays * pointsPerDay;
-    // Update the user's points
     updatePoints(pointsEarned);
     console.log(`Earned ${pointsEarned} points and the 5-Day badge.`);
-    awardBadge(1); // Assuming badge with ID 5 is the 5-Day badge
+    awardBadge(1); // Assuming badge with ID 1 is the 5-Day badge
   }
 }
 
 // Usage example
 async function checkUserVisit() {
-  const currentDateTime
+  const currentDateTime = new Date();
+  const lastVisitDateTime = localStorage.getItem('lastVisitDateTime');
+  const hasVisitedToday = lastVisitDateTime && isSameDay(currentDateTime, new Date(lastVisitDateTime));
 
+  if (!hasVisitedToday) {
+    // Increment consecutive days
+    const consecutiveDays = parseInt(localStorage.getItem('consecutiveDays') || '0');
+    localStorage.setItem('consecutiveDays', consecutiveDays + 1);
 
+    // Update last visit date/time
+    localStorage.setItem('lastVisitDateTime', currentDateTime.toString());
 
+    // Reward points for returning days
+    rewardPointsForReturningDays();
+  } else {
+    console.log('Already visited today.');
+  }
+}
 
-
-
-
-
-
-
-  
-  
-
-
-
-
-
-
+// Function to check if two dates are the same day
+function isSameDay(date1, date2) {
+  return (
+    date1.getFullYear() === date2.getFullYear() &&
+    date1.getMonth() === date2.getMonth() &&
+    date1.getDate() === date2.getDate()
+  );
+}
