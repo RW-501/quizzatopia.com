@@ -92,12 +92,12 @@ function startQuiz() {
   document.getElementById("MessageBoard").classList.add("d-none");
 
   // Retrieve the quizInfo from the array quiz
-  const quizInfo = quiz.find((item) => item.quizCode === quizCode);
+  //const quizInfo = quiz.find((item) => item.quizCode === quizCode);
 
-	/*       quizCode = quizInfo.quizCode;
+	      quizCode = quizInfo.quizCode;
         quizName = quizInfo.quizName;
         numberOfQuestions = quizInfo.numberOfQuestions;
-	*/
+	
   // Check quiz code and retrieve or save quiz info
   setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions);
 
