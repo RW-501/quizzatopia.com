@@ -377,12 +377,12 @@ function displayEarnedPoints(earnedPoints) {
     earnedPointsElement.classList.remove("animate-earned-points");
   }, 5000);
 }
-
-  const initialPoints = localStorage.getItem('points');
+  const userInfo = getUserInfo();
+  const initialPoints = userInfo.points;
 console.log(initialPoints+"  initialPoints??????????totalQuestions????"); // Output: 3
 
 function calculateEarnedPoints() {
-  const currentPoints = localStorage.getItem('points');
+  const currentPoints = userInfo.points;
   const earnedPoints = currentPoints - initialPoints;
 console.log(earnedPoints+"  earnedPoints??????????totalQuestions????"); // Output: 3
 
