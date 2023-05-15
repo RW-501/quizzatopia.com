@@ -211,12 +211,26 @@ quizInfoElement.innerHTML = `
   <p>Score: ${questionCorrect}/${numberOfQuestions} questions</p>
 `;
 
+   const removeButton = document.createElement('button');
+      removeButton.innerText = 'Remove';
+      removeButton.classList.add('remove-button');
+      removeButton.addEventListener('click', function () {
+        // Call the function to remove the quiz
+        removeQuiz(key);
+      });
 
-          quizInfoContainer.appendChild(quizInfoElement);
-        }
-      }
+      quizInfoElement.appendChild(removeButton);
+      quizInfoContainer.appendChild(quizInfoElement);
     }
+  }
+}
 
+// Function to remove the quiz
+function removeQuiz(key) {
+  localStorage.removeItem(key);
+  // Refresh the quiz information display
+  getQuizInfo();
+}
     // Call the function to display quiz information on page load
     document.addEventListener('DOMContentLoaded', getQuizInfo);    
 		    
