@@ -42,7 +42,7 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
     }
 
     if (userInfo[USER_NAME_KEY]) {
-      profileNameElement.textContent = userInfo[USER_NAME_KEY];
+    //  profileNameElement.textContent = userInfo[USER_NAME_KEY];
     }
   }
   
