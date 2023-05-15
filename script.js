@@ -159,6 +159,17 @@ function showAdsFunc() {
 }
 
 
+// Function to shuffle an array using Fisher-Yates algorithm
+// Function to shuffle an array using Fisher-Yates algorithm
+function shuffleArrayAnswers(array) {
+  const shuffledArray = [...array];
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+  return shuffledArray;
+}
+
 
 
 function showQuestion() {
@@ -183,7 +194,10 @@ function showQuestion() {
   // Randomize the order of the answer options
   const options = questionObj.options;
   const shuffledOptions = shuffleArrayAnswers(options);
-
+	
+   console.log(shuffledOptions[1]+"  options   "+options[1]); // Output: 3
+	
+	
   const answerButtons = document.getElementsByClassName("answer-option");
   for (let i = 0; i < shuffledOptions.length; i++) {
     answerButtons[i].innerHTML = shuffledOptions[i];
@@ -200,15 +214,6 @@ function showQuestion() {
   skipNextBtn.innerHTML = questionCorrect > currentQuestion ? 'Next' : 'Skip';
 }
 
-// Function to shuffle an array using Fisher-Yates algorithm
-function shuffleArrayAnswers(array) {
-  const shuffledArray = [...array];
-  for (let i = shuffledArray.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
-  }
-  return shuffledArray;
-}
 
 
   // Get the progress bar element
