@@ -213,10 +213,10 @@ function showAdsFunc() {
         showQuestion(); // Call the showQuestion function after the ad ends
       } else {
 	      
-const scriptCode = '<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="Quizzatopia" data-color="#5F7FFF" data-emoji="" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00"></script>';
+//const scriptCode = '<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="Quizzatopia" data-color="#5F7FFF" data-emoji="" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00"></script>';
 	      
         document.getElementById("ad-text").innerHTML = "This will be an ad <br> Ad ends in " + countdown + " seconds <p id=\'adButton\' ></p>";
-	       document.getElementById("adButton").innerHTML = scriptCode;
+	      // document.getElementById("adButton").innerHTML = scriptCode;
 	      
       }
     }, 1000);
