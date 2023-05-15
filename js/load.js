@@ -65,3 +65,43 @@ function updateQuizzesTaken(quizzesTaken) {
 }
   
       displayUserInfo();
+
+
+
+
+
+function updatePointsAndRank() {
+  const userInfo = getUserInfo();
+  let pointsRewards;
+
+  if (userInfo.points <= 100) {
+    updateRank('Beginner');
+    pointsRewards = 2;
+  } else if (userInfo.points > 100 && userInfo.points < 250) {
+    updateRank('Novice');
+    pointsRewards = 3;
+  } else if (userInfo.points >= 250 && userInfo.points < 500) {
+    updateRank('Enthusiast');
+    pointsRewards = 4;
+  } else if (userInfo.points >= 500 && userInfo.points < 1000) {
+    updateRank('Prodigy');
+    pointsRewards = 5;
+  } else if (userInfo.points >= 1000 && userInfo.points < 2500) {
+    updateRank('Expert');
+    pointsRewards = 6;
+  } else if (userInfo.points >= 2500 && userInfo.points < 5000) {
+    updateRank('Master');
+    pointsRewards = 7;
+  } else if (userInfo.points >= 5000 && userInfo.points < 10000) {
+    updateRank('Grandmaster');
+    pointsRewards = 8;
+  } else {
+    updateRank('Ultimate Grandmaster');
+    pointsRewards = 9;
+  }
+
+  // Update the user's points rewards
+ //userInfo.pointsRewards = pointsRewards;
+ // saveUserInfo(userInfo);
+}
+
