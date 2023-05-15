@@ -795,7 +795,18 @@ function displayTestInfo() {
   } else {
     // Handle case where there is no stored quiz info, display appropriate message or fallback behavior
     const testInfoDiv = document.getElementById('testInfo');
-    testInfoDiv.innerHTML = '<p>No quiz information found.</p>';
+    testInfoDiv.innerHTML = '';
+	  
+	        testInfoDiv.innerHTML = `
+        <h3>Quiz Information</h3>
+        <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
+        <p><strong>Quiz Name:</strong> ${quizInfo.quizName}</p>
+        <p><strong>Number of Questions:</strong> ${quizInfo.numberOfQuestions}</p>
+        <p><strong>Difficulty:</strong> </p>
+        <p><strong>No quiz information found.</strong></p>
+      `;
+	  
+	  
   }
 }
 
