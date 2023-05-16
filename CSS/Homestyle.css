@@ -1,7 +1,4 @@
-
-
-
-
+/* CSS comments for the featured quizzes section */
 .featured-quizzes-container {
   background-color: #f5f5f5;
   padding: 80px 0; /* Adjust the padding as needed */
@@ -48,9 +45,7 @@
 }
 
 
-
-
-
+/* CSS comments for the hero section */
 .hero {
   background-color: #f5f5f5;
   padding: 80px 0; /* Adjust the padding as needed */
@@ -75,27 +70,7 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Call-to-Action Section */
+/* CSS comments for the call-to-action section */
 .call-to-action {
   padding: 4rem 0;
   background-color: #0d6efd;
@@ -119,7 +94,8 @@
   padding: 1.2rem 2.5rem;
 }
 
-/* Quiz Categories Section */
+
+/* CSS comments for the quiz categories section */
 .quiz-categories {
   padding: 4rem 0;
   text-align: center;
@@ -154,13 +130,14 @@
   padding: 1.5rem 0;
 }
 
-/* Quiz Recommendations Section */
+
+/* CSS comments for the quiz recommendations section */
 .quiz-recommendations {
   padding: 4rem 0;
 }
 
 .quiz-recommendations h2 {
-  font-size: 2.5rem;
+  font-size: 2.5
   font-weight: 700;
   margin-bottom: 2rem;
 }
@@ -205,6 +182,40 @@
 
 
 
+.carousel-container {
+  background-color: #f5f5f5;
+  padding: 80px 0; /* Adjust the padding as needed */
+}
+
+.carousel-inner {
+  margin: 0 auto;
+  max-width: 900px; /* Adjust the max-width as needed */
+}
+
+.card {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.card-img-top {
+  border-radius: 50%;
+  height: 120px; /* Adjust the height as needed */
+  object-fit: cover;
+  width: 120px; /* Adjust the width as needed */
+  margin: 0 auto;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-top: 10px;
+}
+
+.card-text {
+  margin-top: 10px;
+}
 
 
 
@@ -595,6 +606,140 @@ main_section{
 
 
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .quiz-card {
+    max-width: 100%;
+    margin: 20px 10px;
+  }
+
+  .quiz-image {
+    height: 150px;
+  }
+
+  .quiz-title {
+    font-size: 1.2rem;
+  }
+
+  .quiz-description {
+    font-size: 1rem;
+  }
+
+  .carousel {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .quiz-card {
+    max-width: 100%;
+    margin: 20px 5px;
+  }
+
+  .quiz-image {
+    height: 120px;
+  }
+
+  .quiz-title {
+    font-size: 1rem;
+  }
+
+  .quiz-description {
+    font-size: 0.9rem;
+  }
+
+  .carousel {
+    margin-top: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero .btn-primary {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  .quiz-categories h2 {
+    font-size: 2rem;
+  }
+
+  .category-card h3 {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  .quiz-recommendations h2 {
+    font-size: 2rem;
+  }
+
+  .quiz-info a {
+    font-size: 1.5rem;
+  }
+
+  .quiz-info p {
+    font-size: 1.2rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .call-to-action h2 {
+    font-size: 2rem;
+  }
+
+  .call-to-action p {
+    font-size: 1rem;
+  }
+
+  .call-to-action .btn-primary {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  #quiz-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .answer-option {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  #next-btn,
+  #skip-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin: 15px 5px;
+  }
+
+  #end-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  #end-container p {
+    font-size: 1rem;
+  }
+
+  #retake-btn,
+  .other-quiz-btn {
+    font-size: 1rem;
+    margin: 15px 10px;
+    padding: 8px 16px;
+  }
+}
 
 
 
