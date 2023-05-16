@@ -143,11 +143,11 @@ function awardBadge(badgeId) {
   const earnedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
   const maxQuantity = getBadgeMaxQuantity(badgeId.id);
 
-  console.log('badgeId:', badgeId);
-  console.log('badgeId:id  ', badgeId.id);
+  //console.log('badgeId:', badgeId);
+//  console.log('badgeId:id  ', badgeId.id);
 
   //if (earnedBadges.length < maxQuantity) {
-    console.log(earnedBadges.length+'  ???????????????????????????????????????????:   '+maxQuantity);
+    //console.log(earnedBadges.length+'  ???????????????????????????????????????????:   '+maxQuantity);
 
     earnedBadges.push({
       id: badgeId.id,
@@ -159,7 +159,7 @@ function awardBadge(badgeId) {
       maxQuantity: badgeId.maxQuantity
     });
 
-    console.log('earnedBadges:', earnedBadges);
+  //  console.log('earnedBadges:', earnedBadges);
     localStorage.setItem("earnedBadges", JSON.stringify(earnedBadges));
 
     const earnedBadgesFromStorage = JSON.parse(localStorage.getItem('earnedBadges')) || [];
