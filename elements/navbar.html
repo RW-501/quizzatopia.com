@@ -85,7 +85,7 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
         var searchTerm = $(this).val();
 
         if (searchTerm.length >= 2) {
-          fetch("/quizzes")
+          fetch("https://www.quizzatopia.com/quizzes/index.htnl")
             .then(response => response.json())
             .then(data => {
               var filteredResults = filterQuizzes(data, searchTerm);
