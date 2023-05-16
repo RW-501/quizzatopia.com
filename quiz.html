@@ -189,6 +189,21 @@
 
     background-color: #0d6efd !important;
 	}
+	#social-sharing .btn {
+
+    width: 40%;
+	}
+	#badgeBox{
+    overflow: hidden;
+    display: grid;
+    width: 100%;		
+	}
+	
+	#badgeView{
+    overflow: auto;
+    display: flex;
+    width: fit-content;		
+	}
 </style>
 		
 		
@@ -452,7 +467,12 @@
   <p id="feedback"></p>
   <!-- Feedback Placeholder -->
 	<p><span id="earnedPoints"></span></p>
-	<p><div id="badgeView"></div></p>
+	<p><div id='badgebox">
+		<span>Awards</span>
+		<div id="badgeView"></div>
+		
+		
+		</div></p>
 
   <button id="retake-btn" class="btn btn-primary mt-4">Retake Quiz</button>
   <!-- Retake Quiz Button -->
