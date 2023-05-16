@@ -13,8 +13,8 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
   if (!userInfo) {
     userInfo = {
       userName: 'John Doe',
-      profilePic: '/images/pics/2.png',
-      rank: 'Rookie',
+      profilePic: '/images/avatar/1.png',
+      rank: 'Beginner',
       points: 0,
       quizzesTaken: 0
       // Add more properties for additional user information as needed
