@@ -539,7 +539,7 @@ displayEarnedPoints(earnedPoints);
 
 // Remove the items from Array #1 that are present in Array #2
 const filteredArray1 = newEarnedBadges.filter(item => !newlyEarnedBadges.includes(item));
-const filteredArray = newlyEarnedBadges.filter((element) => !newEarnedBadges.includes(element));
+const filteredArray = newEarnedBadges.filter((element) => !newlyEarnedBadges.includes(element));
 
 // Display the items in Array #2
 console.log("filteredArray1   "+filteredArray1.length);
@@ -575,7 +575,6 @@ displayBadges();
 	}
 	
 	
-	console.log(totalQuestions + "   ????????????totalQuestions????"); // Output: 3
 	
   // Unhide the message board
   document.getElementById("MessageBoard").classList.remove("d-none");
