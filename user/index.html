@@ -257,12 +257,12 @@ function removeQuiz(key) {
 
     document.addEventListener('DOMContentLoaded', getLocalStorageUsage);
 		    
-		    
+
 		    
 		    
 		    // Define the badge data structure
 // Retrieve badge information from localStorage
-const savedBadges = JSON.parse(localStorage.getItem('badges')) || [];
+const savedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
 
 // Function to display badges
 function displayBadges() {
