@@ -467,25 +467,13 @@ function calculateEarnedPoints() {
 let earnedBadges;
 
 // Function to check if a badge has been earned
-function hasEarnedBadgeQ() {
   earnedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
-	console.log('earnedBadges:', earnedBadges);
-}
+let newEarnedBadges = earnedBadges;
+	console.log('newEarnedBadges:', newEarnedBadges);
 
 let newBadges;
 
-function displayBadge(badgeId) {
-  // Retrieve the badge information using the badgeId
-  const badgeInfo = badges.find(badge => badge.id === badgeId);
-  if (badgeInfo) {
-    // Display the badge information
-    console.log('New Badge Earned:');
-    console.log('Name:', badgeInfo.name);
-    console.log('Description:', badgeInfo.description);
-    console.log('Image URL:', badgeInfo.imageUrl);
-    console.log('Earned Date:', badgeInfo.earnedDate);
-  }
-}
+
 
 
 function endQuiz() {
@@ -545,15 +533,38 @@ displayEarnedPoints(earnedPoints);
   }
 
   // Check if any new badges were earned
-  const newlyEarnedBadges = newBadges.filter(badgeId => !earnedBadges.includes(badgeId));
+  let newlyEarnedBadges = newBadges;
 
-  // Display the newly earned badges
-  for (const badgeId of newlyEarnedBadges) {
-    displayBadge(badgeId);
-  }	
+ 
 	
-	console.log(earnedBadges+"  earnedBadges???????  "+newBadges+"   newBadges   "+newlyEarnedBadges+"   newlyEarnedBadges    " ); // Output: 3
+	
 
+	
+	
+
+// Remove the items from Array #1 that are present in Array #2
+const filteredArray1 = newEarnedBadges.filter(item => !newlyEarnedBadges.includes(item));
+
+// Display the items in Array #2
+console.log(filteredArray1);
+	
+	console.log(earnedBadges+"  earnedBadgesnewlyEarnedBadges  "+newlyEarnedBadges+"   newBadges   "+newlyEarnedBadges+"   newlyEarnedBadges    " ); // Output: 3
+
+	/*
+function displayBadge(badgeId) {
+  // Retrieve the badge information using the badgeId
+  const badgeInfo = badges.find(badge => badge.id === badgeId);
+  if (badgeInfo) {
+    // Display the badge information
+    console.log('New Badge Earned:');
+    console.log('Name:', badgeInfo.name);
+    console.log('Description:', badgeInfo.description);
+    console.log('Image URL:', badgeInfo.imageUrl);
+    console.log('Earned Date:', badgeInfo.earnedDate);
+  }
+}*/
+	
+	
 	
   // Unhide the message board
   document.getElementById("MessageBoard").classList.remove("d-none");
