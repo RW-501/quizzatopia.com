@@ -540,11 +540,16 @@ let newNewBadge = newBadges;
 const filteredArray1 = newEarnedBadges.filter(item => !newlyEarnedBadges.includes(item));
 const filteredArray = newlyEarnedBadges.filter((element) => !filteredArray1.includes(element));
 
+	const uniqueArray = Array.from(new Set(newlyEarnedBadges.filter(item => !oldBadges.includes(item))));
+
 // Display the items in Array #2
 //console.log("filteredArray1   "+filteredArray1.length);
 //console.log("filteredArray new  "+filteredArray.length);
 	
-	for (let i = 0; i < oldBadges.length; i++) {
+	for (let i = 0; i < uniqueArray.length; i++) {
+     console.log(i+"  uniqueArray  id: "+uniqueArray[i].id);
+
+      }	for (let i = 0; i < oldBadges.length; i++) {
      console.log(i+"  oldBadges  id: "+oldBadges[i].id);
 
       }
