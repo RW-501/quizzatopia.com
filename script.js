@@ -553,13 +553,14 @@ console.log("filteredArray   "+filteredArray.length);
 
       }
     
-	
-			    
+	if(filteredArray.length > 0){
+  document.getElementById("badgebox").classList.remove("d-none");
 // Function to display badges
 function displayBadges() {
   const savedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
   const badgesContainer = document.getElementById("badgeView");
   badgesContainer.innerHTML = savedBadges.map(newBadge => `
+ 
     <div class="card">
       <img src="${newBadge.imageUrl}" alt="${newBadge.id}" class="card-img-top">
       <div class="card-body">
@@ -572,8 +573,8 @@ function displayBadges() {
   `).join("");
 }
 
-displayUserInfo();  
-	
+displayBadges();  
+	}
 	
 	
 	
