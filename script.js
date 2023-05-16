@@ -530,9 +530,8 @@ displayEarnedPoints(earnedPoints);
     showPieChartEnd();
   }
 
-  function justEarnedBadgeQ() {
     newBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
-  }
+  
 
   // Check if any new badges were earned
   let newlyEarnedBadges = newBadges;
