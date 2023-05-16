@@ -543,13 +543,12 @@ const filteredArray = newlyEarnedBadges.filter((element) => !newEarnedBadges.inc
 
 // Display the items in Array #2
 console.log("filteredArray1   "+filteredArray1.length);
-console.log("filteredArray   "+filteredArray.length);
+console.log("filteredArray new  "+filteredArray.length);
 	
 
   const answerOptions = document.getElementsByClassName("answer-option");
     for (let i = 0; i < filteredArray1.length; i++) {
-     console.log(i+"  filteredArray1   "+filteredArray1[i].name);
-     console.log(i+"  filteredArray1   "+filteredArray1[i].id);
+     console.log(i+"  filteredArray1  id: "+filteredArray1[i].id);
 
       }
     
