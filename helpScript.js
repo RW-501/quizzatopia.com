@@ -1,4 +1,4 @@
-    <link rel="import" href="./js/load.js>
+    <link rel="import" href="./js/load.js" >
 
 
 fetch('./elements/navbar.html')
