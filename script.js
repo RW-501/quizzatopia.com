@@ -524,31 +524,22 @@ displayEarnedPoints(earnedPoints);
   }
 
    const newBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
-	
-	
-  	console.log('newBadges inside:', newBadges);
+  console.log('newBadges inside:', newBadges);
+  console.log('oldBadges inside:', oldBadges);
 
-  	console.log('oldBadges inside:', oldBadges);
+  const filteredArray = oldBadges.filter(element => !newBadges.some(item => item.id === element.id));
+  const uniqueArray = newBadges.filter(item => !oldBadges.some(element => element.id === item.id));
 
-const uniqueArray = Array.from(new Set(newBadges.filter(item => !oldBadges.includes(item))));
+  console.log("filteredArray:", filteredArray);
+  console.log("uniqueArray:", uniqueArray);
 
-	// Remove the items from Array #1 that are present in Array #2 based on the 'id' property
-const filteredArray = oldBadges.filter((element) => !newBadges.some(item => item.id === element.id));
+  for (let i = 0; i < filteredArray.length; i++) {
+    console.log(i + " filteredArray id: " + filteredArray[i].id);
+  }
 
-// Display the items in Array #2
-console.log("uniqueArray Array:", uniqueArray);
-console.log("Filtered Array:", filteredArray);
-
-
-	
-for (let i = 0; i < filteredArray.length; i++) {
-  console.log(i + " filteredArray id: " + filteredArray[i].id);
-}
-
-	for (let i = 0; i < uniqueArray.length; i++) {
-  console.log(i + " uniqueArray id: " + uniqueArray[i].id);
-}
-
+  for (let i = 0; i < uniqueArray.length; i++) {
+    console.log(i + " uniqueArray id: " + uniqueArray[i].id);
+  }
 	
 
 	
