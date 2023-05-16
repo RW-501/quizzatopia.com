@@ -388,28 +388,140 @@ if (window.location.search.substr(1) === 'q') {
 		.text-center {
     padding: 5%;
 }
+		
+		
+		
+		.featured-quizzes-container {
+  /* Add container styles here */
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  /* Add carousel styles here */
+}
+
+.quiz-card {
+  flex: 0 0 auto;
+  width: 300px;
+  scroll-snap-align: start;
+  /* Add quiz card styles here */
+}
+		@media (max-width: 768px) {
+  .featured-quizzes-container {
+    /* Adjust container styles for smaller screens */
+  }
+  
+  .carousel {
+    /* Adjust carousel styles for smaller screens */
+  }
+  
+  .quiz-card {
+    /* Adjust quiz card styles for smaller screens */
+  }
+}
+
+
 	</style>
   
-
-    
-    
-<div class="container mt-4 mb-5">
-  <div class="row">
-    <div class="col-md-6">
-      <h1>Welcome to Quizzatopia!</h1>
-      <p>
-        Explore a world of quizzes like never before with Quizzatopia - the ultimate destination for all your quizzing needs. From fun trivia to professional exam preparation, Quizzatopia has it all. With our user-friendly interface and extensive question bank, learning has never been more enjoyable. So, step into the world of quizzes with Quizzatopia and discover the thrill of learning through quizzing.
-      </p>
-	   
-      <a href="quizzes" class="btn btn-primary" style="
-    margin-bottom: 2%;
-">Get Started</a>
+<div class="featured-quizzes-container">
+  <div class="carousel">
+    <div class="quiz-card">
+      <!-- Quiz card content here -->
     </div>
-    <div class="col-md-6 d-flex align-items-center justify-content-center mb-1">
-      <img src="/images/sq/33.png" alt="Quiz Platform Image" class="img-fluid"  loading="lazy">
+    <div class="quiz-card">
+      <!-- Quiz card content here -->
     </div>
+    <div class="quiz-card">
+      <!-- Quiz card content here -->
+    </div>
+    <!-- Add more quiz cards as needed -->
   </div>
 </div>
+
+    <script>
+// Assuming you have an array of featured quizzes
+const featuredQuizzes = [
+  { title: 'Quiz 1', image: 'quiz1.jpg', description: 'Description of Quiz 1' },
+  { title: 'Quiz 2', image: 'quiz2.jpg', description: 'Description of Quiz 2' },
+  { title: 'Quiz 3', image: 'quiz3.jpg', description: 'Description of Quiz 3' }
+];
+
+// Assuming you want to populate the quiz cards dynamically
+const carousel = $('.carousel');
+
+featuredQuizzes.forEach(quiz => {
+  const quizCard = $('<div>').addClass('quiz-card');
+  
+  // Add HTML content for the quiz card using quiz.title, quiz.image, quiz.description
+  const quizContent = `
+    <img src="${quiz.image}" alt="${quiz.title}" class="quiz-image">
+    <h3 class="quiz-title">${quiz.title}</h3>
+    <p class="quiz-description">${quiz.description}</p>
+  `;
+  
+  quizCard.html(quizContent);
+  carousel.append(quizCard);
+});
+
+    
+	$(document).ready(function() {
+  $('.carousel').on('scroll', function() {
+    const scrollPosition = $('.carousel').scrollLeft();
+    const cardWidth = $('.quiz-card').outerWidth();
+    const activeCardIndex = Math.floor(scrollPosition / cardWidth);
+  
+    // Add any desired effects or visual indicators to the active quiz card
+    $('.quiz-card').removeClass('active');
+    $('.quiz-card').eq(activeCardIndex).addClass('active');
+  
+    // Update any related content based on the active quiz card, such as updating a preview or displaying additional information
+    const activeQuizTitle = $('.quiz-card.active').find('.quiz-title').text();
+    const activeQuizDescription = $('.quiz-card.active').find('.quiz-description').text();
+    $('.active-quiz-title').text(activeQuizTitle);
+    $('.active-quiz-description').text(activeQuizDescription);
+  });
+  
+  $('.quiz-card').hover(function() {
+    const quizTitle = $(this).find('.quiz-title').text();
+    const quizPreview = $(this).find('.quiz-preview').html();
+  
+    // Display the quiz preview or update any related content on hover
+    $('.quiz-preview-container').html(quizPreview);
+    $('.quiz-preview-container').addClass('show');
+  }, function() {
+    // Hide the quiz preview or reset any related content
+    $('.quiz-preview-container').removeClass('show');
+    $('.quiz-preview-container').empty();
+  });
+  
+  $('.call-to-action-button').on('click', function() {
+    const quizId = $(this).data('quiz-id');
+  
+    // Perform any necessary action, such as redirecting to the quiz page or triggering a modal
+    // Example: window.location.href = '/quizzes/' + quizId;
+  });
+});
+    
+	    
+	</script>
+    
+<section class="hero" style="background-color: #0d6efd;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 style="color: #fff;">Welcome to Quizzatopia!</h1>
+        <p style="color: #fff;">Explore a world of quizzes like never before with Quizzatopia - the ultimate destination for all your quizzing needs. From fun trivia to professional exam preparation, Quizzatopia has it all. With our user-friendly interface and extensive question bank, learning has never been more enjoyable. So, step into the world of quizzes with Quizzatopia and discover the thrill of learning through quizzing.</p>
+        <a href="quizzes" class="btn btn-primary">Get Started</a>
+      </div>
+      <div class="col-md-6 d-flex align-items-center justify-content-center">
+        <img src="/images/sq/33.png" alt="Quiz Platform Image" class="img-fluid" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
     
@@ -492,10 +604,87 @@ if (window.location.search.substr(1) === 'q') {
 	  
 	    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="Quizzatopia" data-description="Support me on Buy me a coffee!" data-message="Thank you for visiting our website! We appreciate your time and hope you had a great experience. If you have any feedback or questions, feel free to reach out to us. We look forward to seeing you again soon!" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 	    
-	    
+	    <section class="quiz-categories">
+  <div class="container">
+    <h2>Quiz Categories</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="category-card">
+          <img src="it-category.jpg" alt="Information Technology Category" class="category-image">
+          <h3>Information Technology</h3>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="category-card">
+          <img src="healthcare-category.jpg" alt="Healthcare Category" class="category-image">
+          <h3>Healthcare</h3>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="category-card">
+          <img src="education-category.jpg" alt="Education Category" class="category-image">
+          <h3>Education</h3>
+        </div>
+      </div>
+      <!-- Add more category cards as needed -->
+    </div>
+  </div>
+</section>
+
+	  
+	  
+	  
+	  
+	  
+	  
 </div>
 
-  
+  <section class="call-to-action">
+  <div class="container">
+    <h2>Discover Your Knowledge!</h2>
+    <p>Challenge yourself with our quizzes and explore new horizons.</p>
+    <a href="quiz" class="btn btn-primary">Take a Quiz Now</a>
+  </div>
+</section>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -718,7 +907,8 @@ padding:2%;
     
     
     
-    
+    	    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="Quizzatopia" data-description="Support me on Buy me a coffee!" data-message="Thank you for visiting our website! We appreciate your time and hope you had a great experience. If you have any feedback or questions, feel free to reach out to us. We look forward to seeing you again soon!" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+
   </body>
     
   <div id="mainFooter"></div>
