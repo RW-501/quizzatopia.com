@@ -527,7 +527,7 @@ displayEarnedPoints(earnedPoints);
   
 let newNewBadge += newBadges;
   // Check if any new badges were earned
-  const newlyEarnedBadges += newNewBadge;
+  const newlyEarnedBadges = newNewBadge;
 
  
 	
