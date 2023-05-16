@@ -78,46 +78,41 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
   
   */
   
-$(document).ready(function() {
-  $('#quiz-search').on('input', function() {
-    var searchTerm = $(this).val();
+ $(document).ready(function() {
+      $('#quiz-search').on('input', function() {
+        var searchTerm = $(this).val();
 
-    if (searchTerm.length >= 2) {
-      $.ajax({
-        url: 'https://www.quizzatopia.com/quizzes/',
-        method: 'GET',
-        success: function(response) {
-          var filteredResults = filterQuizzes(response, searchTerm);
-          displaySearchResults(filteredResults);
-        },
-        error: function(xhr, status, error) {
-          console.error(error);
+        if (searchTerm.length >= 2) {
+          fetch("/quizzes")
+            .then(response => response.json())
+            .then(data => {
+              var filteredResults = filterQuizzes(data, searchTerm);
+              displaySearchResults(filteredResults);
+            })
+            .catch(error => {
+              console.error(error);
+            });
+        } else {
+          $('#search-results').empty();
         }
       });
-    } else {
-      $('#search-results').empty();
+    });
+
+    function filterQuizzes(quizzes, searchTerm) {
+      var filteredResults = [];
+
+      for (var i = 0; i < quizzes.length; i++) {
+        var quiz = quizzes[i];
+        if (quiz.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            quiz.description.toLowerCase().includes(searchTerm.toLowerCase())) {
+          filteredResults.push(quiz);
+        }
+      }
+
+      return filteredResults;
     }
-  });
-});
 
-function filterQuizzes(quizzes, searchTerm) {
-  var filteredResults = [];
-
-  for (var i = 0; i < quizzes.length; i++) {
-    var quiz = quizzes[i];
-    if (quiz.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        quiz.description.toLowerCase().includes(searchTerm.toLowerCase())) {
-      filteredResults.push(quiz);
-    }
-  }
-
-  return filteredResults;
-}
-
-  return filteredResults;
-}
-  
-     function displaySearchResults(results) {
+    function displaySearchResults(results) {
       var $searchResults = $('#search-results');
       $searchResults.empty();
 
@@ -132,15 +127,13 @@ function filterQuizzes(quizzes, searchTerm) {
 
           $link.append($title, $description);
           $list.append($link);
-        }
+}
 
-        $searchResults.append($list);
-      } else {
-        $searchResults.html('<p>No results found.</p>');
-      }
-    }
-  
-  
+    $searchResults.append($list);
+  } else {
+    $searchResults.html('<p>No results found.</p>');
+  }
+}
   
   
   
