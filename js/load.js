@@ -149,8 +149,8 @@ function awardQuizzesTakenBadges() {
 
   // Define the milestones and corresponding badge information
 const milestones = [
-  { count: 5, badge: { id: 2, name: "Quiz Enthusiast", description: "Awarded for taking 5 quizzes", quantity: 1, imageUrl: "/images/badges/badge-qcount-1.png", maxQuantity: 1 } },
-  { count: 10, badge: { id: 3, name: "Quiz Aficionado", description: "Awarded for taking 10 quizzes", quantity: 1, imageUrl: "/images/badges/badge-qcount-2.png", maxQuantity: 1 } },
+  { count: 1, badge: { id: 2, name: "Quiz Enthusiast", description: "Awarded for taking 5 quizzes", quantity: 1, imageUrl: "/images/badges/badge-qcount-1.png", maxQuantity: 1 } },
+  { count: 2, badge: { id: 3, name: "Quiz Aficionado", description: "Awarded for taking 10 quizzes", quantity: 1, imageUrl: "/images/badges/badge-qcount-2.png", maxQuantity: 1 } },
   { count: 20, badge: { id: 4, name: "Quiz Master", description: "Awarded for taking 20 quizzes", quantity: 1, imageUrl: "/images/badges/badge-qcount-3.png", maxQuantity: 1 } },
   { count: 30, badge: { id: 5, name: "Quiz Guru", description: "Awarded for taking 30 quizzes", quantity: 1, imageUrl: "/images/badges/badge-qcount-4.png", maxQuantity: 1 } },
   { count: 40, badge: { id: 6, name: "Quiz Legend", description: "Awarded for taking 40 quizzes", quantity: 1, imageUrl: "/images/badges/badge-qcount-5.png", maxQuantity: 1 } },
