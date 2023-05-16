@@ -573,7 +573,7 @@ displayBadges();
 	
 	
   // Unhide the message board
-  document.getElementById("MessageBoard").classList.remove("d-none");
+ // document.getElementById("MessageBoard").classList.remove("d-none");
 }
 
 
