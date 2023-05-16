@@ -530,44 +530,24 @@ let newNewBadge = newBadges;
   const newlyEarnedBadges = newNewBadge;
 
  
-	
-	
-
-	
-	
-
-// Remove the items from Array #1 that are present in Array #2
-const filteredArray1 = newlyEarnedBadges.filter(item => !oldBadges.includes(item));
-const filteredArray = oldBadges.filter((element) => !newlyEarnedBadges.includes(element));
-
-	const uniqueArray = Array.from(new Set(newlyEarnedBadges.filter(item => !oldBadges.includes(item))));
-	
-	
-// Remove the items from Array #1 that are present in Array #2
-const filteredArray1 = newlyEarnedBadges.filter(item => !oldBadges.includes(item));
-const filteredArray = oldBadges.filter((element) => !newlyEarnedBadges.includes(element));
-
-	const uniqueArray = Array.from(new Set(newlyEarnedBadges.filter(item => !oldBadges.includes(item))));
+	// Remove the items from Array #1 that are present in Array #2 based on the 'id' property
+const filteredArray = oldBadges.filter((element) => !newlyEarnedBadges.some(item => item.id === element.id));
 
 // Display the items in Array #2
-//console.log("filteredArray1   "+filteredArray1.length);
-//console.log("filteredArray new  "+filteredArray.length);
+console.log("Filtered Array:", filteredArray);
+
+for (let i = 0; i < newlyEarnedBadges.length; i++) {
+  console.log(i + " newlyEarnedBadges id: " + newlyEarnedBadges[i].id);
+}
+
+for (let i = 0; i < oldBadges.length; i++) {
+  console.log(i + " oldBadges id: " + oldBadges[i].id);
+}
+
 	
-	for (let i = 0; i < uniqueArray.length; i++) {
-     console.log(i+"  uniqueArray  id: "+uniqueArray[i].id);
 
-      }	for (let i = 0; i < oldBadges.length; i++) {
-     console.log(i+"  oldBadges  id: "+oldBadges[i].id);
-
-      }
-
-	for (let i = 0; i < newlyEarnedBadges.length; i++) {
-     console.log(i+"  newlyEarnedBadges  id: "+newlyEarnedBadges[i].id);
-
-      }
-    
 	
-	
+
 	
 	
 	
