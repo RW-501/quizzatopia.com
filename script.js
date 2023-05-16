@@ -525,7 +525,7 @@ displayEarnedPoints(earnedPoints);
 
    const newBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
   
-let newNewBadge += newBadges;
+let newNewBadge = newBadges;
   // Check if any new badges were earned
   const newlyEarnedBadges = newNewBadge;
 
