@@ -84,7 +84,7 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
 
     if (searchTerm.length >= 2) {
       $.ajax({
-        url: 'https://www.quizzatopia.com/quizzes',
+        url: 'https://www.quizzatopia.com/quizzes/',
         method: 'GET',
         success: function(response) {
           var filteredResults = filterQuizzes(response, searchTerm);
@@ -114,7 +114,28 @@ function filterQuizzes(quizzes, searchTerm) {
   return filteredResults;
 }
   
-  
+     function displaySearchResults(results) {
+      var $searchResults = $('#search-results');
+      $searchResults.empty();
+
+      if (results.length > 0) {
+        var $list = $('<ul class="list-group"></ul>');
+
+        for (var i = 0; i < results.length; i++) {
+          var quiz = results[i];
+          var $link = $('<a href="' + quiz.href + '" class="list-group-item list-group-item-action"></a>');
+          var $title = $('<h4 class="mb-1">' + quiz.title + '</h4>');
+          var $description = $('<p class="mb-1">' + quiz.description + '</p>');
+
+          $link.append($title, $description);
+          $list.append($link);
+        }
+
+        $searchResults.append($list);
+      } else {
+        $searchResults.html('<p>No results found.</p>');
+      }
+    }
   
   
   
