@@ -537,8 +537,8 @@ let newNewBadge = newBadges;
 	
 
 // Remove the items from Array #1 that are present in Array #2
-const filteredArray1 = newEarnedBadges.filter(item => !newlyEarnedBadges.includes(item));
-const filteredArray = newlyEarnedBadges.filter((element) => !filteredArray1.includes(element));
+const filteredArray1 = newlyEarnedBadges.filter(item => !oldBadges.includes(item));
+const filteredArray = oldBadges.filter((element) => !newlyEarnedBadges.includes(element));
 
 	const uniqueArray = Array.from(new Set(newlyEarnedBadges.filter(item => !oldBadges.includes(item))));
 
