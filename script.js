@@ -465,10 +465,10 @@ function calculateEarnedPoints() {
 }
 
 // Function to check if a badge has been earned
- const earnedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
-let newEarnedBadges = earnedBadges;
-	//console.log('newEarnedBadges:', newEarnedBadges);
-const oldBadges = newEarnedBadges;
+ const oldBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
+	console.log('oldBadges:', oldBadges);
+
+
 
 
 
@@ -524,55 +524,37 @@ displayEarnedPoints(earnedPoints);
   }
 
    const newBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
-  
-let newNewBadge = newBadges;
-  // Check if any new badges were earned
-  const newlyEarnedBadges = newNewBadge;
+	
+	
+  	console.log('newBadges inside:', newBadges);
 
- 
+  	console.log('oldBadges inside:', oldBadges);
+
+const uniqueArray = Array.from(new Set(newBadges.filter(item => !oldBadges.includes(item))));
+
 	// Remove the items from Array #1 that are present in Array #2 based on the 'id' property
-const filteredArray = oldBadges.filter((element) => !newlyEarnedBadges.some(item => item.id === element.id));
+const filteredArray = oldBadges.filter((element) => !newBadges.some(item => item.id === element.id));
 
 // Display the items in Array #2
+console.log("uniqueArray Array:", uniqueArray);
 console.log("Filtered Array:", filteredArray);
 
-for (let i = 0; i < newlyEarnedBadges.length; i++) {
-  console.log(i + " newlyEarnedBadges id: " + newlyEarnedBadges[i].id);
-}
 
-for (let i = 0; i < oldBadges.length; i++) {
-  console.log(i + " oldBadges id: " + oldBadges[i].id);
-}
-
-	for (let i = 0; i < filteredArray.length; i++) {
+	
+for (let i = 0; i < filteredArray.length; i++) {
   console.log(i + " filteredArray id: " + filteredArray[i].id);
 }
 
-	
-
-	
-
-	
-	
-	
-/*
-// Display the items in Array #2
-//console.log("filteredArray1   "+filteredArray1.length);
-//console.log("filteredArray new  "+filteredArray.length);
-	
 	for (let i = 0; i < uniqueArray.length; i++) {
-     console.log(i+"  uniqueArray  id: "+uniqueArray[i].id);
+  console.log(i + " uniqueArray id: " + uniqueArray[i].id);
+}
 
-      }	for (let i = 0; i < oldBadges.length; i++) {
-     console.log(i+"  oldBadges  id: "+oldBadges[i].id);
+	
 
-      }
+	
 
-	for (let i = 0; i < newlyEarnedBadges.length; i++) {
-     console.log(i+"  newlyEarnedBadges  id: "+newlyEarnedBadges[i].id);
-
-      }
-    */
+	
+	
 	if(filteredArray.length > 0){
   document.getElementById("badgebox").classList.remove("d-none");
 // Function to display badges
