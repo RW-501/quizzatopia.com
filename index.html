@@ -507,7 +507,7 @@ featuredQuizzes.forEach(quiz => {
 	    
 	</script>
     
-<section class="hero" style="background-color: #0d6efd;">
+<section class="hero" style="">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
@@ -601,9 +601,22 @@ featuredQuizzes.forEach(quiz => {
       <!-- Placeholder for displaying welcome message and profile picture -->
     </div>
    
+
 	  
-	    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="Quizzatopia" data-description="Support me on Buy me a coffee!" data-message="Thank you for visiting our website! We appreciate your time and hope you had a great experience. If you have any feedback or questions, feel free to reach out to us. We look forward to seeing you again soon!" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 	    
+	  
+	  
+	  
+	  
+  <section class="call-to-action">
+  <div class="container">
+    <h2>Discover Your Knowledge!</h2>
+    <p>Challenge yourself with our quizzes and explore new horizons.</p>
+    <a href="quiz" class="btn btn-primary">Take a Quiz Now</a>
+  </div>
+</section>
+	  
+	  
 	    <section class="quiz-categories">
   <div class="container">
     <h2>Quiz Categories</h2>
@@ -632,25 +645,60 @@ featuredQuizzes.forEach(quiz => {
 </section>
 
 	  
-	  
+	  <section class="quiz-recommendations">
+  <div class="container">
+    <h2>Quiz Recommendations</h2>
+    <div class="quiz-info-container" id="quizInfoContainer">
+      <!-- Quiz recommendation elements will be dynamically added here -->
+    </div>
+  </div>
+</section>
+
 	  
 	  
 	  
 	  
 </div>
 
-  <section class="call-to-action">
-  <div class="container">
-    <h2>Discover Your Knowledge!</h2>
-    <p>Challenge yourself with our quizzes and explore new horizons.</p>
-    <a href="quiz" class="btn btn-primary">Take a Quiz Now</a>
-  </div>
-</section>
 
 	
 	
 	
+	<script>
+	function getQuizInfo() {
+  const quizInfoContainer = document.getElementById('quizInfoContainer');
+  quizInfoContainer.innerHTML = ''; // Clear previous content
+
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    if (key.startsWith('quizInfo_')) {
+      const quizInfo = JSON.parse(localStorage.getItem(key));
+      const quizName = quizInfo.quizName;
+      const questionCorrect = quizInfo.questionCorrect;
+      const numberOfQuestions = quizInfo.numberOfQuestions;
+      const quizLink = quizInfo.quizLink;
+      const quizTime = quizInfo.timestamp;
+
+      const quizInfoElement = document.createElement('div');
+      quizInfoElement.classList.add('quiz-info');
+      quizInfoElement.innerHTML = `
+        <a href="/quiz?q=${quizLink}"><h4>${quizName}</h4></a>
+        <p>Quiz Taken: ${quizTime}</p>
+        <p>Score: ${questionCorrect}/${numberOfQuestions} questions</p>
+      `;
+      
+      quizInfoContainer.appendChild(quizInfoElement);
+    }
+  }
+}
+
+// Call the getQuizInfo() function to populate the quiz recommendations on page load
+getQuizInfo();
 	
+		
+		
+		
+	</script>
 	
 	
 	
@@ -894,17 +942,6 @@ padding:2%;
 	
 
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-    
     
     
     	    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="Quizzatopia" data-description="Support me on Buy me a coffee!" data-message="Thank you for visiting our website! We appreciate your time and hope you had a great experience. If you have any feedback or questions, feel free to reach out to us. We look forward to seeing you again soon!" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
