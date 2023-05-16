@@ -1,3 +1,134 @@
+
+
+/* Call-to-Action Section */
+.call-to-action {
+  padding: 4rem 0;
+  background-color: #0d6efd;
+  color: #fff;
+  text-align: center;
+}
+
+.call-to-action h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.call-to-action p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.call-to-action .btn-primary {
+  font-size: 1.2rem;
+  padding: 1.2rem 2.5rem;
+}
+
+/* Quiz Categories Section */
+.quiz-categories {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.quiz-categories h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.category-card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-image {
+  width: 100%;
+  height: auto;
+}
+
+.category-card h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1.5rem 0;
+}
+
+/* Quiz Recommendations Section */
+.quiz-recommendations {
+  padding: 4rem 0;
+}
+
+.quiz-recommendations h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.quiz-info-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.quiz-info {
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.quiz-info a {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.quiz-info a:hover {
+  color: #0d6efd;
+}
+
+.quiz-info p {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.quiz-info p:last-child {
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 main_section{
     width: 100% !important;
     height: 100% !important;
