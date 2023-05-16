@@ -117,18 +117,18 @@ function awardBadge(badgeId) {
   const earnedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
   const maxQuantity = getBadgeMaxQuantity(badgeId.id);
 
-  if (!earnedBadges.some(eb => eb.id === badgeId.id) && earnedBadges.length < maxQuantity) {
-    earnedBadges.push({ id: badgeId.id, earnedDate: getCurrentDate(), ...badgeId });
-    localStorage.setItem('earnedBadges', JSON.stringify(earnedBadges));
-  }
-}
 
 
+ console.log('badgeId:', badgeId);
 
-/*
 if (!earnedBadges.includes(badgeId) && earnedBadges.length < maxQuantity) {
     const badge = badges.find(b => b.id === badgeId);
+ 
+  console.log('badge:', badge);
+
     if (badge) {
+      console.log('badge:', badge);
+
       const { id, name, description, quantity, imageUrl, maxQuantity } = badge;
       earnedBadges.push({
         id: id,
@@ -139,12 +139,13 @@ if (!earnedBadges.includes(badgeId) && earnedBadges.length < maxQuantity) {
         imageUrl: imageUrl,
         maxQuantity: maxQuantity
       });
+     console.log('earnedBadges:', earnedBadges);
       localStorage.setItem('earnedBadges', JSON.stringify(earnedBadges));
     }
   }
 }
 
-*/
+
 
 
 
