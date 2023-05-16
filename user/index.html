@@ -263,7 +263,9 @@ function removeQuiz(key) {
 		    // Define the badge data structure
 // Retrieve badge information from localStorage
 const savedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
-
+console.log('savedBadges:', savedBadges);
+		    
+		    
 // Function to display badges
 function displayBadges() {
   const badgesContainer = document.getElementById("badgesContainer");
