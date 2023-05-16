@@ -117,37 +117,32 @@ function awardBadge(badgeId) {
   const earnedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
   const maxQuantity = getBadgeMaxQuantity(badgeId.id);
 
+  console.log('badgeId:', badgeId);
 
+  if (!earnedBadges.some(eb => eb.id === badgeId.id) && earnedBadges.length < maxQuantity) {
+    const badge = badges.find(b => b.id === badgeId.id);
 
- console.log('badgeId:', badgeId);
-
-if (!earnedBadges.includes(badgeId) && earnedBadges.length < maxQuantity) {
-    const badge = badges.find(b => b.id === badgeId);
- 
-  console.log('badge:', badge);
+    console.log('badge:', badge);
 
     if (badge) {
       console.log('badge:', badge);
-         earnedBadges = JSON.parse(badgeId);
-/*
-      const { id, name, description, quantity, imageUrl, maxQuantity } = badge;
+
       earnedBadges.push({
-        id: id,
+        id: badge.id,
         earnedDate: getCurrentDate(),
-        name: name,
-        description: description,
-        quantity: quantity,
-        imageUrl: imageUrl,
-        maxQuantity: maxQuantity
+        name: badge.name,
+        description: badge.description,
+        quantity: badge.quantity,
+        imageUrl: badge.imageUrl,
+        maxQuantity: badge.maxQuantity
       });
-     
-   
-     */
-     console.log('earnedBadges:', earnedBadges);
+
+      console.log('earnedBadges:', earnedBadges);
       localStorage.setItem('earnedBadges', JSON.stringify(earnedBadges));
     }
   }
 }
+
 
 
 
