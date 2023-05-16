@@ -119,20 +119,8 @@ function awardBadge(badgeId) {
   const maxQuantity = getBadgeMaxQuantity(badgeId);
 
   if (!earnedBadges.includes(badgeId) && earnedBadges.length < maxQuantity) {
-    const badge = badges.find(b => b.id === badgeId);
-    if (badge) {
-      const { id, name, description, quantity, imageUrl, maxQuantity } = badge;
-      earnedBadges.push({
-        id: id,
-        earnedDate: getCurrentDate(),
-        name: name,
-        description: description,
-        quantity: quantity,
-        imageUrl: imageUrl,
-        maxQuantity: maxQuantity
-      });
-      localStorage.setItem('earnedBadges', JSON.stringify(earnedBadges));
-    }
+    earnedBadges.push({ id: badgeId, earnedDate: getCurrentDate() });
+    localStorage.setItem('earnedBadges', JSON.stringify(earnedBadges));
   }
 }
 
