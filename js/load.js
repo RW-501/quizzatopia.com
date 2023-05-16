@@ -128,7 +128,8 @@ if (!earnedBadges.includes(badgeId) && earnedBadges.length < maxQuantity) {
 
     if (badge) {
       console.log('badge:', badge);
-
+         earnedBadges = JSON.parse(badgeId);
+/*
       const { id, name, description, quantity, imageUrl, maxQuantity } = badge;
       earnedBadges.push({
         id: id,
@@ -139,6 +140,9 @@ if (!earnedBadges.includes(badgeId) && earnedBadges.length < maxQuantity) {
         imageUrl: imageUrl,
         maxQuantity: maxQuantity
       });
+     
+   
+     */
      console.log('earnedBadges:', earnedBadges);
       localStorage.setItem('earnedBadges', JSON.stringify(earnedBadges));
     }
