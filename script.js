@@ -557,10 +557,9 @@ console.log("filteredArray   "+filteredArray.length);
   document.getElementById("badgebox").classList.remove("d-none");
 // Function to display badges
 function displayBadges() {
-  const savedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
+  const savedBadges = JSON.parse(filteredArray) || [];
   const badgesContainer = document.getElementById("badgeView");
   badgesContainer.innerHTML = savedBadges.map(newBadge => `
- 
     <div class="card">
       <img src="${newBadge.imageUrl}" alt="${newBadge.id}" class="card-img-top">
       <div class="card-body">
@@ -577,7 +576,7 @@ displayBadges();
 	}
 	
 	
-	
+	console.log(totalQuestions + "   ????????????totalQuestions????"); // Output: 3
 	
   // Unhide the message board
   document.getElementById("MessageBoard").classList.remove("d-none");
