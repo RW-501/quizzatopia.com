@@ -506,7 +506,9 @@ if (percentageScore === 100) {
 }
   updateQuizzesTaken(1);
 	checkTier();
-rewardPointsForReturningDays
+rewardPointsForReturningDays();
+	awardQuizzesTakenBadges();
+	
 const earnedPoints = calculateEarnedPoints();
 displayEarnedPoints(earnedPoints);
 
