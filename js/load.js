@@ -119,10 +119,23 @@ function awardBadge(badgeId) {
   const maxQuantity = getBadgeMaxQuantity(badgeId);
 
   if (!earnedBadges.includes(badgeId) && earnedBadges.length < maxQuantity) {
-    earnedBadges.push({ id: badgeId, earnedDate: getCurrentDate() });
-    localStorage.setItem('earnedBadges', JSON.stringify(earnedBadges));
+    const badge = badges.find(b => b.id === badgeId);
+    if (badge) {
+      const { id, name, description, quantity, imageUrl, maxQuantity } = badge;
+      earnedBadges.push({
+        id: id,
+        earnedDate: getCurrentDate(),
+        name: name,
+        description: description,
+        quantity: quantity,
+        imageUrl: imageUrl,
+        maxQuantity: maxQuantity
+      });
+      localStorage.setItem('earnedBadges', JSON.stringify(earnedBadges));
+    }
   }
 }
+
 
 function getCurrentDate() {
   const now = new Date();
@@ -161,7 +174,7 @@ const milestones = [
  // Check if the user has reached any of the milestones and hasn't already earned the corresponding badge
   for (const milestone of milestones) {
     if (quizzesTaken >= milestone.count && !hasEarnedBadge(milestone.badge.id)) {
-      awardBadge(milestone);
+      awardBadge(milestone.badge.id);
     }
   }
 }
