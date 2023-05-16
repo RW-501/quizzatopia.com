@@ -463,14 +463,13 @@ function calculateEarnedPoints() {
   return earnedPoints > 0 ? earnedPoints : 0;
 	
 }
-let earnedBadges;
 
 // Function to check if a badge has been earned
-  earnedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
+ const earnedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
 let newEarnedBadges = earnedBadges;
 	//console.log('newEarnedBadges:', newEarnedBadges);
+let oldBadges = newEarnedBadges;
 
-let newBadges;
 
 
 
@@ -524,11 +523,11 @@ displayEarnedPoints(earnedPoints);
     showPieChartEnd();
   }
 
-    newBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
+   const newBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
   
-
+let newNewBadge = newBadges;
   // Check if any new badges were earned
-  let newlyEarnedBadges = newBadges;
+  let newlyEarnedBadges = newNewBadge;
 
  
 	
@@ -542,13 +541,16 @@ const filteredArray1 = newEarnedBadges.filter(item => !newlyEarnedBadges.include
 const filteredArray = newlyEarnedBadges.filter((element) => !filteredArray1.includes(element));
 
 // Display the items in Array #2
-console.log("filteredArray1   "+filteredArray1.length);
-console.log("filteredArray new  "+filteredArray.length);
+//console.log("filteredArray1   "+filteredArray1.length);
+//console.log("filteredArray new  "+filteredArray.length);
 	
+	for (let i = 0; i < oldBadges.length; i++) {
+     console.log(i+"  oldBadges  id: "+oldBadges[i].id);
 
-  const answerOptions = document.getElementsByClassName("answer-option");
-    for (let i = 0; i < filteredArray1.length; i++) {
-     console.log(i+"  filteredArray1  id: "+filteredArray1[i].id);
+      }
+
+	for (let i = 0; i < newlyEarnedBadges.length; i++) {
+     console.log(i+"  newlyEarnedBadges  id: "+newlyEarnedBadges[i].id);
 
       }
     
