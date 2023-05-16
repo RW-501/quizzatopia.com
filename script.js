@@ -460,7 +460,6 @@ function calculateEarnedPoints() {
   let currentPoint = currentPoints;
   let earnedPoints = currentPoint - initialPoints;
 	
-//console.log(earnedPoints+"  earnedPoints???????  "+initialPoints+"   currentPoint   "+currentPoint+"   nscurrentPoints    "+currentPoints ); // Output: 3
 
   return earnedPoints > 0 ? earnedPoints : 0;
 	
@@ -470,6 +469,7 @@ let earnedBadges;
 // Function to check if a badge has been earned
 function hasEarnedBadgeQ() {
   earnedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
+	console.log('earnedBadges:', earnedBadges);
 }
 
 let newBadges;
@@ -552,7 +552,8 @@ displayEarnedPoints(earnedPoints);
     displayBadge(badgeId);
   }	
 	
-	
+	console.log(earnedBadges+"  earnedBadges???????  "+newBadges+"   newBadges   "+newlyEarnedBadges+"   newlyEarnedBadges    " ); // Output: 3
+
 	
   // Unhide the message board
   document.getElementById("MessageBoard").classList.remove("d-none");
