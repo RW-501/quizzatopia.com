@@ -33,6 +33,9 @@ if (window.location.pathname.substr(-5) === '.html' && window.location.pathname.
         </li>
       </ul>
     </div>
+     <form class="form-inline my-2 my-lg-0 search-bar">
+      <input class="form-control mr-sm-2" type="search" id="quiz-search" placeholder="Search quizzes" aria-label="Search">
+    </form>
     <!-- Profile pic and name area -->
     <div class="profile-area">
       <img id="profile-pic" src="/images/pics/4.png" alt="Profile Picture" class="profile-pic" loading="lazy">
@@ -40,6 +43,7 @@ if (window.location.pathname.substr(-5) === '.html' && window.location.pathname.
     </div>
   </div>
 </nav>
+  <div id="search-results" class="container mt-4"></div>
 
 <!-- JavaScript code to check if user is logged in and update profile name and link -->
 <script>
@@ -51,7 +55,7 @@ const POINTS_KEY = 'points';
 const QUIZZES_TAKEN_KEY = 'quizzesTaken';
 // Add more keys for additional user information as needed
   
-  
+  /*
   
   // Check if the user is logged in (you can replace this with your own logic)
   var isLoggedIn = false;
@@ -71,6 +75,66 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
 
   // Call the function to update profile name and link
  // updateProfileInfo();
+  
+  */
+  
+  
+  
+  
+  
+   $(document).ready(function() {
+      $('#quiz-search').on('input', function() {
+        var searchTerm = $(this).val();
+
+        if (searchTerm.length >= 2) {
+          $.ajax({
+            url: '/quizzes',
+            method: 'GET',
+            data: { search: searchTerm },
+            success: function(response) {
+              displaySearchResults(response);
+            },
+            error: function(xhr, status, error) {
+              console.error(error);
+            }
+          });
+        } else {
+          $('#search-results').empty();
+        }
+      });
+    });
+
+    function displaySearchResults(results) {
+      var $searchResults = $('#search-results');
+      $searchResults.empty();
+
+      if (results.length > 0) {
+        var $list = $('<ul class="list-group"></ul>');
+
+        for (var i = 0; i < results.length; i++) {
+          var quiz = results[i];
+          var $link = $('<a href="' + quiz.href + '" class="list-group-item list-group-item-action"></a>');
+          var $title = $('<h4 class="mb-1">' + quiz.title + '</h4>');
+          var $description = $('<p class="mb-1">' + quiz.description + '</p>');
+
+          $link.append($title, $description);
+          $list.append($link);
+        }
+
+        $searchResults.append($list);
+      } else {
+        $searchResults.html('<p>No results found.</p>');
+      }
+    }
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   function getUserInfo() {
@@ -115,10 +179,18 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
   
       displayUserInfo();
 
+  
 </script>
 
 
 <style>
+  
+     @media (max-width: 768px) {
+      .search-bar {
+        display: none;
+      }
+    }
+  
   /* Navigation styles */
   nav {
     background-color: #0D47A1;
