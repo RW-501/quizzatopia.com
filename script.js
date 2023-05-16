@@ -539,7 +539,7 @@ displayEarnedPoints(earnedPoints);
 
 // Remove the items from Array #1 that are present in Array #2
 const filteredArray1 = newEarnedBadges.filter(item => !newlyEarnedBadges.includes(item));
-const filteredArray = newEarnedBadges.filter((element) => !newlyEarnedBadges.includes(element));
+const filteredArray = newlyEarnedBadges.filter((element) => !filteredArray1.includes(element));
 
 // Display the items in Array #2
 console.log("filteredArray1   "+filteredArray1.length);
