@@ -544,6 +544,10 @@ for (let i = 0; i < oldBadges.length; i++) {
   console.log(i + " oldBadges id: " + oldBadges[i].id);
 }
 
+	for (let i = 0; i < filteredArray.length; i++) {
+  console.log(i + " filteredArray id: " + filteredArray[i].id);
+}
+
 	
 
 	
