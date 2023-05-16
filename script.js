@@ -557,7 +557,7 @@ console.log("filteredArray   "+filteredArray.length);
   document.getElementById("badgebox").classList.remove("d-none");
 // Function to display badges
 function displayBadges() {
-  const savedBadges = JSON.parse(filteredArray) || [];
+  const savedBadges = filteredArray || [];
   const badgesContainer = document.getElementById("badgeView");
   badgesContainer.innerHTML = savedBadges.map(newBadge => `
     <div class="card">
