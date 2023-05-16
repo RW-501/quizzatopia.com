@@ -208,12 +208,12 @@ const milestones = [
 }
 
 const badges = [
-  { id: 1, name: "5- Day Badge", description: "Visiting 5 Consecutive Days", quantity: 1, maxQuantity: 10, imageUrl: "/images/badges/xxx-1.png", earnedDate: "" },
+  { id: 1, name: "5- Day Badge", description: "Visiting 5 Consecutive Days", quantity: 0, maxQuantity: 10, imageUrl: "/images/badges/xxx-1.png", earnedDate: "" },
   {
     id: 8,
     name: "Bronze Tier Badge",
     description: "Earned by reaching the Bronze Tier (0-100 points).",
-    quantity: 1,
+    quantity: 0,
     maxQuantity: 1,
     imageUrl: "/images/badges/badge-qcount-8.png",
     earnedDate: ""
@@ -222,7 +222,7 @@ const badges = [
     id: 9,
     name: "Silver Tier Badge",
     description: "Earned by reaching the Silver Tier (101-250 points).",
-    quantity: 1,
+    quantity: 0,
     maxQuantity: 1,
     imageUrl: "/images/badges/badge-qcount-9.png",
     earnedDate: ""
@@ -231,7 +231,7 @@ const badges = [
     id: 10,
     name: "Gold Tier Badge",
     description: "Earned by reaching the Gold Tier (251-500 points).",
-    quantity: 1,
+    quantity: 0,
     maxQuantity: 1,
     imageUrl: "/images/badges/badge-qcount-10.png",
     earnedDate: ""
@@ -240,7 +240,7 @@ const badges = [
     id: 11,
     name: "Platinum Tier Badge",
     description: "Earned by reaching the Platinum Tier (501-1000 points).",
-    quantity: 1,
+    quantity: 0,
     maxQuantity: 1,
     imageUrl: "/images/badges/badge-qcount-11.png",
     earnedDate: ""
@@ -249,7 +249,7 @@ const badges = [
     id: 12,
     name: "Diamond Tier Badge",
     description: "Earned by reaching the Diamond Tier (1001+ points).",
-    quantity: 1,
+    quantity: 0,
     maxQuantity: 1,
     imageUrl: "/images/badges/badge-qcount-12.png",
     earnedDate: ""
@@ -258,7 +258,7 @@ const badges = [
     id: 13,
     name: "Perfect Score",
     description: "Scored 100% on Quiz",
-    quantity: 1,
+    quantity: 0,
     maxQuantity: 100,
     imageUrl: "/images/badges/xxx-1.png",
     earnedDate: ""
