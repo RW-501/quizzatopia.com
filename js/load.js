@@ -131,10 +131,12 @@ function getBadgeMaxQuantity(badgeId) {
 
 
 // Function to check if a badge has been earned
+// Function to check if a badge has been earned
 function hasEarnedBadge(badgeId) {
   const earnedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
-  return earnedBadges.includes(badgeId.id);
+  return earnedBadges.some(eb => eb.id === badgeId.id);
 }
+
 
 
 function awardBadge(badgeId) {
