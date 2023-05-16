@@ -524,11 +524,13 @@ displayEarnedPoints(earnedPoints);
   }
 
    const newBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
+const uniqueArray = newBadges.filter(item => !oldBadges.some(element => element.id === item.id));
+
+	/*
   console.log('newBadges inside:', newBadges);
   console.log('oldBadges inside:', oldBadges);
 
   const filteredArray = oldBadges.filter(element => !newBadges.some(item => item.id === element.id));
-  const uniqueArray = newBadges.filter(item => !oldBadges.some(element => element.id === item.id));
 
   console.log("filteredArray:", filteredArray);
   console.log("uniqueArray:", uniqueArray);
@@ -540,17 +542,17 @@ displayEarnedPoints(earnedPoints);
   for (let i = 0; i < uniqueArray.length; i++) {
     console.log(i + " uniqueArray id: " + uniqueArray[i].id);
   }
-	
+*/	
 
 	
 
 	
 	
-	if(filteredArray.length > 0){
+	if(uniqueArray.length > 0){
   document.getElementById("badgebox").classList.remove("d-none");
 // Function to display badges
 function displayBadges() {
-  const savedBadges = filteredArray || [];
+  const savedBadges = uniqueArray || [];
   const badgesContainer = document.getElementById("badgeView");
   badgesContainer.innerHTML = savedBadges.map(newBadge => `
     <div class="card">
