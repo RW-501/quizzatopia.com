@@ -259,16 +259,14 @@ function removeQuiz(key) {
 		    
 
 		    
-		    
-		    // Define the badge data structure
-// Retrieve badge information from localStorage
-const savedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
-console.log('savedBadges:', savedBadges);
+	
 		    
 		    
 // Function to display badges
 function displayBadges() {
   const savedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
+	console.log('savedBadges:', savedBadges);
+
   const badgesContainer = document.getElementById("badgesContainer");
   badgesContainer.innerHTML = ""; // Clear previous content
 
@@ -316,12 +314,12 @@ function displayBadges() {
     badgesContainer.appendChild(badgeCard);
   }
 }
-
+displayUserInfo();   
 // Call the displayBadges function to show the badges
 displayBadges();
 		    
 		    
-		    		displayUserInfo();    
+		    		 
 function clearLocalStorage() {
   const confirmed = confirm('Are you sure you want to clear the local storage?');
   if (confirmed) {
