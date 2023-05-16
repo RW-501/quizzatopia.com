@@ -174,7 +174,7 @@ const milestones = [
  // Check if the user has reached any of the milestones and hasn't already earned the corresponding badge
   for (const milestone of milestones) {
     if (quizzesTaken >= milestone.count && !hasEarnedBadge(milestone.badge.id)) {
-      awardBadge(milestone.badge.id);
+      awardBadge(milestone.badge);
     }
   }
 }
