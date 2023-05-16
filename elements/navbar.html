@@ -35,8 +35,8 @@ if (window.location.pathname.substr(-5) === '.html' && window.location.pathname.
     </div>
     <!-- Profile pic and name area -->
     <div class="profile-area">
-      <img id="profile-pic" src="/images/pics/4.png" alt="Profile Picture" class="profile-pic">
-      <a id="profile-name" class="profile-name" href="/user/">Username</a>
+      <img id="profile-pic" src="/images/pics/4.png" alt="Profile Picture" class="profile-pic" loading="lazy">
+      <a id="profile-name" class="profile-name" href="/user/">Dashbroad</a>
     </div>
   </div>
 </nav>
@@ -70,7 +70,7 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
   }
 
   // Call the function to update profile name and link
-  updateProfileInfo();
+ // updateProfileInfo();
   
   
   function getUserInfo() {
