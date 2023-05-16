@@ -107,50 +107,6 @@ function updatePointsAndRank() {
 
 
 
-// Function to check if a badge has been earned
-function hasEarnedBadge(badgeId) {
-  const earnedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
-  return earnedBadges.includes(badgeId);
-}
-
-
-function awardBadge(badgeId) {
-  const earnedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
-  const maxQuantity = getBadgeMaxQuantity(badgeId.id);
-
-  console.log('badgeId:', badgeId);
-  console.log('badgeId:id  ', badgeId.id);
-
-  if (badgeId.quantity < badgeId.maxQuantity) {
-    console.log(badgeId.quantity +'  ???????????????????????????????????????????:   '+ badgeId.maxQuantity);
-
-    earnedBadges.push({
-      id: badgeId.id,
-      earnedDate: getCurrentDate(),
-      name: badgeId.name,
-      description: badgeId.description,
-      quantity: badgeId.quantity += 1,
-      imageUrl: badgeId.imageUrl,
-      maxQuantity: badgeId.maxQuantity
-    });
-
-    console.log('earnedBadges:', earnedBadges);
-    localStorage.setItem("earnedBadges", JSON.stringify(earnedBadges));
-
-    const earnedBadgesFromStorage = JSON.parse(localStorage.getItem('earnedBadges')) || [];
-    console.log('earnedBadges:', earnedBadgesFromStorage);
-  }
-}
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -168,6 +124,58 @@ function getBadgeMaxQuantity(badgeId) {
   const badge = badges.find(badge => badge.id === badgeId);
   return badge ? badge.maxQuantity || 1 : 1;
 }
+
+
+
+
+
+
+// Function to check if a badge has been earned
+function hasEarnedBadge(badgeId) {
+  const earnedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
+  return earnedBadges.includes(badgeId.id);
+}
+
+
+function awardBadge(badgeId) {
+  const earnedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
+  const maxQuantity = getBadgeMaxQuantity(badgeId.id);
+
+  console.log('badgeId:', badgeId);
+  console.log('badgeId:id  ', badgeId.id);
+
+  //if (earnedBadges.length < maxQuantity) {
+    console.log(earnedBadges.length+'  ???????????????????????????????????????????:   '+maxQuantity);
+
+    earnedBadges.push({
+      id: badgeId.id,
+      earnedDate: getCurrentDate(),
+      name: badgeId.name,
+      description: badgeId.description,
+      quantity: badgeId.quantity += 1,
+      imageUrl: badgeId.imageUrl,
+      maxQuantity: badgeId.maxQuantity
+    });
+
+    console.log('earnedBadges:', earnedBadges);
+    localStorage.setItem("earnedBadges", JSON.stringify(earnedBadges));
+
+    const earnedBadgesFromStorage = JSON.parse(localStorage.getItem('earnedBadges')) || [];
+    console.log('earnedBadges:', earnedBadgesFromStorage);
+//  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
