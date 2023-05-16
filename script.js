@@ -541,6 +541,13 @@ const filteredArray1 = newlyEarnedBadges.filter(item => !oldBadges.includes(item
 const filteredArray = oldBadges.filter((element) => !newlyEarnedBadges.includes(element));
 
 	const uniqueArray = Array.from(new Set(newlyEarnedBadges.filter(item => !oldBadges.includes(item))));
+	
+	
+// Remove the items from Array #1 that are present in Array #2
+const filteredArray1 = newlyEarnedBadges.filter(item => !oldBadges.includes(item));
+const filteredArray = oldBadges.filter((element) => !newlyEarnedBadges.includes(element));
+
+	const uniqueArray = Array.from(new Set(newlyEarnedBadges.filter(item => !oldBadges.includes(item))));
 
 // Display the items in Array #2
 //console.log("filteredArray1   "+filteredArray1.length);
@@ -559,6 +566,29 @@ const filteredArray = oldBadges.filter((element) => !newlyEarnedBadges.includes(
 
       }
     
+	
+	
+	
+	
+	
+/*
+// Display the items in Array #2
+//console.log("filteredArray1   "+filteredArray1.length);
+//console.log("filteredArray new  "+filteredArray.length);
+	
+	for (let i = 0; i < uniqueArray.length; i++) {
+     console.log(i+"  uniqueArray  id: "+uniqueArray[i].id);
+
+      }	for (let i = 0; i < oldBadges.length; i++) {
+     console.log(i+"  oldBadges  id: "+oldBadges[i].id);
+
+      }
+
+	for (let i = 0; i < newlyEarnedBadges.length; i++) {
+     console.log(i+"  newlyEarnedBadges  id: "+newlyEarnedBadges[i].id);
+
+      }
+    */
 	if(filteredArray.length > 0){
   document.getElementById("badgebox").classList.remove("d-none");
 // Function to display badges
