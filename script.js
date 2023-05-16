@@ -546,12 +546,16 @@ displayEarnedPoints(earnedPoints);
 const filteredArray1 = newEarnedBadges.filter(item => !newlyEarnedBadges.includes(item));
 
 // Display the items in Array #2
-console.log("ffff   "+filteredArray1);
 console.log("filteredArray1   "+filteredArray1.length);
 	
-	//console.log(earnedBadges+"  earnedBadgesnewlyEarnedBadges  "+newlyEarnedBadges+"   newBadges   "+newlyEarnedBadges+"   newlyEarnedBadges    " ); // Output: 3
 
+  const answerOptions = document.getElementsByClassName("answer-option");
+    for (let i = 0; i < filteredArray1.length; i++) {
+     console.log(i+"  filteredArray1   "+filteredArray1[i].name);
+     console.log(i+"  filteredArray1   "+filteredArray1[i].id);
 
+      }
+    
 	
 	
 	
