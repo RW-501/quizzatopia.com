@@ -265,55 +265,20 @@ function removeQuiz(key) {
 // Function to display badges
 function displayBadges() {
   const savedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
-	console.log('savedBadges:', savedBadges);
-
   const badgesContainer = document.getElementById("badgesContainer");
-  badgesContainer.innerHTML = ""; // Clear previous content
-
-  // Loop through the badges and create the badge cards
-  for (let newBadge of savedBadges) {
-    const badgeCard = document.createElement("div");
-    badgeCard.classList.add("card");
-
-    // Create the badge image element
-    const badgeImage = document.createElement("img");
-    badgeImage.src = newBadge.imageUrl;
-    badgeImage.alt = newBadge.id;
-    badgeImage.classList.add("card-img-top");
-    badgeCard.appendChild(badgeImage);
-
-    // Create the badge card body
-    const badgeCardBody = document.createElement("div");
-    badgeCardBody.classList.add("card-body");
-
-    // Add the badge name
-    const badgeTitle = document.createElement("h5");
-    badgeTitle.classList.add("card-title");
-    badgeTitle.textContent = newBadge.name;
-    badgeCardBody.appendChild(badgeTitle);
-
-    // Add the badge description
-    const badgeDescription = document.createElement("p");
-    badgeDescription.classList.add("card-text");
-    badgeDescription.textContent = newBadge.description;
-    badgeCardBody.appendChild(badgeDescription);
-
-    // Add the quantity
-    const badgeQuantity = document.createElement("p");
-    badgeQuantity.classList.add("card-text");
-    badgeQuantity.textContent = "Quantity: " + newBadge.quantity;
-    badgeCardBody.appendChild(badgeQuantity);
-
-    // Add the earned date
-    const badgeDate = document.createElement("p");
-    badgeDate.classList.add("card-text");
-    badgeDate.textContent = "Earned on " + newBadge.earnedDate;
-    badgeCardBody.appendChild(badgeDate);
-
-    badgeCard.appendChild(badgeCardBody);
-    badgesContainer.appendChild(badgeCard);
-  }
+  badgesContainer.innerHTML = savedBadges.map(newBadge => `
+    <div class="card">
+      <img src="${newBadge.imageUrl}" alt="${newBadge.id}" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">${newBadge.name}</h5>
+        <p class="card-text">${newBadge.description}</p>
+        <p class="card-text">Quantity: ${newBadge.quantity}</p>
+        <p class="card-text">Earned on ${newBadge.earnedDate}</p>
+      </div>
+    </div>
+  `).join("");
 }
+
 displayUserInfo();   
 // Call the displayBadges function to show the badges
 displayBadges();
