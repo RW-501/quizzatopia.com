@@ -21,7 +21,7 @@ const featuredQuizzes = [
 const carousel = $('.carousel');
 
 featuredQuizzes.forEach(quiz => {
-  const quizCard = $('<div>').addClass('quiz-card');
+  const quizCard = $('<div>').addClass('quiz-card_top');
   
   // Add HTML content for the quiz card using quiz.title, quiz.image, quiz.description
   const quizContent = `
