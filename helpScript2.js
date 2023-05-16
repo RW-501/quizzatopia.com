@@ -22,7 +22,7 @@ fetch('/elements/footer2.html')
 		    function displayUserInfoNav() {
   const userInfo = getUserInfo();
 //  document.getElementById('userNameQ').innerHTML = userInfo.userName;
-  document.getElementById('profile-name').innerHTML = userInfo.rank;
+//  document.getElementById('profile-name').innerHTML = userInfo.rank;
 //  document.getElementById('userPointsQ').innerHTML = userInfo.points;
           
   document.getElementById('profile-pic').src = userInfo.profilePic;
