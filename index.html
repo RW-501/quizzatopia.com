@@ -377,59 +377,10 @@ if (window.location.search.substr(1) === 'q') {
 <body>
   <div id="navbar"></div>
     <!-- rest of the page content -->
-  	<style>
-	
-
-		.shadow {
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-		}
-		
-		
-		.text-center {
-    padding: 5%;
-}
-		
-		
-		
-		.featured-quizzes-container {
-  /* Add container styles here */
-}
-
-.carousel {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  /* Add carousel styles here */
-}
-
-.quiz-card {
-  flex: 0 0 auto;
-  width: 300px;
-  scroll-snap-align: start;
-  /* Add quiz card styles here */
-}
-		@media (max-width: 768px) {
-  .featured-quizzes-container {
-    /* Adjust container styles for smaller screens */
-  }
   
-  .carousel {
-    /* Adjust carousel styles for smaller screens */
-  }
-  
-  .quiz-card {
-    /* Adjust quiz card styles for smaller screens */
-  }
-}
-
-
-	</style>
   
 <div class="featured-quizzes-container">
   <div class="carousel">
-    <div class="quiz-card">
-      <!-- Quiz card content here -->
-    </div>
     <div class="quiz-card">
       <!-- Quiz card content here -->
     </div>
@@ -506,13 +457,14 @@ featuredQuizzes.forEach(quiz => {
     
 	    
 	</script>
-    
-<section class="hero" style="">
+	
+	
+<section class="hero">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h1 style="color: #000;">Welcome to Quizzatopia!</h1>
-        <p style="color: #000;">Explore a world of quizzes like never before with Quizzatopia - the ultimate destination for all your quizzing needs. From fun trivia to professional exam preparation, Quizzatopia has it all. With our user-friendly interface and extensive question bank, learning has never been more enjoyable. So, step into the world of quizzes with Quizzatopia and discover the thrill of learning through quizzing.</p>
+        <h1>Welcome to Quizzatopia!</h1>
+        <p>Explore a world of quizzes like never before with Quizzatopia - the ultimate destination for all your quizzing needs. From fun trivia to professional exam preparation, Quizzatopia has it all. With our user-friendly interface and extensive question bank, learning has never been more enjoyable. So, step into the world of quizzes with Quizzatopia and discover the thrill of learning through quizzing.</p>
         <a href="quizzes" class="btn btn-primary">Discover Your Knowledge!</a>
       </div>
       <div class="col-md-6 d-flex align-items-center justify-content-center">
@@ -521,6 +473,7 @@ featuredQuizzes.forEach(quiz => {
     </div>
   </div>
 </section>
+
 
     
 <div class="container shadow py-4">
