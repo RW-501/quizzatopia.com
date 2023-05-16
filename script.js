@@ -468,7 +468,7 @@ function calculateEarnedPoints() {
  const earnedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
 let newEarnedBadges = earnedBadges;
 	//console.log('newEarnedBadges:', newEarnedBadges);
-let oldBadges = newEarnedBadges;
+const oldBadges = newEarnedBadges;
 
 
 
@@ -527,7 +527,7 @@ displayEarnedPoints(earnedPoints);
   
 let newNewBadge = newBadges;
   // Check if any new badges were earned
-  let newlyEarnedBadges = newNewBadge;
+  const newlyEarnedBadges = newNewBadge;
 
  
 	
