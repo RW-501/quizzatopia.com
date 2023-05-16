@@ -213,7 +213,6 @@ function showAdsFunc() {
         showQuestion(); // Call the showQuestion function after the ad ends
       } else {
 	      
-//const scriptCode = '<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="Quizzatopia" data-color="#5F7FFF" data-emoji="" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00"></script>';
 	      
         document.getElementById("ad-text").innerHTML = "This will be an ad <br> Ad ends in " + countdown + " seconds <p id=\'adButton\' ></p>";
 	      // document.getElementById("adButton").innerHTML = scriptCode;
@@ -547,23 +546,15 @@ displayEarnedPoints(earnedPoints);
 const filteredArray1 = newEarnedBadges.filter(item => !newlyEarnedBadges.includes(item));
 
 // Display the items in Array #2
-console.log(filteredArray1);
+console.log("ffff   "+filteredArray1);
 	
-	console.log(earnedBadges+"  earnedBadgesnewlyEarnedBadges  "+newlyEarnedBadges+"   newBadges   "+newlyEarnedBadges+"   newlyEarnedBadges    " ); // Output: 3
+	//console.log(earnedBadges+"  earnedBadgesnewlyEarnedBadges  "+newlyEarnedBadges+"   newBadges   "+newlyEarnedBadges+"   newlyEarnedBadges    " ); // Output: 3
 
-	/*
-function displayBadge(badgeId) {
-  // Retrieve the badge information using the badgeId
-  const badgeInfo = badges.find(badge => badge.id === badgeId);
-  if (badgeInfo) {
-    // Display the badge information
-    console.log('New Badge Earned:');
-    console.log('Name:', badgeInfo.name);
-    console.log('Description:', badgeInfo.description);
-    console.log('Image URL:', badgeInfo.imageUrl);
-    console.log('Earned Date:', badgeInfo.earnedDate);
-  }
-}*/
+
+	
+	
+	
+	
 	
 	
 	
