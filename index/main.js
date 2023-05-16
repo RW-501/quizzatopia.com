@@ -18,7 +18,7 @@ const featuredQuizzes = [
 ];
 
 // Assuming you want to populate the quiz cards dynamically
-const carousel = $('.carousel');
+const carousel = $('.carousel_top');
 
 featuredQuizzes.forEach(quiz => {
   const quizCard = $('<div>').addClass('quiz-card_top');
