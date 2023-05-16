@@ -113,13 +113,13 @@ function hasEarnedBadge(badgeId) {
   return earnedBadges.includes(badgeId);
 }
 
-/// Function to award a badge
-function awardBadge(badge) {
+// Function to award a badge
+function awardBadge(badgeId) {
   const earnedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
-  const maxQuantity = getBadgeMaxQuantity(badge.id);
+  const maxQuantity = getBadgeMaxQuantity(badgeId.id);
 
-  if (!earnedBadges.some(eb => eb.id === badge.id) && earnedBadges.length < maxQuantity) {
-    earnedBadges.push({ id: badge.id, earnedDate: getCurrentDate(), ...badge });
+  if (!earnedBadges.some(eb => eb.id === badgeId.id) && earnedBadges.length < maxQuantity) {
+    earnedBadges.push({ id: badgeId.id, earnedDate: getCurrentDate(), ...badgeId });
     localStorage.setItem('earnedBadges', JSON.stringify(earnedBadges));
   }
 }
