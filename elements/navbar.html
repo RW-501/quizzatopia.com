@@ -78,7 +78,7 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
   
   */
   
-  $(document).ready(function() {
+$(document).ready(function() {
   $('#quiz-search').on('input', function() {
     var searchTerm = $(this).val();
 
@@ -110,6 +110,9 @@ function filterQuizzes(quizzes, searchTerm) {
       filteredResults.push(quiz);
     }
   }
+
+  return filteredResults;
+}
 
   return filteredResults;
 }
