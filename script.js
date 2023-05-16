@@ -468,7 +468,7 @@ let earnedBadges;
 // Function to check if a badge has been earned
   earnedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
 let newEarnedBadges = earnedBadges;
-	console.log('newEarnedBadges:', newEarnedBadges);
+	//console.log('newEarnedBadges:', newEarnedBadges);
 
 let newBadges;
 
@@ -518,12 +518,7 @@ displayEarnedPoints(earnedPoints);
 
   // Show the badge if all answers are correct
   if (questionCorrect === totalQuestions) {
-    const badgeImage = document.createElement("img");
-    badgeImage.src = "/images/lan/37.png";
-    badgeImage.alt = "Badge";
-    badgeImage.classList.add("badge-img");
-    document.getElementById("score").innerHTML = "";
-    document.getElementById("score").appendChild(badgeImage);
+  
   } else {
     // Show the pie chart for correct and incorrect answers
     showPieChartEnd();
@@ -544,9 +539,11 @@ displayEarnedPoints(earnedPoints);
 
 // Remove the items from Array #1 that are present in Array #2
 const filteredArray1 = newEarnedBadges.filter(item => !newlyEarnedBadges.includes(item));
+const filteredArray = newlyEarnedBadges.filter((element) => !newEarnedBadges.includes(element));
 
 // Display the items in Array #2
 console.log("filteredArray1   "+filteredArray1.length);
+console.log("filteredArray   "+filteredArray.length);
 	
 
   const answerOptions = document.getElementsByClassName("answer-option");
@@ -557,7 +554,25 @@ console.log("filteredArray1   "+filteredArray1.length);
       }
     
 	
-	
+			    
+// Function to display badges
+function displayBadges() {
+  const savedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
+  const badgesContainer = document.getElementById("badgeView");
+  badgesContainer.innerHTML = savedBadges.map(newBadge => `
+    <div class="card">
+      <img src="${newBadge.imageUrl}" alt="${newBadge.id}" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">${newBadge.name}</h5>
+        <p class="card-text">${newBadge.description}</p>
+        <p class="card-text">Quantity: ${newBadge.quantity}</p>
+        <p class="card-text">Earned on ${newBadge.earnedDate}</p>
+      </div>
+    </div>
+  `).join("");
+}
+
+displayUserInfo();  
 	
 	
 	
