@@ -1,3 +1,6 @@
+    <link rel="import" href="./js/load.js>
+
+
 fetch('./elements/navbar.html')
   .then(response => response.text())
   .then(data => {
