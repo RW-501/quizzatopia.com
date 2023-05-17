@@ -47,8 +47,80 @@ if (window.location.pathname.substr(-5) === '.html' && window.location.pathname.
 </nav>
   <div id="search-results" class="container mt-4"></div>
 
+
+
+
+
+
+
+
+
+
+<div role="alertdialog" aria-describedby="onetrust-policy-text" aria-label="Privacy" class="cookie-banner">
+  <div class="ot-sdk-container">
+    <div class="ot-sdk-row">
+      <div id="onetrust-group-container" class="ot-sdk-eight ot-sdk-columns">
+        <div class="banner_logo"></div>
+        <div id="onetrust-policy">
+          <p id="onetrust-policy-text">
+            By clicking "Allow All", you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.
+            <a href="./legal/cookie" aria-label="More information about your privacy">Cookie Notice</a>
+          </p>
+        </div>
+      </div>
+      <div id="onetrust-button-group-parent" class="ot-sdk-three ot-sdk-columns">
+        <div id="onetrust-button-group">
+          <button id="onetrust-accept-btn-handler">Allow All</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="onetrust-close-btn-container">
+    <button class="onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon" style="background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);" aria-label="Close"></button>
+  </div>
+</div>
+
+
 <!-- JavaScript code to check if user is logged in and update profile name and link -->
 <script>
+
+// Function to save user's preference
+  function saveCookieConsent() {
+    localStorage.setItem('cookieConsent', 'true');
+  }
+
+  // Function to check if user has given consent
+  function hasCookieConsent() {
+    return localStorage.getItem('cookieConsent') === 'true';
+  }
+
+  // Function to remove the cookie consent banner
+  function removeCookieBanner() {
+    const cookieBanner = document.querySelector('.cookie-banner');
+    cookieBanner.remove();
+  }
+
+  // Event listener for clicking "Allow All" button
+  const acceptBtn = document.getElementById('onetrust-accept-btn-handler');
+  acceptBtn.addEventListener('click', function () {
+    saveCookieConsent();
+    removeCookieBanner();
+  });
+
+  // Check if user has given consent
+  if (hasCookieConsent()) {
+    removeCookieBanner();
+  }
+
+
+
+
+
+
+
+
+
+
   const USER_INFO_KEY = 'userInfo';
   const USER_NAME_KEY = 'userName';
   const PROFILE_PIC_KEY = 'profilePic';
