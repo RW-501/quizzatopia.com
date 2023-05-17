@@ -100,7 +100,7 @@ const quizContent = `
       const quizTime = quizInfo.timestamp;
 
       const quizInfoElement = document.createElement('div');
-      quizInfoElement.classList.add('quiz-info');
+      quizInfoElement.classList.add('quiz-info_His');
       quizInfoElement.innerHTML = `
         <a href="/quiz?q=${quizLink}"><h4>${quizName}</h4></a>
         <p>Quiz Taken: ${quizTime}</p>
