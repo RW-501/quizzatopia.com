@@ -51,6 +51,31 @@
     color: #6c757d;
   }
 
+.changed-text {
+  transition: color 1s ease-in-out;
+}
+
+.color-animation {
+  animation: colorLoop 2s infinite;
+}
+
+@keyframes colorLoop {
+  0% { color: red; }
+  50% { color: blue; }
+  100% { color: green; }
+}
+
+#savedMessage {
+  display: none;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
   .btn-primary,
   .btn-success {
     background-color: #0d6efd;
