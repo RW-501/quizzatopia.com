@@ -12,7 +12,7 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
   let userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
   if (!userInfo) {
     userInfo = {
-      userName: 'John Doe',
+      userName: 'New User',
       profilePic: '/images/avatar/w1.png',
       rank: 'Beginner',
       points: 0,
