@@ -1,3 +1,28 @@
+.quiz-info_His {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.quiz-info_His a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.quiz-info_His a:hover {
+  text-decoration: underline;
+}
+
+.quiz-info_His h4 {
+  margin-bottom: 5px;
+}
+
+.quiz-info_His p {
+  margin: 0;
+}
 
 
  .quiz-card {
