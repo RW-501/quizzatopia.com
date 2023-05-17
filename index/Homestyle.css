@@ -17,8 +17,8 @@
 }
 
 a{
-    text-decoration: underline;
-
+    text-decoration: none;
+    color: #565656;
 }
 
 .quiz-info_His h4 {
