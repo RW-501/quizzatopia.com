@@ -1,7 +1,7 @@
 
  const USER_INFO_KEY = 'userInfo';
   const USER_NAME_KEY = 'userName';
-  const USER_Tagline = 'userTagline';
+  const USER_Tagline = 'tagLine';
   const PROFILE_PIC_KEY = 'profilePic';
 const RANK_KEY = 'rank';
 const POINTS_KEY = 'points';
@@ -56,6 +56,11 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
 function updateTagline(tagLine) {
   const userInfo = getUserInfo();
   userInfo.tagLine = tagLine;
+  localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
+}
+function updateUserName(userName) {
+  const userInfo = getUserInfo();
+  userInfo.userName = userName;
   localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
 }  
 function updateRank(rank) {
