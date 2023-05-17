@@ -13,7 +13,7 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
   if (!userInfo) {
     userInfo = {
       userName: 'John Doe',
-      profilePic: '/images/avatar/1.png',
+      profilePic: '/images/avatar/w1.png',
       rank: 'Beginner',
       points: 0,
       quizzesTaken: 0
@@ -192,12 +192,12 @@ function awardQuizzesTakenBadges() {
 
   // Define the milestones and corresponding badge information
 const milestones = [
-  { count: 0, badge: { id: 2, name: "Quiz Enthusiast", description: "Awarded for taking 5 quizzes", quantity: 0, imageUrl: "/images/badges/badge-qcount-1.png", maxQuantity: 1 } },
-  { count: 1, badge: { id: 3, name: "Quiz Aficionado", description: "Awarded for taking 10 quizzes", quantity: 0, imageUrl: "/images/badges/badge-qcount-2.png", maxQuantity: 1 } },
-  { count: 2, badge: { id: 4, name: "Quiz Master", description: "Awarded for taking 20 quizzes", quantity: 0, imageUrl: "/images/badges/badge-qcount-3.png", maxQuantity: 1 } },
-  { count: 3, badge: { id: 5, name: "Quiz Guru", description: "Awarded for taking 30 quizzes", quantity: 0, imageUrl: "/images/badges/badge-qcount-4.png", maxQuantity: 1 } },
-  { count: 4, badge: { id: 6, name: "Quiz Legend", description: "Awarded for taking 40 quizzes", quantity: 0, imageUrl: "/images/badges/badge-qcount-5.png", maxQuantity: 1 } },
-  { count: 50, badge: { id: 7, name: "Quiz Champion", description: "Awarded for taking 50 quizzes", quantity: 0, imageUrl: "/images/badges/badge-qcount-6.png", maxQuantity: 1 } }
+  { count: 0, badge: { id: 2, name: "Quiz Enthusiast", description: "Awarded for taking 5 quizzes", quantity: 0, imageUrl: "/images/badge/wizards/wt1.png", maxQuantity: 1 } },
+  { count: 1, badge: { id: 3, name: "Quiz Aficionado", description: "Awarded for taking 10 quizzes", quantity: 0, imageUrl: "/images/badge/wizards/wt2.png", maxQuantity: 1 } },
+  { count: 2, badge: { id: 4, name: "Quiz Master", description: "Awarded for taking 20 quizzes", quantity: 0, imageUrl: "/images/badge/wizards/wt3.png", maxQuantity: 1 } },
+  { count: 3, badge: { id: 5, name: "Quiz Guru", description: "Awarded for taking 30 quizzes", quantity: 0, imageUrl: "/images/badge/wizards/wt4.png", maxQuantity: 1 } },
+  { count: 4, badge: { id: 6, name: "Quiz Legend", description: "Awarded for taking 40 quizzes", quantity: 0, imageUrl: "/images/badge/wizards/wt5.png", maxQuantity: 1 } },
+  { count: 50, badge: { id: 7, name: "Quiz Champion", description: "Awarded for taking 50 quizzes", quantity: 0, imageUrl: "/images/badge/wizards/wt6.png", maxQuantity: 1 } }
 ];
 
 
