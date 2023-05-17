@@ -7,7 +7,7 @@ fetch('/elements/navbar2.html')
 
 
 
-      const navUserInfo = JSON.parse(localStorage.getItem(profilePic));
+      const navUserInfo = JSON.parse(localStorage.getItem("profilePic"));
  console.log('navUserInfo.profilePic 1 ', navUserInfo.profilePic);
   document.getElementById('profile-pic').src = navUserInfo.profilePic;
    
@@ -29,7 +29,7 @@ fetch('/elements/footer2.html')
 });
 
 
-      const navUserInfo = JSON.parse(localStorage.getItem(profilePic));
+      const navUserInfo = JSON.parse(localStorage.getItem("profilePic"));
  console.log('navUserInfo.profilePic 2 ', navUserInfo.profilePic);
   document.getElementById('profile-pic').src = navUserInfo.profilePic;
    
