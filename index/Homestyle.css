@@ -16,6 +16,11 @@
   text-decoration: underline;
 }
 
+a{
+    text-decoration: underline;
+
+}
+
 .quiz-info_His h4 {
   margin-bottom: 5px;
 }
