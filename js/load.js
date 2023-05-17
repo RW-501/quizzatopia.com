@@ -69,7 +69,11 @@ function updateQuizzesTaken(quizzesTaken) {
   localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
 }
   
-      displayUserInfo();
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Your function code here
+  displayUserInfo();
+});
 
 
   let pointsRewards;
