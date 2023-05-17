@@ -11,10 +11,13 @@
 
 
 // Assuming you have an array of featured quizzes
+
 const featuredQuizzes = [
-  { title: 'Job Interview', image: 'quiz1.jpg', description: 'Description of Quiz 1' },
-  { title: 'Pop Culture', image: 'quiz2.jpg', description: 'Description of Quiz 2' },
-  { title: 'Movies', image: 'quiz3.jpg', description: 'Description of Quiz 3' }
+{ title: 'Job Interview', image: 'quiz1.jpg', description: 'Land Your Dream Job with Confidence!', url: 'job-interview-quiz' },
+{ title: 'Pop Culture', image: 'quiz2.jpg', description: 'Test Your Pop Culture Knowledge and Become the Ultimate Trendsetter!', url: 'pop-culture-quiz' },
+{ title: 'Web Development', image: 'quiz3.jpg', description: 'Unlock the Secrets of Web Development and Master the Digital Frontier!', url: 'web-development-quiz' },
+{ title: 'Self Health', image: 'quiz4.jpg', description: 'Discover Your Path to Wellness and Embrace a Healthier You!', url: 'self-health-quiz' },
+{ title: 'Movies', image: 'quiz5.jpg', description: 'Lights, Camera, Action! Dive into the Cinematic Universe and Become a Movie Guru!', url: 'movies-quiz' }
 ];
 
 // Assuming you want to populate the quiz cards dynamically
@@ -25,10 +28,13 @@ featuredQuizzes.forEach(quiz => {
   
   // Add HTML content for the quiz card using quiz.title, quiz.image, quiz.description
   const quizContent = `
+  <div class="quiz-card">
     <img src="${quiz.image}" alt="${quiz.title}" class="quiz-image">
     <h3 class="quiz-title">${quiz.title}</h3>
     <p class="quiz-description">${quiz.description}</p>
-  `;
+  </div>
+`;
+
   
   quizCard.html(quizContent);
   carousel.append(quizCard);
