@@ -29,9 +29,5 @@ fetch('/elements/footer2.html')
 });
 
 
-      const navUserInfo = JSON.parse(localStorage.getItem("userInfo"));
- console.log('navUserInfo.profilePic 2 ', navUserInfo.profilePic);
-  document.getElementById('profile-pic').src = navUserInfo.profilePic;
-   
 
   
