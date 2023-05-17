@@ -104,7 +104,7 @@ const quizContent = `
       quizInfoElement.innerHTML = `
         <a href="/quiz?q=${quizLink}"><h4>${quizName}</h4></a>
         <p>Quiz Taken: ${quizTime}</p>
-        <p>Score: ${questionCorrect}/${numberOfQuestions} questions</p>
+        <p>Scored: ${questionCorrect}/${numberOfQuestions} Questions</p>
       `;
       
       quizInfoContainer.appendChild(quizInfoElement);
