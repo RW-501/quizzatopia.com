@@ -57,12 +57,11 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
 // Add more keys for additional user information as needed
   
 
-   $(document).ready(function() {
 
       const navUserInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
  console.log('navUserInfo.profilePic  ', navUserInfo.profilePic);
   document.getElementById('profile-pic').src = navUserInfo.profilePic;
-    });
+   
 
 
   
