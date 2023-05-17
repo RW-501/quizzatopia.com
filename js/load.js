@@ -217,7 +217,7 @@ const badges = [
     description: "Earned by reaching the Bronze Tier (0-100 points).",
     quantity: 0,
     maxQuantity: 1,
-    imageUrl: "/images/badges/badge-qcount-8.png",
+    imageUrl: "/images/badge/b1.png",
     earnedDate: ""
   },
   {
@@ -226,7 +226,7 @@ const badges = [
     description: "Earned by reaching the Silver Tier (101-250 points).",
     quantity: 0,
     maxQuantity: 1,
-    imageUrl: "/images/badges/badge-qcount-9.png",
+    imageUrl: "/images/badge/s1.png",
     earnedDate: ""
   },
   {
@@ -235,7 +235,7 @@ const badges = [
     description: "Earned by reaching the Gold Tier (251-500 points).",
     quantity: 0,
     maxQuantity: 1,
-    imageUrl: "/images/badges/badge-qcount-10.png",
+    imageUrl: "/images/badge/g1.png",
     earnedDate: ""
   },
   {
@@ -244,7 +244,7 @@ const badges = [
     description: "Earned by reaching the Platinum Tier (501-1000 points).",
     quantity: 0,
     maxQuantity: 1,
-    imageUrl: "/images/badges/badge-qcount-11.png",
+    imageUrl: "/images/badge/p1.png",
     earnedDate: ""
   },
   {
@@ -253,7 +253,7 @@ const badges = [
     description: "Earned by reaching the Diamond Tier (1001+ points).",
     quantity: 0,
     maxQuantity: 1,
-    imageUrl: "/images/badges/badge-qcount-12.png",
+    imageUrl: "/images/badge/d1.png",
     earnedDate: ""
   },
   {
@@ -262,7 +262,7 @@ const badges = [
     description: "Scored 100% on Quiz",
     quantity: 0,
     maxQuantity: 100,
-    imageUrl: "/images/badges/xxx-1.png",
+    imageUrl: "/images/badge/ps.png",
     earnedDate: ""
   }
 ];
@@ -378,7 +378,7 @@ async function checkUserVisit() {
     // Reward points for returning days
     rewardPointsForReturningDays();
   } else {
-    console.log('Already visited today.');
+   // console.log('Already visited today.');
   }
 }
 
