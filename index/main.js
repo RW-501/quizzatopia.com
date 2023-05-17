@@ -15,9 +15,9 @@
 const featuredQuizzes = [
 { title: 'Job Interview', image: '/images/sq/26.png', description: 'Land Your Dream Job with Confidence!', url: '/quiz?q=job_interviews' },
 { title: 'Pop Culture', image: '/images/sq/3.png', description: 'Test Your Pop Culture Knowledge and Become the Ultimate Trendsetter!', url: '/quiz?q=pop_culture' },
-{ title: 'Web Development', image: '/images/sq/19.png', description: 'Unlock the Secrets of Web Development and Master the Digital Frontier!', url: 'web-development-quiz' },
-{ title: 'Self Health', image: '/images/sq/19.png', description: 'Discover Your Path to Wellness and Embrace a Healthier You!', url: 'self-health-quiz' },
-{ title: 'Movies', image: '/images/sq/19.png', description: 'Lights, Camera, Action! Dive into the Cinematic Universe and Become a Movie Guru!', url: '/quiz?q=movies' }
+{ title: 'Web Development', image: '/images/sq/45.png', description: 'Unlock the Secrets of Web Development and Master the Digital Frontier!', url: 'web-development-quiz' },
+{ title: 'Self Health', image: '/images/sq/54.png', description: 'Discover Your Path to Wellness and Embrace a Healthier You!', url: 'self-health-quiz' },
+{ title: 'Movies', image: '/images/sq/35.png', description: 'Lights, Camera, Action! Dive into the Cinematic Universe and Become a Movie Guru!', url: '/quiz?q=movies' }
 ];
 
 // Assuming you want to populate the quiz cards dynamically
