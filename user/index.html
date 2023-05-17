@@ -31,45 +31,7 @@
 <!-- Profile Picture -->
 <img id="userPic" src="/images/blank.png" alt="User Picture" class="img-fluid rounded-circle user-picture" loading="lazy" onclick="openImagePopup()">
 
-<!-- Popup Container -->
-<div id="imagePopup" class="popup-container">
-	<!-- Close Button -->
-  <button class="close-button" onclick="closeImagePopup()">Close</button>
-  
-  <!-- Add 12 clickable circle images here -->
-<img src="/images/avatar/1.png" alt="Avatar 1" onclick="selectProfilePic('/images/avatar/1.png')">
-<img src="/images/avatar/2.png" alt="Avatar 2" onclick="selectProfilePic('/images/avatar/2.png')">
-<img src="/images/avatar/3.png" alt="Avatar 3" onclick="selectProfilePic('/images/avatar/3.png')">
-<img src="/images/avatar/4.png" alt="Avatar 4" onclick="selectProfilePic('/images/avatar/4.png')">
-<img src="/images/avatar/5.png" alt="Avatar 5" onclick="selectProfilePic('/images/avatar/5.png')">
-<img src="/images/avatar/6.png" alt="Avatar 6" onclick="selectProfilePic('/images/avatar/6.png')">
-<img src="/images/avatar/7.png" alt="Avatar 7" onclick="selectProfilePic('/images/avatar/7.png')">
-<img src="/images/avatar/8.png" alt="Avatar 8" onclick="selectProfilePic('/images/avatar/8.png')">
-<img src="/images/avatar/w1.png" alt="Avatar W1" onclick="selectProfilePic('/images/avatar/w1.png')">
-<img src="/images/avatar/w2.png" alt="Avatar W2" onclick="selectProfilePic('/images/avatar/w2.png')">
-<img src="/images/avatar/w3.png" alt="Avatar W3" onclick="selectProfilePic('/images/avatar/w3.png')">
 
-  <!-- Add more images here -->
-</div>
-	      
-	    <script>
-		    function openImagePopup() {
-  const popup = document.getElementById("imagePopup");
-  popup.style.display = "block";
-}
-
-function closeImagePopup() {
-  const popup = document.getElementById("imagePopup");
-  popup.style.display = "none";
-}
-
-function selectProfilePic(imageSrc) {
-  updateProfilePic(imageSrc);
-  displayUserInfo();
-  closeImagePopup();
-}
-
-		    </script>
 	      
         <!-- User tagline -->
         <h4 id="userNameQ" class="user-name        mt-3">John Doe</h4>
@@ -162,6 +124,46 @@ function selectProfilePic(imageSrc) {
 	    <button id="clearStorageBtn" class="btn btn-danger">Clear Storage</button>
 
     </div>
+	
+	<!-- Popup Container -->
+<div id="imagePopup" class="popup-container">
+	<!-- Close Button -->
+  <button class="close-button" onclick="closeImagePopup()">Close</button>
+  
+  <!-- Add 12 clickable circle images here -->
+<img src="/images/avatar/1.png" alt="Avatar 1" onclick="selectProfilePic('/images/avatar/1.png')">
+<img src="/images/avatar/2.png" alt="Avatar 2" onclick="selectProfilePic('/images/avatar/2.png')">
+<img src="/images/avatar/3.png" alt="Avatar 3" onclick="selectProfilePic('/images/avatar/3.png')">
+<img src="/images/avatar/4.png" alt="Avatar 4" onclick="selectProfilePic('/images/avatar/4.png')">
+<img src="/images/avatar/5.png" alt="Avatar 5" onclick="selectProfilePic('/images/avatar/5.png')">
+<img src="/images/avatar/6.png" alt="Avatar 6" onclick="selectProfilePic('/images/avatar/6.png')">
+<img src="/images/avatar/7.png" alt="Avatar 7" onclick="selectProfilePic('/images/avatar/7.png')">
+<img src="/images/avatar/8.png" alt="Avatar 8" onclick="selectProfilePic('/images/avatar/8.png')">
+<img src="/images/avatar/w1.png" alt="Avatar W1" onclick="selectProfilePic('/images/avatar/w1.png')">
+<img src="/images/avatar/w2.png" alt="Avatar W2" onclick="selectProfilePic('/images/avatar/w2.png')">
+<img src="/images/avatar/w3.png" alt="Avatar W3" onclick="selectProfilePic('/images/avatar/w3.png')">
+
+  <!-- Add more images here -->
+</div>
+	      
+	    <script>
+		    function openImagePopup() {
+  const popup = document.getElementById("imagePopup");
+  popup.style.display = "block";
+}
+
+function closeImagePopup() {
+  const popup = document.getElementById("imagePopup");
+  popup.style.display = "none";
+}
+
+function selectProfilePic(imageSrc) {
+  updateProfilePic(imageSrc);
+  displayUserInfo();
+  closeImagePopup();
+}
+
+		    </script>
  
    		  </body>
 	  <div id="mainFooter"></div>
