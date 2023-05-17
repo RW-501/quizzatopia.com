@@ -163,7 +163,7 @@ function awardBadge(badgeId) {
     localStorage.setItem("earnedBadges", JSON.stringify(earnedBadges));
 
     const earnedBadgesFromStorage = JSON.parse(localStorage.getItem('earnedBadges')) || [];
-    console.log('earnedBadges:', earnedBadgesFromStorage);
+/    console.log('earnedBadges:', earnedBadgesFromStorage);
 //  }
 }
 
