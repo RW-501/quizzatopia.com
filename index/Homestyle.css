@@ -128,12 +128,12 @@
 }
 
 /* Apply the animation to the element when hovered */
-.call-to-action {
+.ctaBTN {
   /* Set initial properties of the element */
   transition: transform 0.3s ease;
 }
 
-.call-to-action:hover {
+.ctaBTN:hover {
   /* Apply the animation on hover */
   animation: example-animation 0.3s infinite alternate;
 }
