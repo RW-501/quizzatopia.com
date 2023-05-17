@@ -201,7 +201,19 @@
   outline: none;
 }
 
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4267B2; /* Facebook Blue */
+  padding: 10px;
+}
 
+.popup-title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
 .popup-container {
   display: none;
   position: fixed;
@@ -246,14 +258,13 @@ overflow-x: hidden;
 }
 
 .close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
   border: none;
   cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s;
 }
 
 .close-button::before,
@@ -264,7 +275,7 @@ overflow-x: hidden;
   left: 50%;
   width: 16px;
   height: 2px;
-  background-color: #000;
+  background-color: #4267B2; /* Facebook Blue */
   transform: translate(-50%, -50%);
 }
 
@@ -276,7 +287,16 @@ overflow-x: hidden;
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+.close-button:hover {
+  background-color: #eee;
+}
+
 .close-button:hover::before,
 .close-button:hover::after {
-  background-color: #555;
+  background-color: #fff;
+}
+
+#pic-text {
+    font-size: 24px;
+    font-weight: bold;
 }
