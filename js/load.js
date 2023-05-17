@@ -46,7 +46,12 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
     }
   }
   
-  function updateRank(rank) {
+  function updateProfilePic(profilePic) {
+  const userInfo = getUserInfo();
+  userInfo.profilePic = profilePic;
+  localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
+}  
+function updateRank(rank) {
   const userInfo = getUserInfo();
   userInfo.rank = rank;
   localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
