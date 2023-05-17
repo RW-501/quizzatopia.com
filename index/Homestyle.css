@@ -168,7 +168,7 @@ a{
   padding: 1.2rem 2.5rem;
 }
 
-@keyframes hover-animation {
+@keyframes animation {
   0% {
     /* Initial state */
     transform: scale(1);
@@ -180,15 +180,20 @@ a{
   100% {
     /* Final state */
     transform: scale(1);
-        color: #fff;
+color: #fff;
     background-color: #0b5ed7;
     border-color: #0a58ca;
+    box-shadow: 0 0 0 0.25rem rgba(49,132,253,.5);
   }
 }
 
 /* Apply the animation  */
-#mainCTA:hover {
-
+#mainCTA {
+    transform: scale(1);
+color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+    box-shadow: 0 0 0 0.25rem rgba(49,132,253,.5);
   animation: loop-animation 2s infinite;
 }
 
@@ -202,6 +207,11 @@ a{
   100% {
     /* Final state of the element */
     transform: scale(1.2);
+        transform: scale(1);
+color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+    box-shadow: 0 0 0 0.25rem rgba(49,132,253,.5);
   }
 }
 
@@ -211,9 +221,9 @@ a{
   transition: transform 0.3s ease;
 }
 
-.ctaBTN:hover {
+.ctaBTN {
   /* Apply the animation on hover */
-  animation: example-animation 0.3s infinite alternate;
+  animation: example-animation 0.5s infinite alternate;
 }
 
 
