@@ -1,1 +1,110 @@
+  /* General Styles */
+  body {
+    background-color: #f8f9fa;
+  }
 
+  .shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  /* Quiz Recommendations Styles */
+  .quiz-info {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .quiz-list {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+
+  /* User Profile Styles */
+  .profile-container {
+    background-color: white;
+    border-radius: 4px;
+    padding: 20px;
+  }
+
+  .user-picture {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px auto;
+  }
+
+  .user-name {
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .user-tagline {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #6c757d;
+  }
+
+  .btn-primary,
+  .btn-success {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+  }
+
+  /* Stats Grid Styles */
+  .stats-grid .card {
+    border: none;
+    background-color: #fafafa;
+    margin-bottom: 20px;
+  }
+
+  .stats-grid .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0d6efd;
+    margin-bottom: 10px;
+  }
+
+  .stats-grid .card-text {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  /* Badges Styles */
+  .badges .card {
+    border: none;
+    background-color: #fafafa;
+    margin-bottom: 20px;
+  }
+
+  .badges .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0d6efd;
+    margin-bottom: 10px;
+  }
+
+  /* Quizzes Taken Styles */
+  .quizzes-taken .card {
+    border: none;
+    background-color: #fafafa;
+    margin-bottom: 20px;
+  }
+
+  .quizzes-taken .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0d6efd;
+    margin-bottom: 10px;
+  }
+
+  .localStorage-usage {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 10px;
+  }
