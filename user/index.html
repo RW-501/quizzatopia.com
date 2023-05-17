@@ -37,10 +37,10 @@
 
 	      
         <!-- User tagline -->
-        <h4 id="userNameQ" class="user-name        mt-3">John Doe</h4>
-        <p class="text-muted">Unlock Your Knowledge Potential with Quizzatopia!</p>
+        <h4 id="userNameQ" class="user-name  mt-3">John Doe</h4>
+        <p id="userTagLine" class="text-muted">Unlock Your Knowledge Potential with Quizzatopia!</p>
 
-        <!-- Buttons -->
+        <!-- Buttons -->"
         <div class="d-flex justify-content-center mt-4">
           <!-- Message User button -->
           <button onclick="redirectToMessaging()" class="btn btn-primary mr-2">Go to Messaging</button>
@@ -193,6 +193,7 @@ function selectProfilePic(imageSrc) {
   document.getElementById('userRankQ').innerHTML = userInfo.rank;
   document.getElementById('userPointsQ').innerHTML = userInfo.points;
   document.getElementById('userQuzziesTaken').innerHTML = userInfo.quizzesTaken;
+  document.getElementById('userTagLine').innerHTML = userInfo.tagLine;
 			    
   document.getElementById('userPic').src = userInfo.profilePic;
 
