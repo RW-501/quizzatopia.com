@@ -34,11 +34,11 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
  //   console.log('Quizzes Taken:', userInfo.quizzesTaken);
 
     // Display additional user information as needed
-    const profilePicElement = document.getElementById('profile-pic').src;
+    //const profilePicElement = document.getElementById('profile-pic').src;
     const profileNameElement = document.getElementById('profile-name');
 
     if (userInfo[PROFILE_PIC_KEY]) {
-      profilePicElement.src = userInfo[PROFILE_PIC_KEY];
+      document.getElementById('profile-pic').src = userInfo[PROFILE_PIC_KEY];
     }
 
     if (userInfo[USER_NAME_KEY]) {
