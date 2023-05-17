@@ -23,3 +23,33 @@ fetch('/elements/footer2.html')
 
 
 
+/* Reset styles */
+      * {
+        user-select: none;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+  
+  transition-duration: 0.5s; /* 500 milliseconds */
+  transition-timing-function: ease-in-out;
+}
+
+      /* Global styles */
+      html {
+        height: 100%;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+  
+    width: 100% !important;
+      }
+
+#footer_XL {
+  flex-shrink: 0;
+}
+      .container {
+        flex: 1;
+      }
