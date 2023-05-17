@@ -8,7 +8,7 @@
 
 	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="style.css" />
   
     <link rel="import" href="./elements/navbar.html">
     <link rel="import" href="./elements/footer.html">
@@ -18,63 +18,32 @@
 <body>
   <div id="navbar"></div>
     <!-- rest of the page content -->
-  	<style>
-	
-
-		.shadow {
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-		}
-	</style>
-  <style>
-    .quiz-info {
-      background-color: #f8f9fa;
-      border: 1px solid #ced4da;
-      border-radius: 4px;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-
-    .quiz-list {
-      max-height: 200px;
-      overflow-y: auto;
-    }
-	  
-	      .localStorage-usage {
-      background-color: #f8f9fa;
-      border: 1px solid #ced4da;
-      border-radius: 4px;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-  </style>
-<div class="container shadow py-4">
-  	 
+  	<div class="container shadow py-4">
   <div id="main">
+    <!-- Profile container -->
+    <div class="profile-container">
+      <!-- User Picture -->
+      <div class="text-center">
+        <!-- Place user profile picture here -->
+        <img id="userPic" src="/images/blank.png" alt="User Picture" class="img-fluid rounded-circle user-picture" loading="lazy">
 
-   <!-- Profile container -->
-  <div class="container">
-    <!-- User Picture -->
-    <div class="text-center">
-      <!-- Place user profile picture here -->
-      <img  id="userPic"  src="/images/blank.png" alt="User Picture" class="img-fluid rounded-circle mt-3" loading="lazy">
-      
-      <!-- User tagline -->
-      <h4 id="userNameQ" class="mt-3">John Doe</h4>
-      <p class="text-muted">Unlock Your Knowledge Potential with Quizzatopia!</p>
-      
-      <!-- Buttons -->
-      <div class="d-flex justify-content-center mt-4">
-        <!-- Message User button -->
-	          <button onclick="redirectToMessaging()" class="btn btn-primary mr-2">Go to Messaging</button>
+        <!-- User tagline -->
+        <h4 id="userNameQ" class="user-name        mt-3">John Doe</h4>
+        <p class="text-muted">Unlock Your Knowledge Potential with Quizzatopia!</p>
 
+        <!-- Buttons -->
+        <div class="d-flex justify-content-center mt-4">
+          <!-- Message User button -->
+          <button onclick="redirectToMessaging()" class="btn btn-primary mr-2">Go to Messaging</button>
 
-        <!-- Add User button -->
-        <button class="btn btn-success d-none">Add User</button>
+          <!-- Add User button -->
+          <button class="btn btn-success d-none">Add User</button>
+        </div>
       </div>
     </div>
 
     <!-- Grid of stats -->
-    <div class="row mt-5">
+    <div class="row mt-5 stats-grid">
       <!-- Stat 1 -->
       <div class="col-md-4">
         <div class="card">
@@ -84,7 +53,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Stat 2 -->
       <div class="col-md-4">
         <div class="card">
@@ -94,47 +63,55 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Stat 3 -->
       <div class="col-md-4">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Quizzes Taken</h5>
-            <p  id="userQuzziesTaken" class="card-text">50</p>
+            <p id="userQuzziesTaken" class="card-text">50</p>
           </div>
         </div>
       </div>
     </div>
 
-<div class="row mt-4">
-	
-   <!-- User badges -->
-  <div class="col-md-6">
-    <h5>Badges</h5>
-    <div class="card-deck">
-      <div class="card">
-        <div id="badgesContainer" style="height: 400px; overflow: auto;"></div>
-          <!-- Badges will be dynamically added here -->
+    <div class="row mt-4">
+      <!-- User badges -->
+      <div class="col-md-6 badges">
+        <h5>Badges</h5>
+        <div class="card-deck">
+          <div class="card">
+            <div id="badgesContainer" style="height: 400px; overflow: auto;"></div>
+            <!-- Badges will be dynamically added here -->
+          </div>
         </div>
       </div>
-    </div>
-	
-   <!-- User quizzes -->
-  <div class="col-md-6">
-    <h5>Quizzes Taken</h5>
-    <div class="card-deck">
-      <div class="card">
-        <div id="quizInfoContainer" style="height: 400px; overflow: auto;"></div>
-        <div class="">
-          <div id="localStorageUsage" class="localStorage-usage"></div>
+
+      <!-- Quizzes Taken -->
+      <div class="col-md-6 quizzes-taken">
+        <h5>Quizzes Taken</h5>
+        <div class="card-deck">
+          <div class="card">
+            <div id="quizInfoContainer" class="quiz-list"></div>
+            <div class="localStorage-usage">
+              <p>Your Quiz History</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-	  
-	    </div>
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
+				  
 	  
 <div class="d-flex justify-content-center mt-4">
       <button class="btn btn-danger d-none">Report User</button>
