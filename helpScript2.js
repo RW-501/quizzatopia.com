@@ -22,3 +22,4 @@ fetch('/elements/footer2.html')
 });
 
 
+      displayUserInfo();
