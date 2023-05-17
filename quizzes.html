@@ -84,7 +84,9 @@
 	
 	
 	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+	
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/quizzes/style.css">
   
     <link rel="import" href="./elements/navbar.html">
     <link rel="import" href="./elements/footer.html">
@@ -103,68 +105,9 @@
 <body>
   <div id="navbar"></div>
     <!-- rest of the page content -->
-<style>
-  #number-container {
- 
-
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-  }
-
-  .number-div {
-    display: none;
-    width: 100%;
-
-  }
-
-  .number-div.active {
-    display: block;
-  }
-	
-	.cg_ad{
-    width: 100%;
-    height: fit-content;
-    display: block;
-    min-width: 250px !important;
-	}
-	
-	
-	.back-to-top {
-    width: 80%;
-    margin: auto;
-    padding: 1%;
-    margin-bottom: 4%;
-}
-	.card-body {
-
-   
-	}
-	.card-title{
-		
-		
-	}
-	.card-text{
-		
-	}
-	.card-Q {
-  height: 100%;
-}
 
 	
 
-
- .list-group-item-action {
-    width: 100%;
-  }
-
-  .container {
-    margin-bottom: 20px;
-  }
-
-
-
-</style>
 
 	
 		<div id="card_container" class="container mt-4 number-div active">
@@ -440,7 +383,7 @@ cards.forEach(card => {
 		    
 		    
 		    
-		    <div class="container-fluid bg-primary py-4">
+<div class="container-fluid bg-primary py-4">
   <div class="container">
     <div class="row">
       <div class="col-md-6 offset-md-3">
@@ -454,7 +397,7 @@ cards.forEach(card => {
             <label for="quizDescription" class="text-white">Quiz Description</label>
             <textarea class="form-control" id="quizDescription" rows="4" placeholder="Enter quiz description" required></textarea>
           </div>
-          <div class="form-group">
+         <div class="form-group">
             <label for="quizCategory" class="text-white">Quiz Category</label>
             <select class="form-control" id="quizCategory" required>
               <option value="">Select category...</option>
@@ -476,6 +419,7 @@ cards.forEach(card => {
               <option value="fitness">Fitness</option>
               <option value="school">School</option>
               <option value="random">Random</option>
+              <!-- Add the rest of the options here -->
             </select>
           </div>
           <button type="submit" class="btn btn-light btn-block">Submit Request</button>
@@ -486,25 +430,7 @@ cards.forEach(card => {
 </div>
 
 		    
-		    
-		    
-		    
 	
-	
-  <style>
-    /* Custom CSS */
-    #quiz_list h2 {
-      color: #333;
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    #quiz_list p {
-      color: #666;
-      font-size: 14px;
-    }
-  </style>
     
     <div class="container d-flex justify-content-center" id="quiz_list">
   <div class="row">
