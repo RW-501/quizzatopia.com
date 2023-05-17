@@ -1,6 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+	  <script>
+// Function to apply the overlay to each direct child of body
+function applyOverlay() {
+  const bodyChildren = document.body.children;
+
+  // Loop through the direct children of body
+  for (let i = 0; i < bodyChildren.length; i++) {
+    const child = bodyChildren[i];
+
+    // Create the overlay element for each child
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
+
+    // Append the overlay to the child
+    child.appendChild(overlay);
+  }
+}
+
+// Function to remove the overlay from each direct child of body
+function removeOverlay() {
+  const overlays = document.querySelectorAll('.overlay');
+
+  // Loop through the overlays and remove them
+  overlays.forEach((overlay) => {
+    overlay.parentNode.removeChild(overlay);
+  });
+}
+
+// Apply the overlay when the DOM content is loaded
+document.addEventListener('DOMContentLoaded', applyOverlay);
+
+// Remove the overlay when the page is fully loaded
+window.addEventListener('load', removeOverlay);
+
+
+</script>
+
 	  <meta charset="utf-8" /> <!-- Character encoding for the webpage -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Required for Internet Explorer compatibility -->
 
@@ -373,7 +410,8 @@
   <div id="navbar"></div>
     <!-- rest of the page content -->
   
-	
+	  <div class="overlay"></div>
+
 
   
 <div class="featured-quizzes-container">
@@ -933,39 +971,3 @@ document.getElementById('show-login-form').addEventListener('click', function() 
 
 	
 </html>
-<script>
-// Function to apply the overlay to each direct child of body
-function applyOverlay() {
-  const bodyChildren = document.body.children;
-
-  // Loop through the direct children of body
-  for (let i = 0; i < bodyChildren.length; i++) {
-    const child = bodyChildren[i];
-
-    // Create the overlay element for each child
-    const overlay = document.createElement('div');
-    overlay.classList.add('overlay');
-
-    // Append the overlay to the child
-    child.appendChild(overlay);
-  }
-}
-
-// Function to remove the overlay from each direct child of body
-function removeOverlay() {
-  const overlays = document.querySelectorAll('.overlay');
-
-  // Loop through the overlays and remove them
-  overlays.forEach((overlay) => {
-    overlay.parentNode.removeChild(overlay);
-  });
-}
-
-// Apply the overlay when the DOM content is loaded
-document.addEventListener('DOMContentLoaded', applyOverlay);
-
-// Remove the overlay when the page is fully loaded
-window.addEventListener('load', removeOverlay);
-
-
-</script>
