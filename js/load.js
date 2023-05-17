@@ -38,7 +38,7 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
     const profileNameElement = document.getElementById('profile-name');
 
     if (userInfo[PROFILE_PIC_KEY]) {
-      document.getElementById('profile-pic').src = userInfo[PROFILE_PIC_KEY];
+  //    document.getElementById('profile-pic').src = userInfo[PROFILE_PIC_KEY];
     }
 
     if (userInfo[USER_NAME_KEY]) {
