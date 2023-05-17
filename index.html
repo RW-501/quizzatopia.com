@@ -803,7 +803,7 @@ window.addEventListener('load', removeOverlay);
   left: 0;
   width: 100%;
   background-color: #f8f9fa;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
@@ -813,12 +813,12 @@ window.addEventListener('load', removeOverlay);
 .banner_logo {
   width: 80px;
   height: 80px;
-  background-image: url("your-logo.png");
+  background-image: url("/images/logo.png");
   background-size: cover;
 }
 
 #onetrust-policy-text {
-  margin: 0;
+  margin: 5%;
   font-size: 14px;
   line-height: 1.5;
   color: #333;
@@ -872,20 +872,20 @@ window.addEventListener('load', removeOverlay);
         <div class="banner_logo"></div>
         <div id="onetrust-policy">
           <p id="onetrust-policy-text">
-            By clicking "Allow All", you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.
-            <a href="./legal/cookie" aria-label="More information about your privacy">Cookie Notice</a>
+            By clicking "Allow", you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.
+            <a href="./legal/cookies" aria-label="More information about your privacy">Cookie Notice</a>
           </p>
         </div>
       </div>
       <div id="onetrust-button-group-parent" class="ot-sdk-three ot-sdk-columns">
         <div id="onetrust-button-group">
-          <button id="onetrust-accept-btn-handler">Allow All</button>
+          <button id="onetrust-accept-btn-handler">Allow</button>
         </div>
       </div>
     </div>
   </div>
   <div id="onetrust-close-btn-container">
-    <button class="onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon" style="background-image: url(&quot;https://cdn.cookielaw.org/logos/static/ot_close.svg&quot;);" aria-label="Close"></button>
+    <button class="onetrust-close-btn-handler onetrust-close-btn-ui banner-close-button ot-close-icon" style='' aria-label="Close"></button>
   </div>
 </div>
 
