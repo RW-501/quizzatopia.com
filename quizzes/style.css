@@ -125,13 +125,20 @@
   background-color: #fff; /* Replace with the background color of your choice */
   color: #333; /* Replace with the text color of your choice */
 }
+{
+  
+  
 
-.btn-primary {
-  background-color: #4267B2; /* Replace with the primary color of your choice */
-  color: #fff; /* Replace with the text color of your choice */
-  border: none;
-}
+.form-group{
+  
+  
+  }
+  
+  
+  
 
-.btn-primary:hover {
-  background-color: #39598A; /* Replace with a darker shade or hover color */
-}
+
+
+
+
+
