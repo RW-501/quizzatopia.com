@@ -168,6 +168,25 @@ a{
   padding: 1.2rem 2.5rem;
 }
 
+@keyframes hover-animation {
+  0% {
+    /* Initial state */
+    transform: scale(1);
+  }
+  50% {
+    /* Intermediate state */
+    transform: scale(1.2);
+  }
+  100% {
+    /* Final state */
+    transform: scale(1);
+  }
+}
+
+/* Apply the animation on hover */
+#mainCTA:hover {
+  animation: hover-animation 1s infinite;
+}
 
 
 
