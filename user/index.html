@@ -174,11 +174,11 @@
           const quizTime = quizInfo.timestamp;
 
 const quizInfoElement = document.createElement('div');
-quizInfoElement.classList.add('quiz-info');
+quizInfoElement.classList.add('quiz-infop');
 quizInfoElement.innerHTML = `
   <a href="/quiz?q=${quizLink}" class=""><h4>${quizName}</h4></a>
   <p>Quiz Taken: ${quizTime}</p>
-  <p>Score: ${questionCorrect}/${numberOfQuestions} questions</p>
+  <p>Scored: ${questionCorrect}/${numberOfQuestions} Questions</p>
 `;
 
    const removeButton = document.createElement('button');
@@ -267,6 +267,10 @@ function clearLocalStorage() {
   const confirmed = confirm('Are you sure you want to clear the local storage?');
   if (confirmed) {
     localStorage.clear();
+	    getQuizInfo();
+displayBadges();
+displayUserInfo();   
+
     alert('Local storage cleared!');
   }
 }
