@@ -27,12 +27,12 @@ featuredQuizzes.forEach(quiz => {
   const quizCard = $('<div>').addClass('quiz-card_top');
   
   // Add HTML content for the quiz card using quiz.title, quiz.image, quiz.description
-  const quizContent = `
-  <div class="quiz-card">
+const quizContent = `
+  <a href="${quiz.url}" class="quiz-card">
     <img src="${quiz.image}" alt="${quiz.title}" class="quiz-image">
     <h3 class="quiz-title">${quiz.title}</h3>
     <p class="quiz-description">${quiz.description}</p>
-  </div>
+  </a>
 `;
 
   
