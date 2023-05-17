@@ -24,7 +24,7 @@ fetch('/elements/footer2.html')
 
 
 /* Reset styles */
-      * {
+      html {
         user-select: none;
         margin: 0;
         padding: 0;
