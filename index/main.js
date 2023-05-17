@@ -12,9 +12,9 @@
 
 // Assuming you have an array of featured quizzes
 const featuredQuizzes = [
-  { title: 'Quiz 1', image: 'quiz1.jpg', description: 'Description of Quiz 1' },
-  { title: 'Quiz 2', image: 'quiz2.jpg', description: 'Description of Quiz 2' },
-  { title: 'Quiz 3', image: 'quiz3.jpg', description: 'Description of Quiz 3' }
+  { title: 'Job Interview', image: 'quiz1.jpg', description: 'Description of Quiz 1' },
+  { title: 'Pop Culture', image: 'quiz2.jpg', description: 'Description of Quiz 2' },
+  { title: 'Movies', image: 'quiz3.jpg', description: 'Description of Quiz 3' }
 ];
 
 // Assuming you want to populate the quiz cards dynamically
