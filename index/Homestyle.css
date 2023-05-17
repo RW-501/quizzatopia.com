@@ -185,7 +185,9 @@ a{
 
 /* Apply the animation  */
 #mainCTA:hover {
-
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
   animation: loop-animation 2s infinite;
 }
 
