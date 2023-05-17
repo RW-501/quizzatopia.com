@@ -1,3 +1,19 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* CSS comments for the featured quizzes section */
 .featured-quizzes-container {
   background-color: #f5f5f5;
@@ -93,6 +109,38 @@
   font-size: 1.2rem;
   padding: 1.2rem 2.5rem;
 }
+
+
+
+
+
+
+/* Define the keyframes for the animation */
+@keyframes example-animation {
+  0% {
+    /* Initial state of the element */
+    transform: scale(1);
+  }
+  100% {
+    /* Final state of the element */
+    transform: scale(1.2);
+  }
+}
+
+/* Apply the animation to the element when hovered */
+.call-to-action {
+  /* Set initial properties of the element */
+  transition: transform 0.3s ease;
+}
+
+.call-to-action:hover {
+  /* Apply the animation on hover */
+  animation: example-animation 0.3s infinite alternate;
+}
+
+
+
+
 
 
 /* CSS comments for the quiz categories section */
