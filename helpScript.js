@@ -12,6 +12,10 @@ fetch('./elements/navbar.html')
 	
 			
 
+      const navUserInfo = JSON.parse(localStorage.getItem("userInfo"));
+ console.log('navUserInfo.profilePic 2 ', navUserInfo.profilePic);
+  document.getElementById('profile-pic').src = navUserInfo.profilePic;
+   
 	
 	
     $(document).ready(function() {
