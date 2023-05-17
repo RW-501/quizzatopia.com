@@ -1,13 +1,3 @@
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency as desired */
-  z-index: 9999; /* Ensure the overlay appears on top of other elements */
-}
-
 .quiz-info_His {
   background-color: #f8f9fa;
   border: 1px solid #ced4da;
@@ -177,7 +167,6 @@
 
 
 
-
 /* Define the keyframes for the animation */
 @keyframes example-animation {
   0% {
@@ -235,10 +224,12 @@
   height: auto;
 }
 
+
 .category-card h3 {
   font-size: 1.8rem;
   font-weight: 600;
   padding: 1.5rem 0;
+      text-decoration: none;
 }
 
 
