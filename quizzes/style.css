@@ -135,7 +135,64 @@
   }
   
   
-  
+    #number-container {
+ 
+
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+  }
+
+  .number-div {
+    display: none;
+    width: 100%;
+
+  }
+
+  .number-div.active {
+    display: block;
+  }
+	
+	.cg_ad{
+    width: 100%;
+    height: fit-content;
+    display: block;
+    min-width: 250px !important;
+	}
+	
+	
+	.back-to-top {
+    width: 80%;
+    margin: auto;
+    padding: 1%;
+    margin-bottom: 4%;
+}
+	.card-body {
+
+   
+	}
+	.card-title{
+		
+		
+	}
+	.card-text{
+		
+	}
+	.card-Q {
+  height: 100%;
+}
+
+	
+
+
+ .list-group-item-action {
+    width: 100%;
+  }
+
+  .container {
+    margin-bottom: 20px;
+  }
+
 
 
 
