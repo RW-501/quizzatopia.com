@@ -155,3 +155,31 @@
   color: #888;
 }
 
+
+.quiz-infop {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.quiz-infop a {
+  text-decoration: none;
+  color: #333;
+}
+
+.quiz-infop a:hover {
+  text-decoration: underline;
+}
+
+.quiz-infop h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.quiz-infop p {
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
