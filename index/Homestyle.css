@@ -183,12 +183,11 @@ a{
   }
 }
 
-/* Apply the animation on hover */
+/* Apply the animation  */
 #mainCTA:hover {
-  animation: hover-animation 1s infinite;
+
+  animation: loop-animation 2s infinite;
 }
-
-
 
 
 /* Define the keyframes for the animation */
