@@ -46,9 +46,24 @@ if (window.location.pathname.substr(-5) === '.html' && window.location.pathname.
 <!-- JavaScript code to check if user is logged in and update profile name and link -->
 <script>
   
-  const navUserInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
+
+
+  const USER_INFO_KEY = 'userInfo';
+  const USER_NAME_KEY = 'userName';
+  const PROFILE_PIC_KEY = 'profilePic';
+const RANK_KEY = 'rank';
+const POINTS_KEY = 'points';
+const QUIZZES_TAKEN_KEY = 'quizzesTaken';
+// Add more keys for additional user information as needed
+  
+
+   $(document).ready(function() {
+
+      const navUserInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
 
   document.getElementById('profile-pic').src = navUserInfo.profilePic;
+    });
+
 
   
 </script>
