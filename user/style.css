@@ -215,6 +215,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow-y: scroll;
   padding: 20px;
+      z-index: 500;
 }
 
 .popup-container::-webkit-scrollbar {
