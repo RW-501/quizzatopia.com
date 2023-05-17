@@ -40,13 +40,12 @@ if (window.location.pathname.substr(-5) === '.html' && window.location.pathname.
     </form>
     <!-- Profile pic and name area -->
     <div class="profile-area">
-      <img id="profile-pic" src="/images/pics/4.png" alt="Profile Picture" class="profile-pic" loading="lazy">
+      <img id="profile-pic" src="/images/avatar/w1.png" alt="Profile Picture" class="profile-pic" loading="lazy">
       <a id="profile-name" class="profile-name" href="/user/">Dashbroad</a>
     </div>
   </div>
 </nav>
   <div id="search-results" class="container mt-4"></div>
-
 
 
 
@@ -98,7 +97,11 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
  // updateProfileInfo();
   
   */
-  
+
+  // Display additional user information as needed
+
+	
+
  $(document).ready(function() {
       $('#quiz-search').on('input', function() {
         var searchTerm = $(this).val();
@@ -162,50 +165,17 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
   
   
   
-  
-  
-  
-  function getUserInfo() {
-  let userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
-  if (!userInfo) {
-    userInfo = {
-      userName: 'John Doe',
-      profilePic: '/images/pics/2.png',
-      rank: 'Rookie',
-      points: 0,
-      quizzesTaken: 0
-      // Add more properties for additional user information as needed
-    };
-    localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
-  }
-  return userInfo;
-}
+      const navUserInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
+
+  document.getElementById('profile-pic').src = navUserInfo.profilePic;
 
   
   
   
-    function displayUserInfo() {
-    const userInfo = getUserInfo();
-//    console.log('Rank:', userInfo.rank);
-   // console.log('Points:', userInfo.points);
- //   console.log('Quizzes Taken:', userInfo.quizzesTaken);
-
-    // Display additional user information as needed
-    const profilePicElement = document.getElementById('profile-pic');
-    const profileNameElement = document.getElementById('profile-name');
-
-    if (userInfo[PROFILE_PIC_KEY]) {
-      profilePicElement.src = userInfo[PROFILE_PIC_KEY];
-    }
-
-    if (userInfo[USER_NAME_KEY]) {
-      profileNameElement.textContent = userInfo[USER_NAME_KEY];
-    }
-  }
   
   
   
-      displayUserInfo();
+ 
 
   
 </script>
