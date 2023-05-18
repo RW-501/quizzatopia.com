@@ -47,7 +47,7 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
     //  profileNameElement.textContent = userInfo[USER_NAME_KEY];
     }
   }
-  
+
   function updateProfilePic(profilePic) {
   const userInfo = getUserInfo();
   userInfo.profilePic = profilePic;
