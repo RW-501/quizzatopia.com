@@ -72,7 +72,10 @@
   50% { color: blue; }
   100% { color: green; }
 }
-
+#savedMessage {
+  display: none;
+  margin-top: 10px;
+}
 #saveButton {
   background-color: #4CAF50;
   color: white;
