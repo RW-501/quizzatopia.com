@@ -555,15 +555,19 @@ function displayBadges() {
   const savedBadges = uniqueArray || [];
   const badgesContainer = document.getElementById("badgeView");
   badgesContainer.innerHTML = savedBadges.map(newBadge => `
-    <div class="card awardBadge">
-      <img src="${newBadge.imageUrl}" alt="${newBadge.id}" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">${newBadge.name}</h5>
-        <p class="card-text">${newBadge.description}</p>
-        <p class="card-text">Quantity: ${newBadge.quantity}</p>
-        <p class="card-text">Earned on ${newBadge.earnedDate}</p>
-      </div>
-    </div>
+   <div class="card awardBadge">
+  <div class="badge-layer-1"></div>
+  <div class="badge-layer-2">
+    <img src="${newBadge.imageUrl}" alt="${newBadge.id}" class="badge-image">
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">${newBadge.name}</h5>
+    <p class="card-text">${newBadge.description}</p>
+    <p class="card-text">Quantity: ${newBadge.quantity}</p>
+    <p class="card-text">Earned on ${newBadge.earnedDate}</p>
+  </div>
+</div>
+
   `).join("");
 }
 
