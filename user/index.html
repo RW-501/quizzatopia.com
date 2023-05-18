@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Points</h5>
-            <p id="userPointsQ" class="card-text">10,000</p>
+            <p id="userPointsQ" class="card-text">0</p>
           </div>
         </div>
       </div>
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Quizzes Taken</h5>
-            <p id="userQuzziesTaken" class="card-text">50</p>
+            <p id="userQuzziesTaken" class="card-text">0</p>
           </div>
         </div>
       </div>
@@ -145,8 +145,8 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="col-md-6 badges">
         <h5>Badges</h5>
         <div class="card-deck">
-          <div class="card"><div class="card badge-card">No Badges Earned</div>
-            <div id="badgesContainer" style="height: 400px; overflow: auto;">  </div>
+          <div class="card">
+            <div id="badgesContainer" style="height: 400px; overflow: auto;">???<div class="card badge-card">No Badges Earned</div>  </div>
             <!-- Badges will be dynamically added here -->
 		 
 
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <h5>Quizzes Taken</h5>
         <div class="card-deck">
           <div class="card">
-            <div id="quizInfoContainer" class="quiz-list"></div>
+            <div id="quizInfoContainer" class="quiz-list"> <p>No Quiz Takken</p></div>
             <div id="localStorageUsage" class="localStorage-usage">
               <p>Your Quiz History</p>
             </div>
