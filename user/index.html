@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	  
 <div class="d-flex justify-content-center mt-4">
       <button class="btn btn-danger d-none">Report User</button>
-	    
+	    <button id="clearStorageBtn" class="btn btn-danger">Clear Storage</button>
 
     </div>
 	<div id="imagePopup" class="popup-container">
@@ -342,7 +342,7 @@ function removeQuiz(key) {
 
       localStorageUsage.innerHTML = `
         <h2 class="text-center">Storage</h2>
-        <p>Total Data: ${totalUsage}<button id="clearStorageBtn" class="btn btn-danger">Clear Storage</button></p>
+        <p>Total Data: ${totalUsage}</p>
       `;
     }
 
@@ -355,6 +355,8 @@ function removeQuiz(key) {
 function displayBadges() {
   const savedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
   const badgesContainer = document.getElementById("badgesContainer");
+	
+	if(savedBadges,length > 0){
   badgesContainer.innerHTML = savedBadges.map(newBadge => `
     <div class="card badge-card">
       <div class="badge-image-container">
@@ -370,6 +372,9 @@ function displayBadges() {
       </div>
     </div>
   `).join("");
+}else{
+badgesContainer.innerHTML =  `<div class="card badge-card">No Badges Earned`;	
+	
 }
 
 
