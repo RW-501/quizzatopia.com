@@ -32,18 +32,18 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
     function displayUserInfo() {
     const userInfo = getUserInfo();
     //console.log('Rank:', userInfo.rank);
-   // console.log('Points:', userInfo.points);
+   console.log('userName:', userInfo.userName);
  //   console.log('Quizzes Taken:', userInfo.quizzesTaken);
 
     // Display additional user information as needed
     //const profilePicElement = document.getElementById('profile-pic').src;
-    const profileNameElement = document.getElementById('profile-name');
+ //   const profileNameElement = document.getElementById('profile-name');
 
     if (userInfo[PROFILE_PIC_KEY]) {
   //    document.getElementById('profile-pic').src = userInfo[PROFILE_PIC_KEY];
     }
 
-    if (userInfo[USER_NAME_KEY]) {
+//    if (userInfo[USER_NAME_KEY]) {
     //  profileNameElement.textContent = userInfo[USER_NAME_KEY];
     }
   }
