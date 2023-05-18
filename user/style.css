@@ -174,42 +174,69 @@
 
 
 .badge-card {
+  position: relative;
   width: 200px;
-  display: inline-block;
+  background-color: #fff;
+  border-radius: 10px;
   margin: 10px;
+  overflow: hidden;
 }
 
 .badge-image-container {
   position: relative;
 }
 
-.badge-name {
+.badge-layer-1,
+.badge-layer-2 {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #000;
+  right: 0;
+  bottom: 0;
+}
+
+.badge-layer-1 {
+  background-color: #4e5058;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.badge-layer-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.badge-name {
+  position: absolute;
+  top: 10px;
+  left: 10px;
   color: #fff;
-  padding: 5px;
-  margin: 0;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .badge-image {
-  width: 100%;
-  height: auto;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
-.badge-description {
-  font-size: 14px;
-  margin-bottom: 5px;
-}
 
-.badge-info {
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-  color: #888;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .quiz-infop {
