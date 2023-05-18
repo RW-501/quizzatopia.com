@@ -210,52 +210,45 @@
 	
 	
 	
-	
-	
-	
-	
-	.badge-container {
-  margin-top: 20px;
-}
-
-.badge-view {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.awardBadge {
+	.awardBadge {
+  position: relative;
   width: 200px;
   background-color: #20232a;
   color: #fff;
   border-radius: 10px;
   margin: 10px;
+  overflow: hidden;
 }
 
-.card-img-top {
-  border-radius: 10px 10px 0 0;
+.badge-layer-1,
+.badge-layer-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-.card-body {
-  padding: 10px;
+.badge-layer-1 {
+  background-color: #4e5058;
+  opacity: 0.8;
+  z-index: 1;
 }
 
-.card-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
+.badge-layer-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
 }
 
-.card-text {
-  font-size: 14px;
-  margin-bottom: 5px;
+.badge-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
-.card-text:last-child {
-  margin-bottom: 0;
-}
-
-	
 	
 	
 	
