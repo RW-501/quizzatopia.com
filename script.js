@@ -355,7 +355,6 @@ function showExplanation(explanation) {
   document.getElementById("explanation").innerHTML = explanation;
   disableAnswerButtons();
   showExplanationPopup();
-	document.getElementById('show-explanation-btn').classList.remove("d-none");
 }
 
 // Function to show the explanation popup
@@ -367,7 +366,7 @@ function showExplanationPopup() {
 
   closeButton.addEventListener('click', function() {
     explanationContainer.style.display = 'none';
-	  	document.getElementById('show-explanation-btn').classList.add("d-none");
+	  //	document.getElementById('show-explanation-btn').classList.add("d-none");
 
   });
 }
@@ -378,6 +377,9 @@ showExplanationButton.addEventListener('click', function() {
   // Replace this with your explanation content
  //const explanation = "This is the explanation for the question.";
 //  showExplanation(explanation);
+		document.getElementById('show-explanation-btn').classList.remove("d-none");
+
+	
 });
 
 
