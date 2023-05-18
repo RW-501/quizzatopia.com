@@ -556,9 +556,10 @@ function displayBadges() {
   const badgesContainer = document.getElementById("badgeView");
   badgesContainer.innerHTML = savedBadges.map(newBadge => `
    <div class="card awardBadge">
-  <div class="badge-layer-1"></div>
+  <div class="badge-layer-1">
   <div class="badge-layer-2">
     <img src="${newBadge.imageUrl}" alt="${newBadge.id}" class="badge-image">
+    </div>
   </div>
   <div class="card-body">
     <h5 class="card-title">${newBadge.name}</h5>
