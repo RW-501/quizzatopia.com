@@ -349,23 +349,27 @@ function displayBadges() {
 	
 	if(savedBadges.length > 0){
   badgesContainer.innerHTML = savedBadges.map(newBadge => `
-    <div class="card badge-card">
-      <div class="badge-image-container">
-        <h5 class="badge-name">${newBadge.name}</h5>
-        <img src="${newBadge.imageUrl}" alt="${newBadge.id}" class="badge-image">
-      </div>
-      <div class="card-body">
-        <p class="badge-description">${newBadge.description}</p>
-        <div class="badge-info">
-          <p class="badge-quantity">Quantity: ${newBadge.quantity}</p>
-          <p class="badge-earned-date">Earned on ${newBadge.earnedDate}</p>
-        </div>
-      </div>
+<div class="card badge-card">
+  <div class="badge-image-container">
+    <div class="badge-layer-1"></div>
+    <div class="badge-layer-2">
+      <h5 class="badge-name">${newBadge.name}</h5>
+      <img src="${newBadge.imageUrl}" alt="${newBadge.id}" class="badge-image">
     </div>
+  </div>
+  <div class="card-body">
+    <p class="badge-description">${newBadge.description}</p>
+    <div class="badge-info">
+      <p class="badge-quantity">Quantity: ${newBadge.quantity}</p>
+      <p class="badge-earned-date">Earned on ${newBadge.earnedDate}</p>
+    </div>
+  </div>
+</div>
+
   `).join("");
 
 	}else{
-badgesContainer.innerHTML =  `<div class="card badge-card">No Badges Earned`;	
+badgesContainer.innerHTML =  `<div class="card badge-card">No Badges Earned Yet`;	
 	
 }
 }
