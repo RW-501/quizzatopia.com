@@ -148,6 +148,8 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="card">
             <div id="badgesContainer" style="height: 400px; overflow: auto;"></div>
             <!-- Badges will be dynamically added here -->
+		  <div class="card badge-card">No Badges Earned</div>
+
           </div>
         </div>
       </div>
@@ -267,7 +269,7 @@ function selectProfilePic(imageSrc) {
       const quizInfoContainer = document.getElementById('quizInfoContainer');
       quizInfoContainer.innerHTML = ''; // Clear previous content
 
-        for (let i = 0; i < localStorage.length; i++) {
+	    for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         if (key.startsWith('quizInfo_')) {
           const quizInfo = JSON.parse(localStorage.getItem(key));
@@ -296,6 +298,13 @@ quizInfoElement.innerHTML = `
 
       quizInfoElement.appendChild(removeButton);
       quizInfoContainer.appendChild(quizInfoElement);
+    }else{
+    const quizInfoElement = document.createElement('div');
+quizInfoElement.classList.add('quiz-infop');
+quizInfoElement.innerHTML = `
+  <p>No Quizzes Taken</p>
+
+`;
     }
   }
 }
