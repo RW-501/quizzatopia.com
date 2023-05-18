@@ -62,7 +62,9 @@ function saveChanges() {
   // Show the saved message
   var savedMessage = document.getElementById("savedMessage");
   savedMessage.style.display = "block";
-
+	
+	
+console.log('????????:');
   // Apply color animation to the changed text
   animateTextChanges();
 }
@@ -78,6 +80,7 @@ function updateTagline(newTagline) {
 function animateTextChanges() {
   // Apply the color animation to the changed text
   var changedElements = document.querySelectorAll(".changed-text");
+	displayUserInfo();
   changedElements.forEach(function(element) {
     element.classList.add("color-animation");
   });
