@@ -235,8 +235,14 @@
 }
 
 .popup-container.active {
-  visibility: visible;
-  opacity: 1;
+
+    visibility: visible;
+    opacity: 1;
+    z-index: 600;
+    margin: auto;
+    display: block;
+    height: auto;
+
 }
 
 .popup-content {
