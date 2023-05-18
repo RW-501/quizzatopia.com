@@ -356,7 +356,7 @@ function displayBadges() {
   const savedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
   const badgesContainer = document.getElementById("badgesContainer");
 	
-	if(savedBadges,length > 0){
+	if(savedBadges.length > 0){
   badgesContainer.innerHTML = savedBadges.map(newBadge => `
     <div class="card badge-card">
       <div class="badge-image-container">
