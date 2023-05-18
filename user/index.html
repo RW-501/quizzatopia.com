@@ -45,7 +45,7 @@
 
 	      
 	      <script>
-		function showSaveMessage() {
+	function showSaveMessage() {
   var savedMessage = document.getElementById("savedMessage");
   savedMessage.style.display = "block";
 }
@@ -55,36 +55,39 @@ function saveChanges() {
   var newUsername = document.getElementById("userNameQ").innerText;
   var newTagline = document.getElementById("userTagLine").innerText;
 
-  // Call the updateUserName and updateTagline functions to save the changes
-  updateUserName(newUsername);
-  updateTagline(newTagline);
+  // Call the updateUserInfo function to save the changes
+  updateUserInfo({ userName: newUsername, tagLine: newTagline });
 
   // Show the saved message
-  var savedMessage = document.getElementById("savedMessage");
-  savedMessage.style.display = "block";
-	
-	
-console.log('???????newUsername?: '+newUsername);
+  showSaveMessage();
+
   // Apply color animation to the changed text
   animateTextChanges();
 }
 
 function updateUserName(newName) {
   // Implement the logic to update the username on the server or perform any necessary actions
+  // Call displayUserInfo() here if needed
 }
 
 function updateTagline(newTagline) {
   // Implement the logic to update the tagline on the server or perform any necessary actions
+  // Call displayUserInfo() here if needed
 }
 
 function animateTextChanges() {
   // Apply the color animation to the changed text
   var changedElements = document.querySelectorAll(".changed-text");
-	displayUserInfo();
+
   changedElements.forEach(function(element) {
     element.classList.add("color-animation");
   });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  displayUserInfo();
+});
+
 
 	      </script>
 	      
