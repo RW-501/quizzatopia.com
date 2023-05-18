@@ -355,7 +355,7 @@ function showExplanation(explanation) {
   document.getElementById("explanation").innerHTML = explanation;
   disableAnswerButtons();
   showExplanationPopup();
-	//document.getElementById('show-explanation-btn').classList.remove("d-none");
+	document.getElementById('show-explanation-btn').classList.remove("d-none");
 }
 
 // Function to show the explanation popup
@@ -367,7 +367,7 @@ function showExplanationPopup() {
 
   closeButton.addEventListener('click', function() {
     explanationContainer.style.display = 'none';
-	  	//document.getElementById('show-explanation-btn').classList.add("d-none");
+	  	document.getElementById('show-explanation-btn').classList.add("d-none");
 
   });
 }
