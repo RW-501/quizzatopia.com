@@ -37,14 +37,20 @@
 
 	      
         <!-- User tagline -->
-  <h4 id="userNameQ" class="user-name mt-3" contenteditable="true">John Doe</h4>
-<p id="userTagLine" class="text-muted" contenteditable="true">Unlock Your Knowledge Potential with Quizzatopia!</p>
-<button onclick="saveChanges()">Save Changes</button>
+  <h4 id="userNameQ" class="user-name mt-3" contenteditable="true" oninput="showSaveMessage()">John Doe</h4>
+<p id="userTagLine" class="text-muted" contenteditable="true" oninput="showSaveMessage()">Unlock Your Knowledge Potential with Quizzatopia!</p>
+<button id="saveButton" onclick="saveChanges()">Save Changes</button>
+<p id="savedMessage" style="display: none;">Changes saved!</p>
+
 
 	      
 	      <script>
-		      
-		     function saveChanges() {
+		function showSaveMessage() {
+  var savedMessage = document.getElementById("savedMessage");
+  savedMessage.style.display = "block";
+}
+
+function saveChanges() {
   // Get the updated username and tagline
   var newUsername = document.getElementById("userNameQ").innerText;
   var newTagline = document.getElementById("userTagLine").innerText;
@@ -55,23 +61,18 @@
 
   // Show the saved message
   var savedMessage = document.getElementById("savedMessage");
-  savedMessage.innerText = "Changes saved";
   savedMessage.style.display = "block";
 
   // Apply color animation to the changed text
   animateTextChanges();
-} 
-		
+}
+
 function updateUserName(newName) {
   // Implement the logic to update the username on the server or perform any necessary actions
-  // For example:
-  // send an AJAX request to the server with the new name
 }
 
 function updateTagline(newTagline) {
   // Implement the logic to update the tagline on the server or perform any necessary actions
-  // For example:
-  // send an AJAX request to the server with the new tagline
 }
 
 function animateTextChanges() {
@@ -80,7 +81,8 @@ function animateTextChanges() {
   changedElements.forEach(function(element) {
     element.classList.add("color-animation");
   });
-}      
+}
+
 	      </script>
 	      
 	      
@@ -88,7 +90,7 @@ function animateTextChanges() {
 	      
 	      
 
-        <!-- Buttons -->"
+        <!-- Buttons -->
         <div class="d-flex justify-contgent-center mt-4">
           <!-- Message User button -->
           <button onclick="redirectToMessaging()" class="btn btn-primary mr-2">Go to Messaging</button>
