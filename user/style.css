@@ -133,8 +133,7 @@
   .badges .card {
     border: none;
     background-color: #fafafa;
-    margin-bottom: 20px;
-  }
+    margin-bottom: 0px;  }
 
   .badges .card-title {
     font-size: 18px;
@@ -149,6 +148,7 @@
     border: none;
     background-color: #fafafa;
         overflow: hidden;
+        width: 100%;
   }
 
   .quizzes-taken .card-title {
@@ -416,4 +416,5 @@ overflow-x: hidden;
     border-radius: 1rem !important;
       border: 1px solid #0d6efd;
   overflow: hidden;
+  margin-bottom: 0;
 }
