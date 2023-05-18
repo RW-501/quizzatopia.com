@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <h5>Badges</h5>
         <div class="card-deck">
           <div class="card">
-            <div id="badgesContainer" style="height: 400px; overflow: auto;">???<div class="card badge-card">No Badges Earned</div>  </div>
+            <div id="badgesContainer" style="height: 400px; overflow: auto;">  </div>
             <!-- Badges will be dynamically added here -->
 		 
 
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <h5>Quizzes Taken</h5>
         <div class="card-deck">
           <div class="card">
-            <div id="quizInfoContainer" class="quiz-list"> <p>No Quiz Takken</p></div>
+            <div id="quizInfoContainer" class="quiz-list"> </div>
             <div id="localStorageUsage" class="localStorage-usage">
               <p>Your Quiz History</p>
             </div>
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	  
 <div class="d-flex justify-content-center mt-4">
       <button class="btn btn-danger d-none">Report User</button>
-	    <button id="clearStorageBtn" class="btn btn-danger">Clear Storage</button>
+	    
 
     </div>
 	<div id="imagePopup" class="popup-container">
@@ -305,6 +305,8 @@ quizInfoElement.innerHTML = `
   <p>No Quizzes Taken</p>
 
 `;
+      quizInfoContainer.appendChild(quizInfoElement);	    
+	    
     }
   }
 }
@@ -340,7 +342,7 @@ function removeQuiz(key) {
 
       localStorageUsage.innerHTML = `
         <h2 class="text-center">Storage</h2>
-        <p>Total Data: ${totalUsage}</p>
+        <p>Total Data: ${totalUsage}<button id="clearStorageBtn" class="btn btn-danger">Clear Storage</button></p>
       `;
     }
 
