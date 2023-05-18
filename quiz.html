@@ -280,7 +280,6 @@
   margin-left: 20px;
   margin-right: 20px;
 }
-
 .explanation-container {
   position: fixed;
   top: 50%;
@@ -311,15 +310,6 @@
 
 .close-button:hover {
   color: #666;
-}
-
-.explanation-container.dragging {
-  opacity: 0.8;
-  cursor: grabbing;
-}
-
-.explanation-container.dragging .close-button {
-  display: none;
 }
 
 </style>
@@ -559,10 +549,11 @@
         <li><button class="btn btn-primary answer-option"></button></li>
         <li><button class="btn btn-primary answer-option"></button></li>
       </ul>
- <div class="explanation-container" draggable="true">
-  <button id="close-btn" class="close-button">&times;</button>
+<div class="explanation-container">
+  <button id="close-btn" class="close-button"></button>
   <div id="explanation"></div>
 </div>
+
 
     <!-- Explanation area -->
     <div id="btn_container">
@@ -723,16 +714,47 @@
   <script>
     
 	 
-	const explanationContainer = document.querySelector('.explanation-container');
+interact('.explanation-container')
+  .draggable({
+    inertia: true,
+    modifiers: [
+      interact.modifiers.restrictRect({
+        restriction: 'parent',
+        endOnly: true,
+      }),
+    ],
+    listeners: {
+      move(event) {
+        const target = event.target;
+        const x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
+        const y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
 
-explanationContainer.addEventListener('dragstart', function (event) {
-  event.dataTransfer.setData('text/plain', ''); // Set data to enable dragging
-  explanationContainer.classList.add('dragging');
-});
+        target.style.transform = `translate(${x}px, ${y}px)`;
+        target.setAttribute('data-x', x);
+        target.setAttribute('data-y', y);
+      },
+    },
+  })
+  .resizable({
+    edges: { top: true, left: true, bottom: true, right: true },
+  })
+  .on('resizemove', function (event) {
+    const target = event.target;
+    let { x, y } = target.dataset;
 
-explanationContainer.addEventListener('dragend', function () {
-  explanationContainer.classList.remove('dragging');
-});
+    x = parseFloat(x) || 0;
+    y = parseFloat(y) || 0;
+
+    target.style.width = event.rect.width + 'px';
+    target.style.height = event.rect.height + 'px';
+
+    x += event.deltaRect.left;
+    y += event.deltaRect.top;
+
+    target.style.transform = `translate(${x}px, ${y}px)`;
+    target.setAttribute('data-x', x);
+    target.setAttribute('data-y', y);
+  });
 
 // You can also add additional logic for handling close button click event, etc.
 
