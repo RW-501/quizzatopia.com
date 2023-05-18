@@ -416,30 +416,13 @@ badgesContainer.innerHTML =  `<div class="card badge-card">No Badges Earned Yet`
 // Call the displayBadges function to show the badges
 displayBadges();
 		    
+	
 		    
 		    
-	function showBadgeDetails(name, description, quantity, earnedDate) {
-  const popupContainer = document.getElementById("popupContainer");
-  const popupDetails = document.getElementById("popupDetails");
-
-  // Set the badge details in the popup
-  popupDetails.innerHTML = `
-    <h3>${name}</h3>
-    <p>Description: ${description}</p>
-    <p>Quantity: ${quantity}</p>
-    <p>Earned Date: ${earnedDate}</p>
-  `;
-
-  // Show the popup
-  popupContainer.classList.add("active");
-}
-
-function closePopup() {
-  const popupContainer = document.getElementById("popupContainer");
-
-  // Hide the popup
-  popupContainer.classList.remove("active");
-}
+		    
+		    
+		    
+		    
 	    		 
 function clearLocalStorage() {
   const confirmed = confirm('Are you sure you want to clear the local storage?');
