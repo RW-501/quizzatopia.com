@@ -380,8 +380,9 @@ showExplanationButton.addEventListener('click', function() {
  //const explanation = "This is the explanation for the question.";
 //  showExplanation(explanation);
 		document.getElementById('show-explanation-btn').classList.remove("d-none");
+  const explanationContainer = document.querySelector('.explanation-container');
 
-	
+	explanationContainer.style.display = 'block';
 });
 
 
