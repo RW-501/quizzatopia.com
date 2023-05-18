@@ -189,65 +189,62 @@
   width: 100%;
 }
 
-#badgeView {
-    overflow: auto;
-    display: -webkit-box;
-    width: fit-content;
-	    display: -webkit-inline-box;
-}
-
 	
-	.badge-card {
+	
+	
+	.card.awardBadge {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  background-color: #f2f2f2;
-  border-radius: 10px;
-  padding: 10px;
-  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.badge-image-container {
-  flex-shrink: 0;
-  margin-right: 10px;
-  position: relative;
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
+.badge-layer-1 {
+  background-color: #e9ebee;
+  width: 100%;
+  height: 6px;
+  border-radius: 4px 4px 0 0;
+}
+
+.badge-layer-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  margin-top: -60px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .badge-image {
-  width: 100%;
-  height: 100%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
   object-fit: cover;
 }
 
-.badge-content {
-  flex-grow: 1;
+.card-body {
+  text-align: center;
+  padding: 20px;
 }
 
-.badge-name {
+.card-title {
   font-size: 18px;
-  margin-bottom: 5px;
-}
-
-.badge-description {
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
-.badge-quantity,
-.badge-earned-date {
+.card-text {
+  font-size: 14px;
   margin-bottom: 5px;
 }
 
-.badge-quantity {
-  font-weight: bold;
-}
-
-	
-	
-	
 	
 </style>
 		
