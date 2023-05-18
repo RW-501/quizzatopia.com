@@ -356,7 +356,7 @@ overflow-x: hidden;
 }
 
 
-.card-body ,.card    {
+.card-body ,.card ,.card-deck   {
  
     background-color: #ededed !important;
     border-radius: 1rem !important;
