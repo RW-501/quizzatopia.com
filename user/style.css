@@ -133,7 +133,9 @@
   .badges .card {
     border: none;
     background-color: #fafafa;
-    margin-bottom: 0px;  }
+    margin-bottom: 0px; 
+    width: 100%;
+}
 
   .badges .card-title {
     font-size: 18px;
