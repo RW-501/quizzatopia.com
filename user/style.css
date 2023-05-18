@@ -7,12 +7,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
-.card-body .card    {
- 
-    background-color: #ededed !important;
-    border-radius: 1rem !important;
-  
-}
+
 
 
 
@@ -358,4 +353,12 @@ overflow-x: hidden;
 #pic-text {
     font-size: 24px;
     font-weight: bold;
+}
+
+
+.card-body ,.card    {
+ 
+    background-color: #ededed !important;
+    border-radius: 1rem !important;
+  
 }
