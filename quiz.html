@@ -1043,6 +1043,8 @@ function fetchData(q) {
         const randomFile = getRandomFile(files);
         fetchData(randomFile);
       } else {
+	              console.log(" data:    "+data);
+
         // Use the questions data here
         const questionData = data.questions.map(questionObj => ({
           question: questionObj.question,
