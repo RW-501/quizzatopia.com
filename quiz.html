@@ -635,7 +635,7 @@
 
 	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
-    <script src="helpScript.js"></script>
+    <script src="helpScript.js" Defer></script>
 
 
 	
@@ -845,9 +845,10 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
       const { score, percentage } = calculateScore(quizInfo);
       let ansWrong = numberOfQuestions - score;
 
+	    if(score > 0){
       // Show the pie chart for correct and incorrect answers
       showPieChartFront(score, ansWrong);
-
+	    }
       testInfoDiv.innerHTML = `
         <h3>Quiz Information</h3>
         <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
