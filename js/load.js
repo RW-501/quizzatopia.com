@@ -1,15 +1,6 @@
+const USER_INFO_KEY = 'userInfo';
 
- const USER_INFO_KEY = 'userInfo';
-  const USER_NAME_KEY = 'userName';
-  const USER_Tagline = 'tagLine';
-  const PROFILE_PIC_KEY = 'profilePic';
-const RANK_KEY = 'rank';
-const POINTS_KEY = 'points';
-const QUIZZES_TAKEN_KEY = 'quizzesTaken';
-// Add more keys for additional user information as needed
-  
-  
-  function getUserInfo() {
+function getUserInfo() {
   let userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
   if (!userInfo) {
     userInfo = {
@@ -19,74 +10,75 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
       rank: 'Beginner',
       points: 0,
       quizzesTaken: 0
-      // Add more properties for additional user information as needed
     };
     localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
   }
   return userInfo;
 }
 
+function displayUserInfo() {
+  const userInfo = getUserInfo();
   
+  // Update profile picture element
+  const profilePicElement = document.getElementById('profile-pic');
+  profilePicElement.src = userInfo.profilePic;
   
+  // Update profile name element
+  const profileNameElement = document.getElementById('profile-name');
+  profileNameElement.textContent = userInfo.userName;
   
-    function displayUserInfo() {
-    const userInfo = getUserInfo();
-    //console.log('Rank:', userInfo.rank);
-   console.log('userName:', userInfo.userName);
- //   console.log('Quizzes Taken:', userInfo.quizzesTaken);
+  // Update tagline element
+  const taglineElement = document.getElementById('tagline');
+  taglineElement.textContent = userInfo.tagLine;
+}
 
-    // Display additional user information as needed
-    //const profilePicElement = document.getElementById('profile-pic').src;
- //   const profileNameElement = document.getElementById('profile-name');
-
-    if (userInfo[PROFILE_PIC_KEY]) {
-  //    document.getElementById('profile-pic').src = userInfo[PROFILE_PIC_KEY];
-    }
-
-//    if (userInfo[USER_NAME_KEY]) {
-    //  profileNameElement.textContent = userInfo[USER_NAME_KEY];
+function updateUserInfo(updatedInfo) {
+  const userInfo = getUserInfo();
+  const updatedKeys = Object.keys(updatedInfo);
+  
+  for (const key of updatedKeys) {
+    if (userInfo[key] !== updatedInfo[key]) {
+      userInfo[key] = updatedInfo[key];
     }
   }
-
-  function updateProfilePic(profilePic) {
-  const userInfo = getUserInfo();
-  userInfo.profilePic = profilePic;
+  
   localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
-}    
-function updateTagline(tagLine) {
-  const userInfo = getUserInfo();
-  userInfo.tagLine = tagLine;
-  localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
+  displayUserInfo();
 }
+
+function updateProfilePic(profilePic) {
+  updateUserInfo({ profilePic });
+}
+
+function updateTagline(tagLine) {
+  updateUserInfo({ tagLine });
+}
+
 function updateUserName(userName) {
-  const userInfo = getUserInfo();
-  userInfo.userName = userName;
-  localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
-}  
+  updateUserInfo({ userName });
+}
+
 function updateRank(rank) {
-  const userInfo = getUserInfo();
-  userInfo.rank = rank;
-  localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
+  updateUserInfo({ rank });
 }
 
 function updatePoints(points) {
   const userInfo = getUserInfo();
   userInfo.points += points;
   localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
+  displayUserInfo();
 }
 
 function updateQuizzesTaken(quizzesTaken) {
   const userInfo = getUserInfo();
   userInfo.quizzesTaken += quizzesTaken;
   localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
+  displayUserInfo();
 }
-  
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Your function code here
   displayUserInfo();
 });
-
 
   let pointsRewards;
 
