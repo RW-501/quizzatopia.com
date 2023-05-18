@@ -15,36 +15,42 @@ function getUserInfo() {
   }
   return userInfo;
 }
-
 function displayUserInfo() {
   const userInfo = getUserInfo();
-  
+
   // Update profile picture element
   const profilePicElement = document.getElementById('profile-pic');
-  profilePicElement.src = userInfo.profilePic;
-  
+  if (profilePicElement) {
+    profilePicElement.src = userInfo.profilePic;
+  }
+
   // Update profile name element
   const profileNameElement = document.getElementById('profile-name');
-  profileNameElement.textContent = userInfo.userName;
-  
+  if (profileNameElement) {
+    profileNameElement.textContent = userInfo.userName;
+  }
+
   // Update tagline element
   const taglineElement = document.getElementById('tagline');
-  taglineElement.textContent = userInfo.tagLine;
+  if (taglineElement) {
+    taglineElement.textContent = userInfo.tagLine;
+  }
 }
 
 function updateUserInfo(updatedInfo) {
   const userInfo = getUserInfo();
   const updatedKeys = Object.keys(updatedInfo);
-  
+
   for (const key of updatedKeys) {
     if (userInfo[key] !== updatedInfo[key]) {
       userInfo[key] = updatedInfo[key];
     }
   }
-  
+
   localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
   displayUserInfo();
 }
+
 
 function updateProfilePic(profilePic) {
   updateUserInfo({ profilePic });
