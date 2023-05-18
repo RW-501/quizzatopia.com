@@ -281,6 +281,46 @@
   margin-right: 20px;
 }
 
+.explanation-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  max-width: 90%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  z-index: 9999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: move;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #999;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #666;
+}
+
+.explanation-container.dragging {
+  opacity: 0.8;
+  cursor: grabbing;
+}
+
+.explanation-container.dragging .close-button {
+  display: none;
+}
 
 </style>
 		
@@ -519,10 +559,11 @@
         <li><button class="btn btn-primary answer-option"></button></li>
         <li><button class="btn btn-primary answer-option"></button></li>
       </ul>
-    <div class="explanation-container">
-      <button id="close-btn" class="close-button">&times;</button>
-      <div id="explanation"></div>
-    </div>
+ <div class="explanation-container" draggable="true">
+  <button id="close-btn" class="close-button">&times;</button>
+  <div id="explanation"></div>
+</div>
+
     <!-- Explanation area -->
     <div id="btn_container">
       <!-- Button container -->
@@ -682,7 +723,19 @@
   <script>
     
 	 
-	
+	const explanationContainer = document.querySelector('.explanation-container');
+
+explanationContainer.addEventListener('dragstart', function (event) {
+  event.dataTransfer.setData('text/plain', ''); // Set data to enable dragging
+  explanationContainer.classList.add('dragging');
+});
+
+explanationContainer.addEventListener('dragend', function () {
+  explanationContainer.classList.remove('dragging');
+});
+
+// You can also add additional logic for handling close button click event, etc.
+
 
  
 	  
