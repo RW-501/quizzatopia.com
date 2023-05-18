@@ -355,6 +355,8 @@ function showExplanation(explanation) {
   document.getElementById("explanation").innerHTML = explanation;
   disableAnswerButtons();
   showExplanationPopup();
+			document.getElementById('show-explanation-btn').classList.remove("d-none");
+
 }
 
 // Function to show the explanation popup
@@ -362,11 +364,11 @@ function showExplanationPopup() {
   const explanationContainer = document.querySelector('.explanation-container');
   const closeButton = document.getElementById('close-btn');
 
-  explanationContainer.style.display = 'block';
+ // explanationContainer.style.display = 'block';
 
   closeButton.addEventListener('click', function() {
     explanationContainer.style.display = 'none';
-	  //	document.getElementById('show-explanation-btn').classList.add("d-none");
+	  
 
   });
 }
@@ -404,7 +406,8 @@ function enableAnswerButtons() {
 // Function to show the next question
 function nextQuestion() {
   currentQuestion++;
-
+document.getElementById('show-explanation-btn').classList.add("d-none");
+	
   if (currentQuestion < totalQuestions) {
     enableAnswerButtons();
     showQuestion();
