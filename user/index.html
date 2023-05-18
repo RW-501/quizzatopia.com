@@ -171,10 +171,41 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 				  
+	<div id="popupContainer" class="popup-container">
+  <div class="popup-content">
+    <button id="closeButton" class="close-button" onclick="closePopup()">&times;</button>
+    <div id="popupDetails" class="popup-details">
+      <!-- Badge details content will be dynamically added here -->
+    </div>
+  </div>
+</div>
+
+	<script>			  
 				  
-				  
-				  
-				  
+		function showBadgeDetails(name, description, quantity, earnedDate) {
+  const popupContainer = document.getElementById("popupContainer");
+  const popupDetails = document.getElementById("popupDetails");
+
+  // Set the badge details in the popup
+  popupDetails.innerHTML = `
+    <h3>${name}</h3>
+    <p>Description: ${description}</p>
+    <p>Quantity: ${quantity}</p>
+    <p>Earned Date: ${earnedDate}</p>
+  `;
+
+  // Show the popup
+  popupContainer.classList.add("active");
+}
+
+function closePopup() {
+  const popupContainer = document.getElementById("popupContainer");
+
+  // Hide the popup
+  popupContainer.classList.remove("active");
+}
+		  
+	</script>				  
 				  
 				  
 				  
@@ -214,15 +245,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	
 	
-	<div id="popupContainer" class="popup-container">
-  <div class="popup-content">
-    <button id="closeButton" class="close-button" onclick="closePopup()">&times;</button>
-    <div id="popupDetails" class="popup-details">
-      <!-- Badge details content will be dynamically added here -->
-    </div>
-  </div>
-</div>
-
 	
 	
 	
