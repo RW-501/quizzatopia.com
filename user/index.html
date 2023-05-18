@@ -209,6 +209,27 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 	      
+	
+	
+	
+	
+	
+	<div id="popupContainer" class="popup-container">
+  <div class="popup-content">
+    <button id="closeButton" class="close-button" onclick="closePopup()">&times;</button>
+    <div id="popupDetails" class="popup-details">
+      <!-- Badge details content will be dynamically added here -->
+    </div>
+  </div>
+</div>
+
+	
+	
+	
+	
+	
+	
+	
 	    <script>
 		    function openImagePopup() {
   const popup = document.getElementById("imagePopup");
@@ -340,8 +361,8 @@ function removeQuiz(key) {
     document.addEventListener('DOMContentLoaded', getLocalStorageUsage);
 		    
 
+
 		    
-	
 		    
 function displayBadges() {
   const savedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
@@ -353,18 +374,14 @@ function displayBadges() {
   <div class="badge-image-container">
     <div class="badge-layer-1"></div>
     <div class="badge-layer-2">
-      <img src="${newBadge.imageUrl}" alt="${newBadge.id}" class="badge-image">
+      <img src="${newBadge.imageUrl}" alt="${newBadge.id}" class="badge-image" onclick="showBadgeDetails('${newBadge.name}', '${newBadge.description}', ${newBadge.quantity}, '${newBadge.earnedDate}')">
     </div>
   </div>
-  <div class="card-body">
-  <h5 class="badge-name">${newBadge.name}</h5>
-    <div class="badge-info">
-        <p class="badge-description">${newBadge.description}</p>
-      <p class="badge-quantity">Quantity: ${newBadge.quantity}</p>
-      <p class="badge-earned-date">Earned on ${newBadge.earnedDate}</p>
-    </div>
+  <div class="card-body base">
+    <h5 class="badge-name">${newBadge.name}</h5>
   </div>
 </div>
+
 
   `).join("");
 
@@ -377,7 +394,31 @@ badgesContainer.innerHTML =  `<div class="card badge-card">No Badges Earned Yet`
 // Call the displayBadges function to show the badges
 displayBadges();
 		    
-		    		 
+		    
+		    
+	function showBadgeDetails(name, description, quantity, earnedDate) {
+  const popupContainer = document.getElementById("popupContainer");
+  const popupDetails = document.getElementById("popupDetails");
+
+  // Set the badge details in the popup
+  popupDetails.innerHTML = `
+    <h3>${name}</h3>
+    <p>Description: ${description}</p>
+    <p>Quantity: ${quantity}</p>
+    <p>Earned Date: ${earnedDate}</p>
+  `;
+
+  // Show the popup
+  popupContainer.classList.add("active");
+}
+
+function closePopup() {
+  const popupContainer = document.getElementById("popupContainer");
+
+  // Hide the popup
+  popupContainer.classList.remove("active");
+}
+	    		 
 function clearLocalStorage() {
   const confirmed = confirm('Are you sure you want to clear the local storage?');
   if (confirmed) {
