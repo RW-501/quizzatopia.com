@@ -148,7 +148,7 @@
   .quizzes-taken .card {
     border: none;
     background-color: #fafafa;
-    margin-bottom: 20px;
+        overflow: hidden;
   }
 
   .quizzes-taken .card-title {
