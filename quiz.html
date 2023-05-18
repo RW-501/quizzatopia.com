@@ -245,32 +245,10 @@
   margin-bottom: 5px;
 }
 
-	.explanation-container {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
-}
 
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 20px;
-  color: #888;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
+	
+	
 
-.close-button:hover {
-  color: #000;
-}
 
 #btn_container {
   display: flex;
@@ -550,9 +528,10 @@
         <li><button class="btn btn-primary answer-option"></button></li>
       </ul>
 <div class="explanation-container">
-  <button id="close-btn" class="close-button"></button>
+  <button id="close-btn" class="close-button">&times;</button>
   <div id="explanation"></div>
 </div>
+
 
 
     <!-- Explanation area -->
