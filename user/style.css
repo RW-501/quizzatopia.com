@@ -172,62 +172,53 @@
 
 
 
-
 .badge-card {
-  position: relative;
-  width: 200px;
-  background-color: #fff;
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
   border-radius: 10px;
-  margin: 10px;
-  overflow: hidden;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .badge-image-container {
+  flex-shrink: 0;
+  margin-right: 10px;
   position: relative;
-}
-
-.badge-layer-1,
-.badge-layer-2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.badge-layer-1 {
-  background-color: #4e5058;
-  opacity: 0.8;
-  z-index: 1;
-}
-
-.badge-layer-2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-}
-
-.badge-name {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  color: #fff;
-  font-size: 16px;
-}
-
-.badge-image {
   width: 100px;
   height: 100px;
-  object-fit: cover;
+  overflow: hidden;
   border-radius: 50%;
 }
 
+.badge-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
+.badge-content {
+  flex-grow: 1;
+}
 
+.badge-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
 
+.badge-description {
+  margin-bottom: 10px;
+}
 
+.badge-quantity,
+.badge-earned-date {
+  margin-bottom: 5px;
+}
 
+.badge-quantity {
+  font-weight: bold;
+}
 
 
 
