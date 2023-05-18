@@ -372,13 +372,16 @@ function displayBadges() {
       </div>
     </div>
   `).join("");
-}
 
 
 displayUserInfo();   
 // Call the displayBadges function to show the badges
 displayBadges();
-		    
+	}else{
+badgesContainer.innerHTML =  `<div class="card badge-card">No Badges Earned`;	
+	
+}
+	    
 		    
 		    		 
 function clearLocalStorage() {
