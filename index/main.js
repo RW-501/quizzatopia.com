@@ -84,10 +84,11 @@ const quizContent = `
 
 
 
-
-	function getQuizInfo() {
+function getQuizInfo() {
   const quizInfoContainer = document.getElementById('quizInfoContainer');
   quizInfoContainer.innerHTML = ''; // Clear previous content
+
+  let count = 0; // Counter for limiting the number of displayed quiz info
 
   for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i);
@@ -106,11 +107,18 @@ const quizContent = `
         <p>Quiz Taken: ${quizTime}</p>
         <p>Scored: ${questionCorrect}/${numberOfQuestions} Questions</p>
       `;
-      
+
       quizInfoContainer.appendChild(quizInfoElement);
+
+      count++; // Increment the counter
+
+      if (count >= 5) {
+        break; // Exit the loop when the limit is reached
+      }
     }
   }
 }
+
 
 // Call the getQuizInfo() function to populate the quiz recommendations on page load
 getQuizInfo();
