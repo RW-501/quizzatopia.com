@@ -1,0 +1,112 @@
+{
+  "quizCode": "QZ006",
+  "quizName": "Autodesk Certified User (ACU) Certification",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which Autodesk software is primarily used for 3D modeling and animation?",
+      "options": ["Autodesk Maya", "Autodesk AutoCAD", "Autodesk Revit", "Autodesk Inventor"],
+      "answer": "Autodesk Maya",
+      "explanation": "Autodesk Maya is primarily used for 3D modeling and animation."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which Autodesk software is used for architectural design and documentation?",
+      "options": ["Autodesk Revit", "Autodesk AutoCAD", "Autodesk Inventor", "Autodesk 3ds Max"],
+      "answer": "Autodesk Revit",
+      "explanation": "Autodesk Revit is used for architectural design and documentation."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which Autodesk software is commonly used for mechanical design and engineering?",
+      "options": ["Autodesk Inventor", "Autodesk Maya", "Autodesk AutoCAD", "Autodesk Fusion 360"],
+      "answer": "Autodesk Inventor",
+      "explanation": "Autodesk Inventor is commonly used for mechanical design and engineering."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which Autodesk software is used for creating 2D drawings and drafting?",
+      "options": ["Autodesk AutoCAD", "Autodesk Revit", "Autodesk Maya", "Autodesk Fusion 360"],
+      "answer": "Autodesk AutoCAD",
+      "explanation": "Autodesk AutoCAD is used for creating 2D drawings and drafting."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which Autodesk software is used for creating realistic visualizations and renderings?",
+      "options": ["Autodesk 3ds Max", "Autodesk Maya", "Autodesk Revit", "Autodesk Inventor"],
+      "answer": "Autodesk 3ds Max",
+      "explanation": "Autodesk 3ds Max is used for creating realistic visualizations and renderings."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which Autodesk software is used for creating 3D product designs and simulations?",
+      "options": ["Autodesk Fusion 360", "Autodesk Inventor", "Autodesk AutoCAD", "Autodesk Revit"],
+      "answer": "Autodesk Fusion 360",
+      "explanation": "Autodesk Fusion 360 is used for creating 3D product designs and simulations."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which Autodesk software is used for creating 3D models and animations for games?",
+      "options": ["Autodesk Maya", "Autodesk AutoCAD", "Autodesk Revit", "Autodesk Inventor"],
+      "answer": "Autodesk Maya",
+      "explanation": "Autodesk Maya is used for creating 3D models and animations for games."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which Autodesk software is used for creating detailed 3D models of building structures?",
+      "options": ["Autodesk Revit", "Autodesk AutoCAD", "Autodesk Maya", "Autodesk Fusion 360"],
+      "answer": "Autodesk Revit",
+      "explanation": "Autodesk Revit is used for creating detailed 3D models of building structures."
+    },
+    {
+     "questionNumber": 9,
+      "question": "Which Autodesk software is used for industrial design and 3D modeling?",
+      "options": ["Autodesk Fusion 360", "Autodesk Inventor", "Autodesk AutoCAD", "Autodesk 3ds Max"],
+      "answer": "Autodesk Fusion 360",
+      "explanation": "Autodesk Fusion 360 is used for industrial design and 3D modeling."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which Autodesk software is used for creating realistic 3D animations and visual effects?",
+      "options": ["Autodesk Maya", "Autodesk AutoCAD", "Autodesk Revit", "Autodesk Inventor"],
+      "answer": "Autodesk Maya",
+      "explanation": "Autodesk Maya is used for creating realistic 3D animations and visual effects."
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which Autodesk software is used for creating digital prototypes and simulations?",
+      "options": ["Autodesk Inventor", "Autodesk Fusion 360", "Autodesk AutoCAD", "Autodesk Revit"],
+      "answer": "Autodesk Inventor",
+      "explanation": "Autodesk Inventor is used for creating digital prototypes and simulations."
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which Autodesk software is used for creating 3D models and visualizations of mechanical designs?",
+      "options": ["Autodesk Fusion 360", "Autodesk Inventor", "Autodesk AutoCAD", "Autodesk 3ds Max"],
+      "answer": "Autodesk Inventor",
+      "explanation": "Autodesk Inventor is used for creating 3D models and visualizations of mechanical designs."
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which Autodesk software is used for creating 3D models and animations for films and visual effects?",
+      "options": ["Autodesk Maya", "Autodesk AutoCAD", "Autodesk Revit", "Autodesk 3ds Max"],
+      "answer": "Autodesk Maya",
+      "explanation": "Autodesk Maya is used for creating 3D models and animations for films and visual effects."
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which Autodesk software is used for creating 3D models and animations for architectural visualization?",
+      "options": ["Autodesk Revit", "Autodesk AutoCAD", "Autodesk Maya", "Autodesk 3ds Max"],
+      "answer": "Autodesk 3ds Max",
+      "explanation": "Autodesk 3ds Max is used for creating 3D models and animations for architectural visualization."
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which Autodesk software is used for creating 3D models and simulations for product design?",
+      "options": ["Autodesk Fusion 360", "Autodesk Inventor", "Autodesk AutoCAD", "Autodesk Revit"],
+      "answer": "Autodesk Inventor",
+      "explanation": "Autodesk Inventor is used for creating 3D models and simulations for product design."
+    }
+  ]
+}
