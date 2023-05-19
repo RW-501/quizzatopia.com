@@ -1,0 +1,112 @@
+{
+  "quizCode": "QZ005",
+  "quizName": "Adobe Certified Associate (ACA) Certification",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which Adobe application is primarily used for photo editing and manipulation?",
+      "options": ["Adobe Photoshop", "Adobe Illustrator", "Adobe InDesign", "Adobe Premiere Pro"],
+      "answer": "Adobe Photoshop",
+      "explanation": "Adobe Photoshop is primarily used for photo editing and manipulation."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which tool in Adobe Illustrator is used to create precise paths and shapes?",
+      "options": ["Pen Tool", "Brush Tool", "Pencil Tool", "Eraser Tool"],
+      "answer": "Pen Tool",
+      "explanation": "The Pen Tool in Adobe Illustrator is used to create precise paths and shapes."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which Adobe application is used for creating and publishing interactive digital documents?",
+      "options": ["Adobe InDesign", "Adobe Premiere Pro", "Adobe After Effects", "Adobe Audition"],
+      "answer": "Adobe InDesign",
+      "explanation": "Adobe InDesign is used for creating and publishing interactive digital documents."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which Adobe application is used for video editing and post-production?",
+      "options": ["Adobe Premiere Pro", "Adobe Photoshop", "Adobe Illustrator", "Adobe Audition"],
+      "answer": "Adobe Premiere Pro",
+      "explanation": "Adobe Premiere Pro is used for video editing and post-production."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which Adobe application is primarily used for creating vector graphics and illustrations?",
+      "options": ["Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign", "Adobe After Effects"],
+      "answer": "Adobe Illustrator",
+      "explanation": "Adobe Illustrator is primarily used for creating vector graphics and illustrations."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which Adobe application is used for creating and editing audio files?",
+      "options": ["Adobe Audition", "Adobe Premiere Pro", "Adobe After Effects", "Adobe InDesign"],
+      "answer": "Adobe Audition",
+      "explanation": "Adobe Audition is used for creating and editing audio files."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which Adobe application is used for creating motion graphics and visual effects?",
+      "options": ["Adobe After Effects", "Adobe Illustrator", "Adobe Photoshop", "Adobe Premiere Pro"],
+      "answer": "Adobe After Effects",
+      "explanation": "Adobe After Effects is used for creating motion graphics and visual effects."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which Adobe application is used for designing and publishing print and digital media?",
+      "options": ["Adobe InDesign", "Adobe Photoshop", "Adobe Illustrator", "Adobe Premiere Pro"],
+      "answer": "Adobe InDesign",
+      "explanation": "Adobe InDesign is used for designing and publishing print and digital media."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which Adobe application is used for creating and editing vector-based graphics?",
+      "options": ["Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign", "Adobe After Effects"],
+      "answer": "Adobe Illustrator",
+      "explanation": "Adobe Illustrator is used for creating and editing vector-based graphics."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which Adobe application is used for creating and editing video content?",
+      "options": ["Adobe Premiere Pro", "Adobe Photoshop", "Adobe Illustrator", "Adobe Audition"],
+      "answer": "Adobe Premiere Pro",
+      "explanation": "Adobe Premiere Pro is used for creating and editing video content."
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which Adobe application is used for creating and editing animated graphics?",
+      "options": ["Adobe After Effects", "Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign"],
+      "answer": "Adobe After Effects",
+      "explanation": "Adobe After Effects is used for creating and editing animated graphics."
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which Adobe application is used for designing and editing web and mobile graphics?",
+      "options": ["Adobe Photoshop", "Adobe Illustrator", "Adobe InDesign", "Adobe XD"],
+      "answer": "Adobe XD",
+      "explanation": "Adobe XD is used for designing and editing web and mobile graphics."
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which Adobe application is used for creating and editing vector-based illustrations?",
+      "options": ["Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign", "Adobe Premiere Pro"],
+      "answer": "Adobe Illustrator",
+      "explanation": "Adobe Illustrator is used for creating and editing vector-based illustrations."
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which Adobe application is used for creating and editing 3D models and animations?",
+      "options": ["Adobe Dimension", "Adobe Illustrator", "Adobe Photoshop", "Adobe InDesign"],
+      "answer": "Adobe Dimension",
+      "explanation": "Adobe Dimension is used for creating and editing 3D models and animations."
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which Adobe application is used for designing and publishing eBooks?",
+      "options": ["Adobe InDesign", "Adobe Premiere Pro", "Adobe After Effects", "Adobe Audition"],
+      "answer": "Adobe InDesign",
+      "explanation": "Adobe InDesign is used for designing and publishing eBooks."
+    }
+  ]
+}
