@@ -1,0 +1,142 @@
+{
+  "quizCode": "QCBIT",
+  "quizName": "Behavioral Interviews Quiz",
+  "categoryName": "Job Interviews",
+  "editionNumber": 1,
+  "numberOfQuestions": 10,
+  "description": "Test your knowledge of behavioral interviews and learn how to effectively showcase your skills and experiences.",
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Tell me about a time when you faced a difficult challenge at work and how you resolved it.",
+      "difficulty": "Medium",
+      "options": [
+        "I sought help from my colleagues and together we found a solution.",
+        "I ignored the challenge and hoped it would go away on its own.",
+        "I blamed others for the challenge and avoided taking responsibility.",
+        "I quit the job because I couldn't handle the challenge."
+      ],
+      "answer": "I sought help from my colleagues and together we found a solution.",
+      "explanation": "This answer demonstrates collaboration, problem-solving skills, and a proactive approach to challenges."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Give an example of a time when you had to work with a difficult team member and how you managed the situation.",
+      "difficulty": "Medium",
+      "options": [
+        "I confronted the team member and told them to improve their behavior.",
+        "I avoided working with the team member as much as possible.",
+        "I sought guidance from my supervisor to address the issue.",
+        "I gossiped about the team member to other colleagues."
+      ],
+      "answer": "I sought guidance from my supervisor to address the issue.",
+      "explanation": "This answer shows maturity, problem-solving skills, and a willingness to seek help and resolve conflicts in a professional manner."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Describe a situation where you had to meet a tight deadline and how you managed your time to complete the task.",
+      "difficulty": "Medium",
+      "options": [
+        "I procrastinated and rushed to complete the task at the last minute.",
+        "I asked for an extension on the deadline.",
+        "I prioritized tasks, created a schedule, and worked efficiently to meet the deadline.",
+        "I delegated the task to someone else and took credit for their work."
+      ],
+      "answer": "I prioritized tasks, created a schedule, and worked efficiently to meet the deadline.",
+      "explanation": "This answer demonstrates time management skills, organization, and a proactive approach to meeting deadlines."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Tell me about a time when you had to deal with a difficult customer and how you handled the situation.",
+      "difficulty": "Medium",
+      "options": [
+        "I argued with the customer and refused to provide assistance.",
+        "I ignored the customer's complaints and hoped they would go away.",
+        "I empathized with the customer, actively listened to their concerns, and offered a solution.",
+        "I blamed the customer for their difficulties and refused to help."
+      ],
+      "answer": "I empathized with the customer, actively listened to their concerns, and offered a solution.",
+      "explanation": "This answer demonstrates customer service skills, empathy, and problem-solving abilities."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Give an example of a time when you had to work under pressure and how you handled the situation.",
+      "difficulty": "Medium",
+      "options": [
+        "I panicked and made mistakes due to the pressure.",
+        "I asked for someone else to take over the task.",
+       
+
+ "I stayed calm, prioritized tasks, and focused on completing them one at a time.",
+        "I blamed others for the pressure and avoided taking responsibility."
+      ],
+      "answer": "I stayed calm, prioritized tasks, and focused on completing them one at a time.",
+      "explanation": "This answer demonstrates the ability to handle pressure, prioritize tasks, and maintain focus under challenging circumstances."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Describe a situation where you had to resolve a conflict between two team members and how you approached it.",
+      "difficulty": "Medium",
+      "options": [
+        "I took sides and favored one team member over the other.",
+        "I ignored the conflict and hoped it would resolve itself.",
+        "I facilitated a calm and open conversation between the team members to understand their perspectives and find a resolution.",
+        "I escalated the conflict to my supervisor without attempting to resolve it."
+      ],
+      "answer": "I facilitated a calm and open conversation between the team members to understand their perspectives and find a resolution.",
+      "explanation": "This answer shows conflict resolution skills, leadership abilities, and a proactive approach to addressing interpersonal issues within a team."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Tell me about a time when you had to adapt to a significant change at work and how you handled it.",
+      "difficulty": "Medium",
+      "options": [
+        "I resisted the change and refused to adapt to it.",
+        "I complained about the change to my colleagues.",
+        "I embraced the change, sought training if necessary, and proactively adapted to the new circumstances.",
+        "I quit the job because I couldn't accept the change."
+      ],
+      "answer": "I embraced the change, sought training if necessary, and proactively adapted to the new circumstances.",
+      "explanation": "This answer demonstrates adaptability, a positive attitude towards change, and a willingness to learn and grow."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Describe a situation where you had to take the lead on a project or initiative and how you motivated your team to achieve the desired outcome.",
+      "difficulty": "Medium",
+      "options": [
+        "I micromanaged my team members and dictated their every move.",
+        "I let my team members work independently without providing any guidance or support.",
+        "I delegated tasks based on team members' strengths, provided guidance and support, and recognized their contributions.",
+        "I took credit for my team's work and didn't acknowledge their efforts."
+      ],
+      "answer": "I delegated tasks based on team members' strengths, provided guidance and support, and recognized their contributions.",
+      "explanation": "This answer demonstrates leadership skills, delegation abilities, and the importance of recognizing and valuing team members' contributions."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Tell me about a time when you had to make a difficult decision and how you arrived at your choice.",
+      "difficulty": "Medium",
+      "options": [
+        "I made the decision without considering any alternatives.",
+        "I sought input from others, evaluated different options, and made an informed decision.",
+        "I delayed making the decision and hoped someone else would take responsibility.",
+        "I made a decision based solely on my personal preferences."
+      ],
+      "answer": "I sought input from others, evaluated different options, and made an informed decision.",
+      "explanation": "This answer demonstrates critical thinking skills, decision-making abilities, and the importance of considering different perspectives before making a choice."
+    },
+    {
+      "questionNumber": 10,
+      "question":"Give an example of a time when you had to handle multiple tasks or projects simultaneously and how you managed your workload.",
+      "difficulty": "Medium",
+      "options": [
+        "I ignored some tasks or projects and focused only on the ones I preferred.",
+        "I worked long hours and sacrificed personal time to complete all the tasks or projects.",
+        "I prioritized tasks, created a schedule, and effectively managed my time and resources to handle multiple responsibilities.",
+        "I delegated all tasks or projects to others and took credit for their work."
+      ],
+      "answer": "I prioritized tasks, created a schedule, and effectively managed my time and resources to handle multiple responsibilities.",
+      "explanation": "This answer demonstrates organizational skills, time management abilities, and the capability to handle multiple tasks or projects efficiently."
+    }
+  ]
+}
