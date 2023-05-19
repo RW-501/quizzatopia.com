@@ -807,9 +807,12 @@ new Chart(ctx, {
     
 // Get the current URL and parse its search parameters
 const urlParams = new URLSearchParams(window.location.search);
-
-// Get the value of the "q" parameter
+	  
+// Get the values of the "q" and "e" parameters
 let q = urlParams.get('q');
+let e = urlParams.get('e');
+	  
+
 
 if (q === null) {
   const files = [
@@ -1027,24 +1030,39 @@ quizInfo.quizLink = q;  // Add the "q" parameter to the quizInfo object
 	  
 	  
 	  
-	 
-// Fetch and assign the data
-function fetchData(q) {
-  fetch("q/" + q + ".json")
-    .then(response => response.json())
-    .then(data => {
-      if (Array.isArray(data)) {
-        // Handle old JSON structure
-        console.log("Old JSON structure");
+	  
+// Function to check if the edition parameter is valid
+function isValidEdition(e) {
+  return !isNaN(e) && parseInt(e) > 1;
+}
 
-        if (data.length === 0) {
-          // Handle empty data
-          console.log("Empty data");
-          const randomFile = getRandomFile(files);
-          fetchData(randomFile);
+// Fetch and assign the data
+function fetchData(q, e) {
+  if (e && isValidEdition(e)) {
+    fetch(`quiz/Quizzes/${e}/${q}.json`)
+      .then(response => response.json())
+      .then(data => {
+        if (Array.isArray(data)) {
+          // Handle old JSON structure
+          console.log("Old JSON structure");
+
+          if (data.length === 0) {
+            // Handle empty data
+            console.log("Empty data");
+            const randomFile = getRandomFile(files);
+            fetchData(randomFile, e);
+          } else {
+            // Use the questions data here
+            const questionData = data.map(questionObj => ({
+              question: questionObj.question,
+              answer: questionObj.answer,
+              options: questionObj.options,
+              explanation: questionObj.explanation
+            }));
+          }
         } else {
           // Use the questions data here
-          const questionData = data.map(questionObj => ({
+          const questionData = data.questions.map(questionObj => ({
             question: questionObj.question,
             answer: questionObj.answer,
             options: questionObj.options,
@@ -1068,44 +1086,71 @@ function fetchData(q) {
           // Display the test information
           displayTestInfo(quizCode, quizName, numberOfQuestions);
         }
-      } else {
-        // Handle new JSON structure
-        console.log("New JSON structure");
+      })
+      .catch(error => {
+        console.error("Error fetching data:", error);
+      });
+  } else {
+    fetch(`q/${q}.json`)
+      .then(response => response.json())
+      .then(data => {
+        if (Array.isArray(data)) {
+          // Handle old JSON structure
+          console.log("Old JSON structure");
 
-        if (data.questions.length === 0) {
-          // Handle empty data
-          console.log("Empty data");
-          const randomFile = getRandomFile(files);
-          fetchData(randomFile);
+          if (data.length === 0) {
+            // Handle empty data
+            console.log("Empty data");
+            const randomFile = getRandomFile(files);
+            fetchData(randomFile);
+          } else {
+            // Use the questions data here
+            const questionData = data.map(questionObj => ({
+              question: questionObj.question,
+              answer: questionObj.answer,
+              options: questionObj.options,
+              explanation: questionObj.explanation
+            }));
+          }
         } else {
-          // Use the questions data here
-          const questionData = data.questions.map(questionObj => ({
-            question: questionObj.question,
-            answer: questionObj.answer,
-            options: questionObj.options,
-            explanation: questionObj.explanation
-          }));
+          // Handle new JSON structure
+          console.log("New JSON structure");
 
-          // Update quizCode, quizName, numberOfQuestions
-          quizCode = data.quizCode;
-          quizName = data.quizName;
-          numberOfQuestions = data.numberOfQuestions;
+          if (data.questions.length === 0) {
+            // Handle empty data
+            console.log("Empty data");
+            const randomFile = getRandomFile(files);
+            fetchData(randomFile);
+          } else {
+            // Use the questions data here
+            const questionData = data.questions.map(questionObj => ({
+              question: questionObj.question,
+              answer: questionObj.answer,
+              options: questionObj.options,
+              explanation: questionObj.explanation
+            }));
 
-          // Check quiz code and retrieve or save quiz info
-          const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
+            // Update quizCode, quizName, numberOfQuestions
+            quizCode = data.quizCode;
+            quizName = data.quizName;
+            numberOfQuestions = data.numberOfQuestions;
 
-          questions.push(...questionData);
-          shuffleArray(questions);
+            // Check quiz code and retrieve or save quiz info
+            const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
 
-          // Access and use the retrieved quiz information
-          const questionsCompleted = quizInfo.questionsCompleted;
+            questions.push(...questionData);
+            shuffleArray(questions);
 
-          // Display the test information
-          displayTestInfo(quizCode, quizName, numberOfQuestions);
+            // Access and use the retrieved quiz information
+            const questionsCompleted = quizInfo.questionsCompleted;
+
+            // Display the test information
+            displayTestInfo(quizCode, quizName, numberOfQuestions);
+          }
         }
-      }
-    })
-    .catch(error => console.error(error));
+      })
+      .catch(error => console.error(error));
+  }
 }
 
 // Call fetchData with the initial q value
