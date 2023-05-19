@@ -1,0 +1,112 @@
+{
+  "quizCode": "QZ007",
+  "quizName": "Unity Certified User Certification",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which programming language is commonly used in Unity development?",
+      "options": ["C#", "Java", "Python", "JavaScript"],
+      "answer": "C#",
+      "explanation": "C# is commonly used in Unity development."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which component in Unity is responsible for controlling object behavior and logic?",
+      "options": ["Script", "Rigidbody", "Collider", "Transform"],
+      "answer": "Script",
+      "explanation": "The Script component is responsible for controlling object behavior and logic in Unity."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which Unity feature allows for the creation of realistic lighting and shadows?",
+      "options": ["Lighting", "Rendering", "Physics", "Animation"],
+      "answer": "Lighting",
+      "explanation": "The Lighting feature in Unity allows for the creation of realistic lighting and shadows."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which Unity component is used to detect and respond to user input?",
+      "options": ["Input", "Collider", "Rigidbody", "Animator"],
+      "answer": "Input",
+      "explanation": "The Input component in Unity is used to detect and respond to user input."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which Unity feature is used to animate objects and create character movements?",
+      "options": ["Animation", "Rendering", "Physics", "Scripting"],
+      "answer": "Animation",
+      "explanation": "The Animation feature in Unity is used to animate objects and create character movements."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which Unity component is responsible for simulating physics and collisions?",
+      "options": ["Rigidbody", "Script", "Animator", "Input"],
+      "answer": "Rigidbody",
+      "explanation": "The Rigidbody component in Unity is responsible for simulating physics and collisions."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which Unity feature allows for the creation of user interfaces and menus?",
+      "options": ["UI System", "Rendering", "Physics", "Animation"],
+      "answer": "UI System",
+      "explanation": "The UI System in Unity allows for the creation of user interfaces and menus."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which Unity component is used to control and blend between different animations?",
+      "options": ["Animator", "Script", "Input", "Rigidbody"],
+      "answer": "Animator",
+      "explanation": "The Animator component in Unity is used to control and blend between different animations."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which Unity feature is used to optimize performance by culling objects outside the camera's view?",
+      "options": ["Frustum Culling", "Rendering", "Physics", "Scripting"],
+      "answer": "Frustum Culling",
+      "explanation": "Frustum Culling in Unity is used to optimize performance by culling objects outside the camera's view."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which Unity component is used to detect and handle collisions between objects?",
+      "options": ["Collider", "Script", "Rigidbody", "Animator"],
+      "answer": "Collider",
+      "explanation": "The Collider component in Unity is used to detect and handle collisions between objects."
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which Unity feature allows for the creation of complex and realistic particle effects?",
+      "options": ["Particle System", "Rendering", "Physics", "Animation"],
+      "answer": "Particle System",
+      "explanation": "The Particle System feature in Unity allows for the creation of complex and realistic particle effects."
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which Unity component is used to change object positions, rotations, and scales?",
+      "options": ["Transform", "Script", "Input", "Animator"],
+      "answer": "Transform",
+      "explanation": "The Transform component in Unity is used to change object positions, rotations, and scales."
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which Unity feature is used to create AI behavior and navigation for characters and objects?",
+      "options": ["Navigation", "Rendering", "Physics", "Scripting"],
+      "answer": "Navigation",
+      "explanation": "The Navigation feature in Unity is used to create AI behavior and navigation for characters and objects."
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which Unity component is used to play sound effects and background music?",
+      "options": ["Audio Source", "Collider", "Rigidbody", "Animator"],
+      "answer": "Audio Source",
+      "explanation": "The Audio Source component in Unity is used to play sound effects and background music."
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which Unity feature is used to build and deploy games to different platforms?",
+      "options": ["Build Settings", "Rendering", "Physics", "Animation"],
+      "answer": "Build Settings",
+      "explanation": "The Build Settings feature in Unity is used to build and deploy games to different platforms."
+    }
+  ]
+}
