@@ -187,9 +187,9 @@ function generateQuizAdPattern(numQuestions, numAds) {
 
 
 
-   const getUserInfo = JSON.parse(localStorage.getItem("userInfo"));
+   const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
-if( getUserInfo.userName == "admin" ||  getUserInfo.userName == "Admin"){
+if( userInfo.userName == "admin" ||  userInfo.userName == "Admin"){
 	
   const adDuration = 1; // Duration of each ad in seconds
   let adCount = 0; // Counter for the number of ads shown
