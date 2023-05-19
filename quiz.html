@@ -1028,44 +1028,81 @@ quizInfo.quizLink = q;  // Add the "q" parameter to the quizInfo object
 	  
 	  
 	 
-	  
 // Fetch and assign the data
 function fetchData(q) {
   fetch("q/" + q + ".json")
     .then(response => response.json())
     .then(data => {
-      if (data.length === 0) {
-        // Handle empty data
-        console.log("Empty data");
-        const randomFile = getRandomFile(files);
-        fetchData(randomFile);
+      if (Array.isArray(data)) {
+        // Handle old JSON structure
+        console.log("Old JSON structure");
+
+        if (data.length === 0) {
+          // Handle empty data
+          console.log("Empty data");
+          const randomFile = getRandomFile(files);
+          fetchData(randomFile);
+        } else {
+          // Use the questions data here
+          const questionData = data.map(questionObj => ({
+            question: questionObj.question,
+            answer: questionObj.answer,
+            options: questionObj.options,
+            explanation: questionObj.explanation
+          }));
+
+          // Update quizCode, quizName, numberOfQuestions
+          quizCode = "";
+          quizName = "";
+          numberOfQuestions = data.length;
+
+          // Check quiz code and retrieve or save quiz info
+          const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
+
+          questions.push(...questionData);
+          shuffleArray(questions);
+
+          // Access and use the retrieved quiz information
+          const questionsCompleted = quizInfo.questionsCompleted;
+
+          // Display the test information
+          displayTestInfo(quizCode, quizName, numberOfQuestions);
+        }
       } else {
-	              console.log(" data:    "+data);
+        // Handle new JSON structure
+        console.log("New JSON structure");
 
-        // Use the questions data here
-        const questionData = data.questions.map(questionObj => ({
-          question: questionObj.question,
-          answer: questionObj.answer,
-          options: questionObj.options,
-          explanation: questionObj.explanation
-        }));
+        if (data.questions.length === 0) {
+          // Handle empty data
+          console.log("Empty data");
+          const randomFile = getRandomFile(files);
+          fetchData(randomFile);
+        } else {
+          // Use the questions data here
+          const questionData = data.questions.map(questionObj => ({
+            question: questionObj.question,
+            answer: questionObj.answer,
+            options: questionObj.options,
+            explanation: questionObj.explanation
+          }));
 
-        // Update quizCode, quizName, numberOfQuestions
-        quizCode = data.quizCode;
-        quizName = data.quizName;
-        numberOfQuestions = data.numberOfQuestions;
+          // Update quizCode, quizName, numberOfQuestions
+          quizCode = data.quizCode;
+          quizName = data.quizName;
+          numberOfQuestions = data.numberOfQuestions;
 
-        // Check quiz code and retrieve or save quiz info
-        const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
+          // Check quiz code and retrieve or save quiz info
+          const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
 
-        questions.push(...questionData);
-        shuffleArray(questions);
+          questions.push(...questionData);
+          shuffleArray(questions);
 
-        // Access and use the retrieved quiz information
-        const questionsCompleted = quizInfo.questionsCompleted;
+          // Access and use the retrieved quiz information
+          const questionsCompleted = quizInfo.questionsCompleted;
 
-        // Display the  test information
-        displayTestInfo(quizCode, quizName, numberOfQuestions);
+          // Display the test information
+          displayTestInfo(quizCode, quizName, numberOfQuestions);
+        }
       }
     })
     .catch(error => console.error(error));
@@ -1073,6 +1110,7 @@ function fetchData(q) {
 
 // Call fetchData with the initial q value
 fetchData(q);
+
 
 
 	      
