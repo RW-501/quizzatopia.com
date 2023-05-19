@@ -1,151 +1,114 @@
 {
-  "quizCode": "QZ0631211",
+  "quizCode": "QZ003",
   "quizName": "Movie Trivia Quiz",
-  "numberOfQuestions": 13,
+  "numberOfQuestions": 15,
   "questions": [
     {
-      "question": "Who directed the movie 'Jaws'?",
-      "options": [
-        "Steven Spielberg",
-        "Martin Scorsese",
-        "Francis Ford Coppola",
-        "Quentin Tarantino"
-      ],
-      "answer": "Steven Spielberg",
-      "explanation": "Steven Spielberg directed the movie 'Jaws'.",
-      "difficulty": "Easy"
+      "questionNumber": 1,
+      "question": "Which actor played the character 'Forrest Gump' in the movie 'Forrest Gump'?",
+      "options": ["Tom Hanks", "Leonardo DiCaprio", "Brad Pitt", "Johnny Depp"],
+      "answer": "Tom Hanks",
+      "explanation": "Tom Hanks played the character 'Forrest Gump' in the movie 'Forrest Gump'."
     },
     {
-      "question": "What is the name of the protagonist in 'The Godfather'?",
-      "options": [
-        "Tony Montana",
-        "Don Corleone",
-        "Michael Corleone",
-        "Vito Corleone"
-      ],
-      "answer": "Michael Corleone",
-      "explanation": "Michael Corleone is the protagonist in 'The Godfather'.",
-      "difficulty": "Easy"
+      "questionNumber": 2,
+      "question": "What is the highest-grossing film of all time?",
+      "options": ["Avengers: Endgame", "Avatar", "Titanic", "Star Wars: The Force Awakens"],
+      "answer": "Avengers: Endgame",
+      "explanation": "Avengers: Endgame is the highest-grossing film of all time."
     },
     {
-      "question": "What is the name of the main character in 'Forrest Gump'?",
-      "options": [
-        "Forrest Gump",
-        "Tom Hanks",
-        "Jenny Curran",
-        "Bubba Blue"
-      ],
-      "answer": "Forrest Gump",
-      "explanation": "Forrest Gump is the name of the main character in the movie 'Forrest Gump'.",
-      "difficulty": "Easy"
+      "questionNumber": 3,
+      "question": "Who directed the movie 'The Shawshank Redemption'?",
+      "options": ["Frank Darabont", "Martin Scorsese", "Steven Spielberg", "Christopher Nolan"],
+      "answer": "Frank Darabont",
+      "explanation": "Frank Darabont directed the movie 'The Shawshank Redemption'."
     },
     {
-      "question": "Which movie won the Academy Award for Best Picture in 2020?",
-      "options": [
-        "Parasite",
-        "The Irishman",
-        "Once Upon a Time in Hollywood",
-        "Nomadland"
-      ],
+      "questionNumber": 4,
+      "question": "Which actress won the Best Actress award at the 2020 Academy Awards?",
+      "options": ["Renée Zellweger", "Scarlett Johansson", "Charlize Theron", "Saoirse Ronan"],
+      "answer": "Renée Zellweger",
+      "explanation": "Renée Zellweger won the Best Actress award at the 2020 Academy Awards."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Who directed the movie 'The Godfather'?",
+      "options": ["Francis Ford Coppola", "Alfred Hitchcock", "Stanley Kubrick", "Quentin Tarantino"],
+      "answer": "Francis Ford Coppola",
+      "explanation": "Francis Ford Coppola directed the movie 'The Godfather'."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which actor played the character 'Tony Stark' in the Marvel Cinematic Universe?",
+      "options": ["Robert Downey Jr.", "Chris Evans", "Mark Ruffalo", "Chris Hemsworth"],
+      "answer": "Robert Downey Jr.",
+      "explanation": "Robert Downey Jr. played the character 'Tony Stark' in the Marvel Cinematic Universe."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which movie won the Best Picture award at the 2021 Academy Awards?",
+      "options": ["Nomadland", "The Trial of the Chicago 7", "Minari", "Promising Young Woman"],
       "answer": "Nomadland",
-      "explanation": "Nomadland won the Academy Award for Best Picture in 2020.",
-      "difficulty": "Easy"
+      "explanation": "Nomadland won the Best Picture award at the 2021 Academy Awards."
     },
     {
-      "question": "Who played the role of The Joker in the movie 'The Dark Knight'?",
-      "options": [
-        "Jack Nicholson",
-        "Joaquin Phoenix",
-        "Heath Ledger",
-        "Mark Hamill"
-      ],
-      "answer": "Heath Ledger",
-      "explanation": "Heath Ledger played the role of The Joker in the movie 'The Dark Knight'.",
-      "difficulty": "Easy"
+      "questionNumber": 8,
+      "question": "Who played the character 'Joker' in the 2019 movie 'Joker'?",
+      "options": ["Joaquin Phoenix", "Heath Ledger", "Jared Leto", "Jack Nicholson"],
+      "answer": "Joaquin Phoenix",
+      "explanation": "Joaquin Phoenix played the character 'Joker' in
+
+ the 2019 movie 'Joker'."
     },
     {
-      "question": "What is the name of the fictional city where the Batman movies take place?",
-      "options": [
-        "Metropolis",
-        "Gotham",
-        "Central City",
-        "Star City"
-      ],
-      "answer": "Gotham",
-      "explanation": "The fictional city where the Batman movies take place is called Gotham.",
-      "difficulty": "Easy"
+      "questionNumber": 9,
+      "question": "Which actress played the character 'Katniss Everdeen' in 'The Hunger Games' series?",
+      "options": ["Jennifer Lawrence", "Emma Stone", "Natalie Portman", "Anne Hathaway"],
+      "answer": "Jennifer Lawrence",
+      "explanation": "Jennifer Lawrence played the character 'Katniss Everdeen' in 'The Hunger Games' series."
     },
     {
-      "question": "What is the name of the main character in 'Rocky'?",
-      "options": [
-        "Adrian",
-        "Apollo Creed",
-        "Mickey Goldmill",
-        "Rocky Balboa"
-      ],
-      "answer": "Rocky Balboa",
-      "explanation": "Rocky Balboa is the name of the main character in the movie 'Rocky'.",
-      "difficulty": "Easy"
+      "questionNumber": 10,
+      "question": "Who directed the movie 'Inception'?",
+      "options": ["Christopher Nolan", "David Fincher", "Quentin Tarantino", "Steven Spielberg"],
+      "answer": "Christopher Nolan",
+      "explanation": "Christopher Nolan directed the movie 'Inception'."
     },
     {
-      "question": "Which movie is known for the line 'Here's Johnny!'?",
-      "options": [
-        "The Shining",
-        "Psycho",
-        "Halloween",
-        "Friday the 13th"
-      ],
-      "answer": "The Shining",
-      "explanation": "The movie 'The Shining' is known for the line 'Here's Johnny!'.",
-      "difficulty": "Medium"
+      "questionNumber": 11,
+      "question": "Which actor played the character 'Neo' in 'The Matrix' trilogy?",
+      "options": ["Keanu Reeves", "Matt Damon", "Tom Cruise", "Brad Pitt"],
+      "answer": "Keanu Reeves",
+      "explanation": "Keanu Reeves played the character 'Neo' in 'The Matrix' trilogy."
     },
     {
-      "question": "Who played the role of Indiana Jones in the 'Indiana Jones' movies?",
-      "options": [
-        "Harrison Ford",
-        "Tom Cruise",
-        "Johnny Depp",
-        "Brad Pitt"
-      ],
-      "answer": "Harrison Ford",
-      "explanation": "Harrison Ford played the role of Indiana Jones in the 'Indiana Jones' movies.",
-      "difficulty": "Medium"
+      "questionNumber": 12,
+      "question": "Which movie features the famous line, 'Here's looking at you, kid'?",
+      "options": ["Casablanca", "Gone with the Wind", "The Godfather", "Citizen Kane"],
+      "answer": "Casablanca",
+      "explanation": "The movie 'Casablanca' features the famous line, 'Here's looking at you, kid'."
     },
     {
-      "question": "What is the name of the main character in 'The Matrix'?",
-      "options": [
-        "Neo",
-        "Trinity",
-        "Morpheus",
-        "Agent Smith"
-      ],
-      "answer": "Neo",
-      "explanation": "The main character in 'The Matrix' is named Neo.",
-      "difficulty": "Medium"
+      "questionNumber": 13,
+      "question": "Who directed the movie 'Pulp Fiction'?",
+      "options": ["Quentin Tarantino", "Martin Scorsese", "Stanley Kubrick", "David Fincher"],
+      "answer": "Quentin Tarantino",
+      "explanation": "Quentin Tarantino directed the movie 'Pulp Fiction'."
     },
     {
-      "question": "Which actor plays the role of Batman in 'The Dark Knight' trilogy?",
-      "options": [
-        "Christian Bale",
-        "Ben Affleck",
-        "Michael Keaton",
-        "Val Kilmer"
-      ],
-      "answer": "Christian Bale",
-      "explanation": "Christian Bale plays the role of Batman in 'The Dark Knight' trilogy.",
-      "difficulty": "Medium"
+      "questionNumber": 14,
+      "question": "Which actor played the character 'Jack Sparrow' in the 'Pirates of the Caribbean' series?",
+      "options": ["Johnny Depp", "Orlando Bloom", "Brad Pitt", "Leonardo DiCaprio"],
+      "answer": "Johnny Depp",
+      "explanation": "Johnny Depp played the character 'Jack Sparrow' in the 'Pirates of the Caribbean' series."
     },
     {
-      "question": "What is the name of the lion in 'The Lion King'?",
-      "options": [
-        "Simba",
-        "Mufasa",
-        "Scar",
-        "Nala"
-      ],
-      "answer": "Simba",
-      "explanation": "Simba is the name of the lion in 'The Lion King'.",
-      "difficulty": "Medium"
+      "questionNumber": 15,
+      "question": "Which movie features the character 'Hannibal Lecter'?",
+      "options": ["The Silence of the Lambs", "Se7en", "Psycho", "American Psycho"],
+      "answer": "The Silence of the Lambs",
+      "explanation": "The movie 'The Silence of the Lambs' features the character 'Hannibal Lecter'."
     }
   ]
 }
