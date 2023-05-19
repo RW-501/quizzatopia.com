@@ -1036,15 +1036,20 @@ function isValidEdition(e) {
   return !isNaN(e) && parseInt(e) > 1;
 }
 
+	  
+	
+	  
+	  
+	  
 // Fetch and assign the data
-function fetchData(q, e) {
+function fetchData(q, e) 
   if (e && isValidEdition(e)) {
-    fetch(`/quiz/Quizzes/${e}/${q}.json`)
+	            console.log("New JSON structure 2nd ");
+    fetch(`/quiz/Quizzes/${q}.json`)
       .then(response => response.json())
       .then(data => {
         if (Array.isArray(data)) {
           // Handle old JSON structure
-          console.log("Old JSON structure");
 
           if (data.length === 0) {
             // Handle empty data
@@ -1114,7 +1119,6 @@ function fetchData(q, e) {
           }
         } else {
           // Handle new JSON structure
-          console.log("New JSON structure");
 
           if (data.questions.length === 0) {
             // Handle empty data
