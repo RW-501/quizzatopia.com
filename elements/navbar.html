@@ -42,7 +42,10 @@ if (window.location.pathname.substr(-5) === '.html' && window.location.pathname.
       </ul>
     </div>
      <form class="form-inline my-2 my-lg-0 search-bar">
-      <input class="form-control mr-sm-2" type="search" id="quiz-search" placeholder="Search quizzes" aria-label="Search">
+      <input class="form-control mr-sm-2" type="search" id="searchInput" placeholder="Search quizzes" aria-label="Search">
+	     <button onclick="search()">Search</button>
+	     <div id="searchResults"></div>
+
     </form>
     <!-- Profile pic and name area -->
     <div class="profile-area">
@@ -108,62 +111,58 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
 
 	
 
- $(document).ready(function() {
-      $('#quiz-search').on('input', function() {
-        var searchTerm = $(this).val();
+function search() {
+  var searchQuery = document.getElementById("searchInput").value.toLowerCase();
+  var resultsContainer = document.getElementById("searchResults");
+  resultsContainer.innerHTML = ""; // Clear previous results
 
-        if (searchTerm.length >= 2) {
-          fetch("https://www.quizzatopia.com/quizzes/index.htnl")
-            .then(response => response.json())
-            .then(data => {
-              var filteredResults = filterQuizzes(data, searchTerm);
-              displaySearchResults(filteredResults);
-            })
-            .catch(error => {
-              console.error(error);
-            });
-        } else {
-          $('#search-results').empty();
-        }
-      });
-    });
+  // Perform search logic here
+  fetch("/quiz/search.json")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      var matches = performSearchLogic(searchQuery, data);
 
-    function filterQuizzes(quizzes, searchTerm) {
-      var filteredResults = [];
+      if (matches.length === 0) {
+        resultsContainer.innerHTML = "No results found.";
+      } else {
+        var html = "";
 
-      for (var i = 0; i < quizzes.length; i++) {
-        var quiz = quizzes[i];
-        if (quiz.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            quiz.description.toLowerCase().includes(searchTerm.toLowerCase())) {
-          filteredResults.push(quiz);
-        }
+        matches.forEach(function (match) {
+          html += "<div>";
+          html += "<h3>" + match.quizName + "</h3>";
+          html += "<p>" + match.description + "</p>";
+          html += "<p>Topics: " + match.topics.join(", ") + "</p>";
+          // Add more details if needed
+          html += "</div>";
+        });
+
+        resultsContainer.innerHTML = html;
       }
-
-      return filteredResults;
-    }
-
-    function displaySearchResults(results) {
-      var $searchResults = $('#search-results');
-      $searchResults.empty();
-
-      if (results.length > 0) {
-        var $list = $('<ul class="list-group"></ul>');
-
-        for (var i = 0; i < results.length; i++) {
-          var quiz = results[i];
-          var $link = $('<a href="' + quiz.href + '" class="list-group-item list-group-item-action"></a>');
-          var $title = $('<h4 class="mb-1">' + quiz.title + '</h4>');
-          var $description = $('<p class="mb-1">' + quiz.description + '</p>');
-
-          $link.append($title, $description);
-          $list.append($link);
+    })
+    .catch(function (error) {
+      console.log("Error fetching JSON file:", error);
+    });
 }
 
-    $searchResults.append($list);
-  } else {
-    $searchResults.html('<p>No results found.</p>');
-  }
+
+function performSearchLogic(searchQuery, jsonData) {
+  // Implement your search logic here using the jsonData
+  // Return an array of matched results
+  var matches = jsonData.filter(function (quiz) {
+    return (
+      quiz.quizName.toLowerCase().includes(searchQuery) ||
+      quiz.description.toLowerCase().includes(searchQuery) ||
+      quiz.topics.some(function (topic) {
+        return topic.toLowerCase().includes(searchQuery);
+      })
+    );
+  });
+
+  return matches;
 }
+
   
   
   
