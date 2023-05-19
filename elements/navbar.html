@@ -117,7 +117,7 @@ function search() {
   resultsContainer.innerHTML = ""; // Clear previous results
 
   // Perform search logic here
-  fetch("/quiz/search.json")
+  fetch("quiz/search.json")
     .then(function (response) {
       return response.json();
     })
