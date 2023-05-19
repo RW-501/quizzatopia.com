@@ -408,6 +408,16 @@ function nextQuestion() {
   currentQuestion++;
 document.getElementById('show-explanation-btn').classList.add("d-none");
 
+	  const explanationContainer = document.querySelector('.explanation-container');
+if(xplanationContainer.style.display = 'block'){
+	
+		explanationContainer.style.display = 'none';
+
+}
+	
+
+	
+	
   if (currentQuestion < totalQuestions) {
     enableAnswerButtons();
     showQuestion();
