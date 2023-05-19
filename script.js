@@ -186,8 +186,8 @@ function generateQuizAdPattern(numQuestions, numAds) {
 
 
 
+  const userInfo = getUserInfo();
 
-   //const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
 if( userInfo.userName == "admin" ||  userInfo.userName == "Admin"){
 	
@@ -499,7 +499,6 @@ earnedPointsElement.textContent = `+${earnedPoints} Points!`;
   }, 5000);
 	}
 }
-  const userInfo = getUserInfo();
   const userStartPoints = userInfo.points;
 let initialPoints = userStartPoints;
 
