@@ -1,0 +1,112 @@
+{
+  "quizCode": "QZ008",
+  "quizName": "CompTIA AITP Certification",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does the acronym 'IT' stand for?",
+      "options": ["Information Technology", "Internet Technology", "Integrated Technology", "Innovative Technology"],
+      "answer": "Information Technology",
+      "explanation": "IT stands for Information Technology."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which of the following is an example of a network topology?",
+      "options": ["Bus", "Server", "Firewall", "Hard Drive"],
+      "answer": "Bus",
+      "explanation": "Bus is an example of a network topology."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the purpose of a firewall in a computer network?",
+      "options": ["To protect against unauthorized access", "To increase network speed", "To store data", "To create backups"],
+      "answer": "To protect against unauthorized access",
+      "explanation": "The purpose of a firewall in a computer network is to protect against unauthorized access."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the process of converting data into a coded form called?",
+      "options": ["Encryption", "Decryption", "Compression", "Decompression"],
+      "answer": "Encryption",
+      "explanation": "The process of converting data into a coded form is called encryption."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which of the following is a common programming language used in web development?",
+      "options": ["HTML", "TCP/IP", "DNS", "SMTP"],
+      "answer": "HTML",
+      "explanation": "HTML is a common programming language used in web development."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the term used to describe malicious software that disrupts or damages computer systems?",
+      "options": ["Malware", "Spyware", "Adware", "Phishing"],
+      "answer": "Malware",
+      "explanation": "The term used to describe malicious software that disrupts or damages computer systems is malware."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the purpose of an IP address?",
+      "options": ["To uniquely identify a device on a network", "To establish a secure connection", "To encrypt data transmission", "To prevent unauthorized access"],
+      "answer": "To uniquely identify a device on a network",
+      "explanation": "The purpose of an IP address is to uniquely identify a device on a network."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which of the following is a programming language used for creating dynamic web pages?",
+      "options": ["JavaScript", "HTML", "CSS", "SQL"],
+      "answer": "JavaScript",
+      "explanation": "JavaScript is a programming language used for creating dynamic web pages."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What does the acronym 'DNS' stand for?",
+      "options": ["Domain Name System", "Dynamic Network Server", "Data Network Security", "Digital Network Service"],
+      "answer": "Domain Name System",
+      "explanation": "DNS stands for Domain Name System."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which of the following is an example of a cloud computing service?",
+     "options": ["Amazon Web Services (AWS)", "Ethernet", "VPN", "RAM"],
+      "answer": "Amazon Web Services (AWS)",
+      "explanation": "Amazon Web Services (AWS) is an example of a cloud computing service."
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the process of converting coded data back into its original form called?",
+      "options": ["Decryption", "Encryption", "Compression", "Decompression"],
+      "answer": "Decryption",
+      "explanation": "The process of converting coded data back into its original form is called decryption."
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which of the following is a common protocol used for email transmission?",
+      "options": ["SMTP", "HTTP", "FTP", "DNS"],
+      "answer": "SMTP",
+      "explanation": "SMTP is a common protocol used for email transmission."
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the term used to describe the unauthorized access and use of someone else's data?",
+      "options": ["Identity theft", "Phishing", "Spyware", "Hacking"],
+      "answer": "Identity theft",
+      "explanation": "The term used to describe the unauthorized access and use of someone else's data is identity theft."
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which of the following is a common cybersecurity measure?",
+      "options": ["Firewall", "RAM", "CPU", "Hard Drive"],
+      "answer": "Firewall",
+      "explanation": "A firewall is a common cybersecurity measure."
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the purpose of a VPN (Virtual Private Network)?",
+      "options": ["To create a secure connection over a public network", "To host websites and web applications", "To store data backups", "To manage domain names"],
+      "answer": "To create a secure connection over a public network",
+      "explanation": "The purpose of a VPN (Virtual Private Network) is to create a secure connection over a public network."
+    }
+  ]
+}
