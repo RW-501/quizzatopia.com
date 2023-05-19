@@ -1027,64 +1027,36 @@ quizInfo.quizLink = q;  // Add the "q" parameter to the quizInfo object
 
 }
 	  
-	  
-	  
-	 // Function to check if the edition parameter is valid
-function isValidEdition(e) {
-  return  parseInt(e) > 1;
+	  function isValidEdition(e) {
+  return parseInt(e) > 1;
 }
-	  
-console.log("urlParams e     "+e); 
 
-// Fetch and assign the data
 function fetchData(q, e) {
   if (e && isValidEdition(e)) {
-    console.log("New JSON structure 2nd");
     fetch(`/quiz/Quizzes/${q}.json`)
       .then(response => response.json())
       .then(data => {
         if (Array.isArray(data)) {
-          // Handle old JSON structure
-
           if (data.length === 0) {
-            // Handle empty data
-            console.log("Empty data");
             const randomFile = getRandomFile(files);
             fetchData(randomFile, e);
           } else {
-            // Use the questions data here
             const questionData = data.map(questionObj => ({
               question: questionObj.question,
               answer: questionObj.answer,
               options: questionObj.options,
               explanation: questionObj.explanation
             }));
+            updateQuizData(questionData);
           }
         } else {
-          // Use the questions data here
           const questionData = data.questions.map(questionObj => ({
             question: questionObj.question,
             answer: questionObj.answer,
             options: questionObj.options,
             explanation: questionObj.explanation
           }));
-
-          // Update quizCode, quizName, numberOfQuestions
-          quizCode = "";
-          quizName = "";
-          numberOfQuestions = data.length;
-
-          // Check quiz code and retrieve or save quiz info
-          const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
-
-          questions.push(...questionData);
-          shuffleArray(questions);
-
-          // Access and use the retrieved quiz information
-          const questionsCompleted = quizInfo.questionsCompleted;
-
-          // Display the test information
-          displayTestInfo(quizCode, quizName, numberOfQuestions);
+          updateQuizData(questionData);
         }
       })
       .catch(error => {
@@ -1095,56 +1067,30 @@ function fetchData(q, e) {
       .then(response => response.json())
       .then(data => {
         if (Array.isArray(data)) {
-          // Handle old JSON structure
-          console.log("Old JSON structure");
-
           if (data.length === 0) {
-            // Handle empty data
-            console.log("Empty data");
             const randomFile = getRandomFile(files);
             fetchData(randomFile);
           } else {
-            // Use the questions data here
             const questionData = data.map(questionObj => ({
               question: questionObj.question,
               answer: questionObj.answer,
               options: questionObj.options,
               explanation: questionObj.explanation
             }));
+            updateQuizData(questionData);
           }
         } else {
-          // Handle new JSON structure
-
           if (data.questions.length === 0) {
-            // Handle empty data
-            console.log("Empty data");
             const randomFile = getRandomFile(files);
             fetchData(randomFile);
           } else {
-            // Use the questions data here
             const questionData = data.questions.map(questionObj => ({
               question: questionObj.question,
               answer: questionObj.answer,
               options: questionObj.options,
               explanation: questionObj.explanation
             }));
-
-            // Update quizCode, quizName, numberOfQuestions
-            quizCode = data.quizCode;
-            quizName = data.quizName;
-            numberOfQuestions = data.numberOfQuestions;
-
-            // Check quiz code and retrieve or save quiz info
-            const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
-
-            questions.push(...questionData);
-            shuffleArray(questions);
-
-            // Access and use the retrieved quiz information
-            const questionsCompleted = quizInfo.questionsCompleted;
-
-            // Display the test information
-            displayTestInfo(quizCode, quizName, numberOfQuestions);
+            updateQuizData(questionData);
           }
         }
       })
@@ -1152,9 +1098,22 @@ function fetchData(q, e) {
   }
 }
 
-// Call fetchData with the initial q value
- fetchData(q, e);
+function updateQuizData(questionData) {
+  quizCode = "";
+  quizName = "";
+  numberOfQuestions = questionData.length;
 
+  const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
+
+  questions.push(...questionData);
+  shuffleArray(questions);
+
+  const questionsCompleted = quizInfo.questionsCompleted;
+
+  displayTestInfo(quizCode, quizName, numberOfQuestions);
+}
+
+fetchData(q, e);
 
 	      
 	      
