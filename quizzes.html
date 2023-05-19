@@ -422,26 +422,26 @@ cards.forEach(card => {
 
 		    
 		    
+
 		    
-		    
-		    
-<div class="container-fluid bg-primary py-4">
+		    <div class="container-fluid bg-primary py-4">
   <div class="container">
     <div class="row">
       <div class="col-md-6 offset-md-3">
         <h2 class="text-white text-center mb-4">Request a Quiz</h2>
-        <form>
+        <form method="post" action="https://formspree.io/Quizzatopia@gmail.com">
           <div class="form-group">
             <label for="quizTitle" class="text-white">Quiz Title</label>
-            <input type="text" class="form-control" id="quizTitle" placeholder="Enter quiz title" required>
+            <input type="text" class="form-control" id="quizTitle" name="quizTitle" placeholder="Enter quiz title" required>
           </div>
           <div class="form-group">
             <label for="quizDescription" class="text-white">Quiz Description</label>
-            <textarea class="form-control" id="quizDescription" rows="4" placeholder="Enter quiz description" required></textarea>
+            <textarea class="form-control" id="quizDescription" name="quizDescription" rows="4" placeholder="Enter quiz description" required></textarea>
           </div>
          <div class="form-group">
             <label for="quizCategory" class="text-white">Quiz Category</label>
-            <select class="form-control" id="quizCategory" required>
+
+            <select class="form-control" id="quizCategory" name="quizCategory" required>
               <option value="">Select category...</option>
               <option value="information-tech">Information Technology</option>
               <option value="healthcare">Healthcare</option>
@@ -461,9 +461,9 @@ cards.forEach(card => {
               <option value="fitness">Fitness</option>
               <option value="school">School</option>
               <option value="random">Random</option> 
-		    <option value="health-wellness">Health Wellness</option> 
-		    <option value="job-preparation">Job Preparation</option>
-              <!-- Add the rest of the opjtions here -->
+		          <option value="health-wellness">Health Wellness</option> 
+		          <option value="job-preparation">Job Preparation</option>
+              <!-- Add the rest of the options here -->
             </select>
           </div>
           <button type="submit" class="btn btn-light btn-block">Submit Request</button>
@@ -472,6 +472,7 @@ cards.forEach(card => {
     </div>
   </div>
 </div>
+
 
 		    
 	
