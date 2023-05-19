@@ -1029,22 +1029,15 @@ quizInfo.quizLink = q;  // Add the "q" parameter to the quizInfo object
 	  
 	  
 	  
-	  
-	  
-// Function to check if the edition parameter is valid
+	 // Function to check if the edition parameter is valid
 function isValidEdition(e) {
   return !isNaN(e) && parseInt(e) > 1;
 }
 
-	  
-	
-	  
-	  
-	  
 // Fetch and assign the data
-function fetchData(q, e) 
+function fetchData(q, e) {
   if (e && isValidEdition(e)) {
-	            console.log("New JSON structure 2nd ");
+    console.log("New JSON structure 2nd");
     fetch(`/quiz/Quizzes/${q}.json`)
       .then(response => response.json())
       .then(data => {
@@ -1159,7 +1152,6 @@ function fetchData(q, e)
 
 // Call fetchData with the initial q value
 fetchData(q);
-
 
 
 	      
