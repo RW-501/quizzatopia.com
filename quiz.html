@@ -972,11 +972,15 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
       testInfoDiv.innerHTML = `
         <h3>Quiz Information</h3>
         <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
-        <p><strong>Quiz Name:</strong> ${quizInfo.quizName}</p>
         <p><strong>Number of Questions:</strong> ${quizInfo.numberOfQuestions}</p>
         <p><strong>Question Correct:</strong> ${score}</p>
         <p><strong>Best Score:</strong> ${percentage.toFixed(0)}%</p>
       `;
+	    
+	    	  
+	      const testInfoDiv = document.getElementById('optionsQuizName');
+    testInfoDiv.innerHTML = `${quizNameNS}`;
+	    
       logStorageContents(quizInfo.quizCode);
 
     } catch (error) {
@@ -989,12 +993,12 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
     testInfoDiv.innerHTML = `
         <h3>Quiz Information</h3>
         <p><strong>Quiz Code:</strong> ${quizCodeNS}</p>
-        <p><strong>Quiz Name:</strong> ${quizNameNS}</p>
         <p><strong>Number of Questions:</strong> ${numberOfQuestionsNS}</p>
         <p><strong>No quiz information found.</strong></p>
       `;
 	  
-	  
+	      const testInfoDiv = document.getElementById('optionsQuizName');
+    testInfoDiv.innerHTML = `${quizNameNS}`;
   }
 }
 
