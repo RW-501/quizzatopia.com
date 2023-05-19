@@ -409,7 +409,7 @@ function nextQuestion() {
 document.getElementById('show-explanation-btn').classList.add("d-none");
 
 	  const explanationContainer = document.querySelector('.explanation-container');
-if(xplanationContainer.style.display = 'block'){
+if(explanationContainer.style.display == 'block'){
 	
 		explanationContainer.style.display = 'none';
 
