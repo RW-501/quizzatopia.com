@@ -3,7 +3,7 @@
   "quizName": "Architect Registration Examination Quiz",
   "categoryName": "Architecture",
   "editionNumber": 1,
-  "numberOfQuestions": 22,
+  "numberOfQuestions": 30,
   "description": "Test your knowledge of the Architect Registration Examination and assess your understanding of key architectural concepts and principles.",
   "questions": [
     {
@@ -38,7 +38,7 @@
       "difficulty": "Easy",
       "options": [
         "5",
-        "7",
+        "6",
         "9",
         "11"
       ],
@@ -399,3 +399,4 @@
       "explanation": "Building Information Modeling (BIM) is a digital technology that facilitates the collaborative design and documentation process in architecture. It allows architects, engineers, and other stakeholders to create and share a 3D model of a building, integrating various design elements and data for improved coordination and communication."
     }
   ]
+}
