@@ -1,47 +1,127 @@
 {
   "quizCode": "QZ002",
   "quizName": "Pop Culture Quiz",
-  "numberOfQuestions": 5,
+  "numberOfQuestions": 15,
   "questions": [
     {
+      "questionNumber": 1,
       "question": "Who is the lead singer of the band 'Coldplay'?",
       "options": ["Chris Martin", "Adam Levine", "Bono", "Ed Sheeran"],
       "answer": "Chris Martin",
       "explanation": "Chris Martin is the lead singer of the band 'Coldplay'.",
-      "questionNumber": 1,
       "difficulty": "Easy"
     },
     {
+      "questionNumber": 2,
       "question": "Which actor played the character 'Iron Man' in the Marvel Cinematic Universe?",
       "options": ["Robert Downey Jr.", "Chris Evans", "Mark Ruffalo", "Chris Hemsworth"],
       "answer": "Robert Downey Jr.",
       "explanation": "Robert Downey Jr. played the character 'Iron Man' in the Marvel Cinematic Universe.",
-      "questionNumber": 2,
       "difficulty": "Easy"
     },
     {
+      "questionNumber": 3,
       "question": "What is the highest-grossing film of all time?",
       "options": ["Avengers: Endgame", "Avatar", "Titanic", "Star Wars: The Force Awakens"],
       "answer": "Avengers: Endgame",
       "explanation": "Avengers: Endgame is the highest-grossing film of all time.",
-      "questionNumber": 3,
       "difficulty": "Medium"
     },
     {
+      "questionNumber": 4,
       "question": "Who won the Best Actor award at the 2020 Academy Awards?",
       "options": ["Joaquin Phoenix", "Leonardo DiCaprio", "Brad Pitt", "Tom Hanks"],
       "answer": "Joaquin Phoenix",
       "explanation": "Joaquin Phoenix won the Best Actor award at the 2020 Academy Awards.",
-      "questionNumber": 4,
       "difficulty": "Medium"
     },
     {
+      "questionNumber": 5,
       "question": "Which singer released the hit song 'Bad Guy'?",
       "options": ["Billie Eilish", "Taylor Swift", "Ariana Grande", "Rihanna"],
       "answer": "Billie Eilish",
       "explanation": "Billie Eilish released the hit song 'Bad Guy'.",
-      "questionNumber": 5,
       "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Who is the director of the movie 'Inception'?",
+      "options": ["Christopher Nolan", "Martin Scorsese", "Steven Spielberg", "Quentin Tarantino"],
+      "answer": "Christopher Nolan",
+      "explanation": "Christopher Nolan directed the movie 'Inception'.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which TV show features the character 'Walter White'?",
+      "options": ["Breaking Bad", "The Walking Dead", "Game of Thrones", "Stranger Things"],
+      "answer": "Breaking Bad",
+      "explanation": "The TV show 'Breaking Bad' features the character 'Walter White'.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Who wrote the novel 'To Kill a Mockingbird'?",
+      "options": ["Harper Lee", "George Orwell", "F. Scott Fitzgerald", "Ernest Hemingway"],
+      "answer": "Harper Lee",
+      "explanation": "Harper Lee wrote the novel 'To Kill a Mockingbird'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which artist painted the 'Mona Lisa'?",
+      "options": ["Leonardo da Vinci", "Pablo Picasso", "Vincent van Gogh", "Michelangelo"],
+      "answer": "Leonardo da Vinci",
+      "explanation": "Leonardo da Vinci painted the 'Mona Lisa'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which country is the birthplace of the Olympic Games?",
+      "options": ["Greece", "Italy", "France", "Egypt"],
+      "answer": "Greece",
+      "explanation": "The Olympic Games originated in Greece.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Who is the author of the 'Harry Potter' book series?",
+      "options": ["J.K. Rowling", "Stephen King", "George R.R. Martin", "Roald Dahl"],
+      "answer": "J.K. Rowling",
+      "explanation": "J.K. Rowling is the author of the 'Harry Potter' book series.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which planet is known as the 'Red Planet'?",
+      "options": ["Mars", "Venus", "Jupiter", "Saturn"],
+      "answer": "Mars",
+      "explanation": "Mars is known as the 'Red Planet'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Who is the lead vocalist of the band 'Queen'?",
+      "options": ["Freddie Mercury", "Roger Taylor", "Brian May", "John Deacon"],
+      "answer": "Freddie Mercury",
+      "explanation": "Freddie Mercury is the lead vocalist of the band 'Queen'.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which city is the capital of Australia?",
+      "options": ["Canberra", "Sydney", "Melbourne", "Brisbane"],
+      "answer": "Canberra",
+      "explanation": "Canberra is the capital of Australia.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which actress played the character 'Katniss Everdeen' in the 'Hunger Games' film series?",
+      "options": ["Jennifer Lawrence", "Emma Stone", "Scarlett Johansson", "Natalie Portman"],
+      "answer": "Jennifer Lawrence",
+      "explanation": "Jennifer Lawrence played the character 'Katniss Everdeen' in the 'Hunger Games' film series.",
+      "difficulty": "Medium"
     }
   ]
 }
