@@ -191,7 +191,7 @@ function generateQuizAdPattern(numQuestions, numAds) {
 
 if( getUserInfo.userName == "admin" ||  getUserInfo.userName == "Admin"){
 	
-  const adDuration = 0; // Duration of each ad in seconds
+  const adDuration = 1; // Duration of each ad in seconds
   let adCount = 0; // Counter for the number of ads shown
 }else{
 	
