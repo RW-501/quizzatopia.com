@@ -1033,6 +1033,8 @@ quizInfo.quizLink = q;  // Add the "q" parameter to the quizInfo object
 function isValidEdition(e) {
   return  parseInt(e) > 1;
 }
+	  
+console.log("urlParams e     "+e); 
 
 // Fetch and assign the data
 function fetchData(q, e) {
@@ -1151,7 +1153,7 @@ function fetchData(q, e) {
 }
 
 // Call fetchData with the initial q value
-fetchData(q);
+ fetchData(q, e);
 
 
 	      
