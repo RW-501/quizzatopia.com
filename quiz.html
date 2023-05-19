@@ -296,7 +296,8 @@
 	#reportForm{
 		
     position: absolute;
-    width: 50%;
+        min-width: 50%;
+    max-width: 60%;
     display: block;
     margin: auto;
     z-index: 500;
@@ -440,13 +441,12 @@
       </div>
       <a href="coach_apply.html" class="btn btn-primary btn-apply-coach">Apply to be a Study Coach</a>
     </div>
-    <div class="col-md d-md-none">">
+    <div class="col-md d-md-none">
       <div class="study-coach-box">
         <a href="coach-details" class="coach-link">
           <div class="coach-image">
             <img src="/images/pics/5.png" alt="Study Coach 3" style="
-    width: -webkit-fill-available;
-"  loading="lazy">
+    width: -webkit-fill-available;"  loading="lazy">
           </div>
           <div class="coach-details">
             <h2 class="coach-name">Emily Thompson</h2>
@@ -1160,9 +1160,6 @@ reportForm.addEventListener('submit', function (e) {
   // Perform any necessary actions with the report data
   // For example, you can send an AJAX request to report the problem
 
-  // Close the modal
-  closeModal();
-});
 
 // Function to open the modal
 function openModal() {
@@ -1192,7 +1189,10 @@ document.addEventListener('click', function (e) {
 });
 
 	      
-	      
+	  // Close the modal
+  closeModal();
+});
+      
 	      
 	      
     </script>
