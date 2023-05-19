@@ -1,0 +1,127 @@
+{
+  "quizCode": "QZ003",
+  "quizName": "Self-Health Quiz",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the recommended daily amount of water intake for adults?",
+      "options": ["8 cups", "4 cups", "2 cups", "10 cups"],
+      "answer": "8 cups",
+      "explanation": "The recommended daily amount of water intake for adults is approximately 8 cups.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "How many hours of sleep are recommended for optimal health?",
+      "options": ["7-8 hours", "4-5 hours", "10-12 hours", "2-3 hours"],
+      "answer": "7-8 hours",
+      "explanation": "For optimal health, it is recommended to have 7-8 hours of sleep per night.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which activity is considered aerobic exercise?",
+      "options": ["Running", "Weightlifting", "Yoga", "Stretching"],
+      "answer": "Running",
+      "explanation": "Running is considered an aerobic exercise as it increases heart rate and improves cardiovascular fitness.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the primary source of vitamin D?",
+      "options": ["Sunlight", "Milk", "Oranges", "Eggs"],
+      "answer": "Sunlight",
+      "explanation": "The primary source of vitamin D is sunlight. The body can produce vitamin D when the skin is exposed to sunlight.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the main component of a balanced diet?",
+      "options": ["Nutrients", "Proteins", "Carbohydrates", "Fats"],
+      "answer": "Nutrients",
+      "explanation": "A balanced diet consists of various nutrients, including proteins, carbohydrates, fats, vitamins, and minerals.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which nutrient is responsible for building and repairing body tissues?",
+      "options": ["Protein", "Fiber", "Vitamin C", "Calcium"],
+      "answer": "Protein",
+      "explanation": "Protein is the nutrient responsible for building and repairing body tissues, including muscles and organs.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the recommended frequency of exercise per week for adults?",
+      "options": ["At least 150 minutes", "At least 30 minutes", "At least 60 minutes", "At least 90 minutes"],
+      "answer": "At least 150 minutes",
+      "explanation": "For adults, it is recommended to engage in at least 150 minutes of moderate-intensity aerobic exercise per week.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which of the following is an effective stress management technique?",
+      "options": ["Deep breathing", "Consuming caffeine", "Avoiding social interactions", "Overeating"],
+      "answer": "Deep breathing",
+      "explanation": "Deep breathing is an effective stress management technique that helps promote relaxation and reduce anxiety.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the recommended daily limit for added sugar consumption?",
+      "options": ["Less than 25 grams", "Less than 50 grams", "Less than 75 grams", "Less than 100 grams"],
+      "answer": "Less than 25 grams",
+      "explanation": "The recommended daily limit for added sugar consumption is less than 25 grams (6 teaspoons) for adults.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the best way to manage time effectively?",
+      "options": ["Prioritize tasks", "Multitask constantly", "Procrastinate", "Ignore deadlines"],
+      "answer": "Prioritize tasks",
+      "explanation": "To manage time effectively, it is best to prioritize tasks based on importance and urgency.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is a common symptom of burnout?",
+      "options": ["Chronic fatigue", "Excessive motivation", "Increased productivity", "Improved sleep"],
+      "answer": "Chronic fatigue",
+      "explanation": "Chronic fatigue is a common symptom of burnout, characterized by persistent exhaustion and decreased energy levels.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which of the following is a healthy way to cope with stress?",
+      "options": ["Regular exercise", "Excessive alcohol consumption", "Isolating oneself", "Avoiding sleep"],
+      "answer": "Regular exercise",
+      "explanation": "Regular exercise is a healthy way to cope with stress as it helps release endorphins and improve mood.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the recommended frequency of dental check-ups?",
+      "options": ["Every 6 months", "Every year", "Every 2 years", "Only when experiencing pain"],
+      "answer": "Every 6 months",
+      "explanation": "It is recommended to have dental check-ups every 6 months to maintain oral health and prevent dental problems.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which of the following is a relaxation technique?",
+      "options": ["Meditation", "Binge-watching TV shows", "Checking social media constantly", "Consuming excessive caffeine"],
+      "answer": "Meditation",
+      "explanation": "Meditation is a relaxation technique that involves focusing attention and eliminating the stream of thoughts.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the recommended daily intake of fruits and vegetables?",
+      "options": ["5 servings", "1 serving", "10 servings", "3 servings"],
+      "answer": "5 servings",
+      "explanation": "It is recommended to consume at least 5 servings of fruits and vegetables per day for a healthy diet.",
+      "difficulty": "Easy"
+    }
+  ]
+}
