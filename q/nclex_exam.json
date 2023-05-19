@@ -1,1 +1,112 @@
-{"quizCode":"QZ663637","quizName":"Medical Knowledge Quiz","numberOfQuestions":11,"questions":[{"question":"What is the primary function of the respiratory system?","options":["To transport oxygen and remove carbon dioxide from the body","To regulate the body's fluid and electrolyte balance","To produce and secrete hormones","To filter waste products from the blood"],"answer":"To transport oxygen and remove carbon dioxide from the body","explanation":"The respiratory system is responsible for the exchange of gases between the body and the environment. Its primary function is to transport oxygen from the air into the bloodstream, and remove carbon dioxide from the bloodstream and release it into the air.","difficulty":"Medium"},{"question":"What is the normal range for blood glucose levels?","options":["70-100 mg/dL","100-125 mg/dL","126-150 mg/dL","150-200 mg/dL"],"answer":"70-100 mg/dL","explanation":"Normal blood glucose levels are typically between 70-100 mg/dL when fasting, and can rise to around 140 mg/dL after eating.","difficulty":"Easy"},{"question":"What is the primary function of the kidneys?","options":["To regulate the body's fluid and electrolyte balance","To produce and secrete hormones","To transport oxygen and remove carbon dioxide from the body","To filter waste products from the blood"],"answer":"To filter waste products from the blood","explanation":"The kidneys are responsible for filtering waste products from the blood and excreting them in the urine. They also help to regulate fluid and electrolyte balance, blood pressure, and the production of red blood cells.","difficulty":"Easy"},{"question":"What is the normal range for blood pressure in adults?","options":["Less than 120/80 mmHg","Less than 130/90 mmHg","Less than 140/90 mmHg","Less than 160/100 mmHg"],"answer":"Less than 120/80 mmHg","explanation":"Normal blood pressure in adults is less than 120/80 mmHg. High blood pressure, or hypertension, is defined as a reading of 130/80 mmHg or higher.","difficulty":"Easy"},{"question":"What is the most common cause of pneumonia?","options":["Bacterial infection","Fungal infection","Viral infection","Allergic reaction"],"answer":"Viral infection","explanation":"Viral infections, particularly from the influenza virus, are the most common cause of pneumonia. Bacterial infections can also cause pneumonia, but are less common.","difficulty":"Easy"},{"question":"What is the normal range for adult respiratory rate?","options":["12-20 breaths per minute","20-30 breaths per minute","30-40 breaths per minute","40-50 breaths per minute"],"answer":"12-20 breaths per minute","explanation":"The normal range for adult respiratory rate is typically between 12-20 breaths per minute. Higher respiratory rates may indicate an underlying health condition.","difficulty":"Easy"},{"question":"What is the most common type of stroke?","options":["Ischemic stroke","Hemorrhagic stroke","Transient ischemic attack","Subarachnoid hemorrhage"],"answer":"Ischemic stroke","explanation":"Ischemic stroke is the most common type of stroke, accounting for about 87% of all strokes. It occurs when a blood clot blocks blood flow to the brain.","difficulty":"Medium"},{"question":"What is the primary function of insulin?","options":["To break down glucose into energy","To convert glycogen to glucose","To stimulate the pancreas to produce glucagon","To transport glucose from the bloodstream into cells"],"answer":"To transport glucose from the bloodstream into cells","explanation":"Insulin is a hormone produced by the pancreas that helps regulate blood sugar levels by allowing cells to take in and use glucose for energy. Without insulin, glucose builds up in the bloodstream, leading to hyperglycemia, which can cause a range of health problems over time.","difficulty":"Medium"},{"question":"What is the purpose of a urinalysis?","options":["To detect infections in the urinary tract","To measure kidney function","To diagnose diabetes","To screen for cancer"],"answer":"To detect infections in the urinary tract","explanation":"Urinalysis is a common diagnostic test that examines urine for signs of disease or infection. It can detect a wide range of conditions, including urinary tract infections, kidney problems, and metabolic disorders. The test involves examining urine under a microscope and analyzing its chemical composition.","difficulty":"Easy"},{"question":"What is the proper technique for hand washing?","options":["Wash hands for at least 10 seconds with soap and water","Wash hands for at least 20 seconds with soap and water","Wash hands for at least 30 seconds with soap and water","Wash hands for at least 1 minute with soap and water"],"answer":"Wash hands for at least 20 seconds with soap and water","explanation":"Proper hand hygiene is critical to preventing the spread of infectious diseases. The CDC recommends washing hands for at least 20 seconds with soap and water, making sure to lather all surfaces of the hands, including between fingers and under nails. This should be done frequently throughout the day, especially after using the bathroom, coughing or sneezing, or handling food.","difficulty":"Easy"},{"question":"What is the normal range for a resting adult heart rate?","options":["60-80 beats per minute","80-100 beats per minute","100-120 beats per minute","120-140 beats per minute"],"answer":"60-80 beats per minute","explanation":"The normal resting heart rate for an adult is typically between 60 and 80 beats per minute. However, factors such as age, fitness level, and underlying medical conditions can affect heart rate. An unusually high or low heart rate may be a sign of an underlying health problem and should be evaluated by a healthcare provider.","difficulty":"Easy"},{"question":"What is the primary function of the kidneys?","options":["To regulate blood sugar levels","To produce insulin","To filter waste and excess fluids from the bloodstream","To transport oxygen to the body's tissues"],"answer":"To filter waste and excess fluids from the bloodstream","explanation":"The kidneys are a pair of organs that filter waste and excess fluids from the bloodstream, helping to maintain a healthy balance of water, electrolytes, and other substances in the body. They also help regulate blood pressure and produce hormones that stimulate the production of red blood cells.","difficulty":"Easy"}]}
+{
+  "quizCode": "QZ004",
+  "quizName": "NCLEX Exam Review",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the normal range for adult respiratory rate per minute?",
+      "options": ["12-20", "20-30", "30-40", "40-50"],
+      "answer": "12-20",
+      "explanation": "The normal range for adult respiratory rate per minute is 12-20."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which type of isolation precautions should be implemented for a patient with tuberculosis?",
+      "options": ["Airborne precautions", "Contact precautions", "Droplet precautions", "Standard precautions"],
+      "answer": "Airborne precautions",
+      "explanation": "Patients with tuberculosis should be placed on airborne precautions."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which laboratory value indicates a potential risk for bleeding?",
+      "options": ["Platelet count of 100,000/mm3", "Hemoglobin level of 15 g/dL", "Prothrombin time (PT) of 12 seconds", "International normalized ratio (INR) of 1"],
+      "answer": "Platelet count of 100,000/mm3",
+      "explanation": "A platelet count of 100,000/mm3 indicates a potential risk for bleeding."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which position should the nurse place a patient experiencing a seizure?",
+      "options": ["Side-lying (recovery) position", "Supine position with elevated head", "Prone position with limbs restrained", "Sitting position with head tilted forward"],
+      "answer": "Side-lying (recovery) position",
+      "explanation": "During a seizure, the nurse should place the patient in a side-lying (recovery) position."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which medication is commonly used to treat hypertension?",
+      "options": ["Lisinopril", "Metformin", "Warfarin", "Acetaminophen"],
+      "answer": "Lisinopril",
+      "explanation": "Lisinopril is a commonly used medication for treating hypertension."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which nursing intervention is appropriate for a patient with impaired mobility?",
+      "options": ["Assist with range-of-motion exercises", "Administer pain medication as needed", "Encourage independent ambulation", "Apply warm compress to affected area"],
+      "answer": "Assist with range-of-motion exercises",
+      "explanation": "Assisting with range-of-motion exercises is an appropriate nursing intervention for a patient with impaired mobility."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the priority nursing action when administering medication?",
+      "options": ["Verify the patient's identity", "Explain the purpose of the medication", "Assess for possible adverse effects", "Document the administration"],
+      "answer": "Verify the patient's identity",
+      "explanation": "The priority nursing action when administering medication is to verify the patient's identity."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which assessment finding should the nurse report immediately for a patient with chest pain?",
+      "options": ["Elevated blood pressure", "Irregular heart rate", "Diminished breath sounds", "Pallor and diaphoresis"],
+      "answer": "Pallor and diaphoresis",
+      "explanation": "Pallor and diaphoresis are signs of possible myocardial infarction and should be reported immediately for a patient with chest pain."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the priority nursing intervention for a patient experiencing anaphylaxis?",
+      "options": ["Administer epinephrine", "Place the patient in a supine position", "Obtain a detailed allergy history", "Administer antihistamine"],
+      "answer": "Administer epinephrine",
+      "explanation": "The priority nursing intervention for a patient experiencing anaphylaxis is to administer epinephrine."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which symptom is commonly associated with hypoglycemia?",
+      "options": ["Diaphoresis", "Polyuria", "Hypertension", "Constipation"],
+      "answer": "Diaphoresis",
+      "explanation": "Diaphoresis is a common symptom associated with hypoglycemia."
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which laboratory test is used to evaluate kidney function?",
+      "options": ["Serum creatinine", "Prothrombin time (PT)", "Total cholesterol", "Alanine aminotransferase (ALT)"],
+      "answer": "Serum creatinine",
+      "explanation": "Serum creatinine is a laboratory test used to evaluate kidney function."
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the purpose of using the Glasgow Coma Scale (GCS) in neurological assessment?",
+      "options": ["To assess level of consciousness", "To measure blood pressure", "To evaluate motor function", "To assess visual acuity"],
+      "answer": "To assess level of consciousness",
+      "explanation": "The Glasgow Coma Scale (GCS) is used to assess the level of consciousness in neurological assessment."
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which nursing intervention is appropriate for a patient receiving intravenous (IV) therapy?",
+      "options": ["Monitor for signs of infiltration", "Administer medications orally", "Encourage increased oral fluid intake", "Apply warm compress to IV site"],
+      "answer": "Monitor for signs of infiltration",
+      "explanation": "Monitoring for signs of infiltration is an appropriate nursing intervention for a patient receiving intravenous (IV) therapy."
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which action should the nurse take when preparing to administer a subcutaneous injection?",
+      "options": ["Pinch the skin at the injection site", "Use a 1-inch needle for all subcutaneous injections", "Administer the medication quickly", "Insert the needle at a 45-degree angle"],
+      "answer": "Pinch the skin at the injection site",
+      "explanation": "When preparing to administer a subcutaneous injection, the nurse should pinch the skin at the injection site."
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which symptom is commonly associated with hypothyroidism?",
+      "options": ["Weight gain", "Heat intolerance", "Tachycardia", "Hypertension"],
+      "answer": "Weight gain",
+      "explanation": "Weight gain is a common symptom associated with hypothyroidism."
+    }
+  ]
+}
