@@ -1,0 +1,112 @@
+{
+  "quizCode": "QZ016",
+  "quizName": "CFP Certification",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does CFP stand for?",
+      "options": ["Certified Financial Planner", "Certified Financial Professional", "Chartered Financial Planner", "Chartered Financial Professional"],
+      "answer": "Certified Financial Planner",
+      "explanation": "CFP stands for Certified Financial Planner."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which organization grants the CFP certification?",
+      "options": ["Financial Planning Association (FPA)", "Certified Financial Planner Board of Standards (CFP Board)", "Securities and Exchange Commission (SEC)", "American Institute of Certified Public Accountants (AICPA)"],
+      "answer": "Certified Financial Planner Board of Standards (CFP Board)",
+      "explanation": "The Certified Financial Planner Board of Standards (CFP Board) grants the CFP certification."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the minimum educational requirement for CFP certification?",
+      "options": ["High school diploma", "Associate's degree", "Bachelor's degree", "Master's degree"],
+      "answer": "Bachelor's degree",
+      "explanation": "A Bachelor's degree is the minimum educational requirement for CFP certification."
+    },
+    {
+      "questionNumber": 4,
+      "question": "How many years of relevant work experience are required for CFP certification?",
+      "options": ["1 year", "2 years", "3 years", "4 years"],
+      "answer": "3 years",
+      "explanation": "Three years of relevant work experience are required for CFP certification."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the passing score for the CFP exam?",
+      "options": ["60%", "65%", "70%", "75%"],
+      "answer": "70%",
+      "explanation": "The passing score for the CFP exam is 70%."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which area is NOT covered in the CFP exam?",
+      "options": ["Estate planning", "Retirement planning", "Investment management", "Tax preparation"],
+      "answer": "Tax preparation",
+      "explanation": "Tax preparation is not covered in the CFP exam."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the purpose of the CFP Code of Ethics?",
+      "options": ["To ensure client confidentiality", "To promote professional integrity", "To regulate financial markets", "To set tax regulations"],
+      "answer": "To promote professional integrity",
+      "explanation": "The purpose of the CFP Code of Ethics is to promote professional integrity."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which of the following is a key principle of the CFP Code of Ethics?",
+      "options": ["Transparency", "Profit maximization", "Conflict of interest", "Client confidentiality"],
+      "answer": "Client confidentiality",
+      "explanation": "Client confidentiality is a key principle of the CFP Code of Ethics."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which area of financial planning involves creating a plan for the accumulation and preservation of wealth?",
+      "options": ["Investment planning", "Retirement planning", "Estate planning", "Risk management"],
+      "answer": "Investment planning",
+      "explanation": "Investment planning involves creating a plan for the accumulation and preservation of wealth."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the primary goal of retirement planning?",
+      "options": ["To minimize taxes", "To generate income", "To protect assets", "To manage debt"],
+      "answer": "To generate income",
+      "explanation": "The primary goal of retirement planning is to generate income during retirement."
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which area of financial planning involves managing risks and protecting against potential financial losses?",
+      "options": ["Investment planning", "Retirement planning", "Estate planning", "Risk management"],
+      "answer": "Risk management",
+      "explanation": "Risk management involves managing risks and protecting against potential financial losses."
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the primary goal of estate planning?",
+      "options": ["To minimize taxes", "To distribute assets", "To generate income", "To manage debt"],
+      "answer": "To distribute assets",
+      "explanation": "The primary goal of estate planning is to distribute assets according to the individual's wishes."
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the role of a Certified Financial Planner (CFP)?",
+      "options": ["To provide legal advice", "To offer tax services", "To manage investment portfolios", "To provide comprehensive financial planning"],
+      "answer": "To provide comprehensive financial planning",
+      "explanation": "The role of a Certified Financial Planner (CFP) is to provide comprehensive financial planning services."
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which of the following is NOT a step in the financial planning process?",
+      "options": ["Gathering client information", "Analyzing financial data", "Developing a marketing strategy", "Implementing the financial plan"],
+      "answer": "Developing a marketing strategy",
+      "explanation": "Developing a marketing strategy is not a step in the financial planning process."
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the purpose of continuing education for CFP professionals?",
+      "options": ["To maintain professional licensing", "To increase income potential", "To fulfill annual tax requirements", "To learn about new financial products"],
+      "answer": "To maintain professional licensing",
+      "explanation": "Continuing education for CFP professionals is required to maintain professional licensing."
+    }
+  ]
+}
