@@ -1,7 +1,7 @@
 {
   "quizCode": "Qn65ou9",
-  "quizName": "Job Interview quiz #1",
-  "numberOfQuestions": 8,
+  "quizName": "Job Interview Quiz #1",
+  "numberOfQuestions": 15,
   "questions": [
     {
       "questionNumber": 1,
@@ -13,7 +13,7 @@
         "I am only here for the job interview experience."
       ],
       "answer": "I've heard good things about your company's culture and values.",
-      "explanation": "Researching the company before the interview is essential. The interviewer wants to see if you have done your research, and if you are genuinely interested in working there."
+      "explanation": "Researching the company before the interview is essential. The interviewer wants to see if you have done your research and if you are genuinely interested in working there."
     },
     {
       "questionNumber": 2,
@@ -73,7 +73,7 @@
         "All of the above."
       ],
       "answer": "I was looking for a new challenge.",
-      "explanation": "Be honest about why you left your last job, but be sure to focus on thepositive aspects of your decision."
+      "explanation": "Be honest about why you left your last job, but be sure to focus on the positive aspects of your decision."
     },
     {
       "questionNumber": 7,
@@ -98,6 +98,92 @@
       ],
       "answer": "I confronted the team member directly and worked to find a solution",
       "explanation": "Working with difficult team members is a common challenge in many workplaces. When answering this question, it's important to demonstrate that you can handle conflict in a professional manner. Confronting the team member directly and working to find a solution shows that you are a good communicator and problem-solver, and that you are committed to achieving the best outcomes for your team and your organization."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Describe a situation where you had to deal with a challenging customer.",
+      "options": [
+        "I ignored the customer's complaints and moved on.",
+        "I argued with the customer and defended my position.",
+        "I actively listened to the customer's concerns and worked to find a solution.",
+        "I asked a coworker to handle the customer's issue."
+      ],
+      "answer": "I actively listened to the customer's concerns and worked to find a solution.",
+      "explanation": "Dealing with challenging customers is a common scenario in many jobs, especially in customer service roles. It is important to demonstrate empathy, active listening skills, and problem-solving abilities when handling such situations."
+    },
+    {
+      "questionNumber": 10,
+      "question": "How do you stay updated with industry trends and developments?",
+      "options": [
+        "I attend industry conferences and events.",
+        "I regularly read industry-related articles and publications.",
+        "I participate in online forums and discussions.",
+        "All of the above."
+      ],
+      "answer": "All of the above.",
+      "explanation": "Employers value candidates who show a commitment to continuous learning and staying up-to-date with industry trends. Mention specific examples of how you stay informed and engaged in your field."
+    },
+    {
+      "questionNumber": 11,
+      "question": "Tell me about a time when you had to meet a tight deadline.",
+      "options": [
+        "I procrastinated and struggled to meet the deadline.",
+        "I asked for an extension on the deadline.",
+        "I prioritized tasks and managed my time effectively to meet the deadline.",
+        "I delegated tasks to others to meet the deadline."
+      ],
+      "answer": "I prioritized tasks and managed my time effectively to meet the deadline.",
+      "explanation": "Meeting deadlines is crucial in most jobs. Highlight your ability to manage time, prioritize tasks, and handle pressure to meet deadlines."
+    },
+    {
+      "questionNumber": 12,
+      "question": "Describe a
+
+ situation where you had to resolve a complex problem.",
+      "options": [
+        "I gave up on solving the problem.",
+        "I sought help from a supervisor or colleague.",
+        "I broke down the problem into smaller parts and systematically solved each part.",
+        "I ignored the problem and hoped it would resolve itself."
+      ],
+      "answer": "I broke down the problem into smaller parts and systematically solved each part.",
+      "explanation": "Employers value candidates who can analyze complex problems and come up with effective solutions. Describe your problem-solving approach and how you tackle complex challenges."
+    },
+    {
+      "questionNumber": 13,
+      "question": "How do you handle constructive criticism?",
+      "options": [
+        "I get defensive and dismiss the criticism.",
+        "I reflect on the feedback and look for ways to improve.",
+        "I ignore the criticism and continue with my current approach.",
+        "I confront the person giving the criticism."
+      ],
+      "answer": "I reflect on the feedback and look for ways to improve.",
+      "explanation": "Receiving and implementing constructive criticism is important for personal and professional growth. Demonstrate your ability to handle feedback positively and use it as an opportunity for self-improvement."
+    },
+    {
+      "questionNumber": 14,
+      "question": "Tell me about a time when you had to adapt to a change in the workplace.",
+      "options": [
+        "I resisted the change and preferred the old way of doing things.",
+        "I adapted quickly and embraced the change.",
+        "I complained about the change to my coworkers.",
+        "I refused to accept the change and looked for a new job."
+      ],
+      "answer": "I adapted quickly and embraced the change.",
+      "explanation": "Adaptability is a valuable trait in today's fast-paced work environment. Describe a situation where you successfully navigated a workplace change and highlight your flexibility and openness to new ideas."
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is your long-term career goal?",
+      "options": [
+        "I don't have a specific long-term career goal.",
+        "I want to advance to a leadership position within the company.",
+        "I aspire to start my own business.",
+        "I am still exploring different career paths."
+      ],
+      "answer": "I want to advance to a leadership position within the company.",
+      "explanation": "Employers are interested in candidates who have ambition and long-term career aspirations. Show your commitment to growth and development within the organization."
     }
   ]
 }
