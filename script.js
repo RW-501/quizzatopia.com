@@ -355,7 +355,7 @@ function showExplanation(explanation) {
   document.getElementById("explanation").innerHTML = explanation;
   disableAnswerButtons();
   showExplanationPopup();
-			document.getElementById('show-explanation-btn').classList.remove("d-none");
+document.getElementById('show-explanation-btn').classList.remove("d-none");
 
 }
 
@@ -364,7 +364,6 @@ function showExplanationPopup() {
   const explanationContainer = document.querySelector('.explanation-container');
   const closeButton = document.getElementById('close-btn');
 
- // explanationContainer.style.display = 'block';
 
   closeButton.addEventListener('click', function() {
     explanationContainer.style.display = 'none';
@@ -379,7 +378,7 @@ showExplanationButton.addEventListener('click', function() {
   // Replace this with your explanation content
  //const explanation = "This is the explanation for the question.";
 //  showExplanation(explanation);
-		document.getElementById('show-explanation-btn').classList.remove("d-none");
+document.getElementById('show-explanation-btn').classList.remove("d-none");
   const explanationContainer = document.querySelector('.explanation-container');
 
 	explanationContainer.style.display = 'block';
@@ -408,7 +407,7 @@ function enableAnswerButtons() {
 function nextQuestion() {
   currentQuestion++;
 document.getElementById('show-explanation-btn').classList.add("d-none");
-	
+
   if (currentQuestion < totalQuestions) {
     enableAnswerButtons();
     showQuestion();
