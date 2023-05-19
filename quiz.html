@@ -1039,7 +1039,7 @@ function isValidEdition(e) {
 // Fetch and assign the data
 function fetchData(q, e) {
   if (e && isValidEdition(e)) {
-    fetch(`quiz/Quizzes/${e}/${q}.json`)
+    fetch(`/quiz/Quizzes/${e}/${q}.json`)
       .then(response => response.json())
       .then(data => {
         if (Array.isArray(data)) {
