@@ -695,6 +695,11 @@
   <script>
     
 	 
+// Function to prevent body scrolling on mobile devices during drag
+function preventBodyScrolling(event) {
+  event.preventDefault();
+}
+
 interact('.explanation-container')
   .draggable({
     inertia: true,
@@ -713,6 +718,17 @@ interact('.explanation-container')
         target.style.transform = `translate(${x}px, ${y}px)`;
         target.setAttribute('data-x', x);
         target.setAttribute('data-y', y);
+      },
+      // Disable body scrolling during drag on mobile devices
+      start(event) {
+        if ('ontouchmove' in document.documentElement) {
+          document.addEventListener('touchmove', preventBodyScrolling, { passive: false });
+        }
+      },
+      end(event) {
+        if ('ontouchmove' in document.documentElement) {
+          document.removeEventListener('touchmove', preventBodyScrolling);
+        }
       },
     },
   })
