@@ -3,6 +3,12 @@ if (window.location.pathname.substr(-5) === '.html' && window.location.pathname.
   var newPath = window.location.pathname.slice(0, -5);
   window.history.replaceState({}, '', newPath);
 }
+	
+	
+	
+	
+	
+	
 </script>
 
 
@@ -176,7 +182,17 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
   
   
   
-  
+  function runWaitFunc() {
+  const toHTML = document.body;
+
+  // Add the fade-in class to the body element
+  toHTML.classList.add('fade-in');
+
+  // Wait for the transition to complete and remove the fade-in class
+  setTimeout(() => {
+    toHTML.classList.remove('fade-in');
+  }, 200);
+}
   
  
 
@@ -185,6 +201,12 @@ const QUIZZES_TAKEN_KEY = 'quizzesTaken';
 
 
 <style>
+	
+	.fade-in {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
   .search-bar{
      margin-right: 5%;
 }
