@@ -1032,87 +1032,101 @@ quizInfo.quizLink = q;  // Add the "q" parameter to the quizInfo object
 }
 
 function fetchData(q, e) {
+let stringEnt;	
   if (e && isValidEdition(e)) {
-    fetch(`/quiz/Quizzes/${q}.json`)
-      .then(response => response.json())
-      .then(data => {
-        if (Array.isArray(data)) {
-          if (data.length === 0) {
-            const randomFile = getRandomFile(files);
-            fetchData(randomFile, e);
-          } else {
-            const questionData = data.map(questionObj => ({
-              question: questionObj.question,
-              answer: questionObj.answer,
-              options: questionObj.options,
-              explanation: questionObj.explanation
-            }));
-            updateQuizData(questionData);
-          }
+	  
+		         console.log("New JSON structure");
+  
+	stringEnt  = '/quiz/Quizzes/${q}.json';
+  }else{
+	         console.log("old JSON structure");
+ 
+	stringEnt  = 'q/${q}.json';
+  }
+	
+	
+  fetch(stringEnt)
+    .then(response => response.json())
+    .then(data => {
+      if (Array.isArray(data)) {
+        // Handle old JSON structure
+        console.log("Old JSON structure");
+
+        if (data.length === 0) {
+          // Handle empty data
+          console.log("Empty data");
+          const randomFile = getRandomFile(files);
+          fetchData(randomFile);
         } else {
+          // Use the questions data here
+          const questionData = data.map(questionObj => ({
+            question: questionObj.question,
+            answer: questionObj.answer,
+            options: questionObj.options,
+            explanation: questionObj.explanation
+          }));
+
+          // Update quizCode, quizName, numberOfQuestions
+          quizCode = "";
+          quizName = "";
+          numberOfQuestions = data.length;
+
+          // Check quiz code and retrieve or save quiz info
+          const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
+
+          questions.push(...questionData);
+          shuffleArray(questions);
+
+          // Access and use the retrieved quiz information
+          const questionsCompleted = quizInfo.questionsCompleted;
+
+          // Display the test information
+          displayTestInfo(quizCode, quizName, numberOfQuestions);
+        }
+      } else {
+        // Handle new JSON structure
+
+        if (data.questions.length === 0) {
+          // Handle empty data
+          console.log("Empty data");
+          const randomFile = getRandomFile(files);
+          fetchData(randomFile);
+        } else {
+          // Use the questions data here
           const questionData = data.questions.map(questionObj => ({
             question: questionObj.question,
             answer: questionObj.answer,
             options: questionObj.options,
             explanation: questionObj.explanation
           }));
-          updateQuizData(questionData);
+
+          // Update quizCode, quizName, numberOfQuestions
+          quizCode = data.quizCode;
+          quizName = data.quizName;
+          numberOfQuestions = data.numberOfQuestions;
+
+          // Check quiz code and retrieve or save quiz info
+          const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
+
+          questions.push(...questionData);
+          shuffleArray(questions);
+
+          // Access and use the retrieved quiz information
+          const questionsCompleted = quizInfo.questionsCompleted;
+
+          // Display the test information
+          displayTestInfo(quizCode, quizName, numberOfQuestions);
         }
-      })
-      .catch(error => {
-        console.error("Error fetching data:", error);
-      });
-  } else {
-    fetch(`q/${q}.json`)
-      .then(response => response.json())
-      .then(data => {
-        if (Array.isArray(data)) {
-          if (data.length === 0) {
-            const randomFile = getRandomFile(files);
-            fetchData(randomFile);
-          } else {
-            const questionData = data.map(questionObj => ({
-              question: questionObj.question,
-              answer: questionObj.answer,
-              options: questionObj.options,
-              explanation: questionObj.explanation
-            }));
-            updateQuizData(questionData);
-          }
-        } else {
-          if (data.questions.length === 0) {
-            const randomFile = getRandomFile(files);
-            fetchData(randomFile);
-          } else {
-            const questionData = data.questions.map(questionObj => ({
-              question: questionObj.question,
-              answer: questionObj.answer,
-              options: questionObj.options,
-              explanation: questionObj.explanation
-            }));
-            updateQuizData(questionData);
-          }
-        }
-      })
-      .catch(error => console.error(error));
-  }
+      }
+    })
+    .catch(error => console.error(error));
 }
 
-function updateQuizData(questionData) {
-  quizCode = "";
-  quizName = "";
-  numberOfQuestions = questionData.length;
-
-  const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions);
-
-  questions.push(...questionData);
-  shuffleArray(questions);
-
-  const questionsCompleted = quizInfo.questionsCompleted;
-
-  displayTestInfo(quizCode, quizName, numberOfQuestions);
-}
-
+// Call fetchData with the initial q value
+fetchData(q);
+	  
+	  
+	  
 fetchData(q, e);
 
 	      
