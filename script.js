@@ -187,7 +187,7 @@ function generateQuizAdPattern(numQuestions, numAds) {
 
 
 
-   const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+   //const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
 if( userInfo.userName == "admin" ||  userInfo.userName == "Admin"){
 	
