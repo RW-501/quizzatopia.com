@@ -1,0 +1,112 @@
+{
+  "quizCode": "QZ015",
+  "quizName": "FINRA Exams",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does FINRA stand for?",
+      "options": ["Financial Industry Regulatory Authority", "Federal Investment Regulatory Agency", "Financial Institutions Regulatory Association", "Fidelity and Investments National Regulatory Authority"],
+      "answer": "Financial Industry Regulatory Authority",
+      "explanation": "FINRA stands for Financial Industry Regulatory Authority."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which of the following is NOT a type of FINRA exam?",
+      "options": ["Series 6", "Series 63", "Series 7", "Series 10"],
+      "answer": "Series 10",
+      "explanation": "Series 10 is not a type of FINRA exam."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the purpose of the Series 6 exam?",
+      "options": ["To qualify individuals to sell mutual funds and variable annuities", "To qualify individuals to sell municipal securities", "To qualify individuals to trade options", "To qualify individuals to provide investment advisory services"],
+      "answer": "To qualify individuals to sell mutual funds and variable annuities",
+      "explanation": "The purpose of the Series 6 exam is to qualify individuals to sell mutual funds and variable annuities."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which exam is required for individuals who want to become registered representatives and sell a wide range of securities?",
+      "options": ["Series 63", "Series 65", "Series 66", "Series 7"],
+      "answer": "Series 7",
+      "explanation": "The Series 7 exam is required for individuals who want to become registered representatives and sell a wide range of securities."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the passing score for FINRA exams?",
+      "options": ["70%", "75%", "80%", "85%"],
+      "answer": "70%",
+      "explanation": "The passing score for FINRA exams is 70%."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which exam is required for individuals who want to provide investment advice or manage client accounts?",
+      "options": ["Series 63", "Series 65", "Series 66", "Series 7"],
+      "answer": "Series 65",
+      "explanation": "The Series 65 exam is required for individuals who want to provide investment advice or manage client accounts."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the purpose of the Series 63 exam?",
+      "options": ["To qualify individuals to sell mutual funds and variable annuities", "To qualify individuals to sell municipal securities", "To qualify individuals to trade options", "To qualify individuals to provide investment advisory services"],
+      "answer": "To qualify individuals to sell municipal securities",
+      "explanation": "The purpose of the Series 63 exam is to qualify individuals to sell municipal securities."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the purpose of the Series 66 exam?",
+      "options": ["To qualify individuals to sell mutual funds and variable annuities", "To qualify individuals to sell municipal securities", "To qualify individuals to trade options", "To qualify individuals to provide investment advisory services"],
+      "answer": "To qualify individuals to provide investment advisory services",
+      "explanation": "The purpose of the Series 66 exam is to qualify individuals to provide investment advisory services."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which exam is a combination of the Series 63 and Series 65 exams?",
+      "options": ["Series 63", "Series 65", "Series 66", "Series 7"],
+      "answer": "Series 66",
+      "explanation": "The Series 66 exam is a combination of the Series 63 and Series 65 exams."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the purpose of the Series 24 exam?",
+      "options": ["To qualify individuals to sell mutual funds and variable annuities", "To qualify individuals to sell municipal securities", "To qualify individuals to supervise sales activities of other registered representatives", "To qualify individuals to provide investment advisory services"],
+      "answer": "To qualify individuals to supervise sales activities of other registered representatives",
+      "explanation": "The purpose of the Series 24 exam is to qualify individuals to supervise sales activities of other registered representatives."
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which exam is required for individuals who want to engage in options trading?",
+      "options": ["Series 63", "Series 65", "Series 66", "Series 7"],
+      "answer": "Series 7",
+      "explanation": "The Series 7 exam is required for individuals who want to engage in options trading."
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the purpose of the Series 53 exam?",
+      "options": ["To qualify individuals to sell municipal securities", "To qualify individuals to supervise sales activities of other registered representatives", "To qualify individuals to trade options", "To qualify individuals to provide investment advisory services"],
+      "answer": "To qualify individuals to sell municipal securities",
+      "explanation": "The purpose of the Series 53 exam is to qualify individuals to sell municipal securities."
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which exam is required for individuals who want to engage in futures trading?",
+      "options": ["Series 3", "Series 65", "Series 66", "Series 7"],
+      "answer": "Series 3",
+      "explanation": "The Series 3 exam is required for individuals who want to engage in futures trading."
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the purpose of the Series 31 exam?",
+      "options": ["To qualify individuals to sell mutual funds and variable annuities", "To qualify individuals to sell municipal securities", "To qualify individuals to trade futures contracts", "To qualify individuals to provide investment advisory services"],
+      "answer": "To qualify individuals to trade futures contracts",
+      "explanation": "The purpose of the Series 31 exam is to qualify individuals to trade futures contracts."
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the purpose of the Series 87 exam?",
+      "options": ["To qualify individuals to sell mutual funds and variable annuities", "To qualify individuals to sell municipal securities", "To qualify individuals to trade futures contracts", "To qualify individuals to work as research analysts"],
+      "answer": "To qualify individuals to work as research analysts",
+      "explanation": "The purpose of the Series 87 exam is to qualify individuals to work as research analysts."
+    }
+  ]
+}
