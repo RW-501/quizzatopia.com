@@ -1,21 +1,9 @@
-import { initializeApp } from './app.js';
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider, FacebookAuthProvider, signInWithPopup } from './auth.js';
+import { initializeApp } from 'auth/app';
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'auth/auth';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
-// Firebase app configuration
-var firebaseConfig = {
-  // your configuration here
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-
-// Rest of your code...
-
-
-
-// Firebase app configuration
-var firebaseConfig = {
+const app = initializeApp({
   apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
   authDomain: "quizzatopia-bdfc9.firebaseapp.com",
   projectId: "quizzatopia-bdfc9",
@@ -23,7 +11,41 @@ var firebaseConfig = {
   messagingSenderId: "828105067102",
   appId: "1:828105067102:web:76afb989ed7c03ebb542cf",
   measurementId: "G-J3QK9V5480"
+});
+
+const auth = getAuth(app);
+
+// Function to handle Facebook sign-in
+export const signInWithFacebook = () => {
+  const provider = new firebase.auth.FacebookAuthProvider();
+
+  return auth
+    .signInWithPopup(provider)
+    .then((result) => {
+      // Retrieve the user information
+      const user = result.user;
+
+      // Get the user's display name and email
+      const displayName = user.displayName;
+      const email = user.email;
+
+      // Perform any additional actions or redirect the user
+
+      // Example: Show a success message and user info
+      alert('Facebook Login successful');
+      console.log('User display name:', displayName);
+      console.log('User email:', email);
+    })
+    .catch((error) => {
+      // Handle errors during sign-in
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // Handle the error appropriately
+    });
 };
+
+// Rest of the code...
+
 
 // Initialize Firebase
 //firebase.initializeApp(firebaseConfig);
