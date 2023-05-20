@@ -1,7 +1,7 @@
-import { initializeApp } from './app';
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from './auth';
-import firebase from './app';
-import './auth';
+import { initializeApp } from './app.js';
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from './auth.js';
+import firebase from './app.js';
+import './auth.js';
 
 
 const app = initializeApp({
