@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Firebase Authentication Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Firebase Authentication Example</h1>
+
+  <!-- Login/Sign-up Form -->
+  <div class="auth-container">
+    <div class="auth-form">
+      <h2>Login</h2>
+      <input type="email" id="emailInput" placeholder="Email">
+      <input type="password" id="passwordInput" placeholder="Password">
+      <button onclick="signInWithEmail()">Sign In</button>
+      <p class="or-divider">or</p>
+      <button onclick="signInWithGoogle()" class="google-button">Sign In with Google</button>
+      <p class="register-link">Don't have an account? <a href="#" onclick="showSignUpForm()">Register</a></p>
+    </div>
+    <div class="auth-form hidden" id="signupForm">
+      <h2>Sign Up</h2>
+      <input type="email" id="signupEmailInput" placeholder="Email">
+      <input type="password" id="signupPasswordInput" placeholder="Password">
+      <button onclick="signUpWithEmail()">Sign Up</button>
+      <p class="or-divider">or</p>
+      <button onclick="signInWithGoogle()" class="google-button">Sign Up with Google</button>
+      <p class="register-link">Already have an account? <a href="#" onclick="showLoginForm()">Login</a></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
