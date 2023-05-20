@@ -33,9 +33,34 @@ function handleLogin(event) {
   event.preventDefault();
   var email = document.getElementById('email').value;
   var password = document.getElementById('password').value;
+
   // Firebase authentication logic for email/password login
-  // Use Firebase Auth API to sign in the user with email and password
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      // Retrieve the user information
+      var user = userCredential.user;
+
+      // Get the user's display name and email
+      var displayName = user.displayName;
+      var email = user.email;
+
+      // Perform any additional actions or redirect the user
+
+      // Example: Show a success message and user info
+      alert(' email Login successful');
+      console.log('User display name:', displayName);
+      console.log('User email:', email);
+    })
+    .catch((error) => {
+      // Handle errors during login
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // Handle the error appropriately
+    });
 }
+
 
 // Function to handle signup form submission
 function handleSignup(event) {
@@ -43,9 +68,39 @@ function handleSignup(event) {
   var username = document.getElementById('username').value;
   var email = document.getElementById('email').value;
   var password = document.getElementById('password').value;
+
   // Firebase authentication logic for email/password signup
-  // Use Firebase Auth API to create a new user with email and password
+  firebase
+    .auth()
+    .createUserWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      // Retrieve the user information
+      var user = userCredential.user;
+
+      // Set the user's display name
+      user.updateProfile({
+        displayName: username
+      });
+
+      // Get the user's display name and email
+      var displayName = user.displayName;
+      var email = user.email;
+
+      // Perform any additional actions or redirect the user
+
+      // Example: Show a success message and user info
+      alert('email Sign-up successful');
+      console.log('User display name:', displayName);
+      console.log('User email:', email);
+    })
+    .catch((error) => {
+      // Handle errors during sign-up
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // Handle the error appropriately
+    });
 }
+
 
 // Function to handle Google sign-in
 function signInWithGoogle() {
@@ -55,9 +110,19 @@ function signInWithGoogle() {
     .auth()
     .signInWithPopup(provider)
     .then((result) => {
-      // Handle successful sign-in
+      // Retrieve the user information
       var user = result.user;
+      
+      // Get the user's display name and email
+      var displayName = user.displayName;
+      var email = user.email;
+      
       // Perform any additional actions or redirect the user
+      
+      // Example: Show a success message and user info
+      alert(' google Login successful');
+      console.log('User display name:', displayName);
+      console.log('User email:', email);
     })
     .catch((error) => {
       // Handle errors during sign-in
@@ -75,9 +140,19 @@ function signInWithFacebook() {
     .auth()
     .signInWithPopup(provider)
     .then((result) => {
-      // Handle successful sign-in
+      // Retrieve the user information
       var user = result.user;
+      
+      // Get the user's display name and email
+      var displayName = user.displayName;
+      var email = user.email;
+      
       // Perform any additional actions or redirect the user
+      
+      // Example: Show a success message and user info
+      alert('facebook Login successful');
+      console.log('User display name:', displayName);
+      console.log('User email:', email);
     })
     .catch((error) => {
       // Handle errors during sign-in
