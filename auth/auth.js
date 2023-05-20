@@ -53,7 +53,7 @@ function handleLogin(event) {
       // Perform any additional actions or redirect the user
 
       // Example: Show a success message and user info
-      alert(' email Login successful');
+      alert('Email Login successful');
       console.log('User display name:', displayName);
       console.log('User email:', email);
     })
@@ -76,64 +76,64 @@ function handleSignup(event) {
 }
 
 // Function to handle Google sign-in
-function signInWithGoogle() {
-  var provider = new firebase.auth.GoogleAuthProvider();
+export const signInWithGoogle = () => {
+  const provider = new firebase.auth.GoogleAuthProvider();
 
-  firebase
+  return firebase
     .auth()
     .signInWithPopup(provider)
     .then((result) => {
       // Retrieve the user information
-      var user = result.user;
-      
+      const user = result.user;
+
       // Get the user's display name and email
-      var displayName = user.displayName;
-      var email = user.email;
-      
+      const displayName = user.displayName;
+      const email = user.email;
+
       // Perform any additional actions or redirect the user
-      
+
       // Example: Show a success message and user info
-      alert(' google Login successful');
+      alert('Google Login successful');
       console.log('User display name:', displayName);
       console.log('User email:', email);
     })
     .catch((error) => {
       // Handle errors during sign-in
-      var errorCode = error.code;
-      var errorMessage = error.message;
+      const errorCode = error.code;
+      const errorMessage = error.message;
       // Handle the error appropriately
     });
-}
+};
 
 // Function to handle Facebook sign-in
-function signInWithFacebook() {
-  var provider = new firebase.auth.FacebookAuthProvider();
+export const signInWithFacebook = () => {
+  const provider = new firebase.auth.FacebookAuthProvider();
 
-  firebase
+  return firebase
     .auth()
     .signInWithPopup(provider)
     .then((result) => {
       // Retrieve the user information
-      var user = result.user;
-      
+      const user = result.user;
+
       // Get the user's display name and email
-      var displayName = user.displayName;
-      var email = user.email;
-      
+      const displayName = user.displayName;
+      const email = user.email;
+
       // Perform any additional actions or redirect the user
-      
+
       // Example: Show a success message and user info
-      alert('facebook Login successful');
+      alert('Facebook Login successful');
       console.log('User display name:', displayName);
       console.log('User email:', email);
     })
     .catch((error) => {
       // Handle errors during sign-in
-      var errorCode = error.code;
-      var errorMessage = error.message;
+      const errorCode = error.code;
+      const errorMessage = error.message;
       // Handle the error appropriately
     });
-}
+};
 
 // Function to initialize the login/signup functionality
 function initializeAuth() {
@@ -143,8 +143,6 @@ function initializeAuth() {
 
 // Call the initializeAuth function when the window finishes loading
 window.onload = initializeAuth;
-
-
 
 
 
