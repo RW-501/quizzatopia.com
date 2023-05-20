@@ -1,7 +1,8 @@
-import { initializeApp } from 'auth/app';
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'auth/auth';
-import firebase from 'auth/app';
-import 'auth/auth';
+import { initializeApp } from './auth/app';
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from './auth/auth';
+import firebase from './auth/app';
+import './auth/auth';
+
 
 const app = initializeApp({
   apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
