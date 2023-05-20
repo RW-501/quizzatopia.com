@@ -45,7 +45,23 @@ export const signInWithFacebook = () => {
     });
 };
 
-// Rest of the code...
+
+
+export function createUserWithEmailAndPassword(email, password) {
+  // Your authentication logic here
+  // This function should handle the process of creating a new user with the provided email and password
+  
+  // For example, using Firebase Authentication:
+  return firebase.auth().createUserWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      // User creation successful, return the user object
+      return userCredential.user;
+    })
+    .catch((error) => {
+      // Handle any errors that occurred during user creation
+      throw error;
+    });
+}
 
 
 // Rest of the code...
