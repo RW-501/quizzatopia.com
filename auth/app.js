@@ -46,6 +46,8 @@ export const signInWithFacebook = () => {
 
 // Rest of the code...
 
+// Rest of the code...
+
 
 // Initialize Firebase
 //firebase.initializeApp(firebaseConfig);
