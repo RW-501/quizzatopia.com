@@ -1,8 +1,9 @@
+// app.js
+
 import { initializeApp } from './app.js';
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from './auth.js';
 import firebase from './app.js';
 import './auth.js';
-
 
 const app = initializeApp({
   apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
@@ -153,37 +154,6 @@ function handleSignup(event) {
     })
     .catch((error) => {
       // Handle errors during sign-up
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // Handle the error appropriately
-    });
-}
-
-
-// Function to handle Google sign-in
-function signInWithGoogle() {
-  var provider = new firebase.auth.GoogleAuthProvider();
-
-  firebase
-    .auth()
-    .signInWithPopup(provider)
-    .then((result) => {
-      // Retrieve the user information
-      var user = result.user;
-      
-      // Get the user's display name and email
-      var displayName = user.displayName;
-      var email = user.email;
-      
-      // Perform any additional actions or redirect the user
-      
-      // Example: Show a success message and user info
-      alert(' google Login successful');
-      console.log('User display name:', displayName);
-      console.log('User email:', email);
-    })
-    .catch((error) => {
-      // Handle errors during sign-in
       var errorCode = error.code;
       var errorMessage = error.message;
       // Handle the error appropriately
