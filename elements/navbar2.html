@@ -35,13 +35,25 @@ if (window.location.pathname.substr(-5) === '.html' && window.location.pathname.
         </li>
       </ul>
     </div>
+    <form class="form-inline my-2 my-lg-0 search-bar d-none">
+      <input class="form-control mr-sm-2" type="search" id="searchInput" placeholder="Search quizzes" aria-label="Search">
+      <button onclick="search()">Search</button>
+      <div id="searchResults"></div>
+    </form>
     <!-- Profile pic and name area -->
     <div class="profile-area">
-      <img id="profile-pic" src="/images/avatar/w1.png" alt="Profile Picture" class="profile-pic " loading="lazy">
-      <a id="profile-name" class="profile-name" href="/user/">Dashbroad</a>
+      <img id="profile-pic" src="/images/avatar/w1.png" alt="Profile Picture" class="profile-pic" loading="lazy">
+      <a id="profile-name" class="profile-name" href="/user/">Dashboard</a>
+    </div>
+    <!-- Sign-up and Log-in buttons -->
+    <div class="auth-buttons">
+      <button onclick="openPopup()">Sign Up</button>
+      <button onclick="openPopup()">Log In</button>
     </div>
   </div>
 </nav>
+<div id="search-results" class="container mt-4"></div>
+
 
 
 
