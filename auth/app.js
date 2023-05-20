@@ -173,35 +173,6 @@ function signInWithGoogle() {
     });
 }
 
-// Function to handle Facebook sign-in
-function signInWithFacebook() {
-  var provider = new firebase.auth.FacebookAuthProvider();
-
-  firebase
-    .auth()
-    .signInWithPopup(provider)
-    .then((result) => {
-      // Retrieve the user information
-      var user = result.user;
-      
-      // Get the user's display name and email
-      var displayName = user.displayName;
-      var email = user.email;
-      
-      // Perform any additional actions or redirect the user
-      
-      // Example: Show a success message and user info
-      alert('facebook Login successful');
-      console.log('User display name:', displayName);
-      console.log('User email:', email);
-    })
-    .catch((error) => {
-      // Handle errors during sign-in
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // Handle the error appropriately
-    });
-}
 
 
 // Function to initialize the login/signup functionality
