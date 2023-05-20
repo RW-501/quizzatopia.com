@@ -1,5 +1,5 @@
-import { initializeApp } from 'auth/app';
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider, FacebookAuthProvider, signInWithPopup } from 'auth/auth';
+import { initializeApp } from './app.js';
+import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider, FacebookAuthProvider, signInWithPopup } from './auth.js';
 
 // Firebase app configuration
 var firebaseConfig = {
