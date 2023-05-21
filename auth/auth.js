@@ -1,7 +1,4 @@
 // auth.js
-
-import { signInWithGoogle, signInWithFacebook, createUserWithEmailAndPassword } from './auth.js';
-
 // Function to handle Google sign-in
 export function signInWithGoogle() {
   // ...
