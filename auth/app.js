@@ -1,7 +1,7 @@
 // app.js
 
-import { initializeApp } from 'firebase/app';
-import 'firebase/auth';
+import { initializeApp } from 'auth/app.js';
+import 'auth/auth.js';
 
 const firebaseConfig = {
   // Your Firebase configuration
