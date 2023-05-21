@@ -1,7 +1,7 @@
 // app.js
 
 import { initializeApp } from 'firebase/app';
-import { signInWithGoogle, signInWithFacebook, createUserWithEmailAndPassword } from '/auth/auth.js';
+//import { signInWithGoogle, signInWithFacebook, createUserWithEmailAndPassword } from '/auth/auth.js';
 
 const firebaseConfig = {
   // Your Firebase configuration
