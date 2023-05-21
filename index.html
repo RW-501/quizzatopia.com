@@ -1045,23 +1045,19 @@ signupLoginArea.display = "none";
 	
 	
 	<div id="signupLoginArea" ><div>
-	
-	<!-- Include the Firebase JavaScript SDK -->
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-
-<!-- Include the Firebase Auth JavaScript SDK -->
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-
-<!-- Your HTML code and other JavaScript code here -->
-<!-- ... -->
 
 
 
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-
-<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
-    // Your Firebase configuration
     apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
     authDomain: "quizzatopia-bdfc9.firebaseapp.com",
     projectId: "quizzatopia-bdfc9",
@@ -1071,6 +1067,11 @@ signupLoginArea.display = "none";
     measurementId: "G-J3QK9V5480"
   };
 
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+	
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
