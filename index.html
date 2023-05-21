@@ -1046,14 +1046,11 @@ signupLoginArea.display = "none";
 	
 	<div id="signupLoginArea" ><div>
 
-
-
 <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+  import { getAuth, GoogleAuthProvider, FacebookAuthProvider, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
 
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -1070,115 +1067,108 @@ signupLoginArea.display = "none";
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
+  const auth = getAuth();
 
-	
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+  // Function to handle Google sign-in
+  function signInWithGoogle() {
+    const provider = new GoogleAuthProvider();
 
-// Function to handle Google sign-in
- function signInWithGoogle() {
-  const provider = new firebase.auth.GoogleAuthProvider();
+    return auth
+      .signInWithPopup(provider)
+      .then((result) => {
+        // Retrieve the user information
+        const user = result.user;
 
-  return firebase
-    .auth()
-    .signInWithPopup(provider)
-    .then((result) => {
-      // Retrieve the user information
-      const user = result.user;
+        // Get the user's display name and email
+        const displayName = user.displayName;
+        const email = user.email;
+        const firebaseId = user.uid;
 
-      // Get the user's display name and email
-      const displayName = user.displayName;
-      const email = user.email;
-      const firebaseId = user.uid;
+        // Perform any additional actions or redirect the user
 
-      // Perform any additional actions or redirect the user
+        // Example: Show a success message and user info
+        alert('Google Login successful');
+        console.log('User display name:', displayName);
+        console.log('User email:', email);
+        console.log('Firebase ID:', firebaseId);
+      })
+      .catch((error) => {
+        // Handle errors during sign-in
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // Handle the error appropriately
+        console.log('errorCode google:', errorCode);
+        console.log('errorMessage:', errorMessage);
+      });
+  }
 
-      // Example: Show a success message and user info
-      alert('Google Login successful');
-      console.log('User display name:', displayName);
-      console.log('User email:', email);
-         console.log('Firebase ID:', firebaseId);
-    })
-    .catch((error) => {
-      // Handle errors during sign-in
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // Handle the error appropriately
-      console.log('errorCode google:', errorCode);
-          console.log('errorMessage   :', errorMessage);
-    });
-}
+  // Function to handle Facebook sign-in
+  function signInWithFacebook() {
+    const provider = new FacebookAuthProvider();
 
-// Function to handle Facebook sign-in
- function signInWithFacebook() {
-  const provider = new firebase.auth.FacebookAuthProvider();
+    return auth
+      .signInWithPopup(provider)
+      .then((result) => {
+        // Retrieve the user information
+        const user = result.user;
 
-  return firebase
-    .auth()
-    .signInWithPopup(provider)
-    .then((result) => {
-      // Retrieve the user information
-      const user = result.user;
+        // Get the user's display name and email
+        const displayName = user.displayName;
+        const firebaseId = user.uid;
+        const email = user.email;
 
-      // Get the user's display name and email
-      const displayName = user.displayName;
-      const firebaseId = user.uid;
-      const email = user.email;
+        // Perform any additional actions or redirect the user
 
-      // Perform any additional actions or redirect the user
+        // Example: Show a success message and user info
+        alert('Facebook Login successful');
+        console.log('User display name:', displayName);
+        console.log('Firebase ID:', firebaseId);
+        console.log('User email:', email);
+      })
+      .catch((error) => {
+        // Handle errors during sign-in
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // Handle the error appropriately
+        console.log('errorCode facebook:', errorCode);
+        console.log('errorMessage:', errorMessage);
+      });
+  }
 
-      // Example: Show a success message and user info
-      alert('Facebook Login successful');
-      console.log('User display name:', displayName);
-      console.log('Firebase ID:', firebaseId);
-          console.log('User email:', email);
+  // Function to handle the signup form submission
+  function createUserWithEmailAndPassword() {
+    var username = document.getElementById('susername').value;
+    var email = document.getElementById('semail').value;
+    var password = document.getElementById('spassword').value;
 
-    })
-    .catch((error) => {
-      // Handle errors during sign-in
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // Handle the error appropriately
-      console.log('errorCode facebook:', errorCode);
-          console.log('errorMessage   :', errorMessage);  
-  });
-}
+    return auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // User creation successful, return the user object
+        const user = userCredential.user;
 
-// Function to handle the signup form submission
- function createUserWithEmailAndPassword() {
-  var username = document.getElementById('susername').value;
-  var email = document.getElementById('semail').value;
-  var password = document.getElementById('spassword').value;
+        // Get the user's display name and Firebase ID
+        const displayName = user.displayName;
+        const firebaseId = user.uid;
 
-  return firebase
-    .auth()
-    .createUserWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      // User creation successful, return the user object
-      const user = userCredential.user;
+        // Example: Show a success message and user info
+        alert('Signup successful');
+        console.log('Username:', username);
+        console.log('User email:', email);
+        console.log('Firebase ID:', firebaseId);
 
-      // Get the user's display name and Firebase ID
-      const displayName = user.displayName;
-      const firebaseId = user.uid;
-
-      // Example: Show a success message and user info
-      alert('Signup successful');
-      console.log('Username:', username);
-      console.log('User email:', email);
-      console.log('Firebase ID:', firebaseId);
-
-      return user;
-    })
-    .catch((error) => {
-      // Handle any errors that occurred during user creation
-     const errorCode = error.code;
-      const errorMessage = error.message;
-      // Handle the error appropriately
-      console.log('errorCode e&p:', errorCode);
-          console.log('errorMessage   :', errorMessage);  
-      throw error;
-    });
-}
+        return user;
+      })
+      .catch((error) => {
+        // Handle any errors that occurred during user creation
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // Handle the error appropriately
+        console.log('errorCode e&p:', errorCode);
+        console.log('errorMessage:', errorMessage);
+        throw error;
+      });
+  }
 </script>
 
 
