@@ -5,6 +5,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Signup Page</title>
+
+  <!-- Include the Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
+  authDomain: "quizzatopia-bdfc9.firebaseapp.com",
+  projectId: "quizzatopia-bdfc9",
+  storageBucket: "quizzatopia-bdfc9.appspot.com",
+  messagingSenderId: "828105067102",
+  appId: "1:828105067102:web:76afb989ed7c03ebb542cf",
+  measurementId: "G-J3QK9V5480"
+};
+
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    const analytics = firebase.analytics();
+  </script>
 </head>
 
 <body>
@@ -17,8 +39,33 @@
     <button type="submit">Sign up</button>
   </form>
 
-  <!-- Include the bundled JavaScript file -->
-  <script src="dist/bundle.js"></script>
+  <script>
+    // Signup form submission
+    const signupForm = document.querySelector("#signup-form");
+    signupForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      // Get user input
+      const email = document.querySelector("#email").value;
+      const password = document.querySelector("#password").value;
+
+      // Create user with email and password
+      firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          // Signed up successfully
+          const user = userCredential.user;
+          console.log("User signed up:", user);
+          // Redirect or show success message
+        })
+        .catch((error) => {
+          // Error occurred during signup
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.error("Signup error:", errorCode, errorMessage);
+          // Display error message to the user
+        });
+    });
+  </script>
 </body>
 
 </html>
