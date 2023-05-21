@@ -1089,7 +1089,7 @@ function switchTab(tabName) {
     display: block;
   }
 
-  form {
+  area {
     margin-bottom: 20px;
   }
 
@@ -1113,7 +1113,7 @@ function switchTab(tabName) {
     border-color: #3b5998;
   }
 
-  button[name="submit"],
+  button[name="send"],
   .social-login button {
     width: 100%;
     padding: 12px;
@@ -1128,7 +1128,7 @@ function switchTab(tabName) {
     transition: background-color 0.3s ease;
   }
 
-  button[name="submit"]:hover,
+  button[name="send"]:hover,
   .social-login button:hover {
     background-color: #344e86;
   }
@@ -1369,11 +1369,12 @@ function createUserWithEmailAndPassword(event) {
     </div>
     <div id="loginTab" class="tab-content">
       <h2>Log In</h2>
-      <form id="loginForm">
+      <area id="loginForm">
         <input type="email" id="lemail" placeholder="Email" required>
         <input type="password" id="lpassword" placeholder="Password" required>
-        <button name="submit" onclick="signInWithUserWithEmailAndPassword()">Log In</button>
-      </form>
+        <button name="send" onclick="signInWithUserWithEmailAndPassword(event)">Log In</button>
+      </area>
+	    <hr>
       <div class="social-login">
         <button onclick="signInWithGoogle()">Log In with Google</button>
         <button onclick="signInWithFacebook()">Log In with Facebook</button>
@@ -1382,12 +1383,13 @@ function createUserWithEmailAndPassword(event) {
 	  
     <div id="signupTab" class="tab-content">
       <h2>Sign Up</h2>
-      <form id="signupForm">
+      <area id="signupForm">
         <input type="text" id="susername" placeholder="Username" required>
         <input type="email" id="semail" placeholder="Email" required>
         <input type="password" id="spassword" placeholder="Password" required>
-        <button name="submit" onclick="createUserWithEmailAndPassword(event)">Sign Up</button>
-      </form>
+        <button name="send" onclick="createUserWithEmailAndPassword(event)">Sign Up</button>
+      </area>
+	    <hr>
       <div class="social-login">
         <button onclick="signInWithGoogle()">Sign Up with Google</button>
         <button onclick="signInWithFacebook()">Sign Up with Facebook</button>
