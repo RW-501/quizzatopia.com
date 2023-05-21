@@ -1,8 +1,18 @@
 // auth.js
 // Function to open the login/signup popup
-function openPopup() {
-  document.getElementById('loginPopup').style.display = 'block';
-}
+//function openPopup() {
+  //document.getElementById('loginPopup').style.display = 'block';}
+
+<!-- JavaScript -->
+
+  function openPopup() {
+    // Function implementation goes here
+    document.getElementById('loginPopup').style.display = 'block';
+  }
+
+  // Attach event listener to the button
+  document.getElementById('openPopupButton').addEventListener('click', openPopup);
+
 
 // Function to close the login/signup popup
 function closePopup() {
