@@ -1217,12 +1217,12 @@ signupLoginArea.display = "none";
       <area id="loginForm">
         <input type="email" id="lemail" placeholder="Email" required>
         <input type="password" id="lpassword" placeholder="Password" required>
-        <button name="send" onclick="signInWithUserWithEmailAndPassword(event)">Log In</button>
+        <button name="send" onclick="signInWithUserWithEmailAndPassword(event);">Log In</button>
       </area>
 	    <hr>
       <div class="social-login">
-        <button onclick="signInWithGoogle()">Log In with Google</button>
-        <button onclick="signInWithFacebook()">Log In with Facebook</button>
+        <button onclick="signInWithGoogle();">Log In with Google</button>
+        <button onclick="signInWithFacebook();">Log In with Facebook</button>
       </div>
     </div>
 	  
@@ -1232,12 +1232,12 @@ signupLoginArea.display = "none";
         <input type="text" id="susername" placeholder="Username" required>
         <input type="email" id="semail" placeholder="Email" required>
         <input type="password" id="spassword" placeholder="Password" required>
-        <button name="send" onclick="createUserWithEmailAndPassword(event)">Sign Up</button>
+        <button name="send" onclick="createUserWithEmailAndPassword(event);">Sign Up</button>
       </area>
 	    <hr>
       <div class="social-login">
-        <button onclick="signInWithGoogle()">Sign Up with Google</button>
-        <button onclick="signInWithFacebook()">Sign Up with Facebook</button>
+        <button onclick="signInWithGoogle();">Sign Up with Google</button>
+        <button onclick="signInWithFacebook();">Sign Up with Facebook</button>
       </div>
     </div>
   </div>
@@ -1273,7 +1273,7 @@ signupLoginArea.display = "none";
   const auth = getAuth();
 
   // Function to handle Google sign-in
-  function signInWithGoogle() {
+window.signInWithGoogle = function() {
     const provider = new GoogleAuthProvider();
 
     return auth
@@ -1306,7 +1306,7 @@ signupLoginArea.display = "none";
   }
 
   // Function to handle Facebook sign-in
-  function signInWithFacebook() {
+window.signInWithFacebook = function() {
     const provider = new FacebookAuthProvider();
 
     return auth
@@ -1340,7 +1340,7 @@ signupLoginArea.display = "none";
 
 
  // Function to handle the sign-in process using email and password
-  function signInWithUserWithEmailAndPassword(event) {
+  window.signInWithUserWithEmailAndPassword = function(event) {
     event.preventDefault();
 
     const email = document.getElementById('semail').value;
@@ -1371,7 +1371,7 @@ signupLoginArea.display = "none";
       });
   }
 // Function to handle the signup form submission
-function createUserWithEmailAndPassword(event) {
+window.createUserWithEmailAndPassword = function(event) {
   event.preventDefault();
 
   var username = document.getElementById('susername').value;
