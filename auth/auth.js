@@ -3,25 +3,6 @@
 
 
 
-  function openPopup() {
-    // Function implementation goes here
-    document.getElementById('loginPopup').style.display = 'block';
-  }
-
-  // Attach event listener to the button
-  document.getElementById('openPopupButton').addEventListener('click', openPopup);
-
-
-// Function to close the login/signup popup
-function closePopup() {
-  document.getElementById('loginPopup').style.display = 'none';
-}
-
-// Function to switch between login and signup tabs
-function switchTab(tabName) {
-  document.getElementById('loginTab').style.display = tabName === 'login' ? 'block' : 'none';
-  document.getElementById('signupTab').style.display = tabName === 'signup' ? 'block' : 'none';
-}
 
 
 // Function to handle Google sign-in
