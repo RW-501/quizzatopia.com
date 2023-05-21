@@ -1026,7 +1026,34 @@ function switchTab(tabName) {
 </script>
 
 
+	<script>
+			  fetch('./auth/index.html')
+  .then(response => response.text())
+  .then(data => {
+      const signupLoginArea = document.querySelector('#signupLoginArea');
+function loadScript(url) {
+  var script = document.createElement('script');
+  script.src = url;
+  document.head.appendChild(script);
+	}
+
+loadScript('https://www.quizzatopia.com/auth/auth.js');
+//loadScript('https://www.quizzatopia.com/auth/app.js');						  
+				 				  				  
+signupLoginArea.innerHTML += data;
+signupLoginArea.display = "none";
+
+});
 	
+
+
+
+	
+	
+	</script>
+	
+	
+	<div id="signupLoginArea" ><div>
 	
 	
 	
@@ -1050,32 +1077,5 @@ function switchTab(tabName) {
 	<script src="/index/main.js"></script>
 
       	    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="Quizzatopia" data-description="Support me on Buy me a coffee!" data-message="Thank you for visiting our website! We appreciate your time and hope you had a great experience. If you have any feedback or questions, feel free to reach out to us. We look forward to seeing you again soon!" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
-<script>
-			  fetch('./auth/index.html')
-  .then(response => response.text())
-  .then(data => {
-      const signupLoginArea = document.querySelector('#signupLoginArea');
-function loadScript(url) {
-  var script = document.createElement('script');
-  script.src = url;
-  document.head.appendChild(script);
-	}
 
-//loadScript('https://www.quizzatopia.com/auth/auth.js');
-//loadScript('https://www.quizzatopia.com/auth/app.js');						  
-				 				  				  
-signupLoginArea.innerHTML += data;
-signupLoginArea.display = "none";
-
-});
-	
-
-
-
-	
-	
-	</script>
-	
-	
-	<div id="signupLoginArea" ><div>
 </html>
