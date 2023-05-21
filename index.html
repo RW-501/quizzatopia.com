@@ -1015,7 +1015,7 @@ function switchTab(tabName) {
 			  fetch('./auth/index.html')
   .then(response => response.text())
   .then(data => {
-    document.querySelector('#signupLoginArea').innerHTML += data;
+    document.querySelector('#signupLoginArea').innerHTML = data;
 
 });
 	</script>
