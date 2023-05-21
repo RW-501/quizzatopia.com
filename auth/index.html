@@ -46,6 +46,8 @@
       const errorCode = error.code;
       const errorMessage = error.message;
       // Handle the error appropriately
+      console.log('errorCode google:', errorCode);
+          console.log('errorMessage   :', errorMessage);
     });
 }
 
@@ -79,7 +81,9 @@
       const errorCode = error.code;
       const errorMessage = error.message;
       // Handle the error appropriately
-    });
+      console.log('errorCode facebook:', errorCode);
+          console.log('errorMessage   :', errorMessage);  
+  });
 }
 
 // Function to handle the signup form submission
@@ -109,6 +113,11 @@
     })
     .catch((error) => {
       // Handle any errors that occurred during user creation
+     const errorCode = error.code;
+      const errorMessage = error.message;
+      // Handle the error appropriately
+      console.log('errorCode e&p:', errorCode);
+          console.log('errorMessage   :', errorMessage);  
       throw error;
     });
 }
