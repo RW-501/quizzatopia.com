@@ -6,7 +6,7 @@
 
 
 // Function to handle Google sign-in
-export function signInWithGoogle() {
+ function signInWithGoogle() {
   const provider = new firebase.auth.GoogleAuthProvider();
 
   return firebase
@@ -38,7 +38,7 @@ export function signInWithGoogle() {
 }
 
 // Function to handle Facebook sign-in
-export function signInWithFacebook() {
+ function signInWithFacebook() {
   const provider = new firebase.auth.FacebookAuthProvider();
 
   return firebase
