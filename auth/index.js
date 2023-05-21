@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quizzatopia - Login/Sign Up</title>
-  <link rel="stylesheet" href="auth/style.css">
-</head>
-<body>
+
   
 <!-- Script tag to link the auth.js file -->
-<script src="auth/auth.js"></script>
+<script src="/auth/auth.js"></script>
   
   <div id="loginPopup" class="popup">
     <div class="popup-content">
@@ -47,8 +39,4 @@
       </div>
     </div>
   </div>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-  <script src="app.js"></script>
-</body>
-</html>
+  
