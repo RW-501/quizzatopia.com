@@ -1164,43 +1164,6 @@ function switchTab(tabName) {
     background-color: #344e86;
   }
 </style>
- 
-<div id="loginPopup" class="popup d-none">
-  <div class="popup-content">
-    <div class="close-btn">
-      <button onclick="closePopup()">×</button>
-    </div>
-    <div class="tabs">
-      <button onclick="switchTab('login')">Log In</button>
-      <button onclick="switchTab('signup')">Sign Up</button>
-    </div>
-    <div id="loginTab" class="tab-content">
-      <h2>Log In</h2>
-      <form id="loginForm">
-        <input type="email" id="lemail" placeholder="Email" required>
-        <input type="password" id="lpassword" placeholder="Password" required>
-        <button type="submit">Log In</button>
-      </form>
-      <div class="social-login">
-        <button onclick="signInWithGoogle()">Log In with Google</button>
-        <button onclick="signInWithFacebook()">Log In with Facebook</button>
-      </div>
-    </div>
-    <div id="signupTab" class="tab-content">
-      <h2>Sign Up</h2>
-      <form id="signupForm">
-        <input type="text" id="susername" placeholder="Username" required>
-        <input type="email" id="semail" placeholder="Email" required>
-        <input type="password" id="spassword" placeholder="Password" required>
-        <button type="submit">Sign Up</button>
-      </form>
-      <div class="social-login">
-        <button onclick="signInWithGoogle()">Sign Up with Google</button>
-        <button onclick="signInWithFacebook()">Sign Up with Facebook</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 	<script>/*
 			  fetch('./auth/index.html')
@@ -1234,7 +1197,7 @@ signupLoginArea.display = "none";
 	
 	<div id="signupLoginArea" ><div>
 
-<script >
+<script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js";
@@ -1322,7 +1285,80 @@ signupLoginArea.display = "none";
         console.log('errorMessage:', errorMessage);
       });
   }
+
+  // Function to handle the signup form submission
+  function createUserWithEmailAndPassword() {
+    var username = document.getElementById('susername').value;
+    var email = document.getElementById('semail').value;
+    var password = document.getElementById('spassword').value;
+
+    return auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // User creation successful, return the user object
+        const user = userCredential.user;
+
+        // Get the user's display name and Firebase ID
+        const displayName = user.displayName;
+        const firebaseId = user.uid;
+
+        // Example: Show a success message and user info
+        alert('Signup successful');
+        console.log('Username:', username);
+        console.log('User email:', email);
+        console.log('Firebase ID:', firebaseId);
+
+        return user;
+      })
+      .catch((error) => {
+        // Handle any errors that occurred during user creation
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // Handle the error appropriately
+        console.log('errorCode e&p:', errorCode);
+        console.log('errorMessage:', errorMessage);
+        throw error;
+      });
+  }
 </script>
+
+ 
+<div id="loginPopup" class="popup d-none">
+  <div class="popup-content">
+    <div class="close-btn">
+      <button onclick="closePopup()">×</button>
+    </div>
+    <div class="tabs">
+      <button onclick="switchTab('login')">Log In</button>
+      <button onclick="switchTab('signup')">Sign Up</button>
+    </div>
+    <div id="loginTab" class="tab-content">
+      <h2>Log In</h2>
+      <form id="loginForm">
+        <input type="email" id="lemail" placeholder="Email" required>
+        <input type="password" id="lpassword" placeholder="Password" required>
+        <button type="submit">Log In</button>
+      </form>
+      <div class="social-login">
+        <button onclick="signInWithGoogle()">Log In with Google</button>
+        <button onclick="signInWithFacebook()">Log In with Facebook</button>
+      </div>
+    </div>
+    <div id="signupTab" class="tab-content">
+      <h2>Sign Up</h2>
+      <form id="signupForm">
+        <input type="text" id="susername" placeholder="Username" required>
+        <input type="email" id="semail" placeholder="Email" required>
+        <input type="password" id="spassword" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+      <div class="social-login">
+        <button onclick="signInWithGoogle()">Sign Up with Google</button>
+        <button onclick="signInWithFacebook()">Sign Up with Facebook</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
