@@ -83,9 +83,9 @@ export function signInWithFacebook() {
 
 // Function to handle the signup form submission
 export function createUserWithEmailAndPassword() {
-  var username = document.getElementById('username').value;
-  var email = document.getElementById('email').value;
-  var password = document.getElementById('password').value;
+  var username = document.getElementById('susername').value;
+  var email = document.getElementById('semail').value;
+  var password = document.getElementById('spassword').value;
 
   return firebase
     .auth()
