@@ -1134,41 +1134,6 @@ signupLoginArea.display = "none";
         console.log('errorMessage:', errorMessage);
       });
   }
-
-  // Function to handle the signup form submission
-  function createUserWithEmailAndPassword() {
-    var username = document.getElementById('susername').value;
-    var email = document.getElementById('semail').value;
-    var password = document.getElementById('spassword').value;
-
-    return auth
-      .createUserWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        // User creation successful, return the user object
-        const user = userCredential.user;
-
-        // Get the user's display name and Firebase ID
-        const displayName = user.displayName;
-        const firebaseId = user.uid;
-
-        // Example: Show a success message and user info
-        alert('Signup successful');
-        console.log('Username:', username);
-        console.log('User email:', email);
-        console.log('Firebase ID:', firebaseId);
-
-        return user;
-      })
-      .catch((error) => {
-        // Handle any errors that occurred during user creation
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // Handle the error appropriately
-        console.log('errorCode e&p:', errorCode);
-        console.log('errorMessage:', errorMessage);
-        throw error;
-      });
-  }
 </script>
 
 
