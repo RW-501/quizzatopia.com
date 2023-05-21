@@ -1,26 +1,21 @@
-
-
-
 <!-- Include the Firebase JavaScript SDK -->
-<script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-<script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
-
-	
-
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
 
 <script>
-  
-const firebaseConfig = {
-  // Your Firebase configuration
-  apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
-  authDomain: "quizzatopia-bdfc9.firebaseapp.com",
-  projectId: "quizzatopia-bdfc9",
-  storageBucket: "quizzatopia-bdfc9.appspot.com",
-  messagingSenderId: "828105067102",
-  appId: "1:828105067102:web:76afb989ed7c03ebb542cf",
-  measurementId: "G-J3QK9V5480"
-};
+  const firebaseConfig = {
+    // Your Firebase configuration
+    apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
+    authDomain: "quizzatopia-bdfc9.firebaseapp.com",
+    projectId: "quizzatopia-bdfc9",
+    storageBucket: "quizzatopia-bdfc9.appspot.com",
+    messagingSenderId: "828105067102",
+    appId: "1:828105067102:web:76afb989ed7c03ebb542cf",
+    measurementId: "G-J3QK9V5480"
+  };
 
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
 // Function to handle Google sign-in
  function signInWithGoogle() {
