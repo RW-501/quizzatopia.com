@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Firebase Email Sign Up</title>
+  <!-- Add Firebase SDK CDN links -->
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
 </head>
@@ -27,6 +28,8 @@
       appId: "1:828105067102:web:76afb989ed7c03ebb542cf",
       measurementId: "G-J3QK9V5480"
     };
+
+    // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
 
     // Function to handle the signup form submission
@@ -61,8 +64,6 @@
           console.log('Error message:', errorMessage);
           alert('Signup failed. Please try again.');
         });
-
-      return false; // Prevent form submission
     });
   </script>
 </body>
