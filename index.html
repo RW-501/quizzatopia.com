@@ -1034,7 +1034,7 @@ function switchTab(tabName) {
 function loadScript(url) {
   var script = document.createElement('script');
   script.src = url;
-  document.head.appendChild(script);
+  document.body.appendChild(script);
 	}
 
 loadScript('https://www.quizzatopia.com/auth/index.html');
