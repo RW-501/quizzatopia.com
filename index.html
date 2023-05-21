@@ -1031,22 +1031,24 @@ function switchTab(tabName) {
   .then(response => response.text())
   .then(data => {
       const signupLoginArea = document.querySelector('#signupLoginArea');
+
+		 				  				  
+signupLoginArea.innerHTML += data;
+signupLoginArea.display = "none";
+				  
+		
 function loadScript(url) {
   var script = document.createElement('script');
   script.src = url;
   document.body.appendChild(script);
-	}
-
-loadScript('https://www.quizzatopia.com/auth/index.html');
-//loadScript('https://www.quizzatopia.com/auth/auth.js');
-//loadScript('https://www.quizzatopia.com/auth/app.js');						  
-				 				  				  
-signupLoginArea.innerHTML += data;
-signupLoginArea.display = "none";
-
+	}		  
+				  
+				  
+//loadScript('https://www.quizzatopia.com/auth/index.html');
+loadScript('https://www.quizzatopia.com/auth/auth.js');
+//loadScript('https://www.quizzatopia.com/auth/app.js');	
 });
 	
-
 
 
 	
