@@ -1,6 +1,5 @@
 
   
-<script src="/auth/auth.js"></script>
   
   <div id="loginPopup" class="popup">
     <div class="popup-content">
