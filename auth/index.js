@@ -1,6 +1,5 @@
 
   
-<!-- Script tag to link the auth.js file -->
 <script src="/auth/auth.js"></script>
   
   <div id="loginPopup" class="popup">
