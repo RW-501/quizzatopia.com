@@ -501,11 +501,13 @@ window.addEventListener('load', removeOverlay);
 	  
     <div class="col-md-6 px-4">
 	
-	    
+  <section id="signupLoginArea">
+	  </section>
+
 	  
 	  
-	  
-	  
+	    <button onclick="openPopup()">Sign Up</button>
+
   <section class="call-to-action">
   <div class="container">
     <h2>Discover Your Knowledge!</h2>
@@ -515,7 +517,6 @@ window.addEventListener('load', removeOverlay);
 </section>
 	  
 	  <hr>
-  <button onclick="openPopup()">Sign Up</button>
 
 	    
 	    
@@ -1014,7 +1015,7 @@ function switchTab(tabName) {
 			  fetch('./auth/index.html')
   .then(response => response.text())
   .then(data => {
-    document.querySelector('body').innerHTML += data;
+    document.querySelector('#signupLoginArea').innerHTML += data;
 
 });
 	</script>
