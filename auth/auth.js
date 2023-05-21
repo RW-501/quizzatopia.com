@@ -71,7 +71,7 @@
 }
 
 // Function to handle the signup form submission
-export function createUserWithEmailAndPassword() {
+ function createUserWithEmailAndPassword() {
   var username = document.getElementById('susername').value;
   var email = document.getElementById('semail').value;
   var password = document.getElementById('spassword').value;
