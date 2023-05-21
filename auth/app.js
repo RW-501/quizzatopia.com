@@ -1,7 +1,6 @@
 // app.js
 
 
-
 const firebaseConfig = {
   // Your Firebase configuration
   apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
@@ -13,4 +12,6 @@ const firebaseConfig = {
   measurementId: "G-J3QK9V5480"
 };
 
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
