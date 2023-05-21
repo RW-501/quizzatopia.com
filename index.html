@@ -1113,7 +1113,7 @@ function switchTab(tabName) {
     border-color: #3b5998;
   }
 
-  button[type="submit"],
+  button[name="submit"],
   .social-login button {
     width: 100%;
     padding: 12px;
@@ -1128,7 +1128,7 @@ function switchTab(tabName) {
     transition: background-color 0.3s ease;
   }
 
-  button[type="submit"]:hover,
+  button[name="submit"]:hover,
   .social-login button:hover {
     background-color: #344e86;
   }
@@ -1201,7 +1201,7 @@ signupLoginArea.display = "none";
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js";
-  import { getAuth, GoogleAuthProvider, FacebookAuthProvider, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+  import { getAuth, GoogleAuthProvider, FacebookAuthProvider } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
 
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -1372,20 +1372,21 @@ function createUserWithEmailAndPassword(event) {
       <form id="loginForm">
         <input type="email" id="lemail" placeholder="Email" required>
         <input type="password" id="lpassword" placeholder="Password" required>
-        <button onclick="signInWithUserWithEmailAndPassword()">Log In</button>
+        <button name="submit" onclick="signInWithUserWithEmailAndPassword()">Log In</button>
       </form>
       <div class="social-login">
         <button onclick="signInWithGoogle()">Log In with Google</button>
         <button onclick="signInWithFacebook()">Log In with Facebook</button>
       </div>
     </div>
+	  
     <div id="signupTab" class="tab-content">
       <h2>Sign Up</h2>
       <form id="signupForm">
         <input type="text" id="susername" placeholder="Username" required>
         <input type="email" id="semail" placeholder="Email" required>
         <input type="password" id="spassword" placeholder="Password" required>
-        <button onclick="createUserWithEmailAndPassword(event)">Sign Up</button>
+        <button name="submit" onclick="createUserWithEmailAndPassword(event)">Sign Up</button>
       </form>
       <div class="social-login">
         <button onclick="signInWithGoogle()">Sign Up with Google</button>
