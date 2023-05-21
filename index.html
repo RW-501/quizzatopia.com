@@ -1287,7 +1287,37 @@ signupLoginArea.display = "none";
   }
 
 
+ // Function to handle the sign-in process using email and password
+  function signInWithEmailAndPassword(event) {
+    event.preventDefault();
 
+    const email = document.getElementById('semail').value;
+    const password = document.getElementById('spassword').value;
+        console.log('event e&p:', event);
+
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Sign-in successful, retrieve the user object
+        const user = userCredential.user;
+
+        // Get the user's display name and Firebase ID
+        const displayName = user.displayName;
+        const firebaseId = user.uid;
+
+        // Example: Show a success message and user info
+        alert('Sign-in successful');
+        console.log('User display name:', displayName);
+        console.log('Firebase ID:', firebaseId);
+      })
+      .catch((error) => {
+        // Handle any errors that occurred during sign-in
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // Handle the error appropriately
+        console.log('errorCode signInWithEmailAndPassword:', errorCode);
+        console.log('errorMessage:', errorMessage);
+      });
+  }
 // Function to handle the signup form submission
 function createUserWithEmailAndPassword(event) {
   event.preventDefault(); // Prevent the default form submission behavior
@@ -1295,6 +1325,7 @@ function createUserWithEmailAndPassword(event) {
     var username = document.getElementById('susername').value;
     var email = document.getElementById('semail').value;
     var password = document.getElementById('spassword').value;
+        console.log('event e&p:', event);
 
     return auth
       .createUserWithEmailAndPassword(email, password)
@@ -1341,7 +1372,7 @@ function createUserWithEmailAndPassword(event) {
       <form id="loginForm">
         <input type="email" id="lemail" placeholder="Email" required>
         <input type="password" id="lpassword" placeholder="Password" required>
-        <button type="submit">Log In</button>
+        <button onclick="signInWithUserWithEmailAndPassword()">Log In</button>
       </form>
       <div class="social-login">
         <button onclick="signInWithGoogle()">Log In with Google</button>
@@ -1354,7 +1385,7 @@ function createUserWithEmailAndPassword(event) {
         <input type="text" id="susername" placeholder="Username" required>
         <input type="email" id="semail" placeholder="Email" required>
         <input type="password" id="spassword" placeholder="Password" required>
-        <button type="submit">Sign Up</button>
+        <button onclick="createUserWithEmailAndPassword(event)">Sign Up</button>
       </form>
       <div class="social-login">
         <button onclick="signInWithGoogle()">Sign Up with Google</button>
