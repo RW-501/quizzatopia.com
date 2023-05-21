@@ -1,18 +1,17 @@
-// auth.js
-// Function to open the login/signup popup
 
+  const firebaseConfig = {
+    // Your Firebase configuration
+    apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
+    authDomain: "quizzatopia-bdfc9.firebaseapp.com",
+    projectId: "quizzatopia-bdfc9",
+    storageBucket: "quizzatopia-bdfc9.appspot.com",
+    messagingSenderId: "828105067102",
+    appId: "1:828105067102:web:76afb989ed7c03ebb542cf",
+    measurementId: "G-J3QK9V5480"
+  };
 
-const firebaseConfig = {
-  // Your Firebase configuration
-  apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
-  authDomain: "quizzatopia-bdfc9.firebaseapp.com",
-  projectId: "quizzatopia-bdfc9",
-  storageBucket: "quizzatopia-bdfc9.appspot.com",
-  messagingSenderId: "828105067102",
-  appId: "1:828105067102:web:76afb989ed7c03ebb542cf",
-  measurementId: "G-J3QK9V5480"
-};
-
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
 // Function to handle Google sign-in
  function signInWithGoogle() {
@@ -43,6 +42,8 @@ const firebaseConfig = {
       const errorCode = error.code;
       const errorMessage = error.message;
       // Handle the error appropriately
+      console.log('errorCode google:', errorCode);
+          console.log('errorMessage   :', errorMessage);
     });
 }
 
@@ -76,7 +77,9 @@ const firebaseConfig = {
       const errorCode = error.code;
       const errorMessage = error.message;
       // Handle the error appropriately
-    });
+      console.log('errorCode facebook:', errorCode);
+          console.log('errorMessage   :', errorMessage);  
+  });
 }
 
 // Function to handle the signup form submission
@@ -106,6 +109,11 @@ const firebaseConfig = {
     })
     .catch((error) => {
       // Handle any errors that occurred during user creation
+     const errorCode = error.code;
+      const errorMessage = error.message;
+      // Handle the error appropriately
+      console.log('errorCode e&p:', errorCode);
+          console.log('errorMessage   :', errorMessage);  
       throw error;
     });
 }
