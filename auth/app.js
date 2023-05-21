@@ -1,7 +1,7 @@
 // app.js
 
 import { initializeApp } from './app.js';
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from './auth.js';
+import { getAuth } from './auth.js';
 import firebase from './app.js';
 import './auth.js';
 
@@ -46,14 +46,15 @@ export const signInWithFacebook = () => {
     });
 };
 
-
-
+// Function to handle signup form submission
 export function createUserWithEmailAndPassword(email, password) {
   // Your authentication logic here
   // This function should handle the process of creating a new user with the provided email and password
-  
+
   // For example, using Firebase Authentication:
-  return firebase.auth().createUserWithEmailAndPassword(email, password)
+  return firebase
+    .auth()
+    .createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
       // User creation successful, return the user object
       return userCredential.user;
@@ -64,8 +65,8 @@ export function createUserWithEmailAndPassword(email, password) {
     });
 }
 
-
 // Rest of the code...
+
 
 
 // Initialize Firebase
