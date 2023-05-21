@@ -1197,6 +1197,58 @@ signupLoginArea.display = "none";
 	
 	<div id="signupLoginArea" ><div>
 
+		
+		
+		
+		
+		
+ 
+<div id="loginPopup" class="popup d-none">
+  <div class="popup-content">
+    <div class="close-btn">
+      <button onclick="closePopup()">×</button>
+    </div>
+    <div class="tabs">
+      <button onclick="switchTab('login')">Log In</button>
+      <button onclick="switchTab('signup')">Sign Up</button>
+    </div>
+    <div id="loginTab" class="tab-content">
+      <h2>Log In</h2>
+      <area id="loginForm">
+        <input type="email" id="lemail" placeholder="Email" required>
+        <input type="password" id="lpassword" placeholder="Password" required>
+        <button name="send" onclick="signInWithUserWithEmailAndPassword(event)">Log In</button>
+      </area>
+	    <hr>
+      <div class="social-login">
+        <button onclick="signInWithGoogle()">Log In with Google</button>
+        <button onclick="signInWithFacebook()">Log In with Facebook</button>
+      </div>
+    </div>
+	  
+    <div id="signupTab" class="tab-content">
+      <h2>Sign Up</h2>
+      <area id="signupForm">
+        <input type="text" id="susername" placeholder="Username" required>
+        <input type="email" id="semail" placeholder="Email" required>
+        <input type="password" id="spassword" placeholder="Password" required>
+        <button name="send" onclick="createUserWithEmailAndPassword(event)">Sign Up</button>
+      </area>
+	    <hr>
+      <div class="social-login">
+        <button onclick="signInWithGoogle()">Sign Up with Google</button>
+        <button onclick="signInWithFacebook()">Sign Up with Facebook</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+		
+		
+		
+		
 <script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
@@ -1288,7 +1340,7 @@ signupLoginArea.display = "none";
 
 
  // Function to handle the sign-in process using email and password
-  function signInWithEmailAndPassword(event) {
+  function signInWithUserWithEmailAndPassword(event) {
     event.preventDefault();
 
     const email = document.getElementById('semail').value;
@@ -1356,49 +1408,6 @@ function createUserWithEmailAndPassword(event) {
       });
   }
 </script>
-
- 
-<div id="loginPopup" class="popup d-none">
-  <div class="popup-content">
-    <div class="close-btn">
-      <button onclick="closePopup()">×</button>
-    </div>
-    <div class="tabs">
-      <button onclick="switchTab('login')">Log In</button>
-      <button onclick="switchTab('signup')">Sign Up</button>
-    </div>
-    <div id="loginTab" class="tab-content">
-      <h2>Log In</h2>
-      <area id="loginForm">
-        <input type="email" id="lemail" placeholder="Email" required>
-        <input type="password" id="lpassword" placeholder="Password" required>
-        <button name="send" onclick="signInWithUserWithEmailAndPassword(event)">Log In</button>
-      </area>
-	    <hr>
-      <div class="social-login">
-        <button onclick="signInWithGoogle()">Log In with Google</button>
-        <button onclick="signInWithFacebook()">Log In with Facebook</button>
-      </div>
-    </div>
-	  
-    <div id="signupTab" class="tab-content">
-      <h2>Sign Up</h2>
-      <area id="signupForm">
-        <input type="text" id="susername" placeholder="Username" required>
-        <input type="email" id="semail" placeholder="Email" required>
-        <input type="password" id="spassword" placeholder="Password" required>
-        <button name="send" onclick="createUserWithEmailAndPassword(event)">Sign Up</button>
-      </area>
-	    <hr>
-      <div class="social-login">
-        <button onclick="signInWithGoogle()">Sign Up with Google</button>
-        <button onclick="signInWithFacebook()">Sign Up with Facebook</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
 
 	
 
