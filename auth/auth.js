@@ -1,9 +1,9 @@
 // auth.js
 
-import firebase from './app.js';
+// ...
 
 // Function to handle Google sign-in
-export const signInWithGoogle = () => {
+export function signInWithGoogle() {
   const provider = new firebase.auth.GoogleAuthProvider();
 
   return firebase
@@ -30,7 +30,40 @@ export const signInWithGoogle = () => {
       const errorMessage = error.message;
       // Handle the error appropriately
     });
-};
+}
+
+// Function to handle Facebook sign-in
+export function signInWithFacebook() {
+  const provider = new firebase.auth.FacebookAuthProvider();
+
+  return firebase
+    .auth()
+    .signInWithPopup(provider)
+    .then((result) => {
+      // Retrieve the user information
+      const user = result.user;
+
+      // Get the user's display name and email
+      const displayName = user.displayName;
+      const email = user.email;
+
+      // Perform any additional actions or redirect the user
+
+      // Example: Show a success message and user info
+      alert('Facebook Login successful');
+      console.log('User display name:', displayName);
+      console.log('User email:', email);
+    })
+    .catch((error) => {
+      // Handle errors during sign-in
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // Handle the error appropriately
+    });
+}
+
+// ...
+
 
 // Function to handle Facebook sign-in
 export const signInWithFacebook = () => {
