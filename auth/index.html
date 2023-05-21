@@ -28,8 +28,22 @@
     text-align: right;
   }
 
+  .close-btn button {
+    border: none;
+    background-color: transparent;
+    color: #666;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .close-btn button:hover {
+    color: #333;
+  }
+
   .tabs {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
   }
 
   .tabs button {
@@ -42,10 +56,11 @@
     cursor: pointer;
     font-size: 14px;
     font-weight: 600;
+    transition: background-color 0.3s ease;
   }
 
   .tabs button:hover {
-    background-color: #ddd;
+    background-color: #e6e6e6;
   }
 
   .tab-content {
@@ -70,6 +85,7 @@
     background-color: #f0f0f0;
     margin-bottom: 10px;
     font-size: 14px;
+    transition: border-color 0.3s ease;
   }
 
   input[type="email"]:focus,
@@ -91,6 +107,7 @@
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
+    transition: background-color 0.3s ease;
   }
 
   button[type="submit"]:hover,
@@ -98,15 +115,39 @@
     background-color: #344e86;
   }
 
+  .social-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-login button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #3b5998;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+
   .social-login button:nth-child(2) {
     background-color: #db4437;
   }
+
+  .social-login button:hover {
+    background-color: #344e86;
+  }
 </style>
 
-<div id="loginPopup" class="popup d-none">
+<div id="loginPopup" class="popup">
   <div class="popup-content">
     <div class="close-btn">
-      <button onclick="closePopup()">Close</button>
+      <button onclick="closePopup()">×</button>
     </div>
     <div class="tabs">
       <button onclick="switchTab('login')">Log In</button>
