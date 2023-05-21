@@ -1,40 +1,104 @@
+<style>
+  /* Styling for the login/signup popup */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
 
-  
-  
-  <div id="loginPopup" class="popup">
-    <div class="popup-content">
-      <div class="close-btn">
-        <button onclick="openPopupButton()">Close</button>
+  .popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 400px;
+  }
+
+  .close-btn {
+    text-align: right;
+  }
+
+  .tabs {
+    margin-bottom: 20px;
+  }
+
+  .tabs button {
+    padding: 8px 16px;
+    margin-right: 10px;
+    border: none;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .tabs button:hover {
+    background-color: #ddd;
+  }
+
+  .tab-content {
+    display: none;
+  }
+
+  .social-login button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #3b5998;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  .social-login button:nth-child(2) {
+    background-color: #db4437;
+  }
+
+  .social-login button:hover {
+    background-color: #344e86;
+  }
+</style>
+
+<div id="loginPopup" class="popup">
+  <div class="popup-content">
+    <div class="close-btn">
+      <button onclick="closePopup()">Close</button>
+    </div>
+    <div class="tabs">
+      <button onclick="switchTab('login')">Log In</button>
+      <button onclick="switchTab('signup')">Sign Up</button>
+    </div>
+    <div id="loginTab" class="tab-content">
+      <h2>Log In</h2>
+      <form id="loginForm">
+        <input type="email" id="lemail" placeholder="Email" required>
+        <input type="password" id="lpassword" placeholder="Password" required>
+        <button type="submit">Log In</button>
+      </form>
+      <div class="social-login">
+        <button onclick="signInWithGoogle()">Log In with Google</button>
+        <button onclick="signInWithFacebook()">Log In with Facebook</button>
       </div>
-      <div class="tabs">
-        <button onclick="switchTab('login')">Log In</button>
-        <button onclick="switchTab('signup')">Sign Up</button>
-      </div>
-      <div id="loginTab" class="tab-content">
-        <h2>Log In</h2>
-        <form id="loginForm">
-          <input type="email" id="lemail" placeholder="Email" required>
-          <input type="password" id="lpassword" placeholder="Password" required>
-          <button type="submit">Log In</button>
-        </form>
-        <div class="social-login">
-          <button onclick="signInWithGoogle()">Log In with Google</button>
-          <button onclick="signInWithFacebook()">Log In with Facebook</button>
-        </div>
-      </div>
-      <div id="signupTab" class="tab-content">
-        <h2>Sign Up</h2>
-        <form id="signupForm">
-          <input type="text" id="susername" placeholder="Username" required>
-          <input type="email" id="semail" placeholder="Email" required>
-          <input type="password" id="spassword" placeholder="Password" required>
-          <button type="submit">Sign Up</button>
-        </form>
-        <div class="social-login">
-          <button onclick="signInWithGoogle()">Sign Up with Google</button>
-          <button onclick="signInWithFacebook()">Sign Up with Facebook</button>
-        </div>
+    </div>
+    <div id="signupTab" class="tab-content">
+      <h2>Sign Up</h2>
+      <form id="signupForm">
+        <input type="text" id="susername" placeholder="Username" required>
+        <input type="email" id="semail" placeholder="Email" required>
+        <input type="password" id="spassword" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
+      <div class="social-login">
+        <button onclick="signInWithGoogle()">Sign Up with Google</button>
+        <button onclick="signInWithFacebook()">Sign Up with Facebook</button>
       </div>
     </div>
   </div>
-  
+</div>
