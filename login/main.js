@@ -1,21 +1,7 @@
-import { initializeApp } from 'firebase/app';
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+// main.js
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
 
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
-  authDomain: "quizzatopia-bdfc9.firebaseapp.com",
-  projectId: "quizzatopia-bdfc9",
-  storageBucket: "quizzatopia-bdfc9.appspot.com",
-  messagingSenderId: "828105067102",
-  appId: "1:828105067102:web:76afb989ed7c03ebb542cf",
-  measurementId: "G-J3QK9V5480"
-};
-
-
-const app = initializeApp(firebaseConfig);
 const auth = getAuth();
-
 const signupForm = document.getElementById('signup-form');
 
 signupForm.addEventListener('submit', (e) => {
