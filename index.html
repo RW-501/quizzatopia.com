@@ -1273,7 +1273,7 @@ signupLoginArea.display = "none";
   firebase.initializeApp(firebaseConfig);
 
   // Access the necessary functions
-  const auth = firebase.auth;
+const auth = firebase.auth();
   const GoogleAuthProvider = firebase.auth.GoogleAuthProvider;
   const FacebookAuthProvider = firebase.auth.FacebookAuthProvider;
   const createUserWithEmailAndPassword = firebase.auth.createUserWithEmailAndPassword;
