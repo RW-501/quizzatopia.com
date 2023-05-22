@@ -42,6 +42,42 @@
     color: #333;
   }
 
+.status-bar {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.status-bar span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.status-bar.success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+}
+
+.status-bar.error {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+
+
+
+
+
+
+
+
+
+
 .tabs {
   margin-bottom: 20px;
   display: flex;
