@@ -405,13 +405,6 @@ window.createUserWithEmailAndPassword = function (event) {
     displayUserInfo();
   });
 
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  // Access the necessary functions
-  const auth = firebase.auth();
-  const GoogleAuthProvider = firebase.auth.GoogleAuthProvider;
-  const FacebookAuthProvider = firebase.auth.FacebookAuthProvider;
-  const createUserWithEmailAndPassword = firebase.auth().createUserWithEmailAndPassword;
-  const signInWithPopup = firebase.auth().signInWithPopup;
+
 });
 
