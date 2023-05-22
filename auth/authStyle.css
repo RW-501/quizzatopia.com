@@ -44,11 +44,12 @@
 
 .status-bar {
   margin-top: 20px;
-  padding: 10px;
-height: 16px;
+  padding: 5px;
+    text-align: center;
   border-radius: 8px;
   display: flex;
   align-items: center;
+      height: 60px !IMPORTANT;
 }
 
 .status-bar span {
