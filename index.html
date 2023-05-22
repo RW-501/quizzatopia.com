@@ -1257,15 +1257,16 @@ signupLoginArea.display = "none";
 
 	
 	
-  const firebaseConfig = {
-    apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
-    authDomain: "quizzatopia-bdfc9.firebaseapp.com",
-    projectId: "quizzatopia-bdfc9",
-    storageBucket: "quizzatopia-bdfc9.appspot.com",
-    messagingSenderId: "828105067102",
-    appId: "1:828105067102:web:76afb989ed7c03ebb542cf",
-    measurementId: "G-J3QK9V5480"
-  };
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
+  authDomain: "quizzatopia-bdfc9.firebaseapp.com",
+  projectId: "quizzatopia-bdfc9",
+  storageBucket: "quizzatopia-bdfc9.appspot.com",
+  messagingSenderId: "828105067102",
+  appId: "1:828105067102:web:76afb989ed7c03ebb542cf",
+  measurementId: "G-J3QK9V5480"
+};
 
 
 
@@ -1387,7 +1388,7 @@ window.createUserWithEmailAndPassword = function(event) {
   var password = document.getElementById('spassword').value;
 
   return auth
-    .createUserWithEmailAndPassword(email, password)
+    .createUserWithEmailAndPassword(email, password) // Provide email and password as arguments
     .then((userCredential) => {
       // User creation successful, return the user object
       const user = userCredential.user;
