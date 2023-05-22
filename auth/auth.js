@@ -1,4 +1,35 @@
-// Function to show the status message in the status bar
+
+
+		
+	
+
+
+	document.addEventListener("DOMContentLoaded", () => {
+		
+function resetPassword() {
+  var resetEmail = document.getElementById('resetEmail').value;
+  firebase.auth().sendPasswordResetEmail(resetEmail)
+    .then(function () {
+      // Password reset email sent
+      // You can display a success message to the user
+      var statusMessage = document.getElementById('statusMessage');
+      statusMessage.textContent = 'Password reset email sent';
+      statusMessage.classList.remove('error');
+      statusMessage.classList.add('success');
+    })
+    .catch(function (error) {
+      // An error occurred while attempting to send the password reset email
+      // You can display an error message to the user
+      var statusMessage = document.getElementById('statusMessage');
+      statusMessage.textContent = 'Error sending password reset email: ' + error.message;
+      statusMessage.classList.remove('success');
+      statusMessage.classList.add('error');
+      console.error('Error sending password reset email:', error);
+    });
+}
+
+		
+	// Function to show the status message in the status bar
 function showStatusMessage(message, status) {
   const statusBar = document.getElementById('statusBar');
   const statusMessage = document.getElementById('statusMessage');
@@ -15,91 +46,80 @@ function hideStatusBar() {
   statusBar.classList.add('d-none');
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const USER_INFO_KEY = 'userInfo';
 
-
-
-
-		
-	
-
-
-	document.addEventListener("DOMContentLoaded", () => {
-		
-		
-const USER_INFO_KEY = 'userInfo';
-
-function getUserInfo() {
-  let userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
-  if (!userInfo) {
-    userInfo = {
-      userName: 'New User',
-      profilePic: '/images/avatar/w1.png',
-      tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-      rank: 'Beginner',
-      points: 0,
-      quizzesTaken: 0
-    };
-    localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
-  }
-  return userInfo;
-}
-
-function displayUserInfo() {
-  const userInfo = getUserInfo();
-
-  // Update profile picture element
-  const profilePicElement = document.getElementById('profile-pic');
-  if (profilePicElement) {
-    profilePicElement.src = userInfo.profilePic;
+  function getUserInfo() {
+    let userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
+    if (!userInfo) {
+      userInfo = {
+        userName: 'New User',
+        profilePic: '/images/avatar/w1.png',
+        tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+        rank: 'Beginner',
+        points: 0,
+        quizzesTaken: 0
+      };
+      localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
+    }
+    return userInfo;
   }
 
-  // Update profile name element
-  const profileNameElement = document.getElementById('profile-name');
-  if (profileNameElement) {
-    profileNameElement.textContent = userInfo.userName;
-  }
+  function displayUserInfo() {
+    const userInfo = getUserInfo();
 
-  // Update tagline element
-  const taglineElement = document.getElementById('tagline');
-  if (taglineElement) {
-    taglineElement.textContent = userInfo.tagLine;
-  }
-}
+    // Update profile picture element
+    const profilePicElement = document.getElementById('profile-pic');
+    if (profilePicElement) {
+      profilePicElement.src = userInfo.profilePic;
+    }
 
-function updateUserInfo(updatedInfo) {
-  const userInfo = getUserInfo();
-  const updatedKeys = Object.keys(updatedInfo);
+    // Update profile name element
+    const profileNameElement = document.getElementById('profile-name');
+    if (profileNameElement) {
+      profileNameElement.textContent = userInfo.userName;
+    }
 
-  for (const key of updatedKeys) {
-    if (userInfo[key] !== updatedInfo[key]) {
-      userInfo[key] = updatedInfo[key];
+    // Update tagline element
+    const taglineElement = document.getElementById('tagline');
+    if (taglineElement) {
+      taglineElement.textContent = userInfo.tagLine;
     }
   }
 
-  localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
-  displayUserInfo();
-}
+  function updateUserInfo(updatedInfo) {
+    const userInfo = getUserInfo();
+    const updatedKeys = Object.keys(updatedInfo);
 
-function transferAccountToEmailUserInfo(userInfo, email) {
-  saveUserInfoToFirebase(userInfo);
-  const emailUserInfo = { ...userInfo, email };
-  localStorage.setItem('emailUserInfo', JSON.stringify(emailUserInfo));
-}
+    for (const key of updatedKeys) {
+      if (userInfo[key] !== updatedInfo[key]) {
+        userInfo[key] = updatedInfo[key];
+      }
+    }
 
-function saveUserInfoToFirebase(userInfo) {
-  // Replace this with your own logic to save user info to the Firebase database
-  const userRef = firestore.collection('users').doc(userInfo.firebaseId);
-  userRef.set(userInfo)
-    .then(() => {
-      console.log('User info saved to Firebase database');
-    })
-    .catch((error) => {
-      console.log('Error saving user info to Firebase database:', error);
-    });
-}
+    localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
+    displayUserInfo();
+  }
 
-	
-	
+  function transferAccountToEmailUserInfo(userInfo, email) {
+    saveUserInfoToFirebase(userInfo);
+    const emailUserInfo = { ...userInfo, email };
+    localStorage.setItem('emailUserInfo', JSON.stringify(emailUserInfo));
+  }
+
+  function saveUserInfoToFirebase(userInfo) {
+    // Replace this with your own logic to save user info to the Firebase database
+    const userRef = firestore.collection('users').doc(userInfo.firebaseId);
+    userRef
+      .set(userInfo)
+      .then(() => {
+        console.log('User info saved to Firebase database');
+      })
+      .catch((error) => {
+        console.log('Error saving user info to Firebase database:', error);
+      });
+  }
+
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
@@ -112,179 +132,201 @@ const firebaseConfig = {
 };
 
 
-
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
   // Access the necessary functions
-const auth = firebase.auth();
+  const auth = firebase.auth();
   const GoogleAuthProvider = firebase.auth.GoogleAuthProvider;
   const FacebookAuthProvider = firebase.auth.FacebookAuthProvider;
-const createUserWithEmailAndPassword = firebase.auth().createUserWithEmailAndPassword;
+  const createUserWithEmailAndPassword = firebase.auth().createUserWithEmailAndPassword;
   const signInWithPopup = firebase.auth().signInWithPopup;
 
+  // Function to handle Google sign-in
+  window.signInWithGoogle = function () {
+    const provider = new GoogleAuthProvider();
+
+    auth
+      .signInWithPopup(provider)
+      .then((result) => {
+        const user = result.user;
+        const displayName = user.displayName;
+        const email = user.email;
+        const firebaseId = user.uid;
+
+        const userInfo = {
+          userName: displayName,
+          profilePic: user.photoURL,
+          tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+          rank: 'Beginner',
+          points: 0,
+          quizzesTaken: 0,
+          firebaseId: firebaseId
+        };
+
+        if (userInfo.points > 0) {
+          if (confirm('Would you like to transfer the current userInfo to emailUserInfo?')) {
+            const email = prompt('Please enter your email address:');
+            transferAccountToEmailUserInfo(userInfo, email);
+          }
+        }
+
+        updateUserInfo(userInfo);
+        // Set the logged-in cookie
+        document.cookie = 'loggedIn=true';
+
+        console.log('User display name:', displayName);
+        console.log('User email:', email);
+        console.log('Firebase ID:', firebaseId);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log('errorCode google:', errorCode);
+        console.log('errorMessage:', errorMessage);
+        // Set the logged-in cookie
+        document.cookie = 'loggedIn=false';
+      });
+  };
+
+  // Function to handle Facebook sign-in
+  window.signInWithFacebook = function () {
+    const provider = new FacebookAuthProvider();
+
+    auth
+      .signInWithPopup(provider)
+      .then((result) => {
+        const user = result.user;
+        const displayName = user.displayName;
+        const email = user.email;
+        const firebaseId = user.uid;
+
+        const userInfo = {
+          userName: displayName,
+          profilePic: user.photoURL,
+          tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+          rank: 'Beginner',
+          points: 0,
+          quizzesTaken: 0,
+          firebaseId: firebaseId
+        };
+
+        if (userInfo.points > 0) {
+          if (confirm('Would you like to transfer the current userInfo to emailUserInfo?')) {
+            const email = prompt('Please enter your email address:');
+            transferAccountToEmailUserInfo(userInfo, email);
+          }
+        }
+
+        updateUserInfo(userInfo);
+        // Set the logged-in cookie
+        document.cookie = 'loggedIn=true';
+
+        console.log('User display name:', displayName);
+        console.log('User email:', email);
+        console.log('Firebase ID:', firebaseId);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log('errorCode facebook:', errorCode);
+        console.log('errorMessage:', errorMessage);
+        // Set the logged-in cookie
+        document.cookie = 'loggedIn=false';
+      });
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    displayUserInfo();
+  });
+
+  // Function to handle the sign-in process using email and password
+  window.signInWithUserWithEmailAndPassword = function (event) {
+    event.preventDefault();
+
+    const email = document.getElementById('lemail').value;
+    const password = document.getElementById('lpassword').value;
+
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Sign-in successful, retrieve the user object
+        const user = userCredential.user;
+
+        // Get the user's display name and Firebase ID
+        const displayName = user.displayName;
+        const firebaseId = user.uid;
+
+        // Example: Show a success message and user info
+        showStatusMessage('Sign-in successful', 'success');
+        console.log('User display name:', displayName);
+        console.log('Firebase ID:', firebaseId);
+
+        // Update user info
+        const userInfo = {
+          userName: displayName,
+          profilePic: '/images/avatar/w1.png',
+          tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+          rank: 'Beginner',
+          points: 0,
+          quizzesTaken: 0,
+          firebaseId: firebaseId
+        };
+        // Set the logged-in cookie
+        document.cookie = 'loggedIn=true';
+
+        if (userInfo.points > 0) {
+          if (confirm('Would you like to transfer the current userInfo to emailUserInfo?')) {
+            const email = prompt('Please enter your email address:');
+            transferAccountToEmailUserInfo(userInfo, email);
+          }
+        }
+
+        updateUserInfo(userInfo);
+      })
+      .catch((error) => {
+        // Handle any errors that occurred during sign-in
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // Handle the error appropriately
+        console.log('errorCode signInWithEmailAndPassword:', errorCode);
+        console.log('errorMessage:', errorMessage);
+        showStatusMessage(errorMessage, 'error');
+        // Set the logged-in cookie
+        document.cookie = 'loggedIn=false';
+      });
+  };
+
+ 
 	
-// Function to handle Google sign-in
-window.signInWithGoogle = function() {
-  const provider = new GoogleAuthProvider();
+	// Function to validate the username, email, and password fields
+function validateFields(username, email, password) {
+  if (username.trim() === '' || email.trim() === '' || password.trim() === '') {
+    // Display an error message for empty fields
+    showStatusMessage('Please fill in all the fields', 'error');
+    return false;
+  }
 
-  return auth
-    .signInWithPopup(provider)
-    .then((result) => {
-      const user = result.user;
-      const displayName = user.displayName;
-      const email = user.email;
-      const firebaseId = user.uid;
+  // Validate email format using a regular expression
+  const emailRegex = /^\S+@\S+\.\S+$/;
+  if (!emailRegex.test(email)) {
+    // Display an error message for invalid email format
+    showStatusMessage('Invalid email format', 'error');
+    return false;
+  }
 
-      const userInfo = {
-        userName: displayName,
-        profilePic: user.photoURL,
-        tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-        rank: 'Beginner',
-        points: 0,
-        quizzesTaken: 0,
-        firebaseId: firebaseId
-      };
+  // Validate password strength (e.g., minimum length, required characters)
+  const passwordMinLength = 8;
+  if (password.length < passwordMinLength) {
+    // Display an error message for weak password
+    showStatusMessage('Password should be at least ' + passwordMinLength + ' characters long', 'error');
+    return false;
+  }
 
-      if (userInfo.points > 0) {
-        if (confirm('Would you like to transfer the current userInfo to emailUserInfo?')) {
-          const email = prompt('Please enter your email address:');
-          transferAccountToEmailUserInfo(userInfo, email);
-        }
-      }
+  // You can add more password strength validation logic based on your requirements
 
-      updateUserInfo(userInfo);
-      // Set the logged-in cookie
-      document.cookie = 'loggedIn=true';
-	  
-      console.log('User display name:', displayName);
-      console.log('User email:', email);
-      console.log('Firebase ID:', firebaseId);
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log('errorCode google:', errorCode);
-      console.log('errorMessage:', errorMessage);	 
-	  // Set the logged-in cookie
-      document.cookie = 'loggedIn=false';
-	  
-    });
-};
-
-// Function to handle Facebook sign-in
-window.signInWithFacebook = function() {
-  const provider = new FacebookAuthProvider();
-
-  return auth
-    .signInWithPopup(provider)
-    .then((result) => {
-      const user = result.user;
-      const displayName = user.displayName;
-      const email = user.email;
-      const firebaseId = user.uid;
-
-      const userInfo = {
-        userName: displayName,
-        profilePic: user.photoURL,
-        tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-        rank: 'Beginner',
-        points: 0,
-        quizzesTaken: 0,
-        firebaseId: firebaseId
-      };
-
-      if (userInfo.points > 0) {
-        if (confirm('Would you like to transfer the current userInfo to emailUserInfo?')) {
-          const email = prompt('Please enter your email address:');
-          transferAccountToEmailUserInfo(userInfo, email);
-        }
-      }
-
-      updateUserInfo(userInfo);
-     // Set the logged-in cookie
-      document.cookie = 'loggedIn=true';
-	  
-     
-      console.log('User display name:', displayName);
-      console.log('User email:', email);
-      console.log('Firebase ID:', firebaseId);
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log('errorCode facebook:', errorCode);
-      console.log('errorMessage:', errorMessage);	 
-	  // Set the logged-in cookie
-      document.cookie = 'loggedIn=false';
-	  
-    });
-};
-
-document.addEventListener('DOMContentLoaded', function() {
-  displayUserInfo();
-});
-		
-		
-		
-		
-
-// Function to handle the sign-in process using email and password
-window.signInWithUserWithEmailAndPassword = function(event) {
-  event.preventDefault();
-
-  const email = document.getElementById('lemail').value;
-  const password = document.getElementById('lpassword').value;
-
-  auth.signInWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      // Sign-in successful, retrieve the user object
-      const user = userCredential.user;
-
-      // Get the user's display name and Firebase ID
-      const displayName = user.displayName;
-      const firebaseId = user.uid;
-
-      // Example: Show a success message and user info
-      showStatusMessage('Sign-in successful', 'success');
-      console.log('User display name:', displayName);
-      console.log('Firebase ID:', firebaseId);
-      
-      // Update user info
-      const userInfo = {
-        userName: displayName,
-        profilePic: '/images/avatar/w1.png',
-        tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-        rank: 'Beginner',
-        points: 0,
-        quizzesTaken: 0,
-        firebaseId: firebaseId
-      };
-       // Set the logged-in cookie
-      document.cookie = 'loggedIn=true';
-	  
-      if (userInfo.points > 0) {
-        if (confirm('Would you like to transfer the current userInfo to emailUserInfo?')) {
-          const email = prompt('Please enter your email address:');
-          transferAccountToEmailUserInfo(userInfo, email);
-	
-        }
-      }
-
-      updateUserInfo(userInfo);
-    })
-    .catch((error) => {
-      // Handle any errors that occurred during sign-in
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // Handle the error appropriately
-      console.log('errorCode signInWithEmailAndPassword:', errorCode);
-      console.log('errorMessage:', errorMessage);
-      showStatusMessage(errorMessage, 'error');	 
-	  // Set the logged-in cookie
-      document.cookie = 'loggedIn=false';
-	  
-    });
+  // All validations passed
+  return true;
 }
 
 // Function to handle the signup form submission
@@ -295,15 +337,18 @@ window.createUserWithEmailAndPassword = function (event) {
   var email = document.getElementById('semail').value;
   var password = document.getElementById('spassword').value;
 
+  // Validate the fields before proceeding
+  if (!validateFields(username, email, password)) {
+    return;
+  }
+
   auth
-    .createUserWithEmailAndPassword(email, password) // Provide email and password as arguments
+    .createUserWithEmailAndPassword(email, password)
     .then((userCredential) => {
       // User creation successful, return the user object
       const user = userCredential.user;
-     // Set the logged-in cookie
       document.cookie = 'loggedIn=true';
-	  
-     
+
       // Get the user's display name and Firebase ID
       const displayName = user.displayName;
       const firebaseId = user.uid;
@@ -320,45 +365,53 @@ window.createUserWithEmailAndPassword = function (event) {
       // Handle any errors that occurred during user creation
       const errorCode = error.code;
       const errorMessage = error.message;
-      // Handle the error appropriately
-      console.log('errorCode e&p:', errorCode);
-      console.log('errorMessage:', errorMessage);
-      showStatusMessage(errorMessage, 'error');		 
-	  // Set the logged-in cookie
+      showStatusMessage(errorMessage, 'error');
       document.cookie = 'loggedIn=false';
-	  
+
       throw error;
     });
 }
-	
-	
-// Get references to the buttons
-const loginButton = document.getElementById("loginButton");
-const signupButton = document.getElementById("signupButton");
-const googleButton = document.getElementById("googleButtonC");
-const facebookButton = document.getElementById("facebookButtonC");
-
-// Add event listeners to the buttons
-loginButton.addEventListener("click", (event) => {
-  event.preventDefault();
-  signInWithUserWithEmailAndPassword(event);
-});
-
-signupButton.addEventListener("click", (event) => {
-  event.preventDefault();
-  createUserWithEmailAndPassword(event);
-});
-
-googleButton.addEventListener("click", () => {
-  signInWithGoogle();
-});
-
-facebookButton.addEventListener("click", () => {
-  signInWithFacebook();
-});
-
-});
-
-
 
 	
+	
+	
+	
+  // Get references to the buttons
+  const loginButton = document.getElementById('loginButton');
+  const signupButton = document.getElementById('signupButton');
+  const googleButton = document.getElementById('googleButtonC');
+  const facebookButton = document.getElementById('facebookButtonC');
+
+  // Add event listeners to the buttons
+  loginButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    signInWithUserWithEmailAndPassword(event);
+  });
+
+  signupButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    createUserWithEmailAndPassword(event);
+  });
+
+  googleButton.addEventListener('click', () => {
+    signInWithGoogle();
+  });
+
+  facebookButton.addEventListener('click', () => {
+    signInWithFacebook();
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    displayUserInfo();
+  });
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  // Access the necessary functions
+  const auth = firebase.auth();
+  const GoogleAuthProvider = firebase.auth.GoogleAuthProvider;
+  const FacebookAuthProvider = firebase.auth.FacebookAuthProvider;
+  const createUserWithEmailAndPassword = firebase.auth().createUserWithEmailAndPassword;
+  const signInWithPopup = firebase.auth().signInWithPopup;
+});
+
