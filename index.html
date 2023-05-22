@@ -1002,7 +1002,7 @@ function switchTab(tabName) {
 }
 
 // Fetch the popup HTML dynamically and append it to the signupLoginArea element
-fetch('/auth/index.html')
+fetch('./auth/index.html')
   .then(response => response.text())
   .then(data => {
     const signupLoginArea = document.querySelector('#signupLoginArea');
