@@ -1006,7 +1006,8 @@ fetch('./auth/index.html')
   .then(response => response.text())
   .then(data => {
     const signupLoginArea = document.querySelector('#signupLoginArea');
-    signupLoginArea.innerHTML = data;
+	signupLoginArea.innerHTML += data;
+signupLoginArea.display = "none";
   });
 
 
