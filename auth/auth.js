@@ -4,7 +4,7 @@
 	
 
 
-	document.addEventListener("DOMContentLoaded", () => {
+//	document.addEventListener("DOMContentLoaded", () => {
 		
 function resetPassword() {
   var resetEmail = document.getElementById('resetEmail').value;
@@ -411,4 +411,4 @@ window.createUserWithEmailAndPassword = function (event) {
 		
 		
 		
-	});
+	//});
