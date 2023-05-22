@@ -1221,8 +1221,8 @@ signupLoginArea.display = "none";
       </area>
 	    <hr>
       <div class="social-login">
-        <button onclick="signInWithGoogle();">Log In with Google</button>
-        <button onclick="signInWithFacebook();">Log In with Facebook</button>
+        <button onclick="signInWithGoogle();" id="googleButtonC">Log In with Google</button>
+        <button onclick="signInWithFacebook();" id="facebookButtonC">Log In with Facebook</button>
       </div>
     </div>
 	  
@@ -1421,8 +1421,8 @@ window.createUserWithEmailAndPassword = function(event) {
 // Get references to the buttons
 const loginButton = document.getElementById("loginButton");
 const signupButton = document.getElementById("signupButton");
-const googleButton = document.getElementById("googleButton");
-const facebookButton = document.getElementById("facebookButton");
+const googleButton = document.getElementById("googleButtonC");
+const facebookButton = document.getElementById("facebookButtonC");
 
 // Add event listeners to the buttons
 loginButton.addEventListener("click", (event) => {
