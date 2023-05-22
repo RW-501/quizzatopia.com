@@ -411,4 +411,4 @@ window.createUserWithEmailAndPassword = function (event) {
 		
 		
 		
-	}
+	});
