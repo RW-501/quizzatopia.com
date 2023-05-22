@@ -1246,16 +1246,16 @@ signupLoginArea.display = "none";
 	
 	
 	
+	   <!-- Include the Firebase JavaScript SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+
+<!-- Include the Firebase Auth JavaScript SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
 	
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-import { firebase } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js';
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+	
+<script >
+
+	
   const firebaseConfig = {
     apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
     authDomain: "quizzatopia-bdfc9.firebaseapp.com",
@@ -1266,10 +1266,8 @@ import { firebase } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-aut
     measurementId: "G-J3QK9V5480"
   };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
 
+	
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
@@ -1419,20 +1417,31 @@ window.createUserWithEmailAndPassword = function(event) {
 	
 	
 	
-	// Get references to the login and signup buttons
-const loginBtn = document.getElementById('loginBtn');
-const signupBtn = document.getElementById('signupBtn');
+// Get references to the buttons
+const loginButton = document.getElementById("loginButton");
+const signupButton = document.getElementById("signupButton");
+const googleButton = document.getElementById("googleButton");
+const facebookButton = document.getElementById("facebookButton");
 
 // Add event listeners to the buttons
-loginBtn.addEventListener('click', function() {
-  // Call a function or perform any actions when the login button is clicked
-  switchTab('login');
+loginButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  signInWithUserWithEmailAndPassword(event);
 });
 
-signupBtn.addEventListener('click', function() {
-  // Call a function or perform any actions when the signup button is clicked
-  switchTab('signup');
+signupButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  createUserWithEmailAndPassword(event);
 });
+
+googleButton.addEventListener("click", () => {
+  signInWithGoogle();
+});
+
+facebookButton.addEventListener("click", () => {
+  signInWithFacebook();
+});
+
 
 </script>
 
