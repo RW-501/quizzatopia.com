@@ -1,5 +1,19 @@
+// Function to show the status message in the status bar
+function showStatusMessage(message, status) {
+  const statusBar = document.getElementById('statusBar');
+  const statusMessage = document.getElementById('statusMessage');
+  statusMessage.textContent = message;
+  statusBar.classList.remove('d-none');
+  statusBar.classList.remove('success');
+  statusBar.classList.remove('error');
+  statusBar.classList.add(status);
+}
 
-
+// Function to hide the status bar
+function hideStatusBar() {
+  const statusBar = document.getElementById('statusBar');
+  statusBar.classList.add('d-none');
+}
 
 
 
@@ -104,8 +118,9 @@ window.signInWithFacebook = function() {
   }
 
 
+
 // Function to handle the sign-in process using email and password
-window.signInWithUserWithEmailAndPassword = function(event) {
+window.signInWithUserWithEmailAndPassword = function (event) {
   event.preventDefault();
 
   const email = document.getElementById('lemail').value;
@@ -121,7 +136,7 @@ window.signInWithUserWithEmailAndPassword = function(event) {
       const firebaseId = user.uid;
 
       // Example: Show a success message and user info
-      alert('Sign-in successful');
+      showStatusMessage('Sign-in successful', 'success');
       console.log('User display name:', displayName);
       console.log('Firebase ID:', firebaseId);
     })
@@ -132,22 +147,19 @@ window.signInWithUserWithEmailAndPassword = function(event) {
       // Handle the error appropriately
       console.log('errorCode signInWithEmailAndPassword:', errorCode);
       console.log('errorMessage:', errorMessage);
+      showStatusMessage(errorMessage, 'error');
     });
 }
 
-		
-		
-		
-		
 // Function to handle the signup form submission
-window.createUserWithEmailAndPassword = function(event) {
+window.createUserWithEmailAndPassword = function (event) {
   event.preventDefault();
 
   var username = document.getElementById('susername').value;
   var email = document.getElementById('semail').value;
   var password = document.getElementById('spassword').value;
 
-  return auth
+  auth
     .createUserWithEmailAndPassword(email, password) // Provide email and password as arguments
     .then((userCredential) => {
       // User creation successful, return the user object
@@ -158,7 +170,7 @@ window.createUserWithEmailAndPassword = function(event) {
       const firebaseId = user.uid;
 
       // Example: Show a success message and user info
-      alert('Signup successful');
+      showStatusMessage('Signup successful', 'success');
       console.log('Username:', username);
       console.log('User email:', email);
       console.log('Firebase ID:', firebaseId);
@@ -172,11 +184,10 @@ window.createUserWithEmailAndPassword = function(event) {
       // Handle the error appropriately
       console.log('errorCode e&p:', errorCode);
       console.log('errorMessage:', errorMessage);
+      showStatusMessage(errorMessage, 'error');
       throw error;
     });
 }
-
-	
 	
 	
 // Get references to the buttons
