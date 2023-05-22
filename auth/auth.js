@@ -4,7 +4,6 @@
 	
 
 
-//	document.addEventListener("DOMContentLoaded", () => {
 		
 function resetPassword() {
   var resetEmail = document.getElementById('resetEmail').value;
@@ -374,7 +373,8 @@ window.createUserWithEmailAndPassword = function (event) {
 
 	
 	
-	
+		document.addEventListener("DOMContentLoaded", () => {
+
 	
   // Get references to the buttons
   const loginButton = document.getElementById('loginButton');
@@ -411,4 +411,4 @@ window.createUserWithEmailAndPassword = function (event) {
 		
 		
 		
-	//});
+	});
