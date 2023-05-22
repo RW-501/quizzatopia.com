@@ -1348,37 +1348,41 @@ window.signInWithFacebook = function() {
   }
 
 
- // Function to handle the sign-in process using email and password
-  window.signInWithUserWithEmailAndPassword = function(event) {
-    event.preventDefault();
+// Function to handle the sign-in process using email and password
+window.signInWithUserWithEmailAndPassword = function(event) {
+  event.preventDefault();
 
-    const email = document.getElementById('semail').value;
-    const password = document.getElementById('spassword').value;
-        console.log('event e&p:', event);
+  const email = document.getElementById('lemail').value;
+  const password = document.getElementById('lpassword').value;
 
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Sign-in successful, retrieve the user object
-        const user = userCredential.user;
+  auth.signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      // Sign-in successful, retrieve the user object
+      const user = userCredential.user;
 
-        // Get the user's display name and Firebase ID
-        const displayName = user.displayName;
-        const firebaseId = user.uid;
+      // Get the user's display name and Firebase ID
+      const displayName = user.displayName;
+      const firebaseId = user.uid;
 
-        // Example: Show a success message and user info
-        alert('Sign-in successful');
-        console.log('User display name:', displayName);
-        console.log('Firebase ID:', firebaseId);
-      })
-      .catch((error) => {
-        // Handle any errors that occurred during sign-in
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // Handle the error appropriately
-        console.log('errorCode signInWithEmailAndPassword:', errorCode);
-        console.log('errorMessage:', errorMessage);
-      });
-  }
+      // Example: Show a success message and user info
+      alert('Sign-in successful');
+      console.log('User display name:', displayName);
+      console.log('Firebase ID:', firebaseId);
+    })
+    .catch((error) => {
+      // Handle any errors that occurred during sign-in
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // Handle the error appropriately
+      console.log('errorCode signInWithEmailAndPassword:', errorCode);
+      console.log('errorMessage:', errorMessage);
+    });
+}
+
+		
+		
+		
+		
 // Function to handle the signup form submission
 window.createUserWithEmailAndPassword = function(event) {
   event.preventDefault();
