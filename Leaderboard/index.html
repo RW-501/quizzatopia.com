@@ -141,14 +141,14 @@
 	  
 	  const lbUserInfo = JSON.parse(localStorage.getItem("userInfo"));
 
-
+   
 // Update HTML elements with user information
 document.getElementById('uName').innerHTML = lbUserInfo.userName;
-document.getElementById('uRank').innerHTML = lbUserInfo.userRank;
-document.getElementById('uPoints').innerHTML = lbUserInfo.userPoints;
+document.getElementById('uRank').innerHTML = lbUserInfo.rank;
+document.getElementById('uPoints').innerHTML = lbUserInfo.points;
 // document.getElementById('uQuzziesTaken').innerHTML = lbUserInfo.quizzesTaken;
 
-document.getElementById('uPic').src = lbUserInfo.userProfilePic;
+document.getElementById('uPic').src = lbUserInfo.profilePic;
 
 
   // Display additional user information as needed
@@ -175,19 +175,24 @@ const firestore = firebase.firestore();
 	  
 	  
 	  
-	  
 	function loadLeaderboard() {
   // Reference to the users collection in Firestore
-  var usersCollection = firestore.collection('users');
+var usersCollection = firestore.collection('users');
+console.log('Users collection reference created.');
 
-  // Query to retrieve the top 10 users sorted by city and points
-  var query = usersCollection.orderBy('userCity').orderBy('userPoints', 'desc').limit(10);
-
+// Query to retrieve the top 10 users sorted by city and points
+var query = usersCollection.orderBy('userCity').orderBy('userPoints', 'desc').limit(10);
+console.log('Query created:', query);
+		
+		
   // Retrieve the sorted data
   query.get()
     .then(function(querySnapshot) {
+      console.log('Query executed successfully.');
+
       // Clear the leaderboard body
       $('#leaderboardBody').empty();
+      console.log('Leaderboard body cleared.');
 
       // Loop through the retrieved data and add rows to the leaderboard table
       querySnapshot.forEach(function(doc) {
@@ -212,6 +217,8 @@ const firestore = firebase.firestore();
         // Add the row to the leaderboard body
         $('#leaderboardBody').append(rowHtml);
       });
+
+      console.log('Data added to the leaderboard table.');
     })
     .catch(function(error) {
       console.log('Error occurred while fetching leaderboard data: ', error);
