@@ -37,10 +37,10 @@
 
 	      
         <!-- User tagline -->
-  <h4 id="userNameQ" class="user-name mt-3" contenteditable="true" oninput="showSaveMessage()">John Doe</h4>
-<p id="userTagLine" class="text-muted" contenteditable="true" oninput="showSaveMessage()">Unlock Your Knowledge Potential with Quizzatopia!</p>
-<button id="saveButton" onclick="saveChanges()">Save Changes</button>
-<p id="savedMessage" style="display: none;">Changes saved!</p>
+  <h4 id="userNameQ" class="user-name mt-3" contenteditable="true" oninput="showSaveMessage(); saveChanges();">John Doe</h4>
+<p id="userTagLine" class="text-muted" contenteditable="true" oninput="showSaveMessage(); saveChanges();">Unlock Your Knowledge Potential with Quizzatopia!</p>
+
+	      <p id="savedMessage" style="display: none;">Changes saved!</p>
 
 
 	      
@@ -48,7 +48,19 @@
 	function showSaveMessage() {
   var savedMessage = document.getElementById("savedMessage");
   savedMessage.style.display = "block";
+		
+		// Call the function repeatedly at a time interval (in milliseconds)
+setInterval(function() {
+  // Call your function here
+  removeSaveMessage();
+}, 3000); // 3000 milliseconds = 3 seconds
+
 }
+		      
+		      function removeSaveMessage() {
+  var savedMessage = document.getElementById("savedMessage");
+  savedMessage.style.display = "none";
+		      }
 
 function saveChanges() {
   // Get the updated username and tagline
