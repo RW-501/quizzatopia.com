@@ -20,12 +20,12 @@ fetch('./elements/navbar.html')
 	var cookieValue = document.cookie.split('; ').find(row => row.startsWith('loggedIn=')).split('=')[1];
 
 	// Check if user is logged in
-  if (cookieValue === 'true') {
+  if (cookieValue == 'true') {
     // User is logged in
-    document.getElementById('navLoggedin').innerHTML = "<button onclick=\"logOutFunction()\">Log Out</button>";
+    document.getElementById('navLoggedin').innerHTML = "<div onclick=\"logOutFunction()\">Log Out</div>";
   } else {
     // User is not logged in
-    document.getElementById('navLoggedin').innerHTML = "<button onclick=\"openPopup()\">Log In</button>";
+    document.getElementById('navLoggedin').innerHTML = "<div onclick=\"openPopup()\">Log In</div>";
   }
     console.log("cookieValue: ", cookieValue);
 
