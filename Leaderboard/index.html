@@ -134,6 +134,17 @@
 
 
     console.log('lbUserInfo ', lbUserInfo);
+		  
+		  // Update HTML elements with user information
+//document.getElementById('uName').innerHTML = lbUserInfo.userName;
+document.getElementById('uRank').innerHTML = lbUserInfo.rank;
+document.getElementById('uPoints').innerHTML = lbUserInfo.points;
+    console.log('state ', lbUserInfo.state);
+    console.log('city ', lbUserInfo.city);
+// document.getElementById('uQuzziesTaken').innerHTML = lbUserInfo.quizzesTaken;
+
+document.getElementById('uPic').src = lbUserInfo.profilePic;
+	  
 	</script>
 	
 	
@@ -236,16 +247,7 @@ console.log('Query created:', query);
 	  
 	  
 
-// Update HTML elements with user information
-//document.getElementById('uName').innerHTML = lbUserInfo.userName;
-document.getElementById('uRank').innerHTML = lbUserInfo.rank;
-document.getElementById('uPoints').innerHTML = lbUserInfo.points;
-    console.log('state ', lbUserInfo.state);
-    console.log('city ', lbUserInfo.city);
-// document.getElementById('uQuzziesTaken').innerHTML = lbUserInfo.quizzesTaken;
 
-document.getElementById('uPic').src = lbUserInfo.profilePic;
-	  
 	  function loadLeaderboardGet(xxx){
 		  
     console.log(xxx+' ', lbUserInfo.xxx);
