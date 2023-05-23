@@ -170,10 +170,12 @@ function transferAccountToEmailUserInfo(userInfo, email) {
   localStorage.setItem('emailUserInfo', JSON.stringify(emailUserInfo));
 }
 
+
 function saveUserInfoToFirestore(userInfo) {
-  // Replace this with your own logic to save user info to the Firestore database
-  const userRef = firestore.collection('users').doc(userInfo.firebaseId);
-  userRef
+  const db = firebase.firestore();
+
+  db.collection('users')
+    .doc(userInfo.firebaseId)
     .set(userInfo)
     .then(() => {
       console.log('User info saved to Firestore database');
@@ -182,6 +184,7 @@ function saveUserInfoToFirestore(userInfo) {
       console.log('Error saving user info to Firestore database:', error);
     });
 }
+
 
 
 
@@ -240,6 +243,9 @@ window.signInWithGoogle = function() {
       // Set the logged-in cookie
       document.cookie = 'loggedIn=true';
 
+    // Sign-in successful
+    onAuthSuccess(userInfo);
+  
       console.log('User display name:', displayName);
       console.log('User email:', email);
       console.log('Firebase ID:', firebaseId);
@@ -282,6 +288,9 @@ window.signInWithFacebook = function() {
       // Set the logged-in cookie
       document.cookie = 'loggedIn=true';
 
+    // Sign-in successful
+    onAuthSuccess(userInfo);
+  
       console.log('User display name:', displayName);
       console.log('User email:', email);
       console.log('Firebase ID:', firebaseId);
@@ -350,6 +359,9 @@ window.signInWithUserWithEmailAndPassword = function(event) {
       // Set the logged-in cookie
       document.cookie = 'loggedIn=true';
 
+    // Sign-in successful
+    onAuthSuccess(userInfo);
+  
       updateUserInfo(userInfo);
     })
     .catch((error) => {
@@ -418,6 +430,9 @@ window.createUserWithEmailAndPassword = function (event) {
       const user = userCredential.user;
       document.cookie = 'loggedIn=true';
 
+    // Sign-in successful
+    onAuthSuccess(userInfo);
+  
       // Get the user's display name and Firebase ID
       const displayName = user.displayName;
       const firebaseId = user.uid;
@@ -427,6 +442,19 @@ window.createUserWithEmailAndPassword = function (event) {
       console.log('Username:', username);
       console.log('User email:', email);
       console.log('Firebase ID:', firebaseId);
+
+      // Save user info to Firestore database
+      const userInfo = {
+        userName: username,
+        profilePic: '/images/avatar/w1.png',
+        tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+        rank: 'Beginner',
+        points: 0,
+        quizzesTaken: 0,
+        firebaseId: firebaseId
+      };
+      transferAccountToEmailUserInfo(userInfo, email); // Transfer account to email if needed
+      saveUserInfoToFirestore(userInfo); // Save user info to Firestore
 
       return user;
     })
@@ -440,6 +468,7 @@ window.createUserWithEmailAndPassword = function (event) {
       throw error;
     });
 }
+
 
 	
 	
@@ -482,3 +511,27 @@ window.createUserWithEmailAndPassword = function (event) {
 		
 		
 	});
+
+
+function onAuthSuccess(userInfo) {
+  // Perform any actions or operations you want to execute after successful authentication
+
+  // Example: Display a welcome message to the user
+  console.log('Welcome, ' + userInfo.userName + '!');
+
+  // Example: Redirect the user to a different page
+// window.location.href = '/dashboard.html';
+
+  // Example: Update the UI to show the user as logged in
+  const loginButton = document.getElementById('loginButton');
+  const signupButton = document.getElementById('signupButton');
+  const dashboardLink = document.getElementById('dashboardLink');
+
+  loginButton.style.display = 'none';
+  signupButton.style.display = 'none';
+  dashboardLink.style.display = 'block';
+	
+	  document.getElementById('loginPopup').classList.add('d-none');
+
+}
+
