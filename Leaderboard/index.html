@@ -11,6 +11,32 @@
   
     <link rel="import" href="./elements/navbar.html">
     <link rel="import" href="./elements/footer.html">
+	   <style>
+    /* Custom Styles */
+
+		   
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    .leaderboard-title {
+      color: #4267B2;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .leaderboard-table th {
+      background-color: #4267B2;
+      color: #fff;
+    }
+
+    .leaderboard-table tbody tr:hover {
+      background-color: #f0f2f5;
+      cursor: pointer;
+    }
+  </style>
     </head>
 
 <body>
@@ -25,59 +51,75 @@
 	</style>
 
 <div class="container shadow py-4">
-  	  <div class="col-lg-6 order-lg-2">
+  	
+	
+	
+	
+	<div class="col-lg-6 order-lg-2">
       <img src="/images/lan/38.png" alt="Quiztopia Platform" class="img-fluid">
     </div>
 	
  <!-- Profile container -->
   <div class="container">
     <!-- ...previous profile content... -->
-    
-    <!-- Leaderboard section -->
-    <div class="mt-5">
-      <!-- Buttons to switch leaderboards -->
-      <div class="btn-group d-flex">
-        <!-- Global leaderboard button -->
-        <button class="btn btn-primary w-100" onclick="loadLeaderboard('global')">Global</button>
-        
-        <!-- Local leaderboard button -->
-        <button class="btn btn-primary w-100" onclick="loadLeaderboard('local')">Local</button>
-        
-        <!-- Friends leaderboard button -->
-        <button class="btn btn-primary w-100" onclick="loadLeaderboard('friends')">Friends</button>
+        <div class="row">
+      <div class="col-lg-8">
+        <!-- Profile Info -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Profile Info</h5>
+            <!-- Your profile content goes here -->
+          </div>
+        </div>
+
+        <!-- Leaderboard -->
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title leaderboard-title">Leaderboard</h5>
+            <!-- Buttons to switch leaderboards -->
+            <div class="btn-group mb-3">
+              <button class="btn btn-primary" onclick="loadLeaderboard('global')">Global</button>
+              <button class="btn btn-primary" onclick="loadLeaderboard('local')">Local</button>
+              <button class="btn btn-primary" onclick="loadLeaderboard('friends')">Friends</button>
+            </div>
+            <!-- Leaderboard table -->
+            <table class="table leaderboard-table">
+              <thead>
+                <tr>
+                  <th scope="col">Rank</th>
+                  <th scope="col">User</th>
+                  <th scope="col" class="text-right">Points</th>
+                </tr>
+              </thead>
+              <tbody id="leaderboardBody">
+                <!-- Leaderboard rows will be dynamically added here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
-      
-      <!-- Leaderboard table -->
-      <table class="table table-hover mt-3">
-        <thead>
-          <tr>
-            <th scope="col">Rank</th>
-            <th scope="col">User</th>
-            <th scope="col" class="text-right">Points</th>
-          </tr>
-        </thead>
-        <tbody id="leaderboardBody">
-          <!-- Leaderboard rows will be dynamically added here -->
-        </tbody>
-      </table>
+      <div class="col-lg-4">
+        <!-- Ads or additional content -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Ads</h5>
+            <!-- Your ads content goes here -->
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
-  
-  
-  
-  
-  
-  
+	
+	
   </div>
    		  </body>
 	  <div id="mainFooter"></div>
 	  
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
+
   
   <script>
     // Function to load the appropriate leaderboard using AJAX
@@ -86,17 +128,17 @@
       $.ajax({
         url: `get_leaderboard.php?type=${type}`, // Replace with your server-side endpoint
         method: 'GET',
-        success: function(data) {
+        success: function (data) {
           // Clear the leaderboard body
           $('#leaderboardBody').empty();
-          
+
           // Loop through the received data and add rows to the leaderboard table
           for (var i = 0; i < data.length; i++) {
             var rank = data[i].rank;
             var userPicture = data[i].userPicture;
             var userName = data[i].userName;
             var points = data[i].points;
-            
+
             // Construct the row HTML
             var rowHtml = `
               <tr onclick="viewUserProfile('${userName}')">
@@ -108,23 +150,24 @@
                 <td class="text-right">${points}</td>
               </tr>
             `;
-            
+
             // Add the row to the leaderboard body
             $('#leaderboardBody').append(rowHtml);
           }
         },
-        error: function() {
+        error: function () {
           console.log('Error occurred while fetching leaderboard data.');
         }
       });
     }
- // Function to view user profile when a row is clicked
+
+    // Function to view user profile when a row is clicked
     function viewUserProfile(userName) {
       // Perform an action to view the user's profile
-      console.log(Viewing user profile: ${userName});
-// You can replace the console.log statement with your desired action to view the user's profile.
-}
-</script>
+      console.log("Viewing user profile: " + userName);
+      // You can replace the console.log statement with your desired action to view the user's profile.
+    }
+  </script>
 
       
       
