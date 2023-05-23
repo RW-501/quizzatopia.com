@@ -74,7 +74,7 @@
 		   <tr onclick="viewUserProfile('${userName}')">
             <td id="uRank"></td>
             <td>
-              <img src="${userPicture}" alt="${userName}" class="rounded-circle mr-2" style="width: 30px; height: 30px;"  id="uPic">
+              <img src="${userPicture}" alt="" class="rounded-circle mr-2" style="width: 100px; height: 100px;"  id="uPic">
             
             </td>
             <td class="text-right"  id="uPoints"></td>
@@ -140,13 +140,17 @@
   <script>
 	  
 	   
-let userInfo = JSON.parse(localStorage.getItem("userInfo"));
- // document.getElementById('uName').innerHTML = userInfo.userName;
-  document.getElementById('uRank').innerHTML = userInfo.userInfo;
-  document.getElementById('uPoints').innerHTML = userInfo.userPoints;
-//  document.getElementById('uQuzziesTaken').innerHTML = userInfo.quizzesTaken;
+// Retrieve user information from local storage
+var userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
-  document.getElementById('uPic').src = userInfo.userProfilePic;
+// Update HTML elements with user information
+document.getElementById('uName').innerHTML = userInfo.userName;
+document.getElementById('uRank').innerHTML = userInfo.userRank;
+document.getElementById('uPoints').innerHTML = userInfo.userPoints;
+// document.getElementById('uQuzziesTaken').innerHTML = userInfo.quizzesTaken;
+
+document.getElementById('uPic').src = userInfo.userProfilePic;
+
 
   // Display additional user information as needed
 
@@ -167,6 +171,12 @@ firebase.initializeApp(firebaseConfig);
 // Get a reference to the Firestore database
 const firestore = firebase.firestore();
 
+	  
+	  
+	  
+	  
+	  
+	  
 	function loadLeaderboard(type) {
   // Reference to the users collection in Firestore
   var usersCollection = firestore.collection('users');
@@ -193,7 +203,7 @@ const firestore = firebase.firestore();
           <tr onclick="viewUserProfile('${userName}')">
             <td>${rank}</td>
             <td>
-              <img src="${userPicture}" alt="${userName}" class="rounded-circle mr-2" style="width: 30px; height: 30px;">
+              <img src="${userPicture}" alt="${userName}" class="rounded-circle mr-2" style="width: 75px; height: 750px;">
               ${userName}
             </td>
             <td class="text-right">${points}</td>
