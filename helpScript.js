@@ -17,9 +17,10 @@ fetch('./elements/navbar.html')
   document.getElementById('profile-pic').src = navUserInfo.profilePic;
    
 	
-	
+	var cookieValue = document.cookie.split('; ').find(row => row.startsWith('loggedIn=')).split('=')[1];
+
 	// Check if user is logged in
-  if (loggedIn === 'true') {
+  if (cookieValue === 'true') {
     // User is logged in
     document.getElementById('navLoggedin').innerHTML = "<button onclick=\"logOutFunction()\">Log Out</button>";
   } else {
