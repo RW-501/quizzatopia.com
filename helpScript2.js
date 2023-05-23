@@ -16,7 +16,7 @@ fetch('/elements/navbar2.html')
 
 	
 	// Check if user is logged in
-  if (cookieValue === 'true') {
+  if (cookieValue == 'true') {
     // User is logged in
     document.getElementById('navLoggedin').innerHTML = "<div onclick=\"logOutFunction()\">Log Out</div>";
   } else {
