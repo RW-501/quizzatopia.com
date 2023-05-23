@@ -177,12 +177,12 @@ const firestore = firebase.firestore();
 	  
 	  
 	  
-	function loadLeaderboard(type) {
+	function loadLeaderboard() {
   // Reference to the users collection in Firestore
   var usersCollection = firestore.collection('users');
 
-  // Query to retrieve the top 10 users sorted by location and points
-  var query = usersCollection.orderBy(type).orderBy('userPoints', 'desc').limit(10);
+  // Query to retrieve the top 10 users sorted by city and points
+  var query = usersCollection.orderBy('userCity').orderBy('userPoints', 'desc').limit(10);
 
   // Retrieve the sorted data
   query.get()
@@ -219,7 +219,7 @@ const firestore = firebase.firestore();
     });
 }
 
-loadLeaderboard('userRank');
+loadLeaderboard();
 
 
     // Function to view user profile when a row is clicked
