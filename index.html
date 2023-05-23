@@ -1045,53 +1045,27 @@ const firestore = firebase.firestore();
 	
 
 
-// Set up the fields in the "users" collection
-const usersCollection = firestore.collection('users');
+ // Get a reference to the Firestore database
+  const db = firebase.firestore();
 
-// Define a helper function to add a document with the specified fields
-function addDocumentToCollection(collection, documentData) {
-  collection
-    .add(documentData)
+  // Create a collection called "users" (if it doesn't exist already)
+  const usersCollection = db.collection('users');
+
+  // Add a user document to the "users" collection with the required fields
+  const user = {
+    userName_DB: 'John Doe',
+    userEmail_DB: 'johndoe@example.com',
+    userActive_DB: 30
+  };
+
+  // Add the user document to the "users" collection
+  usersCollection.add(user)
     .then((docRef) => {
       console.log('Document written with ID:', docRef.id);
     })
     .catch((error) => {
       console.error('Error adding document:', error);
     });
-}
-
-// Define your field configurations
-const fields = [
-  { name: 'userName_DB', type: 'string', defaultValue: 'New User' },
-  { name: 'userEmail_DB', type: 'string', defaultValue: '' },
-  { name: 'userActive_DB', type: 'boolean', defaultValue: true },
-  { name: 'userJoinedDate_DB', type: 'timestamp', defaultValue: firebase.firestore.FieldValue.serverTimestamp() },
-  { name: 'userCity_DB', type: 'string', defaultValue: '' },
-  { name: 'userState_DB', type: 'string', defaultValue: '' },
-  { name: 'userRegion_DB', type: 'string', defaultValue: '' },
-  { name: 'userZipCode_DB', type: 'string', defaultValue: '' },
-  { name: 'userProfilePic_DB', type: 'string', defaultValue: '/images/avatar/w1.png' },
-  { name: 'userTagLine_DB', type: 'string', defaultValue: 'Unlock Your Knowledge Potential with Quizzatopia!' },
-  { name: 'userRank_DB', type: 'string', defaultValue: 'Beginner' },
-  { name: 'userPoints_DB', type: 'number', defaultValue: 0 },
-  { name: 'userQuizzesTaken_DB', type: 'number', defaultValue: 0 },
-  { name: 'userAds_DB', type: 'string', defaultValue: '' }
-  // Add more fields as needed
-];
-
-// Create a document template with default values
-const documentTemplate = fields.reduce((template, field) => {
-  template[field.name] = field.type === 'number' ? 0 : '';
-  return template;
-}, {});
-
-// Set up the fields in the Firestore database
-fields.forEach((field) => {
-  documentTemplate[field.name] = ''; // Remove default values
-  addDocumentToCollection(usersCollection, documentTemplate);
-  documentTemplate[field.name] = field.type === 'number' ? 0 : ''; // Restore default values
-});
-
 
     console.log('xxx  ????????????????????????????????????????????????????????');
 
