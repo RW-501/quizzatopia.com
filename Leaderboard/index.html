@@ -142,11 +142,11 @@
 	   
 let userInfo = JSON.parse(localStorage.getItem("userInfo"));
  // document.getElementById('uName').innerHTML = userInfo.userName;
-  document.getElementById('uRank').innerHTML = userInfo.rank;
-  document.getElementById('uPoints').innerHTML = userInfo.points;
+  document.getElementById('uRank').innerHTML = userInfo.userInfo;
+  document.getElementById('uPoints').innerHTML = userInfo.userPoints;
 //  document.getElementById('uQuzziesTaken').innerHTML = userInfo.quizzesTaken;
 
-  document.getElementById('uPic').src = userInfo.profilePic;
+  document.getElementById('uPic').src = userInfo.userProfilePic;
 
   // Display additional user information as needed
 
