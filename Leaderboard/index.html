@@ -129,7 +129,12 @@
 	
 	
 	
-	
+	  <script>
+		    const lbUserInfo = JSON.parse(localStorage.getItem("userInfo"));
+
+
+    console.log('lbUserInfo ', lbUserInfo);
+	</script>
 	
 	
 	<!-- Scripts -->
@@ -142,12 +147,8 @@
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
   
   <script>
-		    const lbUserInfo = JSON.parse(localStorage.getItem("userInfo"));
-
-
-    console.log('lbUserInfo ', lbUserInfo);
-
-	
+		   
+	  
 
 
   // Display additional user information as needed
