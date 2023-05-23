@@ -5,7 +5,9 @@ if (window.location.pathname.substr(-5) === '.html' && window.location.pathname.
 }
   
   
-	
+	document.addEventListener('contextmenu', function(event) {
+  event.preventDefault();
+});
   
   
 </script>
