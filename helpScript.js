@@ -27,6 +27,7 @@ fetch('./elements/navbar.html')
     // User is not logged in
     document.getElementById('navLoggedin').innerHTML = "<button onclick=\"openPopup()\">Log In</button>";
   }
+    console.log("cookieValue: ", cookieValue);
 
 
 // Log out function
