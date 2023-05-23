@@ -192,7 +192,8 @@ var usersCollection = firestore.collection('users');
 console.log('Users collection reference created.');
 
 // Query to retrieve the top 10 users sorted by city and points
-var query = usersCollection.where(loc).orderBy('userPoints', 'desc').limit(10);
+var query = usersCollection.orderBy('userPoints', 'desc').limit(10);
+//var query = usersCollection.where(loc).orderBy('userPoints', 'desc').limit(10);
 console.log('Query created:', query);
 		
 		
