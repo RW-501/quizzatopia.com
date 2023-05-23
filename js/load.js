@@ -15,22 +15,20 @@ function getUserInfo() {
   }
   return userInfo;
 }
+
 function displayUserInfo() {
   const userInfo = getUserInfo();
 
-  // Update profile picture element
   const profilePicElement = document.getElementById('profile-pic');
   if (profilePicElement) {
     profilePicElement.src = userInfo.profilePic;
   }
 
-  // Update profile name element
   const profileNameElement = document.getElementById('profile-name');
   if (profileNameElement) {
     profileNameElement.textContent = userInfo.userName;
   }
 
-  // Update tagline element
   const taglineElement = document.getElementById('tagline');
   if (taglineElement) {
     taglineElement.textContent = userInfo.tagLine;
@@ -50,7 +48,6 @@ function updateUserInfo(updatedInfo) {
   localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
   displayUserInfo();
 }
-
 
 function updateProfilePic(profilePic) {
   updateUserInfo({ profilePic });
@@ -86,9 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
   displayUserInfo();
 });
 
-  let pointsRewards;
-
-
+let pointsRewards;
 
 function updatePointsAndRank() {
   const userInfo = getUserInfo();
@@ -118,7 +113,6 @@ function updatePointsAndRank() {
     updateRank('Ultimate Grandmaster');
     pointsRewards = 9;
   }
-
   // Update the user's points rewards
  //userInfo.pointsRewards = pointsRewards;
  // saveUserInfo(userInfo);
