@@ -23,8 +23,6 @@ function getUserInfo() {
 
 
 
-// Replace the firebaseConfig initialization code with your own configuration
-firebase.initializeApp(firebaseConfig);
 
 // Get a reference to the Firestore database
 const db = firebase.firestore();
