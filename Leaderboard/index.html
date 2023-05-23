@@ -92,8 +92,8 @@
             <!-- Buttons to switch leaderboards -->
             <div class="btn-group w-100 mb-3">
               <button class="btn btn-primary" onclick="loadLeaderboard('userRank')">Global</button>
-              <button class="btn btn-primary" onclick="loadLeaderboard('userState')">Local</button>
-              <button class="btn btn-primary" onclick="loadLeaderboard('userCity')">Area</button>
+              <button class="btn btn-primary" onclick="loadLeaderboardGet('userState')">Local</button>
+              <button class="btn btn-primary" onclick="loadLeaderboardGet('userCity')">Area</button>
             </div>
             <!-- Leaderboard table -->
             <table class="table leaderboard-table">
@@ -171,13 +171,13 @@ const firestore = firebase.firestore();
 	  
 	  
 	  
-	function loadLeaderboard() {
+	function loadLeaderboard(loc) {
   // Reference to the users collection in Firestore
 var usersCollection = firestore.collection('users');
 console.log('Users collection reference created.');
 
 // Query to retrieve the top 10 users sorted by city and points
-var query = usersCollection.orderBy('userCity').orderBy('userPoints', 'desc').limit(10);
+var query = usersCollection.where(loc).orderBy('userPoints', 'desc').limit(10);
 console.log('Query created:', query);
 		
 		
@@ -246,7 +246,13 @@ document.getElementById('uPoints').innerHTML = lbUserInfo.points;
 
 document.getElementById('uPic').src = lbUserInfo.profilePic;
 	  
-	  
+	  function loadLeaderboardGet(xxx){
+		  
+    console.log(xxx+' ', lbUserInfo.xxx);
+		  
+		  loadLeaderboard(lbUserInfo.xxx);
+
+	  }
 	  
 	  
   </script>
