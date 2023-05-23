@@ -1058,17 +1058,14 @@ const usersCollection = db.collection('users');
     age: 30
   };
 
-  // Use a specific document ID when adding the user document
-  const documentId = 'user1'; // Replace with a unique document ID
-
-  usersCollection.doc(documentId).set(user)
-    .then(() => {
-      console.log('Document written with ID:', documentId);
+// Add the user document to the "users" collection
+  usersCollection.add(user)
+    .then((docRef) => {
+      console.log('Document written with ID:', docRef.id);
     })
     .catch((error) => {
       console.error('Error adding document:', error);
     });
-
 
     console.log('xxx  ????????????????????????????????????????????????????????');
 
