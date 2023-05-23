@@ -70,7 +70,9 @@ if (window.location.pathname.substr(-5) === '.html' && window.location.pathname.
 <script>
 
 
-
+document.addEventListener('contextmenu', function(event) {
+  event.preventDefault();
+});
 
 
 
