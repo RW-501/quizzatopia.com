@@ -107,9 +107,9 @@ function updateUserInfo(updatedInfo) {
   }
 
   localStorage.setItem('userInfo', JSON.stringify(userInfo));
-  saveUserInfoToFirebase(userInfo.userId, userInfo);
-    displayUserInfo();
-  }
+  saveUserInfoToFirebase(userInfo);
+  displayUserInfo();
+}
 
 	// Function to get user location using their IP address
 function getUserLocation() {
@@ -164,24 +164,25 @@ function checkUserInfoChanges() {
 	
 	
 	
-  function transferAccountToEmailUserInfo(userInfo, email) {
-    saveUserInfoToFirebase(userInfo);
-    const emailUserInfo = { ...userInfo, email };
-    localStorage.setItem('emailUserInfo', JSON.stringify(emailUserInfo));
-  }
+function transferAccountToEmailUserInfo(userInfo, email) {
+  saveUserInfoToFirestore(userInfo);
+  const emailUserInfo = { ...userInfo, email };
+  localStorage.setItem('emailUserInfo', JSON.stringify(emailUserInfo));
+}
 
-  function saveUserInfoToFirebase(userInfo) {
-    // Replace this with your own logic to save user info to the Firebase database
-    const userRef = firestore.collection('users').doc(userInfo.firebaseId);
-    userRef
-      .set(userInfo)
-      .then(() => {
-        console.log('User info saved to Firebase database');
-      })
-      .catch((error) => {
-        console.log('Error saving user info to Firebase database:', error);
-      });
-  }
+function saveUserInfoToFirestore(userInfo) {
+  // Replace this with your own logic to save user info to the Firestore database
+  const userRef = firestore.collection('users').doc(userInfo.firebaseId);
+  userRef
+    .set(userInfo)
+    .then(() => {
+      console.log('User info saved to Firestore database');
+    })
+    .catch((error) => {
+      console.log('Error saving user info to Firestore database:', error);
+    });
+}
+
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -196,11 +197,8 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-// Get a reference to the Firebase Realtime Database
-const database = firebase.database();
-
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+// Get a reference to the Firestore database
+const firestore = firebase.firestore();
 
   // Access the necessary functions
   const auth = firebase.auth();
@@ -209,6 +207,25 @@ const database = firebase.database();
   const createUserWithEmailAndPassword = firebase.auth().createUserWithEmailAndPassword;
   const signInWithPopup = firebase.auth().signInWithPopup;
 
+	// Function to get user information from authentication provider (Google, Facebook, or email)
+function getUserInfoFromAuthProvider(user) {
+  const displayName = user.displayName;
+  const email = user.email;
+  const firebaseId = user.uid;
+
+  const userInfo = {
+    userName: displayName,
+    profilePic: user.photoURL,
+    tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+    rank: 'Beginner',
+    points: 0,
+    quizzesTaken: 0,
+    firebaseId: firebaseId
+  };
+
+  return userInfo;
+}
+	
 // Function to handle Google sign-in
 window.signInWithGoogle = function() {
   const provider = new firebase.auth.GoogleAuthProvider();
@@ -217,19 +234,8 @@ window.signInWithGoogle = function() {
     .signInWithPopup(provider)
     .then((result) => {
       const user = result.user;
-      const displayName = user.displayName;
-      const email = user.email;
-      const firebaseId = user.uid;
+      const userInfo = getUserInfoFromAuthProvider(user);
 
-      const userInfo = {
-        userName: displayName,
-        profilePic: user.photoURL,
-        tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-        rank: 'Beginner',
-        points: 0,
-        quizzesTaken: 0,
-        firebaseId: firebaseId
-      };
 
       // Check if the user has already transferred the data
       if (!userInfo.transferToEmail) {
@@ -270,19 +276,8 @@ window.signInWithFacebook = function() {
     .signInWithPopup(provider)
     .then((result) => {
       const user = result.user;
-      const displayName = user.displayName;
-      const email = user.email;
-      const firebaseId = user.uid;
+      const userInfo = getUserInfoFromAuthProvider(user);
 
-      const userInfo = {
-        userName: displayName,
-        profilePic: user.photoURL,
-        tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-        rank: 'Beginner',
-        points: 0,
-        quizzesTaken: 0,
-        firebaseId: firebaseId
-      };
 
       // Check if the user has already transferred the data
       if (!userInfo.transferToEmail) {
