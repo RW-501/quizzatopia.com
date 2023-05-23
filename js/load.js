@@ -24,32 +24,6 @@ function getUserInfo() {
 
 
 
-// Get a reference to the Firestore database
-const db = firebase.firestore();
-
-// Create a collection called "users"
-const usersCollection = db.collection('users');
-
-// Add a document to the "users" collection
-const user = {
-  name: 'John Doe',
-  email: 'johndoe@example.com',
-  age: 30
-};
-
-usersCollection.add(user)
-  .then((docRef) => {
-    console.log('Document written with ID:', docRef.id);
-  })
-  .catch((error) => {
-    console.error('Error adding document:', error);
-  });
-
-
-    console.log('xxx  ????????????????????????????????????????????????????????');
-
-
-
 
 
 function displayUserInfo() {
