@@ -91,9 +91,9 @@
             <h5 class="card-title leaderboard-title">Leaderboard</h5>
             <!-- Buttons to switch leaderboards -->
             <div class="btn-group w-100 mb-3">
-              <button class="btn btn-primary" onclick="loadLeaderboard('global')">Global</button>
-              <button class="btn btn-primary" onclick="loadLeaderboard('local')">Local</button>
-              <button class="btn btn-primary" onclick="loadLeaderboard('friends')">Friends</button>
+              <button class="btn btn-primary" onclick="loadLeaderboard('userRank')">Global</button>
+              <button class="btn btn-primary" onclick="loadLeaderboard('userState')">Local</button>
+              <button class="btn btn-primary" onclick="loadLeaderboard('userCity')">Area</button>
             </div>
             <!-- Leaderboard table -->
             <table class="table leaderboard-table">
@@ -182,7 +182,7 @@ const firestore = firebase.firestore();
   var usersCollection = firestore.collection('users');
 
   // Query to retrieve the top 10 users sorted by location and points
-  var query = usersCollection.orderBy('locationPoints').limit(10);
+  var query = usersCollection.orderBy(type).orderBy('userPoints', 'desc').limit(10);
 
   // Retrieve the sorted data
   query.get()
@@ -219,7 +219,7 @@ const firestore = firebase.firestore();
     });
 }
 
-loadLeaderboard('global');
+loadLeaderboard('userRank');
 
 
     // Function to view user profile when a row is clicked
