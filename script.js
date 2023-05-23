@@ -188,6 +188,7 @@ function generateQuizAdPattern(numQuestions, numAds) {
 
   const userInfo = getUserInfo();
 
+	   console.log('userInfo.userName ????????????????? ', userInfo.userName);
 
 if( userInfo.userName == "admin" ||  userInfo.userName == "Admin"){
 	
