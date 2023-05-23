@@ -142,7 +142,8 @@
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
   
   <script>
-	
+		    const lbUserInfo = JSON.parse(localStorage.getItem("userInfo"));
+
 
 	
 
@@ -232,7 +233,6 @@ loadLeaderboard();
     }
 	  
 	  
-	    const lbUserInfo = JSON.parse(localStorage.getItem("userInfo"));
 
     console.log('lbUserInfo ', lbUserInfo);
 
@@ -250,7 +250,7 @@ document.getElementById('uPic').src = lbUserInfo.profilePic;
 		  
     console.log(xxx+' ', lbUserInfo.xxx);
 		  
-		  loadLeaderboard(lbUserInfo.xxx);
+		  loadLeaderboard(xxx'='+lbUserInfo.xxx);
 
 	  }
 	  
