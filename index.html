@@ -1044,6 +1044,7 @@ const firestore = firebase.firestore();
 <script>
 	
 
+	
 
  // Get a reference to the Firestore database
   const db = firebase.firestore();
@@ -1051,12 +1052,6 @@ const firestore = firebase.firestore();
   // Create a collection called "users" (if it doesn't exist already)
   const usersCollection = db.collection('users');
 
-const usersRef = firebase.database().ref('users');
-
-// Save each user to the database
-users.forEach((user) => {
-  const newUserRef = usersRef.push(); // Generate a new unique key for the user
-  newUserRef.set(user);
 const users = [
   // Existing users...
   {
@@ -1456,22 +1451,41 @@ const users = [
     userProfilePic: '/images/avatar/w9.png',
   },
   {
-    userName: 'Jackson Wright',
-    userEmail: 'jackson.wright@example.com',
-    userCity: 'New York City',
-    userState: 'New York',
-    userRegion: 'Northeast',
-    userZipCode: '10001',
-    userPoints: 15000,
-    userRank: 'Ultimate Grandmaster',
-    userProfilePic: '/images/avatar/w8.png',
+    userName: 'Mia Turner',
+    userEmail: 'mia.turner@example.com',
+    userCity: 'Atlanta',
+    userState: 'Georgia',
+    userRegion: 'South',
+    userZipCode: '30301',
+    userPoints: 50,
+    userRank: 'Beginner',
+    userProfilePic: '/images/avatar/w1.png',
   },
+  {
+    userName: 'Leo Parker',
+    userEmail: 'leo.parker@example.com',
+    userCity: 'Miami',
+    userState: 'Florida',
+    userRegion: 'South',
+    userZipCode: '33101',
+    userPoints: 180,
+    userRank: 'Intermediate',
+    userProfilePic: '/images/avatar/w2.png',
+  },
+  // Add more users...
 ];
-  // Add more users here...
-  // Make sure to include users from different locations and with different points and ranks
+
+// Add users to Firestore database
+users.forEach(user => {
+  firestore.collection('users').add(user)
+    .then(function(docRef) {
+      console.log('Document written with ID: ', docRef.id);
+    })
+    .catch(function(error) {
+      console.error('Error adding document: ', error);
+    });
 });
 
-console.log('Users saved to the database successfully.');
 
     console.log('xxx  ????????????????????????????????????????????????????????');
 
