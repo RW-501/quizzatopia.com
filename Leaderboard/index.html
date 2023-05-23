@@ -140,27 +140,26 @@ firebase.initializeApp(firebaseConfig);
 
 // Reference to the user info table in the Firebase Realtime Database
 
-	  
-function loadLeaderboard(type) {
-  // Reference to the users info data in the Firebase Realtime Database
-  var usersRef = firebase.database().ref('userInfo');
+	function loadLeaderboard(type) {
+  // Reference to the users collection in Firestore
+  var usersCollection = firestore.collection('users');
 
   // Query to retrieve the top 10 users sorted by location and points
-  var query = usersRef.orderByChild('locationPoints').limitToLast(10);
+  var query = usersCollection.orderBy('locationPoints').limit(10);
 
   // Retrieve the sorted data
-  query.once('value')
-    .then(function(snapshot) {
+  query.get()
+    .then(function(querySnapshot) {
       // Clear the leaderboard body
       $('#leaderboardBody').empty();
 
       // Loop through the retrieved data and add rows to the leaderboard table
-      snapshot.forEach(function(childSnapshot) {
-        var userInfo = childSnapshot.val();
-        var rank = userInfo.rank;
-        var userPicture = userInfo.picture;
-        var userName = userInfo.name;
-        var points = userInfo.points;
+      querySnapshot.forEach(function(doc) {
+        var userInfo = doc.data();
+        var rank = userInfo.userRank;
+        var userPicture = userInfo.userProfilePic;
+        var userName = userInfo.userName;
+        var points = userInfo.userPoints;
 
         // Construct the row HTML
         var rowHtml = `
@@ -184,6 +183,7 @@ function loadLeaderboard(type) {
 }
 
 loadLeaderboard('global');
+
 
     // Function to view user profile when a row is clicked
     function viewUserProfile(userName) {
