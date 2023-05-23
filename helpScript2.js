@@ -12,26 +12,31 @@ fetch('/elements/navbar2.html')
   document.getElementById('profile-pic').src = navUserInfo.profilePic;
    
 // Check if user is logged in
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
+	
+	
+	// Check if user is logged in
+  if (loggedIn == 'true') {
     // User is logged in
     document.getElementById('navLoggedin').innerHTML = "<button onclick=\"logOutFunction()\">Log Out</button>";
   } else {
     // User is not logged in
     document.getElementById('navLoggedin').innerHTML = "<button onclick=\"openPopup()\">Log In</button>";
   }
-});
+
 
 // Log out function
 function logOutFunction() {
   firebase.auth().signOut().then(function() {
     // Log out successful
-    console.log("User logged out.");
+      // Set the logged-in cookie
+      document.cookie = 'loggedIn=false';
+	  console.log("User logged out.");
   }).catch(function(error) {
     // An error occurred
     console.log("Error logging out:", error);
   });
 }
+
 
 	
     $(document).ready(function() {
