@@ -1050,20 +1050,24 @@ const db = firebase.firestore();
 // Create a collection called "users"
 const usersCollection = db.collection('users');
 
-// Add a document to the "users" collection
-const user = {
-  name: 'John Doe',
-  email: 'johndoe@example.com',
-  age: 30
-};
 
-usersCollection.add(user)
-  .then((docRef) => {
-    console.log('Document written with ID:', docRef.id);
-  })
-  .catch((error) => {
-    console.error('Error adding document:', error);
-  });
+  // Add a document to the "users" collection with a specific document ID
+  const user = {
+    name: 'John Doe',
+    email: 'johndoe@example.com',
+    age: 30
+  };
+
+  // Use a specific document ID when adding the user document
+  const documentId = 'user1'; // Replace with a unique document ID
+
+  usersCollection.doc(documentId).set(user)
+    .then(() => {
+      console.log('Document written with ID:', documentId);
+    })
+    .catch((error) => {
+      console.error('Error adding document:', error);
+    });
 
 
     console.log('xxx  ????????????????????????????????????????????????????????');
