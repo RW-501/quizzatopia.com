@@ -1058,10 +1058,12 @@ const firestore = firebase.firestore();
     userActive_DB: 30
   };
 
-  // Add the user document to the "users" collection
-  usersCollection.add(user)
-    .then((docRef) => {
-      console.log('Document written with ID:', docRef.id);
+// Use a specific document ID when adding the user document
+  const documentId = 'YVM3kfxUkjgq2hXbxuhx'; // Replace with a unique document ID
+
+  usersCollection.doc(documentId).set(user)
+    .then(() => {
+      console.log('Document written with ID:', documentId);
     })
     .catch((error) => {
       console.error('Error adding document:', error);
