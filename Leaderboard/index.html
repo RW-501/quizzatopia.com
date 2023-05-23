@@ -139,17 +139,16 @@
   
   <script>
 	  
-	   
-// Retrieve user information from local storage
-var userInfo = JSON.parse(localStorage.getItem("userInfo"));
+	  const lbUserInfo = JSON.parse(localStorage.getItem("userInfo"));
+
 
 // Update HTML elements with user information
-document.getElementById('uName').innerHTML = userInfo.userName;
-document.getElementById('uRank').innerHTML = userInfo.userRank;
-document.getElementById('uPoints').innerHTML = userInfo.userPoints;
-// document.getElementById('uQuzziesTaken').innerHTML = userInfo.quizzesTaken;
+document.getElementById('uName').innerHTML = lbUserInfo.userName;
+document.getElementById('uRank').innerHTML = lbUserInfo.userRank;
+document.getElementById('uPoints').innerHTML = lbUserInfo.userPoints;
+// document.getElementById('uQuzziesTaken').innerHTML = lbUserInfo.quizzesTaken;
 
-document.getElementById('uPic').src = userInfo.userProfilePic;
+document.getElementById('uPic').src = lbUserInfo.userProfilePic;
 
 
   // Display additional user information as needed
