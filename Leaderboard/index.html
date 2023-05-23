@@ -61,16 +61,7 @@
  <!-- Profile container -->
   <div class="container">
     <!-- ...previous profile content... -->
- <tr onclick="viewUserProfile('${userName}')">
-            <td id="uRank"></td>
-            <td>
-              <img src="${userPicture}" alt="${userName}" class="rounded-circle mr-2" style="width: 30px; height: 30px;"  id="uPic">
-            
-            </td>
-            <td class="text-right"  id="uPoints">${points}</td>
-          </tr>	  
-	  
-	  
+
 	  
         <div class="row">
       <div class="col-lg-8">
@@ -79,6 +70,18 @@
           <div class="card-body">
             <h5 class="card-title">Profile Info</h5>
             <!-- Your profile content goes here -->
+		  
+		   <tr onclick="viewUserProfile('${userName}')">
+            <td id="uRank"></td>
+            <td>
+              <img src="${userPicture}" alt="${userName}" class="rounded-circle mr-2" style="width: 30px; height: 30px;"  id="uPic">
+            
+            </td>
+            <td class="text-right"  id="uPoints"></td>
+          </tr>	  
+		  
+		  
+		  
           </div>
         </div>
 
@@ -137,20 +140,18 @@
   <script>
 	  
 	   
-		    function displayUserInfo() {
-  const userInfo = getUserInfo();
-  document.getElementById('uName').innerHTML = userInfo.userName;
+let userInfo = JSON.parse(localStorage.getItem("userInfo"));
+ // document.getElementById('uName').innerHTML = userInfo.userName;
   document.getElementById('uRank').innerHTML = userInfo.rank;
   document.getElementById('uPoints').innerHTML = userInfo.points;
-  document.getElementById('uQuzziesTaken').innerHTML = userInfo.quizzesTaken;
+//  document.getElementById('uQuzziesTaken').innerHTML = userInfo.quizzesTaken;
 
   document.getElementById('uPic').src = userInfo.profilePic;
 
   // Display additional user information as needed
-}
+
 		 
 	  
-// Initialize Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
   authDomain: "quizzatopia-bdfc9.firebaseapp.com",
@@ -160,9 +161,11 @@ const firebaseConfig = {
   appId: "1:828105067102:web:76afb989ed7c03ebb542cf",
   measurementId: "G-J3QK9V5480"
 };
+// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-// Reference to the user info table in the Firebase Realtime Database
+// Get a reference to the Firestore database
+const firestore = firebase.firestore();
 
 	function loadLeaderboard(type) {
   // Reference to the users collection in Firestore
