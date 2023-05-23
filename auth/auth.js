@@ -53,11 +53,19 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!userInfo) {
       userInfo = {
         userName: 'New User',
-        profilePic: '/images/avatar/w1.png',
-        tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-        rank: 'Beginner',
-        points: 0,
-        quizzesTaken: 0
+      userEmail: '',
+      userActive: true,
+      userJoinedDate: new Date().toISOString(),
+      userCity: '',
+      userState: '',
+      userRegion: '',
+      userZipCode: '',
+      userProfilePic: '/images/avatar/w1.png',
+      userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+      userRank: 'Beginner',
+      userPoints: 0,
+      userQuizzesTaken: 0,
+      userAds: ''
       };
       localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
     }
@@ -86,20 +94,76 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function updateUserInfo(updatedInfo) {
-    const userInfo = getUserInfo();
-    const updatedKeys = Object.keys(updatedInfo);
 
-    for (const key of updatedKeys) {
-      if (userInfo[key] !== updatedInfo[key]) {
-        userInfo[key] = updatedInfo[key];
-      }
+// Function to update user information in local storage and Firebase Realtime Database
+function updateUserInfo(updatedInfo) {
+  const userInfo = getUserInfo();
+  const updatedKeys = Object.keys(updatedInfo);
+
+  for (const key of updatedKeys) {
+    if (userInfo[key] !== updatedInfo[key]) {
+      userInfo[key] = updatedInfo[key];
     }
+  }
 
-    localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
+  localStorage.setItem('userInfo', JSON.stringify(userInfo));
+  saveUserInfoToFirebase(userInfo.userId, userInfo);
     displayUserInfo();
   }
 
+	// Function to get user location using their IP address
+function getUserLocation() {
+  return fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+      const ipAddress = data.ip;
+      // Replace this logic with your own implementation to get user location based on the IP address
+      // Here, we're using a mock implementation that sets default values
+      const userCity = 'City';
+      const userState = 'State';
+      const userRegion = 'Region';
+      const userZipCode = 'ZipCode';
+
+      return { userCity, userState, userRegion, userZipCode };
+    })
+    .catch(error => {
+      console.error('Error getting user location:', error);
+      return null;
+    });
+}
+
+// Function to check if user information has changed
+function checkUserInfoChanges() {
+  const userInfo = getUserInfo();
+
+  getUserLocation()
+    .then(location => {
+      const { userCity, userState, userRegion, userZipCode } = location;
+
+      if (
+        userInfo.userCity !== userCity ||
+        userInfo.userState !== userState ||
+        userInfo.userRegion !== userRegion ||
+        userInfo.userZipCode !== userZipCode
+      ) {
+        // User location has changed, update user information
+        const updatedInfo = {
+          userCity,
+          userState,
+          userRegion,
+          userZipCode
+        };
+        updateUserInfo(updatedInfo);
+      }
+    });
+}
+
+
+	
+	
+	
+	
+	
   function transferAccountToEmailUserInfo(userInfo, email) {
     saveUserInfoToFirebase(userInfo);
     const emailUserInfo = { ...userInfo, email };
@@ -129,7 +193,11 @@ const firebaseConfig = {
   appId: "1:828105067102:web:76afb989ed7c03ebb542cf",
   measurementId: "G-J3QK9V5480"
 };
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
+// Get a reference to the Firebase Realtime Database
+const database = firebase.database();
 
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
@@ -141,160 +209,181 @@ const firebaseConfig = {
   const createUserWithEmailAndPassword = firebase.auth().createUserWithEmailAndPassword;
   const signInWithPopup = firebase.auth().signInWithPopup;
 
-  // Function to handle Google sign-in
-  window.signInWithGoogle = function () {
-    const provider = new GoogleAuthProvider();
+// Function to handle Google sign-in
+window.signInWithGoogle = function() {
+  const provider = new firebase.auth.GoogleAuthProvider();
 
-    auth
-      .signInWithPopup(provider)
-      .then((result) => {
-        const user = result.user;
-        const displayName = user.displayName;
-        const email = user.email;
-        const firebaseId = user.uid;
+  firebase.auth()
+    .signInWithPopup(provider)
+    .then((result) => {
+      const user = result.user;
+      const displayName = user.displayName;
+      const email = user.email;
+      const firebaseId = user.uid;
 
-        const userInfo = {
-          userName: displayName,
-          profilePic: user.photoURL,
-          tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-          rank: 'Beginner',
-          points: 0,
-          quizzesTaken: 0,
-          firebaseId: firebaseId
-        };
+      const userInfo = {
+        userName: displayName,
+        profilePic: user.photoURL,
+        tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+        rank: 'Beginner',
+        points: 0,
+        quizzesTaken: 0,
+        firebaseId: firebaseId
+      };
 
+      // Check if the user has already transferred the data
+      if (!userInfo.transferToEmail) {
         if (userInfo.points > 0) {
           if (confirm('Would you like to transfer the current userInfo to emailUserInfo?')) {
             const email = prompt('Please enter your email address:');
             transferAccountToEmailUserInfo(userInfo, email);
+            userInfo.transferToEmail = true; // Mark the transfer as completed
+            updateUserInfo(userInfo); // Update user info in the database
           }
         }
+      }
 
-        updateUserInfo(userInfo);
-        // Set the logged-in cookie
-        document.cookie = 'loggedIn=true';
+      // Update the user info in the UI
+      updateUserInfo(userInfo);
+      // Set the logged-in cookie
+      document.cookie = 'loggedIn=true';
 
-        console.log('User display name:', displayName);
-        console.log('User email:', email);
-        console.log('Firebase ID:', firebaseId);
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log('errorCode google:', errorCode);
-        console.log('errorMessage:', errorMessage);
-        // Set the logged-in cookie
-        document.cookie = 'loggedIn=false';
-      });
-  };
+      console.log('User display name:', displayName);
+      console.log('User email:', email);
+      console.log('Firebase ID:', firebaseId);
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log('errorCode google:', errorCode);
+      console.log('errorMessage:', errorMessage);
+      // Set the logged-in cookie
+      document.cookie = 'loggedIn=false';
+    });
+};
 
-  // Function to handle Facebook sign-in
-  window.signInWithFacebook = function () {
-    const provider = new FacebookAuthProvider();
+// Function to handle Facebook sign-in
+window.signInWithFacebook = function() {
+  const provider = new firebase.auth.FacebookAuthProvider();
 
-    auth
-      .signInWithPopup(provider)
-      .then((result) => {
-        const user = result.user;
-        const displayName = user.displayName;
-        const email = user.email;
-        const firebaseId = user.uid;
+  firebase.auth()
+    .signInWithPopup(provider)
+    .then((result) => {
+      const user = result.user;
+      const displayName = user.displayName;
+      const email = user.email;
+      const firebaseId = user.uid;
 
-        const userInfo = {
-          userName: displayName,
-          profilePic: user.photoURL,
-          tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-          rank: 'Beginner',
-          points: 0,
-          quizzesTaken: 0,
-          firebaseId: firebaseId
-        };
+      const userInfo = {
+        userName: displayName,
+        profilePic: user.photoURL,
+        tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+        rank: 'Beginner',
+        points: 0,
+        quizzesTaken: 0,
+        firebaseId: firebaseId
+      };
 
+      // Check if the user has already transferred the data
+      if (!userInfo.transferToEmail) {
         if (userInfo.points > 0) {
           if (confirm('Would you like to transfer the current userInfo to emailUserInfo?')) {
             const email = prompt('Please enter your email address:');
             transferAccountToEmailUserInfo(userInfo, email);
+            userInfo.transferToEmail = true; // Mark the transfer as completed
+            updateUserInfo(userInfo); // Update user info in the database
           }
         }
+      }
 
-        updateUserInfo(userInfo);
-        // Set the logged-in cookie
-        document.cookie = 'loggedIn=true';
+      // Update the user info in the UI
+      updateUserInfo(userInfo);
+      // Set the logged-in cookie
+      document.cookie = 'loggedIn=true';
 
-        console.log('User display name:', displayName);
-        console.log('User email:', email);
-        console.log('Firebase ID:', firebaseId);
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log('errorCode facebook:', errorCode);
-        console.log('errorMessage:', errorMessage);
-        // Set the logged-in cookie
-        document.cookie = 'loggedIn=false';
-      });
-  };
+      console.log('User display name:', displayName);
+      console.log('User email:', email);
+      console.log('Firebase ID:', firebaseId);
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log('errorCode facebook:', errorCode);
+      console.log('errorMessage:', errorMessage);
+      // Set the logged-in cookie
+      document.cookie = 'loggedIn=false';
+    });
+};
 
-  document.addEventListener('DOMContentLoaded', function () {
-    displayUserInfo();
-  });
+document.addEventListener('DOMContentLoaded', function() {
+  displayUserInfo();
+});
 
-  // Function to handle the sign-in process using email and password
-  window.signInWithUserWithEmailAndPassword = function (event) {
-    event.preventDefault();
 
-    const email = document.getElementById('lemail').value;
-    const password = document.getElementById('lpassword').value;
 
-    auth
-      .signInWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-        // Sign-in successful, retrieve the user object
-        const user = userCredential.user;
+// Function to handle the sign-in process using email and password
+window.signInWithUserWithEmailAndPassword = function(event) {
+  event.preventDefault();
 
-        // Get the user's display name and Firebase ID
-        const displayName = user.displayName;
-        const firebaseId = user.uid;
+  const email = document.getElementById('lemail').value;
+  const password = document.getElementById('lpassword').value;
 
-        // Example: Show a success message and user info
-        showStatusMessage('Sign-in successful', 'success');
-        console.log('User display name:', displayName);
-        console.log('Firebase ID:', firebaseId);
+  auth
+    .signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      // Sign-in successful, retrieve the user object
+      const user = userCredential.user;
 
-        // Update user info
-        const userInfo = {
-          userName: displayName,
-          profilePic: '/images/avatar/w1.png',
-          tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-          rank: 'Beginner',
-          points: 0,
-          quizzesTaken: 0,
-          firebaseId: firebaseId
-        };
-        // Set the logged-in cookie
-        document.cookie = 'loggedIn=true';
+      // Get the user's display name and Firebase ID
+      const displayName = user.displayName;
+      const firebaseId = user.uid;
 
+      // Example: Show a success message and user info
+      showStatusMessage('Sign-in successful', 'success');
+      console.log('User display name:', displayName);
+      console.log('Firebase ID:', firebaseId);
+
+      // Update user info
+      const userInfo = {
+        userName: displayName,
+        profilePic: '/images/avatar/w1.png',
+        tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+        rank: 'Beginner',
+        points: 0,
+        quizzesTaken: 0,
+        firebaseId: firebaseId
+      };
+      
+      // Check if the user has already transferred the data
+      if (!userInfo.transferToEmail) {
         if (userInfo.points > 0) {
           if (confirm('Would you like to transfer the current userInfo to emailUserInfo?')) {
             const email = prompt('Please enter your email address:');
             transferAccountToEmailUserInfo(userInfo, email);
+            userInfo.transferToEmail = true; // Mark the transfer as completed
+            updateUserInfo(userInfo); // Update user info in the database
           }
         }
+      }
 
-        updateUserInfo(userInfo);
-      })
-      .catch((error) => {
-        // Handle any errors that occurred during sign-in
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // Handle the error appropriately
-        console.log('errorCode signInWithEmailAndPassword:', errorCode);
-        console.log('errorMessage:', errorMessage);
-        showStatusMessage(errorMessage, 'error');
-        // Set the logged-in cookie
-        document.cookie = 'loggedIn=false';
-      });
-  };
+      // Set the logged-in cookie
+      document.cookie = 'loggedIn=true';
+
+      updateUserInfo(userInfo);
+    })
+    .catch((error) => {
+      // Handle any errors that occurred during sign-in
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // Handle the error appropriately
+      console.log('errorCode signInWithEmailAndPassword:', errorCode);
+      console.log('errorMessage:', errorMessage);
+      showStatusMessage(errorMessage, 'error');
+      // Set the logged-in cookie
+      document.cookie = 'loggedIn=false';
+    });
+};
+
 
  
 	
