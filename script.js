@@ -613,10 +613,9 @@ function displayBadges() {
     </div>
   </div>
   <div class="card-body">
-    <h5 class="card-title">${newBadge.name}</h5>
+  <br>
+    <h5 class="card-title">${newBadge.name}</h5><hr>
     <p class="card-text">${newBadge.description}</p>
-    <p class="card-text">Quantity: ${newBadge.quantity}</p>
-    <p class="card-text">Earned on ${newBadge.earnedDate}</p>
   </div>
 </div>
 
