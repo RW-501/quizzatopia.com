@@ -19,7 +19,7 @@ fetch('./elements/navbar.html')
 	
 	
 	// Check if user is logged in
-  if (loggedIn == 'true') {
+  if (loggedIn === 'true') {
     // User is logged in
     document.getElementById('navLoggedin').innerHTML = "<button onclick=\"logOutFunction()\">Log Out</button>";
   } else {
