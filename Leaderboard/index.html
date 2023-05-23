@@ -222,7 +222,6 @@ console.log('Query created:', query);
     });
 }
 
-loadLeaderboard();
 
 
     // Function to view user profile when a row is clicked
@@ -250,11 +249,11 @@ document.getElementById('uPic').src = lbUserInfo.profilePic;
 		  
     console.log(xxx+' ', lbUserInfo.xxx);
 		  
-		  loadLeaderboard(xxx'='+lbUserInfo.xxx);
-
+ loadLeaderboard(xxx'='+lbUserInfo.xxx);
 	  }
 	  
-	  
+	loadLeaderboard('userCountry='+lbUserInfo.userCountry);
+  
   </script>
 
       
