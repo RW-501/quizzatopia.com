@@ -11,10 +11,13 @@
       display: block;
     margin: auto;
   border: none;
+      text-align: center;
+  
 }
 
 #userTagLine{
   border: none;
+      text-align: center;
 }
 
 
