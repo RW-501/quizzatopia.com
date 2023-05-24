@@ -557,7 +557,7 @@ window.addEventListener('load', removeOverlay);
 	
 
 
-<button class="signup-button" onclick="openPopup(); switchTab('signup'); "><span>Sign Up</span></button>
+<button id="mainSignupBtn" class="signup-button" onclick="openPopup(); switchTab('signup'); "><span>Sign Up</span></button>
  
 	    
   <hr>
@@ -985,6 +985,12 @@ window.addEventListener('load', removeOverlay);
 	</script>
 	
 	<script>
+	  if (Loggedin === "true") {
+ document.getElementById('mainSignupBtn').innerHTML =  "";
+	  }	
+		
+		
+		
 // Function to open the login/signup popup
 function openPopup() {
   document.getElementById('loginPopup').classList.remove('d-none');
