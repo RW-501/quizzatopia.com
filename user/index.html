@@ -52,13 +52,13 @@
 
 	}	
 function saveTime(){	
-	clearTimeout(timerId);
 
 	// Call the function repeatedly at a time interval (in milliseconds)
-timerId = setInterval(function() {
+const timerId = setInterval(function() {
   // Call your function here
   removeSaveMessage();
 }, 5000); // 3000 milliseconds = 3 seconds
+	clearTimeout(timerId);
 
 }	      
 		      function removeSaveMessage() {
