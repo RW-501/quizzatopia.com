@@ -132,30 +132,47 @@ function getUserLocation() {
     });
 }
 
-// Function to check if user information has changed
 function checkUserInfoChanges() {
   const userInfo = getUserInfo();
 
-  getUserLocation()
-    .then(location => {
-      const { userCity, userState, userRegion, userZipCode } = location;
+  getUserLocation().then((location) => {
+    const { userCity, userState, userRegion, userZipCode } = location;
 
-      if (
-        userInfo.userCity !== userCity ||
-        userInfo.userState !== userState ||
-        userInfo.userRegion !== userRegion ||
-        userInfo.userZipCode !== userZipCode
-      ) {
-        // User location has changed, update user information
-        const updatedInfo = {
-          userCity,
-          userState,
-          userRegion,
-          userZipCode
-        };
-        updateUserInfo(updatedInfo);
-      }
-    });
+    if (
+      userInfo.userCity !== userCity ||
+      userInfo.userState !== userState ||
+      userInfo.userRegion !== userRegion ||
+      userInfo.userZipCode !== userZipCode
+    ) {
+      // User location has changed, update user information
+      const updatedInfo = {
+        userCity,
+        userState,
+        userRegion,
+        userZipCode,
+      };
+      updateUserInfo(updatedInfo);
+    } else {
+      // Check timestamp for user info
+      const db = firebase.firestore();
+      const userId = userInfo.firebaseId;
+
+      db.collection('users')
+        .doc(userId)
+        .get()
+        .then((doc) => {
+          const dbUserInfo = doc.data();
+
+          if (dbUserInfo && dbUserInfo.lastUpdated > userInfo.lastUpdated) {
+            // Database info is newer, update local storage
+            updateUserInfo(dbUserInfo);
+          }
+        })
+        .catch((error) => {
+          console.error('Error retrieving user info from Firestore:', error);
+        });
+    }
+  });
 }
 
 
@@ -211,7 +228,7 @@ function getUserInfoFromAuthProvider(user) {
     quizzesTaken: 0,
     firebaseId: firebaseId
   };
-saveUserInfoToFirestore(userInfo)
+//saveUserInfoToFirestore(userInfo)
   return userInfo;
 }
 	
