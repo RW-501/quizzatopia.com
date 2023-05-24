@@ -188,12 +188,12 @@ function generateQuizAdPattern(numQuestions, numAds) {
 
   const userInfo = getUserInfo();
 
-	   console.log('userInfo.userName ????????????????? ', userInfo.userName);
+	 //  console.log('userInfo.userName ????????????????? ', userInfo.userName);
 
-if( userInfo.userName == "admin" ||  userInfo.userName == "Admin"){
+if( userInfo.userName == "admin" ||  userInfo.userName == "Admin" || userInfo.userName !== null ){
 	
   const adDuration = 0; // Duration of each ad in seconds
-  let adCount = 0; // Counter for the number of ads shown
+  let adCount = 0; // Counter for the number of ads shown 
 }else{
 	
   const adDuration = 10; // Duration of each ad in seconds
@@ -568,7 +568,7 @@ displayEarnedPoints(earnedPoints);
   document.getElementById("end-container").classList.remove("d-none");
 
   // Show the badge if all answers are correct
-  if (questionCorrect === totalQuestions) {
+  if (questionCorrect === totalQuestions || questionCorrect == 0 ) {
   
   } else {
     // Show the pie chart for correct and incorrect answers
