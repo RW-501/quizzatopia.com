@@ -188,9 +188,9 @@ let adDuration;
  let adCount
   const userInfo = getUserInfo();
 
-	 //  console.log('userInfo.userName ????????????????? ', userInfo.userName);
+	   console.log('userInfo.userName ????????????????? ', userInfo.userName);
 
-if( userInfo.userName == "admin" ||  userInfo.userName == "Admin" || userInfo.userName !== null ){
+if( userInfo.userName === "admin" ||  userInfo.userName === "Admin" || userInfo.userName !== null ){
 	 console.log( "   ???????no ads???"); // Output: 
    adDuration = 0; // Duration of each ad in seconds
    adCount = 0; // Counter for the number of ads shown 
