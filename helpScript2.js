@@ -12,7 +12,7 @@ var Loggedin = document.cookie.split('; ').find(row => row.startsWith('loggedIn=
   
   }
 		
-fetch('/elements/navbar2.html')
+fetch('./elements/navbar2.html')
   .then(response => response.text())
   .then(data => {
     document.querySelector('#navbar').innerHTML = data;
@@ -61,7 +61,7 @@ function logOutFunction() {
     });
   });
 
-fetch('/elements/footer2.html')
+fetch('./elements/footer2.html')
   .then(response => response.text())
   .then(data => {
     document.querySelector('#mainFooter').innerHTML = data;
