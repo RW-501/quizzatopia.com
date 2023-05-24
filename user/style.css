@@ -8,13 +8,12 @@
   }
 
 .base{  
-    margin-left: 20%;
+margin-left: 20%;
     margin-top: 2%;
     margin-right: 20%;
-    width: auto;
-    margin-bottom: 5%;
+    width: auto !important;
+    margin-bottom: 5% !important;
     padding: 0;
-    border-color: orange;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
