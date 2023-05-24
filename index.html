@@ -1058,26 +1058,7 @@ const firestore = firebase.firestore();
 	
 	// Assuming you have already initialized the Firestore SDK and have access to the Firestore database
 
-// Get a reference to the "users" collection
-var usersCollection = firebase.firestore().collection("users");
-
-// Retrieve all the documents from the "users" collection
-usersCollection.get()
-  .then(function(querySnapshot) {
-    // Iterate through each document
-    querySnapshot.forEach(function(doc) {
-      // Update the document by adding the new field and value
-      usersCollection.doc(doc.id).update({
-        testUsers: "YES"
-      });
-    });
-    
-    console.log("New field added to all users.");
-  })
-  .catch(function(error) {
-    console.error("Error retrieving documents: ", error);
-  });
-
+/
 	
 	
 	
