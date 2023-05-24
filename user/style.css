@@ -7,6 +7,17 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
+#userNameQ{
+      display: block;
+    margin: auto;
+  border: none;
+}
+
+#userTagLine{
+  border: none;
+}
+
+
 .base{  
 margin-left: 20%;
     margin-top: 2%;
