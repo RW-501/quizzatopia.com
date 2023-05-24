@@ -211,7 +211,7 @@ function getUserInfoFromAuthProvider(user) {
     quizzesTaken: 0,
     firebaseId: firebaseId
   };
-
+saveUserInfoToFirestore(userInfo)
   return userInfo;
 }
 	
