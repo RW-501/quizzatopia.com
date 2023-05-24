@@ -2,6 +2,14 @@
 
 
 
+
+fetch('./elements/navbar.html')
+  .then(response => response.text())
+  .then(data => {
+    document.querySelector('#navbar').innerHTML = data;
+
+	
+	
 		
 var Loggedin = document.cookie.split('; ').find(row => row.startsWith('loggedIn=')).split('=')[1];
 	
@@ -14,15 +22,7 @@ var Loggedin = document.cookie.split('; ').find(row => row.startsWith('loggedIn=
   
   }
 		
-
-
-fetch('./elements/navbar.html')
-  .then(response => response.text())
-  .then(data => {
-    document.querySelector('#navbar').innerHTML = data;
-
-	
-			
+		
 
       const navUserInfo = JSON.parse(localStorage.getItem("userInfo"));
  console.log('navUserInfo.profilePic 2 ', navUserInfo.profilePic);
