@@ -37,8 +37,8 @@
 
 	      
         <!-- User tagline -->
-  <h4 id="userNameQ" class="user-name mt-3" contenteditable="true" oninput="showSaveMessage();" onfocusout="saveTime();" >John Doe</h4>
-<p id="userTagLine" class="text-muted" contenteditable="true" oninput="showSaveMessage();" onfocusout="saveTime();" >Unlock Your Knowledge Potential with Quizzatopia!</p>
+  <input id="userNameQ" type='text' class="user-name mt-3"  oninput="showSaveMessage();" onfocusout="saveTime();" >
+<input type='text' id="userTagLine" class="text-muted"  oninput="showSaveMessage();" onfocusout="saveTime();" >
 
 	      <p id="savedMessage" style="display: none;">Changes saved!</p>
 
@@ -285,11 +285,11 @@ function selectProfilePic(imageSrc) {
 		    
 		    function displayUserInfo() {
   const userInfo = getUserInfo();
-  document.getElementById('userNameQ').innerHTML = userInfo.userName;
+  document.getElementById('userNameQ').value = userInfo.userName;
   document.getElementById('userRankQ').innerHTML = userInfo.rank;
   document.getElementById('userPointsQ').innerHTML = userInfo.points;
   document.getElementById('userQuzziesTaken').innerHTML = userInfo.quizzesTaken;
-  document.getElementById('userTagLine').innerHTML = userInfo.tagLine;
+  document.getElementById('userTagLine').value = userInfo.tagLine;
 			    
   document.getElementById('userPic').src = userInfo.profilePic;
 
