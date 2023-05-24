@@ -350,16 +350,7 @@ window.signInWithUserWithEmailAndPassword = function(event) {
       console.log('User display name:', displayName);
       console.log('Firebase ID:', firebaseId);
 
-      // Update user info
-      const userInfo = {
-        userName: displayName,
-        profilePic: '/images/avatar/w1.png',
-        tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-        rank: 'Beginner',
-        points: 0,
-        quizzesTaken: 0,
-        firebaseId: firebaseId
-      };
+  
       
       // Check if the user has already transferred the data
       if (!userInfo.transferToEmail) {
@@ -532,7 +523,10 @@ window.createUserWithEmailAndPassword = function (event) {
 
 function onAuthSuccess(userInfo) {
   // Perform any actions or operations you want to execute after successful authentication
-
+	
+  // Call checkUserInfoChanges() after successful login
+      checkUserInfoChanges();
+	
   // Example: Display a welcome message to the user
   console.log('Welcome, ' + userInfo.userName + '!');
 
