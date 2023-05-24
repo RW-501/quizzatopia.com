@@ -56,12 +56,14 @@ function saveTime(){		      // Call the function repeatedly at a time interval (
 setInterval(function() {
   // Call your function here
   removeSaveMessage();
-}, 3000); // 3000 milliseconds = 3 seconds
+}, 5000); // 3000 milliseconds = 3 seconds
 
 }	      
 		      function removeSaveMessage() {
   var savedMessage = document.getElementById("savedMessage");
   savedMessage.style.display = "none";
+			      saveChanges();
+
 		      }
 
 function saveChanges() {
