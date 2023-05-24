@@ -691,7 +691,69 @@
 
 	
 	
+		<script>
+// Function to open the login/signup popup
+function openPopup() {
+  document.getElementById('loginPopup').classList.remove('d-none');
+}
+
+// Function to close the login/signup popup
+function closePopup() {
+  document.getElementById('loginPopup').classList.add('d-none');
+}
+
+// Function to switch between login and signup tabs
+function switchTab(tabName) {
+  document.getElementById('loginTab').style.display = tabName === 'login' ? 'block' : 'none';
+  document.getElementById('signupTab').style.display = tabName === 'signup' ? 'block' : 'none';
+}
+
+// Fetch the popup HTML dynamically and append it to the signupLoginArea element
+fetch('./auth/index.html')
+  .then(response => response.text())
+  .then(data => {
+    const signupLoginArea = document.querySelector('#signupLoginArea');
+	signupLoginArea.innerHTML += data;
+signupLoginArea.display = "none";
+  });
+
+			var cookieValue = document.cookie.split('; ').find(row => row.startsWith('loggedIn=')).split('=')[1];
 	
+	// Check if user is logged in
+  if (cookieValue == 'false') {
+		const timerId = setTimeout(() => {
+openPopup(); switchTab('signup'); 	
+}, 5000); // Timer will execute after 5000 milliseconds (5 seconds)
+	  
+  }
+			
+</script>
+
+
+ <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+ <link rel="stylesheet" href="/auth/authStyle.css" />
+	
+	<script>
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
+  authDomain: "quizzatopia-bdfc9.firebaseapp.com",
+  projectId: "quizzatopia-bdfc9",
+  storageBucket: "quizzatopia-bdfc9.appspot.com",
+  messagingSenderId: "828105067102",
+  appId: "1:828105067102:web:76afb989ed7c03ebb542cf",
+  measurementId: "G-J3QK9V5480"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+// Get a reference to the Firestore database
+const firestore = firebase.firestore();
+</script>
+
+	<script type="module" src="/auth/auth.js"></script>
 	
 	
 	
@@ -1203,41 +1265,6 @@ document.addEventListener('click', function (e) {
 
 	  <script src="script.js" Defer></script>
 
-	<script>
-// Function to open the login/signup popup
-function openPopup() {
-  document.getElementById('loginPopup').classList.remove('d-none');
-}
-
-// Function to close the login/signup popup
-function closePopup() {
-  document.getElementById('loginPopup').classList.add('d-none');
-}
-
-// Function to switch between login and signup tabs
-function switchTab(tabName) {
-  document.getElementById('loginTab').style.display = tabName === 'login' ? 'block' : 'none';
-  document.getElementById('signupTab').style.display = tabName === 'signup' ? 'block' : 'none';
-}
-
-// Fetch the popup HTML dynamically and append it to the signupLoginArea element
-fetch('/auth/index.html')
-  .then(response => response.text())
-  .then(data => {
-    const signupLoginArea = document.querySelector('#signupLoginArea');
-    signupLoginArea.innerHTML = data;
-  });
-
-
-	
-</script>
-		
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
- <link rel="stylesheet" href="/auth/authStyle.css" />
-<script type="module" src="/auth/auth.js"></script>
-	<div id="signupLoginArea" ><div>
-   
 </html>
 
 
