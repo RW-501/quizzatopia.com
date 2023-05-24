@@ -717,15 +717,7 @@ fetch('./auth/index.html')
 signupLoginArea.display = "none";
   });
 
-			var cookieValue = document.cookie.split('; ').find(row => row.startsWith('loggedIn=')).split('=')[1];
-	
-	// Check if user is logged in
-  if (cookieValue == 'false') {
-		const timerId = setTimeout(() => {
-openPopup(); switchTab('signup'); 	
-}, 5000); // Timer will execute after 5000 milliseconds (5 seconds)
-	  
-  }
+
 			
 </script>
 
@@ -756,7 +748,21 @@ const firestore = firebase.firestore();
 	<script type="module" src="/auth/auth.js"></script>
 	
 	
+	<script>
+		
+					var cookieValue = document.cookie.split('; ').find(row => row.startsWith('loggedIn=')).split('=')[1];
 	
+	// Check if user is logged in
+  if (cookieValue == 'false') {
+		const timerId = setTimeout(() => {
+openPopup(); switchTab('signup'); 	
+}, 5000); // Timer will execute after 5000 milliseconds (5 seconds)
+	  
+  }
+		
+		console.log("cookieValue   f?  "+cookieValue); 
+
+	</script>
  </body>
   <div id="mainFooter"></div>
 
