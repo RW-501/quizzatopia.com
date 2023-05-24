@@ -4,7 +4,7 @@
 
 
 
-fetch('/elements/navbar.html')
+fetch('https://www.quizzatopia.com/elements/navbar.html')
   .then(response => response.text())
   .then(data => {
     document.querySelector('#navbar').innerHTML = data;
@@ -52,7 +52,7 @@ function logOutFunction() {
     });
   });
 
-fetch('/elements/footer.html')
+fetch('https://www.quizzatopia.com/elements/footer.html')
   .then(response => response.text())
   .then(data => {
     document.querySelector('#mainFooter').innerHTML = data;
