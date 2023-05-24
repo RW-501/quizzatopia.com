@@ -3,10 +3,10 @@
 
 
 		
-const cookieV = document.cookie.split('; ').find(row => row.startsWith('loggedIn=')).split('=')[1];
+var Loggedin = document.cookie.split('; ').find(row => row.startsWith('loggedIn=')).split('=')[1];
 	
 	// Check if user is logged in
-  if (cookieV == 'true') {
+  if (Loggedin == 'true') {
  console.log("Logged In"); 
 
   }else{
