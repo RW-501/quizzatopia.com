@@ -48,11 +48,10 @@
 	function showSaveMessage() {
   var savedMessage = document.getElementById("savedMessage");
   savedMessage.style.display = "block";
-			      saveChanges();
 
 	}	
 function saveTime(){	
-
+showSaveMessage();
 	// Call the function repeatedly at a time interval (in milliseconds)
 const timerId = setInterval(function() {
   // Call your function here
@@ -64,6 +63,7 @@ const timerId = setInterval(function() {
 		      function removeSaveMessage() {
   var savedMessage = document.getElementById("savedMessage");
   savedMessage.style.display = "none";
+			      saveChanges();
 
 		      }
 
@@ -75,8 +75,7 @@ function saveChanges() {
   // Call the updateUserInfo function to save the changes
   updateUserInfo({ userName: newUsername, tagLine: newTagline });
 
-  // Show the saved message
-  showSaveMessage();
+  /
 
   // Apply color animation to the changed text
   animateTextChanges();
