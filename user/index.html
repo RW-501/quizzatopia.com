@@ -37,8 +37,8 @@
 
 	      
         <!-- User tagline -->
-  <input id="userNameQ" type='text' class="user-name mt-3" placeholder="user name" onblur="showSaveMessage();" onblur="saveTime();" >
-<input type='text' id="userTagLine" class="text-muted"  placeholder="Tagline" onblur="showSaveMessage();" onblur="saveTime();" >
+  <input id="userNameQ" type='text' class="user-name mt-3" placeholder="user name" onblur="saveTime();" >
+<input type='text' id="userTagLine" class="text-muted"  placeholder="Tagline" onblur="saveTime();" >
 
 	      <p id="savedMessage" style="display: none;">Changes saved!</p>
 
@@ -48,7 +48,7 @@
 	function showSaveMessage() {
   var savedMessage = document.getElementById("savedMessage");
   savedMessage.style.display = "block";
-				saveChanges();
+			      saveChanges();
 
 	}	
 function saveTime(){	
@@ -64,7 +64,6 @@ timerId = setInterval(function() {
 		      function removeSaveMessage() {
   var savedMessage = document.getElementById("savedMessage");
   savedMessage.style.display = "none";
-			      saveChanges();
 
 		      }
 
