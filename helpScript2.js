@@ -1,5 +1,17 @@
 
 
+		
+var Loggedin = document.cookie.split('; ').find(row => row.startsWith('loggedIn=')).split('=')[1];
+	
+	// Check if user is logged in
+  if (Loggedin == 'true') {
+ console.log("Logged In"); 
+
+  }else{
+	 console.log("Logged Out"); 
+  
+  }
+		
 fetch('/elements/navbar2.html')
   .then(response => response.text())
   .then(data => {
