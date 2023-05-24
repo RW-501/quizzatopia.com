@@ -213,14 +213,18 @@
 }
 
 .badge-image {
-  width: 50%;
-  height: auto;
-  border-radius: 50%;
+width: 50%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 3.2);
+    padding: 1%;
+    margin: 1%;
 }
 
 .badge-name {
   text-align: center;
   margin-top: 10px;
+  font-weight: bold;
 }
 
 
