@@ -467,7 +467,7 @@ let authIndex;
   if (currentPagePath === '/' || currentPagePath === '/index.html') {
     authIndex = './auth/index.html';
   } else {
-    authIndex = '../auth/index.html';
+    authIndex = '/auth/index.html';
   }
 
 
@@ -1092,8 +1092,8 @@ function fetchAndInsertContent() {
     navbarPath = './elements/navbar.html';
     footerPath = './elements/footer.html';
   } else {
-    navbarPath = '../elements/navbar2.html';
-    footerPath = '../elements/footer2.html';
+    navbarPath = '/elements/navbar2.html';
+    footerPath = '/elements/footer2.html';
   }
 
   fetch(navbarPath)
