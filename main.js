@@ -1115,6 +1115,7 @@ fetchAndInsertContent();
 
 
   
+document.addEventListener('DOMContentLoaded', function() {
 
 function updatNavBar(){
 	
@@ -1135,5 +1136,5 @@ function updatNavBar(){
 				 
 updatNavBar();
 
-
+});
 
