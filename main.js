@@ -460,8 +460,20 @@ function switchTab(tabName) {
   document.getElementById('signupTab').style.display = tabName === 'signup' ? 'block' : 'none';
 }
 
+
+  const currentPagePath = window.location.pathname;
+    console.log("currentPagePath:", currentPagePath);
+let authIndex;
+  if (currentPagePath === '/' || currentPagePath === '/index.html') {
+    authIndex = './auth/index.html';
+  } else {
+    authIndex = '../auth/index.html';
+  }
+
+
+
 // Fetch the popup HTML dynamically and append it to the signupLoginArea element
-fetch('./auth/index.html')
+fetch(authIndex)
   .then(response => response.text())
   .then(data => {
     const signupLoginArea = document.querySelector('#signupLoginArea');
@@ -1074,9 +1086,7 @@ function logOutFunction() {
 	
 // Function to fetch and insert HTML based on the page level
 function fetchAndInsertContent() {
-  const currentPagePath = window.location.pathname;
   let navbarPath, footerPath;
-    console.log("currentPagePath:", currentPagePath);
 
   if (currentPagePath === '/' || currentPagePath === '/index.html') {
     navbarPath = './elements/navbar.html';
