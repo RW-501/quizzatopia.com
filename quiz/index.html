@@ -80,7 +80,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="./CSS/indexOptions.css">
   
     <link rel="import" href="./elements/navbar.html">
@@ -99,10 +99,10 @@
  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
- <link rel="stylesheet" href="./auth/authStyle.css" />
+ <link rel="stylesheet" href="/auth/authStyle.css" />
 	
 	
-	<script src="./main.js"></script>
+	<script src="/main.js"></script>
 
 </head>
 <!-- Google tag (gtag.js) -->
@@ -1073,11 +1073,11 @@ let stringEnt;
 	  
 		         console.log("New JSON structure");
   
-	stringEnt  = "/quiz/Quizzes/"+q+".json";
+	stringEnt  = "quiz/Quizzes/"+q+".json";
   }else{
 	         console.log("old JSON structure");
  
-	stringEnt  = "q/"+q+".json";
+	stringEnt  = "/q/"+q+".json";
   }
 	
 	
@@ -1221,7 +1221,7 @@ document.addEventListener('click', function (e) {
 	      
     </script>
 
-	  <script src="/script.js" Defer></script>
+	  <script src="script.js" Defer></script>
 
 </html>
 
