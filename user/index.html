@@ -49,20 +49,24 @@
   savedMessage.style.display = "block";
 
 	}	
+	const timerId ;	      
 function saveTime(){	
-showSaveMessage();
+
 	// Call the function repeatedly at a time interval (in milliseconds)
-const timerId = setInterval(function() {
+ timerId = setInterval(function() {
   // Call your function here
+	 showSaveMessage();
   removeSaveMessage();
 }, 5000); // 3000 milliseconds = 3 seconds
-	clearTimeout(timerId);
 
 }	      
 		      function removeSaveMessage() {
+			        // Apply color animation to the changed text
+  animateTextChanges();
   var savedMessage = document.getElementById("savedMessage");
   savedMessage.style.display = "none";
 			      saveChanges();
+	clearTimeout(timerId);
 
 		      }
 
@@ -76,8 +80,7 @@ function saveChanges() {
 
   
 
-  // Apply color animation to the changed text
-  animateTextChanges();
+
 }
 
 function updateUserName(newName) {
