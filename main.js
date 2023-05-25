@@ -1076,6 +1076,7 @@ function logOutFunction() {
 function fetchAndInsertContent() {
   const currentPagePath = window.location.pathname;
   let navbarPath, footerPath;
+    console.log("currentPagePath:", currentPagePath);
 
   if (currentPagePath === '/' || currentPagePath === '/index.html') {
     navbarPath = './elements/navbar.html';
@@ -1131,7 +1132,7 @@ function updatNavBar(){
   }
 }
 				 
-				 } 
+				 
 updatNavBar();
 
 
