@@ -472,6 +472,7 @@ signupLoginArea.display = "none";
 
 
 
+// 		<div id="signupLoginArea" ><div>
 
 
 		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -490,7 +491,12 @@ firebase.initializeApp(firebaseConfig);
 // Get a reference to the Firestore database
 const firestore = firebase.firestore();
 
-		
+		 // Get a reference to the Firestore database
+//  const db = firebase.firestore();
+
+  // Create a collection called "users" (if it doesn't exist already)
+  //const usersCollection = db.collection('users');
+
 	
 
 
