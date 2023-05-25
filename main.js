@@ -1072,8 +1072,6 @@ function logOutFunction() {
 
 
 	
-   
-
 // Function to fetch and insert HTML based on the page level
 function fetchAndInsertContent() {
   const currentPagePath = window.location.pathname;
@@ -1091,6 +1089,7 @@ function fetchAndInsertContent() {
     .then(response => response.text())
     .then(data => {
       document.querySelector('#navbar').innerHTML = data;
+      initializeNavbarToggler();
     });
 
   fetch(footerPath)
@@ -1098,6 +1097,15 @@ function fetchAndInsertContent() {
     .then(data => {
       document.querySelector('#mainFooter').innerHTML = data;
     });
+}
+
+// Function to initialize the navbar toggler event
+function initializeNavbarToggler() {
+  $(document).ready(function() {
+    $('.navbar-toggler').click(function() {
+      $('#navbarNav').toggleClass('collapse');
+    });
+  });
 }
 
 // Call the function to fetch and insert the HTML based on the page level
@@ -1108,11 +1116,8 @@ fetchAndInsertContent();
   
 
 function updatNavBar(){
-   $(document).ready(function() {
-      console.log($('.navbar-toggler'));
-      $('.navbar-toggler').click(function() {
-        $('#navbarNav').toggleClass('collapse');
-   
+	
+
   const userInfo = getUserInfo();
 
   document.getElementById('profile-pic').src = userInfo.profilePic;
@@ -1125,6 +1130,8 @@ function updatNavBar(){
     document.getElementById('navLoggedin').innerHTML = "<div onclick=\"openPopup()\">Log In</div>";
   }
 }
+				 
+				 } 
 updatNavBar();
 
 
