@@ -1119,9 +1119,9 @@ fetchAndInsertContent();
 function updatNavBar(){
 	
 
-  const userInfo = getUserInfo();
+//  const userInfo = getUserInfo();
 
-  document.getElementById('profile-pic').src = userInfo.profilePic;
+  //document.getElementById('profile-pic').src = userInfo.profilePic;
   	// Check if user is logged in
   if (loggedIn == 'true') {
     // User is logged in
