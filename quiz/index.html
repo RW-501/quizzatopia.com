@@ -1068,21 +1068,27 @@ quizInfo.quizLink = q;  // Add the "q" parameter to the quizInfo object
 }
 
 function fetchData(q, e) {
-let stringEnt;	
+  let stringEnt;
   if (e && isValidEdition(e)) {
-	  
-		         console.log("New JSON structure");
-  
-	stringEnt  = "quiz/Quizzes/"+q+".json";
-  }else{
-	         console.log("old JSON structure");
- 
-	stringEnt  = "/q/"+q+".json";
+    console.log("New JSON structure");
+    stringEnt = "quiz/Quizzes/" + q + ".json";
+  } else {
+    console.log("Old JSON structure");
+    stringEnt = "/q/" + q + ".json";
   }
-	
-	
- fetch(stringEnt)
-    .then(response => response.json())
+
+  fetch(stringEnt)
+    .then(response => {
+      // Retrieve the fetched URL
+      const fetchedUrl = response.url;
+      console.log("Fetched URL:", fetchedUrl);
+
+      if (!response.ok) {
+        throw new Error('Network response was not OK');
+      }
+
+      return response.json();
+    })
     .then(data => {
       if (Array.isArray(data)) {
         // Handle old JSON structure
@@ -1155,15 +1161,14 @@ let stringEnt;
         }
       }
     })
-    .catch(error => console.error(error));
+    .catch(error => {
+      // Handle the error
+      console.log("Error:", error);
+    });
 }
 
-  
-	  
-	  
 fetchData(q, e);
 
-	      
 	      
 
 
