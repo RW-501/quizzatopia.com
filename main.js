@@ -1117,9 +1117,12 @@ function fetchAndInsertContent() {
     .then(data => {
       document.querySelector('#mainFooter').innerHTML = data;
     });
+});		
+		
+		
 }
 				  
-});
+
 
 
 // Function to initialize the navbar toggler event
