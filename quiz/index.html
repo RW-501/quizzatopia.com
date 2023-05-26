@@ -94,7 +94,8 @@
 
   <div id="navbar"></div>
     <!-- Rest of the page content -->
-
+<div id="signupLoginArea" ><div>
+		
 	
   <!-- JavaScript dependencies -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -125,288 +126,219 @@
 
 <body>
 	<main_section>
-  
-    <!-- rest of the page content -->
-		
-	
-		
-	
+  <!-- Rest of the page content -->
 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		<div id="signupLoginArea" ><div>
-		
-		
-<div id="optionContainer" class="container">
-  <div class="row" style="
-    padding: 2%;
-">
-    <div class="col-md-6">
-      <div class="quiz-options">
-        <div class="form-check">
-          <div id="optionsQuizNameWrap">
-            <div id="optionsQuizName" class="text-center mb-4">Quiz Name</div>
-            <!-- Quiz Name -->
-          </div>
-        </div>
-        <hr>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="timer-checkbox">
-          <label class="form-check-label" for="timer-checkbox">
-            Enable Timer
-          </label>
-          <!-- Enable Timer Checkbox -->
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="countdown-per-question">
-          <label class="form-check-label" for="countdown-per-question">
-            Countdown per Question
-          </label>
-          <!-- Countdown per Question Checkbox -->
-        </div>
-        <div id="timer-timeGroup" class="form-group">
-          <label for="quiz-time">Quiz Time:</label>
-          <div class="input-group">
-            <input type="number" id="quiz-time" name="quiz-time" value="30" class="form-control">
-            <div class="input-group-append">
-              <span class="input-group-text">Seconds</span>
+  <div id="optionContainer" class="container">
+    <div class="row" style="padding: 2%;">
+      <div class="col-md-6">
+        <div class="quiz-options">
+          <div class="form-check">
+            <div id="optionsQuizNameWrap">
+              <div id="optionsQuizName" class="text-center mb-4">Quiz Name</div>
+              <!-- Quiz Name -->
             </div>
           </div>
-          <!-- Quiz Time Input -->
-        </div>
-        
-        <hr>
-        
-        <div id="testInfo" class="text-center mb-4"></div>
-        <!-- Test Information Placeholder -->
-	      
-	        <p id="pie_graph_front" style="
-    width: 50%;
-    margin: auto;
-"></p>
+          <hr>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="timer-checkbox">
+            <label class="form-check-label" for="timer-checkbox">
+              Enable Timer
+            </label>
+            <!-- Enable Timer Checkbox -->
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="countdown-per-question">
+            <label class="form-check-label" for="countdown-per-question">
+              Countdown per Question
+            </label>
+            <!-- Countdown per Question Checkbox -->
+          </div>
+          <div id="timer-timeGroup" class="form-group">
+            <label for="quiz-time">Quiz Time:</label>
+            <div class="input-group">
+              <input type="number" id="quiz-time" name="quiz-time" value="30" class="form-control">
+              <div class="input-group-append">
+                <span class="input-group-text">Seconds</span>
+              </div>
+            </div>
+            <!-- Quiz Time Input -->
+          </div>
 
-	      
-        <!-- Pie graph -->
-	      
-        <div class="text-center">
-          <button id="start-btn" class="btn btn-primary btn-lg">Start Quiz</button>
-          <!-- Start Quiz Button -->
-		    <div class="quiz-image-container text-center">
-        <img src="/images/lan/9.png" alt="quiz-image" class="w-100"  loading="lazy">
-        <!-- Quiz Image -->
-      </div>
+          <hr>
+
+          <div id="testInfo" class="text-center mb-4"></div>
+          <!-- Test Information Placeholder -->
+          
+          <p id="pie_graph_front" style="width: 50%; margin: auto;"></p>
+          <!-- Pie graph -->
+
+          <div class="text-center">
+            <button id="start-btn" class="btn btn-primary btn-lg">Start Quiz</button>
+            <!-- Start Quiz Button -->
+            <div class="quiz-image-container text-center">
+              <img src="/images/lan/9.png" alt="quiz-image" class="w-100" loading="lazy">
+              <!-- Quiz Image -->
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-6">
-      <div class="quiz-image-container text-center">
-        <img src="/images/lan/10.png" alt="quiz-image" class="w-100 d-md-block"  loading="lazy">
-        <!-- Quiz Image -->
+      <div class="col-md-6">
+        <div class="quiz-image-container text-center">
+          <img src="/images/lan/10.png" alt="quiz-image" class="w-100 d-md-block" loading="lazy">
+          <!-- Quiz Image -->
+        </div>
+
+        <div class="container" style="padding: 2%;" loading="lazy">
+          <div class="row">
+            <div class="col-md">
+              <div class="study-coach-box">
+                <a href="coach-details" class="coach-link">
+                  <div class="coach-image">
+                    <img src="/images/pics/2.png" alt="Study Coach 1" style="width: -webkit-fill-available;" loading="lazy">
+                  </div>
+                  <div class="coach-details">
+                    <h2 class="coach-name">Sarah Johnson</h2>
+                    <p class="coach-specialty">Specialty: English Literature</p>
+                    <p class="coach-description">Dedicated to helping students develop strong reading and analytical skills for success in English literature exams.</p>
+                  </div>
+                </a>
+              </div>
+              <a href="coach_apply.html" class="btn btn-primary btn-apply-coach">Apply to be a Study Coach</a>
+            </div>
+            <div class="col-md">
+              <div class="study-coach-box">
+                <a href="coach-details" class="coach-link">
+                  <div class="coach-image">
+                    <img src="/images/pics/7.png" alt="Study Coach 2" style="width: -webkit-fill-available;" loading="lazy">
+                  </div>
+                  <div class="coach-details">
+                    <h2 class="coach-name">Michael Chen</h2>
+                    <p class="coach-specialty">Specialty: Science and Biology</p>
+                    <p class="coach-description">Passionate about guiding students through complex scientific concepts and preparing them for biology exams.</p>
+                  </div>
+                </a>
+              </div>
+              <a href="coach_apply.html" class="btn btn-primary btn-apply-coach">Apply to be a Study Coach</a>
+            </div>
+            <div class="col-md d-md-none">
+              <div class="study-coach-box">
+                <a href="coach-details" class="coach-link">
+                  <div class="coach-image">
+                    <img src="/images/pics/5.png" alt="Study Coach 3" style="width: -webkit-fill-available;" loading="lazy">
+                  </div>
+                  <div class="coach-details">
+                    <h2 class="coach-name">Emily Thompson</h2>
+                    <p class="coach-specialty">Specialty: History and Social Studies</p>
+                    <p class="coach-description">Committed to helping students gain a deep understanding of historical events and develop critical thinking skills for history exams.</p>
+                  </div>
+                </a>
+              </div>
+              <a href="coach_apply" class="btn btn-primary btn-apply-coach">Apply to be a Study Coach</a>
+            </div>
+          </div>
+        </div>
       </div>
-	   
-	    <div class="container" style="
-    padding: 2%;
-"  loading="lazy">
-  <div class="row" >
-    <div class="col-md">
-      <div class="study-coach-box">
-        <a href="coach-details" class="coach-link">
-          <div class="coach-image">
-            <img src="/images/pics/2.png" alt="Study Coach 1" style="
-    width: -webkit-fill-available;
-"  loading="lazy">
-          </div>
-          <div class="coach-details">
-            <h2 class="coach-name">Sarah Johnson</h2>
-            <p class="coach-specialty">Specialty: English Literature</p>
-            <p class="coach-description">Dedicated to helping students develop strong reading and analytical skills for success in English literature exams.</p>
-          </div>
-        </a>
-      </div>
-      <a href="coach_apply.html" class="btn btn-primary btn-apply-coach">Apply to be a Study Coach</a>
-    </div>
-    <div class="col-md">
-      <div class="study-coach-box">
-        <a href="coach-details" class="coach-link">
-          <div class="coach-image">
-            <img src="/images/pics/7.png" alt="Study Coach 2" style="
-    width: -webkit-fill-available;
-"  loading="lazy">
-          </div>
-          <div class="coach-details">
-            <h2 class="coach-name">Michael Chen</h2>
-            <p class="coach-specialty">Specialty: Science and Biology</p>
-            <p class="coach-description">Passionate about guiding students through complex scientific concepts and preparing them for biology exams.</p>
-          </div>
-        </a>
-      </div>
-      <a href="coach_apply.html" class="btn btn-primary btn-apply-coach">Apply to be a Study Coach</a>
-    </div>
-    <div class="col-md d-md-none">
-      <div class="study-coach-box">
-        <a href="coach-details" class="coach-link">
-          <div class="coach-image">
-            <img src="/images/pics/5.png" alt="Study Coach 3" style="
-    width: -webkit-fill-available;"  loading="lazy">
-          </div>
-          <div class="coach-details">
-            <h2 class="coach-name">Emily Thompson</h2>
-            <p class="coach-specialty">Specialty: History and Social Studies</p>
-            <p class="coach-description">Committed to helping students gain a deep understanding of historical events and develop critical thinking skills for history exams.</p>
-          </div>
-        </a>
-      </div>
-      <a href="coach_apply" class="btn btn-primary btn-apply-coach">Apply to be a Study Coach</a>
     </div>
   </div>
-</div>
 
-	    
-	    
-    </div>
-  </div>
-</div>
-
-
-
-    
-    
   <div class="container mt-4 d-none" id="quiz-container">
-  <!-- Quiz Container -->
-  <div class="layer-1">
-    <!-- First Layer -->
-    <div class="layer-2" id="quiz_main_area">
-      <!-- Second Layer: Main Quiz Area -->
-      <div id="ad-container">
-        <!-- Ad Container -->
-        <div id="ad-box">
-          Google Ads<p>	<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="Quizzatopia" data-color="#5F7FFF" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script></p>
-          <div id='ad-view' style="min-width:255px">
-            <span id='ad-text'>Is the ad Showing?</span>
-            <!-- Google Ad Code -->
-         
-		  
-		  
-		  
-		  
-            <!-- <span class='ad-text'>This will be an ad</span> -->
+    <!-- Quiz Container -->
+    <div class="layer-1">
+      <!-- First Layer -->
+      <div class="layer-2" id="quiz_main_area">
+        <!-- Second Layer: Main Quiz Area -->
+        <div id="ad-container">
+          <!-- Ad Container -->
+          <div id="ad-box">
+            Google Ads
+            <p>
+              <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="Quizzatopia" data-color="#5F7FFF" data-emoji="" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00"></script>
+            </p>
+            <div id='ad-view' style="min-width:255px">
+              <span id='ad-text'>Is the ad Showing?</span>
+              <!-- Google Ad Code -->
+              <!-- <span class='ad-text'>This will be an ad</span> -->
+            </div>
           </div>
         </div>
-      </div>
-	    
-<div id="quiz-timer-qn" class="d-flex justify-content-between">
-  <div id="question-number" class="font-weight-bold"></div>
-  <div id="timer" class="text-right"></div>
-</div>
 
+        <div id="quiz-timer-qn" class="d-flex justify-content-between">
+          <div id="question-number" class="font-weight-bold"></div>
+          <div id="timer" class="text-right"></div>
+        </div>
 
-    <div class="progress-bar-container">
-        <!-- Progress Bar Container -->
-        <div class="progress-bar" id="progress-bar"></div>
-        <!-- Progress Bar -->
+        <div class="progress-bar-container">
+          <!-- Progress Bar Container -->
+          <div class="progress-bar" id="progress-bar"></div>
+          <!-- Progress Bar -->
+        </div>
 
-      </div>
-	    
-	    
-	      <h1 id="question"></h1>
-      <!-- Question heading -->
-      <ul class="list-unstyled" id="optionContainers">
-        <!-- Answer option containers -->
-        <li><button class="btn btn-primary answer-option"></button></li>
-        <li><button class="btn btn-primary answer-option"></button></li>
-        <li><button class="btn btn-primary answer-option"></button></li>
-        <li><button class="btn btn-primary answer-option"></button></li>
-      </ul>
+        <h1 id="question"></h1>
+        <!-- Question heading -->
+        <ul class="list-unstyled" id="optionContainers">
+          <!-- Answer option containers -->
+          <li><button class="btn btn-primary answer-option"></button></li>
+          <li><button class="btn btn-primary answer-option"></button></li>
+          <li><button class="btn btn-primary answer-option"></button></li>
+          <li><button class="btn btn-primary answer-option"></button></li>
+        </ul>
 
-
-
-
-    <!-- Explanation area -->
-    <div id="btn_container">
-      <!-- Button container -->
-      <button id="show-explanation-btn" class="btn btn-primary d-none mt-3">Show Explanation</button>
-         <button id="skip-next-btn" class="btn btn-primary mt-3">Skip</button>
-
-
+        <!-- Explanation area -->
+        <div id="btn_container">
+          <!-- Button container -->
+          <button id="show-explanation-btn" class="btn btn-primary d-none mt-3">Show Explanation</button>
+          <button id="skip-next-btn" class="btn btn-primary mt-3">Skip</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="explanation-container ">
-  <button id="close-btn" class="close-button">&times;</button>
-  <div id="explanation"></div>
-</div>
-		
-		
-		
-		
-		
-<div class="container mt-4 d-none" id="end-container">
-  <!-- End Container -->
-  <h2 id="result-text"></h2>
-  <!-- Result Text -->
-  <h2 class="mt-4">Your Final Score</h2>
-  <!-- Final Score Heading -->
-  <p id="score"></p>
-  <!-- Score Placeholder -->
-  <p id="feedback"></p>
-  <!-- Feedback Placeholder -->
-	<p><span id="earnedPoints"></span></p>
-	<p><div class="d-none" id="badgebox">
-		<span>Awards</span>
-		<div id="badgeView"></div>
-		
-		
-		</div></p>
-
-  <button id="retake-btn" class="btn btn-primary mt-4">Retake Quiz</button>
-  <!-- Retake Quiz Button -->
-  <button class="other-quiz-btn btn btn-secondary mt-4" onclick="window.location.href = 'quizzes'">Try Another Quiz</button>
-  <!-- Try Another Quiz Button -->
-		
-  <div id="social-sharing" class="mt-4">
-    <!-- Social Sharing Section -->
-    <p>
-      <a id="social_fb" href="" target="_blank" class="btn btn-social btn-facebook btn-primary"><i class="fab fa-facebook-f"></i> Share on Facebook</a>
-      <!-- Share on Facebook Button -->
-      <a id="social_tw" href="" target="_blank" class="btn btn-social btn-twitter btn-info"><i class="fab fa-twitter"></i> Share on Twitter</a>
-      <!-- Share on Twitter Button -->
-    </p>
-    <p>
-      <a id="social_red" href="" target="_blank" class="btn btn-social btn-reddit btn-danger"><i class="fab fa-reddit"></i> Share on Reddit</a>
-      <!-- Share on Reddit Button -->
-      <a id="social_ln" href="" target="_blank" class="btn btn-social btn-linkedin btn-primary" style="margin-right: 10px;"><i class="fab fa-linkedin"></i> Share on LinkedIn</a>
-      <!-- Share on LinkedIn Button -->
-    </p>
+  <div class="explanation-container">
+    <button id="close-btn" class="close-button">&times;</button>
+    <div id="explanation"></div>
   </div>
-	<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="Quizzatopia" data-color="#5F7FFF" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
-  <button id="getFull_BTN" class="btn btn-primary mt-4" onclick="window.location.href = 'LearnMore'">Get Full Quiz</button>
-  <!-- Get Full Quiz Button -->
-</div>
 
-		
+  <div class="container mt-4 d-none" id="end-container">
+    <!-- End Container -->
+    <h2 id="result-text"></h2>
+    <!-- Result Text -->
+    <h2 class="mt-4">Your Final Score</h2>
+    <!-- Final Score Heading -->
+    <p id="score"></p>
+    <!-- Score Placeholder -->
+    <p id="feedback"></p>
+    <!-- Feedback Placeholder -->
+    <p><span id="earnedPoints"></span></p>
+    <p>
+      <div class="d-none" id="badgebox">
+        <span>Awards</span>
+        <div id="badgeView"></div>
+      </div>
+    </p>
 
-	
-		
-		
-	<div class="text-right" style="text-align: right;margin-right: 5%;">
-  <!-- Button to trigger the pop-up -->
-  <button type="button" id="report_BTN" class="btn btn-primary float-right" data-toggle="modal" data-target="#reportModal">
-    Report Problem
-  </button>
-</div>
+    <button id="retake-btn" class="btn btn-primary mt-4">Retake Quiz</button>
+    <!-- Retake Quiz Button -->
+    <button class="other-quiz-btn btn btn-secondary mt-4" onclick="window.location.href = 'quizzes'">Try Another Quiz</button>
+    <!-- Try Another Quiz Button -->
+
+    <div id="social-sharing" class="mt-4">
+      <!-- Social Sharing Section -->
+      <p>
+        <a id="social_fb" href="" target="_blank" class="btn btn-social btn-facebook btn-primary"><i class="fab fa-facebook-f"></i> Share on Facebook</a>
+        <!-- Share on Facebook Button -->
+        <a id="social_tw" href="" target="_blank" class="btn btn-social btn-twitter btn-info"><i class="fab fa-twitter"></i> Share on Twitter</a>
+        <!-- Share on Twitter Button -->
+      </p>
+      <p>
+        <a id="social_red" href="" target="_blank" class="btn btn-social btn-reddit btn-danger"><i class="fab fa-reddit"></i> Share on Reddit</a>
+        <!-- Share on Reddit Button -->
+        <a id="social_ln" href="" target="_blank" class="btn btn-social btn-linkedin btn-primary" style="margin-right: 10px;"><i class="fab fa-linkedin"></i> Share on LinkedIn</a>
+        <!-- Share on LinkedIn Button -->
+      </p>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="Quizzatopia" data-color="#5F7FFF" data-emoji="" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00"></script>
+  </div>
+</main_section>
 
 	 
 	</main_section>
