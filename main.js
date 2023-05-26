@@ -230,8 +230,6 @@ function awardBadge(badgeId) {
 
 
 
-
-
 function awardQuizzesTakenBadges() {
   const userInfo = getUserInfo();
   const quizzesTaken = userInfo.quizzesTaken;
@@ -1094,12 +1092,14 @@ function fetchAndInsertContent() {
 	  	      console.log("footerPath 1.... ");
 
   } else {
-    navbarPath = '/elements/navbar2.html';
-    footerPath = '/elements/footer2.html';
+    navbarPath = window.location.origin +'/elements/navbar2.html';
+    footerPath = window.location.origin +'/elements/footer2.html';
 	  
 	      console.log("footerPath 2.... ");
 
   }
+
+	
 
   fetch(navbarPath)
     .then(response => response.text())
