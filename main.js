@@ -1146,8 +1146,8 @@ fetch(footerPath)
    // return response.text();
   })
   .then(data => {
-    document.querySelector('#mainFooter').innerHTML = data;
 	    console.log("New data        "+data);
+    document.querySelector('#mainFooter').innerHTML = data;
 
   });
 
