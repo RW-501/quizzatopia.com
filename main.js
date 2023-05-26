@@ -1117,9 +1117,6 @@ function fetchAndInsertContent() {
     });
 
 }
-// Call the function to fetch and insert the HTML based on the page level
-fetchAndInsertContent();
-
 	
 	
 window.addEventListener('load', function() {
@@ -1155,11 +1152,12 @@ function initializeNavbarToggler() {
     });
   });
 }
+// Call the function to fetch and insert the HTML based on the page level
+fetchAndInsertContent();
+
 
 
 window.addEventListener('DOMContentLoaded', function() {
-// console.log("loggedIn       "+loggedIn);
-	
   function updateNavBar() {
     // Check if user is logged in
     if (loggedIn === true) {
@@ -1167,7 +1165,15 @@ window.addEventListener('DOMContentLoaded', function() {
       document.getElementById('navLoggedin').innerHTML = '<div onclick="logOutFunction()">Log Out</div>';
     } else {
       // User is not logged in
-      document.getElementById('navLoggedin').innerHTML = '<div onclick="openPopup(); switchTab(\'login\');">Log In</div>';
+      var navLoggedinElement = document.getElementById('navLoggedin');
+      if (!navLoggedinElement) {
+        // Create the navLoggedin element if it doesn't exist
+        navLoggedinElement = document.createElement('div');
+        navLoggedinElement.id = 'navLoggedin';
+        // Append the new element to the appropriate parent element in your HTML markup
+        // For example, if it should be part of a navigation bar, find the parent element of the navigation bar and append it there.
+      }
+      navLoggedinElement.innerHTML = '<div onclick="openPopup(); switchTab(\'login\');">Log In</div>';
     }
   }
 
