@@ -1081,15 +1081,9 @@ let stringEnt;
   }
 	
 	
-  fetch(stringEnt)
+ fetch(stringEnt)
     .then(response => response.json())
     .then(data => {
-    const fetchedUrl = response.url;
-    console.log("Fetched URL:", fetchedUrl);
-      if (Array.isArray(data)) {
-        // Handle old JSON structure
-        console.log("Old JSON structure");
-	  
       if (Array.isArray(data)) {
         // Handle old JSON structure
         console.log("Old JSON structure");
