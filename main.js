@@ -1125,9 +1125,6 @@ fetch(footerPath)
   })
   .then(data => {
     document.querySelector('#mainFooter').innerHTML = data;
-  })
-  .catch(error => {
-    console.log(error);
   });
 
 			
