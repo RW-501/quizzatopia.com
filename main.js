@@ -1,17 +1,17 @@
 
 // Get the cookie value using regular expressions
 var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)loggedIn\s*\=\s*([^;]*).*$)|^.*$/, '$1');
-
+var loggedIn; 
 // Check if the user is logged in
 if (cookieValue === 'true') {
   // User is logged in
   console.log('User is logged in');
-var loggedIn = true;
+ loggedIn = true;
 	
 } else {
   // User is not logged in
   console.log('User is not logged in');
-	var loggedIn = false;
+	 loggedIn = false;
 
 }
 
