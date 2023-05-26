@@ -1155,7 +1155,7 @@ function initializeNavbarToggler() {
 }
 
 
-document.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', function() {
 // console.log("loggedIn       "+loggedIn);
 	
   function updateNavBar() {
