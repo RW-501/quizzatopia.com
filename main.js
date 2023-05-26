@@ -1165,7 +1165,7 @@ if (loggedIn === 'true') {
   document.getElementById('navLoggedin').innerHTML = '<div onclick="logOutFunction()">Log Out</div>';
 } else {
   // User is not logged in
-  document.getElementById('navLoggedin').innerHTML = '<div onclick="openPopup()">Log In</div>';
+  document.getElementById('navLoggedin').innerHTML = '<div onclick="openPopup(); switchTab(login);">Log In</div>';
 }
 
 }
