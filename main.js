@@ -1123,14 +1123,14 @@ fetchAndInsertContent();
 	
 	
 	
-	window.addEventListener('load', function() {
+window.addEventListener('DOMContentLoaded', function() {
   // Your fetch and insertion code here
 fetch(footerPath)
    .then(response => response.text())
     .then(data => {
 		    console.log("New data        "+data);
 
-      document.querySelector('#mainFooter').innerHTML = data;
+      document.getElementById('mainFooter').innerHTML = data;
 
 });		
 		
