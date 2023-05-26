@@ -1122,19 +1122,23 @@ fetchAndInsertContent();
 
 	
 	
-	
 window.addEventListener('load', function() {
-  // Your fetch and insertion code here
+  // Create the mainFooter div
+  const mainFooter = document.createElement('div');
+  mainFooter.id = 'mainFooter';
+
+  // Fetch and insert the footer HTML
   fetch(footerPath)
     .then(response => response.text())
     .then(data => {
-      console.log("Fetched data:", data);
-      document.querySelector('#mainFooter').innerHTML = data;
+      mainFooter.innerHTML = data;
+      document.body.appendChild(mainFooter);
     })
     .catch(error => {
       console.error("Error fetching data:", error);
     });
 });
+
 	
 		
 
