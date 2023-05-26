@@ -1128,7 +1128,7 @@ window.addEventListener('DOMContentLoaded', function() {
 fetch(footerPath)
    .then(response => response.text())
     .then(data => {
-		    console.log("New data        "+data);
+		 //   console.log("New data        "+data);
 
       document.getElementById('mainFooter').innerHTML = data;
 
