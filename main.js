@@ -1086,7 +1086,7 @@ function logOutFunction() {
 
 
 
-
+ console.log(currentPagePath+"    footerPath 2.... ");
 
 	  let navbarPath, footerPath;
 
@@ -1125,19 +1125,17 @@ fetchAndInsertContent();
 	
 window.addEventListener('load', function() {
   // Your fetch and insertion code here
-fetch(footerPath)
-   .then(response => response.text())
+  fetch(footerPath)
+    .then(response => response.text())
     .then(data => {
-		 //   console.log("New data        "+data);
-
+      console.log("Fetched data:", data);
       document.querySelector('#mainFooter').innerHTML = data;
-
-});		
-		
-
-			
-});		
-		
+    })
+    .catch(error => {
+      console.error("Error fetching data:", error);
+    });
+});
+	
 		
 
 				  
