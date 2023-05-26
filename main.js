@@ -1096,7 +1096,7 @@ function fetchAndInsertContent() {
   if (currentPagePath === '/' || currentPagePath === '/index.html') {
     navbarPath = './elements/navbar.html';
     footerPath = './elements/footer.html';
-	  	      console.log("footerPath 1.... ");
+	  	    //  console.log("footerPath 1.... ");
 
   } else {
     navbarPath = window.location.origin +'/elements/navbar2.html';
@@ -1130,7 +1130,7 @@ fetch(footerPath)
     .then(data => {
 		 //   console.log("New data        "+data);
 
-      document.getElementById('mainFooter').innerHTML = data;
+      document.querySelector('#mainFooter').innerHTML = data;
 
 });		
 		
