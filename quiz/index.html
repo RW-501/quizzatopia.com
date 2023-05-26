@@ -1084,18 +1084,8 @@ function fetchData(q, e) {
   }
       console.log("stringEnt URL:", stringEnt);
 
-  fetch(stringEnt)
-    .then(response => {
-      // Retrieve the fetched URL
-      const fetchedUrl = response.url;
-      console.log("Fetched URL:", fetchedUrl);
-
-      if (!response.ok) {
-        throw new Error('Network response was not OK');
-      }
-
-      return response.json();
-    })
+   fetch(stringEnt)
+    .then(response => response.json())
     .then(data => {
       if (Array.isArray(data)) {
         // Handle old JSON structure
@@ -1114,7 +1104,7 @@ function fetchData(q, e) {
             options: questionObj.options,
             explanation: questionObj.explanation
           }));
-
+		
           // Update quizCode, quizName, numberOfQuestions
           quizCode = "";
           quizName = "";
