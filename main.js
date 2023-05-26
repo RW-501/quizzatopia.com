@@ -1109,13 +1109,17 @@ function fetchAndInsertContent() {
       initializeNavbarToggler();
     });
 
+	document.addEventListener('DOMContentLoaded', function() {
+  // Your fetch and insertion code here
+		
   fetch(footerPath)
     .then(response => response.text())
     .then(data => {
       document.querySelector('#mainFooter').innerHTML = data;
     });
 }
-
+				  
+});
 
 
 // Function to initialize the navbar toggler event
