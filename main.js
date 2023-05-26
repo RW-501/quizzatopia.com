@@ -1138,18 +1138,14 @@ fetchAndInsertContent();
   // Your fetch and insertion code here
 		
 fetch(footerPath)
-  .then(response => {
-    // Retrieve the fetched URL
-    const fetchedUrl = response.url;
-    console.log(fetchedUrl); // Output the fetched URL
+   .then(response => response.text())
+    .then(data => {
+		    console.log("New data        "+data);
 
-   // return response.text();
-  })
-  .then(data => {
-	    console.log("New data        "+data);
-    document.querySelector('#mainFooter').innerHTML = data;
+      document.querySelector('#mainFooter').innerHTML = data;
 
-  });
+});		
+		
 
 			
 });		
