@@ -3,7 +3,7 @@
 var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)loggedIn\s*\=\s*([^;]*).*$)|^.*$/, '$1');
 var loggedIn; 
 // Check if the user is logged in
-if (cookieValue === 'true') {
+if (cookieValue === true) {
   // User is logged in
   console.log('User is logged in');
  loggedIn = true;
@@ -15,6 +15,7 @@ if (cookieValue === 'true') {
 
 }
 
+			  	      console.log("cookieValue 1.... "+cookieValue);
 
 
 
