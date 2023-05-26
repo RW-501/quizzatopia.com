@@ -343,11 +343,11 @@ color: #fff;
 }
 
 .card-img-top {
-  border-radius: 50%;
-  height: 120px; /* Adjust the height as needed */
-  object-fit: cover;
-  width: 120px; /* Adjust the width as needed */
-  margin: 0 auto;
+border-radius: 50% !important;
+    height: 120px;
+    object-fit: cover;
+    width: 120px !important;
+    margin: 0 auto;
 }
 
 .card-title {
