@@ -1095,7 +1095,7 @@ function fetchAndInsertContent() {
     navbarPath = window.location.origin +'/elements/navbar2.html';
     footerPath = window.location.origin +'/elements/footer2.html';
 	  
-	      console.log("footerPath 2.... ");
+	      console.log("footerPath 2.... "+window.location.origin);
 
   }
 
@@ -1114,6 +1114,8 @@ function fetchAndInsertContent() {
       document.querySelector('#mainFooter').innerHTML = data;
     });
 }
+
+
 
 // Function to initialize the navbar toggler event
 function initializeNavbarToggler() {
