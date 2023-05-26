@@ -586,11 +586,13 @@ new Chart(ctx, {
     
 // Get the current URL and parse its search parameters
 const urlParams = new URLSearchParams(window.location.search);
-	  
+	  console.log("1 urlParams     "+urlParams); 
+
 // Get the values of the "q" and "e" parameters
 let q = urlParams.get('q');
 let e = urlParams.get('e');
 	  
+console.log("2 urlParams     "+q); 
 
 
 if (q === null) {
