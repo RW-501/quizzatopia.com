@@ -1068,6 +1068,8 @@ quizInfo.quizLink = q;  // Add the "q" parameter to the quizInfo object
 }
 
 function fetchData(q, e) {
+	      console.log("fetchData(q, e) :", q+'   e    '+e);
+
   let stringEnt;
   if (e && isValidEdition(e)) {
     console.log("New JSON structure");
@@ -1076,6 +1078,7 @@ function fetchData(q, e) {
     console.log("Old JSON structure");
     stringEnt = "/q/" + q + ".json";
   }
+      console.log("stringEnt URL:", stringEnt);
 
   fetch(stringEnt)
     .then(response => {
