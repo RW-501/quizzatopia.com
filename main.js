@@ -1109,21 +1109,28 @@ function fetchAndInsertContent() {
       initializeNavbarToggler();
     });
 
+	
+	
+	
 	document.addEventListener('DOMContentLoaded', function() {
   // Your fetch and insertion code here
 		
-  fetch(footerPath)
-    .then(response => response.text())
-		    // Retrieve the fetched URL
+fetch(footerPath)
+  .then(response => {
+    // Retrieve the fetched URL
     const fetchedUrl = response.url;
     console.log(fetchedUrl); // Output the fetched URL
 
-    .then(data => {
-      document.querySelector('#mainFooter').innerHTML = data;
-     })
+    return response.text();
+  })
+  .then(data => {
+    document.querySelector('#mainFooter').innerHTML = data;
+  })
   .catch(error => {
-    console.log("error   "+error);
+    console.log(error);
   });
+
+			
 });		
 		
 		
