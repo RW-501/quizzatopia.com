@@ -1095,9 +1095,8 @@ function fetchAndInsertContent() {
     navbarPath = window.location.origin +'/elements/navbar2.html';
     footerPath = window.location.origin +'/elements/footer2.html';
 	  
-	  footerPath = window.location.origin + footerPath;
 	  
-	      console.log(footerPath+"    footerPath 2.... ");
+	      console.log(footerPath+"    footerPath 2.... "+ window.location.origin);
 
   }
 
