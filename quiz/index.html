@@ -1084,6 +1084,15 @@ let stringEnt;
   fetch(stringEnt)
     .then(response => response.json())
     .then(data => {
+    const fetchedU
+    rl = response.url;
+    console.log("Fetched URL:", fetchedUrl);
+
+    // Check if the response was successful
+    if (!response.ok) {
+      throw new Error('Network response was not OK');
+    }
+	  
       if (Array.isArray(data)) {
         // Handle old JSON structure
         console.log("Old JSON structure");
