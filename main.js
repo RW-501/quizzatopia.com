@@ -128,82 +128,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
- console.log(currentPagePath+"    footerPath 2.... ");
-
-	  let navbarPath, footerPath;
-
-// Function to fetch and insert HTML based on the page level
-function fetchAndInsertContent() {
-
-  if (currentPagePath === '/' || currentPagePath === '/index.html') {
-    navbarPath = './elements/navbar.html';
-    footerPath = './elements/footer.html';
-	  	    //  console.log("footerPath 1.... ");
-
-  } else {
-    navbarPath = window.location.origin +'/elements/navbar2.html';
-    footerPath = window.location.origin +'/elements/footer2.html';
-	  
-	  
-	  //    console.log(footerPath+"    footerPath 2.... "+ window.location.origin);
-
-  }
-
-	
-
-  fetch(navbarPath)
-    .then(response => response.text())
-    .then(data => {
-      document.querySelector('#navbar').innerHTML = data;
-      initializeNavbarToggler();
-    });
-
-}
-	
-	
-window.addEventListener('load', function() {
-  // Create the mainFooter div
-  const mainFooter = document.createElement('div');
-  mainFooter.id = 'mainFooter';
-
-  // Fetch and insert the footer HTML
-  fetch(footerPath)
-    .then(response => response.text())
-    .then(data => {
-      mainFooter.innerHTML = data;
-      document.body.appendChild(mainFooter);
-    })
-    .catch(error => {
-      console.error("Error fetching data:", error);
-    });
-});
-
-	
-		
-
-				  
-		    console.log("?????????????????????????????????????????????????999        ");
-
-
-
-// Function to initialize the navbar toggler event
-function initializeNavbarToggler() {
-  $(document).ready(function() {
-    $('.navbar-toggler').click(function() {
-      $('#navbarNav').toggleClass('collapse');
-    });
-  });
-}
-
-
-// Call the function to fetch and insert the HTML based on the page level
-fetchAndInsertContent();
-
-
-
-
-
-
 
 
 let pointsRewards;
@@ -1147,6 +1071,81 @@ function onAuthSuccess(userInfo) {
 
 
 // helpScript.js
+
+
+
+ console.log(currentPagePath+"    footerPath 2.... ");
+
+	  let navbarPath, footerPath;
+
+// Function to fetch and insert HTML based on the page level
+function fetchAndInsertContent() {
+
+  if (currentPagePath === '/' || currentPagePath === '/index.html') {
+    navbarPath = './elements/navbar.html';
+    footerPath = './elements/footer.html';
+	  	    //  console.log("footerPath 1.... ");
+
+  } else {
+    navbarPath = window.location.origin +'/elements/navbar2.html';
+    footerPath = window.location.origin +'/elements/footer2.html';
+	  
+	  
+	  //    console.log(footerPath+"    footerPath 2.... "+ window.location.origin);
+
+  }
+
+	
+
+  fetch(navbarPath)
+    .then(response => response.text())
+    .then(data => {
+      document.querySelector('#navbar').innerHTML = data;
+      initializeNavbarToggler();
+    });
+
+}
+	
+	
+window.addEventListener('load', function() {
+  // Create the mainFooter div
+  const mainFooter = document.createElement('div');
+  mainFooter.id = 'mainFooter';
+
+  // Fetch and insert the footer HTML
+  fetch(footerPath)
+    .then(response => response.text())
+    .then(data => {
+      mainFooter.innerHTML = data;
+      document.body.appendChild(mainFooter);
+    })
+    .catch(error => {
+      console.error("Error fetching data:", error);
+    });
+});
+
+	
+		
+
+				  
+
+
+
+// Function to initialize the navbar toggler event
+function initializeNavbarToggler() {
+  $(document).ready(function() {
+    $('.navbar-toggler').click(function() {
+      $('#navbarNav').toggleClass('collapse');
+    });
+  });
+}
+
+
+// Call the function to fetch and insert the HTML based on the page level
+fetchAndInsertContent();
+
+
+
 
 
 
