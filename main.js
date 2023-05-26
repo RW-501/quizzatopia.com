@@ -1121,10 +1121,12 @@ fetch(footerPath)
     const fetchedUrl = response.url;
     console.log(fetchedUrl); // Output the fetched URL
 
-    return response.text();
+   // return response.text();
   })
   .then(data => {
     document.querySelector('#mainFooter').innerHTML = data;
+	    console.log("New data        "+data);
+
   });
 
 			
@@ -1165,7 +1167,7 @@ if (loggedIn === 'true') {
   document.getElementById('navLoggedin').innerHTML = '<div onclick="logOutFunction()">Log Out</div>';
 } else {
   // User is not logged in
-  document.getElementById('navLoggedin').innerHTML = '<div onclick="openPopup();" "switchTab(login);">Log In</div>';
+  document.getElementById('navLoggedin').innerHTML = '<div onclick="openPopup(); switchTab(login);">Log In</div>';
 }
 
 }
