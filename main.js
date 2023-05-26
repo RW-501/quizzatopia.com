@@ -1,5 +1,3 @@
-
-
 function getCookieValue(cookieName) {
   const cookies = document.cookie.split(';');
   for (let i = 0; i < cookies.length; i++) {
@@ -14,27 +12,18 @@ function getCookieValue(cookieName) {
 const cookieValue = getCookieValue('loggedIn');
 console.log(cookieValue);
 
-
-
-// Get the cookie value using regular expressions
-//var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)loggedIn\s*\=\s*([^;]*).*$)|^.*$/, '$1');
-var loggedIn; 
-// Check if the user is logged in
+let loggedIn;
 if (cookieValue === 'true') {
   // User is logged in
   console.log('User is logged in');
- loggedIn = true;
-	
+  loggedIn = true;
 } else {
   // User is not logged in
   console.log('User is not logged in');
-	 loggedIn = false;
-
+  loggedIn = false;
 }
 
-			  	      console.log("cookieValue 1.2... "+cookieValue);
-
-
+console.log('loggedIn:', loggedIn);
 
 
 
