@@ -1093,7 +1093,7 @@ function fetchAndInsertContent() {
 
   } else {
     navbarPath = window.location.origin +'/elements/navbar2.html';
-    footerPath = window.location.origin +'/elements/footer2.html';
+    footerPath = window.location.origin +'/elements/footer.html';
 	  
 	  
 	      console.log(footerPath+"    footerPath 2.... "+ window.location.origin);
