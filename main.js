@@ -1093,7 +1093,7 @@ function fetchAndInsertContent() {
 
   } else {
     navbarPath = window.location.origin +'/elements/navbar2.html';
-    footerPath = window.location.origin +'/elements/footer.html';
+    footerPath = window.location.origin +'/elements/footer2.html';
 	  
 	  
 	  //    console.log(footerPath+"    footerPath 2.... "+ window.location.origin);
@@ -1112,7 +1112,7 @@ function fetchAndInsertContent() {
   fetch(footerPath)
     .then(response => response.text())
     .then(dataX => {
-      document.querySelector('#mainFooterXXX').innerHTML = dataX;
+      document.querySelector('#mainFooter').innerHTML = dataX;
     });
 }
 
