@@ -1095,7 +1095,7 @@ function fetchAndInsertContent() {
     navbarPath = window.location.origin +'/elements/navbar2.html';
     footerPath = window.location.origin +'/elements/footer2.html';
 	  
-	      console.log("footerPath 2.... "+window.location.origin);
+	      console.log(footerPath+"    footerPath 2.... "+window.location.origin);
 
   }
 
@@ -1141,7 +1141,7 @@ function updatNavBar(){
 
   //document.getElementById('profile-pic').src = userInfo.profilePic;
   	// Check if user is logged in
-  if (loggedIn == 'true') {
+  if (loggedIn === 'true') {
     // User is logged in
     document.getElementById('navLoggedin').innerHTML = "<div onclick=\"logOutFunction()\">Log Out</div>";
   } else {
