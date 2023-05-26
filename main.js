@@ -10,9 +10,9 @@ function getCookieValue(cookieName) {
 }
 
 const cookieValue = getCookieValue('loggedIn');
-console.log(cookieValue);
+//console.log(cookieValue);
 
-let loggedIn;
+var loggedIn;
 if (cookieValue === 'true') {
   // User is logged in
   console.log('User is logged in');
@@ -23,7 +23,7 @@ if (cookieValue === 'true') {
   loggedIn = false;
 }
 
-console.log('loggedIn:', loggedIn);
+//console.log('loggedIn:', loggedIn);
 
 
 
@@ -1123,7 +1123,7 @@ fetchAndInsertContent();
 	
 	
 	
-	document.addEventListener('DOMContentLoaded', function() {
+	document.addEventListener('load', function() {
   // Your fetch and insertion code here
 		
 fetch(footerPath)
@@ -1156,7 +1156,7 @@ function initializeNavbarToggler() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
- console.log("loggedIn       "+loggedIn);
+// console.log("loggedIn       "+loggedIn);
 	
   function updateNavBar() {
     // Check if user is logged in
