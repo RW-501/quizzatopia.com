@@ -1167,8 +1167,6 @@ function logOutFunction() {
 }
 
 
-
-
 window.addEventListener('DOMContentLoaded', function() {
   function updateNavBar() {
     // Check if user is logged in
@@ -1184,6 +1182,8 @@ window.addEventListener('DOMContentLoaded', function() {
         navLoggedinElement.id = 'navLoggedin';
         // Append the new element to the appropriate parent element in your HTML markup
         // For example, if it should be part of a navigation bar, find the parent element of the navigation bar and append it there.
+        var parentElement = document.querySelector('.auth-buttons');
+        parentElement.appendChild(navLoggedinElement);
       }
       navLoggedinElement.innerHTML = '<div onclick="openPopup(); switchTab(\'login\');">Log In</div>';
     }
