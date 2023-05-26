@@ -1099,10 +1099,10 @@ function logOutFunction() {
 
 
 
-	
+	  let navbarPath, footerPath;
+
 // Function to fetch and insert HTML based on the page level
 function fetchAndInsertContent() {
-  let navbarPath, footerPath;
 
   if (currentPagePath === '/' || currentPagePath === '/index.html') {
     navbarPath = './elements/navbar.html';
