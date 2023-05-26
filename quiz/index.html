@@ -1084,8 +1084,7 @@ let stringEnt;
   fetch(stringEnt)
     .then(response => response.json())
     .then(data => {
-    const fetchedU
-    rl = response.url;
+    const fetchedUrl = response.url;
     console.log("Fetched URL:", fetchedUrl);
 
     // Check if the response was successful
