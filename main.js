@@ -1111,8 +1111,8 @@ function fetchAndInsertContent() {
 
   fetch(footerPath)
     .then(response => response.text())
-    .then(data => {
-      document.querySelector('#mainFooter').innerHTML = data;
+    .then(dataX => {
+      document.querySelector('#mainFooterXXX').innerHTML = dataX;
     });
 }
 
