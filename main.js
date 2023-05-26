@@ -1123,7 +1123,7 @@ fetchAndInsertContent();
 	
 	
 	
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function() {
   // Your fetch and insertion code here
 fetch(footerPath)
    .then(response => response.text())
