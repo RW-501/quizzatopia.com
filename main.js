@@ -57,10 +57,10 @@ function displayUserInfo() {
     profilePicElement.src = userInfo.profilePic;
   }
 
-  const profileNameElement = document.getElementById('profile-name');
-  if (profileNameElement) {
-    profileNameElement.textContent = userInfo.userName;
-  }
+//  const profileNameElement = document.getElementById('profile-name');
+//  if (profileNameElement) {
+//    profileNameElement.textContent = userInfo.userName;
+//  }
 
   const taglineElement = document.getElementById('tagline');
   if (taglineElement) {
@@ -1096,7 +1096,7 @@ function fetchAndInsertContent() {
     footerPath = window.location.origin +'/elements/footer.html';
 	  
 	  
-	      console.log(footerPath+"    footerPath 2.... "+ window.location.origin);
+	  //    console.log(footerPath+"    footerPath 2.... "+ window.location.origin);
 
   }
 
