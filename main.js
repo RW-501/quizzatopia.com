@@ -1,6 +1,23 @@
 
+
+function getCookieValue(cookieName) {
+  const cookies = document.cookie.split(';');
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i].trim();
+    if (cookie.startsWith(cookieName + '=')) {
+      return cookie.substring(cookieName.length + 1);
+    }
+  }
+  return null;
+}
+
+const cookieValue = getCookieValue('loggedIn');
+console.log(cookieValue);
+
+
+
 // Get the cookie value using regular expressions
-var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)loggedIn\s*\=\s*([^;]*).*$)|^.*$/, '$1');
+//var cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)loggedIn\s*\=\s*([^;]*).*$)|^.*$/, '$1');
 var loggedIn; 
 // Check if the user is logged in
 if (cookieValue == true) {
