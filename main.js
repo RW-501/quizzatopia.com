@@ -1160,14 +1160,14 @@ function updatNavBar(){
 
   //document.getElementById('profile-pic').src = userInfo.profilePic;
   	// Check if user is logged in
-  if (loggedIn === 'true') {
-    // User is logged in
-    document.getElementById('navLoggedin').innerHTML = "<div onclick=\"logOutFunction()\">Log Out</div>";
-  } else {
-    // User is not logged in
-    document.getElementById('navLoggedin').innerHTML = " ?????????????????????  ";
-	    //  "<div onclick=\"openPopup()\">Log In</div>";
-  }
+if (loggedIn === 'true') {
+  // User is logged in
+  document.getElementById('navLoggedin').innerHTML = '<div onclick="logOutFunction()">Log Out</div>';
+} else {
+  // User is not logged in
+  document.getElementById('navLoggedin').innerHTML = '<div onclick="openPopup()">Log In</div>';
+}
+
 }
 				 
 				 
