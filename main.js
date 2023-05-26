@@ -1114,9 +1114,16 @@ function fetchAndInsertContent() {
 		
   fetch(footerPath)
     .then(response => response.text())
+		    // Retrieve the fetched URL
+    const fetchedUrl = response.url;
+    console.log(fetchedUrl); // Output the fetched URL
+
     .then(data => {
       document.querySelector('#mainFooter').innerHTML = data;
-    });
+     })
+  .catch(error => {
+    console.log("error   "+error);
+  });
 });		
 		
 		
