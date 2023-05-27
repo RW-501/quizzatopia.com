@@ -253,7 +253,6 @@ timerId = setTimeout (function() {
       document.getElementById('userQuzziesTaken').innerHTML = userInfo.quizzesTaken;
       document.getElementById('userTagLine').value = userInfo.tagLine;
       document.getElementById('userPic').src = userInfo.profilePic;
-      document.getElementById('profile-pic').src = userInfo.profilePic;
 	    
 	    console.log("userInfo .... "+userInfo);
     }
@@ -267,6 +266,8 @@ timerId = setTimeout (function() {
     function closeImagePopup() {
       const popup = document.getElementById("imagePopup");
       popup.style.display = "none";
+      document.getElementById('profile-pic').src = userInfo.profilePic;
+
     }
 
     function selectProfilePic(imageSrc) {
@@ -390,7 +391,6 @@ timerId = setTimeout (function() {
       getQuizInfo();
       getLocalStorageUsage();
       displayBadges();
-	    
 	  //  let updatedInfo = getUserInfo();
 	//updateUserInfo(updatedInfo);
     }
