@@ -36,7 +36,7 @@
     </form>
     <!-- Profile pic and name area -->
     <div class="profile-area">
-      <img id="profile-pic" src="/images/avatar/w1.png" alt="Profile Picture" class="profile-pic" loading="lazy">
+      <img id="profile-pic" src="/images/blank.png" alt="Profile Picture" class="profile-pic" loading="lazy">
       <a id="profile-name" class="profile-name" href="/user/">Dashboard</a>
     </div>
     <!-- Sign-up and Log-in buttons -->
@@ -157,7 +157,7 @@ function performSearchLogic(searchQuery, jsonData) {
   
   
   
-   $(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function() {
 
       const navUserInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
  console.log('navUserInfo.profilePic navbar  ', navUserInfo.profilePic);
