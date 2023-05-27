@@ -136,10 +136,15 @@
 	
 	
 	  <script>
-		    const lbUserInfo = JSON.parse(localStorage.getItem("userInfo"));
+		  
+		  
+		  window.onload = function() {
+  const lbUserInfo = JSON.parse(localStorage.getItem("userInfo"));
 
 
     console.log('lbUserInfo ', lbUserInfo);
+    console.log('lbUserInfo r ', lbUserInfo.rank);
+    console.log('lbUserInfo p ', lbUserInfo.points);
 		  
 		  // Update HTML elements with user information
 //document.getElementById('uName').innerHTML = lbUserInfo.userName;
@@ -150,40 +155,20 @@ document.getElementById('uPoints').innerHTML = lbUserInfo.points;
 // document.getElementById('uQuzziesTaken').innerHTML = lbUserInfo.quizzesTaken;
 
 document.getElementById('uPic').src = lbUserInfo.profilePic;
+};
+
+		    
 	  
 	</script>
 	
 	
-	<!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
-
- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-  
+	
   <script>
 		   
 	  
 
 
-  // Display additional user information as needed
-
-		 
 	  
-const firebaseConfig = {
-  apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
-  authDomain: "quizzatopia-bdfc9.firebaseapp.com",
-  projectId: "quizzatopia-bdfc9",
-  storageBucket: "quizzatopia-bdfc9.appspot.com",
-  messagingSenderId: "828105067102",
-  appId: "1:828105067102:web:76afb989ed7c03ebb542cf",
-  measurementId: "G-J3QK9V5480"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
 // Get a reference to the Firestore database
 const firestore = firebase.firestore();
 
