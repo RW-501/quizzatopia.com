@@ -200,8 +200,14 @@
 	      
 	
   <script>
+	  var timerId;
+	  
     // Profile related functions
     function showSaveMessage() {
+timerId = setInterval(function() {
+  // Call your function here
+  removeSaveMessage();
+}, 5000); // 3000 milliseconds = 3 seconds
       var savedMessage = document.getElementById("savedMessage");
       savedMessage.style.display = "block";
     }
