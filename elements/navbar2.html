@@ -51,12 +51,11 @@
 
 
 <script>
-	window.onload = function() {
-	     document.getElementById('profile-pic').src = userInfo.profilePic;
+	  const savedUserInfo = localStorage.getItem("userInfo");
+  console.log('nav pic :', savedUserInfo);
 
-};
 
-  
+     document.getElementById('profile-pic').src = savedUserInfo.profilePic;
 
 	
 </script>
