@@ -86,7 +86,7 @@ function updateUserInfo(updatedInfo) {
     }
   }
 
-  localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
+  localStorage.setItem("userInfo", JSON.stringify(userInfo));
   displayUserInfo();
 }
 
