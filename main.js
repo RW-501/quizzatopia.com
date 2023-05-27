@@ -1146,16 +1146,23 @@ window.addEventListener('load', function() {
 
 // Function to initialize the navbar toggler event
 function initializeNavbarToggler() {
-  $(document).ready(function() {
-    $('.navbar-toggler').click(function() {
-      $('#navbarNav').toggleClass('collapse');
+  document.addEventListener('DOMContentLoaded', function() {
+    var navbarToggler = document.querySelector('.navbar-toggler');
+    var navbarNav = document.querySelector('#navbarNav');
+
+    navbarToggler.addEventListener('click', function() {
+      navbarNav.classList.toggle('collapse');
     });
   });
 }
 
 
+
 // Call the function to fetch and insert the HTML based on the page level
-fetchAndInsertContent();
+document.addEventListener('DOMContentLoaded', function() {
+  initializeNavbarToggler();
+  fetchAndInsertContent();
+});
 
 
 
