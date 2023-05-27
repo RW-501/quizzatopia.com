@@ -199,11 +199,20 @@
 	      
 	
   <script>
+	  document.addEventListener('DOMContentLoaded', function() {
+
+	  
+	      checkUserInfoChanges();
+	  
+	  });
+
+	  
+	  
 	  var timerId;
 	  
     // Profile related functions
     function showSaveMessage() {
-timerId = setInterval(function() {
+timerId = setTimeout (function() {
   // Call your function here
   removeSaveMessage();
 }, 5000); // 3000 milliseconds = 3 seconds
@@ -224,7 +233,7 @@ timerId = setInterval(function() {
       var newUsername = document.getElementById("userNameQ").value;
       var newTagline = document.getElementById("userTagLine").value;
       updateUserInfo({ userName: newUsername, tagLine: newTagline });
-	    	    checkUserInfoChanges();
+	    	
 
     }
 
