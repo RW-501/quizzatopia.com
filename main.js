@@ -1225,7 +1225,7 @@ window.onload = function() {
   }
 
   updateNavBar();
-});
+}
 
 
    
