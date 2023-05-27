@@ -1163,7 +1163,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 window.onload = function() {
   var navbarNav = document.querySelector('#navbarNav');
-  navbarNav.classList.add('collapse');
+  navbarNav.classList.toggle('collapse');
 };
 
 
