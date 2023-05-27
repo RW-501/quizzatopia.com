@@ -101,8 +101,8 @@ function saveTime(){
 
 function saveChanges() {
   // Get the updated username and tagline
-  var newUsername = document.getElementById("userNameQ").innerText;
-  var newTagline = document.getElementById("userTagLine").innerText;
+  var newUsername = document.getElementById("userNameQ").value;
+  var newTagline = document.getElementById("userTagLine").value;
 
   // Call the updateUserInfo function to save the changes
   updateUserInfo({ userName: newUsername, tagLine: newTagline });
