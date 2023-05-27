@@ -202,7 +202,6 @@
 
 	  
 	  
-	  
 	  var timerId;
 	  
     // Profile related functions
@@ -310,6 +309,7 @@ timerId = setTimeout (function() {
 
     function removeQuiz(key) {
       localStorage.removeItem(key);
+	    logOutFunction();
       getQuizInfo();
     }
 
