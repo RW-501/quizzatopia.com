@@ -19,7 +19,7 @@
   <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
 
   <!-- Custom scripts -->
-  <script  src="main.js"></script> 
+  <script  src="/main.js"></script> 
 	   <style>
     /* Custom Styles */
 
@@ -81,14 +81,15 @@
             <h5 class="card-title">Profile Info</h5>
             <!-- Your profile content goes here -->
 		  
-		   <div onclick="viewUserProfile('${userName}')">
-            <div id="uRank"></div>
-            <div>
-              <img src="" alt="" class="rounded-circle mr-2" style="width: 100px; height: 100px;"  id="uPic">
-            
-            </div>
-            <div class="text-right"  id="uPoints"></div>
-          </div>	  
+		 <div class="card" style="width: 18rem;" onclick="viewUserProfile('${userName}')">
+    <div id="uRank" class="card-header"></div>
+    <div>
+      <img src="" alt="" class="card-img-top rounded-circle mx-auto mt-3" style="width: 100px; height: 100px;" id="uPic">
+    </div>
+    <div class="card-body">
+      <div class="text-right" id="uPoints"></div>
+    </div>
+  </div> 
 		  
 		  
 		  
@@ -96,7 +97,7 @@
         </div>
 
         <!-- Leaderboard -->
-        <div class="card">
+        <div class="card w-100">
           <div class="card-body">
             <h5 class="card-title leaderboard-title">Leaderboard</h5>
             <!-- Buttons to switch leaderboards -->
