@@ -64,7 +64,7 @@
 
 	      
         <!-- User tagline -->
-  <input id="userNameQ" type='text' class="user-name mt-3" placeholder="user name" onblur="showSaveMessage();" >
+  <input id="userNameQ" type='text' class="user-name mt-3" placeholder="user name" onblur="showSaveMessage();" ><hr>
 <input type="textarea" id="userTagLine" class="text-muted" placeholder="Tagline" onblur="showSaveMessage();" style="min-height: 100px;width: 75%;">
 	      
 	      <p id="savedMessage" style="display: none;">Changes saved!</p>
@@ -240,7 +240,9 @@ timerId = setTimeout (function() {
     }
 
     function displayUserInfo() {
-  const userInfo = localStorage.getItem("userInfo");
+ // const userInfo = localStorage.getItem("userInfo");
+	      let userInfo = JSON.parse(localStorage.getItem("userInfo"));
+
       document.getElementById('userNameQ').value = userInfo.userName;
       document.getElementById('userRankQ').innerHTML = userInfo.rank;
       document.getElementById('userPointsQ').innerHTML = userInfo.points;
