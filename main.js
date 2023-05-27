@@ -605,6 +605,7 @@ document.addEventListener('DOMContentLoaded', () => {
       userQuizzesTaken: 0,
       userAds: ''
       };
+	    checkUserInfoChanges(userInfo);
       localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
     }
     return userInfo;
@@ -637,7 +638,7 @@ document.addEventListener('DOMContentLoaded', () => {
    
 
 
-// Function to update user information in local storage and Firebase Realtime Database
+// Function to update user information in local storage and Firestore Database
 function updateUserInfo(updatedInfo) {
   const userInfo = getUserInfo();
   const updatedKeys = Object.keys(updatedInfo);
@@ -653,18 +654,14 @@ function updateUserInfo(updatedInfo) {
   displayUserInfo();
 }
 
-	// Function to get user location using their IP address
-function getUserLocation() {
-  return fetch('https://api.ipify.org?format=json')
+	function getUserLocation() {
+  return fetch('https://api.ipapi.com/check?access_key=YOUR_ACCESS_KEY')
     .then(response => response.json())
     .then(data => {
-      const ipAddress = data.ip;
-      // Replace this logic with your own implementation to get user location based on the IP address
-      // Here, we're using a mock implementation that sets default values
-      const userCity = 'City';
-      const userState = 'State';
-      const userRegion = 'Region';
-      const userZipCode = 'ZipCode';
+      const userCity = data.city;
+      const userState = data.region;
+      const userRegion = data.region_name;
+      const userZipCode = data.zip;
 
       return { userCity, userState, userRegion, userZipCode };
     })
@@ -673,6 +670,7 @@ function getUserLocation() {
       return null;
     });
 }
+
 
 function checkUserInfoChanges() {
   const userInfo = getUserInfo();
