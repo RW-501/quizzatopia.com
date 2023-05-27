@@ -225,6 +225,8 @@ timerId = setInterval(function() {
       var newUsername = document.getElementById("userNameQ").value;
       var newTagline = document.getElementById("userTagLine").value;
       updateUserInfo({ userName: newUsername, tagLine: newTagline });
+	    	    checkUserInfoChanges();
+
     }
 
 
@@ -377,6 +379,9 @@ timerId = setInterval(function() {
       getQuizInfo();
       getLocalStorageUsage();
       displayBadges();
+	    
+	  //  let updatedInfo = getUserInfo();
+	//updateUserInfo(updatedInfo);
     }
 
     initialize();
