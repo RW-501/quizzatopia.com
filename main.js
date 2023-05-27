@@ -518,6 +518,14 @@ if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function')
   // Your Firestore code here
     console.log('Firebase found.');
 
+	  // Access the necessary functions
+  const auth = firebase.auth();
+  const GoogleAuthProvider = firebase.auth.GoogleAuthProvider;
+  const FacebookAuthProvider = firebase.auth.FacebookAuthProvider;
+  const createUserWithEmailAndPassword = firebase.auth().createUserWithEmailAndPassword;
+  const signInWithPopup = firebase.auth().signInWithPopup;
+	
+	
 } else {
   // The Firebase scripts are not loaded
   // Handle the situation accordingly
@@ -736,12 +744,7 @@ function saveUserInfoToFirestore(userInfo) {
 
 
 
-  // Access the necessary functions
-  const auth = firebase.auth();
-  const GoogleAuthProvider = firebase.auth.GoogleAuthProvider;
-  const FacebookAuthProvider = firebase.auth.FacebookAuthProvider;
-  const createUserWithEmailAndPassword = firebase.auth().createUserWithEmailAndPassword;
-  const signInWithPopup = firebase.auth().signInWithPopup;
+
 
 	// Function to get user information from authentication provider (Google, Facebook, or email)
 function getUserInfoFromAuthProvider(user) {
