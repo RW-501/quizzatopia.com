@@ -240,7 +240,7 @@ timerId = setTimeout (function() {
     }
 
     function displayUserInfo() {
-      const userInfo = getUserInfo();
+  const userInfo = localStorage.getItem("userInfo");
       document.getElementById('userNameQ').value = userInfo.userName;
       document.getElementById('userRankQ').innerHTML = userInfo.rank;
       document.getElementById('userPointsQ').innerHTML = userInfo.points;
