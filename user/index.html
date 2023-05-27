@@ -208,6 +208,7 @@ timerId = setInterval(function() {
   // Call your function here
   removeSaveMessage();
 }, 5000); // 3000 milliseconds = 3 seconds
+	    
       var savedMessage = document.getElementById("savedMessage");
       savedMessage.style.display = "block";
     }
@@ -226,15 +227,6 @@ timerId = setInterval(function() {
       updateUserInfo({ userName: newUsername, tagLine: newTagline });
     }
 
-    function updateUserName(newName) {
-      // Implement the logic to update the username on the server or perform any necessary actions
-      // Call displayUserInfo() here if needed
-    }
-
-    function updateTagline(newTagline) {
-      // Implement the logic to update the tagline on the server or perform any necessary actions
-      // Call displayUserInfo() here if needed
-    }
 
     function animateTextChanges() {
       var changedElements = document.querySelectorAll(".changed-text");
