@@ -633,6 +633,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
+
+   
+
+
 // Function to update user information in local storage and Firebase Realtime Database
 function updateUserInfo(updatedInfo) {
   const userInfo = getUserInfo();
@@ -1220,5 +1224,14 @@ window.addEventListener('DOMContentLoaded', function() {
 
   updateNavBar();
 });
+
+window.onload = function() {
+  // Function to check user info changes
+  // Check if the current page path is "/user/"
+  if (currentPagePath === "/user/") {
+    checkUserInfoChanges();
+  }
+};
+
 
 		    console.log("11111111111111111111111111111111111  ?????????????????????????????????????????????????999        ");
