@@ -1192,7 +1192,20 @@ window.addEventListener('DOMContentLoaded', function() {
     // Check if user is logged in
     if (loggedIn === true) {
       // User is logged in
-      document.getElementById('navLoggedin').innerHTML = '<div onclick="logOutFunction()">Log Out</div>';
+     // document.getElementById('navLoggedin').innerHTML = '<div onclick="logOutFunction()">Log Out</div>';
+	        var navLoggedinElement = document.getElementById('navLoggedin');
+      if (!navLoggedinElement) {
+        // Create the navLoggedin element if it doesn't exist
+        navLoggedinElement = document.createElement('div');
+        navLoggedinElement.id = 'navLoggedin';
+        // Append the new element to the appropriate parent element in your HTML markup
+        // For example, if it should be part of a navigation bar, find the parent element of the navigation bar and append it there.
+        var parentElement = document.querySelector('.auth-buttons');
+        parentElement.appendChild(navLoggedinElement);
+      }
+      navLoggedinElement.innerHTML = '<div onclick="logOutFunction()">Log Out</div>';
+	    
+	    
     } else {
       // User is not logged in
       var navLoggedinElement = document.getElementById('navLoggedin');
