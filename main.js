@@ -508,16 +508,20 @@ const firebaseConfig = {
   measurementId: "G-J3QK9V5480"
 };
 
-firebase.initializeApp(firebaseConfig);
-
-// Check if Firestore is defined
-if (typeof firebase.firestore === "function") {
-  // Get a reference to the Firestore database
+// Check if the Firebase scripts are loaded
+if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function') {
+  // The Firebase scripts are loaded
+  // Initialize Firebase and get a reference to the Firestore database
+  firebase.initializeApp(firebaseConfig);
   const firestore = firebase.firestore();
-  // Continue with Firestore operations
+  
+  // Your Firestore code here
+    console.log('Firebase found.');
+
 } else {
-  console.error("Firestore is not available.");
-  // Handle the error or show a message to the user
+  // The Firebase scripts are not loaded
+  // Handle the situation accordingly
+  console.log('Firebase scripts not found.');
 }
 
 
