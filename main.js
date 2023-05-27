@@ -28,6 +28,9 @@ if (cookieValue === 'true') {
   const savedUserInfo = localStorage.getItem("userInfo");
   console.log('logStorageContents savedUserInfo:', savedUserInfo);
 
+
+     document.getElementById('profile-pic').src = savedUserInfo.profilePic;
+
 // load.js
 const USER_INFO_KEY = 'userInfo';
 
@@ -1186,7 +1189,7 @@ function logOutFunction() {
 }
 
 
-window.addEventListener('DOMContentLoaded', function() {
+window.onload = function() {
   function updateNavBar() {
     // Check if user is logged in
     if (loggedIn === true) {
@@ -1225,7 +1228,5 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 
-    const userInfo = getUserInfo();
-     document.getElementById('profile-pic').src = userInfo.profilePic;
-
-		    console.log("  ?????????????????????????    ^   Main.js ^   ????????????????????????999        "+userInfo.profilePic);
+   
+		    console.log("  ?????????????????????????    ^   Main.js ^   ????????????????????????999        ");
