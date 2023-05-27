@@ -25,7 +25,8 @@ if (cookieValue === 'true') {
 
 //console.log('loggedIn:', loggedIn);
 
-
+  const savedUserInfo = localStorage.getItem("userInfo");
+  console.log('logStorageContents savedUserInfo:', savedUserInfo);
 
 // load.js
 const USER_INFO_KEY = 'userInfo';
