@@ -72,74 +72,6 @@
 
 
 	      
-	      <script>
-	function showSaveMessage() {
-  var savedMessage = document.getElementById("savedMessage");
-  savedMessage.style.display = "block";
-
-	}	
-	let timerId ;	      
-function saveTime(){	
-
-	// Call the function repeatedly at a time interval (in milliseconds)
- timerId = setInterval(function() {
-  // Call your function here
-	 showSaveMessage();
-  removeSaveMessage();
-}, 5000); // 3000 milliseconds = 3 seconds
-
-}	      
-		      function removeSaveMessage() {
-			        // Apply color animation to the changed text
-  animateTextChanges();
-  var savedMessage = document.getElementById("savedMessage");
-  savedMessage.style.display = "none";
-			      saveChanges();
-	clearTimeout(timerId);
-
-		      }
-
-function saveChanges() {
-  // Get the updated username and tagline
-  var newUsername = document.getElementById("userNameQ").value;
-  var newTagline = document.getElementById("userTagLine").value;
-
-  // Call the updateUserInfo function to save the changes
-  updateUserInfo({ userName: newUsername, tagLine: newTagline });
-
-  
-
-
-}
-
-function updateUserName(newName) {
-  // Implement the logic to update the username on the server or perform any necessary actions
-  // Call displayUserInfo() here if needed
-}
-
-function updateTagline(newTagline) {
-  // Implement the logic to update the tagline on the server or perform any necessary actions
-  // Call displayUserInfo() here if needed
-}
-
-function animateTextChanges() {
-  // Apply the color animation to the changed text
-  var changedElements = document.querySelectorAll(".changed-text");
-
-  changedElements.forEach(function(element) {
-    element.classList.add("color-animation");
-  });
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  displayUserInfo();
-});
-
-
-	      </script>
-	      
-	      
-	      
 	      
 	      
 
@@ -267,77 +199,77 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	      
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	    <script>
-		    function openImagePopup() {
-  const popup = document.getElementById("imagePopup");
-  popup.style.display = "block";
-}
+  <script>
+    // Profile related functions
+    function showSaveMessage() {
+      var savedMessage = document.getElementById("savedMessage");
+      savedMessage.style.display = "block";
+    }
 
-function closeImagePopup() {
-  const popup = document.getElementById("imagePopup");
-  popup.style.display = "none";
-}
+    function removeSaveMessage() {
+      animateTextChanges();
+      var savedMessage = document.getElementById("savedMessage");
+      savedMessage.style.display = "none";
+      saveChanges();
+      clearTimeout(timerId);
+    }
 
-function selectProfilePic(imageSrc) {
-  updateProfilePic(imageSrc);
-  displayUserInfo();
-  closeImagePopup();
-}
+    function saveChanges() {
+      var newUsername = document.getElementById("userNameQ").value;
+      var newTagline = document.getElementById("userTagLine").value;
+      updateUserInfo({ userName: newUsername, tagLine: newTagline });
+    }
 
-		    </script>
- 
-   		  </body>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
+    function updateUserName(newName) {
+      // Implement the logic to update the username on the server or perform any necessary actions
+      // Call displayUserInfo() here if needed
+    }
 
-	    
-		    
-		    
-		    
-		    
-		    
-		    
+    function updateTagline(newTagline) {
+      // Implement the logic to update the tagline on the server or perform any necessary actions
+      // Call displayUserInfo() here if needed
+    }
 
+    function animateTextChanges() {
+      var changedElements = document.querySelectorAll(".changed-text");
+      changedElements.forEach(function(element) {
+        element.classList.add("color-animation");
+      });
+    }
 
-            <script>		
-		    
-		    function displayUserInfo() {
-  const userInfo = getUserInfo();
-  document.getElementById('userNameQ').value = userInfo.userName;
-  document.getElementById('userRankQ').innerHTML = userInfo.rank;
-  document.getElementById('userPointsQ').innerHTML = userInfo.points;
-  document.getElementById('userQuzziesTaken').innerHTML = userInfo.quizzesTaken;
-  document.getElementById('userTagLine').value = userInfo.tagLine;
-			    
-  document.getElementById('userPic').src = userInfo.profilePic;
+    function displayUserInfo() {
+      const userInfo = getUserInfo();
+      document.getElementById('userNameQ').value = userInfo.userName;
+      document.getElementById('userRankQ').innerHTML = userInfo.rank;
+      document.getElementById('userPointsQ').innerHTML = userInfo.points;
+      document.getElementById('userQuzziesTaken').innerHTML = userInfo.quizzesTaken;
+      document.getElementById('userTagLine').value = userInfo.tagLine;
+      document.getElementById('userPic').src = userInfo.profilePic;
+    }
 
-  // Display additional user information as needed
-}
-		    
-		    
-		    
-		    
-		    
-		    
-		    
-		   // Retrieve quiz information from localStorage
+    // Image popup related functions
+    function openImagePopup() {
+      const popup = document.getElementById("imagePopup");
+      popup.style.display = "block";
+    }
+
+    function closeImagePopup() {
+      const popup = document.getElementById("imagePopup");
+      popup.style.display = "none";
+    }
+
+    function selectProfilePic(imageSrc) {
+      updateProfilePic(imageSrc);
+      displayUserInfo();
+      closeImagePopup();
+    }
+
+    // Quiz information related functions
     function getQuizInfo() {
       const quizInfoContainer = document.getElementById('quizInfoContainer');
-      quizInfoContainer.innerHTML = ''; // Clear previous content
+      quizInfoContainer.innerHTML = '';
 
-	    for (let i = 0; i < localStorage.length; i++) {
+      for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
         if (key.startsWith('quizInfo_')) {
           const quizInfo = JSON.parse(localStorage.getItem(key));
@@ -348,41 +280,34 @@ function selectProfilePic(imageSrc) {
           const quizLink = quizInfo.quizLink;
           const quizTime = quizInfo.timestamp;
 
-const quizInfoElement = document.createElement('div');
-quizInfoElement.classList.add('quiz-infop');
-quizInfoElement.innerHTML = `
-  <a href="/quiz?q=${quizLink}" class=""><h4>${quizName}</h4></a>
-  <p>Quiz Taken: ${quizTime}</p>
-  <p>Scored: ${questionCorrect}/${numberOfQuestions} Questions</p>
-`;
+          const quizInfoElement = document.createElement('div');
+          quizInfoElement.classList.add('quiz-infop');
+          quizInfoElement.innerHTML = `
+            <a href="/quiz?q=${quizLink}" class=""><h4>${quizName}</h4></a>
+            <p>Quiz Taken: ${quizTime}</p>
+            <p>Scored: ${questionCorrect}/${numberOfQuestions} Questions</p>
+          `;
 
-   const removeButton = document.createElement('button');
-      removeButton.innerText = 'Remove';
-      removeButton.classList.add('remove-button');
-      removeButton.addEventListener('click', function () {
-        // Call the function to remove the quiz
-        removeQuiz(key);
-      });
+          const removeButton = document.createElement('button');
+          removeButton.innerText = 'Remove';
+          removeButton.classList.add('remove-button');
+          removeButton.addEventListener('click', function () {
+            removeQuiz(key);
+          });
 
-      quizInfoElement.appendChild(removeButton);
-      quizInfoContainer.appendChild(quizInfoElement);
+          quizInfoElement.appendChild(removeButton);
+          quizInfoContainer.appendChild(quizInfoElement);
+        }
+      }
     }
-  }
-}
 
-// Function to remove the quiz
-function removeQuiz(key) {
-  localStorage.removeItem(key);
-  // Refresh the quiz information display
-  getQuizInfo();
-	getLocalStorageUsage();
-}
-    // Call the function to display quiz information on page load
-    document.addEventListener('DOMContentLoaded', getQuizInfo);    
-		    
-		    
-		    
-		  function formatBytes(bytes, decimals = 2) {
+    function removeQuiz(key) {
+      localStorage.removeItem(key);
+      getQuizInfo();
+    }
+
+    // Local Storage usage related functions
+    function formatBytes(bytes, decimals = 2) {
       if (bytes === 0) return '0 Bytes';
 
       const k = 1024;
@@ -390,7 +315,6 @@ function removeQuiz(key) {
       const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
 
       const i = Math.floor(Math.log(bytes) / Math.log(k));
-
       return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
     }
 
@@ -405,93 +329,59 @@ function removeQuiz(key) {
       `;
     }
 
-    document.addEventListener('DOMContentLoaded', getLocalStorageUsage);
-		    
+    // Badge related functions
+    function displayBadges() {
+      const savedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
+      const badgesContainer = document.getElementById("badgesContainer");
 
-
-		    
-		    
-function displayBadges() {
-  const savedBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
-  const badgesContainer = document.getElementById("badgesContainer");
-	
-	if(savedBadges.length > 0){
-  badgesContainer.innerHTML = savedBadges.map(newBadge => `
-<div class="card badge-card">
-  <div class="badge-image-container">
-    <div class="badge-layer-1"></div>
-    <div class="badge-layer-2">
-      <img src="${newBadge.imageUrl}" alt="${newBadge.id}" class="badge-image" onclick="showBadgeDetails('${newBadge.name}', '${newBadge.description}', ${newBadge.quantity}, '${newBadge.earnedDate}')">
-    </div>
-  </div>
-  <div class="card-body base">
-    <h5 class="badge-name">${newBadge.name}</h5>
-  </div>
-</div>
-
-
-  `).join("");
-
-	}else{
-badgesContainer.innerHTML =  `<div class="card badge-card">No Badges Earned Yet`;	
-	
-}
-}
-	    displayUserInfo();   
-// Call the displayBadges function to show the badges
-displayBadges();
-		    
-	
-		    
-		    
-		    
-		  		function showBadgeDetails(name, description, quantity, earnedDate) {
-  const popupContainer = document.getElementById("popupContainer");
-  const popupDetails = document.getElementById("popupDetails");
-
-  // Set the badge details in the popup
-  popupDetails.innerHTML = `
-    <h3>${name}</h3>
-    <p>Description: ${description}</p>
-    <p>Quantity: ${quantity}</p>
-    <p>Earned Date: ${earnedDate}</p>
-  `;
-
-  // Show the popup
-  popupContainer.classList.add("active");
-}
-
-function closePopup() {
-  const popupContainer = document.getElementById("popupContainer");
-
-  // Hide the popup
-  popupContainer.classList.remove("active");
-}
-		    
-		    
-		    
-		    
-		    
-	    		 
-function clearLocalStorage() {
-  const confirmed = confirm('Are you sure you want to clear the local storage?');
-  if (confirmed) {
-    localStorage.clear();
-	    getQuizInfo();
-displayBadges();
-displayUserInfo();   
-
-    alert('Local storage cleared!');
-  }
-}
-
-const clearStorageBtn = document.getElementById('clearStorageBtn');
-clearStorageBtn.addEventListener('click', clearLocalStorage);
-
-		    
-    function redirectToMessaging() {
-      window.location.href = "../messaging";
+      if (savedBadges.length > 0) {
+        badgesContainer.innerHTML = savedBadges.map(newBadge => `
+          <div class="card badge-card">
+            <div class="badge-image-container">
+              <div class="badge-layer-1"></div>
+              <div class="badge-layer-2">
+                <img src="${newBadge.imageUrl}" alt="${newBadge.id}" class="badge-image" onclick="showBadgeDetails('${newBadge.name}', '${newBadge.description}', ${newBadge.quantity}, '${newBadge.earnedDate}')">
+              </div>
+            </div>
+            <div class="card-body base">
+              <h5 class="badge-name">${newBadge.name}</h5>
+            </div>
+          </div>
+        `).join("");
+      } else {
+        badgesContainer.innerHTML = `<div class="card badge-card">No Badges Earned Yet</div>`;
+      }
     }
+
+    // Popup related functions
+    function showBadgeDetails(name, description, quantity, earnedDate) {
+      const popupContainer = document.getElementById("popupContainer");
+      const popupDetails = document.getElementById("popupDetails");
+
+      popupDetails.innerHTML = `
+        <h4 class="text-center">${name}</h4>
+        <p>${description}</p>
+        <p>Quantity: ${quantity}</p>
+        <p>Earned Date: ${earnedDate}</p>
+      `;
+
+      popupContainer.style.display = "block";
+    }
+
+    function closePopup() {
+      const popupContainer = document.getElementById("popupContainer");
+      popupContainer.style.display = "none";
+    }
+
+    // Initialization
+    function initialize() {
+      displayUserInfo();
+      getQuizInfo();
+      getLocalStorageUsage();
+      displayBadges();
+    }
+
+    initialize();
   </script>
 
 </html>
