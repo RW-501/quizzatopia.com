@@ -56,7 +56,7 @@
   
 document.addEventListener('DOMContentLoaded', function() {
 
-      const navUserInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
+      const navUserInfo = JSON.parse(localStorage.getItem('userInfo'));
  console.log('navUserInfo.profilePic navbar  ', navUserInfo.profilePic);
 
   document.getElementById('profile-pic').src = navUserInfo.profilePic;
