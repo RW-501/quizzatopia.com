@@ -647,7 +647,7 @@ function updateUserInfo(updatedInfo) {
       userInfo[key] = updatedInfo[key];
     }
   }
-
+ console.log('Saved to DB');
   localStorage.setItem('userInfo', JSON.stringify(userInfo));
   saveUserInfoToFirebase(userInfo);
   displayUserInfo();
@@ -1230,6 +1230,7 @@ window.onload = function() {
   // Check if the current page path is "/user/"
   if (currentPagePath === "/user/") {
     checkUserInfoChanges();
+	    console.log("Upsdate   ");
   }
 };
 
