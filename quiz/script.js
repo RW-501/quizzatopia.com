@@ -188,19 +188,18 @@ let adDuration;
  let adCount
   const userInfo = getUserInfo();
 
-	  // console.log('userInfo.userName ????????????????? ', userInfo.userName);
+	   console.log('userInfo.userName ????????????????? ', userInfo.userName);
 
-if( userInfo.userName === "admin" ||  userInfo.userName === "Admin" || userInfo.userName !== null|| userInfo.userName !== "" ){
-	 console.log( "   ???????no ads???"); // Output: 
-   adDuration = 0; // Duration of each ad in seconds
-   adCount = 0; // Counter for the number of ads shown 
-}else{
-		 console.log( "   ???????view  ads???"); // Output: 
-
-   adDuration = 10; // Duration of each ad in seconds
-   adCount = 0; // Counter for the number of ads shown
-	
+if (userInfo.userName === "admin" || userInfo.userName === "Admin" || userInfo.userName !== null || userInfo.userName !== "") {
+  console.log("   ???????no ads???"); // Output: 
+  adDuration = 0; // Duration of each ad in seconds
+  adCount = 0; // Counter for the number of ads shown 
+} else {
+  console.log("   ???????view ads???"); // Output: 
+  adDuration = 10; // Duration of each ad in seconds
+  adCount = 0; // Counter for the number of ads shown
 }
+
 
 // Function to display ads
 function showAdsFunc() {
