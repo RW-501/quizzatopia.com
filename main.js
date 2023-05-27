@@ -498,8 +498,6 @@ signupLoginArea.display = "none";
 
 // 		<div id="signupLoginArea" ><div>
 
-
-		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
   authDomain: "quizzatopia-bdfc9.firebaseapp.com",
@@ -509,11 +507,19 @@ const firebaseConfig = {
   appId: "1:828105067102:web:76afb989ed7c03ebb542cf",
   measurementId: "G-J3QK9V5480"
 };
-// Initialize Firebase
+
 firebase.initializeApp(firebaseConfig);
 
-// Get a reference to the Firestore database
-const firestore = firebase.firestore();
+// Check if Firestore is defined
+if (typeof firebase.firestore === "function") {
+  // Get a reference to the Firestore database
+  const firestore = firebase.firestore();
+  // Continue with Firestore operations
+} else {
+  console.error("Firestore is not available.");
+  // Handle the error or show a message to the user
+}
+
 
 		 // Get a reference to the Firestore database
 //  const db = firebase.firestore();
