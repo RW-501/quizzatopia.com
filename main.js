@@ -1150,7 +1150,7 @@ function initializeNavbarToggler() {
     var navbarNav = document.querySelector('#navbarNav');
 
       navbarNav.classList.toggle('collapse');
-  
+  console.log('collapse button :');
 }
 
 
