@@ -25,11 +25,7 @@ if (cookieValue === 'true') {
 
 //console.log('loggedIn:', loggedIn);
 
-  const savedUserInfo = localStorage.getItem("userInfo");
-  console.log('logStorageContents savedUserInfo:', savedUserInfo);
 
-
-     document.getElementById('profile-pic').src = savedUserInfo.profilePic;
 
 // load.js
 const USER_INFO_KEY = 'userInfo';
