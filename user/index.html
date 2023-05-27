@@ -92,7 +92,7 @@
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Rank</h5>
-            <p id="userRankQ" class="card-text">Ultimate Grandmaster</p>
+            <p id="userRankQ" class="card-text">Beginner</p>
           </div>
         </div>
       </div>
@@ -244,6 +244,8 @@ timerId = setInterval(function() {
       document.getElementById('userQuzziesTaken').innerHTML = userInfo.quizzesTaken;
       document.getElementById('userTagLine').value = userInfo.tagLine;
       document.getElementById('userPic').src = userInfo.profilePic;
+	    
+	    console.log("userInfo .... "+userInfo);
     }
 
     // Image popup related functions
