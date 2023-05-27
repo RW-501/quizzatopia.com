@@ -7,15 +7,22 @@
   <title>Quizzatopia Buy the Full Quiz</title>
 	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="./CSS/indexOptions.css">
-  
+
+	
     <link rel="import" href="./elements/navbar.html">
     <link rel="import" href="./elements/footer.html">
+	
+
+  <div id="navbar"></div>
+  <!-- Rest of the page content -->
+
+  <!-- Custom scripts -->
+  <script  src="/main.js"></script> 
 	</head>
 
 <body>
 	<main_section>
-  <div id="navbar"></div>
+
     <!-- rest of the page content -->
 <style>
 
@@ -119,54 +126,9 @@
    <div id="mainFooter"></div>
 
 
-  <script>
-    
-    
-    
-// Get the current URL and parse its search parameters
-const urlParams = new URLSearchParams(window.location.search);
-
-// Get the value of the "q" parameter
-const q = urlParams.get('q');
-
-// Use the value of "q"
-//console.log("urlParams     "+q); 
-
-                const newStr = q.replace(/_/g, " ");
-
-	  
-document.getElementById("optionsQuizName").innerHTML = newStr;
-	  
-document.getElementById("social_fb").href = "https://www.facebook.com/sharer/sharer.php?u=https://rw-501.github.io/Q-A/index.html?q="+q;
-document.getElementById("social_tw").href = "https://twitter.com/intent/tweet?url=https://rw-501.github.io/Q-A/index.html?q="+q;
-document.getElementById("social_ln").href = "ttps://www.linkedin.com/shareArticle?url=https://rw-501.github.io/Q-A/index.html?q="+q;
-document.getElementById("social_red").href = "https://www.reddit.com/submit?url=https://rw-501.github.io/Q-A/index.html?q="+q;
-                          
-	  
 
 
-// fetch and assign the data
-fetch("q/" + q + ".json")
-  .then(response => response.json())
-  .then(data => {
-    // Use the questions data here
-    questions.push(...data);
- //   console.log("questions 1    mm  ", questions); // Outputs the original order of the questions
-    shuffleArray(questions);
-  //  console.log("questions 2    mm  ", questions); // Outputs a random order of the questions
-  })
-  .catch(error => console.error(error));
 
-    
-    </script>
-
-  <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
-
-
-    <script src="helpScript.js"></script>
- 
 
     </body>
 </html>
