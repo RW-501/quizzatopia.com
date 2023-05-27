@@ -51,19 +51,13 @@
 
 
 <script>
-	
-	
-  
-document.addEventListener('DOMContentLoaded', function() {
+	window.onload = function() {
+	     document.getElementById('profile-pic').src = userInfo.profilePic;
 
-      const navUserInfo = JSON.parse(localStorage.getItem('userInfo'));
- console.log('navUserInfo.profilePic navbar  ', navUserInfo.profilePic);
-
-  document.getElementById('profile-pic').src = navUserInfo.profilePic;
-    });
+};
 
   
-  
+
 	
 </script>
 
