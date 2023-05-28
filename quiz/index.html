@@ -912,14 +912,16 @@ function fetchData(q, e) {
           displayTestInfo(quizCode, quizName, numberOfQuestions);
         }
       }
-    })
-    .catch(error => {
-      // Handle the error
-      console.log("Error:", error);
-    });
+     })
+    .catch(error => console.error(error));
 }
 
+  
+	  
+	  
 fetchData(q, e);
+
+	      
 
 	      
 
