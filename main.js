@@ -1,3 +1,13 @@
+
+	  const savedUserInfo = localStorage.getItem("userInfo");
+  console.log('nav pic :', savedUserInfo);
+
+
+     document.getElementById('profile-pic').src = savedUserInfo.profilePic;
+
+
+
+
 function getCookieValue(cookieName) {
   const cookies = document.cookie.split(';');
   for (let i = 0; i < cookies.length; i++) {
