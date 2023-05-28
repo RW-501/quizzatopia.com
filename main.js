@@ -1161,8 +1161,7 @@ function initializeNavbarToggler() {
 
 		  let userInfo = JSON.parse(localStorage.getItem("userInfo"));
      document.getElementById('profile-pic').src = userInfo.profilePic;
-//  console.log('nav main  :', userInfo);
- // console.log('nav main pic :', userInfo.profilePic);
+
 
   console.log('collapse button :');
 }
