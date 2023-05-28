@@ -51,10 +51,10 @@
 
 
 <script>
-	  let userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
+	  let userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
 	  const savedUserInfo = localStorage.getItem("userInfo");
-  console.log('nav  :', savedUserInfo);
+  console.log('nav  :', userInfo);
   console.log('nav profilePic :', savedUserInfo.profilePic);
   console.log('nav userInfo :', userInfo.profilePic);
 
