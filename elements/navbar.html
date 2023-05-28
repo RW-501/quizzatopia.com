@@ -60,12 +60,8 @@
 
 
 
-	  const savedUserInfo = localStorage.getItem("userInfo");
-  console.log('nav  :', savedUserInfo);
-  console.log('nav profilePic :', savedUserInfo.profilePic);
-
-
-     document.getElementById('profile-pic').src = savedUserInfo.profilePic;
+		  let userInfo = JSON.parse(localStorage.getItem("userInfo"));
+     document.getElementById('profile-pic').src = userInfo.profilePic;
 
 
 
