@@ -1156,6 +1156,14 @@ function initializeNavbarToggler() {
     var navbarNav = document.querySelector('#navbarNav');
 
       navbarNav.classList.toggle('collapse');
+	
+
+
+		  let userInfo = JSON.parse(localStorage.getItem("userInfo"));
+     //document.getElementById('profile-pic').src = userInfo.profilePic;
+  console.log('nav main  :', userInfo);
+  console.log('nav main pic :', userInfo.profilePic);
+
   console.log('collapse button :');
 }
 
@@ -1227,13 +1235,6 @@ window.onload = function() {
   updateNavBar();
 }
 
-
-
-
-		  let userInfo = JSON.parse(localStorage.getItem("userInfo"));
-     //document.getElementById('profile-pic').src = userInfo.profilePic;
-  console.log('nav main  :', userInfo);
-  console.log('nav main pic :', userInfo.profilePic);
 
    
 		    console.log("  ?????????????????????????    ^   Main.js ^   ????????????????????????999        ");
