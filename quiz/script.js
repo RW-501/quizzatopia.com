@@ -522,6 +522,17 @@ function calculateEarnedPoints() {
 
 
 
+function addBadgeToUser(userId, badgeId) {
+  const usersCollection = firebase.firestore().collection('usersBadges');
+
+  usersCollection.doc(userId).update({ badgeId: badgeId })
+    .then(() => {
+      console.log("Badge ID added successfully to user:", userId);
+    })
+    .catch((error) => {
+      console.error("Error adding badge ID to user:", userId, error);
+    });
+}
 
 
 
@@ -533,9 +544,14 @@ function endQuiz() {
   // Clear the timer display
   const timerDisplay = document.getElementById("timer");
   timerDisplay.innerHTML = "";
+	
+ const userInfo = JSON.parse(localStorage.getItem('userInfo')) || [];
+const userId =	userInfo.firebaseId;
+ const userBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
 
-
-
+addBadgeToUser(userId, userBadges);
+	
+	
   
   // Calculate feedback and display it
   const feedback = calculateFeedback();
