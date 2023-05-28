@@ -51,12 +51,15 @@
 
 
 <script>
+	  let userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
+
 	  const savedUserInfo = localStorage.getItem("userInfo");
   console.log('nav  :', savedUserInfo);
   console.log('nav profilePic :', savedUserInfo.profilePic);
+  console.log('nav userInfo :', userInfo.profilePic);
 
 
-     document.getElementById('profile-pic').src = savedUserInfo.profilePic;
+     document.getElementById('profile-pic').src = userInfo.profilePic;
 
 	
 </script>
