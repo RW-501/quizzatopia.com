@@ -1229,11 +1229,10 @@ window.onload = function() {
 
 
 
-	  const savedUserInfo = localStorage.getItem("userInfo");
-  console.log('nav pic :', savedUserInfo.profilePic);
 
-
-     document.getElementById('profile-pic').src = savedUserInfo.profilePic;
+		  let userInfo = JSON.parse(localStorage.getItem("userInfo"));
+     document.getElementById('profile-pic').src = userInfo.profilePic;
+  console.log('nav main pic :', userInfo.profilePic);
 
    
 		    console.log("  ?????????????????????????    ^   Main.js ^   ????????????????????????999        ");
