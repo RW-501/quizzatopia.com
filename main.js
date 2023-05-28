@@ -1162,6 +1162,7 @@ function initializeNavbarToggler() {
 		  let userInfo = JSON.parse(localStorage.getItem("userInfo"));
      document.getElementById('profile-pic').src = userInfo.profilePic;
 
+    console.log("userInfo firebaseId :", userInfo.firebaseId);
 
   console.log('collapse button :');
 }
