@@ -79,6 +79,15 @@ function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
 // Function to start the quiz
 function startQuiz() {
 
+	 questionTime = 0; // seconds
+ currentQuestion = 0;
+ questionCorrect = 0;
+ quizStarted = false;
+ timer = 0;
+ countdownPerQuestion = false; // set to true if the countdown should happen for each question
+ totalTime = 0; // seconds
+ totalQuestions = questions.length;
+ timerEnabled = false;
 	
    quizStarted = true;
   updatePointsAndRank();
@@ -102,7 +111,7 @@ const quizInfo = setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions);
 	
   // Check quiz code and retrieve or save quiz info
 
-//  console.log(totalQuestions + "   ????????????totalQuestions????"); // Output: 3
+ console.log(totalQuestions + "   ????????????totalQuestions????"); // Output: 3
 
   var numAd;
 
@@ -522,6 +531,10 @@ function calculateEarnedPoints() {
 
 
 
+
+
+
+
 function addBadgeToUser(userId, badgeId) {
   const usersCollection = firebase.firestore().collection('usersBadges');
 
@@ -750,5 +763,5 @@ function startTimer() {
 document.getElementById("start-btn").addEventListener("click", startQuiz);
 
 document.getElementById("retake-btn").addEventListener("click", () => {
-location.href = "/quiz?q="+q;
+location.href = "/quiz/?q="+q;
 });
