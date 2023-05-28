@@ -1,10 +1,4 @@
 
-	  const savedUserInfo = localStorage.getItem("userInfo");
-  console.log('nav pic :', savedUserInfo);
-
-
-     document.getElementById('profile-pic').src = savedUserInfo.profilePic;
-
 
 
 
@@ -1233,6 +1227,13 @@ window.onload = function() {
   updateNavBar();
 }
 
+
+
+	  const savedUserInfo = localStorage.getItem("userInfo");
+  console.log('nav pic :', savedUserInfo.profilePic);
+
+
+     document.getElementById('profile-pic').src = savedUserInfo.profilePic;
 
    
 		    console.log("  ?????????????????????????    ^   Main.js ^   ????????????????????????999        ");
