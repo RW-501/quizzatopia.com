@@ -132,7 +132,7 @@ const quizInfo = setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions);
 	
   // Check quiz code and retrieve or save quiz info
 
- console.log(totalQuestions + "   ????????????totalQuestions????"); // Output: 3
+// console.log(totalQuestions + "   ????????????totalQuestions????"); // Output: 3
 
   var numAd;
 
@@ -215,8 +215,8 @@ function generateQuizAdPattern(numQuestions, numAds) {
 
 
 let adDuration;
- let adCount
-  const userInfo = getUserInfo();
+ let adCount;
+  let userInfo = getUserInfo();
 
 	   console.log('userInfo.userName ????????????????? ', userInfo.userName);
 
@@ -284,7 +284,7 @@ function shuffleArrayAnswers(array) {
 
 
 function showQuestion() {
-  console.log(adQuestionNumbers + "  adQuestionNumbers??????????currentQuestion????   " + currentQuestion);
+//  console.log(adQuestionNumbers + "  adQuestionNumbers??????????currentQuestion????   " + currentQuestion);
 
   // Check if the current question number is in the adQuestionNumbers array
   if (adQuestionNumbers.includes(currentQuestion)) {
