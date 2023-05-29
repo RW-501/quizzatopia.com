@@ -562,13 +562,13 @@ function addBadgeToUser(userId, badgeId) {
 function animateNumber(start, end, duration) {
   let current = start;
   const increment = Math.ceil((end - start) / duration * 10); // Adjust the speed of animation by changing the increment value
-  const counterElement = document.getElementById("counter");
+  const counterElement = document.getElementById("earnedPoints");
   
   const intervalId = setInterval(() => {
     current += increment;
-    counterElement.textContent = current;
+    counterElement.textContent = "+"+current+" Points!";
 
-    if (current >= end) {
+    if (current >= end ) {
       clearInterval(intervalId);
     }
   }, 100); // Adjust the interval duration to control the speed of animation
@@ -617,14 +617,12 @@ rewardPointsForReturningDays();
 const earnedPoints = calculateEarnedPoints();
 	// Usage example:
 const startValue = 0;
-const endValue = earnedPoints;
 const animationDuration = 2000; // Duration in milliseconds (2 seconds)
 
-animateNumber(startValue, endValue, animationDuration);
-
-
+	if(earnedPoints > 0){
+animateNumber(startValue, earnedPoints, animationDuration);
 displayEarnedPoints(earnedPoints);
-
+	}
 	
   // Hide the quiz container and show the end container
   document.getElementById("quiz-container").classList.add("d-none");
