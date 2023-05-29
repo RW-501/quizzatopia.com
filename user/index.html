@@ -312,7 +312,7 @@ timerId = setTimeout (function() {
     function removeQuiz(key) {
       localStorage.removeItem(key);
       getQuizInfo();
-	    
+	getLocalStorageUsage();
     }
 
     // Local Storage usage related functions
@@ -382,6 +382,30 @@ timerId = setTimeout (function() {
       popupContainer.style.display = "none";
     }
 
+	  
+	  
+	    		 
+function clearLocalStorage() {
+  const confirmed = confirm('Are you sure you want to clear the local storage?');
+  if (confirmed) {
+    localStorage.clear();
+	    getQuizInfo();
+displayBadges();
+displayUserInfo();   
+
+    alert('Local storage cleared!');
+  }
+}
+
+const clearStorageBtn = document.getElementById('clearStorageBtn');
+clearStorageBtn.addEventListener('click', clearLocalStorage);
+
+		    
+	  
+	  
+	  
+	  
+	  
     // Initialization
     function initialize() {
       displayUserInfo();
