@@ -725,6 +725,7 @@ function updateUserInfo(updatedInfo) {
   displayUserInfo();
 }
 	var ipAddress;
+	function getUserIP(){
 // This approach uses a third-party API to fetch the user's IP address
 fetch('https://api.ipify.org?format=json')
   .then(response => response.json())
@@ -736,13 +737,13 @@ fetch('https://api.ipify.org?format=json')
   .catch(error => {
     console.error('Error:', error);
   });
-
+	}
 	
 	// Replace 'YOUR_API_KEY' with your actual API key from the IP Geolocation API
 const apiKey = 'f26dee18c273451e8622b5c4bb618167';
 
 		function getUserLocation() {
-
+getUserIP();
 	// Make a request to the IP Geolocation API
 fetch(`https://api.ipgeolocationapi.com/geolocate/${ipAddress}?api_key=${apiKey}`)
   .then(response => response.json())
