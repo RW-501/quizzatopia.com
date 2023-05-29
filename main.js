@@ -1234,12 +1234,6 @@ window.addEventListener('load', function() {
 });
 
 	
-function navbarToggler() {
-  var navbarNav = document.querySelector('#navbarNav');
-  navbarNav.classList.toggle('collapse');
-}
-
-				  
 
 
 
@@ -1362,6 +1356,12 @@ function showLoginPopupIfNeeded() {
   }
 }
 
+function navbarToggler() {
+  var navbarNav = document.querySelector('#navbarNav');
+  navbarNav.classList.toggle('collapse');
+}
+
+				  
 
 slideIn("loginPopup");
 
