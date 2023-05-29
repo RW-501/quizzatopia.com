@@ -980,8 +980,15 @@ document.addEventListener('click', function (e) {
 	  // Close the modal
   closeModal();
 });
-      
-	      
+       var divElement = document.getElementById("testInfo");
+
+  if (divElement.innerHTML === "") {
+    console.log("empty.");
+	  
+	  window.location.href = "https://quizzatopia.com/quiz/?q="+q;
+//location.reload();
+
+  }       
 	      
     </script>
 
