@@ -47,7 +47,6 @@
     }
   </style>
     </head>
- <script src="/js/load.js"></script>
 
 <body>
 
@@ -144,7 +143,7 @@
 		  
 		  
 		  window.onload = function() {
-  const lbUserInfo = JSON.parse(localStorage.getItem("userInfo"));
+  var lbUserInfo = JSON.parse(localStorage.getItem("userInfo"));
 
 
     console.log('lbUserInfo ', lbUserInfo);
