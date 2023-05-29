@@ -593,59 +593,6 @@ new Chart(ctx, {
 }
 	  
 	  
-	  	//console.log('222222???????????????????????????main quiz js part ???????????????????????????????????????????????//');
-
-	  
-    
-// Get the current URL and parse its search parameters
-const urlParams = new URLSearchParams(window.location.search);
-	//  console.log("1 urlParams     "+urlParams); 
-
-// Get the values of the "q" and "e" parameters
-let q = urlParams.get('q');
-let e = urlParams.get('e');
-	  
-//console.log("2 urlParams     "+q); 
-
-
-if (q === null) {
-  const files = [
-    "job_interviews",
-    "marvel_cinematic_universe",
-    "middle_school_math",
-    "high_school_science",
-    "movies",
-    "hip_hop",
-    "pop_culture"
-  ];
-console.log("1 random     "+q); 
-	
-  function getRandomFile(files) {
-    return files[Math.floor(Math.random() * files.length)];
-  }
-
-  q = getRandomFile(files);
-}
-
-// Use the value of "q"
-console.log("urlParams     "+q); 
-
-                const newStr = q.replace(/_/g, " ");
-	  
-	  
-	  
-		   // console.log("?????????????????????????????????????????????????999        ");
-
-	  
-document.getElementById("msg_quiz_name").innerHTML = newStr;
-document.getElementById("optionsQuizName").innerHTML = newStr;
-	  
-document.getElementById("social_fb").href = "https://www.facebook.com/sharer/sharer.php?u=https://quizzatopia.com/quiz/?q="+q;
-document.getElementById("social_tw").href = "https://twitter.com/intent/tweet?url=https://quizzatopia.com/quiz/?q="+q;
-document.getElementById("social_ln").href = "ttps://www.linkedin.com/shareArticle?url=https://quizzatopia.com/quiz/?q="+q;
-document.getElementById("social_red").href = "https://www.reddit.com/submit?url=https://quizzatopia.com/quiz/?q="+q;
-    
-	  
 	  
 	  
 	  
@@ -712,7 +659,69 @@ function logStorageContents(quizCode) {
 
 	  
 	  
+		  
 	  
+	  
+	  
+	  
+	  
+	  
+	  	//console.log('222222???????????????????????????main quiz js part ???????????????????????????????????????????????//');
+
+	  
+    
+// Get the current URL and parse its search parameters
+const urlParams = new URLSearchParams(window.location.search);
+	//  console.log("1 urlParams     "+urlParams); 
+
+// Get the values of the "q" and "e" parameters
+let q = urlParams.get('q');
+let e = urlParams.get('e');
+	  
+//console.log("2 urlParams     "+q); 
+
+
+if (q === null) {
+  const files = [
+    "job_interviews",
+    "marvel_cinematic_universe",
+    "middle_school_math",
+    "high_school_science",
+    "movies",
+    "hip_hop",
+    "pop_culture"
+  ];
+console.log("1 random     "+q); 
+	
+  function getRandomFile(files) {
+    return files[Math.floor(Math.random() * files.length)];
+  }
+
+  q = getRandomFile(files);
+}
+
+// Use the value of "q"
+console.log("urlParams     "+q); 
+
+                const newStr = q.replace(/_/g, " ");
+	  
+	  
+	  
+		   // console.log("?????????????????????????????????????????????????999        ");
+
+	  
+document.getElementById("msg_quiz_name").innerHTML = newStr;
+document.getElementById("optionsQuizName").innerHTML = newStr;
+	  
+document.getElementById("social_fb").href = "https://www.facebook.com/sharer/sharer.php?u=https://quizzatopia.com/quiz/?q="+q;
+document.getElementById("social_tw").href = "https://twitter.com/intent/tweet?url=https://quizzatopia.com/quiz/?q="+q;
+document.getElementById("social_ln").href = "ttps://www.linkedin.com/shareArticle?url=https://quizzatopia.com/quiz/?q="+q;
+document.getElementById("social_red").href = "https://www.reddit.com/submit?url=https://quizzatopia.com/quiz/?q="+q;
+    
+	  
+	  
+	  
+  
 	  
 	  
 	  
@@ -980,15 +989,15 @@ document.addEventListener('click', function (e) {
 	  // Close the modal
   closeModal();
 });
-       var divElement = document.getElementById("testInfo");
+   var divElement = document.getElementById("testInfo");
 
-  if (divElement.innerHTML === "") {
-    console.log("empty.");
-	  
-	  window.location.href = "https://quizzatopia.com/quiz/?q="+q;
-//location.reload();
+if (divElement.innerHTML === "" || q === null || q === '') {
+  console.log("empty.");
 
-  }       
+  window.location.href = "https://quizzatopia.com/quiz/?q=" + q;
+  //location.reload();
+}
+
 	      
     </script>
 
