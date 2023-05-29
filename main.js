@@ -1154,9 +1154,7 @@ window.createUserWithEmailAndPassword = function (event) {
 
 		
 		
-		
-	});
-
+	
 
 function onAuthSuccess(userInfo) {
   // Perform any actions or operations you want to execute after successful authentication
