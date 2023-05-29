@@ -555,6 +555,20 @@ function addBadgeToUser(userId, badgeId) {
     });
 }
 
+function animateNumber(start, end, duration) {
+  let current = start;
+  const increment = Math.ceil((end - start) / duration * 10); // Adjust the speed of animation by changing the increment value
+  const counterElement = document.getElementById("counter");
+  
+  const intervalId = setInterval(() => {
+    current += increment;
+    counterElement.textContent = current;
+
+    if (current >= end) {
+      clearInterval(intervalId);
+    }
+  }, 100); // Adjust the interval duration to control the speed of animation
+}
 
 
 
@@ -597,6 +611,14 @@ rewardPointsForReturningDays();
 	awardQuizzesTakenBadges();
 	
 const earnedPoints = calculateEarnedPoints();
+	// Usage example:
+const startValue = 0;
+const endValue = earnedPoints;
+const animationDuration = 2000; // Duration in milliseconds (2 seconds)
+
+animateNumber(startValue, endValue, animationDuration);
+
+
 displayEarnedPoints(earnedPoints);
 
 	
