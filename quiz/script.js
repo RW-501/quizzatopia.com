@@ -809,10 +809,12 @@ document.getElementById('show-explanation-btn').classList.remove("d-none");
 	explanationContainer.style.display = 'block';
 ///});
 }
-function retakeQuizFunc(){
-//document.getElementById("retake-btn").addEventListener("click", () => {
+document.addEventListener('DOMContentLoaded', function() {
+
+//function retakeQuizFunc(){
+document.getElementById("retake-btn").addEventListener("click", () => {
 location.href = "/quiz/?q="+q;
 ////});
-}
+});
 
 
