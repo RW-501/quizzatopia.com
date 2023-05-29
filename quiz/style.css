@@ -7,7 +7,7 @@ main_section {
     /* scroll-snap-type: block; */
     /* scroll-snap-align: center; */
     /* scroll-snap-stop: always; */
-    display: block;
+    display: contents;
 }
 
 
