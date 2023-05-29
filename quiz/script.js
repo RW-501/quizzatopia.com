@@ -546,18 +546,34 @@ function calculateEarnedPoints() {
 
 
 
-
 function addBadgeToUser(userId, badgeId) {
   const usersCollection = firebase.firestore().collection('usersBadges');
 
-  usersCollection.doc(userId).update({ badgeId: badgeId })
-    .then(() => {
-      console.log("Badge ID added successfully to user:", userId);
-    })
-    .catch((error) => {
-      console.error("Error adding badge ID to user:", userId, error);
-    });
+  usersCollection.doc(userId).get().then((doc) => {
+    if (doc.exists) {
+      // Document exists, update the badgeId field
+      usersCollection.doc(userId).update({ badgeId: badgeId })
+        .then(() => {
+          console.log("Badge ID updated successfully for user:", userId);
+        })
+        .catch((error) => {
+          console.error("Error updating badge ID for user:", userId, error);
+        });
+    } else {
+      // Document doesn't exist, create a new document with badgeId
+      usersCollection.doc(userId).set({ badgeId: badgeId })
+        .then(() => {
+          console.log("New user document created with badge ID:", userId);
+        })
+        .catch((error) => {
+          console.error("Error creating user document with badge ID:", userId, error);
+        });
+    }
+  }).catch((error) => {
+    console.error("Error checking user document:", userId, error);
+  });
 }
+
 
 function animateNumber(start, end, duration) {
   let current = start;
