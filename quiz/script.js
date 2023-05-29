@@ -77,8 +77,14 @@ function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
 // Function to start the quiz
 function startQuiz() {
  var divElement = document.getElementById("testInfo");
+	// Call the function when needed, e.g., after completing a quiz
+showLoginPopupIfNeeded();
+	    if (newQuizCount > QUIZ_COUNT_THRESHOLD) {
+      // Show the login popup
+      // Replace this with your own code to show the login popup
+     			slideIn("loginPopup");
+    }else{
 	
-slideIn("quiz-container");
 	
 if (  q === null || q === '') {
     console.log("empty.");
@@ -99,6 +105,8 @@ if (  q === null || q === '') {
 	
    quizStarted = true;
   updatePointsAndRank();
+	  
+slideIn("quiz-container");
 
   document.getElementById("start-btn").classList.add("d-none");
   document.getElementById("quiz-container").classList.remove("d-none");
@@ -149,6 +157,8 @@ const quizInfo = setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions);
   }
 }
 
+
+}
 
 
 
