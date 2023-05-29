@@ -1234,7 +1234,10 @@ window.addEventListener('load', function() {
 });
 
 	
-		
+function navbarToggler() {
+  var navbarNav = document.querySelector('#navbarNav');
+  navbarNav.classList.toggle('collapse');
+}
 
 				  
 
