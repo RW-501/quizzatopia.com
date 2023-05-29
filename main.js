@@ -739,11 +739,13 @@ fetch('https://api.ipify.org?format=json')
   });
 	}
 	
-	// Replace 'YOUR_API_KEY' with your actual API key from the IP Geolocation API
-const apiKey = 'f26dee18c273451e8622b5c4bb618167';
+
 
 		function getUserLocation() {
-getUserIP();
+	// Replace 'YOUR_API_KEY' with your actual API key from the IP Geolocation API
+const apiKey = 'f26dee18c273451e8622b5c4bb618167';
+			
+			getUserIP();
 	// Make a request to the IP Geolocation API
 return fetch(`https://api.ipgeolocationapi.com/geolocate/${ipAddress}?api_key=${apiKey}`)
   .then(response => response.json())
@@ -1152,7 +1154,8 @@ window.createUserWithEmailAndPassword = function (event) {
 
 });
 
-		
+		});
+	
 		
 	
 
