@@ -80,10 +80,10 @@ function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
 function startQuiz() {
  var divElement = document.getElementById("testInfo");
 
-  if (divElement.innerHTML === "") {
+if (  q === null || q === '') {
     console.log("empty.");
-	  
-	  window.location.href = "https://quizzatopia.com/quiz/?q="+q;
+	  location.reload();
+	 // window.location.href = "https://quizzatopia.com/quiz/?q="+q;
 
   } else {
  
@@ -271,7 +271,7 @@ function shuffleArrayAnswers(array) {
 
 
 function showQuestion() {
-//  console.log(adQuestionNumbers + "  adQuestionNumbers??????????currentQuestion????   " + currentQuestion);
+  console.log(adQuestionNumbers + "  adQuestionNumbers??????????currentQuestion????   " + currentQuestion);
 
   // Check if the current question number is in the adQuestionNumbers array
   if (adQuestionNumbers.includes(currentQuestion)) {
@@ -435,6 +435,8 @@ function enableAnswerButtons() {
 
 // Function to show the next question
 function nextQuestion() {
+		 console.log("nextQuestion:   ");
+
   currentQuestion++;
 document.getElementById('show-explanation-btn').classList.add("d-none");
 
@@ -444,7 +446,7 @@ if(explanationContainer.style.display == 'block'){
 		explanationContainer.style.display = 'none';
 
 }
-	
+	 console.log("currentQuestion:   "+currentQuestion);
 
 	
 	
@@ -475,8 +477,11 @@ function skipQuestion() {
   updateQuestionNumber();
 }
 
+
+
 // Function to handle skip or next action
 function skipOrNext() {
+	 console.log("skipOrNext:   ");
   if (this.innerHTML === 'Skip') {
     skipQuestion();
   } else {
