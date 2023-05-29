@@ -1245,6 +1245,8 @@ document.addEventListener('DOMContentLoaded', function() {
 window.onload = function() {
   var navbarNav = document.querySelector('#navbarNav');
   navbarNav.classList.toggle('collapse');
+	  console.log('collapse toggle last main.js :');
+
 };
 
 
