@@ -666,9 +666,9 @@ document.addEventListener('DOMContentLoaded', () => {
       userActive: true,
       userJoinedDate: new Date().toISOString(),
       userCity: '',
-      userState: '',
-      userRegion: '',
-      userZipCode: '',
+      userLongitude: '',
+      userLatitude: '',
+      userCountry: '',
       userProfilePic: '/images/avatar/w1.png',
       userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
       userRank: 'Beginner',
@@ -742,30 +742,44 @@ fetch('https://api.ipify.org?format=json')
 
 
 		function getUserLocation() {
-	// Replace 'YOUR_API_KEY' with your actual API key from the IP Geolocation API
-const apiKey = 'f26dee18c273451e8622b5c4bb618167';
-			
-			getUserIP();
-	// Make a request to the IP Geolocation API
-return fetch(`https://api.ipgeolocationapi.com/geolocate/${ipAddress}?api_key=${apiKey}`)
-  .then(response => response.json())
-  .then(data => {
-       const userCountry =  data.country_name;
-      const userCity =  data.city;
-      const userLatitude =  data.latitude;
-      const userLongitude =  data.longitude;
- 
-	    return { userCountry, userCity, userLatitude, userLongitude };
+  const USER_INFO_KEY = 'user_location';
+  const savedUserInfo = localStorage.getItem(USER_INFO_KEY);
 
-    // Use the location data as needed
-  })
-  .catch(error => {
-    console.error('Error:', error);
-	     return null;
+  if (savedUserInfo) {
+    // User location is already saved in local storage, return the parsed object
+    return JSON.parse(savedUserInfo);
+  }
 
-  });
-		}	
-			
+  const apiKey = 'f26dee18c273451e8622b5c4bb618167';
+  const ipAddress = getUserIP();
+
+  // Make a request to the IP Geolocation API
+  return fetch(`https://api.ipgeolocationapi.com/geolocate/${ipAddress}?api_key=${apiKey}`)
+    .then(response => response.json())
+    .then(data => {
+      const userCountry = data.country_name;
+      const userCity = data.city;
+      const userLatitude = data.latitude;
+      const userLongitude = data.longitude;
+
+      const userInfo = {
+        userCountry,
+        userCity,
+        userLatitude,
+        userLongitude
+      };
+
+      // Save the user location in local storage
+      localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
+
+      return userInfo;
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      return null;
+    });
+}
+
 	
 
 
