@@ -78,7 +78,15 @@ function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
 
 // Function to start the quiz
 function startQuiz() {
+ var divElement = document.getElementById("testInfo");
 
+  if (divElement.innerHTML === "") {
+    console.log("empty.");
+	  
+	  window.location.href = "https://quizzatopia.com/quiz/?q="+q;
+
+  } else {
+ 
 	 questionTime = 0; // seconds
  currentQuestion = 0;
  questionCorrect = 0;
@@ -138,7 +146,7 @@ const quizInfo = setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions);
 
   updateProgressBar(currentQuestion);
     showQuestion();
-
+  }
 }
 
 
@@ -760,7 +768,7 @@ function startTimer() {
 
 
 // Event Listeners
-document.getElementById("start-btn").addEventListener("click", startQuiz);
+//document.getElementById("start-btn").addEventListener("click", startQuiz);
 
 document.getElementById("retake-btn").addEventListener("click", () => {
 location.href = "/quiz/?q="+q;
