@@ -1245,7 +1245,7 @@ function initializeNavbarToggler() {
    // var navbarToggler = document.querySelector('.navbar-toggler');
     var navbarNav = document.querySelector('#navbarNav');
 
-      navbarNav.classList.toggle('collapse');
+      navbarNav.classList.add('collapse');
 	
 
 
