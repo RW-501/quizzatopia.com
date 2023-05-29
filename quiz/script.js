@@ -721,8 +721,12 @@ displayBadges();
 function  showPieChartEnd(){
 
   
-   const chartCanvas2 = document.createElement('canvas');
+const chartCanvas2 = document.createElement('canvas');
 chartCanvas2.id = 'pie-chart2';
+
+// Set the width and height of the chartCanvas2 element
+chartCanvas2.style.width = '300px';
+chartCanvas2.style.height = '300px';
    
      const correctAnswers = questionCorrect;
   const incorrectAnswers = totalQuestions - questionCorrect;
