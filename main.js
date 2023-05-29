@@ -1361,9 +1361,16 @@ function navbarToggler() {
   navbarNav.classList.toggle('collapse');
 }
 
-				  
+		function elementExists(elementId) {
+  const element = document.getElementById(elementId);
+  return element !== null;
+}
+		  
+if (elementExists('loginPopup')) {
+  // The element exists, you can proceed with accessing it
+ slideIn("loginPopup");
 
-slideIn("loginPopup");
+}
 
    
 		    console.log("  ?????????????????????????    ^   Main.js ^   ????????????????????????999        ");
