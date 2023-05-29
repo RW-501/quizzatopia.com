@@ -415,19 +415,6 @@ function showExplanationPopup() {
   });
 }
 
-// Add click event listener to the "Show Explanation" button
-//const showExplanationButton = document.getElementById('show-explanation-btn');
-//showExplanationButton.addEventListener('click', 
-
-function showExplanationFunc() {
-  // Replace this with your explanation content
- //const explanation = "This is the explanation for the question.";
-//  showExplanation(explanation);
-document.getElementById('show-explanation-btn').classList.remove("d-none");
-  const explanationContainer = document.querySelector('.explanation-container');
-
-	explanationContainer.style.display = 'block';
-});
 
 
 // Function to disable answer buttons after user answers
@@ -504,9 +491,6 @@ function skipOrNext() {
   }
 }
 
-// Add event listener to the skip-next-btn
-//const skipNextBtn = document.getElementById('skip-next-btn');
-//skipNextBtn.addEventListener('click', skipOrNext);
 
 
 
@@ -807,10 +791,29 @@ function startTimer() {
         }
 }
 
+// Add event listener to the skip-next-btn
+//const skipNextBtn = document.getElementById('skip-next-btn');
+//skipNextBtn.addEventListener('click', skipOrNext);
 
 
 // Event Listeners
 //document.getElementById("start-btn").addEventListener("click", startQuiz);
+
+
+// Add click event listener to the "Show Explanation" button
+//const showExplanationButton = document.getElementById('show-explanation-btn');
+//showExplanationButton.addEventListener('click', 
+
+function showExplanationFunc() {
+  // Replace this with your explanation content
+ //const explanation = "This is the explanation for the question.";
+//  showExplanation(explanation);
+document.getElementById('show-explanation-btn').classList.remove("d-none");
+  const explanationContainer = document.querySelector('.explanation-container');
+
+	explanationContainer.style.display = 'block';
+///});
+}
 
 document.getElementById("retake-btn").addEventListener("click", () => {
 location.href = "/quiz/?q="+q;
