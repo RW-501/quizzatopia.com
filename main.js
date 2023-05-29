@@ -724,43 +724,67 @@ function updateUserInfo(updatedInfo) {
   saveUserInfoToFirebase(userInfo);
   displayUserInfo();
 }
+	var ipAddress;
+// This approach uses a third-party API to fetch the user's IP address
+fetch('https://api.ipify.org?format=json')
+  .then(response => response.json())
+  .then(data => {
+     ipAddress = data.ip;
+    console.log(ipAddress);
+    // Use the IP address as needed
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
 
-	function getUserLocation() {
-  return fetch('https://api.ipapi.com/check?access_key=YOUR_ACCESS_KEY')
-    .then(response => response.json())
-    .then(data => {
-      const userCity = data.city;
-      const userState = data.region;
-      const userRegion = data.region_name;
-      const userZipCode = data.zip;
+	
+	// Replace 'YOUR_API_KEY' with your actual API key from the IP Geolocation API
+const apiKey = 'f26dee18c273451e8622b5c4bb618167';
 
-      return { userCity, userState, userRegion, userZipCode };
-    })
-    .catch(error => {
-      console.error('Error getting user location:', error);
-      return null;
-    });
-}
+		function getUserLocation() {
+
+	// Make a request to the IP Geolocation API
+fetch(`https://api.ipgeolocationapi.com/geolocate/${ipAddress}?api_key=${apiKey}`)
+  .then(response => response.json())
+  .then(data => {
+    const { country_name, city, latitude, longitude } = data;
+       const userCountry = country_name;
+      const userCity = city;
+      const userLatitude = latitude;
+      const userLongitude = longitude;
+ 
+	      return { userCountry, userCity, userLatitude, userLongitude };
+
+    // Use the location data as needed
+  })
+  .catch(error => {
+    console.error('Error:', error);
+	      return null;
+
+  });
+			
+			
+	
 
 
 function checkUserInfoChanges() {
   const userInfo = getUserInfo();
 
   getUserLocation().then((location) => {
-    const { userCity, userState, userRegion, userZipCode } = location;
+	      const { userCountry, userCity, userLatitude, userLongitude } = location;
 
     if (
       userInfo.userCity !== userCity ||
-      userInfo.userState !== userState ||
-      userInfo.userRegion !== userRegion ||
-      userInfo.userZipCode !== userZipCode
+      userInfo.userCountry !== userCountry ||
+      userInfo.userLatitude !== userLatitude ||
+      userInfo.userLongitude !== userLongitude
     ) {
       // User location has changed, update user information
       const updatedInfo = {
         userCity,
-        userState,
-        userRegion,
-        userZipCode,
+        userCountry,
+        userLatitude,
+        userLongitude,
       };
       updateUserInfo(updatedInfo);
     } else {
