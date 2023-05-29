@@ -474,7 +474,6 @@
   <script>
 window.addEventListener("load", function() {
 
-	      console.log("quiz page start 1.... ");
 
 	// Check if user is logged in
   if (loggedIn   ==  false) {
@@ -674,7 +673,6 @@ function logStorageContents(quizCode) {
 	  
 	  
 	  
-	  	console.log('222222???????????????????????????main quiz js part 669 ???????????????????????????????????????????????//');
 
 	  
     
@@ -711,11 +709,10 @@ console.log("1 random     "+q);
 // Use the value of "q"
 console.log("urlParams     "+q); 
 
-                const newStr = q.replace(/_/g, " ");
+                var newStr = q.replace(/_/g, " ");
 	  
 	  
 	  
-		    console.log("?????????????????????????????????????????????????999  710      ");
 
 	  
 document.getElementById("msg_quiz_name").innerHTML = newStr;
@@ -849,7 +846,7 @@ quizInfo.quizLink = q;  // Add the "q" parameter to the quizInfo object
 }
 
 function fetchData(q, e) {
-	      console.log("fetchData(q, e) :", q+'   e    '+e);
+	   //   console.log("fetchData(q, e) :", q+'   e    '+e);
 
   let stringEnt;
   if (e && isValidEdition(e)) {
@@ -859,7 +856,7 @@ function fetchData(q, e) {
     console.log("Old JSON structure");
     stringEnt = "/q/" + q + ".json";
   }
-      console.log("stringEnt URL:", stringEnt);
+//      console.log("stringEnt URL:", stringEnt);
 
    fetch(stringEnt)
     .then(response => response.json())
