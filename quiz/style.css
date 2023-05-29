@@ -1,4 +1,18 @@
-	/* Styles for the social-sharing section */
+	
+main_section {
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow: hidden;
+    /* scroll-behavior: smooth; */
+    /* scroll-snap-type: block; */
+    /* scroll-snap-align: center; */
+    /* scroll-snap-stop: always; */
+    display: block;
+}
+
+
+
+/* Styles for the social-sharing section */
 #social-sharing {
   padding: 5%;
 }
