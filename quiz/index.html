@@ -991,11 +991,14 @@ document.addEventListener('click', function (e) {
 });
    var divElement = document.getElementById("testInfo");
 
-if (divElement.innerHTML === "" || q === null || q === '') {
+if (  q === null || q === '') {
   console.log("empty.");
 
   window.location.href = "https://quizzatopia.com/quiz/?q=" + q;
   //location.reload();
+}else{
+          console.log("Q:   "+q);
+	
 }
 
 	      
