@@ -101,24 +101,31 @@ if (cookieValue === 'true') {
 // load.js
 const USER_INFO_KEY = 'userInfo';
 
-function getUserInfo() {
-  let userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
-  if (!userInfo) {
-    userInfo = {
-      userName: 'New User',
-      profilePic: '/images/avatar/w1.png',
-      tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-      rank: 'Beginner',
-      points: 0,
-      quizzesTaken: 0
-    };
-    localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
+
+  function getUserInfo() {
+    let userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
+    if (!userInfo) {
+      userInfo = {
+        userName: 'New User',
+      userEmail: '',
+      userActive: true,
+      userJoinedDate: new Date().toISOString(),
+      userCity: '',
+      userLongitude: '',
+      userLatitude: '',
+      userCountry: '',
+      userProfilePic: '/images/avatar/w1.png',
+      userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+      userRank: 'Beginner',
+      userPoints: 0,
+      userQuizzesTaken: 0,
+      userAds: ''
+      };
+	    checkUserInfoChanges(userInfo);
+      localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
+    }
+    return userInfo;
   }
-  return userInfo;
-}
-
-
-
 
 
 
@@ -132,7 +139,7 @@ function displayUserInfo() {
 
   const profilePicElement = document.getElementById('profile-pic');
   if (profilePicElement) {
-    profilePicElement.src = userInfo.profilePic;
+    profilePicElement.src = userInfo.userProfilePic;
   }
 
 //  const profileNameElement = document.getElementById('profile-name');
@@ -142,7 +149,7 @@ function displayUserInfo() {
 
   const taglineElement = document.getElementById('tagline');
   if (taglineElement) {
-    taglineElement.textContent = userInfo.tagLine;
+    taglineElement.textContent = userInfo.userTagLine;
   }
 }
 
@@ -160,32 +167,32 @@ function updateUserInfo(updatedInfo) {
   displayUserInfo();
 }
 
-function updateProfilePic(profilePic) {
-  updateUserInfo({ profilePic });
+function updateProfilePic(userProfilePic) {
+  updateUserInfo({ userProfilePic });
 }
 
-function updateTagline(tagLine) {
-  updateUserInfo({ tagLine });
+function updateTagline(userTagLine) {
+  updateUserInfo({ userTagLine });
 }
 
 function updateUserName(userName) {
   updateUserInfo({ userName });
 }
 
-function updateRank(rank) {
-  updateUserInfo({ rank });
+function updateRank(userRank) {
+  updateUserInfo({ userRank });
 }
 
-function updatePoints(points) {
+function updatePoints(userPoints) {
   const userInfo = getUserInfo();
-  userInfo.points += points;
+  userInfo.userPoints += userPoints;
   localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
   displayUserInfo();
 }
 
-function updateQuizzesTaken(quizzesTaken) {
+function updateQuizzesTaken(userQuizzesTaken) {
   const userInfo = getUserInfo();
-  userInfo.quizzesTaken += quizzesTaken;
+  userInfo.userQuizzesTaken += userQuizzesTaken;
   localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
   displayUserInfo();
 }
@@ -403,7 +410,7 @@ const badges = [
 
 function getUserPoints() {
   const userInfo = getUserInfo();
-  return userInfo.points;
+  return userInfo.userPoints;
 }
 
 function checkTier() {
@@ -655,32 +662,7 @@ function hideStatusBar() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const USER_INFO_KEY = 'userInfo';
 
-  function getUserInfo() {
-    let userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
-    if (!userInfo) {
-      userInfo = {
-        userName: 'New User',
-      userEmail: '',
-      userActive: true,
-      userJoinedDate: new Date().toISOString(),
-      userCity: '',
-      userLongitude: '',
-      userLatitude: '',
-      userCountry: '',
-      userProfilePic: '/images/avatar/w1.png',
-      userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-      userRank: 'Beginner',
-      userPoints: 0,
-      userQuizzesTaken: 0,
-      userAds: ''
-      };
-	    checkUserInfoChanges(userInfo);
-      localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
-    }
-    return userInfo;
-  }
 
   function displayUserInfo() {
     const userInfo = getUserInfo();
@@ -688,7 +670,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update profile picture element
     const profilePicElement = document.getElementById('profile-pic');
     if (profilePicElement) {
-      profilePicElement.src = userInfo.profilePic;
+      profilePicElement.src = userInfo.userProfilePic;
     }
 
     // Update profile name element
@@ -700,7 +682,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update tagline element
     const taglineElement = document.getElementById('tagline');
     if (taglineElement) {
-      taglineElement.textContent = userInfo.tagLine;
+      taglineElement.textContent = userInfo.userTagLine;
     }
   }
 
@@ -832,9 +814,9 @@ function checkUserInfoChanges() {
 	
 	
 	
-function transferAccountToEmailUserInfo(userInfo, email) {
+function transferAccountToEmailUserInfo(userInfo, userEmail) {
   saveUserInfoToFirestore(userInfo);
-  const emailUserInfo = { ...userInfo, email };
+  const emailUserInfo = { ...userInfo, userEmail };
   localStorage.setItem('emailUserInfo', JSON.stringify(emailUserInfo));
 }
 
@@ -867,11 +849,12 @@ function getUserInfoFromAuthProvider(user) {
 
   const userInfo = {
     userName: displayName,
-    profilePic: user.photoURL,
-    tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-    rank: 'Beginner',
-    points: 0,
-    quizzesTaken: 0,
+    userEmail: email,
+    userProfilePic: user.photoURL,
+    userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+    userRank: 'Beginner',
+    userPoints: 0,
+    userQuizzesTaken: 0,
     firebaseId: firebaseId
   };
 //saveUserInfoToFirestore(userInfo)
@@ -1106,13 +1089,14 @@ window.createUserWithEmailAndPassword = function (event) {
       // Save user info to Firestore database
       const userInfo = {
         userName: username,
-        profilePic: '/images/avatar/w1.png',
-        tagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-        rank: 'Beginner',
-        points: 0,
-        quizzesTaken: 0,
-        firebaseId: firebaseId
-      };
+    userEmail: email,
+    userProfilePic: '/images/avatar/w1.png',
+    userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+    userRank: 'Beginner',
+    userPoints: 0,
+    userQuizzesTaken: 0,
+    firebaseId: firebaseId
+  };
       transferAccountToEmailUserInfo(userInfo, email); // Transfer account to email if needed
       saveUserInfoToFirestore(userInfo); // Save user info to Firestore
 
