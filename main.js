@@ -1231,7 +1231,7 @@ function initializeNavbarToggler() {
 
     console.log("userInfo firebaseId :", userInfo.firebaseId);
 
-  console.log('collapse button :');
+  console.log('collapse btn last main.js :');
 }
 
 
