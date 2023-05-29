@@ -1,7 +1,7 @@
 	
 main_section {
     width: 100vw !important;
-    height: 100vh !important;
+    height: 90vh !important;
     overflow: hidden;
     /* scroll-behavior: smooth; */
     /* scroll-snap-type: block; */
@@ -55,6 +55,8 @@ main_section {
         text-align: center;
         margin-top: 50px;
         position: relative;
+	          height: 90vh !important;
+
       }
 
       #quiz-container h1 {
