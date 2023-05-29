@@ -1,3 +1,17 @@
+  // Create the overlay div
+    var overlay = document.createElement("div");
+    overlay.setAttribute("id", "overlay");
+
+    // Create the loader div
+    var loader = document.createElement("div");
+    loader.setAttribute("id", "loader");
+
+    // Append the loader to the overlay
+    overlay.appendChild(loader);
+
+    // Append the overlay to the body
+    document.body.appendChild(overlay);
+
 window.addEventListener("load", function() {
   var overlay = document.getElementById("overlay");
   overlay.classList.add("loaded");
