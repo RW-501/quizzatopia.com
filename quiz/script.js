@@ -622,6 +622,7 @@ const earnedPoints = calculateEarnedPoints();
 	// Usage example:
 const startValue = 0;
 const animationDuration = 2000; // Duration in milliseconds (2 seconds)
+  console.log('earnedPoints:', earnedPoints);
 
 	if(earnedPoints > 0){
 displayEarnedPoints(startValue, earnedPoints, animationDuration);
