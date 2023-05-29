@@ -195,11 +195,7 @@
           <!-- Quiz Image -->
         </div>
 
-	        <script>
-
-	      console.log("Made it pass... 200");
-  </script>
-
+	
 	
 	
         <div class="container" style="padding: 2%;" loading="lazy">
@@ -269,10 +265,7 @@
             Google Ads
             <p>
 		    
-	  <script>
 
-	      console.log("Made it pass... 270");
-  </script>
 
 	
               
@@ -313,10 +306,7 @@
 
 	      
 	
-  <script>
 
-	      console.log("Made it pass... 310");
-  </script>
 
 	
 	
@@ -324,17 +314,14 @@
         <div id="btn_container">
           <!-- Button container -->
           <button id="show-explanation-btn" class="btn btn-primary d-none mt-3">Show Explanation</button>
-          <button id="skip-next-btn" class="btn btn-primary mt-3">Skip</button>
+          <button id="skip-next-btn" class="btn btn-primary mt-3"  onclick="skipOrNext()">Skip</button>
         </div>
       </div>
     </div>
   </div>
 
 		
-	  <script>
-
-	      console.log("Made it pass... 335");
-  </script>
+	
 		
   <div class="explanation-container">
     <button id="close-btn" class="close-button">&times;</button>
@@ -359,10 +346,7 @@
       </div>
     </p>
 		
-	  <script>
-
-	      console.log("Made it pass... 365");
-  </script>
+	
 		
     <button id="retake-btn" class="btn btn-primary mt-4">Retake Quiz</button>
     <!-- Retake Quiz Button -->
@@ -385,10 +369,7 @@
       </p>
     </div>
 				
-	  <script>
-
-	      console.log("Made it pass... 390");
-  </script>
+	
 		
     <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="Quizzatopia" data-color="#5F7FFF" data-emoji="" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00"></script>
   </div>
@@ -397,11 +378,7 @@
 	 
 	</main_section>
 	
-	  <script>
-
-	      console.log("Made it pass... 403");
-  </script>
-
+	
 	
 					
 	<form id="reportForm" method="POST" action="https://formspree.io/Quizzatopia@gmail.com">
@@ -424,11 +401,7 @@
 	
 		
 
-	  <script>
-
-	      console.log("Made it pass... 430");
-  </script>
-
+	  
 	
 	
 	
@@ -1029,8 +1002,8 @@ document.addEventListener('click', function (e) {
 if (  q === null || q === '') {
   console.log("empty.");
 
-  window.location.href = "https://quizzatopia.com/quiz/?q=" + q;
-  //location.reload();
+  //window.location.href = "https://quizzatopia.com/quiz/?q=" + q;
+  location.reload();
 }else{
           console.log("Q:   "+q);
 	
