@@ -66,7 +66,18 @@ function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
 
 
 
-
+function slideIn(xxx) {
+  var myDiv = document.getElementById(xxx);
+  var keyframes = [
+    { transform: "translateX(-100%)" },
+    { transform: "translateX(0)" }
+  ];
+  var options = {
+    duration: 500,
+    easing: "ease"
+  };
+  myDiv.animate(keyframes, options);
+}
 
 
 
@@ -79,7 +90,9 @@ function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
 // Function to start the quiz
 function startQuiz() {
  var divElement = document.getElementById("testInfo");
-
+	
+slideIn("quiz-container");
+	
 if (  q === null || q === '') {
     console.log("empty.");
 	  location.reload();
