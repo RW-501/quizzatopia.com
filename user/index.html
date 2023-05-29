@@ -244,11 +244,11 @@ timerId = setTimeout (function() {
 	      let userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
       document.getElementById('userNameQ').value = userInfo.userName;
-      document.getElementById('userRankQ').innerHTML = userInfo.rank;
-      document.getElementById('userPointsQ').innerHTML = userInfo.points;
-      document.getElementById('userQuzziesTaken').innerHTML = userInfo.quizzesTaken;
-      document.getElementById('userTagLine').value = userInfo.tagLine;
-      document.getElementById('userPic').src = userInfo.profilePic;
+      document.getElementById('userRankQ').innerHTML = userInfo.userRank;
+      document.getElementById('userPointsQ').innerHTML = userInfo.userPoints;
+      document.getElementById('userQuzziesTaken').innerHTML = userInfo.userQuizzesTaken;
+      document.getElementById('userTagLine').value = userInfo.userTagLine;
+      document.getElementById('userPic').src = userInfo.userProfilePic;
 	    
 	  console.log("userInfo .... "+userInfo);
     }
@@ -262,7 +262,7 @@ timerId = setTimeout (function() {
     function closeImagePopup() {
       const popup = document.getElementById("imagePopup");
       popup.style.display = "none";
-      document.getElementById('profile-pic').src = userInfo.profilePic;
+      document.getElementById('profile-pic').src = userInfo.userProfilePic;
 
     }
 
