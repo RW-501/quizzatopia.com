@@ -313,7 +313,7 @@
         <!-- Explanation area -->
         <div id="btn_container">
           <!-- Button container -->
-          <button id="show-explanation-btn" class="btn btn-primary d-none mt-3">Show Explanation</button>
+          <button id="show-explanation-btn" class="btn btn-primary d-none mt-3"  onclick="showExplanationFunc()">Show Explanation</button>
           <button id="skip-next-btn" class="btn btn-primary mt-3"  onclick="skipOrNext()">Skip</button>
         </div>
       </div>
@@ -997,7 +997,6 @@ document.addEventListener('click', function (e) {
 	  // Close the modal
   closeModal();
 });
-   var divElement = document.getElementById("testInfo");
 
 if (  q === null || q === '') {
   console.log("empty.");
