@@ -1,4 +1,51 @@
-  // Create the overlay div
+ // Create the <style> element
+var styleElement = document.createElement("style");
+
+// Set the CSS styles
+var cssStyles = `
+  /* CSS styles for the overlay and loader */
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    z-index: 9999;
+  }
+
+  #loader {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 6px solid #aaaaaa;
+    border-top-color: #000000;
+    animation: loader-spin 1s infinite linear;
+  }
+
+  @keyframes loader-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+`;
+
+// Set the CSS code as the content of the <style> element
+styleElement.textContent = cssStyles;
+
+// Append the <style> element to the <head> section of the document
+document.head.appendChild(styleElement);
+
+
+// Create the overlay div
     var overlay = document.createElement("div");
     overlay.setAttribute("id", "overlay");
 
