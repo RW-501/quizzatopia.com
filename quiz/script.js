@@ -808,7 +808,10 @@ document.getElementById('show-explanation-btn').classList.remove("d-none");
 	explanationContainer.style.display = 'block';
 ///});
 }
-
-document.getElementById("retake-btn").addEventListener("click", () => {
+function retakeQuizFunc(){
+//document.getElementById("retake-btn").addEventListener("click", () => {
 location.href = "/quiz/?q="+q;
-});
+////});
+}
+
+
