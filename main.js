@@ -745,25 +745,24 @@ const apiKey = 'f26dee18c273451e8622b5c4bb618167';
 		function getUserLocation() {
 getUserIP();
 	// Make a request to the IP Geolocation API
-fetch(`https://api.ipgeolocationapi.com/geolocate/${ipAddress}?api_key=${apiKey}`)
+return fetch(`https://api.ipgeolocationapi.com/geolocate/${ipAddress}?api_key=${apiKey}`)
   .then(response => response.json())
   .then(data => {
-    const { country_name, city, latitude, longitude } = data;
-       const userCountry = country_name;
-      const userCity = city;
-      const userLatitude = latitude;
-      const userLongitude = longitude;
+       const userCountry =  data.country_name;
+      const userCity =  data.city;
+      const userLatitude =  data.latitude;
+      const userLongitude =  data.longitude;
  
-	      return { userCountry, userCity, userLatitude, userLongitude };
+	    return { userCountry, userCity, userLatitude, userLongitude };
 
     // Use the location data as needed
   })
   .catch(error => {
     console.error('Error:', error);
-	      return null;
+	     return null;
 
   });
-			
+		}	
 			
 	
 
