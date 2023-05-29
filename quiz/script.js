@@ -490,8 +490,8 @@ function skipOrNext() {
 }
 
 // Add event listener to the skip-next-btn
-const skipNextBtn = document.getElementById('skip-next-btn');
-skipNextBtn.addEventListener('click', skipOrNext);
+//const skipNextBtn = document.getElementById('skip-next-btn');
+//skipNextBtn.addEventListener('click', skipOrNext);
 
 
 
