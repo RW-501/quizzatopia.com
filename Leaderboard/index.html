@@ -148,16 +148,17 @@
 
 
     console.log('lbUserInfo ', lbUserInfo);
-    console.log('lbUserInfo r ', lbUserInfo.rank);
+    console.log('lbUserInfo r ', lbUserInfo.userRank);
     console.log('lbUserInfo p ', lbUserInfo.points);
 		  
 		  // Update HTML elements with user information
 //document.getElementById('uName').innerHTML = lbUserInfo.userName;
-document.getElementById('uRank').innerHTML = lbUserInfo.rank;
-document.getElementById('uPoints').innerHTML = lbUserInfo.points;
-    console.log('state ', lbUserInfo.state);
-    console.log('city ', lbUserInfo.city);
-// document.getElementById('uQuzziesTaken').innerHTML = lbUserInfo.quizzesTaken;
+document.getElementById('uRank').innerHTML = lbUserInfo.userRank;
+document.getElementById('uPoints').innerHTML = lbUserInfo.userRank;
+			  
+    console.log('userCountry ', lbUserInfo.userCountry);
+    console.log('userCity ', lbUserInfo.userCity);
+// document.getElementById('uQuzziesTaken').innerHTML = lbUserInfo.userQuizzesTaken;
 
 document.getElementById('uPic').src = lbUserInfo.profilePic;
 };
