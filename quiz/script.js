@@ -508,19 +508,7 @@ const currentQuestionNumber = currentQuestion === 0 ? 1 : currentQuestion;
 
 
 
-// Calculate the earned points in the quiz
-function displayEarnedPoints(earnedPoints) {
-	if(earnedPoints > 0){
-  const earnedPointsElement = document.getElementById("earnedPoints");
-earnedPointsElement.textContent = `+${earnedPoints} Points!`;
-  earnedPointsElement.classList.add("animate-earned-points");
 
-  setTimeout(() => {
-   // updatePoints(earnedPoints);
-    earnedPointsElement.classList.remove("animate-earned-points");
-  }, 5000);
-	}
-}
   const userStartPoints = userInfo.points;
 let initialPoints = userStartPoints;
 
@@ -575,7 +563,7 @@ function addBadgeToUser(userId, badgeId) {
 }
 
 
-function animateNumber(start, end, duration) {
+function displayEarnedPoints(start, end, duration) {
   let current = start;
   const increment = Math.ceil((end - start) / duration * 10); // Adjust the speed of animation by changing the increment value
   const counterElement = document.getElementById("earnedPoints");
@@ -636,8 +624,7 @@ const startValue = 0;
 const animationDuration = 2000; // Duration in milliseconds (2 seconds)
 
 	if(earnedPoints > 0){
-animateNumber(startValue, earnedPoints, animationDuration);
-displayEarnedPoints(earnedPoints);
+displayEarnedPoints(startValue, earnedPoints, animationDuration);
 	}
 	
   // Hide the quiz container and show the end container
@@ -659,18 +646,7 @@ const uniqueArray = newBadges.filter(item => !oldBadges.some(element => element.
   console.log('newBadges inside:', newBadges);
   console.log('oldBadges inside:', oldBadges);
 
-  const filteredArray = oldBadges.filter(element => !newBadges.some(item => item.id === element.id));
 
-  console.log("filteredArray:", filteredArray);
-  console.log("uniqueArray:", uniqueArray);
-
-  for (let i = 0; i < filteredArray.length; i++) {
-    console.log(i + " filteredArray id: " + filteredArray[i].id);
-  }
-
-  for (let i = 0; i < uniqueArray.length; i++) {
-    console.log(i + " uniqueArray id: " + uniqueArray[i].id);
-  }
 */	
 
 	
