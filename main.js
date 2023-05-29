@@ -1341,5 +1341,26 @@ function slideIn(xxx) {
   myDiv.animate(keyframes, options);
 }
 
+
+function showLoginPopupIfNeeded() {
+  var  QUIZ_COUNT_THRESHOLD = 2;
+  const localStorageKey = 'userInfo';
+  var  quizCount = localStorage.getItem(localStorageKey);
+
+  if (!quizCount) {
+    // First time user, set the quiz count to 1
+    localStorage.setItem(localStorageKey, '1');
+  } else {
+    // Increment the quiz count and update the localStorage
+    const newQuizCount = parseInt(quizCount) + 1;
+    localStorage.setItem(localStorageKey, newQuizCount.toString());
+
+
+  }
+}
+
+
+
+
    
 		    console.log("  ?????????????????????????    ^   Main.js ^   ????????????????????????999        ");
