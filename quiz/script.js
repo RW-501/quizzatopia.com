@@ -786,6 +786,18 @@ function startTimer() {
         }
 }
 
+
+document.addEventListener('DOMContentLoaded', function() {
+
+function retakeQuizFunc(){
+document.getElementById("retake-btn").addEventListener("click", () => {
+location.href = "/quiz/?q="+q;
+});
+}
+	
+});
+
+
 // Add event listener to the skip-next-btn
 //const skipNextBtn = document.getElementById('skip-next-btn');
 //skipNextBtn.addEventListener('click', skipOrNext);
@@ -809,13 +821,4 @@ document.getElementById('show-explanation-btn').classList.remove("d-none");
 	explanationContainer.style.display = 'block';
 ///});
 }
-document.addEventListener('DOMContentLoaded', function() {
-
-//function retakeQuizFunc(){
-document.getElementById("retake-btn").addEventListener("click", () => {
-location.href = "/quiz/?q="+q;
-});
-
-});
-
 
