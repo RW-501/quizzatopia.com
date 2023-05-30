@@ -240,7 +240,7 @@ timerId = setTimeout (function() {
     }
 
     function displayUserInfo() {
-  let userInf = localStorage.getItem("userInfo");
+  //let userInf = localStorage.getItem("userInfo");
 	      let userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
       document.getElementById('userNameQ').value = userInfo.userName;
@@ -250,7 +250,7 @@ timerId = setTimeout (function() {
       document.getElementById('userTagLine').value = userInfo.userTagLine;
       document.getElementById('userPic').src = userInfo.userProfilePic;
 	    
-	  console.log(userInf+"  userInfo .... "+userInfo+ " ll  "+JSON.stringify(userInfo));
+	  console.log(" userInfo  "+JSON.stringify(userInfo));
     }
 
     // Image popup related functions
@@ -291,7 +291,7 @@ timerId = setTimeout (function() {
           const quizInfoElement = document.createElement('div');
           quizInfoElement.classList.add('quiz-infop');
           quizInfoElement.innerHTML = `
-            <a href="/quiz?q=${quizLink}" class=""><h4>${quizName}</h4></a>
+            <a href="/quiz/?q=${quizLink}" class=""><h4>${quizName}</h4></a>
             <p>Quiz Taken: ${quizTime}</p>
             <p>Scored: ${questionCorrect}/${numberOfQuestions} Questions</p>
           `;
@@ -395,6 +395,7 @@ function clearLocalStorage() {
 displayBadges();
 getUserInfo();
 	        displayUserInfo();
+      getLocalStorageUsage();
 
     alert('Local storage cleared!');
   }
