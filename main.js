@@ -141,8 +141,9 @@ function getUserInfo() {
 
 
 
+
 function displayUserInfo() {
-  const userInfo = getUserInfo();
+//  const userInfo = getUserInfo();
 
   const profilePicElement = document.getElementById('profile-pic');
   if (profilePicElement) {
@@ -204,12 +205,6 @@ function updateQuizzesTaken(userQuizzesTaken) {
   localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
   displayUserInfo();
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-  displayUserInfo();
-	console.log("  Update  911 ");
-});
-
 
 
 
@@ -1316,6 +1311,11 @@ window.onload = function() {
 
   updateNavBar();
 }
+document.addEventListener('DOMContentLoaded', function() {
+  displayUserInfo();
+	console.log("  Update  911 ");
+});
+
 
 
 function slideIn(xxx) {
