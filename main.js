@@ -634,26 +634,14 @@ if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function')
 // Function to retrieve user location using a geolocation API
 
 
+			var ipAddress;
 
 		function getUserLocation() {
 			
 			
-			var ipAddress;
-	function getUserIP(){
-// This approach uses a third-party API to fetch the user's IP address
-fetch('https://api.ipify.org?format=json')
-  .then(response => response.json())
-  .then(data => {
-     ipAddress = data.ip;
-    console.log(ipAddress);
-    // Use the IP address as needed
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
-	}
 	
-getUserIP();
+
+			
   const USER_INFO_KEY = 'user_location';
   const savedUserInfo = localStorage.getItem(USER_INFO_KEY);
 
@@ -663,8 +651,9 @@ getUserIP();
   }
   const apiKey = 'f26dee18c273451e8622b5c4bb618167';
 
-  // Make a request to the IP Geolocation API
-  return fetch(`https://api.ipgeolocationapi.com/geolocate/${ipAddress}?api_key=${apiKey}`)
+	 const apiUrl = `http://api.ipstack.com/${ipAddress}?access_key=${apiKey}`;
+
+  return fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
       const userCountry = data.country_name;
@@ -674,7 +663,7 @@ getUserIP();
       console.log('userCountry ID:', userCountry);
       console.log('userCity ID:', userCity);
 
-      const userInfo = {
+      const locationInfo = {
         userCountry,
         userCity,
         userLatitude,
@@ -682,14 +671,29 @@ getUserIP();
       };
 
       // Save the user location in local storage
-      localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
-
-      return userInfo;
+      localStorage.setItem(USER_INFO_KEY, JSON.stringify(locationInfo));
+      return locationInfo;
     })
     .catch(error => {
       console.error('Error:', error);
       return null;
     });
+}
+
+function ipFunc(){
+// This approach uses a third-party API to fetch the user's IP address
+fetch('https://api.ipify.org?format=json')
+  .then(response => response.json())
+  .then(data => {
+     ipAddress = data.ip;
+    console.log(ipAddress);
+    // Use the IP address as needed
+	getUserLocation();
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+		
 }
 
 	
@@ -714,7 +718,7 @@ function saveUserInfoToFirestore(userInfo) {
 function checkUserInfoChanges() {
   const userInfo = getUserInfo();
 
-  getUserLocation()
+  ipFunc()
     .then((location) => {
       const { userCountry, userCity, userLatitude, userLongitude } = location;
 
@@ -913,7 +917,7 @@ function validateFields(username, email, password) {
 function checkUserInfoChanges() {
   const userInfo = getUserInfo();
 
-  getUserLocation().then((location) => {
+  ipFunc().then((location) => {
 	      const { userCountry, userCity, userLatitude, userLongitude } = location;
 
     if (
