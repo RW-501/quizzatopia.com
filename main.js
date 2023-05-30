@@ -1145,18 +1145,18 @@ function fetchAndInsertContent() {
   if (currentPagePath === '/' || currentPagePath === '/index.html') {
     navbarPath = './elements/navbar.html';
     footerPath = './elements/footer.html';
-	  	    //  console.log("footerPath 1.... ");
+	  	      console.log("footerPath 1.... ");
 
   } else {
     navbarPath = window.location.origin +'/elements/navbar2.html';
     footerPath = window.location.origin +'/elements/footer2.html';
 	  
 	  
-	  //    console.log(footerPath+"    footerPath 2.... "+ window.location.origin);
+	     console.log(footerPath+"    footerPath 2.... "+ window.location.origin);
 
   }
 
-	
+	  fetchAndInsertContent();
 
   fetch(navbarPath)
     .then(response => response.text())
@@ -1187,7 +1187,7 @@ function fetchAndInsertContent() {
 
 
 
-  fetchAndInsertContent();
+
 });
 
 
