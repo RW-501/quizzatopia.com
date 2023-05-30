@@ -590,7 +590,7 @@ location.href = "/quiz/?q="+q;
 
 
 function endQuiz() {
-	endFucs();
+	
   clearInterval(timer);
   quizStarted = false;
 
@@ -690,7 +690,7 @@ function displayBadges() {
 displayBadges();  
 	}
 	
-	
+	endFucs();
 	
   // Unhide the message board
  // document.getElementById("MessageBoard").classList.remove("d-none");
