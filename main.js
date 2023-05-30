@@ -632,7 +632,13 @@ if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function')
   //const usersCollection = db.collection('users');
 
 // Function to retrieve user location using a geolocation API
-var ipAddress;
+
+
+
+		function getUserLocation() {
+			
+			
+			var ipAddress;
 	function getUserIP(){
 // This approach uses a third-party API to fetch the user's IP address
 fetch('https://api.ipify.org?format=json')
@@ -648,9 +654,6 @@ fetch('https://api.ipify.org?format=json')
 	}
 	
 getUserIP();
-
-
-		function getUserLocation() {
   const USER_INFO_KEY = 'user_location';
   const savedUserInfo = localStorage.getItem(USER_INFO_KEY);
 
