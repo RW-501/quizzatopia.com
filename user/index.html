@@ -230,6 +230,9 @@ function saveChanges() {
   var newUsername = document.getElementById("userNameQ").value;
   var newTagline = document.getElementById("userTagLine").value;
   // Perform the necessary actions to save the changes
+	
+	 updateUserInfo({ userName: newUsername, userTagLine: newTagline });
+	
 }
 
 function animateTextChanges() {
