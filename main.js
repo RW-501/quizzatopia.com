@@ -138,11 +138,6 @@ function getUserInfo() {
 
 
 
-
-
-  window.addEventListener('load', function() {
-
-
 function displayUserInfo() {
 //  const userInfo = getUserInfo();
  userInfo = JSON.parse(localStorage.getItem("userInfo"));
@@ -166,9 +161,10 @@ function displayUserInfo() {
 
 
 
+
+
+
   displayUserInfo();
-	console.log("  Update  911 ");
-});
 
 
 
