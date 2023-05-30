@@ -1112,13 +1112,6 @@ function updateUserInfo(updatedInfo) {
 
 
 
-
-
-window.addEventListener('load', function() {
-
-
-
-
 	  let navbarPath, footerPath;
 
 // Function to fetch and insert HTML based on the page level
@@ -1127,27 +1120,51 @@ function fetchAndInsertContent() {
   if (currentPagePath === '/' || currentPagePath === '/index.html') {
     navbarPath = './elements/navbar.html';
     footerPath = './elements/footer.html';
-	  	      console.log("footerPath 1.... ");
+	  	    //  console.log("footerPath 1.... ");
 
   } else {
     navbarPath = window.location.origin +'/elements/navbar2.html';
     footerPath = window.location.origin +'/elements/footer2.html';
 	  
 	  
-	     console.log(footerPath+"    footerPath 2.... "+ window.location.origin);
+	  //    console.log(footerPath+"    footerPath 2.... "+ window.location.origin);
 
   }
 
-	  fetchAndInsertContent();
+	
 
-
+  fetch(navbarPath)
+    .then(response => response.text())
+    .then(data => {
+      document.querySelector('#navbar').innerHTML = data;
+      initializeNavbarToggler();
+    });
 
 }
 	
 	
+window.addEventListener('load', function() {
+  // Create the mainFooter div
+  const mainFooter = document.createElement('div');
+  mainFooter.id = 'mainFooter';
+
+  // Fetch and insert the footer HTML
+  fetch(footerPath)
+    .then(response => response.text())
+    .then(data => {
+      mainFooter.innerHTML = data;
+      document.body.appendChild(mainFooter);
+    })
+    .catch(error => {
+      console.error("Error fetching data:", error);
+    });
+});
+
+	
 
 
 
+// Function to initialize the navbar toggler event
 
 function initializeNavbarToggler() {
     var navbarNav = document.querySelector('#navbarNav');
@@ -1166,35 +1183,17 @@ function initializeNavbarToggler() {
 }
 
 
-  fetch(navbarPath)
-    .then(response => response.text())
-    .then(data => {
-      document.querySelector('#navbar').innerHTML = data;
-      initializeNavbarToggler();
-    });
+
+
+// Call the function to fetch and insert the HTML based on the page level
+document.addEventListener('DOMContentLoaded', function() {
+  fetchAndInsertContent();
+});
 
 
 
 
-  // Create the mainFooter div
-  const mainFooter = document.createElement('div');
-  mainFooter.id = 'mainFooter';
 
-  // Fetch and insert the footer HTML
-  fetch(footerPath)
-    .then(response => response.text())
-    .then(data => {
-      mainFooter.innerHTML = data;
-      document.body.appendChild(mainFooter);
-    })
-    .catch(error => {
-      console.error("Error fetching data:", error);
-    });
-
-
-
-
-//
 
 
 window.onload = function() {
