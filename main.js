@@ -1123,11 +1123,14 @@ function fetchAndInsertContent() {
 	  	    //  console.log("footerPath 1.... ");
 
   } else {
-    navbarPath = window.location.origin +'/elements/navbar2.html';
-    footerPath = window.location.origin +'/elements/footer2.html';
+    navbarPath = '/elements/navbar2.html';
+    footerPath = '/elements/footer2.html';   
+	  
+//navbarPath = window.location.origin +'/elements/navbar2.html';
+  //  footerPath = window.location.origin +'/elements/footer2.html';
 	  
 	  
-	  //    console.log(footerPath+"    footerPath 2.... "+ window.location.origin);
+	      console.log(footerPath+"    footerPath 2.... "+ window.location.origin);
 
   }
 
