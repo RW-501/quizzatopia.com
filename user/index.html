@@ -382,8 +382,10 @@ timerId = setTimeout (function() {
       popupContainer.style.display = "none";
     }
 
-	  
-	  
+	      let userInfoP = JSON.parse(localStorage.getItem("userInfo"));
+
+	        console.log('userInfo :   '+userInfoP);
+
 	    		 
 function clearLocalStorage() {
   const confirmed = confirm('Are you sure you want to clear the local storage?');
