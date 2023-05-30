@@ -114,7 +114,8 @@ function getUserInfo() {
     return cachedUserInfo;
   }
 
-const   userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
+//const   userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
+  const userInfo = localStorage.getItem('userInfo');
 
   if (!userInfo) {
     userInfo = {
