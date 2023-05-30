@@ -664,7 +664,6 @@ fetch('https://api.ipify.org?format=json')
   }
 
   const apiKey = 'f26dee18c273451e8622b5c4bb618167';
-  const ipAddress = getUserIP();
 
   // Make a request to the IP Geolocation API
   return fetch(`https://api.ipgeolocationapi.com/geolocate/${ipAddress}?api_key=${apiKey}`)
