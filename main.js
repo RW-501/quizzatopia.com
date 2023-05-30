@@ -647,6 +647,7 @@ fetch('https://api.ipify.org?format=json')
   });
 	}
 	
+getUserIP();
 
 
 		function getUserLocation() {
@@ -657,7 +658,6 @@ fetch('https://api.ipify.org?format=json')
     // User location is already saved in local storage, return the parsed object
     return JSON.parse(savedUserInfo);
   }
-getUserIP();
   const apiKey = 'f26dee18c273451e8622b5c4bb618167';
 
   // Make a request to the IP Geolocation API
