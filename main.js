@@ -1132,7 +1132,7 @@ function initializeNavbarToggler() {
 
 
 
-window.addEventListener('load', function() {
+//window.addEventListener('load', function() {
 
 
 
@@ -1188,7 +1188,7 @@ function fetchAndInsertContent() {
 
 
 
-});
+//});
 
 
 window.onload = function() {
