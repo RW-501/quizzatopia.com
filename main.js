@@ -122,7 +122,7 @@ function getUserInfo() {
       userEmail: '',
       userActive: true,
       userJoinedDate: new Date().toISOString(),
-      userCity: '',
+      userState: '',
       userLongitude: '',
       userLatitude: '',
       userCountry: '',
@@ -649,23 +649,23 @@ if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function')
     // User location is already saved in local storage, return the parsed object
     return JSON.parse(savedUserInfo);
   }
-  const apiKey = 'b0de30bbebfbdcaaf38a41b308ac0679';
 
-	 const apiUrl = `https://api.ipstack.com/${ipAddress}?access_key=${apiKey}`;
+			
+	 const apiUrl = `https://quizzatopia.com/geo/usa_states.json${ipAddress}`;
 
   return fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
       const userCountry = data.country_name;
-      const userCity = data.city;
+      const userState = data.state;
       const userLatitude = data.latitude;
       const userLongitude = data.longitude;
       console.log('userCountry ID:', userCountry);
-      console.log('userCity ID:', userCity);
+      console.log('userState ID:', userState);
 
       const locationInfo = {
         userCountry,
-        userCity,
+        userState,
         userLatitude,
         userLongitude
       };
@@ -720,17 +720,17 @@ function checkUserInfoChanges() {
 
   ipFunc()
     .then((location) => {
-      const { userCountry, userCity, userLatitude, userLongitude } = location;
+      const { userCountry, userState, userLatitude, userLongitude } = location;
 
       if (
-        userInfo.userCity !== userCity ||
+        userInfo.userState !== userState ||
         userInfo.userCountry !== userCountry ||
         userInfo.userLatitude !== userLatitude ||
         userInfo.userLongitude !== userLongitude
       ) {
         // User location has changed, update user information
         const updatedInfo = {
-          userCity,
+          userState,
           userCountry,
           userLatitude,
           userLongitude,
@@ -794,7 +794,7 @@ window.signInWithGoogle = function () {
         userPoints: 0,
         userQuizzesTaken: 0,
         userCountry: '',
-        userCity: '',
+        userState: '',
         userLatitude: 0,
         userLongitude: 0,
         firebaseId: firebaseId,
@@ -854,7 +854,7 @@ window.createUserWithEmailAndPassword = function (email, password) {
         userPoints: 0,
         userQuizzesTaken: 0,
         userCountry: '',
-        userCity: '',
+        userState: '',
         userLatitude: 0,
         userLongitude: 0,
         firebaseId: firebaseId,
@@ -918,17 +918,17 @@ function checkUserInfoChanges() {
   const userInfo = getUserInfo();
 
   ipFunc().then((location) => {
-	      const { userCountry, userCity, userLatitude, userLongitude } = location;
+	      const { userCountry, userState, userLatitude, userLongitude } = location;
 
     if (
-      userInfo.userCity !== userCity ||
+      userInfo.userState !== userState ||
       userInfo.userCountry !== userCountry ||
       userInfo.userLatitude !== userLatitude ||
       userInfo.userLongitude !== userLongitude
     ) {
       // User location has changed, update user information
       const updatedInfo = {
-        userCity,
+        userState,
         userCountry,
         userLatitude,
         userLongitude,
