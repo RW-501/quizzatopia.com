@@ -758,11 +758,16 @@ function checkUserInfoChanges() {
       console.error('Error retrieving user location:', error);
     });
 }
+
+
+
+
+// Update the signInWithGoogle function
 // Update the signInWithGoogle function
 window.signInWithGoogle = function () {
   const provider = new firebase.auth.GoogleAuthProvider();
 
-  auth
+  firebase.auth()
     .signInWithPopup(provider)
     .then((result) => {
       const user = result.user;
@@ -814,61 +819,11 @@ window.signInWithGoogle = function () {
     });
 };
 
-// Update the signInWithFacebook function
-window.signInWithFacebook = function () {
-  const provider = new firebase.auth.FacebookAuthProvider();
 
-  auth
-    .signInWithPopup(provider)
-    .then((result) => {
-      const user = result.user;
 
-      // Get the user's display name and Firebase ID
-      const displayName = user.displayName;
-      const firebaseId = user.uid;
 
-      // Example: Show a success message and user info
-      showStatusMessage('Sign-in successful', 'success');
-      console.log('User display name:', displayName);
-      console.log('Firebase ID:', firebaseId);
 
-      // Save user info to Firestore database
-      const userInfo = {
-        userName: displayName,
-        userEmail: user.email,
-        userProfilePic: user.photoURL,
-        userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-        userRank: 'Beginner',
-        userPoints: 0,
-        userQuizzesTaken: 0,
-        userCountry: '',
-        userCity: '',
-        userLatitude: 0,
-        userLongitude: 0,
-        firebaseId: firebaseId,
-        lastUpdated: new Date().getTime(),
-      };
-      saveUserInfoToFirestore(userInfo); // Save user info to Firestore
 
-      // Set the logged-in cookie
-      document.cookie = 'loggedIn=true';
-
-      // Sign-in successful
-      onAuthSuccess(userInfo);
-
-      updateUserInfo(userInfo);
-
-      // Check if user info changes
-      checkUserInfoChanges();
-    })
-    .catch((error) => {
-      // Handle any errors that occurred during sign-in
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      showStatusMessage(errorMessage, 'error');
-      document.cookie = 'loggedIn=false';
-    });
-};
 
 // Update the createUserWithEmailAndPassword function
 window.createUserWithEmailAndPassword = function (email, password) {
