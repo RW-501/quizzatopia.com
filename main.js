@@ -1132,7 +1132,7 @@ function fetchAndInsertContent() {
   //  footerPath = window.location.origin +'/elements/footer2.html';
 	  
 	  
-	      console.log(footerPath+"    footerPath 2.... "+ window.location.origin);
+	   //   console.log(footerPath+"    footerPath 2.... "+ window.location.origin);
 
   }
 
