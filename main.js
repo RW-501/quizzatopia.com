@@ -1243,7 +1243,9 @@ function initializeNavbarToggler() {
     var navbarNav = document.querySelector('#navbarNav');
 
       navbarNav.classList.add('collapse');
-	
+	    var loggedInDiv = document.querySelector('#navLoggedin');
+      loggedInDiv.style.display = 'none';
+
 
 
 		  let userInfo = JSON.parse(localStorage.getItem("userInfo"));
@@ -1265,8 +1267,14 @@ document.addEventListener('DOMContentLoaded', function() {
 window.onload = function() {
   var navbarNav = document.querySelector('#navbarNav');
   navbarNav.classList.toggle('collapse');
-	  console.log('collapse toggle last main.js :');
-
+    // Check if the navbar is collapsed or not
+    if (navbarNav.classList.contains('collapse')) {
+      // Navbar is collapsed, hide the "logged in" div
+      loggedInDiv.style.display = 'none';
+    } else {
+      // Navbar is not collapsed, show the "logged in" div
+      loggedInDiv.style.display = 'block';
+    }
 };
 
 
