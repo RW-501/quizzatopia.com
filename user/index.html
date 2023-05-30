@@ -64,9 +64,9 @@
 
 	      
         <!-- User tagline -->
-<input id="userNameQ" type="text" class="user-name mt-3" placeholder="Username" onblur="showSaveMessage();" spellcheck="false" autocomplete="off">
+<input id="userNameQ" type="text" class="user-name mt-3" placeholder="username" onblur="showSaveMessage();" spellcheck="false" autocomplete="off">
 <hr>
-<textarea id="userTagLine" class="text-muted" placeholder="Tagline" onblur="showSaveMessage();" style="min-height: 100px; width: 75%; overflow: auto;" spellcheck="false" autocomplete="off"></textarea>
+<textarea id="userTagLine" class="text-muted" placeholder="tagline" onblur="showSaveMessage();" style="min-height: 100px; width: 75%; overflow: auto;" spellcheck="false" autocomplete="off"></textarea>
 
 <p id="savedMessage" style="display: none;">Changes saved!</p>
 
@@ -386,6 +386,9 @@ function displayProfileInfo() {
       const popupContainer = document.getElementById("popupContainer");
       popupContainer.style.display = "none";
     }
+function removeLoginCookie() {
+  document.cookie = "loginCookie=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}
 
 	  
 
@@ -399,7 +402,7 @@ displayBadges();
 getUserInfo();
 	        displayProfileInfo();
       getLocalStorageUsage();
-
+removeLoginCookie();
     alert('Local storage cleared!');
   }
 }
