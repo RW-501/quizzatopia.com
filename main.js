@@ -1113,26 +1113,8 @@ function updateUserInfo(updatedInfo) {
 
 
 
-function initializeNavbarToggler() {
-    var navbarNav = document.querySelector('#navbarNav');
-    navbarNav.classList.add('collapse');
-    var loggedInDiv = document.querySelector('#navLoggedin');
-    loggedInDiv.style.display = 'none';
 
-	const userInfo = getUserInfo();
-	
-   // const userInfo = JSON.parse(localStorage.getItem('userInfo'));
-    document.getElementById('profile-pic').src = userInfo.userProfilePic;
-
-    console.log('userInfo firebaseId:', userInfo.firebaseId);
-
-    console.log('collapse btn last main.js:');
-}
-
-
-
-
-//window.addEventListener('load', function() {
+window.addEventListener('load', function() {
 
 
 
@@ -1158,6 +1140,32 @@ function fetchAndInsertContent() {
 
 	  fetchAndInsertContent();
 
+
+
+}
+	
+	
+
+
+
+
+function initializeNavbarToggler() {
+    var navbarNav = document.querySelector('#navbarNav');
+    navbarNav.classList.add('collapse');
+    var loggedInDiv = document.querySelector('#navLoggedin');
+    loggedInDiv.style.display = 'none';
+
+	const userInfo = getUserInfo();
+	
+   // const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+    document.getElementById('profile-pic').src = userInfo.userProfilePic;
+
+    console.log('userInfo firebaseId:', userInfo.firebaseId);
+
+    console.log('collapse btn last main.js:');
+}
+
+
   fetch(navbarPath)
     .then(response => response.text())
     .then(data => {
@@ -1165,9 +1173,9 @@ function fetchAndInsertContent() {
       initializeNavbarToggler();
     });
 
-}
-	
-	
+
+
+
   // Create the mainFooter div
   const mainFooter = document.createElement('div');
   mainFooter.id = 'mainFooter';
@@ -1186,9 +1194,7 @@ function fetchAndInsertContent() {
 
 
 
-
-
-//});
+//
 
 
 window.onload = function() {
@@ -1197,12 +1203,15 @@ window.onload = function() {
     // Check if the navbar is collapsed or not
     if (navbarNav.classList.contains('collapse')) {
       // Navbar is collapsed, hide the "logged in" div
-      loggedInDiv.style.display = 'none';
+     // loggedInDiv.style.display = 'none';
     } else {
       // Navbar is not collapsed, show the "logged in" div
-      loggedInDiv.style.display = 'block';
+  //    loggedInDiv.style.display = 'block';
     }
 };
+
+});
+
 
 
 
