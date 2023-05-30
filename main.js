@@ -140,6 +140,7 @@ function displayUserInfo() {
   const profilePicElement = document.getElementById('profile-pic');
   if (profilePicElement) {
     profilePicElement.src = userInfo.userProfilePic;
+	  console.log(userInfo+'  ?userInfo.userProfilePic?????????????????????????????????:   '+userInfo.userProfilePic);
   }
 
 //  const profileNameElement = document.getElementById('profile-name');
@@ -199,6 +200,7 @@ function updateQuizzesTaken(userQuizzesTaken) {
 
 document.addEventListener('DOMContentLoaded', function() {
   displayUserInfo();
+	console.log("  Update   ");
 });
 
 
