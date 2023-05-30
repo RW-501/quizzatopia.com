@@ -243,7 +243,7 @@ timerId = setTimeout (function() {
       });
     }
 
-    function displayUserInfo(event) {
+    function displayUserInfo() {
   //let userInf = localStorage.getItem("userInfo");
 	      let userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
@@ -254,7 +254,7 @@ timerId = setTimeout (function() {
       document.getElementById('userTagLine').value = userInfo.userTagLine;
       document.getElementById('userPic').src = userInfo.userProfilePic;
 	    
-	  console.log(event+" userInfo  "+ JSON.stringify(userInfo));
+	  console.log(" userInfo  "+ JSON.stringify(userInfo));
     }
 
     // Image popup related functions
