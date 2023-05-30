@@ -664,29 +664,6 @@ function hideStatusBar() {
 document.addEventListener('DOMContentLoaded', () => {
 
 
-  function displayUserInfo() {
-    const userInfo = getUserInfo();
-
-    // Update profile picture element
-    const profilePicElement = document.getElementById('profile-pic');
-    if (profilePicElement) {
-      profilePicElement.src = userInfo.userProfilePic;
-    }
-
-    // Update profile name element
-    const profileNameElement = document.getElementById('profile-name');
-    if (profileNameElement) {
-      profileNameElement.textContent = userInfo.userName;
-    }
-
-    // Update tagline element
-    const taglineElement = document.getElementById('tagline');
-    if (taglineElement) {
-      taglineElement.textContent = userInfo.userTagLine;
-    }
-  }
-
-
 
    
 
@@ -958,7 +935,6 @@ window.signInWithFacebook = function() {
 document.addEventListener('DOMContentLoaded', function() {
   displayUserInfo();
 });
-
 
 
 // Function to handle the sign-in process using email and password
