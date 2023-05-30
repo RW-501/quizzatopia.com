@@ -649,7 +649,7 @@ if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function')
     // User location is already saved in local storage, return the parsed object
     return JSON.parse(savedUserInfo);
   }
-  const apiKey = 'f26dee18c273451e8622b5c4bb618167';
+  const apiKey = 'b0de30bbebfbdcaaf38a41b308ac0679';
 
 	 const apiUrl = `http://api.ipstack.com/${ipAddress}?access_key=${apiKey}`;
 
