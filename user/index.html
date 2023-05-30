@@ -245,12 +245,13 @@ function animateTextChanges() {
 function displayProfileInfo() {
   let userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
-  document.getElementById('userNameQ').value = userInfo.userName || "";
-  document.getElementById('userRankQ').innerHTML = userInfo.userRank;
-  document.getElementById('userPointsQ').innerHTML = userInfo.userPoints;
-  document.getElementById('userQuzziesTaken').innerHTML = userInfo.userQuizzesTaken;
-  document.getElementById('userTagLine').value = userInfo.userTagLine || "";
-  document.getElementById('userPic').src = userInfo.userProfilePic || "";
+   document.getElementById('userNameQ').value = userInfo.userName;
+      document.getElementById('userRankQ').innerHTML = userInfo.userRank;
+      document.getElementById('userPointsQ').innerHTML = userInfo.userPoints;
+      document.getElementById('userQuzziesTaken').innerHTML = userInfo.userQuizzesTaken;
+      document.getElementById('userTagLine').value = userInfo.userTagLine;
+      document.getElementById('userPic').src = userInfo.userProfilePic;
+	    
 
   console.log("userInfo: " + JSON.stringify(userInfo));
 }
