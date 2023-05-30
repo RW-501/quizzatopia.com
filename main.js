@@ -67,6 +67,12 @@ window.addEventListener("load", function() {
   }, 1000); // Delay in milliseconds before removing the overlay
 });
 
+function setLoggedInCookie() {
+  var expirationDate = new Date();
+  expirationDate.setDate(expirationDate.getDate() + 3);
+
+  document.cookie = "loggedIn=true; expires=" + expirationDate.toUTCString() + "; path=/;";
+}
 
 
 function getCookieValue(cookieName) {
@@ -1153,6 +1159,7 @@ function onAuthSuccess(userInfo) {
   // Call checkUserInfoChanges() after successful login
       checkUserInfoChanges();
 		  loggedIn = true;
+	setLoggedInCookie(); 
  slideOut("loginPopup");
 	
 	
