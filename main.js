@@ -1113,6 +1113,21 @@ function updateUserInfo(updatedInfo) {
 
 
 
+function initializeNavbarToggler() {
+    var navbarNav = document.querySelector('#navbarNav');
+    navbarNav.classList.add('collapse');
+    var loggedInDiv = document.querySelector('#navLoggedin');
+    loggedInDiv.style.display = 'none';
+
+	const userInfo = getUserInfo();
+	
+   // const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+    document.getElementById('profile-pic').src = userInfo.userProfilePic;
+
+    console.log('userInfo firebaseId:', userInfo.firebaseId);
+
+    console.log('collapse btn last main.js:');
+}
 
 
 
@@ -1146,7 +1161,7 @@ function fetchAndInsertContent() {
     .then(response => response.text())
     .then(data => {
       document.querySelector('#navbar').innerHTML = data;
-      displayUserInfo();
+      initializeNavbarToggler();
     });
 
 }
@@ -1170,21 +1185,6 @@ window.addEventListener('load', function() {
 
 
 
-function initializeNavbarToggler() {
-    var navbarNav = document.querySelector('#navbarNav');
-    navbarNav.classList.add('collapse');
-    var loggedInDiv = document.querySelector('#navLoggedin');
-    loggedInDiv.style.display = 'none';
-
-	const userInfo = getUserInfo();
-	
-   // const userInfo = JSON.parse(localStorage.getItem('userInfo'));
-    document.getElementById('profile-pic').src = userInfo.userProfilePic;
-
-    console.log('userInfo firebaseId:', userInfo.firebaseId);
-
-    console.log('collapse btn last main.js:');
-}
 
 
   fetchAndInsertContent();
