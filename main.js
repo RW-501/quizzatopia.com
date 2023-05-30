@@ -651,7 +651,7 @@ if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function')
   }
   const apiKey = 'b0de30bbebfbdcaaf38a41b308ac0679';
 
-	 const apiUrl = `http://api.ipstack.com/${ipAddress}?access_key=${apiKey}`;
+	 const apiUrl = `https://api.ipstack.com/${ipAddress}?access_key=${apiKey}`;
 
   return fetch(apiUrl)
     .then(response => response.json())
