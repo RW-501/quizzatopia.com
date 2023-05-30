@@ -133,7 +133,7 @@ function getUserInfo() {
       userQuizzesTaken: 0,
       userAds: ''
     };
-
+console.log('userInfo main: ', userInfo);
     localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
   }
 
