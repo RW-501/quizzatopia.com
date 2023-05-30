@@ -668,6 +668,8 @@ fetch('https://api.ipify.org?format=json')
       const userCity = data.city;
       const userLatitude = data.latitude;
       const userLongitude = data.longitude;
+      console.log('userCountry ID:', userCountry);
+      console.log('userCity ID:', userCity);
 
       const userInfo = {
         userCountry,
