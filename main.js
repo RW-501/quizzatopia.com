@@ -149,14 +149,14 @@ const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
   const profilePicElement = document.getElementById('profile-pic');
   if (profilePicElement) {
-    profilePicElement.src = window.location.origin +  userInfo.userProfilePic;
+    profilePicElement.src =   userInfo.userProfilePic;
 	  console.log(userInfo+'  ?userInfo.userProfilePic?????????????????????????????????:   '+userInfo.userProfilePic);
   }
 
 //  const profileNameElement = document.getElementById('profile-name');
 //  if (profileNameElement) {
 //    profileNameElement.textContent = userInfo.userName;
-//  }
+//  }  window.location.origin
 
   const taglineElement = document.getElementById('tagline');
   if (taglineElement) {
