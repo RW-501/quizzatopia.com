@@ -1153,8 +1153,11 @@ function onAuthSuccess(userInfo) {
   // Call checkUserInfoChanges() after successful login
       checkUserInfoChanges();
 		  loggedIn = true;
-
-  // Example: Display a welcome message to the user
+ slideOut("loginPopup");
+	
+	
+	
+	// Example: Display a welcome message to the user
   console.log('Welcome, ' + userInfo.userName + '!');
 
   // Example: Redirect the user to a different page
@@ -1173,7 +1176,7 @@ function onAuthSuccess(userInfo) {
 
 
 
- console.log(currentPagePath+"    footerPath 2.... ");
+ //console.log(currentPagePath+"    footerPath 2.... ");
 
 	  let navbarPath, footerPath;
 
@@ -1336,6 +1339,18 @@ function slideIn(xxx) {
   myDiv.animate(keyframes, options);
 }
 
+function slideOut(xxx) {
+  var myDiv = document.getElementById(xxx);
+  var keyframes = [
+    { transform: "translateX(0)" },
+    { transform: "translateX(-100%)" }
+  ];
+  var options = {
+    duration: 500,
+    easing: "ease"
+  };
+  myDiv.animate(keyframes, options);
+}
 
 function showLoginPopupIfNeeded() {
   var  QUIZ_COUNT_THRESHOLD = 2;
