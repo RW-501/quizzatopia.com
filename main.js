@@ -106,7 +106,7 @@ if (cookieValue === 'true') {
 
 // load.js
 const USER_INFO_KEY = 'userInfo';
- 
+
 let cachedUserInfo = null;
 
 function getUserInfo() {
@@ -114,8 +114,7 @@ function getUserInfo() {
     return cachedUserInfo;
   }
 
-const   userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
-// no  const userInfo = localStorage.getItem('userInfo');
+  let userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
 
   if (!userInfo) {
     userInfo = {
@@ -143,29 +142,24 @@ const   userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
 }
 
 
-
 function displayUserInfo() {
-//  const userInfo = getUserInfo();
-const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+  const userInfo = JSON.parse(localStorage.getItem('userInfo'));
 
   const profilePicElement = document.getElementById('profile-pic');
   if (profilePicElement) {
-    profilePicElement.src =   userInfo.userProfilePic;
-	 // console.log(userInfo+'  ?userInfo.userProfilePic?????????????????????????????????:   '+userInfo.userProfilePic);
+    profilePicElement.src = userInfo.userProfilePic;
   }
 
 //  const profileNameElement = document.getElementById('profile-name');
 //  if (profileNameElement) {
 //    profileNameElement.textContent = userInfo.userName;
-//  }  window.location.origin
+//  }
 
   const taglineElement = document.getElementById('tagline');
   if (taglineElement) {
     taglineElement.textContent = userInfo.userTagLine;
   }
 }
-
-
 
 
 
@@ -1177,35 +1171,21 @@ window.addEventListener('load', function() {
 
 
 
-
-
-// Function to initialize the navbar toggler event
 function initializeNavbarToggler() {
-   // var navbarToggler = document.querySelector('.navbar-toggler');
     var navbarNav = document.querySelector('#navbarNav');
+    navbarNav.classList.add('collapse');
+    var loggedInDiv = document.querySelector('#navLoggedin');
+    loggedInDiv.style.display = 'none';
 
-      navbarNav.classList.add('collapse');
-	    var loggedInDiv = document.querySelector('#navLoggedin');
-      loggedInDiv.style.display = 'none';
+    const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+    document.getElementById('profile-pic').src = userInfo.userProfilePic;
 
-//const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+    console.log('userInfo firebaseId:', userInfo.firebaseId);
 
-	 const userInfo = getUserInfo();
-///const userInfo = JSON.parse(localStorage.getItem("userInfo"));
-
-
-	
-	
-	
-	
-
-		//  const userInfo = localStorage.getItem("userInfo");
-     document.getElementById('profile-pic').src = userInfo.userProfilePic;
-
-    console.log("userInfo firebaseId :", userInfo.firebaseId);
-
-  console.log('collapse btn last main.js :');
+    console.log('collapse btn last main.js:');
 }
+
+
 
 
 
