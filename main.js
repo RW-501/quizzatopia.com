@@ -1208,7 +1208,7 @@ window.onload = function() {
      // loggedInDiv.style.display = 'none';
     } else {
       // Navbar is not collapsed, show the "logged in" div
-  //    loggedInDiv.style.display = 'block';
+     loggedInDiv.style.display = 'block';
     }
 };
 
