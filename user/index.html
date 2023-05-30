@@ -223,6 +223,7 @@ function removeSaveMessage() {
   var savedMessage = document.getElementById("savedMessage");
   savedMessage.style.display = "none";
   clearTimeout(timerId);
+	displayUserInfo();
 }
 
 function saveChanges() {
