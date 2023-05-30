@@ -1188,10 +1188,10 @@ function initializeNavbarToggler() {
 	    var loggedInDiv = document.querySelector('#navLoggedin');
       loggedInDiv.style.display = 'none';
 
-const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+//const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
 
-		 // let userInfo = JSON.parse(localStorage.getItem("userInfo"));
+		  const userInfo = localStorage.getItem("userInfo");
      document.getElementById('profile-pic').src = userInfo.userProfilePic;
 
     console.log("userInfo firebaseId :", userInfo.firebaseId);
