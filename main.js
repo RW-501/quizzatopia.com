@@ -1301,18 +1301,20 @@ function slideOut(xxx) {
   myDiv.animate(keyframes, options);
 }
 
-function showLoginPopupIfNeeded() {
+
   var  QUIZ_COUNT_THRESHOLD = 2;
-  const localStorageKey = 'userInfo';
-  var  quizCount = localStorage.getItem(localStorageKey);
+ var newQuizCount;
+function showLoginPopupIfNeeded() {
+
+  var  quizCount = localStorage.getItem('quizCount');
 
   if (!quizCount) {
     // First time user, set the quiz count to 1
-    localStorage.setItem(localStorageKey, '1');
+    localStorage.setItem('quizCount', '1');
   } else {
     // Increment the quiz count and update the localStorage
-    var newQuizCount = parseInt(quizCount) + 1;
-    localStorage.setItem(localStorageKey, newQuizCount.toString());
+     newQuizCount = parseInt(quizCount) + 1;
+    localStorage.setItem('quizCount', newQuizCount.toString());
 
 
   }
