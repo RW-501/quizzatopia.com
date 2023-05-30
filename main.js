@@ -637,73 +637,8 @@ if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function')
   // Create a collection called "users" (if it doesn't exist already)
   //const usersCollection = db.collection('users');
 
-	
-
-
-		
-function resetPassword() {
-  var resetEmail = document.getElementById('resetEmail').value;
-  firebase.auth().sendPasswordResetEmail(resetEmail)
-    .then(function () {
-      // Password reset email sent
-      // You can display a success message to the user
-      var statusMessage = document.getElementById('statusMessage');
-      statusMessage.textContent = 'Password reset email sent';
-      statusMessage.classList.remove('error');
-      statusMessage.classList.add('success');
-    })
-    .catch(function (error) {
-      // An error occurred while attempting to send the password reset email
-      // You can display an error message to the user
-      var statusMessage = document.getElementById('statusMessage');
-      statusMessage.textContent = 'Error sending password reset email: ' + error.message;
-      statusMessage.classList.remove('success');
-      statusMessage.classList.add('error');
-      console.error('Error sending password reset email:', error);
-    });
-}
-
-		
-	// Function to show the status message in the status bar
-function showStatusMessage(message, status) {
-  const statusBar = document.getElementById('statusBar');
-  const statusMessage = document.getElementById('statusMessage');
-  statusMessage.textContent = message;
-  statusBar.classList.remove('d-none');
-  statusBar.classList.remove('success');
-  statusBar.classList.remove('error');
-  statusBar.classList.add(status);
-}
-
-// Function to hide the status bar
-function hideStatusBar() {
-  const statusBar = document.getElementById('statusBar');
-  statusBar.classList.add('d-none');
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-
-
-
-   
-
-
-// Function to update user information in local storage and Firestore Database
-function updateUserInfo(updatedInfo) {
-  const userInfo = getUserInfo();
-  const updatedKeys = Object.keys(updatedInfo);
-
-  for (const key of updatedKeys) {
-    if (userInfo[key] !== updatedInfo[key]) {
-      userInfo[key] = updatedInfo[key];
-    }
-  }
- console.log('Saved to DB');
-  localStorage.setItem('userInfo', JSON.stringify(userInfo));
-  saveUserInfoToFirebase(userInfo);
-  displayUserInfo();
-}
-	var ipAddress;
+// Function to retrieve user location using a geolocation API
+var ipAddress;
 	function getUserIP(){
 // This approach uses a third-party API to fetch the user's IP address
 fetch('https://api.ipify.org?format=json')
@@ -761,6 +696,267 @@ fetch('https://api.ipify.org?format=json')
 
 	
 
+// Function to save user information to Firestore
+function saveUserInfoToFirestore(userInfo) {
+  const db = firebase.firestore();
+  const userId = userInfo.firebaseId;
+
+  db.collection('users')
+    .doc(userId)
+    .set(userInfo)
+    .then(() => {
+      console.log('User information saved to Firestore');
+    })
+    .catch((error) => {
+      console.error('Error saving user information to Firestore:', error);
+    });
+}
+
+// Function to check if user info has changed and update if necessary
+function checkUserInfoChanges() {
+  const userInfo = getUserInfo();
+
+  getUserLocation()
+    .then((location) => {
+      const { userCountry, userCity, userLatitude, userLongitude } = location;
+
+      if (
+        userInfo.userCity !== userCity ||
+        userInfo.userCountry !== userCountry ||
+        userInfo.userLatitude !== userLatitude ||
+        userInfo.userLongitude !== userLongitude
+      ) {
+        // User location has changed, update user information
+        const updatedInfo = {
+          userCity,
+          userCountry,
+          userLatitude,
+          userLongitude,
+        };
+        updateUserInfo(updatedInfo);
+      } else {
+        // Check timestamp for user info
+        const db = firebase.firestore();
+        const userId = userInfo.firebaseId;
+
+        db.collection('users')
+          .doc(userId)
+          .get()
+          .then((doc) => {
+            const dbUserInfo = doc.data();
+
+            if (dbUserInfo && dbUserInfo.lastUpdated > userInfo.lastUpdated) {
+              // Database info is newer, update local storage
+              updateUserInfo(dbUserInfo);
+            }
+          })
+          .catch((error) => {
+            console.error('Error retrieving user info from Firestore:', error);
+          });
+      }
+    })
+    .catch((error) => {
+      console.error('Error retrieving user location:', error);
+    });
+}
+
+// Update the signInWithGoogle function
+window.signInWithGoogle = function () {
+  const provider = new firebase.auth.GoogleAuthProvider();
+
+  auth
+    .signInWithPopup(provider)
+    .then((result) => {
+      const user = result.user;
+
+      // Get the user's display name and Firebase ID
+      const displayName = user.displayName;
+      const firebaseId = user.uid;
+
+      // Example: Show a success message and user info
+      showStatusMessage('Sign-in successful', 'success');
+      console.log('User display name:', displayName);
+      console.log('Firebase ID:', firebaseId);
+
+      // Save user info to Firestore database
+      const userInfo = {
+        userName: displayName,
+        userEmail: user.email,
+        userProfilePic: user.photoURL,
+        userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+        userRank: 'Beginner',
+        userPoints: 0,
+        userQuizzesTaken: 0,
+        userCountry: '',
+        userCity: '',
+        userLatitude: 0,
+        userLongitude: 0,
+        firebaseId: firebaseId,
+        lastUpdated: new Date().getTime(),
+      };
+      saveUserInfoToFirestore(userInfo); // Save user info to Firestore
+
+      // Set the logged-in cookie
+      document.cookie = 'loggedIn=true';
+
+      // Sign-in successful
+      onAuthSuccess(userInfo);
+
+      updateUserInfo(userInfo);
+
+      // Check if user info changes
+      checkUserInfoChanges();
+    })
+    .catch((error) => {
+      // Handle any errors that occurred during sign-in
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      showStatusMessage(errorMessage, 'error');
+      document.cookie = 'loggedIn=false';
+    });
+};
+
+// Update the signInWithFacebook function
+window.signInWithFacebook = function () {
+  const provider = new firebase.auth.FacebookAuthProvider();
+
+  auth
+    .signInWithPopup(provider)
+    .then((result) => {
+      const user = result.user;
+
+      // Get the user's display name and Firebase ID
+      const displayName = user.displayName;
+      const firebaseId = user.uid;
+
+      // Example: Show a success message and user info
+      showStatusMessage('Sign-in successful', 'success');
+      console.log('User display name:', displayName);
+      console.log('Firebase ID:', firebaseId);
+
+      // Save user info to Firestore database
+      const userInfo = {
+        userName: displayName,
+        userEmail: user.email,
+        userProfilePic: user.photoURL,
+        userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+        userRank: 'Beginner',
+        userPoints: 0,
+        userQuizzesTaken: 0,
+        userCountry: '',
+        userCity: '',
+        userLatitude: 0,
+        userLongitude: 0,
+        firebaseId: firebaseId,
+        lastUpdated: new Date().getTime(),
+      };
+      saveUserInfoToFirestore(userInfo); // Save user info to Firestore
+
+      // Set the logged-in cookie
+      document.cookie = 'loggedIn=true';
+
+      // Sign-in successful
+      onAuthSuccess(userInfo);
+
+      updateUserInfo(userInfo);
+
+      // Check if user info changes
+      checkUserInfoChanges();
+    })
+    .catch((error) => {
+      // Handle any errors that occurred during sign-in
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      showStatusMessage(errorMessage, 'error');
+      document.cookie = 'loggedIn=false';
+    });
+};
+
+// Update the createUserWithEmailAndPassword function
+window.createUserWithEmailAndPassword = function (email, password) {
+  auth
+    .createUserWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+
+      // Get the user's email and Firebase ID
+      const userEmail = user.email;
+      const firebaseId = user.uid;
+
+      // Example: Show a success message and user info
+      showStatusMessage('Signup successful', 'success');
+      console.log('User email:', userEmail);
+      console.log('Firebase ID:', firebaseId);
+
+      // Save user info to Firestore database
+      const userInfo = {
+        userName: '',
+        userEmail: userEmail,
+        userProfilePic: '/images/avatar/w1.png',
+        userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+        userRank: 'Beginner',
+        userPoints: 0,
+        userQuizzesTaken: 0,
+        userCountry: '',
+        userCity: '',
+        userLatitude: 0,
+        userLongitude: 0,
+        firebaseId: firebaseId,
+        lastUpdated: new Date().getTime(),
+      };
+      saveUserInfoToFirestore(userInfo); // Save user info to Firestore
+
+      // Set the logged-in cookie
+      document.cookie = 'loggedIn=true';
+
+      // Sign-up successful
+      onAuthSuccess(userInfo);
+
+      updateUserInfo(userInfo);
+
+      // Check if user info changes
+      checkUserInfoChanges();
+    })
+    .catch((error) => {
+      // Handle any errors that occurred during sign-up
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      showStatusMessage(errorMessage, 'error');
+      document.cookie = 'loggedIn=false';
+    });
+};
+	
+	// Function to validate the username, email, and password fields
+function validateFields(username, email, password) {
+  if (username.trim() === '' || email.trim() === '' || password.trim() === '') {
+    // Display an error message for empty fields
+    showStatusMessage('Please fill in all the fields', 'error');
+    return false;
+  }
+
+  // Validate email format using a regular expression
+  const emailRegex = /^\S+@\S+\.\S+$/;
+  if (!emailRegex.test(email)) {
+    // Display an error message for invalid email format
+    showStatusMessage('Invalid email format', 'error');
+    return false;
+  }
+
+  // Validate password strength (e.g., minimum length, required characters)
+  const passwordMinLength = 8;
+  if (password.length < passwordMinLength) {
+    // Display an error message for weak password
+    showStatusMessage('Password should be at least ' + passwordMinLength + ' characters long', 'error');
+    return false;
+  }
+
+  // You can add more password strength validation logic based on your requirements
+
+  // All validations passed
+  return true;
+}
+
+
 
 function checkUserInfoChanges() {
   const userInfo = getUserInfo();
@@ -808,310 +1004,7 @@ function checkUserInfoChanges() {
 
 	
 	
-	
-	
-	
-function transferAccountToEmailUserInfo(userInfo, userEmail) {
-  saveUserInfoToFirestore(userInfo);
-  const emailUserInfo = { ...userInfo, userEmail };
-  localStorage.setItem('emailUserInfo', JSON.stringify(emailUserInfo));
-}
-
-
-function saveUserInfoToFirestore(userInfo) {
-  const db = firebase.firestore();
-
-  db.collection('users')
-    .doc(userInfo.firebaseId)
-    .set(userInfo)
-    .then(() => {
-      console.log('User info saved to Firestore database');
-    })
-    .catch((error) => {
-      console.log('Error saving user info to Firestore database:', error);
-    });
-}
-
-
-
-
-
-
-
-	// Function to get user information from authentication provider (Google, Facebook, or email)
-function getUserInfoFromAuthProvider(user) {
-  const displayName = user.displayName;
-  const email = user.email;
-  const firebaseId = user.uid;
-
-  const userInfo = {
-    userName: displayName,
-    userEmail: email,
-    userProfilePic: user.photoURL,
-    userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-    userRank: 'Beginner',
-    userPoints: 0,
-    userQuizzesTaken: 0,
-    firebaseId: firebaseId
-  };
-saveUserInfoToFirestore(userInfo)
-  return userInfo;
-}
-	
-// Function to handle Google sign-in
-window.signInWithGoogle = function() {
-  const provider = new firebase.auth.GoogleAuthProvider();
-
-  firebase.auth()
-    .signInWithPopup(provider)
-    .then((result) => {
-      const user = result.user;
-      const userInfo = getUserInfoFromAuthProvider(user);
-
-
-      // Check if the user has already transferred the data
-      if (!userInfo.transferToEmail) {
-        if (userInfo.points > 0) {
-          if (confirm('Would you like to transfer the Local user Online?')) {
-            const email = prompt('Please enter your email address:');
-            transferAccountToEmailUserInfo(userInfo, email);
-            userInfo.transferToEmail = true; // Mark the transfer as completed
-            updateUserInfo(userInfo); // Update user info in the database
-          }
-        }
-      }
-
-      // Update the user info in the UI
-      updateUserInfo(userInfo);
-      // Set the logged-in cookie
-      document.cookie = 'loggedIn=true';
-
-    // Sign-in successful
-    onAuthSuccess(userInfo);
-  
-      console.log('User display name:', displayName);
-      console.log('User email:', email);
-      console.log('Firebase ID:', firebaseId);
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log('errorCode google:', errorCode);
-      console.log('errorMessage:', errorMessage);
-      // Set the logged-in cookie
-      document.cookie = 'loggedIn=false';
-	  loggedIn = false;
-
-    });
-};
-
-// Function to handle Facebook sign-in
-window.signInWithFacebook = function() {
-  const provider = new firebase.auth.FacebookAuthProvider();
-
-  firebase.auth()
-    .signInWithPopup(provider)
-    .then((result) => {
-      const user = result.user;
-      const userInfo = getUserInfoFromAuthProvider(user);
-
-
-      // Check if the user has already transferred the data
-      if (!userInfo.transferToEmail) {
-        if (userInfo.points > 0) {
-          if (confirm('Would you like to transfer the Local user Online?')) {
-            const email = prompt('Please enter your email address:');
-            transferAccountToEmailUserInfo(userInfo, email);
-            userInfo.transferToEmail = true; // Mark the transfer as completed
-            updateUserInfo(userInfo); // Update user info in the database
-          }
-        }
-      }
-
-      // Update the user info in the UI
-      updateUserInfo(userInfo);
-      // Set the logged-in cookie
-      document.cookie = 'loggedIn=true';
-
-    // Sign-in successful
-    onAuthSuccess(userInfo);
-  
-      console.log('User display name:', displayName);
-      console.log('User email:', email);
-      console.log('Firebase ID:', firebaseId);
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log('errorCode facebook:', errorCode);
-      console.log('errorMessage:', errorMessage);
-      // Set the logged-in cookie
-      document.cookie = 'loggedIn=false';
-	   loggedIn = false;
-
-    });
-};
-
-document.addEventListener('DOMContentLoaded', function() {
-  displayUserInfo();
-});
-
-
-// Function to handle the sign-in process using email and password
-window.signInWithUserWithEmailAndPassword = function(event) {
-  event.preventDefault();
-
-  const email = document.getElementById('lemail').value;
-  const password = document.getElementById('lpassword').value;
-
-  auth
-    .signInWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      // Sign-in successful, retrieve the user object
-      const user = userCredential.user;
-
-      // Get the user's display name and Firebase ID
-      const displayName = user.displayName;
-      const firebaseId = user.uid;
-
-      // Example: Show a success message and user info
-      showStatusMessage('Sign-in successful', 'success');
-      console.log('User display name:', displayName);
-      console.log('Firebase ID:', firebaseId);
-
-  
-      
-      // Check if the user has already transferred the data
-      if (!userInfo.transferToEmail) {
-        if (userInfo.points > 0) {
-          if (confirm('Would you like to transfer the Local user Online?')) {
-            const email = prompt('Please enter your email address:');
-            transferAccountToEmailUserInfo(userInfo, email);
-            userInfo.transferToEmail = true; // Mark the transfer as completed
-            updateUserInfo(userInfo); // Update user info in the database
-          }
-        }
-      }
-
-      // Set the logged-in cookie
-      document.cookie = 'loggedIn=true';
-
-    // Sign-in successful
-    onAuthSuccess(userInfo);
-  
-      updateUserInfo(userInfo);
-    })
-    .catch((error) => {
-      // Handle any errors that occurred during sign-in
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // Handle the error appropriately
-      console.log('errorCode signInWithEmailAndPassword:', errorCode);
-      console.log('errorMessage:', errorMessage);
-      showStatusMessage(errorMessage, 'error');
-      // Set the logged-in cookie
-      document.cookie = 'loggedIn=false';
-	   loggedIn = false;
-
-    });
-};
-
-
- 
-	
-	// Function to validate the username, email, and password fields
-function validateFields(username, email, password) {
-  if (username.trim() === '' || email.trim() === '' || password.trim() === '') {
-    // Display an error message for empty fields
-    showStatusMessage('Please fill in all the fields', 'error');
-    return false;
-  }
-
-  // Validate email format using a regular expression
-  const emailRegex = /^\S+@\S+\.\S+$/;
-  if (!emailRegex.test(email)) {
-    // Display an error message for invalid email format
-    showStatusMessage('Invalid email format', 'error');
-    return false;
-  }
-
-  // Validate password strength (e.g., minimum length, required characters)
-  const passwordMinLength = 8;
-  if (password.length < passwordMinLength) {
-    // Display an error message for weak password
-    showStatusMessage('Password should be at least ' + passwordMinLength + ' characters long', 'error');
-    return false;
-  }
-
-  // You can add more password strength validation logic based on your requirements
-
-  // All validations passed
-  return true;
-}
-
-// Function to handle the signup form submission
-window.createUserWithEmailAndPassword = function (event) {
-  event.preventDefault();
-
-  var username = document.getElementById('susername').value;
-  var email = document.getElementById('semail').value;
-  var password = document.getElementById('spassword').value;
-
-  // Validate the fields before proceeding
-  if (!validateFields(username, email, password)) {
-    return;
-  }
-
-  auth
-    .createUserWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      // User creation successful, return the user object
-      const user = userCredential.user;
-      document.cookie = 'loggedIn=true';
-
-    // Sign-in successful
-    onAuthSuccess(userInfo);
-  
-      // Get the user's display name and Firebase ID
-      const displayName = user.displayName;
-      const firebaseId = user.uid;
-
-      // Example: Show a success message and user info
-      showStatusMessage('Signup successful', 'success');
-      console.log('Username:', username);
-      console.log('User email:', email);
-      console.log('Firebase ID:', firebaseId);
-
-      // Save user info to Firestore database
-      const userInfo = {
-        userName: username,
-    userEmail: email,
-    userProfilePic: '/images/avatar/w1.png',
-    userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-    userRank: 'Beginner',
-    userPoints: 0,
-    userQuizzesTaken: 0,
-    firebaseId: firebaseId
-  };
-      transferAccountToEmailUserInfo(userInfo, email); // Transfer account to email if needed
-      saveUserInfoToFirestore(userInfo); // Save user info to Firestore
-
-      return user;
-    })
-    .catch((error) => {
-      // Handle any errors that occurred during user creation
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      showStatusMessage(errorMessage, 'error');
-      document.cookie = 'loggedIn=false';
-	  loggedIn = false;
-
-      throw error;
-    });
-}
-
-
-	
+		
 	
 		document.addEventListener("DOMContentLoaded", () => {
 
@@ -1172,18 +1065,114 @@ function onAuthSuccess(userInfo) {
 
   // Example: Update the UI to show the user as logged in
 
-	
+	  saveUserInfoToFirebase(userInfo);
+
 	  document.getElementById('loginPopup').classList.add('d-none');
 
 }
 
+ // Function to save user information to Firestore
+
+function saveUserInfoToFirebase(userInfo) {
+  // Access the Firestore database
+  const db = firebase.firestore();
+
+  // Save the user information to the "userInfo" collection in Firebase
+  db.collection('users').add(userInfo)
+    .then((docRef) => {
+      console.log('User information saved to Firebase with document ID:', docRef.id);
+    })
+    .catch((error) => {
+      console.error('Error saving user information to Firebase:', error);
+    });
+}
 
 
-// helpScript.js
+		
+function resetPassword() {
+  var resetEmail = document.getElementById('resetEmail').value;
+  firebase.auth().sendPasswordResetEmail(resetEmail)
+    .then(function () {
+      // Password reset email sent
+      // You can display a success message to the user
+      var statusMessage = document.getElementById('statusMessage');
+      statusMessage.textContent = 'Password reset email sent';
+      statusMessage.classList.remove('error');
+      statusMessage.classList.add('success');
+    })
+    .catch(function (error) {
+      // An error occurred while attempting to send the password reset email
+      // You can display an error message to the user
+      var statusMessage = document.getElementById('statusMessage');
+      statusMessage.textContent = 'Error sending password reset email: ' + error.message;
+      statusMessage.classList.remove('success');
+      statusMessage.classList.add('error');
+      console.error('Error sending password reset email:', error);
+    });
+}
+
+		
+	// Function to show the status message in the status bar
+function showStatusMessage(message, status) {
+  const statusBar = document.getElementById('statusBar');
+  const statusMessage = document.getElementById('statusMessage');
+  statusMessage.textContent = message;
+  statusBar.classList.remove('d-none');
+  statusBar.classList.remove('success');
+  statusBar.classList.remove('error');
+  statusBar.classList.add(status);
+}
+
+// Function to hide the status bar
+function hideStatusBar() {
+  const statusBar = document.getElementById('statusBar');
+  statusBar.classList.add('d-none');
+}
 
 
 
- //console.log(currentPagePath+"    footerPath 2.... ");
+
+
+
+// Function to update user information in local storage and Firestore Database
+function updateUserInfo(updatedInfo) {
+  const userInfo = getUserInfo();
+  const updatedKeys = Object.keys(updatedInfo);
+
+  for (const key of updatedKeys) {
+    if (userInfo[key] !== updatedInfo[key]) {
+      userInfo[key] = updatedInfo[key];
+    }
+  }
+
+  // Update user information in local storage
+  localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
+
+  // Save updated user information to Firebase
+  saveUserInfoToFirebase(userInfo);
+
+  // Display updated user information
+  displayUserInfo();
+}
+
+	
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	  let navbarPath, footerPath;
 
