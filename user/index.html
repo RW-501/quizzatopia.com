@@ -68,8 +68,8 @@
 <hr>
 <textarea id="userTagLine" class="text-muted" placeholder="Tagline" onblur="showSaveMessage();" style="min-height: 100px; width: 75%; overflow: auto;" spellcheck="false" autocomplete="off"></textarea>
 
-	      
-	      <p id="savedMessage" style="display: none;">Changes saved!</p>
+<p id="savedMessage" style="display: none;">Changes saved!</p>
+
 
 
 	      
@@ -203,51 +203,47 @@
   <script>
 
 	  
-	  
-	  var timerId;
-	  
-    // Profile related functions
-    function showSaveMessage() {
-	    
-	          saveChanges();
+var timerId;
 
-timerId = setTimeout (function() {
-  // Call your function here
-  removeSaveMessage();
-}, 5000); // 3000 milliseconds = 3 seconds
-	    
-      var savedMessage = document.getElementById("savedMessage");
-      savedMessage.style.display = "block";
-    }
+// Profile related functions
+function showSaveMessage() {
+  saveChanges();
 
-    function removeSaveMessage() {
-      animateTextChanges();
-      var savedMessage = document.getElementById("savedMessage");
-      savedMessage.style.display = "none";
-      clearTimeout(timerId);
-    }
+  timerId = setTimeout(function() {
+    // Call your function here
+    removeSaveMessage();
+  }, 5000); // 5000 milliseconds = 5 seconds
 
-    function saveChanges() {
-      var newUsername = document.getElementById("userNameQ").value;
-      var newTagline = document.getElementById("userTagLine").value;
-      updateUserInfo({ userName: newUsername, tagLine: newTagline });
-	    	
+  var savedMessage = document.getElementById("savedMessage");
+  savedMessage.style.display = "block";
+}
 
-    }
+function removeSaveMessage() {
+  animateTextChanges();
+  var savedMessage = document.getElementById("savedMessage");
+  savedMessage.style.display = "none";
+  clearTimeout(timerId);
+}
 
+function saveChanges() {
+  var newUsername = document.getElementById("userNameQ").value;
+  var newTagline = document.getElementById("userTagLine").value;
+  // Perform the necessary actions to save the changes
+}
 
-    function animateTextChanges() {
-      var changedElements = document.querySelectorAll(".changed-text");
-      changedElements.forEach(function(element) {
-        element.classList.add("color-animation");
-      });
-    }
+function animateTextChanges() {
+  var changedElements = document.querySelectorAll(".changed-text");
+  changedElements.forEach(function(element) {
+    element.classList.add("color-animation");
+  });
+}
 
-    function displayUserInfo() {
-  //let userInf = localStorage.getItem("userInfo");
-	      let userInfo = JSON.parse(localStorage.getItem("userInfo"));
+function displayUserInfo() {
+  var userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
-      document.getElementById('userNameQ').value = userInfo.userName;
+  document.getElementById('userNameQ').value = userInfo.userName;
+  // Set other user-related data in the respective elements
+
       document.getElementById('userRankQ').innerHTML = userInfo.userRank;
       document.getElementById('userPointsQ').innerHTML = userInfo.userPoints;
       document.getElementById('userQuzziesTaken').innerHTML = userInfo.userQuizzesTaken;
