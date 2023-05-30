@@ -106,8 +106,7 @@ if (cookieValue === 'true') {
 
 // load.js
 const USER_INFO_KEY = 'userInfo';
- var  userInfo;
-
+ 
 let cachedUserInfo = null;
 
 function getUserInfo() {
@@ -115,7 +114,7 @@ function getUserInfo() {
     return cachedUserInfo;
   }
 
-   userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
+const   userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
 
   if (!userInfo) {
     userInfo = {
@@ -146,12 +145,12 @@ function getUserInfo() {
 
 function displayUserInfo() {
 //  const userInfo = getUserInfo();
- userInfo = JSON.parse(localStorage.getItem("userInfo"));
+const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
   const profilePicElement = document.getElementById('profile-pic');
   if (profilePicElement) {
     profilePicElement.src = window.location.origin +  userInfo.userProfilePic;
-	 // console.log(userInfo+'  ?userInfo.userProfilePic?????????????????????????????????:   '+userInfo.userProfilePic);
+	  console.log(userInfo+'  ?userInfo.userProfilePic?????????????????????????????????:   '+userInfo.userProfilePic);
   }
 
 //  const profileNameElement = document.getElementById('profile-name');
