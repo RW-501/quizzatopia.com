@@ -315,8 +315,9 @@ function displayProfileInfo() {
 
     function removeQuiz(key) {
       localStorage.removeItem(key);
-      getQuizInfo();
 	getLocalStorageUsage();
+      getQuizInfo();
+	    
     }
 
     // Local Storage usage related functions
