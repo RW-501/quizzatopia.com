@@ -145,6 +145,7 @@ function getUserInfo() {
 
 function displayUserInfo() {
 //  const userInfo = getUserInfo();
+ userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
   const profilePicElement = document.getElementById('profile-pic');
   if (profilePicElement) {
