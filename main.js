@@ -121,7 +121,7 @@ const USER_INFO_KEY = 'userInfo';
       userQuizzesTaken: 0,
       userAds: ''
       };
-	    checkUserInfoChanges(userInfo);
+	   // checkUserInfoChanges(userInfo);
       localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
     }
     return userInfo;
