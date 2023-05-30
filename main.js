@@ -593,7 +593,7 @@ signupLoginArea.display = "none";
 
 
 
-// 		<div id="signupLoginArea" ><div>
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
@@ -758,7 +758,6 @@ function checkUserInfoChanges() {
       console.error('Error retrieving user location:', error);
     });
 }
-
 // Update the signInWithGoogle function
 window.signInWithGoogle = function () {
   const provider = new firebase.auth.GoogleAuthProvider();
