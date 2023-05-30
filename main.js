@@ -1167,7 +1167,6 @@ window.addEventListener('load', function() {
     .catch(error => {
       console.error("Error fetching data:", error);
     });
-});
 
 
 
@@ -1177,7 +1176,9 @@ function initializeNavbarToggler() {
     var loggedInDiv = document.querySelector('#navLoggedin');
     loggedInDiv.style.display = 'none';
 
-    const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+	const userInfo = getUserInfo();
+	
+   // const userInfo = JSON.parse(localStorage.getItem('userInfo'));
     document.getElementById('profile-pic').src = userInfo.userProfilePic;
 
     console.log('userInfo firebaseId:', userInfo.firebaseId);
@@ -1186,11 +1187,6 @@ function initializeNavbarToggler() {
 }
 
 
-
-
-
-// Call the function to fetch and insert the HTML based on the page level
-document.addEventListener('DOMContentLoaded', function() {
   fetchAndInsertContent();
 });
 
