@@ -140,6 +140,7 @@ function getUserInfo() {
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
 
 
 function displayUserInfo() {
@@ -161,6 +162,18 @@ function displayUserInfo() {
     taglineElement.textContent = userInfo.userTagLine;
   }
 }
+
+
+
+  displayUserInfo();
+	console.log("  Update  911 ");
+});
+
+
+
+
+
+
 
 function updateUserInfo(updatedInfo) {
   const userInfo = getUserInfo();
@@ -1311,11 +1324,6 @@ window.onload = function() {
 
   updateNavBar();
 }
-document.addEventListener('DOMContentLoaded', function() {
-  displayUserInfo();
-	console.log("  Update  911 ");
-});
-
 
 
 function slideIn(xxx) {
