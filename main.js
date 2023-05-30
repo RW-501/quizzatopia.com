@@ -150,7 +150,7 @@ const userInfo = JSON.parse(localStorage.getItem("userInfo"));
   const profilePicElement = document.getElementById('profile-pic');
   if (profilePicElement) {
     profilePicElement.src =   userInfo.userProfilePic;
-	  console.log(userInfo+'  ?userInfo.userProfilePic?????????????????????????????????:   '+userInfo.userProfilePic);
+	 // console.log(userInfo+'  ?userInfo.userProfilePic?????????????????????????????????:   '+userInfo.userProfilePic);
   }
 
 //  const profileNameElement = document.getElementById('profile-name');
@@ -1187,6 +1187,7 @@ function initializeNavbarToggler() {
 	    var loggedInDiv = document.querySelector('#navLoggedin');
       loggedInDiv.style.display = 'none';
 
+const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
 
 		 // let userInfo = JSON.parse(localStorage.getItem("userInfo"));
