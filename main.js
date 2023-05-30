@@ -102,11 +102,18 @@ if (cookieValue === 'true') {
 const USER_INFO_KEY = 'userInfo';
 
 
-  function getUserInfo() {
-    let userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
-    if (!userInfo) {
-      userInfo = {
-        userName: 'New User',
+let cachedUserInfo = null;
+
+function getUserInfo() {
+  if (cachedUserInfo) {
+    return cachedUserInfo;
+  }
+
+  let userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
+
+  if (!userInfo) {
+    userInfo = {
+      userName: 'New User',
       userEmail: '',
       userActive: true,
       userJoinedDate: new Date().toISOString(),
@@ -120,14 +127,14 @@ const USER_INFO_KEY = 'userInfo';
       userPoints: 0,
       userQuizzesTaken: 0,
       userAds: ''
-      };
-	   // checkUserInfoChanges(userInfo);
-      localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
-    }
-    return userInfo;
+    };
+
+    localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
   }
 
-
+  cachedUserInfo = userInfo;
+  return userInfo;
+}
 
 
 
