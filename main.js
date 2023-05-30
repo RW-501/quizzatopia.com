@@ -227,25 +227,25 @@ let pointsRewards;
 function updatePointsAndRank() {
   const userInfo = getUserInfo();
 
-  if (userInfo.points <= 100) {
+  if (userInfo.userPoints <= 100) {
     updateRank('Beginner');
     pointsRewards = 2;
-  } else if (userInfo.points > 100 && userInfo.points < 250) {
+  } else if (userInfo.userPoints > 100 && userInfo.userPoints < 250) {
     updateRank('Novice');
     pointsRewards = 3;
-  } else if (userInfo.points >= 250 && userInfo.points < 500) {
+  } else if (userInfo.userPoints >= 250 && userInfo.userPoints < 500) {
     updateRank('Enthusiast');
     pointsRewards = 4;
-  } else if (userInfo.points >= 500 && userInfo.points < 1000) {
+  } else if (userInfo.userPoints >= 500 && userInfo.userPoints < 1000) {
     updateRank('Prodigy');
     pointsRewards = 5;
-  } else if (userInfo.points >= 1000 && userInfo.points < 2500) {
+  } else if (userInfo.userPoints >= 1000 && userInfo.userPoints < 2500) {
     updateRank('Expert');
     pointsRewards = 6;
-  } else if (userInfo.points >= 2500 && userInfo.points < 5000) {
+  } else if (userInfo.userPoints >= 2500 && userInfo.userPoints < 5000) {
     updateRank('Master');
     pointsRewards = 7;
-  } else if (userInfo.points >= 5000 && userInfo.points < 10000) {
+  } else if (userInfo.userPoints >= 5000 && userInfo.userPoints < 10000) {
     updateRank('Grandmaster');
     pointsRewards = 8;
   } else {
@@ -338,7 +338,7 @@ function awardBadge(badgeId) {
 
 function awardQuizzesTakenBadges() {
   const userInfo = getUserInfo();
-  const quizzesTaken = userInfo.quizzesTaken;
+  const quizzesTaken = userInfo.userQuizzesTaken;
 
   // Define the milestones and corresponding badge information
 const milestones = [
