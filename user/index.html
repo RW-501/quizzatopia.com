@@ -243,9 +243,9 @@ function animateTextChanges() {
 }
 
 function displayProfileInfo() {
-//const userInfo = localStorage.getItem("userInfo");
+const userInfo = localStorage.getItem("userInfo");
 // const userInfo = getUserInfo();
-const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+//const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 	
    document.getElementById('userNameQ').value = userInfo.userName;
       document.getElementById('userRankQ').innerHTML = userInfo.userRank;
