@@ -64,8 +64,10 @@
 
 	      
         <!-- User tagline -->
-  <input id="userNameQ" type='text' class="user-name mt-3" placeholder="user name" onblur="showSaveMessage();" ><hr>
-<input type="textarea" id="userTagLine" class="text-muted" placeholder="Tagline" onblur="showSaveMessage();" style="min-height: 100px;width: 75%;">
+<input id="userNameQ" type="text" class="user-name mt-3" placeholder="Username" onblur="showSaveMessage();" spellcheck="false" autocomplete="off">
+<hr>
+<textarea id="userTagLine" class="text-muted" placeholder="Tagline" onblur="showSaveMessage();" style="min-height: 100px; width: 75%; overflow: auto;" spellcheck="false" autocomplete="off"></textarea>
+
 	      
 	      <p id="savedMessage" style="display: none;">Changes saved!</p>
 
@@ -206,6 +208,9 @@
 	  
     // Profile related functions
     function showSaveMessage() {
+	    
+	          saveChanges();
+
 timerId = setTimeout (function() {
   // Call your function here
   removeSaveMessage();
@@ -219,7 +224,6 @@ timerId = setTimeout (function() {
       animateTextChanges();
       var savedMessage = document.getElementById("savedMessage");
       savedMessage.style.display = "none";
-      saveChanges();
       clearTimeout(timerId);
     }
 
