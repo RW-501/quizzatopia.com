@@ -1311,7 +1311,7 @@ function showLoginPopupIfNeeded() {
     localStorage.setItem(localStorageKey, '1');
   } else {
     // Increment the quiz count and update the localStorage
-    const newQuizCount = parseInt(quizCount) + 1;
+    var newQuizCount = parseInt(quizCount) + 1;
     localStorage.setItem(localStorageKey, newQuizCount.toString());
 
 
