@@ -170,7 +170,7 @@
 	  
 <div class="d-flex justify-content-center mt-4">
       <button class="btn btn-danger d-none">Report User</button>
-	    <button id="clearStorageBtn" class="btn btn-danger">Clear Storage</button>
+	    <button id="clearStorageBtn" class="btn btn-danger"  onclick="clearLocalStorage()">Clear Storage</button>
 
     </div>
 	<div id="imagePopup" class="popup-container">
@@ -397,8 +397,8 @@ displayUserInfo();
   }
 }
 
-const clearStorageBtn = document.getElementById('clearStorageBtn');
-clearStorageBtn.addEventListener('click', clearLocalStorage);
+//const clearStorageBtn = document.getElementById('clearStorageBtn');
+//clearStorageBtn.addEventListener('click', clearLocalStorage);
 
 		    
 	  
