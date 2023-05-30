@@ -223,7 +223,7 @@ function removeSaveMessage() {
   var savedMessage = document.getElementById("savedMessage");
   savedMessage.style.display = "none";
   clearTimeout(timerId);
-	displayUserInfo();
+	displayProfileInfo();
 }
 
 function saveChanges() {
@@ -242,7 +242,7 @@ function animateTextChanges() {
   });
 }
 
-function displayUserInfo() {
+function displayProfileInfo() {
   let userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
   document.getElementById('userNameQ').value = userInfo.userName || "";
@@ -270,7 +270,7 @@ function displayUserInfo() {
 
     function selectProfilePic(imageSrc) {
       updateProfilePic(imageSrc);
-      displayUserInfo();
+      displayProfileInfo();
       closeImagePopup();
     }
 
@@ -394,7 +394,7 @@ function clearLocalStorage() {
 	    getQuizInfo();
 displayBadges();
 getUserInfo();
-	        displayUserInfo();
+	        displayProfileInfo();
       getLocalStorageUsage();
 
     alert('Local storage cleared!');
