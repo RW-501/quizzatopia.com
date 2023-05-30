@@ -1132,6 +1132,7 @@ function initializeNavbarToggler() {
 
 
 
+window.addEventListener('load', function() {
 
 
 
@@ -1167,7 +1168,6 @@ function fetchAndInsertContent() {
 }
 	
 	
-window.addEventListener('load', function() {
   // Create the mainFooter div
   const mainFooter = document.createElement('div');
   mainFooter.id = 'mainFooter';
