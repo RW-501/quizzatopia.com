@@ -100,7 +100,7 @@ if (cookieValue === 'true') {
 
 // load.js
 const USER_INFO_KEY = 'userInfo';
-
+ var  userInfo;
 
 let cachedUserInfo = null;
 
@@ -109,7 +109,7 @@ function getUserInfo() {
     return cachedUserInfo;
   }
 
-  let userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
+   userInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
 
   if (!userInfo) {
     userInfo = {
@@ -207,7 +207,7 @@ function updateQuizzesTaken(userQuizzesTaken) {
 
 document.addEventListener('DOMContentLoaded', function() {
   displayUserInfo();
-	console.log("  Update   ");
+	console.log("  Update  911 ");
 });
 
 
