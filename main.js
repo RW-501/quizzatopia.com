@@ -921,9 +921,9 @@ function validateFields(username, email, password) {
 
 function checkUserInfoChanges() {
   const userInfo = getUserInfo();
-ipFunc();
-  getUserLocation().then((location) => {
-    const { userCountry, userState, userLatitude, userLongitude } = location;
+
+    ipFunc().then((location) => {
+      const { userCountry, userState, userLatitude, userLongitude } = location;
 
     if (
       userInfo.userState !== userState ||
