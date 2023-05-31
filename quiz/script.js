@@ -140,7 +140,7 @@ const quizInfo = setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions);
             numAds = 1;
       }
   } else {
-    numAds = totalQuestions / 3;
+    numAds = totalQuestions / 2;
   }
 
   var intvalue = Math.round(numAds);
