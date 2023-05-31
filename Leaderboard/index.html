@@ -139,7 +139,6 @@
 	  <script>
 		  
 		  var lbUserInfo ;
-		  window.onload = function() {
    lbUserInfo = JSON.parse(localStorage.getItem("userInfo"));
 
 
@@ -157,7 +156,7 @@ document.getElementById('uPoints').innerHTML = lbUserInfo.userPoints;
 // document.getElementById('uQuzziesTaken').innerHTML = lbUserInfo.userQuizzesTaken;
 
 document.getElementById('uPic').src = lbUserInfo.userProfilePic;
-};
+
 
 		    
 	  
@@ -180,7 +179,7 @@ var usersCollection = firestore.collection('users');
 console.log('Users collection reference created.');
 
 // Query to retrieve the top 10 users sorted by city and points
-var query = usersCollection.orderBy('userPoints', 'desc').limit(10);
+var query = usersCollection.orderBy('userPoints', 'descending').limit(10);
 //var query = usersCollection.where(loc).orderBy('userPoints', 'desc').limit(10);
 console.log('Query created:', query);
 		
@@ -241,14 +240,9 @@ console.log('Query created:', query);
 	  
 
 
-	  function loadLeaderboardGet(xxx){
-		  
-    console.log(xxx+' ', lbUserInfo.xxx);
-		  
- loadLeaderboard(xxx+'='+lbUserInfo.xxx);
-	  }
+	
 	  
-	loadLeaderboard("userCountry=''");
+	loadLeaderboard();
   
   </script>
 
