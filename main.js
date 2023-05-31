@@ -632,8 +632,7 @@ if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function')
   //const usersCollection = db.collection('users');
 
 // Function to retrieve user location using a geolocation API
-
-var ipAddress;
+var ipAddress; // This variable should be assigned the IP address of the user
 
 function getUserLocation() {
   const USER_INFO_KEY = 'user_location';
@@ -644,19 +643,11 @@ function getUserLocation() {
     return JSON.parse(savedUserInfo);
   }
 
-  // Fetch IP geolocation data
-  const geoApiUrl = `https://api.ipgeolocationapi.com/geolocate/${ipAddress}`;
-  const ipRangesUrl = 'https://quizzatopia.com/geo/usa_states.json';
+  const ipRangesUrl = 'https://quizzatopia.com/geo/usa_states.json'; // Replace with the actual URL of the IP ranges JSON file
 
-  return Promise.all([fetch(geoApiUrl).then(response => response.json()), fetch(ipRangesUrl).then(response => response.json())])
-    .then(([geoData, ipRangesData]) => {
-      const userCountry = geoData.country_name;
-      const userState = geoData.state;
-      const userLatitude = geoData.latitude;
-      const userLongitude = geoData.longitude;
-      console.log('userCountry:', userCountry);
-      console.log('userState:', userState);
-
+  return fetch(ipRangesUrl)
+    .then(response => response.json())
+    .then(ipRangesData => {
       // IP range lookup
       for (const range of ipRangesData) {
         const startIP = range.start_ip.split('.').map(Number);
@@ -674,9 +665,9 @@ function getUserLocation() {
         if (isInRange) {
           const locationInfo = {
             userCountry: range.country,
-            userState,
-            userLatitude,
-            userLongitude
+            userState: range.state,
+            userLatitude: null, // Update with the actual latitude value if available
+            userLongitude: null // Update with the actual longitude value if available
           };
 
           // Save the user location in local storage
@@ -685,17 +676,8 @@ function getUserLocation() {
         }
       }
 
-      // IP address not found in any range, use geolocation data
-      const locationInfo = {
-        userCountry,
-        userState,
-        userLatitude,
-        userLongitude
-      };
-
-      // Save the user location in local storage
-      localStorage.setItem(USER_INFO_KEY, JSON.stringify(locationInfo));
-      return locationInfo;
+      // IP address not found in any range, return null or handle the case as needed
+      return null;
     })
     .catch(error => {
       console.error('Error:', error);
