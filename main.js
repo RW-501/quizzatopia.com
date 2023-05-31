@@ -643,8 +643,10 @@ function getUserLocation() {
     return JSON.parse(savedUserInfo);
   }
 
-  const ipRangesUrl = 'https://quizzatopia.com/geo/usa_states.json'; // Replace with the actual URL of the IP ranges JSON file
+//  const ipRangesUrl = 'https://www.quizzatopia.com/geo/usa_states.json'; // Replace with the actual URL of the IP ranges JSON file
+const ipRangesUrl = '/geo/usa_states.json'; // Replace with the actual URL to the JSON file
 
+function getLocationFromIP(ipAddress) {
   return fetch(ipRangesUrl)
     .then(response => response.json())
     .then(ipRangesData => {
@@ -669,7 +671,8 @@ function getUserLocation() {
             userLatitude: null, // Update with the actual latitude value if available
             userLongitude: null // Update with the actual longitude value if available
           };
-    console.log("locationInfo   "+location);
+
+          console.log("Location Info: ", location);
 
           // Save the user location in local storage
           localStorage.setItem(USER_INFO_KEY, JSON.stringify(location));
@@ -686,6 +689,10 @@ function getUserLocation() {
     });
 }
 
+// Example usage:
+//const ipAddress = [1, 2, 3, 4]; // Replace with the actual IP address as an array of four numbers
+
+
 function ipFunc(){
 // This approach uses a third-party API to fetch the user's IP address
 fetch('https://api.ipify.org?format=json')
@@ -694,7 +701,7 @@ fetch('https://api.ipify.org?format=json')
      ipAddress = data.ip;
     console.log(ipAddress);
     // Use the IP address as needed
-	getUserLocation();
+getLocationFromIP(ipAddress);
   })
   .catch(error => {
     console.error('Error:', error);
