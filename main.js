@@ -634,7 +634,7 @@ if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function')
 // Function to retrieve user location using a geolocation API
 var ipAddress; // This variable should be assigned the IP address of the user
 
-function getUserLocation() {
+function getUserLocation(ipAddress) {
   const USER_INFO_KEY = 'user_location';
   const savedUserInfo = localStorage.getItem(USER_INFO_KEY);
 
@@ -646,7 +646,6 @@ function getUserLocation() {
 //  const ipRangesUrl = 'https://www.quizzatopia.com/geo/usa_states.json'; // Replace with the actual URL of the IP ranges JSON file
 const ipRangesUrl = '/geo/usa_states.json'; // Replace with the actual URL to the JSON file
 
-function getLocationFromIP(ipAddress) {
   return fetch(ipRangesUrl)
     .then(response => response.json())
     .then(ipRangesData => {
@@ -701,7 +700,7 @@ fetch('https://api.ipify.org?format=json')
      ipAddress = data.ip;
     console.log(ipAddress);
     // Use the IP address as needed
-getLocationFromIP(ipAddress);
+getUserLocation(ipAddress);
   })
   .catch(error => {
     console.error('Error:', error);
