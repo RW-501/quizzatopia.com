@@ -37,7 +37,8 @@
 	
 	
 	
-	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 	
 	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
@@ -53,125 +54,90 @@
 </head>
 
     
-		
-
-<body>
-
-
-  <div class="container mt-4">
+    <style>
+      .error-mark {
+        color: red;
+        font-weight: bold;
+      }
+      .success-mark {
+        color: green;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-4">
+      <table id="quizTable" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Page Name</th>
+            <th>Results</th>
+            <th>Questions Count</th>
+            <th>Fix</th>
+            <th>View</th>
+            <th>Add</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
 
     <script>
-	    const fs = require('fs');
-const path = require('path');
+      window.addEventListener('DOMContentLoaded', () => {
+        const folderPath = '/q';
 
-// Specify the folder path
-const folderPath = '/q';
+        // Function to fetch JSON file and generate table row
+        async function generateTableRow(file) {
+          const filePath = `${folderPath}/${file}`;
 
-// Read the contents of the folder
-fs.readdir(folderPath, (err, files) => {
-  if (err) {
-    console.error('Error reading folder:', err);
-    return;
-  }
+          try {
+            const response = await fetch(filePath);
+            const jsonData = await response.json();
 
-  // Generate HTML table rows for each file
-  const tableRows = files.map((file) => {
-    // Create the file path
-    const filePath = path.join(folderPath, file);
+            const hasError = Object.keys(jsonData).length === 0;
+            const questionCount = hasError ? 'N/A' : Object.keys(jsonData.questions).length;
 
-    // Read the JSON file
-    let jsonData = {};
-    try {
-      jsonData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-    } catch (error) {
-      console.error(`Error reading JSON file ${file}:`, error);
-    }
+            return `
+              <tr>
+                <td>${file}</td>
+                <td>${hasError ? '<span class="error-mark">X</span>' : '<span class="success-mark">&#10004;</span>'}</td>
+                <td>${questionCount}</td>
+                <td>
+                  <a href="/backend/fix/?q=${encodeURIComponent(file)}" class="btn btn-primary">Fix</a>
+                </td>
+                <td>
+                  <a href="/quiz/?q=${encodeURIComponent(file)}" class="btn btn-info">View</a>
+                </td>
+                <td>
+                  <a href="/backend/add/?q=${encodeURIComponent(file)}" class="btn btn-success">Add</a>
+                </td>
+              </tr>
+            `;
+          } catch (error) {
+            console.error(`Error reading JSON file ${file}:`, error);
+            return '';
+          }
+        }
 
-    // Check if there is an error in the JSON
-    const hasError = Object.keys(jsonData).length === 0;
+        // Function to generate the HTML table
+        async function generateTable() {
+          const tableBody = document.querySelector('#quizTable tbody');
 
-    // Calculate the number of questions
-    const questionCount = hasError ? 'N/A' : Object.keys(jsonData.questions).length;
+          try {
+            const response = await fetch(folderPath);
+            const files = await response.json();
 
-    // Create the row with the file details and buttons
-    return `
-      <tr>
-        <td>${file}</td>
-        <td>${hasError ? '<span class="error-mark">X</span>' : '<span class="success-mark">&#10004;</span>'}</td>
-        <td>${questionCount}</td>
-        <td>
-          <a href="/backend/fix/?q=${encodeURIComponent(file)}" class="btn btn-primary">Fix</a>
-        </td>
-        <td>
-          <a href="/quiz/?q=${encodeURIComponent(file)}" class="btn btn-info">View</a>
-        </td>
-        <td>
-          <a href="/backend/add/?q=${encodeURIComponent(file)}" class="btn btn-success">Add</a>
-        </td>
-      </tr>
-    `;
-  });
+            const tableRows = await Promise.all(files.map(generateTableRow));
 
-  // Generate the full HTML table
-  const tableHTML = `
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Page Name</th>
-          <th>Results</th>
-          <th>Questions Count</th>
-          <th>Fix</th>
-          <th>View</th>
-          <th>Add</th>
-        </tr>
-      </thead>
-      <tbody>
-        ${tableRows.join('')}
-      </tbody>
-    </table>
-  `;
+            tableBody.innerHTML = tableRows.join('');
+          } catch (error) {
+            console.error('Error fetching file names:', error);
+          }
+        }
 
-  // Read the existing file content (if any)
-  let existingContent = '';
-  try {
-    existingContent = fs.readFileSync(__filename, 'utf8');
-  } catch (error) {
-    console.error('Error reading existing file content:', error);
-  }
-
-  // Extract the HTML content between "<!-- START GENERATED CONTENT -->" and "<!-- END GENERATED CONTENT -->"
-  const startIndex = existingContent.indexOf('<!-- START GENERATED CONTENT -->');
-  const endIndex = existingContent.indexOf('<!-- END GENERATED CONTENT -->');
-  const updatedContent = existingContent.substring(0, startIndex + '<!-- START GENERATED CONTENT -->'.length) +
-    '\n' + tableHTML + '\n' +
-    existingContent.substring(endIndex);
-
-  // Write the updated HTML to the same file
-  fs.writeFile(__filename, updatedContent, (err) => {
-    if (err) {
-      console.error('Error writing to file:', err);
-      return;
-    }
-
-    console.log('HTML content generated and updated successfully!');
-  });
-});
-
-	    
-	    
-    
-    
-    
-    
+        // Generate the table on page load
+        generateTable();
+      });
     </script>
-    
-    
-       
-	  </div>
-
-  
-	
-
-    
   </body>
     </html>
