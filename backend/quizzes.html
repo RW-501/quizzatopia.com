@@ -31,10 +31,6 @@
 
 
 	
-	<!-- Search engine verification -->
-<meta name="google-site-verification" content="your-verification-code">
-
-	
 	
 	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -52,8 +48,7 @@
   <!-- Custom scripts -->
   <script  src="/main.js"></script> 
 </head>
-
-    <style>
+ <style>
       .error-mark {
         color: red;
         font-weight: bold;
@@ -65,26 +60,85 @@
     </style>
   </head>
   <body>
-	  <script>
-		  
-		  const fs = require('fs');
+    <div class="container mt-4">
+      <table id="quizTable" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Page Name</th>
+            <th>Results</th>
+            <th>Questions Count</th>
+            <th>Fix</th>
+            <th>View</th>
+            <th>Add</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
 
-// Specify the folder path
-const folderPath = '/path/to/folder';
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        const folderPath = '/q';
 
-// Read the contents of the folder
-fs.readdir(folderPath, (err, files) => {
-  if (err) {
-    console.error('Error reading folder:', err);
-    return;
-  }
+        // Function to fetch JSON file and generate table row
+        async function generateTableRow(file) {
+          const filePath = `${folderPath}/${file}`;
 
-  // Process each file
-  files.forEach((file) => {
-    console.log(file);
-  });
-});
+          try {
+            const response = await fetch(filePath);
+            const jsonData = await response.json();
 
+            const hasError = Object.keys(jsonData).length === 0;
+            const questionCount = hasError ? 'N/A' : Object.keys(jsonData.questions).length;
+
+            return `
+              <tr>
+                <td>${file}</td>
+                <td>${hasError ? '<span class="error-mark">X</span>' : '<span class="success-mark">&#10004;</span>'}</td>
+                <td>${questionCount}</td>
+                <td>
+                  <a href="/backend/fix/?q=${encodeURIComponent(file)}" class="btn btn-primary">Fix</a>
+                </td>
+                <td>
+                  <a href="/quiz/?q=${encodeURIComponent(file)}" class="btn btn-info">View</a>
+                </td>
+                <td>
+                  <a href="/backend/add/?q=${encodeURIComponent(file)}" class="btn btn-success">Add</a>
+                </td>
+              </tr>
+            `;
+          } catch (error) {
+            console.error(`Error reading JSON file ${file}:`, error);
+            return '';
+          }
+        }
+
+        // Function to fetch file names from the folder
+        async function fetchFileNames() {
+          try {
+            const response = await fetch(folderPath);
+            const files = await response.json();
+            return files;
+          } catch (error) {
+            console.error('Error fetching file names:', error);
+            return [];
+          }
+        }
+
+        // Function to generate the HTML table
+        async function generateTable() {
+          const tableBody = document.querySelector('#quizTable tbody');
+          const files = await fetchFileNames();
+
+          const tableRows = await Promise.all(files.map(generateTableRow));
+
+          tableBody.innerHTML = tableRows.join('');
+        }
+
+        // Generate the table on page load
+        generateTable();
+      });
     </script>
+  </body>
   </body>
     </html>
