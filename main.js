@@ -633,22 +633,20 @@ if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function')
 
 // Function to retrieve user location using a geolocation API
 var ipAddress; // This variable should be assigned the IP address of the user
- var  locationV;
+var locationV;
 
 function getUserLocation(ipAddress) {
   const USER_INFO_KEY = 'user_location';
   const savedUserInfo = localStorage.getItem(USER_INFO_KEY);
-          console.log("savedUserInfo 1: ", savedUserInfo);
-/*
-  if (savedUserInfo) {
-          console.log("savedUserInfo ?: ", savedUserInfo);
+          console.log("savedUserInfo Info: ", savedUserInfo);
 
+//  if (savedUserInfo) {
     // User location is already saved in local storage, return the parsed object
-    return JSON.parse(savedUserInfo);
-  }
-*/
+  //  return JSON.parse(savedUserInfo);
+//  }
+
   const ipRangesUrl = 'https://www.quizzatopia.com/geo/usa_states.json'; // Replace with the actual URL of the IP ranges JSON file
-//const ipRangesUrl = '/geo/usa_states.json'; // Replace with the actual URL to the JSON file
+
   return fetch(ipRangesUrl)
     .then(response => response.json())
     .then(ipRangesData => {
@@ -665,7 +663,6 @@ function getUserLocation(ipAddress) {
             break;
           }
         }
-          console.log("isInRange: ", isInRange);
 
         if (isInRange) {
           locationV = {
@@ -674,7 +671,6 @@ function getUserLocation(ipAddress) {
             userLatitude: null, // Update with the actual latitude value if available
             userLongitude: null // Update with the actual longitude value if available
           };
-
           console.log("Location Info: ", locationV);
 
           // Save the user location in local storage
@@ -682,7 +678,6 @@ function getUserLocation(ipAddress) {
           return locationV;
         }
       }
-          console.log("no info? ");
 
       // IP address not found in any range, return null or handle the case as needed
       return null;
@@ -692,53 +687,31 @@ function getUserLocation(ipAddress) {
       return null;
     });
 }
-          console.log("Location Info2: ", locationV);
 
 // Example usage:
 //const ipAddress = [1, 2, 3, 4]; // Replace with the actual IP address as an array of four numbers
 
-
-function ipFunc(){
-// This approach uses a third-party API to fetch the user's IP address
-fetch('https://api.ipify.org?format=json')
-  .then(response => response.json())
-  .then(data => {
-     ipAddress = data.ip;
-    console.log(ipAddress);
-    // Use the IP address as needed
-getUserLocation(ipAddress);
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
-		
-}
- const userInfo = getUserInfo();
-	    console.log("userInfo   "+userInfo);
-
-
-// Function to save user information to Firestore
-function saveUserInfoToFirestore(userInfo) {
-  const db = firebase.firestore();
-  const userId = userInfo.firebaseId;
-
-  db.collection('users')
-    .doc(userId)
-    .set(userInfo)
-    .then(() => {
-      console.log('User information saved to Firestore');
+function getIPAddress() {
+  // This approach uses a third-party API to fetch the user's IP address
+  return fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+      ipAddress = data.ip;
+      return ipAddress;
     })
-    .catch((error) => {
-      console.error('Error saving user information to Firestore:', error);
+    .catch(error => {
+      console.error('Error:', error);
+      return null;
     });
 }
 
-// Function to check if user info has changed and update if necessary
 function checkUserInfoChanges() {
   const userInfo = getUserInfo();
 
-    ipFunc().then((locationV) => {
-      const { userCountry, userState, userLatitude, userLongitude } = locationV;
+  getIPAddress()
+    .then(ip => getUserLocation(ip))
+    .then(location => {
+      const { userCountry, userState, userLatitude, userLongitude } = location;
 
       if (
         userInfo.userState !== userState ||
@@ -762,7 +735,7 @@ function checkUserInfoChanges() {
         db.collection('users')
           .doc(userId)
           .get()
-          .then((doc) => {
+          .then(doc => {
             const dbUserInfo = doc.data();
 
             if (dbUserInfo && dbUserInfo.lastUpdated > userInfo.lastUpdated) {
@@ -770,15 +743,17 @@ function checkUserInfoChanges() {
               updateUserInfo(dbUserInfo);
             }
           })
-          .catch((error) => {
+          .catch(error => {
             console.error('Error retrieving user info from Firestore:', error);
           });
       }
     })
-    .catch((error) => {
+    .catch(error => {
       console.error('Error retrieving user location:', error);
     });
 }
+
+
 
 
 
