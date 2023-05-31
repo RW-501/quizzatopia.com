@@ -725,7 +725,7 @@ function saveUserInfoToFirestore(userInfo) {
 function checkUserInfoChanges() {
   const userInfo = getUserInfo();
 
-    getUserLocation().then((location) => {
+    ipFunc().then((location) => {
       const { userCountry, userState, userLatitude, userLongitude } = location;
 
       if (
@@ -919,51 +919,6 @@ function validateFields(username, email, password) {
 }
 
 
-function checkUserInfoChanges() {
-  const userInfo = getUserInfo();
-
-    getUserLocation().then((location) => {
-      const { userCountry, userState, userLatitude, userLongitude } = location;
-
-    if (
-      userInfo.userState !== userState ||
-      userInfo.userCountry !== userCountry ||
-      userInfo.userLatitude !== userLatitude ||
-      userInfo.userLongitude !== userLongitude
-    ) {
-      // User location has changed, update user information
-      const updatedInfo = {
-        userState,
-        userCountry,
-        userLatitude,
-        userLongitude,
-      };
-      updateUserInfo(updatedInfo);
-    } else {
-      // Check timestamp for user info
-      const db = firebase.firestore();
-      const userId = userInfo.firebaseId;
-
-      db.collection('users')
-        .doc(userId)
-        .get()
-        .then((doc) => {
-          const dbUserInfo = doc.data();
-
-          if (dbUserInfo && dbUserInfo.lastUpdated > userInfo.lastUpdated) {
-            // Database info is newer, update local storage
-            updateUserInfo(dbUserInfo);
-          }
-        })
-        .catch((error) => {
-          console.error('Error retrieving user info from Firestore:', error);
-        });
-    }
-  });
-}
-
-	
-	
 		
 	
 		document.addEventListener("DOMContentLoaded", () => {
