@@ -725,7 +725,7 @@ function saveUserInfoToFirestore(userInfo) {
 function checkUserInfoChanges() {
   const userInfo = getUserInfo();
 
-    .then((location) => {
+    ipFunc().then((location) => {
       const { userCountry, userState, userLatitude, userLongitude } = location;
 
       if (
@@ -815,7 +815,6 @@ window.signInWithGoogle = function () {
       onAuthSuccess(userInfo);
 
       updateUserInfo(userInfo);
-  ipFunc();
 
       // Check if user info changes
       checkUserInfoChanges();
