@@ -640,12 +640,14 @@ function getUserLocation(ipAddress) {
   const savedUserInfo = localStorage.getItem(USER_INFO_KEY);
 
   if (savedUserInfo) {
+	            console.log("savedUserInfo ? ");
+
     // User location is already saved in local storage, return the parsed object
     return JSON.parse(savedUserInfo);
   }
 
-//  const ipRangesUrl = 'https://www.quizzatopia.com/geo/usa_states.json'; // Replace with the actual URL of the IP ranges JSON file
-const ipRangesUrl = '/geo/usa_states.json'; // Replace with the actual URL to the JSON file
+  const ipRangesUrl = 'https://www.quizzatopia.com/geo/usa_states.json'; // Replace with the actual URL of the IP ranges JSON file
+//const ipRangesUrl = '/geo/usa_states.json'; // Replace with the actual URL to the JSON file
   return fetch(ipRangesUrl)
     .then(response => response.json())
     .then(ipRangesData => {
