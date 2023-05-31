@@ -669,6 +669,7 @@ function getUserLocation() {
             userLatitude: null, // Update with the actual latitude value if available
             userLongitude: null // Update with the actual longitude value if available
           };
+    console.log("locationInfo   "+locationInfo);
 
           // Save the user location in local storage
           localStorage.setItem(USER_INFO_KEY, JSON.stringify(locationInfo));
@@ -700,8 +701,9 @@ fetch('https://api.ipify.org?format=json')
   });
 		
 }
+ const userInfo = getUserInfo();
+	    console.log("userInfo   "+userInfo);
 
-	
 
 // Function to save user information to Firestore
 function saveUserInfoToFirestore(userInfo) {
