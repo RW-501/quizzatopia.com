@@ -919,12 +919,11 @@ function validateFields(username, email, password) {
 }
 
 
-
 function checkUserInfoChanges() {
   const userInfo = getUserInfo();
-
-  ipFunc().then((location) => {
-	      const { userCountry, userState, userLatitude, userLongitude } = location;
+ipFunc();
+  getUserLocation().then((location) => {
+    const { userCountry, userState, userLatitude, userLongitude } = location;
 
     if (
       userInfo.userState !== userState ||
@@ -962,7 +961,6 @@ function checkUserInfoChanges() {
     }
   });
 }
-
 
 	
 	
