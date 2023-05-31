@@ -633,6 +633,7 @@ if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function')
 
 // Function to retrieve user location using a geolocation API
 var ipAddress; // This variable should be assigned the IP address of the user
+ var  locationV;
 
 function getUserLocation(ipAddress) {
   const USER_INFO_KEY = 'user_location';
@@ -645,7 +646,6 @@ function getUserLocation(ipAddress) {
 
 //  const ipRangesUrl = 'https://www.quizzatopia.com/geo/usa_states.json'; // Replace with the actual URL of the IP ranges JSON file
 const ipRangesUrl = '/geo/usa_states.json'; // Replace with the actual URL to the JSON file
-
   return fetch(ipRangesUrl)
     .then(response => response.json())
     .then(ipRangesData => {
@@ -662,22 +662,24 @@ const ipRangesUrl = '/geo/usa_states.json'; // Replace with the actual URL to th
             break;
           }
         }
+          console.log("isInRange: ", isInRange);
 
         if (isInRange) {
-          const location = {
+          locationV = {
             userCountry: range.country,
             userState: range.state,
             userLatitude: null, // Update with the actual latitude value if available
             userLongitude: null // Update with the actual longitude value if available
           };
 
-          console.log("Location Info: ", location);
+          console.log("Location Info: ", locationV);
 
           // Save the user location in local storage
-          localStorage.setItem(USER_INFO_KEY, JSON.stringify(location));
-          return location;
+          localStorage.setItem(USER_INFO_KEY, JSON.stringify(locationV));
+          return locationV;
         }
       }
+          console.log("no info? ");
 
       // IP address not found in any range, return null or handle the case as needed
       return null;
@@ -687,6 +689,7 @@ const ipRangesUrl = '/geo/usa_states.json'; // Replace with the actual URL to th
       return null;
     });
 }
+          console.log("Location Info2: ", locationV);
 
 // Example usage:
 //const ipAddress = [1, 2, 3, 4]; // Replace with the actual IP address as an array of four numbers
@@ -731,8 +734,8 @@ function saveUserInfoToFirestore(userInfo) {
 function checkUserInfoChanges() {
   const userInfo = getUserInfo();
 
-    ipFunc().then((location) => {
-      const { userCountry, userState, userLatitude, userLongitude } = location;
+    ipFunc().then((locationV) => {
+      const { userCountry, userState, userLatitude, userLongitude } = locationV;
 
       if (
         userInfo.userState !== userState ||
