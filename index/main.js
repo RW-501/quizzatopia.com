@@ -86,7 +86,6 @@ const quizContent = `
 
 function getQuizInfo() {
   const quizInfoContainer = document.getElementById('quizInfoContainer');
-  quizInfoContainer.innerHTML = ''; // Clear previous content
 
   let count = 0; // Counter for limiting the number of displayed quiz info
 
