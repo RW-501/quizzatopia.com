@@ -184,10 +184,7 @@ function loadLeaderboard(loc) {
     .then(function(querySnapshot) {
       console.log('Query executed successfully.');
 
-      // Clear the leaderboard body
-      $('#leaderboardBody').empty();
-      console.log('Leaderboard body cleared.');
-
+   
       // Loop through the retrieved data and add rows to the leaderboard table
       querySnapshot.forEach(function(doc) {
         var userInfo = doc.data();
