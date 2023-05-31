@@ -342,11 +342,11 @@ function awardQuizzesTakenBadges() {
 
   // Define the milestones and corresponding badge information
 const milestones = [
-  { count: 0, badge: { id: 2, name: "Quiz Enthusiast", description: "Awarded for taking 5 quizzes", quantity: 0, imageUrl: "/images/badge/wizards/wt1.png", maxQuantity: 1 } },
-  { count: 1, badge: { id: 3, name: "Quiz Aficionado", description: "Awarded for taking 10 quizzes", quantity: 0, imageUrl: "/images/badge/wizards/wt2.png", maxQuantity: 1 } },
-  { count: 2, badge: { id: 4, name: "Quiz Master", description: "Awarded for taking 20 quizzes", quantity: 0, imageUrl: "/images/badge/wizards/wt3.png", maxQuantity: 1 } },
-  { count: 3, badge: { id: 5, name: "Quiz Guru", description: "Awarded for taking 30 quizzes", quantity: 0, imageUrl: "/images/badge/wizards/wt4.png", maxQuantity: 1 } },
-  { count: 4, badge: { id: 6, name: "Quiz Legend", description: "Awarded for taking 40 quizzes", quantity: 0, imageUrl: "/images/badge/wizards/wt5.png", maxQuantity: 1 } },
+  { count: 5, badge: { id: 2, name: "Quiz Enthusiast", description: "Awarded for taking 5 quizzes", quantity: 0, imageUrl: "/images/badge/wizards/wt1.png", maxQuantity: 1 } },
+  { count: 10, badge: { id: 3, name: "Quiz Aficionado", description: "Awarded for taking 10 quizzes", quantity: 0, imageUrl: "/images/badge/wizards/wt2.png", maxQuantity: 1 } },
+  { count: 20, badge: { id: 4, name: "Quiz Master", description: "Awarded for taking 20 quizzes", quantity: 0, imageUrl: "/images/badge/wizards/wt3.png", maxQuantity: 1 } },
+  { count: 30, badge: { id: 5, name: "Quiz Guru", description: "Awarded for taking 30 quizzes", quantity: 0, imageUrl: "/images/badge/wizards/wt4.png", maxQuantity: 1 } },
+  { count: 40, badge: { id: 6, name: "Quiz Legend", description: "Awarded for taking 40 quizzes", quantity: 0, imageUrl: "/images/badge/wizards/wt5.png", maxQuantity: 1 } },
   { count: 50, badge: { id: 7, name: "Quiz Champion", description: "Awarded for taking 50 quizzes", quantity: 0, imageUrl: "/images/badge/wizards/wt6.png", maxQuantity: 1 } }
 ];
 
@@ -663,17 +663,17 @@ function getUserLocation() {
         }
 
         if (isInRange) {
-          const locationInfo = {
+          const location = {
             userCountry: range.country,
             userState: range.state,
             userLatitude: null, // Update with the actual latitude value if available
             userLongitude: null // Update with the actual longitude value if available
           };
-    console.log("locationInfo   "+locationInfo);
+    console.log("locationInfo   "+location);
 
           // Save the user location in local storage
-          localStorage.setItem(USER_INFO_KEY, JSON.stringify(locationInfo));
-          return locationInfo;
+          localStorage.setItem(USER_INFO_KEY, JSON.stringify(location));
+          return location;
         }
       }
 
@@ -725,7 +725,7 @@ function saveUserInfoToFirestore(userInfo) {
 function checkUserInfoChanges() {
   const userInfo = getUserInfo();
 
-    ipFunc().then((location) => {
+    getUserLocation().then((location) => {
       const { userCountry, userState, userLatitude, userLongitude } = location;
 
       if (
@@ -922,7 +922,7 @@ function validateFields(username, email, password) {
 function checkUserInfoChanges() {
   const userInfo = getUserInfo();
 
-    ipFunc().then((location) => {
+    getUserLocation().then((location) => {
       const { userCountry, userState, userLatitude, userLongitude } = location;
 
     if (
