@@ -725,7 +725,7 @@ function saveUserInfoToFirestore(userInfo) {
 function checkUserInfoChanges() {
   const userInfo = getUserInfo();
 
-  ipFunc()
+  ipFunc();
     .then((location) => {
       const { userCountry, userState, userLatitude, userLongitude } = location;
 
