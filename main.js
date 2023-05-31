@@ -638,14 +638,15 @@ var ipAddress; // This variable should be assigned the IP address of the user
 function getUserLocation(ipAddress) {
   const USER_INFO_KEY = 'user_location';
   const savedUserInfo = localStorage.getItem(USER_INFO_KEY);
-
+          console.log("savedUserInfo 1: ", savedUserInfo);
+/*
   if (savedUserInfo) {
-	            console.log("savedUserInfo ? ");
+          console.log("savedUserInfo ?: ", savedUserInfo);
 
     // User location is already saved in local storage, return the parsed object
     return JSON.parse(savedUserInfo);
   }
-
+*/
   const ipRangesUrl = 'https://www.quizzatopia.com/geo/usa_states.json'; // Replace with the actual URL of the IP ranges JSON file
 //const ipRangesUrl = '/geo/usa_states.json'; // Replace with the actual URL to the JSON file
   return fetch(ipRangesUrl)
