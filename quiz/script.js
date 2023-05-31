@@ -580,11 +580,10 @@ function displayEarnedPoints(start, end, duration) {
 
  function endFucs() {
 
-function retakeQuizFunc(){
 document.getElementById("retake-btn").addEventListener("click", () => {
 location.href = "/quiz/?q="+q;
 });
-}
+
 	
  }
 
@@ -649,7 +648,7 @@ displayEarnedPoints(startValue, earnedPoints, animationDuration);
     // Show the pie chart for correct and incorrect answers
     showPieChartEnd();
   }
-
+endFucs();
    const newBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
 const uniqueArray = newBadges.filter(item => !oldBadges.some(element => element.id === item.id));
 
@@ -690,7 +689,7 @@ function displayBadges() {
 displayBadges();  
 	}
 	
-	endFucs();
+	
 	
   // Unhide the message board
  // document.getElementById("MessageBoard").classList.remove("d-none");
