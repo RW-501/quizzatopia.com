@@ -697,6 +697,8 @@ function getIPAddress() {
     .then(response => response.json())
     .then(data => {
       ipAddress = data.ip;
+	            console.log("ipAddress Info: ", ipAddress);
+
       return ipAddress;
     })
     .catch(error => {
