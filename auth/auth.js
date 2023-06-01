@@ -462,7 +462,7 @@ window.createUserWithEmailAndPassword = function (event) {
         firebaseId: firebaseId
       };
       transferAccountToEmailUserInfo(userInfo, email); // Transfer account to email if needed
-      saveUserInfoToFirestore(userInfo); // Save user info to Firestore
+  //    saveUserInfoToFirestore(userInfo); // Save user info to Firestore
 
       return user;
     })
