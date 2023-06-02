@@ -1,0 +1,117 @@
+{
+  "quizName": "Project Management Professional Quiz",
+  "quizCode": "Q98pm6u",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "A project manager is solely responsible for the success or failure of a project.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "While the project manager plays a crucial role in managing and leading the project, the success or failure of a project is a collective responsibility that involves the entire project team, stakeholders, and organizational support.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Project scope defines the work required to complete the project.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Project scope defines the objectives, deliverables, tasks, and boundaries of the project, providing a clear understanding of what needs to be accomplished and the project's overall boundaries.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Change management is not necessary for successful project execution.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Change management is essential for successful project execution. It involves identifying, managing, and communicating changes that impact the project's scope, timeline, and resources, ensuring stakeholders are informed and aligned.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Risk management is only important during the project planning phase.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Risk management is important throughout the entire project lifecycle. It involves identifying, assessing, and managing potential risks that can impact project objectives, and should be continuously monitored and addressed.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Communication management is not necessary in project management.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Effective communication is crucial in project management to ensure clear and timely exchange of information among team members, stakeholders, and project sponsors. It helps foster collaboration, manage expectations, and address project issues.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "A project charter is developed during the project execution phase.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "A project charter is developed during the project initiation phase. It serves as a formal document that authorizes the existence of the project, defines its objectives, stakeholders, and high-level requirements.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "A stakeholder register is used to keep track of project risks.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "A stakeholder register is used to identify and manage project stakeholders. It includes information about their interests, influence, and potential impact on the project, but it does not directly track project risks.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Quality management is focused solely on meeting project deadlines.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Quality management in project management focuses on meeting project requirements and delivering a product or service that meets or exceeds customer expectations. It involves processes for planning, assuring, and controlling quality throughout the project lifecycle.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Resource leveling is a technique used to balance resource demand and supply.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Resource leveling is a technique used to balance resource demand and supply over time, ensuring that resources are allocated efficiently and that project tasks are appropriately scheduled based on resource availability.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Lessons learned are typically captured at the end of the project.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Lessons learned are captured throughout the project lifecycle, not just at the end. They involve reflecting on project successes, challenges, and failures to identify best practices and areas for improvement, which can be shared and applied in future projects.",
+      "difficulty": "Easy"
+    }
+  ]
+}
