@@ -1,0 +1,116 @@
+{
+  "quizName": "Movies Quiz",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "The movie 'Jurassic Park' was released in 1993.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "'Jurassic Park' was indeed released in 1993 and directed by Steven Spielberg. It became a blockbuster and is considered a classic in the science fiction genre.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "The 'Lord of the Rings' trilogy consists of four movies.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "The 'Lord of the Rings' trilogy consists of three movies: 'The Fellowship of the Ring' (2001), 'The Two Towers' (2002), and 'The Return of the King' (2003).",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "The movie 'Forrest Gump' stars Tom Hanks in the lead role.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Tom Hanks portrayed the iconic character Forrest Gump in the 1994 film. His performance earned him an Academy Award for Best Actor.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "The movie 'Titanic' was directed by James Cameron.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "James Cameron directed the epic romance-disaster film 'Titanic' in 1997. The movie became a massive success and won numerous Academy Awards, including Best Picture and Best Director.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "The movie 'The Dark Knight' features Heath Ledger as the Joker.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Heath Ledger portrayed the character of the Joker in Christopher Nolan's 2008 film 'The Dark Knight.' His captivating performance earned him a posthumous Academy Award for Best Supporting Actor.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "The movie 'Avatar' is the highest-grossing film of all time.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "As of now, 'Avatar,' directed by James Cameron, holds the title of the highest-grossing film of all time, surpassing 'Avengers: Endgame' in worldwide box office earnings.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "The 'Harry Potter' film series consists of eight movies.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The 'Harry Potter' film series is composed of eight movies, adapting the seven books written by J.K. Rowling. The final book, 'Harry Potter and the Deathly Hallows,' was divided into two parts for the film adaptation.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "The movie 'Inception' was directed by Christopher Nolan.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Christopher Nolan directed the mind-bending film 'Inception' in 2010. The movie received critical acclaim for its innovative storytelling and visual effects.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "The movie 'The Shawshank Redemption' is based on a Stephen King novella.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "'The Shawshank Redemption,' released in 1994, is based on a novella written by Stephen King titled 'Rita Hayworth and Shawshank Redemption.' The film has since gained a cult following and is often regarded as one of the greatest movies of all time.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "The movie 'Pulp Fiction' was directed by Quentin Tarantino.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Quentin Tarantino directed the neo-noir black comedy film 'Pulp Fiction' in 1994. The movie is known for its nonlinear narrative structure and memorable dialogue.",
+      "difficulty": "Easy"
+    }
+  ]
+}
