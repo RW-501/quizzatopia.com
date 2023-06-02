@@ -1,3 +1,19 @@
+
+.carousel-control-next-icon {
+    background-color: cornflowerblue;
+      opacity: 0;
+}
+.carousel-control-prev-icon {
+    background-color: cornflowerblue;
+      opacity: 0;
+}
+
+
+
+
+
+
+
 .quiz-info_His {
   background-color: #f8f9fa;
   border: 1px solid #ced4da;
