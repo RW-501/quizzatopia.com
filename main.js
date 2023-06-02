@@ -24,7 +24,7 @@ var cssStyles = `
     height: 60px;
     border-radius: 50%;
     border: 6px solid #aaaaaa;
-    border-top-color: #000000;
+    border-top-color: #ff8c00;
     animation: loader-spin 1s infinite linear;
   }
 
