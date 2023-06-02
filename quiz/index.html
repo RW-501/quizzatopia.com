@@ -734,12 +734,6 @@ if (str.startsWith("TF_")) {
 
 	
 
-// Use the value of "q"
-console.log("urlParams     "+q); 
-
-if (str.startsWith("TF_")) {
- q = str.substr(3); // Remove the first three characters
-}
       var newStr = q.replace(/_/g, " ");
 	  
 	  
@@ -763,10 +757,18 @@ document.getElementById("social_red").href = "https://www.reddit.com/submit?url=
 	  
 	  
 
+	  function removeTF(q) {
+
+// Use the value of "q"
+console.log("urlParams     "+q); 
+
+if (str.startsWith("TF")) {
+ q = str.substr(2); // Remove the first three characters
+	return q;
+}
 	  
 	  
-	  
-	  
+	  }
 	  
 	  
 	  
