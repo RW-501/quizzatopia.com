@@ -687,6 +687,28 @@ var q = urlParams.get('q');
 var e = urlParams.get('e');
 	  
 console.log("2 urlParams     "+q); 
+	
+	  
+if (q === null) {
+  const files = [
+    "job_interviews",
+    "marvel_cinematic_universe",
+    "middle_school_math",
+    "high_school_science",
+    "movies",
+    "hip_hop",
+    "pop_culture"
+  ];
+//console.log("1 random     "+q);
+	
+	  function getRandomFile(files) {
+    return files[Math.floor(Math.random() * files.length)];
+  }
+
+  q = getRandomFile(files);
+}
+  
+	  
 	  
 	  let str = q;
 
@@ -711,24 +733,8 @@ if (str.startsWith("TF_")) {
 
 
 
-if (q === null) {
-  const files = [
-    "job_interviews",
-    "marvel_cinematic_universe",
-    "middle_school_math",
-    "high_school_science",
-    "movies",
-    "hip_hop",
-    "pop_culture"
-  ];
-console.log("1 random     "+q); 
-	
-  function getRandomFile(files) {
-    return files[Math.floor(Math.random() * files.length)];
-  }
 
-  q = getRandomFile(files);
-}
+	
 
 // Use the value of "q"
 console.log("urlParams     "+q); 
