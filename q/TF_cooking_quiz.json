@@ -1,0 +1,117 @@
+{
+  "quizName": "Cooking True or False Quiz",
+  "quizCode": "Q866fgh1",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Butter is a commonly used ingredient in baking.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Butter is a commonly used ingredient in baking and adds flavor, moisture, and richness to baked goods.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Boiling is the process of cooking food in a large amount of oil.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Boiling is the process of cooking food in a liquid, usually water or broth, at or near its boiling point. It is different from frying, which involves cooking food in oil or fat.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Marinating is a technique used to tenderize and add flavor to meat and poultry.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Marinating involves soaking meat or poultry in a seasoned liquid mixture to enhance its flavor, tenderize the meat, and sometimes add moisture.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "A paring knife is used for cutting vegetables into small, even pieces.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "A paring knife is a small, sharp knife used for peeling and trimming fruits and vegetables. It is not specifically designed for cutting vegetables into small, even pieces.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "To properly cook a steak, it should be flipped only once during the cooking process.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "To achieve a nice sear and even cooking, it is recommended to flip a steak only once during the cooking process. Constant flipping can prevent the steak from developing a desirable crust.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Baking powder and baking soda are interchangeable in recipes.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Baking powder and baking soda are not interchangeable in recipes. They have different chemical properties and react differently when combined with other ingredients. It's important to use the specified leavening agent in a recipe.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Whisking is a technique used to incorporate air into ingredients and create a light and fluffy texture.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Whisking is a technique used to beat or stir ingredients vigorously using a whisk, incorporating air and creating a light and fluffy texture in dishes such as whipped cream or meringue.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Blanching is a cooking technique that involves immersing food in boiling water for a short period and then immediately transferring it to ice water.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Blanching is a cooking technique used to partially cook food by immersing it in boiling water for a short period, followed by quickly transferring it to ice water to stop the cooking process. It is commonly used for vegetables and fruits.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Using a wooden cutting board is preferable for cutting raw meat.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Using a plastic or nonporous cutting board is preferable for cutting raw meat. Wooden cutting boards can absorb juices from raw meat and be harder to thoroughly clean and sanitize.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "When proofing yeast, it should form a bubbly and frothy mixture.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "When proofing yeast, it should be mixed with warm water and a small amount of sugar. If the yeast is active, it will consume the sugar and produce carbon dioxide, resulting in a bubbly and frothy mixture.",
+      "difficulty": "Easy"
+    }
+  ]
+}
