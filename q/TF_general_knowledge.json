@@ -1,0 +1,118 @@
+{
+  "quizName": "General Knowledge Quiz",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "The capital of Australia is Sydney.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "The capital of Australia is Canberra, not Sydney.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "The Great Wall of China is visible from space.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Contrary to popular belief, the Great Wall of China is not visible from space with the naked eye.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Mount Everest is the tallest mountain in the world.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Mount Everest is the highest peak in the world, standing at a height of 8,848 meters (29,029 feet) above sea level.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "The currency of Japan is the yen.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The currency of Japan is indeed the yen.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "The Mona Lisa was painted by Vincent van Gogh.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "The Mona Lisa was painted by Leonardo da Vinci, not Vincent van Gogh.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "The Nile River is the longest river in the world.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The Nile River, flowing through several countries in northeastern Africa, is widely considered to be the longest river in the world.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "The Statue of Liberty was a gift from France to the United States.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The Statue of Liberty was a gift from France to the United States and has since become an iconic symbol of freedom and democracy.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "The planet Mars is known as the 'Red Planet'.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Mars is often referred to as the 'Red Planet' due to its reddish appearance caused by iron oxide (rust) on its surface.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "The Taj Mahal is located in Istanbul, Turkey.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "The Taj Mahal is located in Agra, India, not Istanbul, Turkey.",
+      "difficulty": "Medium"
+    },
+
+
+    {
+      "questionNumber": 10,
+      "question": "The Declaration of Independence was signed in 1776.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The Declaration of Independence was indeed signed on July 4, 1776, marking the United States' independence from Great Britain.",
+      "difficulty": "Easy"
+    }
+  ]
+}
