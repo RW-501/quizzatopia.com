@@ -1,0 +1,119 @@
+{
+  "quizName": "Architect Registration Examination Quiz",
+"quizCode": "QZ064823",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "The Architect Registration Examination (ARE) is a requirement for architectural licensure in the United States.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The Architect Registration Examination (ARE) is a national examination that assesses the knowledge and skills necessary for architectural practice. It is a requirement for architectural licensure in the United States.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "The ARE consists of multiple-choice questions only.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "The ARE consists of multiple-choice questions as well as other question types such as fill-in-the-blank, hot spot, and graphic vignettes. It is designed to test various aspects of architectural knowledge and skills.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Architects who have passed the ARE are automatically granted licensure in all states.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "While passing the ARE is a significant step towards architectural licensure, architects must still fulfill additional requirements, such as completing the necessary experience hours and meeting the specific licensure requirements of each state, to obtain licensure in a particular state.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "The ARE assesses knowledge and skills in areas such as site design, structural systems, and building codes.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The ARE covers a wide range of topics relevant to architectural practice, including site design, structural systems, building codes, construction materials, and professional practice. It aims to evaluate an architect's competence in various aspects of the profession.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "The ARE is administered by the National Council of Architectural Registration Boards (NCARB).",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The ARE is developed and administered by the National Council of Architectural Registration Boards (NCARB), which is the organization responsible for the regulation of architectural licensure in the United States.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Architects are not required to take the ARE if they have completed an accredited architecture program.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Completion of an accredited architecture program is a prerequisite for eligibility to take the ARE, but architects must still pass the examination to obtain licensure.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "The ARE can only be taken once a year.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "The ARE can be taken year-round at designated testing centers. Candidates can schedule and take individual divisions of the examination based on their own pace and availability.",
+      "difficulty": "Easy"
+    },
+
+
+    {
+      "questionNumber": 8,
+      "question": "The ARE is a computer-based examination.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The ARE is a computer-based examination where candidates interact with the examination questions and prompts on a computer screen. This format allows for efficient administration and timely scoring of the examination.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "The ARE consists of a fixed number of divisions that all candidates must take.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "The ARE is divided into multiple divisions, and candidates have some flexibility in choosing which divisions to take and in what order. However, all divisions must be successfully completed to obtain licensure.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "The ARE is only applicable for architectural practice in the United States.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The ARE is specifically designed for architectural practice in the United States. The licensure requirements and examination formats may vary in other countries.",
+      "difficulty": "Easy"
+    }
+  ]
+}
