@@ -1,7 +1,7 @@
 {
-  "quizCode": "QZ05620",
+  "quizCode": "QZ06420",
   "quizName": "Traffic Safety Quiz",
-  "numberOfQuestions": 13,
+  "numberOfQuestions": 15,
   "questions": [
     {
       "questionNumber": 1,
@@ -12,8 +12,7 @@
       ],
       "answer": "False",
       "explanation": "A steady yellow traffic light means that the light is about to turn red. Drivers should slow down and prepare to stop unless it is unsafe to do so.",
-      "difficulty": "Easy",
-      "quizType": "TF"
+      "difficulty": "Easy"
     },
     {
       "questionNumber": 2,
@@ -24,8 +23,7 @@
       ],
       "answer": "True",
       "explanation": "If your brakes fail, the first thing you should do is try to slow the vehicle down by shifting into a lower gear and pumping the brakes rapidly. If this does not work, use the parking brake to bring the vehicle to a stop.",
-      "difficulty": "Medium",
-      "quizType": "TF"
+      "difficulty": "Medium"
     },
     {
       "questionNumber": 3,
@@ -36,8 +34,7 @@
       ],
       "answer": "False",
       "explanation": "Driver distraction is the most common cause of traffic crashes. Examples of driver distraction include texting while driving, eating while driving, and talking on the phone while driving.",
-      "difficulty": "Easy",
-      "quizType": "TF"
+      "difficulty": "Easy"
     },
     {
       "questionNumber": 4,
@@ -48,8 +45,7 @@
       ],
       "answer": "False",
       "explanation": "You should use your headlights any time you have trouble seeing other cars, including during the day in heavy rain or fog.",
-      "difficulty": "Easy",
-      "quizType": "TF"
+      "difficulty": "Easy"
     },
     {
       "questionNumber": 5,
@@ -60,8 +56,7 @@
       ],
       "answer": "True",
       "explanation": "The maximum speed limit on interstate highways in most states is 70 mph.",
-      "difficulty": "Easy",
-      "quizType": "TF"
+      "difficulty": "Easy"
     },
     {
       "questionNumber": 6,
@@ -72,8 +67,7 @@
       ],
       "answer": "False",
       "explanation": "A crosswalk is a designated area for pedestrians to cross the road. Drivers are required to stop for pedestrians in a crosswalk and give them the right-of-way.",
-      "difficulty": "Easy",
-      "quizType": "TF"
+      "difficulty": "Easy"
     },
     {
       "questionNumber": 7,
@@ -84,8 +78,7 @@
       ],
       "answer": "False",
       "explanation": "You should use your turn signal whenever you change direction, including when turning, changing lanes, and entering or exiting a highway.",
-      "difficulty": "Easy",
-      "quizType": "TF"
+      "difficulty": "Easy"
     },
     {
       "questionNumber": 8,
@@ -96,8 +89,7 @@
       ],
       "answer": "True",
       "explanation": "A yellow diamond-shaped sign indicates a warning. These signs are used to alert drivers of upcoming hazards or dangerous conditions, such as sharp turns, school zones, or construction zones.",
-      "difficulty": "Easy",
-      "quizType": "TF"
+      "difficulty": "Easy"
     },
     {
       "questionNumber": 9,
@@ -108,8 +100,7 @@
       ],
       "answer": "True",
       "explanation": "The speed limit in a residential area unless otherwise posted is generally 25 mph. However, it's important to always check for posted speed limit signs and adjust your speed accordingly.",
-      "difficulty": "Easy",
-      "quizType": "TF"
+      "difficulty": "Easy"
     },
     {
       "questionNumber": 10,
@@ -120,8 +111,7 @@
       ],
       "answer": "False",
       "explanation": "The proper way to enter a freeway is to use the on-ramp to accelerate to the speed of traffic and then merge smoothly into the lane. You should always check your blind spots and use your turn signal to signal your intention to merge.",
-      "difficulty": "Medium",
-      "quizType": "TF"
+      "difficulty": "Medium"
     },
     {
       "questionNumber": 11,
@@ -132,8 +122,7 @@
       ],
       "answer": "False",
       "explanation": "If you miss your exit on a freeway, you should continue driving and exit at the next available off-ramp. It's unsafe and illegal to back up or make a U-turn on a freeway.",
-      "difficulty": "Medium",
-      "quizType": "TF"
+      "difficulty": "Medium"
     },
     {
       "questionNumber": 12,
@@ -144,8 +133,7 @@
       ],
       "answer": "True",
       "explanation": "The proper hand position on the steering wheel is at the 9 and 3 o'clock positions. This position allows for the greatest control and maneuverability of the vehicle.",
-      "difficulty": "Easy",
-      "quizType": "TF"
+      "difficulty": "Easy"
     },
     {
       "questionNumber": 13,
@@ -156,8 +144,29 @@
       ],
       "answer": "True",
       "explanation": "The penalty for driving under the influence (DUI) of alcohol or drugs can vary depending on the state, but typically involves license suspension or revocation, fines, and possible jail time.",
-      "difficulty": "Medium",
-      "quizType": "TF"
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Tailgating, or driving too closely to the vehicle in front of you, is a safe driving practice.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Tailgating is dangerous and increases the risk of a rear-end collision. It is important to maintain a safe following distance to allow for enough time to react to changes in traffic.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Using a cell phone while driving is a safe and acceptable practice.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Using a cell phone while driving is a major distraction and significantly increases the risk of accidents. It is important to keep your focus on the road and avoid any activities that take your attention away from driving.",
+      "difficulty": "Medium"
     }
   ]
 }
