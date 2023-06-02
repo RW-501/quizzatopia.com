@@ -1,0 +1,117 @@
+{
+  "quizName": "Marvel Cinematic Universe Quiz",
+  "numberOfQuestions": 10,
+  "quizCode": "QZje964823",
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Iron Man is the first film released in the Marvel Cinematic Universe.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Iron Man, released in 2008, is the first film in the Marvel Cinematic Universe and introduced the character of Tony Stark.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Thor is the king of Asgard.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Thor, the Norse god of thunder, is portrayed as the king of Asgard in the Marvel Cinematic Universe.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Black Widow's real name is Natasha Romanoff.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Black Widow, portrayed by Scarlett Johansson, is known by her real name Natasha Romanoff in the Marvel Cinematic Universe.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Captain America's shield is made of adamantium.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Captain America's shield is made of vibranium, a fictional metal found in the Marvel Cinematic Universe.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "The Avengers first assembled in the film 'Avengers: Age of Ultron'.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "The Avengers first assembled in the film 'The Avengers', released in 2012. 'Avengers: Age of Ultron' is the sequel to the first Avengers film.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Thanos is the main antagonist in 'Avengers: Endgame'.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Thanos, portrayed by Josh Brolin, is the main antagonist in 'Avengers: Endgame', the culmination of the Infinity Saga in the Marvel Cinematic Universe.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Black Panther is the ruler of the fictional country Wakanda.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Black Panther, also known as T'Challa, is the ruler of the technologically advanced fictional country Wakanda in the Marvel Cinematic Universe.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Hawkeye's real name is Clint Barton.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Hawkeye, portrayed by Jeremy Renner, is known by his real name Clint Barton in the Marvel Cinematic Universe.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Ant-Man can shrink and also increase his size.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Ant-Man, portrayed by Paul Rudd, has the ability to shrink down to the size of an ant and also increase his size, thanks to the Pym Particles.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "The Infinity Stones are powerful artifacts that each represent a different element of the universe.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "The Infinity Stones are powerful artifacts that each represent a different aspect of the universe, such as Space, Mind, Reality, Power, Time, and Soul.",
+      "difficulty": "Medium"
+    }
+  ]
+}
