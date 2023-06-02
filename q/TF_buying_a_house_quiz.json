@@ -1,116 +1,117 @@
 {
-  "quizName": "ServSafe Food Protection Manager Certification Exam True or False Quiz",
+  "quizName": "Buying a House True or False Quiz",
+  "quizCode": "Q87j310",
   "numberOfQuestions": 10,
   "questions": [
     {
       "questionNumber": 1,
-      "question": "Cross-contamination occurs when bacteria from one food item is transferred to another food item.",
+      "question": "A pre-approval letter from a mortgage lender guarantees that you will get a loan to buy a house.",
       "options": [
         "True",
         "False"
       ],
-      "answer": "True",
-      "explanation": "Cross-contamination is the transfer of harmful bacteria or other microorganisms from one food item to another. It can happen through direct contact, such as using the same cutting board or utensils without proper cleaning, or through indirect contact, such as contaminated hands or surfaces.",
+      "answer": "False",
+      "explanation": "A pre-approval letter from a mortgage lender indicates that you are likely to qualify for a loan based on preliminary information. However, it does not guarantee that you will get the loan. The final approval process involves a more detailed evaluation of your financial situation, credit history, and the property itself.",
       "difficulty": "Easy"
     },
     {
       "questionNumber": 2,
-      "question": "The danger zone for food refers to temperatures between 40°F and 140°F (4°C and 60°C), where bacteria can multiply rapidly.",
+      "question": "The asking price of a house is always negotiable.",
       "options": [
         "True",
         "False"
       ],
       "answer": "True",
-      "explanation": "The danger zone for food is the temperature range between 40°F and 140°F (4°C and 60°C). Within this range, bacteria can multiply rapidly, increasing the risk of foodborne illness. It is important to keep perishable foods out of the danger zone to prevent bacterial growth.",
+      "explanation": "The asking price of a house is typically set by the seller, but it is not necessarily the final price. Buyers can negotiate with the seller to reach a mutually acceptable price. Factors such as market conditions, property condition, and buyer's bargaining power can influence the negotiation process.",
       "difficulty": "Easy"
     },
     {
       "questionNumber": 3,
-      "question": "Washing hands with soap and water for at least 5 seconds is sufficient to remove harmful bacteria.",
+      "question": "A home inspection is optional when buying a house.",
       "options": [
         "True",
         "False"
       ],
-      "answer": "False",
-      "explanation": "To effectively remove harmful bacteria, hands should be washed with soap and water for at least 20 seconds. This ensures proper removal of dirt, debris, and microorganisms from the hands.",
+      "answer": "True",
+      "explanation": "A home inspection is not mandatory when buying a house, but it is highly recommended. A home inspection helps identify any potential issues or defects in the property that may affect its value or require costly repairs. It provides buyers with important information to make an informed decision about the purchase.",
       "difficulty": "Easy"
     },
     {
       "questionNumber": 4,
-      "question": "Foodborne illness symptoms typically appear within 24 hours after consuming contaminated food.",
+      "question": "Closing costs include only the down payment on the house.",
       "options": [
         "True",
         "False"
       ],
-      "answer": "True",
-      "explanation": "Foodborne illness symptoms usually appear within 24 hours after consuming contaminated food. However, in some cases, symptoms may take longer to develop or may occur more quickly, depending on the type of pathogen involved.",
+      "answer": "False",
+      "explanation": "Closing costs include various fees and expenses associated with the purchase of a house. These can include lender fees, attorney fees, appraisal fees, title search fees, insurance premiums, and more. The down payment is a separate amount paid towards the purchase price of the house.",
       "difficulty": "Easy"
     },
     {
       "questionNumber": 5,
-      "question": "Thawing frozen food at room temperature is a safe method to prevent bacterial growth.",
-      "options": [
-        "True",
-        "False"
-      ],
-      "answer": "False",
-      "explanation": "Thawing frozen food at room temperature is not a safe method to prevent bacterial growth. It allows the food to remain in the danger zone for an extended period, providing an ideal environment for bacteria to multiply. The recommended methods for thawing food safely are in the refrigerator, under running water, or in the microwave using the defrost setting.",
-      "difficulty": "Medium"
-    },
-    {
-      "questionNumber": 6,
-      "question": "The proper way to sanitize cutting boards is by using hot water and dish soap.",
-      "options": [
-        "True",
-        "False"
-      ],
-      "answer": "False",
-      "explanation": "The proper way to sanitize cutting boards is by using a solution of bleach and water or a sanitizing agent approved for food contact surfaces. Hot water and dish soap are effective for cleaning, but sanitization requires an additional step using a proper sanitizing solution.",
-      "difficulty": "Medium"
-    },
-    {
-      "questionNumber": 7,
-      "question": "Reheating leftover food to a minimum internal temperature of 135°F (57°C) is sufficient to kill bacteria.",
-      "options": [
-        "True",
-        "False"
-      ],
-      "answer": "False",
-      "explanation": "To kill bacteria and reduce the risk of foodborne illness, leftover food should be reheated to a minimum internal temperature of 165°F (74°C). This temperature ensures that harmful bacteria, such as Salmonella and E. coli, are destroyed.",
-      "difficulty": "Medium"
-    },
-    {
-      "questionNumber": 8,
-      "question": "Hand sanitizers can be used as a substitute for handwashing in food service establishments.",
-      "options": [
-        "True",
-        "False"
-      ],
-      "answer": "False",
-      "explanation": "Hand sanitizers are not a substitute for handwashing in food service establishments. While hand sanitizers can be used as an additional measure for hand hygiene, they are not as effective as soap and water in removing dirt, debris, and certain types of microorganisms. Handwashing with soap and water is the recommended method for proper hand hygiene.",
-      "difficulty": "Medium"
-    },
-    {
-      "questionNumber": 9,
-      "question": "It is safe to taste food to check for freshness or quality before serving it to customers.",
-      "options": [
-        "True",
-        "False"
-      ],
-      "answer": "False",
-      "explanation": "Tasting food to check for freshness or quality before serving it to customers is not safe. It can introduce harmful bacteria or other contaminants into the food, increasing the risk of foodborne illness. Alternative methods, such as visual inspection, smell, or following established food safety guidelines, should be used to determine the freshness and quality of food.",
-      "difficulty": "Medium"
-    },
-    {
-      "questionNumber": 10,
-      "question": "Allergens are substances that can cause an allergic reaction in some individuals.",
+      "question": "A fixed-rate mortgage has a constant interest rate for the entire loan term.",
       "options": [
         "True",
         "False"
       ],
       "answer": "True",
-      "explanation": "Allergens are substances that can cause an allergic reaction in some individuals. Common food allergens include peanuts, tree nuts, shellfish, eggs, milk, wheat, soy, and fish. It is important for food service establishments to identify and properly handle allergens to prevent cross-contact and protect customers with food allergies.",
-      "difficulty": "Easy"
+      "explanation": "A fixed-rate mortgage has an interest rate that remains constant throughout the entire loan term, whether it is 15 years, 30 years, or another duration. This provides stability and predictability for the borrower, as the monthly mortgage payments remain the same.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Private mortgage insurance (PMI) is required for all types of mortgages.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Private mortgage insurance (PMI) is typically required for conventional mortgages when the down payment is less than 20% of the purchase price. However, it is not required for all types of mortgages. For example, government-backed loans such as FHA loans and VA loans have their own mortgage insurance requirements.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "The higher the credit score, the lower the interest rate on a mortgage.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Generally, a higher credit score indicates a lower credit risk for lenders. Borrowers with higher credit scores are more likely to qualify for lower interest rates on their mortgage loans. A good credit score is an important factor in securing favorable loan terms and potentially saving money over the life of the loan.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "The down payment for a house must always be paid in cash.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "While cash is a common method of paying the down payment, it is not the only option. Down payments can also be made through certified checks, wire transfers, or funds from a verified source such as a gift from a family member. The specific acceptable forms of payment may vary depending on the lender and local regulations.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Buying a house is always a better financial decision than renting.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Whether buying a house or renting is a better financial decision depends on various factors such as the local housing market, the buyer's financial situation, long-term plans, and personal preferences. Renting can offer flexibility and lower upfront costs, while buying a house can provide equity and potential long-term benefits. It's important to evaluate individual circumstances before making a decision.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "The mortgage interest rate is the only factor to consider when comparing loan offers.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "While the mortgage interest rate is an important factor in comparing loan offers, it is not the only consideration. Other factors to consider include loan origination fees, discount points, closing costs, loan term, and any special features or terms of the loan. It's important to evaluate the overall cost and terms of the loan to make an informed decision.",
+      "difficulty": "Medium"
     }
   ]
 }
