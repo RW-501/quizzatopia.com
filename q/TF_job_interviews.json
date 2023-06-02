@@ -1,0 +1,119 @@
+{
+  "quizName": "Job Interviews Quiz",
+  "numberOfQuestions": 10,
+  "quizCode": "QZ06ed4823",
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "It is acceptable to arrive late for a job interview.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "It is highly important to arrive on time for a job interview to make a good impression and show respect for the interviewer's time.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "It is important to research the company before a job interview.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Researching the company prior to a job interview demonstrates your interest, preparation, and understanding of the organization, which can impress the interviewer.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "It is recommended to bring a copy of your resume to a job interview.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Bringing a copy of your resume allows you to refer to it during the interview and provide additional copies if needed.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "It is appropriate to ask about the salary and benefits during the initial job interview.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Salary and benefits discussions are typically reserved for later stages of the interview process, such as after receiving a job offer.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Dressing professionally is important for a job interview.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Dressing professionally demonstrates your respect for the opportunity and helps create a positive impression with the interviewer.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "It is acceptable to badmouth previous employers during a job interview.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Speaking negatively about previous employers can raise red flags and reflect poorly on your professionalism and attitude. It's best to focus on positive experiences and lessons learned.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Non-verbal communication, such as maintaining eye contact and good posture, is important during a job interview.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Non-verbal communication plays a significant role in how you are perceived during a job interview. Maintaining eye contact and good posture conveys confidence and attentiveness.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "It is acceptable to ask questions about the company culture and work-life balance during a job interview.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Asking about company culture and work-life balance shows your interest in finding a good fit and understanding the overall environment in which you would be working.",
+      "difficulty": "Medium"
+    },
+   
+
+ {
+      "questionNumber": 9,
+      "question": "Following up with a thank-you note or email after a job interview is unnecessary.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Sending a thank-you note or email after a job interview is considered a professional courtesy and provides an opportunity to express gratitude and reiterate your interest in the position.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "It is acceptable to ask about the next steps in the hiring process at the end of a job interview.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Asking about the next steps in the hiring process demonstrates your eagerness and proactive approach to the position. It also gives you an idea of the timeline for potential follow-up.",
+      "difficulty": "Easy"
+    }
+  ]
+}
