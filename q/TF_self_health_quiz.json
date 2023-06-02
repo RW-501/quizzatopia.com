@@ -1,0 +1,117 @@
+{
+  "quizName": "Self Health Quiz",
+  "quizCode": "QZ06421d3",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Getting enough sleep is important for maintaining good health.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Adequate sleep is crucial for overall health and well-being, as it allows the body to rest, repair, and recharge.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Regular exercise has no impact on mental health.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Regular exercise has been shown to have numerous benefits for mental health, including reducing stress, improving mood, and boosting cognitive function.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Maintaining a balanced diet is important for overall health.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Eating a balanced diet that includes a variety of nutrients is essential for supporting optimal health, providing energy, and preventing chronic diseases.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Drinking enough water is not necessary for good health.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Staying hydrated by drinking enough water is crucial for maintaining proper bodily functions, supporting digestion, regulating body temperature, and promoting overall health.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Taking breaks and practicing relaxation techniques have no impact on stress levels.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Taking breaks and engaging in relaxation techniques, such as deep breathing or meditation, can help reduce stress, promote mental well-being, and improve overall health.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Smoking cigarettes has no negative effects on health.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Smoking cigarettes is highly detrimental to health and is a leading cause of various diseases, including lung cancer, heart disease, and respiratory conditions.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Regular dental check-ups are not necessary for maintaining oral health.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Regular dental check-ups and cleanings are vital for preventing dental issues, detecting problems early, and maintaining optimal oral health.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Mental health is not as important as physical health.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Mental health is just as important as physical health, as it affects overall well-being, quality of life, and the ability to function effectively in daily life.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Excessive stress has no impact on the immune system.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Excessive and chronic stress can weaken the immune system, making individuals more susceptible to infections, illnesses, and other health problems.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Social connections and relationships have no impact on mental and emotional well-being.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Positive social connections and healthy relationships play a significant role in promoting mental and emotional well-being, providing support, and reducing the risk of mental health issues.",
+      "difficulty": "Easy"
+    }
+  ]
+}
