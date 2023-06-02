@@ -509,14 +509,14 @@ const currentQuestionNumber = currentQuestion === 0 ? 1 : currentQuestion;
 
 
 
-  const userStartPoints = userInfo.points;
+  const userStartPoints = userInfo.userPoints;
 let initialPoints = userStartPoints;
 
 
 
 function calculateEarnedPoints() {
   const userInfo = getUserInfo();
-  let currentPoints = userInfo.points;
+  let currentPoints = userInfo.userPoints;
   let currentPoint = currentPoints;
   let earnedPoints = currentPoint - initialPoints;
 	
@@ -626,8 +626,9 @@ if (percentageScore === 100) {
 	checkTier();
 rewardPointsForReturningDays();
 	awardQuizzesTakenBadges();
-	
+
 const earnedPoints = calculateEarnedPoints();
+console.log("earnedPoints:", earnedPoints);
 	// Usage example:
 const startValue = 0;
 const animationDuration = 2000; // Duration in milliseconds (2 seconds)
