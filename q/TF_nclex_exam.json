@@ -1,0 +1,117 @@
+{
+  "quizName": "NCLEX Exam Quiz",
+"quizCode": "QZ9jk823",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "An increase in blood pressure is an expected adverse effect of beta-blocker medications.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Beta-blocker medications commonly cause a decrease in blood pressure as part of their therapeutic effect.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Kussmaul respirations are deep and rapid breathing patterns associated with metabolic alkalosis.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Kussmaul respirations are deep and rapid breathing patterns associated with metabolic acidosis, not alkalosis.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "A positive Babinski reflex in an adult is a normal finding.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "A positive Babinski reflex in an adult is considered abnormal and may indicate a neurological disorder or injury.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Heparin is contraindicated in patients with a history of heparin-induced thrombocytopenia (HIT).",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Heparin should not be used in patients with a history of heparin-induced thrombocytopenia (HIT) due to the risk of a severe immune-mediated reaction.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "A client with chronic kidney disease (CKD) should restrict their dietary protein intake.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Clients with chronic kidney disease (CKD) often need to restrict their dietary protein intake to reduce the burden on the kidneys and prevent further damage.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Hyperkalemia is a potential complication of treatment with loop diuretics.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Hyperkalemia is not a common complication of treatment with loop diuretics. Loop diuretics are more likely to cause hypokalemia (low potassium levels).",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Warfarin is classified as an anticoagulant medication.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Warfarin is an oral anticoagulant medication used to prevent the formation of blood clots.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Insulin lispro is a long-acting insulin medication.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Insulin lispro is a rapid-acting insulin medication. It has a quick onset of action and a shorter duration compared to long-acting insulins.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "A positive Chvostek's sign is indicative of hypocalcemia.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "A positive Chvostek's sign, characterized by facial muscle twitching upon tapping the facial nerve, is a clinical manifestation of hypocalcemia.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Meperidine (Demerol) is contraindicated in clients with a history of opioid addiction.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Meperidine (Demerol) is contraindicated in clients with a history of opioid addiction due to its high potential for abuse and addiction.",
+      "difficulty": "Easy"
+    }
+  ]
+}
