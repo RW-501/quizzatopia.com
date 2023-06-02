@@ -1,0 +1,119 @@
+{
+  "quizName": "Pop Culture True or False Quiz",
+  "quizCode": "Q314pc23",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Taylor Swift's debut studio album is titled '1989'.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Taylor Swift's debut studio album is titled 'Taylor Swift'. '1989' is her fifth studio album.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "The character Jon Snow is played by Kit Harington in the TV series 'Game of Thrones'.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Kit Harington portrayed the character Jon Snow in the TV series 'Game of Thrones'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "The film 'La La Land' won the Academy Award for Best Picture in 2017.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "The film 'La La Land' was mistakenly announced as the winner of the Academy Award for Best Picture in 2017, but the actual winner was 'Moonlight'.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Beyoncé is the lead singer of the band Destiny's Child.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Beyoncé was the lead singer of the popular girl group Destiny's Child before pursuing a successful solo career.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "The fictional character Sherlock Holmes is a detective created by Agatha Christie.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "The fictional character Sherlock Holmes was created by Sir Arthur Conan Doyle, not Agatha Christie.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "The TV show 'Friends' is set in New York City.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The TV show 'Friends' is set in New York City, primarily in the characters' apartments and the Central Perk coffee shop.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "The film 'The Dark Knight' features the character Iron Man as the main protagonist.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "The film 'The Dark Knight' is part of the Batman film series and features Batman, not Iron Man, as the main protagonist.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "The artist behind the hit song 'Shape of You' is Ed Sheeran.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The hit song 'Shape of You' is performed by the artist Ed Sheeran.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 
+
+9,
+      "question": "The character Darth Vader appears in the 'Star Trek' franchise.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "The character Darth Vader is a prominent antagonist in the 'Star Wars' franchise, not 'Star Trek'.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "The TV show 'Stranger Things' is set in the 1980s.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The TV show 'Stranger Things' is set in the 1980s and pays homage to various pop culture elements from that era.",
+      "difficulty": "Easy"
+    }
+  ]
+}
