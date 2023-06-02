@@ -739,7 +739,10 @@ if (str.startsWith("TF_")) {
 // Use the value of "q"
 console.log("urlParams     "+q); 
 
-                var newStr = q.replace(/_/g, " ");
+if (str.startsWith("TF_")) {
+ q = str.substr(3); // Remove the first three characters
+}
+      var newStr = q.replace(/_/g, " ");
 	  
 	  
 	  
