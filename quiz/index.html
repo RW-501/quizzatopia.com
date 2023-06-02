@@ -676,7 +676,7 @@ function logStorageContents(quizCode) {
 	  
 	
 
-	  
+var  quizType = '';	  
     
 // Get the current URL and parse its search parameters
 const urlParams = new URLSearchParams(window.location.search);
@@ -693,7 +693,7 @@ console.log("2 urlParams     "+q);
 if (str.startsWith("TF_")) {
 	console.log("True/False     "); 
   q = str.substr(3); // Remove the first three characters
-	
+	quizType = "True/False";
 	document.getElementById("optionContainers").style.display= "flex";
 	document.getElementById("option_3").style.display= "none";
 	document.getElementById("option_4").style.display= "none";
@@ -702,7 +702,8 @@ if (str.startsWith("TF_")) {
 		document.getElementById("optionContainers").style.display= "block";
 	document.getElementById("option_3").style.display= "block";
 	document.getElementById("option_4").style.display= "block";
-	
+		quizType = "Multi-Choice";
+
 		console.log(" Multi-Choice     "); 
 
 }
@@ -801,6 +802,7 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
       testInfoDiv.innerHTML = `
         <h3>Quiz Information</h3>
         <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
+        <p><strong>Quiz Type:</strong> ${quizType}</p>
         <p><strong>Number of Questions:</strong> ${quizInfo.numberOfQuestions}</p>
         <p><strong>Question Correct:</strong> ${score}</p>
         <p><strong>Best Score:</strong> ${percentage.toFixed(0)}%</p>
@@ -822,6 +824,7 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
     testInfoDiv.innerHTML = `
         <h3>Quiz Information</h3>
         <p><strong>Quiz Code:</strong> ${quizCodeNS}</p>
+        <p><strong>Quiz Type:</strong> ${quizType}</p>
         <p><strong>Number of Questions:</strong> ${numberOfQuestionsNS}</p>
         <p><strong>No quiz information found.</strong></p>
       `;
@@ -842,6 +845,7 @@ function checkQuizCodeAndGetInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
     quizInfo = {
       quizCode: quizCodeNS,
       quizName: quizNameNS,
+      quizType: quizType,
       numberOfQuestions: numberOfQuestionsNS,
       questionCorrect: 0,
       timestamp: timestamp,
@@ -854,6 +858,7 @@ function checkQuizCodeAndGetInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
     // Quiz info exists, retrieve existing quiz info from storage
     quizInfo = JSON.parse(savedQuizInfo);
     quizInfo.quizName = quizNameNS;
+      quizInfo.quizType = quizType;
     quizInfo.numberOfQuestions = numberOfQuestionsNS;
     quizInfo.timestamp = timestamp;
 quizInfo.quizLink = q;  // Add the "q" parameter to the quizInfo object
