@@ -853,6 +853,7 @@ function retrieveUserInfoFromFirestore(firebaseId) {
   });
 }
 
+
 // Function to save user info to Firestore
 function saveUserInfoToFirestore(userInfo) {
   return new Promise((resolve, reject) => {
@@ -951,7 +952,7 @@ function updateUserInfo(updatedInfo) {
   localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
 
   // Save updated user information to Firebase
-  saveUserInfoToFirebase(userInfo);
+  saveUserInfoToFirestore(userInfo);
 
   // Display updated user information
   displayUserInfo();
@@ -1120,7 +1121,7 @@ function onAuthSuccess(userInfo) {
 
   // Example: Update the UI to show the user as logged in
 
-	  saveUserInfoToFirebase(userInfo);
+	  saveUserInfoToFirestore(userInfo);
 
 	  document.getElementById('loginPopup').classList.add('d-none');
 
