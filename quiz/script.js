@@ -303,15 +303,16 @@ function showQuestion() {
   const questionObj = questions[currentQuestion];
   document.getElementById("question").innerHTML = questionObj.question;
 	
-	if(questionObj.imageURL){
-  document.getElementById("questionImage").src = questionObj.imageURL;
-  document.getElementById("questionImageArea").display = "block";
+	if(questionObj.imageURL === '' || questionObj.imageURL === null ){
+ document.getElementById("questionImageArea").display = "none";
 	}else{
-  document.getElementById("questionImageArea").display = "none";
+  document.getElementById("questionImage").src = questionObj.imageURL;
+  document.getElementById("questionImageArea").display = "block"; 
 	}
   document.getElementById("difficulty").innerHTML = questionObj.difficulty;
   document.getElementById("realQustionNum").innerHTML = questionObj.questionNumber;
-
+	
+ console.log(questionObj.questionType + "  questionType");
 	
 	 /*
 	const questionObj = questions[currentQuestion];
