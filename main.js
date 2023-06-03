@@ -868,12 +868,9 @@ function retrieveUserInfoFromFirestore(firebaseId) {
 
 
 
-
 // Function to save user info to Firestore
 function saveUserInfoToFirestore(userInfo) {
   return new Promise((resolve, reject) => {
-    // Implement the logic to save user info to Firestore
-    // Example code:
     firebase.firestore()
       .collection('users')
       .doc(userInfo.firebaseId)
@@ -886,6 +883,7 @@ function saveUserInfoToFirestore(userInfo) {
       });
   });
 }
+
 
 
 
