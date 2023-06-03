@@ -299,7 +299,7 @@ function showQuestion() {
     return;
   }
 
- /*
+
   const questionObj = questions[currentQuestion];
   document.getElementById("question").innerHTML = questionObj.question;
 	
@@ -311,9 +311,9 @@ function showQuestion() {
 	}
   document.getElementById("difficulty").innerHTML = questionObj.difficulty;
   document.getElementById("realQustionNum").innerHTML = questionObj.questionNumber;
-*/
+
 	
-	
+	 /*
 	const questionObj = questions[currentQuestion];
 const questionElement = document.getElementById("question");
 const questionImageElement = document.getElementById("questionImage");
@@ -326,7 +326,8 @@ questionImageElement.src = questionObj.imageURL || "";
 questionImageAreaElement.style.display = questionObj.imageURL ? "block" : "none";
 difficultyElement.innerHTML = questionObj.difficulty;
 realQuestionNumElement.innerHTML = questionObj.questionNumber;
-
+*/
+	
 	  console.log(questionObj + "  questionObj   ??????????    currenquestionObj.imageURL   " + questionObj.imageURL);
 	
   // Randomize the order of the answer options
