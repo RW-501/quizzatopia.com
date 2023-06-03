@@ -1,0 +1,118 @@
+{
+  "quizCode": "DL65160",
+  "quizName": "Driver's License Test - Street Signs",
+        "quizDifficulty": "Medium",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "This sign indicates 'No U-turn.'",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "This sign indicates that U-turns are not allowed. Drivers should proceed straight and not make a U-turn at this location.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "This sign indicates 'Merge ahead.'",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "This sign indicates that there is a merging lane ahead. Drivers should prepare to merge with the traffic in the other lane.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "This sign indicates 'Two-way traffic ahead.'",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "This sign indicates that the road ahead is divided, and there will be two-way traffic. Drivers should be cautious and stay in their designated lane.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "This sign indicates 'Divided highway ends.'",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "This sign indicates that the divided highway ends ahead. The road will no longer be divided, and drivers should be prepared for changes in traffic patterns.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "This sign indicates 'Bicycle lane ahead.'",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "This sign indicates that there is a designated lane for bicycles ahead. Drivers should be aware of cyclists and give them space when passing or merging.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "This sign indicates 'No U-turn.'",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "This sign indicates that U-turns are not allowed at this location. Drivers should proceed straight and not make a U-turn.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "This sign indicates 'No parking.'",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "This sign indicates that parking is not allowed in this area. Drivers should not leave their vehicles unattended in the designated zone.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "This sign indicates 'Lane ends ahead.'",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "This sign indicates that the lane ahead will end. Drivers should merge with the traffic in the other lane.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "This sign indicates 'Emergency vehicle crossing.'",
+      "options": [
+        "True",
+       "False"
+      ],
+      "answer": "True",
+      "explanation": "This sign indicates that there may be emergency vehicles crossing the road ahead. Drivers should be prepared to yield and give right-of-way to emergency vehicles.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "This sign indicates 'Pedestrian crossing ahead.'",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "This sign indicates that there is a pedestrian crossing ahead. Drivers should be cautious and yield to pedestrians who are crossing the road.",
+      "difficulty": "Medium"
+    }
+  ]
+}
