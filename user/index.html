@@ -243,10 +243,15 @@ function animateTextChanges() {
 }
 
 function displayProfileInfo() {
-    //const userInfo = JSON.parse(localStorage.getItem('userInfo'));
-	let userInfo = getUserInfo();
-	retrieveUserInfoFromFirestore(userInfo.firebaseId);
-	 userInfo = getUserInfo();
+    let userInfo = getUserInfo();
+
+retrieveUserInfoFromFirestore(userInfo.firebaseId)
+  .then((userInfoFromFirestore) => {
+    // Save database info to local storage
+    saveUserInfoToLocalStorage(userInfoFromFirestore);
+
+    // Update the local 'userInfo' variable
+    userInfo = getUserInfo();
 
     document.getElementById('userNameQ').value = userInfo.userName;
     document.getElementById('userRankQ').innerHTML = userInfo.userRank;
@@ -256,6 +261,22 @@ function displayProfileInfo() {
     document.getElementById('userPic').src = userInfo.userProfilePic;
 
     console.log('userInfo: ', userInfo);
+	
+	  })
+  .catch((error) => {
+    // Handle any errors that occurred during retrieval
+    console.error('Error retrieving user info from Firestore:', error);
+
+    // Continue with further operations using the existing 'userInfo'
+    // ...
+  });
+
+
+
+
+
+
+	
 }
 
 
