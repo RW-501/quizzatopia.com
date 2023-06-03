@@ -617,7 +617,20 @@ if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function')
   const createUserWithEmailAndPassword = firebase.auth().createUserWithEmailAndPassword;
   const signInWithPopup = firebase.auth().signInWithPopup;
 	
-	
+// Enable Firestore offline persistence
+firebase.firestore().enablePersistence()
+  .then(() => {
+    // Offline persistence enabled
+	  const savedUserInfoDB = localStorage.getItem("userInfo");
+
+	saveUserInfoToFirestore(savedUserInfoDB);
+  })
+  .catch((error) => {
+    // Error enabling offline persistence
+    console.error('Error enabling Firestore offline persistence:', error);
+  });
+
+
 } else {
   // The Firebase scripts are not loaded
   // Handle the situation accordingly
@@ -854,6 +867,8 @@ function retrieveUserInfoFromFirestore(firebaseId) {
 }
 
 
+
+
 // Function to save user info to Firestore
 function saveUserInfoToFirestore(userInfo) {
   return new Promise((resolve, reject) => {
@@ -904,35 +919,27 @@ function checkUserInfoChanges() {
   // Example code:
 
   // Retrieve the current user info from local storage
-  const currentUserInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
+  const currentUserInfo = JSON.parse(localStorage.getItem("userInfo"));
+  const previousUserInfo = JSON.parse(localStorage.getItem("previousUserInfo"));
 
-  // Retrieve the previous user info from a previous session or initial value
-  const previousUserInfo = {
-    userName: 'Previous User',
-    userEmail: '',
-    userActive: true,
-    userJoinedDate: new Date().toISOString(),
-    userState: '',
-    userLongitude: '',
-    userLatitude: '',
-    userCountry: '',
-    userProfilePic: '/images/avatar/w1.png',
-    userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-    userRank: 'Beginner',
-    userPoints: 0,
-    userQuizzesTaken: 0,
-    userAds: '',
-  };
+
 
   // Compare the current user info with the previous user info
-  const hasUserInfoChanged = JSON.stringify(currentUserInfo) !== JSON.stringify(previousUserInfo);
+  const hasUserInfoChanged = JSON.stringify(currentUserInfo) !== JSON.stringify(currentUserInfo);
 
   if (hasUserInfoChanged) {
     // User info has changed
     console.log('User info has changed');
+	  saveUserInfoToFirestore(currentUserInfo); 
+
+	previousUserInfo  = currentUserInfo;
+	    localStorage.setItem("previousUserInfo", JSON.stringify(previousUserInfo));
   } else {
     // User info has not changed
     console.log('User info has not changed');
+	  
+	  
+	  
   }
 }
 
@@ -958,7 +965,7 @@ function updateUserInfo(updatedInfo) {
   displayUserInfo();
 }
 
-	
+
 
 
 
@@ -1403,6 +1410,7 @@ if (elementExists('loginPopup')) {
  slideIn("loginPopup");
 
 }
-checkUserInfoChanges();
-   
+     // Check if user info changes
+                checkUserInfoChanges();
+
 		    console.log("  ?????????????????????????    ^   Main.js ^   ????????????????????????999        ");
