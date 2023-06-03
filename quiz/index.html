@@ -330,7 +330,11 @@
 	
 		
   <div class="explanation-container">
+	  <div id="explanation_bar">    <div id="difficulty"></div>    <div id="realQustionNum"></div>
+
+
     <button id="close-btn" class="close-button">&times;</button>
+	  </div>
     <div id="explanation"></div>
   </div>
 
@@ -826,7 +830,7 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageU
         <h3>Quiz Information</h3>
         <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
         <p><strong>Quiz Type:</strong> ${quizType}</p>
-        <p><strong>Quiz Difficulty:</strong> ${quizDifficultyNS}</p>
+      <p><strong>Quiz Difficulty:</strong> ${quizDifficultyNS || 'N/A'}</p>
         <p><strong>Number of Questions:</strong> ${quizInfo.numberOfQuestions}</p>
         <p><strong>Question Correct:</strong> ${score}</p>
         <p><strong>Best Score:</strong> ${percentage.toFixed(0)}%</p>
@@ -849,7 +853,7 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageU
         <h3>Quiz Information</h3>
         <p><strong>Quiz Code:</strong> ${quizCodeNS}</p>
         <p><strong>Quiz Type:</strong> ${quizType}</p>
-        <p><strong>Quiz Difficulty:</strong> ${quizDifficultyNS}</p>
+      <p><strong>Quiz Difficulty:</strong> ${quizDifficultyNS || 'N/A'}</p>
         <p><strong>Number of Questions:</strong> ${numberOfQuestionsNS}</p>
         <p><strong>No quiz information found.</strong></p>
       `;
