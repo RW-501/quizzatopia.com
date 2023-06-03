@@ -1,0 +1,136 @@
+{
+  "quizCode": "DL678520",
+  "quizName": "Driver's License Test - Street Signs",
+      "quizDifficulty": "Hard"
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "This sign indicates a sharp curve to the:",
+      "options": [
+        "A) Left",
+        "B) Right",
+        "C) Straight",
+        "D) None of the above"
+      ],
+      "answer": "A) Left",
+      "explanation": "This sign indicates a sharp curve to the left. Drivers should reduce speed and be prepared to navigate the curve safely.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 2,
+      "question": "This sign indicates a pedestrian crosswalk:",
+      "options": [
+        "A) Ahead",
+        "B) To the right",
+        "C) To the left",
+        "D) None of the above"
+      ],
+      "answer": "A) Ahead",
+      "explanation": "This sign indicates that there is a pedestrian crosswalk ahead. Drivers should be cautious and yield to pedestrians who are crossing the road.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 3,
+      "question": "This sign indicates a school zone:",
+      "options": [
+        "A) Ahead",
+        "B) To the right",
+        "C) To the left",
+        "D) None of the above"
+      ],
+      "answer": "A) Ahead",
+      "explanation": "This sign indicates that there is a school zone ahead. Drivers should reduce speed and be prepared to comply with lower speed limits and additional safety regulations in the school zone.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 4,
+      "question": "This sign indicates a slippery road surface:",
+      "options": [
+        "A) Ahead",
+        "B) To the right",
+        "C) To the left",
+        "D) None of the above"
+      ],
+      "answer": "A) Ahead",
+      "explanation": "This sign indicates that there is a slippery road surface ahead. Drivers should reduce speed and use caution to maintain control of their vehicle on the slippery surface.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 5,
+      "question": "This sign indicates a winding road:",
+      "options": [
+        "A) Ahead",
+        "B) To the right",
+        "C) To the left",
+        "D) None of the above"
+      ],
+      "answer": "A) Ahead",
+      "explanation": "This sign indicates that there is a winding road ahead. Drivers should reduce speed and be prepared for changes in direction and potential hazards on the road.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 6,
+      "question": "This sign indicates a no-passing zone:",
+      "options": [
+        "A) Ahead",
+        "B) To the right",
+        "C) To the left",
+        "D) None of the above"
+      ],
+      "answer": "A) Ahead",
+      "explanation": "This sign indicates that there is a no-passing zone ahead. Drivers should not attempt to pass other vehicles in this area.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 7,
+      "question": "This sign indicates a steep hill:",
+      "options": [
+        "A) Ahead",
+        "B) To the right",
+        "C) To the left",
+        "D) None of the above"
+      ],
+      "answer": "A) Ahead",
+      "explanation": "This sign indicates that there is a steep hill ahead. Drivers should reduce speed and be prepared for changes in grade and potential hazards on the road.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 8,
+      "question": "This sign indicates a construction zone:",
+      "options": [
+        "A) Ahead",
+        "B) To the right",
+        "C) To the left",
+        "D) None of the above"
+      ],
+      "answer": "A) Ahead",
+      "explanation": "This sign indicates that there is a construction zone ahead. Drivers should reduce speed, be prepared for lane closures or detours, and follow any instructions given by construction workers or signs.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 9,
+      "question": "This sign indicates a divided highway begins:",
+      "options": [
+        "A) Ahead",
+        "B) To the right",
+        "C) To the left",
+        "D) None of the above"
+      ],
+      "answer": "A) Ahead",
+      "explanation": "This sign indicates that a divided highway begins ahead. Drivers should be prepared for a median or physical barrier separating opposing traffic.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 10,
+      "question": "This sign indicates a stop sign ahead:",
+      "options": [
+        "A) True",
+        "B) False"
+      ],
+      "answer": "B) False",
+      "explanation": "This sign does not indicate a stop sign ahead. It is important to read and interpret signs correctly to ensure safe and lawful driving.",
+      "difficulty": "Hard"
+    }
+  ]
+}
