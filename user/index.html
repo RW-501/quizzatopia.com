@@ -245,6 +245,8 @@ function animateTextChanges() {
 function displayProfileInfo() {
     //const userInfo = JSON.parse(localStorage.getItem('userInfo'));
 	const userInfo = getUserInfo();
+	retrieveUserInfoFromFirestore(userInfo.firebaseId);
+	 userInfo = getUserInfo();
 
     document.getElementById('userNameQ').value = userInfo.userName;
     document.getElementById('userRankQ').innerHTML = userInfo.userRank;
