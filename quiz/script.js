@@ -309,23 +309,27 @@ function showQuestion() {
   document.getElementById("questionImage").src = questionObj.imageURL;
   document.getElementById("questionImageArea").display = "block"; 
 	}
+	
+	
   document.getElementById("difficulty").innerHTML = questionObj.difficulty;
   document.getElementById("realQustionNum").innerHTML = questionObj.questionNumber;
 	
  console.log(questionObj.questionType + "  questionType");
 	
+	if (questionObj.questionType) {
+
 if (questionObj.questionType === "True/False") {
-	console.log("True/False     "); 
+	console.log("inside True/False     "); 
 	document.getElementById("option_3").style.display= "none";
 	document.getElementById("option_4").style.display= "none";
 
 }else{
 	document.getElementById("option_3").style.display= "initial";
 	document.getElementById("option_4").style.display= "initial";
-		console.log(" Multi-Choice     "); 
+		console.log("inside Multi-Choice     "); 
 
 }
-
+	}
 	
 	  console.log(questionObj.questionType + "  questionObj.questionType   ??????????    currenquestionObj.imageURL   " + questionObj.imageURL);
 	
