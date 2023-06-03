@@ -1409,7 +1409,7 @@ function navbarToggler() {
 		  
 if (elementExists('loginPopup')) {
   // The element exists, you can proceed with accessing it
- slideIn("loginPopup");
+ slideIn("loginPopupBody");
 
 }
      // Check if user info changes
