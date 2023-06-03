@@ -1,0 +1,138 @@
+{
+  "quizCode": "DL652520",
+  "quizName": "Driver's License Test - Street Signs",
+      "quizDifficulty": "Medium",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does this sign indicate?",
+      "options": [
+        "A. No U-turn",
+        "B. No left turn",
+        "C. No right turn",
+        "D. No parking"
+      ],
+      "answer": "A. No U-turn",
+      "explanation": "This sign indicates that U-turns are not allowed. Drivers should proceed straight and not make a U-turn at this location.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What does this sign indicate?",
+      "options": [
+        "A. Yield ahead",
+        "B. Merge ahead",
+        "C. Stop ahead",
+        "D. School zone ahead"
+      ],
+      "answer": "B. Merge ahead",
+      "explanation": "This sign indicates that there is a merging lane ahead. Drivers should prepare to merge with the traffic in the other lane.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What does this sign indicate?",
+      "options": [
+        "A. No passing zone",
+        "B. Divided highway ahead",
+        "C. Two-way traffic ahead",
+        "D. Crossroad ahead"
+      ],
+      "answer": "C. Two-way traffic ahead",
+      "explanation": "This sign indicates that the road ahead is divided, and there will be two-way traffic. Drivers should be cautious and stay in their designated lane.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What does this sign indicate?",
+      "options": [
+        "A. Yield to oncoming traffic",
+        "B. No right turn",
+        "C. No left turn",
+        "D. Divided highway ends"
+      ],
+      "answer": "D. Divided highway ends",
+      "explanation": "This sign indicates that the divided highway ends ahead. The road will no longer be divided, and drivers should be prepared for changes in traffic patterns.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What does this sign indicate?",
+      "options": [
+        "A. No bicycles allowed",
+        "B. Bicycle crossing ahead",
+        "C. Bicycle parking ahead",
+        "D. Bicycle lane ahead"
+      ],
+      "answer": "D. Bicycle lane ahead",
+      "explanation": "This sign indicates that there is a designated lane for bicycles ahead. Drivers should be aware of cyclists and give them space when passing or merging.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What does this sign indicate?",
+      "options": [
+        "A. No right turn",
+        "B. No left turn",
+        "C. No U-turn",
+        "D. No parking"
+      ],
+      "answer": "C. No U-turn",
+      "explanation": "This sign indicates that U-turns are not allowed at this location. Drivers should proceed straight and not make a U-turn.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What does this sign indicate?",
+      "options": [
+        "A. No parking",
+        "B. No stopping",
+        "C. No standing",
+        "D. No entry"
+      ],
+      "answer": "A. No parking",
+      "explanation": "This sign indicates that parking is not allowed in this area. Drivers should not leave their vehicles unattended in the designated zone.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What does this sign indicate?",
+      "options": [
+        "A. Construction zone ahead",
+        "B. Lane ends ahead",
+        "C. Slow down ahead",
+        "D. Speed limit reduction ahead"
+      ],
+      "answer": "B. Lane ends ahead",
+      "explanation": "This sign indicates that the lane ahead will end. Drivers should merge with the traffic in the other lane.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What does this sign indicate?",
+      "options": [
+        "A. Hospital ahead",
+        "B. Emergency vehicle crossing",
+        "C. Emergency exit ahead",
+        "D. Emergency vehicle parking only"
+      ],
+      "answer": "B. Emergency vehicle crossing",
+      "explanation": "This sign indicates that there may be emergency vehicles crossing the road ahead. Drivers should be prepared to yield and give right-of-way to emergency vehicles.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What does this sign indicate?",
+      "options": [
+        "A. School zone ahead",
+        "B. Pedestrian crossing ahead",
+        "C. Watch for children",
+        "D. Playground nearby"
+      ],
+      "answer": "B. Pedestrian crossing ahead",
+      "explanation": "This sign indicates that there is a pedestrian crossing ahead. Drivers should be cautious and yield to pedestrians who are crossing the road.",
+      "difficulty": "Medium"
+    }
+  ]
+}
