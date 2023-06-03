@@ -207,7 +207,6 @@ var timerId;
 
 // Profile related functions
 function showSaveMessage() {
-  saveChanges();
 
   timerId = setTimeout(function() {
     // Call your function here
@@ -219,10 +218,12 @@ function showSaveMessage() {
 }
 
 function removeSaveMessage() {
-  animateTextChanges();
-  var savedMessage = document.getElementById("savedMessage");
+
+	var savedMessage = document.getElementById("savedMessage");
   savedMessage.style.display = "none";
   clearTimeout(timerId);
+	  saveChanges();
+
 	displayProfileInfo();
 }
 
@@ -235,12 +236,7 @@ function saveChanges() {
 	
 }
 
-function animateTextChanges() {
-  var changedElements = document.querySelectorAll(".changed-text");
-  changedElements.forEach(function(element) {
-    element.classList.add("color-animation");
-  });
-}
+
 
 function displayProfileInfo() {
     const userInfo = getUserInfo();
