@@ -1,137 +1,147 @@
 {
-  "quizCode": "DL652520",
+  "quizCode": "DL6642",
   "quizName": "Driver's License Test - Street Signs",
-      "quizDifficulty": "Medium",
-  "numberOfQuestions": 10,
+  "quizDifficulty": "Medium",
+  "numberOfQuestions": 15,
   "questions": [
     {
       "questionNumber": 1,
       "question": "What does this sign indicate?",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Stop_sign_in_Toronto%2C_Canada.jpg/640px-Stop_sign_in_Toronto%2C_Canada.jpg",
       "options": [
-        "A. No U-turn",
-        "B. No left turn",
-        "C. No right turn",
-        "D. No parking"
+        "A. Stop",
+        "B. Yield",
+        "C. Speed Limit Ahead",
+        "D. No Entry"
       ],
-      "answer": "A. No U-turn",
-      "explanation": "This sign indicates that U-turns are not allowed. Drivers should proceed straight and not make a U-turn at this location.",
+      "answer": "A. Stop",
+      "explanation": "This sign is a stop sign. It indicates that drivers must come to a complete stop before proceeding.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 2,
       "question": "What does this sign indicate?",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Yield_%28336589280%29.jpg/640px-Yield_%28336589280%29.jpg",
       "options": [
-        "A. Yield ahead",
-        "B. Merge ahead",
-        "C. Stop ahead",
-        "D. School zone ahead"
+        "A. Stop",
+        "B. Yield",
+        "C. Speed Limit Ahead",
+        "D. No Entry"
       ],
-      "answer": "B. Merge ahead",
-      "explanation": "This sign indicates that there is a merging lane ahead. Drivers should prepare to merge with the traffic in the other lane.",
+      "answer": "B. Yield",
+      "explanation": "This sign is a yield sign. It indicates that drivers must yield the right-of-way to oncoming traffic or pedestrians.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 3,
       "question": "What does this sign indicate?",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/CA-ON_road_sign_Rb-005-50.svg/640px-CA-ON_road_sign_Rb-005-50.svg.png",
       "options": [
-        "A. No passing zone",
-        "B. Divided highway ahead",
-        "C. Two-way traffic ahead",
-        "D. Crossroad ahead"
+        "A. Stop",
+        "B. Yield",
+        "C. Speed Limit Ahead",
+        "D. No Entry"
       ],
-      "answer": "C. Two-way traffic ahead",
-      "explanation": "This sign indicates that the road ahead is divided, and there will be two-way traffic. Drivers should be cautious and stay in their designated lane.",
+      "answer": "C. Speed Limit Ahead",
+      "explanation": "This sign indicates that there is a speed limit ahead. Drivers should adjust their speed accordingly.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 4,
       "question": "What does this sign indicate?",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Montserrat_%E2%80%94_traffic_sign_%E2%80%9Eno_entry%E2%80%9D.JPG/640px-Montserrat_%E2%80%94_traffic_sign_%E2%80%9Eno_entry%E2%80%9D.JPG",
       "options": [
-        "A. Yield to oncoming traffic",
-        "B. No right turn",
-        "C. No left turn",
-        "D. Divided highway ends"
+        "A. Stop",
+        "B. Yield",
+        "C. Speed Limit Ahead",
+        "D. No Entry"
       ],
-      "answer": "D. Divided highway ends",
-      "explanation": "This sign indicates that the divided highway ends ahead. The road will no longer be divided, and drivers should be prepared for changes in traffic patterns.",
+      "answer": "D. No Entry",
+      "explanation": "This sign indicates that entry is prohibited. Drivers should not enter the road or area indicated by the sign.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 5,
       "question": "What does this sign indicate?",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/One_Way_Sign_%286859761193%29.jpg/640px-One_Way_Sign_%286859761193%29.jpg",
       "options": [
-        "A. No bicycles allowed",
-        "B. Bicycle crossing ahead",
-        "C. Bicycle parking ahead",
-        "D. Bicycle lane ahead"
+        "A. One Way",
+        "B. Yield",
+        "C. No U-Turn",
+        "D. Merge"
       ],
-      "answer": "D. Bicycle lane ahead",
-      "explanation": "This sign indicates that there is a designated lane for bicycles ahead. Drivers should be aware of cyclists and give them space when passing or merging.",
+      "answer": "A. One Way",
+      "explanation": "This sign indicates that the road is one-way traffic. Drivers must proceed in the direction indicated by the arrow.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 6,
       "question": "What does this sign indicate?",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/SADC_road_sign_R213.svg/640px-SADC_road_sign_R213.svg.png",
       "options": [
-        "A. No right turn",
-        "B. No left turn",
-        "C. No U-turn",
-        "D. No parking"
+        "A. One Way",
+        "B. Yield",
+        "C. No U-Turn",
+        "D. Merge"
       ],
-      "answer": "C. No U-turn",
-      "explanation": "This sign indicates that U-turns are not allowed at this location. Drivers should proceed straight and not make a U-turn.",
+      "answer": "C. No U-Turn",
+      "explanation": "This sign indicates that U-turns are not allowed. Drivers should not make a U-turn at or near this location.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 7,
       "question": "What does this sign indicate?",
+      "imageURL": "https://s.driving-tests.org/wp-content/uploads/2020/09/shutterstock_118780804.jpg",
       "options": [
-        "A. No parking",
-        "B. No stopping",
-        "C. No standing",
-        "D. No entry"
+        "A. One Way",
+        "B. Yield",
+        "C. No U-Turn",
+        "D. Merge"
       ],
-      "answer": "A. No parking",
-      "explanation": "This sign indicates that parking is not allowed in this area. Drivers should not leave their vehicles unattended in the designated zone.",
+      "answer": "D. Merge",
+      "explanation": "This sign indicates that there is a merging lane ahead. Drivers should merge with the traffic in the other lane.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 8,
       "question": "What does this sign indicate?",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Saudi_Arabia_-_Road_Sign_-_School_zone.svg/663px-Saudi_Arabia_-_Road_Sign_-_School_zone.svg.png?20190908110526",
       "options": [
-        "A. Construction zone ahead",
-        "B. Lane ends ahead",
-        "C. Slow down ahead",
-        "D. Speed limit reduction ahead"
+        "A. No Stopping",
+        "B. School Zone",
+        "C. Playground Ahead",
+        "D. Watch for Children"
       ],
-      "answer": "B. Lane ends ahead",
-      "explanation": "This sign indicates that the lane ahead will end. Drivers should merge with the traffic in the other lane.",
+      "answer": "B. School Zone",
+      "explanation": "This sign indicates that there is a school zone ahead. Drivers should exercise caution and adhere to the reduced speed limit in school zones.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 9,
       "question": "What does this sign indicate?",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Greek_Traffic_Sign_No_Parking.png/600px-Greek_Traffic_Sign_No_Parking.png?20181124184311",
       "options": [
-        "A. Hospital ahead",
-        "B. Emergency vehicle crossing",
-        "C. Emergency exit ahead",
-        "D. Emergency vehicle parking only"
+        "A. No Parking",
+        "B. No Standing",
+        "C. No Stopping",
+        "D. No Entry"
       ],
-      "answer": "B. Emergency vehicle crossing",
-      "explanation": "This sign indicates that there may be emergency vehicles crossing the road ahead. Drivers should be prepared to yield and give right-of-way to emergency vehicles.",
+      "answer": "A. No Parking",
+      "explanation": "This sign indicates that parking is not allowed in the area. Drivers should not leave their vehicles unattended in the designated zone.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 10,
       "question": "What does this sign indicate?",
+      "imageURL": "https://www.publicdomainpictures.net/pictures/30000/velka/street-sign-railroad-crossing-1342524170F8W.jpg",
       "options": [
-        "A. School zone ahead",
-        "B. Pedestrian crossing ahead",
-        "C. Watch for children",
-        "D. Playground nearby"
+        "A. No Railroad Crossing",
+        "B. Crosswalk Ahead",
+        "C. Railroad Crossing",
+        "D. Watch for Trains"
       ],
-      "answer": "B. Pedestrian crossing ahead",
-      "explanation": "This sign indicates that there is a pedestrian crossing ahead. Drivers should be cautious and yield to pedestrians who are crossing the road.",
+      "answer": "C. Railroad Crossing",
+      "explanation": "This sign indicates that there is a railroad crossing ahead. Drivers should be prepared to stop and yield to oncoming trains.",
       "difficulty": "Medium"
     }
   ]
