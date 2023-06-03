@@ -1276,7 +1276,7 @@ window.onload = function() {
     // Check if the navbar is collapsed or not
     if (navbarNav.classList.contains('collapse')) {
       // Navbar is collapsed, hide the "logged in" div
-     // loggedInDiv.style.display = 'none';
+     loggedInDiv.style.display = 'block';
     } else {
       // Navbar is not collapsed, show the "logged in" div
      loggedInDiv.style.display = 'block';
