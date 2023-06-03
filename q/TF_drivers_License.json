@@ -1,0 +1,172 @@
+{
+  "quizName": "Driver's License Test True or False Quiz",
+  "quizCode": "DL9645",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "A driver's license allows you to operate any type of motor vehicle.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "A driver's license typically comes with certain restrictions and endorsements that specify the type of vehicles you are allowed to operate. Additional endorsements or licenses may be required for operating motorcycles, commercial vehicles, or transporting hazardous materials.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Using a handheld mobile phone while driving is always allowed.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Using a handheld mobile phone while driving is illegal in many jurisdictions. It is important to follow local laws and regulations regarding the use of mobile phones while operating a motor vehicle. Hands-free devices or Bluetooth technology may be allowed for phone calls in some areas.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "The posted speed limit is always the maximum speed you can drive.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The posted speed limit indicates the maximum speed allowed on that road under normal driving conditions. Drivers should adjust their speed based on factors such as weather conditions, traffic flow, and visibility, but should not exceed the posted speed limit.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Using a seat belt is only required for the driver, not the passengers.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Using seat belts is required for both drivers and passengers in most jurisdictions. Seat belts are an important safety measure that can significantly reduce the risk of injury or death in case of a collision. It is the responsibility of the driver to ensure that all passengers are properly restrained.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "You should always yield the right-of-way to emergency vehicles with their lights and sirens activated.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "When emergency vehicles such as ambulances, fire trucks, or police cars are approaching with their lights and sirens activated, you should yield the right-of-way and make way for them to pass safely. This helps emergency responders reach their destinations quickly and efficiently.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "It is legal to pass another vehicle by driving onto the shoulder of the road.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Driving onto the shoulder of the road to pass another vehicle is generally illegal. The shoulder is intended for emergency use and stopping only. Passing should be done safely and legally by using designated passing zones or changing lanes when it is safe to do so.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Using high beams is allowed at all times when driving at night.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer":"False",
+      "explanation": "Using high beams when driving at night is generally allowed only in areas with no oncoming traffic and when there are no vehicles directly ahead of you. High beams can blind other drivers and make it difficult for them to see. It is important to switch to low beams when approaching other vehicles or when driving in urban areas.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "You should always come to a complete stop at a flashing yellow traffic light.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "A flashing yellow traffic light is a cautionary signal that drivers should slow down and proceed with caution. However, unless there are other traffic control devices or signs indicating a requirement to stop, you are not required to come to a complete stop at a flashing yellow light. You should still yield to other vehicles and pedestrians as necessary.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "It is legal to make a U-turn at any intersection.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Making a U-turn is not always legal at every intersection. It is important to check for signs or markings that prohibit U-turns. Some intersections may have specific rules or restrictions regarding U-turns due to safety concerns or traffic flow.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "You can be charged with driving under the influence (DUI) if your blood alcohol concentration (BAC) is below the legal limit.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "In many jurisdictions, you can still be charged with driving under the influence (DUI) even if your blood alcohol concentration (BAC) is below the legal limit. The legal limit is often just a threshold, and driving impairment can occur at lower levels of alcohol consumption. It is important to always drive responsibly and avoid alcohol or drugs when operating a motor vehicle.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "You should always use your turn signals when changing lanes or making turns.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Using turn signals is an important way to communicate your intentions to other drivers. It is important to use your turn signals in advance of changing lanes or making turns to allow other drivers to anticipate your movements and adjust their driving accordingly. Failure to use turn signals can result in accidents or violations.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "You should always maintain a safe following distance behind the vehicle in front of you.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Maintaining a safe following distance is crucial for safe driving. It allows you to react and stop in time if the vehicle in front of you suddenly slows down or stops. The recommended following distance is typically around 3 seconds or more, depending on the road conditions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "You should never use cruise control in rainy or slippery conditions.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Using cruise control in rainy or slippery conditions can be dangerous. Cruise control may cause your vehicle to accelerate or lose traction on slippery surfaces, increasing the risk of losing control. It is best to avoid using cruise control in such conditions and maintain full control of your vehicle.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 14,
+      "question": "You should always check your blind spots before changing lanes.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Blind spots are areas around your vehicle that are not visible in your rearview or side mirrors. It is important to physically turn your head and check your blind spots before changing lanes to ensure there are no vehicles or objects in your path. Relying solely on mirrors may result in collisions or unsafe lane changes.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 15,
+      "question": "You should never pass a school bus when its stop sign is extended and red lights are flashing.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Passing a school bus when its stop sign is extended and red lights are flashing is illegal in most jurisdictions. When a school bus is stopped and loading or unloading passengers, other vehicles must come to a complete stop and wait until the stop sign is retracted and the bus starts moving again. Failing to do so can result in serious penalties and endanger the safety of children.",
+      "difficulty": "Hard"
+    }
+  ]
+}
