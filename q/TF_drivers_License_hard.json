@@ -1,0 +1,117 @@
+{
+  "quizCode": "DL988345",
+  "quizName": "Driver's License Quiz Hard True Fasle",
+  "numberOfQuestions": 10, 
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "You should always yield to pedestrians who are crossing the street at a crosswalk.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Pedestrians have the right-of-way at marked crosswalks and intersections. It is important to yield to pedestrians to ensure their safety and prevent accidents.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Using your cellphone while driving is only illegal if you are holding it in your hand.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Using a cellphone while driving is generally prohibited regardless of whether you are holding it in your hand or using hands-free technology. Many jurisdictions have strict laws against using any form of cellphone while driving to prevent distracted driving.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 3,
+      "question": "You can legally pass a vehicle on the right side when it is making a left turn.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "In some situations, you may legally pass a vehicle on the right side when it is making a left turn. However, it is important to exercise caution and ensure that there is enough space to pass safely without endangering other road users.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 4,
+      "question": "You should always use your headlights when driving in foggy conditions.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Using headlights in foggy conditions improves visibility and helps other drivers see your vehicle. It is essential to use low beam headlights and fog lights, if available, to minimize glare and increase safety.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 5,
+      "question": "You should always use your hazard lights when driving in heavy rain or snow.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Using hazard lights while driving is generally reserved for emergency situations or when your vehicle is stationary. Using hazard lights while driving in heavy rain or snow can confuse other drivers and make it difficult to determine your intentions.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 6,
+      "question": "You should always come to a complete stop at a flashing red traffic light before proceeding.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "A flashing red traffic light is the same as a stop sign. Drivers must come to a complete stop, yield to any other vehicles or pedestrians, and proceed only when it is safe to do so.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 7,
+      "question": "You are not required to stop for a school bus with its red lights flashing if you are traveling in the opposite direction on a divided highway.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "In most jurisdictions, drivers traveling in both directions on an undivided road or divided highway must stop for a school bus with its red lights flashing. The only exception is when there is a physical barrier, such as a median, separating the lanes.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 8,
+      "question": "You should always use your turn signal when exiting a roundabout.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Using your turn signal when exiting a roundabout helps communicate your intentions to other drivers and promotes safe and efficient traffic flow. Always signal your exit before reaching the desired exit point.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 9,
+      "question": "It is legal to pass another vehicle on the shoulder of the road.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Passing on the shoulder of the road is illegal and extremely dangerous. The shoulder is designated for emergencies and is not intended for passing or regular travel.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 10,
+      "question": "You can legally park in a space designated for disabled persons if you are only stopping for a few minutes.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Parking in a space designated for disabled persons without a valid permit, even for a few minutes, is illegal and can result in fines and penalties. These spaces are reserved for individuals with disabilities and should not be used by others.",
+      "difficulty": "Hard"
+    }
+  ]
+}
