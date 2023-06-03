@@ -510,6 +510,42 @@ main_section {
   margin-left: 20px;
   margin-right: 20px;
 }
+
+
+
+
+
+#explanation_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#difficulty {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+#realQustionNum {
+  font-size: 14px;
+  color: #666;
+}
+
+#close-btn {
+  font-size: 24px;
+  color: #999;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#close-btn:hover {
+  color: #666;
+}
+
 .explanation-container {
   position: fixed;
   top: 50%;
