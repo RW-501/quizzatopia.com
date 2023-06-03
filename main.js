@@ -936,6 +936,29 @@ function checkUserInfoChanges() {
 }
 
 
+// Function to update user information in local storage and Firestore Database
+function updateUserInfo(updatedInfo) {
+  const userInfo = getUserInfo();
+  const updatedKeys = Object.keys(updatedInfo);
+
+  for (const key of updatedKeys) {
+    if (userInfo[key] !== updatedInfo[key]) {
+      userInfo[key] = updatedInfo[key];
+    }
+  }
+
+  // Update user information in local storage
+  localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
+
+  // Save updated user information to Firebase
+  saveUserInfoToFirebase(userInfo);
+
+  // Display updated user information
+  displayUserInfo();
+}
+
+	
+
 
 
 
@@ -1151,29 +1174,6 @@ function hideStatusBar() {
 
 
 
-
-// Function to update user information in local storage and Firestore Database
-function updateUserInfo(updatedInfo) {
-  const userInfo = getUserInfo();
-  const updatedKeys = Object.keys(updatedInfo);
-
-  for (const key of updatedKeys) {
-    if (userInfo[key] !== updatedInfo[key]) {
-      userInfo[key] = updatedInfo[key];
-    }
-  }
-
-  // Update user information in local storage
-  localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
-
-  // Save updated user information to Firebase
-  saveUserInfoToFirebase(userInfo);
-
-  // Display updated user information
-  displayUserInfo();
-}
-
-	
 
 	
 	
