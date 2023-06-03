@@ -893,6 +893,7 @@ function saveUserInfoToFirestore(userInfo) {
 function saveUserInfoToLocalStorage(userInfo) {
   // Implement the logic to save user info to local storage
   // Example code:
+    console.log('saveUserInfoToLocalStorage');
 
   // Retrieve existing user info from local storage if it exists
   const existingUserInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
@@ -952,6 +953,7 @@ function updateUserInfo(updatedInfo) {
       userInfo[key] = updatedInfo[key];
     }
   }
+    console.log('updateUserInfo');
 
   // Update user information in local storage
   localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
