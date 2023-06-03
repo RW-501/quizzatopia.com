@@ -633,23 +633,6 @@ if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function')
 
 
 
- // Function to save user information to Firestore
-
-function saveUserInfoToFirebase(userInfo) {
-  // Access the Firestore database
-  const db = firebase.firestore();
-
-  // Save the user information to the "userInfo" collection in Firebase
-  db.collection('users').add(userInfo)
-    .then((docRef) => {
-      console.log('User information saved to Firebase with document ID:', docRef.id);
-    })
-    .catch((error) => {
-      console.error('Error saving user information to Firebase:', error);
-    });
-}
-
-
 // Function to retrieve user location using a geolocation API
 var ipAddress; // This variable should be assigned the IP address of the user
 var locationV;
@@ -776,6 +759,23 @@ function checkUserInfoChanges() {
 
 
 
+
+
+ // Function to save user information to Firestore
+
+function saveUserInfoToFirebase(userInfo) {
+  // Access the Firestore database
+  const db = firebase.firestore();
+
+  // Save the user information to the "userInfo" collection in Firebase
+  db.collection('users').add(userInfo)
+    .then((docRef) => {
+      console.log('User information saved to Firebase with document ID:', docRef.id);
+    })
+    .catch((error) => {
+      console.error('Error saving user information to Firebase:', error);
+    });
+}
 
 
 
