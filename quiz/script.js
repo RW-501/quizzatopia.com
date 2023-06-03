@@ -327,7 +327,7 @@ if (questionObj.questionType === "True/False") {
 }
 
 	
-	  console.log(questionObj + "  questionObj   ??????????    currenquestionObj.imageURL   " + questionObj.imageURL);
+	  console.log(questionObj.questionType + "  questionObj.questionType   ??????????    currenquestionObj.imageURL   " + questionObj.imageURL);
 	
   // Randomize the order of the answer options
   const options = questionObj.options;
