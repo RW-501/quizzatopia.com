@@ -91,6 +91,23 @@ main_section {
   }
 
 
+
+
+  #questionImage {
+    width: 70%;
+    height: 60%;
+    object-fit: fill;
+	  
+	  
+  }
+
+
+
+
+
+
+
+
       .answer-option {
         background-color: #f8f8f8;
         border: 1px solid #ccc;
