@@ -314,20 +314,18 @@ function showQuestion() {
 	
  console.log(questionObj.questionType + "  questionType");
 	
-	 /*
-	const questionObj = questions[currentQuestion];
-const questionElement = document.getElementById("question");
-const questionImageElement = document.getElementById("questionImage");
-const questionImageAreaElement = document.getElementById("questionImageArea");
-const difficultyElement = document.getElementById("difficulty");
-const realQuestionNumElement = document.getElementById("realQuestionNum");
+if (questionObj.questionType === "True/False")) {
+	console.log("True/False     "); 
+	document.getElementById("option_3").style.display= "none";
+	document.getElementById("option_4").style.display= "none";
 
-questionElement.innerHTML = questionObj.question;
-questionImageElement.src = questionObj.imageURL || "";
-questionImageAreaElement.style.display = questionObj.imageURL ? "block" : "none";
-difficultyElement.innerHTML = questionObj.difficulty;
-realQuestionNumElement.innerHTML = questionObj.questionNumber;
-*/
+}else{
+	document.getElementById("option_3").style.display= "initial";
+	document.getElementById("option_4").style.display= "initial";
+		console.log(" Multi-Choice     "); 
+
+}
+
 	
 	  console.log(questionObj + "  questionObj   ??????????    currenquestionObj.imageURL   " + questionObj.imageURL);
 	
