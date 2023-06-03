@@ -814,7 +814,7 @@ window.signInWithGoogle = function () {
         firebaseId: firebaseId,
         lastUpdated: new Date().getTime(),
       };
-      saveUserInfoToFirestore(userInfo); // Save user info to Firestore
+      //saveUserInfoToFirestore(userInfo); // Save user info to Firestore
 
       // Set the logged-in cookie
       document.cookie = 'loggedIn=true';
