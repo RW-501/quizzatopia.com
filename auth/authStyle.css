@@ -86,16 +86,17 @@
 }
 
 .tabs button {
-  padding: 8px 16px;
-  margin-right: 10px;
-  border: none;
-  background-color: #f0f0f0;
-  color: #333;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+padding: 8px 16px;
+    margin-right: 10px;
+    border: none;
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 50%;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
 }
 
 .tabs button:hover {
