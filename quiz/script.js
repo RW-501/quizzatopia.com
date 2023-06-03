@@ -301,7 +301,18 @@ function showQuestion() {
  
   const questionObj = questions[currentQuestion];
   document.getElementById("question").innerHTML = questionObj.question;
-  
+	
+	if(questionObj.imageURL){
+  document.getElementById("questionImage").src = questionObj.imageURL;
+  document.getElementById("questionImageArea").display = "block";
+	}else{
+  document.getElementById("questionImageArea").display = "none";
+	}
+  document.getElementById("difficulty").innerHTML = questionObj.difficulty;
+  document.getElementById("realQustionNum").innerHTML = questionObj.questionNumber;
+
+	
+	
   // Randomize the order of the answer options
   const options = questionObj.options;
   const shuffledOptions = shuffleArrayAnswers(options);
