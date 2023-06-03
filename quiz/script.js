@@ -314,7 +314,7 @@ function showQuestion() {
 	
  console.log(questionObj.questionType + "  questionType");
 	
-if (questionObj.questionType === "True/False")) {
+if (questionObj.questionType === "True/False") {
 	console.log("True/False     "); 
 	document.getElementById("option_3").style.display= "none";
 	document.getElementById("option_4").style.display= "none";
