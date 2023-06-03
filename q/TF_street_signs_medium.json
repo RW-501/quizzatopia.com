@@ -1,117 +1,151 @@
 {
-  "quizCode": "DL65160",
+  "quizCode": "DL6s78521",
   "quizName": "Driver's License Test - Street Signs",
-        "quizDifficulty": "Medium",
+  "quizDifficulty": "Medium",
   "numberOfQuestions": 10,
   "questions": [
     {
       "questionNumber": 1,
-      "question": "This sign indicates 'No U-turn.'",
+      "question": "Identify the following sign:",
+      "imageURL": "https://www.publicdomainpictures.net/pictures/260000/velka/speed-limit-sign-1529673333Ak0.jpg",
+      "questionType": "Multiple Choice",
       "options": [
-        "True",
-        "False"
+        "A) Yield",
+        "B) Stop",
+        "C) Speed Limit",
+        "D) No Parking"
       ],
-      "answer": "True",
-      "explanation": "This sign indicates that U-turns are not allowed. Drivers should proceed straight and not make a U-turn at this location.",
+      "answer": "C) Speed Limit",
+      "explanation": "This sign indicates the speed limit for the area. Drivers should adhere to the posted speed limit to ensure safe driving.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 2,
-      "question": "This sign indicates 'Merge ahead.'",
+      "question": "What does this sign indicate?",
+      "imageURL": "https://as2.ftcdn.net/v2/jpg/01/15/03/35/1000_F_115033577_P8KtK2rjcmuuQVDOZM9qPQ8OU4vAnKS2.jpg",
+      "questionType": "Multiple Choice",
       "options": [
-        "True",
-        "False"
+        "A) No Left Turn",
+        "B) No Right Turn",
+        "C) No U-turn",
+        "D) No Parking"
       ],
-      "answer": "True",
-      "explanation": "This sign indicates that there is a merging lane ahead. Drivers should prepare to merge with the traffic in the other lane.",
+      "answer": "A) No Left Turn",
+      "explanation": "This sign indicates that making a left turn at this intersection is prohibited. Drivers should proceed straight or take an alternative route.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 3,
-      "question": "This sign indicates 'Two-way traffic ahead.'",
+      "question": "What does this sign indicate?",
+      "imageURL": "https://www.publicdomainpictures.net/pictures/260000/velka/pedestrian-crossing-sign-15296733173KL.jpg",
+      "questionType": "Multiple Choice",
       "options": [
-        "True",
-        "False"
+        "A) School Crossing",
+        "B) Pedestrian Crosswalk",
+        "C) Playground",
+        "D) Residential Area"
       ],
-      "answer": "True",
-      "explanation": "This sign indicates that the road ahead is divided, and there will be two-way traffic. Drivers should be cautious and stay in their designated lane.",
+      "answer": "B) Pedestrian Crosswalk",
+      "explanation": "This sign indicates the presence of a pedestrian crosswalk. Drivers should be alert and yield to pedestrians crossing the road.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 4,
-      "question": "This sign indicates 'Divided highway ends.'",
+      "question": "Identify the following sign:",
+      "imageURL": "https://c0.wallpaperflare.com/preview/66/572/843/street-signs-japan-japanese-design-slippery-when-wet.jpg",
+      "questionType": "Multiple Choice",
       "options": [
-        "True",
-        "False"
+        "A) No Overtaking",
+        "B) Divided Highway",
+        "C) Merge",
+        "D) Slippery Road"
       ],
-      "answer": "True",
-      "explanation": "This sign indicates that the divided highway ends ahead. The road will no longer be divided, and drivers should be prepared for changes in traffic patterns.",
+      "answer": "D) Slippery Road",
+      "explanation": "This sign warns drivers of a slippery road surface ahead. Drivers should reduce speed and exercise caution to maintain control of their vehicle.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 5,
-      "question": "This sign indicates 'Bicycle lane ahead.'",
+      "question": "What does this sign indicate?",
+      "imageURL": "https://s.driving-tests.org/wp-content/uploads/2020/09/shutterstock_65862670.jpg",
+      "questionType": "Multiple Choice",
       "options": [
-        "True",
-        "False"
+        "A) Winding Road",
+        "B) Road Narrows",
+        "C) No Overtaking",
+        "D) No Parking"
       ],
-      "answer": "True",
-      "explanation": "This sign indicates that there is a designated lane for bicycles ahead. Drivers should be aware of cyclists and give them space when passing or merging.",
+      "answer": "B) Road Narrows",
+      "explanation": "This sign indicates that the road narrows ahead. Drivers should adjust their position and be prepared for a reduction in lane width.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 6,
-      "question": "This sign indicates 'No U-turn.'",
+      "question": "What does this sign indicate?",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Montserrat_%E2%80%94_traffic_sign_%E2%80%9Eno_entry%E2%80%9D.JPG/640px-Montserrat_%E2%80%94_traffic_sign_%E2%80%9Eno_entry%E2%80%9D.JPG",
+      "questionType": "Multiple Choice",
       "options": [
-        "True",
-        "False"
+        "A) No Entry",
+        "B) No Parking",
+        "C) No Stopping",
+        "D) No U-turns"
       ],
-      "answer": "True",
-      "explanation": "This sign indicates that U-turns are not allowed at this location. Drivers should proceed straight and not make a U-turn.",
+      "answer": "A) No Entry",
+      "explanation": "This sign indicates that entry is prohibited. Drivers should not enter the designated area or road.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 7,
-      "question": "This sign indicates 'No parking.'",
+      "question": "Identify the following sign:",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Estonia_road_sign_537bk.svg/640px-Estonia_road_sign_537bk.svg.png",
+      "questionType": "Multiple Choice",
       "options": [
-        "True",
-        "False"
+        "A) Merge",
+        "B) Divided Highway",
+        "C) Lane Ends",
+        "D) Stop Ahead"
       ],
-      "answer": "True",
-      "explanation": "This sign indicates that parking is not allowed in this area. Drivers should not leave their vehicles unattended in the designated zone.",
+      "answer": "C) Lane Ends",
+      "explanation": "This sign indicates that the lane will end soon. Drivers should merge with the adjacent lane safely.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 8,
-      "question": "This sign indicates 'Lane ends ahead.'",
+      "question": "What does this sign indicate?",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/SU_road_sign_1.23.svg/640px-SU_road_sign_1.23.svg.png",
+      "questionType": "Multiple Choice",
       "options": [
-        "True",
-        "False"
+        "A) Roadwork Ahead",
+        "B) Construction Zone",
+        "C) Detour",
+        "D) Yield to Oncoming Traffic"
       ],
-      "answer": "True",
-      "explanation": "This sign indicates that the lane ahead will end. Drivers should merge with the traffic in the other lane.",
+      "answer": "A) Roadwork Ahead",
+      "explanation": "This sign indicates that roadwork is taking place ahead. Drivers should be cautious and follow any instructions or detour signs.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 9,
-      "question": "This sign indicates 'Emergency vehicle crossing.'",
+      "question": "Identify the following sign:",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Ontario_Wa-35.svg/640px-Ontario_Wa-35.svg.png",
+      "questionType": "Multiple Choice",
       "options": [
-        "True",
-       "False"
+        "A) Two-Way Traffic",
+        "B) Divided Highway Ends",
+        "C) No U-turns",
+        "D) No Overtaking"
       ],
-      "answer": "True",
-      "explanation": "This sign indicates that there may be emergency vehicles crossing the road ahead. Drivers should be prepared to yield and give right-of-way to emergency vehicles.",
+      "answer": "B) Divided Highway Ends",
+      "explanation": "This sign indicates the end of a divided highway. Drivers should be aware that opposing traffic will be merging into a single lane.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 10,
-      "question": "This sign indicates 'Pedestrian crossing ahead.'",
-      "options": [
-        "True",
-        "False"
-      ],
-      "answer": "True",
-      "explanation": "This sign indicates that there is a pedestrian crossing ahead. Drivers should be cautious and yield to pedestrians who are crossing the road.",
+      "question": "Does this sign indicate a yield sign ahead?",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Indonesia_Traffic-signs_Warning-sign-08.jpg/640px-Indonesia_Traffic-signs_Warning-sign-08.jpg",
+      "questionType": "True/False",
+      "answer": "False",
+      "explanation": "This sign does not indicate a yield sign ahead. It is important to correctly interpret signs to ensure safe driving.",
       "difficulty": "Medium"
     }
   ]
