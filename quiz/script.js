@@ -80,13 +80,13 @@ function startQuiz() {
 	// Call the function when needed, e.g., after completing a quiz
 	
 //showLoginPopupIfNeeded();
-	
+			    showLoginPopupIfNeeded();
+
 	
 	    if (newQuizCount > QUIZ_COUNT_THRESHOLD && loggedIn == false) {
       // Show the login popup
      			slideIn("loginPopup");
-		    showLoginPopupIfNeeded();
-
+openPopup();
     }else{
 	
 	
