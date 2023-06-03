@@ -871,6 +871,8 @@ function retrieveUserInfoFromFirestore(firebaseId) {
 // Function to save user info to Firestore
 function saveUserInfoToFirestore(userInfo) {
   return new Promise((resolve, reject) => {
+	      console.log(userInfo); // Log userInfo to the console
+
     firebase.firestore()
       .collection('users')
       .doc(userInfo.firebaseId)
