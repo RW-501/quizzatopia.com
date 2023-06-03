@@ -895,6 +895,7 @@ let numberOfQuestions;
 let quizImageURL;
 let quizDifficulty;
 let questionNumber;
+let questionType;
 
 let difficulty;
 let imageURL;
@@ -1039,6 +1040,7 @@ function fetchData(q, e) {
             options: questionObj.options,
             difficulty: questionObj.difficulty,
             imageURL: questionObj.imageURL,
+            questionType: questionObj.questionType,
             questionNumber: questionObj.questionNumber,
             explanation: questionObj.explanation
           }));
@@ -1078,6 +1080,7 @@ function fetchData(q, e) {
             options: questionObj.options,
             difficulty: questionObj.difficulty,
             imageURL: questionObj.imageURL,
+            questionType: questionObj.questionType,
             questionNumber: questionObj.questionNumber,
             explanation: questionObj.explanation
           }));
@@ -1089,7 +1092,7 @@ function fetchData(q, e) {
           quizImageURL = data.quizImageURL;
           quizDifficulty = data.quizDifficulty;
           questionNumber = data.questionNumber;
-		
+		questionType = data.questionType;
 
           // Check quiz code and retrieve or save quiz info
           const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
