@@ -244,7 +244,7 @@ function animateTextChanges() {
 
 function displayProfileInfo() {
     //const userInfo = JSON.parse(localStorage.getItem('userInfo'));
-	const userInfo = getUserInfo();
+	let userInfo = getUserInfo();
 	retrieveUserInfoFromFirestore(userInfo.firebaseId);
 	 userInfo = getUserInfo();
 
