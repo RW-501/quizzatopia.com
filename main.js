@@ -709,78 +709,13 @@ function getIPAddress() {
     });
 }
 
-function checkUserInfoChanges() {
-  const userInfo = getUserInfo();
-
-  getIPAddress()
-    .then(ip => getUserLocation(ip))
-    .then(location => {
-      const { userCountry, userState, userLatitude, userLongitude } = location;
-
-      if (
-        userInfo.userState !== userState ||
-        userInfo.userCountry !== userCountry ||
-        userInfo.userLatitude !== userLatitude ||
-        userInfo.userLongitude !== userLongitude
-      ) {
-        // User location has changed, update user information
-        const updatedInfo = {
-          userState,
-          userCountry,
-          userLatitude,
-          userLongitude,
-        };
-        updateUserInfo(updatedInfo);
-      } else {
-        // Check timestamp for user info
-        const db = firebase.firestore();
-        const userId = userInfo.firebaseId;
-
-        db.collection('users')
-          .doc(userId)
-          .get()
-          .then(doc => {
-            const dbUserInfo = doc.data();
-
-            if (dbUserInfo && dbUserInfo.lastUpdated > userInfo.lastUpdated) {
-              // Database info is newer, update local storage
-              updateUserInfo(dbUserInfo);
-            }
-          })
-          .catch(error => {
-            console.error('Error retrieving user info from Firestore:', error);
-          });
-      }
-    })
-    .catch(error => {
-      console.error('Error retrieving user location:', error);
-    });
-}
 
 
 
 
 
- // Function to save user information to Firestore
-
-function saveUserInfoToFirebase(userInfo) {
-  // Access the Firestore database
-  const db = firebase.firestore();
-
-  // Save the user information to the "userInfo" collection in Firebase
-  db.collection('users').add(userInfo)
-    .then((docRef) => {
-      console.log('User information saved to Firebase with document ID:', docRef.id);
-    })
-    .catch((error) => {
-      console.error('Error saving user information to Firebase:', error);
-    });
-}
 
 
-
-// Update the signInWithGoogle function
-// Update the signInWithGoogle function
 window.signInWithGoogle = function () {
   const provider = new firebase.auth.GoogleAuthProvider();
 
@@ -798,34 +733,76 @@ window.signInWithGoogle = function () {
       console.log('User display name:', displayName);
       console.log('Firebase ID:', firebaseId);
 
-      // Save user info to Firestore database
-      const userInfo = {
-        userName: displayName,
-        userEmail: user.email,
-        userProfilePic: user.photoURL,
-        userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-        userRank: 'Beginner',
-        userPoints: 0,
-        userQuizzesTaken: 0,
-        userCountry: '',
-        userState: '',
-        userLatitude: 0,
-        userLongitude: 0,
-        firebaseId: firebaseId,
-        lastUpdated: new Date().getTime(),
-      };
-      //saveUserInfoToFirestore(userInfo); // Save user info to Firestore
+      // Check if the user already exists in the Firestore database
+      checkUserExistence(firebaseId)
+        .then((exists) => {
+          if (exists) {
+            // Existing user
+            retrieveUserInfoFromFirestore(firebaseId)
+              .then((userInfo) => {
+                // Save database info to local storage
+                saveUserInfoToLocalStorage(userInfo);
 
-      // Set the logged-in cookie
-      document.cookie = 'loggedIn=true';
+                // Set the logged-in cookie
+                document.cookie = 'loggedIn=true';
 
-      // Sign-in successful
-      onAuthSuccess(userInfo);
+                // Sign-in successful
+                onAuthSuccess(userInfo);
 
-      updateUserInfo(userInfo);
+                updateUserInfo(userInfo);
 
-      // Check if user info changes
-      checkUserInfoChanges();
+                // Check if user info changes
+                checkUserInfoChanges();
+              })
+              .catch((error) => {
+                // Handle error retrieving user info
+                showStatusMessage('Error retrieving user info', 'error');
+              });
+          } else {
+            // New user
+            const userInfo = {
+              userName: displayName,
+              userEmail: user.email,
+              userProfilePic: user.photoURL,
+              userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+              userRank: 'Beginner',
+              userPoints: 0,
+              userQuizzesTaken: 0,
+              userCountry: '',
+              userState: '',
+              userLatitude: 0,
+              userLongitude: 0,
+              firebaseId: firebaseId,
+              lastUpdated: new Date().getTime(),
+            };
+
+            // Save local storage info to Firestore database
+            saveUserInfoToFirestore(userInfo)
+              .then(() => {
+                // Save user info to local storage
+                saveUserInfoToLocalStorage(userInfo);
+
+                // Set the logged-in cookie
+                document.cookie = 'loggedIn=true';
+
+                // Sign-in successful
+                onAuthSuccess(userInfo);
+
+                updateUserInfo(userInfo);
+
+                // Check if user info changes
+                checkUserInfoChanges();
+              })
+              .catch((error) => {
+                // Handle error saving user info to Firestore
+                showStatusMessage('Error saving user info', 'error');
+              });
+          }
+        })
+        .catch((error) => {
+          // Handle error checking user existence
+          showStatusMessage('Error checking user existence', 'error');
+        });
     })
     .catch((error) => {
       // Handle any errors that occurred during sign-in
@@ -835,6 +812,138 @@ window.signInWithGoogle = function () {
       document.cookie = 'loggedIn=false';
     });
 };
+
+// Function to check if the user exists in Firestore
+function checkUserExistence(firebaseId) {
+  return new Promise((resolve, reject) => {
+    // Implement the logic to check user existence in Firestore
+    // Example code:
+    firebase.firestore()
+      .collection('users')
+      .doc(firebaseId)
+      .get()
+      .then((doc) => {
+        resolve(doc.exists);
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+}
+
+// Function to retrieve user info from Firestore
+function retrieveUserInfoFromFirestore(firebaseId) {
+  return new Promise((resolve, reject) => {
+    // Implement the logic to retrieve user info from Firestore
+    // Example code:
+    firebase.firestore()
+      .collection('users')
+      .doc(firebaseId)
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          resolve(doc.data());
+        } else {
+          reject(new Error('User info not found'));
+        }
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+}
+
+// Function to save user info to Firestore
+function saveUserInfoToFirestore(userInfo) {
+  return new Promise((resolve, reject) => {
+    // Implement the logic to save user info to Firestore
+    // Example code:
+    firebase.firestore()
+      .collection('users')
+      .doc(userInfo.firebaseId)
+      .set(userInfo)
+      .then(() => {
+        resolve();
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
+}
+
+
+
+
+
+// Function to save user info to local storage
+function saveUserInfoToLocalStorage(userInfo) {
+  // Implement the logic to save user info to local storage
+  // Example code:
+
+  // Retrieve existing user info from local storage if it exists
+  const existingUserInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
+
+  // Merge the existing user info with the new user info
+  const mergedUserInfo = { ...existingUserInfo, ...userInfo };
+
+  // Save the merged user info to local storage
+  localStorage.setItem(USER_INFO_KEY, JSON.stringify(mergedUserInfo));
+}
+
+
+
+
+
+
+
+
+// Function to check if user info changes
+function checkUserInfoChanges() {
+  // Implement the logic to check if user info changes
+  // Example code:
+
+  // Retrieve the current user info from local storage
+  const currentUserInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
+
+  // Retrieve the previous user info from a previous session or initial value
+  const previousUserInfo = {
+    userName: 'Previous User',
+    userEmail: '',
+    userActive: true,
+    userJoinedDate: new Date().toISOString(),
+    userState: '',
+    userLongitude: '',
+    userLatitude: '',
+    userCountry: '',
+    userProfilePic: '/images/avatar/w1.png',
+    userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+    userRank: 'Beginner',
+    userPoints: 0,
+    userQuizzesTaken: 0,
+    userAds: '',
+  };
+
+  // Compare the current user info with the previous user info
+  const hasUserInfoChanged = JSON.stringify(currentUserInfo) !== JSON.stringify(previousUserInfo);
+
+  if (hasUserInfoChanged) {
+    // User info has changed
+    console.log('User info has changed');
+  } else {
+    // User info has not changed
+    console.log('User info has not changed');
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
