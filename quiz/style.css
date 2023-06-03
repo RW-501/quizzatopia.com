@@ -92,12 +92,18 @@ main_section {
 
 
 
+  #questionImageArea {
+    width: 100%;
+
+    margin: auto;
+	  
+  }
 
   #questionImage {
     width: 70%;
-    height: 60%;
     object-fit: fill;
-	  
+    display: block;
+    margin: auto;
 	  
   }
 
