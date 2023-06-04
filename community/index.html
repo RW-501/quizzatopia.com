@@ -213,7 +213,8 @@ const db = firebase.firestore();
 
 		// Call the function to retrieve and display the thread details on page load
 //var threadId;
-let threadId;
+const urlParams = new URLSearchParams(window.location.search);
+const threadId = urlParams.get('threadId');
 
 if (threadId) {
   getThreadDetails(threadId);
