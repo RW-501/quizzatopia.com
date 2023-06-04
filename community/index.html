@@ -271,8 +271,9 @@ const db = firebase.firestore();
 		// Retrieve the thread ID from the URL query parameter (replace 'threadId' with the actual parameter name)
 
 		// Call the function to retrieve and display the thread details on page load
-const threadId; // = urlParams.get('threadId');
-
+const urlParams = new URLSearchParams(window.location.search);
+const threadId = urlParams.get('threadId');
+		
 if (threadId) {
   getThreadDetails(threadId);
   getReplies(threadId); // Pass threadId to getReplies function
@@ -377,6 +378,7 @@ function addReply(content) {
   // Create a new reply object
   const newReply = {
     user: userInfo.userName,
+    id: userInfo.firebaseId,
     rank: userInfo.userRank,
     points: userInfo.userPoints,
     profilePic: userInfo.userProfilePic,
