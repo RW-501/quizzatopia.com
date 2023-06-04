@@ -305,8 +305,11 @@ document.getElementById("question").innerHTML = questionObj.question;
 
 if (questionObj.imageURL === '' || questionObj.imageURL === null || questionObj.imageURL === 'undefined') {
   document.getElementById("questionImageArea").style.display = "none";
+		console.log("inside No pic     "); 
+
 } else {
-  document.getElementById("questionImage").src = questionObj.imageURL;
+			console.log("inside  pic     "); 
+	document.getElementById("questionImage").src = questionObj.imageURL;
   document.getElementById("questionImageArea").style.display = "block"; 
 }
 	
