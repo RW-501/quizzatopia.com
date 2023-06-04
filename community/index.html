@@ -708,7 +708,7 @@ function voteReply(voteType, replyId) {
 // Function to create channels in HTML
 function createChannelElement(channelData) {
   const channelElement = `
-    <div id="channelData.id" class="channel channel-div"  onclick="switchView('thread-listing-view'); populateThreadList('${channelData.id}')">
+    <div id="ch${channelData.id}" class="channel channel-div"  onclick="switchView('thread-listing-view'); populateThreadList('${channelData.id}')">
 
       <h3>${channelData.name}</h3>
       <p>${channelData.description}</p>
@@ -731,7 +731,7 @@ function getChannels() {
       querySnapshot.forEach((doc) => {
         const channelData = doc.data();
 	      
-		    console.log("channelData        "+channelData);
+		    console.log("channelData        "+channelData.name);
 
         // Create HTML elements for each channel
         const channelElement = createChannelElement(channelData);
