@@ -724,6 +724,9 @@ function getChannels() {
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         const channelData = doc.data();
+	      
+		    console.log("channelData        "+channelData);
+
         // Create HTML elements for each channel
         const channelElement = createChannelElement(channelData);
 
