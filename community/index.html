@@ -273,7 +273,7 @@ const db = firebase.firestore();
 //const urlParams = new URLSearchParams(window.location.search);
 //const threadId = urlParams.get('threadId');
 	var threadId = '';
-		
+/*		
 if (threadId) {
   getThreadDetails(threadId);
   getReplies(threadId); // Pass threadId to getReplies function
@@ -281,7 +281,7 @@ if (threadId) {
   // Handle the case when threadId is not provided
   console.error('Thread ID not found in URL parameters');
 }
-
+*/
 
 // Reference to the thread content and reply list elements
 const threadContent = document.getElementById('thread-content');
@@ -415,45 +415,40 @@ const threadList = document.getElementById('thread-list');
 
 // Function to retrieve thread data from Firebase and populate the thread list
 function populateThreadList() {
-  const threadList = document.getElementById('thread-list');
-  
   // Retrieve thread data from Firestore and sort by vote count
-  firebase.firestore().collection('threads').orderBy('votes', 'desc').onSnapshot((querySnapshot) => {
-    threadList.innerHTML = ''; // Clear existing thread list
+  firebase.firestore().collection('threads').orderBy('votes', 'desc').get()
+    .then((querySnapshot) => {
+      threadList.innerHTML = ''; // Clear existing thread list
 
-    querySnapshot.forEach((doc) => {
-      const threadData = doc.data();
+      querySnapshot.forEach((doc) => {
+        const threadData = doc.data();
 
-      // Create a list item for each thread
-      const listItem = document.createElement('li');
+        // Create a list item for each thread
+        const listItem = document.createElement('li');
 
-      // Set the thread title, author, timestamp, vote count, etc.
-      listItem.innerHTML = `
-     <h3>${threadData.title}</h3>
+        // Set the thread title, author, timestamp, vote count, etc.
+        listItem.innerHTML = `
+          <h3>${threadData.title}</h3>
           <p>Author: ${threadData.user}</p>
           <p>Timestamp: ${threadData.timestamp}</p>
           <p>Votes: ${threadData.votes}</p>
-          <p>Picture: <img src="${threadData.picture}" alt="Thread Picture"></p>
-          <p>Points: ${threadData.points}</p>
-          <p>Rank: ${threadData.rank}</p>
-          <p>Quizzes Taken: ${threadData.quizzesTaken}</p>
-          
           <!-- Additional thread information can be added here -->
           <!-- For threads -->
-          <button class="vote-button" onclick="voteThread('up', '${threadId}')">Upvote</button>
-          <button class="vote-button" onclick="voteThread('down', '${threadId}')">Downvote</button>
+          <button class="vote-button" onclick="voteThread('up', '${doc.id}')">Upvote</button>
+          <button class="vote-button" onclick="voteThread('down', '${doc.id}')">Downvote</button>
         `;
 
-      threadList.appendChild(listItem);
+        threadList.appendChild(listItem);
+      });
+    })
+    .catch((error) => {
+      console.log('Error getting threads:', error);
     });
-  });
 }
-
-
 
 // Call the function to populate the thread list on page load
 populateThreadList();
-		
+
 		
 		
 		
