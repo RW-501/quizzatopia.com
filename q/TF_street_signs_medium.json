@@ -144,6 +144,10 @@
       "question": "Does this sign indicate a yield sign ahead?",
       "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Indonesia_Traffic-signs_Warning-sign-08.jpg/640px-Indonesia_Traffic-signs_Warning-sign-08.jpg",
       "questionType": "True/False",
+           "options": [
+        "False",
+        "True"
+      ],
       "answer": "False",
       "explanation": "This sign does not indicate a yield sign ahead. It is important to correctly interpret signs to ensure safe driving.",
       "difficulty": "Medium"
