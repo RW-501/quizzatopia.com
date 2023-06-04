@@ -185,6 +185,7 @@ const replyList = document.getElementById('reply-list');
 
 // Function to retrieve the selected thread's details from Firebase
 function getThreadDetails(threadId) {
+	console.log('threadId:id  ', threadId);
   // Retrieve the thread document from Firebase using the thread ID
   firebase
     .firestore()
