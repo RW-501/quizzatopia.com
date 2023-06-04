@@ -300,15 +300,15 @@ function showQuestion() {
   }
 
 
-  const questionObj = questions[currentQuestion];
-  document.getElementById("question").innerHTML = questionObj.question;
-	
-	if(questionObj.imageURL === '' || questionObj.imageURL === null || questionObj.imageURL === "undefined" ){
- document.getElementById("questionImageArea").display = "none";
-	}else{
+ const questionObj = questions[currentQuestion];
+document.getElementById("question").innerHTML = questionObj.question;
+
+if (questionObj.imageURL === '' || questionObj.imageURL === null || questionObj.imageURL === 'undefined') {
+  document.getElementById("questionImageArea").style.display = "none";
+} else {
   document.getElementById("questionImage").src = questionObj.imageURL;
-  document.getElementById("questionImageArea").display = "block"; 
-	}
+  document.getElementById("questionImageArea").style.display = "block"; 
+}
 	
 	
   document.getElementById("difficulty").innerHTML = questionObj.difficulty;
