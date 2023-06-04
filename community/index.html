@@ -464,8 +464,13 @@ getReplies();
 // Reference to the thread list element
 const threadList = document.getElementById('thread-list');
 
+		
+		
+		
+		
 // Function to retrieve thread data from Firebase and populate the thread list
-function populateThreadList(threadId) {
+function populateThreadList(channelID) {
+	channelID = channelID;
   // Retrieve thread data from Firestore and sort by vote count
   firebase.firestore().collection('threads').orderBy('votes', 'desc').get()
     .then((querySnapshot) => {
