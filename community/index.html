@@ -280,16 +280,18 @@ const threadList = document.getElementById('thread-list');
 
 // Function to retrieve thread data from Firebase and populate the thread list
 function populateThreadList() {
-  // Retrieve thread data from Firebase (replace 'threads' with your Firebase database reference)
-  firebase.database().ref('threads').on('value', (snapshot) => {
+  const threadList = document.getElementById('thread-list');
+  
+  // Retrieve thread data from Firestore (replace 'threads' with your Firestore collection reference)
+  firebase.firestore().collection('threads').onSnapshot((querySnapshot) => {
     threadList.innerHTML = ''; // Clear existing thread list
 
-    snapshot.forEach((childSnapshot) => {
-      const threadData = childSnapshot.val();
+    querySnapshot.forEach((doc) => {
+      const threadData = doc.data();
 
       // Create a list item for each thread
       const listItem = document.createElement('li');
-      
+
       // Set the thread title, author, timestamp, etc.
       listItem.innerHTML = `
         <h3>${threadData.title}</h3>
@@ -297,13 +299,14 @@ function populateThreadList() {
         <p>Timestamp: ${threadData.timestamp}</p>
         <!-- Additional thread information can be added here -->
 
-        <a href="thread-details.html?threadId=${childSnapshot.key}">View Details</a>
+        <a href="thread-details.html?threadId=${doc.id}">View Details</a>
       `;
 
       threadList.appendChild(listItem);
     });
   });
 }
+
 
 // Call the function to populate the thread list on page load
 populateThreadList();
@@ -336,18 +339,28 @@ createThreadForm.addEventListener('submit', (event) => {
   createThreadForm.reset();
 });
 
-// Function to create a new thread
 function createThread(title, content) {
-  // Implement the logic to create a new thread in Firebase
-  // This could include pushing the data to the Firebase Realtime Database or Firestore
-  // You can use Firebase SDKs and methods to handle data storage and updates
-  // Example code:
-  firebase.database().ref('threads').push({
+  // Get a reference to the Firestore collection
+  const threadsCollection = firebase.firestore().collection('threads');
+
+  // Create a new thread document
+  threadsCollection.add({
     title: title,
     content: content,
-    // Other thread properties like author, timestamp, etc.
+    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+    // Add additional properties as needed
+  })
+  .then((docRef) => {
+    // Thread created successfully
+    console.log('Thread created with ID:', docRef.id);
+    // You can update the UI or perform additional actions here
+  })
+  .catch((error) => {
+    // Error occurred while creating thread
+    console.error('Error creating thread:', error);
   });
 }
+
 
 		
 		
