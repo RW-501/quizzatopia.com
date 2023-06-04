@@ -2,10 +2,12 @@
 .carousel-control-next-icon {
     background-color: cornflowerblue;
       opacity: 0;
+        display: none;
 }
 .carousel-control-prev-icon {
     background-color: cornflowerblue;
       opacity: 0;
+        display: none;
 }
 
 
