@@ -73,7 +73,7 @@
   <div class="view-container">
     <!-- Thread Listing View -->
     <section id="thread-listing-view" class="view active">
-      <h2>Thread Listing</h2>
+      <h2>Main Discussion</h2>
       <ul id="thread-list"></ul>
     </section>
 
@@ -174,7 +174,31 @@ function closeCreateThreadPopup() {
     }	
 		
 		
-		
+function openReplyPopup() {
+  document.querySelector('#reply-popup').style.display = 'block';
+}
+
+function closeReplyPopup() {
+  document.querySelector('#reply-popup').style.display = 'none';
+}
+
+// Add event listener for reply form submission
+const replyForm = document.getElementById('reply-form');
+replyForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Get the value from the reply input field
+  const replyContent = document.getElementById('reply-content').value;
+
+  // Perform necessary actions (e.g., save to Firebase, update UI, etc.)
+  addReply(replyContent);
+
+  // Reset the form
+  replyForm.reset();
+
+  // Close the reply pop-up
+  closeReplyPopup();
+});
 		
 		
 		
