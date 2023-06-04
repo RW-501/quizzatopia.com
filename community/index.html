@@ -275,12 +275,13 @@ const db = firebase.firestore();
 const urlParams = new URLSearchParams(window.location.search);
 const threadId = urlParams.get('threadId');
 
-if (threadId) {
+if (threadId !== null && threadId !== undefined) {
   getThreadDetails(threadId);
 } else {
   // Handle the case when threadId is not provided
   console.error('Thread ID not found in URL parameters');
 }
+
 
 
 // Reference to the thread content and reply list elements
@@ -399,7 +400,7 @@ function addReply(content) {
 
 
 // Call the functions to retrieve and display the thread details and replies on page load
-getThreadDetails();
+getThreadDetails(threadId);
 getReplies();
 		
 		
