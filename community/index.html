@@ -58,21 +58,20 @@
     </aside>
 
     <!-- Thread Listing -->
-    <section class="thread-listing">
-      <h2>General Knowledge</h2>
-      <!-- Display a list of threads -->
-      <ul>
-        <li>
-          <h3><a href="#">Thread Title</a></h3>
-          <p>Thread description or preview</p>
-          <div class="thread-metadata">
-            <!-- Display thread metadata like author, date, views, etc. -->
-          </div>
-        </li>
-        <!-- Add more threads here -->
-      </ul>
-    </section>
+   <section class="thread-listing">
+  <h2>Thread Listing</h2>
+  <ul id="thread-list"></ul>
+</section>
 
+
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
     <!-- Thread Details -->
     <section class="thread-details">
       <h2>Thread Title</h2>
@@ -89,15 +88,205 @@
       </div>
     </section>
 
+	  
+	  
+	  
+	  
+	  
+	  
+	  
     <!-- Create Thread Form -->
-    <section class="create-thread-form">
-      <h2>Create a New Thread</h2>
-      <!-- Display form fields for creating a new thread -->
-    </section>
+<section class="create-thread-form">
+  <h2>Create a New Thread</h2>
+  <form id="create-thread-form">
+    <label for="thread-title">Thread Title:</label>
+    <input type="text" id="thread-title" required>
+
+    <label for="thread-content">Thread Content:</label>
+    <textarea id="thread-content" required></textarea>
+
+    <button type="submit">Create Thread</button>
+  </form>
+</section>
+
   </main>
 
 
   <!-- Include your JavaScript files here to integrate Firebase functionality -->
+	
+	<script>
+		
+		
+		
+		
+// Retrieve the thread ID from the URL query parameter (replace 'threadId' with the actual parameter name)
+const urlParams = new URLSearchParams(window.location.search);
+const threadId = urlParams.get('threadId');
+
+// Reference to the thread content and reply list elements
+const threadContent = document.getElementById('thread-content');
+const replyList = document.getElementById('reply-list');
+
+// Function to retrieve the selected thread's details from Firebase
+function getThreadDetails() {
+  // Retrieve the thread data from Firebase using the thread ID (replace 'threads' with your Firebase database reference)
+  firebase.database().ref('threads/' + threadId).once('value', (snapshot) => {
+    const threadData = snapshot.val();
+
+    // Display the thread content
+    threadContent.innerHTML = `
+      <h3>${threadData.title}</h3>
+      <p>Author: ${threadData.author}</p>
+      <p>Timestamp: ${threadData.timestamp}</p>
+      <p>${threadData.content}</p>
+    `;
+  });
+}
+
+// Function to retrieve and display the replies for the selected thread
+function getReplies() {
+  // Retrieve the replies from Firebase using the thread ID (replace 'replies' with your Firebase database reference)
+  firebase.database().ref('replies').orderByChild('threadId').equalTo(threadId).on('value', (snapshot) => {
+    replyList.innerHTML = ''; // Clear existing replies
+
+    snapshot.forEach((childSnapshot) => {
+      const replyData = childSnapshot.val();
+
+      // Create a list item for each reply
+      const listItem = document.createElement('li');
+      listItem.innerHTML = `
+        <p>Author: ${replyData.author}</p>
+        <p>Timestamp: ${replyData.timestamp}</p>
+        <p>${replyData.content}</p>
+      `;
+
+      replyList.appendChild(listItem);
+    });
+  });
+}
+
+// Function to add a new reply to the thread
+function addReply(content) {
+  // Get the current user's information (you can replace this with your own authentication system)
+  const currentUser = {
+    name: 'John Doe', // Example name
+    // Other user information
+  };
+
+  // Create a new reply object
+  const newReply = {
+    author: currentUser.name,
+    content: content,
+    timestamp: new Date().toISOString(),
+    threadId: threadId,
+  };
+
+  // Push the new reply to Firebase (replace 'replies' with your Firebase database reference)
+  firebase.database().ref('replies').push(newReply);
+}
+
+// Add event listener for the reply form submission
+const replyForm = document.getElementById('reply-form');
+replyForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const replyContent = document.getElementById('reply-content').value;
+
+  // Call the addReply function to add the new reply
+  addReply(replyContent);
+
+  // Clear the reply input field
+  document.getElementById('reply-content').value = '';
+});
+
+// Call the functions to retrieve and display the thread details and replies on page load
+getThreadDetails();
+getReplies();
+		
+		
+		
+		
+		
+		
+		
+		
+// Reference to the thread list element
+const threadList = document.getElementById('thread-list');
+
+// Function to retrieve thread data from Firebase and populate the thread list
+function populateThreadList() {
+  // Retrieve thread data from Firebase (replace 'threads' with your Firebase database reference)
+  firebase.database().ref('threads').on('value', (snapshot) => {
+    threadList.innerHTML = ''; // Clear existing thread list
+
+    snapshot.forEach((childSnapshot) => {
+      const threadData = childSnapshot.val();
+
+      // Create a list item for each thread
+      const listItem = document.createElement('li');
+      
+      // Set the thread title, author, timestamp, etc.
+      listItem.innerHTML = `
+        <h3>${threadData.title}</h3>
+        <p>Author: ${threadData.author}</p>
+        <p>Timestamp: ${threadData.timestamp}</p>
+        <!-- Additional thread information can be added here -->
+
+        <a href="thread-details.html?threadId=${childSnapshot.key}">View Details</a>
+      `;
+
+      threadList.appendChild(listItem);
+    });
+  });
+}
+
+// Call the function to populate the thread list on page load
+populateThreadList();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		// Get a reference to the form element
+const createThreadForm = document.getElementById('create-thread-form');
+
+// Add event listener for form submission
+createThreadForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent the default form submission
+
+  // Get the values from the form fields
+  const threadTitle = document.getElementById('thread-title').value;
+  const threadContent = document.getElementById('thread-content').value;
+
+  // Perform necessary actions (e.g., save to Firebase, update UI, etc.)
+  createThread(threadTitle, threadContent);
+  
+  // Reset the form
+  createThreadForm.reset();
+});
+
+// Function to create a new thread
+function createThread(title, content) {
+  // Implement the logic to create a new thread in Firebase
+  // This could include pushing the data to the Firebase Realtime Database or Firestore
+  // You can use Firebase SDKs and methods to handle data storage and updates
+  // Example code:
+  firebase.database().ref('threads').push({
+    title: title,
+    content: content,
+    // Other thread properties like author, timestamp, etc.
+  });
+}
+
+		
+		
+		
+	</script>
 </body>
   <!-- Footer -->
 
