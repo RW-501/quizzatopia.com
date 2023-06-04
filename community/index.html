@@ -210,8 +210,7 @@ const db = firebase.firestore();
 		// Retrieve the thread ID from the URL query parameter (replace 'threadId' with the actual parameter name)
 
 		// Call the function to retrieve and display the thread details on page load
-const urlParams = new URLSearchParams(window.location.search);
-const threadId = urlParams.get('threadId');
+let threadId;
 
 if (threadId) {
   getThreadDetails(threadId);
@@ -230,6 +229,7 @@ const replyList = document.getElementById('reply-list');
 // Function to retrieve the selected thread's details from Firebase
 function getThreadDetails(threadId) {
 	console.log('threadId:id  ', threadId);
+	threadId = threadId;
   // Retrieve the thread document from Firebase using the thread ID
   firebase
     .firestore()
@@ -387,7 +387,7 @@ createThreadForm.addEventListener('submit', (event) => {
   createThread(threadTitle, threadContent);
   
   // Reset the form
-//  createThreadForm.reset();
+ createThreadForm.reset();
 });
 
 function createThread(title, content) {
