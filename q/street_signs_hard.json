@@ -1,147 +1,149 @@
 {
-  "quizCode": "DL6642",
+  "quizCode": "D62342",
   "quizName": "Driver's License Test - Street Signs",
   "quizDifficulty": "Medium",
-  "numberOfQuestions": 15,
+  "numberOfQuestions": 10,
   "questions": [
     {
       "questionNumber": 1,
       "question": "What does this sign indicate?",
-      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Stop_sign_in_Toronto%2C_Canada.jpg/640px-Stop_sign_in_Toronto%2C_Canada.jpg",
+      "imageURL": "https://example.com/sign1.jpg",
+      "questionType": "Multiple Choice",
       "options": [
-        "Stop",
-        "Yield",
-        "Speed Limit Ahead",
-        "No Entry"
+        "Sharp curve to the left",
+        "Sharp curve to the right",
+        "Straight road ahead",
+        "No turns allowed"
       ],
-      "answer": "Stop",
-      "explanation": "This sign is a stop sign. It indicates that drivers must come to a complete stop before proceeding.",
+      "answer": "Sharp curve to the left",
+      "explanation": "This sign indicates a sharp curve to the left. Drivers should reduce speed and be prepared to navigate the curve safely.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 2,
-      "question": "What does this sign indicate?",
-      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Yield_%28336589280%29.jpg/640px-Yield_%28336589280%29.jpg",
+      "question": "True or False: This sign indicates a pedestrian crosswalk ahead.",
+      "imageURL": "",
+      "questionType": "True/False",
       "options": [
-        "Stop",
-        "Yield",
-        "Speed Limit Ahead",
-        "No Entry"
+        "True",
+        "False"
       ],
-      "answer": "Yield",
-      "explanation": "This sign is a yield sign. It indicates that drivers must yield the right-of-way to oncoming traffic or pedestrians.",
+      "answer": "True",
+      "explanation": "This sign indicates that there is a pedestrian crosswalk ahead. Drivers should be cautious and yield to pedestrians who are crossing the road.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 3,
       "question": "What does this sign indicate?",
-      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/CA-ON_road_sign_Rb-005-50.svg/640px-CA-ON_road_sign_Rb-005-50.svg.png",
+      "imageURL": "https://example.com/sign2.jpg",
+      "questionType": "Multiple Choice",
       "options": [
-        "Stop",
-        "Yield",
-        "Speed Limit Ahead",
-        "No Entry"
+        "School zone ahead",
+        "Playground ahead",
+        "Residential area ahead",
+        "No stopping allowed"
       ],
-      "answer": "Speed Limit Ahead",
-      "explanation": "This sign indicates that there is a speed limit ahead. Drivers should adjust their speed accordingly.",
+      "answer": "School zone ahead",
+      "explanation": "This sign indicates that there is a school zone ahead. Drivers should reduce speed and be prepared to comply with lower speed limits and additional safety regulations in the school zone.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 4,
       "question": "What does this sign indicate?",
-      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Montserrat_%E2%80%94_traffic_sign_%E2%80%9Eno_entry%E2%80%9D.JPG/640px-Montserrat_%E2%80%94_traffic_sign_%E2%80%9Eno_entry%E2%80%9D.JPG",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
       "options": [
-        "Stop",
-        "Yield",
-        "Speed Limit Ahead",
-        "No Entry"
+        "Slippery road surface ahead",
+        "Construction zone ahead",
+        "Road closed ahead",
+        "No entry allowed"
       ],
-      "answer": "No Entry",
-      "explanation": "This sign indicates that entry is prohibited. Drivers should not enter the road or area indicated by the sign.",
+      "answer": "Slippery road surface ahead",
+      "explanation": "This sign indicates that there is a slippery road surface ahead. Drivers should reduce speed and use caution to maintain control of their vehicle on the slippery surface.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 5,
-      "question": "What does this sign indicate?",
-      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/One_Way_Sign_%286859761193%29.jpg/640px-One_Way_Sign_%286859761193%29.jpg",
+      "question": "True or False: This sign indicates a winding road ahead.",
+      "imageURL": "",
+      "questionType": "True/False",
       "options": [
-        "One Way",
-        "Yield",
-        "No U-Turn",
-        "Merge"
+        "True",
+        "False"
       ],
-      "answer": "One Way",
-      "explanation": "This sign indicates that the road is one-way traffic. Drivers must proceed in the direction indicated by the arrow.",
+      "answer": "False",
+      "explanation": "This sign does not indicate a winding road ahead. It is important to read and interpret signs correctly to ensure safe and lawful driving.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 6,
       "question": "What does this sign indicate?",
-      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/SADC_road_sign_R213.svg/640px-SADC_road_sign_R213.svg.png",
+      "imageURL": "https://example.com/sign3.jpg",
+      "questionType": "Multiple Choice",
       "options": [
-        "One Way",
-        "Yield",
-        "No U-Turn",
-        "Merge"
+        "No-passing zone ahead",
+        "No U-turns allowed",
+        "No parking allowed",
+        "No stopping allowed"
       ],
-      "answer": "No U-Turn",
-      "explanation": "This sign indicates that U-turns are not allowed. Drivers should not make a U-turn at or near this location.",
+      "answer": "No-passing zone ahead",
+      "explanation": "This sign indicates that there is a no-passing zone ahead. Drivers should not attempt to pass other vehicles in this area.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 7,
-      "question": "What does this sign indicate?",
-      "imageURL": "https://s.driving-tests.org/wp-content/uploads/2020/09/shutterstock_118780804.jpg",
+      "question": "True or False: This sign indicates a steep hill ahead.",
+      "imageURL": "",
+      "questionType": "True/False",
       "options": [
-        "One Way",
-        "Yield",
-        "No U-Turn",
-        "Merge"
+        "True",
+        "False"
       ],
-      "answer": "Merge",
-      "explanation": "This sign indicates that there is a merging lane ahead. Drivers should merge with the traffic in the other lane.",
+      "answer": "True",
+      "explanation": "This sign indicates that there is a steep hill ahead. Drivers should reduce speed and be prepared for changes in grade and potential hazards on the road.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 8,
       "question": "What does this sign indicate?",
-      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Saudi_Arabia_-_Road_Sign_-_School_zone.svg/663px-Saudi_Arabia_-_Road_Sign_-_School_zone.svg.png?20190908110526",
+      "imageURL": "https://example.com/sign4.jpg",
+      "questionType": "Multiple Choice",
       "options": [
-        "No Stopping",
-        "School Zone",
-        "Playground Ahead",
-        "Watch for Children"
+        "Construction zone ahead",
+        "Detour ahead",
+        "No entry allowed",
+        "No parking allowed"
       ],
-      "answer": "School Zone",
-      "explanation": "This sign indicates that there is a school zone ahead. Drivers should exercise caution and adhere to the reduced speed limit in school zones.",
+      "answer": "Detour ahead",
+      "explanation": "This sign indicates that there is a detour ahead. Drivers should follow the designated alternate route indicated by the sign.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 9,
       "question": "What does this sign indicate?",
-      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Greek_Traffic_Sign_No_Parking.png/600px-Greek_Traffic_Sign_No_Parking.png?20181124184311",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
       "options": [
-        "No Parking",
-        "No Standing",
-        "No Stopping",
-        "No Entry"
+        "Divided highway begins ahead",
+        "Merge with traffic from the right",
+        "No turns allowed",
+        "No entry allowed"
       ],
-      "answer": "No Parking",
-      "explanation": "This sign indicates that parking is not allowed in the area. Drivers should not leave their vehicles unattended in the designated zone.",
+      "answer": "Merge with traffic from the right",
+      "explanation": "This sign indicates that drivers should be prepared to merge with traffic coming from the right. They should yield to vehicles already on the main road.",
       "difficulty": "Medium"
     },
     {
       "questionNumber": 10,
-      "question": "What does this sign indicate?",
-      "imageURL": "https://www.publicdomainpictures.net/pictures/30000/velka/street-sign-railroad-crossing-1342524170F8W.jpg",
+      "question": "True or False: This sign indicates a stop sign ahead.",
+      "imageURL": "",
+      "questionType": "True/False",
       "options": [
-        "No Railroad Crossing",
-        "Crosswalk Ahead",
-        "Railroad Crossing",
-        "Watch for Trains"
+        "True",
+        "False"
       ],
-      "answer": "Railroad Crossing",
-      "explanation": "This sign indicates that there is a railroad crossing ahead. Drivers should be prepared to stop and yield to oncoming trains.",
+      "answer": "False",
+      "explanation": "This sign does not indicate a stop sign ahead. It is important to read and interpret signs correctly to ensure safe and lawful driving.",
       "difficulty": "Medium"
     }
   ]
