@@ -139,6 +139,105 @@ main {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* Views */
+.view {
+  display: none;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.active {
+  display: block;
+}
+
+/* Thread Listing View */
+#thread-listing-view {
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#thread-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#thread-list li {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Thread Details View */
+#thread-details-view {
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#back-to-listing-button {
+  background-color: #4285F4;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#back-to-listing-button:hover {
+  background-color: #3367D6;
+}
+
+.thread-content {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.replies {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .start-discussion-button {
   background-color: #4285F4;
   color: #fff;
