@@ -234,8 +234,6 @@ const replyList = document.getElementById('reply-list');
 
 // Function to retrieve the selected thread's details from Firebase
 function getThreadDetails(threadId) {
-	console.log('threadId:id  ', threadId);
-	//threadId = threadId;
   // Retrieve the thread document from Firebase using the thread ID
   firebase
     .firestore()
@@ -249,10 +247,21 @@ function getThreadDetails(threadId) {
         // Display the thread content
         threadContent.innerHTML = `
           <h3>${threadData.title}</h3>
-          <p>Author: ${threadData.author}</p>
-          <p>Timestamp: ${threadData.timestamp}</p>
+          <div class="thread-details">
+            <div class="thread-author">
+              <p>Author: ${threadData.user}</p>
+              <img src="${threadData.picture}" alt="Author Picture">
+            </div>
+            <div class="thread-info">
+              <p>Timestamp: ${threadData.timestamp}</p>
+              <p>Votes: ${threadData.votes}</p>
+              <p>Points: ${threadData.points}</p>
+              <p>Rank: ${threadData.rank}</p>
+              <p>Quizzes Taken: ${threadData.quizzesTaken}</p>
+            </div>
+          </div>
           <p>${threadData.content}</p>
-	  <button id="reply-button" class="button" onclick="openReplyPopup()">Reply</button>
+          <button id="reply-button" class="button" onclick="openReplyPopup()">Reply</button>
         `;
       } else {
         // Handle the case when the document does not exist
@@ -266,26 +275,36 @@ function getThreadDetails(threadId) {
 }
 
 
+
+// Function to retrieve and display the replies for the selected thread
 // Function to retrieve and display the replies for the selected thread
 function getReplies() {
-  // Retrieve the replies from Firestore using the thread ID
-  db.collection('replies').where('threadId', '==', threadId).get()
+  db.collection('replies')
+    .where('threadId', '==', threadId)
+    .orderBy('timestamp')
+    .get()
     .then((querySnapshot) => {
       replyList.innerHTML = ''; // Clear existing replies
 
       querySnapshot.forEach((doc) => {
         const replyData = doc.data();
 
-        // Create a list item for each reply
-        const listItem = document.createElement('li');
-        listItem.innerHTML = `
-          <p>Author: ${replyData.author}</p>
-          <p>Timestamp: ${replyData.timestamp}</p>
-          <p>${replyData.content}</p>
+        // Create a div for each reply
+        const replyDiv = document.createElement('div');
+        replyDiv.classList.add('reply');
 
+        // Set the reply content, author, timestamp, etc.
+        replyDiv.innerHTML = `
+          <p>Author: ${replyData.author}</p>
+          <p>Timestamp: ${formatTimestamp(replyData.timestamp)}</p>
+          <p>${replyData.content}</p>
+          <!-- Additional reply information can be added here -->
+          <!-- For replies -->
+          <button class="vote-button" onclick="voteReply('up', '${doc.id}')">Upvote</button>
+          <button class="vote-button" onclick="voteReply('down', '${doc.id}')">Downvote</button>
         `;
 
-        replyList.appendChild(listItem);
+        replyList.appendChild(replyDiv);
       });
     })
     .catch((error) => {
@@ -294,17 +313,20 @@ function getReplies() {
 }
 
 
+
 // Function to add a new reply to the thread
 function addReply(content) {
   // Get the current user's information (replace with your authentication system)
-  const currentUser = {
-    name: 'John Doe', // Example name
-    // Other user information
-  };
+     const userInfo = getUserInfo();
+
 
   // Create a new reply object
   const newReply = {
-    author: currentUser.name,
+    user: userInfo.userName,
+    rank: userInfo.userRank,
+    points: userInfo.userPoints,
+    profilePic: userInfo.userProfilePic,
+    quizzesTaken: userInfo.userQuizzesTaken,
     content: content,
     timestamp: new Date().toISOString(),
     threadId: threadId,
@@ -339,8 +361,8 @@ const threadList = document.getElementById('thread-list');
 function populateThreadList() {
   const threadList = document.getElementById('thread-list');
   
-  // Retrieve thread data from Firestore (replace 'threads' with your Firestore collection reference)
-  firebase.firestore().collection('threads').onSnapshot((querySnapshot) => {
+  // Retrieve thread data from Firestore and sort by vote count
+  firebase.firestore().collection('threads').orderBy('votes', 'desc').onSnapshot((querySnapshot) => {
     threadList.innerHTML = ''; // Clear existing thread list
 
     querySnapshot.forEach((doc) => {
@@ -349,15 +371,22 @@ function populateThreadList() {
       // Create a list item for each thread
       const listItem = document.createElement('li');
 
-      // Set the thread title, author, timestamp, etc.
+      // Set the thread title, author, timestamp, vote count, etc.
       listItem.innerHTML = `
-        <h3>${threadData.title}</h3>
-        <p>Author: ${threadData.author}</p>
-        <p>Timestamp: ${threadData.timestamp}</p>
-        <!-- Additional thread information can be added here -->
-
-<div class="viewDetails" onclick=" switchView('thread-details-view');  getThreadDetails('${doc.id}');">View Details</div>
- `;
+     <h3>${threadData.title}</h3>
+          <p>Author: ${threadData.user}</p>
+          <p>Timestamp: ${threadData.timestamp}</p>
+          <p>Votes: ${threadData.votes}</p>
+          <p>Picture: <img src="${threadData.picture}" alt="Thread Picture"></p>
+          <p>Points: ${threadData.points}</p>
+          <p>Rank: ${threadData.rank}</p>
+          <p>Quizzes Taken: ${threadData.quizzesTaken}</p>
+          
+          <!-- Additional thread information can be added here -->
+          <!-- For threads -->
+          <button class="vote-button" onclick="voteThread('up', '${threadId}')">Upvote</button>
+          <button class="vote-button" onclick="voteThread('down', '${threadId}')">Downvote</button>
+        `;
 
       threadList.appendChild(listItem);
     });
@@ -365,9 +394,9 @@ function populateThreadList() {
 }
 
 
+
 // Call the function to populate the thread list on page load
 populateThreadList();
-		
 		
 		
 		
