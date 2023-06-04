@@ -165,6 +165,9 @@
 	var threadId = '';
 
 function filterContent(content) {
+	 if (content == null) {
+    return ''; // Return an empty string if content is null or undefined
+  }
   // Array of bad words
   const badWords = ['badword1', 'badword2', 'badword3'];
 
@@ -180,16 +183,17 @@ function filterContent(content) {
   // Replace contact information with asterisks
   content = content.replace(contactInfoRegex, '***');
 
-  // Remove HTML tags for additional safety
+// Remove HTML tags for additional safety
   const tempElement = document.createElement('div');
   tempElement.innerHTML = content;
   content = tempElement.textContent || tempElement.innerText;
-  
-  // Prevent script injection by removing JavaScript event handlers
-  content = content.replace(/<[^>]+? on\w+="[^"]*"[^>]*>/gi, (match) => {
-    return match.replace(/ on\w+="[^"]*"/gi, '');
-  });
 
+  // Prevent script injection by removing JavaScript event handlers
+  if (typeof content === 'string') {
+    content = content.replace(/<[^>]+? on\w+="[^"]*"[^>]*>/gi, (match) => {
+      return match.replace(/ on\w+="[^"]*"/gi, '');
+    });
+  }
   return content;
 }
 		
