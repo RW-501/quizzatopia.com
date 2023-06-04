@@ -54,7 +54,7 @@
 <body>
   <!-- Header -->
 
-  <button class="start-discussion-button" onclick="openCreateThreadPopup()">Start Discussion</button>
+ 
 
 
   <!-- Main Content -->
@@ -85,6 +85,7 @@
     <!-- Thread Listing View -->
     <section id="thread-listing-view" class="view active">
       <h2>Main Discussion</h2>
+	     <button class="start-discussion-button" onclick="openCreateThreadPopup()">Start Discussion</button>
       <ul id="thread-list"></ul>
     </section>
 
@@ -160,7 +161,8 @@
   <!-- Include your JavaScript files here to integrate Firebase functionality -->
 	
 	<script>
-			var threadId = '';
+				var channelID;
+	var threadId = '';
 
 function filterContent(content) {
   // Array of bad words
@@ -535,9 +537,9 @@ createThreadForm.addEventListener('submit', (event) => {
   const filtered_threadContent = filterContent(threadContent);
 
   // Perform necessary actions (e.g., save to Firebase, update UI, etc.)
-  createThread(filtered_threadTitle, filtered_threadContent);
-  
-  // Reset the form
+  createThread(channelID, filtered_threadTitle, filtered_threadContent);
+
+	// Reset the form
  createThreadForm.reset();
 });
 		
@@ -702,7 +704,6 @@ function voteReply(voteType, replyId) {
 }
 
 		
-		var channelID;
 		
 	
 // Function to create channels in HTML
@@ -731,7 +732,9 @@ function getChannels() {
       querySnapshot.forEach((doc) => {
         const channelData = doc.data();
 	      
-		    console.log("channelData        "+channelData.name);
+		    console.log("channelData  n      "+channelData.name);
+channelID = channelData.id;
+	      		    console.log("channelID        "+channelID);
 
         // Create HTML elements for each channel
         const channelElement = createChannelElement(channelData);
