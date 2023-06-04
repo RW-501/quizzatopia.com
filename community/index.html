@@ -486,6 +486,92 @@ function createThread(title, content) {
 
 
 
+// Function to vote on a thread
+function voteThread(voteType, threadId) {
+  // Get a reference to the thread document
+  const threadRef = firebase.firestore().collection('threads').doc(threadId);
+  // Get a reference to the thread element in the UI
+  const threadElement = document.getElementById(`thread-${threadId}`);
+
+  // Get the vote count element within the thread element
+  const voteCountElement = threadElement.querySelector('.vote-count');
+
+  // Get the current vote count from the UI
+  let currentVoteCount = parseInt(voteCountElement.innerText);
+
+  // Update the vote count based on the vote type
+  if (voteType === 'up') {
+    currentVoteCount++;
+	  threadRef.update({
+      votes: firebase.firestore.FieldValue.increment(1) // Increment vote count by 1
+    })
+    .then(() => {
+      console.log('Thread upvoted successfully.');
+      // Update the UI if necessary
+    })
+    .catch((error) => {
+      console.error('Error upvoting thread:', error);
+    });
+  } else if (voteType === 'down') {
+    currentVoteCount--;
+	  threadRef.update({
+      votes: firebase.firestore.FieldValue.increment(-1) // Decrement vote count by 1
+    })
+    .then(() => {
+      console.log('Thread downvoted successfully.');
+      // Update the UI if necessary
+    })
+    .catch((error) => {
+      console.error('Error downvoting thread:', error);
+    });
+  }
+	
+  // Update the vote count in the UI
+  voteCountElement.innerText = currentVoteCount;
+}
+
+// Function to vote on a reply
+function voteReply(voteType, replyId) {
+  // Get a reference to the reply document
+  const replyRef = firebase.firestore().collection('replies').doc(replyId);
+  // Get a reference to the reply element in the UI
+  const replyElement = document.getElementById(`reply-${replyId}`);
+
+  // Get the vote count element within the reply element
+  const voteCountElement = replyElement.querySelector('.vote-count');
+
+  // Get the current vote count from the UI
+  let currentVoteCount = parseInt(voteCountElement.innerText);
+
+  // Update the vote count based on the vote type
+if (voteType === 'up') {
+    currentVoteCount++;
+	replyRef.update({
+      votes: firebase.firestore.FieldValue.increment(1) // Increment vote count by 1
+    })
+    .then(() => {
+      console.log('Reply upvoted successfully.');
+      // Update the UI if necessary
+    })
+    .catch((error) => {
+      console.error('Error upvoting reply:', error);
+    });
+ } else if (voteType === 'down') {
+    currentVoteCount--;
+	 replyRef.update({
+      votes: firebase.firestore.FieldValue.increment(-1) // Decrement vote count by 1
+    })
+    .then(() => {
+      console.log('Reply downvoted successfully.');
+      // Update the UI if necessary
+    })
+    .catch((error) => {
+      console.error('Error downvoting reply:', error);
+    });
+  }
+	  // Update the vote count in the UI
+  voteCountElement.innerText = currentVoteCount;
+}
 
 		
 		
