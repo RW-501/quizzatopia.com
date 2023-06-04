@@ -86,7 +86,7 @@ function startQuiz() {
 	    if (newQuizCount > QUIZ_COUNT_THRESHOLD && loggedIn == false) {
       // Show the login popup
      			slideIn("loginPopupBody");
-openPopup();
+openPopup();switchTab('login');
     }else{
 	
 	
