@@ -1,11 +1,9 @@
 
-.carousel-control-next-icon {
-    background-color: cornflowerblue;
+.carousel-control-next {
       opacity: 0;
         display: none;
 }
-.carousel-control-prev-icon {
-    background-color: cornflowerblue;
+.carousel-control-prev {
       opacity: 0;
         display: none;
 }
