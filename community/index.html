@@ -150,6 +150,41 @@
   <!-- Include your JavaScript files here to integrate Firebase functionality -->
 	
 	<script>
+function filterContent(content) {
+  // Array of bad words
+  const badWords = ['badword1', 'badword2', 'badword3'];
+
+  // Regular expression for matching contact information
+  const contactInfoRegex = /\b(?:\d{10}|\d{3}[-.\s]\d{3}[-.\s]\d{4}|(?:\+\d{1,2}\s?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4})\b/g;
+
+  // Replace bad words with asterisks
+  badWords.forEach((word) => {
+    const regex = new RegExp(`\\b${word}\\b`, 'gi');
+    content = content.replace(regex, '***');
+  });
+
+  // Replace contact information with asterisks
+  content = content.replace(contactInfoRegex, '***');
+
+  // Remove HTML tags for additional safety
+  const tempElement = document.createElement('div');
+  tempElement.innerHTML = content;
+  content = tempElement.textContent || tempElement.innerText;
+  
+  // Prevent script injection by removing JavaScript event handlers
+  content = content.replace(/<[^>]+? on\w+="[^"]*"[^>]*>/gi, (match) => {
+    return match.replace(/ on\w+="[^"]*"/gi, '');
+  });
+
+  return content;
+}
+		
+		
+		
+		
+		
+		
+		
 		
 function openCreateThreadPopup() {
 	//slideIn(xxx)
@@ -191,9 +226,9 @@ replyForm.addEventListener('submit', (event) => {
 
   // Get the value from the reply input field
   const replyContent = document.getElementById('reply-content').value;
-
+  const filtered_replyContent = filterContent(replyContent);
   // Perform necessary actions (e.g., save to Firebase, update UI, etc.)
-  addReply(replyContent);
+  addReply(filtered_replyContent);
 
   // Reset the form
   replyForm.reset();
@@ -418,8 +453,12 @@ createThreadForm.addEventListener('submit', (event) => {
   const threadTitle = document.getElementById('thread-title').value;
   const threadContent = document.getElementById('thread-content').value;
 
+	
+  const filtered_threadTitle = filterContent(threadTitle);
+  const filtered_threadContent = filterContent(threadContent);
+
   // Perform necessary actions (e.g., save to Firebase, update UI, etc.)
-  createThread(threadTitle, threadContent);
+  createThread(filtered_threadTitle, filtered_threadContent);
   
   // Reset the form
  createThreadForm.reset();
