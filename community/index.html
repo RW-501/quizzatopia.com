@@ -116,7 +116,10 @@
 	
 	<script>
 		
-		
+		// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
 		
 		
 // Retrieve the thread ID from the URL query parameter (replace 'threadId' with the actual parameter name)
@@ -129,45 +132,58 @@ const replyList = document.getElementById('reply-list');
 
 // Function to retrieve the selected thread's details from Firebase
 function getThreadDetails() {
-  // Retrieve the thread data from Firebase using the thread ID (replace 'threads' with your Firebase database reference)
-  firebase.database().ref('threads/' + threadId).once('value', (snapshot) => {
-    const threadData = snapshot.val();
+  // Retrieve the thread data from Firestore using the thread ID
+  db.collection('threads').doc(threadId).get()
+    .then((doc) => {
+      if (doc.exists) {
+        const threadData = doc.data();
 
-    // Display the thread content
-    threadContent.innerHTML = `
-      <h3>${threadData.title}</h3>
-      <p>Author: ${threadData.author}</p>
-      <p>Timestamp: ${threadData.timestamp}</p>
-      <p>${threadData.content}</p>
-    `;
-  });
+        // Display the thread content
+        threadContent.innerHTML = `
+          <h3>${threadData.title}</h3>
+          <p>Author: ${threadData.author}</p>
+          <p>Timestamp: ${threadData.timestamp}</p>
+          <p>${threadData.content}</p>
+        `;
+      } else {
+        console.log("Thread not found");
+      }
+    })
+    .catch((error) => {
+      console.log("Error getting thread details:", error);
+    });
 }
 
 // Function to retrieve and display the replies for the selected thread
 function getReplies() {
-  // Retrieve the replies from Firebase using the thread ID (replace 'replies' with your Firebase database reference)
-  firebase.database().ref('replies').orderByChild('threadId').equalTo(threadId).on('value', (snapshot) => {
-    replyList.innerHTML = ''; // Clear existing replies
+  // Retrieve the replies from Firestore using the thread ID
+  db.collection('replies').where('threadId', '==', threadId).get()
+    .then((querySnapshot) => {
+      replyList.innerHTML = ''; // Clear existing replies
 
-    snapshot.forEach((childSnapshot) => {
-      const replyData = childSnapshot.val();
+      querySnapshot.forEach((doc) => {
+        const replyData = doc.data();
 
-      // Create a list item for each reply
-      const listItem = document.createElement('li');
-      listItem.innerHTML = `
-        <p>Author: ${replyData.author}</p>
-        <p>Timestamp: ${replyData.timestamp}</p>
-        <p>${replyData.content}</p>
-      `;
+        // Create a list item for each reply
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+          <p>Author: ${replyData.author}</p>
+          <p>Timestamp: ${replyData.timestamp}</p>
+          <p>${replyData.content}</p>
+        `;
 
-      replyList.appendChild(listItem);
+        replyList.appendChild(listItem);
+      });
+    })
+    .catch((error) => {
+      console.log("Error getting replies:", error);
     });
-  });
 }
+
 
 // Function to add a new reply to the thread
 function addReply(content) {
-  // Get the current user's information (you can replace this with your own authentication system)
+  // Get the current user's information (replace with your authentication system)
   const currentUser = {
     name: 'John Doe', // Example name
     // Other user information
@@ -181,22 +197,16 @@ function addReply(content) {
     threadId: threadId,
   };
 
-  // Push the new reply to Firebase (replace 'replies' with your Firebase database reference)
-  firebase.database().ref('replies').push(newReply);
+  // Add the new reply to the 'replies' collection in Firestore
+  db.collection('replies').add(newReply)
+    .then((docRef) => {
+      console.log("New reply added with ID: ", docRef.id);
+    })
+    .catch((error) => {
+      console.error("Error adding reply: ", error);
+    });
 }
 
-// Add event listener for the reply form submission
-const replyForm = document.getElementById('reply-form');
-replyForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const replyContent = document.getElementById('reply-content').value;
-
-  // Call the addReply function to add the new reply
-  addReply(replyContent);
-
-  // Clear the reply input field
-  document.getElementById('reply-content').value = '';
-});
 
 // Call the functions to retrieve and display the thread details and replies on page load
 getThreadDetails();
