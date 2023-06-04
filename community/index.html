@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizzatopia Community</title>
+    <meta name="robots" content="nofollow">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  crossorigin="anonymous">
+
+
+  <script  defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+
+  <script  defer src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+	  <script  defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="./style.css" />
+  
+    <link rel="import" href="./elements/navbar.html">
+    <link rel="import" href="./elements/footer.html">
+	  
+	   <div id="navbar"></div>
+  <!-- Firebase SDK -->
+  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+  <!-- Custom scripts -->
+  <script  src="/main.js"></script> 
+  	<style>
+	
+
+		.shadow {
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		}
+	</style>
+ </head>
+<body>
+  <!-- Header -->
+
+  
+
+  <!-- Main Content -->
+  <main>
+    <!-- Channel Sidebar -->
+    <aside class="channel-sidebar">
+      <h2>Channels</h2>
+      <!-- Display a list of channels -->
+      <ul>
+        <li><a href="#">General Knowledge</a></li>
+        <li><a href="#">Pop Culture</a></li>
+        <li><a href="#">Science</a></li>
+        <!-- Add more channels here -->
+      </ul>
+    </aside>
+
+    <!-- Thread Listing -->
+    <section class="thread-listing">
+      <h2>General Knowledge</h2>
+      <!-- Display a list of threads -->
+      <ul>
+        <li>
+          <h3><a href="#">Thread Title</a></h3>
+          <p>Thread description or preview</p>
+          <div class="thread-metadata">
+            <!-- Display thread metadata like author, date, views, etc. -->
+          </div>
+        </li>
+        <!-- Add more threads here -->
+      </ul>
+    </section>
+
+    <!-- Thread Details -->
+    <section class="thread-details">
+      <h2>Thread Title</h2>
+      <!-- Display thread details like author, date, content, replies, etc. -->
+      <div class="thread-content">
+        <p>Thread content goes here</p>
+      </div>
+      <div class="replies">
+        <!-- Display thread replies -->
+        <div class="reply">
+          <!-- Display individual reply content -->
+        </div>
+        <!-- Add more replies here -->
+      </div>
+    </section>
+
+    <!-- Create Thread Form -->
+    <section class="create-thread-form">
+      <h2>Create a New Thread</h2>
+      <!-- Display form fields for creating a new thread -->
+    </section>
+  </main>
+
+
+  <!-- Include your JavaScript files here to integrate Firebase functionality -->
+</body>
+  <!-- Footer -->
+
+</html>
 
