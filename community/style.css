@@ -187,13 +187,19 @@ main {
   display: none;
 }
 .create-thread-popup .create-thread-container, #reply-popup .create-thread-container {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  width: 400px;
-  max-width: 90%;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    height: fit-content;
+    left: 0;
 }
 
 .exit-button {
@@ -244,5 +250,5 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #ffc107;
 }
