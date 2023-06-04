@@ -149,6 +149,8 @@
   <!-- Include your JavaScript files here to integrate Firebase functionality -->
 	
 	<script>
+			var threadId = '';
+
 function filterContent(content) {
   // Array of bad words
   const badWords = ['badword1', 'badword2', 'badword3'];
@@ -210,8 +212,9 @@ function closeCreateThreadPopup() {
     }	
 		
 		
-function openReplyPopup() {
+function openReplyPopup(threadId) {
   document.querySelector('#reply-popup').style.display = 'block';
+	threadId = threadId
 }
 
 function closeReplyPopup() {
@@ -272,7 +275,6 @@ const db = firebase.firestore();
 		// Call the function to retrieve and display the thread details on page load
 //const urlParams = new URLSearchParams(window.location.search);
 //const threadId = urlParams.get('threadId');
-	var threadId = '';
 /*		
 if (threadId) {
   getThreadDetails(threadId);
@@ -316,7 +318,7 @@ function getThreadDetails(threadId) {
             </div>
           </div>
           <p>${threadData.content}</p>
-          <button id="reply-button" class="button" onclick="openReplyPopup()">Reply</button>
+          <button id="reply-button" class="button" onclick="openReplyPopup(${threadId})">Reply</button>
         `;
       } else {
         // Handle the case when the document does not exist
@@ -500,23 +502,43 @@ createThreadForm.addEventListener('submit', (event) => {
 function createThread(title, content) {
   // Get a reference to the Firestore collection
   const threadsCollection = firebase.firestore().collection('threads');
+  const userInfo = getUserInfo();
+
+  // Create a new reply object
+  const newReply = {
+    user: userInfo.userName,
+    id: userInfo.firebaseId,
+    email: userInfo.userEmail,
+    rank: userInfo.userRank,
+    points: userInfo.userPoints,
+    profilePic: userInfo.userProfilePic,
+    quizzesTaken: userInfo.userQuizzesTaken,
+    content: content,
+    timestamp: new Date().toISOString(),
+    threadId: threadId,
+  };
 
   // Create a new thread document
-  threadsCollection.add({
-    title: title,
-    content: content,
-    timestamp: firebase.firestore.FieldValue.serverTimestamp()
-    // Add additional properties as needed
-  })
-  .then((docRef) => {
-    // Thread created successfully
-    console.log('Thread created with ID:', docRef.id);
-    // You can update the UI or perform additional actions here
-  })
-  .catch((error) => {
-    // Error occurred while creating thread
-    console.error('Error creating thread:', error);
-  });
+  threadsCollection
+    .add({
+      title: title,
+      content: content,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+      // Add additional properties here
+      author: userInfo.userName,
+      votes: 0,
+      category: 'general',
+      // Add more properties as needed
+    })
+    .then((docRef) => {
+      // Thread created successfully
+      console.log('Thread created with ID:', docRef.id);
+      // You can update the UI or perform additional actions here
+    })
+    .catch((error) => {
+      // Error occurred while creating thread
+      console.error('Error creating thread:', error);
+    });
 }
 
 
