@@ -285,6 +285,72 @@ if (threadId) {
 }
 */
 
+		
+		
+		
+		// Get a reference to the Firestore collection
+const channelsCollection = firebase.firestore().collection('channels');
+
+// Create channels
+const channels = [
+  {
+    name: 'Welcome Channel',
+    picture: 'welcome_channel.jpg',
+	      lastUpdated: firebase.firestore.FieldValue.serverTimestamp(), // Set the initial lastUpdated value to the current server timestamp
+
+    description: 'A channel where new members can introduce themselves, ask questions, and get acquainted with the Quizzatopia community.',
+    restriction: 0 // No restriction
+  },
+  {
+    name: 'General Channel',
+    picture: 'general_channel.jpg',
+	      lastUpdated: firebase.firestore.FieldValue.serverTimestamp(), // Set the initial lastUpdated value to the current server timestamp
+
+    description: 'A channel for general discussions, announcements, and updates related to Quizzatopia.',
+    restriction: 0 // No restriction
+  },
+  {
+    name: 'Quiz Challenge Channel',
+    picture: 'quiz_challenge_channel.jpg',
+	      lastUpdated: firebase.firestore.FieldValue.serverTimestamp(), // Set the initial lastUpdated value to the current server timestamp
+
+    description: 'A channel dedicated to challenging quizzes and brain teasers.',
+    restriction: 100 // Minimum 100 points required
+  },
+  {
+    name: 'Career Prep Channel',
+    picture: 'career_prep_channel.jpg',
+	      lastUpdated: firebase.firestore.FieldValue.serverTimestamp(), // Set the initial lastUpdated value to the current server timestamp
+
+    description: 'A channel focused on quizzes, resources, and discussions related to career preparation.',
+    restriction: 75 // Minimum 75 points required
+  },
+  {
+    name: 'School Zone Channel',
+    picture: 'school_zone_channel.jpg',
+	      lastUpdated: firebase.firestore.FieldValue.serverTimestamp(), // Set the initial lastUpdated value to the current server timestamp
+
+    description: 'A channel dedicated to educational quizzes, study tips, and academic discussions.',
+    restriction: 50 // Minimum 50 points required
+  }
+];
+
+// Loop through the channels array and create documents in the Firestore collection
+channels.forEach((channel) => {
+  channelsCollection.add(channel)
+    .then((docRef) => {
+      console.log('Channel created with ID:', docRef.id);
+    })
+    .catch((error) => {
+      console.error('Error creating channel:', error);
+    });
+});
+
+		
+		
+		
+		
+		
 // Reference to the thread content and reply list elements
 const threadContent = document.getElementById('thread-content');
 const replyList = document.getElementById('reply-list');
