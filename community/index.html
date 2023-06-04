@@ -432,7 +432,8 @@ function populateThreadList() {
           <h3>${threadData.title}</h3>
           <p>Author: ${threadData.user}</p>
           <p>Timestamp: ${threadData.timestamp}</p>
-          <p>Votes: ${threadData.votes}</p>
+	    <p class="vote-count">Votes: ${threadData.votes}</p>
+
           <!-- Additional thread information can be added here -->
           <!-- For threads -->
           <button class="vote-button" onclick="voteThread('up', '${doc.id}')">Upvote</button>
