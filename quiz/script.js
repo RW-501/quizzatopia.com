@@ -302,7 +302,7 @@ function showQuestion() {
 
  const questionObj = questions[currentQuestion];
 document.getElementById("question").innerHTML = questionObj.question;
-	  console.log(questionObj.questionType + "  questionObj.questionType   ??????????    currenquestionObj.imageURL   " + questionObj.imageURL);
+	//  console.log(questionObj.questionType + "  questionObj.questionType   ??????????    currenquestionObj.imageURL   " + questionObj.imageURL);
 
 if (questionObj.imageURL === "" || questionObj.imageURL === null || questionObj.imageURL === undefined) {
   document.getElementById("questionImageArea").style.display = "none";
@@ -323,14 +323,14 @@ if (questionObj.imageURL === "" || questionObj.imageURL === null || questionObj.
 	if (questionObj.questionType) {
 
 if (questionObj.questionType === "True/False") {
-	console.log("inside True/False     "); 
+	//console.log("inside True/False     "); 
 	document.getElementById("option_3").style.display= "none";
 	document.getElementById("option_4").style.display= "none";
 
 }else{
 	document.getElementById("option_3").style.display= "initial";
 	document.getElementById("option_4").style.display= "initial";
-		console.log("inside Multi-Choice     "); 
+		//console.log("inside Multi-Choice     "); 
 
 }
 	}
