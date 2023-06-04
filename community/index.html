@@ -37,6 +37,19 @@
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 		}
 	</style>
+	  
+	    <style>
+    .channel {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .channel img {
+      max-width: 200px;
+      height: auto;
+    }
+  </style>
  </head>
 <body>
   <!-- Header -->
@@ -49,12 +62,10 @@
 	  
     <!-- Channel Sidebar -->
     <aside class="channel-sidebar">
-      <h2>Channels</h2>
+      <h2>Discussions</h2>
       <!-- Display a list of channels -->
       <ul>
-        <li><a href="#">General Knowledge</a></li>
-        <li><a href="#">Pop Culture</a></li>
-        <li><a href="#">Science</a></li>
+<div id="channels-list"></div>
         <!-- Add more channels here -->
       </ul>
     </aside>
@@ -184,7 +195,25 @@ function filterContent(content) {
 		
 		
 		
-		
+// JavaScript code
+window.addEventListener('DOMContentLoaded', () => {
+  const channelDiv = document.getElementById('channel-div');
+
+  // Add "active" class to channel div on page load
+  channelDiv.classList.add('active');
+
+  // Add click event listener to channel div
+  channelDiv.addEventListener('click', () => {
+    // Remove "active" class from all channel divs
+    const allChannelDivs = document.querySelectorAll('.channel-div');
+    allChannelDivs.forEach((div) => {
+      div.classList.remove('active');
+    });
+
+    // Add "active" class to the clicked channel div
+    channelDiv.classList.add('active');
+  });
+});
 		
 		
 function openCreateThreadPopup() {
@@ -198,18 +227,25 @@ function closeCreateThreadPopup() {
 		
 		
 		
-  // Switch between views
-    function switchView(viewId) {
-      // Hide all views
-      const views = document.querySelectorAll('.view');
-      views.forEach(view => {
-        view.classList.remove('active');
-      });
+// Modify switchView function
+function switchView(viewId) {
+  // Hide all views
+  const views = document.querySelectorAll('.view');
+  views.forEach((view) => {
+    view.classList.remove('active');
+  });
 
-      // Show the selected view
-      const selectedView = document.getElementById(viewId);
-      selectedView.classList.add('active');
-    }	
+  // Show the selected view
+  const selectedView = document.getElementById(viewId);
+  selectedView.classList.add('active');
+}
+
+// Call switchView function with the welcome channel ID on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const welcomeChannelId = 'Ac325oPGwa1stwy7Tu34'; // Replace with the actual welcome channel ID
+  //switchView(welcomeChannelId);
+});
+
 		
 		
 function openReplyPopup(threadId) {
@@ -505,7 +541,7 @@ createThreadForm.addEventListener('submit', (event) => {
  createThreadForm.reset();
 });
 
-function createThread(title, content) {
+function createThread(channelId, title, content) {
   // Get a reference to the Firestore collection
   const threadsCollection = firebase.firestore().collection('threads');
   const userInfo = getUserInfo();
@@ -524,13 +560,13 @@ function createThread(title, content) {
     threadId: threadId,
   };
 
-  // Create a new thread document
+// Create a new thread document
   threadsCollection
     .add({
+      channelId: channelId, // Add the channel ID to the thread document
       title: title,
       content: content,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-      // Add additional properties here
       author: userInfo.userName,
       votes: 0,
       category: 'general',
@@ -539,14 +575,16 @@ function createThread(title, content) {
     .then((docRef) => {
       // Thread created successfully
       console.log('Thread created with ID:', docRef.id);
-      // You can update the UI or perform additional actions here
+      // You can perform additional actions here, such as updating UI
     })
     .catch((error) => {
-      // Error occurred while creating thread
+      // Handle any errors that occurred during thread creation
       console.error('Error creating thread:', error);
     });
 }
 
+// Call createThread function with the channel ID when creating a new thread
+//createThread(channelId, threadTitle, threadContent);
 
 
 // Function to vote on a thread
@@ -660,12 +698,46 @@ function voteReply(voteType, replyId) {
 }
 
 		
+		var channelID;
 		
-		
-		
-		
-		
-		
+	
+// Function to create channels in HTML
+function createChannelElement(channelData) {
+  const channelElement = `
+    <div id="channelData.id" class="channel"  onclick="switchView('thread-listing-view'); populateThreadList('${channelData.id}')">
+
+      <h3>${channelData.name}</h3>
+      <p>${channelData.description}</p>
+      <img src="${channelData.picture}" alt="${channelData.name} Picture">
+    </div>
+  `;
+
+  return channelElement;
+}
+
+// Function to get channels from Firestore and display them in HTML
+function getChannels() {
+  const channelsList = document.getElementById('channels-list');
+
+  // Get all the channels from the Firestore collection
+  db.collection('channels').get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        const channelData = doc.data();
+        // Create HTML elements for each channel
+        const channelElement = createChannelElement(channelData);
+
+        // Add the channel element to the channels list
+        channelsList.insertAdjacentHTML('beforeend', channelElement);
+      });
+    })
+    .catch((error) => {
+      console.error('Error getting channels:', error);
+    });
+}
+
+// Call the getChannels function to retrieve and display the channels
+getChannels();
 		
 	</script>
 </body>
