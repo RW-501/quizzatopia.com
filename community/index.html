@@ -60,35 +60,29 @@
     </aside>
 
     <!-- Thread Listing -->
-   <section class="thread-listing">
+ <!-- Thread Listing View -->
+<section id="thread-listing-view" class="view active">
   <h2>Thread Listing</h2>
   <ul id="thread-list"></ul>
 </section>
 
+<!-- Thread Details View -->
+<section id="thread-details-view" class="view">
+  <button id="back-to-listing-button" onclick="switchView('thread-listing-view')">Back to Listing</button>
+  <h2>Thread Title</h2>
+  <!-- Display thread details like author, date, content, replies, etc. -->
+  <div class="thread-content">
+    <p>Thread content goes here</p>
+  </div>
+  <div class="replies">
+    <!-- Display thread replies -->
+    <div class="reply">
+      <!-- Display individual reply content -->
+    </div>
+    <!-- Add more replies here -->
+  </div>
+</section>
 
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-    <!-- Thread Details -->
-    <section class="thread-details">
-      <h2>Thread Title</h2>
-      <!-- Display thread details like author, date, content, replies, etc. -->
-      <div class="thread-content">
-        <p>Thread content goes here</p>
-      </div>
-      <div class="replies">
-        <!-- Display thread replies -->
-        <div class="reply">
-          <!-- Display individual reply content -->
-        </div>
-        <!-- Add more replies here -->
-      </div>
-    </section>
 
 	  
 	  
