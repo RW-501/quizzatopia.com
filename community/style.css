@@ -173,7 +173,7 @@ main {
 }
 
 
-.create-thread-popup {
+.create-thread-popup, #reply-popup {
   position: fixed;
   top: 0;
   left: 0;
@@ -186,8 +186,7 @@ main {
   z-index: 9999;
   display: none;
 }
-
-.create-thread-container {
+.create-thread-popup .create-thread-container, #reply-popup .create-thread-container {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
