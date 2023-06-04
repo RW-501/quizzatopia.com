@@ -547,87 +547,110 @@ function createThread(title, content) {
 function voteThread(voteType, threadId) {
   // Get a reference to the thread document
   const threadRef = firebase.firestore().collection('threads').doc(threadId);
-  // Get a reference to the thread element in the UI
-  const threadElement = document.getElementById(`thread-${threadId}`);
+  // Get the authenticated user
+  const user = firebase.auth().currentUser;
 
-  // Get the vote count element within the thread element
-  const voteCountElement = threadElement.querySelector('.vote-count');
+  if (user) {
+    // Check if the user has already voted on this thread
+    threadRef
+      .collection('votes')
+      .doc(user.uid)
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          console.log('User has already voted on this thread.');
+          // You can show an error message or prevent the user from voting again
+        } else {
+          // Update the vote count based on the vote type
+          threadRef.update({
+            votes: firebase.firestore.FieldValue.increment(voteType === 'up' ? 1 : -1)
+          })
+          .then(() => {
+            console.log('Thread voted successfully.');
+            // Update the UI if necessary
+          })
+          .catch((error) => {
+            console.error('Error voting on thread:', error);
+          });
 
-  // Get the current vote count from the UI
-  let currentVoteCount = parseInt(voteCountElement.innerText);
-
-  // Update the vote count based on the vote type
-  if (voteType === 'up') {
-    currentVoteCount++;
-	  threadRef.update({
-      votes: firebase.firestore.FieldValue.increment(1) // Increment vote count by 1
-    })
-    .then(() => {
-      console.log('Thread upvoted successfully.');
-      // Update the UI if necessary
-    })
-    .catch((error) => {
-      console.error('Error upvoting thread:', error);
-    });
-  } else if (voteType === 'down') {
-    currentVoteCount--;
-	  threadRef.update({
-      votes: firebase.firestore.FieldValue.increment(-1) // Decrement vote count by 1
-    })
-    .then(() => {
-      console.log('Thread downvoted successfully.');
-      // Update the UI if necessary
-    })
-    .catch((error) => {
-      console.error('Error downvoting thread:', error);
-    });
+          // Store the user's vote in the 'votes' subcollection
+          threadRef
+            .collection('votes')
+            .doc(user.uid)
+            .set({
+              voteType: voteType
+            })
+            .then(() => {
+              console.log('User vote stored successfully.');
+              // Update the UI if necessary
+            })
+            .catch((error) => {
+              console.error('Error storing user vote:', error);
+            });
+        }
+      })
+      .catch((error) => {
+        console.error('Error checking user vote:', error);
+      });
+  } else {
+    console.log('User is not authenticated. Voting is allowed only for authenticated users.');
+    // You can show an error message or prompt the user to authenticate
   }
-	
-  // Update the vote count in the UI
-  voteCountElement.innerText = currentVoteCount;
 }
 
 // Function to vote on a reply
 function voteReply(voteType, replyId) {
   // Get a reference to the reply document
   const replyRef = firebase.firestore().collection('replies').doc(replyId);
-  // Get a reference to the reply element in the UI
-  const replyElement = document.getElementById(`reply-${replyId}`);
+  // Get the authenticated user
+  const user = firebase.auth().currentUser;
 
-  // Get the vote count element within the reply element
-  const voteCountElement = replyElement.querySelector('.vote-count');
+  if (user) {
+    // Check if the user has already voted on this reply
+    replyRef
+      .collection('votes')
+      .doc(user.uid)
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          console.log('User has already voted on this reply.');
+          // You can show an error message or prevent the user from voting again
+        } else {
+          // Update the vote count based on the vote type
+          replyRef.update({
+            votes: firebase.firestore.FieldValue.increment(voteType === 'up' ? 1 : -1)
+          })
+          .then(() => {
+            console.log('Reply voted successfully.');
+            // Update the UI if necessary
+          })
+          .catch((error) => {
+            console.error('Error voting on reply:', error);
+          });
 
-  // Get the current vote count from the UI
-  let currentVoteCount = parseInt(voteCountElement.innerText);
-
-  // Update the vote count based on the vote type
-if (voteType === 'up') {
-    currentVoteCount++;
-	replyRef.update({
-      votes: firebase.firestore.FieldValue.increment(1) // Increment vote count by 1
-    })
-    .then(() => {
-      console.log('Reply upvoted successfully.');
-      // Update the UI if necessary
-    })
-    .catch((error) => {
-      console.error('Error upvoting reply:', error);
-    });
- } else if (voteType === 'down') {
-    currentVoteCount--;
-	 replyRef.update({
-      votes: firebase.firestore.FieldValue.increment(-1) // Decrement vote count by 1
-    })
-    .then(() => {
-      console.log('Reply downvoted successfully.');
-      // Update the UI if necessary
-    })
-    .catch((error) => {
-      console.error('Error downvoting reply:', error);
-    });
+          // Store the user's vote in the 'votes' subcollection
+          replyRef
+            .collection('votes')
+            .doc(user.uid)
+            .set({
+              voteType: voteType
+            })
+            .then(() => {
+              console.log('User vote stored successfully.');
+              // Update the UI if necessary
+            })
+            .catch((error) => {
+              console.error('Error storing user vote:', error);
+            });
+        }
+      })
+      .catch((error) => {
+        console.error('Error checking user vote:', error);
+      });
+  } else {
+    console.log('User is not authenticated. Voting is allowed only for authenticated users.');
+    // You can show an error message or prompt the user to authenticate
   }
-	  // Update the vote count in the UI
-  voteCountElement.innerText = currentVoteCount;
 }
 
 		
