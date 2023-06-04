@@ -718,9 +718,11 @@ function createChannelElement(channelData) {
 // Function to get channels from Firestore and display them in HTML
 function getChannels() {
   const channelsList = document.getElementById('channels-list');
+	
+		    console.log("getChannels        ");
 
   // Get all the channels from the Firestore collection
-  db.collection('channels').get()
+  db.collectionGroup('channels').get()
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         const channelData = doc.data();
