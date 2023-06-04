@@ -80,7 +80,6 @@
     <!-- Thread Details View -->
     <section id="thread-details-view" class="view">
       <button id="back-to-listing-button" class="button" onclick="switchView('thread-listing-view')">Back to Listing</button>
-      <h2>Thread Title</h2>
       <!-- Display thread details like author, date, content, replies, etc. -->
       <div id="thread-content">
         <p>Thread content goes here</p>
@@ -95,6 +94,26 @@
     </section>
   </div>
 
+	  
+	  
+	  
+	  
+	  
+	  
+	  <section id="reply-popup" class="create-thread-popup">
+  <div class="create-thread-container">
+    <button class="exit-button" onclick="closeReplyPopup()">X</button>
+    <h2>Reply to Thread</h2>
+    <form id="reply-form">
+      <label for="reply-content">Reply Content:</label>
+      <textarea id="reply-content" required></textarea>
+
+      <button type="submit">Submit Reply</button>
+    </form>
+  </div>
+</section>
+	  
+	  
 	  
 	  
 	  
@@ -131,6 +150,7 @@
 	<script>
 		
 function openCreateThreadPopup() {
+	//slideIn(xxx)
   document.querySelector('.create-thread-popup').style.display = 'block';
 }
 
@@ -202,6 +222,7 @@ function getThreadDetails(threadId) {
           <p>Author: ${threadData.author}</p>
           <p>Timestamp: ${threadData.timestamp}</p>
           <p>${threadData.content}</p>
+	  <button id="reply-button" class="button" onclick="openReplyPopup()">Reply</button>
         `;
       } else {
         // Handle the case when the document does not exist
@@ -231,6 +252,7 @@ function getReplies() {
           <p>Author: ${replyData.author}</p>
           <p>Timestamp: ${replyData.timestamp}</p>
           <p>${replyData.content}</p>
+
         `;
 
         replyList.appendChild(listItem);
