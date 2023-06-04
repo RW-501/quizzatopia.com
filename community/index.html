@@ -141,7 +141,7 @@ function closeCreateThreadPopup() {
 		
 		
 		
- // Switch between views
+  // Switch between views
     function switchView(viewId) {
       // Hide all views
       const views = document.querySelectorAll('.view');
@@ -152,11 +152,7 @@ function closeCreateThreadPopup() {
       // Show the selected view
       const selectedView = document.getElementById(viewId);
       selectedView.classList.add('active');
-    }		
-		
-		
-		
-		
+    }	
 		
 		
 		
@@ -167,11 +163,17 @@ function closeCreateThreadPopup() {
 //firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
-		
-		
-// Retrieve the thread ID from the URL query parameter (replace 'threadId' with the actual parameter name)
+
+		// Retrieve the thread ID from the URL query parameter (replace 'threadId' with the actual parameter name)
+
+		// Call the function to retrieve and display the thread details on page load
 const urlParams = new URLSearchParams(window.location.search);
 const threadId = urlParams.get('threadId');
+getThreadDetails(threadId);
+
+		
+		
+
 
 // Reference to the thread content and reply list elements
 const threadContent = document.getElementById('thread-content');
@@ -355,12 +357,6 @@ function createThread(title, content) {
 		
 		
 		
-		
-		// Call the function to retrieve and display the thread details on page load
-const urlParams = new URLSearchParams(window.location.search);
-const threadId = urlParams.get('threadId');
-getThreadDetails(threadId);
-
 		
 	</script>
 </body>
