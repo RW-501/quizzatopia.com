@@ -153,9 +153,13 @@ const threadContent = document.getElementById('thread-content');
 const replyList = document.getElementById('reply-list');
 
 // Function to retrieve the selected thread's details from Firebase
-function getThreadDetails() {
-  // Retrieve the thread data from Firestore using the thread ID
-  db.collection('threads').doc(threadId).get()
+function getThreadDetails(threadId) {
+  // Retrieve the thread document from Firebase using the thread ID
+  firebase
+    .firestore()
+    .collection('threads')
+    .doc(threadId)
+    .get()
     .then((doc) => {
       if (doc.exists) {
         const threadData = doc.data();
@@ -168,13 +172,16 @@ function getThreadDetails() {
           <p>${threadData.content}</p>
         `;
       } else {
-        console.log("Thread not found");
+        // Handle the case when the document does not exist
+        console.log('Thread does not exist.');
       }
     })
     .catch((error) => {
-      console.log("Error getting thread details:", error);
+      // Handle any errors that occurred during retrieval
+      console.error('Error retrieving thread details:', error);
     });
 }
+
 
 // Function to retrieve and display the replies for the selected thread
 function getReplies() {
@@ -317,6 +324,18 @@ function createThread(title, content) {
 
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		// Call the function to retrieve and display the thread details on page load
+const urlParams = new URLSearchParams(window.location.search);
+const threadId = urlParams.get('threadId');
+getThreadDetails(threadId);
+
 		
 	</script>
 </body>
