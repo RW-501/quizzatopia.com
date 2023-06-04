@@ -41,10 +41,12 @@
 <body>
   <!-- Header -->
 
-  
+  <button class="start-discussion-button" onclick="openCreateThreadPopup()">Start Discussion</button>
+
 
   <!-- Main Content -->
   <main>
+	  
     <!-- Channel Sidebar -->
     <aside class="channel-sidebar">
       <h2>Channels</h2>
@@ -96,18 +98,22 @@
 	  
 	  
     <!-- Create Thread Form -->
-<section class="create-thread-form">
-  <h2>Create a New Thread</h2>
-  <form id="create-thread-form">
-    <label for="thread-title">Thread Title:</label>
-    <input type="text" id="thread-title" required>
+<section class="create-thread-popup">
+  <div class="create-thread-container">
+    <button class="exit-button" onclick="closeCreateThreadPopup()">X</button>
+    <h2>Create a New Thread</h2>
+    <form id="create-thread-form">
+      <label for="thread-title">Thread Title:</label>
+      <input type="text" id="thread-title" required>
 
-    <label for="thread-content">Thread Content:</label>
-    <textarea id="thread-content" required></textarea>
+      <label for="thread-content">Thread Content:</label>
+      <textarea id="thread-content" required></textarea>
 
-    <button type="submit">Create Thread</button>
-  </form>
+      <button type="submit">Create Thread</button>
+    </form>
+  </div>
 </section>
+
 
   </main>
 
@@ -116,9 +122,31 @@
 	
 	<script>
 		
+function openCreateThreadPopup() {
+  document.querySelector('.create-thread-popup').style.display = 'block';
+}
+
+function closeCreateThreadPopup() {
+  document.querySelector('.create-thread-popup').style.display = 'none';
+}	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
+//firebase.initializeApp(firebaseConfig);
+//const db = firebase.firestore();
 
 		
 		
