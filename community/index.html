@@ -360,7 +360,7 @@ function getThreadDetails(threadId) {
             </div>
           </div>
           <p>${threadData.content}</p>
-          <button id="reply-button" class="button" onclick="openReplyPopup(${threadId})">Reply</button>
+          <button id="reply-button" class="button" onclick="openReplyPopup('${threadId}')">Reply</button>
         `;
       } else {
         // Handle the case when the document does not exist
