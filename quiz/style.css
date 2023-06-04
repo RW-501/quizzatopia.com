@@ -539,7 +539,7 @@ main_section {
 
 
 #explanation_bar {
-  display: flex;
+      display: inline-flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
@@ -549,11 +549,13 @@ main_section {
   font-size: 16px;
   font-weight: bold;
   color: #333;
+    text-indent: 10%;
 }
 
 #realQustionNum {
   font-size: 14px;
   color: #666;
+    text-indent: 50px;
 }
 
 #close-btn {
