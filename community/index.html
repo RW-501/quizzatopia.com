@@ -58,31 +58,42 @@
         <!-- Add more channels here -->
       </ul>
     </aside>
-
-    <!-- Thread Listing -->
- <!-- Thread Listing View -->
-<section id="thread-listing-view" class="view active">
-  <h2>Thread Listing</h2>
-  <ul id="thread-list"></ul>
-</section>
-
-<!-- Thread Details View -->
-<section id="thread-details-view" class="view">
-  <button id="back-to-listing-button" onclick="switchView('thread-listing-view')">Back to Listing</button>
-  <h2>Thread Title</h2>
-  <!-- Display thread details like author, date, content, replies, etc. -->
-  <div class="thread-content">
-    <p>Thread content goes here</p>
+	  
+	  
+	  
+  <div class="container">
+	  
+<!-- Toolbar -->
+  <div class="toolbar">
+    <button class="button" onclick="switchView('thread-listing-view')">Thread Listing</button>
+    <button class="button" onclick="switchView('thread-details-view')">Thread Details</button>
   </div>
-  <div class="replies">
-    <!-- Display thread replies -->
-    <div class="reply">
-      <!-- Display individual reply content -->
-    </div>
-    <!-- Add more replies here -->
-  </div>
-</section>
 
+  <!-- View Container -->
+  <div class="view-container">
+    <!-- Thread Listing View -->
+    <section id="thread-listing-view" class="view active">
+      <h2>Thread Listing</h2>
+      <ul id="thread-list"></ul>
+    </section>
+
+    <!-- Thread Details View -->
+    <section id="thread-details-view" class="view">
+      <button id="back-to-listing-button" class="button" onclick="switchView('thread-listing-view')">Back to Listing</button>
+      <h2>Thread Title</h2>
+      <!-- Display thread details like author, date, content, replies, etc. -->
+      <div class="thread-content">
+        <p>Thread content goes here</p>
+      </div>
+      <div class="replies">
+        <!-- Display thread replies -->
+        <div class="reply">
+          <!-- Display individual reply content -->
+        </div>
+        <!-- Add more replies here -->
+      </div>
+    </section>
+  </div>
 
 	  
 	  
@@ -107,6 +118,10 @@
     </form>
   </div>
 </section>
+	  
+	  
+	  
+  </div>
 
 
   </main>
@@ -126,8 +141,18 @@ function closeCreateThreadPopup() {
 		
 		
 		
-		
-		
+ // Switch between views
+    function switchView(viewId) {
+      // Hide all views
+      const views = document.querySelectorAll('.view');
+      views.forEach(view => {
+        view.classList.remove('active');
+      });
+
+      // Show the selected view
+      const selectedView = document.getElementById(viewId);
+      selectedView.classList.add('active');
+    }		
 		
 		
 		
