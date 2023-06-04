@@ -126,7 +126,145 @@ main {
 
 
 
+/* Thread Details */
+#thread-details-view {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+#thread-details-view h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.thread-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.thread-author {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.thread-author p {
+  margin-left: 10px;
+}
+
+.thread-info p {
+  margin-bottom: 5px;
+}
+
+#thread-details-view p {
+  margin-bottom: 10px;
+}
+
+#reply-button {
+  background-color: #1877f2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#reply-button:hover {
+  background-color: #1264ba;
+}
+
+/* Replies */
+#reply-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.reply {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f0f2f5;
+  border-radius: 4px;
+}
+
+.reply p {
+  margin: 0;
+}
+
+/* Create Thread Form */
+.create-thread-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  overflow: auto;
+}
+
+.create-thread-container {
+  position: relative;
+  margin: 100px auto;
+  width: 400px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.exit-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  color: #999;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.exit-button:hover {
+  color: #666;
+}
+
+.create-thread-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#create-thread-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#create-thread-form input,
+#create-thread-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+#create-thread-form button[type="submit"] {
+  background-color: #1877f2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#create-thread-form button[type="submit"]:hover {
+  background-color: #1264ba;
+}
 
 
 
