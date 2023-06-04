@@ -303,7 +303,8 @@ function populateThreadList() {
         <p>Timestamp: ${threadData.timestamp}</p>
         <!-- Additional thread information can be added here -->
 
-<div class="viewDetails" onclick="getThreadDetails(${doc.id})); switchView('thread-details-view')";>View Details</div>  `;
+<div class="viewDetails" onclick="getThreadDetails('${doc.id}'); switchView('thread-details-view');">View Details</div>
+ `;
 
       threadList.appendChild(listItem);
     });
