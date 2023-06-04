@@ -239,6 +239,30 @@ replyForm.addEventListener('submit', (event) => {
 		
 		
 		
+function formatTimestamp(timestamp) {
+  // Convert the timestamp to a Date object
+  const date = new Date(timestamp);
+
+  // Format the date as desired (e.g., using toLocaleString, moment.js, or custom formatting)
+  // ...
+
+  // Return the formatted timestamp
+  return date.toLocaleString(); // Example: using toLocaleString for formatting
+}
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		// Initialize Firebase
 //firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
