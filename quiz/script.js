@@ -302,8 +302,9 @@ function showQuestion() {
 
  const questionObj = questions[currentQuestion];
 document.getElementById("question").innerHTML = questionObj.question;
+	  console.log(questionObj.questionType + "  questionObj.questionType   ??????????    currenquestionObj.imageURL   " + questionObj.imageURL);
 
-if (questionObj.imageURL === '' || questionObj.imageURL === null || questionObj.imageURL === 'undefined') {
+if (questionObj.imageURL === "" || questionObj.imageURL === null || questionObj.imageURL === "undefined") {
   document.getElementById("questionImageArea").style.display = "none";
 		console.log("inside No pic     "); 
 
@@ -334,7 +335,6 @@ if (questionObj.questionType === "True/False") {
 }
 	}
 	
-	  console.log(questionObj.questionType + "  questionObj.questionType   ??????????    currenquestionObj.imageURL   " + questionObj.imageURL);
 	
   // Randomize the order of the answer options
   const options = questionObj.options;
