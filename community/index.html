@@ -249,16 +249,14 @@ const db = firebase.firestore();
 		// Call the function to retrieve and display the thread details on page load
 //var threadId;
 const urlParams = new URLSearchParams(window.location.search);
-var threadId = urlParams.get('threadId');
+const threadId = urlParams.get('threadId');
 
-if (threadId) {
+if (threadId !== null && threadId !== undefined) {
   getThreadDetails(threadId);
 } else {
   // Handle the case when threadId is not provided
   console.error('Thread ID not found in URL parameters');
 }
-
-
 
 		
 
