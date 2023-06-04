@@ -520,7 +520,7 @@ populateThreadList();
 		
 		
 		// Get a reference to the form element
-const createThreadForm = document.getElementById('thread-form');
+const createThreadForm = document.getElementById('create-thread-form');
 
 // Add event listener for form submission
 createThreadForm.addEventListener('submit', (event) => {
@@ -540,6 +540,10 @@ createThreadForm.addEventListener('submit', (event) => {
   // Reset the form
  createThreadForm.reset();
 });
+		
+		
+		
+		
 
 function createThread(channelId, title, content) {
   // Get a reference to the Firestore collection
