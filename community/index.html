@@ -428,17 +428,32 @@ function populateThreadList() {
         const listItem = document.createElement('li');
 
         // Set the thread title, author, timestamp, vote count, etc.
-        listItem.innerHTML = `
-          <h3>${threadData.title}</h3>
-          <p>Author: ${threadData.user}</p>
-          <p>Timestamp: ${threadData.timestamp}</p>
-	    <p class="vote-count">Votes: ${threadData.votes}</p>
+    listItem.innerHTML = `
+  <div class="thread-container">
+    <h3>${threadData.title}</h3>
+    <p>Author: ${threadData.user}</p>
+    <p>Timestamp: ${threadData.timestamp}</p>
+    <div class="vote-section">
+      <div class="vote-count">Votes: ${threadData.votes}</div>
+      <button class="vote-button" onclick="voteThread('up', '${doc.id}')">Upvote</button>
+      <button class="vote-button" onclick="voteThread('down', '${doc.id}')">Downvote</button>
+    </div>
+    <div class="thread-details">
+      <div class="author-info">
+        <div class="author-picture">
+          <img src="${threadData.picture}" alt="Thread Picture">
+        </div>
+        <div class="author-details">
+          <p>Points: ${threadData.points}</p>
+          <p>Rank: ${threadData.rank}</p>
+          <p>Quizzes Taken: ${threadData.quizzesTaken}</p>
+        </div>
+      </div>
+      <div class="view-details" onclick="switchView('thread-details-view'); getThreadDetails('${doc.id}')">View Details</div>
+    </div>
+  </div>
+`;
 
-          <!-- Additional thread information can be added here -->
-          <!-- For threads -->
-          <button class="vote-button" onclick="voteThread('up', '${doc.id}')">Upvote</button>
-          <button class="vote-button" onclick="voteThread('down', '${doc.id}')">Downvote</button>
-        `;
 
         threadList.appendChild(listItem);
       });
