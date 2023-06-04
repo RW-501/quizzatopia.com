@@ -621,7 +621,8 @@ if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function')
 firebase.firestore().enablePersistence()
   .then(() => {
     // Offline persistence enabled
-	  const savedUserInfoDB = localStorage.getItem("userInfo");
+	//  const savedUserInfoDB = localStorage.getItem("userInfo");
+  const savedUserInfoDB = getUserInfo();
 
 	saveUserInfoToFirestore(savedUserInfoDB);
   })
