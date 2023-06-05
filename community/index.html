@@ -142,7 +142,7 @@
       <input type="text" id="thread-title" required>
 
       <label for="thread-content">Thread Content:</label>
-<textarea id="thread-content" required="" spellcheck="false"></textarea>
+<textarea id="Create-content" required="" spellcheck="false"></textarea>
 
       <button type="submit">Create Thread</button>
     </form>
@@ -540,10 +540,10 @@ createThreadForm.addEventListener('submit', (event) => {
 
   // Get the values from the form fields
   const threadTitle = document.getElementById("thread-title").value;
-  const thread_Content = document.getElementById("thread-content").value;
+  const thread_Content = document.getElementById("Create-content").value;
 
 	console.log("thread_Content        "+thread_Content);
-const textarea = document.getElementById('thread-content');
+const textarea = document.getElementById('Create-content');
 const threadContentx = textarea.textContent;
 console.log("threadContentx: ", threadContentx);
 	
