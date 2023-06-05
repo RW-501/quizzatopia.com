@@ -67,6 +67,23 @@ window.addEventListener("load", function() {
   }, 1000); // Delay in milliseconds before removing the overlay
 });
 
+
+   window.addEventListener('load', function() {
+      var images = document.querySelectorAll('img');
+      
+      images.forEach(function(image) {
+        var width = image.width;
+        var height = image.height;
+        
+        var imageContainer = image.parentNode;
+        imageContainer.style.width = width + 'px';
+        imageContainer.style.height = height + 'px';
+      });
+    });
+
+
+
+
 function setLoggedInCookie() {
   var expirationDate = new Date();
   expirationDate.setDate(expirationDate.getDate() + 3);
