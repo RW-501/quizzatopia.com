@@ -733,7 +733,7 @@ function createChannelElement(channelData) {
 function getChannels() {
   const channelsList = document.getElementById('channels-list');
 	
-		    console.log("getChannels        ");
+		   // console.log("getChannels        ");
 
   // Get all the channels from the Firestore collection
   db.collectionGroup('channels').get()
@@ -741,9 +741,9 @@ function getChannels() {
       querySnapshot.forEach((doc) => {
         const channelData = doc.data();
 	      
-		    console.log("channelData  n      "+channelData.name);
+		//    console.log("channelData  n      "+channelData.name);
 channelID = channelData.id;
-	      		    console.log("channelID        "+channelID);
+	      		    //console.log("channelID        "+channelID);
 
         // Create HTML elements for each channel
         const channelElement = createChannelElement(channelData);
