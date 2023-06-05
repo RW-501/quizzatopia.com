@@ -142,7 +142,7 @@
       <input type="text" id="thread-title" required>
 
       <label for="thread-content">Thread Content:</label>
-      <textarea id="thread-content" required></textarea>
+<textarea id="thread-content" required="" spellcheck="false"></textarea>
 
       <button type="submit">Create Thread</button>
     </form>
@@ -527,7 +527,8 @@ populateThreadList();
 		
 		
 		
-		
+	document.addEventListener('DOMContentLoaded', function() {
+	
 		
 		
 		// Get a reference to the form element
@@ -548,13 +549,12 @@ console.log("filtered_threadContent        "+filtered_threadContent);
 	
   // Perform necessary actions (e.g., save to Firebase, update UI, etc.)
   createThread(channelID, filtered_threadTitle, filtered_threadContent);
-console.log("channelID        "+channelID);
 	
 	// Reset the form
  createThreadForm.reset();
 });
 		
-		
+		});
 		
 		
 
