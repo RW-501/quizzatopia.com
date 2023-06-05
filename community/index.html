@@ -542,16 +542,10 @@ createThreadForm.addEventListener('submit', (event) => {
   const threadTitle = document.getElementById("thread-title").value;
   const thread_Content = document.getElementById("Create-content").value;
 
-	console.log("thread_Content        "+thread_Content);
-const textarea = document.getElementById('Create-content');
-const threadContentx = textarea.textContent;
-console.log("threadContentx: ", threadContentx);
 	
-	const threadContentz = textarea.innerText;
-console.log("threadContentz: ", threadContentz);
 	
 	const filtered_threadTitle = filterContent(threadTitle);
-  const filtered_threadContent = filterContent(threadContent);
+  const filtered_threadContent = filterContent(thread_Content);
 //console.log("filtered_threadContent        "+filtered_threadContent);
 	
   // Perform necessary actions (e.g., save to Firebase, update UI, etc.)
