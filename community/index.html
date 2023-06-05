@@ -541,13 +541,15 @@ createThreadForm.addEventListener('submit', (event) => {
   const threadTitle = document.getElementById('thread-title').value;
   const threadContent = document.getElementById('thread-content').value;
 
-	
+	console.log("threadContent        "+threadContent);
   const filtered_threadTitle = filterContent(threadTitle);
   const filtered_threadContent = filterContent(threadContent);
-
+console.log("filtered_threadContent        "+filtered_threadContent);
+	
   // Perform necessary actions (e.g., save to Firebase, update UI, etc.)
   createThread(channelID, filtered_threadTitle, filtered_threadContent);
-
+console.log("channelID        "+channelID);
+	
 	// Reset the form
  createThreadForm.reset();
 });
