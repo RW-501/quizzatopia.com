@@ -67,7 +67,7 @@ window.addEventListener("load", function() {
   }, 1000); // Delay in milliseconds before removing the overlay
 });
 
-
+/*
    window.addEventListener('load', function() {
       var images = document.querySelectorAll('img');
       
@@ -81,7 +81,7 @@ window.addEventListener("load", function() {
       });
     });
 
-
+*/
 
 
 function setLoggedInCookie() {
