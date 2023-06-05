@@ -542,15 +542,8 @@ createThreadForm.addEventListener('submit', (event) => {
   const threadTitle = document.getElementById("thread-title").value;
   const threadContent = document.getElementById("thread-content").value;
 
-	console.log("threadTitle        "+threadContent);
-	console.log("threadContent        "+threadTitle);
-const textarea = document.getElementById('thread-content');
-const threadContentsss = textarea.textContent;
-console.log("threadContentsss: ", threadContentsss);
-
-	const textareakkk = document.getElementById('thread-content');
-const threadContentjjj = textareakkk.innerText;
-console.log("threadContentjjj: ", threadContentjjj);
+	//console.log("threadTitle        "+threadContent);
+	//console.log("threadContent        "+threadTitle);
 
 	const filtered_threadTitle = filterContent(threadTitle);
   const filtered_threadContent = filterContent(threadContent);
@@ -561,6 +554,7 @@ console.log("threadContentjjj: ", threadContentjjj);
 	
 	// Reset the form
  createThreadForm.reset();
+	closeCreateThreadPopup();
 });
 		
 		});
