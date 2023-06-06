@@ -1003,17 +1003,16 @@ quizInfo.quizLink = q;  // Add the "q" parameter to the quizInfo object
 
 }
 	  
-	  function isValidEdition(e) {
-  return parseInt(e) > 1;
-}
+
 
 function fetchData(q, e) {
 	   //   console.log("fetchData(q, e) :", q+'   e    '+e);
 
   let stringEnt;
-  if (e && isValidEdition(e)) {
+  if (e) {
+	  
     console.log("New JSON structure");
-    stringEnt = "/quiz/Quizzes/" + q + ".json";
+    stringEnt = "/q/"+e+"/" + q + ".json";
   } else {
     console.log("Old JSON structure");
     stringEnt = "/q/" + q + ".json";
