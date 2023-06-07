@@ -786,14 +786,14 @@ function logStorageContents(quizCode) {
 	  
 	  
 	  
-	
+let quizLink;
 
 var  quizType = '';	  
     
 // Get the current URL and parse its search parameters
 const urlParams = new URLSearchParams(window.location.search);
 	//  console.log("1 urlParams     "+urlParams); 
-
+quizLink = urlParams;
 // Get the values of the "q" and "e" parameters
 var q = urlParams.get('q');
 var e = urlParams.get('e');
@@ -899,7 +899,7 @@ let questionType;
 
 let difficulty;
 let imageURL;
-
+	  
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -982,7 +982,7 @@ function checkQuizCodeAndGetInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, qu
       numberOfQuestions: numberOfQuestionsNS,
       questionCorrect: 0,
       timestamp: timestamp,
-	quizLink: q  // Add the "q" parameter to the quizInfo object
+	quizLink: quizLink  // Add the "q" parameter to the quizInfo object
 
     };
 
@@ -995,7 +995,7 @@ function checkQuizCodeAndGetInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, qu
       quizInfo.quizType = quizType;
     quizInfo.numberOfQuestions = numberOfQuestionsNS;
     quizInfo.timestamp = timestamp;
-quizInfo.quizLink = q;  // Add the "q" parameter to the quizInfo object
+quizInfo.quizLink = quizLink;  // Add the "q" parameter to the quizInfo object
     localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
   }
 
@@ -1093,6 +1093,58 @@ function fetchData(q, e) {
           questionNumber = data.questionNumber;
 		questionType = data.questionType;
 
+	/*
+	//////////////////////////////////////////////////////////////
+		*/
+		
+		
+		
+// Get Firestore instance
+const db = firebase.firestore();
+
+// Function to save quiz information to Firestore
+async function saveQuiz(quiz) {
+  const { quizCode, quizName, imageURL, numberOfQuestions, quizLink, quizDifficulty } = quiz;
+
+  // Check if quiz already exists in Firestore
+  const quizRef = db.collection('quizzes').doc(quizCode);
+  const quizDoc = await quizRef.get();
+
+  if (quizDoc.exists) {
+    console.log(`Quiz with code ${quizCode} already saved.`);
+  } else {
+    // Save quiz information to Firestore
+    await quizRef.set({
+      quizCode,
+      quizName,
+      imageURL,
+      numberOfQuestions,
+      quizLink,
+      quizDifficulty
+    });
+
+    console.log(`Quiz with code ${quizCode} saved successfully.`);
+  }
+}
+
+// Example usage
+const quiz = {
+  quizCode: quizCode,
+  quizName: quizName,
+  imageURL: 'https://www.quizzatopia.com/images/sq/_.png',
+  numberOfQuestions: numberOfQuestions,
+  quizLink: quizLink,
+  quizDifficulty: quizDifficulty
+};
+
+saveQuiz(quiz);
+		
+		
+		
+		/*
+		
+		//////////////////////////////////////////////////////////
+		*/
           // Check quiz code and retrieve or save quiz info
           const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
 
