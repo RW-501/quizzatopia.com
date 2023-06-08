@@ -1104,7 +1104,7 @@ async function fetchQuizzesFromDB() {
   const querySnapshot = await db.collection('quizzes').get();
 
   // Initialize the HTML string
-  let html = '';
+  let html = '<p><h2>Updated Quizzes</h2></p>';
 
   // Iterate over each quiz document
   querySnapshot.forEach((doc) => {
