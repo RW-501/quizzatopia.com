@@ -894,6 +894,8 @@ if (str.startsWith("TF")) {
 async function saveQuizToDB(quiz) {
   const { quizCodeX, quizNameX, imageURLX, numberOfQuestionsX, quizLinkX, quizDifficultyX } = quiz;
 
+	const db = firebase.firestore();
+
   // Check if quiz already exists in Firestore
   const quizRef = db.collection('quizzes').doc(quizCodeX);
   const quizDoc = await quizRef.get();
