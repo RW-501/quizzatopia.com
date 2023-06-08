@@ -1,0 +1,223 @@
+{
+  "quizCode": "NCLEX123",
+  "quizName": "NCLEX Quiz -  Safe and Effective Care Environment",
+  "quizDifficulty": "Medium",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the minimum staffing requirement for a medical-surgical unit according to the NCLEX standards?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1 nurse per 4 patients",
+        "1 nurse per 6 patients",
+        "1 nurse per 8 patients",
+        "1 nurse per 10 patients"
+      ],
+      "answer": "1 nurse per 4 patients",
+      "explanation": "According to the NCLEX standards, the minimum staffing requirement for a medical-surgical unit is 1 nurse per 4 patients.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Hand hygiene should be performed before and after every patient contact.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Hand hygiene should be performed before and after every patient contact to prevent the spread of infection.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "The abbreviation 'NPO' stands for ________.",
+      "imageURL": "",
+      "questionType": "Fill in Blank",
+      "options": [
+        "Nothing by mouth",
+        "Non-per os",
+        "No per oral"
+      ],
+      "answer": "Nothing by mouth",
+      "explanation": "The abbreviation 'NPO' stands for 'Nothing by mouth.' It is used to indicate that a patient should not consume any food or fluids orally.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What does this image represent?",
+      "imageURL": "https://example.com/image1.jpg",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Fire extinguisher",
+        "Emergency exit",
+        "First aid kit",
+        "Safety shower"
+      ],
+      "answer": "Emergency exit",
+      "explanation": "The image represents an emergency exit, which is used as an evacuation route in case of emergencies.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "True or False: A healthcare provider can share a patient's medical information with anyone without their consent.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "A healthcare provider cannot share a patient's medical information with anyone without their consent, as it violates patient privacy and confidentiality.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "The 'Chain of Infection' consists of how many links?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "answer": "6",
+      "explanation": "The 'Chain of Infection' consists of 6 links: infectious agent, reservoir, portal of exit, mode of transmission, portal of entry, and susceptible host.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which of the following is an example of a sterile technique?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Washing hands with soap and water",
+        "Wearing gloves for patient care",
+        "Applying a sterile dressing",
+        "Administering oral medications"
+      ],
+      "answer": "Applying a sterile dressing",
+      "explanation": "Applying a sterile dressing requires a sterile technique to prevent contamination and promote wound healing.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "True or False: Restraints can be used as a convenience for healthcare providers.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Restraints should never be used as a convenience for healthcare providers. They should only be used as a last resort to ensure patient safety.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the recommended temperature range for storing perishable vaccines?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "2°C to 8°C",
+        "10°C to 20°C",
+        "-20°C to -10°C",
+        "Room temperature (25°C)"
+      ],
+      "answer": "2°C to 8°C",
+      "explanation": "Perishable vaccines should be stored in a temperature range of 2°C to 8°C to maintain their effectiveness.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: Incident reports should be used to assign blame to individuals involved in an adverse event.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Incident reports are not meant to assign blame but to identify system issues, improve patient safety, and prevent future incidents.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which organization establishes and enforces safety standards in healthcare settings?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "CDC",
+        "FDA",
+        "OSHA",
+        "AMA"
+      ],
+      "answer": "OSHA",
+      "explanation": "OSHA (Occupational Safety and Health Administration) establishes and enforces safety standards in healthcare settings to protect workers and promote workplace safety.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "The 'Five Rights' of medication administration include all of the following except:",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Right patient",
+        "Right medication",
+        "Right dose",
+        "Right time",
+        "Right diagnosis"
+      ],
+      "answer": "Right diagnosis",
+      "explanation": "The 'Five Rights' of medication administration include right patient, right medication, right dose, right time, and right route. The right diagnosis is not part of the medication administration process.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "True or False: Handoff communication should include relevant patient information and ongoing care needs.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Handoff communication should include relevant patient information and ongoing care needs to ensure continuity of care and patient safety.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "The 'Scope of Practice' defines the boundaries of practice for which healthcare professional?",
+      "imageURL": "",
+      "questionType": "Fill in Blank",
+      "options": [
+        "Nurse",
+        "Physician",
+        "Pharmacist",
+        "Physical therapist"
+      ],
+      "answer": "Nurse",
+      "explanation": "The 'Scope of Practice' defines the boundaries of practice for nurses and outlines their professional responsibilities and limitations.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What does this image represent?",
+      "imageURL": "https://example.com/image2.jpg",
+      "questionType": "Multiple Choice",
+      "options": [
+        "High fall risk",
+        "Hand hygiene station",
+        "Radiation hazard",
+        "Biohazard waste"
+      ],
+      "answer": "Biohazard waste",
+      "explanation": "The image represents a biohazard waste container, used for the safe disposal of potentially infectious materials.",
+      "difficulty": "Medium"
+    }
+  ]
+}
