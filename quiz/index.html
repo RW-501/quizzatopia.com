@@ -1126,7 +1126,9 @@ async function saveQuiz(quiz) {
     console.log(`Quiz with code ${quizCode} saved successfully.`);
   }
 }
-
+    if (typeof quizDifficulty !== 'undefined') {
+        quizDifficulty: ''
+}
 // Example usage
 const quiz = {
   quizCode: quizCode,
