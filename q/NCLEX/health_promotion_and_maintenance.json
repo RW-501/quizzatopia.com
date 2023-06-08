@@ -1,0 +1,231 @@
+{
+  "quizCode": "NCLEX1011",
+  "quizName": "NCLEX Quiz - Health Promotion and Maintenance",
+  "quizDifficulty": "Medium",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the primary goal of health promotion?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Prevent disease and injury",
+        "Treat existing health conditions",
+        "Provide palliative care",
+        "Improve access to healthcare"
+      ],
+      "answer": "Prevent disease and injury",
+      "explanation": "The primary goal of health promotion is to prevent disease and injury through education, behavior change, and promoting healthy lifestyles.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which of the following is an example of primary prevention?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Screening for cervical cancer",
+        "Administering antibiotics for pneumonia",
+        "Managing blood glucose levels in diabetes",
+        "Promoting vaccination against measles"
+      ],
+      "answer": "Promoting vaccination against measles",
+      "explanation": "Primary prevention focuses on preventing the development of disease or injury, and promoting vaccination against measles is an example of primary prevention.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the purpose of health screenings?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Diagnose and treat diseases",
+        "Monitor disease progression",
+        "Educate individuals about health risks",
+        "Detect early signs of disease or risk factors"
+      ],
+      "answer": "Detect early signs of disease or risk factors",
+      "explanation": "The purpose of health screenings is to detect early signs of disease or risk factors, allowing for timely interventions and prevention strategies.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "True or False: Health literacy refers to an individual's ability to understand and use healthcare information.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Health literacy refers to an individual's ability to understand and use healthcare information to make informed decisions and follow medical instructions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which of the following is an example of a modifiable risk factor for cardiovascular disease?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Age",
+        "Gender",
+        "Family history",
+        "Smoking"
+      ],
+      "answer": "Smoking",
+      "explanation": "Smoking is a modifiable risk factor for cardiovascular disease, as individuals can quit smoking and reduce their risk of developing heart disease.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the recommended age for starting mammogram screenings for breast cancer in average-risk women?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "25 years old",
+        "30 years old",
+        "40 years old",
+        "50 years old"
+      ],
+      "answer": "50 years old",
+      "explanation": "The recommended age
+
+ for starting mammogram screenings for breast cancer in average-risk women is 50 years old, although guidelines may vary.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the purpose of prenatal care?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Diagnose and treat pregnancy complications",
+        "Educate expectant parents about childbirth",
+        "Monitor the health of the mother and fetus",
+        "Provide emotional support to pregnant women"
+      ],
+      "answer": "Monitor the health of the mother and fetus",
+      "explanation": "The purpose of prenatal care is to monitor the health of the mother and fetus, detect any potential complications, and provide appropriate interventions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "True or False: Breastfeeding provides numerous health benefits for both the infant and the mother.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Breastfeeding offers numerous health benefits for both the infant and the mother, including enhanced immune protection and bonding.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the purpose of immunizations?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Treat existing infections",
+        "Prevent the spread of infectious diseases",
+        "Manage chronic health conditions",
+        "Relieve pain and discomfort"
+      ],
+      "answer": "Prevent the spread of infectious diseases",
+      "explanation": "Immunizations are designed to prevent the spread of infectious diseases by stimulating the immune system to produce an immune response and develop immunity.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which of the following is an example of secondary prevention?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Encouraging smoking cessation programs",
+        "Administering antihypertensive medications",
+        "Promoting physical exercise for weight loss",
+        "Screening for colorectal cancer"
+      ],
+      "answer": "Screening for colorectal cancer",
+      "explanation": "Secondary prevention aims to detect and treat diseases in their early stages, and screening for colorectal cancer is an example of secondary prevention.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the purpose of health education?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Diagnose and treat diseases",
+        "Provide emotional support to patients",
+        "Prevent the spread of infectious diseases",
+        "Promote knowledge and behavior change"
+      ],
+      "answer": "Promote knowledge and behavior change",
+      "explanation": "The purpose of health education is to promote knowledge and behavior change to empower individuals to make informed decisions and improve their health.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "True or False: Routine physical activity is important for maintaining overall health and preventing chronic diseases.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Routine physical activity is important for maintaining
+
+ overall health, improving cardiovascular fitness, and reducing the risk of chronic diseases.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the purpose of smoking cessation programs?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Reduce stress and anxiety",
+        "Promote social interaction",
+        "Prevent lung cancer",
+        "Help individuals quit smoking"
+      ],
+      "answer": "Help individuals quit smoking",
+      "explanation": "Smoking cessation programs aim to help individuals quit smoking and overcome nicotine addiction, reducing the risk of smoking-related health problems.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which of the following is an example of a community-level health promotion intervention?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Providing individual counseling on nutrition",
+        "Organizing a fitness challenge for employees",
+        "Offering prenatal classes for expectant mothers",
+        "Developing a personalized exercise plan for a client"
+      ],
+      "answer": "Organizing a fitness challenge for employees",
+      "explanation": "Organizing a fitness challenge for employees is an example of a community-level health promotion intervention that targets a group or population.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the purpose of well-child visits?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Treat childhood illnesses",
+        "Provide vaccinations",
+        "Monitor growth and development",
+        "Screen for genetic disorders"
+      ],
+      "answer": "Monitor growth and development",
+      "explanation": "Well-child visits are designed to monitor a child's growth and development, provide vaccinations, and address any concerns or issues.",
+      "difficulty": "Medium"
+    }
+  ]
+}
