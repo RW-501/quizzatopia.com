@@ -1127,30 +1127,27 @@ font-size: 30px;
 	
 function getQuizLink() {
   // Get the value entered in the quizCodeX input box
-  const quizCodeX = document.getElementById('quizCodeInput').value;
+const quizCodeX = document.getElementById('quizCodeInput').value;
+console.log(`quizCodeX: ${quizCodeX}`);
 
-		              console.log(`quizCodeX: ${quizCodeX} `);
-/*
-	
-	const db = firebase.firestore();
-  // Retrieve the quizLinkX based on the quizCodeX from the database
-  db.collection('quizzes').where('quizCodeDB', '==', quizCodeX).get()
-    .then((querySnapshot) => {
-      if (!querySnapshot.empty) {
-        const quizLinkX = querySnapshot.docs[0].data().quizLinkDB;
-        // Redirect to the quizLinkX page
-     
-	              console.log(`quizLinkX: ${quizLinkX} `);
+const db = firebase.firestore();
+// Retrieve the quizLinkX based on the quizCodeX from the database
+db.collection('quizzes').where('quizCodeDB', '==', quizCodeX).get()
+  .then((querySnapshot) => {
+    if (!querySnapshot.empty) {
+      const quizLinkX = querySnapshot.docs[0].data().quizLinkDB;
+      console.log(`quizLinkX: ${quizLinkX}`);
+      // Redirect to the quizLinkX page
+      // window.location.href = quizLinkX;
+    } else {
+      console.log(`Quiz with code ${quizCodeX} does not exist.`);
+    }
+  })
+  .catch((error) => {
+    console.log('Error getting quiz link:', error);
+  });
 
-	      //   window.location.href = quizLinkX;
-      } else {
-        console.log(`Quiz with code ${quizCodeX} does not exist.`);
-      }
-    })
-    .catch((error) => {
-      console.log('Error getting quiz link:', error);
-    });
-    */
+   
 }
 	
 	
