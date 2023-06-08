@@ -1164,7 +1164,21 @@ function fetchData(q, e) {
         }
 	      
 	      
-	      
+quizDifficulty = typeof quizDifficulty !== 'undefined' ? quizDifficulty : '';
+
+const quizZZ = {
+  quizCodeDB: quizCode,
+  quizNameDB: quizName,
+  imageURLDB: 'https://www.quizzatopia.com/images/sq/_.png',
+  numberOfQuestionsDB: numberOfQuestions,
+  quizLinkDB: quizUrl,
+  quizDifficultyDB: quizDifficulty
+};
+
+console.log("quizDifficulty:", quizDifficulty);
+console.log("quizZZ:", quizZZ);
+
+//saveQuizToDB(quizZZ);
 	      
 	      
 	      
