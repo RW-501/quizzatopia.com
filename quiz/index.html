@@ -786,7 +786,7 @@ function logStorageContents(quizCode) {
 	  
 	  
 	  
-var quizLink = '';
+//var quizLink = '';
 
 var  quizType = '';	  
     
@@ -966,7 +966,7 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageU
 }
 
 // Check if quizCode matches and retrieve or save quiz info
-function checkQuizCodeAndGetInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageURL) {
+function checkQuizCodeAndGetInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageURL, quizUrl) {
   const savedQuizInfo = localStorage.getItem(`quizInfo_${quizCode}`);
   let quizInfo;
   let timestamp = new Date().toLocaleString();
@@ -981,7 +981,7 @@ function checkQuizCodeAndGetInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, qu
       numberOfQuestions: numberOfQuestionsNS,
       questionCorrect: 0,
       timestamp: timestamp,
-	quizLink: quizLink  // Add the "q" parameter to the quizInfo object
+	quizLink: quizUrl  // Add the "q" parameter to the quizInfo object
 
     };
 
@@ -994,7 +994,7 @@ function checkQuizCodeAndGetInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, qu
       quizInfo.quizType = quizType;
     quizInfo.numberOfQuestions = numberOfQuestionsNS;
     quizInfo.timestamp = timestamp;
-quizInfo.quizLink = quizLink;  // Add the "q" parameter to the quizInfo object
+quizInfo.quizLink = quizUrl;  // Add the "q" parameter to the quizInfo object
     localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
   }
 
@@ -1018,7 +1018,7 @@ function fetchData(q, e) {
   }
      console.log("stringEnt URL:", stringEnt);
 	
-quizLink = stringEnt;
+//quizLink = stringEnt;
    fetch(stringEnt)
     .then(response => response.json())
     .then(data => {
@@ -1050,9 +1050,10 @@ quizLink = stringEnt;
           numberOfQuestions = data.length;
 	quizImageURL = "";
 	quizDifficulty = "";
+		let quizUrl = stringEnt;
 
           // Check quiz code and retrieve or save quiz info
-          const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
+          const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty, quizUrl);
 
           questions.push(...questionData);
           shuffleArray(questions);
