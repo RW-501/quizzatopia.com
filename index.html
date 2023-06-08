@@ -1137,8 +1137,12 @@ db.collection('quizzes').where('quizCodeDB', '==', quizCodeX).get()
     if (!querySnapshot.empty) {
       const quizLinkX = querySnapshot.docs[0].data().quizLinkDB;
       console.log(`quizLinkX: ${quizLinkX}`);
-      // Redirect to the quizLinkX page
-      // window.location.href = quizLinkX;
+
+	    
+	    
+	    
+	    // Redirect to the quizLinkX page
+       window.location.href = "/quiz"+quizLinkX;
     } else {
       console.log(`Quiz with code ${quizCodeX} does not exist.`);
     }
