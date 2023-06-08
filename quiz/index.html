@@ -786,7 +786,7 @@ function logStorageContents(quizCode) {
 	  
 	  
 	  
-//var quizLink = '';
+//var quizLinkURL = '';
 
 var  quizType = '';	  
     
@@ -909,9 +909,10 @@ async function saveQuizToDB(quiz) {
       imageURLDB: imageURLX,
       numberOfQuestionsDB: numberOfQuestionsX,
       quizLinkDB: quizLinkX,
-      quizDifficultyDB: difficulty2
-    });
-
+  quizLinkDB: urlParams,
+  quizDifficultyDB: difficulty2
+   });
+	  
     console.log(`Quiz with code ${quizCodeX} saved successfully.`);
   }
 }
@@ -1102,7 +1103,7 @@ quizUrl = stringEnt;
           numberOfQuestions = data.length;
 	quizImageURL = "";
 	quizDifficulty = "";
-		 quizUrl = stringEnt;
+		// quizUrl = stringEnt;
 
           // Check quiz code and retrieve or save quiz info
           const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty, quizUrl);
@@ -1164,14 +1165,15 @@ quizUrl = stringEnt;
         }
 	      
 	      
-quizDifficulty = typeof quizDifficulty !== 'undefined' ? quizDifficulty : '';
+quizDifficulty = typeof quizDifficulty !== 'undefined' ? quizDifficulty : "";
 
 const quizZZ = {
   quizCodeDB: quizCode,
   quizNameDB: quizName,
   imageURLDB: 'https://www.quizzatopia.com/images/sq/_.png',
   numberOfQuestionsDB: numberOfQuestions,
-  quizLinkDB: quizUrl,
+  quizJsonDB: quizUrl,
+  quizLinkDB: urlParams,
   quizDifficultyDB: quizDifficulty
 };
 
