@@ -916,12 +916,12 @@ function saveQuizToDB(quiz) {
 
     // Save quiz information to Firestore
     await quizRef.set({
-      quizCode: quizCodeX,
-      quizName: quizNameX,
-      imageURL: imageURLX,
-      numberOfQuestions: numberOfQuestionsX,
-      quizLink: quizLinkX,
-      quizDifficulty: difficulty2
+      quizCodeDB: quizCodeX,
+      quizNameDB: quizNameX,
+      imageURLDB: imageURLX,
+      numberOfQuestionsDB: numberOfQuestionsX,
+      quizLinkDB: quizLinkX,
+      quizDifficultyDB: difficulty2
     });
 
     console.log(`Quiz with code ${quizCodeX} saved successfully.`);
@@ -1119,14 +1119,15 @@ function fetchData(q, e) {
           // Display the test information
           displayTestInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
 		
-		
+		     quizDifficulty = typeof quizDifficulty !== 'undefined' ? quizDifficulty : '';
+
 		const quizZZ = {
-  quizCode: quizCode,
-  quizName: quizName,
-  imageURL: 'https://www.quizzatopia.com/images/sq/_.png',
-  numberOfQuestions: numberOfQuestions,
-  quizLink: quizUrl,
-  quizDifficulty: difficulty
+  quizCodeDB: quizCode,
+  quizNameDB: quizName,
+  imageURLDB: 'https://www.quizzatopia.com/images/sq/_.png',
+  numberOfQuestionsDB: numberOfQuestions,
+  quizLinkDB: quizUrl,
+  quizDifficultyDB: quizDifficulty
 };
 
 	
