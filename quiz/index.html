@@ -889,19 +889,7 @@ if (str.startsWith("TF")) {
 	  
 	  
 	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-
-  
-function saveQuizToDB(quiz) {
+async function saveQuizToDB(quiz) {
   const { quizCodeX, quizNameX, imageURLX, numberOfQuestionsX, quizLinkX, quizDifficultyX } = quiz;
 
   // Check if quiz already exists in Firestore
@@ -929,6 +917,15 @@ function saveQuizToDB(quiz) {
 }
 
   
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
 	  
 	  
 	  
@@ -1119,21 +1116,7 @@ function fetchData(q, e) {
           // Display the test information
           displayTestInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
 		
-		     quizDifficulty = typeof quizDifficulty !== 'undefined' ? quizDifficulty : '';
 
-		const quizZZ = {
-  quizCodeDB: quizCode,
-  quizNameDB: quizName,
-  imageURLDB: 'https://www.quizzatopia.com/images/sq/_.png',
-  numberOfQuestionsDB: numberOfQuestions,
-  quizLinkDB: quizUrl,
-  quizDifficultyDB: quizDifficulty
-};
-
-	
-		     console.log("quizDifficulty:", quizDifficulty);
-
-saveQuizToDB(quizZZ);
 	      
 		
         }
@@ -1179,6 +1162,12 @@ saveQuizToDB(quizZZ);
           // Display the test information
           displayTestInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
         }
+	      
+	      
+	      
+	      
+	      
+	      
       }
      })
     .catch(error => console.error(error));
