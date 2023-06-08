@@ -1,0 +1,224 @@
+{
+  "quizCode": "NCLEX456",
+  "quizName": "NCLEX Quiz - Management of Care",
+  "quizDifficulty": "Medium",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the role of the charge nurse in a healthcare setting?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Coordinate patient care",
+        "Administer medications",
+        "Perform surgery",
+        "Clean patient rooms"
+      ],
+      "answer": "Coordinate patient care",
+      "explanation": "The role of the charge nurse is to coordinate patient care, delegate tasks, and ensure efficient operations on the unit.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Delegation is transferring responsibility for the performance of a task to another individual.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Delegation involves transferring responsibility for the performance of a task to another individual while retaining accountability for the outcome.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the primary purpose of a nursing care plan?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Communicate the patient's preferences",
+        "Document the patient's medical history",
+        "Guide individualized patient care",
+        "Schedule nursing tasks"
+      ],
+      "answer": "Guide individualized patient care",
+      "explanation": "The primary purpose of a nursing care plan is to guide individualized patient care by identifying nursing diagnoses, goals, and interventions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What does this image represent?",
+      "imageURL": "https://example.com/image1.jpg",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Intravenous (IV) pump",
+        "Urinary catheter",
+        "Oxygen mask",
+        "Patient-controlled analgesia (PCA) pump"
+      ],
+      "answer": "Patient-controlled analgesia (PCA) pump",
+      "explanation": "The image represents a patient-controlled analgesia (PCA) pump, which allows patients to self-administer pain medication within predetermined limits.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "True or False: Confidentiality of patient information is protected under HIPAA.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Confidentiality of patient information is protected under HIPAA (Health Insurance Portability and Accountability Act) to ensure patient privacy and data security.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the purpose of a change-of-shift report in nursing?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Provide patient education",
+        "Perform physical assessments",
+        "Discuss patient diagnoses",
+        "Transfer patient care information"
+      ],
+      "answer": "Transfer patient care information",
+      "explanation": "The purpose of a change-of-shift report is to transfer patient care information between nursing shifts
+
+, ensuring continuity of care.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which of the following statements describes an autocratic leadership style?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Encourages team collaboration",
+        "Delegates decision-making authority",
+        "Maintains strict control over decisions",
+        "Provides individualized support"
+      ],
+      "answer": "Maintains strict control over decisions",
+      "explanation": "An autocratic leadership style involves maintaining strict control over decisions, with little input from team members.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "True or False: The nurse should prioritize care based on the severity of the patients' conditions.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The nurse should prioritize care based on the severity of the patients' conditions to ensure timely and appropriate interventions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the purpose of informed consent?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Provide legal protection for healthcare providers",
+        "Obtain permission to access medical records",
+        "Ensure patient autonomy and decision-making",
+        "Inform patients about the cost of healthcare services"
+      ],
+      "answer": "Ensure patient autonomy and decision-making",
+      "explanation": "The purpose of informed consent is to ensure patient autonomy and decision-making by providing patients with information about their healthcare options, risks, and benefits.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which of the following is an example of an interdisciplinary healthcare team?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Nursing team",
+        "Radiology team",
+        "Pharmacy team",
+        "Physical therapy team"
+      ],
+      "answer": "Physical therapy team",
+      "explanation": "An interdisciplinary healthcare team involves professionals from multiple disciplines, such as doctors, nurses, therapists, and social workers, working together to provide comprehensive care.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What does the acronym SBAR stand for in healthcare communication?",
+      "imageURL": "",
+      "questionType": "Fill in Blank",
+      "options": [],
+      "answer": "Situation, Background, Assessment, Recommendation",
+      "explanation": "SBAR stands for Situation, Background, Assessment, Recommendation, which is a standardized communication framework used in healthcare for handoff and reporting.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "True or False: Advocacy is the act of speaking up for the rights and interests of patients.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Advocacy involves speaking up for the rights and interests of patients, ensuring they receive safe and appropriate care.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the purpose of a disaster management plan in healthcare settings?",
+      "imageURL": "",
+      "question
+
+Type": "Multiple Choice",
+      "options": [
+        "Prevent workplace accidents",
+        "Promote employee wellness",
+        "Ensure compliance with regulations",
+        "Mitigate the impact of emergencies"
+      ],
+      "answer": "Mitigate the impact of emergencies",
+      "explanation": "The purpose of a disaster management plan is to mitigate the impact of emergencies, such as natural disasters or mass casualties, on healthcare facilities and patients.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which of the following is an example of a healthcare-associated infection (HAI)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Common cold",
+        "Influenza",
+        "Urinary tract infection (UTI)",
+        "Food poisoning"
+      ],
+      "answer": "Urinary tract infection (UTI)",
+      "explanation": "A urinary tract infection (UTI) acquired in a healthcare facility is an example of a healthcare-associated infection (HAI).",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What does this image represent?",
+      "imageURL": "https://example.com/image2.jpg",
+      "questionType": "Multiple Choice",
+      "options": [
+        "High fall risk",
+        "Hand hygiene station",
+        "Radiation hazard",
+        "Biohazard waste"
+      ],
+      "answer": "Biohazard waste",
+      "explanation": "The image represents a biohazard waste container, used for the safe disposal of potentially infectious materials.",
+      "difficulty": "Medium"
+    }
+  ]
+}
