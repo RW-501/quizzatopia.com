@@ -882,8 +882,63 @@ if (str.startsWith("TF")) {
 	  }
 	  
 	
+
 	  
-		
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+  
+function saveQuiz(quiz) {
+  const { quizCodeX, quizNameX, imageURLX, numberOfQuestionsX, quizLinkX, quizDifficultyX } = quiz;
+
+  // Check if quiz already exists in Firestore
+  const quizRef = db.collection('quizzes').doc(quizCodeX);
+  const quizDoc = await quizRef.get();
+
+  if (quizDoc.exists) {
+    console.log(`Quiz with code ${quizCodeX} already saved.`);
+  } else {
+    // Set quizDifficulty to an empty string if it is undefined
+    const difficulty2 = typeof quizDifficultyX !== 'undefined' ? quizDifficultyX : '';
+
+    // Save quiz information to Firestore
+    await quizRef.set({
+      quizCode: quizCodeX,
+      quizName: quizNameX,
+      imageURL: imageURLX,
+      numberOfQuestions: numberOfQuestionsX,
+      quizLink: quizLinkX,
+      quizDifficulty: difficulty2
+    });
+
+    console.log(`Quiz with code ${quizCodeX} saved successfully.`);
+  }
+}
+
+  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
 
 	  
  
@@ -1063,6 +1118,23 @@ function fetchData(q, e) {
 
           // Display the test information
           displayTestInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
+		
+		
+		const quiz = {
+  quizCode: quizCode,
+  quizName: quizName,
+  imageURL: 'https://www.quizzatopia.com/images/sq/_.png',
+  numberOfQuestions: numberOfQuestions,
+  quizLink: quizUrl,
+  quizDifficulty: difficulty
+};
+
+	
+		     console.log("quizDifficulty:", quizDifficulty);
+
+saveQuiz(quiz);
+	      
+		
         }
       } else {
         // Handle new JSON structure
@@ -1115,59 +1187,6 @@ function fetchData(q, e) {
 	  
 fetchData(q, e);
 
-/*
-	//////////////////////////////////////////////////////////////
-		*/
-		
-		     console.log("quizDifficulty:", quizDifficulty);
-
-	
-		
-		/*
-		
-		//////////////////////////////////////////////////////////
-		*/
-  
-function saveQuiz(quiz) {
-  const { quizCodeX, quizNameX, imageURLX, numberOfQuestionsX, quizLinkX, quizDifficultyX } = quiz;
-
-  // Check if quiz already exists in Firestore
-  const quizRef = db.collection('quizzes').doc(quizCodeX);
-  const quizDoc = await quizRef.get();
-
-  if (quizDoc.exists) {
-    console.log(`Quiz with code ${quizCodeX} already saved.`);
-  } else {
-    // Set quizDifficulty to an empty string if it is undefined
-    const difficulty2 = typeof quizDifficultyX !== 'undefined' ? quizDifficultyX : '';
-
-    // Save quiz information to Firestore
-    await quizRef.set({
-      quizCode: quizCodeX,
-      quizName: quizNameX,
-      imageURL: imageURLX,
-      numberOfQuestions: numberOfQuestionsX,
-      quizLink: quizLinkX,
-      quizDifficulty: difficulty2
-    });
-
-    console.log(`Quiz with code ${quizCodeX} saved successfully.`);
-  }
-}
-
-const quiz = {
-  quizCode: quizCode,
-  quizName: quizName,
-  imageURL: 'https://www.quizzatopia.com/images/sq/_.png',
-  numberOfQuestions: numberOfQuestions,
-  quizLink: quizUrl,
-  quizDifficulty: difficulty
-};
-
-
-	      
-saveQuiz(quiz);
-	      
 
 
 	      // Get the modal element
