@@ -1113,6 +1113,10 @@ async function saveQuiz(quiz) {
   if (quizDoc.exists) {
     console.log(`Quiz with code ${quizCode} already saved.`);
   } else {
+	  
+  // Set quizDifficulty to an empty string if it is undefined
+    const difficulty = typeof quizDifficulty !== 'undefined' ? quizDifficulty : '';
+
     // Save quiz information to Firestore
     await quizRef.set({
       quizCode,
@@ -1126,9 +1130,7 @@ async function saveQuiz(quiz) {
     console.log(`Quiz with code ${quizCode} saved successfully.`);
   }
 }
-    if (typeof quizDifficulty !== 'undefined') {
-        quizDifficulty = ''
-}
+ 
 // Example usage
 const quiz = {
   quizCode: quizCode,
@@ -1136,7 +1138,7 @@ const quiz = {
   imageURL: 'https://www.quizzatopia.com/images/sq/_.png',
   numberOfQuestions: numberOfQuestions,
   quizLink: quizLink,
-  quizDifficulty: quizDifficulty
+  quizDifficulty: difficulty
 };
 
 saveQuiz(quiz);
