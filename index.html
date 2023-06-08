@@ -1088,14 +1088,16 @@ font-size: 30px;
 <script>
 	  const db = firebase.firestore();
 
-	// Get the reference to the HTML containers
-const parentContainer = document.getElementById('parentContainer');
-const quizContainer = document.getElementById('updatedQuizzez');
+
 
 // Function to fetch quiz data from Firestore and update the HTML
 async function fetchQuizzesFromDB() {
     console.log('E???????????????????????????????????');
-
+	// Get the reference to the HTML containers
+const parentContainer = document.getElementById('parentContainer');
+const quizContainer = document.getElementById('updatedQuizzez');
+	
+	
   // Fetch the quizzes collection
   const querySnapshot = await db.collectionGroup('quizzes').get();
 
