@@ -1097,7 +1097,7 @@ async function fetchQuizzesFromDB() {
     console.log('E???????????????????????????????????');
 
   // Fetch the quizzes collection
-  const querySnapshot = await db.collection('quizzes').get();
+  const querySnapshot = await db.collectionGroup('quizzes').get();
 
   // Initialize the HTML string
   let html = '';
@@ -1113,7 +1113,7 @@ async function fetchQuizzesFromDB() {
           <div class="list-item box">
             <h5 class="list-title">${quizData.quizNameDB}</h5>
             <p class="list-description"># of Question: ${quizData.numberOfQuestionsDB} <br>
-	    Quiz Code: ${quizData.quizCodeDB} <br>
+	    Quiz Code: ${quizData.quizCodeDB}
 	
 	</p>
           </div>
