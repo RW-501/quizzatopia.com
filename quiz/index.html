@@ -909,17 +909,15 @@ if (str.startsWith("TF")) {
 	
 
 	  
-	  
 async function saveQuizToDB(quiz) {
   const { quizCodeX, quizNameX, imageURLX, numberOfQuestionsX, quizLinkX, quizDifficultyX } = quiz;
 
   const db = firebase.firestore();
 
   // Check if quiz already exists in Firestore
-  const quizRef = db.collection('quizzes').doc(quizCodeX);
-  const quizDoc = await quizRef.get();
+  const querySnapshot = await db.collection('quizzes').where('quizCodeDB', '==', quizCodeX).get();
 
-  if (quizDoc.exists) {
+  if (!querySnapshot.empty) {
     showPopup(`Quiz with code ${quizCodeX} already saved.`);
   } else {
     // Set quizDifficulty to an empty string if it is undefined
