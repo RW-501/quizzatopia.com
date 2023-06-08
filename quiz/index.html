@@ -793,7 +793,6 @@ var  quizType = '';
 // Get the current URL and parse its search parameters
 const urlParams = new URLSearchParams(window.location.search);
 	  console.log("1 urlParams     "+urlParams); 
-quizLink = urlParams;
 // Get the values of the "q" and "e" parameters
 var q = urlParams.get('q');
 var e = urlParams.get('e');
@@ -1018,7 +1017,8 @@ function fetchData(q, e) {
     stringEnt = "/q/" + q + ".json";
   }
      console.log("stringEnt URL:", stringEnt);
-
+	
+quizLink = stringEnt;
    fetch(stringEnt)
     .then(response => response.json())
     .then(data => {
