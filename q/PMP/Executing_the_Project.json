@@ -1,5 +1,8 @@
 {
-  "title": "PMP Certification Exam - Executing the Project",
+  "quizName": "PMP Certification Exam - Executing the Project",
+    "quizCode": "PMP2015",
+  "quizDifficulty": "Medium",
+  "numberOfQuestions": 15,
   "questions": [
     {
       "questionNumber": 1,
@@ -73,9 +76,7 @@
     },
     {
       "questionNumber": 7,
-      "question": "Fill in the blank: The process of ensuring that project deliverables meet quality
-
- requirements is called _________.",
+      "question": "Fill in the blank: The process of ensuring that project deliverables meet quality requirements is called _________.",
       "imageURL": "",
       "questionType": "Fill in the Blank",
       "options": [],
@@ -103,7 +104,10 @@
       "question": "True or False: The purpose of the Perform Quality Control process is to identify and resolve defects in project deliverables.",
       "imageURL": "",
       "questionType": "True/False",
-      "options": [],
+      "options": [
+        "True",
+        "False"
+      ],
       "answer": "True",
       "explanation": "True. The Perform Quality Control process aims to identify and resolve defects in project deliverables. It involves inspecting, testing, and verifying the quality of project outputs.",
       "difficulty": "Easy"
@@ -138,7 +142,10 @@
       "question": "True or False: The purpose of the Control Resources process is to ensure that project resources are effectively and efficiently utilized.",
       "imageURL": "",
       "questionType": "True/False",
-      "options": [],
+      "options": [
+        "True",
+        "False"
+      ],
       "answer": "True",
       "explanation": "True. The Control Resources process aims to ensure that project resources are effectively and efficiently utilized. It involves monitoring resource allocation, performance, and resolving resource-related issues.",
       "difficulty": "Easy"
@@ -149,9 +156,7 @@
       "imageURL": "",
       "questionType": "Fill in the Blank",
       "options": [],
-      "answer": "Monitor and Control Project Work
-
-",
+      "answer": "Monitor and Control Project Work",
       "explanation": "Monitor and Control Project Work is the process of tracking, reviewing, and reporting project progress against the project plan. It helps in identifying variances and taking corrective actions.",
       "difficulty": "Easy"
     },
@@ -175,7 +180,10 @@
       "question": "True or False: The purpose of the Validate Scope process is to formally accept completed project deliverables.",
       "imageURL": "",
       "questionType": "True/False",
-      "options": [],
+      "options": [
+        "True",
+        "False"
+      ],
       "answer": "True",
       "explanation": "True. The Validate Scope process involves formally accepting completed project deliverables. It ensures that the deliverables meet the specified requirements and satisfy the project stakeholders.",
       "difficulty": "Easy"
