@@ -815,14 +815,14 @@ var  quizType = '';
     
 // Get the current URL and parse its search parameters
 const urlParams = new URLSearchParams(window.location.search);
-	  console.log("1 urlParams     "+urlParams); 
+	//  console.log("1 urlParams     "+urlParams); 
 quizLinkURL = 	"/"+urlParams;
 
 // Get the values of the "q" and "e" parameters
 var q = urlParams.get('q');
 var e = urlParams.get('e');
 	  
-console.log("2 urlParams     "+q); 
+//console.log("2 urlParams     "+q); 
 	  
 	  
 if (q === null) {
@@ -851,7 +851,7 @@ if (q === null) {
 if (str.startsWith("TF_")) {
 	console.log("True/False     "); 
 //  q = str.substr(3); // Remove the first three characters
-	quizType = "True/False";
+//	quizType = "True/False";
 	document.getElementById("option_3").style.display= "none";
 	document.getElementById("option_4").style.display= "none";
 
@@ -860,7 +860,7 @@ if (str.startsWith("TF_")) {
 	document.getElementById("option_4").style.display= "initial";
 		quizType = "Multi-Choice";
 
-		console.log(" Multi-Choice     "); 
+		//console.log(" Multi-Choice     "); 
 
 }
 
@@ -896,7 +896,7 @@ document.getElementById("social_red").href = "https://www.reddit.com/submit?url=
 	  function removeTF(q) {
 
 // Use the value of "q"
-console.log("urlParams 875:    "+q); 
+//console.log("urlParams 875:    "+q); 
 
 if (str.startsWith("TF")) {
  q = str.substr(2); // Remove the first three characters
@@ -1218,20 +1218,7 @@ const quizZZ = {
   quizDifficultyX: quizDifficulty
 };
 
-	      /*
-	      	      
-const quizZZ = {
-  quizCodeDB: `${quizCode}`,
-  quizNameDB: `${quizName}`,
-  imageURLDB: `https://www.quizzatopia.com/images/sq/_.png`,
-  numberOfQuestionsDB: numberOfQuestions,
-  quizJsonDB: `${quizUrl}`,
-  quizLinkDB: `${quizLinkURL}`,
-  quizDifficultyDB: `${quizDifficulty}`
-};
-*/
 
-console.log("quizDifficulty:", quizDifficulty);
 console.log("quizZZ:", quizZZ);
 
 saveQuizToDB(quizZZ);
