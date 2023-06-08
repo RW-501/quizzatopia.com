@@ -1,0 +1,184 @@
+{
+  "title": "PMP Certification Exam - Planning the Project",
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Fill in the blank: The process of determining the project objectives and defining the project deliverables is called _________.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Project scope planning",
+      "explanation": "Project scope planning is the process of determining the project objectives and defining the project deliverables. It involves identifying what is included and excluded from the project.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which of the following is NOT a component of a project scope statement?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Project objectives",
+        "Project schedule",
+        "Project deliverables",
+        "Project constraints"
+      ],
+      "answer": "Project schedule",
+      "explanation": "A project scope statement includes project objectives, deliverables, constraints, assumptions, and other relevant information. The project schedule is part of the project management plan.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "True or False: A project schedule defines the start and end dates of project activities and the sequence in which they will be performed.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. A project schedule defines the start and end dates of project activities and the sequence in which they will be performed. It helps in managing project timelines.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Fill in the blank: A project network diagram illustrates the _________ of project activities.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "sequence",
+      "explanation": "A project network diagram illustrates the sequence of project activities. It shows the logical relationships between activities and helps in identifying critical path and dependencies.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which of the following is an output of the Define Activities process?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Project scope statement",
+        "Project network diagram",
+        "Stakeholder register",
+        "Resource calendar"
+      ],
+      "answer": "Project network diagram",
+      "explanation": "The Define Activities process outputs the project network diagram, which illustrates the sequence of project activities and their relationships.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "True or False: The critical path in a project schedule is the longest sequence of dependent activities that determines the project's duration.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. The critical path in a project schedule is the longest sequence of dependent activities that determines the project's duration. Any delay in activities on the critical path will directly impact the project's timeline.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Fill in the blank: Resource leveling is a technique used to adjust the _________ of resources over time.",
+      "imageURL": "",
+      "questionType":
+
+ "Fill in the Blank",
+      "options": [],
+      "answer": "allocation",
+      "explanation": "Resource leveling is a technique used to adjust the allocation of resources over time. It aims to optimize resource utilization and avoid resource overloading or underutilization.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which of the following is an output of the Estimate Activity Durations process?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Project network diagram",
+        "Activity attributes",
+        "Project schedule",
+        "Resource calendar"
+      ],
+      "answer": "Activity attributes",
+      "explanation": "The Estimate Activity Durations process outputs activity attributes, which include information such as activity durations, resource requirements, and constraints. They provide detailed information about each activity.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "True or False: Resource histogram is a graphical representation of resource availability over time.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. A resource histogram is a graphical representation of resource availability over time. It helps in visualizing resource utilization and identifying potential resource conflicts.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Fill in the blank: A project baseline includes the approved _________, cost, and schedule for the project.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "scope",
+      "explanation": "A project baseline includes the approved scope, cost, and schedule for the project. It serves as a reference point for project performance measurement and control.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which of the following is an output of the Develop Schedule process?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Project charter",
+        "Project network diagram",
+        "Project schedule",
+        "Risk register"
+      ],
+      "answer": "Project schedule",
+      "explanation": "The Develop Schedule process outputs the project schedule, which defines the start and end dates of project activities and the sequence in which they will be performed.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "True or False: A resource calendar specifies the working days and shifts for project team members.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. A resource calendar specifies the working days and shifts for project team members. It helps in managing resource availability and planning project activities.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Fill in the blank: The Perform Qualitative Risk Analysis process assesses risks based on their _________ and impact.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "likelihood",
+      "explanation": "The Perform Qualitative Risk Analysis process assesses risks based on their likelihood and impact. It helps in prioritizing risks for further analysis and response planning.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which of the following is an output of the Control Schedule
+
+ process?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Project network diagram",
+        "Project schedule",
+        "Resource histogram",
+        "Risk register"
+      ],
+      "answer": "Project schedule",
+      "explanation": "The Control Schedule process outputs the project schedule, which is updated based on actual progress and changes. It helps in monitoring and controlling project timelines.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "True or False: A project baseline is generally not subject to change throughout the project lifecycle.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "False",
+      "explanation": "False. A project baseline is subject to change throughout the project lifecycle. Changes may occur due to approved change requests, unforeseen circumstances, or other factors. However, changes to the baseline should be managed and controlled.",
+      "difficulty": "Easy"
+    }
+  ]
+}
