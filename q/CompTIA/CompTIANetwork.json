@@ -1,0 +1,394 @@
+{
+  "examTitle": "CompTIA Network+ Quiz",
+  "examDescription": "The Network+ exam covers various networking topics, including networking concepts, infrastructure, operations, security, and troubleshooting.",
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which of the following is a common network topology?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Star",
+        "Square",
+        "Triangle",
+        "Circle"
+      ],
+      "answer": "Star",
+      "explanation": "A star topology is a common network topology where all devices are connected to a central device, such as a switch.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which of the following is a protocol used for secure communication over a network?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "HTTP",
+        "FTP",
+        "SMTP",
+        "HTTPS"
+      ],
+      "answer": "HTTPS",
+      "explanation": "HTTPS (Hypertext Transfer Protocol Secure) is a protocol used for secure communication over a network, commonly used for secure web browsing.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "True or False: A firewall is a security device that monitors and controls incoming and outgoing network traffic based on predetermined security rules.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. A firewall is a security device that monitors and controls incoming and outgoing network traffic based on predetermined security rules.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which of the following network devices operates at Layer 2 of the OSI model?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Router",
+        "Switch",
+        "Firewall",
+        "Hub"
+      ],
+      "answer": "Switch",
+      "explanation": "A switch operates at Layer 2 of the OSI model. It uses MAC addresses to forward network traffic between connected devices.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Fill in the blank: IP stands for _________.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Internet Protocol",
+      "explanation": "IP stands for Internet Protocol. It is a network protocol that enables communication between devices over an IP network.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which of the following IP address ranges is reserved for private networks?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "10.0.0.0 - 10.255.255.255",
+        "172.16.0.0 - 172.31.255.255",
+        "192.168.0.0 - 192.168.255.255",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "All of the given IP address ranges are reserved for private networks.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "True or False: DNS is responsible for translating domain names into IP
+
+ addresses.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. DNS (Domain Name System) is responsible for translating domain names into IP addresses.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which of the following is a wireless encryption standard?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "WEP",
+        "SSL",
+        "SSH",
+        "DNS"
+      ],
+      "answer": "WEP",
+      "explanation": "WEP (Wired Equivalent Privacy) is a wireless encryption standard used to secure wireless networks. However, it is considered weak and vulnerable to attacks.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Fill in the blank: DHCP stands for _________.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Dynamic Host Configuration Protocol",
+      "explanation": "DHCP stands for Dynamic Host Configuration Protocol. It is a network protocol that dynamically assigns IP addresses and other network configuration parameters to devices.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which of the following is used to identify devices on a network?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "MAC address",
+        "IP address",
+        "Domain name",
+        "URL"
+      ],
+      "answer": "IP address",
+      "explanation": "An IP address is used to identify devices on a network. It is a unique numeric identifier assigned to each device connected to an IP network.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "True or False: VLANs (Virtual Local Area Networks) can be used to segment a physical network into multiple logical networks.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. VLANs can be used to segment a physical network into multiple logical networks, providing enhanced network security and flexibility.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which of the following is a protocol used for transferring files over a network?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "HTTP",
+        "FTP",
+        "SMTP",
+        "TCP"
+      ],
+      "answer": "FTP",
+      "explanation": "FTP (File Transfer Protocol) is a protocol used for transferring files over a network. It allows users to upload and download files to and from a remote server.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Fill in the blank: OSI stands for _________.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Open Systems Interconnection",
+      "explanation": "OSI stands for Open Systems Interconnection. It is a conceptual framework that standardizes the functions of a communication system into seven layers.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which of the following is a protocol used for email retrieval?",
+      "imageURL": "",
+      "questionType
+
+": "Multiple Choice",
+      "options": [
+        "HTTP",
+        "FTP",
+        "SMTP",
+        "POP3"
+      ],
+      "answer": "POP3",
+      "explanation": "POP3 (Post Office Protocol 3) is a protocol used for email retrieval from a mail server. It downloads emails from the server to a client device.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "True or False: NAT (Network Address Translation) is used to translate private IP addresses to public IP addresses for internet communication.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. NAT (Network Address Translation) is used to translate private IP addresses to public IP addresses for internet communication.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 16,
+      "question": "Which of the following is a common DNS record type?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer": "A",
+      "explanation": "A (Address) is a common DNS record type used to map a domain name to an IP address.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 17,
+      "question": "Fill in the blank: VPN stands for _________.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Virtual Private Network",
+      "explanation": "VPN stands for Virtual Private Network. It provides secure and encrypted communication over a public network, such as the internet.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 18,
+      "question": "Which of the following is a protocol used for sending email?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "HTTP",
+        "FTP",
+        "SMTP",
+        "DNS"
+      ],
+      "answer": "SMTP",
+      "explanation": "SMTP (Simple Mail Transfer Protocol) is a protocol used for sending email. It is responsible for the transmission and delivery of email messages.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 19,
+      "question": "True or False: In a full-duplex communication mode, data can be transmitted in both directions simultaneously.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. In full-duplex communication mode, data can be transmitted in both directions simultaneously, allowing for faster and more efficient communication.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 20,
+      "question": "Which of the following is a network security best practice?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Disabling automatic software updates",
+        "Using weak passwords",
+        "Disabling firewall",
+        "Regularly updating antivirus software"
+      ],
+      "answer": "Regularly updating antivirus software",
+      "explanation": "Regularly updating antivirus software is a network security best practice. It helps protect against new and emerging threats by keeping the antivirus definitions up to date.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 21,
+      "question": "Fill in the blank: PoE stands
+
+ for _________.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Power over Ethernet",
+      "explanation": "PoE stands for Power over Ethernet. It is a technology that allows the transmission of electrical power and data over Ethernet cables.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 22,
+      "question": "Which of the following is a protocol used for secure remote access to a network?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "HTTP",
+        "FTP",
+        "SSH",
+        "SMTP"
+      ],
+      "answer": "SSH",
+      "explanation": "SSH (Secure Shell) is a protocol used for secure remote access to a network. It provides encrypted communication and secure remote command execution.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 23,
+      "question": "True or False: RADIUS is a protocol used for centralized authentication, authorization, and accounting for network access.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. RADIUS (Remote Authentication Dial-In User Service) is a protocol used for centralized authentication, authorization, and accounting for network access.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 24,
+      "question": "Which of the following is a device used to connect multiple networks together and route network traffic between them?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Router",
+        "Switch",
+        "Firewall",
+        "Bridge"
+      ],
+      "answer": "Router",
+      "explanation": "A router is a device used to connect multiple networks together and route network traffic between them. It operates at Layer 3 of the OSI model.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 25,
+      "question": "Fill in the blank: MAC stands for _________.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Media Access Control",
+      "explanation": "MAC stands for Media Access Control. It is a unique identifier assigned to a network interface card (NIC) by the manufacturer.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 26,
+      "question": "Which of the following is a protocol used for secure email communication?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "HTTP",
+        "FTP",
+        "SMTP",
+        "S/MIME"
+      ],
+      "answer": "S/MIME",
+      "explanation": "S/MIME (Secure/Multipurpose Internet Mail Extensions) is a protocol used for secure email communication. It provides encryption and digital signing of email messages.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 27,
+      "question": "True or False: Load balancing is a technique used to distribute network traffic evenly across multiple servers to optimize performance and ensure high availability.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. Load balancing is a technique used to distribute network traffic evenly across multiple servers to optimize performance and ensure high availability.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 28,
+      "
+
+question": "Which of the following is a protocol used for secure remote management of network devices?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "HTTP",
+        "FTP",
+        "SNMP",
+        "Telnet"
+      ],
+      "answer": "SNMP",
+      "explanation": "SNMP (Simple Network Management Protocol) is a protocol used for secure remote management of network devices. It allows monitoring and management of network devices.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 29,
+      "question": "Fill in the blank: SSL/TLS stands for _________.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Secure Sockets Layer/Transport Layer Security",
+      "explanation": "SSL/TLS (Secure Sockets Layer/Transport Layer Security) is a protocol used for secure communication over a network, commonly used for secure web browsing.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 30,
+      "question": "Which of the following is a network troubleshooting command used to test network connectivity?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "PING",
+        "TRACERT",
+        "IPCONFIG",
+        "NETSTAT"
+      ],
+      "answer": "PING",
+      "explanation": "PING is a network troubleshooting command used to test network connectivity. It sends ICMP echo requests to a target IP address or domain name.",
+      "difficulty": "Medium"
+    }
+  ]
+}
