@@ -83,9 +83,7 @@
       "questionNumber": 7,
       "question": "Fill in the blank: HTTPS stands for _________.",
       "imageURL": "",
-      "question
-
-Type": "Fill in the Blank",
+      "questionType": "Fill in the Blank",
       "options": [],
       "answer": "Hypertext Transfer Protocol Secure",
       "explanation": "HTTPS stands for Hypertext Transfer Protocol Secure. It is a secure version of the HTTP protocol used for secure communication over a network.",
@@ -169,9 +167,7 @@ Type": "Fill in the Blank",
     {
       "questionNumber": 14,
       "question": "Which of the following is an example of a two-factor authentication method?",
-      "
-
-imageURL": "",
+      "imageURL": "",
       "questionType": "Multiple Choice",
       "options": [
         "Username and password",
@@ -213,7 +209,10 @@ imageURL": "",
       "question": "True or False: A DDoS (Distributed Denial of Service) attack is a type of attack where multiple compromised computers are used to flood a target system or network with traffic.",
       "imageURL": "",
       "questionType": "True/False",
-      "options": [],
+      "options": [
+        "True",
+        "False"
+      ],
       "answer": "True",
       "explanation": "True. A DDoS (Distributed Denial of Service) attack is a type of attack where multiple compromised computers are used to flood a target system or network with traffic, causing service disruption.",
       "difficulty": "Easy"
@@ -250,9 +249,7 @@ imageURL": "",
       "questionType": "True/False",
       "options": [],
       "answer": "False",
-      "explanation": "False. Full disk encryption is a security measure that encrypts the
-
- entire contents of a computer's hard drive, including the operating system, applications, and data.",
+      "explanation": "False. Full disk encryption is a security measure that encrypts the entire contents of a computer's hard drive, including the operating system, applications, and data.",
       "difficulty": "Easy"
     },
     {
@@ -300,7 +297,10 @@ imageURL": "",
       "question": "True or False: Two-factor authentication requires the use of two different authentication factors for increased security.",
       "imageURL": "",
       "questionType": "True/False",
-      "options": [],
+      "options": [
+        "True",
+        "False"
+      ],
       "answer": "True",
       "explanation": "True. Two-factor authentication requires the use of two different authentication factors, such as a password and a fingerprint, to verify the identity of a user.",
       "difficulty": "Easy"
@@ -337,8 +337,6 @@ imageURL": "",
       "questionType": "Multiple Choice",
       "options": [
         "Firewall",
-       
-
  "Antivirus software",
         "Cross-site scripting (XSS)",
         "Patch management"
@@ -352,7 +350,10 @@ imageURL": "",
       "question": "True or False: Intrusion detection systems (IDS) are designed to prevent unauthorized access and attacks on a network.",
       "imageURL": "",
       "questionType": "True/False",
-      "options": [],
+      "options": [
+        "True",
+        "False"
+      ],
       "answer": "False",
       "explanation": "False. Intrusion detection systems (IDS) are designed to detect and alert on potential security breaches or unauthorized activities on a network. They do not prevent them.",
       "difficulty": "Easy"
