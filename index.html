@@ -1134,27 +1134,21 @@ function getQuizLink() {
 	const db = firebase.firestore();
 
 	
-  // Retrieve the quiz link based on the quizCodeX
-  const quizRef = db.collection('quizzes').doc(quizCodeX);
-  quizRef.get().then((quizDoc) => {
-    if (quizDoc.exists) {
-      // Get the quiz link from the document data
-      const quizLinkX = quizDoc.data().quizLinkX;
-
-      // Redirect the user to the quiz link
-      window.location.href = quizLinkX;
-    } else {
-      // Quiz with the given quizCodeX does not exist
-      alert('Quiz not found!');
-    }
-  }).catch((error) => {
-    // Error occurred while retrieving the quiz link
-    console.error('Error getting quiz link:', error);
-  });
+  db.collection('quizzes').doc(quizCodeX).get()
+    .then((doc) => {
+      if (doc.exists) {
+        const quizLinkX = doc.data().quizLinkDB;
+        window.location.href = quizLinkX;
+      } else {
+        console.log(`Quiz with code ${quizCodeX} does not exist.`);
+      }
+    })
+    .catch((error) => {
+      console.log('Error getting quiz link:', error);
+    });
 }
+	
 
-	
-	
 	
 	
 	
