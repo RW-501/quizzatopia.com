@@ -1,0 +1,233 @@
+{
+  "quizCode": "NCLEX1015",
+  "quizName": "NCLEX Quiz - Pharmacological and Parenteral Therapies",
+  "quizDifficulty": "Medium",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which of the following is an example of an enteral route of medication administration?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Intravenous (IV) infusion",
+        "Subcutaneous injection",
+        "Intramuscular injection",
+        "Oral tablet"
+      ],
+      "answer": "Oral tablet",
+      "explanation": "The enteral route of medication administration involves administering medications orally, such as through tablets, capsules, or liquids that are swallowed and absorbed through the gastrointestinal tract.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the primary purpose of using an intravenous (IV) infusion pump?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Prevent infection at the IV site",
+        "Control the rate of medication administration",
+        "Monitor vital signs during infusion",
+        "Ensure patient comfort during infusion"
+      ],
+      "answer": "Control the rate of medication administration",
+      "explanation": "An intravenous (IV) infusion pump is used to control and regulate the rate of medication administration, ensuring accurate and controlled delivery of medications or fluids into the patient's bloodstream.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which of the following is an appropriate nursing intervention when administering subcutaneous injections?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Inject the medication at a 90-degree angle",
+        "Pinch the skin before injection",
+        "Massage the injection site after administration",
+        "Use a large-gauge needle for faster absorption"
+      ],
+      "answer": "Pinch the skin before injection",
+      "explanation": "When administering subcutaneous injections, it is appropriate to pinch the skin at the injection site to create a skin fold, which helps ensure that the medication is injected into the subcutaneous tissue and not into muscle.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "True or False: Intramuscular (IM) injections are commonly administered into the adipose tissue.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Intramuscular (IM) injections are administered directly into muscle tissue rather than adipose tissue. This route allows for faster absorption and distribution of medications.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which of the following is an appropriate nursing intervention to prevent medication errors during administration?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Double-check the medication label with another nurse",
+        "Administer medications without interruption",
+        "Avoid documenting medication administration",
+        "Store medications in an unsecured location"
+      ],
+      "answer": "Double-check the medication label with another nurse",
+      "explanation": "Double-checking the medication label with another nurse is an appropriate nursing intervention to prevent medication errors. It helps ensure that the right medication is being administered to the right patient
+
+ in the right dose and route.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which of the following is an example of a topical medication?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Oral capsule",
+        "Intravenous (IV) infusion",
+        "Eye drops",
+        "Intramuscular injection"
+      ],
+      "answer": "Eye drops",
+      "explanation": "Topical medications are applied to the skin or mucous membranes and include ointments, creams, lotions, and eye drops. They are intended for local effects on the area of application.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which of the following is an appropriate nursing intervention to ensure medication safety when administering intravenous (IV) medications?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Administer IV medications quickly to save time",
+        "Use the same IV line for multiple medications",
+        "Monitor the patient for any adverse reactions",
+        "Avoid verifying the medication label with another nurse"
+      ],
+      "answer": "Monitor the patient for any adverse reactions",
+      "explanation": "Monitoring the patient for any adverse reactions is an important nursing intervention to ensure medication safety when administering intravenous (IV) medications. It allows for early detection and management of any potential complications.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "True or False: Intravenous (IV) medications bypass the gastrointestinal (GI) tract and are absorbed directly into the bloodstream.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Intravenous (IV) medications are administered directly into the bloodstream, bypassing the gastrointestinal (GI) tract. This allows for rapid and complete absorption of the medication.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which of the following is an appropriate nursing intervention when administering ear drops to a pediatric patient?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Administer the drops while the child is lying on the unaffected ear",
+        "Pull the pinna downward and backward to straighten the ear canal",
+        "Insert the dropper directly into the ear canal",
+        "Irrigate the ear canal after administering the drops"
+      ],
+      "answer": "Pull the pinna downward and backward to straighten the ear canal",
+      "explanation": "When administering ear drops to a pediatric patient, it is appropriate to pull the pinna downward and backward to straighten the ear canal. This helps ensure accurate and proper instillation of the medication.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which of the following is an appropriate nursing intervention when administering medications via a nasogastric tube?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Administer medications in a large bolus",
+        "Flush the tube with a small amount of water before and after medication administration",
+        "Use a small syringe for administration",
+        "Administer medications without checking for tube placement"
+      ],
+      "answer": "Flush the tube with a small amount of water before and after medication administration",
+      "explanation": "Fl
+
+ushing the nasogastric tube with a small amount of water before and after medication administration helps ensure that the medication is fully delivered and prevents clogging of the tube. It also helps prevent medication residue from remaining in the tube.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which of the following is an appropriate nursing intervention to promote patient safety during medication administration?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Administer medications without washing hands",
+        "Administer medications without explaining the purpose to the patient",
+        "Administer medications without reviewing the patient's allergies",
+        "Administer medications with proper identification of the patient"
+      ],
+      "answer": "Administer medications with proper identification of the patient",
+      "explanation": "Administering medications with proper identification of the patient, such as using two patient identifiers, is an important nursing intervention to promote patient safety during medication administration. It helps prevent medication errors and ensures that the right medication is given to the right patient.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which of the following is an appropriate nursing intervention when administering intramuscular (IM) injections?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Use a small-gauge needle for faster absorption",
+        "Aspirate for blood return before injection",
+        "Inject the medication rapidly",
+        "Apply pressure to the injection site after administration"
+      ],
+      "answer": "Apply pressure to the injection site after administration",
+      "explanation": "Applying pressure to the injection site after administering an intramuscular (IM) injection helps reduce the risk of bleeding and promotes the absorption of the medication. It also helps minimize discomfort or pain at the injection site.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "True or False: Intradermal (ID) injections are commonly used for administering vaccines.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Intradermal (ID) injections are commonly used for administering vaccines, such as the tuberculin skin test (PPD) and allergy testing. The injection is given just below the dermis layer of the skin.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which of the following is an appropriate nursing intervention when administering medication via a metered-dose inhaler (MDI)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Administer the medication during exhalation",
+        "Shake the MDI vigorously before use",
+        "Place the mouthpiece of the MDI between the teeth",
+        "Inhale rapidly and deeply after activating the MDI"
+      ],
+      "answer": "Inhale rapidly and deeply after activating the MDI",
+      "explanation": "When administering medication via a metered-dose inhaler (MDI), it is important for the patient to inhale rapidly and deeply after activating the MDI. This helps ensure optimal delivery of the medication into the lungs.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which of the following is an appropriate nursing intervention to prevent complications during intravenous (IV) therapy?",
+      "imageURL": "",
+      "questionType
+
+": "Multiple Choice",
+      "options": [
+        "Change the IV site once a week",
+        "Keep the IV site uncovered",
+        "Use a small-gauge catheter for rapid infusion",
+        "Monitor the IV site for signs of infiltration or phlebitis"
+      ],
+      "answer": "Monitor the IV site for signs of infiltration or phlebitis",
+      "explanation": "Monitoring the intravenous (IV) site for signs of infiltration or phlebitis is an appropriate nursing intervention to prevent complications during IV therapy. It allows for early detection and intervention to prevent further complications.",
+      "difficulty": "Medium"
+    }
+  ]
+}
