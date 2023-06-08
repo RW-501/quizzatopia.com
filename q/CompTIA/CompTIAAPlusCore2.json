@@ -91,9 +91,7 @@
         "Android"
       ],
       "answer": "Linux",
-      "
-
-explanation": "Linux is an example of a command-line interface (CLI) operating system. While Linux distributions also provide graphical user interfaces (GUI), the CLI is commonly used for advanced configuration and administration tasks.",
+      "explanation": "Linux is an example of a command-line interface (CLI) operating system. While Linux distributions also provide graphical user interfaces (GUI), the CLI is commonly used for advanced configuration and administration tasks.",
       "difficulty": "Medium"
     },
     {
@@ -177,8 +175,6 @@ explanation": "Linux is an example of a command-line interface (CLI) operating s
       "imageURL": "",
       "questionType": "Multiple Choice",
       "options": [
-
-
         "Installing a trusted antivirus app",
         "Using public Wi-Fi networks",
         "Disabling screen lock",
@@ -264,9 +260,7 @@ explanation": "Linux is an example of a command-line interface (CLI) operating s
       "difficulty": "Medium"
     },
     {
-      "question
-
-Number": 18,
+      "questionNumber": 18,
       "question": "Which of the following is an example of a system utility?",
       "imageURL": "",
       "questionType": "Multiple Choice",
@@ -352,9 +346,7 @@ Number": 18,
         "Virtual private network (VPN)"
       ],
       "answer": "Home network with multiple devices",
-      "explanation": "A home network with multiple devices is an example of a peer-to-peer (P2P) network. In a P2P network, devices can directly communicate and share resources with each
-
- other without relying on a centralized server.",
+      "explanation": "A home network with multiple devices is an example of a peer-to-peer (P2P) network. In a P2P network, devices can directly communicate and share resources with each other without relying on a centralized server.",
       "difficulty": "Medium"
     },
     {
@@ -441,9 +433,7 @@ Number": 18,
         "Slower system performance",
         "Increased vulnerability to security threats",
         "Improved compatibility with outdated software",
-        "Fixes for software bugs
-
- and vulnerabilities"
+        "Fixes for software bugs and vulnerabilities"
       ],
       "answer": "Fixes for software bugs and vulnerabilities",
       "explanation": "Regular software updates provide fixes for software bugs and vulnerabilities. They help improve the performance, stability, and security of the software.",
