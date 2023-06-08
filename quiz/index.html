@@ -921,13 +921,11 @@ if (str.startsWith("TF")) {
 const quizRef = db.collection('quizzes').doc(quizCodeX);
   const quizDoc = await quizRef.get();
 
-if (quizDoc.data()) {
-  showPopup(`Quiz with code ${quizCodeX} already saved.`);
-} else {
+  if (quizDoc.exists) {
+	  
     // Set quizDifficulty to an empty string if it is undefined
     const difficulty2 = typeof quizDifficultyX !== 'undefined' ? quizDifficultyX : '';
-
-    // Save quiz information to Firestore
+	      // Save quiz information to Firestore
     await quizRef.set({
       quizCodeDB: quizCodeX,
       quizNameDB: quizNameX,
@@ -936,7 +934,24 @@ if (quizDoc.data()) {
       quizLinkDB: quizLinkX,
       quizDifficultyDB: difficulty2
     });
+	  
+	  
+  showPopup(`Quiz with code ${quizCodeX} already saved.`);
+} else {
+    // Set quizDifficulty to an empty string if it is undefined
+    const difficulty2 = typeof quizDifficultyX !== 'undefined' ? quizDifficultyX : '';
 
+
+    // Save quiz information to Firestore with an automatically generated document ID
+    await db.collection('quizzes').add({
+      quizCodeDB: quizCodeX,
+      quizNameDB: quizNameX,
+      imageURLDB: imageURLX,
+      numberOfQuestionsDB: numberOfQuestionsX,
+      quizLinkDB: quizLinkX,
+      quizDifficultyDB: difficulty2
+    });
+	
     showPopup(`Quiz with code ${quizCodeX} saved successfully.`);
   }
 }
