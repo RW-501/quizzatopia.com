@@ -40,7 +40,10 @@
       "question": "True or False: A firewall is a security device that monitors and controls incoming and outgoing network traffic based on predetermined security rules.",
       "imageURL": "",
       "questionType": "True/False",
-      "options": [],
+      "options": [
+        "True",
+        "False"
+      ],
       "answer": "True",
       "explanation": "True. A firewall is a security device that monitors and controls incoming and outgoing network traffic based on predetermined security rules.",
       "difficulty": "Easy"
@@ -87,12 +90,13 @@
     },
     {
       "questionNumber": 7,
-      "question": "True or False: DNS is responsible for translating domain names into IP
-
- addresses.",
+      "question": "True or False: DNS is responsible for translating domain names into IP addresses.",
       "imageURL": "",
       "questionType": "True/False",
-      "options": [],
+      "options": [
+        "True",
+        "False"
+      ],
       "answer": "True",
       "explanation": "True. DNS (Domain Name System) is responsible for translating domain names into IP addresses.",
       "difficulty": "Easy"
@@ -142,7 +146,10 @@
       "question": "True or False: VLANs (Virtual Local Area Networks) can be used to segment a physical network into multiple logical networks.",
       "imageURL": "",
       "questionType": "True/False",
-      "options": [],
+      "options": [
+        "True",
+        "False"
+      ],
       "answer": "True",
       "explanation": "True. VLANs can be used to segment a physical network into multiple logical networks, providing enhanced network security and flexibility.",
       "difficulty": "Easy"
@@ -176,9 +183,7 @@
       "questionNumber": 14,
       "question": "Which of the following is a protocol used for email retrieval?",
       "imageURL": "",
-      "questionType
-
-": "Multiple Choice",
+      "questionType": "Multiple Choice",
       "options": [
         "HTTP",
         "FTP",
@@ -194,7 +199,10 @@
       "question": "True or False: NAT (Network Address Translation) is used to translate private IP addresses to public IP addresses for internet communication.",
       "imageURL": "",
       "questionType": "True/False",
-      "options": [],
+      "options": [
+        "True",
+        "False"
+      ],
       "answer": "True",
       "explanation": "True. NAT (Network Address Translation) is used to translate private IP addresses to public IP addresses for internet communication.",
       "difficulty": "Easy"
@@ -244,7 +252,10 @@
       "question": "True or False: In a full-duplex communication mode, data can be transmitted in both directions simultaneously.",
       "imageURL": "",
       "questionType": "True/False",
-      "options": [],
+      "options": [
+        "True",
+        "False"
+      ],
       "answer": "True",
       "explanation": "True. In full-duplex communication mode, data can be transmitted in both directions simultaneously, allowing for faster and more efficient communication.",
       "difficulty": "Easy"
@@ -266,9 +277,7 @@
     },
     {
       "questionNumber": 21,
-      "question": "Fill in the blank: PoE stands
-
- for _________.",
+      "question": "Fill in the blank: PoE stands for _________.",
       "imageURL": "",
       "questionType": "Fill in the Blank",
       "options": [],
@@ -353,9 +362,7 @@
     },
     {
       "questionNumber": 28,
-      "
-
-question": "Which of the following is a protocol used for secure remote management of network devices?",
+      "question": "Which of the following is a protocol used for secure remote management of network devices?",
       "imageURL": "",
       "questionType": "Multiple Choice",
       "options": [
