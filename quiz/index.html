@@ -918,12 +918,12 @@ if (str.startsWith("TF")) {
   const db = firebase.firestore();
 
   // Check if quiz already exists in Firestore
-  const quizRef = db.collection('quizzes').doc();
+const quizRef = db.collection('quizzes').doc(quizCodeX);
   const quizDoc = await quizRef.get();
 
-  if (quizDoc.exists) {
-    showPopup(`Quiz with code ${quizCodeX} already saved.`);
-  } else {
+if (quizDoc.data()) {
+  showPopup(`Quiz with code ${quizCodeX} already saved.`);
+} else {
     // Set quizDifficulty to an empty string if it is undefined
     const difficulty2 = typeof quizDifficultyX !== 'undefined' ? quizDifficultyX : '';
 
