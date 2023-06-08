@@ -1138,7 +1138,10 @@ function getQuizLink() {
       if (!querySnapshot.empty) {
         const quizLinkX = querySnapshot.docs[0].data().quizLinkDB;
         // Redirect to the quizLinkX page
-        window.location.href = quizLinkX;
+     
+	              console.log(`quizLinkX: ${quizLinkX} `);
+
+	      //   window.location.href = quizLinkX;
       } else {
         console.log(`Quiz with code ${quizCodeX} does not exist.`);
       }
