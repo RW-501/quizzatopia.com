@@ -1108,7 +1108,7 @@ const quizContainer = document.getElementById('updatedQuizzez');
   querySnapshot.forEach((doc) => {
     const quizData = doc.data();
 
-/*    // Generate the HTML for each quiz
+	  // Generate the HTML for each quiz
     const quizHtml = `
       <div class="col-lg-12">
         <a href="${quizData.quizLinkDB}">
@@ -1122,14 +1122,12 @@ const quizContainer = document.getElementById('updatedQuizzez');
         </a>
       </div>
     `;
-*/
-	  
-	      const quizHtml = `Test  `;
+
 
     // Append the quiz HTML to the overall HTML string
     html += quizHtml;
   });
-
+html = "?????????????????????????????????????????????????????????";
   // Update the quizContainer with the generated HTML
   quizContainer.innerHTML = html;
 }
