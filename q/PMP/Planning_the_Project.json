@@ -1,5 +1,8 @@
 {
-  "title": "PMP Certification Exam - Planning the Project",
+  "quizName": "PMP Certification Exam - Planning the Project",
+    "quizCode": "PMP2013",
+  "quizDifficulty": "Medium",
+  "numberOfQuestions": 15,
   "questions": [
     {
       "questionNumber": 1,
@@ -31,7 +34,10 @@
       "question": "True or False: A project schedule defines the start and end dates of project activities and the sequence in which they will be performed.",
       "imageURL": "",
       "questionType": "True/False",
-      "options": [],
+      "options": [
+        "True",
+        "False"
+      ],
       "answer": "True",
       "explanation": "True. A project schedule defines the start and end dates of project activities and the sequence in which they will be performed. It helps in managing project timelines.",
       "difficulty": "Easy"
@@ -66,7 +72,10 @@
       "question": "True or False: The critical path in a project schedule is the longest sequence of dependent activities that determines the project's duration.",
       "imageURL": "",
       "questionType": "True/False",
-      "options": [],
+      "options": [
+        "True",
+        "False"
+      ],
       "answer": "True",
       "explanation": "True. The critical path in a project schedule is the longest sequence of dependent activities that determines the project's duration. Any delay in activities on the critical path will directly impact the project's timeline.",
       "difficulty": "Easy"
@@ -75,9 +84,7 @@
       "questionNumber": 7,
       "question": "Fill in the blank: Resource leveling is a technique used to adjust the _________ of resources over time.",
       "imageURL": "",
-      "questionType":
-
- "Fill in the Blank",
+      "questionType": "Fill in the Blank",
       "options": [],
       "answer": "allocation",
       "explanation": "Resource leveling is a technique used to adjust the allocation of resources over time. It aims to optimize resource utilization and avoid resource overloading or underutilization.",
@@ -103,7 +110,10 @@
       "question": "True or False: Resource histogram is a graphical representation of resource availability over time.",
       "imageURL": "",
       "questionType": "True/False",
-      "options": [],
+      "options": [
+        "True",
+        "False"
+      ],      
       "answer": "True",
       "explanation": "True. A resource histogram is a graphical representation of resource availability over time. It helps in visualizing resource utilization and identifying potential resource conflicts.",
       "difficulty": "Easy"
@@ -138,7 +148,10 @@
       "question": "True or False: A resource calendar specifies the working days and shifts for project team members.",
       "imageURL": "",
       "questionType": "True/False",
-      "options": [],
+      "options": [
+        "True",
+        "False"
+      ],
       "answer": "True",
       "explanation": "True. A resource calendar specifies the working days and shifts for project team members. It helps in managing resource availability and planning project activities.",
       "difficulty": "Easy"
@@ -155,9 +168,7 @@
     },
     {
       "questionNumber": 14,
-      "question": "Which of the following is an output of the Control Schedule
-
- process?",
+      "question": "Which of the following is an output of the Control Schedule process?",
       "imageURL": "",
       "questionType": "Multiple Choice",
       "options": [
@@ -175,7 +186,10 @@
       "question": "True or False: A project baseline is generally not subject to change throughout the project lifecycle.",
       "imageURL": "",
       "questionType": "True/False",
-      "options": [],
+      "options": [
+        "True",
+        "False"
+      ],
       "answer": "False",
       "explanation": "False. A project baseline is subject to change throughout the project lifecycle. Changes may occur due to approved change requests, unforeseen circumstances, or other factors. However, changes to the baseline should be managed and controlled.",
       "difficulty": "Easy"
