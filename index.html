@@ -1086,6 +1086,7 @@ font-size: 30px;
 </div>
 
 <script>
+	  const db = firebase.firestore();
 
 	// Get the reference to the HTML containers
 const parentContainer = document.getElementById('parentContainer');
@@ -1094,7 +1095,6 @@ const quizContainer = document.getElementById('updatedQuizzez');
 // Function to fetch quiz data from Firestore and update the HTML
 async function fetchQuizzesFromDB() {
     console.log('E???????????????????????????????????');
-	  const db = firebase.firestore();
 
   // Fetch the quizzes collection
   const querySnapshot = await db.collectionGroup('quizzes').get();
@@ -1106,7 +1106,7 @@ async function fetchQuizzesFromDB() {
   querySnapshot.forEach((doc) => {
     const quizData = doc.data();
 
-    // Generate the HTML for each quiz
+/*    // Generate the HTML for each quiz
     const quizHtml = `
       <div class="col-lg-12">
         <a href="${quizData.quizLinkDB}">
@@ -1120,6 +1120,9 @@ async function fetchQuizzesFromDB() {
         </a>
       </div>
     `;
+*/
+	  
+	      const quizHtml = `Test  `;
 
     // Append the quiz HTML to the overall HTML string
     html += quizHtml;
