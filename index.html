@@ -1092,7 +1092,7 @@ font-size: 30px;
 
 //const parentContainer = document.getElementById('parentContainer');
 
-
+var num = 0;
 // Function to fetch quiz data from Firestore and update the HTML
 async function fetchQuizzesFromDB() {
     console.log('E???????????????????????????????????');
@@ -1111,12 +1111,13 @@ async function fetchQuizzesFromDB() {
     const quizData = doc.data();
 	  
   //  console.log('E????????????????????????????????123???      '+quizData);
-
+num += 1;
 	  // Generate the HTML for each quiz
     const quizHtml = `
       <div class="col-lg-12">
         <a href="${quizData.quizLinkDB}">
           <div class="list-item box">
+            <h6 class="list-title">#${num}</h6>
             <h5 class="list-title">${quizData.quizNameDB}</h5>
             <p class="list-description"># of Question: ${quizData.numberOfQuestionsDB} <br>
 	    Quiz Code: ${quizData.quizCodeDB}
