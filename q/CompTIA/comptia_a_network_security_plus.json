@@ -65,9 +65,7 @@
         "To ensure high availability of network resources"
       ],
       "answer": "To attract and monitor malicious activity",
-      "explanation": "A honeypot is a decoy system designed to attract potential attackers and monitor their
-
- behavior. The purpose of a honeypot is to gather information about attackers' tactics, techniques, and procedures to improve network security defenses.",
+      "explanation": "A honeypot is a decoy system designed to attract potential attackers and monitor their behavior. The purpose of a honeypot is to gather information about attackers' tactics, techniques, and procedures to improve network security defenses.",
       "difficulty": "Medium"
     },
     {
@@ -127,9 +125,7 @@
       "question": "What is the difference between a denial-of-service (DoS) attack and a distributed denial-of-service (DDoS) attack?",
       "options": [
         "A DoS attack is launched from a single source, while a DDoS attack is launched from multiple sources",
-        "A DoS attack targets specific individuals or organizations,
-
- while a DDoS attack targets multiple organizations at once",
+        "A DoS attack targets specific individuals or organizations, while a DDoS attack targets multiple organizations at once",
         "A DoS attack is less damaging than a DDoS attack",
         "A DDoS attack is easier to detect and mitigate than a DoS attack"
       ],
@@ -187,9 +183,7 @@
     },
     {
       "questionNumber": 15,
-      "question": "What is the purpose of a virtual
-
- private network (VPN) in network security?",
+      "question": "What is the purpose of a virtual private network (VPN) in network security?",
       "options": [
         "To protect against malware attacks",
         "To control and monitor network traffic",
