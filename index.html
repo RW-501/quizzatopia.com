@@ -485,6 +485,8 @@
 	  <style>
   /* Styling for the creative "Sign Up" button */
   .signup-button {
+	    flex: 0 0 auto;
+  margin-right: 10px;
     position: relative;
     display: inline-block;
     background-color: #ff8c00;
@@ -537,11 +539,14 @@
     opacity: 0.15;
     pointer-events: none;
   }
-		  
+	.col-md-6 {
+  display: flex;
+  align-items: center;
+}
+	  
 #codeContainer {
   position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 50%;
@@ -551,12 +556,14 @@
 #quizCodeInput {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-right: 10px;
+
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
 #quizCodeBTN {
+	  flex: 0 0 auto;
   width: 100%;
   padding: 10px;
   background-color: #4267B2;
