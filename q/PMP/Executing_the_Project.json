@@ -1,0 +1,184 @@
+{
+  "title": "PMP Certification Exam - Executing the Project",
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Fill in the blank: The process of acquiring and managing project resources is called _________.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Resource management",
+      "explanation": "Resource management is the process of acquiring and managing project resources, including personnel, equipment, materials, and facilities.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which of the following is NOT an input to the Develop Project Team process?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Project management plan",
+        "Resource calendar",
+        "Stakeholder register",
+        "Project charter"
+      ],
+      "answer": "Stakeholder register",
+      "explanation": "The Develop Project Team process inputs include the project management plan, resource calendar, and project charter. The stakeholder register is not directly related to team development.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "True or False: The Direct and Manage Project Work process involves executing project activities according to the project plan.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. The Direct and Manage Project Work process involves executing project activities according to the project plan. It focuses on completing the defined work packages and deliverables.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Fill in the blank: The process of ensuring that project work is performed as planned and approved changes are implemented is called _________.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Perform Integrated Change Control",
+      "explanation": "Perform Integrated Change Control is the process of ensuring that project work is performed as planned and approved changes are implemented. It involves reviewing and approving or rejecting change requests.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which of the following is an output of the Manage Project Team process?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Project schedule",
+        "Change log",
+        "Resource calendar",
+        "Work performance data"
+      ],
+      "answer": "Work performance data",
+      "explanation": "The Manage Project Team process outputs work performance data, which includes information on project progress, team performance, and work completed. It helps in monitoring and controlling project execution.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "True or False: The purpose of the Monitor and Control Project Work process is to track, review, and regulate the progress and performance of the project.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. The Monitor and Control Project Work process is designed to track, review, and regulate the progress and performance of the project. It helps in identifying deviations and taking corrective actions.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Fill in the blank: The process of ensuring that project deliverables meet quality
+
+ requirements is called _________.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Perform Quality Assurance",
+      "explanation": "Perform Quality Assurance is the process of ensuring that project deliverables meet quality requirements. It involves evaluating overall project performance and compliance with quality standards.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which of the following is an output of the Manage Communications process?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Project charter",
+        "Project schedule",
+        "Issue log",
+        "Communication management plan"
+      ],
+      "answer": "Communication management plan",
+      "explanation": "The Manage Communications process outputs the communication management plan, which defines the communication requirements, channels, and methods for the project. It ensures effective and timely communication.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "True or False: The purpose of the Perform Quality Control process is to identify and resolve defects in project deliverables.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. The Perform Quality Control process aims to identify and resolve defects in project deliverables. It involves inspecting, testing, and verifying the quality of project outputs.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Fill in the blank: The process of obtaining seller responses, selecting a seller, and awarding a contract is called _________.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Conduct Procurements",
+      "explanation": "Conduct Procurements is the process of obtaining seller responses, selecting a seller, and awarding a contract. It involves the procurement activities for acquiring goods and services from external vendors.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which of the following is an output of the Manage Stakeholder Engagement process?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Change log",
+        "Project network diagram",
+        "Stakeholder register",
+        "Resource histogram"
+      ],
+      "answer": "Change log",
+      "explanation": "The Manage Stakeholder Engagement process outputs the change log, which documents all requested changes, approved changes, and their status. It helps in managing stakeholder expectations and addressing change requests.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "True or False: The purpose of the Control Resources process is to ensure that project resources are effectively and efficiently utilized.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. The Control Resources process aims to ensure that project resources are effectively and efficiently utilized. It involves monitoring resource allocation, performance, and resolving resource-related issues.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Fill in the blank: The process of tracking, reviewing, and reporting project progress against the project plan is called _________.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Monitor and Control Project Work
+
+",
+      "explanation": "Monitor and Control Project Work is the process of tracking, reviewing, and reporting project progress against the project plan. It helps in identifying variances and taking corrective actions.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which of the following is an output of the Close Project or Phase process?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Project schedule",
+        "Lessons learned",
+        "Risk register",
+        "Communication management plan"
+      ],
+      "answer": "Lessons learned",
+      "explanation": "The Close Project or Phase process outputs the lessons learned, which capture the knowledge gained during the project. It helps in improving future project performance.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "True or False: The purpose of the Validate Scope process is to formally accept completed project deliverables.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. The Validate Scope process involves formally accepting completed project deliverables. It ensures that the deliverables meet the specified requirements and satisfy the project stakeholders.",
+      "difficulty": "Easy"
+    }
+  ]
+}
