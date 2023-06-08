@@ -1,0 +1,224 @@
+{
+  "quizCode": "NCLEX789",
+  "quizName": "NCLEX Quiz - Safety and Infection Control",
+  "quizDifficulty": "Medium",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the primary goal of infection control in healthcare settings?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Prevent the spread of infection",
+        "Enhance patient comfort",
+        "Reduce healthcare costs",
+        "Increase staff productivity"
+      ],
+      "answer": "Prevent the spread of infection",
+      "explanation": "The primary goal of infection control in healthcare settings is to prevent the spread of infection and maintain patient and staff safety.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Standard precautions should be followed for every patient encounter, regardless of suspected infection status.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Standard precautions should be followed for every patient encounter to minimize the risk of transmission of pathogens, regardless of suspected infection status.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the purpose of hand hygiene in infection control?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Remove dirt and debris from hands",
+        "Keep hands warm and moisturized",
+        "Eliminate all microorganisms from hands",
+        "Reduce the number of microorganisms on hands"
+      ],
+      "answer": "Reduce the number of microorganisms on hands",
+      "explanation": "The purpose of hand hygiene is to reduce the number of microorganisms on hands, decreasing the risk of infection transmission.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What does this image represent?",
+      "imageURL": "https://example.com/image1.jpg",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Isolation gown",
+        "Face shield",
+        "N95 respirator",
+        "Gloves"
+      ],
+      "answer": "N95 respirator",
+      "explanation": "The image represents an N95 respirator, a type of personal protective equipment (PPE) used to filter out airborne particles and protect against respiratory infections.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "True or False: Sterilization is the complete elimination of all forms of microbial life, including spores.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Sterilization involves the complete elimination of all forms of microbial life, including spores, to ensure the highest level of disinfection.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the purpose of a fire evacuation plan in healthcare facilities?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Prevent fire incidents",
+        "Ensure staff safety",
+        "Reduce property damage",
+        "Facilitate timely evacuation"
+      ],
+      "answer": "Facilitate timely evacuation",
+      "explanation":
+
+ "The purpose of a fire evacuation plan is to facilitate timely evacuation of patients, staff, and visitors to ensure their safety during fire incidents.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which of the following actions is an example of using proper body mechanics to prevent injury?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bending at the waist while lifting heavy objects",
+        "Twisting the body while transferring a patient",
+        "Using the leg muscles to lift and carry objects",
+        "Keeping the back straight while reaching overhead"
+      ],
+      "answer": "Using the leg muscles to lift and carry objects",
+      "explanation": "Using the leg muscles to lift and carry objects helps maintain proper body alignment and reduces strain on the back, preventing injury.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "True or False: Restraints should be used as a routine measure to control patients' movements.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Restraints should not be used as a routine measure to control patients' movements. They should only be used as a last resort to ensure patient and staff safety.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the recommended duration for performing hand hygiene with alcohol-based hand sanitizers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "5 seconds",
+        "15 seconds",
+        "30 seconds",
+        "60 seconds"
+      ],
+      "answer": "15 seconds",
+      "explanation": "The recommended duration for performing hand hygiene with alcohol-based hand sanitizers is at least 15 seconds, ensuring adequate coverage and contact time.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which of the following is an example of a healthcare-associated infection (HAI)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Common cold",
+        "Influenza",
+        "Urinary tract infection (UTI)",
+        "Food poisoning"
+      ],
+      "answer": "Urinary tract infection (UTI)",
+      "explanation": "A urinary tract infection (UTI) acquired in a healthcare facility is an example of a healthcare-associated infection (HAI).",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What does the acronym RACE stand for in fire safety?",
+      "imageURL": "",
+      "questionType": "Fill in Blank",
+      "options": [],
+      "answer": "Rescue, Alarm, Contain, Extinguish/Evacuate",
+      "explanation": "RACE stands for Rescue, Alarm, Contain, Extinguish/Evacuate, which are the recommended actions in case of a fire incident.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "True or False: A nurse should never leave a patient alone while they are restrained.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "A nurse should never leave a patient alone while they
+
+ are restrained to ensure their safety and monitor for any signs of distress.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the purpose of a surgical time-out?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Allow time for the surgical team to rest",
+        "Double-check the patient's identity and surgical site",
+        "Ensure proper positioning of surgical instruments",
+        "Review the surgical procedure with the patient"
+      ],
+      "answer": "Double-check the patient's identity and surgical site",
+      "explanation": "A surgical time-out is performed to double-check the patient's identity and surgical site, ensuring correct and safe surgical interventions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which of the following is an example of a safe patient handling technique?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lifting a patient on your own",
+        "Using a mechanical lift for transfers",
+        "Dragging a patient across the bed",
+        "Reaching across the patient for supplies"
+      ],
+      "answer": "Using a mechanical lift for transfers",
+      "explanation": "Using a mechanical lift for transfers is an example of a safe patient handling technique that minimizes the risk of injury to both the patient and the healthcare provider.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the purpose of a sharps container in healthcare settings?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Store clean surgical instruments",
+        "Dispose of used needles and sharp objects",
+        "Transport medications and IV fluids",
+        "Monitor oxygen saturation"
+      ],
+      "answer": "Dispose of used needles and sharp objects",
+      "explanation": "A sharps container is used to safely dispose of used needles and other sharp objects to prevent injuries and potential transmission of bloodborne pathogens.",
+      "difficulty": "Medium"
+    }
+  ]
+}
