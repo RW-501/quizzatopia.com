@@ -539,7 +539,8 @@
     opacity: 0.15;
     pointer-events: none;
   }
-	.col-md-6 {
+	.group {
+  display: flex;
 
   align-items: center;
 }
@@ -580,6 +581,7 @@
 	  
     <div class="col-md-6 px-4">
 	
+    <div class="group">
 
 
 <button id="mainSignupBtn" class="signup-button" onclick="openPopup(); switchTab('signup'); "><span>Sign Up</span></button>
@@ -587,6 +589,7 @@
 <div id="codeContainer">
 <input type="text" placeholder="code" value="" name="code" id="quizCodeInput">
 	<button id="quizCodeBTN" onclick="getQuizLink()">Get Quiz</button>
+  </div>
   </div>
 	  
 
