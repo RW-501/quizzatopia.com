@@ -1002,7 +1002,7 @@ quizInfo.quizLink = quizUrl;  // Add the "q" parameter to the quizInfo object
 
 }
 	  
-
+let quizUrl;
 
 function fetchData(q, e) {
 	      console.log("fetchDataq:", q+'   e:    '+e);
@@ -1050,7 +1050,7 @@ function fetchData(q, e) {
           numberOfQuestions = data.length;
 	quizImageURL = "";
 	quizDifficulty = "";
-		let quizUrl = stringEnt;
+		 quizUrl = stringEnt;
 
           // Check quiz code and retrieve or save quiz info
           const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty, quizUrl);
@@ -1115,7 +1115,58 @@ function fetchData(q, e) {
 	  
 fetchData(q, e);
 
+/*
+	//////////////////////////////////////////////////////////////
+		*/
+		
+		     console.log("quizDifficulty:", quizDifficulty);
 
+	
+		
+		/*
+		
+		//////////////////////////////////////////////////////////
+		*/
+  
+function saveQuiz(quiz) {
+  const { quizCodeX, quizNameX, imageURLX, numberOfQuestionsX, quizLinkX, quizDifficultyX } = quiz;
+
+  // Check if quiz already exists in Firestore
+  const quizRef = db.collection('quizzes').doc(quizCodeX);
+  const quizDoc = await quizRef.get();
+
+  if (quizDoc.exists) {
+    console.log(`Quiz with code ${quizCodeX} already saved.`);
+  } else {
+    // Set quizDifficulty to an empty string if it is undefined
+    const difficulty2 = typeof quizDifficultyX !== 'undefined' ? quizDifficultyX : '';
+
+    // Save quiz information to Firestore
+    await quizRef.set({
+      quizCode: quizCodeX,
+      quizName: quizNameX,
+      imageURL: imageURLX,
+      numberOfQuestions: numberOfQuestionsX,
+      quizLink: quizLinkX,
+      quizDifficulty: difficulty2
+    });
+
+    console.log(`Quiz with code ${quizCodeX} saved successfully.`);
+  }
+}
+
+const quiz = {
+  quizCode: quizCode,
+  quizName: quizName,
+  imageURL: 'https://www.quizzatopia.com/images/sq/_.png',
+  numberOfQuestions: numberOfQuestions,
+  quizLink: quizUrl,
+  quizDifficulty: difficulty
+};
+
+
+	      
+saveQuiz(quiz);
 	      
 
 
