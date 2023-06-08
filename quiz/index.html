@@ -816,7 +816,7 @@ var  quizType = '';
 // Get the current URL and parse its search parameters
 const urlParams = new URLSearchParams(window.location.search);
 	//  console.log("1 urlParams     "+urlParams); 
-quizLinkURL = 	"/?"+urlParams;
+quizLinkURL = 	"/quiz/?"+urlParams;
 
 // Get the values of the "q" and "e" parameters
 var q = urlParams.get('q');
@@ -1205,7 +1205,7 @@ quizUrl = stringEnt;
 	      
 	      
 //quizDifficulty = typeof quizDifficulty !== 'undefined' ? quizDifficulty : "";
-
+let q_link = "/quiz"+q;
 	      
 const quizZZ = {
   quizCodeX: quizCode,
@@ -1213,7 +1213,7 @@ const quizZZ = {
   imageURLX: "https://www.quizzatopia.com/images/sq/_.png",
   numberOfQuestionsX: numberOfQuestions,
   quizJsonX: quizUrl,
-  quizLinkX: quizLinkURL ? quizLinkURL : q, // Use 'q' if quizLinkURL is empty
+  quizLinkX: quizLinkURL ? quizLinkURL : q_link, // Use 'q' if quizLinkURL is empty
   quizDifficultyX: quizDifficulty ? quizDifficulty : ""
 };
 
