@@ -910,7 +910,7 @@ if (str.startsWith("TF")) {
 
 	  
 async function saveQuizToDB(quiz) {
-  const { quizCodeX, quizNameX, imageURLX, numberOfQuestionsX, quizLinkX, quizDifficultyX } = quiz;
+  const { quizCodeX, quizNameX, imageURLX, quizJsonX, numberOfQuestionsX, quizLinkX, quizDifficultyX } = quiz;
 
   const db = firebase.firestore();
 
@@ -936,11 +936,12 @@ async function saveQuizToDB(quiz) {
         quizCodeDB: quizCodeX,
         quizNameDB: quizNameX,
         imageURLDB: imageURLX,
+        quizJsonDB: quizJsonX,	      
         numberOfQuestionsDB: numberOfQuestionsX,
         quizLinkDB: quizLinkX,
         quizDifficultyDB: difficulty2
       });
-
+	      
       showPopup(`Quiz with code ${quizCodeX} saved successfully.`);
     } else {
       showPopup('Invalid quiz data. Please provide all required fields.');
