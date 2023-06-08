@@ -786,19 +786,21 @@ function logStorageContents(quizCode) {
 	  
 	  
 	  
-//var quizLinkURL = '';
+var quizLinkURL = '';
 
 var  quizType = '';	  
     
 // Get the current URL and parse its search parameters
 const urlParams = new URLSearchParams(window.location.search);
 	  console.log("1 urlParams     "+urlParams); 
+quizLinkURL = 	urlParams;
+
 // Get the values of the "q" and "e" parameters
 var q = urlParams.get('q');
 var e = urlParams.get('e');
 	  
 console.log("2 urlParams     "+q); 
-	
+	  
 	  
 if (q === null) {
   const files = [
@@ -909,7 +911,7 @@ async function saveQuizToDB(quiz) {
       imageURLDB: imageURLX,
       numberOfQuestionsDB: numberOfQuestionsX,
       quizLinkDB: quizLinkX,
-  quizLinkDB: urlParams,
+  quizLinkDB: quizLinkURL,
   quizDifficultyDB: difficulty2
    });
 	  
@@ -1173,7 +1175,7 @@ const quizZZ = {
   imageURLDB: 'https://www.quizzatopia.com/images/sq/_.png',
   numberOfQuestionsDB: numberOfQuestions,
   quizJsonDB: quizUrl,
-  quizLinkDB: urlParams,
+  quizLinkDB: quizLinkURL,
   quizDifficultyDB: quizDifficulty
 };
 
