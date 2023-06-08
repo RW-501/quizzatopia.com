@@ -822,7 +822,7 @@ quizLinkURL = 	"/?"+urlParams;
 var q = urlParams.get('q');
 var e = urlParams.get('e');
 	  
-//console.log("2 urlParams     "+q); 
+console.log("E urlParams     "+e); 
 	  
 	  
 if (q === null) {
@@ -1220,8 +1220,10 @@ const quizZZ = {
 
 console.log("quizZZ:", quizZZ);
 
+	      if (e === null || e === "") {}else{
+
 saveQuizToDB(quizZZ);
-	      
+	      }    
 	      
 	      
       }
