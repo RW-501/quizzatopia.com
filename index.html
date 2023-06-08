@@ -1129,6 +1129,11 @@ function getQuizLink() {
   // Get the value entered in the quizCodeX input box
   const quizCodeX = document.getElementById('quizCodeInput').value;
 
+	
+	
+	const db = firebase.firestore();
+
+	
   // Retrieve the quiz link based on the quizCodeX
   const quizRef = db.collection('quizzes').doc(quizCodeX);
   quizRef.get().then((quizDoc) => {
