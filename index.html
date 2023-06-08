@@ -538,10 +538,38 @@
     pointer-events: none;
   }
 		  
-		  #codeContainer{
-position: relative;
-    display: inline-block;
-		  }
+#codeContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#quizCodeInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#quizCodeBTN {
+  width: 100%;
+  padding: 10px;
+  background-color: #4267B2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#quizCodeBTN:hover {
+  background-color: #3b5998;
+}
+
 </style>
 	  
     <div class="col-md-6 px-4">
@@ -550,10 +578,12 @@ position: relative;
 
 <button id="mainSignupBtn" class="signup-button" onclick="openPopup(); switchTab('signup'); "><span>Sign Up</span></button>
  
-	    <div  id="codeContainer">
-<input type="text" id="quizCodeInput">
-<button onclick="getQuizLink()">Get Quiz</button>
-	    </div>
+<div id="codeContainer">
+    <input type="text" id="quizCodeInput">
+    <button id="quizCodeBTN" onclick="getQuizLink()">Get Quiz</button>
+  </div>
+</div>
+	  
   <hr>
 
 	    
