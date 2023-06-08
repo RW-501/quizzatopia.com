@@ -185,6 +185,8 @@ position: fixed;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     z-index: 9999;
+	  display: none;
+
 }
 
 .popupMSG span {
@@ -916,7 +918,7 @@ if (str.startsWith("TF")) {
   const db = firebase.firestore();
 
   // Check if quiz already exists in Firestore
-  const quizRef = db.collection('quizzes').doc(quizCodeX);
+  const quizRef = db.collection('quizzes').doc();
   const quizDoc = await quizRef.get();
 
   if (quizDoc.exists) {
