@@ -1,7 +1,7 @@
 {
   "quizCode": "QZ63201",
   "quizName": "Network Security Quiz",
-  "numberOfQuestions": 13,
+  "numberOfQuestions": 18,
   "questions": [
     {
       "questionNumber": 1,
@@ -65,7 +65,9 @@
         "To ensure high availability of network resources"
       ],
       "answer": "To attract and monitor malicious activity",
-      "explanation": "A honeypot is a decoy system designed to attract potential attackers and monitor their behavior. The purpose of a honeypot is to gather information about attackers' tactics, techniques, and procedures to improve network security defenses.",
+      "explanation": "A honeypot is a decoy system designed to attract potential attackers and monitor their
+
+ behavior. The purpose of a honeypot is to gather information about attackers' tactics, techniques, and procedures to improve network security defenses.",
       "difficulty": "Medium"
     },
     {
@@ -125,13 +127,117 @@
       "question": "What is the difference between a denial-of-service (DoS) attack and a distributed denial-of-service (DDoS) attack?",
       "options": [
         "A DoS attack is launched from a single source, while a DDoS attack is launched from multiple sources",
-"A DoS attack targets specific individuals or organizations, while a DDoS attack targets multiple organizations at once",
-"A DoS attack is less damaging than a DDoS attack",
-"A DDoS attack is easier to detect and mitigate than a DoS attack"
-],
-"answer": "A DoS attack is launched from a single source, while a DDoS attack is launched from multiple sources",
-"explanation": "A DoS attack is a type of cyberattack that aims to disrupt or disable a target system or network by overwhelming it with traffic from a single source. A DDoS attack is a more sophisticated version of a DoS attack, in which multiple compromised systems are used to flood the target network with traffic, making it much harder to defend against.",
-"difficulty": "Easy"
-}
-]
+        "A DoS attack targets specific individuals or organizations,
+
+ while a DDoS attack targets multiple organizations at once",
+        "A DoS attack is less damaging than a DDoS attack",
+        "A DDoS attack is easier to detect and mitigate than a DoS attack"
+      ],
+      "answer": "A DoS attack is launched from a single source, while a DDoS attack is launched from multiple sources",
+      "explanation": "A DoS attack is a type of cyberattack that aims to disrupt or disable a target system or network by overwhelming it with traffic from a single source. A DDoS attack is a more sophisticated version of a DoS attack, in which multiple compromised systems are used to flood the target network with traffic, making it much harder to defend against.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the purpose of an intrusion prevention system (IPS) in network security?",
+      "options": [
+        "To prevent network attacks",
+        "To identify network attacks in progress",
+        "To encrypt network traffic",
+        "To provide remote access to network resources"
+      ],
+      "answer": "To prevent network attacks",
+      "explanation": "An intrusion prevention system (IPS) is a network security tool that monitors network traffic and actively prevents and blocks network attacks. It analyzes network packets, detects known attack patterns, and takes immediate action to stop the attacks, such as blocking malicious traffic or terminating suspicious connections.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "True or False: Network segmentation is a network security strategy that divides a network into smaller, isolated subnetworks.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Network segmentation is a network security strategy that involves dividing a network into smaller, isolated subnetworks called segments. Each segment is then treated as a separate network with its own security controls and access policies. Network segmentation helps to contain the impact of a security breach and restricts lateral movement within a network.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the purpose of a security information and event management (SIEM) system in network security?",
+      "options": [
+        "To protect against malware attacks",
+        "To control and monitor network traffic",
+        "To provide centralized logging and analysis of security events",
+        "To provide secure remote access to network resources"
+      ],
+      "answer": "To provide centralized logging and analysis of security events",
+      "explanation": "A security information and event management (SIEM) system is a centralized platform that collects, stores, and analyzes security event data from various sources within a network. It provides real-time monitoring, log management, and threat intelligence to help identify and respond to security incidents effectively.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "True or False: A firewall is a hardware device that provides protection against both external and internal network threats.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. A firewall can be implemented as a hardware device or software program. It acts as a barrier between a trusted internal network and an untrusted external network, filtering incoming and outgoing network traffic based on predefined security rules. A firewall helps protect against unauthorized access, malware, and other network threats.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the purpose of a virtual
+
+ private network (VPN) in network security?",
+      "options": [
+        "To protect against malware attacks",
+        "To control and monitor network traffic",
+        "To provide physical security to network devices",
+        "To provide secure remote access to network resources"
+      ],
+      "answer": "To provide secure remote access to network resources",
+      "explanation": "A virtual private network (VPN) allows users to securely access a private network from a remote location. It encrypts data transmissions and provides a secure connection, making it a valuable tool for remote workers, telecommuters, and businesses with multiple locations.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 16,
+      "question": "What is the purpose of a network address translation (NAT) in network security?",
+      "options": [
+        "To protect against malware attacks",
+        "To control and monitor network traffic",
+        "To provide physical security to network devices",
+        "To hide internal IP addresses from the internet"
+      ],
+      "answer": "To hide internal IP addresses from the internet",
+      "explanation": "Network Address Translation (NAT) is a network security feature that hides internal IP addresses from the internet. It allows multiple devices within a private network to share a single public IP address, enhancing security by obfuscating the internal network structure and providing an additional layer of protection against external threats.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 17,
+      "question": "What is the purpose of a vulnerability assessment in network security?",
+      "options": [
+        "To prevent network attacks",
+        "To identify network attacks in progress",
+        "To scan for vulnerabilities and weaknesses in a network",
+        "To provide remote access to network resources"
+      ],
+      "answer": "To scan for vulnerabilities and weaknesses in a network",
+      "explanation": "A vulnerability assessment is a proactive approach to network security that involves scanning a network for potential vulnerabilities and weaknesses. It helps identify security flaws, misconfigurations, and outdated software that could be exploited by attackers. The results of a vulnerability assessment are used to prioritize remediation efforts and strengthen the overall security posture of a network.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 18,
+      "question": "What is the purpose of a security token in network security?",
+      "options": [
+        "To protect against malware attacks",
+        "To control and monitor network traffic",
+        "To authenticate users before granting access",
+        "To provide secure remote access to network resources"
+      ],
+      "answer": "To authenticate users before granting access",
+      "explanation": "A security token is a physical or virtual device that is used to authenticate users before granting them access to network resources. It generates and provides a unique one-time password or cryptographic key, adding an extra layer of security to the authentication process.",
+      "difficulty": "Easy"
+    }
+  ]
 }
