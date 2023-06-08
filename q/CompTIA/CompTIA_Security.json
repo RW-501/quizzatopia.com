@@ -1,0 +1,386 @@
+{
+  "quizCode": "Qcomp987",
+  "quizName": "CompTIA Security+ Exam",
+  "quizDifficulty": "Medium",
+  "numberOfQuestions": 30,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which of the following is an example of a social engineering attack?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Denial of Service (DoS) attack",
+        "Phishing attack",
+        "Cross-site scripting (XSS) attack",
+        "Man-in-the-middle (MitM) attack"
+      ],
+      "answer": "Phishing attack",
+      "explanation": "A phishing attack is a social engineering attack where attackers deceive individuals into revealing sensitive information by pretending to be a trustworthy entity.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Encryption is a process of converting data into a form that can only be read by authorized parties.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. Encryption is a process that uses mathematical algorithms to convert data into a form that can only be read by authorized parties with the corresponding decryption key.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Fill in the blank: IDS stands for _________.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Intrusion Detection System",
+      "explanation": "IDS stands for Intrusion Detection System. It is a security technology that monitors network traffic and identifies potential security breaches or unauthorized activities.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which of the following is a common authentication factor?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Password",
+        "Firewall",
+        "Patch",
+        "Router"
+      ],
+      "answer": "Password",
+      "explanation": "A password is a common authentication factor. It is a secret or a passphrase known only to the authorized user and is used to verify their identity.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "True or False: A firewall is a hardware device used to encrypt network traffic and protect data transmission.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "False",
+      "explanation": "False. A firewall is a network security device that monitors and filters network traffic based on predefined security rules. It does not encrypt network traffic.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which of the following is an example of a symmetric encryption algorithm?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "RSA",
+        "AES",
+        "SHA",
+        "MD5"
+      ],
+      "answer": "AES",
+      "explanation": "AES (Advanced Encryption Standard) is an example of a symmetric encryption algorithm. It uses the same key for both encryption and decryption.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Fill in the blank: HTTPS stands for _________.",
+      "imageURL": "",
+      "question
+
+Type": "Fill in the Blank",
+      "options": [],
+      "answer": "Hypertext Transfer Protocol Secure",
+      "explanation": "HTTPS stands for Hypertext Transfer Protocol Secure. It is a secure version of the HTTP protocol used for secure communication over a network.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which of the following is a common security vulnerability?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Patch",
+        "Firewall",
+        "Encryption",
+        "SQL injection"
+      ],
+      "answer": "SQL injection",
+      "explanation": "SQL injection is a common security vulnerability where an attacker can insert malicious SQL statements into an application's database query. It can lead to unauthorized access or data manipulation.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "True or False: A VPN (Virtual Private Network) provides a secure, encrypted connection between a remote user and a private network over the internet.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. A VPN (Virtual Private Network) creates a secure, encrypted connection over the internet, allowing remote users to access a private network securely.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which of the following is an example of a biometric authentication factor?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Password",
+        "PIN",
+        "Fingerprint",
+        "Token"
+      ],
+      "answer": "Fingerprint",
+      "explanation": "A fingerprint is an example of a biometric authentication factor. Biometrics uses unique physical or behavioral characteristics for authentication.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Fill in the blank: ACL stands for _________.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Access Control List",
+      "explanation": "ACL stands for Access Control List. It is a set of rules or permissions that determine which users or groups have access to resources or perform specific actions.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which of the following is a common security threat?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Patch management",
+        "Firewall configuration",
+        "Social engineering",
+        "Intrusion detection"
+      ],
+      "answer": "Social engineering",
+      "explanation": "Social engineering is a common security threat where attackers manipulate individuals to gain unauthorized access to sensitive information or systems.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "True or False: A vulnerability assessment is the process of identifying and prioritizing vulnerabilities in a system or network.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. A vulnerability assessment is the process of identifying and prioritizing vulnerabilities in a system or network to determine potential risks.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which of the following is an example of a two-factor authentication method?",
+      "
+
+imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Username and password",
+        "Fingerprint and smart card",
+        "Firewall and antivirus",
+        "Encryption and decryption"
+      ],
+      "answer": "Fingerprint and smart card",
+      "explanation": "Fingerprint and smart card is an example of a two-factor authentication method. Two-factor authentication requires two different types of authentication factors for increased security.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Fill in the blank: WPA2 stands for _________.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Wi-Fi Protected Access 2",
+      "explanation": "WPA2 stands for Wi-Fi Protected Access 2. It is a security protocol used for securing wireless computer networks.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 16,
+      "question": "Which of the following is a common security control?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Patch management",
+        "Network switch",
+        "Data backup",
+        "Virtual machine"
+      ],
+      "answer": "Patch management",
+      "explanation": "Patch management is a common security control that involves applying software updates and patches to address vulnerabilities and improve security.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 17,
+      "question": "True or False: A DDoS (Distributed Denial of Service) attack is a type of attack where multiple compromised computers are used to flood a target system or network with traffic.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. A DDoS (Distributed Denial of Service) attack is a type of attack where multiple compromised computers are used to flood a target system or network with traffic, causing service disruption.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 18,
+      "question": "Fill in the blank: PKI stands for _________.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Public Key Infrastructure",
+      "explanation": "PKI stands for Public Key Infrastructure. It is a system of cryptographic techniques and services used to secure communication and verify the authenticity of digital data.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 19,
+      "question": "Which of the following is an example of a physical security control?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Antivirus software",
+        "Firewall",
+        "CCTV cameras",
+        "Intrusion detection system"
+      ],
+      "answer": "CCTV cameras",
+      "explanation": "CCTV cameras are an example of a physical security control. They are used for video surveillance and monitoring of physical areas.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 20,
+      "question": "True or False: Full disk encryption is a security measure that encrypts only specific files or folders on a computer's hard drive.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "False",
+      "explanation": "False. Full disk encryption is a security measure that encrypts the
+
+ entire contents of a computer's hard drive, including the operating system, applications, and data.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 21,
+      "question": "Which of the following is a common network security protocol?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "DHCP",
+        "DNS",
+        "HTTP",
+        "FTP"
+      ],
+      "answer": "DNS",
+      "explanation": "DNS (Domain Name System) is a common network security protocol. It translates domain names into IP addresses and is essential for navigating the internet.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 22,
+      "question": "Fill in the blank: SIEM stands for _________.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Security Information and Event Management",
+      "explanation": "SIEM stands for Security Information and Event Management. It is a system that collects and analyzes security event data from various sources to identify potential security incidents.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 23,
+      "question": "Which of the following is a common security best practice?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Using default passwords",
+        "Sharing passwords",
+        "Disabling automatic updates",
+        "Regularly patching and updating software"
+      ],
+      "answer": "Regularly patching and updating software",
+      "explanation": "Regularly patching and updating software is a common security best practice. Software updates often include security patches to address vulnerabilities.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 24,
+      "question": "True or False: Two-factor authentication requires the use of two different authentication factors for increased security.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. Two-factor authentication requires the use of two different authentication factors, such as a password and a fingerprint, to verify the identity of a user.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 25,
+      "question": "Which of the following is an example of a network security device?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Antivirus software",
+        "Firewall",
+        "Patch management",
+        "Intrusion detection system"
+      ],
+      "answer": "Firewall",
+      "explanation": "A firewall is an example of a network security device. It filters network traffic based on predefined security rules to protect the network from unauthorized access and threats.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 26,
+      "question": "Fill in the blank: Ransomware is a type of _________ attack.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Malware",
+      "explanation": "Ransomware is a type of malware attack. It encrypts a victim's data and demands a ransom payment in exchange for the decryption key.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 27,
+      "question": "Which of the following is a common network security threat?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Firewall",
+       
+
+ "Antivirus software",
+        "Cross-site scripting (XSS)",
+        "Patch management"
+      ],
+      "answer": "Cross-site scripting (XSS)",
+      "explanation": "Cross-site scripting (XSS) is a common network security threat where attackers inject malicious scripts into web pages viewed by other users. It can lead to data theft or unauthorized actions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 28,
+      "question": "True or False: Intrusion detection systems (IDS) are designed to prevent unauthorized access and attacks on a network.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [],
+      "answer": "False",
+      "explanation": "False. Intrusion detection systems (IDS) are designed to detect and alert on potential security breaches or unauthorized activities on a network. They do not prevent them.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 29,
+      "question": "Which of the following is a common wireless security protocol?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "SSH",
+        "WEP",
+        "FTP",
+        "SMTP"
+      ],
+      "answer": "WEP",
+      "explanation": "WEP (Wired Equivalent Privacy) is a common wireless security protocol. However, it is considered weak and easily bypassed. WPA and WPA2 are more secure alternatives.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 30,
+      "question": "Fill in the blank: A DDoS attack is a _________ of service attack.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Distributed",
+      "explanation": "A DDoS (Distributed Denial of Service) attack is a distributed denial of service attack. It involves multiple compromised computers flooding a target system with traffic to overwhelm its resources.",
+      "difficulty": "Easy"
+    }
+  ]
+}
