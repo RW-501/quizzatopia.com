@@ -174,7 +174,7 @@
 </script>
 
 	<style>
-.popup {
+.popupMSG {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -186,7 +186,7 @@
   z-index: 9999;
 }
 
-.popup span {
+.popupMSG span {
   display: block;
   text-align: center;
 }
@@ -507,7 +507,7 @@
 	 
 	</main_section>
 	
-	<div id="popup" class="popup">
+	<div id="popupMSG" class="popupMSG">
   <span id="popupMessage"></span>
 </div>
 
@@ -939,7 +939,7 @@ if (str.startsWith("TF")) {
 }
 
 function showPopup(message) {
-  const popup = document.getElementById('popup');
+  const popup = document.getElementById('popupMSG');
   const popupMessage = document.getElementById('popupMessage');
   popupMessage.textContent = message;
   popup.style.display = 'block';
