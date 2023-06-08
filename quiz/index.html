@@ -816,7 +816,7 @@ var  quizType = '';
 // Get the current URL and parse its search parameters
 const urlParams = new URLSearchParams(window.location.search);
 	//  console.log("1 urlParams     "+urlParams); 
-quizLinkURL = 	"/"+urlParams;
+quizLinkURL = 	"/?"+urlParams;
 
 // Get the values of the "q" and "e" parameters
 var q = urlParams.get('q');
