@@ -87,9 +87,7 @@
         "Transfer patient care information"
       ],
       "answer": "Transfer patient care information",
-      "explanation": "The purpose of a change-of-shift report is to transfer patient care information between nursing shifts
-
-, ensuring continuity of care.",
+      "explanation": "The purpose of a change-of-shift report is to transfer patient care information between nursing shifts, ensuring continuity of care.",
       "difficulty": "Medium"
     },
     {
@@ -177,9 +175,7 @@
       "questionNumber": 13,
       "question": "What is the purpose of a disaster management plan in healthcare settings?",
       "imageURL": "",
-      "question
-
-Type": "Multiple Choice",
+      "questionType": "Multiple Choice",
       "options": [
         "Prevent workplace accidents",
         "Promote employee wellness",
