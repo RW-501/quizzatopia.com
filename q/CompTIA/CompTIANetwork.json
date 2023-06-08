@@ -1,5 +1,8 @@
 {
-  "examTitle": "CompTIA Network+ Quiz",
+  "quizName": "CompTIA Network+ Quiz",
+  "quizCode": "CompTIANetwork",
+"quizDifficulty": "Medium",
+"numberOfQuestions": 30,
   "examDescription": "The Network+ exam covers various networking topics, including networking concepts, infrastructure, operations, security, and troubleshooting.",
   "questions": [
     {
