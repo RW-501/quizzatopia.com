@@ -1,0 +1,227 @@
+{
+  "quizCode": "CompTIAAPlusCore1",
+  "quizName": "CompTIA A+ Core 1 Exam Quiz",
+  "quizDifficulty": "Medium",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which of the following is a type of memory module commonly used in desktop computers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "DIMM",
+        "PCIe",
+        "SATA",
+        "USB"
+      ],
+      "answer": "DIMM",
+      "explanation": "DIMM (Dual In-Line Memory Module) is a type of memory module commonly used in desktop computers to provide system memory (RAM).",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "A user reports that their computer is not connecting to the wireless network. Which of the following troubleshooting steps should be performed first?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Check if the Wi-Fi switch on the computer is turned on",
+        "Restart the computer",
+        "Reset the wireless router",
+        "Reinstall the wireless network driver"
+      ],
+      "answer": "Check if the Wi-Fi switch on the computer is turned on",
+      "explanation": "Before performing any other troubleshooting steps, it is important to check if the Wi-Fi switch on the computer is turned on. Sometimes, users accidentally turn off the Wi-Fi switch, leading to connectivity issues.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "A customer wants to purchase a new smartphone with a large screen and long battery life. Which of the following specifications should the customer look for?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "High screen resolution",
+        "Large RAM capacity",
+        "Fast processor speed",
+        "High battery capacity"
+      ],
+      "answer": "High battery capacity",
+      "explanation": "For a smartphone with a large screen and long battery life, the customer should look for a high battery capacity. A larger battery capacity allows the phone to power the large screen for a longer duration.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which of the following is a characteristic of solid-state drives (SSDs) compared to traditional hard disk drives (HDDs)? SSDs are _________.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "faster",
+      "explanation": "Solid-state drives (SSDs) are faster compared to traditional hard disk drives (HDDs). SSDs use flash memory for storage, which allows for faster data access and retrieval.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "A user is unable to print a document. Which of the following troubleshooting steps should be performed first?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Check if the printer is powered on",
+        "Restart the computer",
+        "Update the printer driver",
+        "Replace the printer cable"
+      ],
+      "answer": "Check if the printer is powered on",
+      "explanation": "Before performing any other troubleshooting steps, it is important to check if the printer is powered on. Sometimes, users forget to turn on the printer, resulting in
+
+ printing issues.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which of the following is the correct order of the four stages in the troubleshooting process?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Identify, Research, Implement, Test",
+      "explanation": "The correct order of the four stages in the troubleshooting process is: Identify, Research, Implement, Test. First, identify the problem and gather information. Then, research possible solutions. Next, implement the chosen solution. Finally, test the solution to ensure it resolves the problem.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "A user wants to set up a new email account on their mobile device. Which of the following information is required to configure the email account?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Email address, password, and server type",
+        "Phone number, password, and email address",
+        "Email address, server type, and email client",
+        "Phone number, server type, and email client"
+      ],
+      "answer": "Email address, password, and server type",
+      "explanation": "To configure a new email account on a mobile device, the user typically needs to provide their email address, password, and server type (e.g., IMAP or POP3). This information is used to establish a connection with the email server.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which of the following is an example of a Class C IP address?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "192.168.1.1",
+        "10.0.0.1",
+        "172.16.0.1",
+        "169.254.0.1"
+      ],
+      "answer": "192.168.1.1",
+      "explanation": "192.168.1.1 is an example of a Class C IP address. Class C addresses have their first octet range from 192 to 223, providing a large number of network addresses for smaller organizations.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "A user reports that their computer is running very slowly and often freezes. Which of the following could be a possible cause of the issue?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Insufficient RAM",
+        "Outdated antivirus software",
+        "Faulty power supply",
+        "Overheating processor"
+      ],
+      "answer": "Insufficient RAM",
+      "explanation": "Insufficient RAM (Random Access Memory) can cause a computer to run slowly and freeze. When the system runs out of available RAM, it may rely heavily on virtual memory, which can significantly degrade performance.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which of the following connectors is commonly used to connect a keyboard to a computer?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "USB",
+        "VGA",
+        "HDMI",
+        "Ethernet"
+      ],
+      "answer": "USB",
+      "explanation": "USB (Universal Serial Bus) is commonly used to connect a keyboard to a computer. USB keyboards are widely supported and provide a convenient
+
+ plug-and-play experience.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which of the following mobile device features allows users to quickly unlock their device by scanning their fingerprint?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Face recognition",
+        "Iris scanner",
+        "Fingerprint scanner",
+        "Voice recognition"
+      ],
+      "answer": "Fingerprint scanner",
+      "explanation": "A fingerprint scanner is a mobile device feature that allows users to quickly unlock their device by scanning their fingerprint. The device compares the scanned fingerprint with the stored fingerprint data for authentication.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which of the following is a valid IPv6 address format?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "192.168.1.1",
+        "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+        "10.0.0.1",
+        "172.16.0.1"
+      ],
+      "answer": "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+      "explanation": "2001:0db8:85a3:0000:0000:8a2e:0370:7334 is a valid IPv6 address format. IPv6 addresses are 128 bits long and are represented in eight groups of four hexadecimal digits separated by colons.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which of the following is a common video port used to connect a computer to an external display?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "USB",
+        "VGA",
+        "HDMI",
+        "Ethernet"
+      ],
+      "answer": "HDMI",
+      "explanation": "HDMI (High-Definition Multimedia Interface) is a common video port used to connect a computer to an external display. HDMI supports high-definition video and audio signals.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "A user is unable to access the internet on their computer. Which of the following troubleshooting steps should be performed first?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Check if the network cable is securely plugged in",
+        "Restart the computer",
+        "Reset the wireless router",
+        "Update the network driver"
+      ],
+      "answer": "Check if the network cable is securely plugged in",
+      "explanation": "Before performing any other troubleshooting steps, it is important to check if the network cable is securely plugged in. A loose or disconnected network cable can cause loss of internet connectivity.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which of the following is an example of an input device?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Monitor",
+        "Printer",
+        "Speakers",
+        "Keyboard"
+      ],
+      "answer": "Keyboard",
+      "explanation": "A keyboard is an example of an input device. Input devices are used to enter data and commands into a computer system.",
+      "difficulty": "Medium"
+    }
+  ]
+}
