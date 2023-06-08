@@ -901,7 +901,7 @@ if (str.startsWith("TF")) {
 	  
 
   
-function saveQuiz(quiz) {
+function saveQuizToDB(quiz) {
   const { quizCodeX, quizNameX, imageURLX, numberOfQuestionsX, quizLinkX, quizDifficultyX } = quiz;
 
   // Check if quiz already exists in Firestore
@@ -1120,7 +1120,7 @@ function fetchData(q, e) {
           displayTestInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
 		
 		
-		const quiz = {
+		const quizZZ = {
   quizCode: quizCode,
   quizName: quizName,
   imageURL: 'https://www.quizzatopia.com/images/sq/_.png',
@@ -1132,7 +1132,7 @@ function fetchData(q, e) {
 	
 		     console.log("quizDifficulty:", quizDifficulty);
 
-saveQuiz(quiz);
+saveQuizToDB(quizZZ);
 	      
 		
         }
