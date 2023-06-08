@@ -1,0 +1,229 @@
+{
+  "quizCode": "NCLEX1013",
+  "quizName": "NCLEX Quiz - Physiological Integrity",
+  "quizDifficulty": "Medium",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which of the following is an example of an isotonic exercise?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Walking",
+        "Yoga",
+        "Stretching",
+        "Pilates"
+      ],
+      "answer": "Walking",
+      "explanation": "Isotonic exercises involve the contraction and relaxation of muscles, resulting in joint movement. Walking is an example of an isotonic exercise.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the purpose of using a sequential compression device (SCD) for a client at risk for deep vein thrombosis (DVT)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Prevent infection",
+        "Maintain skin integrity",
+        "Promote lung expansion",
+        "Enhance circulation and prevent blood clot formation"
+      ],
+      "answer": "Enhance circulation and prevent blood clot formation",
+      "explanation": "Sequential compression devices (SCDs) are used to enhance circulation and prevent blood clot formation in clients at risk for deep vein thrombosis (DVT).",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which of the following is an example of an anticholinergic medication?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Metoprolol",
+        "Aspirin",
+        "Ibuprofen",
+        "Atropine"
+      ],
+      "answer": "Atropine",
+      "explanation": "Atropine is an example of an anticholinergic medication, which blocks the action of acetylcholine and can be used to treat bradycardia and reduce secretions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "True or False: Hypoglycemia is characterized by low blood glucose levels.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Hypoglycemia is characterized by low blood glucose levels, typically below 70 mg/dL. It can cause symptoms such as shakiness, sweating, dizziness, and confusion.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which of the following is an example of an enteral feeding route?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Intravenous (IV)",
+        "Subcutaneous (SubQ)",
+        "Intramuscular (IM)",
+        "Gastrostomy tube (G-tube)"
+      ],
+      "answer": "Gastrostomy tube (G-tube)",
+      "explanation": "Enteral feeding involves administering nutrition directly into the gastrointestinal tract. A gastrostomy tube (G-tube) is an example of an enteral feeding route.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the primary purpose of incentive spirometry
+
+?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Prevent deep vein thrombosis (DVT)",
+        "Assess lung sounds",
+        "Promote lung expansion and prevent atelectasis",
+        "Administer bronchodilators"
+      ],
+      "answer": "Promote lung expansion and prevent atelectasis",
+      "explanation": "Incentive spirometry is used to promote lung expansion and prevent atelectasis by encouraging deep breathing and sustained inhalation to maximize lung capacity.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the primary purpose of using a sitz bath?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Promote wound healing",
+        "Relieve constipation",
+        "Reduce edema",
+        "Provide perineal hygiene and soothing relief"
+      ],
+      "answer": "Provide perineal hygiene and soothing relief",
+      "explanation": "A sitz bath is used to provide perineal hygiene and soothing relief in conditions such as hemorrhoids, childbirth recovery, and postoperative care.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "True or False: The normal range for blood pressure in adults is typically below 120/80 mmHg.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The normal range for blood pressure in adults is typically below 120/80 mmHg. Readings above this range may indicate hypertension.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which of the following is an example of a diuretic medication?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lisinopril",
+        "Metformin",
+        "Furosemide",
+        "Warfarin"
+      ],
+      "answer": "Furosemide",
+      "explanation": "Furosemide is an example of a diuretic medication, which increases urine production and is commonly used to treat conditions such as edema and hypertension.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the primary purpose of the Glasgow Coma Scale (GCS)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Assess pain levels",
+        "Evaluate skin integrity",
+        "Measure oxygen saturation",
+        "Assess level of consciousness"
+      ],
+      "answer": "Assess level of consciousness",
+      "explanation": "The Glasgow Coma Scale (GCS) is used to assess the level of consciousness in individuals, evaluating eye opening, verbal response, and motor response.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which of the following is an example of an opioid analgesic?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ibuprofen",
+        "Acetaminophen",
+        "Morphine",
+        "Prednisone"
+      ],
+      "answer": "Morphine",
+      "explanation": "Morphine is an example of an opioid analgesic, commonly used for moderate to severe pain relief
+
+. It acts on opioid receptors in the central nervous system.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "True or False: Hyperkalemia is characterized by high potassium levels in the blood.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Hyperkalemia is characterized by high potassium levels in the blood, typically above 5.0 mEq/L. It can cause symptoms such as muscle weakness, palpitations, and cardiac dysrhythmias.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the primary purpose of an incentive spirometer?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Assess lung function",
+        "Promote lung expansion",
+        "Administer bronchodilators",
+        "Assist with intubation"
+      ],
+      "answer": "Promote lung expansion",
+      "explanation": "An incentive spirometer is primarily used to promote lung expansion by encouraging deep breathing and sustained inhalation, helping prevent atelectasis.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which of the following is an example of an antipyretic medication?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ibuprofen",
+        "Lisinopril",
+        "Metoprolol",
+        "Warfarin"
+      ],
+      "answer": "Ibuprofen",
+      "explanation": "Ibuprofen is an example of an antipyretic medication, commonly used to reduce fever by acting on the hypothalamus to lower the body's temperature set point.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "True or False: Hypoxemia is characterized by low oxygen levels in the blood.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Hypoxemia is characterized by low oxygen levels in the blood. It can result in symptoms such as shortness of breath, rapid breathing, and cyanosis.",
+      "difficulty": "Medium"
+    }
+  ]
+}
