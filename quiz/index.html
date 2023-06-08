@@ -1205,7 +1205,7 @@ quizUrl = stringEnt;
         }
 	      
 	      
-quizDifficulty = typeof quizDifficulty !== 'undefined' ? quizDifficulty : "";
+//quizDifficulty = typeof quizDifficulty !== 'undefined' ? quizDifficulty : "";
 
 	      
 const quizZZ = {
@@ -1214,8 +1214,8 @@ const quizZZ = {
   imageURLX: "https://www.quizzatopia.com/images/sq/_.png",
   numberOfQuestionsX: numberOfQuestions,
   quizJsonX: quizUrl,
-  quizLinkX: quizLinkURL,
-  quizDifficultyX: quizDifficulty
+  quizLinkX: quizLinkURL ? quizLinkURL : 'q', // Use 'q' if quizLinkURL is empty
+  quizDifficultyX: quizDifficulty ? quizDifficulty : ""
 };
 
 
