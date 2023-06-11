@@ -14,3 +14,15 @@
         .toolbar a:hover {
             text-decoration: underline;
         }
+
+
+ a {
+            text-decoration: underline;
+                color: #000;
+
+        }
+ a:hover {
+            text-decoration: underline;
+                color: #ffc107;
+
+        }
