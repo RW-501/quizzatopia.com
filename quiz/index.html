@@ -817,7 +817,15 @@ var  quizType = '';
 const urlParams = new URLSearchParams(window.location.search);
 	//  console.log("1 urlParams     "+urlParams); 
 quizLinkURL = 	"/quiz/?"+urlParams;
+	  
+// Find the <link rel="canonical"> element
+var canonicalLink = document.querySelector('link[rel="canonical"]');
 
+// Update the href attribute of the <link rel="canonical"> tag
+canonicalLink.href = "https://www.quizzatopia.com"+quizLinkURL;
+	  
+	  
+	  
 // Get the values of the "q" and "e" parameters
 var q = urlParams.get('q');
 var e = urlParams.get('e');
