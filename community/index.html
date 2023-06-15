@@ -335,7 +335,6 @@ if (threadId) {
 		
 		
 		
-		
 // Reference to the thread content and reply list elements
 const threadContent = document.getElementById('thread-content');
 const replyList = document.getElementById('reply-list');
@@ -348,60 +347,61 @@ function getThreadDetails(threadId) {
     .collection('threads')
     .doc(threadId)
     .get()
-  
-// Inside the getThreadDetails function
-.then((doc) => {
-  if (doc.exists) {
-    const threadData = doc.data();
-    const userId = threadData.authorID;
+    .then((doc) => {
+      if (doc.exists) {
+        const threadData = doc.data();
+        const userId = threadData.authorID;
 
-    // Get the user information from the "users" collection based on the userId
-    firebase.firestore().collection('users').doc(userId).get()
-      .then((userDoc) => {
-        const userData = userDoc.data();
+        // Get the user information from the "users" collection based on the userId
+        firebase.firestore().collection('users').doc(userId).get()
+          .then((userDoc) => {
+            const userData = userDoc.data();
 
-        // Combine thread and user information as needed
-        const threadWithUserInfo = {
-          threadId: doc.id,
-          threadData: threadData,
-          userData: userData
-        };
-        
-        const timeStamp = formatTimestamp(threadData.timestamp); // Format the timestamp
-
+            // Combine thread and user information as needed
+            const threadWithUserInfo = {
+              threadId: doc.id,
+              threadData: threadData,
+              userData: userData
+            };
+	      
+	//let timeStamp =   formatTimestamp(threadData.timestamp);
+	      
         // Display the thread content
         threadContent.innerHTML = `
           <h3>${threadData.title}</h3>
           <div class="thread-details">
             <div class="thread-author">
               <p>Author: ${threadData.author}</p>
-              <div class="author-picture">
-                <img src="${userData.userProfilePic}" alt="Thread Picture">
-              </div>
-            </div>
+                    <div class="author-picture">
+                      <img src="${userData.userProfilePic}" alt="Thread Picture">
+                    </div>
+		</div>
             <div class="thread-info">
-              <p>Timestamp: ${timeStamp}</p>
+                <p>Timestamp: </p>
               <p>Votes: ${threadData.votes}</p>
-              <p><b>Points:</b> ${userData.userPoints}</p>
-              <p><b>Rank:</b> ${userData.userRank}</p>
-              <p><b>Quizzes Taken:</b> ${userData.userQuizzesTaken}</p>
+            <p><b>Points:</b> ${userData.userPoints}</p>
+                      <p><b>Rank:</b> ${userData.userRank}</p>
+                      <p><b>Quizzes Taken:</b> ${userData.userQuizzesTaken}</p>
             </div>
           </div>
           <p>${threadData.content}</p>
           <button id="reply-button" class="button" onclick="openReplyPopup('${threadId}')">Reply</button>
         `;
-      })
-      .catch((error) => {
-        console.error('Error retrieving user data:', error);
-      });
-  } else {
-    console.log('Thread does not exist.');
-  }
-})
-.catch((error) => {
-  console.error('Error retrieving thread details:', error);
-});
-
+      } else {
+        // Handle the case when the document does not exist
+        console.log('Thread does not exist.');
+      }
+    })
+    .catch((error) => {
+      // Handle any errors that occurred during retrieval
+      console.error('Error retrieving thread details:', error);
+    });
+}
+		
+		
+		
+		
+		
 
 // Function to retrieve and display the replies for the selected thread
 // Function to retrieve and display the replies for the selected thread
