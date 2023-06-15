@@ -506,7 +506,7 @@ function populateThreadList(channelID) {
   channelID = channelID;
 
 	console.log('channelID3:' + channelID);
-/*
+	
   firebase
     .firestore()
     .collection('threads')
@@ -517,7 +517,7 @@ function populateThreadList(channelID) {
       if (isThreadListPopulated) {
         return; // If the thread list is already populated, exit the function
       }
-*/
+
       threadList.innerHTML = ''; // Clear existing thread list
 
       querySnapshot.forEach((doc) => {
