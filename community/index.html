@@ -479,7 +479,6 @@ function populateThreadList(channelID) {
     .then((querySnapshot) => {
       threadList.innerHTML = ''; // Clear existing thread list
 
-	         let userData; 
 
       querySnapshot.forEach((doc) => {
         const threadData = doc.data();
@@ -487,7 +486,7 @@ function populateThreadList(channelID) {
       // Get the user information from the "users" collection based on the userId
       firebase.firestore().collection('users').doc(userId).get()
         .then((userDoc) => {
-           userData = userDoc.data();
+         const  userData = userDoc.data();
           
           // Combine thread and user information as needed
           const threadWithUserInfo = {
@@ -498,7 +497,7 @@ function populateThreadList(channelID) {
 	  
 	  // Use the threadWithUserInfo object as needed
           console.log(threadWithUserInfo);
-        })
+    
 	       
 	      
 	      
@@ -533,7 +532,7 @@ function populateThreadList(channelID) {
     </div>
   </div>
 `;
-
+    })
 
         threadList.appendChild(listItem);
       });
