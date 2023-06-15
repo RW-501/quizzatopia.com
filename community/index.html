@@ -84,7 +84,7 @@
   <div class="view-container">
     <!-- Thread Listing View -->
     <section id="thread-listing-view" class="view active">
-      <h2>Main Discussion</h2>
+      <h2 id="discusionTitle" >Main Discussion</h2>
 	     <button class="start-discussion-button" onclick="openCreateThreadPopup()">Start Discussion</button>
       <ul id="thread-list"></ul>
     </section>
@@ -234,11 +234,12 @@ function closeCreateThreadPopup() {
 		
 		
 // Modify switchView function
-function switchView(viewId) {
+function switchView(viewId, xxx) {
   // Hide all views
   const views = document.querySelectorAll('.view');
   views.forEach((view) => {
     view.classList.remove('active');
+	   document.querySelector('#discusionTitl').innerHTML = xxx;
   });
 
   // Show the selected view
@@ -722,7 +723,7 @@ function voteReply(voteType, replyId) {
 // Function to create channels in HTML
 function createChannelElement(channelData) {
   const channelElement = `
-    <div id="ch${channelData.id}" class="channel channel-div"  onclick="switchView('thread-listing-view'); populateThreadList('${channelData.id}')">
+    <div id="ch${channelData.id}" class="channel channel-div"  onclick="switchView('thread-listing-view',${channelData.name}); populateThreadList('${channelData.id}')">
 
       <h3>${channelData.name}</h3>
       <p>${channelData.description}</p>
