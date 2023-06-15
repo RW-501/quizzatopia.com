@@ -255,6 +255,7 @@ function switchView(viewId, xxx) {
 function openReplyPopup(threadId) {
   document.querySelector('#reply-popup').style.display = 'block';
 	threadId = threadId
+	console.log("threadId: "+threadId);
 }
 
 function closeReplyPopup() {
@@ -322,7 +323,11 @@ const threadContent = document.getElementById('thread-content');
 const replyList = document.getElementById('reply-list');
 
 // Function to retrieve the selected thread's details from Firebase
-function getThreadDetails(threadId) {
+function getThreadDetails(threadId_ID) {
+	threadId = threadId_ID;
+	
+		console.log("threadId: "+threadId);
+
   // Retrieve the thread document from Firebase using the thread ID
   firebase
     .firestore()
@@ -457,7 +462,9 @@ function addReply(content) {
     });
 	
 	// timer
-	getReplies();
+setTimeout(() => {
+  getReplies();
+}, 500);
 		
 }
 
