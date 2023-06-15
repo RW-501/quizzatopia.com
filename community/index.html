@@ -77,7 +77,7 @@
 <!-- Toolbar -->
   <div class="toolbar">
     <button class="button" onclick="switchView('thread-listing-view')">Thread Listing</button>
-    <button class="button" onclick="switchView('thread-details-view')">Thread Details</button>
+    <button class="button" onclick="openCreateThreadPopup()">Start Discussion</button>
   </div>
 
   <!-- View Container -->
@@ -85,7 +85,6 @@
     <!-- Thread Listing View -->
     <section id="thread-listing-view" class="view active">
       <h2 id="discusionTitle" >Main Discussion</h2>
-	     <button class="start-discussion-button" onclick="openCreateThreadPopup()">Start Discussion</button>
       <ul id="thread-list"></ul>
     </section>
 
@@ -808,7 +807,7 @@ const db3 = firebase.firestore();
 	      
 		//    console.log("channelData  n      "+channelData.name);
 //channelID = channelData.id;
-	      		    console.log("channelID        "+channelID);
+	      		    //console.log("channelID        "+channelID);
 
         // Create HTML elements for each channel
         const channelElement = createChannelElement(channelData);
