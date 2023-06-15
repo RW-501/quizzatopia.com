@@ -129,15 +129,16 @@ const quizInfo = setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions);
         quizName = quizInfo.quizName;
         numberOfQuestions = quizInfo.numberOfQuestions;
 	
-  // Check quiz code and retrieve or save quiz info
-
-// console.log(totalQuestions + "   ????????????totalQuestions????"); // Output: 3
 
 	    const db = firebase.firestore();
 
 // Check if quiz already exists in Firestore
 const querySnapshot = await db.collection('quizzes').where('quizCodeDB', '==', quizCode).get();
+	  if (!querySnapshot.empty) {
+  console.log(quizCode + " was updated"); // Output: <quizCode> was updated
 
+}
+/*
 if (!querySnapshot.empty) {
   const quizDoc = querySnapshot.docs[0]; // Assuming there's only one document with the matching quizCodeDB
 
@@ -157,7 +158,7 @@ if (!querySnapshot.empty) {
 
   console.log(quizCode + " was added"); // Output: <quizCode> was added
 }
-  
+  */
 	  
 	  
 	  
