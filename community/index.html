@@ -479,9 +479,34 @@ function populateThreadList(channelID) {
     .then((querySnapshot) => {
       threadList.innerHTML = ''; // Clear existing thread list
 
+	  
       querySnapshot.forEach((doc) => {
         const threadData = doc.data();
-
+	     const userId = doc.userId;
+      
+      // Get the user information from the "users" collection based on the userId
+      firebase.firestore().collection('users').doc(userId).get()
+        .then((userDoc) => {
+          const userData = userDoc.data();
+          
+          // Combine thread and user information as needed
+          const threadWithUserInfo = {
+            threadId: threadDoc.id,
+            threadData: threadData,
+            userData: userData,
+            userData2: userData.userPoints,
+            userData3: userData.userProfilePic,
+            userData4: userData.userRank
+          };
+	  
+	  // Use the threadWithUserInfo object as needed
+          console.log(threadWithUserInfo);
+        })
+	       
+	      
+	      
+	      
+	      
         // Create a list item for each thread
         const listItem = document.createElement('li');
 
@@ -590,6 +615,7 @@ function createThread(channelId, title, content) {
       content: content,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       author: userInfo.userName,
+      authorID: userInfo.firebaseId,
       votes: 0,
       category: 'general',
       // Add more properties as needed
