@@ -289,15 +289,18 @@ const date = new Date(timestamp.seconds * 1000 + timestamp.nanoseconds / 1000000
 const formattedDate = date.toLocaleString(); // Format the date according to the user's locale
 
 //console.log("Time: "+formatTimestamp(threadData.timestamp));
+	console.log("formattedDate: "+formattedDate);
 	
 	// Specify the target date and time
-//const targetDate = new Date('2023-06-15T01:04:03');
+const targetDate = new Date(formattedDate);
+	
+	console.log("targetDate: "+targetDate);
 
 // Get the current date and time
 const currentDate = new Date();
 
 // Calculate the time difference in milliseconds
-const elapsedTime = currentDate - formattedDate;
+const elapsedTime = currentDate - targetDate;
 
 // Convert the elapsed time to a human-readable format
 const seconds = Math.floor(elapsedTime / 1000);
