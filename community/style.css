@@ -492,14 +492,19 @@ button[type="submit"]:hover {
 
 }
 
-
+.textRight{
+  text-align: right;
+    display: block;
+    width: 100%;
+    padding: 2%;
+}
 
 
 .thread-textArea{
     width: 100%;
-  display: block;
-  background-color: #3366ff;
+    display: block;
+    background-color: #f0f2f5;
     padding: 8px 15px;
-
+    margin: 5%;
 
 }
