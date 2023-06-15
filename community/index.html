@@ -429,7 +429,7 @@ function getReplies() {
       console.log("Error getting replies:", error);
     });
 }
-
+       
 
 
 // Function to add a new reply to the thread
@@ -440,15 +440,10 @@ function addReply(content) {
 
   // Create a new reply object
   const newReply = {
-    user: userInfo.userName,
-    id: userInfo.firebaseId,
-    email: userInfo.userEmail,
-    rank: userInfo.userRank,
-    points: userInfo.userPoints,
-    profilePic: userInfo.userProfilePic,
-    quizzesTaken: userInfo.userQuizzesTaken,
+    author: userInfo.userName,
+    authorID: userInfo.firebaseId,
     content: content,
-    timestamp: new Date().toISOString(),
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     threadId: threadId,
   };
 
@@ -460,6 +455,10 @@ function addReply(content) {
     .catch((error) => {
       console.error("Error adding reply: ", error);
     });
+	
+	// timer
+	getReplies();
+		
 }
 
 
@@ -623,20 +622,7 @@ function createThread(channelId, title, content) {
   const threadsCollection = firebase.firestore().collection('threads');
   const userInfo = getUserInfo();
 
-  // Create a new reply object
-  const newReply = {
-    user: userInfo.userName,
-    id: userInfo.firebaseId,
-    email: userInfo.userEmail,
-    rank: userInfo.userRank,
-    points: userInfo.userPoints,
-    profilePic: userInfo.userProfilePic,
-    quizzesTaken: userInfo.userQuizzesTaken,
-    content: content,
-    timestamp: new Date().toISOString(),
-    threadId: threadId,
-  };
-
+  
 // Create a new thread document
   threadsCollection
     .add({
