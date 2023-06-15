@@ -691,7 +691,7 @@ const userId =	userInfo.firebaseId;
 
 addBadgeToUser(userId, userBadges);
 	
-	updatequizDB();
+
   
   // Calculate feedback and display it
   const feedback = calculateFeedback();
@@ -779,7 +779,7 @@ displayBadges();
 	}
 	
 	
-	
+		updatequizDB();
   // Unhide the message board
  // document.getElementById("MessageBoard").classList.remove("d-none");
 }
