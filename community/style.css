@@ -456,6 +456,10 @@ button[type="submit"]:hover {
 .thread-info{
   flex-basis: 50%;
 }
+
+.author-details {
+  flex-basis: 50%;
+}
 .author-info {
   display: flex;
   align-items: center;
@@ -492,6 +496,8 @@ button[type="submit"]:hover {
 
 .author-picture{
     margin: auto;
+    flex-basis: 50%;
+
 }
 
 .textRight{
