@@ -482,7 +482,7 @@ const threadList = document.getElementById('thread-list');
 
 
 // Function to retrieve thread data from Firebase and populate the thread list
-function populateThreadList(xxxD) {
+function populateThreadList(xxx) {
   // Retrieve thread data from Firestore and sort by vote count
 	//	let xxxD = xxx;// "Ac325oPGwa1stwy7Tu34";
 
@@ -492,14 +492,14 @@ function populateThreadList(xxxD) {
   firebase
     .firestore()
     .collection('threads')
-    .where('channelId', '==', xxxD)
+    .where('channelId', '==', xxx)
     .orderBy('votes', 'desc')
     .get()
     .then((querySnapshot) => {
       if (isThreadListPopulated) {
         return; // If the thread list is already populated, exit the function
       }
- channelID = xxxD;
+ channelID = xxx;
 
 	//console.log('channelID3:' + channelID);
       threadList.innerHTML = ''; // Clear existing thread list
@@ -580,7 +580,7 @@ if (!isThreadListPopulated) {
 window.addEventListener('DOMContentLoaded', () => {
 	 channelID = "Ac325oPGwa1stwy7Tu34";
 	 threadId = '';
-	console.log('channelID1:' + channelID);
+	//console.log('channelID1:' + channelID);
 
 switchView('thread-listing-view','Welcome Channel'); 
 	populateThreadList("Ac325oPGwa1stwy7Tu34");
@@ -661,9 +661,12 @@ function createThread(channelId, title, content) {
 // Function to vote on a thread
 function voteThread(voteType, threadId) {
   // Get a reference to the thread document
+	console.log("threadId        "+threadId);
   const threadRef = firebase.firestore().collection('threads').doc(threadId);
   // Get the authenticated user
   const user = firebase.auth().currentUser;
+	
+	console.log("user        "+user);
 
   if (user) {
     // Check if the user has already voted on this thread
