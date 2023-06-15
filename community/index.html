@@ -499,23 +499,23 @@ const threadList = document.getElementById('thread-list');
 let isThreadListPopulated = false;
 
 // Function to retrieve thread data from Firebase and populate the thread list
-function populateThreadList(channelID) {
+function populateThreadList(xxx) {
   // Retrieve thread data from Firestore and sort by vote count
 	
-	console.log('channelID2:' + channelID);
+	console.log('channelID2:' + xxx);
  
 	
   firebase
     .firestore()
     .collection('threads')
-    .where('channelId', '==', channelID)
+    .where('channelId', '==', xxx)
     .orderBy('votes', 'desc')
     .get()
     .then((querySnapshot) => {
       if (isThreadListPopulated) {
         return; // If the thread list is already populated, exit the function
       }
- channelID = channelID;
+ channelID = xxx;
 
 	console.log('channelID3:' + channelID);
       threadList.innerHTML = ''; // Clear existing thread list
