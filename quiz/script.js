@@ -143,8 +143,8 @@ const querySnapshot2 = await db2.collection('quizzes').where('quizCodeDB', '==',
 
 }
 
-if (!querySnapshot.empty) {
-  const quizDoc = querySnapshot.docs[0]; // Assuming there's only one document with the matching quizCodeDB
+if (!querySnapshot2.empty) {
+  const quizDoc = querySnapshot2.docs[0]; // Assuming there's only one document with the matching quizCodeDB
 
   // Update the quizStartedCount field by 1
   await quizDoc.ref.update({
