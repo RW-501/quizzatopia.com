@@ -483,11 +483,11 @@ function populateThreadList(channelID) {
       querySnapshot.forEach((doc) => {
         const threadData = doc.data();
 	     const userId = threadData.authorID;
-      
+       let userData; 
       // Get the user information from the "users" collection based on the userId
       firebase.firestore().collection('users').doc(userId).get()
         .then((userDoc) => {
-          const userData = userDoc.data();
+           userData = userDoc.data();
           
           // Combine thread and user information as needed
           const threadWithUserInfo = {
