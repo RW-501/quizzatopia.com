@@ -364,10 +364,12 @@ function getThreadDetails(threadId) {
               userData: userData
             };
 	      
-	//let timeStamp =   formatTimestamp(threadData.timestamp);
+	const timeStamp =   formatTimestamp(threadData.timestamp);
 	      
         // Display the thread content
         threadContent.innerHTML = `
+	                <div class='textRight'><b>Timestamp: ${timeStamp}</b> </div>
+
           <h3>${threadData.title}</h3>
           <div class="thread-details">
 	  
@@ -381,7 +383,6 @@ function getThreadDetails(threadId) {
 		</div>
 		
             <div class="thread-info">
-                <p><b>Timestamp:</b> </p>
               <p><b>Votes:</b> ${threadData.votes}</p>
             <p><b>Points:</b> ${userData.userPoints}</p>
                       <p><b>Rank:</b> ${userData.userRank}</p>
