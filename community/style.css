@@ -481,7 +481,6 @@ button[type="submit"]:hover {
   text-align: center;
   width: 120px;
   margin-top: 10px;
-  flex-basis: 100%;
 }
 
 .view-details:hover {
