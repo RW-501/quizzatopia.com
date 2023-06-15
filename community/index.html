@@ -495,17 +495,18 @@ function populateThreadList(channelID) {
             };
 
             // Use the threadWithUserInfo object as needed
-            console.log(threadWithUserInfo);
+           // console.log(threadWithUserInfo);
 
             // Create a list item for each thread
             const listItem = document.createElement('li');
 
-		
-		const timestamp = threadData.author;
+		//${formatTimestamp(threadData.timestamp)}
+		const timestamp = threadData.timestamp;
 const date = new Date(timestamp.seconds * 1000 + timestamp.nanoseconds / 1000000);
 const formattedDate = date.toLocaleString(); // Format the date according to the user's locale
 
-//console.log(formattedDate);
+console.log("Time: "+${formatTimestamp(threadData.timestamp)});
+	      
             // Set the thread title, author, timestamp, vote count, etc.
             listItem.innerHTML = `
               <div class="thread-container">
