@@ -503,9 +503,7 @@ function populateThreadList(channelID) {
   // Retrieve thread data from Firestore and sort by vote count
 	
 	console.log('channelID2:' + channelID);
-  channelID = channelID;
-
-	console.log('channelID3:' + channelID);
+ 
 	
   firebase
     .firestore()
@@ -517,7 +515,9 @@ function populateThreadList(channelID) {
       if (isThreadListPopulated) {
         return; // If the thread list is already populated, exit the function
       }
+ channelID = channelID;
 
+	console.log('channelID3:' + channelID);
       threadList.innerHTML = ''; // Clear existing thread list
 
       querySnapshot.forEach((doc) => {
