@@ -165,7 +165,7 @@ await quizRef.update({
             numAds = 1;
       }
   } else {
-    numAds = totalQuestions / 2;
+    numAds = totalQuestions / 5;
   }
 
   var intvalue = Math.round(numAds);
