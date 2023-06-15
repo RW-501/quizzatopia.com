@@ -510,7 +510,7 @@ function populateThreadList(channelID) {
   firebase
     .firestore()
     .collection('threads')
-    .where('channelId', '==', channelID)
+    .where('channelId', '==', "Ac325oPGwa1stwy7Tu34")
     .orderBy('votes', 'desc')
     .get()
     .then((querySnapshot) => {
