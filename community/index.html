@@ -285,13 +285,48 @@ replyForm.addEventListener('submit', (event) => {
 function formatTimestamp(timestamp) {
   // Convert the timestamp to a Date object
 	//${formatTimestamp(threadData.timestamp)}
-		//const timestamp = timestamp;
 const date = new Date(timestamp.seconds * 1000 + timestamp.nanoseconds / 1000000);
 const formattedDate = date.toLocaleString(); // Format the date according to the user's locale
 
 //console.log("Time: "+formatTimestamp(threadData.timestamp));
+	
+	// Specify the target date and time
+//const targetDate = new Date('2023-06-15T01:04:03');
+
+// Get the current date and time
+const currentDate = new Date();
+
+// Calculate the time difference in milliseconds
+const elapsedTime = currentDate - formattedDate;
+
+// Convert the elapsed time to a human-readable format
+const seconds = Math.floor(elapsedTime / 1000);
+const minutes = Math.floor(seconds / 60);
+const hours = Math.floor(minutes / 60);
+const days = Math.floor(hours / 24);
+
+// Prepare the time components for display
+const timeComponents = [];
+if (days > 0) timeComponents.push(`${days} days`);
+if (hours % 24 > 0) timeComponents.push(`${hours % 24} hours`);
+if (minutes % 60 > 0) timeComponents.push(`${minutes % 60} minutes`);
+if (seconds % 60 > 0) timeComponents.push(`${seconds % 60} seconds`);
+
+// Display the elapsed time
+let elapsedTimeString;
+if (timeComponents.length > 0) {
+  elapsedTimeString = timeComponents.join(', ');
+} else {
+  elapsedTimeString = 'Less than a second';
+}
+
+//console.log(`Elapsed Time: ${elapsedTimeString}`);
+
+	
+	
+	
   // Return the formatted timestamp
-  return formattedDate; // Example: using toLocaleString for formatting
+  return elapsedTimeString; // Example: using toLocaleString for formatting
 }
 
 		
