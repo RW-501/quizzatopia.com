@@ -289,12 +289,12 @@ const date = new Date(timestamp.seconds * 1000 + timestamp.nanoseconds / 1000000
 const formattedDate = date.toLocaleString(); // Format the date according to the user's locale
 
 //console.log("Time: "+formatTimestamp(threadData.timestamp));
-	console.log("formattedDate: "+formattedDate);
+	//console.log("formattedDate: "+formattedDate);
 	
 	// Specify the target date and time
 const targetDate = new Date(formattedDate);
 	
-	console.log("targetDate: "+targetDate);
+	//console.log("targetDate: "+targetDate);
 
 // Get the current date and time
 const currentDate = new Date();
@@ -393,7 +393,7 @@ function getThreadDetails(threadId_ID) {
 	      
         // Display the thread content
         threadContent.innerHTML = `
-	                <div class='textRight'><b>Timestamp: ${timeStamp}</b> </div>
+	                <div class='textRight'><b> ${timeStamp}</b></div>
 
           <h3>${threadData.title}</h3>
           <div class="thread-details">
@@ -463,8 +463,8 @@ function getReplies(xxx) {
 
         // Set the reply content, author, timestamp, etc.
         replyDiv.innerHTML = `
-          <p>Author: ${replyData.author}</p>
-          <p>Timestamp: ${formatTimestamp(replyData.timestamp)}</p>
+          <p>${formatTimestamp(replyData.timestamp)}</p>
+	            <p>Author: ${replyData.author}</p>
           <p>${replyData.content}</p>
           <!-- Additional reply information can be added here -->
           <!-- For replies -->
@@ -529,11 +529,7 @@ const threadList = document.getElementById('thread-list');
 // Function to retrieve thread data from Firebase and populate the thread list
 function populateThreadList(xxx) {
   // Retrieve thread data from Firestore and sort by vote count
-	//	let xxxD = xxx;// "Ac325oPGwa1stwy7Tu34";
 
-	//console.log('channelID2:' + xxxD);
- 
-	
   firebase
     .firestore()
     .collection('threads')
@@ -578,8 +574,8 @@ function populateThreadList(xxx) {
             listItem.innerHTML = `
               <div class="thread-container">
                 <h3>${threadData.title}</h3>
+	               <p>${formatTimestamp(threadData.timestamp)}</p>
                 <p>Author: ${threadData.author}</p>
-                <p>Timestamp: ${formatTimestamp(threadData.timestamp)}</p>
                 <div class="vote-section">
                   <div class="vote-count">Votes: ${threadData.votes}</div>
                   <button class="vote-button" onclick="voteThread('up', '${doc.id}')">Upvote</button>
