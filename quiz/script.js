@@ -131,7 +131,6 @@ const quizInfo = setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions);
 	  
 	  
 	  
-	  
 	  const db2 = firebase.firestore();
 
 
@@ -154,17 +153,7 @@ await quizRef.update({
 	
   console.log(quizCode + " was updated: "+quizId); // Output: <quizCode> was updated
 
-} else {
-	/*
-  // Save quiz information to Firestore with an automatically generated document ID
-  await db.collection('quizzes').add({
-    quizCodeDB: quizCode,
-    quizStartedCount: 1 // Initialize the quizStartedCount to 1
-  });
-*/
-  console.log(quizCode + " was not added"); // Output: <quizCode> was added
-}
- 
+} 
 	  
 	  
 	  
@@ -657,6 +646,36 @@ location.href = "/quiz/?q="+q;
  }
 
 
+
+ 
+	async function updatequizDB() {
+  
+	  const db2 = firebase.firestore();
+
+// Check if quiz already exists in Firestore
+const querySnapshot2 = await db2.collection('quizzes').where('quizCodeDB', '==', quizCode).get();
+
+if (!querySnapshot2.empty) {
+  const quizDoc = querySnapshot2.docs[0]; // Assuming there's only one document with the matching quizCodeDB
+
+// Update the quizStartedCount field by 1
+const quizId = quizDoc.id; // Get the document ID
+const quizRef = db2.collection('quizzes').doc(quizId); // Create a reference to the document
+
+await quizRef.update({
+  quizFinishedCount: firebase.firestore.FieldValue.increment(1)
+});
+	
+  console.log(quizCode + " was updated: "+quizId); // Output: <quizCode> was updated
+
+} 
+	  
+	}
+
+
+
+
+
 function endQuiz() {
 	
   clearInterval(timer);
@@ -672,7 +691,7 @@ const userId =	userInfo.firebaseId;
 
 addBadgeToUser(userId, userBadges);
 	
-	
+	updatequizDB();
   
   // Calculate feedback and display it
   const feedback = calculateFeedback();
