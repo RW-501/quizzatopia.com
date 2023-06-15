@@ -460,94 +460,93 @@ getReplies();
 		
 		
 		
-		
-		
-
-		
-// Reference to the thread list element
+	// Reference to the thread list element
 const threadList = document.getElementById('thread-list');
 
-		
-		
-		
-		
+// Flag to track if the thread list has been populated
+let isThreadListPopulated = false;
+
 // Function to retrieve thread data from Firebase and populate the thread list
 function populateThreadList(channelID) {
-	channelID = channelID;
+  channelID = channelID;
   // Retrieve thread data from Firestore and sort by vote count
   firebase.firestore().collection('threads').orderBy('votes', 'desc').get()
     .then((querySnapshot) => {
-      threadList.innerHTML = ''; // Clear existing thread list
+      if (isThreadListPopulated) {
+        return; // If the thread list is already populated, exit the function
+      }
 
+      threadList.innerHTML = ''; // Clear existing thread list
 
       querySnapshot.forEach((doc) => {
         const threadData = doc.data();
-	     const userId = threadData.authorID;
-      // Get the user information from the "users" collection based on the userId
-      firebase.firestore().collection('users').doc(userId).get()
-        .then((userDoc) => {
-         const  userData = userDoc.data();
-          
-          // Combine thread and user information as needed
-          const threadWithUserInfo = {
-            threadId: doc.id,
-            threadData: threadData,
-            userData: userData
-          };
-	  
-	  // Use the threadWithUserInfo object as needed
-          console.log(threadWithUserInfo);
-    
-	       
-	      
-	      
-	      
-	      
-        // Create a list item for each thread
-        const listItem = document.createElement('li');
+        const userId = threadData.authorID;
 
-        // Set the thread title, author, timestamp, vote count, etc.
-    listItem.innerHTML = `
-  <div class="thread-container">
-    <h3>${threadData.title}</h3>
-    <p>Author: ${threadData.user}</p>
-    <p>Timestamp: ${threadData.timestamp}</p>
-    <div class="vote-section">
-      <div class="vote-count">Votes: ${threadData.votes}</div>
-      <button class="vote-button" onclick="voteThread('up', '${doc.id}')">Upvote</button>
-      <button class="vote-button" onclick="voteThread('down', '${doc.id}')">Downvote</button>
-    </div>
-    <div class="thread-details">
-      <div class="author-info">
-        <div class="author-picture">
-          <img src="${userData.userProfilePic}" alt="Thread Picture">
-        </div>
-        <div class="author-details">
-          <p>Points: ${userData.userPoints}</p>
-          <p>Rank: ${userData.userRank}</p>
-          <p>Quizzes Taken: ${userData.userQuizzesTaken}</p>
-        </div>
-      </div>
-      <div class="view-details" onclick="switchView('thread-details-view'); getThreadDetails('${doc.id}')">View Details</div>
-    </div>
-  </div>
-`;
-  
+        // Get the user information from the "users" collection based on the userId
+        firebase.firestore().collection('users').doc(userId).get()
+          .then((userDoc) => {
+            const userData = userDoc.data();
 
-        threadList.appendChild(listItem);
-	        })
+            // Combine thread and user information as needed
+            const threadWithUserInfo = {
+              threadId: doc.id,
+              threadData: threadData,
+              userData: userData
+            };
+
+            // Use the threadWithUserInfo object as needed
+            console.log(threadWithUserInfo);
+
+            // Create a list item for each thread
+            const listItem = document.createElement('li');
+
+            // Set the thread title, author, timestamp, vote count, etc.
+            listItem.innerHTML = `
+              <div class="thread-container">
+                <h3>${threadData.title}</h3>
+                <p>Author: ${threadData.user}</p>
+                <p>Timestamp: ${threadData.timestamp}</p>
+                <div class="vote-section">
+                  <div class="vote-count">Votes: ${threadData.votes}</div>
+                  <button class="vote-button" onclick="voteThread('up', '${doc.id}')">Upvote</button>
+                  <button class="vote-button" onclick="voteThread('down', '${doc.id}')">Downvote</button>
+                </div>
+                <div class="thread-details">
+                  <div class="author-info">
+                    <div class="author-picture">
+                      <img src="${userData.userProfilePic}" alt="Thread Picture">
+                    </div>
+                    <div class="author-details">
+                      <p>Points: ${userData.userPoints}</p>
+                      <p>Rank: ${userData.userRank}</p>
+                      <p>Quizzes Taken: ${userData.userQuizzesTaken}</p>
+                    </div>
+                  </div>
+                  <div class="view-details" onclick="switchView('thread-details-view'); getThreadDetails('${doc.id}')">View Details</div>
+                </div>
+              </div>
+            `;
+
+            threadList.appendChild(listItem);
+          })
+          .catch((error) => {
+            console.error('Error getting user document:', error);
+          });
       });
+
+      // Set the flag to indicate that the thread list has been populated
+      isThreadListPopulated = true;
     })
     .catch((error) => {
-      console.log('Error getting threads:', error);
+      console.error('Error getting threads:', error);
     });
 }
 
-// Call the function to populate the thread list on page load
-populateThreadList();
+// Call the function to populate the thread list on page load if it hasn't been called before
+if (!isThreadListPopulated) {
+  populateThreadList();
+}
 
-		
-		
 		
 		
 		
