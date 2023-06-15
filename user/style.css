@@ -360,7 +360,8 @@ width: 50%;
 }
 .popup-container {
   display: none;
-  position: fixed;
+    position: fixed;
+    height: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
