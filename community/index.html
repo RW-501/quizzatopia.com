@@ -351,21 +351,38 @@ function getThreadDetails(threadId) {
     .then((doc) => {
       if (doc.exists) {
         const threadData = doc.data();
+        const userId = threadData.authorID;
 
+        // Get the user information from the "users" collection based on the userId
+        firebase.firestore().collection('users').doc(userId).get()
+          .then((userDoc) => {
+            const userData = userDoc.data();
+
+            // Combine thread and user information as needed
+            const threadWithUserInfo = {
+              threadId: doc.id,
+              threadData: threadData,
+              userData: userData
+            };
+	      
+	      
+	      
         // Display the thread content
         threadContent.innerHTML = `
           <h3>${threadData.title}</h3>
           <div class="thread-details">
             <div class="thread-author">
-              <p>Author: ${threadData.user}</p>
-              <img src="${threadData.picture}" alt="Author Picture">
-            </div>
+              <p>Author: ${threadData.author}</p>
+                    <div class="author-picture">
+                      <img src="${userData.userProfilePic}" alt="Thread Picture">
+                    </div>
+		</div>
             <div class="thread-info">
-              <p>Timestamp: ${threadData.timestamp}</p>
+                <p>Timestamp: ${formattedDate}</p>
               <p>Votes: ${threadData.votes}</p>
-              <p>Points: ${threadData.points}</p>
-              <p>Rank: ${threadData.rank}</p>
-              <p>Quizzes Taken: ${threadData.quizzesTaken}</p>
+            <p><b>Points:</b> ${userData.userPoints}</p>
+                      <p><b>Rank:</b> ${userData.userRank}</p>
+                      <p><b>Quizzes Taken:</b> ${userData.userQuizzesTaken}</p>
             </div>
           </div>
           <p>${threadData.content}</p>
@@ -488,11 +505,11 @@ function populateThreadList(channelID) {
             const userData = userDoc.data();
 
             // Combine thread and user information as needed
-            const threadWithUserInfo = {
+ /*           const threadWithUserInfo = {
               threadId: doc.id,
               threadData: threadData,
               userData: userData
-            };
+            };*/
 
             // Use the threadWithUserInfo object as needed
            // console.log(threadWithUserInfo);
@@ -505,8 +522,9 @@ function populateThreadList(channelID) {
 const date = new Date(timestamp.seconds * 1000 + timestamp.nanoseconds / 1000000);
 const formattedDate = date.toLocaleString(); // Format the date according to the user's locale
 
-console.log("Time: "+${formatTimestamp(threadData.timestamp)});
+console.log("Time: "+formatTimestamp(threadData.timestamp));
 	      
+	
             // Set the thread title, author, timestamp, vote count, etc.
             listItem.innerHTML = `
               <div class="thread-container">
