@@ -808,17 +808,17 @@ function getChannels() {
   const channelsList = document.getElementById('channels-list');
 	
 		   // console.log("getChannels        ");
-const db = firebase.firestore();
+const db3 = firebase.firestore();
 
   // Get all the channels from the Firestore collection
-  db.collectionGroup('channels').get()
+  db3.collectionGroup('channels').get()
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         const channelData = doc.data();
 	      
 		//    console.log("channelData  n      "+channelData.name);
 //channelID = channelData.id;
-	      		    //console.log("channelID        "+channelID);
+	      		    console.log("channelID        "+channelID);
 
         // Create HTML elements for each channel
         const channelElement = createChannelElement(channelData);
