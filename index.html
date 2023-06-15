@@ -1134,8 +1134,8 @@ num += 1;
           <div class="list-item box">
             <h5 class="list-title">#${num} ${quizData.quizNameDB}</h5>
             <p class="list-description">
-	    <b>Started:</b> ${quizData.quizStartedCount} <br>
-	    <b>Finished:</b> ${quizData.quizFinishedCount} <br>
+	    <b>Started:</b> ${quizData.quizStartedCount || 0} <br>
+	    <b>Finished:</b> ${quizData.quizFinishedCount || 0} <br>
 	    <b>Questions:</b> ${quizData.numberOfQuestionsDB} <br>
 	    <b>Quiz Code:</b> ${quizData.quizCodeDB}
 	
