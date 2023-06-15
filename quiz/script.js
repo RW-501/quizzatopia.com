@@ -128,8 +128,30 @@ const quizInfo = setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions);
 	      quizCode = quizInfo.quizCode;
         quizName = quizInfo.quizName;
         numberOfQuestions = quizInfo.numberOfQuestions;
+	  
+	  
+	  
+	  
+	  const db = firebase.firestore();
+
+// Access a Firestore collection
+const collectionRef = db.collection('quizzes');
+
+// Perform a basic database operation, such as adding a document
+const quizRef = await collectionRef.add({ quizName: 'Test Quiz' });
+console.log('Document added with ID:', quizRef.id);
+
+// Retrieve the added document and log its data
+const quizDoc = await quizRef.get();
+console.log('Quiz document data:', quizDoc.data());
+	  
+	  
+	  
 	
 /*
+
+		 // Get a reference to the Firestore database
+
 	    const db = firebase.firestore();
 
 // Check if quiz already exists in Firestore
