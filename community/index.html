@@ -723,7 +723,7 @@ function voteReply(voteType, replyId) {
 // Function to create channels in HTML
 function createChannelElement(channelData) {
   const channelElement = `
-    <div id="ch${channelData.id}" class="channel channel-div"  onclick="switchView('thread-listing-view',${channelData.name}); populateThreadList('${channelData.id}')">
+    <div id="ch${channelData.id}" class="channel channel-div"  onclick="switchView('thread-listing-view','${channelData.name}'); populateThreadList('${channelData.id}')">
 
       <h3>${channelData.name}</h3>
       <p>${channelData.description}</p>
