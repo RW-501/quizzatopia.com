@@ -288,13 +288,14 @@ replyForm.addEventListener('submit', (event) => {
 		
 function formatTimestamp(timestamp) {
   // Convert the timestamp to a Date object
-  const date = new Date(timestamp);
+	//${formatTimestamp(threadData.timestamp)}
+		//const timestamp = timestamp;
+const date = new Date(timestamp.seconds * 1000 + timestamp.nanoseconds / 1000000);
+const formattedDate = date.toLocaleString(); // Format the date according to the user's locale
 
-  // Format the date as desired (e.g., using toLocaleString, moment.js, or custom formatting)
-  // ...
-
+//console.log("Time: "+formatTimestamp(threadData.timestamp));
   // Return the formatted timestamp
-  return date.toLocaleString(); // Example: using toLocaleString for formatting
+  return formattedDate; // Example: using toLocaleString for formatting
 }
 
 		
@@ -528,12 +529,7 @@ function populateThreadList(channelID) {
             // Create a list item for each thread
             const listItem = document.createElement('li');
 
-		//${formatTimestamp(threadData.timestamp)}
-		const timestamp = threadData.timestamp;
-const date = new Date(timestamp.seconds * 1000 + timestamp.nanoseconds / 1000000);
-const formattedDate = date.toLocaleString(); // Format the date according to the user's locale
-
-console.log("Time: "+formatTimestamp(threadData.timestamp));
+	
 	      
 	
             // Set the thread title, author, timestamp, vote count, etc.
@@ -541,7 +537,7 @@ console.log("Time: "+formatTimestamp(threadData.timestamp));
               <div class="thread-container">
                 <h3>${threadData.title}</h3>
                 <p>Author: ${threadData.author}</p>
-                <p>Timestamp: ${formattedDate}</p>
+                <p>Timestamp: ${formatTimestamp(threadData.timestamp)}</p>
                 <div class="vote-section">
                   <div class="vote-count">Votes: ${threadData.votes}</div>
                   <button class="vote-button" onclick="voteThread('up', '${doc.id}')">Upvote</button>
