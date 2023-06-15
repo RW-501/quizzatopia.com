@@ -232,7 +232,6 @@ function closeCreateThreadPopup() {
 }	
 		
 		
-		
 // Modify switchView function
 function switchView(viewId, xxx) {
   // Hide all views
@@ -240,8 +239,9 @@ function switchView(viewId, xxx) {
   views.forEach((view) => {
     view.classList.remove('active');
   });
+	if(xxx){
 	   document.querySelector('#discusionTitle').innerHTML = xxx;
-
+	}
   // Show the selected view
   const selectedView = document.getElementById(viewId);
   selectedView.classList.add('active');
@@ -512,17 +512,17 @@ function populateThreadList(channelID) {
                   <button class="vote-button" onclick="voteThread('down', '${doc.id}')">Downvote</button>
                 </div>
                 <div class="thread-details">
-                  <div class="author-info">
+                  <div class="author-info ">
                     <div class="author-picture">
                       <img src="${userData.userProfilePic}" alt="Thread Picture">
                     </div>
-                    <div class="author-details">
-                      <p>Points: ${userData.userPoints}</p>
-                      <p>Rank: ${userData.userRank}</p>
-                      <p>Quizzes Taken: ${userData.userQuizzesTaken}</p>
+                    <div class="author-details ">
+                      <p><b>Points:</b> ${userData.userPoints}</p>
+                      <p><b>Rank:</b> ${userData.userRank}</p>
+                      <p><b>Quizzes Taken:</b> ${userData.userQuizzesTaken}</p>
                     </div>
                   </div>
-                  <div class="view-details" onclick="switchView('thread-details-view'); getThreadDetails('${doc.id}')">View Details</div>
+                  <div class="view-details " onclick="switchView('thread-details-view'); getThreadDetails('${doc.id}')">View Details</div>
                 </div>
               </div>
             `;
