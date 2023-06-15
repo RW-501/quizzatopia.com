@@ -249,7 +249,7 @@ function switchView(viewId, xxx) {
 
 // Call switchView function with the welcome channel ID on page load
 window.addEventListener('DOMContentLoaded', () => {
-	 channelID = 'Ac325oPGwa1stwy7Tu34';
+	 channelID = "Ac325oPGwa1stwy7Tu34";
 	 threadId = '';
 	console.log('channelID1:' + channelID);
 
@@ -510,7 +510,7 @@ function populateThreadList(channelID) {
   firebase
     .firestore()
     .collection('threads')
-    .where('channelId', '==', "Ac325oPGwa1stwy7Tu34")
+    .where('channelId', '==', channelID)
     .orderBy('votes', 'desc')
     .get()
     .then((querySnapshot) => {
