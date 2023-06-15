@@ -506,5 +506,7 @@ button[type="submit"]:hover {
     background-color: #f0f2f5;
     padding: 8px 15px;
     margin: 5%;
+    box-sizing: border-box;
+    margin-inline: auto
 
 }
