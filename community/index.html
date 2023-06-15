@@ -482,7 +482,7 @@ function populateThreadList(channelID) {
 	  
       querySnapshot.forEach((doc) => {
         const threadData = doc.data();
-	     const userId = doc.authorID;
+	     const userId = threadData.authorID;
       
       // Get the user information from the "users" collection based on the userId
       firebase.firestore().collection('users').doc(userId).get()
@@ -521,12 +521,12 @@ function populateThreadList(channelID) {
     <div class="thread-details">
       <div class="author-info">
         <div class="author-picture">
-          <img src="${threadData.picture}" alt="Thread Picture">
+          <img src="${userData.userProfilePic}" alt="Thread Picture">
         </div>
         <div class="author-details">
-          <p>Points: ${threadData.points}</p>
-          <p>Rank: ${threadData.rank}</p>
-          <p>Quizzes Taken: ${threadData.quizzesTaken}</p>
+          <p>Points: ${userData.userPoints}</p>
+          <p>Rank: ${userData.userRank}</p>
+          <p>Quizzes Taken: ${userData.userQuizzesTaken}</p>
         </div>
       </div>
       <div class="view-details" onclick="switchView('thread-details-view'); getThreadDetails('${doc.id}')">View Details</div>
