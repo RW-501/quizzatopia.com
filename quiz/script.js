@@ -138,7 +138,7 @@ const quizInfo = setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions);
 const collectionRef2 = db2.collection('quizzes');
 
 // Perform a basic database operation, such as adding a document
-const quizRef = await collectionRef2.add({ quizName: 'Test Quiz' });
+const quizRef = await collectionRef2.add({ quizNameDB: 'Test Quiz' });
 console.log('Document added with ID:', quizRef.id);
 
 
