@@ -133,7 +133,8 @@ const quizInfo = setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions);
 
 // console.log(totalQuestions + "   ????????????totalQuestions????"); // Output: 3
 
-	  
+	    const db = firebase.firestore();
+
 // Check if quiz already exists in Firestore
 const querySnapshot = await db.collection('quizzes').where('quizCodeDB', '==', quizCode).get();
 
