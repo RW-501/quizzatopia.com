@@ -384,10 +384,10 @@ function displayProfileInfo() {
       const popupDetails = document.getElementById("popupDetails");
 
       popupDetails.innerHTML = `
-        <h4 class="text-center">${name}</h4>
+        <h4 class="text-center">${name}</h4><br>
         <p>${description}</p>
-        <p>Quantity: ${quantity}</p>
-        <p>Earned Date: ${earnedDate}</p>
+        <p><b>Quantity:</b> ${quantity}</p>
+        <p><b>Earned Date:</b> ${earnedDate}</p>
       `;
 
       popupContainer.style.display = "block";
