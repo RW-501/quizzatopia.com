@@ -150,9 +150,10 @@ main {
 }
 
 .thread-author {
-      display: grid;
-  align-items: center;
-  margin-right: 20px;
+    display: grid;
+    align-items: center;
+    flex-basis: 50%;
+    margin: auto;
 }
 
 .thread-author p {
@@ -452,7 +453,9 @@ button[type="submit"]:hover {
   font-size: 12px;
   cursor: pointer;
 }
-
+.thread-info{
+  flex-basis: 50%;
+}
 .author-info {
   display: flex;
   align-items: center;
@@ -488,8 +491,7 @@ button[type="submit"]:hover {
 }
 
 .author-picture{
-    flex-basis: 50%;
-
+    margin: auto;
 }
 
 .textRight{
@@ -507,6 +509,6 @@ button[type="submit"]:hover {
     padding: 8px 15px;
     margin: 5%;
     box-sizing: border-box;
-    margin-inline: auto
-
+    margin-inline: auto;
+border: #7a828e 1px solid;
 }
