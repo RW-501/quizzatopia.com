@@ -163,7 +163,7 @@ if (!querySnapshot.empty) {
 */
   console.log(quizCode + " was not added"); // Output: <quizCode> was added
 }
-  */
+ 
 	  
 	  
 	  
