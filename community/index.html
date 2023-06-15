@@ -387,6 +387,8 @@ function getThreadDetails(threadId) {
           <p>${threadData.content}</p>
           <button id="reply-button" class="button" onclick="openReplyPopup('${threadId}')">Reply</button>
         `;
+	})
+	      
       } else {
         // Handle the case when the document does not exist
         console.log('Thread does not exist.');
