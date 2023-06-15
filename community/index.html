@@ -802,6 +802,7 @@ function getChannels() {
   const channelsList = document.getElementById('channels-list');
 	
 		   // console.log("getChannels        ");
+const db = firebase.firestore();
 
   // Get all the channels from the Firestore collection
   db.collectionGroup('channels').get()
