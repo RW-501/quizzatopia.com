@@ -479,11 +479,11 @@ function populateThreadList(channelID) {
     .then((querySnapshot) => {
       threadList.innerHTML = ''; // Clear existing thread list
 
-	  
+	         let userData; 
+
       querySnapshot.forEach((doc) => {
         const threadData = doc.data();
 	     const userId = threadData.authorID;
-       let userData; 
       // Get the user information from the "users" collection based on the userId
       firebase.firestore().collection('users').doc(userId).get()
         .then((userDoc) => {
