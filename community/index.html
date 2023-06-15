@@ -499,7 +499,14 @@ let isThreadListPopulated = false;
 function populateThreadList(channelID) {
   channelID = channelID;
   // Retrieve thread data from Firestore and sort by vote count
-  firebase.firestore().collection('threads').orderBy('votes', 'desc').get()
+	
+	
+  firebase
+    .firestore()
+    .collection('threads')
+    .where('channelId', '==', channelID)
+    .orderBy('votes', 'desc')
+    .get()
     .then((querySnapshot) => {
       if (isThreadListPopulated) {
         return; // If the thread list is already populated, exit the function
