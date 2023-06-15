@@ -249,8 +249,10 @@ function switchView(viewId, xxx) {
 
 // Call switchView function with the welcome channel ID on page load
 window.addEventListener('DOMContentLoaded', () => {
-  const welcomeChannelId = 'Ac325oPGwa1stwy7Tu34'; // Replace with the actual welcome channel ID
-  //switchView(welcomeChannelId);
+	 channelID = 'Ac325oPGwa1stwy7Tu34';
+	 threadId = '';
+switchView('thread-listing-view','Welcome Channel'); populateThreadList(channelID);
+
 });
 
 		
