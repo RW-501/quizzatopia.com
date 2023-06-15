@@ -145,14 +145,14 @@ if (!querySnapshot2.empty) {
 
 // Update the quizStartedCount field by 1
 const quizId = quizDoc.id; // Get the document ID
-const quizRef = db.collection('quizzes').doc(quizId); // Create a reference to the document
+const quizRef = db2.collection('quizzes').doc(quizId); // Create a reference to the document
 
 await quizRef.update({
   quizStartedCount: firebase.firestore.FieldValue.increment(1)
 });
 	
 	
-  console.log(quizCode + " was updated"); // Output: <quizCode> was updated
+  console.log(quizCode + " was updated: "+quizId); // Output: <quizCode> was updated
 
 } else {
 	/*
