@@ -491,3 +491,15 @@ button[type="submit"]:hover {
     flex-basis: 50%;
 
 }
+
+
+
+
+.thread-textArea{
+    width: 100%;
+  display: block;
+  background-color: #3366ff;
+    padding: 8px 15px;
+
+
+}
