@@ -947,7 +947,9 @@ async function saveQuizToDB(quiz) {
         quizJsonDB: quizJsonX,	      
         numberOfQuestionsDB: numberOfQuestionsX,
         quizLinkDB: quizLinkX,
-        quizDifficultyDB: difficulty2
+        quizDifficultyDB: difficulty2,
+	    quizStartedCount: 0 // Initialize the quizStartedCount to 0
+
       });
 	      
       showPopup(`Quiz with code ${quizCodeX} saved successfully.`);
