@@ -370,21 +370,27 @@ function getThreadDetails(threadId) {
         threadContent.innerHTML = `
           <h3>${threadData.title}</h3>
           <div class="thread-details">
+	  
+	  
             <div class="thread-author">
-              <p>Author: ${threadData.author}</p>
                     <div class="author-picture">
                       <img src="${userData.userProfilePic}" alt="Thread Picture">
                     </div>
+		                  <p>Author: ${threadData.author}</p>
+
 		</div>
+		
             <div class="thread-info">
-                <p>Timestamp: </p>
-              <p>Votes: ${threadData.votes}</p>
+                <p><b>Timestamp:</b> </p>
+              <p><b>Votes:</b> ${threadData.votes}</p>
             <p><b>Points:</b> ${userData.userPoints}</p>
                       <p><b>Rank:</b> ${userData.userRank}</p>
                       <p><b>Quizzes Taken:</b> ${userData.userQuizzesTaken}</p>
             </div>
           </div>
+	              <div id='${doc.id}'  class="thread-textArea">
           <p>${threadData.content}</p>
+	  </div>
           <button id="reply-button" class="button" onclick="openReplyPopup('${threadId}')">Reply</button>
         `;
 	})
