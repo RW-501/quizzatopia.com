@@ -480,7 +480,7 @@ function populateThreadList(xxxD) {
   // Retrieve thread data from Firestore and sort by vote count
 	//	let xxxD = xxx;// "Ac325oPGwa1stwy7Tu34";
 
-	console.log('channelID2:' + xxxD);
+	//console.log('channelID2:' + xxxD);
  
 	
   firebase
@@ -495,7 +495,7 @@ function populateThreadList(xxxD) {
       }
  channelID = xxxD;
 
-	console.log('channelID3:' + channelID);
+	//console.log('channelID3:' + channelID);
       threadList.innerHTML = ''; // Clear existing thread list
 
       querySnapshot.forEach((doc) => {
