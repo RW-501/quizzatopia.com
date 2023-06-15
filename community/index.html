@@ -324,20 +324,20 @@ const replyList = document.getElementById('reply-list');
 
 // Function to retrieve the selected thread's details from Firebase
 function getThreadDetails(threadId_ID) {
-	threadId = threadId_ID;
 	
-		console.log("threadId: "+threadId);
-
   // Retrieve the thread document from Firebase using the thread ID
   firebase
     .firestore()
     .collection('threads')
-    .doc(threadId)
+    .doc(threadId_ID)
     .get()
     .then((doc) => {
       if (doc.exists) {
         const threadData = doc.data();
         const userId = threadData.authorID;
+
+	      threadId = threadId_ID;
+		console.log("threadId: "+threadId);
 
         // Get the user information from the "users" collection based on the userId
         firebase.firestore().collection('users').doc(userId).get()
