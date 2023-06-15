@@ -239,8 +239,8 @@ function switchView(viewId, xxx) {
   const views = document.querySelectorAll('.view');
   views.forEach((view) => {
     view.classList.remove('active');
-	   document.querySelector('#discusionTitl').innerHTML = xxx;
   });
+	   document.querySelector('#discusionTitle').innerHTML = xxx;
 
   // Show the selected view
   const selectedView = document.getElementById(viewId);
