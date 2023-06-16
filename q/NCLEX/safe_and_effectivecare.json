@@ -32,20 +32,21 @@
       "explanation": "Hand hygiene should be performed before and after every patient contact to prevent the spread of infection.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 3,
-      "question": "The abbreviation 'NPO' stands for ________.",
-      "imageURL": "",
-      "questionType": "Fill in Blank",
-      "options": [
-        "Nothing by mouth",
-        "Non-per os",
-        "No per oral"
-      ],
-      "answer": "Nothing by mouth",
-      "explanation": "The abbreviation 'NPO' stands for 'Nothing by mouth.' It is used to indicate that a patient should not consume any food or fluids orally.",
-      "difficulty": "Medium"
-    },
+   {
+  "questionNumber": 3,
+  "question": "The abbreviation 'NPO' stands for ________.",
+  "imageURL": "",
+  "questionType": "Fill in Blank",
+  "options": [
+    "Nothing by mouth",
+    "Non-per os",
+    "No per oral",
+    "Nil per os"
+  ],
+  "answer": "Nothing by mouth",
+  "explanation": "The abbreviation 'NPO' stands for 'Nothing by mouth.' It is used to indicate that a patient should not consume any food or fluids orally.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 4,
       "question": "What does this image represent?",
@@ -204,20 +205,20 @@
       "explanation": "The 'Scope of Practice' defines the boundaries of practice for nurses and outlines their professional responsibilities and limitations.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 15,
-      "question": "What does this image represent?",
-      "imageURL": "https://example.com/image2.jpg",
-      "questionType": "Multiple Choice",
-      "options": [
-        "High fall risk",
-        "Hand hygiene station",
-        "Radiation hazard",
-        "Biohazard waste"
-      ],
-      "answer": "Biohazard waste",
-      "explanation": "The image represents a biohazard waste container, used for the safe disposal of potentially infectious materials.",
-      "difficulty": "Medium"
-    }
+{
+  "questionNumber": 15,
+  "question": "Which of the following is a primary objective of risk management in project management?",
+  "imageURL": "",
+  "questionType": "Multiple Choice",
+  "options": [
+    "Eliminate all risks",
+    "Minimize project costs",
+    "Maximize project scope",
+    "Manage and mitigate risks"
+  ],
+  "answer": "Manage and mitigate risks",
+  "explanation": "The primary objective of risk management in project management is to manage and mitigate risks. It involves identifying, analyzing, and addressing risks to minimize their potential negative impact on the project.",
+  "difficulty": "Medium"
+}
   ]
 }
