@@ -4,16 +4,21 @@
   "quizDifficulty": "Medium",
   "numberOfQuestions": 15,
   "questions": [
-    {
-      "questionNumber": 1,
-      "question": "Fill in the blank: The process of determining the project objectives and defining the project deliverables is called _________.",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Project scope planning",
-      "explanation": "Project scope planning is the process of determining the project objectives and defining the project deliverables. It involves identifying what is included and excluded from the project.",
-      "difficulty": "Easy"
-    },
+{
+  "questionNumber": 1,
+  "question": "Fill in the blank: The process of determining the project objectives and defining the project deliverables is called _________.",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Project scope planning",
+    "Project initiation",
+    "Project requirements gathering",
+    "Project deliverable identification"
+  ],
+  "answer": "Project scope planning",
+  "explanation": "Project scope planning is the process of determining the project objectives and defining the project deliverables. It involves identifying what is included and excluded from the project.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 2,
       "question": "Which of the following is NOT a component of a project scope statement?",
@@ -42,16 +47,21 @@
       "explanation": "True. A project schedule defines the start and end dates of project activities and the sequence in which they will be performed. It helps in managing project timelines.",
       "difficulty": "Easy"
     },
-    {
-      "questionNumber": 4,
-      "question": "Fill in the blank: A project network diagram illustrates the _________ of project activities.",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "sequence",
-      "explanation": "A project network diagram illustrates the sequence of project activities. It shows the logical relationships between activities and helps in identifying critical path and dependencies.",
-      "difficulty": "Easy"
-    },
+{
+  "questionNumber": 4,
+  "question": "Fill in the blank: A project network diagram illustrates the _________ of project activities.",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "cost",
+    "duration",
+    "dependencies",
+    "sequence"
+  ],
+  "answer": "sequence",
+  "explanation": "A project network diagram illustrates the sequence of project activities. It shows the logical relationships between activities and helps in identifying critical path and dependencies.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 5,
       "question": "Which of the following is an output of the Define Activities process?",
@@ -80,16 +90,21 @@
       "explanation": "True. The critical path in a project schedule is the longest sequence of dependent activities that determines the project's duration. Any delay in activities on the critical path will directly impact the project's timeline.",
       "difficulty": "Easy"
     },
-    {
-      "questionNumber": 7,
-      "question": "Fill in the blank: Resource leveling is a technique used to adjust the _________ of resources over time.",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "allocation",
-      "explanation": "Resource leveling is a technique used to adjust the allocation of resources over time. It aims to optimize resource utilization and avoid resource overloading or underutilization.",
-      "difficulty": "Easy"
-    },
+{
+  "questionNumber": 7,
+  "question": "Fill in the blank: Resource leveling is a technique used to adjust the _________ of resources over time.",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "availability",
+    "workload",
+    "utilization",
+    "allocation"
+  ],
+  "answer": "allocation",
+  "explanation": "Resource leveling is a technique used to adjust the allocation of resources over time. It aims to optimize resource utilization and avoid resource overloading or underutilization.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 8,
       "question": "Which of the following is an output of the Estimate Activity Durations process?",
@@ -118,16 +133,21 @@
       "explanation": "True. A resource histogram is a graphical representation of resource availability over time. It helps in visualizing resource utilization and identifying potential resource conflicts.",
       "difficulty": "Easy"
     },
-    {
-      "questionNumber": 10,
-      "question": "Fill in the blank: A project baseline includes the approved _________, cost, and schedule for the project.",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "scope",
-      "explanation": "A project baseline includes the approved scope, cost, and schedule for the project. It serves as a reference point for project performance measurement and control.",
-      "difficulty": "Easy"
-    },
+ {
+  "questionNumber": 10,
+  "question": "Fill in the blank: A project baseline includes the approved _________, cost, and schedule for the project.",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "objectives",
+    "deliverables",
+    "requirements",
+    "scope"
+  ],
+  "answer": "scope",
+  "explanation": "A project baseline includes the approved scope, cost, and schedule for the project. It serves as a reference point for project performance measurement and control.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 11,
       "question": "Which of the following is an output of the Develop Schedule process?",
@@ -156,16 +176,21 @@
       "explanation": "True. A resource calendar specifies the working days and shifts for project team members. It helps in managing resource availability and planning project activities.",
       "difficulty": "Easy"
     },
-    {
-      "questionNumber": 13,
-      "question": "Fill in the blank: The Perform Qualitative Risk Analysis process assesses risks based on their _________ and impact.",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "likelihood",
-      "explanation": "The Perform Qualitative Risk Analysis process assesses risks based on their likelihood and impact. It helps in prioritizing risks for further analysis and response planning.",
-      "difficulty": "Easy"
-    },
+   {
+  "questionNumber": 13,
+  "question": "Fill in the blank: The Perform Qualitative Risk Analysis process assesses risks based on their _________ and impact.",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "severity",
+    "probability",
+    "likelihood",
+    "magnitude"
+  ],
+  "answer": "likelihood",
+  "explanation": "The Perform Qualitative Risk Analysis process assesses risks based on their likelihood and impact. It helps in prioritizing risks for further analysis and response planning.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 14,
       "question": "Which of the following is an output of the Control Schedule process?",
