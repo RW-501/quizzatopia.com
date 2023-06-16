@@ -599,7 +599,7 @@ fetch(authIndex)
   .then(response => response.text())
   .then(data => {
     const signupLoginArea = document.getElementById('signupLoginArea');
-	signupLoginArea.innerHTML += data;
+	signupLoginArea.innerHTML = data;
 signupLoginArea.display = "none";
   });
 
