@@ -1267,11 +1267,11 @@ window.addEventListener('load', function() {
 
 
 // Function to initialize the navbar toggler event
+    var loggedInDiv = document.querySelector('#navLoggedin');
+    var navbarNav = document.querySelector('#navbarNav');
 
 function initializeNavbarToggler() {
-    var navbarNav = document.querySelector('#navbarNav');
     navbarNav.classList.add('collapse');
-    var loggedInDiv = document.querySelector('#navLoggedin');
     loggedInDiv.style.display = 'none';
 
 	const userInfo = getUserInfo();
@@ -1299,6 +1299,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 window.onload = function() {
+	
   var navbarNav = document.querySelector('#navbarNav');
   navbarNav.classList.toggle('collapse');
     // Check if the navbar is collapsed or not
@@ -1344,7 +1345,7 @@ window.onload = function() {
         navLoggedinElement.id = 'navLoggedin';
         // Append the new element to the appropriate parent element in your HTML markup
         // For example, if it should be part of a navigation bar, find the parent element of the navigation bar and append it there.
-        var parentElement = document.querySelector('.auth-buttons');
+        var parentElement = document.getElementById('auth-buttons');
         parentElement.appendChild(navLoggedinElement);
       }
       navLoggedinElement.innerHTML = '<div onclick="logOutFunction()">Log Out</div>';
@@ -1359,7 +1360,7 @@ window.onload = function() {
         navLoggedinElement.id = 'navLoggedin';
         // Append the new element to the appropriate parent element in your HTML markup
         // For example, if it should be part of a navigation bar, find the parent element of the navigation bar and append it there.
-        var parentElement = document.querySelector('.auth-buttons');
+        var parentElement = document.getElementById('auth-buttons');
         parentElement.appendChild(navLoggedinElement);
       }
       navLoggedinElement.innerHTML = '<div onclick="openPopup(); switchTab(\'login\');">Log In</div>';
