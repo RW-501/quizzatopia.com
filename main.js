@@ -1293,6 +1293,8 @@ function initializeNavbarToggler() {
 // Call the function to fetch and insert the HTML based on the page level
 document.addEventListener('DOMContentLoaded', function() {
   fetchAndInsertContent();
+	    console.log('DOMContentLoaded 1296 :   ');
+
 });
 
 
@@ -1314,7 +1316,7 @@ window.onload = function() {
       // Navbar is not collapsed, show the "logged in" div
      loggedInDiv.style.display = 'block';
     }
-	    console.log('collapse :  ???? ');
+	    console.log('window.onload collapse :  ???? ');
 
 };
 
