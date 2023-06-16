@@ -1315,9 +1315,9 @@ document.addEventListener('DOMContentLoaded', function() {
  document.addEventListener('click', function(event) {
   const navbar = document.getElementById('navbar');
     const navbarNav = document.querySelector('#navbarNav');
-	 if (!navbarNav.classList.contains('collapse')) {
+	 if (!navbarNav.classList.contains('show')) {
     if (!navbar.contains(event.target)) {
-      navbarToggler();
+navbarNav.classList.remove('show'); 
     }
   }
 });
