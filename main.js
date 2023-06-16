@@ -1310,14 +1310,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// Add an event listener to the document object
-document.addEventListener('click', function(event) {
-  // Get the navbar element
-  const navbar = document.getElementById('navbar');
-    const navbarNav = document.querySelector('#navbarNav')
+
 
  document.addEventListener('click', function(event) {
-  if (!navbarNav.classList.contains('collapse')) {
+  const navbar = document.getElementById('navbar');
+    const navbarNav = document.querySelector('#navbarNav');
+	 if (!navbarNav.classList.contains('collapse')) {
     if (!navbar.contains(event.target)) {
       navbarToggler();
     }
