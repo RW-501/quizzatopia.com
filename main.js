@@ -1267,12 +1267,11 @@ window.addEventListener('load', function() {
 
 
 // Function to initialize the navbar toggler event
-    var loggedInDiv = document.querySelector('#navLoggedin');
-    var navbarNav = document.querySelector('#navbarNav');
+    const loggedInDiv = document.getElementById('navLoggedin');
+    const navbarNav = document.getElementById('navbarNav');
 
 function initializeNavbarToggler() {
-    var loggedInDiv = document.querySelector('#navLoggedin');
-    var navbarNav = document.querySelector('#navbarNav');
+   
 	
 	navbarNav.classList.add('collapse');
     loggedInDiv.style.display = 'none';
