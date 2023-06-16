@@ -148,16 +148,20 @@
       "explanation": "A urinary tract infection (UTI) acquired in a healthcare facility is an example of a healthcare-associated infection (HAI).",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 11,
-      "question": "What does the acronym RACE stand for in fire safety?",
-      "imageURL": "",
-      "questionType": "Fill in Blank",
-      "options": [],
-      "answer": "Rescue, Alarm, Contain, Extinguish/Evacuate",
-      "explanation": "RACE stands for Rescue, Alarm, Contain, Extinguish/Evacuate, which are the recommended actions in case of a fire incident.",
-      "difficulty": "Medium"
-    },
+{
+  "questionNumber": 11,
+  "question": "What does the acronym RACE stand for in fire safety?",
+  "imageURL": "",
+  "questionType": "Fill in Blank",
+  "options": [
+    "Rescue, Alarm, Contain, Extinguish/Evacuate",
+    "Run, Alert, Control, Escape",
+    "Report, Assess, Call, Evacuate"
+  ],
+  "answer": "Rescue, Alarm, Contain, Extinguish/Evacuate",
+  "explanation": "RACE stands for Rescue, Alarm, Contain, Extinguish/Evacuate, which are the recommended actions in case of a fire incident.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 12,
       "question": "True or False: A nurse should never leave a patient alone while they are restrained.",
