@@ -876,7 +876,7 @@ function createChannelElement(channelData) {
 function getChannels() {
   const channelsList = document.getElementById('channels-list');
 	
-		   // console.log("getChannels        ");
+		   console.log("getChannels        ");
 const db3 = firebase.firestore();
 
   // Get all the channels from the Firestore collection
@@ -885,7 +885,7 @@ const db3 = firebase.firestore();
       querySnapshot.forEach((doc) => {
         const channelData = doc.data();
 	      
-		//    console.log("channelData  n      "+channelData.name);
+		   console.log("channelData  n      "+channelData.name);
 //channelID = channelData.id;
 	      		    //console.log("channelID        "+channelID);
 
