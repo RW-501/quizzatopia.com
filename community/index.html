@@ -901,7 +901,9 @@ const db3 = firebase.firestore();
 
         // Create HTML elements for each channel
         const channelElement = createChannelElement(channelData);
-
+	      
+channelsList.innerHTML = channelElement;
+	      
         // Add the channel element to the channels list
         channelsList.insertAdjacentHTML('beforeend', channelElement);
       });
