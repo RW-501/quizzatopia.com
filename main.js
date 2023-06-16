@@ -1283,7 +1283,8 @@ function initializeNavbarToggler() {
 
     console.log('userInfo firebaseId:', userInfo.firebaseId);
 
-    console.log('1288 :   userInfo.userProfilePic');
+    console.log('1288 :   ');
+	  updateNavBar();
 }
 
 
@@ -1373,7 +1374,7 @@ function logOutFunction() {
     }
 	 
   }
-  updateNavBar(); 
+ 
 //}
 
 
