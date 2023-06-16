@@ -1304,17 +1304,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 window.onload = function() {
-	const loggedInDiv = document.getElementById('navLoggedin');
 
-  var navbarNav = document.querySelector('#navbarNav');
+  var navbarNav = document.getElementById('navbarNav');
   navbarNav.classList.toggle('collapse');
     // Check if the navbar is collapsed or not
     if (navbarNav.classList.contains('collapse')) {
-      // Navbar is collapsed, hide the "logged in" div
-     loggedInDiv.style.display = 'block';
-    } else {
-      // Navbar is not collapsed, show the "logged in" div
-     loggedInDiv.style.display = 'block';
+	navbarNav.classList.add('collapse');
+// navbarToggler();
     }
 	    console.log('window.onload collapse :  ???? ');
 
