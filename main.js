@@ -1296,7 +1296,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
+/*
 
 window.onload = function() {
   var navbarNav = document.querySelector('#navbarNav');
@@ -1310,7 +1310,7 @@ window.onload = function() {
      loggedInDiv.style.display = 'block';
     }
 };
-
+*/
 
 
 
@@ -1336,7 +1336,7 @@ window.onload = function() {
     // Check if user is logged in
     if (loggedIn === true) {
       // User is logged in
-     // document.getElementById('navLoggedin').innerHTML = '<div onclick="logOutFunction()">Log Out</div>';
+      document.getElementById('navLoggedin').innerHTML = '<div onclick="logOutFunction()">Log Out</div>';
 	        var navLoggedinElement = document.getElementById('navLoggedin');
       if (!navLoggedinElement) {
         // Create the navLoggedin element if it doesn't exist
