@@ -1365,9 +1365,10 @@ window.onload = function() {
       }
       navLoggedinElement.innerHTML = '<div onclick="openPopup(); switchTab(\'login\');">Log In</div>';
     }
+	
+  updateNavBar();  
   }
 
-  updateNavBar();
 }
 
 
