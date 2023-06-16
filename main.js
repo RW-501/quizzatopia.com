@@ -1283,7 +1283,7 @@ function initializeNavbarToggler() {
 
     console.log('userInfo firebaseId:', userInfo.firebaseId);
 
-    console.log('1288 :   ');
+   // console.log('1288 :   ');
 	  updateNavBar();
 	
 //  navbarNav.classList.toggle('collapse');
@@ -1295,12 +1295,23 @@ function initializeNavbarToggler() {
 // Call the function to fetch and insert the HTML based on the page level
 document.addEventListener('DOMContentLoaded', function() {
   fetchAndInsertContent();
-	    console.log('DOMContentLoaded 1296 :   ');
+	 //   console.log('DOMContentLoaded 1296 :   ');
 
 });
 
 
 
+// Add an event listener to the document object
+document.addEventListener('click', function(event) {
+  // Get the navbar element
+  const navbar = document.getElementById('navbar');
+
+  // Check if the click event target is outside the navbar
+  if (!navbar.contains(event.target)) {
+    // Call the navbarToggler() function
+    navbarToggler();
+  }
+});
 
 
 
