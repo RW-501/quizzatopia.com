@@ -74,16 +74,21 @@
       "explanation": "Before performing any other troubleshooting steps, it is important to check if the printer is powered on. Sometimes, users forget to turn on the printer, resulting in printing issues.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 6,
-      "question": "Which of the following is the correct order of the four stages in the troubleshooting process?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Identify, Research, Implement, Test",
-      "explanation": "The correct order of the four stages in the troubleshooting process is: Identify, Research, Implement, Test. First, identify the problem and gather information. Then, research possible solutions. Next, implement the chosen solution. Finally, test the solution to ensure it resolves the problem.",
-      "difficulty": "Medium"
-    },
+   {
+  "questionNumber": 6,
+  "question": "Which of the following is the correct order of the four stages in the troubleshooting process?",
+  "imageURL": "",
+  "questionType": "Multiple Choice",
+  "options": [
+    "Identify, Research, Implement, Test",
+    "Test, Implement, Research, Identify",
+    "Implement, Identify, Research, Test",
+    "Research, Identify, Test, Implement"
+  ],
+  "answer": "Identify, Research, Implement, Test",
+  "explanation": "The correct order of the four stages in the troubleshooting process is: Identify, Research, Implement, Test. First, identify the problem and gather information. Then, research possible solutions. Next, implement the chosen solution. Finally, test the solution to ensure it resolves the problem.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 7,
       "question": "A user wants to set up a new email account on their mobile device. Which of the following information is required to configure the email account?",
