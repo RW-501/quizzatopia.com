@@ -568,6 +568,7 @@ function isSameDay(date1, date2) {
 // Function to open the login/signup popup
 function openPopup() {
   document.getElementById('loginPopup').classList.remove('d-none');
+	SetupLoginBTNFunc();
 }
 
 // Function to close the login/signup popup
@@ -1089,8 +1090,7 @@ function validateFields(username, email, password) {
 
 		
 	
-		document.addEventListener("DOMContentLoaded", () => {
-
+function SetupLoginBTNFunc(){
 	
   // Get references to the buttons
   const loginButton = document.getElementById('loginButton');
@@ -1122,7 +1122,7 @@ function validateFields(username, email, password) {
   });
 
 
-});
+}
 
 		
 	
