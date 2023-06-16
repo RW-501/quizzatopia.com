@@ -77,7 +77,7 @@
 <!-- Toolbar -->
   <div class="toolbar">
     <button class="button" onclick="switchView('thread-listing-view')">Thread Listing</button>
-    <button class="button" onclick="openCreateThreadPopup()">Start Discussion</button>
+    <button class="button" onclick="startDiscussionFunc()">Start Discussion</button>
   </div>
 
   <!-- View Container -->
@@ -333,14 +333,33 @@ if (timeComponents.length > 0) {
 }
 
 		
+				  // Get the authenticated user
+		  const user = firebase.auth().currentUser;
+
 		
+		function startDiscussionFunc(){
+  if (user) {
+openCreat;eThreadPopup();
+  }else{
+requestLogin(); 
+  }	
+		}
+		function replyThreadFunc(xxx){
+  if (user) {
+openReplyPopup(xxx);
+  }else{
+requestLogin(); 
+  }	
+		}		
 		
-		
-		
-		
-		
-		
-		
+		function requestLogin(){
+		// timer
+setTimeout(() => {
+ // Show the login popup
+slideIn("loginPopupBody");
+openPopup();
+switchTab('login');}, 200);  	
+		}
 		
 		
 		
@@ -417,7 +436,7 @@ function getThreadDetails(threadId_ID) {
 	              <div id='${doc.id}'  class="thread-textArea">
           <p>${threadData.content}</p>
 	  </div>
-          <button id="reply-button" class="button" onclick="openReplyPopup('${threadId}')">Reply</button>
+          <button id="reply-button" class="button" onclick="replyThreadFunc('${threadId}')">Reply</button>
         `;
 	})
 	      	// timer
@@ -468,8 +487,8 @@ function getReplies(xxx) {
           <p>${replyData.content}</p>
           <!-- Additional reply information can be added here -->
           <!-- For replies -->
-          <button class="vote-button" onclick="voteReply('up', '${doc.id}')">Upvote</button>
-          <button class="vote-button" onclick="voteReply('down', '${doc.id}')">Downvote</button>
+          <button class="vote-button" onclick="voteReply('up', '${doc.id}',this)">Upvote</button>
+          <button class="vote-button" onclick="voteReply('down', '${doc.id}',this)">Downvote</button>
         `;
 
         replyList.appendChild(replyDiv);
@@ -578,8 +597,8 @@ function populateThreadList(xxx) {
                 <p>Author: ${threadData.author}</p>
                 <div class="vote-section">
                   <div class="vote-count">Votes: ${threadData.votes}</div>
-                  <button class="vote-button" onclick="voteThread('up', '${doc.id}')">Upvote</button>
-                  <button class="vote-button" onclick="voteThread('down', '${doc.id}')">Downvote</button>
+                  <button class="vote-button" onclick="voteThread('up', '${doc.id}',this)">Upvote</button>
+                  <button class="vote-button" onclick="voteThread('down', '${doc.id}',this)">Downvote</button>
                 </div>
                 <div class="thread-details">
                   <div class="author-info ">
@@ -700,7 +719,7 @@ function createThread(channelId, title, content) {
 
 
 // Function to vote on a thread
-function voteThread(voteType, threadId) {
+function voteThread(voteType, threadId, ele) {
   // Get a reference to the thread document
 	console.log("threadId        "+threadId);
   const threadRef = firebase.firestore().collection('threads').doc(threadId);
@@ -740,6 +759,8 @@ function voteThread(voteType, threadId) {
               voteType: voteType
             })
             .then(() => {
+		    ele.classList.add('voted');
+
               console.log('User vote stored successfully.');
               // Update the UI if necessary
             })
@@ -752,13 +773,16 @@ function voteThread(voteType, threadId) {
         console.error('Error checking user vote:', error);
       });
   } else {
-    console.log('User is not authenticated. Voting is allowed only for authenticated users.');
+  //  console.log('User is not authenticated. Voting is allowed only for authenticated users.');
     // You can show an error message or prompt the user to authenticate
+	     // Show the login popup
+     			slideIn("loginPopupBody");
+openPopup();switchTab('login');
   }
 }
 
 // Function to vote on a reply
-function voteReply(voteType, replyId) {
+function voteReply(voteType, replyId, ele) {
   // Get a reference to the reply document
   const replyRef = firebase.firestore().collection('replies').doc(replyId);
   // Get the authenticated user
@@ -780,6 +804,7 @@ function voteReply(voteType, replyId) {
             votes: firebase.firestore.FieldValue.increment(voteType === 'up' ? 1 : -1)
           })
           .then(() => {
+		    ele.classList.add('voted');
             console.log('Reply voted successfully.');
             // Update the UI if necessary
           })
@@ -807,8 +832,11 @@ function voteReply(voteType, replyId) {
         console.error('Error checking user vote:', error);
       });
   } else {
-    console.log('User is not authenticated. Voting is allowed only for authenticated users.');
+   // console.log('User is not authenticated. Voting is allowed only for authenticated users.');
     // You can show an error message or prompt the user to authenticate
+	     // Show the login popup
+     			slideIn("loginPopupBody");
+openPopup();switchTab('login');
   }
 }
 
