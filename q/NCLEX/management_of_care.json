@@ -50,7 +50,7 @@
     {
       "questionNumber": 4,
       "question": "What does this image represent?",
-      "imageURL": "https://example.com/image1.jpg",
+      "imageURL": "https://assets.aboutkidshealth.ca/akhassets/PMD_PCA-NCA_Machine_EN.jpg?RenditionID=10",
       "questionType": "Multiple Choice",
       "options": [
         "Intravenous (IV) pump",
@@ -148,16 +148,21 @@
       "explanation": "An interdisciplinary healthcare team involves professionals from multiple disciplines, such as doctors, nurses, therapists, and social workers, working together to provide comprehensive care.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 11,
-      "question": "What does the acronym SBAR stand for in healthcare communication?",
-      "imageURL": "",
-      "questionType": "Fill in Blank",
-      "options": [],
-      "answer": "Situation, Background, Assessment, Recommendation",
-      "explanation": "SBAR stands for Situation, Background, Assessment, Recommendation, which is a standardized communication framework used in healthcare for handoff and reporting.",
-      "difficulty": "Medium"
-    },
+   {
+  "questionNumber": 11,
+  "question": "What does the acronym SBAR stand for in healthcare communication?",
+  "imageURL": "",
+  "questionType": "Fill in Blank",
+  "options": [
+    "Situation, Background, Assessment, Recommendation",
+    "Safety, Behavior, Action, Response",
+    "System, Balance, Analysis, Review",
+    "Support, Build, Adapt, Reflect"
+  ],
+  "answer": "Situation, Background, Assessment, Recommendation",
+  "explanation": "SBAR stands for Situation, Background, Assessment, Recommendation, which is a standardized communication framework used in healthcare for handoff and reporting.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 12,
       "question": "True or False: Advocacy is the act of speaking up for the rights and interests of patients.",
@@ -204,7 +209,7 @@
     {
       "questionNumber": 15,
       "question": "What does this image represent?",
-      "imageURL": "https://example.com/image2.jpg",
+      "imageURL": "https://t4.ftcdn.net/jpg/01/04/59/15/240_F_104591574_ZvM3h2MjL3akbb2Kh2Thp7Uwug5tloeA.jpg",
       "questionType": "Multiple Choice",
       "options": [
         "High fall risk",
