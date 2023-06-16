@@ -4,16 +4,21 @@
   "quizDifficulty": "Medium",
   "numberOfQuestions": 15,
   "questions": [
-    {
-      "questionNumber": 1,
-      "question": "Fill in the blank: The process of comparing actual project performance against the project management plan is called _________.",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Monitor and Control Project Work",
-      "explanation": "Monitor and Control Project Work is the process of comparing actual project performance against the project management plan. It involves tracking, reviewing, and reporting project progress.",
-      "difficulty": "Easy"
-    },
+ {
+  "questionNumber": 1,
+  "question": "Fill in the blank: The process of comparing actual project performance against the project management plan is called _________.",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Monitor and Control Project Work",
+    "Perform Integrated Change Control",
+    "Direct and Manage Project Work",
+    "Validate Scope"
+  ],
+  "answer": "Monitor and Control Project Work",
+  "explanation": "Monitor and Control Project Work is the process of comparing actual project performance against the project management plan. It involves tracking, reviewing, and reporting project progress.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 2,
       "question": "Which of the following is an input to the Control Quality process?",
@@ -42,16 +47,21 @@
       "explanation": "True. The Control Risks process aims to identify new risks that may impact the project. It involves tracking identified risks, monitoring residual risks, and evaluating risk response effectiveness.",
       "difficulty": "Easy"
     },
-    {
-      "questionNumber": 4,
-      "question": "Fill in the blank: The process of managing changes to project baselines is called _________.",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Perform Integrated Change Control",
-      "explanation": "Perform Integrated Change Control is the process of managing changes to project baselines. It involves reviewing change requests, evaluating their impacts, and making decisions on their approval or rejection.",
-      "difficulty": "Easy"
-    },
+  {
+  "questionNumber": 4,
+  "question": "Fill in the blank: The process of managing changes to project baselines is called _________.",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Perform Integrated Change Control",
+    "Control Scope",
+    "Monitor and Control Project Work",
+    "Manage Project Knowledge"
+  ],
+  "answer": "Perform Integrated Change Control",
+  "explanation": "Perform Integrated Change Control is the process of managing changes to project baselines. It involves reviewing change requests, evaluating their impacts, and making decisions on their approval or rejection.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 5,
       "question": "Which of the following is an output of the Control Procurements process?",
@@ -80,16 +90,21 @@
       "explanation": "True. The Perform Integrated Change Control process involves reviewing and approving all change requests. It ensures that changes are properly evaluated, approved, and integrated into the project.",
       "difficulty": "Easy"
     },
-    {
-      "questionNumber": 7,
-      "question": "Fill in the blank: The process of identifying, documenting, and managing stakeholder expectations is called _________.",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Manage Stakeholder Engagement",
-      "explanation": "Manage Stakeholder Engagement is the process of identifying, documenting, and managing stakeholder expectations. It involves communication, relationship building, and addressing stakeholder concerns.",
-      "difficulty": "Easy"
-    },
+  {
+  "questionNumber": 7,
+  "question": "Fill in the blank: The process of identifying, documenting, and managing stakeholder expectations is called _________.",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Manage Stakeholder Engagement",
+    "Perform Quality Control",
+    "Control Stakeholder Engagement",
+    "Close Stakeholder Engagement"
+  ],
+  "answer": "Manage Stakeholder Engagement",
+  "explanation": "Manage Stakeholder Engagement is the process of identifying, documenting, and managing stakeholder expectations. It involves communication, relationship building, and addressing stakeholder concerns.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 8,
       "question": "Which of the following is an output of the Control Communications process?",
@@ -118,16 +133,21 @@
       "explanation": "True. The Control Stakeholder Engagement process aims to manage stakeholder expectations and address their concerns. It involves monitoring and controlling stakeholder engagement activities.",
       "difficulty": "Easy"
     },
-    {
-      "questionNumber": 10,
-      "question": "Fill in the blank: The process of identifying, analyzing, and responding to project risks is called _________.",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Control Risks",
-      "explanation": "Control Risks is the process of identifying, analyzing, and responding to project risks. It involves monitoring identified risks, implementing risk response plans, and evaluating their effectiveness.",
-      "difficulty": "Easy"
-    },
+   {
+  "questionNumber": 10,
+  "question": "Fill in the blank: The process of identifying, analyzing, and responding to project risks is called _________.",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Control Risks",
+    "Plan Risk Responses",
+    "Perform Qualitative Risk Analysis",
+    "Monitor and Control Risks"
+  ],
+  "answer": "Control Risks",
+  "explanation": "Control Risks is the process of identifying, analyzing, and responding to project risks. It involves monitoring identified risks, implementing risk response plans, and evaluating their effectiveness.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 11,
       "question": "Which of the following is an output of the Control Quality process?",
@@ -143,26 +163,34 @@
       "explanation": "The Control Quality process outputs work performance data, which includes information on quality control measurements and test results. It helps in monitoring and controlling project quality.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 12,
-      "question": "True or False: The purpose of the Control Schedule process is to ensure that project activities are executed according to the project schedule.",
-      "imageURL": "",
-      "questionType": "True/False",
-      "options": [],
-      "answer": "True",
-      "explanation": "True. The Control Schedule process aims to ensure that project activities are executed according to the project schedule. It involves monitoring and controlling project timelines.",
-      "difficulty": "Easy"
-    },
-    {
-      "questionNumber": 13,
-      "question": "Fill in the blank: The process of reviewing all change requests, approving changes, and managing approved changes is called _________.",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Perform Integrated Change Control",
-      "explanation": "Perform Integrated Change Control is the process of reviewing all change requests, approving changes, and managing approved changes. It ensures that changes align with project objectives and do not adversely affect project scope, cost, or schedule.",
-      "difficulty": "Easy"
-    },
+ {
+  "questionNumber": 12,
+  "question": "True or False: The purpose of the Control Schedule process is to ensure that project activities are executed according to the project schedule.",
+  "imageURL": "",
+  "questionType": "True/False",
+  "options": [
+    "True",
+    "False"
+  ],
+  "answer": "True",
+  "explanation": "True. The Control Schedule process aims to ensure that project activities are executed according to the project schedule. It involves monitoring and controlling project timelines.",
+  "difficulty": "Easy"
+},
+  {
+  "questionNumber": 13,
+  "question": "Fill in the blank: The process of reviewing all change requests, approving changes, and managing approved changes is called _________.",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Perform Integrated Change Control",
+    "Control Changes",
+    "Manage Change Requests",
+    "Change Control Review"
+  ],
+  "answer": "Perform Integrated Change Control",
+  "explanation": "Perform Integrated Change Control is the process of reviewing all change requests, approving changes, and managing approved changes. It ensures that changes align with project objectives and do not adversely affect project scope, cost, or schedule.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 14,
       "question": "Which of the following is an output of the Control Stakeholder Engagement process?",
