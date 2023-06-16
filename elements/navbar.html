@@ -1,4 +1,5 @@
 
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  crossorigin="anonymous">
 
 
@@ -13,7 +14,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="navCon">
     <a class="navbar-brand" href="/">Quizzatopia</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="navbarToggler()";>      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="navbarToggler()";>
+      <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
@@ -28,7 +30,14 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/Study-Area">Study Area</a>
-        </li>	      
+        </li>	
+	         <li class="nav-item">
+    <!-- Sign-up and Log-in buttons -->
+    <div class="auth-buttons">
+      <div id='navLoggedin'> </div>
+    </div>
+	      
+	      </li>	
       </ul>
     </div>
     <form class="form-inline my-2 my-lg-0 search-bar d-none">
@@ -41,14 +50,11 @@
       <img id="profile-pic" src="/images/blank.png" alt="Profile Picture" class="profile-pic" loading="lazy">
       <a id="profile-name" class="profile-name" href="/user/">Dashboard</a>
     </div>
-    <!-- Sign-up and Log-in buttons -->
-    <div class="auth-buttons">
-           <div id='navLoggedin'> </div>
 
-    </div>
   </div>
 </nav>
 <div id="search-results" class="container mt-4"></div>
+
 
 
 
