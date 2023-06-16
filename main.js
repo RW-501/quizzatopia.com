@@ -1296,7 +1296,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-/*
+
 
 window.onload = function() {
   var navbarNav = document.querySelector('#navbarNav');
@@ -1310,7 +1310,7 @@ window.onload = function() {
      loggedInDiv.style.display = 'block';
     }
 };
-*/
+
 
 
 
