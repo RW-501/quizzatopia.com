@@ -1,11 +1,11 @@
 
 .carousel-control-next {
       opacity: 0;
-        display: none;
+display: none !important;
 }
 .carousel-control-prev {
       opacity: 0;
-        display: none;
+display: none !important;
 }
 
 
