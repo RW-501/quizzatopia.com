@@ -1334,7 +1334,7 @@ function logOutFunction() {
 }
 
 
-async window.onload = function() {
+ window.onload = function() {
   function updateNavBar() {
     // Check if user is logged in
     if (loggedIn === true) {
