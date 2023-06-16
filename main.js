@@ -1360,8 +1360,9 @@ function logOutFunction() {
 	    
     } else {
       // User is not logged in
-      var navLoggedinElement = document.getElementById('navLoggedin');
-      if (!navLoggedinElement) {
+ document.getElementById('navLoggedin').innerHTML = '<div onclick="openPopup(); switchTab("login");">Log In</div>';
+	        var navLoggedinElement = document.getElementById('navLoggedin');
+	    if (!navLoggedinElement) {
         // Create the navLoggedin element if it doesn't exist
         navLoggedinElement = document.createElement('div');
         navLoggedinElement.id = 'navLoggedin';
