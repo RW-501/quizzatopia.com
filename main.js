@@ -1307,11 +1307,9 @@ window.onload = function() {
 
   var navbarNav = document.getElementById('navbarNav');
   navbarNav.classList.toggle('collapse');
-    // Check if the navbar is collapsed or not
-    if (navbarNav.classList.contains('collapse')) {
-	navbarNav.classList.add('collapse');
+
 // navbarToggler();
-    }
+    
 	    console.log('window.onload collapse :  ???? ');
 
 };
