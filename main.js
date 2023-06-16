@@ -1335,7 +1335,7 @@ function logOutFunction() {
 }
 
 
- window.onload = function() {
+// window.onload = function() {
   function updateNavBar() {
     // Check if user is logged in
     if (loggedIn === true) {
@@ -1374,7 +1374,7 @@ function logOutFunction() {
 	 
   }
   updateNavBar(); 
-}
+//}
 
 
 function slideIn(xxx) {
