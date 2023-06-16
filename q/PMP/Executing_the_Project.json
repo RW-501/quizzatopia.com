@@ -4,16 +4,21 @@
   "quizDifficulty": "Medium",
   "numberOfQuestions": 15,
   "questions": [
-    {
-      "questionNumber": 1,
-      "question": "Fill in the blank: The process of acquiring and managing project resources is called _________.",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Resource management",
-      "explanation": "Resource management is the process of acquiring and managing project resources, including personnel, equipment, materials, and facilities.",
-      "difficulty": "Easy"
-    },
+ {
+  "questionNumber": 1,
+  "question": "Fill in the blank: The process of acquiring and managing project resources is called _________.",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Resource planning",
+    "Resource allocation",
+    "Resource coordination",
+    "Resource management"
+  ],
+  "answer": "Resource management",
+  "explanation": "Resource management is the process of acquiring and managing project resources, including personnel, equipment, materials, and facilities.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 2,
       "question": "Which of the following is NOT an input to the Develop Project Team process?",
@@ -29,26 +34,34 @@
       "explanation": "The Develop Project Team process inputs include the project management plan, resource calendar, and project charter. The stakeholder register is not directly related to team development.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 3,
-      "question": "True or False: The Direct and Manage Project Work process involves executing project activities according to the project plan.",
-      "imageURL": "",
-      "questionType": "True/False",
-      "options": [],
-      "answer": "True",
-      "explanation": "True. The Direct and Manage Project Work process involves executing project activities according to the project plan. It focuses on completing the defined work packages and deliverables.",
-      "difficulty": "Easy"
-    },
-    {
-      "questionNumber": 4,
-      "question": "Fill in the blank: The process of ensuring that project work is performed as planned and approved changes are implemented is called _________.",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Perform Integrated Change Control",
-      "explanation": "Perform Integrated Change Control is the process of ensuring that project work is performed as planned and approved changes are implemented. It involves reviewing and approving or rejecting change requests.",
-      "difficulty": "Easy"
-    },
+ {
+  "questionNumber": 3,
+  "question": "True or False: The Direct and Manage Project Work process involves executing project activities according to the project plan.",
+  "imageURL": "",
+  "questionType": "True/False",
+  "options": [
+    "True",
+    "False"
+  ],
+  "answer": "True",
+  "explanation": "True. The Direct and Manage Project Work process involves executing project activities according to the project plan. It focuses on completing the defined work packages and deliverables.",
+  "difficulty": "Easy"
+},
+  {
+  "questionNumber": 4,
+  "question": "Fill in the blank: The process of ensuring that project work is performed as planned and approved changes are implemented is called _________.",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Perform Integrated Change Control",
+    "Monitor and Control Project Work",
+    "Validate Scope",
+    "Control Scope"
+  ],
+  "answer": "Perform Integrated Change Control",
+  "explanation": "Perform Integrated Change Control is the process of ensuring that project work is performed as planned and approved changes are implemented. It involves reviewing and approving or rejecting change requests.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 5,
       "question": "Which of the following is an output of the Manage Project Team process?",
@@ -64,26 +77,34 @@
       "explanation": "The Manage Project Team process outputs work performance data, which includes information on project progress, team performance, and work completed. It helps in monitoring and controlling project execution.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 6,
-      "question": "True or False: The purpose of the Monitor and Control Project Work process is to track, review, and regulate the progress and performance of the project.",
-      "imageURL": "",
-      "questionType": "True/False",
-      "options": [],
-      "answer": "True",
-      "explanation": "True. The Monitor and Control Project Work process is designed to track, review, and regulate the progress and performance of the project. It helps in identifying deviations and taking corrective actions.",
-      "difficulty": "Easy"
-    },
-    {
-      "questionNumber": 7,
-      "question": "Fill in the blank: The process of ensuring that project deliverables meet quality requirements is called _________.",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Perform Quality Assurance",
-      "explanation": "Perform Quality Assurance is the process of ensuring that project deliverables meet quality requirements. It involves evaluating overall project performance and compliance with quality standards.",
-      "difficulty": "Easy"
-    },
+ {
+  "questionNumber": 6,
+  "question": "True or False: The purpose of the Monitor and Control Project Work process is to track, review, and regulate the progress and performance of the project.",
+  "imageURL": "",
+  "questionType": "True/False",
+  "options": [
+    "True",
+    "False"
+  ],
+  "answer": "True",
+  "explanation": "True. The Monitor and Control Project Work process is designed to track, review, and regulate the progress and performance of the project. It helps in identifying deviations and taking corrective actions.",
+  "difficulty": "Easy"
+},
+   {
+  "questionNumber": 7,
+  "question": "Fill in the blank: The process of ensuring that project deliverables meet quality requirements is called _________.",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Perform Quality Assurance",
+    "Quality Control",
+    "Quality Management",
+    "Quality Assessment"
+  ],
+  "answer": "Perform Quality Assurance",
+  "explanation": "Perform Quality Assurance is the process of ensuring that project deliverables meet quality requirements. It involves evaluating overall project performance and compliance with quality standards.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 8,
       "question": "Which of the following is an output of the Manage Communications process?",
@@ -112,16 +133,21 @@
       "explanation": "True. The Perform Quality Control process aims to identify and resolve defects in project deliverables. It involves inspecting, testing, and verifying the quality of project outputs.",
       "difficulty": "Easy"
     },
-    {
-      "questionNumber": 10,
-      "question": "Fill in the blank: The process of obtaining seller responses, selecting a seller, and awarding a contract is called _________.",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Conduct Procurements",
-      "explanation": "Conduct Procurements is the process of obtaining seller responses, selecting a seller, and awarding a contract. It involves the procurement activities for acquiring goods and services from external vendors.",
-      "difficulty": "Easy"
-    },
+{
+  "questionNumber": 10,
+  "question": "Fill in the blank: The process of obtaining seller responses, selecting a seller, and awarding a contract is called _________.",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Conduct Procurements",
+    "Manage Procurements",
+    "Control Procurements",
+    "Administer Procurements"
+  ],
+  "answer": "Conduct Procurements",
+  "explanation": "Conduct Procurements is the process of obtaining seller responses, selecting a seller, and awarding a contract. It involves the procurement activities for acquiring goods and services from external vendors.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 11,
       "question": "Which of the following is an output of the Manage Stakeholder Engagement process?",
@@ -150,16 +176,21 @@
       "explanation": "True. The Control Resources process aims to ensure that project resources are effectively and efficiently utilized. It involves monitoring resource allocation, performance, and resolving resource-related issues.",
       "difficulty": "Easy"
     },
-    {
-      "questionNumber": 13,
-      "question": "Fill in the blank: The process of tracking, reviewing, and reporting project progress against the project plan is called _________.",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Monitor and Control Project Work",
-      "explanation": "Monitor and Control Project Work is the process of tracking, reviewing, and reporting project progress against the project plan. It helps in identifying variances and taking corrective actions.",
-      "difficulty": "Easy"
-    },
+{
+  "questionNumber": 13,
+  "question": "Fill in the blank: The process of tracking, reviewing, and reporting project progress against the project plan is called _________.",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Monitor and Control Project Work",
+    "Perform Integrated Change Control",
+    "Direct and Manage Project Work",
+    "Validate Scope"
+  ],
+  "answer": "Monitor and Control Project Work",
+  "explanation": "Monitor and Control Project Work is the process of tracking, reviewing, and reporting project progress against the project plan. It helps in identifying variances and taking corrective actions.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 14,
       "question": "Which of the following is an output of the Close Project or Phase process?",
