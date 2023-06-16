@@ -1314,6 +1314,8 @@ window.onload = function() {
       // Navbar is not collapsed, show the "logged in" div
      loggedInDiv.style.display = 'block';
     }
+	    console.log('collapse :  ???? ');
+
 };
 
 
@@ -1329,6 +1331,11 @@ function logOutFunction() {
       document.cookie = 'loggedIn=false';
 	  loggedIn = false;
 	  console.log("User logged out.");
+	  updateNavBar();
+	  
+	  //window.location.href = '/';
+	   var navbarNav = document.querySelector('#navbarNav');
+//  navbarNav.classList.toggle('collapse');
   }).catch(function(error) {
     // An error occurred
     console.log("Error logging out:", error);
@@ -1336,7 +1343,6 @@ function logOutFunction() {
 }
 
 
-// window.onload = function() {
   function updateNavBar() {
     // Check if user is logged in
     if (loggedIn === true) {
@@ -1375,7 +1381,6 @@ function logOutFunction() {
 	 
   }
  
-//}
 
 
 function slideIn(xxx) {
