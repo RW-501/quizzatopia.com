@@ -4,16 +4,21 @@
   "quizDifficulty": "Medium",
   "numberOfQuestions": 15,
   "questions": [
-    {
-      "questionNumber": 1,
-      "question": "Fill in the blank: The process of obtaining final acceptance from stakeholders for project deliverables is called _________.",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Close Project or Phase",
-      "explanation": "Close Project or Phase is the process of obtaining final acceptance from stakeholders for project deliverables. It involves verifying completion, confirming satisfaction of requirements, and obtaining formal closure.",
-      "difficulty": "Easy"
-    },
+   {
+  "questionNumber": 1,
+  "question": "Fill in the blank: The process of obtaining final acceptance from stakeholders for project deliverables is called _________.",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Close Project or Phase",
+    "Validate Scope",
+    "Monitor and Control Project Work",
+    "Perform Integrated Change Control"
+  ],
+  "answer": "Close Project or Phase",
+  "explanation": "Close Project or Phase is the process of obtaining final acceptance from stakeholders for project deliverables. It involves verifying completion, confirming satisfaction of requirements, and obtaining formal closure.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 2,
       "question": "Which of the following is an output of the Close Procurements process?",
@@ -42,16 +47,21 @@
       "explanation": "True. The Close Project or Phase process aims to ensure that all project activities are completed and project deliverables are formally accepted. It involves administrative and contract closure activities.",
       "difficulty": "Easy"
     },
-    {
-      "questionNumber": 4,
-      "question": "Fill in the blank: The process of reviewing project performance, identifying lessons learned, and documenting project experiences is called _________.",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Close Project or Phase",
-      "explanation": "Close Project or Phase is the process of reviewing project performance, identifying lessons learned, and documenting project experiences. It helps in capturing knowledge and improving future project performance.",
-      "difficulty": "Easy"
-    },
+  {
+  "questionNumber": 4,
+  "question": "Fill in the blank: The process of reviewing project performance, identifying lessons learned, and documenting project experiences is called _________.",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Close Project or Phase",
+    "Perform Quality Assurance",
+    "Control Quality",
+    "Monitor and Control Project Work"
+  ],
+  "answer": "Close Project or Phase",
+  "explanation": "Close Project or Phase is the process of reviewing project performance, identifying lessons learned, and documenting project experiences. It helps in capturing knowledge and improving future project performance.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 5,
       "question": "Which of the following is an output of the Close Stakeholder Engagement process?",
@@ -118,16 +128,21 @@
       "explanation": "True. The Close Stakeholder Engagement process aims to disengage stakeholders and release project resources. It involves formalizing stakeholder acceptance and closure.",
       "difficulty": "Easy"
     },
-    {
-      "questionNumber": 10,
-      "question": "Fill in the blank: The process of ensuring that project information is distributed to project stakeholders as planned is called _________.",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Close Communications",
-      "explanation": "Close Communications is the process of ensuring that project information is distributed to project stakeholders as planned. It involves finalizing communication activities and documenting lessons learned.",
-      "difficulty": "Easy"
-    },
+{
+  "questionNumber": 10,
+  "question": "Fill in the blank: The process of ensuring that project information is distributed to project stakeholders as planned is called _________.",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Close Communications",
+    "Manage Stakeholder Engagement",
+    "Control Communications",
+    "Monitor and Control Project Work"
+  ],
+  "answer": "Close Communications",
+  "explanation": "Close Communications is the process of ensuring that project information is distributed to project stakeholders as planned. It involves finalizing communication activities and documenting lessons learned.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 11,
       "question": "Which of the following is an output of the Close Quality process?",
@@ -143,26 +158,34 @@
       "explanation": "The Close Quality process outputs the lessons learned, which capture insights and experiences gained in managing project quality. It helps in improving future project performance.",
       "difficulty": "Medium"
     },
+{
+  "questionNumber": 12,
+  "question": "True or False: The purpose of the Close Stakeholder Engagement process is to manage stakeholder expectations and address their concerns.",
+  "imageURL": "",
+  "questionType": "True/False",
+  "options": [
+    "True",
+    "False"
+  ],
+  "answer": "False",
+  "explanation": "False. The purpose of the Close Stakeholder Engagement process is to disengage stakeholders and release project resources. It involves formalizing stakeholder acceptance and closure.",
+  "difficulty": "Easy"
+},
     {
-      "questionNumber": 12,
-      "question": "True or False: The purpose of the Close Stakeholder Engagement process is to manage stakeholder expectations and address their concerns.",
-      "imageURL": "",
-      "questionType": "True/False",
-      "options": [],
-      "answer": "False",
-      "explanation": "False. The purpose of the Close Stakeholder Engagement process is to disengage stakeholders and release project resources. It involves formalizing stakeholder acceptance and closure.",
-      "difficulty": "Easy"
-    },
-    {
-      "questionNumber": 13,
-      "question": "Fill in the blank: The process of updating, organizing, and storing project documentation is called _________.",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Close Project or Phase",
-      "explanation": "Close Project or Phase is the process of updating, organizing, and storing project documentation. It ensures proper documentation management for future reference and audits.",
-      "difficulty": "Easy"
-    },
+  "questionNumber": 13,
+  "question": "Fill in the blank: The process of updating, organizing, and storing project documentation is called _________.",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Close Project or Phase",
+    "Control Scope",
+    "Control Communications",
+    "Perform Integrated Change Control"
+  ],
+  "answer": "Close Project or Phase",
+  "explanation": "Close Project or Phase is the process of updating, organizing, and storing project documentation. It ensures proper documentation management for future reference and audits.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 14,
       "question": "Which of the following is an output of the Close Procurements process?",
