@@ -1351,8 +1351,9 @@ function logOutFunction() {
         var parentElement = document.getElementById('auth-buttons');
         parentElement.appendChild(navLoggedinElement);
       }
+	          if (!navLoggedinElement) {
       navLoggedinElement.innerHTML = '<div onclick="logOutFunction()">Log Out</div>';
-	    
+		  }
 	    
     } else {
       // User is not logged in
@@ -1366,7 +1367,9 @@ function logOutFunction() {
         var parentElement = document.getElementById('auth-buttons');
         parentElement.appendChild(navLoggedinElement);
       }
+	          if (!navLoggedinElement) {
       navLoggedinElement.innerHTML = '<div onclick="openPopup(); switchTab(\'login\');">Log In</div>';
+		  }
     }
 	 
   }
