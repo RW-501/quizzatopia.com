@@ -1305,9 +1305,10 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('click', function(event) {
   // Get the navbar element
   const navbar = document.getElementById('navbar');
+    const navbarNav = document.getElementById('navbarNav');
 
   // Check if the click event target is outside the navbar
-  if (!navbar.contains(event.target)) {
+  if (!navbar.contains(event.target) || navbarNav.classList.toggle('collapse')) {
     // Call the navbarToggler() function
     navbarToggler();
   }
