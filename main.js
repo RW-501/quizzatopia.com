@@ -598,8 +598,17 @@ let authIndex;
 fetch(authIndex)
   .then(response => response.text())
   .then(data => {
-    const signupLoginArea = document.getElementById('signupLoginArea');
-	signupLoginArea.innerHTML += data;
+  //  const signupLoginArea = document.getElementById('signupLoginArea');
+//	signupLoginArea.innerHTML += data;
+	
+	
+	const signupLoginArea = document.createElement('div');
+  signupLoginArea.id = 'signupLoginArea';
+
+      signupLoginArea.innerHTML = data;
+      document.body.appendChild(signupLoginArea);
+	
+	
 signupLoginArea.display = "none";
   });
 
