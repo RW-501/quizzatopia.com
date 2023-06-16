@@ -1271,7 +1271,10 @@ window.addEventListener('load', function() {
     var navbarNav = document.querySelector('#navbarNav');
 
 function initializeNavbarToggler() {
-    navbarNav.classList.add('collapse');
+    var loggedInDiv = document.querySelector('#navLoggedin');
+    var navbarNav = document.querySelector('#navbarNav');
+	
+	navbarNav.classList.add('collapse');
     loggedInDiv.style.display = 'none';
 
 	const userInfo = getUserInfo();
@@ -1281,7 +1284,7 @@ function initializeNavbarToggler() {
 
     console.log('userInfo firebaseId:', userInfo.firebaseId);
 
-    console.log('collapse btn last main.js:');
+    console.log('1288 :   userInfo.userProfilePic');
 }
 
 
@@ -1332,7 +1335,7 @@ function logOutFunction() {
 }
 
 
-window.onload = function() {
+async window.onload = function() {
   function updateNavBar() {
     // Check if user is logged in
     if (loggedIn === true) {
