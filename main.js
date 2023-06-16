@@ -1316,12 +1316,16 @@ document.addEventListener('click', function(event) {
   const navbar = document.getElementById('navbar');
     const navbarNav = document.querySelector('#navbarNav')
 
-  // Check if the click event target is outside the navbar
-  if (!navbar.contains(event.target) && navbarNav.classList.contains('collapse')) {
-    // Call the navbarToggler() function
-    navbarToggler();
+ document.addEventListener('click', function(event) {
+  if (!navbarNav.classList.contains('collapse')) {
+    if (!navbar.contains(event.target)) {
+      navbarToggler();
+    }
   }
 });
+
+
+
 
 
 
