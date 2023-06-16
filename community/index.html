@@ -6,33 +6,23 @@
     <title>Quizzatopia Community</title>
     <meta name="robots" content="follow">
 
-
-	  
-
-
-  <!-- Custom CSS -->
-<link rel="stylesheet" href="./style.css" />
-  
-
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  crossorigin="anonymous">
+
+
   <script  defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+
   <script  defer src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
 	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
 	  <script  defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-
-
-  <!-- Import navbar and footer components -->
+    <link rel="stylesheet" href="./style.css" />
+  
     <link rel="import" href="./elements/navbar.html">
     <link rel="import" href="./elements/footer.html">
-
-
-  <div id="navbar"></div>
-  <!-- Rest of the page content -->
-  <div id="signupLoginArea"><div>
-    
+	  
+	   <div id="navbar"></div>
   <!-- Firebase SDK -->
   <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
@@ -61,16 +51,6 @@
     }
   </style>
  </head>
-	  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9VG78SV9KZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9VG78SV9KZ');
-</script>
-	
 <body>
   <!-- Header -->
 
@@ -354,12 +334,12 @@ if (timeComponents.length > 0) {
 
 		
 				  // Get the authenticated user
-		 const user = firebase.auth().currentUser;
+		  const user = firebase.auth().currentUser;
 
 		
 		function startDiscussionFunc(){
   if (user) {
-openCreateThreadPopup();
+openCreat;eThreadPopup();
   }else{
 requestLogin(); 
   }	
@@ -386,7 +366,7 @@ switchTab('login');}, 200);
 		
 		// Initialize Firebase
 //firebase.initializeApp(firebaseConfig);
-		const db = firebase.firestore();
+const db = firebase.firestore();
 
 
 	
@@ -568,7 +548,6 @@ const threadList = document.getElementById('thread-list');
 // Function to retrieve thread data from Firebase and populate the thread list
 function populateThreadList(xxx) {
   // Retrieve thread data from Firestore and sort by vote count
-        console.log('565 Thread??????????????????????/    '+xxx);
 
   firebase
     .firestore()
@@ -882,7 +861,7 @@ function createChannelElement(channelData) {
 function getChannels() {
   const channelsList = document.getElementById('channels-list');
 	
-		   console.log("getChannels        ");
+		   // console.log("getChannels        ");
 const db3 = firebase.firestore();
 
   // Get all the channels from the Firestore collection
@@ -891,15 +870,13 @@ const db3 = firebase.firestore();
       querySnapshot.forEach((doc) => {
         const channelData = doc.data();
 	      
-		   console.log("channelData  n      "+channelData.name);
+		//    console.log("channelData  n      "+channelData.name);
 //channelID = channelData.id;
 	      		    //console.log("channelID        "+channelID);
 
         // Create HTML elements for each channel
         const channelElement = createChannelElement(channelData);
-	      
-channelsList.innerHTML = channelElement;
-	      
+
         // Add the channel element to the channels list
         channelsList.insertAdjacentHTML('beforeend', channelElement);
       });
@@ -917,4 +894,3 @@ getChannels();
   <!-- Footer -->
 
 </html>
-
