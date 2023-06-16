@@ -1271,7 +1271,7 @@ window.addEventListener('load', function() {
 
 function initializeNavbarToggler() {
        const loggedInDiv = document.getElementById('navLoggedin');
-    const navbarNav = document.querySelector('.navbar-toggler')
+    const navbarNav = document.querySelector('#navbarNav')
 	
 	navbarNav.classList.add('collapse');
    // loggedInDiv.style.display = 'none';
@@ -1305,10 +1305,10 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('click', function(event) {
   // Get the navbar element
   const navbar = document.getElementById('navbar');
-    const navbarNav = document.querySelector('.navbar-toggler')
+    const navbarNav = document.querySelector('#navbarNav')
 
   // Check if the click event target is outside the navbar
-  if (!navbar.contains(event.target) || navbarNav.classList.contains('collapse')) {
+  if (!navbar.contains(event.target) && navbarNav.classList.contains('collapse')) {
     // Call the navbarToggler() function
     navbarToggler();
   }
