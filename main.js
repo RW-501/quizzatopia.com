@@ -1285,6 +1285,9 @@ function initializeNavbarToggler() {
 
     console.log('1288 :   ');
 	  updateNavBar();
+	
+	  var navbarNav = document.getElementById('navbarNav');
+  navbarNav.classList.toggle('collapse');
 }
 
 
@@ -1300,19 +1303,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
-
-window.onload = function() {
-
-  var navbarNav = document.getElementById('navbarNav');
-  navbarNav.classList.toggle('collapse');
-
-// navbarToggler();
-    
-	    console.log('window.onload collapse :  ???? ');
-
-};
 
 
 
