@@ -1,4 +1,6 @@
 User-agent: * 
-Disallow:
+Disallow: /backend/
+Disallow: /temp/
+Disallow: /admin/
 Disallow: /legal
 Sitemap: https://www.quizzatopia.com/sitemap.xml
