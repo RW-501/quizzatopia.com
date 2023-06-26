@@ -1,3 +1,5 @@
+
+function loadScreenFunc(){
 // Create the <style> element
 var styleElement = document.createElement("style");
 
@@ -66,7 +68,8 @@ window.addEventListener("load", function() {
     overlay.remove(); // Remove the overlay after a delay (adjust as needed)
   }, 1000); // Delay in milliseconds before removing the overlay
 });
-
+}
+loadScreenFunc();
 /*
    window.addEventListener('load', function() {
       var images = document.querySelectorAll('img');
