@@ -60,6 +60,8 @@ overlay.appendChild(loader);
 
 // Append the overlay to the body
 document.body.appendChild(overlay);
+}
+
 
 window.addEventListener("load", function() {
   overlay.classList.add("loaded");
@@ -68,7 +70,7 @@ window.addEventListener("load", function() {
     overlay.remove(); // Remove the overlay after a delay (adjust as needed)
   }, 1000); // Delay in milliseconds before removing the overlay
 });
-}
+
 loadScreenFunc();
 /*
    window.addEventListener('load', function() {
