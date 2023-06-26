@@ -9,13 +9,13 @@ main_section {
     /* scroll-snap-stop: always; */
     display: contents;
 }
-.discussionContainer{
+#discussionContainer{
 cursor: pointer;
 }
 
-#coach-description{
+.coach-description{
 cursor: pointer;
-	    background-color: #e8e8e8;
+background-color: #e8e8e8;
     margin: 2%;
     padding: 2%;
 }
