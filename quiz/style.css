@@ -20,7 +20,17 @@ background-color: #e8e8e8;
     padding: 2%;
 }
 
-
+#adPic {
+    height: 20% !important;
+    width: 70% !important;
+    margin: auto;
+    bottom: 0;
+    top: 0;
+    position: absolute;
+    display: block;
+    right: 0;
+    left: 0;
+}
 
 
 @keyframes shake {
@@ -77,7 +87,7 @@ background-color: #e8e8e8;
 #ad-view{
    margin: auto;
     width: fit-content;
-    top: 0 !important;
+    /*top: 0 !important;*/
     bottom: 0 !important;
     display: block;
     left: 0;
