@@ -311,7 +311,7 @@ function shuffleArrayAnswers(array) {
 
 function showQuestion() {
 //  console.log(adQuestionNumbers + "  adQuestionNumbers??????????currentQuestion????   " + currentQuestion);
-
+slideIn("quizContainer", "right");
   // Check if the current question number is in the adQuestionNumbers array
   if (adQuestionNumbers.includes(currentQuestion)) {
     const index = adQuestionNumbers.indexOf(currentQuestion);
@@ -510,10 +510,11 @@ function nextQuestion() {
 
   currentQuestion++;
 document.getElementById('show-explanation-btn').classList.add("d-none");
+	slideOut("quizContainer", "right");
 
 	  const explanationContainer = document.querySelector('.explanation-container');
 if(explanationContainer.style.display == 'block'){
-	
+
 		explanationContainer.style.display = 'none';
 
 }
