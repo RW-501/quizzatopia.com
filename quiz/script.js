@@ -80,7 +80,6 @@ async function startQuiz() {
 
  var divElement = document.getElementById("testInfo");
 	// Call the function when needed, e.g., after completing a quiz
-//showLoginPopupIfNeeded();
 			    showLoginPopupIfNeeded();
 
 	
@@ -110,8 +109,11 @@ if (  q === null || q === '') {
 	
    quizStarted = true;
   updatePointsAndRank();
-	  
-slideIn("quiz-container");
+	    const animations = ["right", ""];
+  const randomIndex = Math.floor(Math.random() * animations.length);
+  const selectedAnimation = animations[randomIndex];
+	
+slideIn("quiz-container",selectedAnimation);
 
   document.getElementById("start-btn").classList.add("d-none");
   document.getElementById("quiz-container").classList.remove("d-none");
