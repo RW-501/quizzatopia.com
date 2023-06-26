@@ -1405,12 +1405,21 @@ function logOutFunction() {
  
 
 
-function slideIn(xxx) {
+function slideIn(xxx,zzz) {
   var myDiv = document.getElementById(xxx);
+	if(zzz === "right"){
+  var keyframes = [
+    { transform: "translateX(100%)" },
+    { transform: "translateX(0)" }
+  ];
+
+	}else{
   var keyframes = [
     { transform: "translateX(-100%)" },
     { transform: "translateX(0)" }
   ];
+
+	}
   var options = {
     duration: 500,
     easing: "ease"
@@ -1418,12 +1427,19 @@ function slideIn(xxx) {
   myDiv.animate(keyframes, options);
 }
 
-function slideOut(xxx) {
+function slideOut(xxx,zzz) {
   var myDiv = document.getElementById(xxx);
+		if(zzz === "right"){
+  var keyframes = [
+    { transform: "translateX(0)" },
+    { transform: "translateX(100%)" }
+  ];
+		}else{
   var keyframes = [
     { transform: "translateX(0)" },
     { transform: "translateX(-100%)" }
   ];
+		}
   var options = {
     duration: 500,
     easing: "ease"
