@@ -812,6 +812,7 @@ window.signInWithGoogle = function () {
               userQuizzesTaken: 0,
               userCountry: '',
               userState: '',
+              animationEnabled: true,
               userLatitude: 0,
               userLongitude: 0,
               firebaseId: firebaseId,
@@ -1041,6 +1042,7 @@ window.createUserWithEmailAndPassword = function (email, password) {
         userCountry: '',
         userState: '',
         userLatitude: 0,
+        animationEnabled: true,
         userLongitude: 0,
         firebaseId: firebaseId,
         lastUpdated: new Date().getTime(),
@@ -1161,7 +1163,7 @@ function onAuthSuccess(userInfo) {
 	  saveUserInfoToFirestore(userInfo);
 
 	  document.getElementById('loginPopup').classList.add('d-none');
-
+updateNavBar();
 }
 
 
