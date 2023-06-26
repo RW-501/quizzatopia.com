@@ -21,7 +21,7 @@ main_section {
 
 
 
-.pulse-animation {
+.shake-animation {
   animation: shake 0.5s;
 }
 
