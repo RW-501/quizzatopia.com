@@ -426,7 +426,7 @@ function checkAnswer() {
   if (selectedAnswer === questionObj.answer) {
     selectedOption.classList.add('correct');
 if (isAnimationEnabled) {
-selectedOption.classList('pulse-animation');
+selectedOption.classList.add('pulse-animation');
 }
 	  
     correct_bool = "Correct";
@@ -447,7 +447,7 @@ selectedOption.classList('pulse-animation');
 	        console.log('isAnimationEnabled :', isAnimationEnabled);
 
 if (isAnimationEnabled) {
-answerOptions[i].classList('shake-animation');
+answerOptions[i].classList.add('shake-animation');
 }
       }
     }
