@@ -148,7 +148,7 @@ function getUserInfo() {
       userRank: 'Beginner',
       userPoints: 0,
       userQuizzesTaken: 0,
-      userAnimation: true,
+      animationEnabled: true,
       userAds: ''
     };
 console.log('userInfo main: ', userInfo);
