@@ -76,7 +76,7 @@ function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
 
 // Function to start the quiz
 async function startQuiz() {
-		loadScreenFunc();
+		//loadScreenFunc();
 
  var divElement = document.getElementById("testInfo");
 	// Call the function when needed, e.g., after completing a quiz
