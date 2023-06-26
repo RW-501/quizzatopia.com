@@ -9,7 +9,7 @@ main_section {
     /* scroll-snap-stop: always; */
     display: contents;
 }
-#discussionContainer{
+.discussionContainer{
 cursor: pointer;
 }
 
