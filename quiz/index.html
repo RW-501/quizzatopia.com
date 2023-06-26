@@ -1353,11 +1353,11 @@ function disableAnimation() {
 var animationCheckbox = document.getElementById('animation-quiz');
 animationCheckbox.addEventListener('change', function() {
   if (this.checked) {
-    enableAnimation();
+  //  enableAnimation();
     // Store animation state in local storage
     localStorage.setItem('animationEnabled', 'true');
   } else {
-    disableAnimation();
+   // disableAnimation();
     // Store animation state in local storage
     localStorage.setItem('animationEnabled', 'false');
   }
