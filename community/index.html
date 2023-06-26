@@ -167,9 +167,11 @@
 function filterContent(content) {
 	 if (content == null) {
     return ''; // Return an empty string if content is null or undefined
-  }
+  } 
+
+
   // Array of bad words
-  const badWords = ['badword1', 'badword2', 'badword3'];
+  const badWords = ['shit', 's h i t', 'queer', 'q u e e r', 'gay', 'pussy', 'dick', 'nigger', 'n i g g e r', 'nigga', 'damn', 'd a m n', 'God damn', 'fuck', 'f u c k', 'b i t c h', 'bitch', '.com', 'cum'];
 
   // Regular expression for matching contact information
   const contactInfoRegex = /\b(?:\d{10}|\d{3}[-.\s]\d{3}[-.\s]\d{4}|(?:\+\d{1,2}\s?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4})\b/g;
