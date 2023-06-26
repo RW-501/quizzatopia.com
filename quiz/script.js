@@ -268,7 +268,7 @@ function showAdsFunc() {
 
     // Show the hidden div
     document.getElementById("ad-container").style.display = 'block';
-    document.getElementById("ad-text").innerHTML = "This will be an ad <br> Ad ends in " + countdown + " seconds";
+    document.getElementById("ad-text").innerHTML = "Help keep Quizzatopia Free. Returns in " + countdown + " seconds";
 
     // Start the countdown timer for the ad duration
     const countdownInterval = setInterval(() => {
