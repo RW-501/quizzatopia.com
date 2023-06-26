@@ -311,8 +311,13 @@ function shuffleArrayAnswers(array) {
 
 function showQuestion() {
 //  console.log(adQuestionNumbers + "  adQuestionNumbers??????????currentQuestion????   " + currentQuestion);
-slideIn("quizContainer", "right");
-  // Check if the current question number is in the adQuestionNumbers array
+  const animations = ["right", ""];
+  const randomIndex = Math.floor(Math.random() * animations.length);
+  const selectedAnimation = animations[randomIndex];
+  
+  slideIn("quizContainer", selectedAnimation);
+	
+	// Check if the current question number is in the adQuestionNumbers array
   if (adQuestionNumbers.includes(currentQuestion)) {
     const index = adQuestionNumbers.indexOf(currentQuestion);
     if (index !== -1) {
@@ -510,8 +515,13 @@ function nextQuestion() {
 
   currentQuestion++;
 document.getElementById('show-explanation-btn').classList.add("d-none");
-	slideOut("quizContainer", "right");
-
+	
+  const animations = ["right", ""];
+  const randomIndex = Math.floor(Math.random() * animations.length);
+  const selectedAnimation = animations[randomIndex];
+  
+  slideOut("quizContainer", selectedAnimation);
+	
 	  const explanationContainer = document.querySelector('.explanation-container');
 if(explanationContainer.style.display == 'block'){
 
