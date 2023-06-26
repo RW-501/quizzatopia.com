@@ -9,6 +9,18 @@ main_section {
     /* scroll-snap-stop: always; */
     display: contents;
 }
+#discussionContainer{
+cursor: pointer;
+}
+
+#coach-description{
+cursor: pointer;
+	    background-color: #e8e8e8;
+    margin: 2%;
+    padding: 2%;
+}
+
+
 
 
 @keyframes shake {
