@@ -285,7 +285,7 @@ function showAdsFunc() {
       } else {
 	      
 	      
-        document.getElementById("ad-text").innerHTML = "Help keep Quizzatopia Free.<br> Returns in " + countdown + " seconds <p id=\'adButton\' ></p>";
+        document.getElementById("ad-text").innerHTML = "Help keep Quizzatopia Free.<br> Returns in " + countdown + " seconds \";
 	      // document.getElementById("adButton").innerHTML = scriptCode;
 	      
       }
