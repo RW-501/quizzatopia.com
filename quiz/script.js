@@ -505,7 +505,7 @@ function enableAnswerButtons() {
   const answerButtons = document.getElementsByClassName("answer-option");
   for (let i = 0; i < answerButtons.length; i++) {
     answerButtons[i].addEventListener("click", checkAnswer);
-    answerButtons[i].classList.remove("disabled", "correct", "incorrect", "missed");
+    answerButtons[i].classList.remove("disabled", "correct", "incorrect", "missed", "shake-animation", "pulse-animation");
   }
 }
 
