@@ -335,10 +335,12 @@ if (timeComponents.length > 0) {
 
 		
 				  // Get the authenticated user
-		  const user = firebase.auth().currentUser;
 
 		
 		function startDiscussionFunc(){
+					  const user = firebase.auth().currentUser;
+		console.log("user: "+user);
+
   if (user) {
 openCreateThreadPopup();
   }else{
@@ -346,6 +348,9 @@ requestLogin();
   }	
 		}
 		function replyThreadFunc(xxx){
+					  const user = firebase.auth().currentUser;
+		console.log("user: "+user);
+
   if (user) {
 openReplyPopup(xxx);
   }else{
@@ -727,7 +732,7 @@ function voteThread(voteType, threadId, ele) {
   // Get the authenticated user
   const user = firebase.auth().currentUser;
 	
-	//console.log("user        "+user);
+	console.log("user        "+user);
 
   if (user) {
     // Check if the user has already voted on this thread
@@ -737,6 +742,8 @@ function voteThread(voteType, threadId, ele) {
       .get()
       .then((doc) => {
         if (doc.exists) {
+		    ele.classList.add('voted');
+
           console.log('User has already voted on this thread.');
           // You can show an error message or prevent the user from voting again
         } else {
@@ -745,6 +752,8 @@ function voteThread(voteType, threadId, ele) {
             votes: firebase.firestore.FieldValue.increment(voteType === 'up' ? 1 : -1)
           })
           .then(() => {
+		    ele.classList.add('voted');
+
             console.log('Thread voted successfully.');
             // Update the UI if necessary
           })
@@ -797,6 +806,7 @@ function voteReply(voteType, replyId, ele) {
       .get()
       .then((doc) => {
         if (doc.exists) {
+		ele.classList.add('voted');
           console.log('User has already voted on this reply.');
           // You can show an error message or prevent the user from voting again
         } else {
@@ -843,7 +853,8 @@ openPopup();switchTab('login');
 
 		
 		
-	
+	            console.log('Reply voted successfully.');
+
 // Function to create channels in HTML
 function createChannelElement(channelData) {
   const channelElement = `
