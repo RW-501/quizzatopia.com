@@ -41,7 +41,11 @@ main_section {
 
 
 
+.answer-option, #questionImageArea{
+    display: none;
 
+
+}
 
 
 
