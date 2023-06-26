@@ -325,61 +325,19 @@ position: fixed;
           <!-- Quiz Image -->
         </div>
 
-	
-	
-	
-        <div class="container" style="padding: 2%;" loading="lazy">
-          <div class="row">
-            <div class="col-md">
-              <div class="study-coach-box">
-                <a href="coach-details" class="coach-link">
-                  <div class="coach-image">
-                    <img src="/images/pics/2.png" alt="Study Coach 1" style="width: -webkit-fill-available;" loading="lazy">
-                  </div>
-                  <div class="coach-details">
-                    <h2 class="coach-name">Sarah Johnson</h2>
-                    <p class="coach-specialty">Specialty: English Literature</p>
-                    <p class="coach-description">Dedicated to helping students develop strong reading and analytical skills for success in English literature exams.</p>
-                  </div>
-                </a>
-              </div>
-              <a href="coach_apply.html" class="btn btn-primary btn-apply-coach">Apply to be a Study Coach</a>
-            </div>
-            <div class="col-md">
-              <div class="study-coach-box">
-                <a href="coach-details" class="coach-link">
-                  <div class="coach-image">
-                    <img src="/images/pics/7.png" alt="Study Coach 2" style="width: -webkit-fill-available;" loading="lazy">
-                  </div>
-                  <div class="coach-details">
-                    <h2 class="coach-name">Michael Chen</h2>
-                    <p class="coach-specialty">Specialty: Science and Biology</p>
-                    <p class="coach-description">Passionate about guiding students through complex scientific concepts and preparing them for biology exams.</p>
-                  </div>
-                </a>
-              </div>
-              <a href="coach_apply.html" class="btn btn-primary btn-apply-coach">Apply to be a Study Coach</a>
-            </div>
-            <div class="col-md d-md-none">
-              <div class="study-coach-box">
-                <a href="coach-details" class="coach-link">
-                  <div class="coach-image">
-                    <img src="/images/pics/5.png" alt="Study Coach 3" style="width: -webkit-fill-available;" loading="lazy">
-                  </div>
-                  <div class="coach-details">
-                    <h2 class="coach-name">Emily Thompson</h2>
-                    <p class="coach-specialty">Specialty: History and Social Studies</p>
-                    <p class="coach-description">Committed to helping students gain a deep understanding of historical events and develop critical thinking skills for history exams.</p>
-                  </div>
-                </a>
-              </div>
-              <a href="coach_apply" class="btn btn-primary btn-apply-coach">Apply to be a Study Coach</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+	        <div class="container" style="padding: 2%;" loading="lazy">
+
+	                    <h2 class="coach-name">Join the Discussion</h2>
+		</div>
+
+
+<div id="discussionContainer" class="container" style="padding: 2%;" loading="lazy">
+  <img src="https://www.quizzatopia.com/images/sq/43.png" alt="Main Discussion Picture" style="width: -webkit-fill-available;" loading="lazy">
+  <p class="coach-description">A place where new members can introduce themselves, ask questions, and get acquainted with the Quizzatopia community.<br> <b>Join our community<b></b></b></p>
+</div>
+
+           
+	      
 
 	
 	
@@ -615,6 +573,12 @@ position: fixed;
 	
 	
   <script>
+const element = document.getElementById("discussionContainer");
+element.addEventListener("click", function() {
+  window.open("https://www.quizzatopia.com/community/", "_blank");
+});
+
+	  
 window.addEventListener("load", function() {
 
 
