@@ -1333,13 +1333,14 @@ if (storedUserInfo) {
 } else {
   // Handle case when no user info is stored in the local storage
   isAnimationEnabled = false;
+	animationCheckbox.checked = isAnimationEnabled;
 }
 
 animationCheckbox.addEventListener('change', function() {
   const storedUserInfo = localStorage.getItem('userInfo');
   const userInfo = storedUserInfo ? JSON.parse(storedUserInfo) : {};
   userInfo.animationEnabled = this.checked;
-
+isAnimationEnabled = userInfo.animationEnabled;
   localStorage.setItem('userInfo', JSON.stringify(userInfo));
 });
   
