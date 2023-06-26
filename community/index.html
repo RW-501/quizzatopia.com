@@ -339,7 +339,7 @@ if (timeComponents.length > 0) {
 		
 		function startDiscussionFunc(){
 					  const user = firebase.auth().currentUser;
-		console.log("user: "+user);
+		//console.log("user: "+user);
 
   if (user) {
 openCreateThreadPopup();
@@ -349,7 +349,7 @@ requestLogin();
 		}
 		function replyThreadFunc(xxx){
 					  const user = firebase.auth().currentUser;
-		console.log("user: "+user);
+		//console.log("user: "+user);
 
   if (user) {
 openReplyPopup(xxx);
