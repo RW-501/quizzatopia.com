@@ -60,6 +60,11 @@ overlay.appendChild(loader);
 
 // Append the overlay to the body
 document.body.appendChild(overlay);
+
+	 setTimeout(function() {
+    overlay.remove(); // Remove the overlay after a delay (adjust as needed)
+  }, 3000); // Delay in milliseconds before removing the overlay
+	
 }
 
 
