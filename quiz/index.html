@@ -1318,33 +1318,30 @@ if (  q === null || q === '') {
 	
 }
 
-userAnimation
 
 // Check if animation is enabled in local storage
-const storedUserInfo = localStorage.getItem("userInfo");
+const storedUserInfo = localStorage.getItem('userInfo');
+let isAnimationEnabled;
+
 if (storedUserInfo) {
   const userInfo = JSON.parse(storedUserInfo);
-  // Access the userAnimation property
-  const isAnimationEnabled = userInfo.animationEnabled;
-  // Use the userAnimation value as needed
+  // Access the animationEnabled property
+  isAnimationEnabled = userInfo.animationEnabled;
+  // Use the isAnimationEnabled value as needed
 } else {
   // Handle case when no user info is stored in the local storage
-	const isAnimationEnabled = false;
+  isAnimationEnabled = false;
 }
-	  
-
-	  
-	  
 
 var animationCheckbox = document.getElementById('animation-quiz');
 animationCheckbox.addEventListener('change', function() {
-  var storedUserInfo = localStorage.getItem('userInfo');
-  var userInfo = storedUserInfo ? JSON.parse(storedUserInfo) : {};
+  const storedUserInfo = localStorage.getItem('userInfo');
+  const userInfo = storedUserInfo ? JSON.parse(storedUserInfo) : {};
   userInfo.animationEnabled = this.checked;
 
   localStorage.setItem('userInfo', JSON.stringify(userInfo));
 });
-	  
+  
 	      
     </script>
 
