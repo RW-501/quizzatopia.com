@@ -424,6 +424,10 @@ function checkAnswer() {
   let correct_bool;
   if (selectedAnswer === questionObj.answer) {
     selectedOption.classList.add('correct');
+if (isAnimationEnabled === 'true') {
+selectedOption.addClass('pulse-animation');
+}
+	  
     correct_bool = "Correct";
     questionCorrect++; // Increment the questionCorrect variable
     quizInfo.questionCorrect = questionCorrect; // Update the questionCorrect value in quizInfo
@@ -438,6 +442,9 @@ function checkAnswer() {
     for (let i = 0; i < answerOptions.length; i++) {
       if (answerOptions[i].innerHTML === questionObj.answer) {
         answerOptions[i].classList.add('missed');
+if (isAnimationEnabled === 'true') {
+answerOptions[i].addClass('shake-animation');
+}
       }
     }
   }
