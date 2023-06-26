@@ -425,7 +425,7 @@ function checkAnswer() {
   let correct_bool;
   if (selectedAnswer === questionObj.answer) {
     selectedOption.classList.add('correct');
-if (isAnimationEnabled === 'true') {
+if (isAnimationEnabled) {
 selectedOption.addClass('pulse-animation');
 }
 	  
@@ -446,7 +446,7 @@ selectedOption.addClass('pulse-animation');
 	      
 	        console.log('isAnimationEnabled :', isAnimationEnabled);
 
-if (isAnimationEnabled === 'true') {
+if (isAnimationEnabled) {
 answerOptions[i].addClass('shake-animation');
 }
       }
