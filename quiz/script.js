@@ -442,6 +442,9 @@ selectedOption.addClass('pulse-animation');
     for (let i = 0; i < answerOptions.length; i++) {
       if (answerOptions[i].innerHTML === questionObj.answer) {
         answerOptions[i].classList.add('missed');
+	      
+	        console.log('isAnimationEnabled :', isAnimationEnabled);
+
 if (isAnimationEnabled === 'true') {
 answerOptions[i].addClass('shake-animation');
 }
