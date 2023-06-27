@@ -41,14 +41,16 @@ main {
 
 .channel-sidebar {
     flex-wrap: wrap;
-    position: absolute;
+    position: fixed;
     background-color: white;
     margin: auto;
     left: 0;
     right: 0;
+    top: 0;
     width: 100%;
-  top:0;
-  bottom:0;
+    bottom: 0;
+    height: 100% !important;
+
 }
 
 .channel.channel-div {
