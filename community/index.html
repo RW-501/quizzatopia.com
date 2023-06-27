@@ -905,9 +905,9 @@ const db3 = firebase.firestore();
       querySnapshot.forEach((doc) => {
         const channelData = doc.data();
 	      
-		    console.log("channelData  n      "+channelData.name);
-channelID = channelData.id;
-	      		    console.log("channelID        "+channelID);
+		    //console.log("channelData  n      "+channelData.name);
+//channelID = channelData.id;
+	      		//    console.log("channelID        "+channelID);
 
         // Create HTML elements for each channel
 const channelElement = createChannelElement(channelData);
