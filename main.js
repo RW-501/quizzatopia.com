@@ -773,7 +773,170 @@ function getIPAddress() {
 
 
 
+window.signInAnonymously = function() {
+  firebase.auth().signInAnonymously()
+    .then((userCredential) => {
+      const user = userCredential.user;
 
+      // Get the user's Firebase ID
+      const firebaseId = user.uid;
+
+      // Example: Show a success message and user info
+      showStatusMessage('Sign-in successful', 'success');
+      console.log('Firebase ID:', firebaseId);
+
+      // Check if the user already exists in the Firestore database
+      checkUserExistence(firebaseId)
+        .then((exists) => {
+          if (exists) {
+            // Existing user
+            retrieveUserInfoFromFirestore(firebaseId)
+              .then((userInfo) => {
+                // Save database info to local storage
+                saveUserInfoToLocalStorage(userInfo);
+
+                // Set the logged-in cookie
+                document.cookie = 'loggedIn=true';
+
+                // Sign-in successful
+                onAuthSuccess(userInfo);
+
+                updateUserInfo(userInfo);
+
+                // Check if user info changes
+                checkUserInfoChanges();
+              })
+              .catch((error) => {
+                // Handle error retrieving user info
+                showStatusMessage('Error retrieving user info', 'error');
+              });
+          } else {
+            // New user
+            const userInfo = {
+              userName: 'Anonymous',
+              userEmail: '',
+              userProfilePic: '',
+              userTagLine: 'Unlock Your Knowledge Potential!',
+              userRank: 'Beginner',
+              userPoints: 0,
+              userQuizzesTaken: 0,
+              userCountry: '',
+              userState: '',
+              animationEnabled: true,
+              userLatitude: 0,
+              userLongitude: 0,
+              firebaseId: firebaseId,
+              lastUpdated: new Date().getTime(),
+            };
+
+            // Save user info to Firestore
+            saveUserInfoToFirestore(firebaseId, userInfo)
+              .then(() => {
+                // Save database info to local storage
+                saveUserInfoToLocalStorage(userInfo);
+
+                // Set the logged-in cookie
+                document.cookie = 'loggedIn=true';
+
+                // Sign-in successful
+                onAuthSuccess(userInfo);
+
+                updateUserInfo(userInfo);
+
+                // Check if user info changes
+                checkUserInfoChanges();
+              })
+              .catch((error) => {
+                // Handle error saving user info
+                showStatusMessage('Error saving user info', 'error');
+              });
+          }
+        })
+        .catch((error) => {
+          // Handle error checking user existence
+          showStatusMessage('Error checking user existence', 'error');
+        });
+    })
+    .catch((error) => {
+      // Handle error signing in anonymously
+      showStatusMessage('Error signing in anonymously', 'error');
+    });
+}
+
+
+
+window.signInWithEmailAndPassword = function() {
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  firebase.auth().signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+
+      // Get the user's display name and Firebase ID
+      const displayName = user.displayName;
+      const firebaseId = user.uid;
+
+      // Example: Show a success message and user info
+      showStatusMessage('Sign-in successful', 'success');
+      console.log('User display name:', displayName);
+      console.log('Firebase ID:', firebaseId);
+
+      checkUserExistence(firebaseId)
+        .then((exists) => {
+          if (exists) {
+            retrieveUserInfoFromFirestore(firebaseId)
+              .then((userInfo) => {
+                saveUserInfoToLocalStorage(userInfo);
+                document.cookie = 'loggedIn=true';
+                onAuthSuccess(userInfo);
+                updateUserInfo(userInfo);
+                checkUserInfoChanges();
+              })
+              .catch((error) => {
+                showStatusMessage('Error retrieving user info', 'error');
+              });
+          } else {
+            const userInfo = {
+              userName: displayName,
+              userEmail: user.email,
+              userProfilePic: user.photoURL,
+              userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+              userRank: 'Beginner',
+              userPoints: 0,
+              userQuizzesTaken: 0,
+              userCountry: '',
+              userState: '',
+              animationEnabled: true,
+              userLatitude: 0,
+              userLongitude: 0,
+              firebaseId: firebaseId,
+              lastUpdated: new Date().getTime(),
+            };
+
+            // Create a new user in the Firestore database
+            createUserInFirestore(userInfo)
+              .then(() => {
+                saveUserInfoToLocalStorage(userInfo);
+                document.cookie = 'loggedIn=true';
+                onAuthSuccess(userInfo);
+                updateUserInfo(userInfo);
+                checkUserInfoChanges();
+              })
+              .catch((error) => {
+                showStatusMessage('Error creating user', 'error');
+              });
+          }
+        })
+        .catch((error) => {
+          showStatusMessage('Error checking user existence', 'error');
+        });
+    })
+    .catch((error) => {
+      showStatusMessage('Error signing in', 'error');
+      console.error('Sign-in error:', error);
+    });
+}
 
 
 window.signInWithGoogle = function () {
@@ -1014,9 +1177,6 @@ function updateUserInfo(updatedInfo) {
   // Display updated user information
   displayUserInfo();
 }
-
-
-
 
 
 
