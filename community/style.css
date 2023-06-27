@@ -62,7 +62,10 @@ main {
 #channels-list{
 width: 100%;
     display: flex;
-    gap: 5%;
+    padding: 0 10% 0 10%;
+    gap: 4%;
+    box-sizing: border-box;
+    margin: 5% 0 5% 0;
 }
   
 .channel-sidebar h2 {
