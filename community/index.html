@@ -32,7 +32,10 @@
   <!-- Custom scripts -->
   <script  src="/main.js"></script> 
   	<style>
-	
+	   #discussionsList {
+      display: none;
+		   
+    }
 
 		.shadow {
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -77,7 +80,7 @@
 	  
 <!-- Toolbar -->
   <div class="toolbar">
-    <button class="button" onclick="switchView('thread-listing-view')">Thread Listing</button>
+    <button class="button"  onclick="toggleDiscussionsList()">Discussions</button>
     <button class="button" onclick="startDiscussionFunc()">Start Discussion</button>
   </div>
 
@@ -891,8 +894,8 @@ const db3 = firebase.firestore();
 	      		    //console.log("channelID        "+channelID);
 
         // Create HTML elements for each channel
-        const channelElement = createChannelElement(channelData);
-
+const channelElement = createChannelElement(channelData);
+channelElement.onclick = toggleDiscussionsList;
         // Add the channel element to the channels list
         channelsList.insertAdjacentHTML('beforeend', channelElement);
       });
