@@ -32,11 +32,22 @@ main {
 }
 
 /* Channel sidebar styles */
+/*
 .channel-sidebar {
   flex: 0 0 200px;
   background-color: #fff;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}*/
+
+.channel-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.channel.channel-div {
+  flex: 1 0 25%; /* Adjust the width as needed */
+  /* Add any additional styling for the channels */
 }
 
 .channel-sidebar h2 {
