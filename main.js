@@ -98,7 +98,7 @@ function setLoggedInCookie() {
   var expirationDate = new Date();
   expirationDate.setDate(expirationDate.getDate() + 3);
 
-  document.cookie = "loggedIn=true; expires=" + expirationDate.toUTCString() + "; path=https://www.quizzatopia.com/";
+  document.cookie = "loggedIn=true; expires=" + expirationDate.toUTCString() + "; path=/";
 }
 
 
