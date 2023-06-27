@@ -169,7 +169,6 @@ function filterContent(content) {
     return ''; // Return an empty string if content is null or undefined
   } 
 
-
   // Array of bad words
   const badWords = ['shit', 's h i t', 'queer', 'q u e e r', 'gay', 'pussy', 'dick', 'nigger', 'n i g g e r', 'nigga', 'damn', 'd a m n', 'God damn', 'fuck', 'f u c k', 'b i t c h', 'bitch', '.com', 'cum'];
 
@@ -715,6 +714,9 @@ function createThread(channelId, title, content) {
       // Thread created successfully
       console.log('Thread created with ID:', docRef.id);
       // You can perform additional actions here, such as updating UI
+	  //  populateThreadList(threadId);
+switchView('thread-details-view'); getThreadDetails(docRef.id);
+	    
     })
     .catch((error) => {
       // Handle any errors that occurred during thread creation
