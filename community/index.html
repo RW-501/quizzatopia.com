@@ -228,13 +228,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
 		  discussionsList.style.display = "none";
 		    function toggleDiscussionsList() {
-	    
+	    	slideIn("discussionsList", '');
+
       if (discussionsList.style.display === "none") {
         discussionsList.style.display = "block";
       } else {
         discussionsList.style.display = "none";
       }
-			    			slideIn("discussionsList", '');
 
     }
 function openCreateThreadPopup() {
