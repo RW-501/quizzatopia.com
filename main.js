@@ -6,6 +6,14 @@ var styleElement = document.createElement("style");
 // Set the CSS styles
 var cssStyles = `
   /* CSS styles for the overlay and loader */
+
+  html{
+width: 100% !important;
+  }
+  body{
+width: 100% !important;
+  }
+  
   #overlay {
     position: fixed;
     top: 0;
