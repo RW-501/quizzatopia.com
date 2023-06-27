@@ -41,18 +41,33 @@ main {
 }*/
 
 .channel-sidebar {
-  display: flex;
-  flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: absolute;
+    background-color: white;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
 }
 
 .channel.channel-div {
-  flex: 1 0 25%; /* Adjust the width as needed */
-  /* Add any additional styling for the channels */
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
+
+
+#channels-list{
+width: 100%;
+    display: flex;
+    gap: 5%;
+}
+  
 .channel-sidebar h2 {
   margin-bottom: 10px;
-  font-size: 18px;
+    text-align: center;
   font-weight: bold;
 }
 
