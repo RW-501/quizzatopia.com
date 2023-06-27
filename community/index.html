@@ -224,16 +224,18 @@ window.addEventListener('DOMContentLoaded', () => {
     channelDiv.classList.add('active');
   });
 });
-		
-		    function toggleDiscussionsList() {
       var discussionsList = document.getElementById("discussionsList");
-			slideIn("discussionsList", '');
+
+		  discussionsList.style.display = "none";
+		    function toggleDiscussionsList() {
 	    
       if (discussionsList.style.display === "none") {
         discussionsList.style.display = "block";
       } else {
         discussionsList.style.display = "none";
       }
+			    			slideIn("discussionsList", '');
+
     }
 function openCreateThreadPopup() {
 	slideIn("thread-popup", '');
