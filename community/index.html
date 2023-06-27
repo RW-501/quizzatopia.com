@@ -242,6 +242,7 @@ let isThreadListPopulated = false;
 		// Modify switchView function
 function switchView(viewId, xxx) {
   // Hide all views
+	slideIn(viewId, '');
 	isThreadListPopulated = false;
   const views = document.querySelectorAll('.view');
   views.forEach((view) => {
@@ -258,12 +259,14 @@ function switchView(viewId, xxx) {
 
 		
 function openReplyPopup(threadId) {
+	slideIn("reply-popup", '');
   document.querySelector('#reply-popup').style.display = 'block';
 	threadId = threadId
 	console.log("threadId: "+threadId);
 }
 
 function closeReplyPopup() {
+	slideIn("reply-popup", '');
   document.querySelector('#reply-popup').style.display = 'none';
 }
 
