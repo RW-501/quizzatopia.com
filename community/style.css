@@ -63,8 +63,10 @@ width: min-content;
     flex: 2;
 }
 
+.channel img {
 
-
+    margin: auto;
+}
 #channels-list{
 width: 100%;
     display: flex;
