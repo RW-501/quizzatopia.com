@@ -881,7 +881,7 @@ openPopup();switchTab('login');
 // Function to create channels in HTML
 function createChannelElement(channelData) {
   const channelElement = `
-    <div id="ch${channelData.id}" class="channel channel-div"  onclick="switchView('thread-listing-view','${channelData.name}'); populateThreadList('${channelData.id}')">
+    <div id="ch${channelData.id}" class="channel channel-div"  onclick="switchView('toggleDiscussionsList','thread-listing-view','${channelData.name}'); populateThreadList('${channelData.id}')">
 
       <h3>${channelData.name}</h3>
       <p>${channelData.description}</p>
@@ -911,7 +911,8 @@ const db3 = firebase.firestore();
 
         // Create HTML elements for each channel
 const channelElement = createChannelElement(channelData);
-channelElement.onclick = toggleDiscussionsList;
+
+	      
         // Add the channel element to the channels list
         channelsList.insertAdjacentHTML('beforeend', channelElement);
       });
