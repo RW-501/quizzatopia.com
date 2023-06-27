@@ -225,13 +225,24 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 		
-		
+		    function toggleDiscussionsList() {
+      var discussionsList = document.getElementById("discussionsList");
+			slideIn(discussionsList, '');
+	    
+      if (discussionsList.style.display === "none") {
+        discussionsList.style.display = "block";
+      } else {
+        discussionsList.style.display = "none";
+      }
+    }
 function openCreateThreadPopup() {
-	//slideIn(xxx)
+	slideIn("thread-popup", '');
   document.querySelector('#thread-popup').style.display = 'block';
 }
 
 function closeCreateThreadPopup() {
+	slideIn("thread-popup", '');
+
   document.querySelector('#thread-popup').style.display = 'none';
 }	
 		
