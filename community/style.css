@@ -27,7 +27,6 @@ a {
 /* Main content styles */
 main {
   display: flex;
-  margin: 20px;
       min-height: 700px;
 }
 
@@ -128,7 +127,7 @@ width: 100%;
 
     /* View Container */
     .view-container {
-      padding: 20px;
+      padding: 20px 0;
     }
 
     /* Views */
