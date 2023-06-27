@@ -452,9 +452,9 @@ button[type="submit"]:hover {
 }
 
 .thread-container h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 10px;
 }
 
 .thread-container p {
