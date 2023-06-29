@@ -815,7 +815,7 @@ window.signInAnonymously = function() {
             const userInfo = {
               userName: 'Anonymous',
               userEmail: '',
-              userProfilePic: '',
+              userProfilePic: '/images/avatar/w1.png',
               userTagLine: 'Unlock Your Knowledge Potential!',
               userRank: 'Beginner',
               userPoints: 0,
