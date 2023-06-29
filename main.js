@@ -830,7 +830,7 @@ window.signInAnonymously = function() {
             };
 
             // Save user info to Firestore
-            saveUserInfoToFirestore(firebaseId, userInfo)
+            saveUserInfoToFirestore(userInfo)
               .then(() => {
                 // Save database info to local storage
                 saveUserInfoToLocalStorage(userInfo);
