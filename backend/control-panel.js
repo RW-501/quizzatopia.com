@@ -27,7 +27,7 @@ function getBadWords() {
     });
 }
 
-
+getBadWords();
 
 // Function to handle form submission
 function handleFormSubmission(event) {
@@ -44,6 +44,7 @@ function handleFormSubmission(event) {
   settingsRef.update({ badWords: editedBadWords })
     .then(() => {
       alert('Bad words updated successfully!');
+      getBadWords();
     })
     .catch(error => {
       console.error('Error updating bad words:', error);
