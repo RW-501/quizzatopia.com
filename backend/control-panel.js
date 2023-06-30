@@ -5,6 +5,59 @@ $('.nav-link[href="' + path + '"]').parent().addClass('active');
 
 
 
+function getBadWords() {
+  const db = firebase.firestore();
+  const settingsRef = db.collection('settings').doc('general');
+
+  settingsRef.get()
+    .then(doc => {
+      if (doc.exists) {
+        const data = doc.data();
+        const badWords = data.badWords || [];
+
+        document.getElementById('listofBadWords').innerHTML = badWords;
+        // Display or use the retrieved bad words array
+        console.log('Retrieved Bad Words:', badWords);
+      } else {
+        console.log('No bad words found in the database.');
+      }
+    })
+    .catch(error => {
+      console.error('Error retrieving bad words:', error);
+    });
+}
+
+
+
+// Function to handle form submission
+function handleFormSubmission(event) {
+  event.preventDefault();
+
+  // Get the edited bad words from the form
+  const badWordsTextArea = document.getElementById('badWords');
+  const editedBadWords = badWordsTextArea.value.split('\n').map(word => word.trim());
+
+  // Update the bad words array in the database
+  const db = firebase.firestore();
+  const settingsRef = db.collection('settings').doc('general');
+
+  settingsRef.update({ badWords: editedBadWords })
+    .then(() => {
+      alert('Bad words updated successfully!');
+    })
+    .catch(error => {
+      console.error('Error updating bad words:', error);
+    });
+}
+
+// Add event listener to form submission
+const editBadWordsForm = document.getElementById('editBadWordsForm');
+editBadWordsForm.addEventListener('submit', handleFormSubmission);
+
+
+
+
+
 // Function to fetch user statistics and render a chart
 function renderUserStatsChart() {
   // Reference to the 'userStats' collection in Firebase Firestore
