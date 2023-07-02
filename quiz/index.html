@@ -530,41 +530,51 @@ position: fixed;
 	
   <script>
 
-// Function to fetch quiz data from Firestore and update the HTML
- function fetchQuizzesFromDB() {
-	 const db = firebase.firestore();
+function fetchQuizzesFromDB() {
+  console.log("Fetching quizzes from the database...");
+
+  const db = firebase.firestore();
 
   // Fetch the quizzes collection
-  const querySnapshot = await db.collection('quizzes').get();
+  db.collection('quizzes')
+    .get()
+    .then((querySnapshot) => {
+      console.log("Query snapshot obtained:", querySnapshot);
 
-  // Get the reference to the HTML container
-  const quizContainer = document.getElementById('otherQuizzes');
+      // Get the reference to the HTML container
+      const quizContainer = document.getElementById('otherQuizzes');
 
-  // Initialize the HTML string
-  let html = '<H3>Other Quzzes</H3><hr><div class="footer-column"><ul>';
+      // Initialize the HTML string
+      let html = '<h3>Other Quizzes</h3><hr><div class="footer-column"><ul>';
 
-  // Iterate over each quiz document
-  querySnapshot.forEach((doc) => {
-    const quizData = doc.data();
+      // Iterate over each quiz document
+      querySnapshot.forEach((doc) => {
+        const quizData = doc.data();
 
-    // Generate the HTML for each quiz
-    const quizHtml = `
-      <li>
-        <a href="${quizData.quizLinkDB}">
-          ${quizData.quizNameDB}
-        </a>
-      </li>
-    `;
+        // Generate the HTML for each quiz
+        const quizHtml = `
+          <li>
+            <a href="${quizData.quizLinkDB}">
+              ${quizData.quizNameDB}
+            </a>
+          </li>
+        `;
 
-    // Append the quiz HTML to the overall HTML string
-    html += quizHtml;
-  });
+        // Append the quiz HTML to the overall HTML string
+        html += quizHtml;
+      });
 
-  // Close the unordered list and the column div
-  html += '</ul></div>';
+      // Close the unordered list and the column div
+      html += '</ul></div>';
 
-  // Update the quizContainer with the generated HTML
-  quizContainer.innerHTML = html;
+      // Update the quizContainer with the generated HTML
+      quizContainer.innerHTML = html;
+
+      console.log("Quizzes fetched and HTML updated successfully.");
+    })
+    .catch((error) => {
+      console.error("Error fetching quizzes:", error);
+    });
 }
 
 // Call the function to fetch and populate the quiz data
