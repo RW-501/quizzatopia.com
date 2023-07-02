@@ -28,8 +28,7 @@ function getBadWords() {
     });
 }
 
-// Call the getBadWords function
-getBadWords();
+
 
 
 // Function to handle form submission
@@ -74,7 +73,7 @@ function handleFormSubmission() {
 
 // Add event listener to form submission
 const editBadWordsForm = document.getElementById('editBadWordsForm');
-editBadWordsForm.addEventListener('submit', function(event) {
+editBadWordsForm.addEventListener('click', function(event) {
   event.preventDefault(); // Prevent page refresh
   handleFormSubmission(); // Call the form submission handler function
 });
@@ -182,7 +181,13 @@ function populateUserTable() {
     });
 }
 
-
-// Call the functions to populate the components when the page loads or as needed
+window.addEventListener("load", function() {
+// Call the getBadWords function
+getBadWords();
+	// Call the functions to populate the components when the page loads or as needed
 renderUserStatsChart();
 populateUserTable();
+
+
+});
+
