@@ -133,8 +133,9 @@ function renderUserStatsChart() {
 // Function to fetch user data and populate the user table
 function populateUserTable() {
   // Reference to the 'users' collection in Firebase Firestore
-  const usersRef = firebase.firestore().collection('users');
-
+  const users = firebase.firestore().collection('users');
+	
+ // const querySnapshot = await db.collection('users').get();
   // Reference to the 'userTable' tbody element
   const userTableBody = document.querySelector('#userTable tbody');
 
