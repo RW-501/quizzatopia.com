@@ -16,7 +16,6 @@ function getBadWords() {
         const data = doc.data();
         const badWords = data.badWords || [];
 
-        document.getElementById('listofBadWords').innerHTML = badWords;
         // Display or use the retrieved bad words array
         console.log('Retrieved Bad Words:', badWords);
       } else {
@@ -28,14 +27,16 @@ function getBadWords() {
     });
 }
 
+// Call the getBadWords function
 getBadWords();
+
 
 // Function to handle form submission
 function handleFormSubmission(event) {
   event.preventDefault();
 
   // Get the edited bad words from the form
-  const badWordsTextArea = document.getElementById('badWords');
+  const badWordsTextArea = document.getElementById('sendBadWords');
   const editedBadWords = badWordsTextArea.value.split('\n').map(word => word.trim());
 
   // Update the bad words array in the database
