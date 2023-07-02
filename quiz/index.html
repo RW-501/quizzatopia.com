@@ -540,8 +540,16 @@ function fetchQuizzesFromDB() {
   db.collection('quizzes')
     .get()
     .then((querySnapshot) => {
-      console.log("Query snapshot obtained:", querySnapshot);
+    const documents = querySnapshot.docs;
+    const randomDocuments = [];
+    const limit = 20;
 
+    // Randomly select documents
+    while (randomDocuments.length < limit && documents.length > 0) {
+      const randomIndex = Math.floor(Math.random() * documents.length);
+      const randomDocument = documents.splice(randomIndex, 1)[0];
+      randomDocuments.push(randomDocument);
+    }
       // Get the reference to the HTML container
       const quizContainer = document.getElementById('otherQuizzes');
 
