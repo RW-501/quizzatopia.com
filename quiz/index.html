@@ -520,7 +520,7 @@ position: fixed;
 	
 	
 
-<H3>Other Quzzes</H3>
+
   <div id="otherQuizzes" class="container">
 
   </div>
@@ -540,7 +540,7 @@ async function fetchQuizzesFromDB() {
   const quizContainer = document.getElementById('otherQuizzes');
 
   // Initialize the HTML string
-  let html = '<div class="footer-column"><ul>';
+  let html = '<H3>Other Quzzes</H3><hr><div class="footer-column"><ul>';
 
   // Iterate over each quiz document
   querySnapshot.forEach((doc) => {
