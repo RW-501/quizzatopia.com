@@ -39,6 +39,10 @@ function handleFormSubmission(event) {
   const badWordsTextArea = document.getElementById('sendBadWords');
   const editedBadWords = badWordsTextArea.value.split('\n').map(word => word.trim());
 
+  
+firebase.initializeApp(firebaseConfig);
+
+
   // Update the bad words array in the database
   const db = firebase.firestore();
   const settingsRef = db.collection('settings').doc('general');
