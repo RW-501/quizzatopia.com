@@ -518,9 +518,6 @@ position: fixed;
 	
 	
 	
-	
-
-
   <div id="otherQuizzes" class="container">
 
   </div>
@@ -528,11 +525,15 @@ position: fixed;
 	
 	
 	
+
+
+	
   <script>
-const db = firebase.firestore();
 
 // Function to fetch quiz data from Firestore and update the HTML
-async function fetchQuizzesFromDB() {
+ function fetchQuizzesFromDB() {
+	 const db = firebase.firestore();
+
   // Fetch the quizzes collection
   const querySnapshot = await db.collection('quizzes').get();
 
@@ -570,7 +571,7 @@ async function fetchQuizzesFromDB() {
 fetchQuizzesFromDB();
 
 	
-
+console.log("loggedIn 2.... "+loggedIn);
 
 
 
