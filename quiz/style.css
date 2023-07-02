@@ -705,19 +705,22 @@ background-color: #e8e8e8;
 
 .otherQuizzes-column {
   display: inline-block;
-  width: 33.33%;
-  vertical-align: top;
-  padding-right: 20px;
+  width: 100%;
 }
 
 .otherQuizzes-column ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+	    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .otherQuizzes-column li {
   margin-bottom: 5px;
+	    flex: 33%;
+	    text-align: center;
 }
 
 .otherQuizzes-column a {
