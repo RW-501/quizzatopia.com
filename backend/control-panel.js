@@ -59,8 +59,6 @@ editBadWordsForm.addEventListener('submit', handleFormSubmission);
 
 
 
-
-
 // Function to fetch user statistics and render a chart
 function renderUserStatsChart() {
   // Reference to the 'userStats' collection in Firebase Firestore
