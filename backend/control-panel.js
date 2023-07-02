@@ -33,29 +33,44 @@ firebase.initializeApp(firebaseConfig); // Initialize Firebase outside the funct
 
 
 // Function to handle form submission
-function handleFormSubmission(event) {
-  event.preventDefault();
-
+function handleFormSubmission() {
   // Get the edited bad words from the form
   const badWordsTextArea = document.getElementById('sendBadWords');
   const editedBadWords = badWordsTextArea.value.split('\n').map(word => word.trim());
 
-  console.log("editedBadWords   "  +editedBadWords);
-
-
-  // Update the bad words array in the database
   const db = firebase.firestore();
   const settingsRef = db.collection('settings').doc('general');
 
-  settingsRef.add({ badWords: editedBadWords })
-    .then(() => {
-      alert('Bad words updated successfully!');
-      getBadWords();
+  // Check if the document exists before updating
+  settingsRef.get()
+    .then((docSnapshot) => {
+      if (docSnapshot.exists) {
+        // Update the bad words field
+        settingsRef.update({ badWords: editedBadWords })
+          .then(() => {
+            alert('Bad words updated successfully!');
+            getBadWords();
+          })
+          .catch(error => {
+            console.error('Error updating bad words:', error);
+          });
+      } else {
+        // Create the document with the bad words field
+        settingsRef.set({ badWords: editedBadWords })
+          .then(() => {
+            alert('Bad words created successfully!');
+            getBadWords();
+          })
+          .catch(error => {
+            console.error('Error creating bad words:', error);
+          });
+      }
     })
     .catch(error => {
-      console.error('Error updating bad words:', error);
+      console.error('Error fetching document:', error);
     });
 }
+
 
 // Add event listener to form submission
 const editBadWordsForm = document.getElementById('editBadWordsForm');
@@ -134,16 +149,17 @@ function populateUserTable() {
       querySnapshot.forEach((doc) => {
         // Get user data from the document
         const user = doc.data();
-        const userId = doc.id;
-        const userName = user.name;
-        const userEmail = user.email;
+        const userDate = doc.userJoinedDate;
+        const userName = user.userName;
+        const userEmail = user.userEmail;
+      console.log(user+'     user   '+userDate);
 
         // Create a new table row
         const newRow = document.createElement('tr');
 
         // Create table cells for each user attribute
         const idCell = document.createElement('td');
-        idCell.textContent = userId;
+        idCell.textContent = userDate;
 
         const nameCell = document.createElement('td');
         nameCell.textContent = userName;
