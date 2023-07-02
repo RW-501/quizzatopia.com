@@ -529,7 +529,6 @@ position: fixed;
 	
 	
   <script>
-
 const db = firebase.firestore();
 
 // Function to fetch quiz data from Firestore and update the HTML
@@ -541,7 +540,7 @@ async function fetchQuizzesFromDB() {
   const quizContainer = document.getElementById('otherQuizzes');
 
   // Initialize the HTML string
-  let html = '   <div class="footer-column"><ul>';
+  let html = '<div class="footer-column"><ul>';
 
   // Iterate over each quiz document
   querySnapshot.forEach((doc) => {
@@ -549,27 +548,27 @@ async function fetchQuizzesFromDB() {
 
     // Generate the HTML for each quiz
     const quizHtml = `
-   
-          <li>
-            <a href="${quizData.quizLinkDB}">
-              ${quizData.quizNameDB}
-            </a>
-          </li>
-  
+      <li>
+        <a href="${quizData.quizLinkDB}">
+          ${quizData.quizNameDB}
+        </a>
+      </li>
     `;
 
     // Append the quiz HTML to the overall HTML string
     html += quizHtml;
   });
 
+  // Close the unordered list and the column div
+  html += '</ul></div>';
+
   // Update the quizContainer with the generated HTML
-  quizContainer.innerHTML = html += "</ul></div>";
+  quizContainer.innerHTML = html;
 }
 
 // Call the function to fetch and populate the quiz data
 fetchQuizzesFromDB();
 
-	
 	
 
 
