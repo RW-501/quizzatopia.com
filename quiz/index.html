@@ -7,8 +7,10 @@
 <!-- Metadata for search engines -->
 <title>Quiz | Quizzatopia - Explore a World of Quizzes</title>
 <meta name="generator" content="Quizzatopia" /> 
-<meta name="description" content="Welcome to Quizzatopia - the ultimate destination for all your quizzing needs. Discover a world of quizzes like never before, ranging from fun trivia to professional exam preparation. With our user-friendly interface and extensive question bank, learning has never been more enjoyable. Join now to compete with others, earn points, and unlock achievements. Sign up, log in, and embark on your quizzing journey today!">
-<meta itemprop="name" content="Quizzatopia">
+	
+<meta name="description" content=" Discover a world of quizzes like never before, ranging from fun trivia to professional exam preparation.">
+
+	<meta itemprop="name" content="Quizzatopia">
 <meta property="og:title" content="Quizzatopia - Explore a World of Quizzes">
 <meta property="og:image" content="https://www.quizzatopia.com/images/logo.png">
 <meta name="Distribution" content="Global" />
@@ -25,9 +27,13 @@
 <link rel="icon" type="image/x-icon" href="/favicon.ico"> <!-- Alternate link to favicon image -->
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /> <!-- Required for mobile devices -->
 <meta property="og:type" content="website">
+
+	
 <meta property="og:description" content="Welcome to Quizzatopia - the ultimate destination for all your quizzing needs. Discover a world of quizzes like never before, ranging from fun trivia to professional exam preparation. With our user-friendly interface and extensive question bank, learning has never been more enjoyable. Join now to compete with others, earn points, and unlock achievements. Sign up, log in, and embark on your quizzing journey today!">
 <meta name="keywords" content="quizzing, quizzes, learning, education, fun, trivia, exam preparation, sign up, log in, compete, points, achievements">
 <meta property="og:url" content="https://www.quizzatopia.com">
+
+	
 <meta name="robots" content="index,follow">
 	<meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@Quizzatopia">
@@ -46,13 +52,12 @@
 <meta itemprop="description" content="Welcome to Quizzatopia - the ultimate destination for all your quizzing needs. Discover a world of quizzes like never before, ranging from fun trivia to professional exam preparation. With our user-friendly interface and extensive question bank, learning has never been more enjoyable. Join now to compete with others, earn points, and unlock achievements. Sign up, log in, and embark on your quizzing journey today!">
 <meta itemprop="image" content="https://www.quizzatopia.com/images/logo.png">
 
-	
-	<!-- Search engine verification -->
-<!--<meta name="google-site-verification" content="your-verification-code"> -->
+
 
 <!-- Canonical URL -->
-<link rel="canonical" href="https://www.quizzatopia.com/quiz">
-
+<!-- <link rel="canonical" href="https://www.quizzatopia.com/quiz"> -->
+ <link rel="canonical">
+	
 <!-- Author information -->
 <meta name="author" content="Ron Wilson II">
 <meta name="contact" content="quizzatopia@gmail.com">
@@ -776,7 +781,7 @@ if(quizStarted == true){
 function logStorageContents(quizCode) {
   const savedQuizInfo = localStorage.getItem(`quizInfo_${quizCode}`);
 //  console.log('logStorageContents Quiz Code:', quizCode);
-  console.log('logStorageContents Quiz Info:', savedQuizInfo);
+  //console.log('logStorageContents Quiz Info:', savedQuizInfo);
 }
 
 
@@ -802,8 +807,8 @@ var canonicalLink = document.querySelector('link[rel="canonical"]');
 
 // Update the href attribute of the <link rel="canonical"> tag
 canonicalLink.href = "https://www.quizzatopia.com"+quizLinkURL;
-	  
-	  
+
+
 	  
 // Get the values of the "q" and "e" parameters
 var q = urlParams.get('q');
@@ -852,6 +857,8 @@ if (str.startsWith("TF_")) {
 }
 
 
+var descriptionLink = document.querySelector('meta[name="description"]');
+descriptionLink.setAttribute("content", "Discover a world of quizzes like never before, ranging from fun trivia to professional exam preparation. "+q);
 
 
 
