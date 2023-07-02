@@ -5,6 +5,7 @@ var path = window.location.pathname;
 $('.nav-link[href="' + path + '"]').parent().addClass('active');
 
 */
+firebase.initializeApp(firebaseConfig); // Initialize Firebase outside the function
 
 function getBadWords() {
   const db = firebase.firestore();
@@ -29,7 +30,6 @@ function getBadWords() {
 
 // Call the getBadWords function
 getBadWords();
-firebase.initializeApp(firebaseConfig); // Initialize Firebase outside the function
 
 
 // Function to handle form submission
