@@ -268,7 +268,7 @@ position: fixed;
         <div class="quiz-options">
           <div class="form-check">
             <div id="optionsQuizNameWrap">
-              <div id="optionsQuizName" class="text-center mb-4">Quiz Name</div>
+              <div id="optionsQuizName" class="text-center mb-4"><h1>Quiz Name</h1></div>
               <!-- Quiz Name -->
             </div>
           </div>
@@ -1030,7 +1030,7 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageU
 document.title = `${quizNameNS}`;
   
 	      const optionsQuizNameDiv = document.getElementById('optionsQuizName');
-    optionsQuizNameDiv.innerHTML = `${quizNameNS}`;
+    optionsQuizNameDiv.innerHTML = `<h1>${quizNameNS}<h1>`;
 	    
       logStorageContents(quizInfo.quizCode);
 
@@ -1052,7 +1052,7 @@ document.title = `${quizNameNS}`;
 	      	// Update the title tag
 document.title = `${quizNameNS}`;
 	      const optionsQuizNameDiv = document.getElementById('optionsQuizName');
-    optionsQuizNameDiv.innerHTML = `${quizNameNS}`;
+    optionsQuizNameDiv.innerHTML = `<h1>${quizNameNS}<h1>`;
   }
 }
 
