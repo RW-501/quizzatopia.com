@@ -29,6 +29,7 @@ function getBadWords() {
 
 // Call the getBadWords function
 getBadWords();
+firebase.initializeApp(firebaseConfig); // Initialize Firebase outside the function
 
 
 // Function to handle form submission
@@ -40,7 +41,6 @@ function handleFormSubmission(event) {
   const editedBadWords = badWordsTextArea.value.split('\n').map(word => word.trim());
 
   
-firebase.initializeApp(firebaseConfig);
 
 
   // Update the bad words array in the database
@@ -59,7 +59,10 @@ firebase.initializeApp(firebaseConfig);
 
 // Add event listener to form submission
 const editBadWordsForm = document.getElementById('editBadWordsForm');
-editBadWordsForm.addEventListener('submit', handleFormSubmission);
+editBadWordsForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent page refresh
+  handleFormSubmission(); // Call the form submission handler function
+});
 
 
 
