@@ -685,7 +685,51 @@ background-color: #e8e8e8;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	}
 
-		
+
+#otherQuizzes{
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+}
+
+#otherQuizzesh3 {
+  color: #666;
+  font-size: 18px;
+}
+
+#otherQuizzeshr { 
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+.otherQuizzes-column {
+  display: inline-block;
+  width: 33.33%;
+  vertical-align: top;
+  padding-right: 20px;
+}
+
+.otherQuizzes-column ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.otherQuizzes-column  li {
+  margin-bottom: 5px;
+}
+
+.otherQuizzes-column  a {
+  color: #555;
+  text-decoration: none;
+}
+
+.otherQuizzes-column  a:hover {
+  text-decoration: underline;
+}
+
 		
 		
 		
