@@ -721,6 +721,7 @@ background-color: #e8e8e8;
   margin-bottom: 5px;
 	    flex: 33%;
 	    text-align: center;
+	    padding: 2%;
 }
 
 .otherQuizzes-column a {
