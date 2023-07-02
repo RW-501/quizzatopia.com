@@ -519,72 +519,63 @@ position: fixed;
 	
 	
 	
-	
- <style>
-    .message-card {
-      margin-bottom: 20px;
-    }
-  </style>
 
-  <div id="MessageBoard" class="container mt-5 d-none  d-none">
-    <h2 id="msg_quiz_name" class="mb-4">Quiz Message Board</h2>
-    <div class="row">
-      <div class="col-lg-8 offset-lg-2">
-        <!-- Message Form -->
-        <div class="card mb-4">
-          <div class="card-header">
-            <h5 class="card-title mb-0">Create a New Post</h5>
-          </div>
-          <div class="card-body">
-            <form>
-              <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name">
-              </div>
-              <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Type your message here"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-          </div>
-        </div>
-        
-        <!-- Message List -->
-        <div class="card">
-          <div class="card-header">
-            <h5 class="card-title mb-0">Latest Posts</h5>
-          </div>
-          <div class="card-body">
-            <div class="message-card">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <h5 class="card-title">John Doe</h5>
-                  <p class="card-text">I really enjoyed the quiz! It was challenging yet fun. Looking forward to more quizzes like this.</p>
-                  <p class="card-text"><small class="text-muted">Posted on January 15, 2023</small></p>
-                </div>
-              </div>
-            </div>
-  
-            <div class="message-card">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <h5 class="card-title">Jane Smith</h5>
-                  <p class="card-text">The quiz questions were well-crafted and thought-provoking. Can't wait to share it with my friends!</p>
-                  <p class="card-text"><small class="text-muted">Posted on January 16, 2023</small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+  <div id="otherQuizzes" class="container">
+
   </div>
 
 	
 	
 	
   <script>
+
+const db = firebase.firestore();
+
+// Function to fetch quiz data from Firestore and update the HTML
+async function fetchQuizzesFromDB() {
+  // Fetch the quizzes collection
+  const querySnapshot = await db.collection('quizzes').get();
+
+  // Get the reference to the HTML container
+  const quizContainer = document.getElementById('otherQuizzes');
+
+  // Initialize the HTML string
+  let html = '   <div class="footer-column"><ul>';
+
+  // Iterate over each quiz document
+  querySnapshot.forEach((doc) => {
+    const quizData = doc.data();
+
+    // Generate the HTML for each quiz
+    const quizHtml = `
+   
+          <li>
+            <a href="${quizData.quizLinkDB}">
+              ${quizData.quizNameDB}
+            </a>
+          </li>
+  
+    `;
+
+    // Append the quiz HTML to the overall HTML string
+    html += quizHtml;
+  });
+
+  // Update the quizContainer with the generated HTML
+  quizContainer.innerHTML = html += "</ul></div>";
+}
+
+// Call the function to fetch and populate the quiz data
+fetchQuizzesFromDB();
+
+	
+	
+
+
+
+
+	  
 const element = document.getElementById("discussionContainer");
 element.addEventListener("click", function() {
   window.open("https://www.quizzatopia.com/community/", "_blank");
