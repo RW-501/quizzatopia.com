@@ -538,6 +538,7 @@ function fetchQuizzesFromDB() {
 
   // Fetch the quizzes collection
   db.collection('quizzes')
+ .limit(20)
     .get()
     .then((querySnapshot) => {
     const documents = querySnapshot.docs;
