@@ -83,7 +83,7 @@ editBadWordsForm.addEventListener('click', function(event) {
 // Function to fetch user statistics and render a chart
 function renderUserStatsChart() {
   // Reference to the 'userStats' collection in Firebase Firestore
-  const userStatsRef = firebase.firestore().collection('users');
+  const userStatsRef = firebase.firestore().collection('userStats');
 
   // Reference to the "userStatsChart" canvas element
   const userStatsChartCanvas = document.getElementById('userStatsChart');
@@ -93,7 +93,7 @@ function renderUserStatsChart() {
     .then((querySnapshot) => {
       // Extract data from query snapshot
       const data = querySnapshot.docs.map((doc) => doc.data());
-      
+
       // Prepare data for the chart
       const labels = data.map((userStat) => userStat.label);
       const values = data.map((userStat) => userStat.value);
@@ -134,13 +134,12 @@ function renderUserStatsChart() {
 function populateUserTable() {
   // Reference to the 'users' collection in Firebase Firestore
   const users = firebase.firestore().collection('users');
-	
- // const querySnapshot = await db.collection('users').get();
+
   // Reference to the 'userTable' tbody element
   const userTableBody = document.querySelector('#userTable tbody');
 
   // Fetch user data from Firestore
-  usersRef.get()
+  users.get()
     .then((querySnapshot) => {
       // Clear existing table rows
       userTableBody.innerHTML = '';
@@ -149,17 +148,16 @@ function populateUserTable() {
       querySnapshot.forEach((doc) => {
         // Get user data from the document
         const user = doc.data();
-        const userDate = doc.userJoinedDate;
+        const userJoinedDate = doc.get('userJoinedDate'); // Access the 'userJoinedDate' field correctly
         const userName = user.userName;
         const userEmail = user.userEmail;
-      console.log(user+'     user   '+userDate);
 
         // Create a new table row
         const newRow = document.createElement('tr');
 
         // Create table cells for each user attribute
         const idCell = document.createElement('td');
-        idCell.textContent = userDate;
+        idCell.textContent = userJoinedDate;
 
         const nameCell = document.createElement('td');
         nameCell.textContent = userName;
@@ -181,6 +179,7 @@ function populateUserTable() {
       console.error('Error fetching user data:', error);
     });
 }
+
 
 window.addEventListener("load", function() {
 // Call the getBadWords function
