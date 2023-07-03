@@ -78,23 +78,17 @@
       <p>This is the main content area of your dashboard.</p>
       <!-- Add your charts, tables, or other components here -->
       <div id="userStatsChart"></div>
-      <table id="userTable">
-        <thead>
-          <tr>
-            <th>User ID</th>
-            <th>Name</th>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Dynamically populate the user table using JavaScript -->
-        </tbody>
-      </table>
+     
+	    
     </div>
+
+
+
+	  
     <div class="col-md-4">
       <!-- Sidebar or additional content -->
       <h3>Sidebar</h3>
-      <p>This is the sidebar or additional content area.</p>
+      <p>Total Users:<div id="totalUsers"></div></p>
     </div>
   </div>
 </main>
@@ -104,7 +98,7 @@
   <h1>Edit Bad Words</h1>
       <h3 id="listofBadWords"></h3>
 <hr>
-  <form id="editBadWordsForm">
+  <div id="editBadWordsForm">
     <div for="badWords">Bad Words:</label>
     <textarea id="sendBadWords" name="badWords" rows="5" cols="50"></textarea>
 
