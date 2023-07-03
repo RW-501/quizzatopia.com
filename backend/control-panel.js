@@ -138,7 +138,7 @@ function getTotalUsers() {
   usersRef.get()
     .then((querySnapshot) => {
       const totalUsers = querySnapshot.size;
-      console.log('Total users:', totalUsers);
+ document.getElementById('totalUsers').innerHTML = totalUsers;
     })
     .catch((error) => {
       console.error('Error fetching user data:', error);
