@@ -49,3 +49,14 @@
   padding: 20px;
 }
 
+
+
+
+
+#userTable tr {
+    padding: 2%;
+    margin: 2%;
+    display: table-caption;
+    width: 100%;
+}
+
