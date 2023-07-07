@@ -69,40 +69,25 @@ overlay.appendChild(loader);
 // Append the overlay to the body
 document.body.appendChild(overlay);
 
+   overlay.classList.add("loaded");
+
+
+window.addEventListener("load", function() {
+
+ const overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
 setTimeout(function() {
-  const overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
   if (overlay) {
     overlay.remove(); // Remove the overlay if it exists
   }
 }, 3000); // Delay in milliseconds before removing the overlay
 
 
-
-window.addEventListener("load", function() {
-  overlay.classList.add("loaded");
-
-  setTimeout(function() {
-    overlay.remove(); // Remove the overlay after a delay (adjust as needed)
-  }, 1000); // Delay in milliseconds before removing the overlay
+	
 });
 
 loadScreenFunc();
-/*
-   window.addEventListener('load', function() {
-      var images = document.querySelectorAll('img');
-      
-      images.forEach(function(image) {
-        var width = image.width;
-        var height = image.height;
-        
-        var imageContainer = image.parentNode;
-        imageContainer.style.width = width + 'px';
-        imageContainer.style.height = height + 'px';
-      });
-    });
 
-*/
-
+	
 
 function setLoggedInCookie() {
   var expirationDate = new Date();
