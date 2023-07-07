@@ -82,10 +82,11 @@ setTimeout(function() {
   if (overlay) {
 	overlay.remove();  
 overlay.style.display = 'none'; // Hide the overlay if it exists
-		  	  console.log('setTimeout 4');
 
   }
-  
+    document.documentElement.scrollTop = 0; // For modern browsers
+  document.body.scrollTop = 0; // For older browsers
+	
 }, 3000); // Delay in milliseconds before removing the overlay
 
 }
@@ -96,19 +97,8 @@ window.addEventListener("load", function() {
 loadScreenFunc();
 
 });
-	/*
-setTimeout(function() {
-	  console.log('setTimeout 2');
-
-  if (overlay) {
-    overlay.style.display = 'none'; // Hide the overlay if it exists
-  }
-  
-}, 3000); // Delay in milliseconds before removing the overlay
-
-*/
-	  console.log('setTimeout 1');
 	
+
 
 function setLoggedInCookie() {
   var expirationDate = new Date();
