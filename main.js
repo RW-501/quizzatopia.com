@@ -87,7 +87,7 @@ setTimeout(function() {
   
 }, 3000); // Delay in milliseconds before removing the overlay
 
-}
+
 
 window.addEventListener("load", function() {
 
