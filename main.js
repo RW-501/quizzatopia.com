@@ -80,7 +80,7 @@ setTimeout(function() {
  const overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
 
 	  	  console.log('setTimeout 3');
-  const overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
+  // overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
   if (overlay) {
     overlay.style.display = 'none'; // Hide the overlay if it exists
   }
@@ -97,7 +97,6 @@ loadScreenFunc();
 setTimeout(function() {
 	  console.log('setTimeout 2');
 
-  const overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
   if (overlay) {
     overlay.style.display = 'none'; // Hide the overlay if it exists
   }
