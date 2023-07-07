@@ -76,11 +76,11 @@ document.body.appendChild(overlay);
 
 	
 setTimeout(function() {
- const overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
+// const overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
 	  	  console.log('setTimeout 3');
-  // overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
+ overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
   if (overlay) {
-    overlay.style.display = 'none'; // Hide the overlay if it exists
+    overlay.display = 'none'; // Hide the overlay if it exists
   }
   
 }, 3000); // Delay in milliseconds before removing the overlay
