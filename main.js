@@ -176,6 +176,26 @@ console.log('userInfo main: ', userInfo);
 }
 
 
+
+
+function viewDashboard() {
+ 
+	if (loggedIn === 'true') {		
+  window.location.href = '/user/';
+	}else{
+      // Show the login popup
+     			slideIn("loginPopupBody");
+openPopup();switchTab('login');
+
+	}
+}
+
+  var userDashboard = document.getElementById("user-dashboard");
+	userDashboard.addEventListener('click', viewDashboard);
+
+
+
+
 function displayUserInfo() {
   const userInfo = JSON.parse(localStorage.getItem('userInfo'));
 
@@ -184,15 +204,23 @@ function displayUserInfo() {
     profilePicElement.src = userInfo.userProfilePic;
   }
 
-//  const profileNameElement = document.getElementById('profile-name');
-//  if (profileNameElement) {
-//    profileNameElement.textContent = userInfo.userName;
-//  }
+
 
   const taglineElement = document.getElementById('tagline');
   if (taglineElement) {
     taglineElement.textContent = userInfo.userTagLine;
   }
+
+	if (loggedIn === 'true') {
+  userDashboard.innerHTML = "Dashboard"; // Clear previous results
+	}else{
+  userDashboard.innerHTML = "Login"; // Clear previous results
+
+	}
+
+
+	
+
 }
 
 
@@ -202,7 +230,7 @@ function displayUserInfo() {
 
 
 
-
+	
 
 
 
