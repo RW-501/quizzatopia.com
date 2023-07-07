@@ -77,7 +77,6 @@ document.body.appendChild(overlay);
 	
 setTimeout(function() {
  const overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
-
 	  	  console.log('setTimeout 3');
   // overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
   if (overlay) {
@@ -86,6 +85,7 @@ setTimeout(function() {
   
 }, 3000); // Delay in milliseconds before removing the overlay
 
+}
 
 
 window.addEventListener("load", function() {
@@ -93,7 +93,7 @@ window.addEventListener("load", function() {
 loadScreenFunc();
 
 });
-	
+	/*
 setTimeout(function() {
 	  console.log('setTimeout 2');
 
@@ -103,7 +103,7 @@ setTimeout(function() {
   
 }, 3000); // Delay in milliseconds before removing the overlay
 
-
+*/
 	  console.log('setTimeout 1');
 	
 
