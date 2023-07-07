@@ -80,7 +80,9 @@ setTimeout(function() {
 	  	  console.log('setTimeout 3');
  overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
   if (overlay) {
-    overlay.display = 'none'; // Hide the overlay if it exists
+overlay.style.display = 'none'; // Hide the overlay if it exists
+		  	  console.log('setTimeout 4');
+
   }
   
 }, 3000); // Delay in milliseconds before removing the overlay
