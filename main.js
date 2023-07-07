@@ -199,8 +199,9 @@ function displayUserInfo() {
 	if (loggedIn === 'true' && userDashboard) {
   userDashboard.innerHTML = "Dashboard"; // Clear previous results
 	}else{
+		if( userDashboard){
   userDashboard.innerHTML = "Login"; // Clear previous results
-
+		}
 	}
 
 
