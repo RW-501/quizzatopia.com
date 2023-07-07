@@ -107,8 +107,12 @@ window.addEventListener('load', function() {
           <p>Scored: ${questionCorrect}/${numberOfQuestions} Questions</p>
         `;
 
-        quizInfoContainer.appendChild(quizInfoElement);
-
+ if (quizInfoContainer && quizInfoElement) {
+    quizInfoContainer.appendChild(quizInfoElement);
+  } else {
+    // Handle the case when either the container or the element is not defined
+          break;
+  }
         count++; // Increment the counter
 
         if (count >= 5) {
