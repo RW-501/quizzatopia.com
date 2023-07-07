@@ -83,7 +83,7 @@ const quizContent = `
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function() {
   function getQuizInfo() {
     const quizInfoContainer = document.getElementById('quizInfoContainer');
 
