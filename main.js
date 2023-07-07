@@ -93,10 +93,11 @@ loadScreenFunc();
 
 setTimeout(function() {
   if (overlay) {
+
     overlay.remove(); // Remove the overlay if it exists
   }
 }, 3000); // Delay in milliseconds before removing the overlay
-});
+
 
 	
 
