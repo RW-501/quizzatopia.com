@@ -48,7 +48,7 @@
     <!-- Profile pic and name area -->
     <div class="profile-area">
       <img id="profile-pic" src="/images/blank.png" alt="Profile Picture" class="profile-pic" loading="lazy">
-      <div id="user-dashboard" class="" >Dashboard</div>
+      <div id="user-dashboard" class="" onclick="viewDashboard(); >Dashboard</div>
     </div>
 
   </div>
@@ -175,6 +175,7 @@ function performSearchLogic(searchQuery, jsonData) {
 	.fade-in {
   opacity: 0;
   transition: opacity 200ms ease-in-out;
+		cursor: pointer;
 }
 
   .search-bar{
