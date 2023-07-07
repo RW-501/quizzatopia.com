@@ -1469,11 +1469,7 @@ openPopup();switchTab('login');
 
 	}
 }
-
-   userDashboard = document.getElementById("user-dashboard");
-	userDashboard.addEventListener('click', viewDashboard);
-
-
+		
 
 
 
@@ -1494,9 +1490,12 @@ function initializeNavbarToggler() {
 
     console.log('userInfo firebaseId:', userInfo.firebaseId);
 
-   // console.log('1288 :   ');
 	  updateNavBar();
 	
+	if( userDashboard){
+   userDashboard = document.getElementById("user-dashboard");
+	userDashboard.addEventListener('click', viewDashboard);
+		}
 //  navbarNav.classList.toggle('collapse');
 }
 
