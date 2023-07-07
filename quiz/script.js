@@ -122,8 +122,8 @@ slideIn("quiz-container",selectedAnimation);
   document.getElementById("optionContainer").classList.add("d-none");
   totalQuestions = questions.length;
 
-  // Hide the MessageBoard
-  document.getElementById("MessageBoard").classList.add("d-none");
+  // Hide the MessageBoard info
+  document.getElementById("otherQuizzes").classList.add("d-none");
 
   // Retrieve the quizInfo from the array quiz
   
