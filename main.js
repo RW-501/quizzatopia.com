@@ -72,7 +72,6 @@ document.body.appendChild(overlay);
    overlay.classList.add("loaded");
 
 
-window.addEventListener("load", function() {
 
 
 	
@@ -87,7 +86,7 @@ setTimeout(function() {
   
 }, 3000); // Delay in milliseconds before removing the overlay
 
-}
+
 
 window.addEventListener("load", function() {
 
