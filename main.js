@@ -1215,9 +1215,6 @@ function updateUserInfo(updatedInfo) {
 
 
 
-
-
-
 // Update the createUserWithEmailAndPassword function
 window.createUserWithEmailAndPassword = function (email, password) {
   auth
@@ -1359,10 +1356,6 @@ function onAuthSuccess(userInfo) {
 	// Example: Display a welcome message to the user
   console.log('Welcome, ' + userInfo.userName + '!');
 
-  // Example: Redirect the user to a different page
-// window.location.href = '/dashboard.html';
-
-  // Example: Update the UI to show the user as logged in
 
 	  saveUserInfoToFirestore(userInfo);
 
