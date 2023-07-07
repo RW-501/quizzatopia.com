@@ -79,9 +79,12 @@ window.addEventListener("load", function() {
 setTimeout(function() {
  const overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
 
+	  	  console.log('setTimeout 3');
+  const overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
   if (overlay) {
-    overlay.remove(); // Remove the overlay if it exists
+    overlay.style.display = 'none'; // Hide the overlay if it exists
   }
+  
 }, 3000); // Delay in milliseconds before removing the overlay
 });
 
@@ -92,14 +95,17 @@ setTimeout(function() {
 loadScreenFunc();
 
 setTimeout(function() {
-	
-	 const overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
+	  console.log('setTimeout 2');
+
+  const overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
   if (overlay) {
-    overlay.remove(); // Remove the overlay if it exists
+    overlay.style.display = 'none'; // Hide the overlay if it exists
   }
+  
 }, 3000); // Delay in milliseconds before removing the overlay
 
 
+	  console.log('setTimeout 1');
 	
 
 function setLoggedInCookie() {
