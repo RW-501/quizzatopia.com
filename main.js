@@ -92,8 +92,9 @@ setTimeout(function() {
 loadScreenFunc();
 
 setTimeout(function() {
+	
+	 const overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
   if (overlay) {
-
     overlay.remove(); // Remove the overlay if it exists
   }
 }, 3000); // Delay in milliseconds before removing the overlay
