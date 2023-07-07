@@ -1541,7 +1541,7 @@ function logOutFunction() {
 	  console.log("User logged out.");
 	  updateNavBar();
 	  
-	  //window.location.href = '/';
+	window.location.href = '/';
 	   var navbarNav = document.querySelector('#navbarNav');
 //  navbarNav.classList.toggle('collapse');
   }).catch(function(error) {
@@ -1588,6 +1588,8 @@ function logOutFunction() {
 		  }
     }
 	 
+  displayUserInfo();
+
   }
  
 
