@@ -86,14 +86,15 @@ setTimeout(function() {
   }
   
 }, 3000); // Delay in milliseconds before removing the overlay
-});
 
-
-	
 }
+
+window.addEventListener("load", function() {
 
 loadScreenFunc();
 
+});
+	
 setTimeout(function() {
 	  console.log('setTimeout 2');
 
