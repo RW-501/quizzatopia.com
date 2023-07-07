@@ -83,47 +83,44 @@ const quizContent = `
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  function getQuizInfo() {
+    const quizInfoContainer = document.getElementById('quizInfoContainer');
 
-function getQuizInfo() {
-  const quizInfoContainer = document.getElementById('quizInfoContainer');
+    let count = 0; // Counter for limiting the number of displayed quiz info
 
-  let count = 0; // Counter for limiting the number of displayed quiz info
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key.startsWith('quizInfo_')) {
+        const quizInfo = JSON.parse(localStorage.getItem(key));
+        const quizName = quizInfo.quizName;
+        const questionCorrect = quizInfo.questionCorrect;
+        const numberOfQuestions = quizInfo.numberOfQuestions;
+        const quizLink = quizInfo.quizLink;
+        const quizTime = quizInfo.timestamp;
 
-  for (let i = 0; i < localStorage.length; i++) {
-    const key = localStorage.key(i);
-    if (key.startsWith('quizInfo_')) {
-      const quizInfo = JSON.parse(localStorage.getItem(key));
-      const quizName = quizInfo.quizName;
-      const questionCorrect = quizInfo.questionCorrect;
-      const numberOfQuestions = quizInfo.numberOfQuestions;
-      const quizLink = quizInfo.quizLink;
-      const quizTime = quizInfo.timestamp;
+        const quizInfoElement = document.createElement('div');
+        quizInfoElement.classList.add('quiz-info_His');
+        quizInfoElement.innerHTML = `
+          <a href="/quiz?q=${quizLink}"><h4>${quizName}</h4></a>
+          <p>Quiz Taken: ${quizTime}</p>
+          <p>Scored: ${questionCorrect}/${numberOfQuestions} Questions</p>
+        `;
 
-      const quizInfoElement = document.createElement('div');
-      quizInfoElement.classList.add('quiz-info_His');
-      quizInfoElement.innerHTML = `
-        <a href="/quiz?q=${quizLink}"><h4>${quizName}</h4></a>
-        <p>Quiz Taken: ${quizTime}</p>
-        <p>Scored: ${questionCorrect}/${numberOfQuestions} Questions</p>
-      `;
+        quizInfoContainer.appendChild(quizInfoElement);
 
-      quizInfoContainer.appendChild(quizInfoElement);
+        count++; // Increment the counter
 
-      count++; // Increment the counter
-
-      if (count >= 5) {
-        break; // Exit the loop when the limit is reached
+        if (count >= 5) {
+          break; // Exit the loop when the limit is reached
+        }
       }
     }
   }
-}
 
-
-// Call the getQuizInfo() function to populate the quiz recommendations on page load
-getQuizInfo();
-	
-
-
+  // Call the getQuizInfo() function to populate the quiz recommendations on page load
+  getQuizInfo();
+});
 
 
 
