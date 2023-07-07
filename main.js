@@ -69,11 +69,13 @@ overlay.appendChild(loader);
 // Append the overlay to the body
 document.body.appendChild(overlay);
 
-	 setTimeout(function() {
-    overlay.remove(); // Remove the overlay after a delay (adjust as needed)
-  }, 3000); // Delay in milliseconds before removing the overlay
-	
-}
+setTimeout(function() {
+  const overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
+  if (overlay) {
+    overlay.remove(); // Remove the overlay if it exists
+  }
+}, 3000); // Delay in milliseconds before removing the overlay
+
 
 
 window.addEventListener("load", function() {
