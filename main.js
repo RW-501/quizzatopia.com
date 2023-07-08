@@ -776,12 +776,13 @@ function getUserLocation(ipAddress) {
 function getIPAddress() {
   // This approach uses a third-party API to fetch the user's IP address
   return fetch('https://api.ipify.org')
-    .then(response => response())
+    .then(response => response.text())
     .then(data => {
-   //   ipAddress = data.ip;
-	         console.log("ipAddress Info: ", data);
+      // Extract the IP address from the response
+      const ipAddress = data.trim();
+      console.log("IP Address:", ipAddress);
 
-      return data;
+      return ipAddress;
     })
     .catch(error => {
       console.error('Error:', error);
