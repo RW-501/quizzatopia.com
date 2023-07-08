@@ -164,8 +164,9 @@ function getUserInfo() {
       userRank: 'Beginner',
       userPoints: 0,
       userQuizzesTaken: 0,
-      animationEnabled: true,
-      userAds: ''
+ animationEnabled: true,
+              userIP: getIPAddress(),
+	    userAds: ''
     };
 console.log('userInfo main: ', userInfo);
     localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
@@ -776,7 +777,7 @@ function getIPAddress() {
     .then(response => response.json())
     .then(data => {
       ipAddress = data.ip;
-	            console.log("ipAddress Info: ", ipAddress);
+	          //  console.log("ipAddress Info: ", ipAddress);
 
       return ipAddress;
     })
@@ -840,12 +841,12 @@ window.signInAnonymously = function() {
               userCountry: '',
               userState: '',
               animationEnabled: true,
+              userIP: getIPAddress(),
               userLatitude: 0,
               userLongitude: 0,
               firebaseId: firebaseId,
               lastUpdated: new Date().getTime(),
             };
-
             // Save user info to Firestore
             saveUserInfoToFirestore(userInfo)
               .then(() => {
@@ -924,8 +925,9 @@ window.signInWithEmailAndPassword = function() {
               userQuizzesTaken: 0,
               userCountry: '',
               userState: '',
-              animationEnabled: true,
-              userLatitude: 0,
+ animationEnabled: true,
+              userIP: getIPAddress(),
+		    userLatitude: 0,
               userLongitude: 0,
               firebaseId: firebaseId,
               lastUpdated: new Date().getTime(),
@@ -1010,8 +1012,9 @@ window.signInWithGoogle = function () {
               userQuizzesTaken: 0,
               userCountry: '',
               userState: '',
-              animationEnabled: true,
-              userLatitude: 0,
+ animationEnabled: true,
+              userIP: getIPAddress(),
+		    userLatitude: 0,
               userLongitude: 0,
               firebaseId: firebaseId,
               lastUpdated: new Date().getTime(),
@@ -1595,10 +1598,83 @@ function logOutFunction() {
       }
 	      
     }
-	 
+	 // Call the logVisitorInformation function whenever you want to log the visitor's information
+logVisitorInformation();
 
   }
  
+
+
+
+
+
+
+// 
+
+function logVisitorInformation() {
+	const db = firebase.firestore();
+	
+  const visitorIp = getIPAddress(); // Function to retrieve visitor's IP address
+  const currentTimestamp = new Date(); // Get current timestamp
+  const referralPage = document.referrer; // Retrieve the referral page
+  const userAgent = navigator.userAgent; // Retrieve the user agent
+
+  db.collection('guestLog').doc(visitorIp).get()
+    .then(doc => {
+      if (doc.exists) {
+        const lastVisitTime = currentTimestamp;
+        const lastVisitPage = getCurrentPage();
+
+        db.collection('guestLog').doc(visitorIp).update({
+          lastVisitTime,
+          lastVisitPage
+        });
+      } else {
+        const firstVisitTime = currentTimestamp;
+        const lastVisitTime = currentTimestamp;
+        const firstVisitPage = getCurrentPage();
+        const lastVisitPage = getCurrentPage();
+
+        db.collection('guestLog').doc(visitorIp).set({
+          firstVisitTime,
+          lastVisitTime,
+          firstVisitPage,
+          lastVisitPage,
+          referralPage,
+          userAgent
+        });
+      }
+    })
+    .catch(error => {
+      console.error('Error checking guest log:', error);
+    });
+}
+
+
+
+
+// Function to get current page URL (example implementation, you may need to customize this)
+function getCurrentPage() {
+  // Your implementation to retrieve the current page URL
+  // This can be done using JavaScript's `window.location` object
+  // Return the current page URL as a string
+  return window.location.href;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function slideIn(xxx,zzz) {
