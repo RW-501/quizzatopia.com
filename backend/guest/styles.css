@@ -1,0 +1,81 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+/* Header styles */
+header {
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Visitor Information section styles */
+.visitor-info {
+  margin-bottom: 40px;
+}
+
+.visitor-details {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+/* Charts section styles */
+.charts {
+  margin-bottom: 40px;
+}
+
+.chart-container {
+  height: 400px;
+}
+
+/* Data Table section styles */
+.data-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.data-table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Visit Duration section styles */
+.visit-duration {
+  margin-bottom: 40px;
+}
+
+.counter {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.counter h3 {
+  margin: 0;
+}
+
+.counter span {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 5px;
+}
