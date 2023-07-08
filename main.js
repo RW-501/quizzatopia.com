@@ -1484,18 +1484,16 @@ function initializeNavbarToggler() {
     const navbarNav = document.querySelector('#navbarNav')
 	
 	navbarNav.classList.add('collapse');
-   // loggedInDiv.style.display = 'none';
 
 	const userInfo = getUserInfo();
 	
-   // const userInfo = JSON.parse(localStorage.getItem('userInfo'));
     document.getElementById('profile-pic').src = userInfo.userProfilePic;
 
     console.log('userInfo firebaseId:', userInfo.firebaseId);
 
 	  updateNavBar();
 
-	   userDashboard = document.getElementById("user-dashboard");
+
 	
 	  displayUserInfo();
 
