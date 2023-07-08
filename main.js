@@ -93,11 +93,7 @@ overlay.style.display = 'none'; // Hide the overlay if it exists
 
 
 window.addEventListener("load", function() {
-	console.log('load:');
-	  displayUserInfo();
-	
- // Call the logVisitorInformation function whenever you want to log the visitor's information
-logVisitorInformation();
+
 	
 loadScreenFunc();
 
@@ -210,7 +206,7 @@ userDashboard = document.getElementById("user-dashboard");
 console.log("1 loggedIn  " + loggedIn);
 console.log("1 userDashboard  " + userDashboard);
 
-if (loggedIn === 'true' && userDashboard !== null) {
+if (loggedIn === true && userDashboard !== null) {
   console.log("userDashboard !== null");
   userDashboard.innerHTML = "Dashboard"; // Clear previous content and set to "Dashboard"
 } else {
@@ -1508,7 +1504,11 @@ function initializeNavbarToggler() {
     console.log('userInfo firebaseId:', userInfo.firebaseId);
 
 	  updateNavBar();
-
+	console.log('load:');
+	  displayUserInfo();
+	
+ // Call the logVisitorInformation function whenever you want to log the visitor's information
+logVisitorInformation();
 
 }
 
