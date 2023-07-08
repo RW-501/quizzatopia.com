@@ -93,6 +93,7 @@ overlay.style.display = 'none'; // Hide the overlay if it exists
 
 
 window.addEventListener("load", function() {
+	console.log('load:');
 	  displayUserInfo();
 	
  // Call the logVisitorInformation function whenever you want to log the visitor's information
