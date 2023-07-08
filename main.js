@@ -1645,7 +1645,7 @@ function logVisitorInformation() {
   const visitorIpPromise = getIPAddress(); // Retrieve the visitor's IP address as a promise
 
   visitorIpPromise.then(visitorIp => {
-    console.log("visitorIp:", visitorIp);
+//    console.log("visitorIp:", visitorIp);
 
     // Check if the visitor's IP is already logged in the "guestLog" collection
     db.collection('guestLog').doc(visitorIp).get()
