@@ -183,7 +183,6 @@ console.log('userInfo main: ', userInfo);
 
 function displayUserInfo() {
   const userInfo = JSON.parse(localStorage.getItem('userInfo'));
-userDashboard = document.getElementById("user-dashboard");
 
 	
   const profilePicElement = document.getElementById('profile-pic');
@@ -197,15 +196,18 @@ userDashboard = document.getElementById("user-dashboard");
   if (taglineElement) {
     taglineElement.textContent = userInfo.userTagLine;
   }
+	
+userDashboard = document.getElementById("user-dashboard");
 
 console.log("1 loggedIn  " + loggedIn);
 console.log("1 userDashboard  " + userDashboard);
 
-if (loggedIn === 'true' && userDashboard !== "null" ) {
+if (loggedIn === 'true' && userDashboard !== null ) {
 	console.log("userDashboard !== null  "); 
   userDashboard.innerHTML = "Dashboard"; // Clear previous content and set to "Dashboard"
 } else {
-  if (userDashboard !== "null") {
+		console.log("else  "); 
+  if (userDashboard !== null) {
     userDashboard.innerHTML = "Login"; // Clear previous content and set to "Login"
   }
 }
