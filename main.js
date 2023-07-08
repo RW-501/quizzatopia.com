@@ -1620,7 +1620,7 @@ function logOutFunction() {
 // 
 
 function logVisitorInformation() {
-  const visitorIp = "172.223.110.58";// getIPAddress();
+  let visitorIp =  getIPAddress();
   const currentTimestamp = new Date();
   const referralPage = document.referrer;
   const userAgentString = navigator.userAgent;
