@@ -1614,11 +1614,10 @@ function logOutFunction() {
 // 
 
 function logVisitorInformation() {
-	
-  const visitorIp = getIPAddress(); // Function to retrieve visitor's IP address
-  const currentTimestamp = new Date(); // Get current timestamp
-  const referralPage = document.referrer; // Retrieve the referral page
-  const userAgent = navigator.userAgent; // Retrieve the user agent
+  const visitorIp = getIPAddress();
+  const currentTimestamp = new Date();
+  const referralPage = document.referrer;
+  const userAgent = navigator.userAgent;
 
   db.collection('guestLog').doc(visitorIp).get()
     .then(doc => {
@@ -1629,6 +1628,9 @@ function logVisitorInformation() {
         db.collection('guestLog').doc(visitorIp).update({
           lastVisitTime,
           lastVisitPage
+        })
+        .catch(error => {
+          console.error('Error updating guest log:', error);
         });
       } else {
         const firstVisitTime = currentTimestamp;
@@ -1643,6 +1645,9 @@ function logVisitorInformation() {
           lastVisitPage,
           referralPage,
           userAgent
+        })
+        .catch(error => {
+          console.error('Error creating guest log:', error);
         });
       }
     })
