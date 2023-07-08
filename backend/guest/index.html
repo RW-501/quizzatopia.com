@@ -67,7 +67,7 @@
       <a class="nav-link" href="../quizzes.html">Quizzes</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/guest">Guest Log</a>
+      <a class="nav-link" href="..backend/guest">Guest Log</a>
     </li>
     <!-- Add more navigation items -->
   </ul>
@@ -75,14 +75,62 @@
 
 <main class="container">
 
-  
-    
+ <header>
+    <h1>Visitor Analytics</h1>
+  </header>
+
+  <section class="visitor-info">
+    <h2>Visitor Information</h2>
+    <div class="visitor-details">
+      <!-- Display visitor details dynamically using JavaScript -->
+    </div>
+  </section>
+
+  <section class="charts">
+    <h2>Charts</h2>
+    <div class="chart-container">
+      <canvas id="chart"></canvas>
+    </div>
+  </section>
+
+  <section class="data-table">
+    <h2>Data Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>IP Address</th>
+          <th>First Visit</th>
+          <th>Last Visit</th>
+          <th>Referral Page</th>
+          <th>User Agent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Populate table rows dynamically using JavaScript -->
+      </tbody>
+    </table>
+  </section>
+
+  <section class="visit-duration">
+    <h2>Visit Duration</h2>
+    <div class="counter">
+      <h3>Total Visit Duration</h3>
+      <span id="total-duration"></span>
+    </div>
+    <div class="counter">
+      <h3>Average Visit Duration</h3>
+      <span id="average-duration"></span>
+    </div>
+  </section>
+	
 	</main>
 
-  <footer>
-    <!-- Footer content -->
-  </footer>
 
+
+
+
+
+	
   <!-- Include JavaScript dependencies -->
 
   <script src="script.js"></script>
