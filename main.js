@@ -1587,7 +1587,7 @@ function logOutFunction() {
 	    
     } else {
       // User is not logged in
- document.getElementById('navLoggedin').innerHTML = '<div onclick="openPopup(); switchTab("login");">Log In</div>';
+ document.getElementById('navLoggedin').innerHTML = '<div onclick="viewDashboard();">Log In</div>';
 	        var navLoggedinElement = document.getElementById('navLoggedin');
 	    if (!navLoggedinElement) {
         // Create the navLoggedin element if it doesn't exist
@@ -1598,7 +1598,7 @@ function logOutFunction() {
         var parentElement = document.getElementById('auth-buttons');
         parentElement.appendChild(navLoggedinElement);
 
-      navLoggedinElement.innerHTML = '<div onclick="openPopup(); switchTab(\'login\');">Log In</div>';
+      navLoggedinElement.innerHTML = '<div onclick="viewDashboard();">Log In</div>';
 
       }
 	      
