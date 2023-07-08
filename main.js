@@ -1506,7 +1506,9 @@ function initializeNavbarToggler() {
 		}
 //  navbarNav.classList.toggle('collapse');
 
-
+			console.log("2 loggedIn  "+loggedIn);
+			console.log("2 userDashboard  "+userDashboard);
+	
 		if (loggedIn === 'true' && userDashboard) {
   userDashboard.innerHTML = "Dashboard"; // Clear previous results
 	}else{
