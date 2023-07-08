@@ -1491,9 +1491,10 @@ function initializeNavbarToggler() {
     console.log('userInfo firebaseId:', userInfo.firebaseId);
 
 	  updateNavBar();
+
+	   userDashboard = document.getElementById("user-dashboard");
 	
 	if( userDashboard){
-   userDashboard = document.getElementById("user-dashboard");
 	userDashboard.addEventListener('click', viewDashboard);
 		}
 //  navbarNav.classList.toggle('collapse');
