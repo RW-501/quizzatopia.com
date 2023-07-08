@@ -196,13 +196,13 @@ function displayUserInfo() {
     taglineElement.textContent = userInfo.userTagLine;
   }
 
-//console.log("1 loggedIn  " + loggedIn);
-//console.log("1 userDashboard  " + userDashboard);
+console.log("1 loggedIn  " + loggedIn);
+console.log("1 userDashboard  " + userDashboard);
 
 if (loggedIn === 'true' && userDashboard !== "null" ) {
   userDashboard.innerHTML = "Dashboard"; // Clear previous content and set to "Dashboard"
 } else {
-  if (userDashboard) {
+  if (userDashboard !== "null") {
     userDashboard.innerHTML = "Login"; // Clear previous content and set to "Login"
   }
 }
@@ -213,8 +213,6 @@ if (loggedIn === 'true' && userDashboard !== "null" ) {
 
 
 
-
-  displayUserInfo();
 
 
 
