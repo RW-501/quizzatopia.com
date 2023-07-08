@@ -1618,8 +1618,19 @@ function logVisitorInformation() {
   const currentTimestamp = new Date();
   const referralPage = document.referrer;
   const userAgent = navigator.userAgent;
+
+// Create a new instance of the UAParser
+const parser = new UAParser();
+
+// Parse the user agent string
+const result = parser.setUA(userAgent).getResult();
+
+// Get the browser and device information from the parsing result
+const browser = result.browser.name;
+//const version = result.browser.version;
+const device = result.device.model;
 	
-    console.log("userAgent:", userAgent);
+    console.log(device+"   browser:", browser);
     console.log("visitorIp:", visitorIp);
 
 	
@@ -1648,7 +1659,8 @@ function logVisitorInformation() {
           firstVisitPage,
           lastVisitPage,
           referralPage,
-          userAgent
+          device,
+	browser
         })
         .catch(error => {
           console.error('Error creating guest log:', error);
