@@ -206,7 +206,7 @@ userDashboard = document.getElementById("user-dashboard");
 
 
 if (loggedIn === true && userDashboard !== null) {
-  console.log("userDashboard !== null");
+//  console.log("userDashboard !== null");
   userDashboard.innerHTML = "Dashboard"; // Clear previous content and set to "Dashboard"
 } else {
   if (userDashboard !== null) {
@@ -779,7 +779,7 @@ function getIPAddress() {
     .then(response => response.json())
     .then(data => {
       ipAddress = data.ip;
-	          //  console.log("ipAddress Info: ", ipAddress);
+	         console.log("ipAddress Info: ", ipAddress);
 
       return ipAddress;
     })
@@ -1501,7 +1501,6 @@ function initializeNavbarToggler() {
     console.log('userInfo firebaseId:', userInfo.firebaseId);
 
 	  updateNavBar();
-	console.log('load:');
 	  displayUserInfo();
 	
  // Call the logVisitorInformation function whenever you want to log the visitor's information
@@ -1622,6 +1621,8 @@ function logVisitorInformation() {
 	
     console.log("userAgent:", userAgent);
     console.log("visitorIp:", visitorIp);
+
+	
  db.collection('guestLog').doc(visitorIp).get()
     .then(doc => {
       if (doc.exists) {
