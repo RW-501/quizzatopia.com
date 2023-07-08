@@ -771,24 +771,30 @@ function getUserLocation(ipAddress) {
     */
 }
 
-var ipAddress = '';
 
+
+
+ var ipAddress = '';
 
 async function getIPAddress() {
   // This approach uses a third-party API to fetch the user's IP address
   if (ipAddress === '') {
-    try {
-      const response = await fetch('https://api.ipify.org');
-      const data = await response.text();
-      ipAddress = data.trim();
-      console.log("IP Address:", ipAddress);
-    } catch (error) {
-      console.error('Error:', error);
-      return null;
-    }
-  }
+    return fetch('https://api.ipify.org')
+      .then(response => response.text())
+      .then(data => {
+        // Extract the IP address from the response
+        ipAddress = data.trim();
+        console.log("IP Address:", ipAddress);
 
-  return ipAddress;
+        return ipAddress;
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        return null;
+      });
+  } else {
+    return ipAddress;
+  }
 }
 
 getIPAddress();
