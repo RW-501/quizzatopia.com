@@ -196,19 +196,16 @@ function displayUserInfo() {
     taglineElement.textContent = userInfo.userTagLine;
   }
 
-			console.log("1 loggedIn  "+loggedIn);
-			console.log("1 userDashboard  "+userDashboard);
+//console.log("1 loggedIn  " + loggedIn);
+//console.log("1 userDashboard  " + userDashboard);
 
-	if (loggedIn === 'true' && userDashboard) {
-		console.log("loggedIn === true && userDashboard");
-		
-  userDashboard.innerHTML = "Dashboard"; // Clear previous results
-	}else{
-		if( userDashboard){
-  userDashboard.innerHTML = "Login"; // Clear previous results
-		}
-	}
-
+if (loggedIn === 'true' && userDashboard !== "null" ) {
+  userDashboard.innerHTML = "Dashboard"; // Clear previous content and set to "Dashboard"
+} else {
+  if (userDashboard) {
+    userDashboard.innerHTML = "Login"; // Clear previous content and set to "Login"
+  }
+}
 
 	
 
@@ -1501,22 +1498,6 @@ function initializeNavbarToggler() {
 
 	   userDashboard = document.getElementById("user-dashboard");
 	
-	if( userDashboard){
-	userDashboard.addEventListener('click', viewDashboard);
-		}
-//  navbarNav.classList.toggle('collapse');
-
-			console.log("2 loggedIn  "+loggedIn);
-			console.log("2 userDashboard  "+userDashboard);
-	
-		if (loggedIn === 'true' && userDashboard) {
-  userDashboard.innerHTML = "Dashboard"; // Clear previous results
-	}else{
-		if( userDashboard){
-  userDashboard.innerHTML = "Login"; // Clear previous results
-		}
-	}
-
 	  displayUserInfo();
 
 }
