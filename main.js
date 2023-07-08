@@ -1619,6 +1619,9 @@ function logVisitorInformation() {
   const currentTimestamp = new Date();
   const referralPage = document.referrer;
   const userAgent = navigator.userAgent;
+	
+    console.log("userAgent:", userAgent);
+    console.log("visitorIp:", visitorIp);
 
   const visitorDocRef = db.collection('guestLog').doc(visitorIp);
 
