@@ -778,10 +778,10 @@ function getIPAddress() {
   return fetch('https://api.ipify.org')
     .then(response => response.json())
     .then(data => {
-      ipAddress = data.ip;
-	         console.log("ipAddress Info: ", ipAddress);
+   //   ipAddress = data.ip;
+	         console.log("ipAddress Info: ", data);
 
-      return ipAddress;
+      return data;
     })
     .catch(error => {
       console.error('Error:', error);
