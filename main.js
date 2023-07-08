@@ -1679,6 +1679,7 @@ function logVisitorInformation() {
           const firstVisitPage = getCurrentPage();
           const lastVisitPage = getCurrentPage();
 		const  banned = "NO";
+		const userVisitCount = 0;
 
           db.collection('guestLog').doc(visitorIp).set({
             firstVisitTime,
