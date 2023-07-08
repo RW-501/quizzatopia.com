@@ -771,26 +771,30 @@ function getUserLocation(ipAddress) {
     */
 }
 
-// Example usage:
-//const ipAddress = [1, 2, 3, 4]; // Replace with the actual IP address as an array of four numbers
+var ipAddress = '';
 
 function getIPAddress() {
   // This approach uses a third-party API to fetch the user's IP address
-  return fetch('https://api.ipify.org')
-    .then(response => response.text())
-    .then(data => {
-      // Extract the IP address from the response
-      const ipAddress = data.trim();
-      console.log("IP Address:", ipAddress);
+  if (ipAddress === '') {
+    return fetch('https://api.ipify.org')
+      .then(response => response.text())
+      .then(data => {
+        // Extract the IP address from the response
+        ipAddress = data.trim();
+        console.log("IP Address:", ipAddress);
 
-      return ipAddress;
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      return null;
-    });
+        return ipAddress;
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        return null;
+      });
+  } else {
+    return Promise.resolve(ipAddress);
+  }
 }
 
+getIPAddress();
 
 
 
