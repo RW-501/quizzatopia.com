@@ -1342,12 +1342,13 @@ function onAuthSuccess(userInfo) {
 	// Example: Display a welcome message to the user
   console.log('Welcome, ' + userInfo.userName + '!');
 
-  displayUserInfo();
 
 	  saveUserInfoToFirestore(userInfo);
 
 	  document.getElementById('loginPopup').classList.add('d-none');
 updateNavBar();
+	  displayUserInfo();
+
 }
 
 
@@ -1509,7 +1510,8 @@ function initializeNavbarToggler() {
 		}
 	}
 
-	
+	  displayUserInfo();
+
 }
 
 
