@@ -196,7 +196,12 @@ function displayUserInfo() {
     taglineElement.textContent = userInfo.userTagLine;
   }
 
+			console.log("1 loggedIn  "+loggedIn);
+			console.log("1 userDashboard  "+userDashboard);
+
 	if (loggedIn === 'true' && userDashboard) {
+		console.log("loggedIn === true && userDashboard");
+		
   userDashboard.innerHTML = "Dashboard"; // Clear previous results
 	}else{
 		if( userDashboard){
