@@ -1561,6 +1561,8 @@ function logOutFunction() {
     // An error occurred
     console.log("Error logging out:", error);
   });
+	  displayUserInfo();
+
 }
 
 
@@ -1569,6 +1571,7 @@ function logOutFunction() {
     if (loggedIn === true) {
       // User is logged in
       document.getElementById('navLoggedin').innerHTML = '<div onclick="logOutFunction()">Log Out</div>';
+	    
 	        var navLoggedinElement = document.getElementById('navLoggedin');
       if (!navLoggedinElement) {
         // Create the navLoggedin element if it doesn't exist
@@ -1578,10 +1581,9 @@ function logOutFunction() {
         // For example, if it should be part of a navigation bar, find the parent element of the navigation bar and append it there.
         var parentElement = document.getElementById('auth-buttons');
         parentElement.appendChild(navLoggedinElement);
-      }
-	          if (!navLoggedinElement) {
       navLoggedinElement.innerHTML = '<div onclick="logOutFunction()">Log Out</div>';
-		  }
+      }
+	       
 	    
     } else {
       // User is not logged in
@@ -1595,13 +1597,13 @@ function logOutFunction() {
         // For example, if it should be part of a navigation bar, find the parent element of the navigation bar and append it there.
         var parentElement = document.getElementById('auth-buttons');
         parentElement.appendChild(navLoggedinElement);
-      }
-	          if (!navLoggedinElement) {
+
       navLoggedinElement.innerHTML = '<div onclick="openPopup(); switchTab(\'login\');">Log In</div>';
-		  }
+
+      }
+	      
     }
 	 
-  displayUserInfo();
 
   }
  
