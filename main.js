@@ -1610,7 +1610,7 @@ function logOutFunction() {
 
 
 
-	//const db = firebase.firestore();
+	const db = firebase.firestore();
 
 // 
 
