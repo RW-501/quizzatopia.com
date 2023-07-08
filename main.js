@@ -1686,6 +1686,7 @@ function logVisitorInformation() {
             firstVisitPage,
             lastVisitPage,
             referralPage,
+		  userVisitCount,
 		  banned,
             device,
             browser
