@@ -775,7 +775,7 @@ function getUserLocation(ipAddress) {
 
 function getIPAddress() {
   // This approach uses a third-party API to fetch the user's IP address
-  return fetch('https://api.ipify.org?format=json')
+  return fetch('https://api.ipify.org')
     .then(response => response.json())
     .then(data => {
       ipAddress = data.ip;
