@@ -1622,16 +1622,13 @@ function logVisitorInformation() {
 	
     console.log("userAgent:", userAgent);
     console.log("visitorIp:", visitorIp);
-
-  const visitorDocRef = db.collection('guestLog').doc(visitorIp);
-
-  visitorDocRef.get()
+ db.collection('guestLog').doc(visitorIp).get()
     .then(doc => {
       if (doc.exists) {
         const lastVisitTime = currentTimestamp;
         const lastVisitPage = getCurrentPage();
 
-        visitorDocRef.update({
+        db.collection('guestLog').doc(visitorIp).update({
           lastVisitTime,
           lastVisitPage
         })
@@ -1644,7 +1641,7 @@ function logVisitorInformation() {
         const firstVisitPage = getCurrentPage();
         const lastVisitPage = getCurrentPage();
 
-        visitorDocRef.set({
+        db.collection('guestLog').doc(visitorIp).set({
           firstVisitTime,
           lastVisitTime,
           firstVisitPage,
@@ -1661,7 +1658,6 @@ function logVisitorInformation() {
       console.error('Error checking guest log:', error);
     });
 }
-
 
 
 
