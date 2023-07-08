@@ -1626,65 +1626,80 @@ function logOutFunction() {
 // 
 
 function logVisitorInformation() {
-  let visitorIp =  ipAddress;
   const currentTimestamp = new Date();
   const referralPage = document.referrer;
   const userAgentString = navigator.userAgent;
 
-const browserMatch = userAgentString.match(/(chrome|safari|firefox|msie|trident(?=\/))\/?\s*([\d\.]+)/i);
-const browserName = browserMatch[1];
-const browserVersion = browserMatch[2];
+  const browserMatch = userAgentString.match(/(chrome|safari|firefox|msie|trident(?=\/))\/?\s*([\d\.]+)/i);
+  const browserName = browserMatch[1];
+  const browserVersion = browserMatch[2];
 
-// Extract device information using regular expressions
-const deviceMatch = userAgentString.match(/\(([^)]+)\)/);
-const deviceInfo = deviceMatch[1].split(';').map(part => part.trim());
-const device = deviceInfo[0];
-const browser = deviceInfo[1];
-	
+  // Extract device information using regular expressions
+  const deviceMatch = userAgentString.match(/\(([^)]+)\)/);
+  const deviceInfo = deviceMatch[1].split(';').map(part => part.trim());
+  const device = deviceInfo[0];
+  const browser = deviceInfo[1];
 
-	
-    console.log(device+"   browser:", browser);
+ // console.log(device + " browser:", browser);
+
+  const visitorIpPromise = getIPAddress(); // Retrieve the visitor's IP address as a promise
+
+  visitorIpPromise.then(visitorIp => {
     console.log("visitorIp:", visitorIp);
 
-	
- db.collection('guestLog').doc(visitorIp).get()
-    .then(doc => {
-      if (doc.exists) {
-        const lastVisitTime = currentTimestamp;
-        const lastVisitPage = getCurrentPage();
+    // Check if the visitor's IP is already logged in the "guestLog" collection
+    db.collection('guestLog').doc(visitorIp).get()
+      .then(doc => {
+        if (doc.exists) {
+          const lastVisitTime = currentTimestamp;
+          const lastVisitPage = getCurrentPage();
 
-        db.collection('guestLog').doc(visitorIp).update({
-          lastVisitTime,
-          lastVisitPage
-        })
-        .catch(error => {
-          console.error('Error updating guest log:', error);
-        });
-      } else {
-        const firstVisitTime = currentTimestamp;
-        const lastVisitTime = currentTimestamp;
-        const firstVisitPage = getCurrentPage();
-        const lastVisitPage = getCurrentPage();
+          db.collection('guestLog').doc(visitorIp).update({
+            lastVisitTime,
+            lastVisitPage
+          })
+            .catch(error => {
+              console.error('Error updating guest log:', error);
+            });
 
-        db.collection('guestLog').doc(visitorIp).set({
-          firstVisitTime,
-          lastVisitTime,
-          firstVisitPage,
-          lastVisitPage,
-          referralPage,
-          device,
-	browser
-        })
-        .catch(error => {
-          console.error('Error creating guest log:', error);
-        });
-      }
-    })
-    .catch(error => {
-      console.error('Error checking guest log:', error);
-    });
+          // Update the user visit count
+          db.collection('guestLog').doc(visitorIp).collection('userVisits').get()
+            .then(snapshot => {
+              const userVisitCount = snapshot.size;
+              console.log('User Visit Count:', userVisitCount);
+
+              // Perform further operations with the user visit count
+            })
+            .catch(error => {
+              console.error('Error retrieving user visit count:', error);
+            });
+        } else {
+          const firstVisitTime = currentTimestamp;
+          const lastVisitTime = currentTimestamp;
+          const firstVisitPage = getCurrentPage();
+          const lastVisitPage = getCurrentPage();
+
+          db.collection('guestLog').doc(visitorIp).set({
+            firstVisitTime,
+            lastVisitTime,
+            firstVisitPage,
+            lastVisitPage,
+            referralPage,
+            device,
+            browser
+          })
+            .catch(error => {
+              console.error('Error creating guest log:', error);
+            });
+        }
+      })
+      .catch(error => {
+        console.error('Error checking guest log:', error);
+      });
+  }).catch(error => {
+    console.error('Error retrieving visitor IP address:', error);
+  });
 }
-
 
 
 
