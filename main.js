@@ -177,13 +177,15 @@ console.log('userInfo main: ', userInfo);
 
 
 
-  var userDashboard = document.getElementById("user-dashboard");
+  var userDashboard;
 
 
 
 function displayUserInfo() {
   const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+userDashboard = document.getElementById("user-dashboard");
 
+	
   const profilePicElement = document.getElementById('profile-pic');
   if (profilePicElement) {
     profilePicElement.src = userInfo.userProfilePic;
