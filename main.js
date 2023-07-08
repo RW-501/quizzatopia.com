@@ -714,14 +714,13 @@ firebase.firestore().enablePersistence()
 
 
 // Function to retrieve user location using a geolocation API
-var ipAddress; // This variable should be assigned the IP address of the user
 var locationV;
 
 function getUserLocation(ipAddress) {
   const USER_INFO_KEY = 'user_location';
   const savedUserInfo = localStorage.getItem(USER_INFO_KEY);
           console.log("savedUserInfo Info: ", savedUserInfo);
-
+/*
 //  if (savedUserInfo) {
     // User location is already saved in local storage, return the parsed object
   //  return JSON.parse(savedUserInfo);
@@ -768,6 +767,8 @@ function getUserLocation(ipAddress) {
       console.error('Error:', error);
       return null;
     });
+
+    */
 }
 
 // Example usage:
