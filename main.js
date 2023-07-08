@@ -191,23 +191,25 @@ function displayUserInfo() {
     profilePicElement.src = userInfo.userProfilePic;
   }
 
-
-
   const taglineElement = document.getElementById('tagline');
   if (taglineElement) {
     taglineElement.textContent = userInfo.userTagLine;
   }
+
+
+
+
 	
 userDashboard = document.getElementById("user-dashboard");
 
 console.log("1 loggedIn  " + loggedIn);
 console.log("1 userDashboard  " + userDashboard);
 
-if (loggedIn === 'true' && userDashboard !== null ) {
-	console.log("userDashboard !== null  "); 
+if (loggedIn === 'true' && userDashboard !== null) {
+  console.log("userDashboard !== null");
   userDashboard.innerHTML = "Dashboard"; // Clear previous content and set to "Dashboard"
 } else {
-		console.log("else  "); 
+  console.log("else");
   if (userDashboard !== null) {
     userDashboard.innerHTML = "Login"; // Clear previous content and set to "Login"
   }
