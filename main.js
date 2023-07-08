@@ -203,16 +203,13 @@ function displayUserInfo() {
 	
 userDashboard = document.getElementById("user-dashboard");
 
-console.log("1 loggedIn  " + loggedIn);
-console.log("1 userDashboard  " + userDashboard);
+
 
 if (loggedIn === true && userDashboard !== null) {
   console.log("userDashboard !== null");
   userDashboard.innerHTML = "Dashboard"; // Clear previous content and set to "Dashboard"
 } else {
-  console.log("else");
   if (userDashboard !== null) {
-	    console.log("Login");
 
     userDashboard.innerHTML = "Login"; // Clear previous content and set to "Login"
   }
@@ -1623,13 +1620,15 @@ function logVisitorInformation() {
   const referralPage = document.referrer;
   const userAgent = navigator.userAgent;
 
-  db.collection('guestLog').doc(visitorIp).get()
+  const visitorDocRef = db.collection('guestLog').doc(visitorIp);
+
+  visitorDocRef.get()
     .then(doc => {
       if (doc.exists) {
         const lastVisitTime = currentTimestamp;
         const lastVisitPage = getCurrentPage();
 
-        db.collection('guestLog').doc(visitorIp).update({
+        visitorDocRef.update({
           lastVisitTime,
           lastVisitPage
         })
@@ -1642,7 +1641,7 @@ function logVisitorInformation() {
         const firstVisitPage = getCurrentPage();
         const lastVisitPage = getCurrentPage();
 
-        db.collection('guestLog').doc(visitorIp).set({
+        visitorDocRef.set({
           firstVisitTime,
           lastVisitTime,
           firstVisitPage,
@@ -1659,6 +1658,7 @@ function logVisitorInformation() {
       console.error('Error checking guest log:', error);
     });
 }
+
 
 
 
