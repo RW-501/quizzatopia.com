@@ -1500,10 +1500,10 @@ function initializeNavbarToggler() {
 
 	  updateNavBar();
 
-
-	
 	  displayUserInfo();
-
+	
+ // Call the logVisitorInformation function whenever you want to log the visitor's information
+logVisitorInformation();
 }
 
 
@@ -1598,8 +1598,7 @@ function logOutFunction() {
       }
 	      
     }
-	 // Call the logVisitorInformation function whenever you want to log the visitor's information
-logVisitorInformation();
+	
 
   }
  
@@ -1608,11 +1607,11 @@ logVisitorInformation();
 
 
 
+	//const db = firebase.firestore();
 
 // 
 
 function logVisitorInformation() {
-	const db = firebase.firestore();
 	
   const visitorIp = getIPAddress(); // Function to retrieve visitor's IP address
   const currentTimestamp = new Date(); // Get current timestamp
