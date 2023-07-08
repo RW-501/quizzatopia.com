@@ -1617,18 +1617,19 @@ function logVisitorInformation() {
   const visitorIp = getIPAddress();
   const currentTimestamp = new Date();
   const referralPage = document.referrer;
-  const userAgent = navigator.userAgent;
+  const userAgentString = navigator.userAgent;
 
-// Create a new instance of the UAParser
-const parser = new UAParser();
+const browserMatch = userAgentString.match(/(chrome|safari|firefox|msie|trident(?=\/))\/?\s*([\d\.]+)/i);
+const browserName = browserMatch[1];
+const browserVersion = browserMatch[2];
 
-// Parse the user agent string
-const result = parser.setUA(userAgent).getResult();
+// Extract device information using regular expressions
+const deviceMatch = userAgentString.match(/\(([^)]+)\)/);
+const deviceInfo = deviceMatch[1].split(';').map(part => part.trim());
+const device = deviceInfo[0];
+const browser = deviceInfo[1];
+	
 
-// Get the browser and device information from the parsing result
-const browser = result.browser.name;
-//const version = result.browser.version;
-const device = result.device.model;
 	
     console.log(device+"   browser:", browser);
     console.log("visitorIp:", visitorIp);
