@@ -93,7 +93,11 @@ overlay.style.display = 'none'; // Hide the overlay if it exists
 
 
 window.addEventListener("load", function() {
-
+	  displayUserInfo();
+	
+ // Call the logVisitorInformation function whenever you want to log the visitor's information
+logVisitorInformation();
+	
 loadScreenFunc();
 
 });
@@ -211,6 +215,8 @@ if (loggedIn === 'true' && userDashboard !== null) {
 } else {
   console.log("else");
   if (userDashboard !== null) {
+	    console.log("Login");
+
     userDashboard.innerHTML = "Login"; // Clear previous content and set to "Login"
   }
 }
@@ -1502,10 +1508,7 @@ function initializeNavbarToggler() {
 
 	  updateNavBar();
 
-	  displayUserInfo();
-	
- // Call the logVisitorInformation function whenever you want to log the visitor's information
-logVisitorInformation();
+
 }
 
 
