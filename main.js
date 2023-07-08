@@ -1678,6 +1678,7 @@ function logVisitorInformation() {
           const lastVisitTime = currentTimestamp;
           const firstVisitPage = getCurrentPage();
           const lastVisitPage = getCurrentPage();
+		const = banned = "NO";
 
           db.collection('guestLog').doc(visitorIp).set({
             firstVisitTime,
@@ -1685,6 +1686,7 @@ function logVisitorInformation() {
             firstVisitPage,
             lastVisitPage,
             referralPage,
+		  banned,
             device,
             browser
           })
