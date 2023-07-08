@@ -11,7 +11,10 @@ display: none !important;
 
 
 
-
+.welcomeMain {
+    display: grid;
+    place-items: center;
+}
 
 
 .quiz-info_His {
