@@ -166,7 +166,7 @@ function getUserInfo() {
       userPoints: 0,
       userQuizzesTaken: 0,
  animationEnabled: true,
-              userIP: getIPAddress(),
+              userIP: ipAddress,
 	    userAds: ''
     };
 console.log('userInfo main: ', userInfo);
@@ -854,7 +854,7 @@ window.signInAnonymously = function() {
               userCountry: '',
               userState: '',
               animationEnabled: true,
-              userIP: getIPAddress(),
+              userIP: ipAddress,
               userLatitude: 0,
               userLongitude: 0,
               firebaseId: firebaseId,
@@ -1026,7 +1026,7 @@ window.signInWithGoogle = function () {
               userCountry: '',
               userState: '',
  animationEnabled: true,
-              userIP: getIPAddress(),
+              userIP: ipAddress,
 		    userLatitude: 0,
               userLongitude: 0,
               firebaseId: firebaseId,
@@ -1250,8 +1250,9 @@ window.createUserWithEmailAndPassword = function (email, password) {
         userCountry: '',
         userState: '',
         userLatitude: 0,
-        animationEnabled: true,
-        userLongitude: 0,
+ animationEnabled: true,
+              userIP: ipAddress,
+	      userLongitude: 0,
         firebaseId: firebaseId,
         lastUpdated: new Date().getTime(),
       };
@@ -1625,7 +1626,7 @@ function logOutFunction() {
 // 
 
 function logVisitorInformation() {
-  let visitorIp =  getIPAddress();
+  let visitorIp =  ipAddress;
   const currentTimestamp = new Date();
   const referralPage = document.referrer;
   const userAgentString = navigator.userAgent;
