@@ -382,10 +382,9 @@
           var option = $(this).find('.option').val();
           var isCorrect = $(this).find('.correctAnswer').prop('checked');
 
-          options.push({
+          options.push(
             option: option,
-            isCorrect: isCorrect
-          });
+          );
         });
 
 	      
