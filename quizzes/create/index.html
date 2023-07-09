@@ -368,6 +368,7 @@
 
         // Get user inputs
         var quizName = $('#quizName').val();
+        var quizCode = $('#quizCode').val();
         var category = $('#category').val();
         var questionType = $('#questionType').val();
         var question = $('#question').val();
@@ -390,7 +391,7 @@
 	      
       var quizObj = {
           quizName: quizName, 
-          quizCode: category,
+          quizCode: quizCode,
           numberOfQuestions: 0,
           quizCategory: category,
   questions: []
