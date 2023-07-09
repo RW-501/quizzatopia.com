@@ -83,6 +83,21 @@
     background-color: #af4c4c;
     }
 
+#generateJSONButton {
+    display: inline-flex;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+    #generateJSONButton:hover {
+    background-color: #3f74c1;
+    }
 
 
 
