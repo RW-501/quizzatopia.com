@@ -596,8 +596,16 @@ function loadQuestions() {
 
     $('#quizName').val(quizData.quizName);
     $('#quizCode').val(quizData.quizCode);
-    $('#category').val(quizData.category);
-    $('#questionType').val(quizData.questionType);
+
+var categoryOption = quizData.category;
+// Set the select element based on the option name
+$('#category').val(categoryOption);
+	
+var questionTypeOption = quizData.questionType;
+// Set the select element based on the option name
+$('#questionType').val(questionTypeOption);
+	  
+
 	  
     $('#questionList').empty();
     $.each(quizData.questions, function(index, question) {
