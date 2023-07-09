@@ -1640,13 +1640,9 @@ function logVisitorInformation() {
   const device = deviceInfo[0];
   const browser = deviceInfo[1];
 
- // console.log(device + " browser:", browser);
-
   const visitorIpPromise = getIPAddress(); // Retrieve the visitor's IP address as a promise
 
   visitorIpPromise.then(visitorIp => {
-//    console.log("visitorIp:", visitorIp);
-
     // Check if the visitor's IP is already logged in the "guestLog" collection
     db.collection('guestLog').doc(visitorIp).get()
       .then(doc => {
@@ -1662,24 +1658,36 @@ function logVisitorInformation() {
               console.error('Error updating guest log:', error);
             });
 
-          // Update the user visit count
-          db.collection('guestLog').doc(visitorIp).collection('userVisits').get()
-            .then(snapshot => {
-              const userVisitCount = snapshot.size;
-              console.log('User Visit Count:', userVisitCount);
-
-              // Perform further operations with the user visit count
+          // Increment the user visit count
+          const userVisitCountRef = db.collection('guestLog').doc(visitorIp).collection('userVisitCount').doc('count');
+          userVisitCountRef.get()
+            .then(doc => {
+              if (doc.exists) {
+                const previousCount = doc.data().count;
+                const updatedCount = previousCount + 1;
+                userVisitCountRef.update({ count: updatedCount })
+                  .catch(error => {
+                    console.error('Error updating user visit count:', error);
+                  });
+              } else {
+                // Initialize the user visit count if it doesn't exist
+                userVisitCountRef.set({ count: 1 })
+                  .catch(error => {
+                    console.error('Error initializing user visit count:', error);
+                  });
+              }
             })
             .catch(error => {
               console.error('Error retrieving user visit count:', error);
             });
         } else {
+          // Create a new visitor log entry
           const firstVisitTime = currentTimestamp;
           const lastVisitTime = currentTimestamp;
           const firstVisitPage = getCurrentPage();
           const lastVisitPage = getCurrentPage();
-		const  banned = "NO";
-		const userVisitCount = 0;
+          const banned = 'NO';
+          const userVisitCount = 1;
 
           db.collection('guestLog').doc(visitorIp).set({
             firstVisitTime,
@@ -1687,8 +1695,8 @@ function logVisitorInformation() {
             firstVisitPage,
             lastVisitPage,
             referralPage,
-		  userVisitCount,
-		  banned,
+            userVisitCount,
+            banned,
             device,
             browser
           })
@@ -1700,7 +1708,8 @@ function logVisitorInformation() {
       .catch(error => {
         console.error('Error checking guest log:', error);
       });
-  }).catch(error => {
+  })
+  .catch(error => {
     console.error('Error retrieving visitor IP address:', error);
   });
 }
