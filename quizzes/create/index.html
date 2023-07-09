@@ -644,14 +644,15 @@ var quizData = JSON.parse(localStorage.getItem('quizData'));
 var jsonData = JSON.stringify(quizData, null, 2);
 
 console.log("jsonData   "+jsonData);
+console.log("quizData   "+quizData.quizCode);
 	    
       // You can do further processing with the generated JSON, such as sending it to a server or displaying it to the user.
 
 
 // Assuming you have initialized Firebase and obtained a Firestore database reference
 // Replace the following placeholders with your actual values
-var quizCodeDB = questionsData.quizCode;
-var quizNameDS = questionsData.quizName;
+var quizCodeDB = quizData.quizCode;
+var quizNameDS = jsonData.quizName;
 var categoryDB = questionsData.length;
 var quizLinkDB = "/quiz/?e=user&q="+quizCodeDB;
 var imageURLDB = "https://www.quizzatopia.com/images/sq/_.png";
