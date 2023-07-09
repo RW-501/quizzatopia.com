@@ -213,14 +213,22 @@ position: fixed;
   color: #ffd700;
 }
 #leaveReviewBtn {
-  background-color: #f5f5f5;
-  border: none;
-  color: #333;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+    background-color: #78cf6e;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
+#quizRating {
+    font-weight: 500;
+    padding: 10px 20px;
+    font-size: 20px;
 
+}
 .modal {
   display: none;
   position: fixed;
@@ -531,8 +539,7 @@ position: fixed;
       </div>
     </p>
       <!-- Feedback Section -->
-	  <p>
-    <label for="rating">Rating:</label>
+    <label id="quizRating" for="rating">Quiz Rating:</label>
     <div id="ratingStars" class="rating">
   <span class="star" onclick="rateQuiz(1)">&#9734;</span>
   <span class="star" onclick="rateQuiz(2)">&#9734;</span>
@@ -541,7 +548,6 @@ position: fixed;
   <span class="star" onclick="rateQuiz(5)">&#9734;</span>
 </div>
 <button id="leaveReviewBtn">Leave Review</button>
-		</p>
 	  
     <button id="retake-btn" class="btn btn-primary mt-4"  onclick="retakeQuizFunc()">Retake Quiz</button>
     <!-- Retake Quiz Button -->
