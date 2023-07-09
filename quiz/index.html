@@ -212,17 +212,7 @@ position: fixed;
 .star.active {
   color: #ffd700;
 }
-#leaveReviewBtn {
-    background-color: #78cf6e;
-    color: #fff;
-    font-weight: 500;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border: 1px solid #CED4DA;
-    border-radius: 4px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-}
+
 #quizRating {
     font-weight: 500;
     padding: 10px 20px;
@@ -280,7 +270,21 @@ position: fixed;
   font-size: 16px;
   cursor: pointer;
 }
+.bar{
+  width: 100%;
+  padding: 5%;
+	display:block;
 
+}
+#reportFormBTN{
+  background-color: #ef6a6a;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+		
 </style>
 	  	
 	
@@ -519,8 +523,14 @@ position: fixed;
     <button id="close-btn" class="close-button">&times;</button>
 	  </div>
     <div id="explanation"></div>
+    <div class="bar">    <div id="reportFormBTN"></div>
+</div>
+	  
   </div>
 
+
+
+		
   <div class="container mt-4 d-none" id="end-container">
     <!-- End Container -->
     <h2 id="result-text"></h2>
@@ -547,9 +557,9 @@ position: fixed;
   <span class="star" onclick="rateQuiz(4)">&#9734;</span>
   <span class="star" onclick="rateQuiz(5)">&#9734;</span>
 </div>
-<button id="leaveReviewBtn">Leave Review</button>
+<button id="leaveReviewBtn" class="other-quiz-btn btn btn-secondary mt-4">Leave Review</button>
 	  
-    <button id="retake-btn" class="btn btn-primary mt-4"  onclick="retakeQuizFunc()">Retake Quiz</button>
+    <button id="retake-btn" class="other-quiz-btn btn btn-secondary mt-4 green"  onclick="retakeQuizFunc()">Retake Quiz</button>
     <!-- Retake Quiz Button -->
     <button class="other-quiz-btn btn btn-secondary mt-4" onclick="window.location.href = '/quizzes'">Try Another Quiz</button>
     <!-- Try Another Quiz Button -->
