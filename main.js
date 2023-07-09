@@ -1501,7 +1501,7 @@ window.addEventListener('load', function() {
 	
 function viewDashboard() {
  
-	if (loggedIn === 'true') {		
+	if (loggedIn === true) {		
   window.location.href = '/user/';
 	}else{
       // Show the login popup
