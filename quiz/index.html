@@ -1271,25 +1271,30 @@ function fetchData(q, e) {
             console.log("Quiz Data from DB: ", quizDataDB);
 
             // Use the quizDataDB here
-            const questionData = quizDataDB.questions.map(questionObj => ({
-              question: questionObj.question,
-              answer: questionObj.answer,
-              options: questionObj.options,
-              difficulty: questionObj.difficulty,
-              imageURL: questionObj.imageURL,
-              questionType: questionObj.questionType,
-              questionNumber: questionObj.questionNumber,
-              explanation: questionObj.explanation
-            }));
+    // Update quizCode, quizName, numberOfQuestions
+      quizCode = quizDataDB.quizCode;
+      quizName = quizDataDB.quizName;
+      numberOfQuestions = quizDataDB.numberOfQuestions;
+      quizImageURL = quizDataDB.imageURL;
+      quizDifficulty = quizDataDB.quizDifficulty;
+      quizCategory = quizDataDB.quizCategory;
 
-            // Update quizCode, quizName, numberOfQuestions
-            quizCode = quizDataDB.quizCodeDB;
-            quizName = quizDataDB.quizNameDS;
-            numberOfQuestions = quizDataDB.numberOfQuestionsDB;
-            quizImageURL = quizDataDB.imageURLDB;
-            quizDifficulty = quizDataDB.quizDifficultyX;
-            questionNumber = 1; // Update this dynamically if available in the database
-            questionType = ""; // Update this dynamically if available in the database
+      // Use the quizDataDB.questions array to populate questionData
+      const questionData = quizDataDB.questions.map(questionObj => ({
+        questionNumber: questionObj.questionNumber,
+        question: questionObj.question,
+        imageURL: questionObj.imageURL,
+        questionType: questionObj.questionType,
+        options: questionObj.options,
+        answer: questionObj.answer,
+        explanation: questionObj.explanation,
+        difficulty: questionObj.difficulty
+      }));
+            console.log("questionData from DB: ", questionData);
+
+		  questionObj = quizDataDB.quizDataDB;
+
+	              console.log("questionObj Data from DB: ", questionObj);
 
             // Check quiz code and retrieve or save quiz info
             const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
