@@ -285,7 +285,26 @@ position: fixed;
   cursor: pointer;
 	display: block;
 }
-		
+	#audioButton {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #eaeaea;
+  border-radius: 5px;
+}
+
+#audioButton img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+#audioButton span {
+  font-size: 14px;
+  vertical-align: middle;
+}
+	
 </style>
 	  	
 	
@@ -472,6 +491,12 @@ position: fixed;
         <div id="quiz-timer-qn" class="d-flex justify-content-between">
           <div id="question-number" class="font-weight-bold"></div>
           <div id="timer" class="text-right"></div>
+		
+<div id="audioButton" onclick="playAudio()">
+  <img src="audio-icon.png" alt="Audio Icon">
+  <span>Play Audio</span>
+</div>
+		
         </div>
 
         <div class="progress-bar-container">
