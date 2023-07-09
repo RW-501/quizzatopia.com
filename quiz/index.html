@@ -283,6 +283,7 @@ position: fixed;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+	display: block;
 }
 		
 </style>
@@ -523,7 +524,7 @@ position: fixed;
     <button id="close-btn" class="close-button">&times;</button>
 	  </div>
     <div id="explanation"></div>
-    <div class="bar">    <div id="reportFormBTN"></div>
+    <div class="bar">    <div id="reportFormBTN" onclick="submitReport()" >Report</div>
 </div>
 	  
   </div>
@@ -1368,13 +1369,6 @@ saveQuizToDB(quizZZ);
 	  
 fetchData(q, e);
 
-
-var reportFormBTN= document.getElementById('reportFormBTN');
-
-	  // Add submit event listener to the form
-reportFormBTN.addEventListener('click', function (e) {
-  e.submitReport();
-	  });
 
 	
 function submitReport(){
