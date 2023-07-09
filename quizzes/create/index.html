@@ -657,7 +657,7 @@ var numberOfQuestionsDB = quizData.numberOfQuestions;
 var quizStartedCount = 0;
 var quizDate = new Date().toISOString();
 var saveType = "user";
-var userID = userInfo.firebaseId;
+var userID = userInfo.firebaseId || "";
 var quizDataDB = jsonData;
 
 // Create an object with the data to be saved
