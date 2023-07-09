@@ -1263,8 +1263,6 @@ function fetchData(q, e) {
       console.log("DB JSON structure");
 	    window.addEventListener("load", function() {
 
-firebase.initializeApp(firebaseConfig);
-
       const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "==", q);
       quizRef.get().then(function(querySnapshot) {
         if (!querySnapshot.empty) {
