@@ -493,7 +493,7 @@ position: fixed;
           <div id="timer" class="text-right"></div>
 		
 <div id="audioButton" onclick="playAudio()">
-  <img src="audio-icon.png" alt="Audio Icon">
+  <div>&#128264;</div>
   <span>Play Audio</span>
 </div>
 		
@@ -549,7 +549,7 @@ position: fixed;
     <button id="close-btn" class="close-button">&times;</button>
 	  </div>
     <div id="explanation"></div>
-    <div class="btn_container">   <div></div> <div id="reportFormBTN" onclick="submitReport()" >Report</div>
+    <div class="btn_container">   <div></div> <div id="reportFormBTN" onclick="openReport()" >Report</div>
 </div>
 	  
   </div>
@@ -658,7 +658,7 @@ position: fixed;
     <textarea class="form-control" id="reportDetails" rows="4" required></textarea>
   </div>
   <hr>
-  <button id="reportFormBTN" class="btn btn-primary btn-block">Submit Report</button>
+  <button id="reportFormBTN" class="btn btn-primary btn-block" onclick="submitReport()()" >Submit Report</button>
 </div>
 	
 		
