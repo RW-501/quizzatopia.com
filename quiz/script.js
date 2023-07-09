@@ -87,6 +87,7 @@ otherQuizzes.style.dispay = "nome";
 	
 	    if (newQuizCount > QUIZ_COUNT_THRESHOLD && loggedIn == false) {
       // Show the login popup
+
      			slideIn("loginPopupBody");
 openPopup();switchTab('login');
     }else{
@@ -248,7 +249,7 @@ let adDuration;
  let adCount;
   let userInfo = getUserInfo();
 
-	   console.log('userInfo.userName ????????????????? ', userInfo.userName);
+	 //  console.log('userInfo.userName ????????????????? ', userInfo.userName);
 
 if (userInfo.userName === "admin" || userInfo.userName === "Admin" ) {
   console.log("   ???????no ads???"); // Output: 
@@ -751,10 +752,14 @@ const animationDuration = 2000; // Duration in milliseconds (2 seconds)
 	if(earnedPoints > 0){
 displayEarnedPoints(startValue, earnedPoints, animationDuration);
 	}
-	
+
+
+	     			slideIn("end-container",'right');
+
   // Hide the quiz container and show the end container
   document.getElementById("quiz-container").classList.add("d-none");
   document.getElementById("end-container").classList.remove("d-none");
+document.getElementById("otherQuizzes").style.display = "nome";
 
   // Show the badge if all answers are correct
   if (questionCorrect === totalQuestions || questionCorrect == 0 ) {
@@ -930,11 +935,59 @@ function startTimer() {
 function showExplanationFunc() {
   // Replace this with your explanation content
  //const explanation = "This is the explanation for the question.";
-//  showExplanation(explanation);
+	
+     			//slideIn("loginPopupBody");
 document.getElementById('show-explanation-btn').classList.remove("d-none");
   const explanationContainer = document.querySelector('.explanation-container');
-
+		
 	explanationContainer.style.display = 'block';
 ///});
 }
+	
+// Rating stars functionality
+let rating = 0;
 
+function rateQuiz(stars) {
+  rating = stars;
+
+  const starElements = document.querySelectorAll('.star');
+  starElements.forEach((star, index) => {
+    if (index < stars) {
+      star.classList.add('active');
+    } else {
+      star.classList.remove('active');
+    }
+  });
+}
+
+// Leaving a review
+function leaveReview() {
+  if (rating === 0) {
+    alert('Please rate the quiz before leaving a review.');
+    return;
+  }
+
+  const feedback = prompt('Leave your review or feedback:');
+  if (feedback) {
+    const feedbackData = {
+      rating: rating,
+      feedback: feedback,
+      feedbackType: "feedback",
+      date: new Date(),
+      quizCode: quizCode // Replace with the actual quiz code
+    };
+
+    // Add the feedback to the 'quizFeedback' collection
+    db.collection('quizFeedback').add(feedbackData)
+      .then(() => {
+        console.log('Feedback added successfully!');
+        alert('Thank you for your review!');
+      })
+      .catch(error => {
+        console.error('Error adding feedback:', error);
+        alert('Failed to add feedback. Please try again.');
+      });
+  } else {
+    alert('Please enter your review or feedback.');
+  }
+}
