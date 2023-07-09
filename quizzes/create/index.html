@@ -507,7 +507,18 @@ var optionOne = $('.optionRow input.option').eq(0);
 var optionTwo = $('.optionRow input.option').eq(1);
 optionOne.val("True");
 optionTwo.val("False");
+  var optionsContainer = $('#optionsContainer');
+  optionsContainer.empty();
 
+    // Add True and False options
+    optionsContainer.append('<div class="optionRow">' +
+      '<input type="text" class="option" value="True" required>' +
+      '<input type="checkbox" class="correctAnswer">' +
+      '</div>');
+    optionsContainer.append('<div class="optionRow">' +
+      '<input type="text" class="option" value="False" required>' +
+      '<input type="checkbox" class="correctAnswer">' +
+      '</div>');
     }
   });
 
