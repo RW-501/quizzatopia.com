@@ -454,7 +454,7 @@ selectedOption.classList.add('pulse-animation');
       if (answerOptions[i].innerHTML === questionObj.answer) {
         answerOptions[i].classList.add('missed');
 	      
-	        console.log('isAnimationEnabled :', isAnimationEnabled);
+	      //  console.log('isAnimationEnabled :', isAnimationEnabled);
 
 if (isAnimationEnabled) {
 answerOptions[i].classList.add('shake-animation');
@@ -961,14 +961,48 @@ function rateQuiz(stars) {
 }
 
 // Leaving a review
-function leaveReview() {
-  if (rating === 0) {
-    alert('Please rate the quiz before leaving a review.');
+
+// Get the elements
+const leaveReviewBtn = document.getElementById('leaveReviewBtn');
+const reviewModal = document.getElementById('reviewModal');
+const closeModal = document.getElementById('closeModal');
+const submitReviewBtn = document.getElementById('submitReviewBtn');
+const reviewTextArea = document.getElementById('reviewTextArea');
+const ratingStars = document.getElementById('ratingStars');
+
+// Event listeners
+leaveReviewBtn.addEventListener('click', openModal);
+closeModal.addEventListener('click', closeModalWindow);
+submitReviewBtn.addEventListener('click', submitReview);
+
+// Open the modal
+function openModal() {
+	  slideIn("reviewModal");
+
+  reviewModal.style.display = 'block';
+}
+
+// Close the modal
+function closeModalWindow() {
+	  slideOut("reviewModal");
+
+  reviewModal.style.display = 'none';
+  reviewTextArea.value = ''; // Clear the review text area
+}
+
+// Submit the review
+function submitReview() {
+	  if (rating === 0) {
+	  if (isAnimationEnabled) {
+ratingStars.classList.add('shake-animation');
+}
+alert('Please rate the quiz before leaving a review.');
     return;
   }
-
-  const feedback = prompt('Leave your review or feedback:');
+  const feedback = reviewTextArea.value;
   if (feedback) {
+    // Perform the necessary actions to store the feedback in Firestore
+
     const feedbackData = {
       rating: rating,
       feedback: feedback,
@@ -987,7 +1021,18 @@ function leaveReview() {
         console.error('Error adding feedback:', error);
         alert('Failed to add feedback. Please try again.');
       });
+  
+
+
+	  
+    console.log('Review:', feedback);
+    closeModalWindow(); // Close the modal after submitting
+    alert('Thank you for your review!');
   } else {
+	  if (isAnimationEnabled) {
+submitReviewBtn.classList.add('shake-animation');
+}
     alert('Please enter your review or feedback.');
   }
 }
+
