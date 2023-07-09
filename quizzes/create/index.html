@@ -649,18 +649,14 @@ console.log("quizData   "+quizData.quizCode);
 // Replace the following placeholders with your actual values
 var quizCodeDB = quizData.quizCode;
 var quizNameDS = quizData.quizName;
-var categoryDB = quizData.category;
-var quizLinkDB = "/quiz/?e=user&q="+quizCodeDB;
+var categoryDB = quizData.category || ""; // Set a default value if category is not defined
+var quizLinkDB = "/quiz/?e=user&q=" + quizCodeDB;
 var imageURLDB = "https://www.quizzatopia.com/images/sq/_.png";
 var numberOfQuestionsDB = quizData.numberOfQuestions;
 var quizStartedCount = 0;
 var quizDate = new Date().toISOString();
 var saveType = "user";
 var quizDataDB = jsonData;
-
-	    console.log("numberOfQuestionsDB   "+numberOfQuestionsDB);
-console.log("quizDataDB   "+quizDataDB);
-
 
 // Create an object with the data to be saved
 var quizData = {
@@ -677,7 +673,9 @@ var quizData = {
 };
 
 // Post the data to the Firestore collection "quizzes"
-firebase.firestore().collection("quizzes").add(quizData)
+firebase.firestore()
+  .collection("quizzes")
+  .add(quizData)
   .then(function(docRef) {
     console.log("Quiz document written with ID: ", docRef.id);
   })
