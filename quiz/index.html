@@ -1261,6 +1261,8 @@ function fetchData(q, e) {
   if (e) {
     if (e === "user") {
       console.log("DB JSON structure");
+	    const firestore = firebase.firestore();
+
       // Retrieve data from the database here
    const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "==", q);
 quizRef.get().then(function(querySnapshot) {
