@@ -640,7 +640,6 @@ var quizData = JSON.parse(localStorage.getItem('quizData'));
 // Convert quiz data to JSON format
 var jsonData = JSON.stringify(quizData, null, 2);
 
-console.log("jsonData   "+jsonData);
 console.log("quizData   "+quizData.quizCode);
 	    
       // You can do further processing with the generated JSON, such as sending it to a server or displaying it to the user.
@@ -649,19 +648,19 @@ console.log("quizData   "+quizData.quizCode);
 // Assuming you have initialized Firebase and obtained a Firestore database reference
 // Replace the following placeholders with your actual values
 var quizCodeDB = quizData.quizCode;
-var quizNameDS = jsonData.quizName;
-var categoryDB = questionsData.category;
+var quizNameDS = quizData.quizName;
+var categoryDB = quizData.category;
 var quizLinkDB = "/quiz/?e=user&q="+quizCodeDB;
 var imageURLDB = "https://www.quizzatopia.com/images/sq/_.png";
-var numberOfQuestionsDB = questionsData.length;
+var numberOfQuestionsDB = quizData.numberOfQuestions;
 var quizStartedCount = 0;
 var quizDate = new Date().toISOString();
 var saveType = "user";
 var quizDataDB = jsonData;
 
-	    console.log("quizCodeDB   "+quizCodeDB);
-console.log("quizNameDS   "+quizNameDS);
-console.log("categoryDB   "+categoryDB);
+	    console.log("numberOfQuestionsDB   "+numberOfQuestionsDB);
+console.log("quizDataDB   "+quizDataDB);
+
 
 // Create an object with the data to be saved
 var quizData = {
@@ -676,7 +675,6 @@ var quizData = {
   saveType: saveType,
   quizDataDB: quizDataDB
 };
-console.log("quizData   "+quizData);
 
 // Post the data to the Firestore collection "quizzes"
 firebase.firestore().collection("quizzes").add(quizData)
