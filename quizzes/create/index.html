@@ -411,11 +411,10 @@ var questionObj = {
 quizObj.questions.push(questionObj);
 quizObj.numberOfQuestions = quizObj.questions.length;
 
-// Save quizObj to quizArray
-quizArray.push(quizObj);
+
 
 // Save quizArray to local storage
-localStorage.setItem('quizData', JSON.stringify(quizArray));
+localStorage.setItem('quizData', JSON.stringify(quizObj));
 
 	      
 
@@ -653,14 +652,18 @@ console.log("quizData   "+quizData.quizCode);
 // Replace the following placeholders with your actual values
 var quizCodeDB = quizData.quizCode;
 var quizNameDS = jsonData.quizName;
-var categoryDB = questionsData.length;
+var categoryDB = questionsData.category;
 var quizLinkDB = "/quiz/?e=user&q="+quizCodeDB;
 var imageURLDB = "https://www.quizzatopia.com/images/sq/_.png";
-var numberOfQuestionsDB = questionsData.quizName;
+var numberOfQuestionsDB = questionsData.length;
 var quizStartedCount = 0;
 var quizDate = new Date().toISOString();
 var saveType = "user";
 var quizDataDB = jsonData;
+
+	    console.log("quizCodeDB   "+quizCodeDB);
+console.log("quizNameDS   "+quizNameDS);
+console.log("categoryDB   "+categoryDB);
 
 // Create an object with the data to be saved
 var quizData = {
