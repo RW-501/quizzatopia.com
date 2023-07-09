@@ -317,6 +317,10 @@
     <input type="submit" value="Add Question">
   </form>
 
+  <div id="questionList">
+    <h2>Question List:</h2>
+  </div>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(document).ready(function() {
@@ -369,6 +373,11 @@
         quizQuestions.push(questionObj);
         localStorage.setItem('quizQuestions', JSON.stringify(quizQuestions));
 
+        // Display question in the question list
+        var questionListItem = $('<div class="questionListItem"></div>');
+        questionListItem.text(questionObj.question);
+        $('#questionList').append(questionListItem);
+
         // Clear form fields
         $('#question').val('');
         $('.optionRow').not(':first').remove();
@@ -385,6 +394,12 @@
 
         // Update quiz code field with new code
         $('#quizCode').val(generateQuizCode());
+
+        // Alert if the maximum number of questions is reached
+        if (questionNumber > 5) {
+          alert('The maximum number of questions has been reached.');
+          $('#quizForm :input[type="submit"]').prop('disabled', true);
+        }
       });
 
       // Handle adding an option
@@ -397,20 +412,47 @@
         $('#optionsContainer').append(optionRow);
       });
 
-      // Update available correct answers when option changes
-      $('#optionsContainer').on('change', '.option', function() {
-        var option = $(this).val();
-        var correctAnswerSelect = $('#answer');
-        correctAnswerSelect.empty();
-        correctAnswerSelect.append('<option value="">Select correct answer...</option>');
-        $('.option').each(function() {
-          var currentOption = $(this).val();
-          correctAnswerSelect.append(`<option value="${currentOption}">${currentOption}</option>`);
+         // Update available correct answers when option changes
+        $('#optionsContainer').on('change', '.option', function() {
+          var option = $(this).val();
+          var correctAnswerSelect = $('#answer');
+          correctAnswerSelect.empty();
+          correctAnswerSelect.append('<option value="">Select correct answer...</option>');
+          $('.option').each(function() {
+            var currentOption = $(this).val();
+            correctAnswerSelect.append(`<option value="${currentOption}">${currentOption}</option>`);
+          });
         });
-        $('#answer').val(option);
+
+        // Remove question
+        $('#questionList').on('click', '.questionListItem', function() {
+          var questionIndex = $(this).index();
+          var quizQuestions = JSON.parse(localStorage.getItem('quizQuestions'));
+          quizQuestions.splice(questionIndex, 1);
+          localStorage.setItem('quizQuestions', JSON.stringify(quizQuestions));
+          $(this).remove();
+          $('#quizForm :input[type="submit"]').prop('disabled', false);
+        });
+
+        // Load questions from local storage
+        function loadQuestions() {
+          var quizQuestions = JSON.parse(localStorage.getItem('quizQuestions'));
+          if (quizQuestions) {
+            $('#questionList').empty();
+            $.each(quizQuestions, function(index, question) {
+              var questionListItem = $('<div class="questionListItem"></div>');
+              questionListItem.text(question.question);
+              $('#questionList').append(questionListItem);
+            });
+            if (quizQuestions.length >= 5) {
+              $('#quizForm :input[type="submit"]').prop('disabled', true);
+            }
+          }
+        }
+
+        loadQuestions();
       });
-    });
-  </script>
+    </script>
 	  <script src="script.js" defer></script>
  </body>
 	
