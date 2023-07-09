@@ -378,13 +378,11 @@
         var explanation = $('#explanation').val();
 
         // Get options and their corresponding correct answers
-        $('.optionRow').each(function() {
-          var option = $(this).find('.option').val();
+    $('.optionRow').each(function() {
+  var option = $(this).find('.option').val();
+  options.push(option);
+});
 
-          options.push(
-            option: option
-          );
-	});
 
 	      
       var quizObj = {
