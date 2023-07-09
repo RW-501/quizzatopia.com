@@ -601,7 +601,7 @@ position: fixed;
 
 	
 					
-	<form id="reportForm" method="POST" action="https://formspree.io/Quizzatopia@gmail.com">
+	<div id="reportForm" ">
   <div class="form-group">
     <label for="reportType">Report Type</label>
     <select class="form-control" id="reportType" required>
@@ -617,7 +617,7 @@ position: fixed;
   </div>
   <hr>
   <button type="submit" class="btn btn-primary btn-block">Submit Report</button>
-</form>
+</div>
 	
 		
 
@@ -1353,55 +1353,96 @@ saveQuizToDB(quizZZ);
 fetchData(q, e);
 
 
+var reportFormBTN;
+
+	  // Add submit event listener to the form
+reportFormBTN.addEventListener('click', function (e) {
+  e.submitReport();
+
+
+	
+function submitReport(){
+
 
 	      // Get the modal element
 const reportModal = document.getElementById('reportModal');
 
-// Get the form element
-//const reportForm = document.getElementById('reportForm');
+const reportForm = document.getElementById('reportForm');
 
-// Add submit event listener to the form
-reportForm.addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  // Get the selected report type and details
   const reportType = document.getElementById('reportType').value;
   const reportDetails = document.getElementById('reportDetails').value;
 
-  // Perform any necessary actions with the report data
-  // For example, you can send an AJAX request to report the problem
+
+  if (reportType) {
+    // Perform the necessary actions to store the feedback in Firestore
+
+    const feedbackData = {
+      feedback: reportDetails,
+      feedbackType: reportType,
+      date: new Date(),
+      quizCode: quizCode // Replace with the actual quiz code
+    };
+ const db = firebase.firestore();
+    // Add the feedback to the 'quizFeedback' collection
+    db.collection('quizFeedback').add(feedbackData)
+      .then(() => {
+        console.log('Quiz Reported successfully!');
+        alert('Thank you for your Report!');
+      })
+      .catch(error => {
+        console.error('Error Reporting Quiz:', error);
+        alert('Failed Reporting Quiz. Please try again.');
+      });
+  
 
 
+	  
+    console.log('Report:', feedback);
+    closeModalWindow(); // Close the modal after submitting
+    alert('Thank you for your review!');
+  } else {
+	  if (isAnimationEnabled) {
+submitReviewBtn.classList.add('shake-animation');
+}
+  }
+
+
+
+
+	  }
+
+
+
+
+	    
 // Function to open the modal
-function openModal() {
+function openReport() {
   reportModal.style.display = 'block';
-  reportModal.style.opacity = '1';
 	 console.log("openModal      "); 
 }
 
 // Function to close the modal
-function closeModal() {
+function closeReport() {
   reportModal.style.display = 'none';
-  reportModal.style.opacity = '0';
 
 }
 
 // Add click event listener to the report button
-document.getElementById('report_BTN').addEventListener('click', openModal);
+document.getElementById('report_BTN').addEventListener('click', openReport);
 
 // Add click event listener to the close button
-document.getElementById('closeReportBTN').addEventListener('click', closeModal);
+document.getElementById('closeReportBTN').addEventListener('click', closeReport);
 
 // Add click event listener to the modal overlay
 document.addEventListener('click', function (e) {
-  if (e.target === reportModal) {
-    closeModal();
+  if (e.target !=== reportModal) {
+    closeReport();
   }
 });
 
 	      
 	  // Close the modal
-  closeModal();
+  closeReport();
 });
 
 if (  q === null || q === '') {
