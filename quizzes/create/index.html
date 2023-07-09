@@ -579,6 +579,29 @@ $(document).ready(function() {
         loadQuestions();
   
 
+
+
+
+$(document).ready(function() {
+  // Existing code
+  
+  $('#generateJSONButton').click(function() {
+    var quizData = {
+      "quizCode": $('#quizCode').val(),
+      "quizName": $('#quizName').val(),
+      "quizDifficulty": $('#difficulty').val(),
+      "numberOfQuestions": JSON.parse(localStorage.getItem('questions')).length,
+      "questions": JSON.parse(localStorage.getItem('questions'))
+    };
+
+    var jsonData = JSON.stringify(quizData, null, 2);
+    console.log(jsonData);
+    // You can do further processing with the generated JSON, such as sending it to a server or displaying it to the user.
+  });
+});
+
+
+	  
 	  
     </script>
 	  <script src="script.js" defer></script>
