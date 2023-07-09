@@ -654,6 +654,7 @@ var numberOfQuestionsDB = questionsData.quizName;
 var quizStartedCount = 0;
 var quizDate = new Date().toISOString();
 var saveType = "user";
+var quizDataDB = jsonData;
 
 // Create an object with the data to be saved
 var quizData = {
@@ -665,7 +666,8 @@ var quizData = {
   numberOfQuestionsDB: numberOfQuestionsDB,
   quizStartedCount: quizStartedCount,
   quizDate: quizDate,
-  saveType: saveType
+  saveType: saveType,
+  quizDataDB: quizDataDB
 };
 console.log("quizData   "+quizData);
 
