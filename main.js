@@ -665,7 +665,7 @@ const firebaseConfig = {
   appId: "1:828105067102:web:76afb989ed7c03ebb542cf",
   measurementId: "G-J3QK9V5480"
 };
-function loadDBFunc(){
+
 // Check if the Firebase scripts are loaded
 if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function') {
   // The Firebase scripts are loaded
@@ -717,13 +717,11 @@ firebase.firestore().enablePersistence()
   document.head.appendChild(firestoreScript);
   document.head.appendChild(firebaseAuthScript);
 
-	  firebase.initializeApp(firebaseConfig);
-  const firestore = firebase.firestore();
-}
+
+
 
 }
 
-loadDBFunc();
 		 // Get a reference to the Firestore database
 //  const db = firebase.firestore();
 
