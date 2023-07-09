@@ -574,36 +574,40 @@ optionTwo.val("False");
     event.preventDefault();
     // Process the form data and save the question to local storage or database
     // ...
-    clearFormInputs();
+  //  clearFormInputs();
   });
 });
 
-	    
+	  // $(this).remove();  
         // Remove question
-        $('#questionList').on('click', '.questionListItem', function() {
-          var questionIndex = $(this).index();
-          var quizQuestions = JSON.parse(localStorage.getItem('quizQuestions'));
-          quizQuestions.splice(questionIndex, 1);
-          localStorage.setItem('quizQuestions', JSON.stringify(quizQuestions));
-          $(this).remove();
-          $('#quizForm :input[type="submit"]').prop('disabled', false);
-        });
+$('#questionList').on('click', '.questionListItem', function() {
+  var questionIndex = $(this).index();
+  var quizQuestions = JSON.parse(localStorage.getItem('quizQuestions'));
+  quizQuestions.splice(questionIndex, 1);
+  localStorage.setItem('quizQuestions', JSON.stringify(quizQuestions));
+  
+  if (quizQuestions.length < 5) {
+    $('#quizForm :input[type="submit"]').prop('disabled', false);
+  }
+});
+
 
         // Load questions from local storage
-        function loadQuestions() {
-          var quizQuestions = JSON.parse(localStorage.getItem('quizQuestions'));
-          if (quizQuestions) {
-            $('#questionList').empty();
-            $.each(quizQuestions, function(index, question) {
-              var questionListItem = $('<div class="questionListItem"></div>');
-              questionListItem.text(question.question);
-              $('#questionList').append(questionListItem);
-            });
-            if (quizQuestions.length >= 5) {
-              $('#quizForm :input[type="submit"]').prop('disabled', true);
-            }
-          }
-        }
+function loadQuestions() {
+  var quizData = JSON.parse(localStorage.getItem('quizData'));
+  if (quizData && quizData.questions) {
+    $('#questionList').empty();
+    $.each(quizData.questions, function(index, question) {
+      var questionListItem = $('<div class="questionListItem"></div>');
+      questionListItem.text(question.question);
+      $('#questionList').append(questionListItem);
+    });
+    if (quizData.questions.length >= 5) {
+      $('#quizForm :input[type="submit"]').prop('disabled', true);
+    }
+  }
+}
+
 
         loadQuestions();
   
