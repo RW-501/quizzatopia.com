@@ -387,8 +387,8 @@
 
 	
 // Create quiz object
-var quizObj = {
-  quizName: quizName, 
+var quizObj = JSON.parse(localStorage.getItem('quizData')) || {
+  quizName: quizName,
   quizCode: quizCode,
   numberOfQuestions: 0,
   quizCategory: category,
@@ -411,9 +411,7 @@ var questionObj = {
 quizObj.questions.push(questionObj);
 quizObj.numberOfQuestions = quizObj.questions.length;
 
-
-
-// Save quizArray to local storage
+// Save quizObj to local storage
 localStorage.setItem('quizData', JSON.stringify(quizObj));
 
 	      
