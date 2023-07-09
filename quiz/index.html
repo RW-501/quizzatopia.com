@@ -1158,8 +1158,7 @@ function shuffleArray(array) {
 	  
 
 	  
-// Retrieve the stored test information and display it
-// Retrieve the stored test information and display it
+
 // Retrieve the stored test information and display it
 function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageURL_NS, quizDifficultyNS) {
   const storedQuizInfo = localStorage.getItem(`quizInfo_${quizCode}`);
@@ -1260,9 +1259,13 @@ function fetchData(q, e) {
 
   let stringEnt;
   if (e) {
-	  
+	  if(e ==="user"){
+    console.log("DB JSON structure");
+    stringEnt = "/q/index.html?q=" + q ;
+	  }else{
     console.log("New JSON structure");
     stringEnt = "/q/"+e+"/" + q + ".json";
+	  }
   } else {
     console.log("Old JSON structure");
     stringEnt = "/q/" + q + ".json";
