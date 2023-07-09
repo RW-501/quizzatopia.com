@@ -1279,8 +1279,12 @@ function fetchData(q, e) {
       quizDifficulty = quizDataDB.quizDifficulty;
       quizCategory = quizDataDB.quizCategory;
 
-      // Use the quizDataDB.questions array to populate questionData
-      const questionData = quizDataDB.questions.map(questionObj => ({
+    // Parse the quizDataDB.quizDataDB string to a JSON object
+      const parsedQuizDataDB = JSON.parse(quizDataDB.quizDataDB);
+	              console.log("parsedQuizDataDB Data from DB: ", parsedQuizDataDB);
+
+      // Use the parsedQuizDataDB.questions array to populate questionData
+      const questionData = parsedQuizDataDB.questions.map(questionObj => ({
         questionNumber: questionObj.questionNumber,
         question: questionObj.question,
         imageURL: questionObj.imageURL,
@@ -1292,9 +1296,7 @@ function fetchData(q, e) {
       }));
             console.log("questionData from DB: ", questionData);
 
-		  questionObj = quizDataDB.quizDataDB;
 
-	              console.log("questionObj Data from DB: ", questionObj);
 
             // Check quiz code and retrieve or save quiz info
             const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
