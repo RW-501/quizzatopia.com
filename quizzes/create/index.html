@@ -245,14 +245,19 @@
 
 	
 <body>
- <h1>Create Quiz</h1>
-  <form id="quizForm">
+<h1>Create Quiz</h1>
+<form id="quizForm">
+  <section>
     <label for="quizName">Quiz Name:</label>
-    <input type="text" id="quizName" required><br>
+    <input type="text" id="quizName" required>
+  </section>
 
+  <section>
     <label for="quizCode">Quiz Code:</label>
-    <input type="text" id="quizCode" readonly><br>
+    <input type="text" id="quizCode" readonly>
+  </section>
 
+  <section>
     <label for="category">Category:</label>
     <select id="category">
       <option value="">Select category...</option>
@@ -274,18 +279,24 @@
       <option value="fitness">Fitness</option>
       <option value="school">School</option>
       <option value="random">Random</option>
-    </select><br>
+    </select>
+  </section>
 
+  <section>
     <label for="questionType">Question Type:</label>
     <select id="questionType">
       <option value="Multiple Choice">Multiple Choice</option>
       <option value="True/False">True/False</option>
       <option value="Fill in the Blank">Fill in the Blank</option>
-    </select><br>
+    </select>
+  </section>
 
+  <section>
     <label for="question">Question:</label>
-    <textarea id="question" rows="3" required></textarea><br>
+    <textarea id="question" rows="3" required></textarea>
+  </section>
 
+  <section>
     <label for="options">Options:</label>
     <div id="optionsContainer">
       <div class="optionRow">
@@ -293,29 +304,39 @@
         <input type="checkbox" class="correctAnswer">
       </div>
     </div>
-    <button type="button" id="addOptionButton">Add Option</button><br>
+<button type="button" id="addOptionButton">Add Option</button>
+<button type="button" id="removeOptionButton" style="display: none;">Remove Option</button>
+  </section>
 
+  <section>
     <label for="answer">Correct Answer:</label>
     <select id="answer" required>
       <option value="">Select correct answer...</option>
-    </select><br>
+    </select>
+  </section>
 
+  <section>
     <label for="image">Image:</label>
-    <input type="file" id="image"><br>
+    <input type="file" id="image">
+  </section>
 
+  <section>
     <label for="difficulty">Difficulty:</label>
     <select id="difficulty">
       <option value="None">None</option>
       <option value="Easy">Easy</option>
       <option value="Medium" selected>Medium</option>
       <option value="Hard">Hard</option>
-    </select><br>
+    </select>
+  </section>
 
+  <section>
     <label for="explanation">Explanation:</label>
-    <textarea id="explanation" rows="3"></textarea><br>
+    <textarea id="explanation" rows="3"></textarea>
+  </section>
 
-    <input type="submit" value="Add Question">
-  </form>
+  <input type="submit" value="Add Question">
+</form>
 
   <div id="questionList">
     <h2>Question List:</h2>
@@ -424,6 +445,41 @@
           });
         });
 
+
+$(document).ready(function() {
+  var maxOptions = 5;
+
+  function updateRemoveOptionButton() {
+    var optionCount = $('.optionRow').length;
+    if (optionCount >= 2) {
+      $('#removeOptionButton').show();
+    } else {
+      $('#removeOptionButton').hide();
+    }
+  }
+
+  $('#addOptionButton').click(function() {
+    var optionCount = $('.optionRow').length;
+    if (optionCount < maxOptions) {
+      var optionRow = $('<div class="optionRow"></div>');
+      optionRow.append('<input type="text" class="option" required>');
+      optionRow.append('<input type="checkbox" class="correctAnswer">');
+      $('#optionsContainer').append(optionRow);
+      updateRemoveOptionButton();
+    } else {
+      alert('You can add a maximum of ' + maxOptions + ' options.');
+    }
+  });
+
+  $('#removeOptionButton').click(function() {
+    $('.optionRow:last-child').remove();
+    updateRemoveOptionButton();
+  });
+});
+
+
+
+	    
         // Remove question
         $('#questionList').on('click', '.questionListItem', function() {
           var questionIndex = $(this).index();
