@@ -702,6 +702,20 @@ firebase.firestore().enablePersistence()
   // The Firebase scripts are not loaded
   // Handle the situation accordingly
   console.log('Firebase scripts not found.');
+
+	  const firebaseAppScript = document.createElement('script');
+  firebaseAppScript.src = 'https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js';
+
+  const firestoreScript = document.createElement('script');
+  firestoreScript.src = 'https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js';
+
+  const firebaseAuthScript = document.createElement('script');
+  firebaseAuthScript.src = 'https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js';
+
+  // Append the scripts to the <head> or <body> section of your HTML
+  document.head.appendChild(firebaseAppScript);
+  document.head.appendChild(firestoreScript);
+  document.head.appendChild(firebaseAuthScript);
 }
 
 
