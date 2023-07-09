@@ -423,29 +423,6 @@
         }
       });
 
-      // Handle adding an option
-      $('#addOptionButton').click(function() {
-        var optionRow = $('<div class="optionRow"></div>');
-        var optionInput = $('<input type="text" class="option" required>');
-        var correctAnswerInput = $('<input type="checkbox" class="correctAnswer">');
-        optionRow.append(optionInput);
-        optionRow.append(correctAnswerInput);
-        $('#optionsContainer').append(optionRow);
-      });
-
-         // Update available correct answers when option changes
-        $('#optionsContainer').on('change', '.option', function() {
-          var option = $(this).val();
-          var correctAnswerSelect = $('#answer');
-          correctAnswerSelect.empty();
-          correctAnswerSelect.append('<option value="">Select correct answer...</option>');
-          $('.option').each(function() {
-            var currentOption = $(this).val();
-            correctAnswerSelect.append(`<option value="${currentOption}">${currentOption}</option>`);
-          });
-        });
-
-
 $(document).ready(function() {
   var maxOptions = 5;
 
@@ -463,7 +440,15 @@ $(document).ready(function() {
     if (optionCount < maxOptions) {
       var optionRow = $('<div class="optionRow"></div>');
       optionRow.append('<input type="text" class="option" required>');
-      optionRow.append('<input type="checkbox" class="correctAnswer">');
+      var correctAnswerCheckbox = $('<input type="checkbox" class="correctAnswer">');
+      correctAnswerCheckbox.change(function() {
+        if ($(this).is(':checked')) {
+          $('#answer').val($(this).siblings('.option').val());
+        } else {
+          $('#answer').val('');
+        }
+      });
+      optionRow.append(correctAnswerCheckbox);
       $('#optionsContainer').append(optionRow);
       updateRemoveOptionButton();
     } else {
@@ -474,9 +459,49 @@ $(document).ready(function() {
   $('#removeOptionButton').click(function() {
     $('.optionRow:last-child').remove();
     updateRemoveOptionButton();
+    $('#answer').val('');
+  });
+
+  $('#optionsContainer').on('change', '.option', function() {
+    var option = $(this).val();
+    var correctAnswerSelect = $('#answer');
+    correctAnswerSelect.empty();
+    correctAnswerSelect.append('<option value="">Select correct answer...</option>');
+    $('.option').each(function() {
+      var currentOption = $(this).val();
+      correctAnswerSelect.append(`<option value="${currentOption}">${currentOption}</option>`);
+    });
+    if ($(this).siblings('.correctAnswer').is(':checked')) {
+      $('#answer').val(option);
+    }
+  });
+
+  $('#answer').change(function() {
+    var selectedAnswer = $(this).val();
+    $('.correctAnswer').each(function() {
+      var option = $(this).siblings('.option').val();
+      if (option === selectedAnswer) {
+        $(this).prop('checked', true);
+      } else {
+        $(this).prop('checked', false);
+      }
+    });
   });
 });
 
+
+ $('#questionType').change(function() {
+    var questionType = $(this).val();
+    if (questionType === 'True/False') {
+      $('.option').each(function() {
+        var option = $(this).val();
+        if (option !== 'True' && option !== 'False') {
+          $(this).val('');
+        }
+      });
+    }
+  });
+});
 
 
 	    
