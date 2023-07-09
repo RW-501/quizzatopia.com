@@ -245,14 +245,36 @@
 
 	
 <body>
-
-<h1>Create Quiz</h1>
+ <h1>Create Quiz</h1>
   <form id="quizForm">
     <label for="quizName">Quiz Name:</label>
     <input type="text" id="quizName" required><br>
 
     <label for="quizCode">Quiz Code:</label>
     <input type="text" id="quizCode" readonly><br>
+
+    <label for="category">Category:</label>
+    <select id="category">
+      <option value="">Select category...</option>
+      <option value="information-tech">Information Technology</option>
+      <option value="healthcare">Healthcare</option>
+      <option value="education">Education</option>
+      <option value="finance">Finance</option>
+      <option value="trades">Trades</option>
+      <option value="language">Language Proficiency</option>
+      <option value="military">Military</option>
+      <option value="cooking">Cooking</option>
+      <option value="driving">Driving</option>
+      <option value="project-management">Project Management</option>
+      <option value="architecture">Architecture</option>
+      <option value="business">Business</option>
+      <option value="marketing">Marketing</option>
+      <option value="design">Design</option>
+      <option value="real-estate">Real Estate</option>
+      <option value="fitness">Fitness</option>
+      <option value="school">School</option>
+      <option value="random">Random</option>
+    </select><br>
 
     <label for="questionType">Question Type:</label>
     <select id="questionType">
@@ -265,13 +287,21 @@
     <textarea id="question" rows="3" required></textarea><br>
 
     <label for="options">Options:</label>
-    <textarea id="options" rows="2" required></textarea><br>
+    <div id="optionsContainer">
+      <div class="optionRow">
+        <input type="text" class="option" required>
+        <input type="checkbox" class="correctAnswer">
+      </div>
+    </div>
+    <button type="button" id="addOptionButton">Add Option</button><br>
 
     <label for="answer">Correct Answer:</label>
-    <input type="text" id="answer" required><br>
+    <select id="answer" required>
+      <option value="">Select correct answer...</option>
+    </select><br>
 
-    <label for="imageURL">Image URL:</label>
-    <input type="text" id="imageURL"><br>
+    <label for="image">Image:</label>
+    <input type="file" id="image"><br>
 
     <label for="difficulty">Difficulty:</label>
     <select id="difficulty">
@@ -286,7 +316,8 @@
 
     <input type="submit" value="Add Question">
   </form>
- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(document).ready(function() {
       // Generate a random quiz code
@@ -302,24 +333,35 @@
         e.preventDefault();
 
         // Get user inputs
+        var category = $('#category').val();
         var questionType = $('#questionType').val();
         var question = $('#question').val();
-        var options = $('#options').val().split('\n');
-        var answer = $('#answer').val();
-        var imageURL = $('#imageURL').val();
+        var options = [];
+        var correctAnswer = $('#answer').val();
         var difficulty = $('#difficulty').val();
         var explanation = $('#explanation').val();
+
+        // Get options and their corresponding correct answers
+        $('.optionRow').each(function() {
+          var option = $(this).find('.option').val();
+          var isCorrect = $(this).find('.correctAnswer').prop('checked');
+
+          options.push({
+            option: option,
+            isCorrect: isCorrect
+          });
+        });
 
         // Create question object
         var questionObj = {
           questionNumber: 1, // Update this dynamically when adding multiple questions
+          category: category,
           question: question,
-          imageURL: imageURL,
           questionType: questionType,
           options: options,
-          answer: answer,
-          explanation: explanation,
-          difficulty: difficulty
+          correctAnswer: correctAnswer,
+          difficulty: difficulty,
+          explanation: explanation
         };
 
         // Save question to local storage
@@ -329,9 +371,11 @@
 
         // Clear form fields
         $('#question').val('');
-        $('#options').val('');
+        $('.optionRow').not(':first').remove();
+        $('.option').val('');
+        $('.correctAnswer').prop('checked', false);
         $('#answer').val('');
-        $('#imageURL').val('');
+        $('#image').val('');
         $('#explanation').val('');
 
         // Increment question number
@@ -342,9 +386,31 @@
         // Update quiz code field with new code
         $('#quizCode').val(generateQuizCode());
       });
+
+      // Handle adding an option
+      $('#addOptionButton').click(function() {
+        var optionRow = $('<div class="optionRow"></div>');
+        var optionInput = $('<input type="text" class="option" required>');
+        var correctAnswerInput = $('<input type="checkbox" class="correctAnswer">');
+        optionRow.append(optionInput);
+        optionRow.append(correctAnswerInput);
+        $('#optionsContainer').append(optionRow);
+      });
+
+      // Update available correct answers when option changes
+      $('#optionsContainer').on('change', '.option', function() {
+        var option = $(this).val();
+        var correctAnswerSelect = $('#answer');
+        correctAnswerSelect.empty();
+        correctAnswerSelect.append('<option value="">Select correct answer...</option>');
+        $('.option').each(function() {
+          var currentOption = $(this).val();
+          correctAnswerSelect.append(`<option value="${currentOption}">${currentOption}</option>`);
+        });
+        $('#answer').val(option);
+      });
     });
   </script>
-
 	  <script src="script.js" defer></script>
  </body>
 	
