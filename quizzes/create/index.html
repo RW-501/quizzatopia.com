@@ -597,6 +597,12 @@ $('#questionList').on('click', '.questionListItem', function() {
 function loadQuestions() {
   var quizData = JSON.parse(localStorage.getItem('quizData'));
   if (quizData && quizData.questions) {
+
+    $('#quizName').val(quizData.quizName);
+    $('#quizCode').val(quizData.quizCode);
+    $('#category').val(quizData.category);
+    $('#questionType').val(quizData.questionType);
+	  
     $('#questionList').empty();
     $.each(quizData.questions, function(index, question) {
       var questionListItem = $('<div class="questionListItem"></div>');
