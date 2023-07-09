@@ -616,7 +616,7 @@ position: fixed;
     <textarea class="form-control" id="reportDetails" rows="4" required></textarea>
   </div>
   <hr>
-  <button type="submit" class="btn btn-primary btn-block">Submit Report</button>
+  <button id="reportFormBTN" class="btn btn-primary btn-block">Submit Report</button>
 </div>
 	
 		
@@ -1353,12 +1353,12 @@ saveQuizToDB(quizZZ);
 fetchData(q, e);
 
 
-var reportFormBTN;
+var reportFormBTN= document.getElementById('reportFormBTN');
 
 	  // Add submit event listener to the form
 reportFormBTN.addEventListener('click', function (e) {
   e.submitReport();
-
+	  });
 
 	
 function submitReport(){
