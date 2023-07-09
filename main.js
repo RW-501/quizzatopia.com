@@ -1658,9 +1658,11 @@ function logVisitorInformation() {
   const browser = deviceInfo[1];
 
   const visitorIpPromise = getIPAddress(); // Retrieve the visitor's IP address as a promise
+
+	let db;
 	
-if (typeof db === 'undefined' || db === null  ) {
-	const db = firebase.firestore();
+if (typeof db === 'undefined' || db === null || db === '' ) {
+	 db = firebase.firestore();
 
 } 
 	
