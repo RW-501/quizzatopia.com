@@ -1036,3 +1036,13 @@ submitReviewBtn.classList.add('shake-animation');
   }
 }
 
+
+
+function playAudio() {
+  // Add your logic to play audio or trigger reading functionality here
+  // For example, you can use the Web Audio API or Text-to-Speech (TTS) APIs
+  // You can also customize the behavior based on your specific requirements
+	        alert('Read Quiz!!!');
+
+}
+
