@@ -8,7 +8,19 @@ function fetchVisitorData() {
       .then(querySnapshot => {
         const visitorData = [];
         querySnapshot.forEach(doc => {
-          const visitor = doc.data();
+          const visitor = {
+            ip: doc.data().ip,
+            firstVisit: doc.data().firstVisit,
+            lastVisit: doc.data().lastVisit,
+            banned: doc.data().banned,
+            browser: doc.data().browser,
+            device: doc.data().device,
+            lastVisitPage: doc.data().lastVisitPage,
+            lastVisitTime: doc.data().lastVisitTime,
+            referralPage: doc.data().referralPage,
+            userVisitCount: doc.data().userVisitCount
+            // Map other database fields to corresponding variables
+          };
           visitorData.push(visitor);
         });
         resolve(visitorData);
@@ -20,55 +32,95 @@ function fetchVisitorData() {
   });
 }
 
-// Function to populate the visitor details section
 function populateVisitorDetails(visitorData) {
   const visitorDetailsContainer = document.querySelector('.visitor-details');
 
   // Clear existing content
   visitorDetailsContainer.innerHTML = '';
 
-// Create and append HTML elements for visitor details
-const ipElement = document.createElement('p');
-ipElement.textContent = `IP Address: ${visitorData.ip}`;
-visitorDetailsContainer.appendChild(ipElement);
+  visitorData.forEach(visitor => {
+    // Create and append HTML elements for visitor details
+    const ipElement = document.createElement('p');
+    ipElement.textContent = `IP Address: ${visitor.ip}`;
+    visitorDetailsContainer.appendChild(ipElement);
 
-const firstVisitElement = document.createElement('p');
-firstVisitElement.textContent = `First Visit: ${visitorData.firstVisit}`;
-visitorDetailsContainer.appendChild(firstVisitElement);
+    const firstVisitElement = document.createElement('p');
+    firstVisitElement.textContent = `First Visit: ${visitor.firstVisit}`;
+    visitorDetailsContainer.appendChild(firstVisitElement);
 
-const lastVisitElement = document.createElement('p');
-lastVisitElement.textContent = `Last Visit: ${visitorData.lastVisit}`;
-visitorDetailsContainer.appendChild(lastVisitElement);
+    const lastVisitElement = document.createElement('p');
+    lastVisitElement.textContent = `Last Visit: ${visitor.lastVisit}`;
+    visitorDetailsContainer.appendChild(lastVisitElement);
 
-// Calculate and display visit duration
-const durationElement = document.createElement('p');
-const visitDuration = visitorData.lastVisit - visitorData.firstVisit;
-const formattedDuration = formatDuration(visitDuration);
-durationElement.textContent = `Visit Duration: ${formattedDuration}`;
-visitorDetailsContainer.appendChild(durationElement);
+    // Calculate and display visit duration
+    const durationElement = document.createElement('p');
+    const visitDuration = visitor.lastVisitTime - visitor.firstVisitTime;
+    const formattedDuration = formatDuration(visitDuration);
+    durationElement.textContent = `Visit Duration: ${formattedDuration}`;
+    visitorDetailsContainer.appendChild(durationElement);
 
-// ... Add more visitor details as needed
+    // ... Add more visitor details as needed
+    const bannedElement = document.createElement('p');
+    bannedElement.textContent = `Banned: ${visitor.banned}`;
+    visitorDetailsContainer.appendChild(bannedElement);
 
+    const browserElement = document.createElement('p');
+    browserElement.textContent = `Browser: ${visitor.browser}`;
+    visitorDetailsContainer.appendChild(browserElement);
+
+    const deviceElement = document.createElement('p');
+    deviceElement.textContent = `Device: ${visitor.device}`;
+    visitorDetailsContainer.appendChild(deviceElement);
+
+    const lastVisitPageElement = document.createElement('p');
+    lastVisitPageElement.textContent = `Last Visit Page: ${visitor.lastVisitPage}`;
+    visitorDetailsContainer.appendChild(lastVisitPageElement);
+
+    const referralPageElement = document.createElement('p');
+    referralPageElement.textContent = `Referral Page: ${visitor.referralPage}`;
+    visitorDetailsContainer.appendChild(referralPageElement);
+
+    const userVisitCountElement = document.createElement('p');
+    userVisitCountElement.textContent = `User Visit Count: ${visitor.userVisitCount}`;
+    visitorDetailsContainer.appendChild(userVisitCountElement);
+
+    // ... Add more visitor details as needed
+  });
 }
 
 // Function to generate a chart using visitor data (adjust based on the chart library you're using)
-// Function to generate a chart using visitor data (using Chart.js)
-function generateChart(visitorData) {
-  const chartCanvas = document.getElementById('chart');
 
-  // Extract labels and visits data from visitorData
-  const labels = visitorData.map(visitor => visitor.date);
-  const visits = visitorData.map(visitor => visitor.visits);
+
+function getTopReferralPages(visitorData) {
+  const referralPages = visitorData.map(visitor => visitor.referralPage);
+  const pageCounts = {};
+
+  // Count the occurrences of each referral page
+  referralPages.forEach(page => {
+    if (pageCounts[page]) {
+      pageCounts[page]++;
+    } else {
+      pageCounts[page] = 1;
+    }
+  });
+
+  // Sort the referral pages based on the count in descending order
+  const sortedPages = Object.keys(pageCounts).sort((a, b) => pageCounts[b] - pageCounts[a]);
+
+  // Get the top referral pages and their counts
+  const topPages = sortedPages.slice(0, 5);
+  const pageCountsTop = topPages.map(page => pageCounts[page]);
 
   // Create the chart using Chart.js
+  const chartCanvas = document.getElementById('chart');
   new Chart(chartCanvas, {
-    type: 'line',
+    type: 'bar',
     data: {
-      labels: labels,
+      labels: topPages,
       datasets: [
         {
-          label: 'Visits',
-          data: visits,
+          label: 'Referral Page Count',
+          data: pageCountsTop,
           backgroundColor: 'rgba(75, 192, 192, 0.2)',
           borderColor: 'rgba(75, 192, 192, 1)',
           borderWidth: 1
@@ -81,7 +133,14 @@ function generateChart(visitorData) {
       // Additional options for customization
     }
   });
+
+  // Return the top referral pages
+  return topPages;
 }
+
+const topReferralPages = getTopReferralPages(visitorData);
+console.log('Top Referral Pages:', topReferralPages);
+
 
 
 // Function to populate the data table with visitor data
@@ -120,7 +179,7 @@ function calculateVisitDurations(visitorData) {
 
   // Calculate total visit duration
   const totalDuration = visitorData.reduce((total, visitor) => {
-    const duration = visitor.lastVisit - visitor.firstVisit;
+    const duration = visitor.lastVisitTime - visitor.firstVisitTime;
     return total + duration;
   }, 0);
 
@@ -149,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function () {
       populateVisitorDetails(visitorData);
 
       // Generate chart
-      generateChart(visitorData);
+      getTopReferralPages(visitorData);
 
       // Populate data table
       populateDataTable(visitorData);
