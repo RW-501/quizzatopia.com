@@ -455,9 +455,18 @@ position: fixed;
         <div id="badgeView"></div>
       </div>
     </p>
-		
-	
-		
+      <!-- Feedback Section -->
+	  <p>
+<div class="rating">
+  <span class="star" onclick="rateQuiz(1)">&#9734;</span>
+  <span class="star" onclick="rateQuiz(2)">&#9734;</span>
+  <span class="star" onclick="rateQuiz(3)">&#9734;</span>
+  <span class="star" onclick="rateQuiz(4)">&#9734;</span>
+  <span class="star" onclick="rateQuiz(5)">&#9734;</span>
+</div>
+<button onclick="leaveReview()">Leave Review</button>
+		</p>
+	  
     <button id="retake-btn" class="btn btn-primary mt-4"  onclick="retakeQuizFunc()">Retake Quiz</button>
     <!-- Retake Quiz Button -->
     <button class="other-quiz-btn btn btn-secondary mt-4" onclick="window.location.href = '/quizzes'">Try Another Quiz</button>
