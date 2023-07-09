@@ -501,14 +501,17 @@ $(document).ready(function() {
  $('#questionType').change(function() {
     var questionType = $(this).val();
     if (questionType === 'True/False') {
-      $('.option').each(function() {
-        var option = $(this).val();
-        if (option !== 'True' && option !== 'False') {
-          $(this).val('');
-        }
-      });
+	    
+     $('#addOptionButton').trigger('click');
+var optionOne = $('.optionRow input.option').eq(0);
+var optionTwo = $('.optionRow input.option').eq(1);
+optionOne.val("True");
+optionTwo.val("False");
+
     }
   });
+
+	
 });
 
 
