@@ -198,8 +198,8 @@
   <!-- Custom CSS -->
  <!--  <link rel="stylesheet" href="/style.css">-->
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="indexOptions.css">
 
+	
   <!-- Import navbar and footer components -->
   <link rel="import" href="/elements/navbar.html">
   <link rel="import" href="/elements/footer.html">
@@ -504,6 +504,42 @@ $(document).ready(function() {
   });
 });
 
+
+	  
+  $('#questionList').on('click', '.questionListItem', function() {
+    var questionIndex = $(this).index();
+    var questionData = JSON.parse(localStorage.getItem('questions'))[questionIndex];
+    clearFormInputs();
+    $('#quizName').val(questionData.quizName);
+    $('#quizCode').val(questionData.quizCode);
+    $('#category').val(questionData.category);
+    $('#questionType').val(questionData.questionType);
+    $('#question').val(questionData.question);
+    questionData.options.forEach(function(option) {
+      if (option !== '') {
+        var optionRow = $('<div class="optionRow"></div>');
+        var optionInput = $('<input type="text" class="option" required>');
+        optionInput.val(option);
+        var correctAnswerCheckbox = $('<input type="checkbox" class="correctAnswer">');
+        if (option === questionData.answer) {
+          correctAnswerCheckbox.prop('checked', true);
+          $('#answer').val(option);
+        }
+        optionRow.append(optionInput, correctAnswerCheckbox);
+        $('#optionsContainer').append(optionRow);
+      }
+    });
+    $('#difficulty').val(questionData.difficulty);
+    $('#explanation').val(questionData.explanation);
+  });
+
+  $('#quizForm').submit(function(event) {
+    event.preventDefault();
+    // Process the form data and save the question to local storage or database
+    // ...
+    clearFormInputs();
+  });
+});
 
 	    
         // Remove question
