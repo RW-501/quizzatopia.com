@@ -1255,25 +1255,38 @@ quizInfo.quizLink = quizUrl;  // Add the "q" parameter to the quizInfo object
 let quizUrl;
 
 function fetchData(q, e) {
-	      console.log("fetchDataq:", q+'   e:    '+e);
+  console.log("fetchDataq:", q + '   e:    ' + e);
 
   let stringEnt;
   if (e) {
-	  if(e ==="user"){
-    console.log("DB JSON structure");
-    stringEnt = "/q/index.html?q=" + q ;
-	  }else{
-    console.log("New JSON structure");
-    stringEnt = "/q/"+e+"/" + q + ".json";
-	  }
+    if (e === "user") {
+      console.log("DB JSON structure");
+      // Retrieve data from the database here
+      const quizRef = firebase.firestore().collection("quizzes").doc(q);
+      quizRef.get().then(function (doc) {
+        if (doc.exists) {
+          const quizDataDB = doc.data();
+          console.log("Quiz Data from DB: ", quizDataDB);
+          // Process the quiz data from the database
+          // ...
+        } else {
+          console.log("Quiz Data not found in DB");
+        }
+      }).catch(function (error) {
+        console.error("Error getting quiz document from DB: ", error);
+      });
+    } else {
+      console.log("New JSON structure");
+      stringEnt = "/q/" + e + "/" + q + ".json";
+    }
   } else {
     console.log("Old JSON structure");
     stringEnt = "/q/" + q + ".json";
   }
-     console.log("stringEnt URL:", stringEnt);
-	
-quizUrl = stringEnt;
-   fetch(stringEnt)
+  console.log("stringEnt URL:", stringEnt);
+
+  quizUrl = stringEnt;
+  fetch(stringEnt)
     .then(response => response.json())
     .then(data => {
       if (Array.isArray(data)) {
@@ -1297,14 +1310,13 @@ quizUrl = stringEnt;
             questionNumber: questionObj.questionNumber,
             explanation: questionObj.explanation
           }));
-		
+
           // Update quizCode, quizName, numberOfQuestions
           quizCode = "";
           quizName = "";
           numberOfQuestions = data.length;
-	quizImageURL = "";
-	quizDifficulty = "";
-		// quizUrl = stringEnt;
+          quizImageURL = "";
+          quizDifficulty = "";
 
           // Check quiz code and retrieve or save quiz info
           const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty, quizUrl);
@@ -1317,10 +1329,6 @@ quizUrl = stringEnt;
 
           // Display the test information
           displayTestInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
-		
-
-	      
-		
         }
       } else {
         // Handle new JSON structure
@@ -1350,7 +1358,7 @@ quizUrl = stringEnt;
           quizImageURL = data.quizImageURL;
           quizDifficulty = data.quizDifficulty;
           questionNumber = data.questionNumber;
-		questionType = data.questionType;
+          questionType = data.questionType;
 
           // Check quiz code and retrieve or save quiz info
           const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
@@ -1364,32 +1372,27 @@ quizUrl = stringEnt;
           // Display the test information
           displayTestInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
         }
-	      
-	      
-//quizDifficulty = typeof quizDifficulty !== 'undefined' ? quizDifficulty : "";
-let q_link = "/quiz"+q;
-	      
-const quizZZ = {
-  quizCodeX: quizCode,
-  quizNameX: quizName,
-  imageURLX: "https://www.quizzatopia.com/images/sq/_.png",
-  numberOfQuestionsX: numberOfQuestions,
-  quizJsonX: quizUrl,
-  quizLinkX: quizLinkURL ? quizLinkURL : q_link, // Use 'q' if quizLinkURL is empty
-  quizDifficultyX: quizDifficulty ? quizDifficulty : ""
-};
 
+        //quizDifficulty = typeof quizDifficulty !== 'undefined' ? quizDifficulty : "";
+        let q_link = "/quiz" + q;
 
-console.log("quizZZ:", quizZZ);
+        const quizZZ = {
+          quizCodeX: quizCode,
+          quizNameX: quizName,
+          imageURLX: "https://www.quizzatopia.com/images/sq/_.png",
+          numberOfQuestionsX: numberOfQuestions,
+          quizJsonX: quizUrl,
+          quizLinkX: quizLinkURL ? quizLinkURL : q_link, // Use 'q' if quizLinkURL is empty
+          quizDifficultyX: quizDifficulty ? quizDifficulty : ""
+        };
 
-	      if (e === null || e === "") {}else{
+        console.log("quizZZ:", quizZZ);
 
-saveQuizToDB(quizZZ);
-	      }    
-	      
-	      
+        if (e === null || e === "") {} else {
+          saveQuizToDB(quizZZ);
+        }
       }
-     })
+    })
     .catch(error => console.error(error));
 }
 
