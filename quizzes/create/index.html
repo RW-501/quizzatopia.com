@@ -380,12 +380,11 @@
         // Get options and their corresponding correct answers
         $('.optionRow').each(function() {
           var option = $(this).find('.option').val();
-          var isCorrect = $(this).find('.correctAnswer').prop('checked');
 
           options.push(
             option: option
           );
-        );
+	});
 
 	      
       var quizObj = {
