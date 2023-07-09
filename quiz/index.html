@@ -1268,31 +1268,31 @@ function fetchData(q, e) {
         if (!querySnapshot.empty) {
           querySnapshot.forEach(function(doc) {
             const quizDataDB = doc.data();
-            console.log("Quiz Data from DB: ", quizDataDB);
+            /// console.log("Quiz Data from DB: ", quizDataDB);
+      const parsedQuizDataDB = JSON.parse(quizDataDB.quizDataDB);
 
             // Use the quizDataDB here
     // Update quizCode, quizName, numberOfQuestions
-      quizCode = quizDataDB.quizCode;
-      quizName = quizDataDB.quizName;
-      numberOfQuestions = quizDataDB.numberOfQuestions;
-      quizImageURL = quizDataDB.imageURL;
-      quizDifficulty = quizDataDB.quizDifficulty;
-      quizCategory = quizDataDB.quizCategory;
+      quizCode = parsedQuizDataDB.quizCode;
+      quizName = parsedQuizDataDB.quizName;
+      numberOfQuestions = parsedQuizDataDB.numberOfQuestions;
+      quizImageURL = parsedQuizDataDB.imageURL;
+      quizDifficulty = parsedQuizDataDB.quizDifficulty;
+      quizCategory = parsedQuizDataDB.quizCategory;
 
     // Parse the quizDataDB.quizDataDB string to a JSON object
-      const parsedQuizDataDB = JSON.parse(quizDataDB.quizDataDB);
 	              console.log("parsedQuizDataDB Data from DB: ", parsedQuizDataDB);
 
       // Use the parsedQuizDataDB.questions array to populate questionData
       const questionData = parsedQuizDataDB.questions.map(questionObj => ({
-        questionNumber: questionObj.questionNumber,
-        question: questionObj.question,
-        imageURL: questionObj.imageURL,
-        questionType: questionObj.questionType,
-        options: questionObj.options,
-        answer: questionObj.answer,
-        explanation: questionObj.explanation,
-        difficulty: questionObj.difficulty
+        questionNumber: questionData.questionNumber,
+        question: questionData.question,
+        imageURL: questionData.imageURL,
+        questionType: questionData.questionType,
+        options: questionData.options,
+        answer: questionData.answer,
+        explanation: questionData.explanation,
+        difficulty: questionData.difficulty
       }));
             console.log("questionData from DB: ", questionData);
 
