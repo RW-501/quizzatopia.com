@@ -581,7 +581,7 @@ background-color: #e8e8e8;
 	
 
 
-#btn_container {
+.btn_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
