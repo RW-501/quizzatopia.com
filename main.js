@@ -1659,7 +1659,7 @@ function logVisitorInformation() {
 
   const visitorIpPromise = getIPAddress(); // Retrieve the visitor's IP address as a promise
 	
-if (typeof db === 'undefined' || !db) {
+if (typeof db === 'undefined' || db === null  ) {
 	const db = firebase.firestore();
 
 } 
