@@ -1261,26 +1261,54 @@ function fetchData(q, e) {
   if (e) {
     if (e === "user") {
       console.log("DB JSON structure");
-	    
-window.addEventListener("load", function() {
-	    const firestore = firebase.firestore();
-      // Retrieve data from the database here
-   const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "==", q);
-quizRef.get().then(function(querySnapshot) {
-  if (!querySnapshot.empty) {
-    querySnapshot.forEach(function(doc) {
-      const quizDataDB = doc.data();
-      console.log("Quiz Data from DB: ", quizDataDB);
-    });
-  } else {
-    console.log("No quiz found with quizCodeDB equal to", q);
-  }
-}).catch(function(error) {
-  console.error("Error getting quiz document: ", error);
-});
 
-	});
-	    
+      const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "==", q);
+      quizRef.get().then(function(querySnapshot) {
+        if (!querySnapshot.empty) {
+          querySnapshot.forEach(function(doc) {
+            const quizDataDB = doc.data();
+            console.log("Quiz Data from DB: ", quizDataDB);
+
+            // Use the quizDataDB here
+            const questionData = quizDataDB.questions.map(questionObj => ({
+              question: questionObj.question,
+              answer: questionObj.answer,
+              options: questionObj.options,
+              difficulty: questionObj.difficulty,
+              imageURL: questionObj.imageURL,
+              questionType: questionObj.questionType,
+              questionNumber: questionObj.questionNumber,
+              explanation: questionObj.explanation
+            }));
+
+            // Update quizCode, quizName, numberOfQuestions
+            quizCode = quizDataDB.quizCodeDB;
+            quizName = quizDataDB.quizNameDS;
+            numberOfQuestions = quizDataDB.numberOfQuestionsDB;
+            quizImageURL = quizDataDB.imageURLDB;
+            quizDifficulty = quizDataDB.quizDifficultyX;
+            questionNumber = 1; // Update this dynamically if available in the database
+            questionType = ""; // Update this dynamically if available in the database
+
+            // Check quiz code and retrieve or save quiz info
+            const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
+
+            questions.push(...questionData);
+            shuffleArray(questions);
+
+            // Access and use the retrieved quiz information
+            const questionsCompleted = quizInfo.questionsCompleted;
+
+            // Display the test information
+            displayTestInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
+          });
+        } else {
+          console.log("No quiz found with quizCodeDB equal to", q);
+        }
+      }).catch(function(error) {
+        console.error("Error getting quiz document: ", error);
+      });
+
     } else {
       console.log("New JSON structure");
       stringEnt = "/q/" + e + "/" + q + ".json";
@@ -1292,6 +1320,9 @@ quizRef.get().then(function(querySnapshot) {
   console.log("stringEnt URL:", stringEnt);
 
   quizUrl = stringEnt;
+  // Fetch data from URL or database here
+
+	
   fetch(stringEnt)
     .then(response => response.json())
     .then(data => {
