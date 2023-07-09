@@ -1433,18 +1433,9 @@ document.getElementById('report_BTN').addEventListener('click', openReport);
 // Add click event listener to the close button
 document.getElementById('closeReportBTN').addEventListener('click', closeReport);
 
-// Add click event listener to the modal overlay
-document.addEventListener('click', function (e) {
-  if (e.target !=== reportModal) {
-    closeReport();
-  }
-});
 
-	      
-	  // Close the modal
-  closeReport();
-});
 
+	
 if (  q === null || q === '') {
   console.log("empty.");
 
