@@ -235,19 +235,7 @@ background-color: #e8e8e8;
         margin-bottom: 10px;
       }
 
-      #retake-btn,
-      .other-quiz-btn {
-        background-color: #f8f9fa;
-        border: none;
-        border-radius: 5px;
-        color: #fff;
-        cursor: pointer;
-        display: inline-block;
-        font-size: 16px;
-        margin: 20px 10px;
-        padding: 10px 20px;
-        transition: background-color 0.3s ease;
-      }
+
 .missed{
     background-color: #909fad !important;
 }
@@ -399,7 +387,7 @@ background-color: #e8e8e8;
 
 
 .green {
-    background-color: #78cf6e;
+    background-color: #78cf6e !important;
 
 }
 
