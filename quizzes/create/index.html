@@ -638,9 +638,48 @@ var quizData = JSON.parse(localStorage.getItem('quizData'));
 // Convert quiz data to JSON format
 var jsonData = JSON.stringify(quizData, null, 2);
 
-console.log(jsonData);
+console.log("jsonData   "+jsonData);
 	    
       // You can do further processing with the generated JSON, such as sending it to a server or displaying it to the user.
+
+
+// Assuming you have initialized Firebase and obtained a Firestore database reference
+// Replace the following placeholders with your actual values
+var quizCodeDB = questionsData.quizCode;
+var quizNameDS = questionsData.quizName;
+var categoryDB = questionsData.length;
+var quizLinkDB = "/quiz/?e=NCLEX&q=safe_and_effectivecare";
+var imageURLDB = "https://www.quizzatopia.com/images/sq/_.png";
+var numberOfQuestionsDB = questionsData.quizName;
+var quizStartedCount = 0;
+var quizDate = new Date().toISOString();
+var saveType = "user";
+
+// Create an object with the data to be saved
+var quizData = {
+  quizCodeDB: quizCodeDB,
+  quizNameDS: quizNameDS,
+  categoryDB: categoryDB,
+  quizLinkDB: quizLinkDB,
+  imageURLDB: imageURLDB,
+  numberOfQuestionsDB: numberOfQuestionsDB,
+  quizStartedCount: quizStartedCount,
+  quizDate: quizDate,
+  saveType: saveType
+};
+console.log("quizData   "+quizData);
+
+// Post the data to the Firestore collection "quizzes"
+firebase.firestore().collection("quizzes").add(quizData)
+  .then(function(docRef) {
+    console.log("Quiz document written with ID: ", docRef.id);
+  })
+  .catch(function(error) {
+    console.error("Error adding quiz document: ", error);
+  });
+
+
+	    
     } else {
       console.log("No questions found in local storage.");
     }
