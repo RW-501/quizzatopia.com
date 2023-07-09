@@ -95,3 +95,12 @@
     margin-bottom: 10px;
     border-radius: 5px;
   }
+
+select, textarea {
+height: auto;
+
+}
+
+section {
+    margin-bottom: 10px;
+  }
