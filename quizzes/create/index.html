@@ -583,24 +583,29 @@ optionTwo.val("False");
 
 
 
-
 $(document).ready(function() {
   // Existing code
-  
-  $('#generateJSONButton').click(function() {
-    var quizData = {
-      "quizCode": $('#quizCode').val(),
-      "quizName": $('#quizName').val(),
-      "quizDifficulty": $('#difficulty').val(),
-      "numberOfQuestions": JSON.parse(localStorage.getItem('questions')).length,
-      "questions": JSON.parse(localStorage.getItem('questions'))
-    };
 
-    var jsonData = JSON.stringify(quizData, null, 2);
-    console.log(jsonData);
-    // You can do further processing with the generated JSON, such as sending it to a server or displaying it to the user.
+  $('#generateJSONButton').click(function() {
+    var questionsData = localStorage.getItem('questions');
+    if (questionsData) {
+      var quizData = {
+        "quizCode": $('#quizCode').val(),
+        "quizName": $('#quizName').val(),
+        "quizDifficulty": $('#difficulty').val(),
+        "numberOfQuestions": JSON.parse(questionsData).length,
+        "questions": JSON.parse(questionsData)
+      };
+
+      var jsonData = JSON.stringify(quizData, null, 2);
+      console.log(jsonData);
+      // You can do further processing with the generated JSON, such as sending it to a server or displaying it to the user.
+    } else {
+      console.log("No questions found in local storage.");
+    }
   });
 });
+
 
 
 	  
