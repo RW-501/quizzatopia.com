@@ -77,8 +77,7 @@ function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
 // Function to start the quiz
 async function startQuiz() {
 		loadScreenFunc();
- let otherQuizzes = document.getElementById("otherQuizzes");
-otherQuizzes.style.dispay = "nome";
+
 	
  var divElement = document.getElementById("testInfo");
 	// Call the function when needed, e.g., after completing a quiz
@@ -759,8 +758,9 @@ displayEarnedPoints(startValue, earnedPoints, animationDuration);
   // Hide the quiz container and show the end container
   document.getElementById("quiz-container").classList.add("d-none");
   document.getElementById("end-container").classList.remove("d-none");
-document.getElementById("otherQuizzes").style.display = "nome";
-
+ // Hide the MessageBoard info
+  document.getElementById("otherQuizzes").classList.remove("d-none");
+	
   // Show the badge if all answers are correct
   if (questionCorrect === totalQuestions || questionCorrect == 0 ) {
   
