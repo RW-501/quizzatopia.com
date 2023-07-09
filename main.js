@@ -1742,10 +1742,17 @@ if (typeof db === 'undefined' || db === null || db === '' ) {
 
 // Function to get current page URL (example implementation, you may need to customize this)
 function getCurrentPage() {
-  // Your implementation to retrieve the current page URL
-  // This can be done using JavaScript's `window.location` object
-  // Return the current page URL as a string
-  return window.location.href;
+  // Get the current page URL
+  const currentPageURL = window.location.href;
+
+  // Extract the part of the URL after the .com
+  const afterDotCom = currentPageURL.split('.com')[1];
+
+  // Remove leading slash if present
+  const currentPage = afterDotCom.startsWith('/') ? afterDotCom.slice(1) : afterDotCom;
+
+  // Return the current page
+  return currentPage;
 }
 
 
