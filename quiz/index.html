@@ -1262,19 +1262,21 @@ function fetchData(q, e) {
     if (e === "user") {
       console.log("DB JSON structure");
       // Retrieve data from the database here
-      const quizRef = firebase.firestore().collection("quizzes").doc(q);
-      quizRef.get().then(function (doc) {
-        if (doc.exists) {
-          const quizDataDB = doc.data();
-          console.log("Quiz Data from DB: ", quizDataDB);
-          // Process the quiz data from the database
-          // ...
-        } else {
-          console.log("Quiz Data not found in DB");
-        }
-      }).catch(function (error) {
-        console.error("Error getting quiz document from DB: ", error);
-      });
+   const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "==", q);
+quizRef.get().then(function(querySnapshot) {
+  if (!querySnapshot.empty) {
+    querySnapshot.forEach(function(doc) {
+      const quizDataDB = doc.data();
+      console.log("Quiz Data from DB: ", quizDataDB);
+    });
+  } else {
+    console.log("No quiz found with quizCodeDB equal to", q);
+  }
+}).catch(function(error) {
+  console.error("Error getting quiz document: ", error);
+});
+
+	    
     } else {
       console.log("New JSON structure");
       stringEnt = "/q/" + e + "/" + q + ".json";
