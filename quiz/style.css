@@ -597,23 +597,24 @@ background-color: #e8e8e8;
 
 
 #explanation_bar {
-      display: inline-flex;
+      display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-bottom: 10px;
+	width: 100%;
 }
 
 #difficulty {
   font-size: 16px;
   font-weight: bold;
   color: #333;
-    text-indent: 10%;
+		width: 50%;
+
 }
 
 #realQustionNum {
   font-size: 14px;
   color: #666;
-    text-indent: 50px;
+	width: 40%;
 }
 
 #close-btn {
@@ -623,6 +624,8 @@ background-color: #e8e8e8;
   border: none;
   outline: none;
   cursor: pointer;
+		width: 10%;
+
 }
 
 #close-btn:hover {
