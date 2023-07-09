@@ -367,6 +367,7 @@
         e.preventDefault();
 
         // Get user inputs
+        var quizName = $('#quizName').val();
         var category = $('#category').val();
         var questionType = $('#questionType').val();
         var question = $('#question').val();
@@ -386,22 +387,35 @@
           });
         });
 
-        // Create question object
-        var questionObj = {
-          questionNumber: 1, // Update this dynamically when adding multiple questions
-          category: category,
-          question: question,
-          questionType: questionType,
-          options: options,
-          correctAnswer: correctAnswer,
-          difficulty: difficulty,
-          explanation: explanation
-        };
+	      
+      var quizObj = {
+          quizName: quizName, 
+          quizCode: category,
+          numberOfQuestions: 0,
+          quizCategory: category,
+  questions: []
+};
 
-        // Save question to local storage
-        var quizQuestions = JSON.parse(localStorage.getItem('quizQuestions')) || [];
-        quizQuestions.push(questionObj);
-        localStorage.setItem('quizQuestions', JSON.stringify(quizQuestions));
+// Create question object
+var questionObj = {
+  questionNumber: optionCount, // Update this dynamically when adding multiple questions
+  question: question,
+  imageURL: "", // Add the image URL here if available
+  questionType: questionType,
+  options: options,
+  answer: correctAnswer,
+  explanation: explanation,
+  difficulty: difficulty
+};
+
+// Save question to quizObj
+quizObj.questions.push(questionObj);
+quizObj.numberOfQuestions = quizObj.questions.length;
+
+// Save quizObj to local storage
+localStorage.setItem('quizData', JSON.stringify(quizObj));
+
+
 
         // Display question in the question list
         var questionListItem = $('<div class="questionListItem"></div>');
@@ -431,12 +445,14 @@
           $('#quizForm :input[type="submit"]').prop('disabled', true);
         }
       });
+var optionCount;
 
 $(document).ready(function() {
   var maxOptions = 5;
-
+	
+	
   function updateRemoveOptionButton() {
-    var optionCount = $('.optionRow').length;
+     optionCount = $('.optionRow').length;
     if (optionCount >= 2) {
       $('#removeOptionButton').show();
     } else {
@@ -598,18 +614,17 @@ $(document).ready(function() {
   // Existing code
 
   $('#generateJSONButton').click(function() {
-    var questionsData = localStorage.getItem('questions');
+    var questionsData = localStorage.getItem('quizData');
     if (questionsData) {
-      var quizData = {
-        "quizCode": $('#quizCode').val(),
-        "quizName": $('#quizName').val(),
-        "quizDifficulty": $('#difficulty').val(),
-        "numberOfQuestions": JSON.parse(questionsData).length,
-        "questions": JSON.parse(questionsData)
-      };
+	    
+// Retrieve quiz data from local storage
+var quizData = JSON.parse(localStorage.getItem('quizData'));
 
-      var jsonData = JSON.stringify(quizData, null, 2);
-      console.log(jsonData);
+// Convert quiz data to JSON format
+var jsonData = JSON.stringify(quizData, null, 2);
+
+console.log(jsonData);
+	    
       // You can do further processing with the generated JSON, such as sending it to a server or displaying it to the user.
     } else {
       console.log("No questions found in local storage.");
