@@ -1661,9 +1661,9 @@ function logVisitorInformation() {
 	
 if (typeof db === 'undefined' || !db) {
   console.error('Firestore is not properly initialized.');
-} else {
-const db = firebase.firestore();
-}
+	const db = firebase.firestore();
+
+} 
 	
   visitorIpPromise.then(visitorIp => {
     // Check if the visitor's IP is already logged in the "guestLog" collection
