@@ -246,12 +246,106 @@
 	
 <body>
 
+<h1>Create Quiz</h1>
+  <form id="quizForm">
+    <label for="quizName">Quiz Name:</label>
+    <input type="text" id="quizName" required><br>
 
-	
+    <label for="quizCode">Quiz Code:</label>
+    <input type="text" id="quizCode" readonly><br>
+
+    <label for="questionType">Question Type:</label>
+    <select id="questionType">
+      <option value="Multiple Choice">Multiple Choice</option>
+      <option value="True/False">True/False</option>
+      <option value="Fill in the Blank">Fill in the Blank</option>
+    </select><br>
+
+    <label for="question">Question:</label>
+    <textarea id="question" rows="3" required></textarea><br>
+
+    <label for="options">Options:</label>
+    <textarea id="options" rows="2" required></textarea><br>
+
+    <label for="answer">Correct Answer:</label>
+    <input type="text" id="answer" required><br>
+
+    <label for="imageURL">Image URL:</label>
+    <input type="text" id="imageURL"><br>
+
+    <label for="difficulty">Difficulty:</label>
+    <select id="difficulty">
+      <option value="None">None</option>
+      <option value="Easy">Easy</option>
+      <option value="Medium" selected>Medium</option>
+      <option value="Hard">Hard</option>
+    </select><br>
+
+    <label for="explanation">Explanation:</label>
+    <textarea id="explanation" rows="3"></textarea><br>
+
+    <input type="submit" value="Add Question">
+  </form>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Generate a random quiz code
+      function generateQuizCode() {
+        return 'Quiz' + Math.random().toString(36).substr(2, 8);
+      }
+
+      // Update quiz code field with generated code
+      $('#quizCode').val(generateQuizCode());
+
+      // Handle form submission
+      $('#quizForm').submit(function(e) {
+        e.preventDefault();
+
+        // Get user inputs
+        var questionType = $('#questionType').val();
+        var question = $('#question').val();
+        var options = $('#options').val().split('\n');
+        var answer = $('#answer').val();
+        var imageURL = $('#imageURL').val();
+        var difficulty = $('#difficulty').val();
+        var explanation = $('#explanation').val();
+
+        // Create question object
+        var questionObj = {
+          questionNumber: 1, // Update this dynamically when adding multiple questions
+          question: question,
+          imageURL: imageURL,
+          questionType: questionType,
+          options: options,
+          answer: answer,
+          explanation: explanation,
+          difficulty: difficulty
+        };
+
+        // Save question to local storage
+        var quizQuestions = JSON.parse(localStorage.getItem('quizQuestions')) || [];
+        quizQuestions.push(questionObj);
+        localStorage.setItem('quizQuestions', JSON.stringify(quizQuestions));
+
+        // Clear form fields
+        $('#question').val('');
+        $('#options').val('');
+        $('#answer').val('');
+        $('#imageURL').val('');
+        $('#explanation').val('');
+
+        // Increment question number
+        var questionNumber = parseInt(questionObj.questionNumber);
+        questionNumber++;
+        questionObj.questionNumber = questionNumber;
+
+        // Update quiz code field with new code
+        $('#quizCode').val(generateQuizCode());
+      });
+    });
+  </script>
 
 	  <script src="script.js" defer></script>
-
-
  </body>
 	
 </html>
