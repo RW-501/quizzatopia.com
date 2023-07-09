@@ -1660,7 +1660,6 @@ function logVisitorInformation() {
   const visitorIpPromise = getIPAddress(); // Retrieve the visitor's IP address as a promise
 	
 if (typeof db === 'undefined' || !db) {
-  console.error('Firestore is not properly initialized.');
 	const db = firebase.firestore();
 
 } 
