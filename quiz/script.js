@@ -939,7 +939,62 @@ submitReviewBtn.classList.add('shake-animation');
         alert("Link copied to clipboard!");
       }
 
-   
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Get the volume slider element
+var volumeSlider = document.getElementById('volumeSlider');
+
+// Function to set the volume value
+function setVolume(value) {
+  // Create a new SpeechSynthesisUtterance object
+  var utterance = new SpeechSynthesisUtterance();
+
+  // Set the volume
+  utterance.volume = value;
+
+  // Output the current volume to the console
+  console.log('Current volume:', utterance.volume);
+
+  // Save the volume value to local storage
+  localStorage.setItem('volume', value);
+}
+
+// Function to load the volume value from local storage
+function loadVolume() {
+  var savedVolume = localStorage.getItem('volume');
+  if (savedVolume) {
+    // Set the volume slider value
+    volumeSlider.value = savedVolume;
+
+    // Set the volume
+    setVolume(savedVolume);
+  }
+}
+
+// Event listener for the volume slider
+volumeSlider.addEventListener('input', function() {
+  var volumeValue = volumeSlider.value;
+  setVolume(volumeValue);
+});
+
+// Load the volume value on page load
+loadVolume();
+
+
+
+
+
 
 
 
