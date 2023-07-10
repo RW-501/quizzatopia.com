@@ -1119,7 +1119,7 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageU
       testInfoDiv.innerHTML = `
         <h3>Quiz Information</h3>
         <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
-        <p><strong>Quiz Type:</strong> ${quizType}</p>
+        <p><strong>Quiz Type:</strong> ${quizType || 'N/A'}</p>
       <p><strong>Quiz Difficulty:</strong> ${quizDifficultyNS || 'N/A'}</p>
         <p><strong>Number of Questions:</strong> ${quizInfo.numberOfQuestions}</p>
         <p><strong>Question Correct:</strong> ${score}</p>
@@ -1144,7 +1144,7 @@ document.title = `${quizNameNS}`;
     testInfoDiv.innerHTML = `
         <h3>Quiz Information</h3>
         <p><strong>Quiz Code:</strong> ${quizCodeNS}</p>
-        <p><strong>Quiz Type:</strong> ${quizType}</p>
+        <p><strong>Quiz Type:</strong> ${quizType || 'N/A'}</p>
       <p><strong>Quiz Difficulty:</strong> ${quizDifficultyNS || 'N/A'}</p>
         <p><strong>Number of Questions:</strong> ${numberOfQuestionsNS}</p>
         <p><strong>No quiz information found.</strong></p>
@@ -1180,10 +1180,10 @@ function checkQuizCodeAndGetInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, qu
   } else {
     // Quiz info exists, retrieve existing quiz info from storage
     quizInfo = JSON.parse(savedQuizInfo);
-    quizInfo.quizName = quizNameNS;
+    quizInfo.quizName = quizNameNS ;
     quizInfo.quizImageURL = quizImageURL;
-      quizInfo.quizType = quizType;
-    quizInfo.numberOfQuestions = numberOfQuestionsNS;
+      quizInfo.quizType = quizType || "";
+    quizInfo.numberOfQuestions = numberOfQuestionsNS || "";
     quizInfo.timestamp = timestamp;
 quizInfo.quizLink = quizUrl;  // Add the "q" parameter to the quizInfo object
     localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
@@ -1216,10 +1216,10 @@ function fetchData(q, e) {
     // Update quizCode, quizName, numberOfQuestions
       quizCode = parsedQuizDataDB.quizCode;
       quizName = parsedQuizDataDB.quizName;
-      numberOfQuestions = parsedQuizDataDB.numberOfQuestions;
+      numberOfQuestions = parsedQuizDataDB.numberOfQuestions || "";
       quizImageURL = parsedQuizDataDB.imageURL;
-      quizDifficulty = parsedQuizDataDB.quizDifficulty;
-      quizCategory = parsedQuizDataDB.quizCategory;
+      quizDifficulty = parsedQuizDataDB.quizDifficulty || "";
+      quizCategory = parsedQuizDataDB.quizCategory || "";
 
     // Parse the quizDataDB.quizDataDB string to a JSON object
 	     //         console.log("parsedQuizDataDB Data from DB: ", parsedQuizDataDB);
@@ -1341,11 +1341,11 @@ function fetchData(q, e) {
           // Update quizCode, quizName, numberOfQuestions
           quizCode = data.quizCode;
           quizName = data.quizName;
-          numberOfQuestions = data.numberOfQuestions;
+          numberOfQuestions = data.numberOfQuestions || "";
           quizImageURL = data.quizImageURL;
-          quizDifficulty = data.quizDifficulty;
-          questionNumber = data.questionNumber;
-          questionType = data.questionType;
+          quizDifficulty = data.quizDifficulty || "";
+          questionNumber = data.questionNumber || "";
+          questionType = data.questionType || "";
 
           // Check quiz code and retrieve or save quiz info
           const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
