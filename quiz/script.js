@@ -1133,7 +1133,11 @@ function readTextFunc(text) {
 }
 
 
+utterance.addEventListener('end', function(event) {
+  console.log('Speech ended.');
+	  isSpeaking = false;
 
+});
 
 // Function to stop the ongoing speech
 function stopSpeaking() {
