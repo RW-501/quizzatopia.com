@@ -296,7 +296,7 @@ function shuffleArrayAnswers(array) {
 
 
 // Words to search for
-const searchWords = ['all', 'above'];
+const searchWords = ['All', 'above'];
 
 // Find the array that contains the search words
 const foundArray = shuffledArray.find(array => {
