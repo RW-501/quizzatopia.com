@@ -8,6 +8,9 @@ main_section {
     /* scroll-snap-align: center; */
     /* scroll-snap-stop: always; */
     display: contents;
+
+
+    box-sizing: border-box;
 }
 #discussionContainer{
 cursor: pointer;
