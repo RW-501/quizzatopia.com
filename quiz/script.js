@@ -1017,6 +1017,24 @@ submitReviewBtn.classList.add('shake-animation');
 
 
 
+function getUserOperatingSystem() {
+  const userAgentString = navigator.userAgent;
+
+  // Check if the user agent string contains the OS information
+  if (userAgentString.includes('Windows')) {
+    return 'Windows';
+  } else if (userAgentString.includes('Macintosh')) {
+    return 'Mac';
+  } else if (userAgentString.includes('Linux')) {
+    return 'Linux';
+  } else if (userAgentString.includes('Android')) {
+    return 'Android';
+  } else if (userAgentString.includes('iOS')) {
+    return 'iOS';
+  } else {
+    return 'Unknown';
+  }
+}
 
 
 
@@ -1029,14 +1047,20 @@ submitReviewBtn.classList.add('shake-animation');
 function populateVoiceDropdown() {
   var voices = speechSynthesis.getVoices();
   var voiceDropdown = document.getElementById('voiceDropdown');
-  
+
+  var userOS = getUserOperatingSystem();
+
   voices.forEach(function(voice) {
-    var option = document.createElement('option');
-    option.value = voice.voiceURI;
-    option.textContent = voice.name;
-    voiceDropdown.appendChild(option);
+    // Filter the voices based on the user's operating system
+    if (voice.os === userOS || voice.os === 'all') {
+      var option = document.createElement('option');
+      option.value = voice.voiceURI;
+      option.textContent = voice.name;
+      voiceDropdown.appendChild(option);
+    }
   });
 }
+
 
 // Save voice settings to local storage
 function saveVoiceSettings() {
