@@ -1113,17 +1113,11 @@ window.addEventListener('load', function() {
 });
 
 
-var isSpeaking = false; // Track if an utterance is currently being spoken
+
 
 
 function readQuizFunc() {
 
-  if (isSpeaking) {
-    // Stop the ongoing speech
-    stopSpeaking();
-    return;
-  }
-	
 var currentQuestion =   document.getElementById("question").innerHTML;
 
 var currentOptions = document.getElementsByClassName("answer-option");
@@ -1139,46 +1133,24 @@ for (let i = 0; i < currentOptions.length; i++) {
 console.log(currentQuestion+", "+optionsString);
 let readThis = currentQuestion+" "+optionsString;
 
- if ('speechSynthesis' in window) {
-    let synthesis = window.speechSynthesis;
-    let utterance = new SpeechSynthesisUtterance(readThis);
-
-    
-    // Load settings from local storage
-    let voiceSettings = JSON.parse(localStorage.getItem('voiceSettings'));
-   if (voiceSettings) {
-      var voice = getMatchingVoice(voiceSettings.voice);
-      if (voice) {
-        utterance.voice = voice;
-      }
-      utterance.rate = voiceSettings.rate;
-    }
- // Event listener for the end of speech
-    utterance.onend = function() {
-      isSpeaking = false;
-    };
-
-    // Start speaking
-    isSpeaking = true;
-    synthesis.speak(utterance);
-  } else {
-    console.log('Text-to-speech is not supported in this browser.');
-  }
-
-	
-	
-
+readTextFunc(readThis);
 }
 
 
-function readExplanationFunc() {
+
+function readExplanationFunc(){
+let readThis =  "Explanation "+  document.getElementById("explanation").innerHTML;
+readTextFunc(readThis);
+}
+
+
+function readTextFunc(readThis) {
   if (isSpeaking) {
     // Stop the ongoing speech
     stopSpeaking();
     return;
   }
 
-let readThis =  "Explanation "+  document.getElementById("explanation").innerHTML;
 
  if ('speechSynthesis' in window) {
     let synthesis = window.speechSynthesis;
