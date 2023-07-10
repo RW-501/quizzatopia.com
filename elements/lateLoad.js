@@ -986,16 +986,16 @@ function onAuthSuccess(userInfo) {
 
   console.log('Welcome, ' + userInfo.userName + '!');
 
-  saveUserInfoToFirestore(userInfo);
   updateNavBar();
   displayUserInfo();
 
   // Add a delay using a promise
   const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
-
+	
+  saveUserInfoToFirestore(userInfo)
     .then(() => delay(500)) // Adjust the delay time as needed
     .then(() => {
-	      slideOut("loginPopup")
+	      slideOut("loginPopup");
     })
     .catch(error => console.error(error));
 }
