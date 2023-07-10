@@ -94,8 +94,6 @@ overlay.style.display = 'none'; // Hide the overlay if it exists
 	
 loadScreenFunc();
 
-
-
 // Function to convert images to low resolution
 function convertImagesToLowResolution() {
   // Select all <img> elements on the page
@@ -103,7 +101,7 @@ function convertImagesToLowResolution() {
 
   // Iterate over each image
   images.forEach(function(image) {
-    // Store the original image source
+    // Store the original source URL in a data attribute
     image.dataset.originalSrc = image.src;
 
     // Create a new <canvas> element
@@ -122,6 +120,9 @@ function convertImagesToLowResolution() {
 
         // Set the canvas image data as the new image source
         image.src = canvas.toDataURL();
+
+        // Log the resolution value
+        console.log('Image is low resolution:', image.width, image.height);
       })
       .catch(function(error) {
         console.error('Error converting image to low resolution:', error);
@@ -129,20 +130,23 @@ function convertImagesToLowResolution() {
   });
 }
 
-// Function to restore original image sources
-function restoreOriginalImages() {
+// Function to revert images back to normal resolution
+function revertImagesToNormalResolution() {
   // Select all <img> elements on the page
   const images = document.querySelectorAll('img');
 
   // Iterate over each image
   images.forEach(function(image) {
-    // Check if the image has a stored original source
+    // Check if the image has a stored original source URL
     if (image.dataset.originalSrc) {
-      // Restore the original image source
+      // Set the original source URL back to the image
       image.src = image.dataset.originalSrc;
 
-      // Remove the stored original source
+      // Clear the data attribute
       delete image.dataset.originalSrc;
+
+      // Log the resolution value
+      console.log('Image is high resolution:', image.width, image.height);
     }
   });
 }
@@ -152,10 +156,12 @@ window.onload = function() {
   convertImagesToLowResolution();
 };
 
-// Call the function to restore original image sources after the window has loaded
-window.addEventListener('load', function() {
-  restoreOriginalImages();
-});
+// Example usage to revert images back to normal resolution after some event
+// Call revertImagesToNormalResolution() when needed
+// For example, on a button click or after a certain time period
+setTimeout(function() {
+  revertImagesToNormalResolution();
+}, 5000);  // Revert after 5 seconds (adjust the duration as needed)
 
 
 
