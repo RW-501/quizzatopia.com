@@ -1039,6 +1039,21 @@ function playAudio() {
   // For example, you can use the Web Audio API or Text-to-Speech (TTS) APIs
   // You can also customize the behavior based on your specific requirements
 	        alert('Read Quiz!!!');
+var currentQuestion =   document.getElementById("question").innerHTML;
+
+	
+var currentOptions = document.getElementsByClassName("answer-option");
+var optionsString = "";
+
+for (let i = 0; i < currentOptions.length; i++) {
+  optionsString += " Option Number "+[i]+" "+currentOptions[i].innerHTML +" ";
+	
+}
+
+console.log(currentQuestion+" "+optionsString);
+
+	
+var currentExplanation  =   document.getElementById("explanation").innerHTML;
 
 }
 
