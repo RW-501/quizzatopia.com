@@ -352,21 +352,20 @@ if (questionObj.imageURL === "" || questionObj.imageURL === null || questionObj.
   document.getElementById("difficulty").innerHTML = questionObj.difficulty;
   document.getElementById("realQustionNum").innerHTML = questionObj.questionNumber;
 	
- console.log(questionObj.questionType + "  questionType");
-	
-	if (questionObj.questionType) {
 
-if (questionObj.questionType === "True/False") {
-	//console.log("inside True/False     "); 
-	document.getElementById("option_3").style.display= "none";
-	document.getElementById("option_4").style.display= "none";
+  const answerBTN = document.getElementsByClassName("answer-option");
 
+  for (let i = 0; i < answerBTN.length; i++) {
+	if (questionObj.options[i]) {
+	  answerBTN[i].style.display= "initial";
 }else{
-	document.getElementById("option_3").style.display= "initial";
-	document.getElementById("option_4").style.display= "initial";
-		//console.log("inside Multi-Choice     "); 
-
+	  answerBTN[i].style.display= "none";
 }
+  }
+
+
+	
+
 	}
 	
 	
@@ -375,7 +374,7 @@ if (questionObj.questionType === "True/False") {
   const shuffledOptions = shuffleArrayAnswers(options);
 	
   // console.log(shuffledOptions[1]+"  options   "+options[1]); // Output: 3
-	
+
 	
   const answerButtons = document.getElementsByClassName("answer-option");
   for (let i = 0; i < shuffledOptions.length; i++) {
