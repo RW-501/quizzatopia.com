@@ -952,6 +952,75 @@ submitReviewBtn.classList.add('shake-animation');
 
 
 
+
+
+
+
+
+
+
+
+
+var lightInterval;
+var lightIndex = 0;
+var lightColors = ['red', 'green', 'blue', 'orange']; // Colors for the chasing lights
+
+// Function to start chasing lights
+function startChasingLights() {
+  var blinkDiv = document.getElementById('audioButton');
+  var divWidth = blinkDiv.offsetWidth;
+  var divHeight = blinkDiv.offsetHeight;
+  var lights = [];
+
+  // Create lights around the border of the div
+  for (var i = 0; i < 4; i++) {
+    var light = document.createElement('div');
+    light.className = 'light';
+    blinkDiv.appendChild(light);
+    lights.push(light);
+  }
+
+  lightInterval = setInterval(function() {
+    // Reset previous light's background color
+    var prevIndex = (lightIndex + lights.length - 1) % lights.length;
+    lights[prevIndex].style.backgroundColor = '';
+
+    // Set current light's background color
+    lights[lightIndex].style.backgroundColor = lightColors[lightIndex % lightColors.length];
+
+    lightIndex = (lightIndex + 1) % lights.length;
+  }, 500); // Interval duration in milliseconds (500ms = 0.5 seconds)
+}
+
+// Function to stop chasing lights
+function stopChasingLights() {
+  var blinkDiv = document.getElementById('blinkDiv');
+  var lights = blinkDiv.getElementsByClassName('light');
+
+  clearInterval(lightInterval);
+
+  // Remove lights from the div
+  while (lights.length > 0) {
+    blinkDiv.removeChild(lights[0]);
+  }
+
+  lightIndex = 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Get the volume slider element
 var volumeSlider = document.getElementById('volumeSlider');
 
@@ -1190,7 +1259,7 @@ for (var i = 0; i < words.length; i += chunkSize) {
     utterance.onend = function() {
       isSpeaking = false;
     };
-
+startChasingLights();
     // Start speaking
     isSpeaking = true;
     speakChunks(0);
@@ -1213,6 +1282,7 @@ function stopSpeaking() {
     synthesis.cancel();
   }
   isSpeaking = false;
+	stopChasingLights();
 }
 
 window.addEventListener('beforeunload', function(event) {
