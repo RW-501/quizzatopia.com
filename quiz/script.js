@@ -653,7 +653,10 @@ function endQuiz() {
   document.getElementById("quiz-container").classList.add("d-none");
   document.getElementById("end-container").classList.remove("d-none");
   document.getElementById("otherQuizzes").classList.remove("d-none");
-
+	
+  const link = window.location.href;
+  setShareableLink(link);
+	
   if (questionCorrect !== totalQuestions && questionCorrect !== 0) {
     showPieChartEnd();
   }
@@ -911,6 +914,26 @@ submitReviewBtn.classList.add('shake-animation');
 }
 
 
+
+
+
+
+ function setShareableLink(data) {
+        var shareLink = document.getElementById("shareLink");
+        // Build the shareable link based on the provided data
+        var link =  encodeURIComponent(data);
+        shareLink.value = link;
+      }
+
+      function copyLink() {
+        var shareLink = document.getElementById("shareLink");
+        shareLink.select();
+        shareLink.setSelectionRange(0, 99999); /* For mobile devices */
+        document.execCommand("copy");
+        alert("Link copied to clipboard!");
+      }
+
+   
 
 
 
