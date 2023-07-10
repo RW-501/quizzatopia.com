@@ -1012,12 +1012,12 @@ submitReviewBtn.classList.add('shake-animation');
 
 
 
-function getMatchingVoice(voiceURI) {
+function getMatchingVoice(voiceName) {
   if ('speechSynthesis' in window) {
     var synthesis = window.speechSynthesis;
     var voices = synthesis.getVoices();
     var matchedVoice = voices.find(function(voice) {
-      return voice.voiceURI === voiceURI;
+      return voice.name === voiceName;
     });
     return matchedVoice;
   } else {
@@ -1025,6 +1025,7 @@ function getMatchingVoice(voiceURI) {
     return null;
   }
 }
+
 
 
 
