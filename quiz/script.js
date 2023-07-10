@@ -383,6 +383,7 @@ function checkAnswer() {
       options[i].classList.add('disabled');
       if (options[i].innerHTML === questionObj.answer) {
         options[i].classList.add('correct');
+readCorrectAnswerFunc(i);
       } else {
         options[i].classList.add('incorrect');
       }
@@ -464,6 +465,7 @@ function enableAnswerButtons() {
 
 // Function to show the next question
 function nextQuestion() {
+	stopSpeaking();
   currentQuestion++;
   document.getElementById('show-explanation-btn').classList.add("d-none");
 
@@ -1066,6 +1068,10 @@ let readThis = currentQuestion+" "+optionsString;
 readTextFunc(readThis);
 }
 
+function readCorrectAnswerFunc(xxx){
+let readThis =  "The correct answer is "+currentOptions[xxx +1].innerHTML +", ";
+readTextFunc(readThis);
+}
 
 
 function readExplanationFunc(){
@@ -1153,3 +1159,10 @@ function stopSpeaking() {
   }
   isSpeaking = false;
 }
+
+window.addEventListener('beforeunload', function(event) {
+
+	stopSpeaking(); 
+  event.returnValue = 'Are you sure you want to leave this page?';
+});
+
