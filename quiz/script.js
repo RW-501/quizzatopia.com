@@ -311,6 +311,18 @@ function shuffleArrayAnswers(array) {
 }
 
 
+/*
+// Function to shuffle an array using Fisher-Yates algorithm
+function shuffleArrayAnswers(array) {
+  const shuffledArray = [...array];
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+  return shuffledArray;
+}
+*/
+
 // Function to show the question
 function showQuestion() {
   const animations = ["right", ""];
@@ -1169,8 +1181,9 @@ readTextFunc(readThis);
 }
 
 function readCorrectAnswerFunc(xxx){
-		console.log("readThis xxx  "+xxx);
-
+	//	console.log("readThis xxx  "+xxx);
+	
+var currentOptions = document.getElementsByClassName("answer-option");
 let readThis =  "The correct answer is "+currentOptions[xxx +1].innerHTML +" ";
 readTextFunc(readThis);
 	console.log("readThis "+readThis);
