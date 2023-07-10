@@ -1218,6 +1218,6 @@ function stopSpeaking() {
 window.addEventListener('beforeunload', function(event) {
 
 	stopSpeaking(); 
-  event.returnValue = 'Are you sure you want to leave this page?';
+//  event.returnValue = 'Are you sure you want to leave this page?';
 });
 
