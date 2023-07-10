@@ -1132,7 +1132,7 @@ let x = 0;
 for (let i = 0; i < currentOptions.length; i++) {
 	if(currentOptions[i].innerHTML !== ""){
 		x++;
-  optionsString += " Option Number "+[x]+" "+currentOptions[i].innerHTML +", ";
+  optionsString += " Option Number "+[x]+". "+currentOptions[i].innerHTML +", ";
 	}
 }
 
