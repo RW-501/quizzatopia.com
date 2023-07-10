@@ -182,7 +182,7 @@ async function updateQuizStartedCount(quizCode) {
 }
 
 
-}
+
 
 
 
