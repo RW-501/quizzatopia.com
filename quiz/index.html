@@ -1486,6 +1486,11 @@ submitReviewBtn.classList.add('shake-animation');
 function openReport() {
   reportForm.style.display = 'block';
 	 console.log("openModal      "); 
+	
+// Add click event listener to the close button
+document.getElementById('closeReportBTN').addEventListener('click', closeReport);
+
+
 }
 
 // Function to close the modal
@@ -1496,16 +1501,11 @@ function closeReport() {
 
 
 
-// Add click event listener to the close button
-document.getElementById('closeReportBTN').addEventListener('click', closeReport);
-
-
 
 	
 if (  q === null || q === '') {
   console.log("empty.");
 
-  //window.location.href = "https://quizzatopia.com/quiz/?q=" + q;
   location.reload();
 }else{
           console.log("Q:   "+q);
