@@ -487,6 +487,11 @@ function nextQuestion() {
   }
   updateProgressBar(currentQuestion);
   updateQuestionNumber();
+
+	setTimeout(function() {
+  location.reload();
+}, 180000); // 3 minutes = 180 seconds
+	
 }
 
 // Function to skip the question
