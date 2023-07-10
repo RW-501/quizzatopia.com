@@ -1040,7 +1040,7 @@ function playAudio() {
   // Add your logic to play audio or trigger reading functionality here
   // For example, you can use the Web Audio API or Text-to-Speech (TTS) APIs
   // You can also customize the behavior based on your specific requirements
-	        alert('Read Quiz!!!');
+	       // alert('Read Quiz!!!');
 var currentQuestion =   document.getElementById("question").innerHTML;
 
 	
@@ -1049,11 +1049,11 @@ var optionsString = "";
 
 for (let i = 0; i < currentOptions.length; i++) {
 	if(currentOptions[i].innerHTML !== ""){
-  optionsString += " Option Number "+[i =+1]+" "+currentOptions[i].innerHTML +" ";
+  optionsString += " Option Number "+[i =+1]+" "+currentOptions[i].innerHTML +", ";
 	}
 }
 
-console.log(currentQuestion+" "+optionsString);
+console.log(currentQuestion+", "+optionsString);
 var readThis = currentQuestion+" "+optionsString;
 
  if ('speechSynthesis' in window) {
