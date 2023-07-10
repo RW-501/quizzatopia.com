@@ -276,6 +276,129 @@ if (loggedIn === true && userDashboard !== null) {
 
 
 
+
+
+
+  function updateNavBar() {
+    // Check if user is logged in
+    if (loggedIn === true) {
+      // User is logged in
+      document.getElementById('navLoggedin').innerHTML = '<div onclick="logOutFunction()">Log Out</div>';
+	    
+	        var navLoggedinElement = document.getElementById('navLoggedin');
+      if (!navLoggedinElement) {
+        // Create the navLoggedin element if it doesn't exist
+        navLoggedinElement = document.createElement('div');
+        navLoggedinElement.id = 'navLoggedin';
+        // Append the new element to the appropriate parent element in your HTML markup
+        // For example, if it should be part of a navigation bar, find the parent element of the navigation bar and append it there.
+        var parentElement = document.getElementById('auth-buttons');
+        parentElement.appendChild(navLoggedinElement);
+      navLoggedinElement.innerHTML = '<div onclick="logOutFunction()">Log Out</div>';
+      }
+	       
+	    
+    } else {
+      // User is not logged in
+ document.getElementById('navLoggedin').innerHTML = '<div onclick="viewDashboard();">Log In</div>';
+	        var navLoggedinElement = document.getElementById('navLoggedin');
+	    if (!navLoggedinElement) {
+        // Create the navLoggedin element if it doesn't exist
+        navLoggedinElement = document.createElement('div');
+        navLoggedinElement.id = 'navLoggedin';
+        // Append the new element to the appropriate parent element in your HTML markup
+        // For example, if it should be part of a navigation bar, find the parent element of the navigation bar and append it there.
+        var parentElement = document.getElementById('auth-buttons');
+        parentElement.appendChild(navLoggedinElement);
+
+      navLoggedinElement.innerHTML = '<div onclick="viewDashboard();">Log In</div>';
+
+      }
+	      
+    }
+	
+
+  }
+ 
+
+ document.addEventListener('click', function(event) {
+  const navbar = document.getElementById('navbar');
+    const navbarNav = document.querySelector('#navbarNav');
+	 if (!navbarNav.classList.contains('show')) {
+    if (!navbar.contains(event.target)) {
+navbarNav.classList.remove('show'); 
+    }
+  }
+});
+
+function navbarToggler() {
+  var navbarNav = document.querySelector('#navbarNav');
+  navbarNav.classList.toggle('collapse');
+}
+
+
+
+
+// Call the function to fetch and insert the HTML based on the page level
+document.addEventListener('DOMContentLoaded', function() {
+  fetchAndInsertContent();
+	 //   console.log('DOMContentLoaded 1296 :   ');
+
+});
+
+
+
+
+function viewDashboard() {
+ 
+	if (loggedIn === true) {		
+  window.location.href = '/user/';
+	}else{
+      // Show the login popup
+     			
+openPopup();switchTab('login');
+
+	}
+}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const firebaseConfig = {
   apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
   authDomain: "quizzatopia-bdfc9.firebaseapp.com",
@@ -386,91 +509,7 @@ getIPAddress();
 
 
 
-
-
-
-  function updateNavBar() {
-    // Check if user is logged in
-    if (loggedIn === true) {
-      // User is logged in
-      document.getElementById('navLoggedin').innerHTML = '<div onclick="logOutFunction()">Log Out</div>';
-	    
-	        var navLoggedinElement = document.getElementById('navLoggedin');
-      if (!navLoggedinElement) {
-        // Create the navLoggedin element if it doesn't exist
-        navLoggedinElement = document.createElement('div');
-        navLoggedinElement.id = 'navLoggedin';
-        // Append the new element to the appropriate parent element in your HTML markup
-        // For example, if it should be part of a navigation bar, find the parent element of the navigation bar and append it there.
-        var parentElement = document.getElementById('auth-buttons');
-        parentElement.appendChild(navLoggedinElement);
-      navLoggedinElement.innerHTML = '<div onclick="logOutFunction()">Log Out</div>';
-      }
-	       
-	    
-    } else {
-      // User is not logged in
- document.getElementById('navLoggedin').innerHTML = '<div onclick="viewDashboard();">Log In</div>';
-	        var navLoggedinElement = document.getElementById('navLoggedin');
-	    if (!navLoggedinElement) {
-        // Create the navLoggedin element if it doesn't exist
-        navLoggedinElement = document.createElement('div');
-        navLoggedinElement.id = 'navLoggedin';
-        // Append the new element to the appropriate parent element in your HTML markup
-        // For example, if it should be part of a navigation bar, find the parent element of the navigation bar and append it there.
-        var parentElement = document.getElementById('auth-buttons');
-        parentElement.appendChild(navLoggedinElement);
-
-      navLoggedinElement.innerHTML = '<div onclick="viewDashboard();">Log In</div>';
-
-      }
-	      
-    }
 	
-
-  }
- 
-
- document.addEventListener('click', function(event) {
-  const navbar = document.getElementById('navbar');
-    const navbarNav = document.querySelector('#navbarNav');
-	 if (!navbarNav.classList.contains('show')) {
-    if (!navbar.contains(event.target)) {
-navbarNav.classList.remove('show'); 
-    }
-  }
-});
-
-function navbarToggler() {
-  var navbarNav = document.querySelector('#navbarNav');
-  navbarNav.classList.toggle('collapse');
-}
-
-
-
-
-// Call the function to fetch and insert the HTML based on the page level
-document.addEventListener('DOMContentLoaded', function() {
-  fetchAndInsertContent();
-	 //   console.log('DOMContentLoaded 1296 :   ');
-
-});
-
-
-
-
-function viewDashboard() {
- 
-	if (loggedIn === true) {		
-  window.location.href = '/user/';
-	}else{
-      // Show the login popup
-     			
-openPopup();switchTab('login');
-
-	}
-}
-		
 
 
 
