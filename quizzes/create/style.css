@@ -139,3 +139,155 @@ height: auto;
 section {
     margin-bottom: 10px;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+      background-color: #212121;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      margin-top: 40px;
+      text-transform: uppercase;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 8px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #555;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #555;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+    }
+
+    #addOptionButton,
+    #removeOptionButton {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    #removeOptionButton {
+      background-color: #dc3545;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    #questionList {
+      margin-top: 40px;
+    }
+
+    #generateJSONButton {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      font-size: 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  
+
+
+
+
+
+
+
+
+
+
