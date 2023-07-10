@@ -194,6 +194,8 @@ console.log('userInfo main: ', userInfo);
 
   var userDashboard;
 
+  const currentPagePath = window.location.pathname;
+    console.log("currentPagePath:", currentPagePath);
 
 	  let navbarPath, footerPath;
 
@@ -220,6 +222,24 @@ function fetchAndInsertContent() {
 
 }
 	
+function initializeNavbarToggler() {
+       const loggedInDiv = document.getElementById('navLoggedin');
+    const navbarNav = document.querySelector('#navbarNav')
+	
+	navbarNav.classList.add('collapse');
+
+	const userInfo = getUserInfo();
+	
+    document.getElementById('profile-pic').src = userInfo.userProfilePic;
+
+    console.log('userInfo firebaseId:', userInfo.firebaseId);
+
+	  updateNavBar();
+	  displayUserInfo();
+	
+
+
+}
 
 
 
@@ -455,23 +475,6 @@ getIPAddress();
 
 
 
-	
-window.addEventListener('load', function() {
-  // Create the mainFooter div
-  const mainFooter = document.createElement('div');
-  mainFooter.id = 'mainFooter';
-
-  // Fetch and insert the footer HTML
-  fetch(footerPath)
-    .then(response => response.text())
-    .then(data => {
-      mainFooter.innerHTML = data;
-      document.body.appendChild(mainFooter);
-    })
-    .catch(error => {
-      console.error("Error fetching data:", error);
-    });
-});
 
 	
 function viewDashboard() {
@@ -489,28 +492,6 @@ openPopup();switchTab('login');
 
 
 
-// Function to initialize the navbar toggler event
-
-
-function initializeNavbarToggler() {
-       const loggedInDiv = document.getElementById('navLoggedin');
-    const navbarNav = document.querySelector('#navbarNav')
-	
-	navbarNav.classList.add('collapse');
-
-	const userInfo = getUserInfo();
-	
-    document.getElementById('profile-pic').src = userInfo.userProfilePic;
-
-    console.log('userInfo firebaseId:', userInfo.firebaseId);
-
-	  updateNavBar();
-	  displayUserInfo();
-	
- // Call the logVisitorInformation function whenever you want to log the visitor's information
-logVisitorInformation();
-
-}
 
 
 
@@ -545,26 +526,7 @@ navbarNav.classList.remove('show');
 
 
 
-// Log out function
-function logOutFunction() {
-  firebase.auth().signOut().then(function() {
-    // Log out successful
-      // Set the logged-in cookie
-      document.cookie = 'loggedIn=false';
-	  loggedIn = false;
-	  console.log("User logged out.");
-	  updateNavBar();
-	  
-	window.location.href = '/';
-	   var navbarNav = document.querySelector('#navbarNav');
-//  navbarNav.classList.toggle('collapse');
-  }).catch(function(error) {
-    // An error occurred
-    console.log("Error logging out:", error);
-  });
-	  displayUserInfo();
 
-}
 
 
   function updateNavBar() {
@@ -617,118 +579,6 @@ function logOutFunction() {
 
 // 
 
-function logVisitorInformation() {
-  const currentTimestamp = new Date();
-  const referralPage = document.referrer;
-  const userAgentString = navigator.userAgent;
-
-  const browserMatch = userAgentString.match(/(chrome|safari|firefox|msie|trident(?=\/))\/?\s*([\d\.]+)/i);
-  const browserName = browserMatch[1];
-  const browserVersion = browserMatch[2];
-
-  // Extract device information using regular expressions
-  const deviceMatch = userAgentString.match(/\(([^)]+)\)/);
-  const deviceInfo = deviceMatch[1].split(';').map(part => part.trim());
-  const device = deviceInfo[0];
-  const browser = deviceInfo[1];
-
-  const visitorIpPromise = getIPAddress(); // Retrieve the visitor's IP address as a promise
-
-	let db;
-	
-if (typeof db === 'undefined' || db === null || db === '' ) {
-	 db = firebase.firestore();
-
-} 
-	
-  visitorIpPromise.then(visitorIp => {
-    // Check if the visitor's IP is already logged in the "guestLog" collection
-    db.collection('guestLog').doc(visitorIp).get()
-      .then(doc => {
-        if (doc.exists) {
-          const lastVisitTime = currentTimestamp;
-          const lastVisitPage = getCurrentPage();
-
-          db.collection('guestLog').doc(visitorIp).update({
-            lastVisitTime,
-            lastVisitPage
-          })
-            .catch(error => {
-              console.error('Error updating guest log:', error);
-            });
-
-          // Increment the user visit count
-          const userVisitCountRef = db.collection('guestLog').doc(visitorIp).collection('userVisitCount').doc('count');
-          userVisitCountRef.get()
-            .then(doc => {
-              if (doc.exists) {
-                const previousCount = doc.data().count;
-                const updatedCount = previousCount + 1;
-                userVisitCountRef.update({ count: updatedCount })
-                  .catch(error => {
-                    console.error('Error updating user visit count:', error);
-                  });
-              } else {
-                // Initialize the user visit count if it doesn't exist
-                userVisitCountRef.set({ count: 1 })
-                  .catch(error => {
-                    console.error('Error initializing user visit count:', error);
-                  });
-              }
-            })
-            .catch(error => {
-              console.error('Error retrieving user visit count:', error);
-            });
-        } else {
-          // Create a new visitor log entry
-          const firstVisitTime = currentTimestamp;
-          const lastVisitTime = currentTimestamp;
-          const firstVisitPage = getCurrentPage();
-          const lastVisitPage = getCurrentPage();
-          const banned = 'NO';
-          const userVisitCount = 1;
-
-          db.collection('guestLog').doc(visitorIp).set({
-            firstVisitTime,
-            lastVisitTime,
-            firstVisitPage,
-            lastVisitPage,
-            referralPage,
-            userVisitCount,
-            banned,
-            device,
-            browser
-          })
-            .catch(error => {
-              console.error('Error creating guest log:', error);
-            });
-        }
-      })
-      .catch(error => {
-        console.error('Error checking guest log:', error);
-      });
-  })
-  .catch(error => {
-    console.error('Error retrieving visitor IP address:', error);
-  });
-}
-
-
-
-// Function to get current page URL (example implementation, you may need to customize this)
-function getCurrentPage() {
-  // Get the current page URL
-  const currentPageURL = window.location.href;
-
-  // Extract the part of the URL after the .com
-  const afterDotCom = currentPageURL.split('.com')[1];
-
-  // Remove leading slash if present
-  const currentPage = afterDotCom.startsWith('/') ? afterDotCom.slice(1) : afterDotCom;
-
-  // Return the current page
-  return currentPage;
-}
 
 
 
@@ -822,8 +672,7 @@ if (elementExists('loginPopup')) {
  slideIn("loginPopupBody");
 
 }
-     // Check if user info changes
-                checkUserInfoChanges();
+ 
 
 		    console.log("  ?????????????????????????    ^   Main.js ^   ????????????????????????999        ");
 
