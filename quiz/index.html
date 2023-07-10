@@ -492,7 +492,7 @@ position: fixed;
           <div id="question-number" class="font-weight-bold"></div>
           <div id="timer" class="text-right"></div>
 		
-<div id="audioButton" onclick="playAudio()">
+<div id="audioButton" onclick="readQuizFunc()">
   <div>&#128264;</div>
   <span>Play Audio</span>
 </div>
@@ -548,7 +548,7 @@ position: fixed;
 
     <button id="close-btn" class="close-button">&times;</button>
 	  </div>
-    <div id="explanation"></div><hr>
+    <div id="explanation" onclick="readExplanationFunc()"></div><hr>
     <div class="btn_container">   <div></div> <div id="reportFormBTN" onclick=" closeExplanationPopup(); openReport();" >Report</div>
 </div>
 	  
@@ -774,69 +774,7 @@ openPopup(); switchTab('signup');
 	
   <script>
     
-	 /*
-// Function to prevent body scrolling on mobile devices during drag
-function preventBodyScrolling(event) {
-  event.preventDefault();
-}
-
-interact('.explanation-container')
-  .draggable({
-    inertia: true,
-    modifiers: [
-      interact.modifiers.restrictRect({
-        restriction: 'parent',
-        endOnly: true,
-      }),
-    ],
-    listeners: {
-      move(event) {
-        const target = event.target;
-        const x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
-        const y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
-
-        target.style.transform = `translate(${x}px, ${y}px)`;
-        target.setAttribute('data-x', x);
-        target.setAttribute('data-y', y);
-      },
-      // Disable body scrolling during drag on mobile devices
-      start(event) {
-        if ('ontouchmove' in document.documentElement) {
-          document.addEventListener('touchmove', preventBodyScrolling, { passive: false });
-        }
-      },
-      end(event) {
-        if ('ontouchmove' in document.documentElement) {
-          document.removeEventListener('touchmove', preventBodyScrolling);
-        }
-      },
-    },
-  })
-  .resizable({
-    edges: { top: true, left: true, bottom: true, right: true },
-  })
-  .on('resizemove', function (event) {
-    const target = event.target;
-    let { x, y } = target.dataset;
-
-    x = parseFloat(x) || 0;
-    y = parseFloat(y) || 0;
-
-    target.style.width = event.rect.width + 'px';
-    target.style.height = event.rect.height + 'px';
-
-    x += event.deltaRect.left;
-    y += event.deltaRect.top;
-
-    target.style.transform = `translate(${x}px, ${y}px)`;
-    target.setAttribute('data-x', x);
-    target.setAttribute('data-y', y);
-  });
-
-// You can also add additional logic for handling close button click event, etc.
-
-*/
- 
+	
 	  
     function  showPieChartFront(Correctpie,Incorrectpie){
  let Correct1 = parseInt(Correctpie);
