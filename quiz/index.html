@@ -549,7 +549,7 @@ position: fixed;
     <button id="close-btn" class="close-button">&times;</button>
 	  </div>
     <div id="explanation"></div>
-    <div class="btn_container">   <div></div> <div id="reportFormBTN" onclick="openReport()" >Report</div>
+    <div class="btn_container">   <div></div> <div id="reportFormBTN" onclick="openReport(); closeExplanationPopup();" >Report</div>
 </div>
 	  
   </div>
@@ -644,7 +644,8 @@ position: fixed;
 	
 					
 	<div id="reportForm" ">
-  <div class="form-group">
+  <div class="form-group" id="reportView">
+    <span  onclick="closeReport()" class="close">&times;</span>
     <label for="reportType">Report Type</label>
     <select class="form-control" id="reportType" required>
       <option value="">Select...</option>
@@ -658,7 +659,7 @@ position: fixed;
     <textarea class="form-control" id="reportDetails" rows="4" required></textarea>
   </div>
   <hr>
-  <button id="reportFormBTN" class="btn btn-primary btn-block" onclick="submitReport()()" >Submit Report</button>
+  <button id="reportFormBTN" class="btn btn-primary btn-block" onclick="submitReport()" >Submit Report</button>
 </div>
 	
 		
@@ -1484,6 +1485,8 @@ submitReviewBtn.classList.add('shake-animation');
 	    
 // Function to open the modal
 function openReport() {
+	  slideIn("reportView");
+
   reportForm.style.display = 'block';
 	 console.log("openModal      "); 
 	
@@ -1495,6 +1498,7 @@ document.getElementById('closeReportBTN').addEventListener('click', closeReport)
 
 // Function to close the modal
 function closeReport() {
+	  slideOut("reportView");
   reportForm.style.display = 'none';
 
 }
