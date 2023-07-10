@@ -349,8 +349,8 @@ if (questionObj.imageURL === "" || questionObj.imageURL === null || questionObj.
 }
 	
 	
-  document.getElementById("difficulty").innerHTML = questionObj.difficulty;
-  document.getElementById("realQustionNum").innerHTML = questionObj.questionNumber;
+  document.getElementById("difficulty").innerHTML = "Difficulty: <strong>"questionObj.difficulty+"</strong>;
+  document.getElementById("realQustionNum").innerHTML = "# "+questionObj.questionNumber;
 	
 
   const answerBTN = document.getElementsByClassName("answer-option");
