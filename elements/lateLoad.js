@@ -369,7 +369,7 @@ const badges = [
 
 
 
-   function openPopup(){
+   function openPopup(xxx){
 
 if(document.getElementById('loginPopup')){
 slideIn("loginPopupBody");
@@ -399,7 +399,11 @@ fetch(authIndex)
 	
 signupLoginArea.display = "none";
  
+	  if(xxx === "signin"){
+	switchTab('signup');   
+	  }else{
 	switchTab('login');   
+	  }
 slideIn("loginPopupBody");
   document.getElementById('loginPopup').classList.remove('d-none');
 	SetupLoginBTNFunc();
