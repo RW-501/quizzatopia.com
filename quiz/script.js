@@ -1272,6 +1272,7 @@ startChasingLights();
 utterance.addEventListener('end', function(event) {
  // console.log('Speech ended.');
 	  isSpeaking = false;
+	stopChasingLights();
 
 });
 
@@ -1282,7 +1283,6 @@ function stopSpeaking() {
     synthesis.cancel();
   }
   isSpeaking = false;
-	stopChasingLights();
 }
 
 window.addEventListener('beforeunload', function(event) {
