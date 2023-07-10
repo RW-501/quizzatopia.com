@@ -1431,15 +1431,10 @@ function fetchData(q, e) {
 	  
 fetchData(q, e);
 
-const reportModal = document.getElementById('reportModal');
+const reportForm = document.getElementById('reportForm');
 
 	
 function submitReport(){
-
-
-	      // Get the modal element
-
-const reportForm = document.getElementById('reportForm');
 
   const reportType = document.getElementById('reportType').value;
   const reportDetails = document.getElementById('reportDetails').value;
@@ -1489,13 +1484,13 @@ submitReviewBtn.classList.add('shake-animation');
 	    
 // Function to open the modal
 function openReport() {
-  reportModal.style.display = 'block';
+  reportForm.style.display = 'block';
 	 console.log("openModal      "); 
 }
 
 // Function to close the modal
 function closeReport() {
-  reportModal.style.display = 'none';
+  reportForm.style.display = 'none';
 
 }
 
