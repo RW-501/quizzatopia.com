@@ -366,7 +366,7 @@ if (questionObj.imageURL === "" || questionObj.imageURL === null || questionObj.
 
 	
 
-	}
+	
 	
 	
   // Randomize the order of the answer options
