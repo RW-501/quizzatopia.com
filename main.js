@@ -1366,29 +1366,28 @@ function SetupLoginBTNFunc(){
 	
 		
 	
-
 function onAuthSuccess(userInfo) {
-  // Perform any actions or operations you want to execute after successful authentication
-	
-  // Call checkUserInfoChanges() after successful login
-      checkUserInfoChanges();
-		  loggedIn = true;
-	setLoggedInCookie(); 
-	
-	
-	
-	// Example: Display a welcome message to the user
+  checkUserInfoChanges();
+  loggedIn = true;
+  setLoggedInCookie();
+
   console.log('Welcome, ' + userInfo.userName + '!');
 
+  saveUserInfoToFirestore(userInfo);
+  updateNavBar();
+  displayUserInfo();
 
-	  saveUserInfoToFirestore(userInfo);
+  // Add a delay using a promise
+  const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-updateNavBar();
-	  displayUserInfo();
- slideOut("loginPopup");
-	  document.getElementById('loginPopup').classList.add('d-none');
-
+  slideOut("loginPopup")
+    .then(() => delay(500)) // Adjust the delay time as needed
+    .then(() => {
+      document.getElementById('loginPopup').classList.add('d-none');
+    })
+    .catch(error => console.error(error));
 }
+
 
 
 
