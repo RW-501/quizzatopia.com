@@ -649,8 +649,7 @@ function showLoginPopupIfNeeded() {
 		  
 if (elementExists('loginPopup')) {
   // The element exists, you can proceed with accessing it
- slideIn("loginPopupBody");
-
+    openPopup();
 }
  
 
