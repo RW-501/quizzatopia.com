@@ -1047,9 +1047,9 @@ var currentQuestion =   document.getElementById("question").innerHTML;
 var currentOptions = document.getElementsByClassName("answer-option");
 var optionsString = "";
 
-for (let i = 1; i < currentOptions.length; i++) {
+for (let i = 0; i < currentOptions.length; i++) {
 	if(currentOptions[i].innerHTML !== ""){
-  optionsString += " Option Number "+[i]+" "+currentOptions[i].innerHTML +" ";
+  optionsString += " Option Number "+[i =+1]+" "+currentOptions[i].innerHTML +" ";
 	}
 }
 
