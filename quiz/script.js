@@ -291,9 +291,6 @@ function showAdsFunc() {
 }
 
 
-
-
-// Function to shuffle an array using Fisher-Yates algorithm
 // Function to shuffle an array using Fisher-Yates algorithm
 function shuffleArrayAnswers(array) {
   const shuffledArray = [...array];
@@ -304,7 +301,7 @@ function shuffleArrayAnswers(array) {
   return shuffledArray;
 }
 
-
+// Function to show the question
 function showQuestion() {
   const animations = ["right", ""];
   const randomIndex = Math.floor(Math.random() * animations.length);
@@ -312,13 +309,11 @@ function showQuestion() {
 
   slideIn("quizContainer", selectedAnimation);
 
-  // Check if the current question number is in the adQuestionNumbers array
   if (adQuestionNumbers.includes(currentQuestion)) {
     const index = adQuestionNumbers.indexOf(currentQuestion);
     if (index !== -1) {
       adQuestionNumbers.splice(index, 1);
     }
-    // Call the showAdsFunc() to start displaying ads
     showAdsFunc();
     return;
   }
@@ -346,7 +341,6 @@ function showQuestion() {
     }
   }
 
-  // Randomize the order of the answer options
   const options = questionObj.options;
   const shuffledOptions = shuffleArrayAnswers(options);
 
@@ -361,26 +355,20 @@ function showQuestion() {
     startTimer();
   }
 
-  // Update the label of the skip-next-btn
   const skipNextBtn = document.getElementById('skip-next-btn');
   skipNextBtn.innerHTML = questionCorrect > currentQuestion ? 'Next' : 'Skip';
 }
 
-
-
-  // Get the progress bar element
-var progressBar = document.getElementById('progress-bar');
-
-// Update the progress bar
+// Function to update the progress bar
 function updateProgressBar(currentQuestion) {
-  let QuestionNewNum  = currentQuestion === 0 ? 1 : currentQuestion;
-  var percentage = (currentQuestion / totalQuestions) * 100;
-	if(progressBar){
-  progressBar.style.width = percentage + '%';
-	}
+  let QuestionNewNum = currentQuestion === 0 ? 1 : currentQuestion;
+  const progressBar = document.getElementById('progress-bar');
+  if (progressBar) {
+    const percentage = (currentQuestion / totalQuestions) * 100;
+    progressBar.style.width = percentage + '%';
+  }
+}
 
-}   
-// Function to check the user's answer
 // Function to check the user's answer
 function checkAnswer() {
   document.getElementById("skip-next-btn").innerHTML = "Next";
@@ -391,7 +379,6 @@ function checkAnswer() {
   const questionObj = questions[currentQuestion];
   const options = optionContainers[currentQuestion]?.children;
 
-  // Disable all options and apply appropriate classes
   if (options) {
     for (let i = 0; i < options.length; i++) {
       options[i].classList.add('disabled');
@@ -403,54 +390,43 @@ function checkAnswer() {
     }
   }
 
-  // Check if the selected answer is correct
   let correct_bool;
   if (selectedAnswer === questionObj.answer) {
     selectedOption.classList.add('correct');
-if (isAnimationEnabled) {
-selectedOption.classList.add('pulse-animation');
-}
-	  
+    if (isAnimationEnabled) {
+      selectedOption.classList.add('pulse-animation');
+    }
     correct_bool = "Correct";
-    questionCorrect++; // Increment the questionCorrect variable
-    quizInfo.questionCorrect = questionCorrect; // Update the questionCorrect value in quizInfo
-
+    questionCorrect++;
+    quizInfo.questionCorrect = questionCorrect;
     saveQuizInfo(quizCode, quizInfo);
   } else {
     selectedOption.classList.add('incorrect');
     correct_bool = "incorrect";
 
-    // Highlight the missed answer
     const answerOptions = document.getElementsByClassName("answer-option");
     for (let i = 0; i < answerOptions.length; i++) {
       if (answerOptions[i].innerHTML === questionObj.answer) {
         answerOptions[i].classList.add('missed');
-	      
-	      //  console.log('isAnimationEnabled :', isAnimationEnabled);
-
-if (isAnimationEnabled) {
-answerOptions[i].classList.add('shake-animation');
-}
+        if (isAnimationEnabled) {
+          answerOptions[i].classList.add('shake-animation');
+        }
       }
     }
   }
 
-  // Update the question number
   quizInfo.questionNumber = currentQuestion;
 
-  // Show the explanation
   showExplanation(questionObj.explanation);
   logStorageContents(quizCode);
 }
-
 
 // Function to show the explanation for the current question
 function showExplanation(explanation) {
   document.getElementById("explanation").innerHTML = explanation;
   disableAnswerButtons();
   showExplanationPopup();
-document.getElementById('show-explanation-btn').classList.remove("d-none");
-
+  document.getElementById('show-explanation-btn').classList.remove("d-none");
 }
 
 // Function to show the explanation popup
@@ -489,33 +465,23 @@ function enableAnswerButtons() {
 
 // Function to show the next question
 function nextQuestion() {
-		 console.log("nextQuestion:   ");
-
   currentQuestion++;
-document.getElementById('show-explanation-btn').classList.add("d-none");
-	
+  document.getElementById('show-explanation-btn').classList.add("d-none");
+
   const animations = ["right", ""];
   const randomIndex = Math.floor(Math.random() * animations.length);
   const selectedAnimation = animations[randomIndex];
-  
+
   slideOut("quizContainer", selectedAnimation);
-	
-	  const explanationContainer = document.querySelector('.explanation-container');
-if(explanationContainer.style.display == 'block'){
 
-		explanationContainer.style.display = 'none';
+  const explanationContainer = document.querySelector('.explanation-container');
+  if (explanationContainer.style.display == 'block') {
+    explanationContainer.style.display = 'none';
+  }
 
-}
-	 console.log("currentQuestion:   "+currentQuestion);
-
-	
-	
   if (currentQuestion < totalQuestions) {
     enableAnswerButtons();
     showQuestion();
-      console.log("currentQuestion " + currentQuestion + " is being shown.");
-         // document.getElementById("skip-next-btn").innerHTML = "Next";
-
   } else {
     endQuiz();
   }
@@ -523,13 +489,13 @@ if(explanationContainer.style.display == 'block'){
   updateQuestionNumber();
 }
 
+// Function to skip the question
 function skipQuestion() {
   currentQuestion++;
 
   if (currentQuestion < totalQuestions) {
     enableAnswerButtons();
     showQuestion();
-
   } else {
     endQuiz();
   }
@@ -537,11 +503,8 @@ function skipQuestion() {
   updateQuestionNumber();
 }
 
-
-
 // Function to handle skip or next action
 function skipOrNext() {
-	 console.log("skipOrNext:   ");
   if (this.innerHTML === 'Skip') {
     skipQuestion();
   } else {
@@ -549,49 +512,26 @@ function skipOrNext() {
   }
 }
 
-
-
-
-
 // Function to update the question number and progress bar
 function updateQuestionNumber() {
   const questionNumberDisplay = document.getElementById("question-number");
-const currentQuestionNumber = currentQuestion === 0 ? 1 : currentQuestion;
+  const currentQuestionNumber = currentQuestion === 0 ? 1 : currentQuestion;
   questionNumberDisplay.innerHTML = `Question ${currentQuestionNumber}/${totalQuestions}`;
 
-  // Update the progress bar
   updateProgressBar(currentQuestionNumber);
 }
 
-
-
-
-
-  const userStartPoints = userInfo.userPoints;
-let initialPoints = userStartPoints;
-
-
-
+// Function to calculate the earned points
 function calculateEarnedPoints() {
   const userInfo = getUserInfo();
   let currentPoints = userInfo.userPoints;
   let currentPoint = currentPoints;
   let earnedPoints = currentPoint - initialPoints;
-	
 
   return earnedPoints > 0 ? earnedPoints : 0;
-	
 }
 
-// Function to check if a badge has been earned
- const oldBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
-	console.log('oldBadges:', oldBadges);
-
-
-
-
-
-
+// Function to add a badge to the user
 function addBadgeToUser(userId, badgeId) {
   const usersCollection = firebase.firestore().collection('usersBadges');
 
@@ -620,170 +560,131 @@ function addBadgeToUser(userId, badgeId) {
   });
 }
 
-
+// Function to display earned points with animation
 function displayEarnedPoints(start, end, duration) {
   let current = start;
-  const increment = Math.ceil((end - start) / duration * 10); // Adjust the speed of animation by changing the increment value
+  const increment = Math.ceil((end - start) / duration * 10);
   const counterElement = document.getElementById("earnedPoints");
-  
+
   const intervalId = setInterval(() => {
     current += increment;
-    counterElement.textContent = "+"+current+" Points!";
+    counterElement.textContent = "+" + current + " Points!";
 
-    if (current >= end ) {
+    if (current >= end) {
       clearInterval(intervalId);
     }
-  }, 100); // Adjust the interval duration to control the speed of animation
+  }, 100);
 }
 
- function retakeQuizFunc(){
-
+// Function to retake the quiz
+function retakeQuizFunc() {
   location.reload();
-	
- }
+}
 
+// Function to update quiz count in the database
+async function updatequizDB() {
+  const db2 = firebase.firestore();
 
+  // Check if quiz already exists in Firestore
+  const querySnapshot2 = await db2.collection('quizzes').where('quizCodeDB', '==', quizCode).get();
 
- 
-	async function updatequizDB() {
-  
-	  const db2 = firebase.firestore();
+  if (!querySnapshot2.empty) {
+    const quizDoc = querySnapshot2.docs[0]; // Assuming there's only one document with the matching quizCodeDB
 
-// Check if quiz already exists in Firestore
-const querySnapshot2 = await db2.collection('quizzes').where('quizCodeDB', '==', quizCode).get();
+    // Update the quizFinishedCount field by 1
+    const quizId = quizDoc.id; // Get the document ID
+    const quizRef = db2.collection('quizzes').doc(quizId); // Create a reference to the document
 
-if (!querySnapshot2.empty) {
-  const quizDoc = querySnapshot2.docs[0]; // Assuming there's only one document with the matching quizCodeDB
+    await quizRef.update({
+      quizFinishedCount: firebase.firestore.FieldValue.increment(1)
+    });
 
-// Update the quizStartedCount field by 1
-const quizId = quizDoc.id; // Get the document ID
-const quizRef = db2.collection('quizzes').doc(quizId); // Create a reference to the document
-
-await quizRef.update({
-  quizFinishedCount: firebase.firestore.FieldValue.increment(1)
-});
-	
-  console.log(quizCode + " was updated: "+quizId); // Output: <quizCode> was updated
-
-} 
-	  
-	}
-
-
-
-
+    console.log(quizCode + " was updated: " + quizId);
+  }
+}
 
 function endQuiz() {
-	
   clearInterval(timer);
   quizStarted = false;
 
-  // Clear the timer display
   const timerDisplay = document.getElementById("timer");
   timerDisplay.innerHTML = "";
-	
- const userInfo = JSON.parse(localStorage.getItem('userInfo')) || [];
-const userId =	userInfo.firebaseId;
- const userBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
 
-addBadgeToUser(userId, userBadges);
-	
+  const userInfo = JSON.parse(localStorage.getItem('userInfo')) || [];
+  const userId = userInfo.firebaseId;
+  const userBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
 
-  
-  // Calculate feedback and display it
+  addBadgeToUser(userId, userBadges);
+
   const feedback = calculateFeedback();
   document.getElementById("feedback").innerHTML = feedback;
 
-  // Calculate and display the score 
   const percentageScore = Math.round((questionCorrect / totalQuestions) * 100);
   const resultMsg = `You scored ${questionCorrect}/${totalQuestions} (${percentageScore}%)`;
   document.getElementById("score").innerHTML = resultMsg;
- 
-	updatePointsAndRank();
-	// bonus
-if (percentageScore === 100) {
-  let halfQuestionTotal = totalQuestions / 2;
-  let allRightBonus = pointsRewards * halfQuestionTotal;
-  
-  updatePoints(allRightBonus);
-}
+
+  updatePointsAndRank();
+
+  if (percentageScore === 100) {
+    let halfQuestionTotal = totalQuestions / 2;
+    let allRightBonus = pointsRewards * halfQuestionTotal;
+
+    updatePoints(allRightBonus);
+  }
+
   updateQuizzesTaken(1);
-	checkTier();
-rewardPointsForReturningDays();
-	awardQuizzesTakenBadges();
+  checkTier();
+  rewardPointsForReturningDays();
+  awardQuizzesTakenBadges();
 
-const earnedPoints = calculateEarnedPoints();
-console.log("earnedPoints:", earnedPoints);
-	// Usage example:
-const startValue = 0;
-const animationDuration = 2000; // Duration in milliseconds (2 seconds)
-  console.log('earnedPoints:', earnedPoints);
+  const earnedPoints = calculateEarnedPoints();
+  console.log("earnedPoints:", earnedPoints);
 
-	if(earnedPoints > 0){
-displayEarnedPoints(startValue, earnedPoints, animationDuration);
-	}
+  const startValue = 0;
+  const animationDuration = 2000;
+  if (earnedPoints > 0) {
+    displayEarnedPoints(startValue, earnedPoints, animationDuration);
+  }
 
+  slideIn("end-container", "right");
 
-	     			slideIn("end-container",'right');
-
-  // Hide the quiz container and show the end container
   document.getElementById("quiz-container").classList.add("d-none");
   document.getElementById("end-container").classList.remove("d-none");
- // Hide the MessageBoard info
   document.getElementById("otherQuizzes").classList.remove("d-none");
-	
-  // Show the badge if all answers are correct
-  if (questionCorrect === totalQuestions || questionCorrect == 0 ) {
-  
-  } else {
-    // Show the pie chart for correct and incorrect answers
+
+  if (questionCorrect !== totalQuestions && questionCorrect !== 0) {
     showPieChartEnd();
   }
-endFucs();
-   const newBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
-const uniqueArray = newBadges.filter(item => !oldBadges.some(element => element.id === item.id));
 
-	/*
-  console.log('newBadges inside:', newBadges);
-  console.log('oldBadges inside:', oldBadges);
+  const newBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
+  const uniqueArray = newBadges.filter(item => !oldBadges.some(element => element.id === item.id));
 
+  if (uniqueArray.length > 0) {
+    document.getElementById("badgebox").classList.remove("d-none");
 
-*/	
+    function displayBadges() {
+      const savedBadges = uniqueArray || [];
+      const badgesContainer = document.getElementById("badgeView");
+      badgesContainer.innerHTML = savedBadges.map(newBadge => `
+        <div class="card awardBadge">
+          <div class="badge-layer-1">
+            <div class="badge-layer-2">
+              <img src="${newBadge.imageUrl}" alt="${newBadge.id}" class="badge-image">
+            </div>
+          </div>
+          <div class="card-body">
+            <br>
+            <h5 class="card-title">${newBadge.name}</h5><hr>
+            <p class="card-text">${newBadge.description}</p>
+          </div>
+        </div>
+      `).join("");
+    }
 
-	
+    displayBadges();
+  }
 
-	
-	
-	if(uniqueArray.length > 0){
-  document.getElementById("badgebox").classList.remove("d-none");
-// Function to display badges
-function displayBadges() {
-  const savedBadges = uniqueArray || [];
-  const badgesContainer = document.getElementById("badgeView");
-  badgesContainer.innerHTML = savedBadges.map(newBadge => `
-   <div class="card awardBadge">
-  <div class="badge-layer-1">
-  <div class="badge-layer-2">
-    <img src="${newBadge.imageUrl}" alt="${newBadge.id}" class="badge-image">
-    </div>
-  </div>
-  <div class="card-body">
-  <br>
-    <h5 class="card-title">${newBadge.name}</h5><hr>
-    <p class="card-text">${newBadge.description}</p>
-  </div>
-</div>
-
-  `).join("");
-}
-
-displayBadges();  
-	}
-	
-	
-		updatequizDB();
-  // Unhide the message board
- // document.getElementById("MessageBoard").classList.remove("d-none");
+  updatequizDB();
 }
 
 
