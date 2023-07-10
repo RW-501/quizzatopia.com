@@ -993,10 +993,9 @@ function onAuthSuccess(userInfo) {
   // Add a delay using a promise
   const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-  slideOut("loginPopup")
     .then(() => delay(500)) // Adjust the delay time as needed
     .then(() => {
-      document.getElementById('loginPopup').classList.add('d-none');
+	      slideOut("loginPopup")
     })
     .catch(error => console.error(error));
 }
