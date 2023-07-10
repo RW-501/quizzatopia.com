@@ -403,10 +403,6 @@ signupLoginArea.display = "none";
 // Function to open the login/signup popup
 function openPopup() {
   getLoginElements();
-slideIn("loginPopupBody");
-  document.getElementById('loginPopup').classList.remove('d-none');
-	SetupLoginBTNFunc();
-		  console.log("Inside   ???????view openPopup???"); // Output: 
 
 }
 
