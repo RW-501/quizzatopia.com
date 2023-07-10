@@ -1166,7 +1166,10 @@ readTextFunc(readThis);
 
 }
 
-
+function readQuestionFunc(){
+let readThis =  "Explanation. "+  document.getElementById("question").innerHTML;
+readTextFunc(readThis);
+}
 function readExplanationFunc(){
 let readThis =  "Explanation. "+  document.getElementById("explanation").innerHTML;
 readTextFunc(readThis);
