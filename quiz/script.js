@@ -179,7 +179,6 @@ async function updateQuizStartedCount(quizCode) {
   updateProgressBar(currentQuestion);
     showQuestion();
   
-}
 
 
 
@@ -1007,6 +1006,76 @@ submitReviewBtn.classList.add('shake-animation');
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Populate the voice dropdown with available voices
+function populateVoiceDropdown() {
+  var voices = speechSynthesis.getVoices();
+  var voiceDropdown = document.getElementById('voiceDropdown');
+  
+  voices.forEach(function(voice) {
+    var option = document.createElement('option');
+    option.value = voice.voiceURI;
+    option.textContent = voice.name;
+    voiceDropdown.appendChild(option);
+  });
+}
+
+// Save voice settings to local storage
+function saveVoiceSettings() {
+  var rateSlider = document.getElementById('rateSlider');
+  var voiceDropdown = document.getElementById('voiceDropdown');
+  
+  var voiceSettings = {
+    rate: parseFloat(rateSlider.value),
+    voice: voiceDropdown.value
+  };
+  
+  localStorage.setItem('voiceSettings', JSON.stringify(voiceSettings));
+}
+
+// Load voice settings from local storage
+function loadVoiceSettings() {
+  var voiceSettings = JSON.parse(localStorage.getItem('voiceSettings'));
+  if (voiceSettings) {
+    var rateSlider = document.getElementById('rateSlider');
+    var voiceDropdown = document.getElementById('voiceDropdown');
+    
+    rateSlider.value = voiceSettings.rate;
+    voiceDropdown.value = voiceSettings.voice;
+  }
+}
+
+// Event listeners for saving and loading voice settings
+var rateSlider = document.getElementById('rateSlider');
+var voiceDropdown = document.getElementById('voiceDropdown');
+
+rateSlider.addEventListener('input', saveVoiceSettings);
+voiceDropdown.addEventListener('change', saveVoiceSettings);
+
+// Populate the voice dropdown on page load
+window.addEventListener('load', function() {
+  populateVoiceDropdown();
+  loadVoiceSettings();
+});
+
+
+
+
 function readQuizFunc() {
   // Add your logic to play audio or trigger reading functionality here
   // For example, you can use the Web Audio API or Text-to-Speech (TTS) APIs
@@ -1028,8 +1097,17 @@ console.log(currentQuestion+", "+optionsString);
 let readThis = currentQuestion+" "+optionsString;
 
  if ('speechSynthesis' in window) {
-    var synthesis = window.speechSynthesis;
-    var utterance = new SpeechSynthesisUtterance(readThis);
+    let synthesis = window.speechSynthesis;
+    let utterance = new SpeechSynthesisUtterance(readThis);
+
+    
+    // Load settings from local storage
+    let voiceSettings = JSON.parse(localStorage.getItem('voiceSettings'));
+    if (voiceSettings) {
+      utterance.rate = voiceSettings.rate;
+      utterance.voice = voiceSettings.voice;
+    }
+	 
     synthesis.speak(utterance);
   } else {
     console.log('Text-to-speech is not supported in this browser.');
@@ -1047,8 +1125,16 @@ function readExplanationFunc() {
 let readThis =  "Explanation "+  document.getElementById("explanation").innerHTML;
 
  if ('speechSynthesis' in window) {
-    var synthesis = window.speechSynthesis;
-    var utterance = new SpeechSynthesisUtterance(readThis);
+    let synthesis = window.speechSynthesis;
+    let utterance = new SpeechSynthesisUtterance(readThis);
+
+    
+    // Load settings from local storage
+    let voiceSettings = JSON.parse(localStorage.getItem('voiceSettings'));
+    if (voiceSettings) {
+      utterance.rate = voiceSettings.rate;
+      utterance.voice = voiceSettings.voice;
+    }
     synthesis.speak(utterance);
   } else {
     console.log('Text-to-speech is not supported in this browser.');
