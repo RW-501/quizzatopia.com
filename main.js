@@ -154,6 +154,8 @@ function revertImagesToNormalResolution() {
 // Call the function to convert images to low resolution when the page has finished loading
 window.onload = function() {
   convertImagesToLowResolution();
+		  	  console.log('Start high resolution: ????');
+
 };
 
 // Example usage to revert images back to normal resolution after some event
@@ -161,6 +163,8 @@ window.onload = function() {
 // For example, on a button click or after a certain time period
 setTimeout(function() {
   revertImagesToNormalResolution();
+			  	  console.log('End high resolution: ????');
+
 }, 5000);  // Revert after 5 seconds (adjust the duration as needed)
 
 
