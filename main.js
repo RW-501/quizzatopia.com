@@ -101,18 +101,6 @@ loadScreenFunc();
 
 
 
-window.onload = function() {
-  var script = document.createElement('script');
-  script.src = '/elements/lateLoad.js';
-  document.head.appendChild(script);
-
-  script.onload = function() {
-    lateLoad();
-  };
-};
-
-
-
 
 function setLoggedInCookie() {
   var expirationDate = new Date();
@@ -190,6 +178,8 @@ console.log('userInfo main: ', userInfo);
   return userInfo;
 }
 
+
+let pointsRewards;
 
 
   var userDashboard;
@@ -286,66 +276,6 @@ if (loggedIn === true && userDashboard !== null) {
 
 
 
-
-
-
-	
-
-
-
-
-
-
-let pointsRewards;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Function to check if a badge has been earned
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const firebaseConfig = {
   apiKey: "AIzaSyC8PYJV5-E6hIYbElsgb5e7MOS0faCiLM4",
   authDomain: "quizzatopia-bdfc9.firebaseapp.com",
@@ -412,14 +342,7 @@ firebase.firestore().enablePersistence()
 
 }
 
-		 // Get a reference to the Firestore database
-//  const db = firebase.firestore();
-
-  // Create a collection called "users" (if it doesn't exist already)
-  //const usersCollection = db.collection('users');
-
-
-
+	
 // Function to retrieve user location using a geolocation API
 var locationV;
 
@@ -455,69 +378,6 @@ async function getIPAddress() {
 }
 
 getIPAddress();
-
-
-
-
-
-
-
-
-
-
-
-	
-	
-
-
-
-
-
-
-
-
-	
-function viewDashboard() {
- 
-	if (loggedIn === true) {		
-  window.location.href = '/user/';
-	}else{
-      // Show the login popup
-     			slideIn("loginPopupBody");
-openPopup();switchTab('login');
-
-	}
-}
-		
-
-
-
-
-
-
-
-// Call the function to fetch and insert the HTML based on the page level
-document.addEventListener('DOMContentLoaded', function() {
-  fetchAndInsertContent();
-	 //   console.log('DOMContentLoaded 1296 :   ');
-
-});
-
-
-
-
-
- document.addEventListener('click', function(event) {
-  const navbar = document.getElementById('navbar');
-    const navbarNav = document.querySelector('#navbarNav');
-	 if (!navbarNav.classList.contains('show')) {
-    if (!navbar.contains(event.target)) {
-navbarNav.classList.remove('show'); 
-    }
-  }
-});
-
-
 
 
 
@@ -571,21 +431,46 @@ navbarNav.classList.remove('show');
   }
  
 
+ document.addEventListener('click', function(event) {
+  const navbar = document.getElementById('navbar');
+    const navbarNav = document.querySelector('#navbarNav');
+	 if (!navbarNav.classList.contains('show')) {
+    if (!navbar.contains(event.target)) {
+navbarNav.classList.remove('show'); 
+    }
+  }
+});
+
+function navbarToggler() {
+  var navbarNav = document.querySelector('#navbarNav');
+  navbarNav.classList.toggle('collapse');
+}
 
 
 
 
-//	const db = firebase.firestore();
+// Call the function to fetch and insert the HTML based on the page level
+document.addEventListener('DOMContentLoaded', function() {
+  fetchAndInsertContent();
+	 //   console.log('DOMContentLoaded 1296 :   ');
 
-// 
-
-
-
-
-
+});
 
 
 
+
+function viewDashboard() {
+ 
+	if (loggedIn === true) {		
+  window.location.href = '/user/';
+	}else{
+      // Show the login popup
+     			slideIn("loginPopupBody");
+openPopup();switchTab('login');
+
+	}
+}
+		
 
 
 
@@ -657,10 +542,6 @@ function showLoginPopupIfNeeded() {
   }
 }
 
-function navbarToggler() {
-  var navbarNav = document.querySelector('#navbarNav');
-  navbarNav.classList.toggle('collapse');
-}
 
 		function elementExists(elementId) {
   const element = document.getElementById(elementId);
@@ -673,6 +554,21 @@ if (elementExists('loginPopup')) {
 
 }
  
+
+
+
+window.onload = function() {
+  var script = document.createElement('script');
+  script.src = '/elements/lateLoad.js';
+  document.head.appendChild(script);
+
+  script.onload = function() {
+    lateLoad();
+  };
+};
+
+
+
 
 		    console.log("  ?????????????????????????    ^   Main.js ^   ????????????????????????999        ");
 
