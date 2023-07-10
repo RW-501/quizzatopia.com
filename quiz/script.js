@@ -293,8 +293,17 @@ function showAdsFunc() {
 // Function to shuffle an array using Fisher-Yates algorithm
 function shuffleArrayAnswers(array) {
   const shuffledArray = [...array];
-  const allOfTheAbove = "All of the Above";
-  const indexOfAllOfTheAbove = shuffledArray.indexOf(allOfTheAbove);
+
+
+// Words to search for
+const searchWords = ['all', 'above'];
+
+// Find the array that contains the search words
+const foundArray = shuffledArray.find(array => {
+  return searchWords.some(word => array.includes(word));
+});
+	
+  const indexOfAllOfTheAbove = shuffledArray.indexOf(foundArray);
   
   if (indexOfAllOfTheAbove !== -1) {
     shuffledArray.splice(indexOfAllOfTheAbove, 1);
