@@ -293,12 +293,23 @@ function showAdsFunc() {
 // Function to shuffle an array using Fisher-Yates algorithm
 function shuffleArrayAnswers(array) {
   const shuffledArray = [...array];
+  const allOfTheAbove = "All of the Above";
+  const indexOfAllOfTheAbove = shuffledArray.indexOf(allOfTheAbove);
+  
+  if (indexOfAllOfTheAbove !== -1) {
+    shuffledArray.splice(indexOfAllOfTheAbove, 1);
+  }
+  
   for (let i = shuffledArray.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
   }
+  
+  shuffledArray.push(allOfTheAbove);
+  
   return shuffledArray;
 }
+
 
 // Function to show the question
 function showQuestion() {
