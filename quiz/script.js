@@ -1200,7 +1200,7 @@ readTextFunc(readThis);
 }
 
 function readQuestionFunc(){
-let readThis =  "Explanation. "+  document.getElementById("question").innerHTML;
+let readThis =    document.getElementById("question").innerHTML;
 readTextFunc(readThis);
 }
 function readExplanationFunc(){
