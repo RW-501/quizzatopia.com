@@ -308,9 +308,9 @@ firebase.firestore().enablePersistence()
   .then(() => {
     // Offline persistence enabled
 	//  const savedUserInfoDB = localStorage.getItem("userInfo");
-  const savedUserInfoDB = getUserInfo();
+//  const savedUserInfoDB = getUserInfo();
 
-	saveUserInfoToFirestore(savedUserInfoDB);
+	//saveUserInfoToFirestore(savedUserInfoDB);
   })
   .catch((error) => {
     // Error enabling offline persistence
