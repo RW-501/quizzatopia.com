@@ -179,6 +179,45 @@
 </script>
 
 	<style>
+.game-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        font-family: "Arial", sans-serif;
+        font-size: 18px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .game-button:hover {
+        background-color: #45a049;
+      }
+
+      .share-link-container {
+        display: flex;
+        align-items: center;
+      }
+
+      .share-link-input {
+        flex-grow: 1;
+        padding: 10px;
+        font-family: "Arial", sans-serif;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+      }
+
+      .copy-button {
+        margin-left: 10px;
+      }
+
+
+
+
+		
 .popupMSG {
 position: fixed;
     bottom: 0;
@@ -607,6 +646,17 @@ position: fixed;
     <button class="other-quiz-btn btn btn-secondary mt-4" onclick="window.location.href = '/quizzes'">Try Another Quiz</button><br><hr>
     <!-- Try Another Quiz Button -->
 
+ <div class="share-link-container">
+      <input
+        type="text"
+        id="shareLink"
+        class="share-link-input"
+        value="https://example.com/share"
+        readonly
+      />
+      <button class="game-button copy-button" onclick="copyLink()">Copy</button>
+    </div>
+	  
     <div id="social-sharing" class="mt-4">
       <!-- Social Sharing Section -->
       <p>
