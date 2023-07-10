@@ -1056,24 +1056,22 @@ function getUserOperatingSystem() {
 
 
 
-
-// Populate the voice dropdown with available voices
 function populateVoiceDropdown() {
-  var voices = speechSynthesis.getVoices();
   var voiceDropdown = document.getElementById('voiceDropdown');
-
-  var userOS = getUserOperatingSystem();
-
-  voices.forEach(function(voice) {
-    // Filter the voices based on the user's operating system
-    if (voice.os === userOS || voice.os === 'all') {
+  
+  // Wait for the 'voiceschanged' event
+  speechSynthesis.addEventListener('voiceschanged', function() {
+    var voices = speechSynthesis.getVoices();
+  
+    voices.forEach(function(voice) {
       var option = document.createElement('option');
       option.value = voice.voiceURI;
       option.textContent = voice.name;
       voiceDropdown.appendChild(option);
-    }
+    });
   });
 }
+
 
 
 // Save voice settings to local storage
