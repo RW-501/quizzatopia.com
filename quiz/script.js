@@ -1115,13 +1115,17 @@ window.addEventListener('load', function() {
 });
 
 
+var isSpeaking = false; // Track if an utterance is currently being spoken
 
 
 function readQuizFunc() {
-  // Add your logic to play audio or trigger reading functionality here
-  // For example, you can use the Web Audio API or Text-to-Speech (TTS) APIs
-  // You can also customize the behavior based on your specific requirements
-	       // alert('Read Quiz!!!');
+
+  if (isSpeaking) {
+    // Stop the ongoing speech
+    stopSpeaking();
+    return;
+  }
+	
 var currentQuestion =   document.getElementById("question").innerHTML;
 
 var currentOptions = document.getElementsByClassName("answer-option");
@@ -1151,7 +1155,13 @@ let readThis = currentQuestion+" "+optionsString;
       }
       utterance.rate = voiceSettings.rate;
     }
-	 
+ // Event listener for the end of speech
+    utterance.onend = function() {
+      isSpeaking = false;
+    };
+
+    // Start speaking
+    isSpeaking = true;
     synthesis.speak(utterance);
   } else {
     console.log('Text-to-speech is not supported in this browser.');
@@ -1164,7 +1174,11 @@ let readThis = currentQuestion+" "+optionsString;
 
 
 function readExplanationFunc() {
-
+  if (isSpeaking) {
+    // Stop the ongoing speech
+    stopSpeaking();
+    return;
+  }
 
 let readThis =  "Explanation "+  document.getElementById("explanation").innerHTML;
 
@@ -1182,12 +1196,28 @@ let readThis =  "Explanation "+  document.getElementById("explanation").innerHTM
       }
       utterance.rate = voiceSettings.rate;
     }
-    synthesis.speak(utterance);
+ // Event listener for the end of speech
+    utterance.onend = function() {
+      isSpeaking = false;
+    };
+
+    // Start speaking
+    isSpeaking = true;
+	 synthesis.speak(utterance);
   } else {
     console.log('Text-to-speech is not supported in this browser.');
   }
 
-	
-	
+}
 
+
+
+
+// Function to stop the ongoing speech
+function stopSpeaking() {
+  if ('speechSynthesis' in window) {
+    var synthesis = window.speechSynthesis;
+    synthesis.cancel();
+  }
+  isSpeaking = false;
 }
