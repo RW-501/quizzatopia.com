@@ -82,7 +82,6 @@ async function startQuiz() {
 
   if (newQuizCount > QUIZ_COUNT_THRESHOLD && loggedIn == false) {
     // Show the login popup
-    slideIn("loginPopupBody");
     openPopup();
     switchTab('login');
   } else {
@@ -1092,16 +1091,19 @@ function readTextFunc(text) {
     var synthesis = window.speechSynthesis;
 	  
   let blankPattern = /_{1,}/; // Pattern for one or more underscores
-  let replacedQuestion = text.replace(blankPattern, "blank");
+  let replacedQuestion = text.replace(blankPattern, " blank ");
 
-    utterance.text = replacedQuestion;
 
     // Split the text into chunks
-    var chunkSize = 200; // Adjust the chunk size as needed
-    var chunks = [];
-    for (var i = 0; i < text.length; i += chunkSize) {
-      chunks.push(text.substr(i, chunkSize));
-    }
+var chunkSize = 200; // Adjust the chunk size as needed
+var chunks = [];
+var words = replacedQuestion.split(' ');
+
+for (var i = 0; i < words.length; i += chunkSize) {
+  var chunk = words.slice(i, i + chunkSize).join(' ');
+  chunks.push(chunk);
+}
+
 
     // Function to speak the chunks sequentially
     function speakChunks(index) {
