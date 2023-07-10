@@ -520,6 +520,8 @@ function updateQuestionNumber() {
 
   updateProgressBar(currentQuestionNumber);
 }
+const userStartPoints = userInfo.userPoints;
+const initialPoints = userStartPoints;
 
 // Function to calculate the earned points
 function calculateEarnedPoints() {
