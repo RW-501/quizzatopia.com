@@ -819,7 +819,6 @@ function showExplanationFunc() {
   // Replace this with your explanation content
  //const explanation = "This is the explanation for the question.";
 	
-     			//slideIn("loginPopupBody");
 document.getElementById('show-explanation-btn').classList.remove("d-none");
   const explanationContainer = document.querySelector('.explanation-container');
 		
