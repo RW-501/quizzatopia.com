@@ -1054,7 +1054,17 @@ for (let i = 1; i < currentOptions.length; i++) {
 }
 
 console.log(currentQuestion+" "+optionsString);
+var readThis = currentQuestion+" "+optionsString;
 
+ if ('speechSynthesis' in window) {
+    var synthesis = window.speechSynthesis;
+    var utterance = new SpeechSynthesisUtterance(readThis);
+    synthesis.speak(utterance);
+  } else {
+    console.log('Text-to-speech is not supported in this browser.');
+  }
+
+	
 	
 var currentExplanation  =   document.getElementById("explanation").innerHTML;
 
