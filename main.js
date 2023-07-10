@@ -72,16 +72,16 @@ document.body.appendChild(overlay);
    overlay.classList.add("loaded");
 
 
-
+	  	  console.log('Load');
 
 	
 setTimeout(function() {
-// const overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
-	  	  console.log('setTimeout 3');
+	  	  console.log('overlay ????');
  overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
   if (overlay) {
 	overlay.remove();  
 overlay.style.display = 'none'; // Hide the overlay if it exists
+	  	  console.log('overlay Removed');
 
   }
     document.documentElement.scrollTop = 0; // For modern browsers
