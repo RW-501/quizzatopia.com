@@ -1374,7 +1374,6 @@ function onAuthSuccess(userInfo) {
       checkUserInfoChanges();
 		  loggedIn = true;
 	setLoggedInCookie(); 
- slideOut("loginPopup");
 	
 	
 	
@@ -1384,9 +1383,10 @@ function onAuthSuccess(userInfo) {
 
 	  saveUserInfoToFirestore(userInfo);
 
-	  document.getElementById('loginPopup').classList.add('d-none');
 updateNavBar();
 	  displayUserInfo();
+ slideOut("loginPopup");
+	  document.getElementById('loginPopup').classList.add('d-none');
 
 }
 
