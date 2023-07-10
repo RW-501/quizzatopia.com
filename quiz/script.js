@@ -117,12 +117,40 @@ async function startQuiz() {
       quizName = quizInfo.quizName;
       numberOfQuestions = quizInfo.numberOfQuestions;
 
-      await updateQuizStartedCount(quizCode);
 
       document.getElementById("optionContainer").classList.add("d-none");
 
       // Hide the MessageBoard info
       document.getElementById("otherQuizzes").classList.add("d-none");
+
+
+ var numAd;
+
+  if (totalQuestions <= 15) {
+    numAds = 2;
+      if (totalQuestions <= 5) {
+            numAds = 1;
+      }
+  } else {
+    numAds = totalQuestions / 5;
+  }
+
+  var intvalue = Math.round(numAds);
+
+  quizAdPattern = generateQuizAdPattern(totalQuestions, intvalue);
+  adQuestionNumbers = quizAdPattern;
+
+  // Array to store the question numbers where the ad should be shown
+  adQuestionNumbers = quizAdPattern; // Example: Show ad after questions 3, 7, and 11
+
+  setQuizTime();
+   updateQuestionNumber();
+
+  updateProgressBar(currentQuestion);
+    showQuestion();
+  
+	          await updateQuizStartedCount(quizCode);
+
     }
   }
 }
@@ -153,32 +181,7 @@ async function updateQuizStartedCount(quizCode) {
 	  
 	  
 	  
-  var numAd;
-
-  if (totalQuestions <= 15) {
-    numAds = 2;
-      if (totalQuestions <= 5) {
-            numAds = 1;
-      }
-  } else {
-    numAds = totalQuestions / 5;
-  }
-
-  var intvalue = Math.round(numAds);
-
-  quizAdPattern = generateQuizAdPattern(totalQuestions, intvalue);
-  adQuestionNumbers = quizAdPattern;
-  //console.log(adQuestionNumbers + "   ?????xx???????adQuestionNumbers????"); // Output: 3
-
-  // Array to store the question numbers where the ad should be shown
-  adQuestionNumbers = quizAdPattern; // Example: Show ad after questions 3, 7, and 11
-
-  setQuizTime();
-   updateQuestionNumber();
-
-  updateProgressBar(currentQuestion);
-    showQuestion();
-  
+ 
 
 
 
