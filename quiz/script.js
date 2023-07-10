@@ -178,7 +178,7 @@ async function updateQuizStartedCount(quizCode) {
 
   updateProgressBar(currentQuestion);
     showQuestion();
-  }
+  
 }
 
 
