@@ -1012,6 +1012,19 @@ submitReviewBtn.classList.add('shake-animation');
 
 
 
+function getMatchingVoice(voiceURI) {
+  if ('speechSynthesis' in window) {
+    var synthesis = window.speechSynthesis;
+    var voices = synthesis.getVoices();
+    var matchedVoice = voices.find(function(voice) {
+      return voice.voiceURI === voiceURI;
+    });
+    return matchedVoice;
+  } else {
+    console.log('Text-to-speech is not supported in this browser.');
+    return null;
+  }
+}
 
 
 
@@ -1130,9 +1143,12 @@ let readThis = currentQuestion+" "+optionsString;
     
     // Load settings from local storage
     let voiceSettings = JSON.parse(localStorage.getItem('voiceSettings'));
-    if (voiceSettings) {
+   if (voiceSettings) {
+      var voice = getMatchingVoice(voiceSettings.voice);
+      if (voice) {
+        utterance.voice = voice;
+      }
       utterance.rate = voiceSettings.rate;
-      utterance.voice = voiceSettings.voice;
     }
 	 
     synthesis.speak(utterance);
@@ -1158,9 +1174,12 @@ let readThis =  "Explanation "+  document.getElementById("explanation").innerHTM
     
     // Load settings from local storage
     let voiceSettings = JSON.parse(localStorage.getItem('voiceSettings'));
-    if (voiceSettings) {
+   if (voiceSettings) {
+      var voice = getMatchingVoice(voiceSettings.voice);
+      if (voice) {
+        utterance.voice = voice;
+      }
       utterance.rate = voiceSettings.rate;
-      utterance.voice = voiceSettings.voice;
     }
     synthesis.speak(utterance);
   } else {
