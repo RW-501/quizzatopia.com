@@ -482,17 +482,18 @@ document.getElementById('show-explanation-btn').classList.remove("d-none");
 
 // Function to show the explanation popup
 function showExplanationPopup() {
-  const explanationContainer = document.querySelector('.explanation-container');
   const closeButton = document.getElementById('close-btn');
 
-
   closeButton.addEventListener('click', function() {
-    explanationContainer.style.display = 'none';
-	  
+closeExplanationPopup();	  
 
   });
 }
+function closeExplanationPopup() {
+  const explanationContainer = document.querySelector('.explanation-container');
+    explanationContainer.style.display = 'none';
 
+}
 
 
 // Function to disable answer buttons after user answers
