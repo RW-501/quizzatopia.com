@@ -96,6 +96,71 @@ loadScreenFunc();
 
 
 
+// Function to convert images to low resolution
+function convertImagesToLowResolution() {
+  // Select all <img> elements on the page
+  const images = document.querySelectorAll('img');
+
+  // Iterate over each image
+  images.forEach(function(image) {
+    // Store the original image source
+    image.dataset.originalSrc = image.src;
+
+    // Create a new <canvas> element
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+
+    // Set the canvas dimensions to match the image dimensions
+    canvas.width = image.width;
+    canvas.height = image.height;
+
+    // Create an ImageBitmap object from the original image
+    createImageBitmap(image)
+      .then(function(bitmap) {
+        // Draw the ImageBitmap on the canvas with lower resolution
+        context.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+
+        // Set the canvas image data as the new image source
+        image.src = canvas.toDataURL();
+      })
+      .catch(function(error) {
+        console.error('Error converting image to low resolution:', error);
+      });
+  });
+}
+
+// Function to restore original image sources
+function restoreOriginalImages() {
+  // Select all <img> elements on the page
+  const images = document.querySelectorAll('img');
+
+  // Iterate over each image
+  images.forEach(function(image) {
+    // Check if the image has a stored original source
+    if (image.dataset.originalSrc) {
+      // Restore the original image source
+      image.src = image.dataset.originalSrc;
+
+      // Remove the stored original source
+      delete image.dataset.originalSrc;
+    }
+  });
+}
+
+// Call the function to convert images to low resolution when the page has finished loading
+window.onload = function() {
+  convertImagesToLowResolution();
+};
+
+// Call the function to restore original image sources after the window has loaded
+window.addEventListener('load', function() {
+  restoreOriginalImages();
+});
+
+
+
+
+
 function setLoggedInCookie() {
   var expirationDate = new Date();
   expirationDate.setDate(expirationDate.getDate() + 3);
