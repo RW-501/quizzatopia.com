@@ -1431,13 +1431,13 @@ function fetchData(q, e) {
 	  
 fetchData(q, e);
 
+const reportModal = document.getElementById('reportModal');
 
 	
 function submitReport(){
 
 
 	      // Get the modal element
-const reportModal = document.getElementById('reportModal');
 
 const reportForm = document.getElementById('reportForm');
 
@@ -1499,8 +1499,7 @@ function closeReport() {
 
 }
 
-// Add click event listener to the report button
-document.getElementById('report_BTN').addEventListener('click', openReport);
+
 
 // Add click event listener to the close button
 document.getElementById('closeReportBTN').addEventListener('click', closeReport);
