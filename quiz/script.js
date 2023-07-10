@@ -1139,7 +1139,7 @@ readTextFunc(readThis);
 
 
 function readExplanationFunc(){
-let readThis =  "Explanation "+  document.getElementById("explanation").innerHTML;
+let readThis =  "Explanation. "+  document.getElementById("explanation").innerHTML;
 readTextFunc(readThis);
 }
 
