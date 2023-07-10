@@ -371,7 +371,12 @@ const badges = [
 
    function getLoginElements(){
 
+if(document.getElementById('loginPopup')){
+slideIn("loginPopupBody");
+  document.getElementById('loginPopup').classList.remove('d-none');
+	SetupLoginBTNFunc();
 
+}else{
 let authIndex;
   if (currentPagePath === '/' || currentPagePath === '/index.html') {
     authIndex = './auth/index.html';
@@ -394,11 +399,17 @@ fetch(authIndex)
 	
 	
 signupLoginArea.display = "none";
-  });
+ 
+	   
+slideIn("loginPopupBody");
+  document.getElementById('loginPopup').classList.remove('d-none');
+	SetupLoginBTNFunc();
+ });
 
+
+}  
 }
 
-	  console.log("   ???????view openPopup???"); // Output: 
 	
 // Function to open the login/signup popup
 function openPopup() {
@@ -408,6 +419,8 @@ function openPopup() {
 
 // Function to close the login/signup popup
 function closePopup() {
+slideOut("loginPopupBody");
+
   document.getElementById('loginPopup').classList.add('d-none');
 }
 
