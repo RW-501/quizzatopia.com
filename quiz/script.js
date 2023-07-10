@@ -73,92 +73,83 @@ function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
 
 
 
-
-// Function to start the quiz
 async function startQuiz() {
-		loadScreenFunc();
+  loadScreenFunc();
 
-	
- var divElement = document.getElementById("testInfo");
-	// Call the function when needed, e.g., after completing a quiz
-			    showLoginPopupIfNeeded();
+  const divElement = document.getElementById("testInfo");
+  // Call the function when needed, e.g., after completing a quiz
+  showLoginPopupIfNeeded();
 
-	
-	    if (newQuizCount > QUIZ_COUNT_THRESHOLD && loggedIn == false) {
-      // Show the login popup
-
-     			slideIn("loginPopupBody");
-openPopup();switchTab('login');
-    }else{
-	
-	
-if (  q === null || q === '') {
-    console.log("empty.");
-	  location.reload();
-	 // window.location.href = "https://quizzatopia.com/quiz/?q="+q;
-
+  if (newQuizCount > QUIZ_COUNT_THRESHOLD && loggedIn == false) {
+    // Show the login popup
+    slideIn("loginPopupBody");
+    openPopup();
+    switchTab('login');
   } else {
- 
-	 questionTime = 0; // seconds
- currentQuestion = 0;
- questionCorrect = 0;
- quizStarted = false;
- timer = 0;
- countdownPerQuestion = false; // set to true if the countdown should happen for each question
- totalTime = 0; // seconds
- totalQuestions = questions.length;
- timerEnabled = false;
-	
-   quizStarted = true;
-  updatePointsAndRank();
-	    const animations = ["right", ""];
-  const randomIndex = Math.floor(Math.random() * animations.length);
-  const selectedAnimation = animations[randomIndex];
-	
-slideIn("quiz-container",selectedAnimation);
+    if (q === null || q === '') {
+      location.reload();
+    } else {
+      questionTime = 0; // seconds
+      currentQuestion = 0;
+      questionCorrect = 0;
+      quizStarted = false;
+      timer = 0;
+      countdownPerQuestion = false; // set to true if the countdown should happen for each question
+      totalTime = 0; // seconds
+      totalQuestions = questions.length;
+      timerEnabled = false;
 
-  document.getElementById("start-btn").classList.add("d-none");
-  document.getElementById("quiz-container").classList.remove("d-none");
-  document.getElementById("optionContainer").classList.add("d-none");
-  totalQuestions = questions.length;
+      quizStarted = true;
+      updatePointsAndRank();
+      const animations = ["right", ""];
+      const randomIndex = Math.floor(Math.random() * animations.length);
+      const selectedAnimation = animations[randomIndex];
 
-  // Hide the MessageBoard info
-  document.getElementById("otherQuizzes").classList.add("d-none");
+      slideIn("quiz-container", selectedAnimation);
 
-  // Retrieve the quizInfo from the array quiz
-  
-const quizInfo = setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions);
+      document.getElementById("quiz-container").classList.remove("d-none");
+      totalQuestions = questions.length;
 
+      // Retrieve the quizInfo from the array quiz
+      const quizInfo = setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions);
 
-	      quizCode = quizInfo.quizCode;
-        quizName = quizInfo.quizName;
-        numberOfQuestions = quizInfo.numberOfQuestions;
-	  
-	  
-	  
-	  const db2 = firebase.firestore();
+      quizCode = quizInfo.quizCode;
+      quizName = quizInfo.quizName;
+      numberOfQuestions = quizInfo.numberOfQuestions;
 
+      await updateQuizStartedCount(quizCode);
 
+      document.getElementById("optionContainer").classList.add("d-none");
 
-// Check if quiz already exists in Firestore
-const querySnapshot2 = await db2.collection('quizzes').where('quizCodeDB', '==', quizCode).get();
+      // Hide the MessageBoard info
+      document.getElementById("otherQuizzes").classList.add("d-none");
+    }
+  }
+}
 
+async function updateQuizStartedCount(quizCode) {
+  const db2 = firebase.firestore();
 
-if (!querySnapshot2.empty) {
-  const quizDoc = querySnapshot2.docs[0]; // Assuming there's only one document with the matching quizCodeDB
+  try {
+    // Check if quiz already exists in Firestore
+    const querySnapshot2 = await db2.collection('quizzes').where('quizCodeDB', '==', quizCode).get();
 
-// Update the quizStartedCount field by 1
-const quizId = quizDoc.id; // Get the document ID
-const quizRef = db2.collection('quizzes').doc(quizId); // Create a reference to the document
+    if (!querySnapshot2.empty) {
+      const quizDoc = querySnapshot2.docs[0]; // Assuming there's only one document with the matching quizCodeDB
 
-await quizRef.update({
-  quizStartedCount: firebase.firestore.FieldValue.increment(1)
-});
-	
-	
-  console.log(quizCode + " was updated: "+quizId); // Output: <quizCode> was updated
+      // Update the quizStartedCount field by 1
+      const quizId = quizDoc.id; // Get the document ID
+      const quizRef = db2.collection('quizzes').doc(quizId); // Create a reference to the document
 
-} 
+      await quizRef.update({
+        quizStartedCount: firebase.firestore.FieldValue.increment(1)
+      });
+    }
+  } catch (error) {
+    console.error('Error updating quizStartedCount:', error);
+  }
+}
+
 	  
 	  
 	  
@@ -312,83 +303,63 @@ function shuffleArrayAnswers(array) {
 }
 
 
-
 function showQuestion() {
-//  console.log(adQuestionNumbers + "  adQuestionNumbers??????????currentQuestion????   " + currentQuestion);
   const animations = ["right", ""];
   const randomIndex = Math.floor(Math.random() * animations.length);
   const selectedAnimation = animations[randomIndex];
-  
+
   slideIn("quizContainer", selectedAnimation);
-	
-	// Check if the current question number is in the adQuestionNumbers array
+
+  // Check if the current question number is in the adQuestionNumbers array
   if (adQuestionNumbers.includes(currentQuestion)) {
     const index = adQuestionNumbers.indexOf(currentQuestion);
     if (index !== -1) {
       adQuestionNumbers.splice(index, 1);
     }
     // Call the showAdsFunc() to start displaying ads
-
     showAdsFunc();
     return;
   }
 
+  const questionObj = questions[currentQuestion];
+  document.getElementById("question").innerHTML = questionObj.question;
 
- const questionObj = questions[currentQuestion];
-document.getElementById("question").innerHTML = questionObj.question;
-	//  console.log(questionObj.questionType + "  questionObj.questionType   ??????????    currenquestionObj.imageURL   " + questionObj.imageURL);
-
-if (questionObj.imageURL === "" || questionObj.imageURL === null || questionObj.imageURL === undefined) {
-  document.getElementById("questionImageArea").style.display = "none";
-		console.log("inside No pic     "); 
-
-} else {
-			console.log("inside  pic     "); 
-	document.getElementById("questionImage").src = questionObj.imageURL;
-  document.getElementById("questionImageArea").style.display = "block"; 
-}
-	
-	
-document.getElementById("difficulty").innerHTML = "Difficulty: <strong>" + questionObj.difficulty + "</strong>";
-document.getElementById("realQustionNum").innerHTML = "# " + questionObj.questionNumber;
-
-	
-
-  const answerBTN = document.getElementsByClassName("answer-option");
-
-  for (let i = 0; i < answerBTN.length; i++) {
-	if (questionObj.options[i]) {
-	  answerBTN[i].style.display= "initial";
-}else{
-	  answerBTN[i].style.display= "none";
-}
+  if (questionObj.imageURL === "" || questionObj.imageURL === null || questionObj.imageURL === undefined) {
+    document.getElementById("questionImageArea").style.display = "none";
+  } else {
+    document.getElementById("questionImage").src = questionObj.imageURL;
+    document.getElementById("questionImageArea").style.display = "block";
   }
 
+  document.getElementById("difficulty").innerHTML = "Difficulty: <strong>" + questionObj.difficulty + "</strong>";
+  document.getElementById("realQustionNum").innerHTML = "# " + questionObj.questionNumber;
 
-	
+  const answerButtons = document.getElementsByClassName("answer-option");
 
-	
-	
-	
+  for (let i = 0; i < answerButtons.length; i++) {
+    if (questionObj.options[i]) {
+      answerButtons[i].style.display = "initial";
+    } else {
+      answerButtons[i].style.display = "none";
+    }
+  }
+
   // Randomize the order of the answer options
   const options = questionObj.options;
   const shuffledOptions = shuffleArrayAnswers(options);
-	
-  // console.log(shuffledOptions[1]+"  options   "+options[1]); // Output: 3
 
-	
-  const answerButtons = document.getElementsByClassName("answer-option");
   for (let i = 0; i < shuffledOptions.length; i++) {
     answerButtons[i].innerHTML = shuffledOptions[i];
     answerButtons[i].addEventListener("click", checkAnswer);
   }
+
   document.getElementById("explanation").innerHTML = "";
   if (countdownPerQuestion && timerEnabled) {
     totalTime = questionTime;
     startTimer();
   }
-  
-    // Update the label of the skip-next-btn
+
+  // Update the label of the skip-next-btn
   const skipNextBtn = document.getElementById('skip-next-btn');
   skipNextBtn.innerHTML = questionCorrect > currentQuestion ? 'Next' : 'Skip';
 }
@@ -1036,14 +1007,13 @@ submitReviewBtn.classList.add('shake-animation');
 
 
 
-function playAudio() {
+function readQuizFunc() {
   // Add your logic to play audio or trigger reading functionality here
   // For example, you can use the Web Audio API or Text-to-Speech (TTS) APIs
   // You can also customize the behavior based on your specific requirements
 	       // alert('Read Quiz!!!');
 var currentQuestion =   document.getElementById("question").innerHTML;
 
-	
 var currentOptions = document.getElementsByClassName("answer-option");
 var optionsString = "";
 let x = 0;
@@ -1055,7 +1025,7 @@ for (let i = 0; i < currentOptions.length; i++) {
 }
 
 console.log(currentQuestion+", "+optionsString);
-var readThis = currentQuestion+" "+optionsString;
+let readThis = currentQuestion+" "+optionsString;
 
  if ('speechSynthesis' in window) {
     var synthesis = window.speechSynthesis;
@@ -1067,7 +1037,24 @@ var readThis = currentQuestion+" "+optionsString;
 
 	
 	
-var currentExplanation  =   document.getElementById("explanation").innerHTML;
 
 }
 
+
+function readExplanationFunc() {
+
+
+let readThis =  "Explanation "+  document.getElementById("explanation").innerHTML;
+
+ if ('speechSynthesis' in window) {
+    var synthesis = window.speechSynthesis;
+    var utterance = new SpeechSynthesisUtterance(readThis);
+    synthesis.speak(utterance);
+  } else {
+    console.log('Text-to-speech is not supported in this browser.');
+  }
+
+	
+	
+
+}
