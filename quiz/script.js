@@ -921,8 +921,7 @@ submitReviewBtn.classList.add('shake-animation');
  function setShareableLink(data) {
         var shareLink = document.getElementById("shareLink");
         // Build the shareable link based on the provided data
-        var link =  encodeURIComponent(data);
-        shareLink.value = link;
+        shareLink.value = data;
       }
 
       function copyLink() {
