@@ -465,7 +465,7 @@ function viewDashboard() {
   window.location.href = '/user/';
 	}else{
       // Show the login popup
-     			slideIn("loginPopupBody");
+     			
 openPopup();switchTab('login');
 
 	}
