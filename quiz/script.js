@@ -383,7 +383,6 @@ function checkAnswer() {
       options[i].classList.add('disabled');
       if (options[i].innerHTML === questionObj.answer) {
         options[i].classList.add('correct');
-readCorrectAnswerFunc(i);
       } else {
         options[i].classList.add('incorrect');
       }
@@ -410,6 +409,8 @@ readCorrectAnswerFunc(i);
         answerOptions[i].classList.add('missed');
         if (isAnimationEnabled) {
           answerOptions[i].classList.add('shake-animation');
+		readCorrectAnswerFunc(i);
+
         }
       }
     }
@@ -1157,8 +1158,12 @@ readTextFunc(readThis);
 }
 
 function readCorrectAnswerFunc(xxx){
-let readThis =  "The correct answer is "+currentOptions[xxx +1].innerHTML +", ";
+		console.log("readThis xxx  "+xxx);
+
+let readThis =  "The correct answer is "+currentOptions[xxx +1].innerHTML +" ";
 readTextFunc(readThis);
+	console.log("readThis "+readThis);
+
 }
 
 
