@@ -374,7 +374,6 @@ const badges = [
 if(document.getElementById('loginPopup')){
 slideIn("loginPopupBody");
   document.getElementById('loginPopup').classList.remove('d-none');
-	SetupLoginBTNFunc();
 
 }else{
 let authIndex;
