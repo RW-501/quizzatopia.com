@@ -661,12 +661,9 @@ function displayEarnedPoints(start, end, duration) {
   }, 100); // Adjust the interval duration to control the speed of animation
 }
 
- function endFucs() {
+ function retakeQuizFunc()() {
 
-document.getElementById("retake-btn").addEventListener("click", () => {
-location.href = "/quiz/?q="+q;
-});
-
+  location.reload();
 	
  }
 
