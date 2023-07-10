@@ -1046,10 +1046,11 @@ var currentQuestion =   document.getElementById("question").innerHTML;
 	
 var currentOptions = document.getElementsByClassName("answer-option");
 var optionsString = "";
-
+let x = 0;
 for (let i = 0; i < currentOptions.length; i++) {
 	if(currentOptions[i].innerHTML !== ""){
-  optionsString += " Option Number "+[i =+1]+" "+currentOptions[i].innerHTML +", ";
+		
+  optionsString += " Option Number "+[i]+" "+currentOptions[i].innerHTML +", ";
 	}
 }
 
