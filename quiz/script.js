@@ -1075,6 +1075,7 @@ let readThis =  "Explanation. "+  document.getElementById("explanation").innerHT
 readTextFunc(readThis);
 }
 
+    var utterance = new SpeechSynthesisUtterance();
 
 
 var isSpeaking = false; // Track if an utterance is currently being spoken
@@ -1089,7 +1090,6 @@ function readTextFunc(text) {
 
   if ('speechSynthesis' in window) {
     var synthesis = window.speechSynthesis;
-    var utterance = new SpeechSynthesisUtterance();
 	  
   let blankPattern = /_{1,}/; // Pattern for one or more underscores
   let replacedQuestion = text.replace(blankPattern, "blank");
