@@ -532,6 +532,8 @@ function calculateEarnedPoints() {
 
   return earnedPoints > 0 ? earnedPoints : 0;
 }
+// Function to check if a badge has been earned
+ const oldBadges = JSON.parse(localStorage.getItem('earnedBadges')) || [];
 
 // Function to add a badge to the user
 function addBadgeToUser(userId, badgeId) {
