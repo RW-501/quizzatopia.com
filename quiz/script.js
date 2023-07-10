@@ -1128,7 +1128,7 @@ var currentQuestion =   document.getElementById("question").innerHTML;
 
 var currentOptions = document.getElementsByClassName("answer-option");
 var optionsString = "";
-let x = 1;
+let x = 0;
 for (let i = 0; i < currentOptions.length; i++) {
 	if(currentOptions[i].innerHTML !== ""){
 		x++;
