@@ -828,9 +828,8 @@ window.addEventListener("load", function() {
 	// Check if user is logged in
   if (loggedIn   ==  false) {
 		const timerId = setTimeout(() => {
-			slideIn("loginPopupBody");
-
-openPopup(); switchTab('signup'); 	
+		 // Show the login popup
+openPopup();	
 }, 5000); // Timer will execute after 5000 milliseconds (5 seconds)
 	  
   }
