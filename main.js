@@ -91,14 +91,8 @@ overlay.style.display = 'none'; // Hide the overlay if it exists
 
 }
 
-
-window.addEventListener("load", function() {
-
 	
 loadScreenFunc();
-
-});
-
 
 
 
