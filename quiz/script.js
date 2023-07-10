@@ -1059,7 +1059,11 @@ function readTextFunc(text) {
   if ('speechSynthesis' in window) {
     var synthesis = window.speechSynthesis;
     var utterance = new SpeechSynthesisUtterance();
-    utterance.text = text;
+	  
+  let blankPattern = /_{1,}/; // Pattern for one or more underscores
+  let replacedQuestion = text.replace(blankPattern, "blank");
+
+    utterance.text = replacedQuestion;
 
     // Split the text into chunks
     var chunkSize = 200; // Adjust the chunk size as needed
