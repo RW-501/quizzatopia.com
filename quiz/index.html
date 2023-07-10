@@ -179,22 +179,23 @@
 </script>
 
 	<style>
+@keyframes blinkAnimation {
+  0% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: lightcoral;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
 #blinkDiv {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  border: 2px solid black;
-  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
 }
-
-.light {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: yellow;
-}
-
 
 
 
