@@ -1144,40 +1144,61 @@ readTextFunc(readThis);
 }
 
 
-function readTextFunc(readThis) {
+
+var isSpeaking = false; // Track if an utterance is currently being spoken
+
+
+function readTextFunc(text) {
   if (isSpeaking) {
     // Stop the ongoing speech
     stopSpeaking();
     return;
   }
 
+  if ('speechSynthesis' in window) {
+    var synthesis = window.speechSynthesis;
+    var utterance = new SpeechSynthesisUtterance();
+    utterance.text = text;
 
- if ('speechSynthesis' in window) {
-    let synthesis = window.speechSynthesis;
-    let utterance = new SpeechSynthesisUtterance(readThis);
+    // Split the text into chunks
+    var chunkSize = 200; // Adjust the chunk size as needed
+    var chunks = [];
+    for (var i = 0; i < text.length; i += chunkSize) {
+      chunks.push(text.substr(i, chunkSize));
+    }
 
-    
-    // Load settings from local storage
-    let voiceSettings = JSON.parse(localStorage.getItem('voiceSettings'));
-   if (voiceSettings) {
+    // Function to speak the chunks sequentially
+    function speakChunks(index) {
+      if (index < chunks.length) {
+        utterance.text = chunks[index];
+        synthesis.speak(utterance);
+        utterance.onend = function() {
+          speakChunks(index + 1);
+        };
+      }
+    }
+
+    // Load voice settings from local storage
+    var voiceSettings = JSON.parse(localStorage.getItem('voiceSettings'));
+    if (voiceSettings) {
       var voice = getMatchingVoice(voiceSettings.voice);
       if (voice) {
         utterance.voice = voice;
       }
       utterance.rate = voiceSettings.rate;
     }
- // Event listener for the end of speech
+
+    // Event listener for the end of speech
     utterance.onend = function() {
       isSpeaking = false;
     };
 
     // Start speaking
     isSpeaking = true;
-	 synthesis.speak(utterance);
+    speakChunks(0);
   } else {
     console.log('Text-to-speech is not supported in this browser.');
   }
-
 }
 
 
