@@ -997,8 +997,8 @@ function openOptions() {
 
 
 
-const quizInfo = localStorage.getItem(`quizInfo_${quizCode}`);
-  const quizInfo = storedUserInfo ? JSON.parse(quizInfo) : {};
+const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
+  const quizInfo = storedUserInfo ? JSON.parse(quizInfoStored) : {};
 
 
 // Update the quiz information
