@@ -110,9 +110,10 @@
     }
 
 
-  #questionList {
-    margin-top: 20px;
-  }
+#questionList {
+    max-width: 500px;
+    margin: 5% auto;
+}
 
   .questionListItem {
     background-color: #f1f1f1;
