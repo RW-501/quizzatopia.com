@@ -1199,6 +1199,19 @@ window.addEventListener('load', function() {
   const mainFooter = document.createElement('div');
   mainFooter.id = 'mainFooter';
 
+
+  const currentPagePath = window.location.pathname;
+
+
+  if (currentPagePath === '/' || currentPagePath === '/index.html') {
+    footerPath = './elements/footer.html';
+  } else {
+    footerPath = '/elements/footer2.html';   
+	  
+  }
+
+
+	
   // Fetch and insert the footer HTML
   fetch(footerPath)
     .then(response => response.text())
