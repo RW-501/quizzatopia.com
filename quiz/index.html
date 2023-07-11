@@ -435,21 +435,23 @@ margin-block-start: auto;
 }		
 
 		.optionspopup {
-    background-color: #f1f1f1;
-    padding: 5%;
-    border-radius: 2em 2em 0 0;
+     background-color: #F8F9FA;
+    padding: 5% 5% 0 5%;
+    border-radius: 2em ;
     margin: auto;
-    /* top: 0; */
-    /* bottom: 0; */
+    top: 0;
+    bottom: 0;
     position: absolute;
     width: 80%;
+    height: fit-content;
+    overflow: hidden;
+box-shadow: 0px 1px 0rem 2px rgba(0, 0, 0, 0.2) !important;
 }
 
 #closeOptionsButton{
   width: 80%;
 background-color: #f1f1f1;
-    border-radius: 0 0 2em 2em;
-
+padding: 5%;
 }
 
 </style>
@@ -883,7 +885,7 @@ background-color: #f1f1f1;
   <p>Quiz URL: <span id="quizURL"></span></p>
 </div>
 
-		
+		<hr>
 <div id="optionsMenu">
   <h3>Options</h3>
   <div class="form-check">
@@ -913,10 +915,10 @@ background-color: #f1f1f1;
     </label>
   </div>
 </div>
+  <button id="closeOptionsButton"   onclick="closeOptions()" >Close</button>
 
 </div>
 
-  <button id="closeOptionsButton"   onclick="closeOptions()" >Close</button>
 
 		
 		
