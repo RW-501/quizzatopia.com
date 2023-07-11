@@ -2,13 +2,15 @@
 let questionTime = 0; // seconds
 let currentQuestion = 0;
 let questionCorrect = 0;
+let questionInorrect = 0;
+let questionsCompleted =[];
 let quizStarted = false;
 let timer = 0;
 let countdownPerQuestion = false; // set to true if the countdown should happen for each question
 let totalTime = 0; // seconds
 let totalQuestions = questions.length;
 let timerEnabled = false;
-
+let timerDisplay;
 var quizAdPattern;
 // Array to store the question numbers where the ad should be shown
 let adQuestionNumbers;
@@ -45,7 +47,9 @@ function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
       quizCode: quizCodeNS,
       quizName: quizNameNS,
       numberOfQuestions: numberOfQuestionsNS,
+      questionsCompleted: [],
       questionCorrect: 0,
+      questionInorrect: 0,
       timestamp: timestamp,
       quizLink: q  // Add the "q" parameter to the quizInfo object
     };
@@ -91,6 +95,7 @@ async function startQuiz() {
       questionTime = 0; // seconds
       currentQuestion = 0;
       questionCorrect = 0;
+	questionInorrect = 0;    
       quizStarted = false;
       timer = 0;
       countdownPerQuestion = false; // set to true if the countdown should happen for each question
@@ -321,17 +326,6 @@ function shuffleArrayAnswers(array) {
 
 
 
-/*
-// Function to shuffle an array using Fisher-Yates algorithm
-function shuffleArrayAnswers(array) {
-  const shuffledArray = [...array];
-  for (let i = shuffledArray.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
-  }
-  return shuffledArray;
-}
-*/
 
 // Function to show the question
 function showQuestion() {
@@ -363,7 +357,10 @@ function showQuestion() {
 document.getElementById("difficulty").innerHTML = "Difficulty: " + (questionObj.difficulty || '') ;
 document.getElementById("realQustionNum").innerHTML =  ('# '+ questionObj.questionNumber || "");
 
-
+	questionsCompleted.push(questionObj.questionNumber);
+  quizInfo.questionsCompleted = questionsCompleted
+    saveQuizInfo(quizCode, quizInfo);
+	
   const answerButtons = document.getElementsByClassName("answer-option");
 
   for (let i = 0; i < answerButtons.length; i++) {
@@ -383,6 +380,8 @@ for (let i = 0; i < Math.min(shuffledOptions.length, answerButtons.length); i++)
 }
 
   document.getElementById("explanation").innerHTML = "";
+  document.getElementById("difficulty").innerHTML = "";
+  document.getElementById("realQustionNum").innerHTML = "";
   if (countdownPerQuestion && timerEnabled) {
     totalTime = questionTime;
     startTimer();
@@ -414,7 +413,7 @@ function checkAnswer() {
 
 //  console.log('options ????????????????? ', options);
 	
-
+  
 	
   let correct_bool;
   if (selectedAnswer === questionObj.answer) {
@@ -441,8 +440,11 @@ const answerOptions = document.getElementsByClassName("answer-option");
   } else {
     selectedOption.classList.add('incorrect');
     correct_bool = "incorrect";
-
-    const answerOptions = document.getElementsByClassName("answer-option");
+    questionInorrect++;
+    quizInfo.questionInorrect = questionInorrect;
+    saveQuizInfo(quizCode, quizInfo);
+	  
+	  const answerOptions = document.getElementsByClassName("answer-option");
     for (let i = 0; i < answerOptions.length; i++) {
       if (answerOptions[i].innerHTML === questionObj.answer) {
         answerOptions[i].classList.add('missed');
@@ -509,7 +511,8 @@ function nextQuestion() {
   clearTimeout(timeoutId);
 
   timeoutId =  setTimeout(function() {
-  location.reload(); }, 180000); // 3 minutes = 180 seconds
+  location.reload();
+  }, 180000); // 3 minutes = 180 seconds
 
 	
 	stopSpeaking();
@@ -663,7 +666,7 @@ function endQuiz() {
   clearInterval(timer);
   quizStarted = false;
 
-  const timerDisplay = document.getElementById("timer");
+   timerDisplay = document.getElementById("timer");
   timerDisplay.innerHTML = "";
 
   const userInfo = JSON.parse(localStorage.getItem('userInfo')) || [];
