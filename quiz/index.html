@@ -447,9 +447,6 @@ margin: auto;
 			height: fit-content;
 }
 
-.show {
-  display: block;
-}
 
 </style>
 	  	
@@ -1020,7 +1017,7 @@ quizURLElement.textContent = quizInfo.quizLink;
 	
 		  slideIn("optionsPopup");
 
-  optionsPopup.classList.add('show');
+  optionsPopup.classList.remove('d-none');
 }
 
 
@@ -1037,7 +1034,7 @@ quizURLElement.textContent = quizInfo.quizLink;
 function closeOptions() {
 		  slideOuy("optionsPopup");
 
-  optionsPopup.classList.remove('show');
+  optionsPopup.classList.add('d-none');
 }
 
 
