@@ -495,12 +495,14 @@ function enableAnswerButtons() {
     answerButtons[i].classList.remove("disabled", "correct", "incorrect", "missed", "shake-animation", "pulse-animation");
   }
 }
+var timeoutId;
 
 // Function to show the next question
 function nextQuestion() {
-setTimeout(function() {
-  location.reload();
-}, 180000); // 3 minutes = 180 seconds
+  clearTimeout(timeoutId);
+
+  timeoutId = setTimeout(reloadPage, 180000); // 3 minutes = 180 seconds
+
 	
 	stopSpeaking();
   currentQuestion++;
