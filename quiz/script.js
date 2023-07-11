@@ -294,29 +294,36 @@ function showAdsFunc() {
 function shuffleArrayAnswers(array) {
   const shuffledArray = [...array];
 
+  // Words to search for
+  const searchWords = ['All', 'above'];
 
-// Words to search for
-const searchWords = ['All', 'above'];
+  // Find the array that contains the search words
+  const foundArray = shuffledArray.find(array => {
+    return searchWords.some(word => array.includes(word));
+  });
 
-// Find the array that contains the search words
-const foundArray = shuffledArray.find(array => {
-  return searchWords.some(word => array.includes(word));
-});
-	
   const indexOfAllOfTheAbove = shuffledArray.indexOf(foundArray);
-  
+
   if (indexOfAllOfTheAbove !== -1) {
     shuffledArray.splice(indexOfAllOfTheAbove, 1);
   }
-  
+
   for (let i = shuffledArray.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
   }
-  
+
   shuffledArray.push(foundArray);
-  
+
   return shuffledArray;
+}
+
+const options = questionObj.options;
+const shuffledOptions = shuffleArrayAnswers(options);
+
+for (let i = 0; i < Math.min(shuffledOptions.length, answerButtons.length); i++) {
+  answerButtons[i].innerHTML = shuffledOptions[i];
+  answerButtons[i].addEventListener("click", checkAnswer);
 }
 
 
