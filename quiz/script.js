@@ -417,11 +417,11 @@ function checkAnswer() {
       options[i].classList.add('disabled');
       if (options[i].innerHTML === questionObj.answer) {
 	          console.log('readCorrectAnswerFunc i   '+i);
-	      let x = i + 1;
+	      let x = i ;
 	          console.log('readCorrectAnswerFunc x  '+x);
 
 		readCorrectAnswerFunc(x);
-        options[i].classList.add('correct');
+        //options[i].classList.add('correct');
       } else {
         options[i].classList.add('incorrect');
       }
