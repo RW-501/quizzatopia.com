@@ -415,11 +415,7 @@ margin-block-start: auto;
 }
 
 
-		#optionsMenu, #quizInfoPopup {
-  background-color: #f1f1f1;
-  padding: 10px;
-  margin-bottom: 20px;
-}
+	
 
 #optionsMenu h3, #quizInfoPopup h3 {
   margin-top: 0;
@@ -440,9 +436,22 @@ margin-block-start: auto;
 }		
 
 		.optionspopup {
-
+    background-color: #f1f1f1;
+    padding: 5%;
+    border-radius: 2em 2em 0 0;
+    margin: auto;
+    /* top: 0; */
+    /* bottom: 0; */
+    position: absolute;
+    width: 80%;
 }
 
+#closeOptionsButton{
+  width: 80%;
+background-color: #f1f1f1;
+    border-radius: 0 0 2em 2em;
+
+}
 
 </style>
 	  	
@@ -857,21 +866,21 @@ margin-block-start: auto;
 
 	
 	
-	<div id="optionsPopup" class="optionspopup">
-  <button id="closeOptionsButton"   onclick="closeOptions()" >Close</button>
+	<div id="optionsPopup" class="optionspopup d-none">
   <!-- Options content goes here -->
+		<div  class="optionspopup">
 <div id="quizInfoPopup">
   <h3>Quiz Information</h3>
-  <p>Quiz Code: <span id="quizCodePopup">Quizdpv5eoup</span></p>
+  <p>Quiz Code: <span id="quizCodePopup"></span></p>
   <p>Quiz Name:  <span id="quizName"></span></p>
   <p>Score Percent Completed: <span id="scorePercent"></span></p>
-  <p>Number of Questions: <span id="totalQuestions">total</span></p>
+  <p>Number of Questions: <span id="totalQuestions"></span></p>
   <p>Questons Completed: <span id="questionsCompleted"></span></p>
   <p>Percet Completed: <span id="percetCopleted"></span></p>
-  <p>Question Correct: <span id="questionCorrect">2</span></p>
-  <p>Question Incorrect: <span id="questionIncorrect">2</span></p>
-  <p>Time so far: <span id="timeSoFar">00:00:00</span></p>
-  <p>Score: <span id="bestScore">100%</span></p>
+  <p>Question Correct: <span id="questionCorrect"></span></p>
+  <p>Question Incorrect: <span id="questionIncorrect"></span></p>
+  <p>Time so far: <span id="timeSoFar"></span></p>
+  <p>Score: <span id="bestScore"></span></p>
   <p>Quiz URL: <span id="quizURL"></span></p>
 </div>
 
@@ -904,6 +913,9 @@ margin-block-start: auto;
       Animate Quiz
     </label>
   </div>
+</div>
+  <button id="closeOptionsButton"   onclick="closeOptions()" >Close</button>
+
 </div>
 
 
