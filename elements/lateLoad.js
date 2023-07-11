@@ -28,7 +28,7 @@ function lateLoad() {
 	  
   }
 
-    console.log('footerPath   '+footerPath);
+   // console.log('footerPath   '+footerPath);
 
 	
   // Fetch and insert the footer HTML
