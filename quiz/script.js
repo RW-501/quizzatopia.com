@@ -416,9 +416,12 @@ function checkAnswer() {
     for (let i = 0; i < options.length; i++) {
       options[i].classList.add('disabled');
       if (options[i].innerHTML === questionObj.answer) {
-        options[i].classList.add('correct');
+	          console.log('readCorrectAnswerFunc i   '+i);
 	      let x = i + 1;
+	          console.log('readCorrectAnswerFunc x  '+x);
+
 		readCorrectAnswerFunc(x);
+        options[i].classList.add('correct');
       } else {
         options[i].classList.add('incorrect');
       }
