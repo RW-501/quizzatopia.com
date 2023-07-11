@@ -1200,7 +1200,7 @@ window.addEventListener('load', function() {
   mainFooter.id = 'mainFooter';
 
 
-  const currentPagePath = window.location.pathname;
+   currentPagePath = window.location.pathname;
 
 
   if (currentPagePath === '/' || currentPagePath === '/index.html') {
