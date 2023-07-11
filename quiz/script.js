@@ -418,7 +418,6 @@ function checkAnswer() {
       if (options[i].innerHTML === questionObj.answer) {
         options[i].classList.add('correct');
 		readCorrectAnswerFunc(i);
-
       } else {
         options[i].classList.add('incorrect');
       }
@@ -443,6 +442,7 @@ function checkAnswer() {
     for (let i = 0; i < answerOptions.length; i++) {
       if (answerOptions[i].innerHTML === questionObj.answer) {
         answerOptions[i].classList.add('missed');
+		readCorrectAnswerFunc(i);
         if (isAnimationEnabled) {
           answerOptions[i].classList.add('shake-animation');
 
@@ -1193,7 +1193,7 @@ readTextFunc(readThis);
 }
 
 function readCorrectAnswerFunc(xxx){
-	//	console.log("readThis xxx  "+xxx);
+		console.log("readThis xxx  "+xxx);
 	
 var currentOptions = document.getElementsByClassName("answer-option");
 let readThis =  "The correct answer is "+ currentOptions[xxx].innerHTML;
