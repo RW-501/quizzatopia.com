@@ -427,24 +427,20 @@ margin-block-start: auto;
 
 		#optionsPopup{
   display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-			 width: 100%;
-top:0;
-			bottom:0;		}
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #00000080;
+    padding: 10%;
+}		
 
 		.optionspopup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-top:0; bottom:0;  width: 50%;
-  background-color: #f1f1f1;
-  padding: 20px;
-margin: auto;
-			height: fit-content;
+
 }
 
 
@@ -867,17 +863,18 @@ margin: auto;
 <div id="quizInfoPopup">
   <h3>Quiz Information</h3>
   <p>Quiz Code: <span id="quizCodePopup">Quizdpv5eoup</span></p>
-  <p>Quiz Type: N/A</p>
-  <p>Quiz Difficulty: N/A</p>
+  <p>Quiz Name:  <span id="quizName"></span></p>
+  <p>Score Percent Completed: <span id="scorePercent"></span></p>
   <p>Number of Questions: <span id="totalQuestions">total</span></p>
+  <p>Percet Completed: <span id="percetCopleted"></span></p>
   <p>Question Correct: <span id="questionCorrect">2</span></p>
   <p>Question Incorrect: <span id="questionIncorrect">2</span></p>
   <p>Time so far: <span id="timeSoFar">00:00:00</span></p>
-  <p>Best Score: <span id="bestScore">100%</span></p>
+  <p>Score: <span id="bestScore">100%</span></p>
   <p>Quiz URL: <span id="quizURL"></span></p>
-  <p>Questions Completed: <span id="questionsCompleted"></span></p>
 </div>
 
+		
 <div id="optionsMenu">
   <h3>Options</h3>
   <div class="form-check">
@@ -929,8 +926,11 @@ const totalQuestionsElement = document.getElementById('totalQuestions');
 const questionCorrectElement = document.getElementById('questionCorrect');
 const questionIncorrectElement = document.getElementById('questionIncorrect');
 const timeSoFarElement = document.getElementById('timeSoFar');
-const bestScoreElement = document.getElementById('bestScore');
+const scorePercentegeElement = document.getElementById('scorePercent');
+const percetCopletedElement = document.getElementById('percetCopleted');
 const quizURLElement = document.getElementById('quizURL');
+const quizNameElement = document.getElementById('quizName');
+
 
 	  window.addEventListener("load", function() {
 
@@ -1011,15 +1011,40 @@ const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
   const quizInfo = storedUserInfo ? JSON.parse(quizInfoStored) : {};
 
 
+
+	
 // Update the quiz information
 quizCodeElement.textContent = quizInfo.quizCode;
 totalQuestionsElement.textContent = quizInfo.numberOfQuestions;
+timeSoFarElement.textContent = quizInfo.quizCode;
+quizURLElement.textContent = quizInfo.quizLink;
+quizNameElement.textContent = quizInfo.quizName;
+	
+
+
+	
 questionsCompletedElement.textContent = quizInfo.questionsCompleted;
 questionCorrectElement.textContent = quizInfo.questionCorrect;
 questionIncorrectElement.textContent = quizInfo.questionInorrect;
-timeSoFarElement.textContent = quizInfo.quizCode;
-bestScoreElement.textContent = "100%";
-quizURLElement.textContent = quizInfo.quizLink;
+
+let qCompleted = quizInfo.questionsCompleted;
+let qCorrect = quizInfo.questionCorrect;
+let qIncorrect = quizInfo.questionIncorrect;
+
+let totalQuestions = // Total number of questions in the quiz
+
+let percentCompleted = (qCompleted.length / totalQuestions) * 100;
+let scorePercentage = (qCorrect / (qCorrect + qIncorrect)) * 100;
+
+percetCopletedElement.textContent = percentCompleted.toFixed(2) + "%";
+scorePercentegeElement.textContent = scorePercentage.toFixed(2) + "%";
+
+let currentTime = new Date();
+let savedTime = new Date(quizInfo.timestamp);
+
+let timeElapsed = currentTime - savedTime;
+timeSoFarElement.textContent = timeElapsed;
+
 
 	
 		  slideIn("optionsPopup");
@@ -1038,8 +1063,8 @@ quizURLElement.textContent = quizInfo.quizLink;
 
 
 
-function closeOptions() {
-		  slideOuy("optionsPopup");
+function closeOptions(){
+		  slideOut("optionsPopup");
 
   optionsPopup.classList.add('d-none');
 }
