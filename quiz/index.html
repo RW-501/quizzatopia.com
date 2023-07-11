@@ -875,27 +875,27 @@ margin-block-start: auto;
 <div id="optionsMenu">
   <h3>Options</h3>
   <div class="form-check">
-    <label for="audioButton">Audio:</label>
-    <button id="audioButton">On</button>
+    <label for="audioButtonOp">Audio:</label>
+    <button id="audioButtonOp">On</button>
   </div>
 
   <div class="form-check">
-    <label for="volumeSlider">Speech Volume:</label>
-    <input type="range" id="volumeSlider" min="0" max="1" step="0.1">
+    <label for="volumeSliderOp">Speech Volume:</label>
+    <input type="range" id="volumeSliderOp" min="0" max="1" step="0.1">
   </div>
 
   <div class="form-check">
-    <label for="voiceDropdown">Voice:</label>
-    <select id="voiceDropdown"></select>
+    <label for="voiceDropdownOp">Voice:</label>
+    <select id="voiceDropdownOp"></select>
   </div>
 
   <div class="form-check">
-    <label for="rateSlider">Speech Rate:</label>
-    <input type="range" id="rateSlider" min="0.1" max="2" step="0.1">
+    <label for="rateSliderOp">Speech Rate:</label>
+    <input type="range" id="rateSliderOp" min="0.1" max="2" step="0.1">
   </div>
 
   <div class="form-check">
-    <input class="form-check-input" type="checkbox" id="animation-quiz">
+    <input class="form-check-inputOp" type="checkbox" id="animation-quizOp">
     <label class="form-check-label" for="animation-quiz">
       Animate Quiz
     </label>
@@ -911,12 +911,13 @@ margin-block-start: auto;
 	
   <script>
 
-const audioButton = document.getElementById('audioButton');
-const volumeSlider = document.getElementById('volumeSlider');
-const voiceDropdown = document.getElementById('voiceDropdown');
-const rateSlider = document.getElementById('rateSlider');
-const animationCheckbox = document.getElementById('animation-quiz');
-const quizCodeElement = document.getElementById('quizCode');
+ audioButton = document.getElementById('audioButtonOp');
+ volumeSlider = document.getElementById('volumeSliderOp');
+ voiceDropdown = document.getElementById('voiceDropdownOp');
+ rateSlider = document.getElementById('rateSliderOp');
+ animationCheckbox = document.getElementById('animation-quizOp');
+ quizCodeElement = document.getElementById('quizCodePopup');
+	  
 const totalQuestionsElement = document.getElementById('totalQuestions');
 const questionCorrectElement = document.getElementById('questionCorrect');
 const questionIncorrectElement = document.getElementById('questionIncorrect');
