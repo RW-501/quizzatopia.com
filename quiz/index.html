@@ -413,6 +413,36 @@ margin-block-start: auto;
     display: grid;
     background-color: #bedffb;
 }
+
+
+		#optionsMenu, #quizInfoPopup {
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#optionsMenu h3, #quizInfoPopup h3 {
+  margin-top: 0;
+}
+
+
+		.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 200px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  z-index: 999;
+}
+
+.popup.show {
+  display: block;
+}
+
 </style>
 	  	
 	
@@ -622,7 +652,7 @@ margin-block-start: auto;
 	
 	
         <div id="quiz-timer-qn" class="d-flex justify-content-between">
-          <div id="question-number" class="font-weight-bold"></div>
+          <div id="question-number" class="font-weight-bold"   onclick="openOptions()"></div>
           <div id="timer" class="text-right"></div>
 		
 <div id="audioButton" onclick="readQuizFunc();">
@@ -826,12 +856,153 @@ margin-block-start: auto;
 
 	
 	
-	
+	<div id="optionsPopup" class="popup">
+  <button id="closeOptionsButton"   onclick="closeOptions()" >Close</button>
+  <!-- Options content goes here -->
+<div id="quizInfoPopup">
+  <h3>Quiz Information</h3>
+  <p>Quiz Code: <span id="quizCodePopup">Quizdpv5eoup</span></p>
+  <p>Quiz Type: N/A</p>
+  <p>Quiz Difficulty: N/A</p>
+  <p>Number of Questions: <span id="totalQuestions">total</span></p>
+  <p>Question Correct: <span id="questionCorrect">2</span></p>
+  <p>Question Incorrect: <span id="questionIncorrect">2</span></p>
+  <p>Time so far: <span id="timeSoFar">00:00:00</span></p>
+  <p>Best Score: <span id="bestScore">100%</span></p>
+  <p>Quiz URL: <span id="quizURL"></span></p>
+</div>
+
+<div id="optionsMenu">
+  <h3>Options</h3>
+  <div class="form-check">
+    <label for="audioButton">Audio:</label>
+    <button id="audioButton">On</button>
+  </div>
+
+  <div class="form-check">
+    <label for="volumeSlider">Speech Volume:</label>
+    <input type="range" id="volumeSlider" min="0" max="1" step="0.1">
+  </div>
+
+  <div class="form-check">
+    <label for="voiceDropdown">Voice:</label>
+    <select id="voiceDropdown"></select>
+  </div>
+
+  <div class="form-check">
+    <label for="rateSlider">Speech Rate:</label>
+    <input type="range" id="rateSlider" min="0.1" max="2" step="0.1">
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" id="animation-quiz">
+    <label class="form-check-label" for="animation-quiz">
+      Animate Quiz
+    </label>
+  </div>
+</div>
+
+
+		
+		
+</div>
 
 
 	
   <script>
 
+const audioButton = document.getElementById('audioButton');
+const volumeSlider = document.getElementById('volumeSlider');
+const voiceDropdown = document.getElementById('voiceDropdown');
+const rateSlider = document.getElementById('rateSlider');
+const animationCheckbox = document.getElementById('animation-quiz');
+const quizCodeElement = document.getElementById('quizCode');
+const totalQuestionsElement = document.getElementById('totalQuestions');
+const questionCorrectElement = document.getElementById('questionCorrect');
+const questionIncorrectElement = document.getElementById('questionIncorrect');
+const timeSoFarElement = document.getElementById('timeSoFar');
+const bestScoreElement = document.getElementById('bestScore');
+const quizURLElement = document.getElementById('quizURL');
+
+// Event listeners and functions for the options menu
+audioButton.addEventListener('click', toggleAudio);
+
+volumeSlider.addEventListener('input', updateVolume);
+
+voiceDropdown.addEventListener('change', updateVoice);
+
+rateSlider.addEventListener('input', updateRate);
+
+animationCheckbox.addEventListener('change', toggleAnimation);
+
+// Function to toggle audio
+function toggleAudio() {
+  // Toggle the audio state and update the button text
+  isAudioEnabled = !isAudioEnabled;
+  updateAudioButton();
+}
+
+// Function to update the volume
+function updateVolume() {
+  const volume = parseFloat(volumeSlider.value);
+  // Update the volume value
+  // Your logic for handling the volume change goes here
+}
+
+// Function to update the voice
+function updateVoice() {
+  const selectedVoice = voiceDropdown.value;
+  // Update the voice selection
+  // Your logic for handling the voice change goes here
+}
+
+// Function to update the speech rate
+function updateRate() {
+  const rate = parseFloat(rateSlider.value);
+  // Update the speech rate value
+  // Your logic for handling the rate change goes here
+}
+
+// Function to toggle the animation
+function toggleAnimation() {
+  const isAnimated = animationCheckbox.checked;
+  // Toggle the animation state
+  // Your logic for handling the animation toggle goes here
+}
+
+// Update the quiz information
+quizCodeElement.textContent = "Quizdpv5eoup";
+totalQuestionsElement.textContent = "total";
+questionCorrectElement.textContent = "2";
+questionIncorrectElement.textContent = "2";
+timeSoFarElement.textContent = "00:00:00";
+bestScoreElement.textContent = "100%";
+quizURLElement.textContent = "";
+
+
+
+
+
+
+
+
+
+
+
+
+	  
+const optionsPopup = document.getElementById('optionsPopup');
+
+function openOptions() {
+  optionsPopup.classList.add('show');
+}
+
+function closeOptions() {
+  optionsPopup.classList.remove('show');
+}
+
+
+	  
 function fetchQuizzesFromDB() {
   console.log("Fetching quizzes from the database...");
 // Initialize your Firebase app
