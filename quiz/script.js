@@ -1032,6 +1032,20 @@ function stopBlinking() {
 
 
 
+const audioButton = document.getElementById('audioButton');
+var isAudioEnabled = true;
+
+function toggleAudio() {
+  isAudioEnabled = !isAudioEnabled;
+  updateAudioButton();
+}
+
+function updateAudioButton() {
+  audioButton.textContent = ` ${isAudioEnabled ? 'On' : 'Off'}`;
+}
+
+audioButton.addEventListener('click', toggleAudio);
+updateAudioButton();
 
 
 
@@ -1237,6 +1251,8 @@ var isSpeaking = false; // Track if an utterance is currently being spoken
 
 
 function readTextFunc(text) {
+	      if(isAudioEnabled === true){
+
   if (isSpeaking) {
     // Stop the ongoing speech
     stopSpeaking();
@@ -1293,6 +1309,7 @@ startBlinking();
   } else {
     console.log('Text-to-speech is not supported in this browser.');
   }
+	      }
 }
 
 
