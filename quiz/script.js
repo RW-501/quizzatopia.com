@@ -433,7 +433,7 @@ const answerOptions = document.getElementsByClassName("answer-option");
     for (let i = 0; i < answerOptions.length; i++) {
       if (answerOptions[i].innerHTML === selectedAnswer) {
 	      
-		readCorrectAnswerFunc(i , "Correct");
+		readCorrectAnswerFunc(i , 0 );
       }
     }
     
