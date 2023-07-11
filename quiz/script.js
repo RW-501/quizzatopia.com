@@ -417,6 +417,8 @@ function checkAnswer() {
       options[i].classList.add('disabled');
       if (options[i].innerHTML === questionObj.answer) {
         options[i].classList.add('correct');
+		readCorrectAnswerFunc(i);
+
       } else {
         options[i].classList.add('incorrect');
       }
@@ -443,7 +445,6 @@ function checkAnswer() {
         answerOptions[i].classList.add('missed');
         if (isAnimationEnabled) {
           answerOptions[i].classList.add('shake-animation');
-		readCorrectAnswerFunc(i);
 
         }
       }
@@ -1195,7 +1196,7 @@ function readCorrectAnswerFunc(xxx){
 	//	console.log("readThis xxx  "+xxx);
 	
 var currentOptions = document.getElementsByClassName("answer-option");
-let readThis =  "The correct answer is "+currentOptions[xxx +1].innerHTML +" ";
+let readThis =  "The correct answer is "+ currentOptions[xxx].innerHTML;
 readTextFunc(readThis);
 	console.log("readThis "+readThis);
 
