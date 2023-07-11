@@ -314,7 +314,7 @@ const foundArray = shuffledArray.find(array => {
     [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
   }
   
-  shuffledArray.push(allOfTheAbove);
+  shuffledArray.push(foundArray);
   
   return shuffledArray;
 }
