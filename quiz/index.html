@@ -679,7 +679,7 @@ margin-block-start: auto;
     <button id="close-btn" class="close-button">&times;</button>
 	  </div>
     <div id="explanation" onclick="readExplanationFunc()"></div><hr>
-    <div class="btn_container">   <div></div> <div id="reportFormBTN" onclick=" closeExplanationPopup(); openReport();" >Report</div>
+    <div class="btn_container">   <div></div> <div id="reportFormBTN" class="btn" onclick=" closeExplanationPopup(); openReport();" >Report</div>
 </div>
 	  
   </div>
@@ -761,9 +761,17 @@ margin-block-start: auto;
 <div id="reviewModal" class="modal">
   <div class="modal-content">
     <span id="closeModal" class="close">&times;</span>
+	  <p>
+<button class="btn" onclick="quickFeedback('Great Experience')">Great Experience</button>
+<button class="btn" onclick="quickFeedback('User-Friendly Interface')">User-Friendly Interface</button>
+<button class="btn" onclick="quickFeedback('Buggy')">Buggy</button>
+<button class="btn" onclick="quickFeedback('Informative Content')">Informative Content</button>
+
+		  
+	  </p>
     <h2>Leave a Review</h2>
     <textarea id="reviewTextArea" placeholder="Enter your review or feedback"></textarea>
-    <button id="submitReviewBtn">Submit</button>
+    <button id="submitReviewBtn" class="btn" >Submit</button>
   </div>
 </div>
 
