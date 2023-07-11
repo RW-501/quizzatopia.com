@@ -318,13 +318,7 @@ function shuffleArrayAnswers(array) {
   return shuffledArray;
 }
 
-const options = questionObj.options;
-const shuffledOptions = shuffleArrayAnswers(options);
 
-for (let i = 0; i < Math.min(shuffledOptions.length, answerButtons.length); i++) {
-  answerButtons[i].innerHTML = shuffledOptions[i];
-  answerButtons[i].addEventListener("click", checkAnswer);
-}
 
 
 /*
@@ -380,13 +374,13 @@ document.getElementById("realQustionNum").innerHTML =  ('# '+ questionObj.questi
     }
   }
 
-  const options = questionObj.options;
-  const shuffledOptions = shuffleArrayAnswers(options);
+const options = questionObj.options;
+const shuffledOptions = shuffleArrayAnswers(options);
 
-  for (let i = 0; i < shuffledOptions.length; i++) {
-    answerButtons[i].innerHTML = shuffledOptions[i];
-    answerButtons[i].addEventListener("click", checkAnswer);
-  }
+for (let i = 0; i < Math.min(shuffledOptions.length, answerButtons.length); i++) {
+  answerButtons[i].innerHTML = shuffledOptions[i];
+  answerButtons[i].addEventListener("click", checkAnswer);
+}
 
   document.getElementById("explanation").innerHTML = "";
   if (countdownPerQuestion && timerEnabled) {
