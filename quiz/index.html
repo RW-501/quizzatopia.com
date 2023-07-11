@@ -1005,35 +1005,27 @@ const userInfoStored = localStorage.getItem(`userInfo`);
   const userInfo = storedUserInfo ? JSON.parse(userInfoStored) : {};
 	
  console.log("userInfo .... "+userInfo.firebaseId);
-
-	
 const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
-  const quizInfo = storedUserInfo ? JSON.parse(quizInfoStored) : {};
+const quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
 
-
-
-	
 // Update the quiz information
-quizCodeElement.textContent = quizInfo.quizCode;
-totalQuestionsElement.textContent = quizInfo.numberOfQuestions;
-timeSoFarElement.textContent = quizInfo.quizCode;
-quizURLElement.textContent = quizInfo.quizLink;
-quizNameElement.textContent = quizInfo.quizName;
-	
+quizCodeElement.textContent = quizInfo.quizCode || "";
+timeSoFarElement.textContent = quizInfo.quizTime || "";
+quizURLElement.textContent = quizInfo.quizLink || "";
+quizNameElement.textContent = quizInfo.quizName || "";
 
+let qCompleted = quizInfo.questionsCompleted || 0;
+let qCorrect = quizInfo.questionCorrect || 0;
+let qIncorrect = quizInfo.questionIncorrect || 0;
 
-	
-questionsCompletedElement.textContent = quizInfo.questionsCompleted;
-questionCorrectElement.textContent = quizInfo.questionCorrect;
-questionIncorrectElement.textContent = quizInfo.questionInorrect;
+let totalQuestions = quizInfo.numberOfQuestions || 0;
 
-let qCompleted = quizInfo.questionsCompleted;
-let qCorrect = quizInfo.questionCorrect;
-let qIncorrect = quizInfo.questionIncorrect;
+questionsCompletedElement.textContent = qCompleted || 0;
+questionCorrectElement.textContent = qCorrect || 0;
+questionIncorrectElement.textContent = qIncorrect || 0;
+totalQuestionsElement.textContent = totalQuestions || 0;
 
-let totalQuestions = quizInfo.numberOfQuestions;
-
-let percentCompleted = (qCompleted.length / totalQuestions) * 100;
+let percentCompleted = (qCompleted / totalQuestions) * 100;
 let scorePercentage = (qCorrect / (qCorrect + qIncorrect)) * 100;
 
 percetCopletedElement.textContent = percentCompleted.toFixed(2) + "%";
@@ -1045,8 +1037,6 @@ let savedTime = new Date(quizInfo.timestamp);
 let timeElapsed = currentTime - savedTime;
 timeSoFarElement.textContent = timeElapsed;
 
-
-	
 		  slideIn("optionsPopup");
 
   optionsPopup.classList.remove('d-none');
