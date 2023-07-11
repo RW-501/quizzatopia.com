@@ -1291,6 +1291,8 @@ function stopSpeaking() {
     synthesis.cancel();
   }
   isSpeaking = false;
+stopBlinking();
+
 }
 
 window.addEventListener('beforeunload', function(event) {
