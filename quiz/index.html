@@ -935,18 +935,20 @@ rateSlider.addEventListener('input', updateRate);
 
 animationCheckbox.addEventListener('change', toggleAnimation);
 
-// Function to toggle audio
-function toggleAudio() {
-  // Toggle the audio state and update the button text
-  isAudioEnabled = !isAudioEnabled;
-  updateAudioButton();
-}
+
 
 // Function to update the volume
 function updateVolume() {
   const volume = parseFloat(volumeSlider.value);
   // Update the volume value
   // Your logic for handling the volume change goes here
+  utterance.volume = volume;
+
+  // Output the current volume to the console
+  console.log('Current volume:', utterance.volume);
+
+  // Save the volume value to local storage
+  localStorage.setItem('volume', value);
 }
 
 // Function to update the voice
@@ -954,13 +956,19 @@ function updateVoice() {
   const selectedVoice = voiceDropdown.value;
   // Update the voice selection
   // Your logic for handling the voice change goes here
+	getMatchingVoice(selectedVoice);
 }
 
 // Function to update the speech rate
 function updateRate() {
-  const rate = parseFloat(rateSlider.value);
   // Update the speech rate value
   // Your logic for handling the rate change goes here
+  voiceSettings = {
+    rate: parseFloat(rateSlider.value),
+    voice: voiceDropdown.value
+  };
+  
+  localStorage.setItem('voiceSettings', JSON.stringify(voiceSettings));
 }
 
 // Function to toggle the animation
@@ -969,6 +977,19 @@ function toggleAnimation() {
   // Toggle the animation state
   // Your logic for handling the animation toggle goes here
 }
+
+
+
+	  
+const optionsPopup = document.getElementById('optionsPopup');
+
+function openOptions() {
+
+
+
+
+
+
 
 // Update the quiz information
 quizCodeElement.textContent = "Quizdpv5eoup";
@@ -979,25 +1000,26 @@ timeSoFarElement.textContent = "00:00:00";
 bestScoreElement.textContent = "100%";
 quizURLElement.textContent = "";
 
+	
+		  slideIn("optionsPopup");
 
-
-
-
-
-
-
-
-
-
-
-	  
-const optionsPopup = document.getElementById('optionsPopup');
-
-function openOptions() {
   optionsPopup.classList.add('show');
 }
 
+
+
+
+
+
+
+
+
+
+
+
 function closeOptions() {
+		  slideOuy("optionsPopup");
+
   optionsPopup.classList.remove('show');
 }
 
