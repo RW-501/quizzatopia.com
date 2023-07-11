@@ -935,6 +935,8 @@ const timeSoFarElement = document.getElementById('timeSoFar');
 const bestScoreElement = document.getElementById('bestScore');
 const quizURLElement = document.getElementById('quizURL');
 
+	  window.addEventListener("load", function() {
+
 // Event listeners and functions for the options menu
 audioButton.addEventListener('click', toggleAudio);
 
@@ -946,7 +948,7 @@ rateSlider.addEventListener('input', updateRate);
 
 animationCheckbox.addEventListener('change', toggleAnimation);
 
-
+	  });
 
 // Function to update the volume
 function updateVolume() {
