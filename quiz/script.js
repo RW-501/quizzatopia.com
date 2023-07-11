@@ -378,7 +378,7 @@ const options = questionObj.options;
 const shuffledOptions = shuffleArrayAnswers(options);
 
 for (let i = 0; i < Math.min(shuffledOptions.length, answerButtons.length); i++) {
-  answerButtons[i].innerHTML = shuffledOptions[i];
+  answerButtons[i].innerHTML = shuffledOptions[i] || "";
   answerButtons[i].addEventListener("click", checkAnswer);
 }
 
@@ -499,6 +499,7 @@ function enableAnswerButtons() {
   for (let i = 0; i < answerButtons.length; i++) {
     answerButtons[i].addEventListener("click", checkAnswer);
     answerButtons[i].classList.remove("disabled", "correct", "incorrect", "missed", "shake-animation", "pulse-animation");
+	 answerButtons[i].innerHTML = "";  
   }
 }
 var timeoutId;
@@ -657,6 +658,8 @@ async function updatequizDB() {
 }
 
 function endQuiz() {
+  clearTimeout(timeoutId);
+
   clearInterval(timer);
   quizStarted = false;
 
@@ -915,6 +918,11 @@ function closeModalWindow() {
 
   reviewModal.style.display = 'none';
   reviewTextArea.value = ''; // Clear the review text area
+}
+
+function quickFreedback(xxx) {
+reviewTextArea.value = xxx;
+
 }
 
 // Submit the review
