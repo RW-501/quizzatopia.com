@@ -507,7 +507,8 @@ var timeoutId;
 function nextQuestion() {
   clearTimeout(timeoutId);
 
-  timeoutId = setTimeout(reloadPage, 180000); // 3 minutes = 180 seconds
+  timeoutId =  setTimeout(function() {
+  location.reload(); }, 180000); // 3 minutes = 180 seconds
 
 	
 	stopSpeaking();
