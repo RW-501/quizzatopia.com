@@ -414,15 +414,7 @@ function checkAnswer() {
 
   console.log('options ????????????????? ', options);
 	
-/* 
-const answerOptions = document.getElementsByClassName("answer-option");
-    for (let i = 0; i < answerOptions.length; i++) {
-      if (answerOptions[i].innerHTML === selectedAnswer) {
-	        console.log('i ????????????????? ', i);
-		readCorrectAnswerFunc(i);
-      }
-    }
-    */
+
 	
   let correct_bool;
   if (selectedAnswer === questionObj.answer) {
@@ -434,6 +426,18 @@ const answerOptions = document.getElementsByClassName("answer-option");
     questionCorrect++;
     quizInfo.questionCorrect = questionCorrect;
     saveQuizInfo(quizCode, quizInfo);
+
+
+
+const answerOptions = document.getElementsByClassName("answer-option");
+    for (let i = 0; i < answerOptions.length; i++) {
+      if (answerOptions[i].innerHTML === selectedAnswer) {
+	        console.log('i ????????????????? ', i);
+		readCorrectAnswerFunc(i);
+      }
+    }
+    
+	  
   } else {
     selectedOption.classList.add('incorrect');
     correct_bool = "incorrect";
