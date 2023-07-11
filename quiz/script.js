@@ -432,8 +432,7 @@ function checkAnswer() {
 const answerOptions = document.getElementsByClassName("answer-option");
     for (let i = 0; i < answerOptions.length; i++) {
       if (answerOptions[i].innerHTML === selectedAnswer) {
-	        console.log('i ????????????????? ', i);
-		readCorrectAnswerFunc(i);
+		readCorrectAnswerFunc(i, "Correct");
       }
     }
     
@@ -1199,13 +1198,17 @@ let readThis = currentQuestion+" "+optionsString;
 readTextFunc(readThis);
 }
 
-function readCorrectAnswerFunc(xxx){
+function readCorrectAnswerFunc(xxx,zzz){
 		console.log("readThis xxx  "+xxx);
 	
 var currentOptions = document.getElementsByClassName("answer-option");
+	if(zzz){
+let readThis =  "Correct the answer is "+ currentOptions[xxx].innerHTML;
+	}else{
 let readThis =  "The correct answer is "+ currentOptions[xxx].innerHTML;
+	}
 readTextFunc(readThis);
-	console.log("readThis "+readThis);
+//	console.log("readThis "+readThis);
 
 }
 
