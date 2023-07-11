@@ -261,10 +261,10 @@ display: none;
 
 	
 <body>
+  < div class="mainSection" id="area-1">
 <h1>Create Quiz</h1>
 <form id="quizForm">
 
-  < mainSection class="mainSection" id="area-1">
 	  
   <section>
     <label for="quizName">Quiz Name:</label>
@@ -301,9 +301,9 @@ display: none;
     </select>
   </section>
 <button class="sectionBTN"  onclick="showSection('area-2')">Add Question</button>
-  < /mainSection>
+  < /div>
 	  
-  < mainSection class="mainSection" id="area-2">
+  < div class="mainSection" id="area-2">
 <button class="sectionBTN"  onclick="showSection('area-1')">Quiz Info/button>
 
   <section>
@@ -364,7 +364,7 @@ display: none;
 </form>
 <button class="sectionBTN"  onclick="showSection('area-3')">Ouestions List</button>
 
-  < /mainSection>
+  < /div>
 
 	  < mainSection class="mainSection" id="area-3">
 <button class="sectionBTN" onclick="showSection('area-2')">Add Ouestions</button>
@@ -378,7 +378,7 @@ display: none;
   <section>
   <button class="sectionBTN"  type="button" id="generateJSONButton">Submit</button>
   </section>
-  < /mainSection>
+  < /div>
 
 	
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
