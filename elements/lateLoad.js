@@ -13,9 +13,34 @@ function lateLoad() {
 
 
 	    console.log("  ?????????????????????????  inside  ^   LateLoad.js ^   ????????????????????????999        ");
+ // Create the mainFooter div
+  const mainFooter = document.createElement('div');
+  mainFooter.id = 'mainFooter';
+
+
+   currentPagePath = window.location.pathname;
+
+
+  if (currentPagePath === '/' || currentPagePath === '/index.html') {
+    footerPath = './elements/footer.html';
+  } else {
+    footerPath = '/elements/footer2.html';   
+	  
+  }
+
+    console.log('footerPath   '+footerPath);
 
 	
-  // END /////
+  // Fetch and insert the footer HTML
+  fetch(footerPath)
+    .then(response => response.text())
+    .then(data => {
+      mainFooter.innerHTML = data;
+      document.body.appendChild(mainFooter);
+    })
+    .catch(error => {
+      console.error("Error fetching data:", error);
+    });
 }
 
 
@@ -1192,37 +1217,6 @@ function getCurrentPage() {
 
 
 
-
-	
-window.addEventListener('load', function() {
-  // Create the mainFooter div
-  const mainFooter = document.createElement('div');
-  mainFooter.id = 'mainFooter';
-
-
-   currentPagePath = window.location.pathname;
-
-
-  if (currentPagePath === '/' || currentPagePath === '/index.html') {
-    footerPath = './elements/footer.html';
-  } else {
-    footerPath = '/elements/footer2.html';   
-	  
-  }
-
-
-	
-  // Fetch and insert the footer HTML
-  fetch(footerPath)
-    .then(response => response.text())
-    .then(data => {
-      mainFooter.innerHTML = data;
-      document.body.appendChild(mainFooter);
-    })
-    .catch(error => {
-      console.error("Error fetching data:", error);
-    });
-});
 
 
 
