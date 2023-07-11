@@ -870,6 +870,7 @@ margin-block-start: auto;
   <p>Time so far: <span id="timeSoFar">00:00:00</span></p>
   <p>Best Score: <span id="bestScore">100%</span></p>
   <p>Quiz URL: <span id="quizURL"></span></p>
+  <p>Questions Completed: <span id="questionsCompleted"></span></p>
 </div>
 
 <div id="optionsMenu">
@@ -918,6 +919,7 @@ margin-block-start: auto;
  animationCheckbox = document.getElementById('animation-quizOp');
  quizCodeElement = document.getElementById('quizCodePopup');
 	  
+const questionsCompletedElement = document.getElementById('questionsCompleted');
 const totalQuestionsElement = document.getElementById('totalQuestions');
 const questionCorrectElement = document.getElementById('questionCorrect');
 const questionIncorrectElement = document.getElementById('questionIncorrect');
@@ -977,6 +979,11 @@ function toggleAnimation() {
   const isAnimated = animationCheckbox.checked;
   // Toggle the animation state
   // Your logic for handling the animation toggle goes here
+
+  userInfo.animationEnabled = isAnimated;
+isAnimationEnabled = userInfo.animationEnabled;
+  localStorage.setItem('userInfo', JSON.stringify(userInfo));
+	
 }
 
 
@@ -990,16 +997,19 @@ function openOptions() {
 
 
 
+const quizInfo = localStorage.getItem(`quizInfo_${quizCode}`);
+  const quizInfo = storedUserInfo ? JSON.parse(quizInfo) : {};
 
 
 // Update the quiz information
-quizCodeElement.textContent = "Quizdpv5eoup";
-totalQuestionsElement.textContent = "total";
-questionCorrectElement.textContent = "2";
-questionIncorrectElement.textContent = "2";
-timeSoFarElement.textContent = "00:00:00";
+quizCodeElement.textContent = quizInfo.quizCode;
+totalQuestionsElement.textContent = quizInfo.numberOfQuestions;
+questionsCompletedElement.textContent = quizInfo.questionsCompleted;
+questionCorrectElement.textContent = quizInfo.questionCorrect;
+questionIncorrectElement.textContent = quizInfo.questionInorrect;
+timeSoFarElement.textContent = quizInfo.quizCode;
 bestScoreElement.textContent = "100%";
-quizURLElement.textContent = "";
+quizURLElement.textContent = quizInfo.quizLink;
 
 	
 		  slideIn("optionsPopup");
