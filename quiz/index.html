@@ -999,7 +999,14 @@ isAnimationEnabled = userInfo.animationEnabled;
 const optionsPopup = document.getElementById('optionsPopup');
 
 function openOptions() {
+	console.log("Load and Save ....");
+	
+const userInfoStored = localStorage.getItem(`userInfo`);
+  const userInfo = storedUserInfo ? JSON.parse(userInfoStored) : {};
+	
+ console.log("userInfo .... "+userInfo.firebaseId);
 
+	
 const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
   const quizInfo = storedUserInfo ? JSON.parse(quizInfoStored) : {};
 
