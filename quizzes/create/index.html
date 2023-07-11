@@ -180,8 +180,24 @@
 
 	<style>
 
-
-
+.mainSection{
+display: none;
+}
+.sectionBTN{
+    width: 100%;
+    font-weight: 600;
+    display: grid;
+    padding: 5%;
+    font-size: 25px;
+	    background-color: #ffc107;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 5%;
+    border-radius: 2%;
+}
 
     
 </style>
@@ -247,6 +263,9 @@
 <body>
 <h1>Create Quiz</h1>
 <form id="quizForm">
+
+  < mainSection class="mainSection" id="area-1">
+	  
   <section>
     <label for="quizName">Quiz Name:</label>
     <input type="text" id="quizName" required>
@@ -281,6 +300,11 @@
       <option value="random">Random</option>
     </select>
   </section>
+<button class="sectionBTN"  onclick="showSection('area-2')">Add Question</button>
+  < /mainSection>
+	  
+  < mainSection class="mainSection" id="area-2">
+<button class="sectionBTN"  onclick="showSection('area-1')">Quiz Info/button>
 
   <section>
     <label for="questionType">Question Type:</label>
@@ -338,8 +362,13 @@
 
   <input type="submit" value="Add Question">
 </form>
+<button class="sectionBTN"  onclick="showSection('area-3')">Ouestions List</button>
 
-	
+  < /mainSection>
+
+	  < mainSection class="mainSection" id="area-3">
+<button class="sectionBTN" onclick="showSection('area-2')">Add Ouestions</button>
+
   <section>
   <div id="questionList">
     <h2>Question List:</h2>
@@ -347,16 +376,35 @@
   </section>
 
   <section>
-  <button type="button" id="generateJSONButton">Generate JSON</button>
+  <button class="sectionBTN"  type="button" id="generateJSONButton">Submit</button>
   </section>
+  < /mainSection>
 
 	
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
+
+
+function showSection(sectionId) {
+  // Hide all div elements with the class "mainSection"
+  var mainSections = document.getElementsByClassName('mainSection');
+  for (var i = 0; i < mainSections.length; i++) {
+    mainSections[i].style.display = 'none';
+  }
+
+  // Show the specific section with the given sectionId
+  var section = document.getElementById(sectionId);
+  if (section) {
+    section.style.display = 'block';
+  }
+}
+
+
+	  
     $(document).ready(function() {
       // Generate a random quiz code
       function generateQuizCode() {
-        return 'Quiz' + Math.random().toString(36).substr(2, 8);
+        return 'uQuiz' + Math.random().toString(36).substr(2, 8);
       }
 
       // Update quiz code field with generated code
