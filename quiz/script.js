@@ -1199,16 +1199,16 @@ readTextFunc(readThis);
 }
 
 function readCorrectAnswerFunc(xxx,zzz){
-		console.log("readThis xxx  "+xxx);
+		console.log("readThis xxx  "+zzz);
 	
 var currentOptions = document.getElementsByClassName("answer-option");
 	if(zzz){
-let readThis =  "Correct the answer is "+ currentOptions[xxx].innerHTML;
+let readThis =  "Correct, the answer is "+ currentOptions[xxx].innerHTML;
 	}else{
 let readThis =  "The correct answer is "+ currentOptions[xxx].innerHTML;
 	}
 readTextFunc(readThis);
-//	console.log("readThis "+readThis);
+	console.log("readThis "+readThis);
 
 }
 
