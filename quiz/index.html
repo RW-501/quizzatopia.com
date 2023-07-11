@@ -440,14 +440,14 @@ top:0;
   position: fixed;
   top: 0;
   left: 0;
-  width: 50%;
+top:0; bottom:0;  width: 50%;
   background-color: #f1f1f1;
   padding: 20px;
-
+margin: auto;
 			height: fit-content;
 }
 
-#optionsPopup.show {
+.show {
   display: block;
 }
 
@@ -660,7 +660,7 @@ top:0;
 	
 	
         <div id="quiz-timer-qn" class="d-flex justify-content-between">
-          <div id="question-number" class="font-weight-bold"   onclick="openOptions()"></div>
+          <div id="question-number" class="font-weight-bold"   onclick="openOptions();"></div>
           <div id="timer" class="text-right"></div>
 		
 <div id="audioButton" onclick="readQuizFunc();">
@@ -1000,10 +1000,6 @@ isAnimationEnabled = userInfo.animationEnabled;
 const optionsPopup = document.getElementById('optionsPopup');
 
 function openOptions() {
-
-
-
-
 
 const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
   const quizInfo = storedUserInfo ? JSON.parse(quizInfoStored) : {};
