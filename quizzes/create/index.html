@@ -208,7 +208,24 @@ display: none;
 		}
 
 			
-    
+.custom-file-upload {
+  display: inline-block;
+  padding: 8px 12px;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.custom-file-upload span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Hide the default file input */
+.custom-file-upload input[type="file"] {
+  display: none;
+}
 </style>
 	  	
 	
@@ -334,8 +351,10 @@ display: none;
   </section>
 	
   <section>
-    <label for="image">Image:</label>
-    <input type="file" id="image">
+<label for="image" class="custom-file-upload">
+  <span>Image</span>
+<input type="file" id="image" accept="image/jpeg, image/png, image/gif">
+</label>
   </section>
 	
   <section>
