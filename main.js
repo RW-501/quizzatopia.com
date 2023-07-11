@@ -263,10 +263,8 @@ function fetchAndInsertContent() {
 
   if (currentPagePath === '/' || currentPagePath === '/index.html') {
     navbarPath = './elements/navbar.html';
-    footerPath = './elements/footer.html';
   } else {
     navbarPath = '/elements/navbar2.html';
-    footerPath = '/elements/footer2.html';   
 	  
   }
 
