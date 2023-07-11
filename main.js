@@ -253,7 +253,7 @@ let pointsRewards;
 
   var userDashboard;
 
-  const currentPagePath = window.location.pathname;
+  var currentPagePath = window.location.pathname;
     console.log("currentPagePath:", currentPagePath);
 
 	  let navbarPath, footerPath;
