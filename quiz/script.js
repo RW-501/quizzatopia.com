@@ -415,6 +415,7 @@ function checkAnswer() {
   if (options) {
     for (let i = 0; i < options.length; i++) {
       options[i].classList.add('disabled');
+	    console.log(options[i].innerHTML+"   === "+questionObj.answer );
       if (options[i].innerHTML === questionObj.answer) {
 	          console.log('readCorrectAnswerFunc i   '+i);
 	      let x = i ;
@@ -449,7 +450,6 @@ function checkAnswer() {
 		readCorrectAnswerFunc(i);
         if (isAnimationEnabled) {
           answerOptions[i].classList.add('shake-animation');
-
         }
       }
     }
