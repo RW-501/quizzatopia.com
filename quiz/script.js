@@ -1032,7 +1032,7 @@ function stopBlinking() {
 
 
 
-const audioButton = document.getElementById('audioButton');
+var audioButton = document.getElementById('audioButton');
 var isAudioEnabled = true;
 
 function toggleAudio() {
