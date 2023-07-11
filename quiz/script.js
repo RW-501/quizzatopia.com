@@ -366,8 +366,9 @@ function showQuestion() {
     document.getElementById("questionImageArea").style.display = "block";
   }
 
-  document.getElementById("difficulty").innerHTML = "Difficulty: <strong>" + questionObj.difficulty + "</strong>";
-  document.getElementById("realQustionNum").innerHTML = "# " + questionObj.questionNumber;
+document.getElementById("difficulty").innerHTML = "Difficulty: " + (questionObj.difficulty || '') ;
+document.getElementById("realQustionNum").innerHTML =  ('# '+ questionObj.questionNumber || "");
+
 
   const answerButtons = document.getElementsByClassName("answer-option");
 
