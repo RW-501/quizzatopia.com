@@ -1031,7 +1031,7 @@ let qCompleted = quizInfo.questionsCompleted;
 let qCorrect = quizInfo.questionCorrect;
 let qIncorrect = quizInfo.questionIncorrect;
 
-let totalQuestions = // Total number of questions in the quiz
+let totalQuestions = quizInfo.numberOfQuestions;
 
 let percentCompleted = (qCompleted.length / totalQuestions) * 100;
 let scorePercentage = (qCorrect / (qCorrect + qIncorrect)) * 100;
