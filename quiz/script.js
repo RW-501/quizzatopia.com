@@ -413,14 +413,16 @@ function checkAnswer() {
   const options = optionContainers[currentQuestion]?.children;
 
   console.log('options ????????????????? ', options);
- const answerOptions = document.getElementsByClassName("answer-option");
+	
+/* 
+const answerOptions = document.getElementsByClassName("answer-option");
     for (let i = 0; i < answerOptions.length; i++) {
       if (answerOptions[i].innerHTML === selectedAnswer) {
 	        console.log('i ????????????????? ', i);
-
 		readCorrectAnswerFunc(i);
       }
     }
+    */
 	
   let correct_bool;
   if (selectedAnswer === questionObj.answer) {
