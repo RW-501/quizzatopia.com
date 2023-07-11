@@ -1200,16 +1200,16 @@ readTextFunc(readThis);
 }
 
 function readCorrectAnswerFunc(xxx,zzz){
-		console.log("readThis xxx  "+zzz);
-	
+		//console.log("readThis xxx  "+zzz);
+let readThis;	
 var currentOptions = document.getElementsByClassName("answer-option");
-	if(zzz && zzz !== undefined ){
-let readThis =  "Correct, the answer is "+ currentOptions[xxx].innerHTML;
+	if(zzz ){
+ readThis =  "Correct, the answer is "+ currentOptions[xxx].innerHTML;
 	}else{
-let readThis =  "The correct answer is "+ currentOptions[xxx].innerHTML;
+ readThis =  "The correct answer is "+ currentOptions[xxx].innerHTML;
 	}
 readTextFunc(readThis);
-	console.log("readThis "+readThis);
+	//console.log("readThis "+readThis);
 
 }
 
