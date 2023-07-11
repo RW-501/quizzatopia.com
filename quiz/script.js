@@ -412,23 +412,16 @@ function checkAnswer() {
   const questionObj = questions[currentQuestion];
   const options = optionContainers[currentQuestion]?.children;
 
-  if (options) {
-    for (let i = 0; i < options.length; i++) {
-      options[i].classList.add('disabled');
-	    console.log(options[i].innerHTML+"   === "+questionObj.answer );
-      if (options[i].innerHTML === questionObj.answer) {
-	          console.log('readCorrectAnswerFunc i   '+i);
-	      let x = i ;
-	          console.log('readCorrectAnswerFunc x  '+x);
+  console.log('options ????????????????? ', options);
+ const answerOptions = document.getElementsByClassName("answer-option");
+    for (let i = 0; i < answerOptions.length; i++) {
+      if (answerOptions[i].innerHTML === selectedAnswer) {
+	        console.log('i ????????????????? ', i);
 
-		readCorrectAnswerFunc(x);
-        //options[i].classList.add('correct');
-      } else {
-        options[i].classList.add('incorrect');
+		readCorrectAnswerFunc(i);
       }
     }
-  }
-
+	
   let correct_bool;
   if (selectedAnswer === questionObj.answer) {
     selectedOption.classList.add('correct');
@@ -505,6 +498,10 @@ function enableAnswerButtons() {
 
 // Function to show the next question
 function nextQuestion() {
+setTimeout(function() {
+  location.reload();
+}, 180000); // 3 minutes = 180 seconds
+	
 	stopSpeaking();
   currentQuestion++;
   document.getElementById('show-explanation-btn').classList.add("d-none");
@@ -529,10 +526,7 @@ function nextQuestion() {
   updateProgressBar(currentQuestion);
   updateQuestionNumber();
 
-	setTimeout(function() {
-  location.reload();
-}, 180000); // 3 minutes = 180 seconds
-	
+
 }
 
 // Function to skip the question
