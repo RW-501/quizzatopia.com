@@ -417,7 +417,7 @@ function checkAnswer() {
       options[i].classList.add('disabled');
       if (options[i].innerHTML === questionObj.answer) {
         options[i].classList.add('correct');
-		readCorrectAnswerFunc(i);
+		readCorrectAnswerFunc(i +1);
       } else {
         options[i].classList.add('incorrect');
       }
