@@ -433,7 +433,7 @@ const answerOptions = document.getElementsByClassName("answer-option");
     for (let i = 0; i < answerOptions.length; i++) {
       if (answerOptions[i].innerHTML === selectedAnswer) {
 	      
-		readCorrectAnswerFunc(i , 0 );
+		readCorrectAnswerFunc(i , "Correct" );
       }
     }
     
@@ -1203,7 +1203,7 @@ function readCorrectAnswerFunc(xxx,zzz){
 		console.log("readThis xxx  "+zzz);
 	
 var currentOptions = document.getElementsByClassName("answer-option");
-	if(zzz){
+	if(zzz && zzz !== undefined ){
 let readThis =  "Correct, the answer is "+ currentOptions[xxx].innerHTML;
 	}else{
 let readThis =  "The correct answer is "+ currentOptions[xxx].innerHTML;
