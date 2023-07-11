@@ -425,21 +425,29 @@ margin-block-start: auto;
   margin-top: 0;
 }
 
-
-		.popup {
+		#optionsPopup{
   display: none;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  height: 200px;
+  top: 0;
+  left: 0;
+  z-index: 999;
+			 width: 100%;
+top:0;
+			bottom:0;		}
+
+		.optionspopup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
   background-color: #f1f1f1;
   padding: 20px;
-  z-index: 999;
+
+			height: fit-content;
 }
 
-.popup.show {
+#optionsPopup.show {
   display: block;
 }
 
@@ -856,7 +864,7 @@ margin-block-start: auto;
 
 	
 	
-	<div id="optionsPopup" class="popup">
+	<div id="optionsPopup" class="optionspopup">
   <button id="closeOptionsButton"   onclick="closeOptions()" >Close</button>
   <!-- Options content goes here -->
 <div id="quizInfoPopup">
