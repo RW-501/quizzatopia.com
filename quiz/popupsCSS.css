@@ -69,12 +69,10 @@ display:none;
 text-indent: 2%;
 }
 #optionsMenu input{
-	color: #fd7e14;
-    font-size: 3em;
-    font-weight: 800;
+background-color: #fd7e14;
 }
-		#optionsPopup{
-
+	#volumeSlider input,	#rateSlider input {
+background-color: #000000;
 }		
 
 .optionspopup {
