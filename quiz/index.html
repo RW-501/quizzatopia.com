@@ -421,8 +421,13 @@ margin-block-start: auto;
  margin-top: 0;
     font-size: 3em;
     font-weight: 800;
+	color: #ffc107;
 }
-
+#quizInfoPopup input{
+	color: #ffc107;
+    font-size: 3em;
+    font-weight: 800;
+}
 		#optionsPopup{
     position: fixed;
     top: 0;
@@ -437,9 +442,9 @@ margin-block-start: auto;
 }		
 
 		.optionspopup {
-     background-color: #e7e7e7;
-    padding: 5% 0 0 0 ;
-    border-radius: 2em ;
+    background-color: #e7e7e7;
+    padding: 5% 0 0 0;
+    border-radius: 2em;
     margin: auto;
     top: 0;
     bottom: 0;
@@ -447,11 +452,28 @@ margin-block-start: auto;
     width: 80%;
     height: fit-content;
     overflow: hidden;
-box-shadow: 0px 1px 0rem 2px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: inset 0px 1px 0rem 14px #ffc107 !important;
+    display: block;
 }
 #quizInfoPopup, #optionsMenu{
- 
+width: 90%;
+    margin: auto;
+    background-color: #ffc107;
+    box-sizing: border-box;
+    padding: 1%;
+    border-radius: 1em;
+    font-weight: 900;
+    color: #3c3b3a;
+
+    box-shadow: inset 0px -3px 0rem 3px #b98c03 !important;
+
 }
+#quizInfoPopup, #optionsMenu span{
+    color: #ffffff;
+
+}
+
+		
 	#quizInfoPopup	p {
     margin-top: 0;
     margin-bottom: 1%;
@@ -463,7 +485,7 @@ box-shadow: 0px 1px 0rem 2px rgba(0, 0, 0, 0.2) !important;
     padding: 1%;
     border: none;
     font-size: 3em;
-    box-shadow: 0px 1px 0rem 5px rgb(0 0 0 / 65%) !important;
+    box-shadow: 0px 1px 0rem 5px rgb(255 255 255) !important;
     font-weight: 800;
     color: white;
 }
@@ -473,8 +495,13 @@ box-shadow: 0px 1px 0rem 2px rgba(0, 0, 0, 0.2) !important;
 text-align: center;
 }
 .block{
-    width: 80%;
-
+    width: 90%;
+    display: block;
+    margin: 1% auto;
+    background-color: #f7c630;
+    box-sizing: border-box;
+    padding: 1%;
+    border-radius: 1em;
 }
 #optionsMenu .form-check{
     margin: 2%;
@@ -901,34 +928,41 @@ text-align: center;
 
 	<div class="center block"><p>Quiz Code: <span id="quizCodePopup"></span></p>
   <p>Quiz Name:  <span id="quizName"></span></p></div>
-	
- <div class="center block">
-	 <p>Score Percent Completed: <span id="scorePercent"></span></p>
-  <p>Score: <span id="bestScore"></span></p>
-</div>
+
+
 <div class=" block">
   <p>Number of Questions: <span id="totalQuestions"></span></p>
   <p>Questons Completed: <span id="questionsCompleted"></span></p>
   <p>Percet Completed: <span id="percetCopleted"></span></p>
 </div>
+	
+ <div class="center block">
+	 <p>Score Percent: <span id="scorePercent"></span></p>
+  <p>Score: <span id="bestScore"></span></p>
+</div>
+
 <div class=" block">
   <p>Question Correct: <span id="questionCorrect"></span></p>
   <p>Question Incorrect: <span id="questionIncorrect"></span></p>
 </div>
+	
 <div class="center block">	 
   <p>Time so far: <span id="timeSoFar"></span></p>
   <p>Quiz URL: <span id="quizURL"></span></p>
 </div>
 </div>
 
-		<hr>
 <div id="optionsMenu">
   <h3>Options</h3>
-  <div class="form-check">
+
+<div class=" block">
+  <div class="form-check ">
     <label for="audioButtonOp">Audio:</label>
     <button id="audioButtonOp">On</button>
   </div>
+</div>
 
+<div class=" block">
   <div class="form-check">
     <label for="volumeSliderOp">Speech Volume:</label>
     <input type="range" id="volumeSliderOp" min="0" max="1" step="0.2">
@@ -943,13 +977,18 @@ text-align: center;
     <label for="rateSliderOp">Speech Rate:</label>
     <input type="range" id="rateSliderOp" min="0.1" max="2" step="0.5">
   </div>
+</div>
 
+<div class=" block">
   <div class="form-check">
     <input class="form-check-inputOp" type="checkbox" id="animation-quizOp">
     <label class="form-check-label" for="animation-quiz">
       Animate Quiz
     </label>
   </div>
+</div>
+
+	
 </div>
   <button id="closeOptionsButton"   onclick="closeOptions()" >Close</button>
 
