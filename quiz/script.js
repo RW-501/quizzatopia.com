@@ -362,8 +362,8 @@ document.getElementById("realQustionNum").innerHTML =  ('# '+ questionObj.questi
   quizInfo.questionsCompleted = questionsCompleted;
 	
 
-
-    saveQuizInfo(quizCode, JSON.parse(quizInfo));
+let saveQuizInfo = JSON.parse(quizInfo);
+    saveQuizInfo(quizCode, saveQuizInfo);
   //  quizInfo = JSON.parse(savedQuizInfo);
 
 
