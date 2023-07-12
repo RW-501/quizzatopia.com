@@ -363,7 +363,8 @@ document.getElementById("realQustionNum").innerHTML =  ('# '+ questionObj.questi
 	
 
 
-    saveQuizInfo(quizCode, JSON.stringify(quizInfo));
+    saveQuizInfo(quizCode, JSON.parse(quizInfo));
+  //  quizInfo = JSON.parse(savedQuizInfo);
 
 
 
