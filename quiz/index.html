@@ -386,7 +386,7 @@ background-color: #bedffb !important;
     box-shadow: 0px 1px 0rem 2px rgba(0, 0, 0, 0.2) !important;
 }
 
-	#audioButton {
+	#readButton {
     display: inline-block;
     cursor: pointer;
     padding: 10px;
@@ -500,10 +500,7 @@ display: inline-block;
           </div>
           <hr>
 
-	<div class="form-check">
-  <label for="audioButton">Audio:</label>
-<button id="audioButton"> On</button>
-</div>
+
 
 	<div class="form-check">
   <label for="volumeSlider">Speech Volume:</label>
@@ -636,7 +633,7 @@ display: inline-block;
           <div id="question-number" class="font-weight-bold"   onclick="openOptions();"></div>
           <div id="timer" class="text-right"></div>
 		
-<div id="audioButton" onclick="readQuizFunc();">
+<div id="readButton" onclick="readQuizFunc();">
   <div>&#128264;</div>
   <span>Read</span>
 </div>
@@ -881,8 +878,8 @@ display: inline-block;
 
 <div class=" block">
   <div class="form-check ">
-    <label for="audioButtonOp">Audio:</label>
-    <button id="audioButtonOp">On</button>
+    <label for="audioButton">Audio:</label>
+    <button id="audioButton">On</button>
   </div>
 </div>
 
@@ -928,7 +925,6 @@ display: inline-block;
 	
   <script>
 
- audioButton = document.getElementById('audioButtonOp');
  volumeSlider = document.getElementById('volumeSliderOp');
  var voiceDropdown = document.getElementById('voiceDropdownOp');
  var rateSlider = document.getElementById('rateSliderOp');
