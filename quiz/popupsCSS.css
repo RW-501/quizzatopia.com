@@ -7,8 +7,8 @@
 }
 
 
-.btn-main,
-.btn-main:active {
+.btnMain,
+.btnMain:active {
     background-color: #fd7e14;
     color: #fff;
     cursor: pointer;
@@ -16,7 +16,7 @@
 }
 
 
-.btn-main:hover {
+.btnMain:hover {
     color: #fff;
     background-color: rgb(201 99 14);
     border-color: rgb(108 117 125) ;
