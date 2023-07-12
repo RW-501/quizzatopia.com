@@ -634,22 +634,7 @@ background-color: #e8e8e8;
   color: #666;
 }
 
-.explanation-container {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  max-width: 90%;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  z-index: 9999;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  cursor: move;
-	display:none;
-}
+
 
 .close-button {
   position: absolute;
