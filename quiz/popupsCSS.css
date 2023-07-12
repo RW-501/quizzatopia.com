@@ -42,10 +42,10 @@ display:none;
  margin-top: 0;
     font-size: 3em;
     font-weight: 900;
-	color: #ffc107;
+	color: #ffffff;
 }
 #optionsMenu input{
-	color: #ffc107;
+	color: #fd7e14;
     font-size: 3em;
     font-weight: 800;
 }
@@ -64,7 +64,7 @@ display:none;
     width: 80%;
     height: 80%;
     overflow-y: clip;
-    box-shadow: inset 0px 1px 0rem 14px #ffc107 !important;
+    box-shadow: inset 0px 1px 0rem 14px #fd7e14 !important;
     display: block;
 }
 
@@ -79,7 +79,7 @@ display:none;
 #quizInfoPopup, #optionsMenu{
 width: 90%;
     margin: auto;
-    background-color: #ffc107;
+    background-color: #fd7e14;
     box-sizing: border-box;
     padding: 1%;
     border-radius: 1em;
@@ -102,7 +102,7 @@ width: 90%;
 		
 #closeOptionsButton{
     width: 100%;
-    background-color: #ffc107;
+    background-color: #fd7e14;
     padding: 1%;
     border: none;
     font-size: 3em;
@@ -119,7 +119,7 @@ text-align: center;
     width: 90%;
     display: block;
     margin: 1% auto;
-    background-color: #f7c630;
+    background-color: #fd7e14;
     box-sizing: border-box;
     padding: 1%;
     border-radius: 1em;
