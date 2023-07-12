@@ -358,7 +358,11 @@ document.getElementById("difficulty").innerHTML = "Difficulty: " + (questionObj.
 document.getElementById("realQustionNum").innerHTML =  ('# '+ questionObj.questionNumber || "");
 
 	questionsCompleted.push(questionObj.questionNumber);
-  quizInfo.questionsCompleted = questionsCompleted
+  quizInfo.questionsCompleted = questionsCompleted;
+	
+	console.log('questionObj.questionNumber ', questionObj.questionNumber);
+		console.log('questionsCompleted ', questionsCompleted);
+
     saveQuizInfo(quizCode, quizInfo);
 	
   const answerButtons = document.getElementsByClassName("answer-option");
