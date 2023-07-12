@@ -1068,11 +1068,9 @@ function fetchQuizzesFromDB() {
   console.log("Fetching quizzes from the database...");
 // Initialize your Firebase app
 	
-if (db) {
-  // Use the existing db variable
-} else {
-  db = firebase.firestore();
-}
+
+ const db = firebase.firestore();
+
 	
   // Fetch the quizzes collection
   db.collection('quizzes')
