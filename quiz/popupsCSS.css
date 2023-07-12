@@ -1,4 +1,10 @@
-.btn-main{
+
+
+
+
+
+.btn-check:active+.btn-main, .btn-check:checked+.btn-main, .btn-main.active, .btn-main:active, .show>.btn-main.dropdown-toggle {
+
     background-color: rgb(108 117 125) ;
 color: #fff;
 	    cursor: pointer;
