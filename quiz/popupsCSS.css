@@ -40,7 +40,7 @@
 
 
 
-#optionsMenu h3  #quizInfoPopup h3 {
+#optionsMenu h3,  #quizInfoPopup h3 {
  margin-top: 0;
     font-size: 3em;
     font-weight: 800;
