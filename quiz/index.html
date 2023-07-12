@@ -868,24 +868,24 @@ display: inline-block;
 
 <div class=" block">
   <div class="form-check">
-    <label for="volumeSliderOp">Speech Volume:</label>
-    <input type="range" id="volumeSliderOp" min="0" max="1" step="0.2">
+    <label for="volumeSlider">Speech Volume:</label>
+    <input type="range" id="volumeSlider" min="0" max="1" step="0.2">
   </div>
 
   <div class="form-check">
-    <label for="voiceDropdownOp">Voice:</label>
-    <select id="voiceDropdownOp"></select>
+    <label for="voiceDropdown">Voice:</label>
+    <select id="voiceDropdown"></select>
   </div>
 
   <div class="form-check">
-    <label for="rateSliderOp">Speech Rate:</label>
-    <input type="range" id="rateSliderOp" min="0.1" max="2" step="0.5">
+    <label for="rateSlider">Speech Rate:</label>
+    <input type="range" id="rateSlider" min="0.1" max="2" step="0.5">
   </div>
 </div>
 
 <div class=" block">
   <div class="form-check">
-    <input class="form-check-inputOp" type="checkbox" id="animation-quizOp">
+    <input class="form-check-input" type="checkbox" id="animation-quiz">
     <label class="form-check-label" for="animation-quiz">
       Animate Quiz
     </label>
@@ -1010,6 +1010,12 @@ timeSoFarElement.textContent = quizInfo.quizTime || "";
 quizURLElement.textContent = quizInfo.quizLink || "";
 quizNameElement.textContent = quizInfo.quizName || "";
 
+
+
+questionsCompletedElement.textContent = quizInfo.questionsCompleted  || "";
+
+
+	
 let qCorrect = quizInfo.questionCorrect || 0;
 let qIncorrect = quizInfo.questionIncorrect || 0;
 
@@ -1018,7 +1024,6 @@ let qCompleted = qCorrect + qIncorrect;
 
 let totalQuestions = quizInfo.numberOfQuestions || 0;
 
-questionsCompletedElement.textContent = qCompleted || 0;
 questionCorrectElement.textContent = qCorrect || 0;
 questionIncorrectElement.textContent = qIncorrect || 0;
 totalQuestionsElement.textContent = totalQuestions || 0;
