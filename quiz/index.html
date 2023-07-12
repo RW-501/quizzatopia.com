@@ -951,8 +951,7 @@ function updateVolume() {
   console.log('Current volume:', utterance.volume);
 
   // Save the volume value to local storage
-  settings.volume = volume;
-	saveSettings(settings);
+saveSettings('volume', volume);
 
 }
 
@@ -973,8 +972,7 @@ function updateRate() {
     voice: voiceDropdown.value
   };
   
-	  settings.voiceSettings = JSON.stringify(voiceSettings);
-	saveSettings(settings);
+saveSettings('voiceSettings', voiceSettings);
 }
 
 // Function to toggle the animation
@@ -986,7 +984,8 @@ function toggleAnimation() {
   userInfo.animationEnabled = isAnimated;
 isAnimationEnabled = userInfo.animationEnabled;
   localStorage.setItem('userInfo', JSON.stringify(userInfo));
-	
+	saveSettings('animationEnabled', isAnimated);
+
 }
 
 
@@ -1031,8 +1030,9 @@ totalQuestionsElement.textContent = totalQuestions || 0;
 let percentCompleted = (qCompleted / totalQuestions) * 100;
 let scorePercentage = (qCorrect / (qCorrect + qIncorrect)) * 100;
 
-percetCopletedElement.textContent = percentCompleted.toFixed(2) + "%";
-scorePercentegeElement.textContent = scorePercentage.toFixed(2) + "%";
+percetCopletedElement.textContent = percentCompleted ? percentCompleted.toFixed(2) + "%" : "0%";
+scorePercentegeElement.textContent = scorePercentage ? scorePercentage.toFixed(2) + "%" : "0%";
+
 
 let currentTime = new Date();
 let savedTime = new Date(quizInfo.timestamp);
