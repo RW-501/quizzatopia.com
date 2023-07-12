@@ -445,7 +445,7 @@ const answerOptions = document.getElementsByClassName("answer-option");
     correct_bool = "incorrect";
     questionIncorrect++;
     quizInfo.questionIncorrect = questionIncorrect;
-    saveQuizInfo(quizCode, quizInfo.questionIncorrect);
+    saveQuizInfo(quizCode, quizInfo);
 	console.log('questionIncorrect ????????????????? ', questionIncorrect);
 	  
 	  const answerOptions = document.getElementsByClassName("answer-option");
