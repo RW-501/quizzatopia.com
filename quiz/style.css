@@ -105,7 +105,9 @@ background-color: #e8e8e8;
 
   }
 
-
+#skip-next-btn{
+padding: 2% 4% 2% 4%;
+}
 
     
       /* Quiz styles */
