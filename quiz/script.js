@@ -1256,7 +1256,7 @@ function readTextFunc(text) {
 	      if(isAudioEnabled === true){
 
   if (isSpeaking) {
-    // Stop the ongoing speech
+    // Stop the ongoing speech	  
     stopSpeaking();
     return;
   }
@@ -1306,6 +1306,7 @@ for (var i = 0; i < words.length; i += chunkSize) {
     };
 startBlinking();
     // Start speaking
+document.getElementById("readButton").innerHTML = "<div>🔈</div><span>Reading</span>";
     isSpeaking = true;
     speakChunks(0);
   } else {
@@ -1330,6 +1331,7 @@ function stopSpeaking() {
   }
   isSpeaking = false;
 stopBlinking();
+document.getElementById("readButton").innerHTML = "<div>🔈</div><span>Read</span>";
 
 }
 
