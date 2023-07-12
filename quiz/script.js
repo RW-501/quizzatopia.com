@@ -1052,9 +1052,8 @@ isAudioEnabled = settings.audioEnabled;
 function toggleAudio() {
   isAudioEnabled = !isAudioEnabled;
 
-  settings.audioEnabled = isAudioEnabled;
 // Save the updated settings
-saveSettings(settings);
+	saveSettings('audioEnabled', isAudioEnabled);
 	
   updateAudioButton();
 }
@@ -1086,9 +1085,8 @@ function setVolume(value) {
   // Save the volume value to local storage
  // localStorage.setItem('volume', value);
 
- settings.volume = value;
 // Save the updated settings
-saveSettings(settings);
+	saveSettings('volume', value);
 
 }
 
@@ -1101,15 +1099,16 @@ function loadVolume() {
     // Set the volume slider value
     volumeSlider.value = savedVolume;
 
-    // Set the volume
-    setVolume(savedVolume);
+    
   }
 }
 
 // Event listener for the volume slider
 volumeSlider.addEventListener('input', function() {
   var volumeValue = volumeSlider.value;
-  setVolume(volumeValue);
+
+		saveSettings('volume', volumeValue);
+
 });
 
 // Load the volume value on page load
