@@ -989,7 +989,6 @@ isAnimationEnabled = userInfo.animationEnabled;
 	
 }
 
-animationCheckbox.checked = userInfo.animationEnabled;
 
 	  
 const optionsPopup = document.getElementById('optionsPopup');
@@ -999,7 +998,8 @@ function openOptions() {
 	
 const userInfoStored = localStorage.getItem(`userInfo`);
   const userInfo = storedUserInfo ? JSON.parse(userInfoStored) : {};
-	
+	animationCheckbox.checked = userInfo.animationEnabled;
+
  console.log("userInfo .... "+userInfo.firebaseId);
 const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
 const quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
