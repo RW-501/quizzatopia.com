@@ -655,10 +655,10 @@ margin-block-start: auto;
 	      
         <ul class="list-unstyled" id="optionContainers">
           <!-- Answer option containers -->
-          <li><button id="option_1" class="btn btn-primary answer-option"></button></li>
-          <li><button id="option_2"  class="btn btn-primary answer-option"></button></li>
-          <li><button id="option_3"  class="btn btn-primary answer-option"></button></li>
-          <li><button id="option_4"  class="btn btn-primary answer-option"></button></li>
+          <li><button id="option_1" class="btn btn-main answer-option"></button></li>
+          <li><button id="option_2"  class="btn btn-main answer-option"></button></li>
+          <li><button id="option_3"  class="btn btn-main answer-option"></button></li>
+          <li><button id="option_4"  class="btn btn-main answer-option"></button></li>
         </ul>
 
 	      
@@ -670,8 +670,8 @@ margin-block-start: auto;
         <!-- Explanation area -->
         <div class="btn_container">
           <!-- Button container -->
-          <button id="show-explanation-btn" class="btn btn-primary d-none mt-3"  onclick="showExplanationFunc()">Show Explanation</button>
-          <button id="skip-next-btn" class="btn btn-primary mt-3"  onclick="skipOrNext()">Skip</button>
+          <button id="show-explanation-btn" class="btn btn-main d-none mt-3"  onclick="showExplanationFunc()">Show Explanation</button>
+          <button id="skip-next-btn" class="btn btn-main mt-3"  onclick="skipOrNext()">Skip</button>
         </div>
       </div>
     </div>
@@ -727,7 +727,7 @@ margin-block-start: auto;
 	  
     <button id="retake-btn" class="other-quiz-btn btn btn-secondary mt-4 green"  onclick="retakeQuizFunc()">Retake Quiz</button>
     <!-- Retake Quiz Button -->
-    <button class="other-quiz-btn btn btn-secondary mt-4" onclick="window.location.href = '/quizzes'">Try Another Quiz</button><br><hr>
+    <button class="other-quiz-btn btn btn-main mt-4" onclick="window.location.href = '/quizzes'">Try Another Quiz</button><br><hr>
     <!-- Try Another Quiz Button -->
 
  <div class="share-link-container">
@@ -738,7 +738,7 @@ margin-block-start: auto;
         value="https://example.com/share"
         readonly
       />
-      <button class="game-button copy-button" onclick="copyLink()">Copy</button>
+      <button class="game-button copy-button btn-main" onclick="copyLink()">Copy</button>
     </div>
 	  
     <div id="social-sharing" class="mt-4">
@@ -772,16 +772,16 @@ margin-block-start: auto;
   <div class="modal-content">
     <span id="closeModal" class="close">&times;</span>
 	  <p>
-<button class="btn" onclick="quickFeedback('Great Experience')">Great Experience</button>
-<button class="btn" onclick="quickFeedback('User-Friendly Interface')">User-Friendly Interface</button>
-<button class="btn" onclick="quickFeedback('Buggy')">Buggy</button>
-<button class="btn" onclick="quickFeedback('Informative Content')">Informative Content</button>
+<button class="btn  btn-main py-2 px-4" onclick="quickFeedback('Great Experience')">Great Experience</button>
+<button class="btn  btn-main py-2 px-4" onclick="quickFeedback('User-Friendly Interface')">User-Friendly Interface</button>
+<button class="btn  btn-main py-2 px-4" onclick="quickFeedback('Buggy')">Buggy</button>
+<button class="btn btn-main py-2 px-4" onclick="quickFeedback('Informative Content')">Informative Content</button>
 
 		  
 	  </p>
     <h2>Leave a Review</h2>
     <textarea id="reviewTextArea" placeholder="Enter your review or feedback"></textarea>
-    <button id="submitReviewBtn" class="btn" >Submit</button>
+    <button id="submitReviewBtn" class="btn btn-main" >Submit</button>
   </div>
 </div>
 
@@ -808,10 +808,10 @@ margin-block-start: auto;
       <span onclick="closeReport()" class="close">&times;</span>
       <h3>What is the problem?</h3>
       <div class="quickReport">
-        <button class="btn btn-primary py-2 px-4" onclick="submitReport('Glitch Detected', 'reportForm');">Glitch Detected</button>
-        <button class="btn btn-primary py-2 px-4" onclick="submitReport('Quiz Malfunction', 'reportForm');">Quiz Malfunction</button>
-        <button class="btn btn-primary py-2 px-4" onclick="submitReport('Technical Troubles', 'reportForm');">Technical Troubles</button>
-        <button class="btn btn-primary py-2 px-4" onclick="submitReport('Bug Alert', 'reportForm');">Bug Alert</button>
+        <button class="btn btn-main py-2 px-4" onclick="submitReport('Glitch Detected', 'reportForm');">Glitch Detected</button>
+        <button class="btn btn-main py-2 px-4" onclick="submitReport('Quiz Malfunction', 'reportForm');">Quiz Malfunction</button>
+        <button class="btn btn-main py-2 px-4" onclick="submitReport('Technical Troubles', 'reportForm');">Technical Troubles</button>
+        <button class="btn btn-main py-2 px-4" onclick="submitReport('Bug Alert', 'reportForm');">Bug Alert</button>
       </div>
 
       <div class="form-group">
@@ -819,7 +819,7 @@ margin-block-start: auto;
         <textarea class="form-control" id="reportDetails" rows="4" required></textarea>
       </div>
       <hr>
-      <button id="reportFormBTN" class="btn btn-primary btn-block" onclick="submitReport('submit', 'reportForm');">Submit Report</button>
+      <button id="reportFormBTN" class="btn btn-main btn-block" onclick="submitReport('submit', 'reportForm');">Submit Report</button>
     </div>
   </div>
 </div>
