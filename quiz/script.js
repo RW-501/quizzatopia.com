@@ -49,7 +49,7 @@ function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
       numberOfQuestions: numberOfQuestionsNS,
       questionsCompleted: [],
       questionCorrect: 0,
-      questionInorrect: 0,
+      questionIncorrect: 0,
       timestamp: timestamp,
       quizLink: q  // Add the "q" parameter to the quizInfo object
     };
@@ -95,7 +95,7 @@ async function startQuiz() {
       questionTime = 0; // seconds
       currentQuestion = 0;
       questionCorrect = 0;
-	questionInorrect = 0;    
+	questionIncorrect = 0;    
       quizStarted = false;
       timer = 0;
       countdownPerQuestion = false; // set to true if the countdown should happen for each question
