@@ -1028,17 +1028,22 @@ function stopBlinking() {
 }
 
 
-
-
-
-
-
-
 var audioButton = document.getElementById('audioButton');
 var isAudioEnabled = true;
 
+
+const settingsInfoStored = localStorage.getItem(`settings`);
+  const settings = settingsInfoStored ? JSON.parse(settingsInfoStored) : {};
+
+isAudioEnabled = settings.audioEnabled;
+
+
 function toggleAudio() {
   isAudioEnabled = !isAudioEnabled;
+
+  settings.audioEnabled = isAudioEnabled;
+  localStorage.setItem('settings', JSON.stringify(settings));
+	
   updateAudioButton();
 }
 
