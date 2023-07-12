@@ -140,8 +140,14 @@ text-align: center;
 
 
 #reportForm {
-    position: absolute;
-    min-width: 50%;
+       display: none;
+
+}
+
+
+#reportContainer{
+ position: absolute;
+    min-width: 80%;
     max-width: 60%;
     display: block;
     margin: auto;
@@ -151,16 +157,11 @@ text-align: center;
     right: 0;
     background-color: white;
     top: 0;
-    height: fit-content;
     padding: 3%;
     border: 1px solid #ddd;
     padding: 20px;
-    display: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
-
-
 
 
 
