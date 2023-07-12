@@ -16,6 +16,29 @@
 
 
 
+.explanation-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  max-width: 90%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  z-index: 9999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: move;
+	display:none;
+}
+
+.explanation-container
+
+
+
+
+
 #optionsMenu h3, #quizInfoPopup h3 {
  margin-top: 0;
     font-size: 3em;
@@ -31,7 +54,7 @@
 
 }		
 
-		.optionspopup {
+.optionspopup {
     background-color: #e7e7e7;
     padding: 5% 0 0 0;
     border-radius: 2em;
@@ -40,11 +63,19 @@
     bottom: 0;
     position: absolute;
     width: 80%;
-    height: fit-content;
-    overflow: hidden;
+    height: 80%;
+    overflow-y: clip;
     box-shadow: inset 0px 1px 0rem 14px #ffc107 !important;
     display: block;
 }
+
+.scrollWrap{
+width:auto;
+    height: auto;
+    overflow-y: scroll;
+}
+
+
 #quizInfoPopup, #optionsMenu{
 width: 90%;
     margin: auto;
