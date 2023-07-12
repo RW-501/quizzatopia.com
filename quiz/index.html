@@ -556,7 +556,7 @@ display: inline-block;
           <!-- Pie graph -->
 
              <div class="text-center">
-            <button id="start-btn" class="btn btn-main" onclick="startQuiz()">Start Quiz</button>
+            <button id="start-btn" class=" " onclick="startQuiz()">Start Quiz</button>
             <!-- Start Quiz Button -->
             <div class="quiz-image-container text-center">
               <img src="/images/lan/9.png" alt="quiz-image" class="w-100" loading="lazy">
@@ -651,10 +651,10 @@ display: inline-block;
 	      
         <ul class="list-unstyled" id="optionContainers">
           <!-- Answer option containers -->
-          <li><button id="option_1" class=" btnMain  answer-option"></button></li>
+          <li><button id="option_1" class="btnMain  answer-option"></button></li>
           <li><button id="option_2"  class="btnMain   answer-option"></button></li>
-          <li><button id="option_3"  class="btnMain btn  answer-option"></button></li>
-          <li><button id="option_4"  class="btnMain btn answer-option"></button></li>
+          <li><button id="option_3"  class="btnMain   answer-option"></button></li>
+          <li><button id="option_4"  class="btnMain  answer-option"></button></li>
         </ul>
 
 	      
@@ -666,8 +666,8 @@ display: inline-block;
         <!-- Explanation area -->
         <div class="btn_container">
           <!-- Button container -->
-          <button id="show-explanation-btn" class="btnMain btn  d-none mt-3"  onclick="showExplanationFunc()">Show Explanation</button>
-          <button id="skip-next-btn" class="btnMain btn  mt-3"  onclick="skipOrNext()">Skip</button>
+          <button id="show-explanation-btn" class="btnMain  d-none mt-3"  onclick="showExplanationFunc()">Show Explanation</button>
+          <button id="skip-next-btn" class="btnMain   mt-3"  onclick="skipOrNext()">Skip</button>
         </div>
       </div>
     </div>
@@ -684,7 +684,7 @@ display: inline-block;
     <button id="close-btn" class="close-button">&times;</button>
 	  </div>
     <div id="explanation" onclick="readExplanationFunc()"></div><hr>
-    <div class="btn_container">   <div></div> <div id="reportFormBTN" class="btn" onclick=" closeExplanationPopup(); openReport();" >Report</div>
+    <div class="btn_container">   <div></div> <div id="reportFormBTN" class="btnMain" onclick=" closeExplanationPopup(); openReport();" >Report</div>
 </div>
 	  
   </div>
@@ -719,11 +719,11 @@ display: inline-block;
   <span class="star" onclick="rateQuiz(4)">&#9734;</span>
   <span class="star" onclick="rateQuiz(5)">&#9734;</span>
 </div>
-<button id="leaveReviewBtn" class="other-quiz-btn btn btn-secondary mt-4">Leave Review</button>
+<button id="leaveReviewBtn" class="other-quiz-btn  btn-secondary mt-4">Leave Review</button>
 	  
-    <button id="retake-btn" class="other-quiz-btn btn btn-secondary mt-4 green"  onclick="retakeQuizFunc()">Retake Quiz</button>
+    <button id="retake-btn" class="other-quiz-btn  btnMain mt-4 "  onclick="retakeQuizFunc()">Retake Quiz</button>
     <!-- Retake Quiz Button -->
-    <button class="other-quiz-btn btn btnMain mt-4" onclick="window.location.href = '/quizzes'">Try Another Quiz</button><br><hr>
+    <button class="other-quiz-btn  btn-secondary mt-4" onclick="window.location.href = '/quizzes'">Try Another Quiz</button><br><hr>
     <!-- Try Another Quiz Button -->
 
  <div class="share-link-container">
@@ -734,7 +734,7 @@ display: inline-block;
         value="https://example.com/share"
         readonly
       />
-      <button class="game-button copy-button btn-main" onclick="copyLink()">Copy</button>
+      <button class="btnMain  game-button copy-button " onclick="copyLink()">Copy</button>
     </div>
 	  
     <div id="social-sharing" class="mt-4">
@@ -768,16 +768,16 @@ display: inline-block;
   <div class="modal-content">
     <span id="closeModal" class="close">&times;</span>
 	  <p>
-<button class="btn  btnMain py-2 px-4" onclick="quickFeedback('Great Experience')">Great Experience</button>
-<button class="btn  btnMain py-2 px-4" onclick="quickFeedback('User-Friendly Interface')">User-Friendly Interface</button>
-<button class="btn  btnMain py-2 px-4" onclick="quickFeedback('Buggy')">Buggy</button>
-<button class="btn btnMain py-2 px-4" onclick="quickFeedback('Informative Content')">Informative Content</button>
+<button class="  btnMain py-2 px-4" onclick="quickFeedback('Great Experience')">Great Experience</button>
+<button class="  btnMain py-2 px-4" onclick="quickFeedback('User-Friendly Interface')">User-Friendly Interface</button>
+<button class="  btnMain py-2 px-4" onclick="quickFeedback('Buggy')">Buggy</button>
+<button class=" btnMain py-2 px-4" onclick="quickFeedback('Informative Content')">Informative Content</button>
 
 		  
 	  </p>
     <h2>Leave a Review</h2>
     <textarea id="reviewTextArea" placeholder="Enter your review or feedback"></textarea>
-    <button id="submitReviewBtn" class="btn btnMain" >Submit</button>
+    <button id="submitReviewBtn" class=" btnMain" >Submit</button>
   </div>
 </div>
 
@@ -804,10 +804,10 @@ display: inline-block;
       <span onclick="closeReport()" class="close">&times;</span>
       <h3>What is the problem?</h3>
       <div class="quickReport">
-        <button class="btn btn-main py-2 px-4" onclick="submitReport('Glitch Detected', 'reportForm');">Glitch Detected</button>
-        <button class="btn btn-main py-2 px-4" onclick="submitReport('Quiz Malfunction', 'reportForm');">Quiz Malfunction</button>
-        <button class="btn btn-main py-2 px-4" onclick="submitReport('Technical Troubles', 'reportForm');">Technical Troubles</button>
-        <button class="btn btn-main py-2 px-4" onclick="submitReport('Bug Alert', 'reportForm');">Bug Alert</button>
+        <button class=" btn-main py-2 px-4" onclick="submitReport('Glitch Detected', 'reportForm');">Glitch Detected</button>
+        <button class=" btn-main py-2 px-4" onclick="submitReport('Quiz Malfunction', 'reportForm');">Quiz Malfunction</button>
+        <button class=" btn-main py-2 px-4" onclick="submitReport('Technical Troubles', 'reportForm');">Technical Troubles</button>
+        <button class=" btn-main py-2 px-4" onclick="submitReport('Bug Alert', 'reportForm');">Bug Alert</button>
       </div>
 
       <div class="form-group">
@@ -815,7 +815,7 @@ display: inline-block;
         <textarea class="form-control" id="reportDetails" rows="4" required></textarea>
       </div>
       <hr>
-      <button id="reportFormBTN" class="btn btn-main btn-block" onclick="submitReport('submit', 'reportForm');">Submit Report</button>
+      <button id="reportFormBTN" class=" btn-main btn-block" onclick="submitReport('submit', 'reportForm');">Submit Report</button>
     </div>
   </div>
 </div>
