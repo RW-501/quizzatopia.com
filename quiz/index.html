@@ -435,8 +435,8 @@ margin-block-start: auto;
 }		
 
 		.optionspopup {
-     background-color: #F8F9FA;
-    padding: 5% 5% 0 5%;
+     background-color: #e7e7e7;
+    padding: 5% 0 0 0 ;
     border-radius: 2em ;
     margin: auto;
     top: 0;
@@ -447,13 +447,39 @@ margin-block-start: auto;
     overflow: hidden;
 box-shadow: 0px 1px 0rem 2px rgba(0, 0, 0, 0.2) !important;
 }
-
+#quizInfoPopup, #optionsMenu{
+  margin-top: 0;
+    font-size: 3em;
+    font-weight: 800;
+}
+	#quizInfoPopup	p {
+    margin-top: 0;
+    margin-bottom: 1%;
+}
+		
 #closeOptionsButton{
-  width: 80%;
-background-color: #f1f1f1;
-padding: 5%;
+    width: 100%;
+    background-color: #ffc107;
+    padding: 1%;
+    border: none;
+    font-size: 3em;
+    box-shadow: 0px 1px 0rem 5px rgb(0 0 0 / 65%) !important;
+    font-weight: 800;
+    color: white;
 }
 
+.center{
+    margin: auto;
+text-align: center;
+}
+.block{
+    width: 80%;
+
+}
+#optionsMenu .form-check{
+    margin: 2%;
+
+}
 </style>
 	  	
 	
@@ -537,7 +563,7 @@ padding: 5%;
 
 	<div class="form-check">
   <label for="volumeSlider">Speech Volume:</label>
-<input type="range" id="volumeSlider" min="0" max="1" step="0.1">
+<input type="range" id="volumeSlider" min="0" max="1" step="0.2">
 </div>
 
 	<div class="form-check">
@@ -547,7 +573,7 @@ padding: 5%;
 
 <div class="form-check">
   <label for="rateSlider">Speech Rate:</label>
-  <input type="range" id="rateSlider" min="0.1" max="2" step="0.1">
+  <input type="range" id="rateSlider" min="0.1" max="2" step="0.5">
 </div>
 
 
@@ -872,17 +898,27 @@ padding: 5%;
 		<div  class="optionspopup">
 <div id="quizInfoPopup">
   <h3>Quiz Information</h3>
-  <p>Quiz Code: <span id="quizCodePopup"></span></p>
-  <p>Quiz Name:  <span id="quizName"></span></p>
-  <p>Score Percent Completed: <span id="scorePercent"></span></p>
+
+	<div class="center block"><p>Quiz Code: <span id="quizCodePopup"></span></p>
+  <p>Quiz Name:  <span id="quizName"></span></p></div>
+	
+ <div class="center block">
+	 <p>Score Percent Completed: <span id="scorePercent"></span></p>
+  <p>Score: <span id="bestScore"></span></p>
+</div>
+<div class=" block">
   <p>Number of Questions: <span id="totalQuestions"></span></p>
   <p>Questons Completed: <span id="questionsCompleted"></span></p>
   <p>Percet Completed: <span id="percetCopleted"></span></p>
+</div>
+<div class=" block">
   <p>Question Correct: <span id="questionCorrect"></span></p>
   <p>Question Incorrect: <span id="questionIncorrect"></span></p>
+</div>
+<div class="center block">	 
   <p>Time so far: <span id="timeSoFar"></span></p>
-  <p>Score: <span id="bestScore"></span></p>
   <p>Quiz URL: <span id="quizURL"></span></p>
+</div>
 </div>
 
 		<hr>
@@ -895,7 +931,7 @@ padding: 5%;
 
   <div class="form-check">
     <label for="volumeSliderOp">Speech Volume:</label>
-    <input type="range" id="volumeSliderOp" min="0" max="1" step="0.1">
+    <input type="range" id="volumeSliderOp" min="0" max="1" step="0.2">
   </div>
 
   <div class="form-check">
@@ -905,7 +941,7 @@ padding: 5%;
 
   <div class="form-check">
     <label for="rateSliderOp">Speech Rate:</label>
-    <input type="range" id="rateSliderOp" min="0.1" max="2" step="0.1">
+    <input type="range" id="rateSliderOp" min="0.1" max="2" step="0.5">
   </div>
 
   <div class="form-check">
