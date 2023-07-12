@@ -1077,9 +1077,13 @@ function closeOptions(){
 function fetchQuizzesFromDB() {
   console.log("Fetching quizzes from the database...");
 // Initialize your Firebase app
-
- const db = firebase.firestore();
-
+	
+if (db) {
+  // Use the existing db variable
+} else {
+  db = firebase.firestore();
+}
+	
   // Fetch the quizzes collection
   db.collection('quizzes')
  .limit(20)
