@@ -362,8 +362,9 @@ document.getElementById("realQustionNum").innerHTML =  ('# '+ questionObj.questi
 	
 	console.log('questionObj.questionNumber ', questionObj.questionNumber);
 		console.log('questionsCompleted ', questionsCompleted);
+		console.log('quizInfo ', quizInfo);
 
-    saveQuizInfo(quizCode, quizInfo.questionsCompleted);
+    saveQuizInfo(quizCode, quizInfo);
 	
   const answerButtons = document.getElementsByClassName("answer-option");
 
