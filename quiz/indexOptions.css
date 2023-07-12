@@ -1,4 +1,24 @@
 
+
+/* Style the start quiz button */
+#start-btn {
+    margin-top: 20px;
+    background-color: #fd7e14;
+    border: none;
+    margin-bottom: 15%;
+    font-size: 3em;
+    font-weight: 800;
+    color: white;
+    border-radius: 1em;
+    text-shadow: -4px 2px 0px #6b6a6a;
+    box-shadow: 3px 3px 0rem 3px #b98c03 !important;
+
+}
+
+
+
+
+
 #optionsQuizNameWrap{
       padding: 2%;
 }
@@ -54,20 +74,7 @@
   color: #fff;
 }
 
-/* Style the start quiz button */
-#start-btn {
-    margin-top: 20px;
-    background-color: #fd7e14;
-    border: none;
-    margin-bottom: 15%;
-    font-size: 3em;
-    font-weight: 800;
-    color: white;
-    border-radius: 1em;
-    text-shadow: -4px 2px 0px #6b6a6a;
-    box-shadow: 3px 3px 0rem 3px #b98c03 !important;
 
-}
 
 /* Style the quiz options container */
 .quiz-options {
