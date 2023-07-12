@@ -807,11 +807,13 @@ margin-block-start: auto;
   <div class="form-group" id="reportView">
     <span  onclick="closeReport()" class="close">&times;</span>
     <h3 ">What is the problem?</h3>
-<button class="btn" onclick="submitReport('Glitch Detected', "reportForm")">Glitch Detected</button>
-<button class="btn" onclick="submitReport('Quiz Malfunction', "reportForm")">Quiz Malfunction</button>
-<button class="btn" onclick="submitReport('Technical Troubles', "reportForm")">Technical Troubles</button>
-<button class="btn" onclick="submitReport('Bug Alert', "reportForm")">Bug Alert</button>
-
+	  <div class='quickReport'>
+<button class="btn py-2 px-4" onclick="submitReport('Glitch Detected', "reportForm")">Glitch Detected</button>
+<button class="btn py-2 px-4" onclick="submitReport('Quiz Malfunction', "reportForm")">Quiz Malfunction</button>
+<button class="btn py-2 px-4" onclick="submitReport('Technical Troubles', "reportForm")">Technical Troubles</button>
+<button class="btn py-2 px-4" onclick="submitReport('Bug Alert', "reportForm")">Bug Alert</button>
+	  </div>
+	  
   <div class="form-group">
     <label for="reportDetails">Details</label>
     <textarea class="form-control" id="reportDetails" rows="4" required></textarea>
