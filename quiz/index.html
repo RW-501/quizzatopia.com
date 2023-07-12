@@ -418,7 +418,9 @@ margin-block-start: auto;
 	
 
 #optionsMenu h3, #quizInfoPopup h3 {
-  margin-top: 0;
+ margin-top: 0;
+    font-size: 3em;
+    font-weight: 800;
 }
 
 		#optionsPopup{
@@ -448,9 +450,7 @@ margin-block-start: auto;
 box-shadow: 0px 1px 0rem 2px rgba(0, 0, 0, 0.2) !important;
 }
 #quizInfoPopup, #optionsMenu{
-  margin-top: 0;
-    font-size: 3em;
-    font-weight: 800;
+ 
 }
 	#quizInfoPopup	p {
     margin-top: 0;
@@ -1064,9 +1064,11 @@ timeSoFarElement.textContent = quizInfo.quizTime || "";
 quizURLElement.textContent = quizInfo.quizLink || "";
 quizNameElement.textContent = quizInfo.quizName || "";
 
-let qCompleted = quizInfo.questionsCompleted || 0;
 let qCorrect = quizInfo.questionCorrect || 0;
 let qIncorrect = quizInfo.questionIncorrect || 0;
+
+let qCompleted = qCorrect + qIncorrect;
+
 
 let totalQuestions = quizInfo.numberOfQuestions || 0;
 
