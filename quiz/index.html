@@ -806,20 +806,18 @@ margin-block-start: auto;
 	<div id="reportContainer" class="optionspopup">
   <div class="form-group" id="reportView">
     <span  onclick="closeReport()" class="close">&times;</span>
-    <label for="reportType">Report Type</label>
-    <select class="form-control" id="reportType" required>
-      <option value="">Select...</option>
-      <option value="question">Report Question</option>
-      <option value="quiz">Report Quiz Error</option>
-      <option value="other">Other</option>
-    </select>
-  </div>
+    <h3 ">What is the problem?</h3>
+<button class="btn" onclick="submitReport('Glitch Detected', "reportForm")">Glitch Detected</button>
+<button class="btn" onclick="submitReport('Quiz Malfunction', "reportForm")">Quiz Malfunction</button>
+<button class="btn" onclick="submitReport('Technical Troubles', "reportForm")">Technical Troubles</button>
+<button class="btn" onclick="submitReport('Bug Alert', "reportForm")">Bug Alert</button>
+
   <div class="form-group">
     <label for="reportDetails">Details</label>
     <textarea class="form-control" id="reportDetails" rows="4" required></textarea>
   </div>
   <hr>
-  <button id="reportFormBTN" class="btn btn-primary btn-block" onclick="submitReport()" >Submit Report</button>
+  <button id="reportFormBTN" class="btn btn-primary btn-block" onclick="submitReport("sumbit", "reportForm")" >Submit Report</button>
 </div>
 </div>
 	
@@ -1766,9 +1764,8 @@ fetchData(q, e);
 const reportForm = document.getElementById('reportForm');
 
 	
-function submitReport(){
+function submitReport(reportType, xxx){
 
-  const reportType = document.getElementById('reportType').value;
   const reportDetails = document.getElementById('reportDetails').value;
 
 
@@ -1785,8 +1782,10 @@ function submitReport(){
     // Add the feedback to the 'quizFeedback' collection
     db.collection('quizFeedback').add(feedbackData)
       .then(() => {
-        console.log('Quiz Reported successfully!');
-        alert('Thank you for your Report!');
+  	  
+    console.log('Report:', feedback);
+    closeReport(); // Close the modal after submitting
+    alert('Thank you for your feedback!');
       })
       .catch(error => {
         console.error('Error Reporting Quiz:', error);
@@ -1795,10 +1794,7 @@ function submitReport(){
   
 
 
-	  
-    console.log('Report:', feedback);
-    closeModalWindow(); // Close the modal after submitting
-    alert('Thank you for your review!');
+
   } else {
 	  if (isAnimationEnabled) {
 submitReviewBtn.classList.add('shake-animation');
@@ -1827,7 +1823,7 @@ function openReport() {
 
 // Function to close the modal
 function closeReport() {
-	  slideOut("reportView");
+	  slideOut("reportContainer");
   reportForm.style.display = 'none';
 
 }
