@@ -837,7 +837,7 @@ margin-block-start: auto;
 	
 	<div id="optionsPopup" class="PopupWrap d-none">
   <!-- Options content goes here -->
-		<div  class="optionspopup">
+		<div id='optionsPopupBox' class="optionspopup">
 		<div  class="scrollWrap">
 <div id="quizInfoPopup">
   <h3>Quiz Information</h3>
@@ -1050,7 +1050,7 @@ let seconds = Math.floor((timeElapsed % 60000) / 1000); // Convert remaining mil
 timeSoFarElement.textContent = `${minutes} mins ${seconds} secs`;
 
 
-		  slideIn("optionsPopup");
+		  slideIn("optionsPopupBox");
 
   optionsPopup.classList.remove('d-none');
 }
@@ -1067,7 +1067,7 @@ timeSoFarElement.textContent = `${minutes} mins ${seconds} secs`;
 
 
 function closeOptions(){
-		  slideOut("optionsPopup");
+		  slideOut("optionsPopupBox");
 
   optionsPopup.classList.add('d-none');
 }
