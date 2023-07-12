@@ -2,7 +2,7 @@
 let questionTime = 0; // seconds
 let currentQuestion = 0;
 let questionCorrect = 0;
-let questionInorrect = 0;
+let questionIncorrect = 0;
 let questionsCompleted =[];
 let quizStarted = false;
 let timer = 0;
@@ -439,8 +439,8 @@ const answerOptions = document.getElementsByClassName("answer-option");
   } else {
     selectedOption.classList.add('incorrect');
     correct_bool = "incorrect";
-    questionInorrect++;
-    quizInfo.questionInorrect = questionInorrect;
+    questionIncorrect++;
+    quizInfo.questionIncorrect = questionIncorrect;
     saveQuizInfo(quizCode, quizInfo);
 	  
 	  const answerOptions = document.getElementsByClassName("answer-option");
@@ -1006,7 +1006,9 @@ function getSettings() {
   return settingsInfoStored ? JSON.parse(settingsInfoStored) : {};
 }
 
-function saveSettings(settings) {
+function saveSettings(key, value) {
+  const settings = getSettings();
+  settings[key] = value;
   const settingsInfo = JSON.stringify(settings);
   localStorage.setItem('settings', settingsInfo);
 }
