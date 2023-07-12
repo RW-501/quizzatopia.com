@@ -1001,6 +1001,15 @@ submitReviewBtn.classList.add('shake-animation');
 
 
 
+function getSettings() {
+  const settingsInfoStored = localStorage.getItem('settings');
+  return settingsInfoStored ? JSON.parse(settingsInfoStored) : {};
+}
+
+function saveSettings(settings) {
+  const settingsInfo = JSON.stringify(settings);
+  localStorage.setItem('settings', settingsInfo);
+}
 
 
 
@@ -1032,8 +1041,8 @@ var audioButton = document.getElementById('audioButton');
 var isAudioEnabled = true;
 
 
-const settingsInfoStored = localStorage.getItem(`settings`);
-  const settings = settingsInfoStored ? JSON.parse(settingsInfoStored) : {};
+const settings = getSettings();
+
 
 isAudioEnabled = settings.audioEnabled;
 
@@ -1042,7 +1051,8 @@ function toggleAudio() {
   isAudioEnabled = !isAudioEnabled;
 
   settings.audioEnabled = isAudioEnabled;
-  localStorage.setItem('settings', JSON.stringify(settings));
+// Save the updated settings
+saveSettings(settings);
 	
   updateAudioButton();
 }
@@ -1072,12 +1082,19 @@ function setVolume(value) {
   console.log('Current volume:', utterance.volume);
 
   // Save the volume value to local storage
-  localStorage.setItem('volume', value);
+ // localStorage.setItem('volume', value);
+
+ settings.volume = value;
+// Save the updated settings
+saveSettings(settings);
+
 }
 
 // Function to load the volume value from local storage
 function loadVolume() {
-  var savedVolume = localStorage.getItem('volume');
+	const settings = getSettings();
+
+  var savedVolume = settings.volume;
   if (savedVolume) {
     // Set the volume slider value
     volumeSlider.value = savedVolume;
