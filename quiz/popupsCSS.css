@@ -39,13 +39,13 @@
 
 
 
-#optionsMenu h3, #quizInfoPopup h3 {
+#optionsMenu h3  #quizInfoPopup h3 {
  margin-top: 0;
     font-size: 3em;
     font-weight: 800;
 	color: #ffc107;
 }
-#quizInfoPopup input{
+#optionsMenu input{
 	color: #ffc107;
     font-size: 3em;
     font-weight: 800;
@@ -70,9 +70,10 @@
 }
 
 .scrollWrap{
-width:auto;
-    height: auto;
+    width: 98%;
+    height: 88%;
     overflow-y: scroll;
+    padding-bottom: 5%;
 }
 
 
