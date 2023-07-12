@@ -363,7 +363,7 @@ document.getElementById("realQustionNum").innerHTML =  ('# '+ questionObj.questi
 	console.log('questionObj.questionNumber ', questionObj.questionNumber);
 		console.log('questionsCompleted ', questionsCompleted);
 
-    saveQuizInfo(quizCode, quizInfo);
+    saveQuizInfo(quizCode, quizInfo.questionsCompleted);
 	
   const answerButtons = document.getElementsByClassName("answer-option");
 
@@ -445,7 +445,8 @@ const answerOptions = document.getElementsByClassName("answer-option");
     correct_bool = "incorrect";
     questionIncorrect++;
     quizInfo.questionIncorrect = questionIncorrect;
-    saveQuizInfo(quizCode, quizInfo);
+    saveQuizInfo(quizCode, quizInfo.questionIncorrect);
+	console.log('questionIncorrect ????????????????? ', questionIncorrect);
 	  
 	  const answerOptions = document.getElementsByClassName("answer-option");
     for (let i = 0; i < answerOptions.length; i++) {
@@ -459,7 +460,7 @@ const answerOptions = document.getElementsByClassName("answer-option");
     }
   }
 
-  quizInfo.questionNumber = currentQuestion;
+//  quizInfo.questionNumber = currentQuestion;
 
   showExplanation(questionObj.explanation);
   logStorageContents(quizCode);
