@@ -1,4 +1,15 @@
+.btn-main{
+    background-color: rgb(108 117 125) !important;
+color: #fff;
+	    cursor: pointer;
+}
 
+.btn-main:hover {
+    color: #fff;
+    background-color: rgb(201 99 14)!important;
+    border-color: rgb(108 117 125) !important;
+	cursor: pointer;
+}
 
 
 .PopupWrap{
