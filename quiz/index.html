@@ -1049,7 +1049,12 @@ let currentTime = new Date();
 let savedTime = new Date(quizInfo.timestamp);
 
 let timeElapsed = currentTime - savedTime;
-timeSoFarElement.textContent = timeElapsed;
+let minutes = Math.floor(timeElapsed / 60000); // Convert milliseconds to minutes
+let seconds = Math.floor((timeElapsed % 60000) / 1000); // Convert remaining milliseconds to seconds
+
+// Display the timeElapsed in minutes and seconds format
+timeSoFarElement.textContent = `${minutes} mins ${seconds} secs`;
+
 
 		  slideIn("optionsPopup");
 
