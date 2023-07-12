@@ -2,20 +2,18 @@
 
 /* Style the start quiz button */
 #start-btn {
-    margin-top: 20px;
+margin-top: 20px;
     background-color: #fd7e14;
     border: none;
     margin-bottom: 15%;
-    font-size: 3em;
+    font-size: calc(1.3rem + 2.6vw);
     font-weight: 800;
+    padding: 4%;
     color: white;
     border-radius: 1em;
     text-shadow: -4px 2px 0px #6b6a6a;
     box-shadow: 3px 3px 0rem 3px #b98c03 !important;
-
 }
-
-
 
 
 
@@ -26,7 +24,7 @@
 #optionsQuizName{
   font-size: 1.5em;
     text-transform: capitalize;
-    font-weight: bold;
+    font-weight: 800;
 
 }
 .form-check {
