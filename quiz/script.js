@@ -1035,7 +1035,7 @@ function saveSettings(key, value) {
 
 
 
-var blinkDiv = document.getElementById('audioButton');
+var blinkDiv = document.getElementById('readButton');
 var blinkInterval;
 
 function startBlinking() {
@@ -1204,8 +1204,8 @@ function saveVoiceSettings() {
     rate: parseFloat(rateSlider.value),
     voice: voiceDropdown.value
   };
-  
-  localStorage.setItem('voiceSettings', JSON.stringify(voiceSettings));
+  	saveSettings('voiceSettings', voiceSettings);
+
 }
 
 // Load voice settings from local storage
@@ -1337,6 +1337,8 @@ for (var i = 0; i < words.length; i += chunkSize) {
     // Event listener for the end of speech
     utterance.onend = function() {
       isSpeaking = false;
+document.getElementById("readButton").innerHTML = "<div>🔈</div><span>Read</span>";
+stopBlinking();	
     };
 startBlinking();
     // Start speaking
@@ -1353,8 +1355,8 @@ document.getElementById("readButton").innerHTML = "<div>🔈</div><span>Reading<
 utterance.addEventListener('end', function(event) {
  // console.log('Speech ended.');
 	  isSpeaking = false;
-stopBlinking();
-	
+document.getElementById("readButton").innerHTML = "<div>🔈</div><span>Read</span>";
+stopBlinking();	
 });
 
 // Function to stop the ongoing speech
@@ -1364,8 +1366,9 @@ function stopSpeaking() {
     synthesis.cancel();
   }
   isSpeaking = false;
-stopBlinking();
 document.getElementById("readButton").innerHTML = "<div>🔈</div><span>Read</span>";
+
+stopBlinking();
 
 }
 
