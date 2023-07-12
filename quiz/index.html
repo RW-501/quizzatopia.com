@@ -417,96 +417,6 @@ margin-block-start: auto;
 
 	
 
-#optionsMenu h3, #quizInfoPopup h3 {
- margin-top: 0;
-    font-size: 3em;
-    font-weight: 800;
-	color: #ffc107;
-}
-#quizInfoPopup input{
-	color: #ffc107;
-    font-size: 3em;
-    font-weight: 800;
-}
-		#optionsPopup{
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    width: 100%;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    background-color: #00000080;
-    padding: 10%;
-}		
-
-		.optionspopup {
-    background-color: #e7e7e7;
-    padding: 5% 0 0 0;
-    border-radius: 2em;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    width: 80%;
-    height: fit-content;
-    overflow: hidden;
-    box-shadow: inset 0px 1px 0rem 14px #ffc107 !important;
-    display: block;
-}
-#quizInfoPopup, #optionsMenu{
-width: 90%;
-    margin: auto;
-    background-color: #ffc107;
-    box-sizing: border-box;
-    padding: 1%;
-    border-radius: 1em;
-    font-weight: 900;
-    color: #3c3b3a;
-
-    box-shadow: inset 0px -3px 0rem 3px #b98c03 !important;
-
-}
-#quizInfoPopup, #optionsMenu span{
-    color: #ffffff;
-
-}
-
-		
-	#quizInfoPopup	p {
-    margin-top: 0;
-    margin-bottom: 1%;
-}
-		
-#closeOptionsButton{
-    width: 100%;
-    background-color: #ffc107;
-    padding: 1%;
-    border: none;
-    font-size: 3em;
-    box-shadow: 0px 1px 0rem 5px rgb(255 255 255) !important;
-    font-weight: 800;
-    color: white;
-}
-
-.center{
-    margin: auto;
-text-align: center;
-}
-.block{
-    width: 90%;
-    display: block;
-    margin: 1% auto;
-    background-color: #f7c630;
-    box-sizing: border-box;
-    padding: 1%;
-    border-radius: 1em;
-}
-#optionsMenu .form-check{
-    margin: 2%;
-
-}
 </style>
 	  	
 	
@@ -522,6 +432,7 @@ text-align: center;
  <!--  <link rel="stylesheet" href="/style.css">-->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="indexOptions.css">
+  <link rel="stylesheet" href="popupsCSS.css">
 
   <!-- Import navbar and footer components -->
   <link rel="import" href="/elements/navbar.html">
@@ -889,7 +800,8 @@ text-align: center;
 
 	
 					
-	<div id="reportForm" ">
+	<div id="reportForm" class="PopupWrap">
+	<div id="reportContainer" class="optionspopup">
   <div class="form-group" id="reportView">
     <span  onclick="closeReport()" class="close">&times;</span>
     <label for="reportType">Report Type</label>
@@ -907,6 +819,7 @@ text-align: center;
   <hr>
   <button id="reportFormBTN" class="btn btn-primary btn-block" onclick="submitReport()" >Submit Report</button>
 </div>
+</div>
 	
 		
 
@@ -920,7 +833,7 @@ text-align: center;
 
 	
 	
-	<div id="optionsPopup" class=" d-none">
+	<div id="optionsPopup" class="PopupWrap d-none">
   <!-- Options content goes here -->
 		<div  class="optionspopup">
 <div id="quizInfoPopup">
