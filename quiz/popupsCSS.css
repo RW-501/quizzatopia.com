@@ -17,7 +17,7 @@
 
 
 .explanation-container {
-
+display:none;
 }
 
 .explanation{
@@ -30,10 +30,8 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
-  z-index: 9999;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  cursor: move;
-	display:none;
+
 }
 
 
