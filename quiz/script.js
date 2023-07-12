@@ -98,6 +98,7 @@ async function startQuiz() {
 	questionIncorrect = 0;    
       quizStarted = false;
       timer = 0;
+	    questionsCompleted = [];
       countdownPerQuestion = false; // set to true if the countdown should happen for each question
       totalTime = 0; // seconds
       totalQuestions = questions.length;
@@ -360,12 +361,16 @@ document.getElementById("realQustionNum").innerHTML =  ('# '+ questionObj.questi
 	questionsCompleted.push(questionObj.questionNumber);
   quizInfo.questionsCompleted = questionsCompleted;
 	
-	console.log('questionObj.questionNumber ', questionObj.questionNumber);
+
+
+    saveQuizInfo(quizCode, JSON.stringify(quizInfo));
+
+
+
+
+		console.log('questionObj.questionNumber ', questionObj.questionNumber);
 		console.log('questionsCompleted ', questionsCompleted);
 		console.log('quizInfo ', quizInfo);
-
-    saveQuizInfo(quizCode, quizInfo);
-	
   const answerButtons = document.getElementsByClassName("answer-option");
 
   for (let i = 0; i < answerButtons.length; i++) {
