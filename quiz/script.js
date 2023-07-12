@@ -380,8 +380,7 @@ for (let i = 0; i < Math.min(shuffledOptions.length, answerButtons.length); i++)
 }
 
   document.getElementById("explanation").innerHTML = "";
-  document.getElementById("difficulty").innerHTML = "";
-  document.getElementById("realQustionNum").innerHTML = "";
+
   if (countdownPerQuestion && timerEnabled) {
     totalTime = questionTime;
     startTimer();
