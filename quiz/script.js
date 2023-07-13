@@ -146,6 +146,8 @@ async function startQuiz() {
   quizAdPattern = generateQuizAdPattern(totalQuestions, intvalue);
   adQuestionNumbers = quizAdPattern;
 
+console.log(quizAdPattern+'  quizAdPattern.userName ????????????intvalue '+ intvalue);
+	    
   // Array to store the question numbers where the ad should be shown
 //  adQuestionNumbers = quizAdPattern; // Example: Show ad after questions 3, 7, and 11
 
@@ -338,6 +340,8 @@ function showQuestion() {
   slideIn("quizContainer", selectedAnimation);
 
   if (adQuestionNumbers.includes(currentQuestion)) {
+console.log(adQuestionNumbers+'  adQuestionNumbers.userName ????????????currentQuestion '+ currentQuestion);
+
     const index = adQuestionNumbers.indexOf(currentQuestion);
     if (index !== -1) {
       adQuestionNumbers.splice(index, 1);
