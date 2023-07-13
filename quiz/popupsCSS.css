@@ -189,11 +189,11 @@ width: 90%;
 
 
 
-.tab-content {
+.tab-cont {
   display: none;
 }
 
-.tab-content.active {
+.tab-cont.active {
   display: block;
 }
 
