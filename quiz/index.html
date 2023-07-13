@@ -1035,7 +1035,9 @@ const questionsCompleted = quizInfo.questionsCompleted || [];
 	
 var correctTab = document.getElementById("correctTab");
 var incorrectTab = document.getElementById("incorrectTab");
-
+correctTab.innerHTML = "";
+incorrectTab.innerHTML = "";
+	
 questionsCompleted.forEach(function(question) {
   var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
   if (questionIndex >= 0 && questionIndex < questions.length) {
@@ -1048,6 +1050,8 @@ questionsCompleted.forEach(function(question) {
     }
     questionDiv.addEventListener("click", function() {
       // Handle click event for each question
+
+	  
       console.log("Clicked on Question " + (questionIndex + 1));
     });
 
