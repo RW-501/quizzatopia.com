@@ -371,7 +371,7 @@ questionsCompleted.push(questionObj.questionNumber);
 	
 //let saveQuizInfo = JSON.stringify(quizInfo);
 	
-saveQuizInfo(quizCode, saveQuizInfo);
+saveQuizInfo(quizCode, quizInfo);
 
 
 
