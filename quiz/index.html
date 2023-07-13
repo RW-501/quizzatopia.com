@@ -459,8 +459,11 @@ display: inline-block;
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
+	    height: 90%;
 }
-
+.scroll {
+    overflow-y: scroll;
+}
 .tab {
   display: flex;
   justify-content: center;
@@ -981,6 +984,7 @@ display: block !important;
 
 <div id="reviewPopup" class="popup">
   <div class="popup-content">
+	  <div class="scroll" >
     <div class="tab">
       <button class="tab-link active" data-tab="correct">Correct</button>
       <button class="tab-link" data-tab="incorrect">Incorrect</button>
@@ -993,6 +997,7 @@ display: block !important;
 <div id="incorrectTab" class="tab-content">
   <h3>Incorrect Answers</h3>
   <div id="incorrectList"></div>
+</div>
 </div>
 
     <button id="closeButton" class="close-button">Close</button>
