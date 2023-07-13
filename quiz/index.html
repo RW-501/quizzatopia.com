@@ -419,13 +419,15 @@ display: inline-block;
     font-weight: 900;
 }
 
-.highlight {
-    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.8) !important;
-    opacity: .5;
 
-}
+		
 	
-
+    .tab {
+      display: none;
+    }
+    .tab.active {
+      display: block;
+    }
 </style>
 	  	
 	
@@ -819,6 +821,12 @@ display: inline-block;
 
   </div>
 
+
+
+
+
+
+
 	
 	
 	<div id="optionsPopup" class="PopupWrap d-none">
@@ -852,6 +860,12 @@ display: inline-block;
   <p>Time so far: <span id="timeSoFar"></span></p>
   <p>Quiz URL: <span id="quizURL"></span></p>
 </div>
+<br><hr>
+ <div class="center block">
+  <button onclick="openReviewPopup()">Open Review Popup</button>
+
+ </div>
+	
 </div>
 
 <div id="optionsMenu">
@@ -902,10 +916,84 @@ display: inline-block;
 		
 </div>
 
+ <div id="reviewPopup" style="display: none;">
+    <button onclick="closeReviewPopup()">Close</button>
+
+    <div id="questionList">
+      <!-- Questions will be dynamically generated here -->
+    </div>
+
+    <div id="tabs">
+      <button onclick="showTab('all')">All</button>
+      <button onclick="showTab('correct')">Correct</button>
+      <button onclick="showTab('incorrect')">Incorrect</button>
+    </div>
+  </div>
 
 	
   <script>
 
+
+	  
+  var questionsCompleted = [ ];
+
+    function generateQuestionList() {
+
+const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
+const quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
+
+questionsCompleted  = quizInfo.questionsCompleted;
+
+	  
+      var questionList = document.getElementById("questionList");
+
+      questionList.innerHTML = ""; // Clear existing content
+
+      questionsCompleted.forEach(function(question) {
+        var listItem = document.createElement("div");
+        listItem.textContent = "Question " + question.questionNumber;
+        listItem.classList.add(question.correctness);
+
+        questionList.appendChild(listItem);
+      });
+    }
+
+    function showTab(tabName) {
+      var tabs = document.getElementById("tabs").children;
+      var questionList = document.getElementById("questionList").children;
+
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove("active");
+        questionList[i].classList.remove("active");
+      }
+
+      document.getElementById(tabName).classList.add("active");
+    }
+
+    function openReviewPopup() {
+      generateQuestionList();
+      showTab("all");
+
+      document.getElementById("reviewPopup").style.display = "block";
+    }
+
+    function closeReviewPopup() {
+      document.getElementById("reviewPopup").style.display = "none";
+    }
+
+    // Initial setup
+    generateQuestionList();
+
+
+
+
+
+
+
+
+
+
+	  
  var volumeSlider = document.getElementById('volumeSlider');
  var voiceDropdown = document.getElementById('voiceDropdown');
  var rateSlider = document.getElementById('rateSlider');
@@ -1009,7 +1097,7 @@ quizNameElement.textContent = quizInfo.quizName || "";
 
 
 
-questionsCompletedElement.textContent = quizInfo.questionsCompleted  || "";
+questionsCompletedElement.textContent = quizInfo.questionsCompleted.length || 0;
 
 
 	
