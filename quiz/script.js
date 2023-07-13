@@ -440,7 +440,7 @@ function checkAnswer() {
       selectedOption.classList.add('pulse-animation');
     }
     correct_bool = "Correct";
-    questionCorrect++;
+  //  questionCorrect++;
     quizInfo.questionCorrect = questionCorrect;
 
 	  var correctness = "correct";
@@ -448,6 +448,10 @@ questionsCompleted.push({ questionNumber: realQuestionNumber, correctness: corre
 	  
 saveQuizInfo(quizCode, quizInfo);
 
+// Get the number of correct questions
+questionCorrect = questionsCompleted.filter(function(question) {
+  return question.correctness === "correct";
+}).length;
 
 
 
@@ -464,9 +468,13 @@ const answerOptions = document.getElementsByClassName("answer-option");
   } else {
     selectedOption.classList.add('incorrect');
     correct_bool = "incorrect";
-    questionIncorrect++;
+   // questionIncorrect++;
 //    quizInfo.questionIncorrect = questionIncorrect;
 
+// Get the number of incorrect questions
+questionIncorrect = questionsCompleted.filter(function(question) {
+  return question.correctness === "incorrect";
+}).length;
 
     quizInfo = { questionIncorrect: questionIncorrect};
 
