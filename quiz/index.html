@@ -455,7 +455,7 @@ display: inline-block;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
+  width: 80%;
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
@@ -1047,6 +1047,7 @@ questionsCompleted.forEach(function(question) {
 
 });
 	  
+
 // Switch tabs
 var tabLinks = document.querySelectorAll(".tab-link");
 var tabContents = document.querySelectorAll(".tab-content");
@@ -1059,13 +1060,19 @@ tabLinks.forEach(function(tabLink) {
       link.classList.remove("active");
     });
     tabContents.forEach(function(content) {
-      content.classList.remove("active");
+      content.style.display = "none";
     });
     
     this.classList.add("active");
-    document.getElementById(tabId).classList.add("active");
+    document.getElementById(tabId).style.display = "block";
   });
 });
+
+
+
+
+
+
 
 
 
