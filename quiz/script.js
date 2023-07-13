@@ -330,7 +330,7 @@ function shuffleArrayAnswers(array) {
 
 
 
-
+var realQuestionNumber;
 // Function to show the question
 function showQuestion() {
   const animations = ["right", ""];
@@ -363,7 +363,7 @@ console.log(adQuestionNumbers+'  adQuestionNumbers.userName ????????????currentQ
 document.getElementById("difficulty").innerHTML = "Difficulty: " + (questionObj.difficulty || '') ;
 document.getElementById("realQustionNum").innerHTML =  ('# '+ questionObj.questionNumber || "");
 
-var questionNumber = questionObj.questionNumber;
+ realQuestionNumber = questionObj.questionNumber;
 
 //questionsCompleted.push(questionObj.questionNumber);
 //quizInfo.questionsCompleted = questionsCompleted;
@@ -443,7 +443,7 @@ function checkAnswer() {
   //  quizInfo.questionCorrect = questionCorrect;
 
 	  var correctness = "correct";
-questionsCompleted.push({ questionNumber: questionNumber, correctness: correctness });
+questionsCompleted.push({ questionNumber: realQuestionNumber, correctness: correctness });
 	  
 saveQuizInfo(quizCode, quizInfo);
 
@@ -471,7 +471,7 @@ const answerOptions = document.getElementsByClassName("answer-option");
 
 //quizInfo.questionIncorrect = questionIncorrect;
 var correctness = "incorrect";
-questionsCompleted.push({ questionNumber: questionNumber, correctness: correctness });
+questionsCompleted.push({ questionNumber: realQuestionNumber, correctness: correctness });
 	  
     saveQuizInfo(quizCode, quizInfo );
 	//console.log('questionIncorrect ????????????????? ', questionIncorrect);
