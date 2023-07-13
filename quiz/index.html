@@ -1145,8 +1145,8 @@ questionsCompleted.forEach(function(question) {
     
     var questionNumber = document.createElement("span");
     questionNumber.classList.add("question-number");
-  //  questionNumber.textContent = "Question " + (questionIndex + 1) + ": ";
-    questionNumber.textContent = "Question " + (questionIndex) + ": ";
+    questionNumber.textContent = "Question " + (questionIndex + 1) + ": ";
+  //  questionNumber.textContent = "Question " + (questionIndex) + ": ";
     
     var questionText = document.createElement("span");
     questionText.classList.add("question-text");
@@ -1189,12 +1189,11 @@ window.addEventListener("load", function() {
 
 
 
-	  
- var volumeSlider = document.getElementById('volumeSlider');
+	   var volumeSlider = document.getElementById('volumeSlider');
  var voiceDropdown = document.getElementById('voiceDropdown');
  var rateSlider = document.getElementById('rateSlider');
- animationCheckbox = document.getElementById('animation-quizOp');
- quizCodeElement = document.getElementById('quizCodePopup');
+const animationCheckbox = document.getElementById('animation-quizOp');
+const quizCodeElement = document.getElementById('quizCodePopup');
 	  
 const questionsCompletedElement = document.getElementById('questionsCompleted');
 const totalQuestionsElement = document.getElementById('totalQuestions');
@@ -1207,8 +1206,12 @@ const quizURLElement = document.getElementById('quizURL');
 const quizNameElement = document.getElementById('quizName');
 
 
-	  window.addEventListener("load", function() {
 
+	  window.addEventListener("load", function() {
+		  
+
+
+		  
 // Event listeners and functions for the options menu
 audioButton.addEventListener('click', toggleAudio);
 
