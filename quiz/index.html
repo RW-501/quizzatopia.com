@@ -978,7 +978,9 @@ display: inline-block;
 
 
 
-<div id="reviewPopup" class="">
+<button id="openReviewButton">Open Review</button>
+
+<div id="reviewPopup" class="popup">
   <div class="popup-content">
     <div class="tab">
       <button class="tab-link active" data-tab="correct">Correct</button>
@@ -986,8 +988,10 @@ display: inline-block;
     </div>
     <div id="correctTab" class="tab-content active"></div>
     <div id="incorrectTab" class="tab-content"></div>
+    <button id="closeButton" class="close-button">Close</button>
   </div>
 </div>
+
 
 
 
@@ -999,6 +1003,10 @@ display: inline-block;
 
 
 	  
+// Close the review popup
+document.getElementById("closeButton").addEventListener("click", function() {
+  document.getElementById("reviewPopup").style.display = "none";
+});
 
 
 
@@ -1014,7 +1022,7 @@ document.getElementById("openReviewButton").addEventListener("click", function()
 const quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
 // Generate the question list
 var questionsCompleted =  quizInfo.questionsCompleted;
-console.log("questionsCompleted...."+questionsCompleted);
+console.log("questionsCompleted...."+quizInfo.questionsCompleted);
 var correctTab = document.getElementById("correctTab");
 var incorrectTab = document.getElementById("incorrectTab");
 
