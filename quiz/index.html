@@ -935,14 +935,13 @@ display: inline-block;
 
 
 	  
-  var questionsCompleted = [ ];
 
     function generateQuestionList() {
 
 const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
 const quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
 
-questionsCompleted  = quizInfo.questionsCompleted;
+//questionsCompleted  = quizInfo.questionsCompleted;
 
 	  
       var questionList = document.getElementById("questionList");
