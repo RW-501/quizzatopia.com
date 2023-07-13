@@ -1262,19 +1262,14 @@ let x = 0 , z = 0;
 for (let i = 0; i < currentOptions.length; i++) {
 	if(currentOptions[i].innerHTML !== ""){
 		x++;
-		if(z > 0){
-  currentOptions[i].classList.remove("highlight"); 
-		}
-		z = i;
+		
 optionsString += " Option Number "+[x]+". "+currentOptions[i].innerHTML +", ";
   currentOptions[i].classList.add("highlight"); 
-
 		
-		console.log(z " currentOptions  "+i);
+
 	}
 }
 
-console.log(currentQuestion+", "+optionsString);
 let readThis = currentQuestion+" "+optionsString;
 
 readTextFunc(readThis);
@@ -1360,26 +1355,45 @@ function readTextFunc(text) {
 
 
     // Split the text into chunks
-var chunkSize = 200; // Adjust the chunk size as needed
+var words = currentQuestion.split(" "); // Split the currentQuestion into an array of words
+var chunkSize = 4; // Assuming each chunk contains 4 words
 var chunks = [];
-var words = replacedQuestion.split(' ');
+var OptionsArray = [];
 
+// Create chunks of words
 for (var i = 0; i < words.length; i += chunkSize) {
   var chunk = words.slice(i, i + chunkSize).join(' ');
   chunks.push(chunk);
+  
+  // Check if the chunk contains the word "Option Number"
+  if (chunk.includes("Option Number")) {
+    var optionNumberIndex = i / chunkSize; // Calculate the index of the option number
+    OptionsArray.push(optionNumberIndex);
+  }
+}
+let numX;
+// Function to speak the chunks sequentially
+function speakChunks(index) {
+  if (index < chunks.length) {
+    utterance.text = chunks[index];
+    synthesis.speak(utterance);
+    utterance.onend = function() {
+      // Check if the current index is present in the OptionsArray
+      if (OptionsArray.includes(index)) {
+        // Run the desired function when the option number is encountered
+        // Call your function here
+
+numX++;
+	       console.log(numX'  numX index. '+index);
+      }
+      
+      speakChunks(index + 1);
+    };
+  }
 }
 
-
-    // Function to speak the chunks sequentially
-    function speakChunks(index) {
-      if (index < chunks.length) {
-        utterance.text = chunks[index];
-        synthesis.speak(utterance);
-        utterance.onend = function() {
-          speakChunks(index + 1);
-        };
-      }
-    }
+// Usage:
+//speakChunks(0);
 
     // Load voice settings from local storage
     var voiceSettings = JSON.parse(localStorage.getItem('voiceSettings'));
