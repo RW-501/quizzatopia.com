@@ -1351,7 +1351,7 @@ function readTextFunc(text) {
 
 
     // Split the text into chunks
-var words = currentQuestion.split(" "); // Split the currentQuestion into an array of words
+var words = replacedQuestion.split(" "); // Split the currentQuestion into an array of words
 var chunkSize = 4; // Assuming each chunk contains 4 words
 var chunks = [];
 var OptionsArray = [];
