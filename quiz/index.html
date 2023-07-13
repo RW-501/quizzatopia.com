@@ -1033,8 +1033,10 @@ questionsCompleted.forEach(function(question) {
   var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
   if (questionIndex >= 0 && questionIndex < questions.length) {
     var questionDiv = document.createElement("div");
-    questionDiv.textContent = "Question " + (questionIndex + 1) + ": " + questions[questionIndex];
-    
+    questionDiv.textContent = "Question " + (questionIndex + 1) + ": " + questions[questionIndex].question;
+	  
+    	console.log("questionsCompleted...."+questions.[questionIndex].questionNumber );
+
     if (question.correctness === "correct") {
       correctTab.appendChild(questionDiv);
     } else if (question.correctness === "incorrect") {
