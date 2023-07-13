@@ -189,6 +189,36 @@ width: 90%;
 
 
 
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.quiz-result-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.quiz-result-item.correct {
+  background-color: #dff0d8;
+}
+
+.quiz-result-item.incorrect {
+  background-color: #f2dede;
+}
+
+.quiz-result-item:hover {
+  cursor: pointer;
+}
+
+.quiz-result-item:hover .question-number {
+  text-decoration: underline;
+}
 
 
 
