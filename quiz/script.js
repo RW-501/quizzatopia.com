@@ -1384,7 +1384,7 @@ function speakChunks(index) {
         // Call your function here
 
 numX++;
-	       console.log(numX'  numX index. '+index);
+	       console.log(numX+'  numX index. '+index);
       }
       
       speakChunks(index + 1);
