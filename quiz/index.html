@@ -1246,7 +1246,7 @@ if(quizStarted == true){
     savedQuizInfo.quizLink = q; // Add the "q" parameter to the quizInfo object
 	  }else{
     savedQuizInfo.quizCode = quizCode;
-    savedQuizInfo.quizInfo = quizInfo;
+    savedQuizInfo = quizInfo;
   }
  if (newScore > savedScore ){
 	  	  updatePoints(pointsRewards);
