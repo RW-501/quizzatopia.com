@@ -1268,6 +1268,9 @@ for (let i = 0; i < currentOptions.length; i++) {
 		z = i;
 optionsString += " Option Number "+[x]+". "+currentOptions[i].innerHTML +", ";
   currentOptions[i].classList.add("highlight"); 
+
+		
+		console.log(z " currentOptions  "+i);
 	}
 }
 
