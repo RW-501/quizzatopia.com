@@ -1056,13 +1056,6 @@ function openQuestionPopup(questionIndex) {
     questionDiv.textContent = "Question " + (questionIndex + 1) + ": " + question.question;
     closeQuestionPopup();
   });
-}
-
-// Close the question popup
-function closeQuestionPopup() {
-  const popup = document.getElementById("questionPopup");
-  popup.style.display = "none";
-}
 
 // Add event listeners to question divs
 for (let i = 0; i < questions.length; i++) {
@@ -1077,6 +1070,18 @@ for (let i = 0; i < questions.length; i++) {
   
   document.getElementById("questionList").appendChild(questionDiv);
 }
+
+
+
+	
+}
+
+// Close the question popup
+function closeQuestionPopup() {
+  const popup = document.getElementById("questionPopup");
+  popup.style.display = "none";
+}
+
 
 
 
