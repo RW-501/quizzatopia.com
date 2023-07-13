@@ -479,12 +479,12 @@ display: inline-block;
   color: #fff;
 }
 
-.tab-content {
+.tab-cont {
   display: none;
   margin-top: 20px;
 }
 
-.tab-content.active {
+.tab-cont.active {
 display: block !important;
 }
 
@@ -985,8 +985,16 @@ display: block !important;
       <button class="tab-link active" data-tab="correct">Correct</button>
       <button class="tab-link" data-tab="incorrect">Incorrect</button>
     </div>
-    <div id="correctTab" class="tab-content active"></div>
-    <div id="incorrectTab" class="tab-content"></div>
+<div id="correctTab" class="tab-content">
+  <h3>Correct Answers</h3>
+  <div id="correctList"></div>
+</div>
+
+<div id="incorrectTab" class="tab-content">
+  <h3>Incorrect Answers</h3>
+  <div id="incorrectList"></div>
+</div>
+
     <button id="closeButton" class="close-button">Close</button>
   </div>
 </div>
@@ -1032,17 +1040,36 @@ questionsCompleted.forEach(function(question) {
   var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
   if (questionIndex >= 0 && questionIndex < questions.length) {
     var questionDiv = document.createElement("div");
-    questionDiv.textContent = "Question " + (questionIndex + 1) + ": " + questions[questionIndex].question;
-	  
-    	console.log("questionsCompleted...."+questions[questionIndex].questionNumber );
+    questionDiv.classList.add("quiz-result-item");
+    if (question.correctness === "correct") {
+      questionDiv.classList.add("correct");
+    } else if (question.correctness === "incorrect") {
+      questionDiv.classList.add("incorrect");
+    }
+    questionDiv.addEventListener("click", function() {
+      // Handle click event for each question
+      console.log("Clicked on Question " + (questionIndex + 1));
+    });
+
+    var questionNumber = document.createElement("span");
+    questionNumber.classList.add("question-number");
+    questionNumber.textContent = "Question " + (questionIndex + 1) + ": ";
+
+    var questionText = document.createElement("span");
+    questionText.classList.add("question-text");
+    questionText.textContent = questions[questionIndex].question;
+
+    questionDiv.appendChild(questionNumber);
+    questionDiv.appendChild(questionText);
 
     if (question.correctness === "correct") {
-      correctTab.appendChild(questionDiv);
+      document.getElementById("correctList").appendChild(questionDiv);
     } else if (question.correctness === "incorrect") {
-      incorrectTab.appendChild(questionDiv);
+      document.getElementById("incorrectList").appendChild(questionDiv);
     }
   }
 });
+
 
 
 });
@@ -1050,7 +1077,7 @@ questionsCompleted.forEach(function(question) {
 
 // Switch tabs
 var tabLinks = document.querySelectorAll(".tab-link");
-var tabContents = document.querySelectorAll(".tab-content");
+var tabContents = document.querySelectorAll(".tab-cont");
 
 tabLinks.forEach(function(tabLink) {
   tabLink.addEventListener("click", function() {
