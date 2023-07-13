@@ -365,13 +365,11 @@ questionsCompleted.push(questionObj.questionNumber);
 //quizInfo.questionsCompleted = questionsCompleted;
 
 
-	    quizInfo = {
-      questionsCompleted: questionsCompleted
-    };
+	 //   quizInfo = {questionsCompleted: questionsCompleted };
 	
 //let saveQuizInfo = JSON.stringify(quizInfo);
 	
-saveQuizInfo(quizCode, quizInfo);
+saveQuizInfo(quizCode, questionsCompleted.questionsCompleted);
 
 
 
@@ -461,12 +459,10 @@ const answerOptions = document.getElementsByClassName("answer-option");
 //    quizInfo.questionIncorrect = questionIncorrect;
 
 
-    quizInfo = {
-      questionIncorrect: questionIncorrect
-    };
+ //   quizInfo = { questionIncorrect: questionIncorrect};
 
 	  
-    saveQuizInfo(quizCode, quizInfo);
+    saveQuizInfo(quizCode, questionIncorrect.questionIncorrect);
 	console.log('questionIncorrect ????????????????? ', questionIncorrect);
 	  
 	  const answerOptions = document.getElementsByClassName("answer-option");
