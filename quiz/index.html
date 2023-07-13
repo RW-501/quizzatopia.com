@@ -1124,12 +1124,13 @@ var addedQuestionNumbers = []; // Array to store the added question numbers
 
 questionsCompleted.forEach(function(question) {
   var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
-  
+	
+
   // Check if the question number has already been added
   if (addedQuestionNumbers.includes(questionIndex)) {
     return; // Skip this iteration if the question number already exists
   }
-  
+
   addedQuestionNumbers.push(questionIndex); // Add the question number to the array
   
   if (questionIndex >= 0 && questionIndex < questions.length) {
@@ -1152,11 +1153,16 @@ questionsCompleted.forEach(function(question) {
     questionNumber.classList.add("question-number");
     questionNumber.textContent = "Question " + (questionIndex + 1) + ": ";
   //  questionNumber.textContent = "Question " + (questionIndex) + ": ";
-    
+
+
     var questionText = document.createElement("span");
     questionText.classList.add("question-text");
     questionText.textContent = questions[questionIndex].question;
-    
+
+          console.log(questions[questionIndex].question);
+
+
+	  
     questionDiv.appendChild(questionNumber);
     questionDiv.appendChild(questionText);
     
