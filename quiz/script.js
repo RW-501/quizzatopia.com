@@ -368,7 +368,7 @@ questionsCompleted.push(questionObj.questionNumber);
 	 //   quizInfo = {questionsCompleted: questionsCompleted };
 	
 //let saveQuizInfo = JSON.stringify(quizInfo);
- quizInfo = questionsCompleted.questionsCompleted;
+ quizInfo.questionsCompleteXXX = questionsCompleted;
 	
 saveQuizInfo(quizCode, quizInfo);
 
