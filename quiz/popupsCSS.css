@@ -137,21 +137,26 @@ width: 90%;
 text-align: center;
 }
 .block{
-    width: 90%;
+width: 90%;
     display: block;
     margin: 1% auto;
-    background-color: #fd7e14;
+    background-color: #21252926;
     box-sizing: border-box;
-    padding: 1%;
-    border-radius: 1em;
+    padding: 2%;
+    border-radius: 25px;
+
 }
 #optionsMenu .form-check{
     margin: 2%;
 
 }
 
-
-
+#openReviewButton{
+    border: none;
+    background-color: transparent;
+    font-size: 1.5em;
+    font-weight: 900;
+}
 
 
 
