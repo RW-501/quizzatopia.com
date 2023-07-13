@@ -95,11 +95,10 @@ async function startQuiz() {
     } else {
       questionTime = 0; // seconds
       currentQuestion = 0;
-      questionCorrect = 0;
-	questionIncorrect = 0;    
+
       quizStarted = false;
       timer = 0;
-	    questionsCompleted = [];
+	//    questionsCompleted = [];
       countdownPerQuestion = false; // set to true if the countdown should happen for each question
       totalTime = 0; // seconds
       totalQuestions = questions.length;
@@ -331,6 +330,8 @@ function shuffleArrayAnswers(array) {
 
 
 var realQuestionNumber;
+
+
 // Function to show the question
 function showQuestion() {
   const animations = ["right", ""];
@@ -446,12 +447,12 @@ function checkAnswer() {
 	  var correctness = "correct";
 questionsCompleted.push({ questionNumber: realQuestionNumber, correctness: correctness });
 	  
-saveQuizInfo(quizCode, quizInfo);
 
 // Get the number of correct questions
 questionCorrect = questionsCompleted.filter(function(question) {
   return question.correctness === "correct";
 }).length;
+saveQuizInfo(quizCode);
 
 
 
@@ -471,18 +472,21 @@ const answerOptions = document.getElementsByClassName("answer-option");
    // questionIncorrect++;
 //    quizInfo.questionIncorrect = questionIncorrect;
 
+
+   // quizInfo = { questionIncorrect: questionIncorrect};
+
+//quizInfo.questionIncorrect = questionIncorrect;
+var correctness = "incorrect";
+questionsCompleted.push({ questionNumber: realQuestionNumber, correctness: correctness });
+
 // Get the number of incorrect questions
 questionIncorrect = questionsCompleted.filter(function(question) {
   return question.correctness === "incorrect";
 }).length;
 
-    quizInfo = { questionIncorrect: questionIncorrect};
-
-//quizInfo.questionIncorrect = questionIncorrect;
-var correctness = "incorrect";
-questionsCompleted.push({ questionNumber: realQuestionNumber, correctness: correctness });
 	  
-    saveQuizInfo(quizCode, quizInfo );
+    saveQuizInfo(quizCode );
+	  
 	//console.log('questionIncorrect ????????????????? ', questionIncorrect);
 	  
 	  const answerOptions = document.getElementsByClassName("answer-option");
