@@ -3,7 +3,7 @@ let questionTime = 0; // seconds
 let currentQuestion = 0;
 let questionCorrect = 0;
 let questionIncorrect = 0;
-let questionsCompleted =[];
+let questionsCompleted = 0;
 let quizStarted = false;
 let timer = 0;
 let countdownPerQuestion = false; // set to true if the countdown should happen for each question
@@ -47,7 +47,7 @@ function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
       quizCode: quizCodeNS,
       quizName: quizNameNS,
       numberOfQuestions: numberOfQuestionsNS,
-      questionsCompleted: [],
+      questionsCompleted: 0,
       questionCorrect: 0,
       questionIncorrect: 0,
       timestamp: timestamp,
@@ -358,14 +358,13 @@ function showQuestion() {
 document.getElementById("difficulty").innerHTML = "Difficulty: " + (questionObj.difficulty || '') ;
 document.getElementById("realQustionNum").innerHTML =  ('# '+ questionObj.questionNumber || "");
 
-	questionsCompleted.push(questionObj.questionNumber);
-  quizInfo.questionsCompleted = questionsCompleted;
-	
 
-let saveQuestionsCompleted = JSON.stringify(quizInfo);
-    saveQuizInfo(quizCode, saveQuestionsCompleted);
-  //  quizInfo = JSON.parse(savedQuizInfo);
 
+questionsCompleted.push(questionObj.questionNumber);
+quizInfo.questionsCompleted = questionsCompleted;
+
+let saveQuizInfo = JSON.stringify(quizInfo);
+saveQuizData(quizCode, saveQuizInfo);
 
 
 
