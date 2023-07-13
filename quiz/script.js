@@ -368,8 +368,9 @@ questionsCompleted.push(questionObj.questionNumber);
 	 //   quizInfo = {questionsCompleted: questionsCompleted };
 	
 //let saveQuizInfo = JSON.stringify(quizInfo);
+let quizInfoZZZ = questionsCompleted.questionsCompleted;
 	
-saveQuizInfo(quizCode, questionsCompleted.questionsCompleted);
+saveQuizInfo(quizCode, quizInfoZZZ);
 
 
 
@@ -461,8 +462,9 @@ const answerOptions = document.getElementsByClassName("answer-option");
 
  //   quizInfo = { questionIncorrect: questionIncorrect};
 
+let quizInfoX =  questionIncorrect.questionIncorrect;
 	  
-    saveQuizInfo(quizCode, questionIncorrect.questionIncorrect);
+    saveQuizInfo(quizCode, quizInfoX );
 	console.log('questionIncorrect ????????????????? ', questionIncorrect);
 	  
 	  const answerOptions = document.getElementsByClassName("answer-option");
