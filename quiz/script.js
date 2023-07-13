@@ -3,7 +3,7 @@ let questionTime = 0; // seconds
 let currentQuestion = 0;
 let questionCorrect = 0;
 let questionIncorrect = 0;
-let questionsCompleted = 0;
+let questionsCompleted = [];
 let quizStarted = false;
 let timer = 0;
 let countdownPerQuestion = false; // set to true if the countdown should happen for each question
@@ -41,13 +41,14 @@ function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
   let quizInfo;
   let timestamp = new Date().toLocaleString();
 
+	
   if (!savedQuizInfo) {
     // Quiz info doesn't exist, save new quiz info to storage
     quizInfo = {
       quizCode: quizCodeNS,
       quizName: quizNameNS,
       numberOfQuestions: numberOfQuestionsNS,
-      questionsCompleted: 0,
+      questionsCompleted: [],
       questionCorrect: 0,
       questionIncorrect: 0,
       timestamp: timestamp,
@@ -360,9 +361,13 @@ document.getElementById("realQustionNum").innerHTML =  ('# '+ questionObj.questi
 
 
 
-questionsCompleted = questionObj.questionNumber;
-quizInfo.questionsCompleted.push(questionsCompleted);
-questionsCompleted  
+questionsCompleted.push(questionObj.questionNumber);
+//quizInfo.questionsCompleted = questionsCompleted;
+
+
+	    quizInfo = {
+      questionsCompleted: questionsCompleted
+    };
 	
 //let saveQuizInfo = JSON.stringify(quizInfo);
 	
@@ -370,9 +375,9 @@ saveQuizData(quizCode, saveQuizInfo);
 
 
 
-		console.log('questionObj.questionNumber ', questionObj.questionNumber);
-		console.log('questionsCompleted ', questionsCompleted);
-		console.log('quizInfo ', quizInfo);
+		//console.log('questionObj.questionNumber ', questionObj.questionNumber);
+		//console.log('questionsCompleted ', questionsCompleted);
+		//console.log('quizInfo ', quizInfo);
 	
   const answerButtons = document.getElementsByClassName("answer-option");
 
@@ -453,7 +458,14 @@ const answerOptions = document.getElementsByClassName("answer-option");
     selectedOption.classList.add('incorrect');
     correct_bool = "incorrect";
     questionIncorrect++;
-    quizInfo.questionIncorrect = questionIncorrect;
+//    quizInfo.questionIncorrect = questionIncorrect;
+
+
+    quizInfo = {
+      questionIncorrect: questionIncorrect
+    };
+
+	  
     saveQuizInfo(quizCode, quizInfo);
 	console.log('questionIncorrect ????????????????? ', questionIncorrect);
 	  
