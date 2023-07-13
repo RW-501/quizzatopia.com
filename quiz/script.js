@@ -364,13 +364,15 @@ questionsCompleted.push(questionObj.questionNumber);
 quizInfo.questionsCompleted = questionsCompleted;
 
 let saveQuizInfo = JSON.stringify(quizInfo);
-saveQuizData(quizCode, saveQuizInfo);
+	
+//saveQuizData(quizCode, saveQuizInfo);
 
 
 
 		console.log('questionObj.questionNumber ', questionObj.questionNumber);
 		console.log('questionsCompleted ', questionsCompleted);
 		console.log('quizInfo ', quizInfo);
+	
   const answerButtons = document.getElementsByClassName("answer-option");
 
   for (let i = 0; i < answerButtons.length; i++) {
