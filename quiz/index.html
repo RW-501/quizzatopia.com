@@ -1034,24 +1034,6 @@ display: block !important;
   <script>
 
 
-// Get the retake button element
-const retakeButton = document.getElementById("retakeButton");
-
-// Attach an event listener to the retake button
-retakeButton.addEventListener("click", function() {
-  // Retrieve the wrong questions from questionsCompleted
-  const wrongQuestions = questionsCompleted.filter(question => question.correctness === "incorrect");
-
-  // Create a new quiz or quiz session with the wrong questions
-  createQuizSession(wrongQuestions);
-});
-
-	  function createQuizSession(wrongQuestions){
-
-		  questions = wrongQuestions;
-startQuiz();
-
-	  }
 	  
 	  
 // Open the question popup
@@ -1213,8 +1195,25 @@ questionsCompleted.forEach(function(question) {
 	  
 window.addEventListener("load", function() {
 
-    // Initial setup
 
+// Get the retake button element
+const retakeButton = document.getElementById("retakeButton");
+
+// Attach an event listener to the retake button
+retakeButton.addEventListener("click", function() {
+  // Retrieve the wrong questions from questionsCompleted
+  const wrongQuestions = questionsCompleted.filter(question => question.correctness === "incorrect");
+
+  // Create a new quiz or quiz session with the wrong questions
+  createQuizSession(wrongQuestions);
+});
+
+	  function createQuizSession(wrongQuestions){
+
+		  questions = wrongQuestions;
+startQuiz();
+
+	  }
 
 });
 
