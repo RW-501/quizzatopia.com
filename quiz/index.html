@@ -990,10 +990,9 @@ display: block !important;
   <div class="popup-content">
 	  <div class="scroll" >
     <div class="tab">
-  <h2 id="quizReviewName"></h2>
-
-	    
+		    <h2 id="quizReviewName"></h2>
     </div>
+
 		  <hr>
 <div id="correctTab" class="tab-content">
   <h3>Correct Answers</h3>
@@ -1053,34 +1052,44 @@ var incorrectTab = document.getElementById("incorrectTab");
 	document.getElementById("quizReviewName").innerHTML = quizInfo.quizName;
 
 	
+var addedQuestionNumbers = []; // Array to store the added question numbers
+
 questionsCompleted.forEach(function(question) {
   var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
+  
+  // Check if the question number has already been added
+  if (addedQuestionNumbers.includes(questionIndex)) {
+    return; // Skip this iteration if the question number already exists
+  }
+  
+  addedQuestionNumbers.push(questionIndex); // Add the question number to the array
+  
   if (questionIndex >= 0 && questionIndex < questions.length) {
     var questionDiv = document.createElement("div");
     questionDiv.classList.add("quiz-result-item");
+    
     if (question.correctness === "correct") {
       questionDiv.classList.add("correct");
     } else if (question.correctness === "incorrect") {
       questionDiv.classList.add("incorrect");
     }
+    
     questionDiv.addEventListener("click", function() {
       // Handle click event for each question
-
-	  
-      console.log("Question " + (questionIndex + 1)+" Answer: "+questions[questionIndex].answer+" "+questions[questionIndex].explanation);
+      console.log("Question " + (questionIndex + 1) + " Answer: " + questions[questionIndex].answer + " " + questions[questionIndex].explanation);
     });
-
+    
     var questionNumber = document.createElement("span");
     questionNumber.classList.add("question-number");
     questionNumber.textContent = "Question " + (questionIndex + 1) + ": ";
-
+    
     var questionText = document.createElement("span");
     questionText.classList.add("question-text");
     questionText.textContent = questions[questionIndex].question;
-
+    
     questionDiv.appendChild(questionNumber);
     questionDiv.appendChild(questionText);
-
+    
     if (question.correctness === "correct") {
       document.getElementById("correctList").appendChild(questionDiv);
     } else if (question.correctness === "incorrect") {
@@ -1093,27 +1102,6 @@ questionsCompleted.forEach(function(question) {
 
 });
 	  
-
-// Switch tabs
-var tabLinks = document.querySelectorAll(".tab-link");
-var tabContents = document.querySelectorAll(".tab-cont");
-
-tabLinks.forEach(function(tabLink) {
-  tabLink.addEventListener("click", function() {
-    var tabId = this.dataset.tab;
-    
-    tabLinks.forEach(function(link) {
-      link.classList.remove("active");
-    });
-    tabContents.forEach(function(content) {
-      content.style.display = "none";
-    });
-    
-    this.classList.add("active");
-    document.getElementById(tabId).style.display = "block";
-  });
-});
-
 
 
 
