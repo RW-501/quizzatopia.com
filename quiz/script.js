@@ -368,9 +368,6 @@ questionsCompleted.push(questionObj.questionNumber);
 	 //   quizInfo = {questionsCompleted: questionsCompleted };
 	
 //let saveQuizInfo = JSON.stringify(quizInfo);
- quizInfo.questionsCompleted = questionsCompleted;
-	
-saveQuizInfo(quizCode, quizInfo);
 
 
 
@@ -439,8 +436,13 @@ function checkAnswer() {
     }
     correct_bool = "Correct";
     questionCorrect++;
-    quizInfo.questionCorrect = questionCorrect;
-    saveQuizInfo(quizCode, quizInfo);
+  //  quizInfo.questionCorrect = questionCorrect;
+
+	  var correctness = "correct";
+questionsCompleted.push({ questionNumber: questionNumber, correctness: correctness });
+	  
+saveQuizInfo(quizCode, quizInfo);
+
 
 
 
@@ -451,7 +453,8 @@ const answerOptions = document.getElementsByClassName("answer-option");
 		readCorrectAnswerFunc(i , "Correct" );
       }
     }
-    
+	
+
 	  
   } else {
     selectedOption.classList.add('incorrect');
@@ -462,10 +465,12 @@ const answerOptions = document.getElementsByClassName("answer-option");
 
  //   quizInfo = { questionIncorrect: questionIncorrect};
 
-quizInfo.questionIncorrect = questionIncorrect;
+//quizInfo.questionIncorrect = questionIncorrect;
+var correctness = "incorrect";
+questionsCompleted.push({ questionNumber: questionNumber, correctness: correctness });
 	  
     saveQuizInfo(quizCode, quizInfo );
-	console.log('questionIncorrect ????????????????? ', questionIncorrect);
+	//console.log('questionIncorrect ????????????????? ', questionIncorrect);
 	  
 	  const answerOptions = document.getElementsByClassName("answer-option");
     for (let i = 0; i < answerOptions.length; i++) {
