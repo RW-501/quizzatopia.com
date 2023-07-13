@@ -377,7 +377,7 @@ document.getElementById("realQustionNum").innerHTML =  ('# '+ questionObj.questi
 
 		//console.log('questionObj.questionNumber ', questionObj.questionNumber);
 		//console.log('questionsCompleted ', questionsCompleted);
-		//console.log('quizInfo ', quizInfo);
+		console.log('realQuestionNumber ', realQuestionNumber);
 	
   const answerButtons = document.getElementsByClassName("answer-option");
 
