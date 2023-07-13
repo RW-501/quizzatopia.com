@@ -1010,6 +1010,18 @@ display: block !important;
 </div>
 
 
+<div id="questionPopup" class="popup">
+  <div class="popup-content">
+    <span class="close">&times;</span>
+    <h3>Question</h3>
+    <textarea id="questionTextArea" rows="3"></textarea>
+    <h3>Answer</h3>
+    <textarea id="answerTextArea" rows="3"></textarea>
+    <h3>Explanation</h3>
+    <textarea id="explanationTextArea" rows="3"></textarea>
+    <button id="updateButton">Update</button>
+  </div>
+</div>
 
 
 
@@ -1018,7 +1030,61 @@ display: block !important;
 	
   <script>
 
+// Open the question popup
+function openQuestionPopup(questionIndex) {
+  const question = questions[questionIndex];
+  const questionTextArea = document.getElementById("questionTextArea");
+  const answerTextArea = document.getElementById("answerTextArea");
+  const explanationTextArea = document.getElementById("explanationTextArea");
+  
+  questionTextArea.value = question.question;
+  answerTextArea.value = question.answer;
+  explanationTextArea.value = question.explanation;
+  
+  const popup = document.getElementById("questionPopup");
+  popup.style.display = "block";
 
+
+
+	      console.log("Question " + (questionIndex + 1) + " Answer: " + questions[questionIndex].answer + " " + questions[questionIndex].explanation);
+
+  // Update the question on button click
+  const updateButton = document.getElementById("updateButton");
+  updateButton.addEventListener("click", function() {
+    question.question = questionTextArea.value;
+    question.answer = answerTextArea.value;
+    question.explanation = explanationTextArea.value;
+    // Update the question div with the updated question
+    const questionDiv = document.getElementById("question-" + questionIndex);
+    questionDiv.textContent = "Question " + (questionIndex + 1) + ": " + question.question;
+    closeQuestionPopup();
+  });
+}
+
+// Close the question popup
+function closeQuestionPopup() {
+  const popup = document.getElementById("questionPopup");
+  popup.style.display = "none";
+}
+
+// Add event listeners to question divs
+for (let i = 0; i < questions.length; i++) {
+  const questionDiv = document.createElement("div");
+  questionDiv.id = "question-" + i;
+  questionDiv.textContent = "Question " + (i + 1) + ": " + questions[i].question;
+  
+  questionDiv.addEventListener("click", function() {
+    const questionIndex = parseInt(this.id.split("-")[1]);
+    openQuestionPopup(questionIndex);
+  });
+  
+  document.getElementById("questionList").appendChild(questionDiv);
+}
+
+
+
+
+	  
 	  
 // Close the review popup
 document.getElementById("closeButton").addEventListener("click", function() {
@@ -1076,12 +1142,14 @@ questionsCompleted.forEach(function(question) {
     
     questionDiv.addEventListener("click", function() {
       // Handle click event for each question
+	    openQuestionPopup(
       console.log("Question " + (questionIndex + 1) + " Answer: " + questions[questionIndex].answer + " " + questions[questionIndex].explanation);
     });
     
     var questionNumber = document.createElement("span");
     questionNumber.classList.add("question-number");
-    questionNumber.textContent = "Question " + (questionIndex + 1) + ": ";
+  //  questionNumber.textContent = "Question " + (questionIndex + 1) + ": ";
+    questionNumber.textContent = "Question " + (questionIndex) + ": ";
     
     var questionText = document.createElement("span");
     questionText.classList.add("question-text");
