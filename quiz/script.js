@@ -440,7 +440,7 @@ function checkAnswer() {
     }
     correct_bool = "Correct";
     questionCorrect++;
-  //  quizInfo.questionCorrect = questionCorrect;
+    quizInfo.questionCorrect = questionCorrect;
 
 	  var correctness = "correct";
 questionsCompleted.push({ questionNumber: realQuestionNumber, correctness: correctness });
@@ -467,7 +467,7 @@ const answerOptions = document.getElementsByClassName("answer-option");
 //    quizInfo.questionIncorrect = questionIncorrect;
 
 
- //   quizInfo = { questionIncorrect: questionIncorrect};
+    quizInfo = { questionIncorrect: questionIncorrect};
 
 //quizInfo.questionIncorrect = questionIncorrect;
 var correctness = "incorrect";
