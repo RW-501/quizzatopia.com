@@ -986,14 +986,16 @@ display: block !important;
   <div class="popup-content">
 	  <div class="scroll" >
     <div class="tab">
-      <button class="tab-link active" data-tab="correct">Correct</button>
-      <button class="tab-link" data-tab="incorrect">Incorrect</button>
+  <h2 id="quizReviewName"></h2>
+
+	    
     </div>
+		  <hr>
 <div id="correctTab" class="tab-content">
   <h3>Correct Answers</h3>
   <div id="correctList"></div>
 </div>
-
+<br>
 <div id="incorrectTab" class="tab-content">
   <h3>Incorrect Answers</h3>
   <div id="incorrectList"></div>
@@ -1035,13 +1037,17 @@ const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
 const quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
 const questionsCompleted = quizInfo.questionsCompleted || [];
 
-	console.log("questionsCompleted...."+quizInfo.questionsCompleted);
+	//console.log("questionsCompleted...."+quizInfo.questionsCompleted);
 
 	
 var correctTab = document.getElementById("correctTab");
 var incorrectTab = document.getElementById("incorrectTab");
 correctTab.innerHTML = "";
 incorrectTab.innerHTML = "";
+	
+
+	document.getElementById("quizReviewName").innerHTML = quizInfo.quizName;
+
 	
 questionsCompleted.forEach(function(question) {
   var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
@@ -1057,7 +1063,7 @@ questionsCompleted.forEach(function(question) {
       // Handle click event for each question
 
 	  
-      console.log("Clicked on Question " + (questionIndex + 1));
+      console.log("Clicked on Question " + (questionIndex + 1)+"   "+questions[questionIndex].explanation);
     });
 
     var questionNumber = document.createElement("span");
