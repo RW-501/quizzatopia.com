@@ -1017,25 +1017,32 @@ document.getElementById("openReviewButton").addEventListener("click", function()
   document.getElementById("reviewPopup").style.display = "block";
 
 
-
-	  const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
+	
+	
+const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
 const quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
-// Generate the question list
-var questionsCompleted =  quizInfo.questionsCompleted;
-console.log("questionsCompleted...."+quizInfo.questionsCompleted);
+const questionsCompleted = quizInfo.questionsCompleted || [];
+
+	console.log("questionsCompleted...."+quizInfo.questionsCompleted);
+
+	
 var correctTab = document.getElementById("correctTab");
 var incorrectTab = document.getElementById("incorrectTab");
 
 questionsCompleted.forEach(function(question) {
-  var questionDiv = document.createElement("div");
-  questionDiv.textContent = "Question " + questions[question.questionNumber];
-  
-  if (question.correctness === "correct") {
-    correctTab.appendChild(questionDiv);
-  } else if (question.correctness === "incorrect") {
-    incorrectTab.appendChild(questionDiv);
+  var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
+  if (questionIndex >= 0 && questionIndex < questions.length) {
+    var questionDiv = document.createElement("div");
+    questionDiv.textContent = "Question " + (questionIndex + 1) + ": " + questions[questionIndex];
+    
+    if (question.correctness === "correct") {
+      correctTab.appendChild(questionDiv);
+    } else if (question.correctness === "incorrect") {
+      incorrectTab.appendChild(questionDiv);
+    }
   }
 });
+
 
 });
 	  
