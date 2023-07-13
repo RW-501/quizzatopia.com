@@ -360,12 +360,13 @@ document.getElementById("realQustionNum").innerHTML =  ('# '+ questionObj.questi
 
 
 
-questionsCompleted.push(questionObj.questionNumber);
-quizInfo.questionsCompleted = questionsCompleted;
-
-let saveQuizInfo = JSON.stringify(quizInfo);
+quizInfo.questionsCompleted.push(questionObj.questionNumber);
+//quizInfo.questionsCompleted = questionsCompleted;
+questionsCompleted  
 	
-//saveQuizData(quizCode, saveQuizInfo);
+//let saveQuizInfo = JSON.stringify(quizInfo);
+	
+saveQuizData(quizCode, saveQuizInfo);
 
 
 
