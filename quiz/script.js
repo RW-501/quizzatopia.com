@@ -1258,14 +1258,34 @@ let readThis = currentQuestion+" "+optionsString;
 readTextFunc(readThis);
 }
 
-function readCorrectAnswerFunc(xxx,zzz){
+function readCorrectAnswerFunc(num,correct){
 		//console.log("readThis xxx  "+zzz);
-let readThis;	
+ let incorrectResponses, responses, randomIndex, readThis;	
 var currentOptions = document.getElementsByClassName("answer-option");
-	if(zzz ){
- readThis =  "Correct, the answer is "+ currentOptions[xxx].innerHTML;
+	if(correct){
+ readThis =  "Correct, the answer is "+ currentOptions[num].innerHTML;
+  responses = [
+    "Great job! The answer is " + currentOptions[num].innerHTML + ".",
+    "You got it right! It's " + currentOptions[num].innerHTML + ".",
+    "Correct answer: " + currentOptions[num].innerHTML + ".",
+    "Well done! It's " + currentOptions[num].innerHTML + ".",
+    "That's correct! The answer is " + currentOptions[num].innerHTML + ".",
+  ];
+
+   randomIndex = Math.floor(Math.random() * responses.length);
+   readThis = correct ? responses[randomIndex] : "The correct answer is " + currentOptions[num].innerHTML + ".";
 	}else{
- readThis =  "The correct answer is "+ currentOptions[xxx].innerHTML;
+   incorrectResponses = [
+    "Oops! That's not the correct answer.",
+    "No, that's not it. The correct answer is " + currentOptions[num].innerHTML + ".",
+    "Incorrect. The answer is " + currentOptions[num].innerHTML + ".",
+    "Better luck next time! It's actually " + currentOptions[num].innerHTML + ".",
+    "Wrong answer. The correct one is " + currentOptions[num].innerHTML + ".",
+  ];
+
+   randomIndex = Math.floor(Math.random() * (correct ? correctResponses.length : incorrectResponses.length));
+   readThis = correct ? correctResponses[randomIndex] : incorrectResponses[randomIndex];
+  	
 	}
 readTextFunc(readThis);
 	//console.log("readThis "+readThis);
@@ -1277,8 +1297,19 @@ let readThis =    document.getElementById("question").innerHTML;
 readTextFunc(readThis);
 }
 function readExplanationFunc(){
-let readThis =  "Explanation. "+  document.getElementById("explanation").innerHTML;
-readTextFunc(readThis);
+   let explanations, randomIndex, readThis;	
+
+	explanations = [
+    "Here's the explanation: " + document.getElementById("explanation").innerHTML,
+    "Let me explain. " + document.getElementById("explanation").innerHTML,
+    "The explanation is as follows: " + document.getElementById("explanation").innerHTML,
+    "Listen carefully to the explanation: " + document.getElementById("explanation").innerHTML,
+    "Allow me to clarify. " + document.getElementById("explanation").innerHTML,
+  ];
+
+   randomIndex = Math.floor(Math.random() * explanations.length);
+   readThis = explanations[randomIndex];
+	readTextFunc(readThis);
 }
 
     var utterance = new SpeechSynthesisUtterance();
@@ -1300,7 +1331,10 @@ function readTextFunc(text) {
     var synthesis = window.speechSynthesis;
 	  
   let blankPattern = /_{1,}/; // Pattern for one or more underscores
-  let replacedQuestion = text.replace(blankPattern, " blank ");
+  let replacedQuestion2 = text.replace(blankPattern, " blank ");
+
+ let blankPattern2 = "True or False:"; // Pattern for one or more underscores
+  let replacedQuestion = replacedQuestion2.replace(blankPattern2, "");
 
 
     // Split the text into chunks
