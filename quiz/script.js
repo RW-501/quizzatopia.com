@@ -1258,13 +1258,14 @@ var currentQuestion =   document.getElementById("question").innerHTML;
 
 var currentOptions = document.getElementsByClassName("answer-option");
 var optionsString = "";
-let x = 0;
+let x = 0 , z = 0;
 for (let i = 0; i < currentOptions.length; i++) {
 	if(currentOptions[i].innerHTML !== ""){
 		x++;
-		if(x > 0){
+		if(z > 0){
   currentOptions[i].classList.remove("highlight"); 
 		}
+		z = i;
 optionsString += " Option Number "+[x]+". "+currentOptions[i].innerHTML +", ";
   currentOptions[i].classList.add("highlight"); 
 	}
