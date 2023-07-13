@@ -1015,13 +1015,13 @@ document.getElementById("openReviewButton").addEventListener("click", function()
 const quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
 // Generate the question list
 var questionsCompleted =  quizInfo.questionsCompleted;
-
+console.log("questionsCompleted...."+questionsCompleted);
 var correctTab = document.getElementById("correctTab");
 var incorrectTab = document.getElementById("incorrectTab");
 
-questionsCompleted.forEach(function(questions) {
+questionsCompleted.forEach(function(question) {
   var questionDiv = document.createElement("div");
-  questionDiv.textContent = "Question " + question.questionNumber;
+  questionDiv.textContent = "Question " + questions[question.questionNumber];
   
   if (question.correctness === "correct") {
     correctTab.appendChild(questionDiv);
