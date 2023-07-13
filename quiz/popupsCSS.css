@@ -205,12 +205,19 @@ width: 90%;
 }
 
 .quiz-result-item.correct {
-  background-color: #dff0d8;
+    font-size: 1em;
+    background-color: #dff0d8 !important;
+    font-weight: 700;
+    color: black;
 }
 
 .quiz-result-item.incorrect {
-  background-color: #f2dede;
+    font-size: 1em;
+    background-color: #f2dede !important;
+    font-weight: 700;
+    color: black;
 }
+
 
 .quiz-result-item:hover {
   cursor: pointer;
