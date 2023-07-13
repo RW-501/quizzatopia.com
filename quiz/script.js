@@ -462,9 +462,9 @@ const answerOptions = document.getElementsByClassName("answer-option");
 
  //   quizInfo = { questionIncorrect: questionIncorrect};
 
-let quizInfoX =  questionIncorrect.questionIncorrect;
+quizInfo.questionIncorrect.questionIncorrect;
 	  
-    saveQuizInfo(quizCode, quizInfoX );
+    saveQuizInfo(quizCode, quizInfo.questionIncorrect );
 	console.log('questionIncorrect ????????????????? ', questionIncorrect);
 	  
 	  const answerOptions = document.getElementsByClassName("answer-option");
