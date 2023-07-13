@@ -979,12 +979,13 @@ const quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
     function closeReviewPopup() {
       document.getElementById("reviewPopup").style.display = "none";
     }
+window.addEventListener("load", function() {
 
     // Initial setup
     generateQuestionList();
 
 
-
+});
 
 
 
