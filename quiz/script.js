@@ -147,7 +147,7 @@ async function startQuiz() {
   adQuestionNumbers = quizAdPattern;
 
   // Array to store the question numbers where the ad should be shown
-  adQuestionNumbers = quizAdPattern; // Example: Show ad after questions 3, 7, and 11
+//  adQuestionNumbers = quizAdPattern; // Example: Show ad after questions 3, 7, and 11
 
   setQuizTime();
    updateQuestionNumber();
@@ -359,9 +359,9 @@ function showQuestion() {
 document.getElementById("difficulty").innerHTML = "Difficulty: " + (questionObj.difficulty || '') ;
 document.getElementById("realQustionNum").innerHTML =  ('# '+ questionObj.questionNumber || "");
 
+var questionNumber = questionObj.questionNumber;
 
-
-questionsCompleted.push(questionObj.questionNumber);
+//questionsCompleted.push(questionObj.questionNumber);
 //quizInfo.questionsCompleted = questionsCompleted;
 
 
