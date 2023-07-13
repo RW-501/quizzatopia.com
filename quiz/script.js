@@ -368,7 +368,7 @@ questionsCompleted.push(questionObj.questionNumber);
 	 //   quizInfo = {questionsCompleted: questionsCompleted };
 	
 //let saveQuizInfo = JSON.stringify(quizInfo);
- quizInfo.questionsCompleteXXX = questionsCompleted;
+ quizInfo.questionsCompleted = questionsCompleted;
 	
 saveQuizInfo(quizCode, quizInfo);
 
@@ -462,9 +462,9 @@ const answerOptions = document.getElementsByClassName("answer-option");
 
  //   quizInfo = { questionIncorrect: questionIncorrect};
 
-quizInfo.questionIncorrect.questionIncorrect;
+quizInfo.questionIncorrect = questionIncorrect;
 	  
-    saveQuizInfo(quizCode, quizInfo.questionIncorrect );
+    saveQuizInfo(quizCode, quizInfo );
 	console.log('questionIncorrect ????????????????? ', questionIncorrect);
 	  
 	  const answerOptions = document.getElementsByClassName("answer-option");
@@ -1353,42 +1353,26 @@ function readTextFunc(text) {
 
 
     // Split the text into chunks
-var words = replacedQuestion.split(" "); // Split the currentQuestion into an array of words
-var chunkSize = 10; // Assuming each chunk contains 4 words
+var chunkSize = 200; // Adjust the chunk size as needed
 var chunks = [];
-var OptionsArray = [];
+var words = replacedQuestion.split(' ');
 
-// Create chunks of words
 for (var i = 0; i < words.length; i += chunkSize) {
   var chunk = words.slice(i, i + chunkSize).join(' ');
   chunks.push(chunk);
-  
-  // Check if the chunk contains the word "Option Number"
-  if (chunk.includes("Option Number")) {
-    var optionNumberIndex = i / chunkSize; // Calculate the index of the option number
-    OptionsArray.push(optionNumberIndex);
-  }
 }
-let numX;
-// Function to speak the chunks sequentially
-function speakChunks(index) {
-  if (index < chunks.length) {
-    utterance.text = chunks[index];
-    synthesis.speak(utterance);
-    utterance.onend = function() {
-      // Check if the current index is present in the OptionsArray
-      if (OptionsArray.includes(index)) {
-        // Run the desired function when the option number is encountered
-        // Call your function here
 
-numX++;
-	       console.log(numX+'  numX index. '+index);
+
+    // Function to speak the chunks sequentially
+    function speakChunks(index) {
+      if (index < chunks.length) {
+        utterance.text = chunks[index];
+        synthesis.speak(utterance);
+        utterance.onend = function() {
+          speakChunks(index + 1);
+        };
       }
-      
-      speakChunks(index + 1);
-    };
-  }
-}
+    }
 
 // Usage:
 //speakChunks(0);
