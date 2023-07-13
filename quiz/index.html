@@ -1045,9 +1045,6 @@ function openQuestionPopup(questionIndex) {
   popup.style.display = "block";
 
 
-
-	      console.log("Question " + (questionIndex + 1) + " Answer: " + questions[questionIndex].answer + " " + questions[questionIndex].explanation);
-
   // Update the question on button click
   const updateButton = document.getElementById("updateButton");
   updateButton.addEventListener("click", function() {
@@ -1142,7 +1139,7 @@ questionsCompleted.forEach(function(question) {
     
     questionDiv.addEventListener("click", function() {
       // Handle click event for each question
-	    openQuestionPopup(
+	    openQuestionPopup(questionIndex);
       console.log("Question " + (questionIndex + 1) + " Answer: " + questions[questionIndex].answer + " " + questions[questionIndex].explanation);
     });
     
