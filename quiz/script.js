@@ -452,7 +452,7 @@ questionsCompleted.push({ questionNumber: realQuestionNumber, correctness: corre
 questionCorrect = questionsCompleted.filter(function(question) {
   return question.correctness === "correct";
 }).length;
-saveQuizInfo(quizCode);
+saveQuizInfo(quizCode,questionsCompleted);
 
 
 
@@ -485,7 +485,7 @@ questionIncorrect = questionsCompleted.filter(function(question) {
 }).length;
 
 	  
-    saveQuizInfo(quizCode );
+saveQuizInfo(quizCode,questionsCompleted);
 	  
 	//console.log('questionIncorrect ????????????????? ', questionIncorrect);
 	  
