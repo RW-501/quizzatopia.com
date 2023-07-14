@@ -335,7 +335,7 @@ var realQuestionNumber;
 // Function to show the question
 function showQuestion() {
      questionStartTime = new Date();
-	
+
   const animations = ["right", ""];
   const randomIndex = Math.floor(Math.random() * animations.length);
   const selectedAnimation = animations[randomIndex];
@@ -425,7 +425,7 @@ function updateProgressBar(currentQuestion) {
 // Function to check the user's answer
 function checkAnswer() {
   document.getElementById("skip-next-btn").innerHTML = "Next";
-  const quizInfo = JSON.parse(localStorage.getItem(`quizInfo_${quizCode}`)) || {};
+  var quizInfo = JSON.parse(localStorage.getItem(`quizInfo_${quizCode}`)) || {};
 
   const selectedOption = this;
   const optionContainers = document.querySelectorAll("#optionContainers button.answer-option");
@@ -433,14 +433,13 @@ function checkAnswer() {
   const questionObj = questions[currentQuestion];
   const options = optionContainers[currentQuestion]?.children;
 
-//  console.log('options ????????????????? ', options);
+  console.log('questionStartTime ????????????????? ', questionStartTime);
 
 		// Update the end time and calculate the response time for the completed question
 let questionEndTime = new Date();
 questionResponseTime = questionEndTime - questionStartTime;
 	
-    var questionStartTime = new Date();
-	
+
   let correct_bool;
   if (selectedAnswer === questionObj.answer) {
     selectedOption.classList.add('correct');
@@ -465,7 +464,6 @@ questionResponseTime = questionEndTime - questionStartTime;
 });
 quizInfo.questionsCompleted = questionsCompleted;
 	  
-	// console.log(quizInfo+' questionsCompleted '+quizInfo.questionsCompleted );
 
 saveQuizInfo(quizCode,quizInfo);
 
@@ -501,7 +499,7 @@ const answerOptions = document.getElementsByClassName("answer-option");
 
 //quizInfo.questionIncorrect = questionIncorrect;
 	  
-var correctness = "incorrect";
+let correctness = "incorrect";
  questionsCompleted.push({
   questionNumber: realQuestionNumber,
   correctness: correctness,
@@ -511,7 +509,6 @@ var correctness = "incorrect";
 });
 
 quizInfo.questionsCompleted = questionsCompleted;
-	  	// console.log(quizInfo+' questionsCompleted  incorrect  '+questionsCompleted );
 
 saveQuizInfo(quizCode,quizInfo);
 	  
@@ -520,9 +517,9 @@ questionIncorrect = questionsCompleted.filter(function(question) {
   return question.correctness === "incorrect";
 }).length;
 
-	 quizInfo.questionIncorrect = questionIncorrect;
+quizInfo.questionIncorrect = questionIncorrect;
 	  
-//saveQuizInfo(quizCode,quizInfo);
+saveQuizInfo(quizCode,quizInfo);
 
 	  
 	//console.log('questionIncorrect ????????????????? ', questionIncorrect);
