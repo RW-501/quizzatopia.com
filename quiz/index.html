@@ -1857,8 +1857,8 @@ function checkQuizCodeAndGetInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, qu
       quizImageURL: quizImageURL,
       quizType: quizType,
       numberOfQuestions: numberOfQuestionsNS,
-      questionCorrect: 0,
-      timestamp: timestamp,
+      questionsCompleted: questionsCompleted,
+      startTime: startTime,
 	quizLink: quizUrl  // Add the "q" parameter to the quizInfo object
 
     };
@@ -1871,7 +1871,7 @@ function checkQuizCodeAndGetInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, qu
     quizInfo.quizImageURL = quizImageURL;
       quizInfo.quizType = quizType || "";
     quizInfo.numberOfQuestions = numberOfQuestionsNS || "";
-    quizInfo.timestamp = timestamp;
+    quizInfo.startTime = timestamp;
 quizInfo.quizLink = quizUrl;  // Add the "q" parameter to the quizInfo object
     localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
   }
