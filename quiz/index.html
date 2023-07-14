@@ -1040,7 +1040,15 @@ function openQuestionPopup(questionIndex) {
 
  const responseTime = question.responseTime;
 
- responseTimeTextArea.value = question.responseTime;
+// Convert responseTime to minutes and seconds
+const minutes = Math.floor(responseTime / 60000);
+const seconds = Math.floor((responseTime % 60000) / 1000);
+
+// Format the minutes and seconds into a string
+const formattedTime = minutes + "m " + seconds + "s";
+
+				    
+ responseTimeTextArea.innerHTML = formattedTime;
   
   const popup = document.getElementById("questionPopup");
   popup.style.display = "block";
