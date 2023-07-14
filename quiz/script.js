@@ -455,14 +455,14 @@ questionResponseTime = questionEndTime - questionStartTime;
 
 
 
-questionsCompleted.push({
+let questionsCompletedQ.push({
   questionNumber: realQuestionNumber,
   correctness: correctness,
   startTime: questionStartTime, // Record the start time when the user starts answering the question
   endTime: questionEndTime, // Placeholder for the end time
   responseTime: questionResponseTime
 });
-quizInfo.questionsCompleted = questionsCompleted;
+quizInfo.questionsCompleted = questionsCompletedQ;
 	  
 saveQuizInfo(quizCode,quizInfo);
 
@@ -499,7 +499,7 @@ const answerOptions = document.getElementsByClassName("answer-option");
 //quizInfo.questionIncorrect = questionIncorrect;
 	  
 var correctness = "incorrect";
-questionsCompleted.push({
+let questionsCompletedI.push({
   questionNumber: realQuestionNumber,
   correctness: correctness,
   startTime: questionStartTime, // Record the start time when the user starts answering the question
@@ -507,7 +507,7 @@ questionsCompleted.push({
   responseTime: questionResponseTime
 });
 
-quizInfo.questionsCompleted = questionsCompleted;
+quizInfo.questionsCompleted = questionsCompletedI;
 	  
 saveQuizInfo(quizCode,quizInfo);
 	  
