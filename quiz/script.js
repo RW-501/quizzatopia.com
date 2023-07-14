@@ -39,7 +39,7 @@ function setQuizTime() {
 function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
   const savedQuizInfo = localStorage.getItem(`quizInfo_${quizCode}`);
   let quizInfo;
-  let timestamp = new Date().toLocaleString();
+  let startTime = new Date().toLocaleString();
 
 	
   if (!savedQuizInfo) {
