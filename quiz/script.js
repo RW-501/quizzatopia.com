@@ -466,7 +466,7 @@ quizInfo.questionsCompleted = questionsCompleted;
 	  
 	 console.log(quizInfo+' questionsCompleted '+quizInfo.questionsCompleted );
 	  
-saveQuizInfo(quizCode,quizInfo);
+saveQuizInfo(quizCode,quizInfo.questionsCompleted);
 
 // Get the number of correct questions
 questionCorrect = questionsCompleted.filter(function(question) {
@@ -511,8 +511,9 @@ var correctness = "incorrect";
 
 quizInfo.questionsCompleted = questionsCompleted;
 	  	 console.log(quizInfo+' questionsCompleted  incorrect  '+questionsCompleted );
-
-saveQuizInfo(quizCode,quizInfo);
+	  
+  localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
+//saveQuizInfo(quizCode,quizInfo);
 	  
 // Get the number of incorrect questions
 questionIncorrect = questionsCompleted.filter(function(question) {
