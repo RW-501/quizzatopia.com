@@ -425,6 +425,7 @@ function updateProgressBar(currentQuestion) {
 // Function to check the user's answer
 function checkAnswer() {
   document.getElementById("skip-next-btn").innerHTML = "Next";
+  const quizInfo = JSON.parse(localStorage.getItem(`quizInfo_${quizCode}`)) || {};
 
   const selectedOption = this;
   const optionContainers = document.querySelectorAll("#optionContainers button.answer-option");
