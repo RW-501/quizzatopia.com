@@ -507,7 +507,7 @@ questionsCompleted.push({
   responseTime: questionResponseTime
 });
 
-	quizInfo.questionCorrect;
+	quizInfo.questionsCompleted;
 	  
 saveQuizInfo(quizCode,quizInfo);
 	  
