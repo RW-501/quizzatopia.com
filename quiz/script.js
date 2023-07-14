@@ -455,7 +455,7 @@ questionResponseTime = questionEndTime - questionStartTime;
 
 
 
-let questionsCompletedQ.push({
+ questionsCompletedQ.push({
   questionNumber: realQuestionNumber,
   correctness: correctness,
   startTime: questionStartTime, // Record the start time when the user starts answering the question
@@ -499,7 +499,7 @@ const answerOptions = document.getElementsByClassName("answer-option");
 //quizInfo.questionIncorrect = questionIncorrect;
 	  
 var correctness = "incorrect";
-let questionsCompletedI.push({
+ questionsCompletedI.push({
   questionNumber: realQuestionNumber,
   correctness: correctness,
   startTime: questionStartTime, // Record the start time when the user starts answering the question
