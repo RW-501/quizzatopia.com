@@ -464,6 +464,8 @@ questionResponseTime = questionEndTime - questionStartTime;
 });
 quizInfo.questionsCompleted = questionsCompleted;
 	  
+	 console.log(quizInfo+' questionsCompleted '+quizInfo.questionsCompleted );
+	  
 saveQuizInfo(quizCode,quizInfo);
 
 // Get the number of correct questions
@@ -508,7 +510,8 @@ var correctness = "incorrect";
 });
 
 quizInfo.questionsCompleted = questionsCompleted;
-	  
+	  	 console.log(quizInfo+' questionsCompleted  incorrect  '+questionsCompleted );
+
 saveQuizInfo(quizCode,quizInfo);
 	  
 // Get the number of incorrect questions
