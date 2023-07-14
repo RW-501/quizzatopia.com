@@ -462,15 +462,18 @@ questionsCompleted.push({
   endTime: questionEndTime, // Placeholder for the end time
   responseTime: questionResponseTime
 });
+	quizInfo.questionsCompleted;
 	  
+saveQuizInfo(quizCode,quizInfo);
 
 // Get the number of correct questions
 questionCorrect = questionsCompleted.filter(function(question) {
   return question.correctness === "correct";
 }).length;
+
+	quizInfo.questionCorrect;
 	  
-saveQuizInfo(quizCode,questionCorrect);
-saveQuizInfo(quizCode,questionsCompleted);
+saveQuizInfo(quizCode,quizInfo);
 
 
 
@@ -503,15 +506,20 @@ questionsCompleted.push({
   endTime: questionEndTime, // Placeholder for the end time
   responseTime: questionResponseTime
 });
+
+	quizInfo.questionCorrect;
+	  
+saveQuizInfo(quizCode,quizInfo);
 	  
 // Get the number of incorrect questions
 questionIncorrect = questionsCompleted.filter(function(question) {
   return question.correctness === "incorrect";
 }).length;
 
+	quizInfo.questionIncorrect;
 	  
-saveQuizInfo(quizCode,questionsCompleted);
-saveQuizInfo(quizCode,questionIncorrect);
+saveQuizInfo(quizCode,quizInfo);
+
 	  
 	//console.log('questionIncorrect ????????????????? ', questionIncorrect);
 	  
