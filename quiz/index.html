@@ -1145,22 +1145,29 @@ questionsCompleted.forEach(function(question) {
       console.log("Question " + (questionIndex + 1) + " Answer: " + questions[questionIndex].answer + " " + questions[questionIndex].explanation);
     });
     
-    var questionNumber = document.createElement("span");
+    let reviewQuestionNumber = document.createElement("span");
     questionNumber.classList.add("question-number");
     questionNumber.textContent = "Question " + (questionIndex + 1) + ": ";
   //  questionNumber.textContent = "Question " + (questionIndex) + ": ";
 
 
-    var questionText = document.createElement("span");
+    let reviewQuestionText = document.createElement("span");
     questionText.classList.add("question-text");
     questionText.textContent = questions[questionIndex].question;
 
+    let reviewQuestionResult = document.createElement("span");
+    questionText.classList.add("question-text");
+    questionText.textContent = questions[questionIndex].question;
+
+
+	  
           console.log(questions[questionIndex].question);
 
 
 	  
-    questionDiv.appendChild(questionNumber);
-    questionDiv.appendChild(questionText);
+    questionDiv.appendChild(reviewQuestionResult);
+    questionDiv.appendChild(reviewQuestionText);
+    questionDiv.appendChild(reviewQuestionNumber);
     
     if (question.correctness === "correct") {
       document.getElementById("correctList").appendChild(questionDiv);
@@ -1871,7 +1878,7 @@ function checkQuizCodeAndGetInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, qu
     quizInfo.quizImageURL = quizImageURL;
       quizInfo.quizType = quizType || "";
     quizInfo.numberOfQuestions = numberOfQuestionsNS || "";
-    quizInfo.startTime = timestamp;
+    quizInfo.startTime = startTime;
 quizInfo.quizLink = quizUrl;  // Add the "q" parameter to the quizInfo object
     localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
   }
