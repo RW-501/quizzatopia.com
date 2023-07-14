@@ -462,7 +462,7 @@ questionsCompleted.push({
   endTime: questionEndTime, // Placeholder for the end time
   responseTime: questionResponseTime
 });
-	quizInfo.questionsCompleted;
+quizInfo.questionsCompleted = questionsCompleted;
 	  
 saveQuizInfo(quizCode,quizInfo);
 
@@ -471,8 +471,8 @@ questionCorrect = questionsCompleted.filter(function(question) {
   return question.correctness === "correct";
 }).length;
 
-	quizInfo.questionCorrect;
-	  
+	 quizInfo.questionCorrect = questionCorrect;
+ 
 saveQuizInfo(quizCode,quizInfo);
 
 
@@ -507,7 +507,7 @@ questionsCompleted.push({
   responseTime: questionResponseTime
 });
 
-	quizInfo.questionsCompleted;
+quizInfo.questionsCompleted = questionsCompleted;
 	  
 saveQuizInfo(quizCode,quizInfo);
 	  
@@ -516,7 +516,7 @@ questionIncorrect = questionsCompleted.filter(function(question) {
   return question.correctness === "incorrect";
 }).length;
 
-	quizInfo.questionIncorrect;
+	 quizInfo.questionIncorrect = questionIncorrect;
 	  
 saveQuizInfo(quizCode,quizInfo);
 
