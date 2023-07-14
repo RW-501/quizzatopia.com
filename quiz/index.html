@@ -1032,27 +1032,33 @@ function openQuestionPopup(questionIndex) {
   const questionTextArea = document.getElementById("questionTextArea");
   const answerTextArea = document.getElementById("answerTextArea");
   const explanationTextArea = document.getElementById("explanationTextArea");
+  const responseTimeTextArea = document.getElementById("responseTimeTextArea");
   
   questionTextArea.value = question.question;
   answerTextArea.value = question.answer;
   explanationTextArea.value = question.explanation;
+
+ const responseTime = question.responseTime;
+
+ responseTimeTextArea.value = question.responseTime;
   
   const popup = document.getElementById("questionPopup");
   popup.style.display = "block";
 
-
+/*
   // Update the question on button click
   const updateButton = document.getElementById("updateButton");
   updateButton.addEventListener("click", function() {
     question.question = questionTextArea.value;
     question.answer = answerTextArea.value;
     question.explanation = explanationTextArea.value;
+	  
     // Update the question div with the updated question
     const questionDiv = document.getElementById("question-" + questionIndex);
     questionDiv.textContent = "Question " + (questionIndex + 1) + ": " + question.question;
     closeQuestionPopup();
   });
-
+*/
 // Add event listeners to question divs
 for (let i = 0; i < questions.length; i++) {
   const questionDiv = document.createElement("div");
@@ -1155,9 +1161,9 @@ questionsCompleted.forEach(function(question) {
     questionText.classList.add("question-text");
     questionText.textContent = questions[questionIndex].question;
 
-    let reviewQuestionResult = document.createElement("span");
+    let reviewQuestionResponse = document.createElement("span");
     questionText.classList.add("question-text");
-    questionText.textContent = questions[questionIndex].question;
+    questionText.textContent = questions[questionIndex].responseTime;
 
 
 	  
@@ -1165,7 +1171,7 @@ questionsCompleted.forEach(function(question) {
 
 
 	  
-    questionDiv.appendChild(reviewQuestionResult);
+    questionDiv.appendChild(reviewQuestionResponse);
     questionDiv.appendChild(reviewQuestionText);
     questionDiv.appendChild(reviewQuestionNumber);
     
@@ -1570,10 +1576,12 @@ if(quizStarted == true){
  if (newScore > savedScore ){
 	  	  updatePoints(pointsRewards);
  }
-	  
-	  
+	 //     savedQuizInfo = quizInfo;
+
+	   console.log('saveQuizInfo Quiz Info:' + quizInfo);
+	
     // Update the quiz information for the specific quiz code
-    localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
+    localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(savedQuizInfo));
 
 }
 }
