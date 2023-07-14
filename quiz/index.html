@@ -1550,7 +1550,7 @@ if(quizStarted == true){
   //console.log('saveQuizInfo Quiz Code:' + quizCode);
  // console.log('saveQuizInfo Quiz Info:' + savedQuizInfo);
   //console.log('JSON.stringify(savedQuizInfo)) Quiz Info:' + JSON.stringify(savedQuizInfo));
-
+/*
   if (newScore > savedScore || savedScore === 0 || savedScore === null) {
     savedQuizInfo.quizCode = quizCode;
     savedQuizInfo.questionCorrect = newScore; // Update the questionCorrect value
@@ -1559,14 +1559,14 @@ if(quizStarted == true){
     savedQuizInfo.quizCode = quizCode;
     savedQuizInfo.questionsCompleted = questionsCompleted;
     savedQuizInfo.questionIncorrect = questionIncorrect;
-  }
+  }*/
  if (newScore > savedScore ){
 	  	  updatePoints(pointsRewards);
  }
 	  
 	  
     // Update the quiz information for the specific quiz code
-    localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(savedQuizInfo));
+    localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
 
 }
 }
