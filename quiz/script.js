@@ -464,8 +464,7 @@ questionResponseTime = questionEndTime - questionStartTime;
 });
 quizInfo.questionsCompleted = questionsCompleted;
 	  
-	 console.log(quizInfo+' questionsCompleted '+quizInfo.questionsCompleted );
-	     localStorage.setItem(`quizInfo_${quizCode}`,quizInfo.questionsCompleted);
+	// console.log(quizInfo+' questionsCompleted '+quizInfo.questionsCompleted );
 
 saveQuizInfo(quizCode,quizInfo);
 
@@ -476,7 +475,7 @@ questionCorrect = questionsCompleted.filter(function(question) {
 
 	 quizInfo.questionCorrect = questionCorrect;
 
-//saveQuizInfo(quizCode,quizInfo);
+saveQuizInfo(quizCode,quizInfo);
 
 
 
@@ -511,10 +510,9 @@ var correctness = "incorrect";
 });
 
 quizInfo.questionsCompleted = questionsCompleted;
-	  	 console.log(quizInfo+' questionsCompleted  incorrect  '+questionsCompleted );
-	  
-  localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo.questionsCompleted));
-//saveQuizInfo(quizCode,quizInfo);
+	  	// console.log(quizInfo+' questionsCompleted  incorrect  '+questionsCompleted );
+
+saveQuizInfo(quizCode,quizInfo);
 	  
 // Get the number of incorrect questions
 questionIncorrect = questionsCompleted.filter(function(question) {
