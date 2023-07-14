@@ -51,7 +51,7 @@ function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
       questionsCompleted: [],
       questionCorrect: 0,
       questionIncorrect: 0,
-      timestamp: timestamp,
+      startTime: startTime,
       quizLink: q  // Add the "q" parameter to the quizInfo object
     };
 
@@ -61,7 +61,7 @@ function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
     quizInfo = JSON.parse(savedQuizInfo);
     quizInfo.quizName = quizName;
     quizInfo.numberOfQuestions = numberOfQuestions;
-    quizInfo.timestamp = timestamp;
+    quizInfo.startTime = startTime;
     quizInfo.quizLink = q;  // Add the "q" parameter to the quizInfo object
     localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
   }
@@ -145,7 +145,7 @@ async function startQuiz() {
   quizAdPattern = generateQuizAdPattern(totalQuestions, intvalue);
   adQuestionNumbers = quizAdPattern;
 
-console.log(quizAdPattern+'  quizAdPattern.userName ????????????intvalue '+ intvalue);
+//console.log(quizAdPattern+'  quizAdPattern.userName ????????????intvalue '+ intvalue);
 	    
   // Array to store the question numbers where the ad should be shown
 //  adQuestionNumbers = quizAdPattern; // Example: Show ad after questions 3, 7, and 11
@@ -328,12 +328,14 @@ function shuffleArrayAnswers(array) {
 
 
 
-
+    var questionStartTime, questionResponseTime;
 var realQuestionNumber;
 
 
 // Function to show the question
 function showQuestion() {
+     questionStartTime = new Date();
+	
   const animations = ["right", ""];
   const randomIndex = Math.floor(Math.random() * animations.length);
   const selectedAnimation = animations[randomIndex];
@@ -341,7 +343,7 @@ function showQuestion() {
   slideIn("quizContainer", selectedAnimation);
 
   if (adQuestionNumbers.includes(currentQuestion)) {
-console.log(adQuestionNumbers+'  adQuestionNumbers.userName ????????????currentQuestion '+ currentQuestion);
+//console.log(adQuestionNumbers+'  adQuestionNumbers.userName ????????????currentQuestion '+ currentQuestion);
 
     const index = adQuestionNumbers.indexOf(currentQuestion);
     if (index !== -1) {
@@ -352,7 +354,7 @@ console.log(adQuestionNumbers+'  adQuestionNumbers.userName ????????????currentQ
   }
 
   const questionObj = questions[currentQuestion];
-	console.log(questionObj+' questionsCompleted '+currentQuestion);
+//	console.log(questionObj+' questionsCompleted '+currentQuestion);
   document.getElementById("question").innerHTML = questionObj.question;
 
   if (questionObj.imageURL === "" || questionObj.imageURL === null || questionObj.imageURL === undefined) {
@@ -431,8 +433,12 @@ function checkAnswer() {
   const options = optionContainers[currentQuestion]?.children;
 
 //  console.log('options ????????????????? ', options);
+
+		// Update the end time and calculate the response time for the completed question
+let questionEndTime = new Date();
+questionResponseTime = questionEndTime - questionStartTime;
 	
-  
+    var questionStartTime = new Date();
 	
   let correct_bool;
   if (selectedAnswer === questionObj.answer) {
@@ -442,16 +448,28 @@ function checkAnswer() {
     }
     correct_bool = "Correct";
   //  questionCorrect++;
-    quizInfo.questionCorrect = questionCorrect;
+ //   quizInfo.questionCorrect = questionCorrect;
 
 	  var correctness = "correct";
-questionsCompleted.push({ questionNumber: realQuestionNumber, correctness: correctness });
+	  
+
+
+
+questionsCompleted.push({
+  questionNumber: realQuestionNumber,
+  correctness: correctness,
+  startTime: questionStartTime, // Record the start time when the user starts answering the question
+  endTime: questionEndTime, // Placeholder for the end time
+  responseTime: questionResponseTime
+});
 	  
 
 // Get the number of correct questions
 questionCorrect = questionsCompleted.filter(function(question) {
   return question.correctness === "correct";
 }).length;
+	  
+saveQuizInfo(quizCode,questionCorrect);
 saveQuizInfo(quizCode,questionsCompleted);
 
 
@@ -476,9 +494,16 @@ const answerOptions = document.getElementsByClassName("answer-option");
    // quizInfo = { questionIncorrect: questionIncorrect};
 
 //quizInfo.questionIncorrect = questionIncorrect;
+	  
 var correctness = "incorrect";
-questionsCompleted.push({ questionNumber: realQuestionNumber, correctness: correctness });
-
+questionsCompleted.push({
+  questionNumber: realQuestionNumber,
+  correctness: correctness,
+  startTime: questionStartTime, // Record the start time when the user starts answering the question
+  endTime: questionEndTime, // Placeholder for the end time
+  responseTime: questionResponseTime
+});
+	  
 // Get the number of incorrect questions
 questionIncorrect = questionsCompleted.filter(function(question) {
   return question.correctness === "incorrect";
@@ -486,6 +511,7 @@ questionIncorrect = questionsCompleted.filter(function(question) {
 
 	  
 saveQuizInfo(quizCode,questionsCompleted);
+saveQuizInfo(quizCode,questionIncorrect);
 	  
 	//console.log('questionIncorrect ????????????????? ', questionIncorrect);
 	  
@@ -603,6 +629,7 @@ function skipQuestion() {
 
 // Function to handle skip or next action
 function skipOrNext() {
+	
   if (this.innerHTML === 'Skip') {
     skipQuestion();
   } else {
@@ -898,18 +925,6 @@ function startTimer() {
 
 
 
-// Add event listener to the skip-next-btn
-//const skipNextBtn = document.getElementById('skip-next-btn');
-//skipNextBtn.addEventListener('click', skipOrNext);
-
-
-// Event Listeners
-//document.getElementById("start-btn").addEventListener("click", startQuiz);
-
-
-// Add click event listener to the "Show Explanation" button
-//const showExplanationButton = document.getElementById('show-explanation-btn');
-//showExplanationButton.addEventListener('click', 
 
 function showExplanationFunc() {
   // Replace this with your explanation content
