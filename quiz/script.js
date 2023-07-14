@@ -465,7 +465,8 @@ questionResponseTime = questionEndTime - questionStartTime;
 quizInfo.questionsCompleted = questionsCompleted;
 	  
 	 console.log(quizInfo+' questionsCompleted '+quizInfo.questionsCompleted );
-	  
+	     localStorage.setItem(`quizInfo_${quizCode}`,quizInfo.questionsCompleted);
+
 saveQuizInfo(quizCode,quizInfo);
 
 // Get the number of correct questions
@@ -474,8 +475,8 @@ questionCorrect = questionsCompleted.filter(function(question) {
 }).length;
 
 	 quizInfo.questionCorrect = questionCorrect;
- 
-saveQuizInfo(quizCode,quizInfo);
+
+//saveQuizInfo(quizCode,quizInfo);
 
 
 
@@ -522,7 +523,7 @@ questionIncorrect = questionsCompleted.filter(function(question) {
 
 	 quizInfo.questionIncorrect = questionIncorrect;
 	  
-saveQuizInfo(quizCode,quizInfo);
+//saveQuizInfo(quizCode,quizInfo);
 
 	  
 	//console.log('questionIncorrect ????????????????? ', questionIncorrect);
