@@ -1345,7 +1345,7 @@ scorePercentegeElement.textContent = scorePercentage ? scorePercentage.toFixed(2
 
 
 let currentTime = new Date();
-let savedTime = new Date(quizInfo.timestamp);
+let savedTime = new Date(quizInfo.startTime);
 
 let timeElapsed = currentTime - savedTime;
 let minutes = Math.floor(timeElapsed / 60000); // Convert milliseconds to minutes
