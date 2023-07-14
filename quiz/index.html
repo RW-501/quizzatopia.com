@@ -1847,7 +1847,7 @@ document.title = `${quizNameNS}`;
 function checkQuizCodeAndGetInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageURL, quizUrl) {
   const savedQuizInfo = localStorage.getItem(`quizInfo_${quizCode}`);
   let quizInfo;
-  let timestamp = new Date().toLocaleString();
+  let startTime = new Date().toLocaleString();
 
   if (!savedQuizInfo) {
     // Quiz info doesn't exist, save new quiz info to storage
