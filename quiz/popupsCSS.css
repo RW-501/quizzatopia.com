@@ -45,18 +45,25 @@ display:none;
 
 .explanation{
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    height: -webkit-fill-available;
+    position: fixed;
 
+	
+	    background-color: #e7e7e7;
+    border-radius: 2em;
+
+    overflow-y: clip;
+    box-shadow: inset 0px 1px 0rem 14px #fd7e14 !important;
+    display: block;
 }
-
 
 
 
@@ -123,7 +130,7 @@ width: 90%;
 }
 		
 .BottomCloseOptionsButton{
-    width: 100%;
+      width: 100%;
     background-color: #fd7e14;
     padding: 1%;
     border: none;
@@ -133,6 +140,7 @@ width: 90%;
     box-sizing: border-box;
     bottom: 0;
     position: absolute;
+    left: 0;
 }
 
 .center{
