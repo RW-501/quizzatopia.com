@@ -1055,9 +1055,12 @@ display: block !important;
 	
   <script>
 
-const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
-const quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
-const questionsCompleted = quizInfo.questionsCompleted || [];
+function loadQuestionsCompleted(quizCode) {
+  const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
+  const quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
+  const questionsCompleted = quizInfo.questionsCompleted || [];
+  return questionsCompleted;
+}
 
 	//console.log("questionsCompleted...."+quizInfo.questionsCompleted);
 
@@ -1073,7 +1076,7 @@ function openQuestionPopup(questionIndex) {
   questionTextArea.innerHTML = question.question;
   answerTextArea.innerHTML = question.answer;
   explanationTextArea.innerHTML = question.explanation;
-
+let questionsCompleted = loadQuestionsCompleted;
 const responseTime  = parseInt(questionsCompleted.responseTime, 10); // 42
 console.log("question.responseTime...."+questionsCompleted.responseTime);
 console.log("responseTime...."+responseTime);
@@ -1189,6 +1192,7 @@ if (addedQuestionNumbers.indexOf(questionIndex) > -1) {
 	    openQuestionPopup(questionIndex);
       console.log("Question " + (questionIndex + 1) + " Answer: " + questions[questionIndex].answer + " Explanation " + questions[questionIndex].explanation);
     });
+let questionsCompleted = loadQuestionsCompleted;
 
 const responseTime  = parseInt(questionsCompleted.responseTime, 10); // 42
 	  
