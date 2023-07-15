@@ -1021,7 +1021,7 @@ display: block !important;
 </div>
 </div>
 
-    <button id="closeReviewButton " class="BottomCloseOptionsButton">Close</button>
+    <button id="closeReviewButton " class="BottomCloseOptionsButton"  onclick="closeReviewFunc()" >Close</button>
   </div>
 </div>
 
@@ -1119,7 +1119,10 @@ function closeQuestionPopup() {
 
 
 
+function closeReviewFunc(){
+  document.getElementById("reviewPopup").style.display = "none";
 
+}
 	  
 
 
@@ -1266,13 +1269,6 @@ const quizNameElement = document.getElementById('quizName');
 
 
 	  window.addEventListener("load", function() {
-
-	  
-// Close the review popup
-document.getElementById("closeReviewButton").addEventListener("click", function() {
-  document.getElementById("reviewPopup").style.display = "none";
-});
-
 
 
 		  
