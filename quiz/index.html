@@ -1356,7 +1356,7 @@ const userInfoStored = localStorage.getItem(`userInfo`);
 
  console.log("userInfo .... "+userInfo.firebaseId);
 const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
-const quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
+ quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
 
 // Update the quiz information
 quizCodeElement.textContent = quizInfo.quizCode || "";
