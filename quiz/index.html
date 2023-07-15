@@ -1190,10 +1190,22 @@ if (addedQuestionNumbers.indexOf(questionIndex) > -1) {
 	    openQuestionPopup(questionIndex);
       console.log("Question " + (questionIndex + 1) + " Answer: " + questions[questionIndex].answer + " Explanation " + questions[questionIndex].explanation);
     });
-    
+
+	  
+let responseTime = questions[questionIndex].responseTime;
+	  
+console.log("responseTime...."+responseTime);
+
+
+let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
+let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining milliseconds to seconds
+
+// Display the timeElapsed in minutes and seconds format
+ responseTimeTextArea.innerHTML  = `${minutes} mins ${seconds} secs`;
+	  
     let reviewQuestionNumber = document.createElement("span");
     reviewQuestionNumber.classList.add("question-number");
-    reviewQuestionNumber.textContent = "Question: " + (questionIndex + 1) + " Response Time: "+questions[questionIndex].responseTime;
+    reviewQuestionNumber.textContent = "Question: " + (questionIndex + 1) + " Response Time: "+responseTime;
   //  questionNumber.textContent = "Question " + (questionIndex) + ": ";
 	  
     let reviewQuestionResponse = document.createElement("br");
