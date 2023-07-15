@@ -250,7 +250,18 @@
         margin-left: 10px;
       }
 
-
+#skip-next-btn{
+display: inline-block;
+    cursor: pointer;
+    padding: 2%;
+    margin-block-start: auto;
+    background-color: #eaeaea;
+    border-radius: 2em;
+    box-shadow: 0px 1px 0rem 1px rgba(0, 0, 0, 0.2) !important;
+    color: #fd7e14;
+    font-size: 1.2em;
+    font-weight: 900;
+}
 
 
 		
@@ -727,8 +738,8 @@ display: block !important;
         <!-- Explanation area -->
         <div class="btn_container">
           <!-- Button container -->
-          <button id="show-explanation-btn" class="btnMain  d-none mt-3"  onclick="showExplanationFunc()">Show Explanation</button>
-          <button id="skip-next-btn" class="btnMain   mt-3"  onclick="skipOrNext()">Skip</button>
+          <button id="show-explanation-btn" class="btnMainBottom  d-none mt-3"  onclick="showExplanationFunc()">Show Explanation</button>
+          <button id="skip-next-btn" class="btnMainBottom   mt-3"  onclick="skipOrNext()">Skip</button>
         </div>
       </div>
     </div>
@@ -741,13 +752,14 @@ display: block !important;
   <div class="explanation">
 	  <div id="explanation_bar"><div id="difficulty"></div>    <div id="realQustionNum"></div>
 
-
-    <button id="close-btn" class="close-button">&times;</button>
+ <div></div> <div id="reportFormBTN" class="btnMain" onclick=" closeExplanationPopup(); openReport();" >Report</div>
+   
 	  </div>
-    <div id="explanation" onclick="readExplanationFunc()"></div><hr>
-    <div class="btn_container">   <div></div> <div id="reportFormBTN" class="btnMain" onclick=" closeExplanationPopup(); openReport();" >Report</div>
+  
+	      <div id="explanation" onclick="readExplanationFunc()"></div><hr>
+  <div class="btn_container">  
 </div>
-	  
+	   <button id="close-btn" class="close-button">Close</button>
   </div>
   </div>
 
