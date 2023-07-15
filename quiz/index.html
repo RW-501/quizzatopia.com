@@ -756,20 +756,7 @@ display: block !important;
 		
 	
 		
-  <div class="explanation-container  PopupWrap">
-  <div id="explanation-con" class="explanation">
-	  <div id="explanation_bar"><div id="difficulty"></div>    <div id="realQustionNum"></div>
 
- <div></div> <div id="reportFormBTN" class="btnMain" onclick=" closeExplanationPopup(); openReport();" >Report</div>
-   
-	  </div>
-  <div class="center">Explanation</div>
-	  <hr>
-	      <div id="explanation" onclick="readExplanationFunc()"></div>
-
-	   <button id="close-btn" class="BottomCloseOptionsButton">Close</button>
-  </div>
-  </div>
 
 
 
@@ -865,7 +852,20 @@ display: block !important;
 
 
 
+  <div class="explanation-container  PopupWrap">
+  <div id="explanation-con" class="explanation">
+	  <div id="explanation_bar"><div id="difficulty"></div>    <div id="realQustionNum"></div>
 
+ <div></div> <div id="reportFormBTN" class="btnMain" onclick=" closeExplanationPopup(); openReport();" >Report</div>
+   
+	  </div>
+  <div class="center">Explanation</div>
+	  <hr>
+	      <div id="explanation" onclick="readExplanationFunc()"></div>
+
+	   <button id="close-btn" class="BottomCloseOptionsButton">Close</button>
+  </div>
+  </div>
 
 
 
@@ -1071,7 +1071,8 @@ function openQuestionPopup(questionIndex) {
   explanationTextArea.innerHTML = question.explanation;
 
 const responseTime  = parseInt(question.responseTime, 10); // 42
-
+console.log("question.responseTime...."+question.responseTime);
+console.log("responseTime...."+responseTime);
 
 
 let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
