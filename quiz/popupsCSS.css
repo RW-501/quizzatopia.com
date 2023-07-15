@@ -95,6 +95,7 @@ background-color: #000000;
     overflow-y: clip;
     box-shadow: inset 0px 1px 0rem 14px #fd7e14 !important;
     display: block;
+	    overflow: hidden;
 }
 
 .scrollWrap{
