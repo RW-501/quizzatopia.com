@@ -1070,7 +1070,7 @@ function openQuestionPopup(questionIndex) {
   answerTextArea.innerHTML = question.answer;
   explanationTextArea.innerHTML = question.explanation;
 
-const responseTime = Math.floor(question.responseTime); // 3
+const responseTime = 85622; // 3
 
 
 let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
@@ -1165,9 +1165,9 @@ questionsCompleted.forEach(function(question) {
    console.log("1 addedQuestionNumbers " + addedQuestionNumbers);
 
   // Check if the question number has already been added
-  if (addedQuestionNumbers.includes(questionIndex)) {
-    return; // Skip this iteration if the question number already exists
-  }
+if (addedQuestionNumbers.indexOf(questionIndex) > -1) {
+  return; // Skip this iteration if the question number already exists
+}
 
   addedQuestionNumbers.push(questionIndex); // Add the question number to the array
 	
