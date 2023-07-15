@@ -1122,6 +1122,13 @@ function closeQuestionPopup() {
 
 	  
 
+
+//questionsCompleted  = quizInfo.questionsCompleted;
+// Open the review popup
+document.getElementById("openReviewButton").addEventListener("click", function() {
+  document.getElementById("reviewPopup").style.display = "block";
+
+
 	
 	
 const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
@@ -1266,13 +1273,6 @@ document.getElementById("closeReviewButton").addEventListener("click", function(
   document.getElementById("reviewPopup").style.display = "none";
 });
 
-
-
-
-//questionsCompleted  = quizInfo.questionsCompleted;
-// Open the review popup
-document.getElementById("openReviewButton").addEventListener("click", function() {
-  document.getElementById("reviewPopup").style.display = "block";
 
 
 		  
