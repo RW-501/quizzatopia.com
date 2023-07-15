@@ -547,6 +547,12 @@ function showExplanation(explanation) {
   document.getElementById("explanation").innerHTML = explanation;
   disableAnswerButtons();
   showExplanationPopup();
+
+	      const animations = ["right", ""];
+      const randomIndex = Math.floor(Math.random() * animations.length);
+      const selectedAnimation = animations[randomIndex];
+
+      slideIn("explanation-container", selectedAnimation);
   document.getElementById('show-explanation-btn').classList.remove("d-none");
 }
 
@@ -555,11 +561,17 @@ function showExplanationPopup() {
   const closeButton = document.getElementById('close-btn');
 
   closeButton.addEventListener('click', function() {
+	  
 closeExplanationPopup();	  
 
   });
 }
 function closeExplanationPopup() {
+	      const animations = ["right", ""];
+      const randomIndex = Math.floor(Math.random() * animations.length);
+      const selectedAnimation = animations[randomIndex];
+
+      slideIn("explanation-container", selectedAnimation);	
   const explanationContainer = document.querySelector('.explanation-container');
     explanationContainer.style.display = 'none';
 
