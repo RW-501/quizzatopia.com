@@ -1055,8 +1055,12 @@ display: block !important;
 	
   <script>
 
+const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
+const quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
+const questionsCompleted = quizInfo.questionsCompleted || [];
 
-	  
+	//console.log("questionsCompleted...."+quizInfo.questionsCompleted);
+
 	  
 // Open the question popup
 function openQuestionPopup(questionIndex) {
@@ -1070,8 +1074,8 @@ function openQuestionPopup(questionIndex) {
   answerTextArea.innerHTML = question.answer;
   explanationTextArea.innerHTML = question.explanation;
 
-const responseTime  = parseInt(question.responseTime, 10); // 42
-console.log("question.responseTime...."+question.responseTime);
+const responseTime  = parseInt(questionsCompleted.responseTime, 10); // 42
+console.log("question.responseTime...."+questionsCompleted.responseTime);
 console.log("responseTime...."+responseTime);
 
 
@@ -1142,11 +1146,6 @@ document.getElementById("openReviewButton").addEventListener("click", function()
 
 	
 	
-const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
-const quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
-const questionsCompleted = quizInfo.questionsCompleted || [];
-
-	//console.log("questionsCompleted...."+quizInfo.questionsCompleted);
 
 	
 var correctTab = document.getElementById("correctTab");
@@ -1191,8 +1190,7 @@ if (addedQuestionNumbers.indexOf(questionIndex) > -1) {
       console.log("Question " + (questionIndex + 1) + " Answer: " + questions[questionIndex].answer + " Explanation " + questions[questionIndex].explanation);
     });
 
-	  
-let responseTime = questions[questionIndex].responseTime;
+const responseTime  = parseInt(questionsCompleted.responseTime, 10); // 42
 	  
 console.log("responseTime...."+responseTime);
 
