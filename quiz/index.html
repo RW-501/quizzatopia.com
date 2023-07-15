@@ -1038,7 +1038,7 @@ display: block !important;
       <div id="explanationTextArea" class="text-area"></div>
       <div id="responseTimeTextArea" class="text-area"></div>
     </div>
-    <span class="close BottomCloseOptionsButton">Close</span>
+    <span class="close BottomCloseOptionsButton" onclick="closeQuestionPopup()">Close</span>
   </div>
 </div>
 
@@ -1153,7 +1153,8 @@ var incorrectTab = document.getElementById("incorrectTab");
 var addedQuestionNumbers = []; // Array to store the added question numbers
 
 questionsCompleted.forEach(function(question) {
-  var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
+ // var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
+  var questionIndex = question.questionNumber; // Adjust index by subtracting 1
 	
 
   // Check if the question number has already been added
