@@ -578,6 +578,8 @@ closeExplanationPopup();
   });
 }
 function closeExplanationPopup() {
+	          //console.log("New user document created with badge ID:", userId);
+
 	      const animations = ["right", ""];
       const randomIndex = Math.floor(Math.random() * animations.length);
       const selectedAnimation = animations[randomIndex];
