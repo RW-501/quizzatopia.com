@@ -72,7 +72,7 @@ display:none;
  margin-top: 0;
     font-size: 3em;
     font-weight: 900;
-	color: #ffffff;
+	color: #939393;
 text-indent: 2%;
 }
 #optionsMenu input{
@@ -108,14 +108,12 @@ background-color: #000000;
 #quizInfoPopup, #optionsMenu{
 width: 90%;
     margin: auto;
-    background-color: #fd7e14;
     box-sizing: border-box;
     padding: 1%;
     border-radius: 1em;
     font-weight: 900;
     color: #3c3b3a;
     margin-bottom: 10%;
-    box-shadow: inset 0px -3px 0rem 3px #b98c03 !important;
 
 }
 #quizInfoPopup span, #optionsMenu span{
@@ -151,10 +149,11 @@ text-align: center;
 width: 90%;
     display: block;
     margin: 1% auto;
-    background-color: #21252926;
+    background-color: #fd7e14;
     box-sizing: border-box;
     padding: 2%;
     border-radius: 25px;
+    box-shadow: inset 0px -3px 0rem 3px #b98c03 !important;
 
 }
 #optionsMenu .form-check{
@@ -164,7 +163,7 @@ width: 90%;
 
 #openReviewButton{
     border: none;
-    background-color: transparent;
+    background-color: #fd7e14;
     font-size: 1.5em;
     font-weight: 900;
 }
