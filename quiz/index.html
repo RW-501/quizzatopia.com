@@ -1071,15 +1071,13 @@ function openQuestionPopup(questionIndex) {
 
  const responseTime = question.responseTime;
 
-// Convert responseTime to minutes and seconds
-const minutes = Math.floor(responseTime / 60000);
-const seconds = Math.floor((responseTime % 60000) / 1000);
 
-// Format the minutes and seconds into a string
-const formattedTime = minutes + "m " + seconds + "s";
+let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
+let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining milliseconds to seconds
 
+// Display the timeElapsed in minutes and seconds format
+ responseTimeTextArea.innerHTML  = `${minutes} mins ${seconds} secs`;
 				    
- responseTimeTextArea.innerHTML = formattedTime;
   
   const popup = document.getElementById("questionPopup");
   popup.style.display = "block";
@@ -1384,8 +1382,8 @@ totalQuestionsElement.textContent = totalQuestions || 0;
 let percentCompleted = (qCompleted / totalQuestions) * 100;
 let scorePercentage = (qCorrect / (qCorrect + qIncorrect)) * 100;
 
-percetCopletedElement.textContent = percentCompleted ? percentCompleted.toFixed(2) + "%" : "0%";
-scorePercentegeElement.textContent = scorePercentage ? scorePercentage.toFixed(2) + "%" : "0%";
+percetCopletedElement.textContent = percentCompleted ? percentCompleted.toFixed(1) + "%" : "0%";
+scorePercentegeElement.textContent = scorePercentage ? scorePercentage.toFixed(1) + "%" : "0%";
 
 
 let currentTime = new Date();
