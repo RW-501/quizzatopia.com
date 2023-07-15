@@ -1162,6 +1162,7 @@ questionsCompleted.forEach(function(question) {
   var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
 //  var questionIndex = question.questionNumber; // Adjust index by subtracting 1
 	
+   console.log("1 addedQuestionNumbers " + addedQuestionNumbers);
 
   // Check if the question number has already been added
   if (addedQuestionNumbers.includes(questionIndex)) {
@@ -1169,7 +1170,9 @@ questionsCompleted.forEach(function(question) {
   }
 
   addedQuestionNumbers.push(questionIndex); // Add the question number to the array
-  
+	
+   console.log("2 addedQuestionNumbers " + addedQuestionNumbers);
+	
   if (questionIndex >= 0 && questionIndex < questions.length) {
     var questionDiv = document.createElement("div");
     questionDiv.classList.add("quiz-result-item");
@@ -1210,11 +1213,16 @@ questionsCompleted.forEach(function(question) {
     questionDiv.appendChild(reviewQuestionText);
     questionDiv.appendChild(reviewQuestionNumber);
     
-    if (question.correctness === "correct") {
-      document.getElementById("correctList").appendChild(questionDiv);
-    } else if (question.correctness === "incorrect") {
-      document.getElementById("incorrectList").appendChild(questionDiv);
-    }
+if (question.correctness === "correct") {
+  const parentElement = document.getElementById("correctList");
+  const firstChild = parentElement.firstChild;
+  parentElement.insertBefore(questionDiv, firstChild);
+} else if (question.correctness === "incorrect") {
+  const parentElement = document.getElementById("incorrectList");
+  const firstChild = parentElement.firstChild;
+  parentElement.insertBefore(questionDiv, firstChild);
+}
+
   }
 });
 
