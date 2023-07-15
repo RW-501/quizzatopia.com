@@ -1082,7 +1082,7 @@ function openQuestionPopup(questionIndex) {
 
 console.log("questionsCompleted...."+questionsCompleted);
 	
-const responseTime  = parseInt(questionsCompleted.responseTime, 10); // 42
+const responseTime  = parseInt(questionsCompleted[questionIndex].responseTime, 10); // 42
 console.log("question.responseTime...."+questionsCompleted.responseTime);
 console.log("responseTime...."+responseTime);
 
@@ -1199,7 +1199,7 @@ if (addedQuestionNumbers.indexOf(questionIndex) > -1) {
     });
  questionsCompleted = loadQuestionsCompleted(quizCode);
 
-const responseTime  = parseInt(questionsCompleted.responseTime, 10); // 42
+const responseTime  = parseInt(questionsCompleted[questionIndex].responseTime, 10); // 42
 	  
 console.log("responseTime...."+responseTime);
 
