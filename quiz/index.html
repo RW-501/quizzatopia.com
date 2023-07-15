@@ -1339,7 +1339,8 @@ const optionsPopup = document.getElementById('optionsPopup');
 
 function openOptions() {
 	console.log("Load and Save ....");
-	
+	  clearTimeout(timeoutId);
+
 const userInfoStored = localStorage.getItem(`userInfo`);
   const userInfo = storedUserInfo ? JSON.parse(userInfoStored) : {};
 	animationCheckbox.checked = userInfo.animationEnabled;
