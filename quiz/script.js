@@ -548,11 +548,7 @@ function showExplanation(explanation) {
   disableAnswerButtons();
   showExplanationPopup();
 
-	      const animations = ["right", ""];
-      const randomIndex = Math.floor(Math.random() * animations.length);
-      const selectedAnimation = animations[randomIndex];
-
-      slideIn("explanation-container", selectedAnimation);
+	
   document.getElementById('show-explanation-btn').classList.remove("d-none");
 }
 
@@ -570,8 +566,8 @@ function closeExplanationPopup() {
 	      const animations = ["right", ""];
       const randomIndex = Math.floor(Math.random() * animations.length);
       const selectedAnimation = animations[randomIndex];
-
-      slideIn("explanation-container", selectedAnimation);	
+      slideOut("explanation-con", selectedAnimation);	
+	
   const explanationContainer = document.querySelector('.explanation-container');
     explanationContainer.style.display = 'none';
 
@@ -957,8 +953,11 @@ function startTimer() {
 
 
 function showExplanationFunc() {
-  // Replace this with your explanation content
- //const explanation = "This is the explanation for the question.";
+       const animations = ["right", ""];
+      const randomIndex = Math.floor(Math.random() * animations.length);
+      const selectedAnimation = animations[randomIndex];
+
+      slideIn("explanation-con", selectedAnimation);
 	
 document.getElementById('show-explanation-btn').classList.remove("d-none");
   const explanationContainer = document.querySelector('.explanation-container');
