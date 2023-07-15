@@ -1070,7 +1070,7 @@ function openQuestionPopup(questionIndex) {
   answerTextArea.innerHTML = question.answer;
   explanationTextArea.innerHTML = question.explanation;
 
- const responseTime = question.responseTime;
+const responseTime = Math.floor(question.responseTime); // 3
 
 
 let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
@@ -1096,7 +1096,7 @@ let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining mi
     questionDiv.textContent = "Question " + (questionIndex + 1) + ": " + question.question;
     closeQuestionPopup();
   });
-*/
+
 // Add event listeners to question divs
 for (let i = 0; i < questions.length; i++) {
   const questionDiv = document.createElement("div");
@@ -1110,7 +1110,7 @@ for (let i = 0; i < questions.length; i++) {
   
   document.getElementById("questionList").appendChild(questionDiv);
 }
-
+*/
 
 
 	
