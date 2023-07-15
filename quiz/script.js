@@ -1052,6 +1052,7 @@ alert('Please rate the quiz before leaving a review.');
       date: new Date(),
       quizCode: quizCode // Replace with the actual quiz code
     };
+	  
  const db = firebase.firestore();
     // Add the feedback to the 'quizFeedback' collection
     db.collection('quizFeedback').add(feedbackData)
