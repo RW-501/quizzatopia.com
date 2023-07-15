@@ -31,6 +31,24 @@ function setQuizTime() {
   }
 }
 
+// Get the number of correct questions
+questionCorrect = questionsCompleted.filter(function(question) {
+  return question.correctness === "correct";
+}).length;
+	 quizInfo.questionCorrect = questionCorrect;
+saveQuizInfo(quizCode,quizInfo);
+
+// Get the number of correct questions
+questionIncorrect = questionsCompleted.filter(function(question) {
+  return question.correctness === "correct";
+}).length;
+	 quizInfo.questionCorrect = questionIncorrect;
+saveQuizInfo(quizCode,quizInfo);
+
+
+
+
+
 
 
 
@@ -450,14 +468,11 @@ questionResponseTime = questionEndTime - questionStartTime;
   //  questionCorrect++;
  //   quizInfo.questionCorrect = questionCorrect;
 
-	  var correctness = "correct";
-	  
-
-
+	  var correctnessVar = "correct";
 
  questionsCompleted.push({
   questionNumber: realQuestionNumber,
-  correctness: correctness,
+  correctness: correctnessVar,
   startTime: questionStartTime, // Record the start time when the user starts answering the question
   endTime: questionEndTime, // Placeholder for the end time
   responseTime: questionResponseTime
@@ -499,10 +514,10 @@ const answerOptions = document.getElementsByClassName("answer-option");
 
 //quizInfo.questionIncorrect = questionIncorrect;
 	  
-let correctness = "incorrect";
+let correctnessVar = "incorrect";
  questionsCompleted.push({
   questionNumber: realQuestionNumber,
-  correctness: correctness,
+  correctness: correctnessVar,
   startTime: questionStartTime, // Record the start time when the user starts answering the question
   endTime: questionEndTime, // Placeholder for the end time
   responseTime: questionResponseTime
