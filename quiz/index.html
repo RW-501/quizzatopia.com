@@ -1076,7 +1076,8 @@ function openQuestionPopup(questionIndex) {
   questionTextArea.innerHTML = question.question;
   answerTextArea.innerHTML = question.answer;
   explanationTextArea.innerHTML = question.explanation;
- questionsCompleted = loadQuestionsCompleted();
+	
+ questionsCompleted = loadQuestionsCompleted(quizCode);
 
 
 console.log("questionsCompleted...."+questionsCompleted);
@@ -1196,7 +1197,7 @@ if (addedQuestionNumbers.indexOf(questionIndex) > -1) {
 	    openQuestionPopup(questionIndex);
       console.log("Question " + (questionIndex + 1) + " Answer: " + questions[questionIndex].answer + " Explanation " + questions[questionIndex].explanation);
     });
- questionsCompleted = loadQuestionsCompleted();
+ questionsCompleted = loadQuestionsCompleted(quizCode);
 
 const responseTime  = parseInt(questionsCompleted.responseTime, 10); // 42
 	  
