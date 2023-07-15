@@ -1077,6 +1077,10 @@ function openQuestionPopup(questionIndex) {
   answerTextArea.innerHTML = question.answer;
   explanationTextArea.innerHTML = question.explanation;
  questionsCompleted = loadQuestionsCompleted();
+
+
+console.log("questionsCompleted...."+questionsCompleted);
+	
 const responseTime  = parseInt(questionsCompleted.responseTime, 10); // 42
 console.log("question.responseTime...."+questionsCompleted.responseTime);
 console.log("responseTime...."+responseTime);
