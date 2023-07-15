@@ -586,13 +586,22 @@ function enableAnswerButtons() {
 }
 var timeoutId;
 
-// Function to show the next question
-function nextQuestion() {
+function startTimeOutFunc() {
   clearTimeout(timeoutId);
 
   timeoutId =  setTimeout(function() {
   location.reload();
   }, 180000); // 3 minutes = 180 seconds
+
+}
+
+
+
+
+// Function to show the next question
+function nextQuestion() {
+
+	startTimeOutFunc();
 
 	
 	stopSpeaking();
@@ -1106,6 +1115,9 @@ function startBlinking() {
 function stopBlinking() {
   clearInterval(blinkInterval);
   blinkDiv.classList.remove('blink');
+	
+		startTimeOutFunc();
+
 }
 
 
