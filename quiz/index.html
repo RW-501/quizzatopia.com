@@ -1121,20 +1121,6 @@ function closeQuestionPopup() {
 
 
 	  
-	  
-// Close the review popup
-document.getElementById("closeReviewButton").addEventListener("click", function() {
-  document.getElementById("reviewPopup").style.display = "none";
-});
-
-
-
-
-//questionsCompleted  = quizInfo.questionsCompleted;
-// Open the review popup
-document.getElementById("openReviewButton").addEventListener("click", function() {
-  document.getElementById("reviewPopup").style.display = "block";
-
 
 	
 	
@@ -1249,12 +1235,6 @@ startQuiz();
 
 	  }
 
-window.addEventListener("load", function() {
-
-});
-
-
-
 
 
 
@@ -1279,6 +1259,20 @@ const quizNameElement = document.getElementById('quizName');
 
 
 	  window.addEventListener("load", function() {
+
+	  
+// Close the review popup
+document.getElementById("closeReviewButton").addEventListener("click", function() {
+  document.getElementById("reviewPopup").style.display = "none";
+});
+
+
+
+
+//questionsCompleted  = quizInfo.questionsCompleted;
+// Open the review popup
+document.getElementById("openReviewButton").addEventListener("click", function() {
+  document.getElementById("reviewPopup").style.display = "block";
 
 
 		  
