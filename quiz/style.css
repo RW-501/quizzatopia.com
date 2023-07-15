@@ -311,8 +311,9 @@ padding: 2% 4% 2% 4%;
 
 /* Style for explanation */
 #explanation {
-  margin-top: 20px;
-	text-align: center;
+    margin: auto;
+ 
+    width: 90%;
 
 }
 
@@ -601,10 +602,11 @@ padding: 2% 4% 2% 4%;
 
 
 #explanation_bar {
-      display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-	width: 100%;
+display: flex;
+    margin: auto;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 90%;
 }
 
 #difficulty {
