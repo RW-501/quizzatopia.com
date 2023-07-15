@@ -1186,33 +1186,35 @@ if (addedQuestionNumbers.indexOf(questionIndex) > -1) {
     questionDiv.addEventListener("click", function() {
       // Handle click event for each question
 	    openQuestionPopup(questionIndex);
-      console.log("Question " + (questionIndex + 1) + " Answer: " + questions[questionIndex].answer + " " + questions[questionIndex].explanation);
+      console.log("Question " + (questionIndex + 1) + " Answer: " + questions[questionIndex].answer + " Explanation " + questions[questionIndex].explanation);
     });
     
     let reviewQuestionNumber = document.createElement("span");
     reviewQuestionNumber.classList.add("question-number");
-    reviewQuestionNumber.textContent = "Question " + (questionIndex + 1) + ": ";
+    reviewQuestionNumber.textContent = "Question: " + (questionIndex + 1) + " Response Time: "+questions[questionIndex].responseTime;
   //  questionNumber.textContent = "Question " + (questionIndex) + ": ";
+	  
+    let reviewQuestionResponse = document.createElement("<br>");
 
 
     let reviewQuestionText = document.createElement("span");
     reviewQuestionText.classList.add("question-text");
-    reviewQuestionText.textContent = questions[questionIndex].question;
-
+    reviewQuestionText.textContent = questions[questionIndex].question ;
+/*
     let reviewQuestionResponse = document.createElement("span");
     reviewQuestionResponse.classList.add("question-text");
     reviewQuestionResponse.textContent = questions[questionIndex].responseTime;
 
-
+*/
 	  
           console.log(questions[questionIndex].question);
 
 
-	  
-    questionDiv.appendChild(reviewQuestionResponse);
+	      questionDiv.appendChild(reviewQuestionNumber);
+
+        questionDiv.appendChild(reviewQuestionResponse);
     questionDiv.appendChild(reviewQuestionText);
-    questionDiv.appendChild(reviewQuestionNumber);
-    
+
 if (question.correctness === "correct") {
   const parentElement = document.getElementById("correctList");
   const firstChild = parentElement.firstChild;
