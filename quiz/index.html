@@ -1070,7 +1070,8 @@ function openQuestionPopup(questionIndex) {
   answerTextArea.innerHTML = question.answer;
   explanationTextArea.innerHTML = question.explanation;
 
-const responseTime = 85622; // 3
+const responseTime  = parseInt(question.responseTime, 10); // 42
+
 
 
 let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
