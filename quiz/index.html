@@ -1066,7 +1066,7 @@ function loadQuestionsCompleted(quizCode) {
 
 	  
 // Open the question popup
-function openQuestionPopup(questionIndex) {
+function openQuestionPopup(questionIndex, count) {
   const question = questions[questionIndex];
   const questionTextArea = document.getElementById("questionTextArea");
   const answerTextArea = document.getElementById("answerTextArea");
@@ -1082,7 +1082,7 @@ function openQuestionPopup(questionIndex) {
 
 console.log("questionsCompleted...."+questionsCompleted);
 	
-const responseTime  = parseInt(questionsCompleted[questionIndex].responseTime, 10); // 42
+const responseTime  = parseInt(questionsCompleted[count].responseTime, 10); // 42
 console.log("question.responseTime...."+questionsCompleted.responseTime);
 console.log("responseTime...."+responseTime);
 
@@ -1164,13 +1164,13 @@ var incorrectTab = document.getElementById("incorrectTab");
 
 	document.getElementById("quizReviewName").innerHTML = quizInfo.quizName;
 
-	
+	 
 var addedQuestionNumbers = []; // Array to store the added question numbers
-
+let count = 0
 questionsCompleted.forEach(function(question) {
   var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
 //  var questionIndex = question.questionNumber; // Adjust index by subtracting 1
-	
+count++;	
    console.log("1 addedQuestionNumbers " + addedQuestionNumbers);
 
   // Check if the question number has already been added
@@ -1194,16 +1194,20 @@ if (addedQuestionNumbers.indexOf(questionIndex) > -1) {
     
     questionDiv.addEventListener("click", function() {
       // Handle click event for each question
-	    openQuestionPopup(questionIndex);
+	    openQuestionPopup(questionIndex, count);
       console.log("Question " + (questionIndex + 1) + " Answer: " + questions[questionIndex].answer + " Explanation " + questions[questionIndex].explanation);
     });
  questionsCompleted = loadQuestionsCompleted(quizCode);
 
-let rtValue = questionsCompleted[questionIndex].responseTime;
+let qValue = questionsCompleted[count];
 
-console.log("rtValue...."+rtValue);
+console.log("qValue...."+qValue);
 
-const responseTime = parseInt(rtValue, 10); // 42
+	  let inValue = qValue.responseTime;
+
+console.log("inValue...."+inValue);
+
+const responseTime = parseInt(inValue, 10); // 42
 	  
 console.log("responseTime...."+responseTime);
 
