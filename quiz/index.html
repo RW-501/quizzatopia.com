@@ -452,6 +452,13 @@ display: inline-block;
   max-width: 90%;
 		}
 
+#optionsPopupBox{
+	  display: none;
+
+}
+
+		
+
 		#questionPopup{
     display: none;
 
@@ -978,7 +985,7 @@ display: block !important;
 
 	
 </div>
-  <button id="closeStatsButton " class="close BottomCloseOptionsButton"  onclick="closeStats()" >Close</button>
+  <button id="closeStatsButton " class="close BottomCloseOptionsButton"  onclick="closeStatsPopup()" >Close</button>
 
 </div>
 	
@@ -1076,7 +1083,7 @@ display: block !important;
 </div>
 </div>
 
-    <button id="closeReviewButton " class="BottomCloseOptionsButton"  onclick="closeReviewFunc()" >Close</button>
+    <button id="closeReviewButton " class="BottomCloseOptionsButton"  onclick="closeReviewPopup()" >Close</button>
   </div>
 </div>
 
@@ -1197,7 +1204,7 @@ function closeStatsPopup(){
 	
 
 
-function closeReviewFunc(){
+function closeReviewPopup(){
 	zoomOutTransition("reviewPopup");
 //  document.getElementById("reviewPopup").style.display = "none";
 
