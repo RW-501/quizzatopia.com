@@ -1199,8 +1199,10 @@ if (addedQuestionNumbers.indexOf(questionIndex) > -1) {
     });
 let  questionsCompletedxx = loadQuestionsCompleted(quizCode);
 
-console.log("questionsCompleted...."+questionsCompletedxx);
-console.log("questionsCompleted..0.."+questionsCompletedxx)[0];
+let jsonQues  = JSON.parse(questionsCompletedxx);	  
+	  
+console.log("jsonQues...."+jsonQues);
+console.log("jsonQues..0.."+jsonQues)[0];
 
 	  
 let qValue = questionsCompletedxx[count];
