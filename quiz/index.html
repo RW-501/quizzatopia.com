@@ -1154,7 +1154,7 @@ if (addedQuestionNumbers.indexOf(questionIndex) > -1) {
 
   addedQuestionNumbers.push(questionIndex); // Add the question number to the array
 	
-   console.log(questionIndex+" addedQuestionNumbers " + addedQuestionNumbers);
+  // console.log(questionIndex+" addedQuestionNumbers " + addedQuestionNumbers);
 	
   if (questionIndex >= 0 && questionIndex < questions.length) {
     var questionDiv = document.createElement("div");
@@ -1176,7 +1176,7 @@ let questionsCompleted = loadQuestionsCompleted(quizCode);
 
 
 
-console.log("questionsCompleted:", questionsCompleted);
+//console.log("questionsCompleted:", questionsCompleted);
 console.log("count:", count);
 
 // Access the responseTime of a specific question
@@ -1190,11 +1190,11 @@ let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minut
 let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining milliseconds to seconds
 
 // Display the timeElapsed in minutes and seconds format
- responseTimeTextArea.innerHTML  = `${minutes} mins ${seconds} secs`;
+ let responseTimeText = `${minutes} mins ${seconds} secs`;
 	 
     let reviewQuestionNumber = document.createElement("span");
     reviewQuestionNumber.classList.add("question-number");
-    reviewQuestionNumber.textContent = "Question: " + (questionIndex + 1) + " Response Time: "+responseTime;
+    reviewQuestionNumber.textContent = "<b>Question:</b> " + (questionIndex + 1) + "  <b>Response Time:</b> "+responseTimeText;
   //  questionNumber.textContent = "Question " + (questionIndex) + ": ";
 	  
     let reviewQuestionResponse = document.createElement("br");
