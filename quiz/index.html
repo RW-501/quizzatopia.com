@@ -1080,9 +1080,10 @@ function openQuestionPopup(questionIndex, count) {
 let questionsCompleted = loadQuestionsCompleted(quizCode);
 
 console.log("questionsCompleted:", questionsCompleted);
+console.log("questionIndex:", questionIndex);
 
 // Access the responseTime of a specific question
-let questionIndex = 0; // Replace with the desired question index
+//let questionIndex = 0; // Replace with the desired question index
 let responseTime = questionsCompleted[questionIndex].responseTime;
 
 console.log("responseTime:", responseTime);
@@ -1170,13 +1171,17 @@ if (addedQuestionNumbers.indexOf(questionIndex) > -1) {
 	    openQuestionPopup(questionIndex, count);
       console.log("Question " + (questionIndex + 1) + " Answer: " + questions[questionIndex].answer + " Explanation " + questions[questionIndex].explanation);
     });
-	/*  
+	
 let questionsCompleted = loadQuestionsCompleted(quizCode);
 
 console.log("questionsCompleted:", questionsCompleted);
 
+
+console.log("questionsCompleted:", questionsCompleted);
+console.log("questionIndex:", questionIndex);
+
 // Access the responseTime of a specific question
-let questionIndex = 0; // Replace with the desired question index
+//let questionIndex = 0; // Replace with the desired question index
 let responseTime = questionsCompleted[questionIndex].responseTime;
 
 console.log("responseTime:", responseTime);
@@ -1185,7 +1190,6 @@ const responseTime = parseInt(inValue, 10); // 42
 	  
 console.log("responseTime...."+responseTime);
 
-*/ 
 let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
 let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining milliseconds to seconds
 
