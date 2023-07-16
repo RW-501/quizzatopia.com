@@ -1197,9 +1197,13 @@ if (addedQuestionNumbers.indexOf(questionIndex) > -1) {
 	    openQuestionPopup(questionIndex, count);
       console.log("Question " + (questionIndex + 1) + " Answer: " + questions[questionIndex].answer + " Explanation " + questions[questionIndex].explanation);
     });
- questionsCompleted = loadQuestionsCompleted(quizCode);
+let  questionsCompletedxx = loadQuestionsCompleted(quizCode);
 
-let qValue = questionsCompleted[count];
+console.log("questionsCompleted...."+questionsCompletedxx);
+console.log("questionsCompleted..0.."+questionsCompletedxx)[0];
+
+	  
+let qValue = questionsCompletedxx[count];
 
 console.log("qValue...."+qValue);
 
