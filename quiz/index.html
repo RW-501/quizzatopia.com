@@ -1199,7 +1199,11 @@ if (addedQuestionNumbers.indexOf(questionIndex) > -1) {
     });
  questionsCompleted = loadQuestionsCompleted(quizCode);
 
-const responseTime  = parseInt(questionsCompleted[questionIndex].responseTime, 10); // 42
+let rtValue = questionsCompleted[questionIndex].responseTime;
+
+console.log("rtValue...."+rtValue);
+
+const responseTime = parseInt(rtValue, 10); // 42
 	  
 console.log("responseTime...."+responseTime);
 
