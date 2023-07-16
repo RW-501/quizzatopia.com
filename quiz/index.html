@@ -1197,21 +1197,16 @@ if (addedQuestionNumbers.indexOf(questionIndex) > -1) {
 	    openQuestionPopup(questionIndex, count);
       console.log("Question " + (questionIndex + 1) + " Answer: " + questions[questionIndex].answer + " Explanation " + questions[questionIndex].explanation);
     });
-let  questionsCompletedxx = loadQuestionsCompleted(quizCode);
-
-let jsonQues  = JSON.parse(questionsCompletedxx);	  
 	  
-console.log("jsonQues...."+jsonQues);
-console.log("jsonQues..0.."+jsonQues)[0];
+let questionsCompleted = loadQuestionsCompleted(quizCode);
 
-	  
-let qValue = questionsCompletedxx[count];
+console.log("questionsCompleted:", questionsCompleted);
 
-console.log("qValue...."+qValue);
+// Access the responseTime of a specific question
+let questionIndex = 0; // Replace with the desired question index
+let responseTime = questionsCompleted[questionIndex].responseTime;
 
-	  let inValue = qValue.responseTime;
-
-console.log("inValue...."+inValue);
+console.log("responseTime:", responseTime);
 
 const responseTime = parseInt(inValue, 10); // 42
 	  
