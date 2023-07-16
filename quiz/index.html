@@ -1111,7 +1111,7 @@ function zoomOutTransition(elementId) {
   element.style.transform = "scale(0)";
   
   setTimeout(() => {
-    element.style.display = "none";
+    element.style.display = "initial";
   element.style.transition = "initial";
   element.style.transform = "initial";
 	  
@@ -1128,6 +1128,7 @@ function closeQuestionPopup() {
 
 	
 	zoomOutTransition("questionPopup");
+  document.getElementById("questionPopup").style.display = "none";
 
 }
 
@@ -1136,6 +1137,7 @@ function closeQuestionPopup() {
 
 function closeReviewFunc(){
 	zoomOutTransition("reviewPopup");
+  document.getElementById("reviewPopup").style.display = "none";
 
 }
 	  
@@ -1433,6 +1435,7 @@ timeSoFarElement.textContent = `${minutes} mins ${seconds} secs`;
 
 
 		  slideIn("optionsPopupBox");
+  document.getElementById("optionsPopup").style.display = "block";
 
   optionsPopup.classList.remove('d-none');
 }
