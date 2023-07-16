@@ -1112,6 +1112,9 @@ function zoomOutTransition(elementId) {
   
   setTimeout(() => {
     element.style.display = "none";
+  element.style.transition = "initial";
+  element.style.transform = "initial";
+	  
   }, 300);
 }
 
