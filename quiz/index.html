@@ -1084,7 +1084,7 @@ console.log("questionIndex:", questionIndex);
 
 // Access the responseTime of a specific question
 //let questionIndex = 0; // Replace with the desired question index
-let responseTime = questionsCompleted[questionIndex].responseTime;
+let responseTime = questionsCompleted[count].responseTime;
 
 console.log("responseTime:", responseTime);
 
@@ -1174,15 +1174,14 @@ if (addedQuestionNumbers.indexOf(questionIndex) > -1) {
 	
 let questionsCompleted = loadQuestionsCompleted(quizCode);
 
-console.log("questionsCompleted:", questionsCompleted);
 
 
 console.log("questionsCompleted:", questionsCompleted);
-console.log("questionIndex:", questionIndex);
+console.log("count:", count);
 
 // Access the responseTime of a specific question
 //let questionIndex = 0; // Replace with the desired question index
-let responseTime = questionsCompleted[questionIndex].responseTime;
+let responseTime = questionsCompleted[count].responseTime;
 
 console.log("responseTime:", responseTime);
 
