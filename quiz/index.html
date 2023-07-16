@@ -1044,6 +1044,7 @@ display: block !important;
       <div id="answerTextArea" class="text-area"></div>
       <h3>Explanation</h3>
       <div id="explanationTextArea" class="text-area"></div>
+      <h3>Response</h3>
       <div id="responseTimeTextArea" class="text-area"></div>
     </div>
     <span class="close BottomCloseOptionsButton" onclick="closeQuestionPopup()">Close</span>
@@ -1104,17 +1105,34 @@ let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining mi
 	
 }
 
+function zoomOutTransition(elementId) {
+  const element = document.getElementById(elementId);
+  element.style.transition = "transform 0.3s ease";
+  element.style.transform = "scale(0)";
+  
+  setTimeout(() => {
+    element.style.display = "none";
+  }, 300);
+}
+
+// Usage example
+
+
+	  
+
 // Close the question popup
 function closeQuestionPopup() {
-  const popup = document.getElementById("questionPopup");
-  popup.style.display = "none";
+
+	
+	zoomOutTransition("questionPopup");
+
 }
 
 
 
 
 function closeReviewFunc(){
-  document.getElementById("reviewPopup").style.display = "none";
+	zoomOutTransition("reviewPopup");
 
 }
 	  
@@ -1169,7 +1187,7 @@ if (addedQuestionNumbers.indexOf(questionIndex) > -1) {
     questionDiv.addEventListener("click", function() {
       // Handle click event for each question
 	    openQuestionPopup(questionIndex, count);
-      console.log("Question " + (questionIndex + 1) + " Answer: " + questions[questionIndex].answer + " Explanation " + questions[questionIndex].explanation);
+   //   console.log("Question " + (questionIndex + 1) + " Answer: " + questions[questionIndex].answer + " Explanation " + questions[questionIndex].explanation);
     });
 	
 let questionsCompleted = loadQuestionsCompleted(quizCode);
@@ -1194,7 +1212,7 @@ let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining mi
 	 
     let reviewQuestionNumber = document.createElement("span");
     reviewQuestionNumber.classList.add("question-number");
-    reviewQuestionNumber.textContent = "<b>Question:</b> " + (questionIndex + 1) + "  <b>Response Time:</b> "+responseTimeText;
+    reviewQuestionNumber.innerHTML = "<b>Question:</b> " + (questionIndex + 1) + "  <b>Response Time:</b> "+responseTimeText;
   //  questionNumber.textContent = "Question " + (questionIndex) + ": ";
 	  
     let reviewQuestionResponse = document.createElement("br");
@@ -1428,7 +1446,8 @@ timeSoFarElement.textContent = `${minutes} mins ${seconds} secs`;
 
 
 function closeOptions(){
-		  slideOut("optionsPopupBox");
+		//  slideOut("optionsPopupBox");
+	zoomOutTransition("optionsPopupBox");
 
   optionsPopup.classList.add('d-none');
 }
