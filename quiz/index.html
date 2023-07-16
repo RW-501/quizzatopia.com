@@ -1086,7 +1086,7 @@ console.log("questionIndex:", questionIndex);
 //let questionIndex = 0; // Replace with the desired question index
 let responseTime = questionsCompleted[count].responseTime;
 
-console.log("responseTime:", responseTime);
+//console.log("responseTime:", responseTime);
 
 
 let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
@@ -1132,8 +1132,8 @@ document.getElementById("openReviewButton").addEventListener("click", function()
 	
 var correctTab = document.getElementById("correctTab");
 var incorrectTab = document.getElementById("incorrectTab");
-//document.getElementById("incorrect").innerHTML = "";
-//document.getElementById("correct").innerHTML = "";
+document.getElementById("incorrect").innerHTML = "<h3>Incorrect Answers</h3>";
+document.getElementById("correct").innerHTML = "<h3>Correct Answers</h3>";
 	
 
 	document.getElementById("quizReviewName").innerHTML = quizInfo.quizName;
@@ -1144,12 +1144,12 @@ let count = 0
 questionsCompleted.forEach(function(question) {
   var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
 //  var questionIndex = question.questionNumber; // Adjust index by subtracting 1
-count++;	
+count++;	count = count - 1;
    console.log("1 addedQuestionNumbers " + addedQuestionNumbers);
 
   // Check if the question number has already been added
 if (addedQuestionNumbers.indexOf(questionIndex) > -1) {
-  return; // Skip this iteration if the question number already exists
+  return; // Skip this iteration if the  question number already exists
 }
 
   addedQuestionNumbers.push(questionIndex); // Add the question number to the array
