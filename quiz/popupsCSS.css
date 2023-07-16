@@ -43,6 +43,17 @@
 display:none;
 }
 
+
+#explanation-con h3{
+    font-weight: 900;
+    font-size: 1.5em;
+}
+##explanation {
+
+    font-weight: 900;
+    font-size: 1.8em;
+}
+
 .explanation{
   position: fixed;
     top: 20%;
@@ -58,7 +69,6 @@ display:none;
     height: -webkit-fill-available;
     position: fixed;
 
-	
 	    background-color: #e7e7e7;
     border-radius: 2em;
 
