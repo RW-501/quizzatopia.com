@@ -1077,14 +1077,15 @@ function openQuestionPopup(questionIndex, count) {
   answerTextArea.innerHTML = question.answer;
   explanationTextArea.innerHTML = question.explanation;
 	
- questionsCompleted = loadQuestionsCompleted(quizCode);
+let questionsCompleted = loadQuestionsCompleted(quizCode);
 
+console.log("questionsCompleted:", questionsCompleted);
 
-console.log("questionsCompleted...."+questionsCompleted);
-	
-const responseTime  = parseInt(questionsCompleted[count].responseTime, 10); // 42
-console.log("question.responseTime...."+questionsCompleted.responseTime);
-console.log("responseTime...."+responseTime);
+// Access the responseTime of a specific question
+let questionIndex = 0; // Replace with the desired question index
+let responseTime = questionsCompleted[questionIndex].responseTime;
+
+console.log("responseTime:", responseTime);
 
 
 let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
@@ -1097,34 +1098,6 @@ let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining mi
   const popup = document.getElementById("questionPopup");
   popup.style.display = "block";
 
-/*
-  // Update the question on button click
-  const updateButton = document.getElementById("updateButton");
-  updateButton.addEventListener("click", function() {
-    question.question = questionTextArea.value;
-    question.answer = answerTextArea.value;
-    question.explanation = explanationTextArea.value;
-	  
-    // Update the question div with the updated question
-    const questionDiv = document.getElementById("question-" + questionIndex);
-    questionDiv.textContent = "Question " + (questionIndex + 1) + ": " + question.question;
-    closeQuestionPopup();
-  });
-
-// Add event listeners to question divs
-for (let i = 0; i < questions.length; i++) {
-  const questionDiv = document.createElement("div");
-  questionDiv.id = "question-" + i;
-  questionDiv.textContent = "Question " + (i + 1) + ": " + questions[i].question;
-  
-  questionDiv.addEventListener("click", function() {
-    const questionIndex = parseInt(this.id.split("-")[1]);
-    openQuestionPopup(questionIndex);
-  });
-  
-  document.getElementById("questionList").appendChild(questionDiv);
-}
-*/
 
 
 	
@@ -1197,7 +1170,7 @@ if (addedQuestionNumbers.indexOf(questionIndex) > -1) {
 	    openQuestionPopup(questionIndex, count);
       console.log("Question " + (questionIndex + 1) + " Answer: " + questions[questionIndex].answer + " Explanation " + questions[questionIndex].explanation);
     });
-	  
+	/*  
 let questionsCompleted = loadQuestionsCompleted(quizCode);
 
 console.log("questionsCompleted:", questionsCompleted);
@@ -1212,13 +1185,13 @@ const responseTime = parseInt(inValue, 10); // 42
 	  
 console.log("responseTime...."+responseTime);
 
-
+*/ 
 let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
 let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining milliseconds to seconds
 
 // Display the timeElapsed in minutes and seconds format
  responseTimeTextArea.innerHTML  = `${minutes} mins ${seconds} secs`;
-	  
+	 
     let reviewQuestionNumber = document.createElement("span");
     reviewQuestionNumber.classList.add("question-number");
     reviewQuestionNumber.textContent = "Question: " + (questionIndex + 1) + " Response Time: "+responseTime;
