@@ -412,7 +412,7 @@ position: fixed;
 }
 
 #readButton span {
-  font-size: 14px;
+  font-size: 1.2em;
   vertical-align: middle;
 color: #fd7e14;
 }
@@ -687,6 +687,14 @@ display: block !important;
 	
   <div class="container mt-4 d-none" id="quiz-container">
     <!-- Quiz Container -->
+
+        <div id="quiz-timer-qn" class="d-flex justify-content-between">
+<div id="statsBTN" class="font-weight-bold" onclick="openPopupsFunc('statsPopup','');">Stats</div>
+<div id="reviewBTN" class="font-weight-bold" onclick="openPopupsFunc('reviewPopup','');">Review</div>
+<div id="optionsBTN" class="font-weight-bold" onclick="openPopupsFunc('optionsPopup','optionsPopupBox');">Options</div>
+	</div>
+
+	  
     <div   id="quizContainer" class="layer-1">
       <!-- First Layer -->
       <div class="layer-2" id="quiz_main_area">
@@ -870,7 +878,7 @@ display: block !important;
  <div></div> <div id="reportFormBTN" class="btnMain" onclick=" closeExplanationPopup(); openReport();" >Report</div>
    
 	  </div>
-  <div class="center"><h3></h3>Explanation</h3></div>
+  <div class="center"><h3>Explanation</h3></div>
 	  <hr>
 	      <div id="explanation" onclick="readExplanationFunc()"></div>
 
@@ -931,12 +939,12 @@ display: block !important;
 
 	
 	
-	<div id="optionsPopup" class="PopupWrap ">
+	<div id="statsPopup" class="PopupWrap ">
   <!-- Options content goes here -->
 		<div id="optionsPopupBox" class="optionspopup">
 		<div  class="scrollWrap">
 <div id="quizInfoPopup">
-  <h3>Quiz Information</h3>
+  <h3>Quiz Stats</h3>
 
 	<div class="center block"><p>Quiz Code: <span id="quizCodePopup"></span></p>
   <p>Quiz Name:  <span id="quizName"></span></p></div>
@@ -962,13 +970,43 @@ display: block !important;
   <p>Time so far: <span id="timeSoFar"></span></p>
   <p>Quiz URL: <span id="quizURL"></span></p>
 </div>
-<br><hr>
- <div >
-<button class="center block" id="openReviewButton">Open Review</button>
 
- </div>
 	
 </div>
+
+
+
+	
+</div>
+  <button id="closeStatsButton " class="close BottomCloseOptionsButton"  onclick="closeStats()" >Close</button>
+
+</div>
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div id="optionsPopup" class="PopupWrap ">
+  <!-- Options content goes here -->
+		<div id="optionsPopupBox" class="optionspopup">
+		<div  class="scrollWrap">
+<div id="quizInfoPopup">
+
 
 <div id="optionsMenu">
   <h3>Options</h3>
@@ -1016,9 +1054,7 @@ display: block !important;
 </div>
 
 
-
-
-
+	
 
 
 <div id="reviewPopup" class="popup">
@@ -1132,6 +1168,16 @@ function zoomOutTransition(elementId) {
 // Usage example
 
 
+function openPopupsFunc(xxx, zzz) {
+
+			  slideIn(zzz);
+
+  document.getElementById(xxx).style.display = "block";
+
+}
+
+
+
 	  
 
 // Close the question popup
@@ -1143,7 +1189,12 @@ function closeQuestionPopup() {
 
 }
 
+function closeStatsPopup(){
+	zoomOutTransition("statsPopup");
+//  document.getElementById("reviewPopup").style.display = "none";
 
+}
+	
 
 
 function closeReviewFunc(){
