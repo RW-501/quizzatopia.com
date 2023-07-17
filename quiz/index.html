@@ -958,6 +958,47 @@ display: block !important;
   </div>
 
 
+<div id="reviewPopup" class="popup">
+  <div id="reviewPopupBox" class="popup-content">
+	  <div class="scroll" >
+    <div class="tab">
+		    <h2 id="quizReviewName"></h2>
+    </div>
+
+		  <hr>
+<div id="correctTab" class="tab-content">
+  <h3>Correct Answers</h3>
+  <div id="correctList"></div>
+</div>
+<br>
+<div id="incorrectTab" class="tab-content">
+  <h3>Incorrect Answers</h3>
+  <div id="incorrectList"></div>
+</div>
+</div>
+
+    <button id="closeReviewButton " class="BottomCloseOptionsButton"  onclick="closeReviewPopup()" >Close</button>
+  </div>
+</div>
+
+ 
+<div id="questionPopup" class="popup">
+  <div class="popup-content">
+    <h3>Question</h3>
+    <div id="content-wrap">
+      <div id="questionTextArea" class="text-area"></div>
+      <h3>Answer</h3>
+      <div id="answerTextArea" class="text-area"></div>
+      <h3>Explanation</h3>
+      <div id="explanationTextArea" class="text-area"></div>
+      <h3>Response</h3>
+      <div id="responseTimeTextArea" class="text-area"></div>
+    </div>
+    <span class="close BottomCloseOptionsButton" onclick="closeQuestionPopup()">Close</span>
+  </div>
+</div>
+
+	
 
 
 
@@ -1083,48 +1124,7 @@ display: block !important;
 	
 
 
-<div id="reviewPopup" class="popup">
-  <div id="reviewPopupBox" class="popup-content">
-	  <div class="scroll" >
-    <div class="tab">
-		    <h2 id="quizReviewName"></h2>
-    </div>
 
-		  <hr>
-<div id="correctTab" class="tab-content">
-  <h3>Correct Answers</h3>
-  <div id="correctList"></div>
-</div>
-<br>
-<div id="incorrectTab" class="tab-content">
-  <h3>Incorrect Answers</h3>
-  <div id="incorrectList"></div>
-</div>
-</div>
-
-    <button id="closeReviewButton " class="BottomCloseOptionsButton"  onclick="closeReviewPopup()" >Close</button>
-  </div>
-</div>
-
-
- 
-<div id="questionPopup" class="popup">
-  <div class="popup-content">
-    <h3>Question</h3>
-    <div id="content-wrap">
-      <div id="questionTextArea" class="text-area"></div>
-      <h3>Answer</h3>
-      <div id="answerTextArea" class="text-area"></div>
-      <h3>Explanation</h3>
-      <div id="explanationTextArea" class="text-area"></div>
-      <h3>Response</h3>
-      <div id="responseTimeTextArea" class="text-area"></div>
-    </div>
-    <span class="close BottomCloseOptionsButton" onclick="closeQuestionPopup()">Close</span>
-  </div>
-</div>
-
-	
 
 	
   <script>
