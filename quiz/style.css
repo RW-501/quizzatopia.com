@@ -510,7 +510,13 @@ padding: 2% 4% 2% 4%;
 }
 
 #earnedPoints {
-  font-size: 2em;
+    font-size: 2em;
+    font-weight: 900;
+    /* font-family: cursive; */
+    text-shadow: 1px 2px 1px black;
+    color: #fd7e14;
+    transition: background-color 0.3s ease;
+
 }
 
 .bmc-btn {
@@ -527,7 +533,7 @@ padding: 2% 4% 2% 4%;
   width: 100%;
 }
 
-	
+
 	
 	
 	.card.awardBadge {
