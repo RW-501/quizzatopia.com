@@ -514,14 +514,21 @@ display: inline-block;
     box-shadow: inset 0px 1px 0rem 14px #fd7e14 !important;
 
 }
+#quizReviewName{
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+		
 .scroll {
     overflow-y: scroll;
     display: block;
     height: fit-content;
-    margin-top: 5%;
 
 }
 .tab {
+    margin-top: 5%;
+
   display: flex;
   justify-content: center;
 }
@@ -961,15 +968,18 @@ display: block !important;
 
 <div id="reviewPopup" class="popup">
   <div id="reviewPopupBox" class="popup-content">
-	  <div class="scroll" >
+	   <h2 id="quizReviewName"></h2><br>
     <div class="tab">
-		    <h2 id="quizReviewName"></h2><br>
+		   
 	    <button id="sortByAdded" class="sort-button">Last Added</button>
 <button id="sortByResponseTime" class="sort-button">Response Time</button>
 
     </div>
 
 		  <hr>
+	  <div class="scroll" >
+
+	  
 <div id="correctTab" class="tab-content">
   <h3>Correct Answers</h3>
   <div id="correctList"></div>
@@ -1295,7 +1305,7 @@ count++;	count = count - 1;
 
 
 		
-  // console.log(questionIndex+" addedQuestionNumbers " + addedQuestionNumbers);
+   console.log(questionIndex+" questions.length " + questions.length);
 	
   if (questionIndex >= 0 && questionIndex < questions.length) {
     var questionDiv = document.createElement("div");
@@ -1368,6 +1378,9 @@ if (question.correctness === "correct") {
   parentElement.insertBefore(questionDiv, firstChild);
 }
 
+  }else{
+incorrectTab.innerHTML = "<h3>No Results</h3>";
+correctTab.innerHTML = "";
   }
 });
 
