@@ -2010,6 +2010,7 @@ function showPopup(message) {
 
 	  
  
+let questionsOG = [];
 let questions = [];
 let quizCode;
 let quizName;
@@ -2177,6 +2178,8 @@ function fetchData(q, e) {
             const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
 
             questions.push(...questionData);
+	questionsOG.push(...questionData);	
+
             shuffleArray(questions);
 
             // Access and use the retrieved quiz information
@@ -2243,6 +2246,7 @@ function fetchData(q, e) {
           const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty, quizUrl);
 
           questions.push(...questionData);
+	questionsOG.push(...questionData);	
           shuffleArray(questions);
 
           // Access and use the retrieved quiz information
@@ -2285,6 +2289,7 @@ function fetchData(q, e) {
           const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
 
           questions.push(...questionData);
+	questionsOG.push(...questionData);	
           shuffleArray(questions);
 
           // Access and use the retrieved quiz information
