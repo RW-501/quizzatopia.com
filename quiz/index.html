@@ -1294,6 +1294,13 @@ function sortReview(sortBy) {
 
 	  
 }
+function checkVarForValueFunc(questionIndex) {
+  if (questionIndex < 0 || questionIndex === '' || questionIndex === null || questionIndex === undefined) {
+    return true; // Indicates that the condition is true
+  } else {
+    return false; // Indicates that the condition is false
+  }
+}
 
 	  
 // Open the review popup
@@ -1324,8 +1331,8 @@ count++;	count = count - 1;
 
 
 		
-	
-  if (questionIndex < 0 || questionIndex === ) {
+	let questionIndexBool = checkVarForValueFunc(questionIndex);
+  if (questionIndexBool) {
 //  if (questionIndex >= 0 && questionIndex < questions.length) {
     var questionDiv = document.createElement("div");
     questionDiv.classList.add("quiz-result-item");
