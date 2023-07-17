@@ -715,9 +715,9 @@ display: block !important;
     <!-- Quiz Container -->
 
         <div id="quiz-options" class="d-flex justify-content-between">
-<div id="statsBTN" class="font-weight-bold" onclick="openPopupsFunc('statsPopup','statsPopupBox');">Stats</div>
-<div id="reviewBTN" class="font-weight-bold" onclick="openPopupsFunc('reviewPopup','reviewPopupBox');">Review</div>
-<div id="optionsBTN" class="font-weight-bold" onclick="openPopupsFunc('optionsPopup','optionsPopupBox');">Options</div>
+<div id="statsBTN" class="font-weight-bold" onclick="openStatsFunc(); openPopupsFunc('statsPopup','statsPopupBox');">Stats</div>
+<div id="reviewBTN" class="font-weight-bold" onclick="openReviewFunc(); openPopupsFunc('reviewPopup','reviewPopupBox');">Review</div>
+<div id="optionsBTN" class="font-weight-bold" onclick="openOptionsFunc(); openPopupsFunc('optionsPopup','optionsPopupBox');">Options</div>
 	</div>
 
 	  
@@ -748,7 +748,7 @@ display: block !important;
 	
 	
         <div id="quiz-timer-qn" class="d-flex justify-content-between">
-          <div id="question-number" class="font-weight-bold"   onclick="openOptions();"></div>
+          <div id="question-number" class="font-weight-bold"   onclick="openStatsFunc(); openPopupsFunc('statsPopup','statsPopupBox');"></div>
           <div id="timer" class="text-right"></div>
 		
 <div id="readButton" onclick="readQuizFunc();">
@@ -1231,15 +1231,12 @@ function closeReviewPopup(){
 	  
 
 
-//questionsCompleted  = quizInfo.questionsCompleted;
+	  
 // Open the review popup
-document.getElementById("openReviewButton").addEventListener("click", function() {
-  document.getElementById("reviewPopup").style.display = "block";
+function openReviewFunc() {
 
 
 	
-	
-
 	
 var correctTab = document.getElementById("correctTab");
 var incorrectTab = document.getElementById("incorrectTab");
@@ -1314,12 +1311,7 @@ let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining mi
     let reviewQuestionText = document.createElement("span");
     reviewQuestionText.classList.add("question-text");
     reviewQuestionText.textContent = questions[questionIndex].question ;
-/*
-    let reviewQuestionResponse = document.createElement("span");
-    reviewQuestionResponse.classList.add("question-text");
-    reviewQuestionResponse.textContent = questions[questionIndex].responseTime;
 
-*/
 	  
           console.log(questions[questionIndex].question);
 
@@ -1342,9 +1334,11 @@ if (question.correctness === "correct") {
   }
 });
 
+  document.getElementById("reviewPopup").style.display = "block";
+			  slideIn("reviewPopupBox");
 
 
-});
+}
 	  
 
 
@@ -1468,29 +1462,27 @@ isAnimationEnabled = userInfo.animationEnabled;
 	  
 const optionsPopup = document.getElementById('optionsPopup');
 
-function openOptions() {
+function openOptionFunc() {
 	console.log("openOptions ....");
 	  clearTimeout(timeoutId);
 
 
-		  slideIn("optionsPopupBox");
   document.getElementById("optionsPopup").style.display = "block";
 
-//  optionsPopup.classList.remove('d-none');
+		  slideIn("optionsPopupBox");
 }
 
 
 
 
 function closeOptions(){
-		  slideOut("optionsPopupBox");
 	zoomOutTransition("optionsPopup");
 
-//  optionsPopup.classList.add('d-none');
+		  slideOut("optionsPopupBox");
 }
 
 
-function openStats() {
+function openStatsFunc() {
 	console.log("Load and Save ....");
 
   clearTimeout(timeoutId);
@@ -1546,8 +1538,8 @@ timeSoFarElement.textContent = `${minutes} mins ${seconds} secs`;
 
 
 
-		  slideIn("statsPopupBox");
   document.getElementById("statsPopup").style.display = "block";
+		  slideIn("statsPopupBox");
 
 }
 
