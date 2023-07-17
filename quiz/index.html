@@ -1237,7 +1237,10 @@ function closeReviewPopup(){
 function sortReview(sortBy) {
   var correctList = document.getElementById("correctList");
   var incorrectList = document.getElementById("incorrectList");
-  
+
+	correctList.innerHTML = "";
+	incorrectList.innerHTML = "";
+	
   if (sortBy === "lastAdded") {
     sortQuestionsByLastAdded(correctList);
     sortQuestionsByLastAdded(incorrectList);
@@ -1260,13 +1263,17 @@ function sortReview(sortBy) {
       .sort((a, b) => a.dataset.responseTime - b.dataset.responseTime)
       .forEach(item => list.appendChild(item));
   }
+
+
+	  
 }
 
 	  
 // Open the review popup
 function openReviewFunc() {
 
-
+  const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
+  const quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
 	
 	
 var correctTab = document.getElementById("correctTab");
@@ -1280,8 +1287,8 @@ correctTab.innerHTML = "<h3>Correct Answers</h3><div id='correctList'></div>";
 	 
 let count = 0
 questionsCompleted.forEach(function(question) {
-//  var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
-  var questionIndex = question.questionNumber; // Adjust index by subtracting 1
+  var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
+ // var questionIndex = question.questionNumber; // Adjust index by subtracting 1
 count++;	count = count - 1;
 
 
