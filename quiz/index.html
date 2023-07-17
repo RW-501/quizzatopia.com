@@ -1315,18 +1315,19 @@ correctTab.innerHTML = "<h3>Correct Answers</h3><div id='correctList'></div>";
 	 
 let count = 0
 questionsCompleted.forEach(function(question) {
-  var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
- // var questionIndex = question.questionNumber; // Adjust index by subtracting 1
+//  var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
+ var questionIndex = question.questionNumber; // Adjust index by subtracting 1
 count++;	count = count - 1;
 	
-   console.log(questionIndex+" ind   "+count+" count  ");
+   console.log(questionIndex+" questionIndex   "+count+" count  ");
 
 
 
 
 		
 	
-  if (questionIndex >= 0 && questionIndex < questions.length) {
+  if (questionIndex) {
+//  if (questionIndex >= 0 && questionIndex < questions.length) {
     var questionDiv = document.createElement("div");
     questionDiv.classList.add("quiz-result-item");
     
