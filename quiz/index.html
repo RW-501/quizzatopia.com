@@ -1341,7 +1341,7 @@ count++;	count = count - 1;
     questionDiv.addEventListener("click", function() {
       // Handle click event for each question
 	    openQuestionPopup(questionIndex, count);
-   //   console.log("Question " + (questionIndex + 1) + " Answer: " + questions[questionIndex].answer + " Explanation " + questions[questionIndex].explanation);
+   //   console.log("Question " + (questionIndex + 1) + " Answer: " + questionsOG[questionIndex].answer + " Explanation " + questions[questionIndex].explanation);
     });
 	
 //let questionsCompleted = loadQuestionsCompleted(quizCode);
@@ -1374,13 +1374,13 @@ let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining mi
 
     let reviewQuestionText = document.createElement("span");
     reviewQuestionText.classList.add("question-text");
-    reviewQuestionText.textContent = questions[questionIndex].question ;
+    reviewQuestionText.textContent = questionsOG[questionIndex].question ;
 
 	  
  //   questionDiv.dataset.questionNumber = questionIndex; // Add question number for sorting by last added
 //questionDiv.dataset.responseTime = responseTime; // Add response time for sorting by response time
 	  
-          console.log(questions[questionIndex].question);
+          console.log(questionsOG[questionIndex].question);
 
 
 	      questionDiv.appendChild(reviewQuestionNumber);
