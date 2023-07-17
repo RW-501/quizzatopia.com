@@ -1319,7 +1319,7 @@ questionsCompleted.forEach(function(question) {
  var questionIndex = question.questionNumber; // Adjust index by subtracting 1
 count++;	count = count - 1;
 	
-   console.log(questionIndex+" questionIndex   "+count+" count  ");
+   console.log(questionIndex+" questionIndex   "+count+" count  "+realQuestionNumber+"   realQuestionNumber");
 
 
 
@@ -1344,7 +1344,7 @@ count++;	count = count - 1;
    //   console.log("Question " + (questionIndex + 1) + " Answer: " + questions[questionIndex].answer + " Explanation " + questions[questionIndex].explanation);
     });
 	
-let questionsCompleted = loadQuestionsCompleted(quizCode);
+//let questionsCompleted = loadQuestionsCompleted(quizCode);
 
 
 
@@ -1366,7 +1366,7 @@ let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining mi
 	 
     let reviewQuestionNumber = document.createElement("span");
     reviewQuestionNumber.classList.add("question-number");
-    reviewQuestionNumber.innerHTML = "<b>Question:</b> " + (questionIndex + 1) + "  <b>Response Time:</b> "+responseTimeText;
+    reviewQuestionNumber.innerHTML = "<b>Question:</b> " + (questionIndex ) + "  <b>Response Time:</b> "+responseTimeText;
   //  questionNumber.textContent = "Question " + (questionIndex) + ": ";
 	  
     let reviewQuestionResponse = document.createElement("br");
@@ -1374,13 +1374,13 @@ let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining mi
 
     let reviewQuestionText = document.createElement("span");
     reviewQuestionText.classList.add("question-text");
-    reviewQuestionText.textContent = questions[questionIndex].question ;
+    reviewQuestionText.textContent = question[questionIndex].question ;
 
 	  
-    questionDiv.dataset.questionNumber = questionIndex; // Add question number for sorting by last added
-questionDiv.dataset.responseTime = responseTime; // Add response time for sorting by response time
+ //   questionDiv.dataset.questionNumber = questionIndex; // Add question number for sorting by last added
+//questionDiv.dataset.responseTime = responseTime; // Add response time for sorting by response time
 	  
-          console.log(questions[questionIndex].question);
+          console.log(question[questionIndex].question);
 
 
 	      questionDiv.appendChild(reviewQuestionNumber);
