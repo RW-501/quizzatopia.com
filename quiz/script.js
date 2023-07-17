@@ -31,6 +31,10 @@ function setQuizTime() {
   }
 }
 
+
+console.log('questionCorrect ', questionCorrect);
+console.log('questionIncorrect ', questionIncorrect);
+
 // Get the number of correct questions
 questionCorrect = questionsCompleted.filter(function(question) {
   return question.correctness === "correct";
@@ -42,13 +46,13 @@ saveQuizInfo(quizCode,quizInfo);
 questionIncorrect = questionsCompleted.filter(function(question) {
   return question.correctness === "correct";
 }).length;
-	 quizInfo.questionCorrect = questionIncorrect;
+	 quizInfo.questionCorrect = questionIncorrect || 0;
 saveQuizInfo(quizCode,quizInfo);
 
 
 
-
-
+console.log('questionCorrect ', questionCorrect);
+console.log('questionIncorrect ', questionIncorrect);
 
 
 
