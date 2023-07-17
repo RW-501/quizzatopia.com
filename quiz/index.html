@@ -1299,7 +1299,6 @@ function sortReview(sortBy) {
 	  
 // Open the review popup
 function openReviewFunc() {
-   console.log("openReviewFunc   ?????????????????????????????????? ");
 
   const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
   const quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
@@ -1316,8 +1315,8 @@ correctTab.innerHTML = "<h3>Correct Answers</h3><div id='correctList'></div>";
 	 
 let count = 0
 questionsCompleted.forEach(function(question) {
-  var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
- // var questionIndex = question.questionNumber; // Adjust index by subtracting 1
+ // var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
+  var questionIndex = question.questionNumber; // Adjust index by subtracting 1
 count++;	count = count - 1;
 	
    console.log(questionIndex+" ind   "+count+" count  ");
