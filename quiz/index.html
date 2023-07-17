@@ -717,8 +717,8 @@ display: block !important;
     <!-- Quiz Container -->
 
         <div id="quiz-options" class="d-flex justify-content-between">
-<div id="statsBTN" class="font-weight-bold" onclick="openPopupsFunc('statsPopup','');">Stats</div>
-<div id="reviewBTN" class="font-weight-bold" onclick="openPopupsFunc('reviewPopup','');">Review</div>
+<div id="statsBTN" class="font-weight-bold" onclick="openPopupsFunc('statsPopup','statsPopupBox');">Stats</div>
+<div id="reviewBTN" class="font-weight-bold" onclick="openPopupsFunc('reviewPopup','reviewPopupBox');">Review</div>
 <div id="optionsBTN" class="font-weight-bold" onclick="openPopupsFunc('optionsPopup','optionsPopupBox');">Options</div>
 	</div>
 
@@ -969,7 +969,7 @@ display: block !important;
 	
 	<div id="statsPopup" class="PopupWrap ">
   <!-- Options content goes here -->
-		<div id="optionsPopupBox" class="optionspopup">
+		<div id="statsPopupBox" class="optionspopup">
 		<div  class="scrollWrap">
 <div id="quizInfoPopup">
   <h3>Quiz Stats</h3>
@@ -1086,7 +1086,7 @@ display: block !important;
 
 
 <div id="reviewPopup" class="popup">
-  <div class="popup-content">
+  <div id="reviewPopupBox" class="popup-content">
 	  <div class="scroll" >
     <div class="tab">
 		    <h2 id="quizReviewName"></h2>
@@ -1471,8 +1471,31 @@ isAnimationEnabled = userInfo.animationEnabled;
 const optionsPopup = document.getElementById('optionsPopup');
 
 function openOptions() {
-	console.log("Load and Save ....");
+	console.log("openOptions ....");
 	  clearTimeout(timeoutId);
+
+
+		  slideIn("optionsPopupBox");
+  document.getElementById("optionsPopup").style.display = "block";
+
+//  optionsPopup.classList.remove('d-none');
+}
+
+
+
+
+function closeOptions(){
+		  slideOut("optionsPopupBox");
+	zoomOutTransition("optionsPopup");
+
+//  optionsPopup.classList.add('d-none');
+}
+
+
+function openStats() {
+	console.log("Load and Save ....");
+
+  clearTimeout(timeoutId);
 
 const userInfoStored = localStorage.getItem(`userInfo`);
   const userInfo = storedUserInfo ? JSON.parse(userInfoStored) : {};
@@ -1524,28 +1547,10 @@ let seconds = Math.floor((timeElapsed % 60000) / 1000); // Convert remaining mil
 timeSoFarElement.textContent = `${minutes} mins ${seconds} secs`;
 
 
-		  slideIn("optionsPopupBox");
-  document.getElementById("optionsPopup").style.display = "block";
 
-//  optionsPopup.classList.remove('d-none');
-}
+		  slideIn("statsPopupBox");
+  document.getElementById("statsPopup").style.display = "block";
 
-
-
-
-
-
-
-
-
-
-
-
-function closeOptions(){
-		  slideOut("optionsPopupBox");
-	zoomOutTransition("optionsPopup");
-
-//  optionsPopup.classList.add('d-none');
 }
 
 
