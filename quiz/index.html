@@ -856,7 +856,9 @@ display: block !important;
 	  
     <button id="retake-btn" class="other-quiz-btn  btnMain mt-4 "  onclick="retakeQuizFunc()">Retake Quiz</button>
     <!-- Retake Quiz Button -->
-    <button class="other-quiz-btn  btn-secondary mt-4" onclick="window.location.href = '/quizzes'">Try Another Quiz</button><br><hr>
+    <button class="other-quiz-btn  btn-secondary mt-4" onclick="window.location.href = '/quizzes'">Try Another Quiz</button>
+		  
+		  <br><hr>
     <!-- Try Another Quiz Button -->
 	  </div>
 
@@ -1225,7 +1227,7 @@ function zoomOutTransition(elementId) {
 
 
 function openPopupsFunc(xxx, zzz) {
-
+console.log("openPopupsFunc  ????????????????????????????????????????????:");
 			  slideIn(zzz);
 
   document.getElementById(xxx).style.display = "block";
