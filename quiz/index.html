@@ -964,6 +964,9 @@ display: block !important;
 	  <div class="scroll" >
     <div class="tab">
 		    <h2 id="quizReviewName"></h2>
+	    <button id="sortByAdded" class="sort-button">Last Added</button>
+<button id="sortByResponseTime" class="sort-button">Response Time</button>
+
     </div>
 
 		  <hr>
@@ -1231,6 +1234,33 @@ function closeReviewPopup(){
 }
 	  
 
+function sortReview(sortBy) {
+  var correctList = document.getElementById("correctList");
+  var incorrectList = document.getElementById("incorrectList");
+  
+  if (sortBy === "lastAdded") {
+    sortQuestionsByLastAdded(correctList);
+    sortQuestionsByLastAdded(incorrectList);
+  } else if (sortBy === "responseTime") {
+    sortQuestionsByResponseTime(correctList);
+    sortQuestionsByResponseTime(incorrectList);
+  }
+  
+  // Add more sorting criteria if needed
+  
+  // Example sort functions:
+  function sortQuestionsByLastAdded(list) {
+    Array.from(list.children)
+      .sort((a, b) => a.dataset.questionNumber - b.dataset.questionNumber)
+      .forEach(item => list.appendChild(item));
+  }
+  
+  function sortQuestionsByResponseTime(list) {
+    Array.from(list.children)
+      .sort((a, b) => a.dataset.responseTime - b.dataset.responseTime)
+      .forEach(item => list.appendChild(item));
+  }
+}
 
 	  
 // Open the review popup
@@ -1248,21 +1278,16 @@ correctTab.innerHTML = "<h3>Correct Answers</h3><div id='correctList'></div>";
 	document.getElementById("quizReviewName").innerHTML = quizInfo.quizName;
 
 	 
-var addedQuestionNumbers = []; // Array to store the added question numbers
 let count = 0
 questionsCompleted.forEach(function(question) {
 //  var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
   var questionIndex = question.questionNumber; // Adjust index by subtracting 1
 count++;	count = count - 1;
-   console.log("1 addedQuestionNumbers " + addedQuestionNumbers);
 
-  // Check if the question number has already been added
-if (addedQuestionNumbers.indexOf(questionIndex) > -1) {
-  return; // Skip this iteration if the  question number already exists
-}
 
-  addedQuestionNumbers.push(questionIndex); // Add the question number to the array
-	
+
+
+		
   // console.log(questionIndex+" addedQuestionNumbers " + addedQuestionNumbers);
 	
   if (questionIndex >= 0 && questionIndex < questions.length) {
@@ -1274,7 +1299,9 @@ if (addedQuestionNumbers.indexOf(questionIndex) > -1) {
     } else if (question.correctness === "incorrect") {
       questionDiv.classList.add("incorrect");
     }
-    
+    questionDiv.dataset.questionNumber = questionIndex; // Add question number for sorting by last added
+questionDiv.dataset.responseTime = responseTime; // Add response time for sorting by response time
+
     questionDiv.addEventListener("click", function() {
       // Handle click event for each question
 	    openQuestionPopup(questionIndex, count);
