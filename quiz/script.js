@@ -997,6 +997,7 @@ function rateQuiz(stars) {
       star.classList.remove('active');
     }
   });
+	submitReview();
 }
 
 // Leaving a review
@@ -1046,10 +1047,17 @@ alert('Please rate the quiz before leaving a review.');
   const feedback = reviewTextArea.value;
   if (feedback) {
     // Perform the necessary actions to store the feedback in Firestore
+	  
+let uID = userInfo.firebaseId;
+	  if(uID === '' || uID === null || uID === undefined){
+uID = ipAddress; /// getIPAddress();
+	  }
 
+	  
     const feedbackData = {
       rating: rating,
       feedback: feedback,
+      userID: uID,
       feedbackType: "feedback",
       date: new Date(),
       quizCode: quizCode // Replace with the actual quiz code
