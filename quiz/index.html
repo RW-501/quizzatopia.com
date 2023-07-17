@@ -1374,13 +1374,13 @@ let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining mi
 
     let reviewQuestionText = document.createElement("span");
     reviewQuestionText.classList.add("question-text");
-    reviewQuestionText.textContent = question[questionIndex].question ;
+    reviewQuestionText.textContent = questions[questionIndex].question ;
 
 	  
  //   questionDiv.dataset.questionNumber = questionIndex; // Add question number for sorting by last added
 //questionDiv.dataset.responseTime = responseTime; // Add response time for sorting by response time
 	  
-          console.log(question[questionIndex].question);
+          console.log(questions[questionIndex].question);
 
 
 	      questionDiv.appendChild(reviewQuestionNumber);
