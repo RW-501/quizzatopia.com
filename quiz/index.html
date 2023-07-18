@@ -1774,31 +1774,13 @@ if(quizStarted == true){
   const savedScore = savedQuizInfo.questionCorrect || 0;
   const newScore = quizInfo.questionCorrect || 0;
 
- // console.log(savedScore + " savedScore | newScore " + newScore);
-
-//  console.log(JSON.stringify(savedQuizInfo)'  saveQuizInfo Quiz quizInfo:  ' + quizInfo);
-  //console.log('saveQuizInfo Quiz Code:' + quizCode);
- // console.log('saveQuizInfo Quiz Info:' + savedQuizInfo);
-  //console.log('JSON.stringify(savedQuizInfo)) Quiz Info:' + JSON.stringify(savedQuizInfo));
-/*
-  if (newScore > savedScore || savedScore === 0 || savedScore === null) {
-    savedQuizInfo.quizCode = quizCode;
-    savedQuizInfo.questionCorrect = newScore; // Update the questionCorrect value
-    savedQuizInfo.quizLink = q; // Add the "q" parameter to the quizInfo object
-	  }else{
-    savedQuizInfo.quizCode = quizCode;
-    savedQuizInfo.questionsCompleted = questionsCompleted;
-    savedQuizInfo.questionIncorrect = questionIncorrect;
-  }*/
+ 
  if (newScore > savedScore ){
 	  	  updatePoints(pointsRewards);
  }
 
 	
-	  //  savedQuizInfo = quizInfo;
- //   quizInfo = JSON.parse(quizInfo);
 
-	 ///  console.log('saveQuizInfo Quiz Info:' + quizInfo);
 	   console.log(quizCode+'  saveQuizInfo Quiz Info:' + quizInfo);
 	
     // Update the quiz information for the specific quiz code
@@ -2092,6 +2074,8 @@ function checkQuizCodeAndGetInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, qu
       quizCode: quizCodeNS,
       quizName: quizNameNS,
       quizImageURL: quizImageURL,
+      questionIncorrect: questionIncorrect,
+      questionCorrect: questionCorrect,
       quizType: quizType,
       numberOfQuestions: numberOfQuestionsNS,
       questionsCompleted: questionsCompleted,
