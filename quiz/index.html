@@ -1173,7 +1173,7 @@ function loadQuestionsCompleted(quizCode) {
 	  
 // Open the question popup
 function openQuestionPopup(questionIndex, count) {
-  const question = questions[questionIndex];
+  const question = questionsOG[questionIndex];
   const questionTextArea = document.getElementById("questionTextArea");
   const answerTextArea = document.getElementById("answerTextArea");
   const explanationTextArea = document.getElementById("explanationTextArea");
@@ -1191,7 +1191,7 @@ console.log("questionsCompleted:", questionsCompleted);
 //console.log("questionIndex:", questionIndex);
 
 // Access the responseTime of a specific question
-let questionIndex = 0; // Replace with the desired question index
+//let questionIndex = 0; // Replace with the desired question index
 let newResponseTime = questionsCompleted[questionIndex].responseTime;
 
 console.log("responseTime:", newResponseTime);
