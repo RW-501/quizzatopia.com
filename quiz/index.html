@@ -1365,6 +1365,8 @@ questionsCompleted.forEach(function(question) {
     reviewQuestionNumber.innerHTML = "<b>Question:</b> " + (questionIndex + 1) + "  <b>Response Time:</b> " + responseTimeText;
 
     let reviewQuestionResponse = document.createElement("br");
+    console.log("questionsOG:", questionsOG);
+    console.log("questions:", questions);
 
     let reviewQuestionText = document.createElement("span");
     reviewQuestionText.classList.add("question-text");
