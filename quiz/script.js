@@ -29,10 +29,8 @@ function setQuizTime() {
   }
 }
 
-let questionsCompleted = [];
+let questionsCompleted = loadQuestionsCompleted(quizCode);
 
-console.log('questionCorrect ', questionCorrect);
-console.log('questionIncorrect ', questionIncorrect);
 
 // Get the number of correct questions
 let questionCorrect = questionsCompleted.filter(function(question) {
