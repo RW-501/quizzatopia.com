@@ -1319,13 +1319,13 @@ correctTab.innerHTML = "<h3>Correct Answers</h3><div id='correctList'></div>";
 	document.getElementById("quizReviewName").innerHTML = quizInfo.quizName;
 
 questionsCompleted = loadQuestionsCompleted(quizCode);
-let resustCount = 0
+let resultCount = 0
 questionsCompleted.forEach(function(question) {
   var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
 // var questionIndex = question.questionNumber; // Adjust index by subtracting 1
-resustCount++;	//count = count - 1;
+resultCount++;	//count = count - 1;
 	
-   console.log(questionIndex+" questionIndex   "+resustCount+" count  "+realQuestionNumber+"   realQuestionNumber");
+   console.log(questionIndex+" questionIndex   "+resultCount+" count  "+realQuestionNumber+"   realQuestionNumber");
 
 
 
@@ -1346,7 +1346,7 @@ resustCount++;	//count = count - 1;
 
     questionDiv.addEventListener("click", function() {
       // Handle click event for each question
-	    openQuestionPopup(questionIndex, resustCount);
+	    openQuestionPopup(questionIndex, resultCount);
    //   console.log("Question " + (questionIndex + 1) + " Answer: " + questionsOG[questionIndex].answer + " Explanation " + questions[questionIndex].explanation);
     });
 	
@@ -1359,9 +1359,9 @@ console.log("count:", resustCount);
 
 // Access the responseTime of a specific question
 //let questionIndex = 0; // Replace with the desired question index
-let responseTime = questionsCompleted[resustCount].responseTime;
+let responseTime = questionsCompleted[resultCount].responseTime;
 
-console.log("count:", resustCount);
+console.log("count:", resultCount);
 console.log("responseTime:", responseTime);
 
 
