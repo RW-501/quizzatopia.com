@@ -1,9 +1,7 @@
 // Global Variables
 let questionTime = 0; // seconds
 let currentQuestion = 0;
-let questionCorrect = 0;
-let questionIncorrect = 0;
-let questionsCompleted = [];
+
 let quizStarted = false;
 let timer = 0;
 let countdownPerQuestion = false; // set to true if the countdown should happen for each question
@@ -31,22 +29,23 @@ function setQuizTime() {
   }
 }
 
+let questionsCompleted = [];
 
 console.log('questionCorrect ', questionCorrect);
 console.log('questionIncorrect ', questionIncorrect);
 
 // Get the number of correct questions
-questionCorrect = questionsCompleted.filter(function(question) {
+let questionCorrect = questionsCompleted.filter(function(question) {
   return question.correctness === "correct";
 }).length;
 	 quizInfo.questionCorrect = questionCorrect;
 saveQuizInfo(quizCode,quizInfo);
 
 // Get the number of correct questions
-questionIncorrect = questionsCompleted.filter(function(question) {
-  return question.correctness === "correct";
+let questionIncorrect = questionsCompleted.filter(function(question) {
+  return question.correctness === "Incorrect";
 }).length;
-	 quizInfo.questionCorrect = questionIncorrect || 0;
+	 quizInfo.questionIncorrect = questionIncorrect || 0;
 saveQuizInfo(quizCode,quizInfo);
 
 
@@ -395,12 +394,6 @@ document.getElementById("realQustionNum").innerHTML =  ('# '+ questionObj.questi
 
 //questionsCompleted.push(questionObj.questionNumber);
 //quizInfo.questionsCompleted = questionsCompleted;
-
-
-	 //   quizInfo = {questionsCompleted: questionsCompleted };
-	
-//let saveQuizInfo = JSON.stringify(quizInfo);
-
 
 
 		//console.log('questionObj.questionNumber ', questionObj.questionNumber);
