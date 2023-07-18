@@ -1339,14 +1339,15 @@ questionsCompleted.forEach(function(question) {
     }
 
     console.log("1349?????? count:", resultCount);
+	  
+ (function(resultCount) { // Use an IIFE to create a new scope for resultCount
+      questionDiv.addEventListener("click", function() {
+        console.log("sending ???????????????    " + questionIndex + "   ??????? count:", resultCount);
 
-    questionDiv.addEventListener("click", function() {
-      console.log("sending ???????????????    " + questionIndex + "   ??????? count:", resultCount);
-
-      // Handle click event for each question
-      openQuestionPopup(questionIndex, resultCount);
-
-    });
+        // Handle click event for each question
+        openQuestionPopup(questionIndex, resultCount);
+      });
+    })(resultCount); // Pass resultCount as an argument to the IIFE
 
     let responseTime = questionsCompleted[resultCount].responseTime;
 
