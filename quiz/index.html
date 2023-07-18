@@ -1325,8 +1325,7 @@ var resultCount = 0
 questionsCompleted.forEach(function(question) {
   var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
 // var questionIndex = question.questionNumber; // Adjust index by subtracting 1
-		resultCount++;
-	resultCount = resultCount - 1;
+	
 
    console.log(questionIndex+" questionIndex   "+resultCount+" count  "+realQuestionNumber+"   realQuestionNumber");
 
@@ -1348,12 +1347,13 @@ questionsCompleted.forEach(function(question) {
 
 console.log("?????? count:", resultCount);
 
-    questionDiv.addEventListener("click", function() {
+    questionDiv.addEventListener("click", function(resultCount) {
       // Handle click event for each question
 	    openQuestionPopup(questionIndex , resultCount);
 	    
 console.log("send ?????? count:", resultCount);
     });
+		resultCount++;
 
 //let questionsCompleted = loadQuestionsCompleted(quizCode);
 
