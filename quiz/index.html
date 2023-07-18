@@ -1353,7 +1353,7 @@ console.log("?????? count:", resultCount);
 	    
 console.log("send ?????? count:", resultCount);
     });
-		resultCount++;
+		
 
 //let questionsCompleted = loadQuestionsCompleted(quizCode);
 
@@ -1367,7 +1367,7 @@ let responseTime = questionsCompleted[resultCount].responseTime;
 
 console.log("count:", resultCount);
 console.log("responseTime:", responseTime);
-
+resultCount++;
 
 let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
 let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining milliseconds to seconds
