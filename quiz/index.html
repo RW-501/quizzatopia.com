@@ -1322,54 +1322,38 @@ correctTab.innerHTML = "<h3>Correct Answers</h3><div id='correctList'></div>";
 	document.getElementById("quizReviewName").innerHTML = quizInfo.quizName;
 
 questionsCompleted = loadQuestionsCompleted(quizCode);
-let resultCount = 0
+let resultCount = 0;
 questionsCompleted.forEach(function(question) {
   var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
-// var questionIndex = question.questionNumber; // Adjust index by subtracting 1
-	
+  console.log(questionIndex + " questionIndex   " + resultCount + " count  " + realQuestionNumber + "   realQuestionNumber");
 
-   console.log(questionIndex+" questionIndex   "+resultCount+" count  "+realQuestionNumber+"   realQuestionNumber");
-
-
-
-
-		
-	let questionIndexBool = checkVarForValueFunc(questionIndex);
+  let questionIndexBool = checkVarForValueFunc(questionIndex);
   if (questionIndexBool) {
-//  if (questionIndex >= 0 && questionIndex < questions.length) {
     var questionDiv = document.createElement("div");
     questionDiv.classList.add("quiz-result-item");
-    
+
     if (question.correctness === "correct") {
       questionDiv.classList.add("correct");
     } else if (question.correctness === "incorrect") {
       questionDiv.classList.add("incorrect");
     }
 
-console.log("1349?????? count:", resultCount);
+    console.log("1349?????? count:", resultCount);
 
     questionDiv.addEventListener("click", function() {
-	    console.log("sending ???????????????    "+questionIndex+"   ??????? count:", resultCount);
+      console.log("sending ???????????????    " + questionIndex + "   ??????? count:", resultCount);
 
       // Handle click event for each question
-	    openQuestionPopup(questionIndex , resultCount);
-	    
+      openQuestionPopup(questionIndex, resultCount);
+
     });
-		
 
-//let questionsCompleted = loadQuestionsCompleted(quizCode);
+    let responseTime = questionsCompleted[resultCount].responseTime;
+
+    console.log("count:", resultCount);
+    console.log("responseTime:", responseTime);
 
 
-
-//console.log("questionsCompleted:", questionsCompleted);
-
-// Access the responseTime of a specific question
-//let questionIndex = 0; // Replace with the desired question index
-let responseTime = questionsCompleted[resultCount].responseTime;
-
-console.log("count:", resultCount);
-console.log("responseTime:", responseTime);
-resultCount++;
 
 let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
 let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining milliseconds to seconds
@@ -1410,16 +1394,16 @@ if (question.correctness === "correct") {
   parentElement.insertBefore(questionDiv, firstChild);
 }
 
-  }
-   
+ resultCount++;
+});
 
-   else{
+	  
+  }else{
 incorrectTab.innerHTML = "<h3>No Results</h3>";
 correctTab.innerHTML = "";
   }
-  
-	
-});
+
+ 
 
   document.getElementById("reviewPopup").style.display = "block";
 			  slideIn("reviewPopupBox");
