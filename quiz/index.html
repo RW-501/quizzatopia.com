@@ -1421,8 +1421,20 @@ const retakeButton = document.getElementById("retakeButton");
 // Attach an event listener to the retake button
 retakeButton.addEventListener("click", function() {
   // Retrieve the wrong questions from questionsCompleted
-  const wrongQuestions = questionsCompleted.filter(question => question.correctness === "incorrect");
 
+const wrongQuestions = questionsCompleted
+  .filter(question => question.correctness === "incorrect")
+  .map(question => {
+    const questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
+    return {
+      question: questions[questionIndex].question,
+      options: questions[questionIndex].options
+    };
+  });
+
+
+
+	  
   // Create a new quiz or quiz session with the wrong questions
   createQuizSession(wrongQuestions);
 });
