@@ -1183,20 +1183,21 @@ function openQuestionPopup(questionIndex, count) {
   answerTextArea.innerHTML = question.answer;
   explanationTextArea.innerHTML = question.explanation;
 	
-let questionsCompleted = loadQuestionsCompleted(quizCode);
+	questionsCompleted = loadQuestionsCompleted(quizCode);
+
 
 console.log("questionsCompleted:", questionsCompleted);
 console.log("questionIndex:", questionIndex);
 
 // Access the responseTime of a specific question
 //let questionIndex = 0; // Replace with the desired question index
-let responseTime = questionsCompleted[count].responseTime;
+let newResponseTime = questionsCompleted[count].responseTime;
 
-//console.log("responseTime:", responseTime);
+console.log("responseTime:", newResponseTime);
 
 
-let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
-let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining milliseconds to seconds
+let minutes = Math.floor(newResponseTime / 60000); // Convert milliseconds to minutes
+let seconds = Math.floor((newResponseTime % 60000) / 1000); // Convert remaining milliseconds to seconds
 
 // Display the timeElapsed in minutes and seconds format
  responseTimeTextArea.innerHTML  = `${minutes} mins ${seconds} secs`;
