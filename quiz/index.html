@@ -1353,57 +1353,49 @@ questionsCompleted.forEach(function(question) {
     console.log("count:", resultCount);
     console.log("responseTime:", responseTime);
 
+    let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
+    let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining milliseconds to seconds
 
+    // Display the timeElapsed in minutes and seconds format
+    let responseTimeText = `${minutes} mins ${seconds} secs`;
 
-let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
-let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining milliseconds to seconds
-
-// Display the timeElapsed in minutes and seconds format
- let responseTimeText = `${minutes} mins ${seconds} secs`;
-	 
     let reviewQuestionNumber = document.createElement("span");
     reviewQuestionNumber.classList.add("question-number");
-    reviewQuestionNumber.innerHTML = "<b>Question:</b> " + (questionIndex + 1) + "  <b>Response Time:</b> "+responseTimeText;
-  //  questionNumber.textContent = "Question " + (questionIndex) + ": ";
-	  
-    let reviewQuestionResponse = document.createElement("br");
+    reviewQuestionNumber.innerHTML = "<b>Question:</b> " + (questionIndex + 1) + "  <b>Response Time:</b> " + responseTimeText;
 
+    let reviewQuestionResponse = document.createElement("br");
 
     let reviewQuestionText = document.createElement("span");
     reviewQuestionText.classList.add("question-text");
-    reviewQuestionText.textContent = questionsOG[questionIndex].question ;
+    reviewQuestionText.textContent = questionsOG[questionIndex].question;
 
-	  
- //   questionDiv.dataset.questionNumber = questionIndex; // Add question number for sorting by last added
-//questionDiv.dataset.responseTime = responseTime; // Add response time for sorting by response time
-	  
-          console.log(questionsOG[questionIndex].question);
-
-
-	      questionDiv.appendChild(reviewQuestionNumber);
-
-        questionDiv.appendChild(reviewQuestionResponse);
+    questionDiv.appendChild(reviewQuestionNumber);
+    questionDiv.appendChild(reviewQuestionResponse);
     questionDiv.appendChild(reviewQuestionText);
-if (question.correctness === "correct") {
-  const parentElement = document.getElementById("correctList");
-  const firstChild = parentElement.firstChild;
-  parentElement.insertBefore(questionDiv, firstChild);
-} else if (question.correctness === "incorrect") {
-  const parentElement = document.getElementById("incorrectList");
-  const firstChild = parentElement.firstChild;
-  parentElement.insertBefore(questionDiv, firstChild);
-}
-	  }
- resultCount++;
-});
 
-	  
-  }else{
-incorrectTab.innerHTML = "<h3>No Results</h3>";
-correctTab.innerHTML = "";
+    if (question.correctness === "correct") {
+      const parentElement = document.getElementById("correctList");
+      const firstChild = parentElement.firstChild;
+      parentElement.insertBefore(questionDiv, firstChild);
+    } else if (question.correctness === "incorrect") {
+      const parentElement = document.getElementById("incorrectList");
+      const firstChild = parentElement.firstChild;
+      parentElement.insertBefore(questionDiv, firstChild);
+    }
+
+    resultCount++; // Increment resultCount here
+  } else {
+    incorrectTab.innerHTML = "<h3>No Results</h3>";
+    correctTab.innerHTML = "";
   }
 
- 
+});
+
+// Remove resultCount++ from here
+
+document.getElementById("reviewPopup").style.display = "block";
+slideIn("reviewPopupBox");
+
 
   document.getElementById("reviewPopup").style.display = "block";
 			  slideIn("reviewPopupBox");
