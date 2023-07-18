@@ -439,7 +439,8 @@ function updateProgressBar(currentQuestion) {
   let QuestionNewNum = currentQuestion === 0 ? 1 : currentQuestion;
   const progressBar = document.getElementById('progress-bar');
   if (progressBar) {
-    const percentage = (currentQuestion + 1 / totalQuestions) * 100;
+	  let plusCurrentQuestion = currentQuestion +1;
+    const percentage = (plusCurrentQuestion / totalQuestions) * 100;
     progressBar.style.width = percentage + '%';
   }
 }
