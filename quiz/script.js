@@ -1094,9 +1094,7 @@ uID = ipAddress; /// getIPAddress();
 	}else{
 	  if (isAnimationEnabled) {
 submitReviewBtn.classList.add('shake-animation');
-}
-		
-	}else{
+
     alert('Please enter your review or feedback.');
   }
   
