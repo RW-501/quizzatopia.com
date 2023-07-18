@@ -981,54 +981,16 @@ function showExplanationFunc() {
       const randomIndex = Math.floor(Math.random() * animations.length);
       const selectedAnimation = animations[randomIndex];
 
-      slideIn("explanation-con", selectedAnimation);
 	
 document.getElementById('show-explanation-btn').classList.remove("d-none");
   const explanationContainer = document.querySelector('.explanation-container');
-		
+			
+      slideIn("explanation-con", selectedAnimation);
+
 	explanationContainer.style.display = 'block';
-///});
+
 }
 	
-// Rating stars functionality
-let rating = 0;
-
-function rateQuiz(stars) {
-  rating = stars;
-
-  const starElements = document.querySelectorAll('.star');
-  starElements.forEach((star, index) => {
-    if (index < stars) {
-      star.classList.add('active');
-    } else {
-      star.classList.remove('active');
-    }
-  });
-	  if (rating === 0) {
-	  if (isAnimationEnabled) {
-ratingStars.classList.add('shake-animation');
-}
-alert('Please rate the quiz before leaving a review.');
-    return;
-  }
-
-let uID = userInfo.firebaseId;
-	  if(uID === '' || uID === null || uID === undefined){
-uID = ipAddress; /// getIPAddress();
-	  }
-  const feedbackData = {
-      rating: rating,
-      userID: uID,
-      feedbackType: "stars",
-      date: new Date(),
-      quizCode: quizCode // Replace with the actual quiz code
-    };
-	if(sendFeedBackToDBFunc(feedbackData)){
-    alert('Thank you for your feedback!');
-
-	}
-	
-}
 
 // Leaving a review
 
@@ -1062,68 +1024,100 @@ function closeModalWindow() {
 
 
 
+// Rating stars functionality
+let rating = 0;
 
+function rateQuiz(stars) {
+  rating = stars;
 
+  const starElements = document.querySelectorAll('.star');
+  starElements.forEach((star, index) => {
+    if (index < stars) {
+      star.classList.add('active');
+    } else {
+      star.classList.remove('active');
+    }
+  });
 
-function quickFreedback(xxx) {
-reviewTextArea.value = xxx;
+  if (rating === 0) {
+    if (isAnimationEnabled) {
+      ratingStars.classList.add('shake-animation');
+    }
+    alert('Please rate the quiz before leaving a review.');
+    return;
+  }
 
+  let uID = userInfo.firebaseId;
+  if (uID === '' || uID === null || uID === undefined) {
+    uID = ipAddress; /// getIPAddress();
+  }
+
+  const feedbackData = {
+    rating: rating,
+    userID: uID,
+    feedbackType: "stars",
+    date: new Date(),
+    quizCode: quizCode // Replace with the actual quiz code
+  };
+
+  if (sendFeedbackToDBFunc(feedbackData)) {
+    alert('Thank you for your feedback!');
+  }
+}
+
+function quickFeedback(xxx) {
+  reviewTextArea.value = xxx;
 }
 
 // Submit the review
 function submitReview() {
-
   const feedback = reviewTextArea.value;
-  if (feedback) {
-    // Perform the necessary actions to store the feedback in Firestore
-	  
-let uID = userInfo.firebaseId;
-	  if(uID === '' || uID === null || uID === undefined){
-uID = ipAddress; /// getIPAddress();
-	  }
+
+  if (!feedback) {
+    if (isAnimationEnabled) {
+      submitReviewBtn.classList.add('shake-animation');
+    }
+    alert('Please enter your review or feedback.');
+    return;
+  }
+
+  let uID = userInfo.firebaseId;
+  if (uID === '' || uID === null || uID === undefined) {
+    uID = ipAddress; /// getIPAddress();
+  }
+
   const feedbackData = {
-      rating: rating,
-      feedback: feedback,
-      userID: uID,
-      feedbackType: "feedback",
-      date: new Date(),
-      quizCode: quizCode // Replace with the actual quiz code
-    };
-	if(sendFeedBackToDBFunc(feedbackData)){
+    rating: rating,
+    feedback: feedback,
+    userID: uID,
+    feedbackType: "feedback",
+    date: new Date(),
+    quizCode: quizCode // Replace with the actual quiz code
+  };
+
+  if (sendFeedbackToDBFunc(feedbackData)) {
     console.log('Review:', feedback);
     closeModalWindow(); // Close the modal after submitting
     alert('Thank you for your review!');
-	}else{
-	  if (isAnimationEnabled) {
-submitReviewBtn.classList.add('shake-animation');
-
-    alert('Please enter your review or feedback.');
   }
-  
-
-}
-	  
-  
-	  function sendFeedBackToDBFunc(feedbackData){
-		  
- const db = firebase.firestore();
-    // Add the feedback to the 'quizFeedback' collection
-    db.collection('quizFeedback').add(feedbackData)
-      .then(() => {
-        console.log('Feedback added successfully!');
-
-	      return true;
-      })
-      .catch(error => {
-        console.error('Error adding feedback:', error);
-return false;
-      });
-  
-
-
-
 }
 
+function sendFeedbackToDBFunc(feedbackData) {
+  const db = firebase.firestore();
+
+  // Add the feedback to the 'quizFeedback' collection
+  return db
+    .collection('quizFeedback')
+    .add(feedbackData)
+    .then(() => {
+      console.log('Feedback added successfully!');
+      return true;
+    })
+    .catch(error => {
+      console.error('Error adding feedback:', error);
+      return false;
+    });
+}
 
 
 
