@@ -1002,7 +1002,30 @@ function rateQuiz(stars) {
       star.classList.remove('active');
     }
   });
-	submitReview();
+	  if (rating === 0) {
+	  if (isAnimationEnabled) {
+ratingStars.classList.add('shake-animation');
+}
+alert('Please rate the quiz before leaving a review.');
+    return;
+  }
+
+let uID = userInfo.firebaseId;
+	  if(uID === '' || uID === null || uID === undefined){
+uID = ipAddress; /// getIPAddress();
+	  }
+  const feedbackData = {
+      rating: rating,
+      userID: uID,
+      feedbackType: "stars",
+      date: new Date(),
+      quizCode: quizCode // Replace with the actual quiz code
+    };
+	if(sendFeedBackToDBFunc(feedbackData)){
+    alert('Thank you for your feedback!');
+
+	}
+	
 }
 
 // Leaving a review
@@ -1035,6 +1058,11 @@ function closeModalWindow() {
   reviewTextArea.value = ''; // Clear the review text area
 }
 
+
+
+
+
+
 function quickFreedback(xxx) {
 reviewTextArea.value = xxx;
 
@@ -1042,13 +1070,7 @@ reviewTextArea.value = xxx;
 
 // Submit the review
 function submitReview() {
-	  if (rating === 0) {
-	  if (isAnimationEnabled) {
-ratingStars.classList.add('shake-animation');
-}
-alert('Please rate the quiz before leaving a review.');
-    return;
-  }
+
   const feedback = reviewTextArea.value;
   if (feedback) {
     // Perform the necessary actions to store the feedback in Firestore
@@ -1057,9 +1079,7 @@ let uID = userInfo.firebaseId;
 	  if(uID === '' || uID === null || uID === undefined){
 uID = ipAddress; /// getIPAddress();
 	  }
-
-	  
-    const feedbackData = {
+  const feedbackData = {
       rating: rating,
       feedback: feedback,
       userID: uID,
@@ -1067,31 +1087,41 @@ uID = ipAddress; /// getIPAddress();
       date: new Date(),
       quizCode: quizCode // Replace with the actual quiz code
     };
+	if(sendFeedBackToDBFunc(feedbackData)){
+    console.log('Review:', feedback);
+    closeModalWindow(); // Close the modal after submitting
+    alert('Thank you for your review!');
+	}else{
+	  if (isAnimationEnabled) {
+submitReviewBtn.classList.add('shake-animation');
+}
+		
+	}else{
+    alert('Please enter your review or feedback.');
+  }
+  
+
+}
 	  
+  
+	  function sendFeedBackToDBFunc(feedbackData){
+		  
  const db = firebase.firestore();
     // Add the feedback to the 'quizFeedback' collection
     db.collection('quizFeedback').add(feedbackData)
       .then(() => {
         console.log('Feedback added successfully!');
-        alert('Thank you for your review!');
+
+	      return true;
       })
       .catch(error => {
         console.error('Error adding feedback:', error);
-        alert('Failed to add feedback. Please try again.');
+return false;
       });
   
 
 
-	  
-    console.log('Review:', feedback);
-    closeModalWindow(); // Close the modal after submitting
-    alert('Thank you for your review!');
-  } else {
-	  if (isAnimationEnabled) {
-submitReviewBtn.classList.add('shake-animation');
-}
-    alert('Please enter your review or feedback.');
-  }
+
 }
 
 
