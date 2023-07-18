@@ -1323,7 +1323,7 @@ let resultCount = 0
 questionsCompleted.forEach(function(question) {
   var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
 // var questionIndex = question.questionNumber; // Adjust index by subtracting 1
-resultCount++;	//count = count - 1;
+	//count = count - 1;
 	
    console.log(questionIndex+" questionIndex   "+resultCount+" count  "+realQuestionNumber+"   realQuestionNumber");
 
@@ -1394,7 +1394,7 @@ let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining mi
 
         questionDiv.appendChild(reviewQuestionResponse);
     questionDiv.appendChild(reviewQuestionText);
-
+resultCount++;
 if (question.correctness === "correct") {
   const parentElement = document.getElementById("correctList");
   const firstChild = parentElement.firstChild;
