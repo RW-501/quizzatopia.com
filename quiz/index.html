@@ -1428,8 +1428,12 @@ retakeButton.addEventListener("click", function() {
 });
 
 	  function createQuizSession(wrongQuestions){
-
-		  questions = wrongQuestions;
+		  
+          questions.push(...wrongQuestions);
+	questionsOG.push(...wrongQuestions);	
+          shuffleArray(questions);
+		  //questions = wrongQuestions;
+		  
 startQuiz();
 
 	  }
