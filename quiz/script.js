@@ -81,7 +81,8 @@ function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
     // Quiz info exists, retrieve existing quiz info from storage
     quizInfo = JSON.parse(savedQuizInfo);
     quizInfo.quizName = quizName;
-    quizInfo.numberOfQuestions = numberOfQuestions;
+    quizInfo.quizName = quizName;
+    quizInfo.questionsCompleted = questionsCompleted;
     quizInfo.startTime = startTime;
     quizInfo.quizLink = q;  // Add the "q" parameter to the quizInfo object
     localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
