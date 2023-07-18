@@ -1321,7 +1321,7 @@ correctTab.innerHTML = "<h3>Correct Answers</h3><div id='correctList'></div>";
 	document.getElementById("quizReviewName").innerHTML = quizInfo.quizName;
 
 questionsCompleted = loadQuestionsCompleted(quizCode);
-let resultCount = 0
+var resultCount = 0
 questionsCompleted.forEach(function(question) {
   var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
 // var questionIndex = question.questionNumber; // Adjust index by subtracting 1
@@ -1349,7 +1349,7 @@ console.log("?????? count:", resultCount);
 
     questionDiv.addEventListener("click", function() {
       // Handle click event for each question
-	    openQuestionPopup(questionIndex, resultCount);
+	    openQuestionPopup(questionIndex , resultCount);
 	    
 console.log("send ?????? count:", resultCount);
     });
