@@ -1296,9 +1296,9 @@ function sortReview(sortBy) {
 }
 function checkVarForValueFunc(questionIndex) {
   if (questionIndex < 0 || questionIndex === '' || questionIndex === null || questionIndex === undefined) {
-    return true; // Indicates that the condition is true
+    return false; // Indicates that the condition is true
   } else {
-    return false; // Indicates that the condition is false
+    return true; // Indicates that the condition is false
   }
 }
 
