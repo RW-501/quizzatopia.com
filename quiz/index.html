@@ -1374,7 +1374,7 @@ let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining mi
 	 
     let reviewQuestionNumber = document.createElement("span");
     reviewQuestionNumber.classList.add("question-number");
-    reviewQuestionNumber.innerHTML = "<b>Question:</b> " + (questionIndex ) + "  <b>Response Time:</b> "+responseTimeText;
+    reviewQuestionNumber.innerHTML = "<b>Question:</b> " + (questionIndex + 1) + "  <b>Response Time:</b> "+responseTimeText;
   //  questionNumber.textContent = "Question " + (questionIndex) + ": ";
 	  
     let reviewQuestionResponse = document.createElement("br");
