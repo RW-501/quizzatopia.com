@@ -1,0 +1,233 @@
+{
+  "quizName": "Quiz on Oregon",
+  "quizCode": "OR2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Oregon!",
+  "quizTags": "Oregon, Geography, States, USA",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the capital city of Oregon?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Portland",
+        "Eugene",
+        "Salem",
+        "Bend"
+      ],
+      "answer": "Salem",
+      "explanation": "The capital city of Oregon is Salem, known for its historic downtown, the State Capitol building, and the beautiful Willamette River.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Crater Lake, located in Oregon, is the deepest lake in the United States.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Crater Lake, located in Oregon's Crater Lake National Park, is the deepest lake in the United States, known for its stunning blue color and surrounding volcanic landscape.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the nickname of Oregon?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Sunshine State",
+        "The Beaver State",
+        "The Garden State",
+        "The Silver State"
+      ],
+      "answer": "The Beaver State",
+      "explanation": "Oregon is often referred to as 'The Beaver State,' a nickname that honors the importance of beavers in the state's history and ecosystem.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous national park, located in Oregon, is known for its volcanic landscapes, diverse ecosystems, and the iconic Mount Hood?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yellowstone National Park",
+        "Yosemite National Park",
+        "Great Smoky Mountains National Park",
+        "Crater Lake National Park"
+      ],
+      "answer": "Crater Lake National Park",
+      "explanation": "Crater Lake National Park, located in Oregon, is known for its volcanic landscapes, including the deep blue Crater Lake, diverse ecosystems, and the iconic Mount Hood.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which famous trail, spanning from Missouri to Oregon, was used by pioneers during the 19th century westward expansion?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Oregon Trail",
+        "Appalachian Trail",
+        "Pacific Crest Trail",
+        "Santa Fe Trail"
+      ],
+      "answer": "Oregon Trail",
+      "explanation": "The Oregon Trail is a famous trail that spanned from Missouri to Oregon during the 19th century. It was used by pioneers during the westward expansion of the United States.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous waterfall, located in Oregon's Columbia River Gorge, is known for its scenic beauty and is often referred to as the 'King of Waterfalls'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Multnomah Falls",
+        "Niagara Falls",
+        "Yosemite Falls",
+        "Angel Falls"
+      ],
+      "answer": "Multnomah Falls",
+      "explanation": "Multnomah Falls, located in Oregon's Columbia River Gorge, is a famous waterfall known for its scenic beauty and is often referred to as the 'King of Waterfalls.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state bird of Oregon?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Northern Cardinal",
+        "Western Meadowlark",
+        "American Robin",
+        "California Quail"
+      ],
+      "answer": "Western Meadowlark",
+      "explanation": "The official state bird of Oregon is the Western Meadowlark, a colorful bird known for its melodious song.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous city in Oregon is known for its vibrant arts scene, outdoor activities, and eco-friendly culture?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Portland",
+        "Eugene",
+        "Salem",
+        "Bend"
+      ],
+      "answer": "Portland",
+      "explanation": "Portland, a famous city in Oregon, is known for its vibrant arts scene, outdoor activities, eco-friendly culture, and diverse culinary offerings.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous university, located in Eugene, Oregon, is known for its successful track and field program and is referred to as 'Track Town, USA'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "University of Oregon",
+        "Oregon State University",
+        "Portland State University",
+        "Reed College"
+      ],
+      "answer": "University of Oregon",
+      "explanation": "The University of Oregon, located in Eugene, Oregon, is known for its successful track and field program, historic Hayward Field, and its nickname 'Track Town, USA.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which famous state park, located along the Oregon coast, is known for its beautiful beaches, sand dunes, and unique coastal ecosystem?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yellowstone National Park",
+        "Crater Lake National Park",
+        "Columbia River Gorge",
+        "Cape Kiwanda State Natural Area"
+      ],
+      "answer": "Cape Kiwanda State Natural Area",
+      "explanation": "Cape Kiwanda State Natural Area, located along the Oregon coast, is a famous state park known for its beautiful beaches, sand dunes, and unique coastal ecosystem.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous lake, located in southern Oregon, is the deepest lake in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lake Superior",
+        "Lake Tahoe",
+        "Crater Lake",
+        "Lake Michigan"
+      ],
+      "answer": "Crater Lake",
+      "explanation": "Crater Lake, located in southern Oregon's Crater Lake National Park, is the deepest lake in the United States. It was formed by the collapse of a volcanic crater.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous brewery, based in Oregon, is known for its craft beers and is one of the pioneers of the craft beer movement in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Budweiser",
+        "Coors",
+        "Samuel Adams",
+        "Deschutes Brewery"
+      ],
+      "answer": "Deschutes Brewery",
+      "explanation": "Deschutes Brewery, based in Oregon, is known for its craft beers and is one of the pioneers of the craft beer movement in the United States.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which famous national scenic area, located in Oregon's Columbia River Gorge, is known for its breathtaking views, hiking trails, and waterfalls?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yosemite National Park",
+        "Grand Canyon National Park",
+        "Columbia River Gorge National Scenic Area",
+        "Zion National Park"
+      ],
+      "answer": "Columbia River Gorge National Scenic Area",
+      "explanation": "Columbia River Gorge National Scenic Area, located in Oregon's Columbia River Gorge, is known for its breathtaking views, hiking trails, and numerous waterfalls, including Multnomah Falls.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous ski resort, located in Oregon's Cascade Range, is known for its world-class skiing and snowboarding opportunities?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Aspen Snowmass",
+        "Vail",
+        "Whistler Blackcomb",
+        "Mount Bachelor"
+      ],
+      "answer": "Mount Bachelor",
+      "explanation": "Mount Bachelor, located in Oregon's Cascade Range, is a famous ski resort known for its world-class skiing and snowboarding opportunities.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous music festival, held annually in Oregon, is known for its diverse lineup of artists and its scenic location at The Gorge Amphitheatre?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Coachella",
+        "Bonnaroo",
+        "Lollapalooza",
+        "Sasquatch! Music Festival"
+      ],
+      "answer": "Sasquatch! Music Festival",
+      "explanation": "Sasquatch! Music Festival, held annually in Oregon at The Gorge Amphitheatre, is known for its diverse lineup of artists and its scenic location overlooking the Columbia River Gorge.",
+      "difficulty": "Medium"
+    }
+  ]
+}
