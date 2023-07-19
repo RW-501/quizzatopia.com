@@ -1,0 +1,228 @@
+{
+  "quizName": "Quiz on Alaska",
+  "quizCode": "AK2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Alaska!",
+  "quizTags": "Alaska, Geography, States, USA",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Alaska is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Last Frontier",
+        "Treasure State",
+        "Land of Enchantment",
+        "Sunshine State"
+      ],
+      "answer": "Last Frontier",
+      "explanation": "Alaska is known as the Last Frontier, reflecting its vast and untamed wilderness.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Alaska is the largest state in the United States by land area.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Alaska is the largest state in the United States, covering a vast land area.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of Alaska?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Anchorage",
+        "Fairbanks",
+        "Juneau",
+        "Sitka"
+      ],
+      "answer": "Juneau",
+      "explanation": "The capital city of Alaska is Juneau.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which national park in Alaska is the largest national park in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Denali National Park",
+        "Wrangell-St. Elias National Park",
+        "Glacier Bay National Park",
+        "Kenai Fjords National Park"
+      ],
+      "answer": "Wrangell-St. Elias National Park",
+      "explanation": "Wrangell-St. Elias National Park is the largest national park in the United States, covering a massive area in Alaska.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Alaska is bordered by which ocean?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Pacific Ocean",
+        "Arctic Ocean"
+      ],
+      "answer": "Arctic Ocean",
+      "explanation": "Alaska is bordered by the Arctic Ocean to the north.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the tallest mountain in North America, located in Alaska?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mount Rainier",
+        "Mount Whitney",
+        "Mount Elbert",
+        "Denali (Mount McKinley)"
+      ],
+      "answer": "Denali (Mount McKinley)",
+      "explanation": "Denali, also known as Mount McKinley, is the tallest mountain in North America and is situated in Alaska.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which of the following is a famous annual event in Alaska involving a long-distance sled dog race?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Iditarod Trail Sled Dog Race",
+        "Yukon Quest",
+        "Great Alaska Shootout",
+        "Iron Dog"
+      ],
+      "answer": "Iditarod Trail Sled Dog Race",
+      "explanation": "The Iditarod Trail Sled Dog Race is a famous long-distance sled dog race that takes place annually in Alaska.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the state bird of Alaska?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bald Eagle",
+        "American Robin",
+        "Common Loon",
+        "Puffin"
+      ],
+      "answer": "Willow Ptarmigan",
+      "explanation": "The Willow Ptarmigan is the state bird of Alaska, known for its white winter plumage.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Alaska is home to the largest U.S. Forest Service unit. What is it called?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tongass National Forest",
+        "Chugach National Forest",
+        "Coconino National Forest",
+        "Olympic National Forest"
+      ],
+      "answer": "Tongass National Forest",
+      "explanation": "The Tongass National Forest in Alaska is the largest U.S. Forest Service unit.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which natural light display can be seen in the night skies of Alaska's polar regions?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Aurora Borealis (Northern Lights)",
+        "Bioluminescence",
+        "St. Elmo's Fire",
+        "Harvest Moon"
+      ],
+      "answer": "Aurora Borealis (Northern Lights)",
+      "explanation": "The Aurora Borealis, also known as the Northern Lights, is a beautiful natural light display visible in Alaska's polar regions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "True or False: Alaska has no counties; it is divided into boroughs and census areas.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Alaska does not have counties like other states; instead, it is divided into boroughs and census areas for administrative purposes.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous ice formation in Alaska is often referred to as the 'blue ice'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Matanuska Glacier",
+        "Mendenhall Glacier",
+        "Exit Glacier",
+        "Portage Glacier"
+      ],
+      "answer": "Mendenhall Glacier",
+      "explanation": "Mendenhall Glacier is often referred to as the 'blue ice' due to its stunning blue appearance.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the Alaska state motto?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "North to the Future",
+      "explanation": "The Alaska state motto is 'North to the Future.'",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which animal is commonly associated with Alaska and is often depicted on souvenirs and artwork?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Buffalo",
+        "Moose",
+        "Kangaroo",
+        "Elephant"
+      ],
+      "answer": "Moose",
+      "explanation": "The moose is commonly associated with Alaska and is often depicted on souvenirs and artwork representing the state's wildlife.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the Alaska state flower?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Forget-Me-Not",
+        "Lupine",
+        "Fireweed",
+        "Indian Paintbrush"
+      ],
+      "answer": "Forget-Me-Not",
+      "explanation": "The Forget-Me-Not is the state flower of Alaska.",
+      "difficulty": "Medium"
+    }
+  ]
+}
