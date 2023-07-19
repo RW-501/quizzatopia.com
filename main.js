@@ -45,6 +45,42 @@ width: 100% !important;
     100% {
       transform: rotate(360deg);
     }
+
+.btnFX {
+  /* Default styles */
+
+  transition: background-color 0.3s ease;
+
+  /* Hover effect */
+  &:hover {
+    background-color: #ff0000;
+  }
+
+  /* Click effect */
+  &:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Custom animation */
+  animation: fade-in 0.5s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+    
   }
 `;
 
