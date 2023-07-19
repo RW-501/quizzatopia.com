@@ -1,0 +1,159 @@
+{
+  "quizName": "Inventions Quiz",
+  "quizCode": "INVENTIONS123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Science",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who is credited with inventing the telephone?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Alexander Graham Bell",
+        "Thomas Edison",
+        "Nikola Tesla",
+        "Albert Einstein"
+      ],
+      "answer": "Alexander Graham Bell",
+      "explanation": "Alexander Graham Bell is credited with inventing the telephone, revolutionizing communication.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Who is credited with inventing the light bulb?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Thomas Edison",
+        "Alexander Graham Bell",
+        "Nikola Tesla",
+        "Albert Einstein"
+      ],
+      "answer": "Thomas Edison",
+      "explanation": "Thomas Edison is credited with inventing the practical incandescent light bulb.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Who is credited with inventing the automobile?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Karl Benz",
+        "Henry Ford",
+        "Wilbur Wright",
+        "Orville Wright"
+      ],
+      "answer": "Karl Benz",
+      "explanation": "Karl Benz is credited with inventing the automobile, introducing the Benz Patent-Motorwagen in 1886.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Who is credited with inventing the computer?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Charles Babbage",
+        "Steve Jobs",
+        "Bill Gates",
+        "Mark Zuckerberg"
+      ],
+      "answer": "Charles Babbage",
+      "explanation": "Charles Babbage is credited with conceptualizing and designing the Analytical Engine, a precursor to modern computers.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Who is credited with inventing the World Wide Web (WWW)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tim Berners-Lee",
+        "Bill Gates",
+        "Steve Jobs",
+        "Mark Zuckerberg"
+      ],
+      "answer": "Tim Berners-Lee",
+      "explanation": "Tim Berners-Lee is credited with inventing the World Wide Web, a global system of interconnected documents and resources.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Who is credited with inventing the printing press?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Johannes Gutenberg",
+        "Leonardo da Vinci",
+        "Isaac Newton",
+        "Galileo Galilei"
+      ],
+      "answer": "Johannes Gutenberg",
+      "explanation": "Johannes Gutenberg is credited with inventing the movable type printing press, revolutionizing the spread of information.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Who is credited with inventing the airplane?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Wilbur Wright and Orville Wright",
+        "Thomas Edison",
+        "Nikola Tesla",
+        "Albert Einstein"
+      ],
+      "answer": "Wilbur Wright and Orville Wright",
+      "explanation": "Wilbur Wright and Orville Wright are credited with inventing and developing the first successful airplane.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Who is credited with inventing the steam engine?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "James Watt",
+        "Nikola Tesla",
+        "Thomas Edison",
+        "Galileo Galilei"
+      ],
+      "answer": "James Watt",
+      "explanation": "James Watt is credited with inventing and improving the steam engine, a key development in the Industrial Revolution.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Who is credited with inventing the vaccination?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Edward Jenner",
+        "Louis Pasteur",
+        "Marie Curie",
+        "Robert Koch"
+      ],
+      "answer": "Edward Jenner",
+      "explanation": "Edward Jenner is credited with inventing the smallpox vaccination, pioneering the concept of immunization.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Who is credited with inventing the telescope?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hans Lippershey",
+        "Galileo Galilei",
+        "Isaac Newton",
+        "Johannes Kepler"
+      ],
+      "answer": "Hans Lippershey",
+      "explanation": "Hans Lippershey is often credited with inventing the telescope, although the exact origin is debated.",
+      "difficulty": "Medium"
+    }
+  ]
+}
