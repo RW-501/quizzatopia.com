@@ -1,0 +1,226 @@
+{
+  "quizName": "Quiz on California",
+  "quizCode": "CA2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of California!",
+  "quizTags": "California, Geography, States, USA",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "California is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Golden",
+        "Sunshine",
+        "Garden",
+        "Bear"
+      ],
+      "answer": "Golden",
+      "explanation": "California is known as the Golden State, a nickname inspired by the California Gold Rush and the state's golden poppy flowers.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: California is the largest state in the United States by population.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. California is the most populous state in the United States.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of California?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Los Angeles",
+        "San Francisco",
+        "Sacramento",
+        "San Diego"
+      ],
+      "answer": "Sacramento",
+      "explanation": "The capital city of California is Sacramento.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which national park in California features a famous valley known for its granite cliffs and waterfalls?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yosemite National Park",
+        "Yellowstone National Park",
+        "Grand Canyon National Park",
+        "Glacier National Park"
+      ],
+      "answer": "Yosemite National Park",
+      "explanation": "Yosemite National Park in California features a famous valley known for its granite cliffs and waterfalls.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of the iconic bridge in San Francisco, California, that is often featured in films and photographs?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Brooklyn Bridge",
+        "Golden Gate Bridge",
+        "London Bridge",
+        "Sydney Harbour Bridge"
+      ],
+      "answer": "Golden Gate Bridge",
+      "explanation": "The iconic bridge in San Francisco, California, is known as the Golden Gate Bridge.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "California is bordered by which ocean?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Pacific Ocean",
+        "Arctic Ocean"
+      ],
+      "answer": "Pacific Ocean",
+      "explanation": "California is bordered by the Pacific Ocean to the west.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which famous desert is located in Southern California and is known for its unique Joshua trees?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sahara Desert",
+        "Mojave Desert",
+        "Sonoran Desert",
+        "Great Basin Desert"
+      ],
+      "answer": "Mojave Desert",
+      "explanation": "The Mojave Desert, located in Southern California, is known for its unique Joshua trees and distinctive landscapes.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the nickname of the California State University's sports teams?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bears",
+        "Trojans",
+        "Bruins",
+        "Golden Bears"
+      ],
+      "answer": "Golden Bears",
+      "explanation": "The sports teams of California State University are nicknamed the Golden Bears.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous tech hub in California is home to many technology companies and innovation centers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Silicon Valley",
+        "Hollywood",
+        "Napa Valley",
+        "Beverly Hills"
+      ],
+      "answer": "Silicon Valley",
+      "explanation": "Silicon Valley in California is renowned for its concentration of technology companies and innovation centers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: Death Valley, located in California, is the hottest and driest national park in the United States.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. Death Valley in California holds the record for the highest temperature ever recorded on Earth.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the official state flower of California?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Rose",
+        "Lily",
+        "Poppy",
+        "Tulip"
+      ],
+      "answer": "California Poppy",
+      "explanation": "The official state flower of California is the California Poppy.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous coastal highway in California offers breathtaking views of the Pacific Ocean and is a popular road trip destination?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Route 66",
+        "Pacific Coast Highway",
+        "Great Ocean Road",
+        "Trans-Canada Highway"
+      ],
+      "answer": "Pacific Coast Highway",
+      "explanation": "The Pacific Coast Highway in California offers breathtaking views of the Pacific Ocean and is a popular road trip destination.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the largest island located off the coast of Southern California?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Catalina Island",
+        "Maui",
+        "Kauai",
+        "Oahu"
+      ],
+      "answer": "Catalina Island",
+      "explanation": "Catalina Island is the largest island located off the coast of Southern California and is a popular tourist destination.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "California is home to several famous national parks. Which one is known for its towering trees and is often called 'The Land of Giants'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sequoia National Park",
+        "Yosemite National Park",
+        "Kings Canyon National Park",
+        "Redwood National Park"
+      ],
+      "answer": "Sequoia National Park",
+      "explanation": "Sequoia National Park in California is known for its towering sequoia trees and is often referred to as 'The Land of Giants.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the famous district in Los Angeles, California, known for its entertainment industry and Hollywood Walk of Fame?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Chinatown",
+        "Little Italy",
+        "Beverly Hills",
+        "Hollywood"
+      ],
+      "answer": "Hollywood",
+      "explanation": "Hollywood in Los Angeles, California, is famous for its entertainment industry and Hollywood Walk of Fame.",
+      "difficulty": "Medium"
+    }
+  ]
+}
