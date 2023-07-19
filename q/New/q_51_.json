@@ -1,0 +1,230 @@
+{
+  "quizName": "Quiz on Indiana",
+  "quizCode": "IN2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Indiana!",
+  "quizTags": "Indiana, Geography, States, USA",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Indiana is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Corn",
+        "Hoosier",
+        "Amber",
+        "Crossroads"
+      ],
+      "answer": "Hoosier",
+      "explanation": "Indiana is known as the Hoosier State, though the origin of the term 'Hoosier' remains uncertain and has various historical explanations.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Indiana is home to the largest freshwater lake in the United States, Lake Superior.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "False",
+      "explanation": "False. Lake Superior is located in the state of Minnesota. Indiana does not border any of the Great Lakes.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of Indiana?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Indianapolis",
+        "Fort Wayne",
+        "Evansville",
+        "South Bend"
+      ],
+      "answer": "Indianapolis",
+      "explanation": "The capital city of Indiana is Indianapolis, which is also the largest city in the state.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous river forms the southern border of Indiana with the state of Kentucky?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mississippi River",
+        "Ohio River",
+        "Missouri River",
+        "Tennessee River"
+      ],
+      "answer": "Ohio River",
+      "explanation": "The Ohio River forms the southern border of Indiana with the state of Kentucky.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of Indiana?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Corn State",
+        "The Hoosier State",
+        "The Crossroads of America",
+        "The Amber Waves State"
+      ],
+      "answer": "The Hoosier State",
+      "explanation": "Indiana is often referred to as The Hoosier State, though the origin and meaning of the term 'Hoosier' have several theories.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous speedway, located in Indianapolis, hosts the annual Indy 500 race, one of the most prestigious events in motorsports?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Daytona International Speedway",
+        "Indianapolis Motor Speedway",
+        "Monaco Grand Prix",
+        "Nürburgring"
+      ],
+      "answer": "Indianapolis Motor Speedway",
+      "explanation": "The Indianapolis Motor Speedway, located in Indianapolis, hosts the annual Indy 500 race, which is considered one of the most prestigious events in motorsports.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state bird of Indiana?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Northern Cardinal",
+        "American Robin",
+        "Eastern Bluebird",
+        "Indigo Bunting"
+      ],
+      "answer": "Northern Cardinal",
+      "explanation": "The official state bird of Indiana is the Northern Cardinal, known for its vibrant red color and melodic song.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous track and field competition, often considered the world's largest and most prestigious, is held annually in Indianapolis?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Olympic Games",
+        "IAAF World Championships",
+        "NCAA Track and Field Championships",
+        "USATF Outdoor Championships"
+      ],
+      "answer": "USATF Outdoor Championships",
+      "explanation": "The USATF Outdoor Championships, organized by USA Track & Field, is held annually in Indianapolis and is one of the world's largest and most prestigious track and field competitions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous national park, located in southern Indiana, features a unique karst landscape with caves, sinkholes, and underground rivers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yellowstone National Park",
+        "Yosemite National Park",
+        "Mammoth Cave National Park",
+        "Great Smoky Mountains National Park"
+      ],
+      "answer": "Mammoth Cave National Park",
+      "explanation": "Mammoth Cave National Park, located in southern Indiana (though primarily in Kentucky), features a unique karst landscape with an extensive cave system, sinkholes, and underground rivers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: The Indianapolis 500 race is a Formula One event.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "False",
+      "explanation": "False. The Indianapolis 500 race is not a Formula One event. It is an IndyCar Series event, which features open-wheel, single-seat race cars.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous former U.S. president, known for his leadership during World War II, was born in Denison, Texas, but later lived in Indiana?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Franklin D. Roosevelt",
+        "Dwight D. Eisenhower",
+        "Harry S. Truman",
+        "John F. Kennedy"
+      ],
+      "answer": "Dwight D. Eisenhower",
+      "explanation": "Dwight D. Eisenhower, the 34th President of the United States, was born in Denison, Texas, but later lived in Indiana during his youth.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous amusement park, located in Santa Claus, Indiana, is themed around the Christmas holiday and offers various rides and attractions?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Walt Disney World",
+        "Six Flags Great Adventure",
+        "Universal Studios Hollywood",
+        "Holiday World & Splashin' Safari"
+      ],
+      "answer": "Holiday World & Splashin' Safari",
+      "explanation": "Holiday World & Splashin' Safari, located in Santa Claus, Indiana, is a famous amusement park themed around the Christmas holiday and offers various rides and attractions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the famous cookie, originating from Indiana, that is known for its soft and chewy texture?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Chocolate Chip Cookie",
+        "Oatmeal Raisin Cookie",
+        "Sugar Cookie",
+        "Snickerdoodle Cookie"
+      ],
+      "answer": "Snickerdoodle Cookie",
+      "explanation": "The Snickerdoodle cookie, originating from Indiana, is known for its soft and chewy texture and is rolled in cinnamon sugar before baking.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous university, located in Bloomington, Indiana, is renowned for its music school and basketball program?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "University of Michigan",
+        "University of Wisconsin",
+        "Indiana University",
+        "Purdue University"
+      ],
+      "answer": "Indiana University",
+      "explanation": "Indiana University, located in Bloomington, Indiana, is renowned for its Jacobs School of Music and successful men's basketball program.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous event, held annually in Indianapolis, is one of the largest and most prestigious motorsports events in the world?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Monaco Grand Prix",
+        "Daytona 500",
+        "Indy 500",
+        "24 Hours of Le Mans"
+      ],
+      "answer": "Indy 500",
+      "explanation": "The Indy 500, officially known as the Indianapolis 500, is held annually in Indianapolis and is one of the largest and most prestigious motorsports events in the world, attracting top drivers and teams.",
+      "difficulty": "Medium"
+    }
+  ]
+}
