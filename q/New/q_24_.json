@@ -1,0 +1,159 @@
+{
+  "quizName": "Famous Quotes Quiz",
+  "quizCode": "QUOTES123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Quotes",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who said, 'The only way to do great work is to love what you do'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Steve Jobs",
+        "Bill Gates",
+        "Elon Musk",
+        "Mark Zuckerberg"
+      ],
+      "answer": "Steve Jobs",
+      "explanation": "Steve Jobs, co-founder of Apple Inc., said, 'The only way to do great work is to love what you do'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Who said, 'In three words I can sum up everything I've learned about life: it goes on'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Robert Frost",
+        "Maya Angelou",
+        "Mark Twain",
+        "Albert Einstein"
+      ],
+      "answer": "Robert Frost",
+      "explanation": "Robert Frost, an American poet, said, 'In three words I can sum up everything I've learned about life: it goes on'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Who said, 'The only thing we have to fear is fear itself'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Franklin D. Roosevelt",
+        "John F. Kennedy",
+        "Winston Churchill",
+        "Abraham Lincoln"
+      ],
+      "answer": "Franklin D. Roosevelt",
+      "explanation": "Franklin D. Roosevelt, the 32nd President of the United States, said, 'The only thing we have to fear is fear itself'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Who said, 'Be the change that you wish to see in the world'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mahatma Gandhi",
+        "Nelson Mandela",
+        "Martin Luther King Jr.",
+        "Malala Yousafzai"
+      ],
+      "answer": "Mahatma Gandhi",
+      "explanation": "Mahatma Gandhi, the leader of India's independence movement, said, 'Be the change that you wish to see in the world'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Who said, 'Life is what happens when you're busy making other plans'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "John Lennon",
+        "Bob Marley",
+        "Elvis Presley",
+        "Michael Jackson"
+      ],
+      "answer": "John Lennon",
+      "explanation": "John Lennon, a member of the Beatles, said, 'Life is what happens when you're busy making other plans'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Who said, 'Success is not final, failure is not fatal: It is the courage to continue that counts'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Winston Churchill",
+        "Theodore Roosevelt",
+        "Thomas Edison",
+        "Steve Jobs"
+      ],
+      "answer": "Winston Churchill",
+      "explanation": "Winston Churchill, the former British Prime Minister, said, 'Success is not final, failure is not fatal: It is the courage to continue that counts'.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Who said, 'Imagination is more important than knowledge'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Albert Einstein",
+        "Isaac Newton",
+        "Stephen Hawking",
+        "Nikola Tesla"
+      ],
+      "answer": "Albert Einstein",
+      "explanation": "Albert Einstein, the renowned physicist, said, 'Imagination is more important than knowledge'.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Who said, 'Darkness cannot drive out darkness; only light can do that'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Martin Luther King Jr.",
+        "Nelson Mandela",
+        "Malcolm X",
+        "Mahatma Gandhi"
+      ],
+      "answer": "Martin Luther King Jr.",
+      "explanation": "Martin Luther King Jr., a prominent civil rights leader, said, 'Darkness cannot drive out darkness; only light can do that'.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Who said, 'The greatest glory in living lies not in never falling, but in rising every time we fall'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Nelson Mandela",
+        "Winston Churchill",
+        "Abraham Lincoln",
+        "Rosa Parks"
+      ],
+      "answer": "Nelson Mandela",
+      "explanation": "Nelson Mandela, the former President of South Africa, said, 'The greatest glory in living lies not in never falling, but in rising every time we fall'.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Who said, 'It does not matter how slowly you go as long as you do not stop'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Confucius",
+        "Socrates",
+        "Aristotle",
+        "Plato"
+      ],
+      "answer": "Confucius",
+      "explanation": "Confucius, a Chinese philosopher, said, 'It does not matter how slowly you go as long as you do not stop'.",
+      "difficulty": "Medium"
+    }
+  ]
+}
