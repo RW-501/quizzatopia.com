@@ -1,0 +1,231 @@
+{
+  "quizName": "Quiz on Florida",
+  "quizCode": "FL2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Florida!",
+  "quizTags": "Florida, Geography, States, USA",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Florida is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Sunshine",
+        "Everglade",
+        "Citrus",
+        "Vacation"
+      ],
+      "answer": "Sunshine",
+      "explanation": "Florida is known as the Sunshine State due to its generally sunny and warm climate.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Florida is the southernmost state in the contiguous United States.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Florida is the southernmost state in the contiguous U.S., with Key West being the southernmost point.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of Florida?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Miami",
+        "Tallahassee",
+        "Orlando",
+        "Jacksonville"
+      ],
+      "answer": "Tallahassee",
+      "explanation": "The capital city of Florida is Tallahassee.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which ocean borders Florida to the east?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pacific Ocean",
+        "Indian Ocean",
+        "Atlantic Ocean",
+        "Arctic Ocean"
+      ],
+      "answer": "Atlantic Ocean",
+      "explanation": "The Atlantic Ocean borders Florida to the east.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of Florida?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Sunshine State",
+        "The Everglade State",
+        "The Orange State",
+        "The Vacation State"
+      ],
+      "answer": "The Sunshine State",
+      "explanation": "Florida is often referred to as The Sunshine State due to its sunny and warm weather.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous peninsula is located in southern Florida and is known for its unique ecosystem?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Monterey Peninsula",
+        "Yucatán Peninsula",
+        "Delmarva Peninsula",
+        "Florida Peninsula"
+      ],
+      "answer": "Florida Peninsula",
+      "explanation": "The Florida Peninsula, also known as the Florida mainland, is located in southern Florida and is known for its unique ecosystem, including the Everglades.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state bird of Florida?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Northern Mockingbird",
+        "American Bald Eagle",
+        "American Flamingo",
+        "Brown Pelican"
+      ],
+      "answer": "Northern Mockingbird",
+      "explanation": "The official state bird of Florida is the Northern Mockingbird.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous space launch facility, located on Merritt Island, Florida, is used by NASA for human spaceflight?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kennedy Space Center",
+        "Cape Canaveral Air Force Station",
+        "Johnson Space Center",
+        "Vandenberg Space Force Base"
+      ],
+      "answer": "Kennedy Space Center",
+      "explanation": "The Kennedy Space Center, located on Merritt Island, Florida, is used by NASA for human spaceflight and is one of the most famous space launch facilities in the world.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous inventor and entrepreneur had a winter estate called 'The Edison and Ford Winter Estates' in Fort Myers, Florida?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Thomas Edison",
+        "Nikola Tesla",
+        "Alexander Graham Bell",
+        "George Washington Carver"
+      ],
+      "answer": "Thomas Edison",
+      "explanation": "Thomas Edison, the renowned inventor, and entrepreneur had a winter estate called 'The Edison and Ford Winter Estates' in Fort Myers, Florida.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: Florida has the longest coastline of all the contiguous states in the U.S.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Florida has the longest coastline among the contiguous states, with a shoreline of approximately 1,350 miles.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous national park in Florida is the third-largest national park in the contiguous United States and is known for its unique wetland ecosystem?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Grand Canyon National Park",
+        "Everglades National Park",
+        "Yellowstone National Park",
+        "Yosemite National Park"
+      ],
+      "answer": "Everglades National Park",
+      "explanation": "Everglades National Park in Florida is the third-largest national park in the contiguous U.S. and is known for its unique wetland ecosystem.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which major U.S. highway that runs from Florida to Maine is popularly known as the 'Main Street of America'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Route 66",
+        "Interstate 40",
+        "Interstate 95",
+        "Interstate 80"
+      ],
+      "answer": "Interstate 95",
+      "explanation": "Interstate 95, which runs from Florida to Maine, is often referred to as the 'Main Street of America.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Florida is divided into how many congressional districts?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "10",
+        "15",
+        "20",
+        "27"
+      ],
+      "answer": "27",
+      "explanation": "Florida is divided into 27 congressional districts, making it one of the most populous states in terms of representation in the U.S. House of Representatives.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous city in Florida is known as the 'Theme Park Capital of the World' and is home to numerous world-famous amusement parks?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Orlando",
+        "Miami",
+        "Tampa",
+        "Jacksonville"
+      ],
+      "answer": "Orlando",
+      "explanation": "Orlando, Florida, is known as the 'Theme Park Capital of the World' and is home to numerous world-famous amusement parks, including Walt Disney World and Universal Orlando Resort.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the state marine mammal of Florida?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "West Indian Manatee",
+        "Bottlenose Dolphin",
+        "Killer Whale",
+        "Harbor Seal"
+      ],
+      "answer": "West Indian Manatee",
+      "explanation": "The West Indian Manatee is the state marine mammal of Florida.",
+      "difficulty": "Medium"
+    }
+  ]
+}
