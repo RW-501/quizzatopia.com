@@ -1,0 +1,234 @@
+{
+  "quizName": "Quiz on Texas",
+  "quizCode": "TX2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Texas!",
+  "quizTags": "Texas, Geography, States, USA",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the capital city of Texas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Austin",
+        "Houston",
+        "Dallas",
+        "San Antonio"
+      ],
+      "answer": "Austin",
+      "explanation": "The capital city of Texas is Austin, known for its vibrant music scene, technology industry, and being the home of the University of Texas.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: The Alamo, a famous historic site, is located in Texas.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. The Alamo, a historic mission and fortress, is located in San Antonio, Texas. It is a significant symbol of Texas independence.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the nickname of Texas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Lone Star State",
+        "The Sunshine State",
+        "The Empire State",
+        "The Volunteer State"
+      ],
+      "answer": "The Lone Star State",
+      "explanation": "Texas is often referred to as 'The Lone Star State' due to its historical association with the symbol of a single star, representing independence.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous river forms part of the southern border of Texas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mississippi River",
+        "Rio Grande",
+        "Colorado River",
+        "Brazos River"
+      ],
+      "answer": "Rio Grande",
+      "explanation": "The Rio Grande forms part of the southern border of Texas, separating it from Mexico.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which famous Texan landmark, located in Houston, is known as the 'Home of Space Exploration' and is the visitor center for NASA's Johnson Space Center?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Alamo",
+        "Texas State Capitol",
+        "Space Center Houston",
+        "San Antonio River Walk"
+      ],
+      "answer": "Space Center Houston",
+      "explanation": "Space Center Houston, located in Houston, Texas, is known as the 'Home of Space Exploration.' It is the visitor center for NASA's Johnson Space Center and offers exhibits and tours related to space exploration.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the official state bird of Texas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Northern Mockingbird",
+        "Blue Jay",
+        "Bald Eagle",
+        "Cardinal"
+      ],
+      "answer": "Northern Mockingbird",
+      "explanation": "The official state bird of Texas is the Northern Mockingbird, known for its remarkable ability to mimic the songs of other birds.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which famous national park, located in West Texas, is known for its striking desert landscapes, rugged mountains, and iconic geological formations like the 'Chisos Mountains' and 'Santa Elena Canyon'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yellowstone National Park",
+        "Grand Canyon National Park",
+        "Big Bend National Park",
+        "Zion National Park"
+      ],
+      "answer": "Big Bend National Park",
+      "explanation": "Big Bend National Park, located in West Texas along the border with Mexico, is known for its striking desert landscapes, rugged mountains, and iconic geological formations like the 'Chisos Mountains' and 'Santa Elena Canyon.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous Texan city is known for its vibrant arts scene, world-class museums like the Museum of Fine Arts, and the annual Houston Livestock Show and Rodeo?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Austin",
+        "Dallas",
+        "Houston",
+        "San Antonio"
+      ],
+      "answer": "Houston",
+      "explanation": "Houston, the largest city in Texas, is known for its vibrant arts scene, world-class museums like the Museum of Fine Arts, and hosting the annual Houston Livestock Show and Rodeo.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous American author and journalist, known for his novels 'The Old Man and the Sea' and 'For Whom the Bell Tolls,' was born in Oak Park, Illinois, but had a strong connection to Texas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mark Twain",
+        "Ernest Hemingway",
+        "F. Scott Fitzgerald",
+        "Jack London"
+      ],
+      "answer": "Ernest Hemingway",
+      "explanation": "Ernest Hemingway, a famous American author and journalist, was born in Oak Park, Illinois. While he did not have a strong connection to Texas, his works are widely celebrated and studied.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which famous Texas landmark, located in San Antonio, is a historic Spanish mission and fortress and played a significant role in the Texas Revolution?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Alamo",
+        "Texas State Capitol",
+        "San Antonio River Walk",
+        "Space Center Houston"
+      ],
+      "answer": "The Alamo",
+      "explanation": "The Alamo, located in San Antonio, Texas, is a historic Spanish mission and fortress. It played a significant role in the Texas Revolution and is considered a symbol of Texas independence.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous American professional basketball player, known for his career with the San Antonio Spurs, was born in Los Angeles, California, but became a beloved figure in Texas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "LeBron James",
+        "Kobe Bryant",
+        "Shaquille O'Neal",
+        "Tim Duncan"
+      ],
+      "answer": "Tim Duncan",
+      "explanation": "Tim Duncan, a famous American professional basketball player, was born in Saint Croix, U.S. Virgin Islands. He played his entire 19-season career with the San Antonio Spurs, becoming a beloved figure in Texas.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous American singer and actress, known as the 'Queen of Tejano Music,' was born in Lake Jackson, Texas, and became a cultural icon before her tragic death?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gloria Estefan",
+        "Jennifer Lopez",
+        "Selena Quintanilla",
+        "Celia Cruz"
+      ],
+      "answer": "Selena Quintanilla",
+      "explanation": "Selena Quintanilla, known as Selena, was a famous American singer and actress. She was born in Lake Jackson, Texas, and became a cultural icon, particularly in the Tejano music genre, before her tragic death in 1995.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which famous Texas city is known for its vibrant live music scene, including the annual South by Southwest (SXSW) festival and being the 'Live Music Capital of the World'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Austin",
+        "Houston",
+        "Dallas",
+        "San Antonio"
+      ],
+      "answer": "Austin",
+      "explanation": "Austin, the capital city of Texas, is known for its vibrant live music scene. It is often referred to as the 'Live Music Capital of the World' and hosts the annual South by Southwest (SXSW) festival.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous Texas landmark, located in San Antonio, is a historic waterway and popular tourist attraction lined with shops, restaurants, and scenic walkways?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Alamo",
+        "Texas State Capitol",
+        "Space Center Houston",
+        "San Antonio River Walk"
+      ],
+      "answer": "San Antonio River Walk",
+      "explanation": "The San Antonio River Walk, located in San Antonio, Texas, is a historic waterway and popular tourist attraction. It is lined with shops, restaurants, and scenic walkways.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous Texas city is known for its rich cowboy culture, including the annual Fort Worth Stock Show and Rodeo and the National Cowgirl Museum and Hall of Fame?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Austin",
+        "Dallas",
+        "Houston",
+        "Fort Worth"
+      ],
+      "answer": "Fort Worth",
+      "explanation": "Fort Worth, located in North Texas, is known for its rich cowboy culture. It hosts the annual Fort Worth Stock Show and Rodeo and is home to the National Cowgirl Museum and Hall of Fame.",
+      "difficulty": "Medium"
+    }
+  ]
+}
