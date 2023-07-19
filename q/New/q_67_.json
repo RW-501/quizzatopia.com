@@ -1,0 +1,230 @@
+{
+  "quizName": "Quiz on New Jersey",
+  "quizCode": "NJ2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of New Jersey!",
+  "quizTags": "New Jersey, Geography, States, USA",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "New Jersey is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Garden",
+        "Pine",
+        "Beach",
+        "Liberty"
+      ],
+      "answer": "Garden State",
+      "explanation": "New Jersey is known as the Garden State due to its rich agricultural heritage and beautiful gardens.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: New Jersey is the largest state in the United States by land area.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "False",
+      "explanation": "False. New Jersey is one of the smaller states in the United States by land area, but it is densely populated and has a significant economic impact.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of New Jersey?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Newark",
+        "Jersey City",
+        "Trenton",
+        "Camden"
+      ],
+      "answer": "Trenton",
+      "explanation": "The capital city of New Jersey is Trenton, situated on the Delaware River.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous battlefield, located in New Jersey, was the site of a pivotal Revolutionary War battle where George Washington famously crossed the Delaware River?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gettysburg Battlefield",
+        "Bunker Hill Battlefield",
+        "Valley Forge Battlefield",
+        "Princeton Battlefield"
+      ],
+      "answer": "Princeton Battlefield",
+      "explanation": "The Princeton Battlefield, located in New Jersey, was the site of a significant Revolutionary War battle where General George Washington and his troops famously crossed the Delaware River before defeating British forces.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of New Jersey?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Garden State",
+        "The Granite State",
+        "The Bay State",
+        "The Empire State"
+      ],
+      "answer": "The Garden State",
+      "explanation": "New Jersey is often referred to as The Garden State due to its fertile farmlands and rich agricultural history.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous beach town, located along the Jersey Shore, is known for its boardwalk, amusement parks, and vibrant nightlife?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Atlantic City",
+        "Cape May",
+        "Seaside Heights",
+        "Asbury Park"
+      ],
+      "answer": "Atlantic City",
+      "explanation": "Atlantic City, located along the Jersey Shore, is famous for its boardwalk, casinos, amusement parks, and lively entertainment scene.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state bird of New Jersey?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Eastern Bluebird",
+        "American Goldfinch",
+        "Eastern Goldfinch",
+        "American Robin"
+      ],
+      "answer": "Eastern Goldfinch",
+      "explanation": "The official state bird of New Jersey is the Eastern Goldfinch, a vibrant yellow bird commonly seen throughout the state.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous historic site, located in Edison, New Jersey, is the laboratory complex where Thomas Edison conducted numerous experiments and inventions?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Statue of Liberty",
+        "The White House",
+        "Independence Hall",
+        "Thomas Edison National Historical Park"
+      ],
+      "answer": "Thomas Edison National Historical Park",
+      "explanation": "Thomas Edison National Historical Park in Edison, New Jersey, is the laboratory complex where Thomas Edison, the renowned inventor, conducted numerous experiments and developed inventions like the phonograph and the electric light bulb.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous lighthouse, located in New Jersey, is the tallest lighthouse in the United States and a popular tourist attraction?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cape Hatteras Lighthouse",
+        "Split Rock Lighthouse",
+        "Sandy Hook Lighthouse",
+        "Absecon Lighthouse"
+      ],
+      "answer": "Absecon Lighthouse",
+      "explanation": "The Absecon Lighthouse, located in Atlantic City, New Jersey, is the tallest lighthouse in the United States. It stands at 171 feet and has been a popular tourist attraction since its construction in the 19th century.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: The famous street known for its shopping and entertainment in New York City, often associated with Broadway theater, extends into New Jersey.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "False",
+      "explanation": "False. Broadway is a famous street in New York City known for its theaters and entertainment, but it does not extend into New Jersey.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous amusement park, located in Jackson, New Jersey, is known for its thrilling roller coasters and family-friendly attractions?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cedar Point",
+        "Disneyland",
+        "Six Flags Great Adventure",
+        "Universal Studios"
+      ],
+      "answer": "Six Flags Great Adventure",
+      "explanation": "Six Flags Great Adventure, located in Jackson, New Jersey, is a popular amusement park known for its thrilling roller coasters, water rides, and family-friendly attractions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous river, separating New Jersey from Pennsylvania, is a major navigable waterway and played a significant role in the industrial development of the region?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Hudson River",
+        "The Mississippi River",
+        "The Ohio River",
+        "The Delaware River"
+      ],
+      "answer": "The Delaware River",
+      "explanation": "The Delaware River, separating New Jersey from Pennsylvania, is a major navigable waterway and played a vital role in the industrial development and transportation of goods in the region.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the famous barrier island, known for its sandy beaches and resorts, that stretches along the Atlantic Ocean in New Jersey?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Long Beach Island",
+        "Fire Island",
+        "Jekyll Island",
+        "Galveston Island"
+      ],
+      "answer": "Long Beach Island",
+      "explanation": "Long Beach Island, often referred to as LBI, is a famous barrier island located along the Atlantic Ocean in New Jersey. It is known for its beautiful sandy beaches, resorts, and beachfront communities.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous inventor, known for his pioneering work in telecommunications and the invention of the telephone, conducted his first successful voice transmission in New Jersey?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Alexander Graham Bell",
+        "Nikola Tesla",
+        "Benjamin Franklin",
+        "Samuel Morse"
+      ],
+      "answer": "Alexander Graham Bell",
+      "explanation": "Alexander Graham Bell, the renowned inventor, conducted his first successful voice transmission using the telephone in New Jersey. The historic event took place in 1876.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous NFL team, based in East Rutherford, New Jersey, shares a stadium with another NFL team?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "New England Patriots",
+        "Philadelphia Eagles",
+        "New York Giants",
+        "Dallas Cowboys"
+      ],
+      "answer": "New York Giants",
+      "explanation": "The New York Giants, an NFL team based in East Rutherford, New Jersey, share MetLife Stadium with another NFL team, the New York Jets.",
+      "difficulty": "Medium"
+    }
+  ]
+}
