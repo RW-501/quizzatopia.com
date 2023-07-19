@@ -570,8 +570,8 @@ firebase.firestore().enablePersistence()
 }
 
 	
-      var region ="";
-      var country ="";
+      var userRegion ="";
+      var userCountry ="";
 
 function getLocation() {
   if (navigator.geolocation) {
@@ -605,8 +605,8 @@ async function reverseGeocode(latitude, longitude) {
     );
 
     if (stateInfo) {
-       region = stateInfo.region;
-       country = stateInfo.country;
+       userRegion = stateInfo.region;
+       userCountry = stateInfo.country;
       console.log("region:", region);
       console.log("country:", country);
 	    
@@ -621,11 +621,6 @@ async function reverseGeocode(latitude, longitude) {
 }
 
 
-
-function getUserLocation(ipAddress) {
-  const USER_INFO_KEY = 'user_location';
-
-}
 
 
 
