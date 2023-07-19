@@ -1,0 +1,159 @@
+{
+  "quizName": "Kids Quiz (Age 8)",
+  "quizCode": "KIDS8",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Kids",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the capital city of Canada?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Toronto",
+        "Ottawa",
+        "Montreal",
+        "Vancouver"
+      ],
+      "answer": "Ottawa",
+      "explanation": "Ottawa is the capital city of Canada, known for its historic sites and being the seat of government.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "How many continents are there in the world?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "answer": "7",
+      "explanation": "There are 7 continents in the world: Africa, Antarctica, Asia, Europe, North America, Australia/Oceania, and South America.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the largest ocean in the world?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Arctic Ocean",
+        "Pacific Ocean"
+      ],
+      "answer": "Pacific Ocean",
+      "explanation": "The Pacific Ocean is the largest ocean in the world, covering a vast area between Asia, Australia, the Americas, and Antarctica.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which planet is known as the 'Red Planet'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Earth",
+        "Mars",
+        "Jupiter",
+        "Saturn"
+      ],
+      "answer": "Mars",
+      "explanation": "Mars is known as the 'Red Planet' due to its reddish appearance caused by iron oxide (rust) on its surface.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which animal is known for its black and white stripes?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tiger",
+        "Giraffe",
+        "Zebra",
+        "Elephant"
+      ],
+      "answer": "Zebra",
+      "explanation": "Zebras are known for their distinctive black and white stripes, which help to camouflage and confuse predators.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "How many legs does a spider have?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "answer": "8",
+      "explanation": "Spiders have 8 legs, which they use for walking, climbing, and capturing prey.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which of the following is a primary color?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yellow",
+        "Green",
+        "Purple",
+        "Orange"
+      ],
+      "answer": "Yellow",
+      "explanation": "Yellow is a primary color, along with red and blue. Primary colors cannot be created by mixing other colors.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which continent is known as the 'Land Down Under'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Africa",
+        "Australia",
+        "South America",
+        "Asia"
+      ],
+      "answer": "Australia",
+      "explanation": "Australia is known as the 'Land Down Under' due to its location in the southern hemisphere.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "How many sides does a triangle have?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": "3",
+      "explanation": "A triangle has 3 sides. It is a polygon with three straight sides and three angles.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the main ingredient in bread?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Eggs",
+        "Sugar",
+        "Flour",
+        "Butter"
+      ],
+      "answer": "Flour",
+      "explanation": "The main ingredient in bread is flour, typically made from wheat or other grains.",
+      "difficulty": "Easy"
+    }
+  ]
+}
