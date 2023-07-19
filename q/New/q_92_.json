@@ -1,0 +1,237 @@
+{
+  "quizName": "Vowels Quiz",
+  "quizCode": "VOWELS2023",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Language",
+  "quizDescription": "Test your knowledge of vowels!",
+  "quizTags": "Vowels, Language, Phonetics, Spelling",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "How many vowels are there in the English alphabet?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "8"
+      ],
+      "answer": "5",
+      "explanation": "There are 5 vowels in the English alphabet: A, E, I, O, and U.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which of the following is a vowel?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "B",
+        "C",
+        "E",
+        "F"
+      ],
+      "answer": "E",
+      "explanation": "'E' is a vowel as it represents one of the vowel sounds in the English language.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Identify the vowel in the word 'book'.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "B",
+        "O",
+        "K",
+        "None of the above"
+      ],
+      "answer": "O",
+      "explanation": "The vowel in the word 'book' is 'O'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which of the following words does not contain a vowel?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cat",
+        "Dog",
+        "Fish",
+        "Bird"
+      ],
+      "answer": "RPG",
+      "explanation": "'RPG' does not contain a vowel. The other options (Cat, Dog, Fish, Bird) all contain at least one vowel.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which vowel sound is represented by the letter 'I' in the word 'bike'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Long 'I' sound",
+        "Short 'I' sound",
+        "Schwa sound",
+        "Silent sound"
+      ],
+      "answer": "Long 'I' sound",
+      "explanation": "In the word 'bike', the letter 'I' represents the long 'I' sound.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which of the following words contains the vowel sound represented by the letter 'U' in the word 'cup'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bus",
+        "Cat",
+        "Cut",
+        "Bed"
+      ],
+      "answer": "Cut",
+      "explanation": "The word 'cut' contains the vowel sound represented by the letter 'U' in the word 'cup'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Identify the vowel sound in the word 'cat'.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Short 'A' sound",
+        "Long 'A' sound",
+        "Short 'E' sound",
+        "Short 'I' sound"
+      ],
+      "answer": "Short 'A' sound",
+      "explanation": "The vowel sound in the word 'cat' is the short 'A' sound.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which of the following words starts with a vowel?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cat",
+        "Dog",
+        "Eagle",
+        "Fish"
+      ],
+      "answer": "Eagle",
+      "explanation": "'Eagle' starts with a vowel ('E'). The other options (Cat, Dog, Fish) start with consonants.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Identify the vowel sound in the word 'home'.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Long 'O' sound",
+        "Short 'O' sound",
+        "Short 'E' sound",
+        "Long 'E' sound"
+      ],
+      "answer": "Long 'O' sound",
+      "explanation": "The vowel sound in the word 'home' is the long 'O' sound.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which vowel sound is represented by the letter 'A' in the word 'cat'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Long 'A' sound",
+        "Short 'A' sound",
+        "Schwa sound",
+        "Silent sound"
+      ],
+      "answer": "Short 'A' sound",
+      "explanation": "In the word 'cat', the letter 'A' represents the short 'A' sound.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which of the following words contains the vowel sound represented by the letter 'O' in the word 'hot'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lot",
+        "Cut",
+        "Bed",
+        "Hit"
+      ],
+      "answer": "Lot",
+      "explanation": "The word 'lot' contains the vowel sound represented by the letter 'O' in the word 'hot'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Identify the vowel sound in the word 'big'.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Short 'I' sound",
+        "Long 'I' sound",
+        "Short 'E' sound",
+        "Short 'A' sound"
+      ],
+      "answer": "Short 'I' sound",
+      "explanation": "The vowel sound in the word 'big' is the short 'I' sound.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which of the following words does not contain a vowel?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Fish",
+        "Book",
+        "Sky",
+        "Bike"
+      ],
+      "answer": "Sky",
+      "explanation": "'Sky' does not contain a vowel. The other options (Fish, Book, Bike) all contain at least one vowel.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Identify the vowel sound in the word 'meet'.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Long 'E' sound",
+        "Short 'E' sound",
+        "Long 'I' sound",
+        "Short 'I' sound"
+      ],
+      "answer": "Long 'E' sound",
+      "explanation": "The vowel sound in the word 'meet' is the long 'E' sound.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which of the following is a diphthong, representing a combination of two vowel sounds?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A",
+        "E",
+        "I",
+        "Ou"
+      ],
+      "answer": "Ou",
+      "explanation": "'Ou' is a diphthong as it represents the combination of the 'O' and 'U' sounds.",
+      "difficulty": "Easy"
+    }
+  ]
+}
