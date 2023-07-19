@@ -1,0 +1,224 @@
+{
+  "quizName": "Quiz on Alabama",
+  "quizCode": "AL2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Alabama!",
+  "quizTags": "Alabama, Geography, States, USA",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Alabama is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Sunshine",
+        "Yellowhammer",
+        "Cotton",
+        "Heart of Dixie"
+      ],
+      "answer": "Yellowhammer",
+      "explanation": "Alabama is known as the Yellowhammer State. The yellowhammer bird is the state bird of Alabama.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Alabama is bordered by the Gulf of Mexico.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Alabama has a coastline along the Gulf of Mexico to the south.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of Alabama?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Montgomery",
+        "Birmingham",
+        "Mobile",
+        "Huntsville"
+      ],
+      "answer": "Montgomery",
+      "explanation": "The capital city of Alabama is Montgomery.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which river forms part of Alabama's northern border?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tennessee River",
+        "Mississippi River",
+        "Alabama River",
+        "Cahaba River"
+      ],
+      "answer": "Tennessee River",
+      "explanation": "The Tennessee River forms part of Alabama's northern border.",
+      "difficulty": "Medium"
+    },
+  {
+  "questionNumber": 5,
+  "question": "Alabama became the ______ state of the United States on December 14, 1819.",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": ["15th", "18th", "22nd", "25th"],
+  "answer": "22nd",
+  "explanation": "Alabama became the 22nd state of the United States on December 14, 1819.",
+  "difficulty": "Easy"
+},    {
+      "questionNumber": 6,
+      "question": "What is the highest point in Alabama?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cheaha Mountain",
+        "Mount Mitchell",
+        "Clingmans Dome",
+        "Brasstown Bald"
+      ],
+      "answer": "Cheaha Mountain",
+      "explanation": "Cheaha Mountain, with an elevation of 2,413 feet (735 meters) above sea level, is the highest point in Alabama.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which of the following is a famous natural landmark in Alabama?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Grand Canyon",
+        "Niagara Falls",
+        "Natchez Trace Parkway",
+        "Yellowstone National Park"
+      ],
+      "answer": "Natchez Trace Parkway",
+      "explanation": "Natchez Trace Parkway is a famous scenic road that stretches through Alabama and other states, known for its beautiful natural scenery.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the nickname of the University of Alabama's sports teams?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tigers",
+        "Bulldogs",
+        "Crimson Tide",
+        "Wildcats"
+      ],
+      "answer": "Crimson Tide",
+      "explanation": "The University of Alabama's sports teams are known as the Crimson Tide.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Alabama is the only state that has all of the following natural resources except:",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Coal",
+        "Iron Ore",
+        "Bauxite",
+        "Gold"
+      ],
+      "answer": "Gold",
+      "explanation": "Alabama is known for its abundant natural resources, including coal, iron ore, and bauxite, but it does not have significant gold deposits.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the official state tree of Alabama?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Longleaf Pine",
+        "Southern Magnolia",
+        "Pecan",
+        "Redbud"
+      ],
+      "answer": "Southern Magnolia",
+      "explanation": "The official state tree of Alabama is the Southern Magnolia.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which of these musicians was born in Alabama?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Elvis Presley",
+        "Ray Charles",
+        "Johnny Cash",
+        "Michael Jackson"
+      ],
+      "answer": "Hank Williams",
+      "explanation": "Hank Williams, a famous country music singer and songwriter, was born in Mount Olive, Alabama.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Alabama is home to one of the largest space flight centers in the USA. What is its name?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kennedy Space Center",
+        "Johnson Space Center",
+        "Cape Canaveral Space Launch Complex",
+        "Marshall Space Flight Center"
+      ],
+      "answer": "Marshall Space Flight Center",
+      "explanation": "The Marshall Space Flight Center, located in Huntsville, Alabama, is one of NASA's major space flight centers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "True or False: The famous civil rights activist Rosa Parks was born in Alabama.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. Rosa Parks, known for her pivotal role in the Montgomery Bus Boycott, was born in Tuskegee, Alabama.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which U.S. space agency operates the U.S. Space & Rocket Center, a popular space museum and attraction in Alabama?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "NASA",
+        "SpaceX",
+        "ESA",
+        "Blue Origin"
+      ],
+      "answer": "NASA",
+      "explanation": "The U.S. Space & Rocket Center in Alabama is operated by NASA, the United States' space agency.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the largest city in Alabama by population?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Birmingham",
+        "Montgomery",
+        "Mobile",
+        "Huntsville"
+      ],
+      "answer": "Birmingham",
+      "explanation": "Birmingham is the largest city in Alabama by population.",
+      "difficulty": "Medium"
+    }
+  ]
+}
