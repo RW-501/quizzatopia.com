@@ -1,0 +1,159 @@
+{
+  "quizName": "Famous Figures Quiz",
+  "quizCode": "FIGURES123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "People",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who painted the Mona Lisa?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Leonardo da Vinci",
+        "Vincent van Gogh",
+        "Pablo Picasso",
+        "Michelangelo"
+      ],
+      "answer": "Leonardo da Vinci",
+      "explanation": "The Mona Lisa was painted by Leonardo da Vinci, a renowned Italian artist.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Who is known for their theory of relativity?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Albert Einstein",
+        "Isaac Newton",
+        "Stephen Hawking",
+        "Nikola Tesla"
+      ],
+      "answer": "Albert Einstein",
+      "explanation": "Albert Einstein is known for his theory of relativity, which revolutionized the field of physics.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Who was the first woman to win a Nobel Prize?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Marie Curie",
+        "Rosa Parks",
+        "Amelia Earhart",
+        "Jane Austen"
+      ],
+      "answer": "Marie Curie",
+      "explanation": "Marie Curie was the first woman to win a Nobel Prize, receiving it for her pioneering research on radioactivity.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Who was the leader of the civil rights movement in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Martin Luther King Jr.",
+        "Malcolm X",
+        "Nelson Mandela",
+        "Mahatma Gandhi"
+      ],
+      "answer": "Martin Luther King Jr.",
+      "explanation": "Martin Luther King Jr. was a prominent leader of the civil rights movement in the United States, advocating for racial equality and justice.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Who is the author of 'Pride and Prejudice'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jane Austen",
+        "Emily Brontë",
+        "Charlotte Brontë",
+        "Virginia Woolf"
+      ],
+      "answer": "Jane Austen",
+      "explanation": "Jane Austen is the author of 'Pride and Prejudice,' a classic novel of romance and social satire.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Who is known as the 'Father of the Nation' in India?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mahatma Gandhi",
+        "Jawaharlal Nehru",
+        "Rabindranath Tagore",
+        "Indira Gandhi"
+      ],
+      "answer": "Mahatma Gandhi",
+      "explanation": "Mahatma Gandhi is known as the 'Father of the Nation' in India for his role in India's independence movement.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Who was the first person to step on the moon?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Neil Armstrong",
+        "Buzz Aldrin",
+        "Yuri Gagarin",
+        "Alan Shepard"
+      ],
+      "answer": "Neil Armstrong",
+      "explanation": "Neil Armstrong was the first person to step on the moon during the Apollo 11 mission in 1969.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Who painted 'The Starry Night'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Vincent van Gogh",
+        "Leonardo da Vinci",
+        "Pablo Picasso",
+        "Claude Monet"
+      ],
+      "answer": "Vincent van Gogh",
+      "explanation": "Vincent van Gogh painted 'The Starry Night,' a famous and iconic artwork.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Who is the famous figure associated with the theory of evolution?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Charles Darwin",
+        "Sigmund Freud",
+        "Carl Jung",
+        "Isaac Newton"
+      ],
+      "answer": "Charles Darwin",
+      "explanation": "Charles Darwin is known for his theory of evolution and natural selection, which had a profound impact on the understanding of biology.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Who is the figure associated with the theory of relativity?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Albert Einstein",
+        "Isaac Newton",
+        "Stephen Hawking",
+        "Nikola Tesla"
+      ],
+      "answer": "Albert Einstein",
+      "explanation": "Albert Einstein is associated with the theory of relativity, which revolutionized the field of physics.",
+      "difficulty": "Medium"
+    }
+  ]
+}
