@@ -1,0 +1,159 @@
+{
+  "quizName": "Countries Quiz",
+  "quizCode": "COUNTRIES123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the largest country in the world by land area?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Russia",
+        "Canada",
+        "China",
+        "United States"
+      ],
+      "answer": "Russia",
+      "explanation": "Russia is the largest country in the world by land area.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the most populous country in the world?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "China",
+        "India",
+        "United States",
+        "Brazil"
+      ],
+      "answer": "China",
+      "explanation": "China is the most populous country in the world.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which country is known as the 'Land of the Rising Sun'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Japan",
+        "South Korea",
+        "China",
+        "Thailand"
+      ],
+      "answer": "Japan",
+      "explanation": "Japan is known as the 'Land of the Rising Sun'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which country is home to the Eiffel Tower?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "France",
+        "Italy",
+        "Spain",
+        "Germany"
+      ],
+      "answer": "France",
+      "explanation": "France is home to the Eiffel Tower, an iconic landmark in Paris.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which country is known as the 'Land Down Under'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Australia",
+        "New Zealand",
+        "South Africa",
+        "Argentina"
+      ],
+      "answer": "Australia",
+      "explanation": "Australia is known as the 'Land Down Under'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which country is known for its tulips and windmills?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Netherlands",
+        "Belgium",
+        "Denmark",
+        "Norway"
+      ],
+      "answer": "Netherlands",
+      "explanation": "The Netherlands is known for its tulips and windmills.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which country is the birthplace of the Olympic Games?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Greece",
+        "Italy",
+        "Egypt",
+        "Turkey"
+      ],
+      "answer": "Greece",
+      "explanation": "Greece is the birthplace of the Olympic Games, which originated in ancient times.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which country is known as the 'Land of Fire and Ice'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Iceland",
+        "Greenland",
+        "Finland",
+        "Sweden"
+      ],
+      "answer": "Iceland",
+      "explanation": "Iceland is known as the 'Land of Fire and Ice' due to its volcanoes and glaciers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which country is home to the Great Pyramids?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Egypt",
+        "Saudi Arabia",
+        "Iraq",
+        "Iran"
+      ],
+      "answer": "Egypt",
+      "explanation": "Egypt is home to the Great Pyramids, ancient monumental structures.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which country is known for its fjords and northern lights?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Norway",
+        "Sweden",
+        "Denmark",
+        "Finland"
+      ],
+      "answer": "Norway",
+      "explanation": "Norway is known for its fjords and northern lights, offering stunning natural beauty.",
+      "difficulty": "Medium"
+    }
+  ]
+}
