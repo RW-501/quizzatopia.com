@@ -1,0 +1,228 @@
+{
+  "quizName": "Fortnite Quiz",
+  "quizCode": "FORTNITE123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Gaming",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the name of the island where Fortnite Battle Royale takes place?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tilted Towers",
+        "Pleasant Park",
+        "Fortnite Island",
+        "Battle Island"
+      ],
+      "answer": "Fortnite Island",
+      "explanation": "Fortnite Battle Royale takes place on Fortnite Island, a virtual island where players fight against each other until only one is left standing.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which in-game item provides temporary health and shield points?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Medkit",
+        "Slurp Juice",
+        "Bandages",
+        "Shield Potion"
+      ],
+      "answer": "Slurp Juice",
+      "explanation": "Slurp Juice is an in-game item in Fortnite that provides both health and shield points when consumed. It grants 25 health or shield points over time.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "True or False: Fortnite Battle Royale has a building mechanic.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Fortnite Battle Royale features a unique building mechanic that allows players to construct various structures using gathered materials like wood, stone, and metal.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which of the following is not a playable mode in Fortnite?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Solo",
+        "Duo",
+        "Squad",
+        "Trios"
+      ],
+      "answer": "Trios",
+      "explanation": "Trios is not a permanent playable mode in Fortnite. However, it may be available during limited-time events or special game modes.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the rarest type of item in Fortnite?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Common",
+        "Uncommon",
+        "Rare",
+        "Legendary"
+      ],
+      "answer": "Legendary",
+      "explanation": "Legendary items are the rarest and most powerful items in Fortnite. They are denoted by their orange color and often have unique abilities or superior stats.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Who is the main antagonist in Fortnite's storyline?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Visitor",
+        "The Foundation",
+        "The Devourer",
+        "The Cube"
+      ],
+      "answer": "The Foundation",
+      "explanation": "The Foundation, also known as Agent Jonesy, is the main antagonist in Fortnite's storyline. He is the leader of the Imagined Order (IO) and plays a significant role in the island's events.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which location in Fortnite is known for its distinctive clock tower?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Retail Row",
+        "Lazy Lake",
+        "Pleasant Park",
+        "Tilted Towers"
+      ],
+      "answer": "Tilted Towers",
+      "explanation": "Tilted Towers was a popular location in Fortnite known for its distinctive clock tower. It was a high-density area often favored by players due to the abundance of loot.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which weapon category includes shotguns and assault rifles in Fortnite?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pistols",
+        "Sniper Rifles",
+        "Explosives",
+        "Close-Range Weapons"
+      ],
+      "answer": "Close-Range Weapons",
+      "explanation": "Shotguns and assault rifles fall under the close-range weapons category in Fortnite. They are commonly used for close to medium-range combat.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "True or False: Fortnite offers cross-platform play between different gaming systems.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Fortnite supports cross-platform play, allowing players on different gaming systems such as PC, consoles (Xbox, PlayStation), and mobile devices to play together.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the name of the Fortnite in-game currency used for purchasing cosmetic items?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Fortnite Bucks",
+        "Battle Coins",
+        "V-Bucks",
+        "Battle Stars"
+      ],
+      "answer": "V-Bucks",
+      "explanation": "V-Bucks is the in-game currency used in Fortnite for purchasing cosmetic items such as skins, emotes, and gliders. It can be obtained through gameplay or purchased with real money.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which season of Fortnite introduced the concept of NPCs (Non-Player Characters) on the island?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Season 2",
+        "Season 3",
+        "Season 5",
+        "Season 7"
+      ],
+      "answer": "Season 5",
+      "explanation": "Season 5 of Fortnite introduced NPCs on the island, allowing players to interact with AI-controlled characters who offer quests, services, and items.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which Fortnite location was transformed into a futuristic city called Neo Tilted?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pleasant Park",
+        "Tilted Towers",
+        "Retail Row",
+        "Misty Meadows"
+      ],
+      "answer": "Tilted Towers",
+      "explanation": "Tilted Towers underwent a transformation and became Neo Tilted in Fortnite. It featured a futuristic cityscape with advanced technology and new buildings.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "True or False: Fortnite hosts regular in-game live events that change the island's landscape and introduce new gameplay elements.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Fortnite is known for its live events, which occur within the game and often involve special cinematic experiences, in-game concerts, and dramatic changes to the island.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the name of the mysterious cube that appeared in Fortnite?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Visitor",
+        "The Foundation",
+        "The Devourer",
+        "Kevin the Cube"
+      ],
+      "answer": "Kevin the Cube",
+      "explanation": "Kevin the Cube was the name given to the mysterious purple cube that appeared in Fortnite. It had a significant impact on the island's events during the game's storyline.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which Fortnite game mode allows players to team up against hordes of AI-controlled enemies?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Battle Royale",
+        "Creative",
+        "Save the World",
+        "Arena"
+      ],
+      "answer": "Save the World",
+      "explanation": "Save the World is a cooperative player-versus-environment (PvE) mode in Fortnite where players team up to fight against hordes of AI-controlled enemies. It is separate from the Battle Royale mode.",
+      "difficulty": "Medium"
+    }
+  ]
+}
