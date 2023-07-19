@@ -1102,7 +1102,7 @@ async function fetchQuizzesFromDB() {
     const quizData = doc.data();
     const quizItem = {
       quizRatingDB: quizData.quizRatingDB,
-      quizDifficulty: quizData.quizDifficulty,
+      quizDifficulty: quizData.quizDifficultyDB || quizData.quizDifficulty,
       quizCreatedByDB: quizData.quizCreatedByDB,
       quizNameDB: quizData.quizNameDB,
       quizLinkDB: quizData.quizLinkDB,
@@ -1120,7 +1120,7 @@ async function fetchQuizzesFromDB() {
       const quizData = doc.data();
       const quizItem = {
         quizRatingDB: quizData.quizRatingDB,
-        quizDifficulty: quizData.quizDifficulty,
+      quizDifficulty: quizData.quizDifficultyDB || quizData.quizDifficulty,
         quizCreatedByDB: quizData.quizCreatedByDB,
         quizNameDB: quizData.quizNameDB,
         quizLinkDB: quizData.quizLinkDB,
@@ -1151,7 +1151,7 @@ async function fetchQuizzesFromDB() {
             <div class="stars"> ${stars} </div>
             <div class="quiz-info">
               <p><b>CreatedBy:</b> ${quizData.quizCreatedByDB || ""}</p>
-              <p><b>Difficulty:</b> ${quizData.quizDifficulty || ""}</p>
+              <p><b>Difficulty:</b> ${quizData.quizDifficultyDB || quizData.quizDifficulty}</p>
               <p><b>Started:</b> ${quizData.quizStartedCount || 0}</p>
               <p><b>Finished:</b> ${quizData.quizFinishedCount || 0}</p>
               <p><b>Questions:</b> ${quizData.numberOfQuestionsDB || 0}</p>
