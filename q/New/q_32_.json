@@ -1,0 +1,159 @@
+{
+  "quizName": "Convolutional Neural Networks (CNN) Quiz",
+  "quizCode": "CNN123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Technology",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is a Convolutional Neural Network (CNN)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A deep learning algorithm for image and video processing",
+        "A network architecture for natural language processing",
+        "A technique for dimensionality reduction",
+        "A method for reinforcement learning"
+      ],
+      "answer": "A deep learning algorithm for image and video processing",
+      "explanation": "A Convolutional Neural Network (CNN) is a deep learning algorithm specifically designed for processing and analyzing visual data such as images and videos.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the main advantage of using Convolutional Neural Networks (CNN) for image recognition tasks?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ability to automatically learn relevant features from raw pixel data",
+        "Faster training compared to traditional machine learning algorithms",
+        "Less memory consumption compared to other neural network architectures",
+        "Ability to handle unstructured data"
+      ],
+      "answer": "Ability to automatically learn relevant features from raw pixel data",
+      "explanation": "The main advantage of using Convolutional Neural Networks (CNN) for image recognition tasks is their ability to automatically learn relevant features directly from raw pixel data, eliminating the need for manual feature engineering.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the basic building block of a Convolutional Neural Network (CNN)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Convolutional layer",
+        "Pooling layer",
+        "Fully connected layer",
+        "All of the above"
+      ],
+      "answer": "Convolutional layer",
+      "explanation": "The basic building block of a Convolutional Neural Network (CNN) is the convolutional layer. It applies convolution operations to input data, extracting local patterns and features.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the purpose of pooling layers in Convolutional Neural Networks (CNN)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To reduce the spatial dimensions of the input",
+        "To increase the number of feature maps",
+        "To introduce non-linearity in the network",
+        "To regularize and prevent overfitting"
+      ],
+      "answer": "To reduce the spatial dimensions of the input",
+      "explanation": "Pooling layers in Convolutional Neural Networks (CNN) are used to reduce the spatial dimensions of the input by performing downsampling operations, such as max pooling or average pooling.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which activation function is commonly used in Convolutional Neural Networks (CNN)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "ReLU (Rectified Linear Unit)",
+        "Sigmoid",
+        "Tanh (Hyperbolic Tangent)",
+        "All of the above"
+      ],
+      "answer": "ReLU (Rectified Linear Unit)",
+      "explanation": "The Rectified Linear Unit (ReLU) activation function is commonly used in Convolutional Neural Networks (CNN) due to its ability to introduce non-linearity, handle vanishing gradients, and improve training efficiency.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the purpose of stride in Convolutional Neural Networks (CNN)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To control the amount of shift between filter applications",
+        "To control the learning rate during backpropagation",
+        "To determine the number of filters in each layer",
+        "To regularize and prevent overfitting"
+      ],
+      "answer": "To control the amount of shift between filter applications",
+      "explanation": "Stride in Convolutional Neural Networks (CNN) is used to control the amount of shift or movement between filter applications over the input data. It affects the spatial dimensions of the output feature maps.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the purpose of padding in Convolutional Neural Networks (CNN)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To preserve spatial dimensions during convolution",
+        "To increase the receptive field of filters",
+        "To add noise for data augmentation",
+        "To regularize and prevent overfitting"
+      ],
+      "answer": "To preserve spatial dimensions during convolution",
+      "explanation": "Padding in Convolutional Neural Networks (CNN) is used to add additional border pixels to the input data, preserving the spatial dimensions during convolution operations and preventing the reduction in feature map size.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which layer connects the convolutional layers and fully connected layers in Convolutional Neural Networks (CNN)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Flattening layer",
+        "Pooling layer",
+        "Batch normalization layer",
+        "Activation layer"
+      ],
+      "answer": "Flattening layer",
+      "explanation": "The flattening layer connects the convolutional layers and fully connected layers in Convolutional Neural Networks (CNN). It reshapes the 3D feature maps into a 1D vector, preparing them for the fully connected layers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the concept of weight sharing in Convolutional Neural Networks (CNN)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Using the same set of weights for multiple filter applications",
+        "Using different weights for each filter application",
+        "Using different learning rates for each layer",
+        "Using different activation functions for each layer"
+      ],
+      "answer": "Using the same set of weights for multiple filter applications",
+      "explanation": "Weight sharing in Convolutional Neural Networks (CNN) refers to the concept of using the same set of weights for multiple filter applications across the input data. This parameter sharing helps in capturing similar features and reducing the number of learnable parameters.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which type of layer is commonly used for the final classification in Convolutional Neural Networks (CNN)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Fully connected layer",
+        "Pooling layer",
+        "Convolutional layer",
+        "Activation layer"
+      ],
+      "answer": "Fully connected layer",
+      "explanation": "Fully connected layers are commonly used for the final classification in Convolutional Neural Networks (CNN). They connect every neuron from the previous layer to the output layer, making the final predictions based on learned features.",
+      "difficulty": "Medium"
+    }
+  ]
+}
