@@ -1,0 +1,159 @@
+{
+  "quizName": "Are You Annoying Quiz",
+  "quizCode": "ANNOY123",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Personality",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Do you often interrupt others while they are speaking?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yes, frequently",
+        "Sometimes, unintentionally",
+        "Rarely, if ever",
+        "No, never"
+      ],
+      "answer": "Yes, frequently",
+      "explanation": "Frequently interrupting others while they are speaking can be seen as annoying, as it can disrupt the flow of conversation and prevent others from expressing their thoughts.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "How often do you talk loudly in public spaces?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Always, I'm naturally loud",
+        "Sometimes, when excited",
+        "Rarely, if ever",
+        "Never, I prefer to speak softly"
+      ],
+      "answer": "Always, I'm naturally loud",
+      "explanation": "Talking loudly in public spaces can be perceived as annoying, as it can disrupt the peace and privacy of others around you.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Do you frequently complain about minor inconveniences?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yes, all the time",
+        "Sometimes, when things bother me",
+        "Rarely, if ever",
+        "No, I try to stay positive"
+      ],
+      "answer": "Yes, all the time",
+      "explanation": "Frequently complaining about minor inconveniences can be annoying to others, as it can create a negative atmosphere and focus on trivial issues.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "How often do you use your phone in social settings?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Constantly, I can't stay away from my phone",
+        "Sometimes, when I receive important messages",
+        "Rarely, I try to be present in the moment",
+        "Never, I keep my phone away"
+      ],
+      "answer": "Constantly, I can't stay away from my phone",
+      "explanation": "Using your phone constantly in social settings can be seen as annoying, as it can give the impression that you are disinterested or not fully engaged in the conversation.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "How often do you talk over people in group discussions?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Always, I want to be heard",
+        "Sometimes, unintentionally",
+        "Rarely, I prefer to listen",
+        "Never, I wait for my turn to speak"
+      ],
+      "answer": "Always, I want to be heard",
+      "explanation": "Consistently talking over people in group discussions can be annoying, as it can prevent others from expressing their opinions and disrupt the flow of conversation.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Do you frequently forget personal boundaries and invade others' personal space?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yes, I'm not aware of personal space",
+        "Sometimes, unintentionally",
+        "Rarely, I respect personal boundaries",
+        "No, I'm very conscious of personal space"
+      ],
+      "answer": "Yes, I'm not aware of personal space",
+      "explanation": "Frequently invading others' personal space can be annoying, as it can make others uncomfortable and infringe upon their boundaries.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "How often do you dominate conversations and make everything about yourself?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Always, I love talking about myself",
+        "Sometimes, unintentionally",
+        "Rarely, I try to give others the spotlight",
+        "Never, I'm a good listener"
+      ],
+      "answer": "Always, I love talking about myself",
+      "explanation": "Consistently dominating conversations and making everything about yourself can be seen as annoying, as it can prevent others from sharing their thoughts and experiences.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "How often do you arrive late to appointments or events?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Always, I'm never on time",
+        "Sometimes, unintentionally",
+        "Rarely, I try to be punctual",
+        "Never, I'm always on time"
+      ],
+      "answer": "Always, I'm never on time",
+      "explanation": "Consistently arriving late to appointments or events can be annoying to others, as it shows a lack of respect for their time and disrupts schedules.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "How often do you engage in excessive self-promotion or bragging?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Always, I want everyone to know my achievements",
+        "Sometimes, when it's relevant",
+        "Rarely, I prefer modesty",
+        "Never, I don't like to boast"
+      ],
+      "answer": "Always, I want everyone to know my achievements",
+      "explanation": "Frequently engaging in excessive self-promotion or bragging can be seen as annoying, as it can come across as boastful and self-centered.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Do you often forget to listen and interrupt others' stories with your own?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yes, I can't help but share my own stories",
+        "Sometimes, when I can relate",
+        "Rarely, I prefer to listen to others",
+        "No, I give full attention to others"
+      ],
+      "answer": "Yes, I can't help but share my own stories",
+      "explanation": "Frequently interrupting others' stories with your own can be annoying, as it can shift the focus away from them and make them feel unheard.",
+      "difficulty": "Easy"
+    }
+  ]
+}
