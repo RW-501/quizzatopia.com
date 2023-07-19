@@ -1,0 +1,159 @@
+{
+  "quizName": "State Capitals Quiz",
+  "quizCode": "CAPITALS123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the capital of California?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sacramento",
+        "Los Angeles",
+        "San Francisco",
+        "San Diego"
+      ],
+      "answer": "Sacramento",
+      "explanation": "The capital of California is Sacramento.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the capital of New York?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Albany",
+        "New York City",
+        "Buffalo",
+        "Rochester"
+      ],
+      "answer": "Albany",
+      "explanation": "The capital of New York is Albany.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital of Texas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Austin",
+        "Dallas",
+        "Houston",
+        "San Antonio"
+      ],
+      "answer": "Austin",
+      "explanation": "The capital of Texas is Austin.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the capital of Florida?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tallahassee",
+        "Miami",
+        "Orlando",
+        "Jacksonville"
+      ],
+      "answer": "Tallahassee",
+      "explanation": "The capital of Florida is Tallahassee.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the capital of Ohio?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Columbus",
+        "Cleveland",
+        "Cincinnati",
+        "Toledo"
+      ],
+      "answer": "Columbus",
+      "explanation": "The capital of Ohio is Columbus.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the capital of Michigan?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lansing",
+        "Detroit",
+        "Grand Rapids",
+        "Ann Arbor"
+      ],
+      "answer": "Lansing",
+      "explanation": "The capital of Michigan is Lansing.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the capital of Colorado?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Denver",
+        "Boulder",
+        "Colorado Springs",
+        "Fort Collins"
+      ],
+      "answer": "Denver",
+      "explanation": "The capital of Colorado is Denver.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the capital of Pennsylvania?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Harrisburg",
+        "Philadelphia",
+        "Pittsburgh",
+        "Allentown"
+      ],
+      "answer": "Harrisburg",
+      "explanation": "The capital of Pennsylvania is Harrisburg.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the capital of Arizona?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Phoenix",
+        "Tucson",
+        "Mesa",
+        "Scottsdale"
+      ],
+      "answer": "Phoenix",
+      "explanation": "The capital of Arizona is Phoenix.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the capital of Massachusetts?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Boston",
+        "Cambridge",
+        "Worcester",
+        "Springfield"
+      ],
+      "answer": "Boston",
+      "explanation": "The capital of Massachusetts is Boston.",
+      "difficulty": "Medium"
+    }
+  ]
+}
