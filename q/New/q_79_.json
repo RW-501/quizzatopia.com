@@ -1,0 +1,234 @@
+{
+  "quizName": "Quiz on Tennessee",
+  "quizCode": "TN2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Tennessee!",
+  "quizTags": "Tennessee, Geography, States, USA",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the capital city of Tennessee?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Nashville",
+        "Memphis",
+        "Knoxville",
+        "Chattanooga"
+      ],
+      "answer": "Nashville",
+      "explanation": "The capital city of Tennessee is Nashville, known as the 'Music City' for its vibrant music scene and country music heritage.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Graceland, the former home of Elvis Presley, is located in Tennessee.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Graceland, the former home of Elvis Presley and now a popular tourist attraction, is located in Memphis, Tennessee.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the nickname of Tennessee?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Volunteer State",
+        "The Lone Star State",
+        "The Empire State",
+        "The Sunshine State"
+      ],
+      "answer": "The Volunteer State",
+      "explanation": "Tennessee is often referred to as 'The Volunteer State' due to the prominent role played by volunteer soldiers from Tennessee, particularly during the War of 1812 and the Mexican-American War.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous river forms part of the western border of Tennessee?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mississippi River",
+        "Ohio River",
+        "Tennessee River",
+        "Cumberland River"
+      ],
+      "answer": "Mississippi River",
+      "explanation": "The Mississippi River forms part of the western border of Tennessee, separating it from the states of Arkansas and Mississippi.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which famous music genre has strong roots in Tennessee and originated in African-American communities in Memphis?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jazz",
+        "Blues",
+        "Country",
+        "Hip Hop"
+      ],
+      "answer": "Blues",
+      "explanation": "The Blues is a famous music genre that has strong roots in Tennessee, particularly in Memphis. It originated in African-American communities in the early 20th century.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the official state bird of Tennessee?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Northern Mockingbird",
+        "Northern Cardinal",
+        "Tennessee Warbler",
+        "Eastern Bluebird"
+      ],
+      "answer": "Northern Mockingbird",
+      "explanation": "The official state bird of Tennessee is the Northern Mockingbird, known for its ability to mimic the songs of other birds.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which famous national park, located in Tennessee, is known for its stunning natural beauty, including waterfalls, forests, and the Great Smoky Mountains?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yellowstone National Park",
+        "Yosemite National Park",
+        "Great Smoky Mountains National Park",
+        "Grand Canyon National Park"
+      ],
+      "answer": "Great Smoky Mountains National Park",
+      "explanation": "Great Smoky Mountains National Park, located in Tennessee and North Carolina, is known for its stunning natural beauty, including waterfalls, forests, and the Great Smoky Mountains.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous music venue in Nashville, Tennessee, is known as the 'Home of Country Music' and showcases live performances and the Grand Ole Opry radio show?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ryman Auditorium",
+        "Bluebird Cafe",
+        "Tennessee Performing Arts Center",
+        "Bridgestone Arena"
+      ],
+      "answer": "Ryman Auditorium",
+      "explanation": "Ryman Auditorium, located in Nashville, Tennessee, is known as the 'Home of Country Music.' It is a historic music venue that showcases live performances and hosts the Grand Ole Opry radio show.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous American author, known for his novels 'Adventures of Huckleberry Finn' and 'The Adventures of Tom Sawyer,' was born in Florida, Missouri, but spent much of his life in Tennessee?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mark Twain",
+        "Ernest Hemingway",
+        "F. Scott Fitzgerald",
+        "Harper Lee"
+      ],
+      "answer": "Mark Twain",
+      "explanation": "Mark Twain, a famous American author and humorist, was born in Florida, Missouri. While he did not spend much of his life in Tennessee, his works are widely celebrated and studied.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which famous American singer and actor, known for his deep voice and hits like 'Ring of Fire' and 'Folsom Prison Blues,' was born in Kingsland, Arkansas, but spent much of his career in Tennessee?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Elvis Presley",
+        "Johnny Cash",
+        "Frank Sinatra",
+        "Roy Orbison"
+      ],
+      "answer": "Johnny Cash",
+      "explanation": "Johnny Cash, a famous American singer and actor, was born in Kingsland, Arkansas, and spent much of his career in Tennessee, particularly in Nashville. He is known as the 'Man in Black.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous American civil rights leader, known for his nonviolent activism and speeches like 'I Have a Dream,' was born in Atlanta, Georgia, but spent much of his life in Tennessee?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Malcolm X",
+        "Jesse Jackson",
+        "Martin Luther King Jr.",
+        "Rosa Parks"
+      ],
+      "answer": "Martin Luther King Jr.",
+      "explanation": "Martin Luther King Jr., a famous American civil rights leader, was born in Atlanta, Georgia, and spent much of his life in Tennessee. He is known for his nonviolent activism and influential speeches.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous American musician and songwriter, known as the 'King of Rock and Roll,' was born in Tupelo, Mississippi, but later moved to Memphis, Tennessee?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Elvis Presley",
+        "Chuck Berry",
+        "Buddy Holly",
+        "Jerry Lee Lewis"
+      ],
+      "answer": "Elvis Presley",
+      "explanation": "Elvis Presley, a famous American musician and actor, was born in Tupelo, Mississippi, and later moved to Memphis, Tennessee. He is known as the 'King of Rock and Roll.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which famous American author, known for her Pulitzer Prize-winning novel 'To Kill a Mockingbird,' was born in Monroeville, Alabama, but later lived in Tennessee?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Flannery O'Connor",
+        "Harper Lee",
+        "Toni Morrison",
+        "Maya Angelou"
+      ],
+      "answer": "Harper Lee",
+      "explanation": "Harper Lee, a famous American author, was born in Monroeville, Alabama, and later lived in Tennessee. She is best known for her novel 'To Kill a Mockingbird,' which won the Pulitzer Prize.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous Tennessee landmark, located in Memphis, is considered the 'Birthplace of Rock 'n' Roll' and is a popular attraction for music lovers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Country Music Hall of Fame",
+        "Sun Studio",
+        "Grand Ole Opry",
+        "Ryman Auditorium"
+      ],
+      "answer": "Sun Studio",
+      "explanation": "Sun Studio, located in Memphis, Tennessee, is considered the 'Birthplace of Rock 'n' Roll.' It is a historic recording studio where many legendary musicians, including Elvis Presley, got their start.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous Tennessee city is known for its vibrant music scene, particularly in genres like blues, soul, and rock 'n' roll?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Nashville",
+        "Memphis",
+        "Knoxville",
+        "Chattanooga"
+      ],
+      "answer": "Memphis",
+      "explanation": "Memphis, located in southwestern Tennessee, is known for its vibrant music scene. It is often associated with genres like blues, soul, and rock 'n' roll.",
+      "difficulty": "Medium"
+    }
+  ]
+}
