@@ -1077,7 +1077,10 @@ font-size: 30px;
 };
 
 
-
+const db = firebase.firestore();
+const quizContainer = document.getElementById('updated_Quizzez');
+let currentPage = 1;
+const quizzesPerPage = 20;
 
 	
 var num = 0;
