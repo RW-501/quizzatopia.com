@@ -1,0 +1,104 @@
+{
+  "quizName": "Hispanic History Quiz",
+  "quizCode": "HISPANICHISTORY2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "History",
+  "quizDescription": "Test your knowledge of Hispanic History!",
+  "quizTags": "Hispanic History, Latin American History, Hispanic Heritage, Spanish Colonialism",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who was the conquistador responsible for the fall of the Aztec Empire?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hernán Cortés",
+        "Francisco Pizarro",
+        "Pedro Álvares Cabral",
+        "Christopher Columbus"
+      ],
+      "answer": "Hernán Cortés",
+      "explanation": "Hernán Cortés was the conquistador responsible for the fall of the Aztec Empire in the 16th century.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Who was the military and political leader who played a key role in the independence of several South American countries from Spanish rule?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "José Martí",
+        "Miguel Hidalgo",
+        "Simón Bolívar",
+        "Bernardo O'Higgins"
+      ],
+      "answer": "Simón Bolívar",
+      "explanation": "Simón Bolívar, known as 'El Libertador', played a key role in the independence of several South American countries from Spanish rule.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which country was the last to gain independence from Spain in mainland Latin America?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mexico",
+        "Argentina",
+        "Brazil",
+        "Cuba"
+      ],
+      "answer": "Cuba",
+      "explanation": "Cuba was the last country to gain independence from Spain in mainland Latin America, achieving independence in 1898.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Who was the Argentine revolutionary leader who played a key role in the independence of several South American countries, including Argentina, Chile, and Peru?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "José de San Martín",
+        "Antonio José de Sucre",
+        "Pancho Villa",
+        "Emiliano Zapata"
+      ],
+      "answer": "José de San Martín",
+      "explanation": "José de San Martín was the Argentine revolutionary leader who played a key role in the independence of several South American countries.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which Mexican president led the Mexican Revolution and implemented agrarian reforms?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Venustiano Carranza",
+        "Porfirio Díaz",
+        "Lázaro Cárdenas",
+        "Emiliano Zapata"
+      ],
+      "answer": "Emiliano Zapata",
+      "explanation": "Emiliano Zapata was a Mexican revolutionary leader who played a key role in the Mexican Revolution and advocated for agrarian reforms.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Who was the Puerto Rican nationalist leader who fought for Puerto Rico's independence from Spanish colonial rule?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Juan Ponce de León",
+        "Luis Muñoz Marín",
+        "Pedro Albizu Campos",
+        "Rafael Trujillo"
+      ],
+      "answer": "Pedro Albizu Campos",
+      "explanation": "Pedro Albizu Campos was a Puerto Rican nationalist leader who fought for Puerto Rico's independence from Spanish colonial rule.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which indigenous civilization built the city of Machu Picchu in present-day Peru?",
+      "imageURL": "",
+     
