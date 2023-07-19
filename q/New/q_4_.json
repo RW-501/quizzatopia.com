@@ -1,0 +1,228 @@
+{
+  "quizName": "Minecraft Quiz",
+  "quizCode": "MINECRAFT123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Gaming",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who is the creator of Minecraft?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Markus Persson",
+        "Notch",
+        "Steve Jobs",
+        "Elon Musk"
+      ],
+      "answer": "Markus Persson",
+      "explanation": "Markus Persson, also known as Notch, is the creator of Minecraft. He developed the game and released it in 2011.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What type of game is Minecraft?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Role-Playing",
+        "First-Person Shooter",
+        "Sandbox",
+        "Platformer"
+      ],
+      "answer": "Sandbox",
+      "explanation": "Minecraft is a sandbox game, which means it provides players with an open-world environment where they can freely explore, build, and interact with the game's elements.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "True or False: In Minecraft, the player can craft various items using a crafting table.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. In Minecraft, players can use a crafting table to combine different materials and craft various items, tools, and blocks.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the primary objective in Minecraft's survival mode?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Build epic structures",
+        "Collect resources",
+        "Defeat the Ender Dragon",
+        "Survive against enemies"
+      ],
+      "answer": "Survive against enemies",
+      "explanation": "The primary objective in Minecraft's survival mode is to survive against enemies such as zombies, skeletons, and creepers while managing resources, exploring, and building shelter.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which dimension can be accessed by building a nether portal in Minecraft?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The End",
+        "The Aether",
+        "The Nether",
+        "The Overworld"
+      ],
+      "answer": "The Nether",
+      "explanation": "Building a nether portal in Minecraft allows players to access the Nether, a dangerous and otherworldly dimension filled with unique blocks, resources, and hostile creatures.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the name of the final boss in Minecraft?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Ender Dragon",
+        "The Wither",
+        "Herobrine",
+        "The Creeper King"
+      ],
+      "answer": "The Ender Dragon",
+      "explanation": "The Ender Dragon is the final boss in Minecraft. It is found in the End dimension and must be defeated to complete the game's main objective.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which material is required to mine obsidian in Minecraft?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Diamond",
+        "Iron",
+        "Stone",
+        "Wood"
+      ],
+      "answer": "Diamond",
+      "explanation": "In Minecraft, obsidian requires a diamond or stronger-tier pickaxe to be mined. It is a durable and blast-resistant material often used in creating portals and enchanting tables.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "True or False: Minecraft offers a creative mode where players have unlimited resources and can fly.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Minecraft offers a creative mode where players have unlimited resources, the ability to fly, and can focus on building and creating without the constraints of survival gameplay.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which biome is known for its tall and slender spruce trees in Minecraft?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Desert",
+        "Swamp",
+        "Jungle",
+        "Taiga"
+      ],
+      "answer": "Taiga",
+      "explanation": "The Taiga biome in Minecraft is known for its tall and slender spruce trees, often covered in snow, and provides a unique environment for players to explore and build.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the name of the primary antagonist in Minecraft's story mode?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Herobrine",
+        "The Ender Dragon",
+        "The Wither Storm",
+        "The Creeper King"
+      ],
+      "answer": "The Wither Storm",
+      "explanation": "The Wither Storm is the primary antagonist in Minecraft's story mode, appearing in the game's 'Minecraft: Story Mode' series developed by Telltale Games.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which material is needed to craft a diamond sword in Minecraft?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Wood",
+        "Stone",
+        "Iron",
+        "Diamond"
+      ],
+      "answer": "Diamond",
+      "explanation": "A diamond sword in Minecraft requires diamonds as a crafting material. Diamond swords are one of the strongest and most durable weapons in the game.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the name of the game's default player character in Minecraft?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Alex",
+        "Steve",
+        "Rob",
+        "Alexa"
+      ],
+      "answer": "Steve",
+      "explanation": "The default player character in Minecraft is named Steve. He is often depicted with a simple blue shirt, brown pants, and dark hair.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 13,
+      "question": "True or False: Minecraft allows players to tame and ride horses.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Minecraft introduced horses as a tamable and rideable mob. Players can tame, breed, and ride horses to traverse the world more quickly.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which creature in Minecraft explodes when it comes near players?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Zombie",
+        "Creeper",
+        "Skeleton",
+        "Spider"
+      ],
+      "answer": "Creeper",
+      "explanation": "Creepers are hostile creatures in Minecraft that silently approach players and explode, causing damage to both the player and the surrounding environment.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which ore is used to create redstone circuits and mechanisms in Minecraft?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Iron",
+        "Gold",
+        "Diamond",
+        "Redstone"
+      ],
+      "answer": "Redstone",
+      "explanation": "Redstone is an ore in Minecraft that is used to create redstone circuits and mechanisms. It enables players to build complex contraptions and automate various processes.",
+      "difficulty": "Easy"
+    }
+  ]
+}
