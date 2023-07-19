@@ -1,0 +1,231 @@
+{
+  "quizName": "Quiz on Georgia",
+  "quizCode": "GA2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Georgia!",
+  "quizTags": "Georgia, Geography, States, USA",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Georgia is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Peach",
+        "Cotton",
+        "Empire",
+        "Southern"
+      ],
+      "answer": "Peach",
+      "explanation": "Georgia is known as the Peach State due to its significant production of peaches.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Georgia is the largest state by land area in the southeastern United States.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Georgia is the largest state by land area in the southeastern U.S.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of Georgia?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Savannah",
+        "Macon",
+        "Atlanta",
+        "Augusta"
+      ],
+      "answer": "Atlanta",
+      "explanation": "The capital city of Georgia is Atlanta.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which river forms Georgia's western border with Alabama?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mississippi River",
+        "Chattahoochee River",
+        "Tennessee River",
+        "Savannah River"
+      ],
+      "answer": "Chattahoochee River",
+      "explanation": "The Chattahoochee River forms Georgia's western border with Alabama.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of Georgia?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Peach State",
+        "The Magnolia State",
+        "The Tar Heel State",
+        "The Lone Star State"
+      ],
+      "answer": "The Peach State",
+      "explanation": "Georgia is often referred to as The Peach State due to its abundance of peach orchards and peach production.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous mountain range runs through northern Georgia?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Rocky Mountains",
+        "Appalachian Mountains",
+        "Sierra Nevada",
+        "Cascade Range"
+      ],
+      "answer": "Appalachian Mountains",
+      "explanation": "The Appalachian Mountains run through northern Georgia, offering scenic landscapes and outdoor recreational opportunities.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state bird of Georgia?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Northern Mockingbird",
+        "Brown Thrasher",
+        "Cardinal",
+        "Bald Eagle"
+      ],
+      "answer": "Brown Thrasher",
+      "explanation": "The official state bird of Georgia is the Brown Thrasher.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous city in Georgia is home to the world's busiest airport?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Savannah",
+        "Macon",
+        "Augusta",
+        "Atlanta"
+      ],
+      "answer": "Atlanta",
+      "explanation": "Atlanta, Georgia, is home to Hartsfield-Jackson Atlanta International Airport, which is one of the world's busiest airports.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous civil rights leader and Nobel Peace Prize recipient was born in Atlanta, Georgia?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Malcolm X",
+        "Rosa Parks",
+        "Martin Luther King Jr.",
+        "Nelson Mandela"
+      ],
+      "answer": "Martin Luther King Jr.",
+      "explanation": "Martin Luther King Jr., the influential civil rights leader and Nobel Peace Prize recipient, was born in Atlanta, Georgia.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: Georgia is one of the original 13 colonies that formed the United States.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "False",
+      "explanation": "False. Georgia was the last of the original 13 colonies to be established, founded in 1733.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous island, accessible by a causeway, is a popular vacation destination in Georgia known for its luxury resorts and golf courses?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hilton Head Island",
+        "St. Simons Island",
+        "Amelia Island",
+        "Jekyll Island"
+      ],
+      "answer": "Jekyll Island",
+      "explanation": "Jekyll Island, accessible by a causeway, is a popular vacation destination in Georgia known for its luxury resorts, golf courses, and historic sites.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which major U.S. highway that runs from Georgia to California is nicknamed the 'Main Street of America'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Route 66",
+        "Interstate 40",
+        "Interstate 95",
+        "Interstate 80"
+      ],
+      "answer": "Route 66",
+      "explanation": "Route 66, also known as the 'Main Street of America,' runs from Chicago, Illinois, to Santa Monica, California.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Georgia is the birthplace of which soft drink that was invented by pharmacist John S. Pemberton in 1886?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Coca-Cola",
+        "Pepsi",
+        "Dr Pepper",
+        "Root Beer"
+      ],
+      "answer": "Coca-Cola",
+      "explanation": "Coca-Cola, one of the world's most popular soft drinks, was invented by pharmacist John S. Pemberton in Atlanta, Georgia, in 1886.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous river, flowing through the city of Savannah, Georgia, is one of the few rivers in North America to flow south to north?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mississippi River",
+        "Missouri River",
+        "Savannah River",
+        "St. Lawrence River"
+      ],
+      "answer": "Savannah River",
+      "explanation": "The Savannah River, flowing through the city of Savannah, Georgia, is one of the few rivers in North America to flow from south to north.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous national park in Georgia is known for its ancient forest and preserves a diverse range of plant and animal species?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yosemite National Park",
+        "Everglades National Park",
+        "Great Smoky Mountains National Park",
+        "Okefenokee National Wildlife Refuge"
+      ],
+      "answer": "Okefenokee National Wildlife Refuge",
+      "explanation": "Okefenokee National Wildlife Refuge in Georgia is known for its ancient forest and is a critical habitat for a diverse range of plant and animal species.",
+      "difficulty": "Medium"
+    }
+  ]
+}
