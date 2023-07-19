@@ -1,0 +1,234 @@
+{
+  "quizName": "Quiz on West Virginia",
+  "quizCode": "WV2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of West Virginia!",
+  "quizTags": "West Virginia, Geography, States, USA",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the capital city of West Virginia?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Charleston",
+        "Huntington",
+        "Morgantown",
+        "Parkersburg"
+      ],
+      "answer": "Charleston",
+      "explanation": "The capital city of West Virginia is Charleston, known for its rich history, scenic beauty, and being the largest city in the state.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: West Virginia is known as the 'Mountain State.'",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. West Virginia is often referred to as the 'Mountain State' due to its mountainous terrain and natural beauty.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the nickname of West Virginia?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Mountain State",
+        "The Sunshine State",
+        "The Empire State",
+        "The Volunteer State"
+      ],
+      "answer": "The Mountain State",
+      "explanation": "West Virginia is often referred to as 'The Mountain State' due to its mountainous terrain and scenic beauty.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous national park, located in West Virginia, is known for its deep canyons, dramatic cliffs, and being the largest national park in the eastern United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yellowstone National Park",
+        "Great Smoky Mountains National Park",
+        "Shenandoah National Park",
+        "New River Gorge National Park and Preserve"
+      ],
+      "answer": "New River Gorge National Park and Preserve",
+      "explanation": "New River Gorge National Park and Preserve, located in West Virginia, is known for its deep canyons, dramatic cliffs, and being the largest national park in the eastern United States. It offers stunning natural landscapes and outdoor recreational opportunities.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which famous West Virginia city is known for its historic downtown area, scenic riverfront, and being home to the West Virginia University?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Charleston",
+        "Huntington",
+        "Morgantown",
+        "Wheeling"
+      ],
+      "answer": "Morgantown",
+      "explanation": "Morgantown, located in West Virginia, is known for its historic downtown area, scenic riverfront along the Monongahela River, and being home to the West Virginia University. It has a vibrant college town atmosphere.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the official state bird of West Virginia?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cardinal",
+        "Bald Eagle",
+        "Northern Mockingbird",
+        "Eastern Bluebird"
+      ],
+      "answer": "Cardinal",
+      "explanation": "The official state bird of West Virginia is the Cardinal, known for its vibrant red color and melodious song.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which famous West Virginia city is known for its annual Sternwheel Regatta, historic riverfront district, and being the second-largest city in the state?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Charleston",
+        "Huntington",
+        "Parkersburg",
+        "Wheeling"
+      ],
+      "answer": "Wheeling",
+      "explanation": "Wheeling, located in West Virginia, is known for its annual Sternwheel Regatta, historic riverfront district, and being the second-largest city in the state. It has a rich cultural and industrial heritage.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous West Virginia city is known for its historic downtown area, beautiful riverfront park, and being a major hub for the coal industry?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Charleston",
+        "Huntington",
+        "Parkersburg",
+        "Beckley"
+      ],
+      "answer": "Huntington",
+      "explanation": "Huntington, located in West Virginia, is known for its historic downtown area, beautiful riverfront park along the Ohio River, and being a major hub for the coal industry. It is the second-largest city in the state.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous West Virginia city is known for its historic downtown area, annual Apple Butter Festival, and being the birthplace of Stonewall Jackson, a Confederate general during the American Civil War?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Charleston",
+        "Harpers Ferry",
+        "Martinsburg",
+        "Clarksburg"
+      ],
+      "answer": "Harpers Ferry",
+      "explanation": "Harpers Ferry, located in West Virginia, is known for its historic downtown area, annual Apple Butter Festival, and being the birthplace of Stonewall Jackson, a Confederate general during the American Civil War. It holds great historical significance.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which famous West Virginia city is known for its historic downtown area, beautiful riverfront park, and being the birthplace of Anna Jarvis, the founder of Mother's Day?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Charleston",
+        "Huntington",
+        "Parkersburg",
+        "Grafton"
+      ],
+      "answer": "Grafton",
+      "explanation": "Grafton, located in West Virginia, is known for its historic downtown area, beautiful riverfront park, and being the birthplace of Anna Jarvis, the founder of Mother's Day. It celebrates its heritage and the significance of Mother's Day.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous West Virginia city is known for its Victorian-style architecture, historic downtown district, and being the hometown of actress Jennifer Garner?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Charleston",
+        "Huntington",
+        "Parkersburg",
+        "Princeton"
+      ],
+      "answer": "Princeton",
+      "explanation": "Princeton, located in West Virginia, is known for its Victorian-style architecture, historic downtown district, and being the hometown of actress Jennifer Garner. It showcases its rich history and small-town charm.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous West Virginia city is known for its historic downtown area, scenic riverfront, and being the third-largest city in the state?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Charleston",
+        "Morgantown",
+        "Parkersburg",
+        "Weirton"
+      ],
+      "answer": "Parkersburg",
+      "explanation": "Parkersburg, located in West Virginia, is known for its historic downtown area, scenic riverfront along the Ohio River, and being the third-largest city in the state. It has a blend of history and natural beauty.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which famous West Virginia city is known for its historic downtown area, beautiful riverfront park, and being the home of the West Virginia State Capitol?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Charleston",
+        "Huntington",
+        "Beckley",
+        "Bluefield"
+      ],
+      "answer": "Charleston",
+      "explanation": "Charleston, the capital city of West Virginia, is known for its historic downtown area, beautiful riverfront park along the Kanawha River, and being the home of the West Virginia State Capitol. It has a mix of culture and natural attractions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous West Virginia city is known for its historic downtown area, annual Sternwheel Regatta, and being a gateway to the Blennerhassett Island Historical State Park?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Charleston",
+        "Huntington",
+        "Parkersburg",
+        "Weirton"
+      ],
+      "answer": "Parkersburg",
+      "explanation": "Parkersburg, located in West Virginia, is known for its historic downtown area, annual Sternwheel Regatta, and being a gateway to the Blennerhassett Island Historical State Park. It offers a blend of history and natural beauty.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous West Virginia city is known for its historic downtown area, beautiful riverfront park, and being the birthplace of legendary basketball player Jerry West?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Charleston",
+        "Huntington",
+        "Clarksburg",
+        "Fairmont"
+      ],
+      "answer": "Chapmanville",
+      "explanation": "Chapmanville, located in West Virginia, is known for its historic downtown area, beautiful riverfront park, and being the birthplace of legendary basketball player Jerry West.",
+      "difficulty": "Medium"
+    }
+  ]
+}
