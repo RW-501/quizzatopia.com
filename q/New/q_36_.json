@@ -1,0 +1,159 @@
+{
+  "quizName": "Kids Quiz (Age 10)",
+  "quizCode": "KIDS10",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Kids",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who wrote the famous play 'Romeo and Juliet'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "William Shakespeare",
+        "J.K. Rowling",
+        "Mark Twain",
+        "Charles Dickens"
+      ],
+      "answer": "William Shakespeare",
+      "explanation": "William Shakespeare wrote the famous play 'Romeo and Juliet', which is one of his most well-known tragedies.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the largest planet in our solar system?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Earth",
+        "Mars",
+        "Jupiter",
+        "Saturn"
+      ],
+      "answer": "Jupiter",
+      "explanation": "Jupiter is the largest planet in our solar system, known for its massive size and swirling storms, such as the Great Red Spot.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which famous scientist discovered the theory of gravity?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Isaac Newton",
+        "Albert Einstein",
+        "Galileo Galilei",
+        "Marie Curie"
+      ],
+      "answer": "Isaac Newton",
+      "explanation": "Isaac Newton, a renowned physicist and mathematician, discovered the theory of gravity and formulated the laws of motion.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which of the following is a renewable energy source?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Coal",
+        "Natural gas",
+        "Solar power",
+        "Nuclear power"
+      ],
+      "answer": "Solar power",
+      "explanation": "Solar power is a renewable energy source that harnesses energy from the sun and converts it into electricity or heat.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the capital city of China?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Beijing",
+        "Shanghai",
+        "Hong Kong",
+        "Tokyo"
+      ],
+      "answer": "Beijing",
+      "explanation": "Beijing is the capital city of China, known for its rich history, iconic landmarks such as the Great Wall and Forbidden City, and as a center of politics and culture.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which two gases make up the majority of Earth's atmosphere?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Oxygen and nitrogen",
+        "Oxygen and carbon dioxide",
+        "Carbon dioxide and nitrogen",
+        "Nitrogen and carbon monoxide"
+      ],
+      "answer": "Oxygen and nitrogen",
+      "explanation": "The two gases that make up the majority of Earth's atmosphere are oxygen and nitrogen. Oxygen is essential for respiration, while nitrogen is relatively inert.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which of the following is not a primary color?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Red",
+        "Blue",
+        "Yellow",
+        "Green"
+      ],
+      "answer": "Green",
+      "explanation": "Green is not a primary color. The primary colors are red, blue, and yellow, which can be mixed to create other colors.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which of the following is the longest unit of geological time?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Millennium",
+        "Century",
+        "Epoch",
+        "Eon"
+      ],
+      "answer": "Eon",
+      "explanation": "An eon is the longest unit of geological time, representing billions of years in Earth's history.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which planet is known for its beautiful rings?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mars",
+        "Jupiter",
+        "Saturn",
+        "Uranus"
+      ],
+      "answer": "Saturn",
+      "explanation": "Saturn is known for its beautiful and prominent ring system, composed of ice particles and rocky debris.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which famous figure is known for discovering electricity?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Thomas Edison",
+        "Alexander Graham Bell",
+        "Benjamin Franklin",
+        "Nikola Tesla"
+      ],
+      "answer": "Benjamin Franklin",
+      "explanation": "Benjamin Franklin, an American polymath, is known for his experiments and discoveries in electricity, including the invention of the lightning rod.",
+      "difficulty": "Medium"
+    }
+  ]
+}
