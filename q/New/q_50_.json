@@ -1,0 +1,230 @@
+{
+  "quizName": "Quiz on Illinois",
+  "quizCode": "IL2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Illinois!",
+  "quizTags": "Illinois, Geography, States, USA",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Illinois is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Land of Lincoln",
+        "Prairie",
+        "Corn",
+        "Lakes"
+      ],
+      "answer": "Land of Lincoln",
+      "explanation": "Illinois is known as the Land of Lincoln, honoring the famous president Abraham Lincoln, who lived in the state.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Illinois is home to the tallest building in the world, the Burj Khalifa.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "False",
+      "explanation": "False. The Burj Khalifa is located in Dubai, United Arab Emirates, not in Illinois.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of Illinois?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Springfield",
+        "Chicago",
+        "Peoria",
+        "Rockford"
+      ],
+      "answer": "Springfield",
+      "explanation": "The capital city of Illinois is Springfield, which is also the hometown of Abraham Lincoln.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous river forms the eastern border of Illinois with the state of Indiana?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mississippi River",
+        "Ohio River",
+        "Missouri River",
+        "Wabash River"
+      ],
+      "answer": "Wabash River",
+      "explanation": "The Wabash River forms the eastern border of Illinois with the state of Indiana.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of Illinois?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Prairie State",
+        "The Corn State",
+        "The Land of Lakes",
+        "The Heart of America"
+      ],
+      "answer": "The Prairie State",
+      "explanation": "Illinois is often referred to as The Prairie State due to its vast expanses of prairies historically found in the region.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous city in Illinois is known for its iconic architecture, including landmarks like the Willis Tower and the John Hancock Center?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Chicago",
+        "Springfield",
+        "Rockford",
+        "Peoria"
+      ],
+      "answer": "Chicago",
+      "explanation": "Chicago, the largest city in Illinois, is renowned for its iconic architecture, including landmarks like the Willis Tower (formerly Sears Tower) and the John Hancock Center.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state bird of Illinois?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Northern Cardinal",
+        "American Robin",
+        "Mourning Dove",
+        "Blue Jay"
+      ],
+      "answer": "Northern Cardinal",
+      "explanation": "The official state bird of Illinois is the Northern Cardinal, known for its bright red plumage.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous historic trail, stretching from Illinois to California, played a significant role in westward expansion during the 19th century?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Santa Fe Trail",
+        "Oregon Trail",
+        "California Trail",
+        "Old Spanish Trail"
+      ],
+      "answer": "California Trail",
+      "explanation": "The California Trail, starting from various points in the Midwest, including Illinois, played a significant role in westward expansion during the 19th century, leading settlers to California.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous university, located in Urbana-Champaign, Illinois, is renowned for its extensive research programs and prestigious academics?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Stanford University",
+        "Massachusetts Institute of Technology (MIT)",
+        "University of Illinois at Urbana-Champaign",
+        "Harvard University"
+      ],
+      "answer": "University of Illinois at Urbana-Champaign",
+      "explanation": "The University of Illinois at Urbana-Champaign is known for its extensive research programs and prestigious academics, making it one of the top public universities in the United States.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: The famous rock band 'The Rolling Stones' originated in Chicago, Illinois.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "False",
+      "explanation": "False. The Rolling Stones originated in London, England, not in Chicago, Illinois.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous tall ship, a replica of a 19th-century Navy frigate, is docked in Chicago and serves as a floating museum and training vessel?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "USS Constitution",
+        "HMS Bounty",
+        "USS Constellation",
+        "USCGC Eagle"
+      ],
+      "answer": "USCGC Eagle",
+      "explanation": "The USCGC Eagle, a replica of a 19th-century Navy frigate, is docked in Chicago and serves as a floating museum and training vessel for the U.S. Coast Guard.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous architect, known for his groundbreaking designs, is associated with iconic buildings in Chicago, such as the Fallingwater and the Guggenheim Museum?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Frank Gehry",
+        "I. M. Pei",
+        "Le Corbusier",
+        "Frank Lloyd Wright"
+      ],
+      "answer": "Frank Lloyd Wright",
+      "explanation": "Frank Lloyd Wright, an influential architect, is associated with iconic buildings worldwide, including the Fallingwater and the Guggenheim Museum in New York, but he has also designed buildings in Chicago.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the famous deep-dish pizza, a Chicago specialty, known for its thick crust and layered toppings?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Margherita Pizza",
+        "Neapolitan Pizza",
+        "New York-style Pizza",
+        "Chicago-style Pizza"
+      ],
+      "answer": "Chicago-style Pizza",
+      "explanation": "Chicago-style pizza is a famous deep-dish pizza, known for its thick crust, generous amount of cheese, and layered toppings, creating a hearty and satisfying meal.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous museum in Chicago is one of the largest science museums in the world and features interactive exhibits and a planetarium?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Louvre",
+        "The British Museum",
+        "Field Museum of Natural History",
+        "The Metropolitan Museum of Art"
+      ],
+      "answer": "Field Museum of Natural History",
+      "explanation": "The Field Museum of Natural History in Chicago is one of the largest science museums in the world, featuring interactive exhibits and a planetarium, among other attractions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous festival in Chicago is an annual celebration of music, food, arts, and culture, attracting millions of visitors each year?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lollapalooza",
+        "Coachella",
+        "Burning Man",
+        "Taste of Chicago"
+      ],
+      "answer": "Taste of Chicago",
+      "explanation": "Taste of Chicago is an annual festival in the city that celebrates music, food, arts, and culture, offering visitors a chance to sample a variety of dishes from local restaurants.",
+      "difficulty": "Medium"
+    }
+  ]
+}
