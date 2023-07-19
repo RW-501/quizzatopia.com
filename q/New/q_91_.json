@@ -1,0 +1,237 @@
+{
+  "quizName": "Constitution Quiz",
+  "quizCode": "CONSTITUTION2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Law",
+  "quizDescription": "Test your knowledge about the Constitution!",
+  "quizTags": "Constitution, Law, Government, United States",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In what year was the United States Constitution signed?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1776",
+        "1787",
+        "1791",
+        "1800"
+      ],
+      "answer": "1787",
+      "explanation": "The United States Constitution was signed in 1787 during the Constitutional Convention in Philadelphia.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "How many amendments are there in the United States Constitution?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "10",
+        "27",
+        "50",
+        "100"
+      ],
+      "answer": "27",
+      "explanation": "There are 27 amendments in the United States Constitution, including the Bill of Rights.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which amendment protects the freedom of speech?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "First Amendment",
+        "Fourth Amendment",
+        "Sixth Amendment",
+        "Tenth Amendment"
+      ],
+      "answer": "First Amendment",
+      "explanation": "The First Amendment protects the freedom of speech, religion, press, assembly, and the right to petition the government.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Who is considered the 'Father of the Constitution'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "George Washington",
+        "Benjamin Franklin",
+        "Thomas Jefferson",
+        "James Madison"
+      ],
+      "answer": "James Madison",
+      "explanation": "James Madison is considered the 'Father of the Constitution' for his pivotal role in drafting and promoting the Constitution.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which article of the Constitution establishes the legislative branch of the United States government?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Article I",
+        "Article II",
+        "Article III",
+        "Article IV"
+      ],
+      "answer": "Article I",
+      "explanation": "Article I of the Constitution establishes the legislative branch, which includes the Congress, composed of the Senate and the House of Representatives.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the supreme law of the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Declaration of Independence",
+        "Constitution",
+        "Bill of Rights",
+        "Emancipation Proclamation"
+      ],
+      "answer": "Constitution",
+      "explanation": "The Constitution is the supreme law of the United States. It outlines the structure of the federal government and guarantees fundamental rights and freedoms.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which amendment abolished slavery in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Thirteenth Amendment",
+        "Fourteenth Amendment",
+        "Fifteenth Amendment",
+        "Nineteenth Amendment"
+      ],
+      "answer": "Thirteenth Amendment",
+      "explanation": "The Thirteenth Amendment, ratified in 1865, abolished slavery and involuntary servitude in the United States.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which amendment guarantees the right to bear arms?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Second Amendment",
+        "Fifth Amendment",
+        "Eighth Amendment",
+        "Tenth Amendment"
+      ],
+      "answer": "Second Amendment",
+      "explanation": "The Second Amendment protects the right of the people to keep and bear arms.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which article of the Constitution establishes the judicial branch of the United States government?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Article I",
+        "Article II",
+        "Article III",
+        "Article IV"
+      ],
+      "answer": "Article III",
+      "explanation": "Article III of the Constitution establishes the judicial branch, which includes the Supreme Court and other federal courts.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Who has the power to declare war according to the Constitution?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "President",
+        "Congress",
+        "Supreme Court",
+        "Governors"
+      ],
+      "answer": "Congress",
+      "explanation": "According to the Constitution, the power to declare war rests with Congress.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which amendment guarantees the right to a fair and speedy trial?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Fourth Amendment",
+        "Sixth Amendment",
+        "Eighth Amendment",
+        "Fourteenth Amendment"
+      ],
+      "answer": "Sixth Amendment",
+      "explanation": "The Sixth Amendment guarantees the right to a fair and speedy trial, as well as the right to legal counsel.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which amendment guarantees freedom of religion?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "First Amendment",
+        "Third Amendment",
+        "Fifth Amendment",
+        "Ninth Amendment"
+      ],
+      "answer": "First Amendment",
+      "explanation": "The First Amendment guarantees freedom of religion, among other rights.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which amendment grants equal protection under the law and due process to all citizens?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Fourteenth Amendment",
+        "Fifteenth Amendment",
+        "Nineteenth Amendment",
+        "Twenty-Sixth Amendment"
+      ],
+      "answer": "Fourteenth Amendment",
+      "explanation": "The Fourteenth Amendment grants equal protection under the law and due process to all citizens.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which article of the Constitution outlines the process for its amendment?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Article I",
+        "Article II",
+        "Article V",
+        "Article VII"
+      ],
+      "answer": "Article V",
+      "explanation": "Article V of the Constitution outlines the process for its amendment, requiring approval from two-thirds of Congress and three-fourths of the states.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which amendment establishes the voting rights for all citizens, regardless of race or color?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Thirteenth Amendment",
+        "Fourteenth Amendment",
+        "Fifteenth Amendment",
+        "Nineteenth Amendment"
+      ],
+      "answer": "Fifteenth Amendment",
+      "explanation": "The Fifteenth Amendment, ratified in 1870, establishes the voting rights for all citizens, regardless of race or color.",
+      "difficulty": "Medium"
+    }
+  ]
+}
