@@ -1,0 +1,159 @@
+{
+  "quizName": "MCU Tony Stark Quiz",
+  "quizCode": "TONY123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Movies",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is Tony Stark's superhero alter ego?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Spider-Man",
+        "Black Widow",
+        "Iron Man",
+        "Captain America"
+      ],
+      "answer": "Iron Man",
+      "explanation": "Tony Stark's superhero alter ego is Iron Man. He created a high-tech suit of armor to fight crime and protect the world.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the name of Tony Stark's company?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Stark Industries",
+        "Wayne Enterprises",
+        "Oscorp",
+        "LexCorp"
+      ],
+      "answer": "Stark Industries",
+      "explanation": "Tony Stark is the CEO of Stark Industries, a multinational industrial company known for its advanced technology and weapons manufacturing.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which actor portrays Tony Stark in the Marvel Cinematic Universe?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Robert Downey Jr.",
+        "Chris Evans",
+        "Tom Hiddleston",
+        "Mark Ruffalo"
+      ],
+      "answer": "Robert Downey Jr.",
+      "explanation": "Robert Downey Jr. portrays Tony Stark in the Marvel Cinematic Universe. His charismatic performance has made the character iconic.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the name of Tony Stark's personal AI assistant?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "JARVIS",
+        "FRIDAY",
+        "EDITH",
+        "T.A.H.I.T.I."
+      ],
+      "answer": "JARVIS",
+      "explanation": "Tony Stark's personal AI assistant is named JARVIS (Just A Rather Very Intelligent System). JARVIS later evolves into Vision.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which Marvel film marks Tony Stark's first appearance in the MCU?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Iron Man",
+        "The Avengers",
+        "Captain America: Civil War",
+        "Thor"
+      ],
+      "answer": "Iron Man",
+      "explanation": "Tony Stark's first appearance in the Marvel Cinematic Universe is in the film 'Iron Man' (2008). It launched the MCU as we know it today.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is Tony Stark's famous catchphrase?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "I am Iron Man",
+        "I'm always angry",
+        "I can do this all day",
+        "I am Groot"
+      ],
+      "answer": "I am Iron Man",
+      "explanation": "Tony Stark's famous catchphrase is 'I am Iron Man.' He first utters this line in the film 'Iron Man' (2008).",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What element powers Tony Stark's arc reactor?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Vibranium",
+        "Adamantium",
+        "Palladium",
+        "Unobtainium"
+      ],
+      "answer": "Palladium",
+      "explanation": "Initially, Tony Stark's arc reactor is powered by a palladium core. He later develops a new element to replace it.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Who is Tony Stark's best friend and War Machine's alter ego?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Happy Hogan",
+        "Rhodey Rhodes",
+        "Bucky Barnes",
+        "Pepper Potts"
+      ],
+      "answer": "Rhodey Rhodes",
+      "explanation": "Rhodey Rhodes, portrayed by Don Cheadle, is Tony Stark's best friend and becomes the superhero War Machine.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which film features Tony Stark's final appearance in the MCU?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Avengers: Endgame",
+        "Spider-Man: Far From Home",
+        "Iron Man 3",
+        "Captain America: Civil War"
+      ],
+      "answer": "Avengers: Endgame",
+      "explanation": "Tony Stark's final appearance in the MCU is in the film 'Avengers: Endgame' (2019), where he sacrifices himself to save the universe.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the name of Tony Stark's wife?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Natasha Romanoff",
+        "Pepper Potts",
+        "Jane Foster",
+        "Wanda Maximoff"
+      ],
+      "answer": "Pepper Potts",
+      "explanation": "Pepper Potts, portrayed by Gwyneth Paltrow, is Tony Stark's wife and a significant character throughout the MCU.",
+      "difficulty": "Medium"
+    }
+  ]
+}
