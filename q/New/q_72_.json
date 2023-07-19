@@ -1,0 +1,233 @@
+{
+  "quizName": "Quiz on Ohio",
+  "quizCode": "OH2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Ohio!",
+  "quizTags": "Ohio, Geography, States, USA",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the capital city of Ohio?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Columbus",
+        "Cleveland",
+        "Cincinnati",
+        "Dayton"
+      ],
+      "answer": "Columbus",
+      "explanation": "The capital city of Ohio is Columbus, known for its vibrant arts scene, diverse economy, and the presence of The Ohio State University.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: The Wright brothers, famous for their pioneering work in aviation, were born in Ohio.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. The Wright brothers, Orville and Wilbur Wright, were born in Dayton, Ohio. They made significant contributions to the development of the airplane.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the nickname of Ohio?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Sunshine State",
+        "The Buckeye State",
+        "The Garden State",
+        "The Lone Star State"
+      ],
+      "answer": "The Buckeye State",
+      "explanation": "Ohio is often referred to as The Buckeye State, a nickname derived from the prevalence of buckeye trees in the state.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous amusement park, located in Sandusky, Ohio, is known for its roller coasters and thrilling rides?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cedar Point",
+        "Six Flags Magic Mountain",
+        "Universal Studios Orlando",
+        "Walt Disney World"
+      ],
+      "answer": "Cedar Point",
+      "explanation": "Cedar Point, located in Sandusky, Ohio, is a famous amusement park known for its world-class roller coasters, thrilling rides, and scenic views of Lake Erie.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the official state bird of Ohio?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Northern Cardinal",
+        "Eastern Bluebird",
+        "American Goldfinch",
+        "Black-capped Chickadee"
+      ],
+      "answer": "Northern Cardinal",
+      "explanation": "The official state bird of Ohio is the Northern Cardinal, a vibrant red bird known for its beautiful song.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous river, a major tributary of the Mississippi River, forms part of Ohio's southern border?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ohio River",
+        "Missouri River",
+        "Colorado River",
+        "Columbia River"
+      ],
+      "answer": "Ohio River",
+      "explanation": "The Ohio River, a major tributary of the Mississippi River, forms part of Ohio's southern border. It has played a significant role in the state's history and economy.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the famous rock and roll museum located in Cleveland, Ohio?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Rock and Roll Hall of Fame",
+        "Country Music Hall of Fame",
+        "Grammy Museum",
+        "Museum of Pop Culture"
+      ],
+      "answer": "Rock and Roll Hall of Fame",
+      "explanation": "The Rock and Roll Hall of Fame, located in Cleveland, Ohio, is a famous museum that celebrates the history and impact of rock and roll music and honors notable musicians and artists in the genre.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous university, located in Columbus, Ohio, is one of the largest and most prestigious universities in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ohio State University",
+        "University of Michigan",
+        "Harvard University",
+        "Stanford University"
+      ],
+      "answer": "Ohio State University",
+      "explanation": "Ohio State University, located in Columbus, Ohio, is one of the largest and most prestigious universities in the United States. It offers a wide range of academic programs and is known for its strong athletics program.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous sports team, based in Cleveland, Ohio, is known for its passionate fanbase and its historic championship drought that ended in 2016?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cleveland Browns (NFL)",
+        "Cleveland Cavaliers (NBA)",
+        "Cleveland Indians (MLB)",
+        "Columbus Blue Jackets (NHL)"
+      ],
+      "answer": "Cleveland Cavaliers (NBA)",
+      "explanation": "The Cleveland Cavaliers, an NBA team based in Cleveland, Ohio, are known for their passionate fanbase and their historic championship victory in 2016, ending the city's long championship drought.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which famous inventor and businessman, known for developing the electric light bulb and founding General Electric (GE), was born in Milan, Ohio?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Thomas Edison",
+        "Nikola Tesla",
+        "Alexander Graham Bell",
+        "Henry Ford"
+      ],
+      "answer": "Thomas Edison",
+      "explanation": "Thomas Edison, one of the most renowned inventors in history, was born in Milan, Ohio. He made significant contributions to various fields, including the development of the electric light bulb and the phonograph.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous national park, located in Ohio, preserves the natural and cultural history of the region and is known for its stunning sandstone cliffs and waterfalls?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yellowstone National Park",
+        "Zion National Park",
+        "Great Smoky Mountains National Park",
+        "Cuyahoga Valley National Park"
+      ],
+      "answer": "Cuyahoga Valley National Park",
+      "explanation": "Cuyahoga Valley National Park, located in Ohio, preserves the natural and cultural history of the region. It is known for its stunning sandstone cliffs, waterfalls, and the historic Ohio & Erie Canal.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous aviation museum, located in Dayton, Ohio, showcases a collection of historic aircraft and pays tribute to the Wright brothers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Smithsonian National Air and Space Museum",
+        "National Museum of the United States Air Force",
+        "Intrepid Sea, Air & Space Museum",
+        "Museum of Flight"
+      ],
+      "answer": "National Museum of the United States Air Force",
+      "explanation": "The National Museum of the United States Air Force, located in Dayton, Ohio, is a famous aviation museum that showcases a vast collection of historic aircraft and artifacts. It pays tribute to the Wright brothers and the history of aviation.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the famous college football team based in Columbus, Ohio, with a passionate fanbase known as 'Buckeye Nation'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ohio State Buckeyes",
+        "Michigan Wolverines",
+        "Alabama Crimson Tide",
+        "Clemson Tigers"
+      ],
+      "answer": "Ohio State Buckeyes",
+      "explanation": "The Ohio State Buckeyes, representing Ohio State University, are a famous college football team based in Columbus, Ohio. They have a passionate fanbase known as 'Buckeye Nation' and have achieved great success in the sport.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous underground railroad network, a system of safe houses and routes for escaped slaves, passed through Ohio on their journey to freedom?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Oregon Trail",
+        "Santa Fe Trail",
+        "Underground Railroad",
+        "El Camino Real"
+      ],
+      "answer": "Underground Railroad",
+      "explanation": "The Underground Railroad was a famous network of safe houses and routes used by escaped slaves seeking freedom. Ohio played a significant role in the Underground Railroad, providing a pathway to freedom for many enslaved individuals.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous amusement park, located in Mason, Ohio, is known for its family-friendly attractions and water park?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Walt Disney World",
+        "Universal Studios Orlando",
+        "Kings Island",
+        "Cedar Point"
+      ],
+      "answer": "Kings Island",
+      "explanation": "Kings Island, located in Mason, Ohio, is a famous amusement park known for its family-friendly attractions, thrilling rides, and a water park called Soak City.",
+      "difficulty": "Medium"
+    }
+  ]
+}
