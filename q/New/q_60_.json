@@ -1,0 +1,230 @@
+{
+  "quizName": "Quiz on Minnesota",
+  "quizCode": "MN2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Minnesota!",
+  "quizTags": "Minnesota, Geography, States, USA",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Minnesota is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Land of Lakes",
+        "North Star",
+        "Gopher",
+        "Lumberjack"
+      ],
+      "answer": "Land of Lakes",
+      "explanation": "Minnesota is known as the Land of Lakes due to its numerous lakes, with over 10,000 of them throughout the state.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Minnesota is known for having bitterly cold winters, earning the nickname 'The Sunshine State.'",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "False",
+      "explanation": "False. Minnesota is known for having bitterly cold winters, especially in the northern regions, but it is not called 'The Sunshine State.' The nickname 'The Sunshine State' is actually used for Florida.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of Minnesota?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Duluth",
+        "Minneapolis",
+        "St. Paul",
+        "Rochester"
+      ],
+      "answer": "St. Paul",
+      "explanation": "The capital city of Minnesota is St. Paul, which is adjacent to Minneapolis and together they form the Twin Cities metropolitan area.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous and beloved American author, known for writing novels such as 'Little House on the Prairie,' was born in Pepin, Wisconsin, but spent part of her childhood in Walnut Grove, Minnesota?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Laura Ingalls Wilder",
+        "Louisa May Alcott",
+        "Harper Lee",
+        "Mark Twain"
+      ],
+      "answer": "Laura Ingalls Wilder",
+      "explanation": "Laura Ingalls Wilder, the author of the 'Little House' series of books, was born in Pepin, Wisconsin, but her family moved to Walnut Grove, Minnesota, where she spent part of her childhood. Her experiences in Minnesota inspired some of her writings.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of Minnesota?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The North Star State",
+        "The Gopher State",
+        "The Northwoods State",
+        "The Land of 10,000 Lakes"
+      ],
+      "answer": "The North Star State",
+      "explanation": "Minnesota is often referred to as The North Star State, a reference to the state's motto: 'L'Étoile du Nord,' which means 'The Star of the North' in French.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous musical artist, known as 'The Purple One,' was born in Minneapolis, Minnesota?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Elvis Presley",
+        "Michael Jackson",
+        "Prince",
+        "David Bowie"
+      ],
+      "answer": "Prince",
+      "explanation": "Prince, a highly influential and iconic musician known for his eclectic style and hits like 'Purple Rain' and 'When Doves Cry,' was born in Minneapolis, Minnesota.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state bird of Minnesota?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "American Goldfinch",
+        "Common Loon",
+        "Bald Eagle",
+        "Eastern Bluebird"
+      ],
+      "answer": "Common Loon",
+      "explanation": "The official state bird of Minnesota is the Common Loon, known for its distinctive calls and often associated with the state's lakes and wilderness areas.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous shopping mall, located in Bloomington, Minnesota, is one of the largest and most visited malls in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mall of America",
+        "Westfield World Trade Center",
+        "The Dubai Mall",
+        "King of Prussia Mall"
+      ],
+      "answer": "Mall of America",
+      "explanation": "The Mall of America, located in Bloomington, Minnesota, is one of the largest and most visited shopping malls in the United States, featuring a wide range of retail stores, restaurants, and entertainment attractions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous frozen waterfall, located on the North Shore of Lake Superior in Minnesota, is a popular destination for ice climbers and winter hikers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Niagara Falls",
+        "Multnomah Falls",
+        "Bridalveil Fall",
+        "Gooseberry Falls"
+      ],
+      "answer": "Gooseberry Falls",
+      "explanation": "Gooseberry Falls, located on the North Shore of Lake Superior in Minnesota, is a famous frozen waterfall and a popular destination for ice climbers and winter hikers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: Minnesota is home to the largest population of wild wolves in the contiguous United States.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Minnesota is home to the largest population of wild wolves in the contiguous United States, and they play a crucial role in the state's ecosystem.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous hockey team, based in St. Paul, Minnesota, won the Stanley Cup in 1989 and 1991?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Boston Bruins",
+        "Chicago Blackhawks",
+        "Montreal Canadiens",
+        "Minnesota North Stars"
+      ],
+      "answer": "Minnesota North Stars",
+      "explanation": "The Minnesota North Stars, formerly based in Bloomington and later in St. Paul, won the Stanley Cup in 1989 and 1991. The team later moved to Dallas, Texas, and became the Dallas Stars.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous landmark and iconic music venue, located in Minneapolis, Minnesota, played a significant role in the music history of the city and hosted many legendary performances?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Madison Square Garden",
+        "The Fillmore",
+        "Apollo Theater",
+        "First Avenue"
+      ],
+      "answer": "First Avenue",
+      "explanation": "First Avenue, located in downtown Minneapolis, is a famous landmark and iconic music venue that played a significant role in the city's music history. It has hosted many legendary performances by various artists and bands.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the famous dish, considered a Minnesota classic, that consists of ground beef and vegetables topped with a layer of mashed potatoes?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gumbo",
+        "Jambalaya",
+        "Hot Dish",
+        "Hushpuppies"
+      ],
+      "answer": "Hot Dish",
+      "explanation": "Hot Dish is a famous dish considered a Minnesota classic, often served as a hearty casserole that includes ground beef, vegetables, and a layer of mashed potatoes or tater tots on top.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous explorer, known for his expedition to the Pacific Northwest, was born in St. Paul, Minnesota?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Christopher Columbus",
+        "John Cabot",
+        "Lewis and Clark",
+        "Zebulon Pike"
+      ],
+      "answer": "Zebulon Pike",
+      "explanation": "Zebulon Pike, a famous American explorer, was born in Lamberton, New Jersey, but later moved to St. Paul, Minnesota. He is best known for leading an expedition to explore the southern portion of the Louisiana Territory and Pike's Peak in Colorado.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous music festival, held annually in Minnesota, is one of the largest and most popular in the United States, attracting music fans from all over the country?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Coachella",
+        "Lollapalooza",
+        "Bonnaroo",
+        "Twin Cities Summer Jam"
+      ],
+      "answer": "Twin Cities Summer Jam",
+      "explanation": "Twin Cities Summer Jam is a famous music festival held annually in Minnesota, featuring a diverse lineup of popular artists from various genres. It has become one of the largest and most popular music festivals in the United States.",
+      "difficulty": "Medium"
+    }
+  ]
+}
