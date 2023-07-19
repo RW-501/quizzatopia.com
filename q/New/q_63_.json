@@ -1,0 +1,230 @@
+{
+  "quizName": "Quiz on Montana",
+  "quizCode": "MT2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Montana!",
+  "quizTags": "Montana, Geography, States, USA",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Montana is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Big Sky",
+        "Treasure",
+        "Mountain",
+        "Wild West"
+      ],
+      "answer": "Big Sky",
+      "explanation": "Montana is known as the Big Sky State, reflecting its vast open spaces and expansive skies.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Glacier National Park, located in Montana, is known for its vast ice-covered landscapes and polar bears.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "False",
+      "explanation": "False. While Glacier National Park is known for its stunning landscapes and glaciers, it is not home to polar bears. The park is located in the northern Rocky Mountains and offers breathtaking scenery and diverse wildlife.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of Montana?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Missoula",
+        "Great Falls",
+        "Helena",
+        "Billings"
+      ],
+      "answer": "Helena",
+      "explanation": "The capital city of Montana is Helena, named after Helena Township in Minnesota or after Saint Helena, depending on different historical accounts.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous national historic trail, starting in Missouri and ending in Oregon, passed through Montana and was a key route for western migration in the 19th century?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Oregon Trail",
+        "The Lewis and Clark Trail",
+        "The Santa Fe Trail",
+        "The California Trail"
+      ],
+      "answer": "The Oregon Trail",
+      "explanation": "The Oregon Trail, a historic trail used by pioneers in the 19th century, passed through Montana, among other states, as they journeyed westward to Oregon or California.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of Montana?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Treasure State",
+        "The Last Frontier",
+        "The Silver State",
+        "The Mountain State"
+      ],
+      "answer": "The Treasure State",
+      "explanation": "Montana is often referred to as The Treasure State due to its rich mineral resources, including gold, silver, copper, and other valuable minerals.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous American author and conservationist wrote extensively about Montana's landscapes and wildlife, advocating for the preservation of the American wilderness?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jack London",
+        "John Muir",
+        "Aldo Leopold",
+        "Rachel Carson"
+      ],
+      "answer": "Aldo Leopold",
+      "explanation": "Aldo Leopold, a renowned conservationist, and author, wrote extensively about Montana's landscapes and wildlife in his book 'A Sand County Almanac.' He was an advocate for wilderness preservation and environmental ethics.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state animal of Montana?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "American Bison",
+        "Bighorn Sheep",
+        "Mule Deer",
+        "Grizzly Bear"
+      ],
+      "answer": "Grizzly Bear",
+      "explanation": "The official state animal of Montana is the Grizzly Bear, a powerful and iconic species native to the state's wilderness areas.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous national park, known for its unique geothermal features such as geysers and hot springs, extends into Montana, Wyoming, and Idaho?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yellowstone National Park",
+        "Yosemite National Park",
+        "Grand Canyon National Park",
+        "Zion National Park"
+      ],
+      "answer": "Yellowstone National Park",
+      "explanation": "Yellowstone National Park, the first national park in the world, extends into Montana, Wyoming, and Idaho. It is renowned for its geysers, hot springs, wildlife, and breathtaking landscapes.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous battle, fought on June 25-26, 1876, marked a significant victory for Native American forces over the United States Army and became known as 'Custer's Last Stand'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Battle of Gettysburg",
+        "The Battle of Little Bighorn",
+        "The Battle of Antietam",
+        "The Battle of Chickamauga"
+      ],
+      "answer": "The Battle of Little Bighorn",
+      "explanation": "The Battle of Little Bighorn, fought between the Lakota Sioux, Cheyenne, and Arapaho tribes and the U.S. Army's 7th Cavalry Regiment, resulted in a major victory for the Native American forces and the death of General George Armstrong Custer.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: Montana is the fourth most populous state in the United States.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "False",
+      "explanation": "False. Montana is one of the least populous states in the United States, ranking among the states with the lowest population. Its vast size and relatively small population contribute to its nickname, the Big Sky State.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous historic site, located in Montana, is a preserved ghost town and a symbol of the American West's mining era?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pompeii",
+        "Bodie",
+        "Tombstone",
+        "Bannack"
+      ],
+      "answer": "Bannack",
+      "explanation": "Bannack, located in Montana, is a well-preserved ghost town and a National Historic Landmark. It was an important mining town during the Montana gold rush of the 1860s.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous river, flowing through Montana, is known for its scenic beauty, wildlife, and world-class fly fishing opportunities?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Colorado River",
+        "The Missouri River",
+        "The Mississippi River",
+        "The Snake River"
+      ],
+      "answer": "The Missouri River",
+      "explanation": "The Missouri River, one of the longest rivers in North America, flows through Montana and offers opportunities for outdoor activities, including fishing, boating, and exploring the stunning natural landscapes.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the famous Montana landmark, located in the Rocky Mountains, that rises over 10,000 feet and is a popular destination for hikers and climbers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mount McKinley",
+        "Mount St. Helens",
+        "Mount Hood",
+        "Granite Peak"
+      ],
+      "answer": "Granite Peak",
+      "explanation": "Granite Peak, located in the Beartooth Mountains of the Rocky Mountains, is the highest peak in Montana and is a sought-after destination for hikers and climbers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous artist and cowboy sculptor, known for his bronze sculptures depicting the American West, was born in Deer Lodge, Montana?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Charles Marion Russell",
+        "Frederic Remington",
+        "Auguste Rodin",
+        "Louise Nevelson"
+      ],
+      "answer": "Charles Marion Russell",
+      "explanation": "Charles Marion Russell, often referred to as 'Charlie Russell,' was a renowned artist and sculptor who captured the spirit of the American West in his bronze sculptures and paintings. He was born in St. Louis, Missouri.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous river, flowing through the southeastern corner of Montana, is known for its exceptional fly fishing opportunities and as a critical habitat for wild trout?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Yellowstone River",
+        "The Snake River",
+        "The Colorado River",
+        "The Bighorn River"
+      ],
+      "answer": "The Yellowstone River",
+      "explanation": "The Yellowstone River flows through the southeastern corner of Montana and is known for its exceptional fly fishing opportunities. It is regarded as one of the most important rivers in the United States for wild trout habitat.",
+      "difficulty": "Medium"
+    }
+  ]
+}
