@@ -1,0 +1,159 @@
+{
+  "quizName": "Kids Quiz (Age 9)",
+  "quizCode": "KIDS9",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Kids",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who painted the Mona Lisa?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Leonardo da Vinci",
+        "Vincent van Gogh",
+        "Pablo Picasso",
+        "Michelangelo"
+      ],
+      "answer": "Leonardo da Vinci",
+      "explanation": "The Mona Lisa was painted by Leonardo da Vinci, an Italian artist, and is considered one of the most famous paintings in the world.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the largest organ in the human body?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Liver",
+        "Heart",
+        "Lungs",
+        "Skin"
+      ],
+      "answer": "Skin",
+      "explanation": "The skin is the largest organ in the human body. It protects the internal organs and helps regulate body temperature.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the smallest planet in our solar system?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Earth",
+        "Mars",
+        "Mercury",
+        "Venus"
+      ],
+      "answer": "Mercury",
+      "explanation": "Mercury is the smallest planet in our solar system, located closest to the Sun.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which of the following is a mammal?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Snake",
+        "Crocodile",
+        "Fish",
+        "Dolphin"
+      ],
+      "answer": "Dolphin",
+      "explanation": "Dolphins are mammals, not fish. They are highly intelligent marine animals that breathe air and nurse their young with milk.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which planet is known as the 'Blue Planet'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Earth",
+        "Mars",
+        "Neptune",
+        "Uranus"
+      ],
+      "answer": "Earth",
+      "explanation": "Earth is known as the 'Blue Planet' due to the abundance of water on its surface, which gives it a blue appearance from space.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the main gas that makes up the Earth's atmosphere?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Oxygen",
+        "Carbon dioxide",
+        "Nitrogen",
+        "Hydrogen"
+      ],
+      "answer": "Nitrogen",
+      "explanation": "Nitrogen is the main gas that makes up the Earth's atmosphere, accounting for about 78% of the air we breathe.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which famous scientist developed the theory of relativity?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Isaac Newton",
+        "Albert Einstein",
+        "Galileo Galilei",
+        "Marie Curie"
+      ],
+      "answer": "Albert Einstein",
+      "explanation": "Albert Einstein, a renowned physicist, developed the theory of relativity, which revolutionized our understanding of space, time, and gravity.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which of the following is a renewable energy source?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Coal",
+        "Natural gas",
+        "Oil",
+        "Solar power"
+      ],
+      "answer": "Solar power",
+      "explanation": "Solar power is a renewable energy source that harnesses energy from the sun and converts it into electricity or heat.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the largest animal on Earth?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Elephant",
+        "Blue whale",
+        "Giraffe",
+        "Hippopotamus"
+      ],
+      "answer": "Blue whale",
+      "explanation": "The blue whale is the largest animal on Earth, growing up to 100 feet long and weighing as much as 200 tons.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the main function of the heart?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pumping blood",
+        "Digesting food",
+        "Producing hormones",
+        "Filtering waste"
+      ],
+      "answer": "Pumping blood",
+      "explanation": "The main function of the heart is to pump blood throughout the body, delivering oxygen and nutrients to the organs and tissues.",
+      "difficulty": "Medium"
+    }
+  ]
+}
