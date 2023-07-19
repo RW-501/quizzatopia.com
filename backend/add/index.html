@@ -157,7 +157,7 @@
  let updateDate = new Date().toLocaleString();
 	  
       // Save quiz information to Firestore with an automatically generated document ID
-     const saveQuizData = await db.collection('quizzes').add({
+  await db.collection('quizzes').doc(quizCode).set({
         quizCodeDB: quizCode,
         quizNameDB: quizName,
         quizCreatedByDB: "Quizzatopia",
