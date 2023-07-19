@@ -46,7 +46,7 @@ width: 100% !important;
       transform: rotate(360deg);
     }
 
-.btnFX {
+.btnFX .btn .category-image .btnMain .font-weight-bold .btnMainBottom .BottomCloseOptionsButton  .close      {
   /* Default styles */
 
   transition: background-color 0.3s ease;
