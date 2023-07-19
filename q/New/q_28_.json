@@ -1,0 +1,159 @@
+{
+  "quizName": "AI Quiz",
+  "quizCode": "AI123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Technology",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does AI stand for?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Artificial Intelligence",
+        "Advanced Interactions",
+        "Automated Inventions",
+        "Augmented Information"
+      ],
+      "answer": "Artificial Intelligence",
+      "explanation": "AI stands for Artificial Intelligence.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the goal of AI?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To simulate human intelligence in machines",
+        "To replace human intelligence with machines",
+        "To create machines that can feel emotions",
+        "To automate all human tasks"
+      ],
+      "answer": "To simulate human intelligence in machines",
+      "explanation": "The goal of AI is to simulate human intelligence in machines.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which programming language is commonly used in AI?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Python",
+        "Java",
+        "C++",
+        "JavaScript"
+      ],
+      "answer": "Python",
+      "explanation": "Python is commonly used in AI due to its simplicity and extensive libraries.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the term used to describe AI systems improving their performance with experience?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Machine Learning",
+        "Deep Learning",
+        "Reinforcement Learning",
+        "Natural Language Processing"
+      ],
+      "answer": "Machine Learning",
+      "explanation": "Machine Learning is the term used to describe AI systems improving their performance with experience.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which AI technique focuses on enabling computers to understand and interpret human language?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Natural Language Processing",
+        "Computer Vision",
+        "Expert Systems",
+        "Genetic Algorithms"
+      ],
+      "answer": "Natural Language Processing",
+      "explanation": "Natural Language Processing focuses on enabling computers to understand and interpret human language.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the field of AI that deals with enabling computers to see and understand visual information?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Computer Vision",
+        "Robotics",
+        "Machine Learning",
+        "Expert Systems"
+      ],
+      "answer": "Computer Vision",
+      "explanation": "Computer Vision is the field of AI that deals with enabling computers to see and understand visual information.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the term used for AI systems that can learn and perform tasks without explicit programming?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Deep Learning",
+        "Reinforcement Learning",
+        "Unsupervised Learning",
+        "Artificial Neural Networks"
+      ],
+      "answer": "Deep Learning",
+      "explanation": "Deep Learning refers to AI systems that can learn and perform tasks without explicit programming.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which AI technique involves training AI models using rewards and punishments to maximize desired outcomes?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Reinforcement Learning",
+        "Supervised Learning",
+        "Unsupervised Learning",
+        "Transfer Learning"
+      ],
+      "answer": "Reinforcement Learning",
+      "explanation": "Reinforcement Learning involves training AI models using rewards and punishments to maximize desired outcomes.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which AI technique involves clustering and pattern recognition without labeled data?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Unsupervised Learning",
+        "Supervised Learning",
+        "Reinforcement Learning",
+        "Natural Language Processing"
+      ],
+      "answer": "Unsupervised Learning",
+      "explanation": "Unsupervised Learning involves clustering and pattern recognition without labeled data.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the term used for interconnected nodes inspired by the human brain in AI?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Artificial Neural Networks",
+        "Genetic Algorithms",
+        "Fuzzy Logic",
+        "Expert Systems"
+      ],
+      "answer": "Artificial Neural Networks",
+      "explanation": "Artificial Neural Networks are interconnected nodes inspired by the human brain in AI.",
+      "difficulty": "Medium"
+    }
+  ]
+}
