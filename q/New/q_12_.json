@@ -1,0 +1,159 @@
+{
+  "quizName": "MCU Spider-Man Quiz",
+  "quizCode": "SPIDERMAN123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Movies",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is Spider-Man's real name?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Peter Parker",
+        "Miles Morales",
+        "Harry Osborn",
+        "Eddie Brock"
+      ],
+      "answer": "Peter Parker",
+      "explanation": "Spider-Man's real name is Peter Parker. He is a high school student who gains superhuman abilities after being bitten by a radioactive spider.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Who is Spider-Man's first mentor in the MCU?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Captain America",
+        "Iron Man",
+        "Black Widow",
+        "Doctor Strange"
+      ],
+      "answer": "Iron Man",
+      "explanation": "Spider-Man's first mentor in the MCU is Tony Stark (Iron Man). Tony recruits Peter and provides him with a high-tech suit.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the name of Spider-Man's AI assistant?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "JARVIS",
+        "FRIDAY",
+        "EDITH",
+        "Karen"
+      ],
+      "answer": "Karen",
+      "explanation": "Spider-Man's AI assistant is named Karen. She assists him with various tasks and provides information during his missions.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which actor portrays Spider-Man in the Marvel Cinematic Universe?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tom Holland",
+        "Andrew Garfield",
+        "Tobey Maguire",
+        "Zendaya"
+      ],
+      "answer": "Tom Holland",
+      "explanation": "Tom Holland portrays Spider-Man in the Marvel Cinematic Universe. His portrayal brings a youthful energy to the character.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the name of the villain in Spider-Man: Homecoming?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Vulture",
+        "Green Goblin",
+        "Mysterio",
+        "Doctor Octopus"
+      ],
+      "answer": "Vulture",
+      "explanation": "The villain in Spider-Man: Homecoming is Adrian Toomes, also known as Vulture. He is played by Michael Keaton.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which city does Spider-Man primarily protect?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "New York City",
+        "Los Angeles",
+        "Chicago",
+        "London"
+      ],
+      "answer": "New York City",
+      "explanation": "Spider-Man primarily protects the city of New York. It is his hometown and the setting for many of his adventures.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Who becomes Spider-Man's best friend and eventually becomes the superhero Ned Leeds?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Happy Hogan",
+        "Flash Thompson",
+        "Ned Leeds",
+        "Harry Osborn"
+      ],
+      "answer": "Ned Leeds",
+      "explanation": "Ned Leeds, portrayed by Jacob Batalon, becomes Peter Parker's best friend and later discovers Peter's secret identity as Spider-Man.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which film features Spider-Man's first appearance in the Marvel Cinematic Universe?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Captain America: Civil War",
+        "Spider-Man: Homecoming",
+        "Avengers: Endgame",
+        "Black Panther"
+      ],
+      "answer": "Captain America: Civil War",
+      "explanation": "Spider-Man makes his first appearance in the Marvel Cinematic Universe in the film 'Captain America: Civil War' (2016).",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Who is Spider-Man's love interest in the MCU?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gwen Stacy",
+        "Mary Jane Watson",
+        "Liz Allan",
+        "MJ (Michelle Jones)"
+      ],
+      "answer": "MJ (Michelle Jones)",
+      "explanation": "Spider-Man's love interest in the MCU is MJ (Michelle Jones), played by Zendaya.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the name of the artificial intelligence glasses given to Peter by Tony Stark?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "EDITH",
+        "Karen",
+        "FRIDAY",
+        "DUM-E"
+      ],
+      "answer": "EDITH",
+      "explanation": "EDITH (Even Dead, I'm The Hero) is the name of the artificial intelligence glasses given to Peter by Tony Stark in Spider-Man: Far From Home.",
+      "difficulty": "Medium"
+    }
+  ]
+}
