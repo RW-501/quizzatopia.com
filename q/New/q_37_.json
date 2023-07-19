@@ -1,0 +1,149 @@
+{
+  "quizName": "Kids Quiz (Age 11)",
+  "quizCode": "KIDS11",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Kids",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "The Great Wall of China is the longest man-made structure in the world.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [],
+      "answer": "True",
+      "explanation": "The Great Wall of China is indeed the longest man-made structure in the world, stretching over 13,000 miles.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Who is the author of the 'Harry Potter' book series?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "J.K. Rowling",
+        "Roald Dahl",
+        "C.S. Lewis",
+        "Enid Blyton"
+      ],
+      "answer": "J.K. Rowling",
+      "explanation": "J.K. Rowling is the author of the 'Harry Potter' book series, which has gained immense popularity worldwide.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which of the following is a renewable energy source?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Coal",
+        "Natural gas",
+        "Wind power",
+        "Nuclear power"
+      ],
+      "answer": "Wind power",
+      "explanation": "Wind power is a renewable energy source that harnesses the energy of wind to generate electricity.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the largest ocean in the world?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Atlantic Ocean",
+        "Indian Ocean",
+        "Arctic Ocean",
+        "Pacific Ocean"
+      ],
+      "answer": "Pacific Ocean",
+      "explanation": "The Pacific Ocean is the largest ocean in the world, covering a vast area between Asia, Australia, the Americas, and Antarctica.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "The human body has four chambers in the heart.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [],
+      "answer": "True",
+      "explanation": "The human heart has four chambers: two atria and two ventricles, which work together to pump blood throughout the body.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Who painted the famous artwork 'The Starry Night'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pablo Picasso",
+        "Vincent van Gogh",
+        "Leonardo da Vinci",
+        "Salvador Dali"
+      ],
+      "answer": "Vincent van Gogh",
+      "explanation": "Vincent van Gogh painted the famous artwork 'The Starry Night', known for its swirling brushstrokes and vibrant colors.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the largest organ in the human body?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Liver",
+        "Heart",
+        "Lungs",
+        "Skin"
+      ],
+      "answer": "Skin",
+      "explanation": "The skin is the largest organ in the human body, serving as a protective barrier and regulating body temperature.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which planet is known as the 'Red Planet'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Earth",
+        "Mars",
+        "Jupiter",
+        "Venus"
+      ],
+      "answer": "Mars",
+      "explanation": "Mars is known as the 'Red Planet' due to its reddish appearance caused by iron oxide (rust) on its surface.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the capital city of Australia?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sydney",
+        "Melbourne",
+        "Canberra",
+        "Brisbane"
+      ],
+      "answer": "Canberra",
+      "explanation": "Canberra is the capital city of Australia, known for its planned layout and being the seat of government.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which of the following is a type of rock?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Diamond",
+        "Gold",
+        "Silver",
+        "Quartz"
+      ],
+      "answer": "Quartz",
+      "explanation": "Quartz is a type of rock that is commonly found in the Earth's crust. It is composed of silicon and oxygen atoms.",
+      "difficulty": "Medium"
+    }
+  ]
+}
