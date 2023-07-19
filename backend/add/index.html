@@ -105,7 +105,7 @@
 
     // Function to fetch JSON files and process data
     async function startFetching() {
-      counter = 0;
+      
       startButton.disabled = true;
       stopButton.disabled = false;
    //   logTextarea.value = '';
@@ -137,6 +137,9 @@
 
   if (!querySnapshot.empty) {
      logTextarea.value +=`Quiz with code ${quizCode} already saved.\n\n`;
+	  	            counter++;
+	            clearInterval(fetchInterval);
+	     fetchInterval = setInterval(fetchNextJSON, 1000); 
   } else {
 
  let updateDate = new Date().toLocaleString();
@@ -179,20 +182,18 @@ console.log(stringValues);
 
         logTextarea.value += `JSON ${counter}: Error saving quiz data:", error \n` });
 
+stopFetching();
+  	  	            counter++;
 
-
-
-
-
-
-	  
-  
       }
 
 
 
       } else {
         logTextarea.value += `JSON ${counter}: Fetch failed\n`;
+	      stopFetching();
+	  	            counter++;
+
       }
     }
 
