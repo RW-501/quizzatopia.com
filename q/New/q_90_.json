@@ -1,0 +1,236 @@
+{
+  "quizName": "Nouns Quiz",
+  "quizCode": "NOUN2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Language",
+  "quizDescription": "Test your knowledge about nouns!",
+  "quizTags": "Nouns, Language, Grammar, Words",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Identify the noun in the following sentence: 'The cat chased the mouse.'",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "cat",
+        "chased",
+        "mouse",
+        "the"
+      ],
+      "answer": "cat",
+      "explanation": "In the sentence, 'cat' is the noun as it is the subject performing the action.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which of the following is a proper noun?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "book",
+        "teacher",
+        "Paris",
+        "table"
+      ],
+      "answer": "Paris",
+      "explanation": "'Paris' is a proper noun as it refers to a specific place.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Identify the abstract noun in the following sentence: 'Love is a powerful emotion.'",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "powerful",
+        "emotion",
+        "is",
+        "love"
+      ],
+      "answer": "love",
+      "explanation": "In the sentence, 'love' is the abstract noun as it represents a concept or idea.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which of the following is a collective noun?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "dog",
+        "city",
+        "team",
+        "book"
+      ],
+      "answer": "team",
+      "explanation": "'Team' is a collective noun as it refers to a group of individuals.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Identify the common noun in the following sentence: 'The chef prepared a delicious meal.'",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "chef",
+        "prepared",
+        "delicious",
+        "meal"
+      ],
+      "answer": "meal",
+      "explanation": "In the sentence, 'meal' is the common noun as it refers to a general category of food.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which of the following is a countable noun?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "water",
+        "time",
+        "apple",
+        "happiness"
+      ],
+      "answer": "apple",
+      "explanation": "'Apple' is a countable noun as it can be quantified and pluralized.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Identify the possessive noun in the following sentence: 'John's car is parked in the driveway.'",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "car",
+        "John's",
+        "parked",
+        "driveway"
+      ],
+      "answer": "John's",
+      "explanation": "In the sentence, 'John's' is the possessive noun as it indicates ownership.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which of the following is an uncountable noun?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "book",
+        "tree",
+        "water",
+        "cat"
+      ],
+      "answer": "water",
+      "explanation": "'Water' is an uncountable noun as it represents a substance that cannot be counted or pluralized.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Identify the concrete noun in the following sentence: 'The children played in the park.'",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "played",
+        "children",
+        "park",
+        "the"
+      ],
+      "answer": "park",
+      "explanation": "In the sentence, 'park' is the concrete noun as it refers to a physical place.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which of the following is a material noun?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "pencil",
+        "iron",
+        "kindness",
+        "sun"
+      ],
+      "answer": "iron",
+      "explanation": "'Iron' is a material noun as it represents a substance or material.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Identify the possessive pronoun in the following sentence: 'The book is hers.'",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "book",
+        "is",
+        "hers",
+        "the"
+      ],
+      "answer": "hers",
+      "explanation": "In the sentence, 'hers' is the possessive pronoun as it shows ownership.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which of the following is a proper noun?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "chair",
+        "girl",
+        "Mount Everest",
+        "love"
+      ],
+      "answer": "Mount Everest",
+      "explanation": "'Mount Everest' is a proper noun as it refers to a specific place.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Identify the compound noun in the following sentence: 'The sunflower bloomed beautifully.'",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "sunflower",
+        "bloomed",
+        "beautifully",
+        "the"
+      ],
+      "answer": "sunflower",
+      "explanation": "In the sentence, 'sunflower' is the compound noun as it is formed by combining two words.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which of the following is an example of a possessive noun?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "book",
+        "teacher",
+        "cat's",
+        "desk"
+      ],
+      "answer": "cat's",
+      "explanation": "'Cat's' is an example of a possessive noun as it indicates ownership.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Identify the proper noun in the following sentence: 'I visited the Louvre Museum in Paris.'",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "visited",
+        "Louvre Museum",
+        "Paris",
+        "the"
+      ],
+      "answer": "Louvre Museum",
+      "explanation": "In the sentence, 'Louvre Museum' is the proper noun as it refers to a specific place.",
+      "difficulty": "Medium"
+    }
+  ]
+}
