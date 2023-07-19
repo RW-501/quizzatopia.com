@@ -1,0 +1,231 @@
+{
+  "quizName": "Quiz on Colorado",
+  "quizCode": "CO2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Colorado!",
+  "quizTags": "Colorado, Geography, States, USA",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Colorado is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Centennial",
+        "Mile High",
+        "Rocky Mountain",
+        "Pioneer"
+      ],
+      "answer": "Centennial",
+      "explanation": "Colorado is known as the Centennial State because it was admitted to the Union in 1876, 100 years after the signing of the Declaration of Independence.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Colorado is nicknamed the 'Mile High State' due to its high elevation.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Colorado is called the 'Mile High State' because it has numerous locations with an elevation of one mile (5,280 feet) above sea level.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of Colorado?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Denver",
+        "Colorado Springs",
+        "Boulder",
+        "Aurora"
+      ],
+      "answer": "Denver",
+      "explanation": "The capital city of Colorado is Denver.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which national park in Colorado is known for its unique geological features, including colorful canyons and towering rock formations?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yellowstone National Park",
+        "Yosemite National Park",
+        "Rocky Mountain National Park",
+        "Black Canyon of the Gunnison National Park"
+      ],
+      "answer": "Black Canyon of the Gunnison National Park",
+      "explanation": "Black Canyon of the Gunnison National Park in Colorado is known for its unique geological features, including colorful canyons and towering rock formations.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the highest peak in Colorado and the Rocky Mountains?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mount Rainier",
+        "Mount Elbert",
+        "Mount Whitney",
+        "Pikes Peak"
+      ],
+      "answer": "Mount Elbert",
+      "explanation": "Mount Elbert, with an elevation of 14,440 feet (4,401 meters), is the highest peak in Colorado and the entire Rocky Mountains.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Colorado is famous for its winter sports and ski resorts. Which city is often referred to as 'Ski Town, U.S.A.'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Aspen",
+        "Vail",
+        "Breckenridge",
+        "Steamboat Springs"
+      ],
+      "answer": "Steamboat Springs",
+      "explanation": "Steamboat Springs in Colorado is often referred to as 'Ski Town, U.S.A.' due to its renowned ski resorts and winter sports opportunities.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which river runs through the Grand Canyon of the Gunnison National Park in Colorado?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Colorado River",
+        "Arkansas River",
+        "Platte River",
+        "Rio Grande"
+      ],
+      "answer": "Gunnison River",
+      "explanation": "The Gunnison River runs through the Grand Canyon of the Gunnison National Park in Colorado.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the official state animal of Colorado?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bighorn Sheep",
+        "Mule Deer",
+        "American Bison",
+        "Mountain Lion"
+      ],
+      "answer": "Rocky Mountain Bighorn Sheep",
+      "explanation": "The official state animal of Colorado is the Rocky Mountain Bighorn Sheep.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous Colorado landmark is a series of sandstone formations and is often called the 'Garden of the Gods'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Red Rocks Park",
+        "Mesa Verde",
+        "Royal Gorge",
+        "Garden of the Gods"
+      ],
+      "answer": "Garden of the Gods",
+      "explanation": "The 'Garden of the Gods' is a famous Colorado landmark known for its stunning sandstone formations and natural beauty.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: The Colorado River begins in the state of Colorado.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. The Colorado River begins in the Rocky Mountains of Colorado and flows through several states before reaching the Gulf of California.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous music festival held annually in Colorado is one of the largest and most well-known in the world?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Coachella",
+        "Burning Man",
+        "Lollapalooza",
+        "Red Rocks Amphitheatre Concert Series"
+      ],
+      "answer": "Burning Man",
+      "explanation": "Burning Man, although not technically a music festival, is an annual event held in the Black Rock Desert of Nevada, near the border with California.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the famous historic railroad in Colorado that offers scenic rides through the Rocky Mountains?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Amtrak",
+        "Durango and Silverton Narrow Gauge Railroad",
+        "California Zephyr",
+        "Royal Gorge Route Railroad"
+      ],
+      "answer": "Durango and Silverton Narrow Gauge Railroad",
+      "explanation": "The Durango and Silverton Narrow Gauge Railroad in Colorado is a famous historic railroad that offers scenic rides through the Rocky Mountains.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which Colorado city is famous for its annual hot air balloon festival, where hundreds of colorful balloons fill the sky?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Aspen",
+        "Boulder",
+        "Colorado Springs",
+        "Albuquerque"
+      ],
+      "answer": "Albuquerque",
+      "explanation": "The Albuquerque International Balloon Fiesta, known for its hot air balloon festival, takes place in Albuquerque, New Mexico, not Colorado.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the official state flower of Colorado?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Columbine",
+        "Sunflower",
+        "Bluebonnet",
+        "Indian Paintbrush"
+      ],
+      "answer": "Columbine",
+      "explanation": "The official state flower of Colorado is the Columbine.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous ski resort town in Colorado is known for its European-inspired architecture and luxurious amenities?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Aspen",
+        "Vail",
+        "Breckenridge",
+        "Telluride"
+      ],
+      "answer": "Vail",
+      "explanation": "Vail, Colorado, is a famous ski resort town known for its European-inspired architecture and upscale amenities.",
+      "difficulty": "Medium"
+    }
+  ]
+}
