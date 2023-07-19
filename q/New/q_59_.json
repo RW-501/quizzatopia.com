@@ -1,0 +1,229 @@
+{
+  "quizName": "Quiz on Michigan",
+  "quizCode": "MI2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Michigan!",
+  "quizTags": "Michigan, Geography, States, USA",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Michigan is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Lakes",
+        "Wolverine",
+        "Great",
+        "Autumn"
+      ],
+      "answer": "Great",
+      "explanation": "Michigan is known as the Great Lakes State because it is bordered by four of the five Great Lakes: Superior, Michigan, Huron, and Erie.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Michigan is the only U.S. state made up entirely of islands.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [],
+      "answer": "False",
+      "explanation": "False. Michigan is not the only U.S. state made up entirely of islands. It is a part of the continental United States and has a mix of mainland and islands.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of Michigan?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Grand Rapids",
+        "Ann Arbor",
+        "Detroit",
+        "Lansing"
+      ],
+      "answer": "Lansing",
+      "explanation": "The capital city of Michigan is Lansing, located in the south-central part of the state.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous American automobile company, founded in Michigan, played a significant role in revolutionizing the automotive industry?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ford",
+        "General Motors",
+        "Chrysler",
+        "Tesla"
+      ],
+      "answer": "Ford",
+      "explanation": "Ford Motor Company, founded by Henry Ford in Michigan, played a major role in revolutionizing the automotive industry by introducing assembly line production techniques and affordable automobiles.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of Michigan?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Wolverine State",
+        "The Great Lakes State",
+        "The Mitten State",
+        "The Water Wonderland"
+      ],
+      "answer": "The Wolverine State",
+      "explanation": "Michigan is often referred to as The Wolverine State, although wolverines are not common in the state. The nickname originated from early settlers' fierce spirit and determination, likening them to wolverines.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous set of waterfalls, located on the Upper Peninsula of Michigan, is one of the largest freshwater falls in North America?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Niagara Falls",
+        "Victoria Falls",
+        "Iguazu Falls",
+        "Tahquamenon Falls"
+      ],
+      "answer": "Tahquamenon Falls",
+      "explanation": "Tahquamenon Falls, located on the Tahquamenon River in the Upper Peninsula of Michigan, is one of the largest freshwater falls east of the Mississippi River.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state bird of Michigan?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Northern Cardinal",
+        "American Robin",
+        "Pileated Woodpecker",
+        "American Goldfinch"
+      ],
+      "answer": "American Robin",
+      "explanation": "The official state bird of Michigan is the American Robin, known for its distinctive orange breast and cheerful song, especially during the spring and summer months.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous national park, located in Michigan's Upper Peninsula, is known for its stunning sandstone cliffs, waterfalls, and pristine shoreline along Lake Superior?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yellowstone National Park",
+        "Yosemite National Park",
+        "Acadia National Park",
+        "Pictured Rocks National Lakeshore"
+      ],
+      "answer": "Pictured Rocks National Lakeshore",
+      "explanation": "Pictured Rocks National Lakeshore, located along Lake Superior in Michigan's Upper Peninsula, is known for its breathtaking sandstone cliffs, colorful rock formations, waterfalls, and pristine shoreline.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous musician, known as the 'Prince of Motown,' was born in Detroit, Michigan?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "James Brown",
+        "Stevie Wonder",
+        "Marvin Gaye",
+        "Ray Charles"
+      ],
+      "answer": "Marvin Gaye",
+      "explanation": "Marvin Gaye, a highly influential soul and R&B singer-songwriter, known for hits like 'What's Going On' and 'Let's Get It On,' was born in Washington, D.C. and raised in Detroit, Michigan.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: Michigan has the longest freshwater shoreline of any state in the United States.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Michigan has the longest freshwater shoreline of any state in the United States, thanks to its border with four of the five Great Lakes.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous sports team, based in Detroit, Michigan, is one of the most successful franchises in the National Hockey League (NHL)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "New York Rangers",
+        "Chicago Blackhawks",
+        "Montreal Canadiens",
+        "Detroit Red Wings"
+      ],
+      "answer": "Detroit Red Wings",
+      "explanation": "The Detroit Red Wings, founded in 1926, are one of the most successful franchises in the National Hockey League (NHL), with numerous Stanley Cup championships.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous museum and cultural institution, located in Dearborn, Michigan, is dedicated to preserving the history of American innovation and the automobile industry?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Henry Ford",
+        "The Smithsonian Institution",
+        "The Museum of Modern Art",
+        "The Louvre"
+      ],
+      "answer": "The Henry Ford",
+      "explanation": "The Henry Ford, also known as the Henry Ford Museum of American Innovation, is a famous museum and cultural institution in Dearborn, Michigan. It is dedicated to preserving the history of American innovation, technology, and the automobile industry.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the famous dessert, considered a Michigan delicacy, that consists of a deep-fried doughnut topped with cinnamon and sugar?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cannoli",
+        "Fried Ice Cream",
+        "Funnel Cake",
+        "Beignets"
+      ],
+      "answer": "Funnel Cake",
+      "explanation": "Funnel Cake is a famous dessert considered a Michigan delicacy, often enjoyed at fairs, carnivals, and outdoor events. The dough is poured through a funnel into hot oil, creating a crispy and delicious treat topped with powdered sugar.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous and highly influential singer, known for hits like 'Respect' and 'Natural Woman,' was born in Memphis, Tennessee, but grew up in Detroit, Michigan?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Diana Ross",
+        "Whitney Houston",
+        "Aretha Franklin",
+        "Tina Turner"
+      ],
+      "answer": "Aretha Franklin",
+      "explanation": "Aretha Franklin, often referred to as the 'Queen of Soul,' was born in Memphis, Tennessee, but her family moved to Detroit, Michigan, where she began her music career and achieved great success as a singer and songwriter.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous freshwater lake, one of the Great Lakes, is entirely located within the boundaries of Michigan?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lake Superior",
+        "Lake Michigan",
+        "Lake Huron",
+        "Lake Erie"
+      ],
+      "answer": "Lake Michigan",
+      "explanation": "Lake Michigan is entirely located within the boundaries of Michigan, making it the only one of the Great Lakes to be entirely within the borders of a single state.",
+      "difficulty": "Medium"
+    }
+  ]
+}
