@@ -1173,10 +1173,11 @@ async function fetchQuizzesFromDB() {
   document.getElementById('updated_Quizzez').innerHTML = "<p><h2>"+num+" " +html;
 
 }
+	  window.addEventListener("load", function() {
 
 // Call the function to fetch and populate the quiz data
 fetchQuizzesFromDB();
-
+  });
 
 // Function to check if user has scrolled to the bottom of the page
 function isScrollAtBottom() {
@@ -1286,36 +1287,10 @@ db.collection('quizzes').where('quizCodeDB', '==', quizCodeX).get()
 
 	
 
- // Get a reference to the Firestore database
-//  const db = firebase.firestore();
-
-  // Create a collection called "users" (if it doesn't exist already)
-  //const usersCollection = db.collection('users');
-
-	
-	
-	// Assuming you have already initialized the Firestore SDK and have access to the Firestore database
-
-
 	
 	
 	
 	
-	
-/*
-// Add users to Firestore database
-users.forEach(user => {
-  firestore.collection('users').add(user)
-    .then(function(docRef) {
-      console.log('Document written with ID: ', docRef.id);
-    })
-    .catch(function(error) {
-      console.error('Error adding document: ', error);
-    });
-});
-*/
-
-//    console.log('xxx  ?????????????????????????Firestore database test stuff ?????????????????????????');
 
 			</script>
 
