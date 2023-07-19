@@ -145,13 +145,16 @@
      const saveQuizData = await db.collection('quizzes').add({
         quizCodeDB: quizCode,
         quizNameDB: quizName,
+        quizCreatedByDB: "Quizzatopia",
+        quizRatingDB: 0,
         imageURLDB: "https://www.quizzatopia.com/images/sq/_.png",
         quizJsonDB: "/q/New/q_"+counter+"_.json",	      
         numberOfQuestionsDB: numberOfQuestions,
         quizLinkDB: "/quiz/?e=New&q=q_"+counter+"_",
         quizCategoryDB: quizCategory,
-        quizUpdateDateDB: updateDate,
+        quizCreatedDateDB: updateDate,
         quizDifficultyDB: quizDifficulty,
+        quizFinishedCount: 0,
 	    quizStartedCount: 0 // Initialize the quizStartedCount to 0
 
       });
