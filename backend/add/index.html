@@ -115,10 +115,9 @@
 
     // Fetch the next JSON file
     async function fetchNextJSON() {
-      counter++;
       counterLabel.textContent = counter;
 
-      const url = `https://www.quizzatopia.com/quiz/?e=New&q=q_${counter}_.json`;
+      const url = `https://www.quizzatopia.com/q/New/q_${counter}_.json`;
       const response = await fetch(url);
 
       if (response.ok) {
@@ -137,6 +136,7 @@ console.log(stringValues);
 
 	      
         logTextarea.value += `JSON ${counter}: Adding: `+stringValues+`\n\n`;
+	            counter++;
 	            clearInterval(fetchInterval);
 	     fetchInterval = setInterval(fetchNextJSON, 1000); 
       } else {
