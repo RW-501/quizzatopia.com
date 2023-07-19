@@ -1076,29 +1076,31 @@ font-size: 30px;
   return filledStars + emptyStars;
 };
 
+
+
 	
-	  const db = firebase.firestore();
+const db = firebase.firestore();
+const quizContainer = document.getElementById('updated_Quizzez');
+let currentPage = 1;
+const quizzesPerPage = 20;
 
-//const parentContainer = document.getElementById('parentContainer');
-
-var num = 0;
 // Function to fetch quiz data from Firestore and update the HTML
-async function fetchQuizzesFromDB() {
-  // Fetch the quizzes collection with ordering
-  const orderedQuerySnapshot = await db.collection('quizzes')
+async function fetchQuizzesFromDB(page) {
+  const startAtIndex = (page - 1) * quizzesPerPage;
+
+  // Fetch the quizzes collection with ordering and pagination
+  const querySnapshot = await db.collection('quizzes')
     .orderBy('quizCreatedDateDB', 'desc')
     .orderBy('quizRatingDB', 'desc')
     .orderBy('quizFinishedCount', 'desc')
     .orderBy('quizStartedCount', 'desc')
     .orderBy('quizNameDB', 'asc')
+    .startAt(startAtIndex)
+    .limit(quizzesPerPage)
     .get();
 
-  // Fetch all the quizzes without any specific ordering
-  const allQuizzesQuerySnapshot = await db.collection('quizzes').get();
-
-  // Combine the results from both queries into a single array
   const quizList = [];
-  orderedQuerySnapshot.forEach((doc) => {
+  querySnapshot.forEach((doc) => {
     const quizData = doc.data();
     const quizItem = {
       quizRatingDB: quizData.quizRatingDB,
@@ -1114,41 +1116,18 @@ async function fetchQuizzesFromDB() {
     quizList.push(quizItem);
   });
 
-  allQuizzesQuerySnapshot.forEach((doc) => {
-    // Check if the quiz is not already included in the quizList array
-    if (!quizList.some((item) => item.quizCodeDB === doc.data().quizCodeDB)) {
-      const quizData = doc.data();
-      const quizItem = {
-        quizRatingDB: quizData.quizRatingDB,
-      quizDifficulty: quizData.quizDifficultyDB || quizData.quizDifficulty,
-        quizCreatedByDB: quizData.quizCreatedByDB,
-        quizNameDB: quizData.quizNameDB,
-        quizLinkDB: quizData.quizLinkDB,
-        quizStartedCount: quizData.quizStartedCount,
-        quizFinishedCount: quizData.quizFinishedCount,
-        numberOfQuestionsDB: quizData.numberOfQuestionsDB,
-        quizCodeDB: quizData.quizCodeDB,
-      };
-      quizList.push(quizItem);
-    }
-  });
+  let html = '';
 
-  // Initialize the HTML string
-  let html = ' Updated Quizzes</h2><p>';
-  let num = 0;
+  quizList.forEach((quizData, index) => {
+    let num = startAtIndex + index + 1;
+    let stars = ratingToStars(quizData.quizRatingDB);
 
-  // Iterate over each quiz item in the combined dataset
-  quizList.forEach((quizData) => {
-    num += 1;
-    const stars = ratingToStars(quizData.quizRatingDB); // Assigned stars here
-
-    // Generate the HTML for each quiz
     const quizHtml = `
       <div class="col-lg-12">
         <a href="${quizData.quizLinkDB}">
           <div class="list-item box">
             <h5 class="list-title">#${num} ${quizData.quizNameDB}</h5>
-            <div class="stars"> ${stars} </div>
+            <div class="stars">${stars}</div>
             <div class="quiz-info">
               <p><b>CreatedBy:</b> ${quizData.quizCreatedByDB || ""}</p>
               <p><b>Difficulty:</b> ${quizData.quizDifficultyDB || quizData.quizDifficulty}</p>
@@ -1162,25 +1141,38 @@ async function fetchQuizzesFromDB() {
       </div>
     `;
 
-    // Append the quiz HTML to the overall HTML string
     html += quizHtml;
   });
 
-  // Update the quizContainer with the generated HTML
-  document.getElementById('updated_Quizzez').innerHTML = "<p><h2>"+num+" " +html;
-
+  quizContainer.innerHTML = "<p><h2>"+num+" " +html;
 }
 
-// Call the function to fetch and populate the quiz data
-fetchQuizzesFromDB();
+// Call the function to fetch and populate the initial quizzes
+fetchQuizzesFromDB(currentPage);
+
+// Function to check if user has scrolled to the bottom of the page
+function isScrollAtBottom() {
+  const containerHeight = quizContainer.clientHeight;
+  const scrollOffset = quizContainer.scrollTop;
+  const totalHeight = quizContainer.scrollHeight;
+
+  return containerHeight + scrollOffset >= totalHeight;
+}
+
+// Event listener for scroll event on quiz container
+quizContainer.addEventListener('scroll', () => {
+  if (isScrollAtBottom()) {
+    currentPage++;
+    fetchQuizzesFromDB(currentPage);
+  }
+});
 
 
 	
 	
 	
 	
-	
-	
+	  
 	
 	
 	
