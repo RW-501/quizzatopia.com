@@ -1090,7 +1090,7 @@ async function fetchQuizzesFromDB() {
 	
 	
   // Fetch the quizzes collection
-  const querySnapshot = await db.collection('quizzes')
+ const querySnapshot = await db.collection('quizzes')
   .orderBy('quizCreatedDateDB', 'desc')
   .orderBy('quizRatingDB', 'desc')
   .orderBy('quizFinishedCount', 'desc')
@@ -1098,18 +1098,23 @@ async function fetchQuizzesFromDB() {
   .orderBy('quizNameDB', 'asc')
   .get();
 
+
+
   // Initialize the HTML string
   let html = 'Updated Quizzes</h2></p>';
+const quizList = [];
 
   // Iterate over each quiz document
   querySnapshot.forEach((doc) => {
-    const quizData = doc.data();
-	  let stars = "";
+  const quizData = doc.data();
+  const quizItem = {
   //  console.log('E????????????????????????????????123???      '+quizData);
 num += 1;
 	  let quizRatingDB = quizData.quizRatingDB;
 	  let quizDifficulty = quizData.quizDifficulty;
 	  let quizCreatedByDB = quizData.quizCreatedByDB;
+  };
+  quizList.push(quizItem);
 
  stars = ratingToStars(quizRatingDB);
 	  
