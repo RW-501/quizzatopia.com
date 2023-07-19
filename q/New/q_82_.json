@@ -1,0 +1,233 @@
+{
+  "quizName": "Quiz on Vermont",
+  "quizCode": "VT2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Vermont!",
+  "quizTags": "Vermont, Geography, States, USA",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the capital city of Vermont?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Montpelier",
+        "Burlington",
+        "Rutland",
+        "Brattleboro"
+      ],
+      "answer": "Montpelier",
+      "explanation": "The capital city of Vermont is Montpelier, known for its small size, historic charm, and being the only state capital without a McDonald's restaurant.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Vermont is known for its beautiful fall foliage and is often referred to as the 'Green Mountain State.'",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Vermont is famous for its stunning fall foliage, particularly in the Green Mountains. The state is often referred to as the 'Green Mountain State.'",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the nickname of Vermont?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Green Mountain State",
+        "The Sunshine State",
+        "The Empire State",
+        "The Volunteer State"
+      ],
+      "answer": "The Green Mountain State",
+      "explanation": "Vermont is often referred to as 'The Green Mountain State' due to its scenic Green Mountains and lush forests.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous ski resort, located in Vermont, is known for its world-class slopes and is the largest ski area on the East Coast of the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Aspen Snowmass",
+        "Park City Mountain Resort",
+        "Vail Mountain Resort",
+        "Killington Resort"
+      ],
+      "answer": "Killington Resort",
+      "explanation": "Killington Resort, located in Vermont, is a famous ski resort known for its world-class slopes. It is the largest ski area on the East Coast of the United States.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which famous natural landmark in Vermont is the highest peak in the state and a popular destination for hikers and outdoor enthusiasts?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mount Washington",
+        "Mount Mansfield",
+        "Mount Katahdin",
+        "Mount Marcy"
+      ],
+      "answer": "Mount Mansfield",
+      "explanation": "Mount Mansfield, located in Vermont, is the highest peak in the state and a popular destination for hikers and outdoor enthusiasts. It offers stunning views of the surrounding area.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the official state bird of Vermont?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hermit Thrush",
+        "Bald Eagle",
+        "Eastern Bluebird",
+        "American Goldfinch"
+      ],
+      "answer": "Hermit Thrush",
+      "explanation": "The official state bird of Vermont is the Hermit Thrush, known for its melodic song and preference for forested habitats.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which famous Vermont city is known for its vibrant arts scene, bustling Church Street Marketplace, and being home to the University of Vermont?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Montpelier",
+        "Burlington",
+        "Rutland",
+        "Brattleboro"
+      ],
+      "answer": "Burlington",
+      "explanation": "Burlington, located in Vermont, is known for its vibrant arts scene, bustling Church Street Marketplace, and being home to the University of Vermont.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous Vermont city is known for its annual Maple Festival, celebrating the state's maple syrup production?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Montpelier",
+        "Burlington",
+        "Rutland",
+        "St. Johnsbury"
+      ],
+      "answer": "St. Johnsbury",
+      "explanation": "St. Johnsbury, located in Vermont, is known for its annual Maple Festival, celebrating the state's maple syrup production. The festival attracts visitors from near and far.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous American poet, known for his collection 'Leaves of Grass,' was born in West Hills, New York, but spent the later years of his life in Vermont?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Robert Frost",
+        "Ralph Waldo Emerson",
+        "Walt Whitman",
+        "Henry David Thoreau"
+      ],
+      "answer": "Walt Whitman",
+      "explanation": "Walt Whitman, a famous American poet, was born in West Hills, New York. While he didn't spend his later years in Vermont, his works are widely celebrated and studied.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which famous Vermont landmark, located in Manchester, is a historic marble mansion and a symbol of the state's Gilded Age?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hildene",
+        "Shelburne Farms",
+        "Billings Farm & Museum",
+        "Bennington Battle Monument"
+      ],
+      "answer": "Hildene",
+      "explanation": "Hildene, located in Manchester, Vermont, is a historic marble mansion and a symbol of the state's Gilded Age. It was the summer home of Robert Todd Lincoln, the son of Abraham Lincoln.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous Vermont city is known for its annual Winter Carnival, featuring ice sculptures, snow sculptures, and various winter activities?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Montpelier",
+        "Burlington",
+        "Rutland",
+        "Stowe"
+      ],
+      "answer": "Stowe",
+      "explanation": "Stowe, located in Vermont, is known for its annual Winter Carnival, featuring ice sculptures, snow sculptures, and various winter activities. It attracts visitors from near and far.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous Vermont city is known for its annual Brattleboro Film Festival, showcasing independent and international films?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Montpelier",
+        "Burlington",
+        "Rutland",
+        "Brattleboro"
+      ],
+      "answer": "Brattleboro",
+      "explanation": "Brattleboro, located in Vermont, is known for its annual Brattleboro Film Festival, showcasing independent and international films. The festival attracts film enthusiasts and filmmakers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which famous Vermont city is known for its historic Main Street, covered bridges, and being the birthplace of Calvin Coolidge, the 30th President of the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Montpelier",
+        "Burlington",
+        "Rutland",
+        "Plymouth"
+      ],
+      "answer": "Plymouth",
+      "explanation": "Plymouth, located in Vermont, is known for its historic Main Street, covered bridges, and being the birthplace of Calvin Coolidge, the 30th President of the United States.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous Vermont city is known for its annual Jazz Festival, featuring renowned jazz musicians from around the world?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Montpelier",
+        "Burlington",
+        "Rutland",
+        "Middlebury"
+      ],
+      "answer": "Burlington",
+      "explanation": "Burlington, located in Vermont, is known for its annual Jazz Festival, featuring renowned jazz musicians from around the world. The festival attracts jazz enthusiasts and musicians.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous Vermont city is known for its picturesque waterfront, charming downtown area, and being a popular destination for outdoor activities?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Montpelier",
+        "Burlington",
+        "Rutland",
+        "Woodstock"
+      ],
+      "answer": "Burlington",
+      "explanation": "Burlington, located in Vermont, is known for its picturesque waterfront, charming downtown area, and being a popular destination for outdoor activities. It offers a blend of natural beauty and vibrant city life.",
+      "difficulty": "Medium"
+    }
+  ]
+}
