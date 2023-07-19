@@ -1,0 +1,237 @@
+{
+  "quizName": "Greek History Quiz",
+  "quizCode": "GREEK2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "History",
+  "quizDescription": "Test your knowledge about Greek history!",
+  "quizTags": "Greece, History, Ancient, Civilization",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who was the legendary king of the gods in Greek mythology?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hades",
+        "Zeus",
+        "Poseidon",
+        "Apollo"
+      ],
+      "answer": "Zeus",
+      "explanation": "Zeus was the legendary king of the gods in Greek mythology. He was associated with the sky, thunder, and justice.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which ancient Greek city-state is often considered the birthplace of democracy?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Athens",
+        "Sparta",
+        "Thebes",
+        "Corinth"
+      ],
+      "answer": "Athens",
+      "explanation": "Athens is often considered the birthplace of democracy. It was a leading city-state in ancient Greece known for its cultural and intellectual achievements.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Who was the philosopher credited with laying the foundation of Western philosophy?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Socrates",
+        "Plato",
+        "Aristotle",
+        "Homer"
+      ],
+      "answer": "Socrates",
+      "explanation": "Socrates was a philosopher credited with laying the foundation of Western philosophy. His teachings and methods had a profound influence on subsequent philosophers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous battle in 480 BCE was a significant victory for the Greeks against the Persian Empire?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Battle of Marathon",
+        "Battle of Thermopylae",
+        "Battle of Salamis",
+        "Battle of Plataea"
+      ],
+      "answer": "Battle of Salamis",
+      "explanation": "The Battle of Salamis in 480 BCE was a significant naval victory for the Greeks against the Persian Empire during the Greco-Persian Wars.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Who wrote the epic poems 'Iliad' and 'Odyssey'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hesiod",
+        "Aristophanes",
+        "Homer",
+        "Euripides"
+      ],
+      "answer": "Homer",
+      "explanation": "Homer is traditionally credited with writing the epic poems 'Iliad' and 'Odyssey,' which are foundational works of ancient Greek literature.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Who was the great military leader and king of Macedonia who conquered much of the known world?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pericles",
+        "Alexander the Great",
+        "Leonidas",
+        "Philip II"
+      ],
+      "answer": "Alexander the Great",
+      "explanation": "Alexander the Great, king of Macedonia, was a great military leader who conquered much of the known world, spreading Greek culture and influence.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which famous ancient Greek mathematician is known as the 'Father of Geometry'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pythagoras",
+        "Euclid",
+        "Archimedes",
+        "Hippocrates"
+      ],
+      "answer": "Euclid",
+      "explanation": "Euclid, an ancient Greek mathematician, is known as the 'Father of Geometry' for his work 'Elements,' which laid the foundation of Euclidean geometry.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which city was the site of the ancient Olympic Games?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Delphi",
+        "Olympia",
+        "Ephesus",
+        "Mycenae"
+      ],
+      "answer": "Olympia",
+      "explanation": "Olympia was the site of the ancient Olympic Games, a major sporting event held every four years in ancient Greece to honor the god Zeus.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Who was the famous playwright known for his tragedies such as 'Oedipus Rex' and 'Antigone'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Euripides",
+        "Aristophanes",
+        "Sophocles",
+        "Aeschylus"
+      ],
+      "answer": "Sophocles",
+      "explanation": "Sophocles was a famous playwright known for his tragedies such as 'Oedipus Rex' and 'Antigone.' His works explored themes of fate, morality, and the human condition.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Who was the famous philosopher and student of Socrates who later became the teacher of Aristotle?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Plato",
+        "Epicurus",
+        "Diogenes",
+        "Thales"
+      ],
+      "answer": "Plato",
+      "explanation": "Plato was a famous philosopher and student of Socrates. He later became the teacher of Aristotle and founded the Academy in Athens.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Who was the ancient Greek historian known for his monumental work 'Histories'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Herodotus",
+        "Thucydides",
+        "Xenophon",
+        "Polybius"
+      ],
+      "answer": "Herodotus",
+      "explanation": "Herodotus was an ancient Greek historian known for his monumental work 'Histories,' which chronicled the Greco-Persian Wars and other historical events.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which ancient Greek philosopher is known for his ideas on ethics, virtue, and the concept of the 'golden mean'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pythagoras",
+        "Socrates",
+        "Aristotle",
+        "Heraclitus"
+      ],
+      "answer": "Aristotle",
+      "explanation": "Aristotle, a renowned ancient Greek philosopher, is known for his ideas on ethics, virtue, and the concept of the 'golden mean' as a path to achieving balance and moral excellence.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which ancient Greek city-state was known for its powerful military and emphasis on discipline and strength?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Athens",
+        "Sparta",
+        "Thebes",
+        "Corinth"
+      ],
+      "answer": "Sparta",
+      "explanation": "Sparta was an ancient Greek city-state known for its powerful military and emphasis on discipline, strength, and the well-being of the state over individual pursuits.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which ancient Greek philosopher is known for his paradoxes and contributions to the field of logic?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Heraclitus",
+        "Zeno of Elea",
+        "Anaximander",
+        "Democritus"
+      ],
+      "answer": "Zeno of Elea",
+      "explanation": "Zeno of Elea was an ancient Greek philosopher known for his paradoxes and contributions to the field of logic. His paradoxes challenged conventional ideas and reasoning.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which ancient Greek city was the center of the Delian League and the birthplace of many famous philosophers and thinkers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Delphi",
+        "Mycenae",
+        "Athens",
+        "Ephesus"
+      ],
+      "answer": "Athens",
+      "explanation": "Athens was an ancient Greek city that served as the center of the Delian League and was the birthplace of many famous philosophers and thinkers, including Socrates, Plato, and Aristotle.",
+      "difficulty": "Medium"
+    }
+  ]
+}
