@@ -1059,6 +1059,7 @@ async function fetchQuizzesFromDB() {
   .orderBy('quizRatingDB', 'desc')
   .orderBy('quizFinishedCount', 'desc')
   .orderBy('quizStartedCount', 'desc')
+  .orderBy('quizNameDB', 'asc')
   .get();
 
   // Initialize the HTML string
