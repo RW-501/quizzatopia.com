@@ -1,0 +1,234 @@
+{
+  "quizName": "Quiz on Pennsylvania",
+  "quizCode": "PA2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Pennsylvania!",
+  "quizTags": "Pennsylvania, Geography, States, USA",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the capital city of Pennsylvania?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Philadelphia",
+        "Pittsburgh",
+        "Harrisburg",
+        "Allentown"
+      ],
+      "answer": "Harrisburg",
+      "explanation": "The capital city of Pennsylvania is Harrisburg, located on the banks of the Susquehanna River.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Pennsylvania is known as the 'Keystone State.'",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Pennsylvania is known as the 'Keystone State' because it played a crucial role in the early development of the United States, similar to how a keystone holds an arch together.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the nickname of Pennsylvania?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Empire State",
+        "The Garden State",
+        "The Keystone State",
+        "The Lone Star State"
+      ],
+      "answer": "The Keystone State",
+      "explanation": "Pennsylvania is often referred to as 'The Keystone State' due to its central location and the important role it played in the early development of the United States.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous historical document, declaring the independence of the United States from Great Britain, was adopted in Pennsylvania?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "United States Constitution",
+        "Bill of Rights",
+        "Emancipation Proclamation",
+        "Declaration of Independence"
+      ],
+      "answer": "Declaration of Independence",
+      "explanation": "The Declaration of Independence, declaring the independence of the United States from Great Britain, was adopted and signed in Pennsylvania, specifically in Philadelphia's Independence Hall.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which famous city in Pennsylvania is known for its rich history, iconic landmarks like the Liberty Bell and Independence Hall, and its role in the American Revolution?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Philadelphia",
+        "Pittsburgh",
+        "Harrisburg",
+        "Allentown"
+      ],
+      "answer": "Philadelphia",
+      "explanation": "Philadelphia is a famous city in Pennsylvania known for its rich history, iconic landmarks like the Liberty Bell and Independence Hall, and its significant role in the American Revolution.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous university, located in Pennsylvania, is known for its prestigious Ivy League education and historic campus?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Harvard University",
+        "Yale University",
+        "Princeton University",
+        "University of Pennsylvania"
+      ],
+      "answer": "University of Pennsylvania",
+      "explanation": "The University of Pennsylvania, located in Philadelphia, is a famous university known for its prestigious Ivy League education and historic campus.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state bird of Pennsylvania?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Northern Cardinal",
+        "Ruffed Grouse",
+        "American Goldfinch",
+        "Eastern Bluebird"
+      ],
+      "answer": "Ruffed Grouse",
+      "explanation": "The official state bird of Pennsylvania is the Ruffed Grouse, a medium-sized bird known for its drumming display during courtship.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous river forms part of Pennsylvania's eastern border?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mississippi River",
+        "Colorado River",
+        "Ohio River",
+        "Potomac River"
+      ],
+      "answer": "Delaware River",
+      "explanation": "The Delaware River forms part of Pennsylvania's eastern border, separating it from the states of New Jersey and Delaware.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous battlefield, located in Pennsylvania, was the site of a significant battle during the American Civil War?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gettysburg Battlefield",
+        "Antietam Battlefield",
+        "Manassas Battlefield",
+        "Chickamauga Battlefield"
+      ],
+      "answer": "Gettysburg Battlefield",
+      "explanation": "Gettysburg Battlefield, located in Gettysburg, Pennsylvania, was the site of a significant battle during the American Civil War. It is considered a turning point in the war and is now a national park and historic site.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which famous chocolate company, founded in Pennsylvania, is known for its iconic Hershey's Kisses and chocolate bars?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Nestlé",
+        "Cadbury",
+        "Ferrero",
+        "The Hershey Company"
+      ],
+      "answer": "The Hershey Company",
+      "explanation": "The Hershey Company, founded by Milton S. Hershey in Pennsylvania, is known for its iconic Hershey's Kisses, chocolate bars, and other delicious chocolate products.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous American composer and conductor, known for his patriotic music and the composition 'Stars and Stripes Forever,' was born in Pennsylvania?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "John Williams",
+        "Leonard Bernstein",
+        "Aaron Copland",
+        "John Philip Sousa"
+      ],
+      "answer": "John Philip Sousa",
+      "explanation": "John Philip Sousa, a famous American composer and conductor, known for his patriotic music and the composition 'Stars and Stripes Forever,' was born in Washington, D.C., but spent much of his career in Pennsylvania.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous amusement park, located in Pennsylvania, is known for its thrilling roller coasters and Halloween-themed events?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Six Flags Magic Mountain",
+        "Universal Studios Hollywood",
+        "Cedar Point",
+        "Hersheypark"
+      ],
+      "answer": "Hersheypark",
+      "explanation": "Hersheypark, located in Hershey, Pennsylvania, is a famous amusement park known for its thrilling roller coasters, family-friendly attractions, and Halloween-themed events.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which famous museum, located in Philadelphia, houses the Liberty Bell and the iconic cracked Liberty Bell?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Metropolitan Museum of Art",
+        "Smithsonian Institution",
+        "Museum of Modern Art",
+        "National Constitution Center"
+      ],
+      "answer": "National Constitution Center",
+      "explanation": "The National Constitution Center, located in Philadelphia, is a famous museum that houses the Liberty Bell and provides interactive exhibits and educational programs about the U.S. Constitution.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous stadium, located in Pittsburgh, is the home of the Pittsburgh Steelers and the Pittsburgh Pirates?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Fenway Park",
+        "Wrigley Field",
+        "Yankee Stadium",
+        "Heinz Field"
+      ],
+      "answer": "Heinz Field",
+      "explanation": "Heinz Field, located in Pittsburgh, Pennsylvania, is a famous stadium and the home of the Pittsburgh Steelers (NFL) and the Pittsburgh Pirates (MLB).",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous waterfall, located in Pennsylvania's Ricketts Glen State Park, is known for its series of cascades and picturesque hiking trails?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Multnomah Falls",
+        "Niagara Falls",
+        "Yosemite Falls",
+        "Glen Onoko Falls"
+      ],
+      "answer": "Glen Onoko Falls",
+      "explanation": "Glen Onoko Falls, located in Ricketts Glen State Park in Pennsylvania, is a famous waterfall known for its series of cascades and picturesque hiking trails.",
+      "difficulty": "Medium"
+    }
+  ]
+}
