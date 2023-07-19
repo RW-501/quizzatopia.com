@@ -1,0 +1,234 @@
+{
+  "quizName": "Quiz on South Dakota",
+  "quizCode": "SD2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of South Dakota!",
+  "quizTags": "South Dakota, Geography, States, USA",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the capital city of South Dakota?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pierre",
+        "Rapid City",
+        "Sioux Falls",
+        "Aberdeen"
+      ],
+      "answer": "Pierre",
+      "explanation": "The capital city of South Dakota is Pierre, located on the eastern bank of the Missouri River.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Mount Rushmore National Memorial is located in South Dakota.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Mount Rushmore National Memorial, featuring the faces of four U.S. presidents carved into the mountainside, is located in the Black Hills of South Dakota.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the nickname of South Dakota?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Lone Star State",
+        "The Sunshine State",
+        "The Mount Rushmore State",
+        "The Treasure State"
+      ],
+      "answer": "The Mount Rushmore State",
+      "explanation": "South Dakota is often referred to as 'The Mount Rushmore State' due to the iconic Mount Rushmore National Memorial located within its borders.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous national park, located in South Dakota, is known for its unique rock formations, including the 'Needles' and 'Cathedral Spires'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yellowstone National Park",
+        "Grand Canyon National Park",
+        "Badlands National Park",
+        "Yosemite National Park"
+      ],
+      "answer": "Badlands National Park",
+      "explanation": "Badlands National Park, located in South Dakota, is known for its unique rock formations, including the 'Needles' and 'Cathedral Spires,' as well as its diverse wildlife.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which famous monument, located in South Dakota, is a tribute to the Oglala Lakota leader Crazy Horse and is still under construction?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Devils Tower",
+        "Crazy Horse Memorial",
+        "Statue of Liberty",
+        "Washington Monument"
+      ],
+      "answer": "Crazy Horse Memorial",
+      "explanation": "The Crazy Horse Memorial, located in the Black Hills of South Dakota, is a massive sculpture dedicated to the Oglala Lakota leader Crazy Horse. It is still under construction.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the official state bird of South Dakota?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Western Meadowlark",
+        "American Robin",
+        "Bald Eagle",
+        "Northern Cardinal"
+      ],
+      "answer": "Ring-necked Pheasant",
+      "explanation": "The official state bird of South Dakota is the Ring-necked Pheasant, a colorful game bird native to Asia but introduced to South Dakota for hunting.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which famous event, held annually in Sturgis, South Dakota, is one of the largest motorcycle rallies in the world?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Daytona Bike Week",
+        "Sturgis Motorcycle Rally",
+        "Laconia Motorcycle Week",
+        "Black Hills Motorcycle Classic"
+      ],
+      "answer": "Sturgis Motorcycle Rally",
+      "explanation": "The Sturgis Motorcycle Rally, held annually in Sturgis, South Dakota, is a famous event that attracts motorcycle enthusiasts from around the world. It is one of the largest motorcycle rallies in the world.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous national grassland, located in southwestern South Dakota, is known for its expansive prairies, diverse wildlife, and paleontological sites?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Custer State Park",
+        "Wind Cave National Park",
+        "Jewel Cave National Monument",
+        "Badlands National Grassland"
+      ],
+      "answer": "Badlands National Grassland",
+      "explanation": "Badlands National Grassland, located in southwestern South Dakota, is a famous national grassland known for its expansive prairies, diverse wildlife, and paleontological sites.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous pioneer and author, known for her books about frontier life, including 'Little House on the Prairie,' was born in Pepin, Wisconsin, but spent much of her childhood in De Smet, South Dakota?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Laura Ingalls Wilder",
+        "Louisa May Alcott",
+        "Mark Twain",
+        "Willa Cather"
+      ],
+      "answer": "Laura Ingalls Wilder",
+      "explanation": "Laura Ingalls Wilder, a famous pioneer and author, was born in Pepin, Wisconsin, but spent much of her childhood in De Smet, South Dakota. She is known for her books about frontier life, including 'Little House on the Prairie.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which famous South Dakota landmark, located in the Black Hills, is a sacred site to many Native American tribes and features massive granite sculptures depicting Lakota leaders?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Crazy Horse Memorial",
+        "Mount Rushmore National Memorial",
+        "Corn Palace",
+        "Wind Cave National Park"
+      ],
+      "answer": "Crazy Horse Memorial",
+      "explanation": "The Crazy Horse Memorial, located in the Black Hills of South Dakota, is a famous landmark and sacred site to many Native American tribes. It features massive granite sculptures depicting Lakota leaders.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous American cyclist, known for his seven consecutive Tour de France victories, was born in Plano, Texas, but later moved to Rapid City, South Dakota?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lance Armstrong",
+        "Greg LeMond",
+        "Eddy Merckx",
+        "Miguel Indurain"
+      ],
+      "answer": "Lance Armstrong",
+      "explanation": "Lance Armstrong, a famous American cyclist, was born in Plano, Texas, and later moved to Richardson, Texas. He achieved seven consecutive Tour de France victories, but those titles were later stripped due to doping allegations.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous American actress, known for her roles in movies like 'Titanic' and 'Eternal Sunshine of the Spotless Mind,' was born in Vermillion, South Dakota?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Meryl Streep",
+        "Cate Blanchett",
+        "Kate Winslet",
+        "Julia Roberts"
+      ],
+      "answer": "Kate Winslet",
+      "explanation": "Kate Winslet, a famous British actress, was born in Reading, Berkshire, England.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which famous American inventor, known for his contributions to the development of the telephone, was born in Edinburgh, Scotland, but spent much of his life in South Dakota?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Thomas Edison",
+        "Alexander Graham Bell",
+        "Nikola Tesla",
+        "Guglielmo Marconi"
+      ],
+      "answer": "Alexander Graham Bell",
+      "explanation": "Alexander Graham Bell, a famous Scottish-born inventor and scientist, is best known for inventing the telephone. He spent much of his life in the United States, including South Dakota.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous South Dakota landmark, located in the Black Hills, is a massive sculpture featuring the faces of four U.S. presidents carved into the mountainside?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mount Rushmore National Memorial",
+        "Crazy Horse Memorial",
+        "Jewel Cave National Monument",
+        "Corn Palace"
+      ],
+      "answer": "Mount Rushmore National Memorial",
+      "explanation": "Mount Rushmore National Memorial, located in the Black Hills of South Dakota, is a massive sculpture featuring the faces of four U.S. presidents (George Washington, Thomas Jefferson, Theodore Roosevelt, and Abraham Lincoln) carved into the mountainside.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous South Dakota city is known for its annual motorcycle rally, historic downtown district, and the Sturgis Motorcycle Museum & Hall of Fame?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pierre",
+        "Rapid City",
+        "Sioux Falls",
+        "Sturgis"
+      ],
+      "answer": "Sturgis",
+      "explanation": "Sturgis, located in western South Dakota, is a famous city known for its annual motorcycle rally, historic downtown district, and the Sturgis Motorcycle Museum & Hall of Fame.",
+      "difficulty": "Medium"
+    }
+  ]
+}
