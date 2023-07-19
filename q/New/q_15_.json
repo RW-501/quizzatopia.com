@@ -1,0 +1,159 @@
+{
+  "quizName": "90s TV Shows Quiz",
+  "quizCode": "90sTV123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "TV",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which TV show follows the lives of six friends living in New York City?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Friends",
+        "Seinfeld",
+        "The Fresh Prince of Bel-Air",
+        "Full House"
+      ],
+      "answer": "Friends",
+      "explanation": "Friends is a popular 90s TV show that revolves around the lives of six friends - Monica, Chandler, Ross, Rachel, Joey, and Phoebe.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which TV show is about a group of high school friends living in California?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Beverly Hills, 90210",
+        "Saved by the Bell",
+        "Dawson's Creek",
+        "Boy Meets World"
+      ],
+      "answer": "Beverly Hills, 90210",
+      "explanation": "Beverly Hills, 90210 follows the lives of a group of friends in the upscale community of Beverly Hills, California.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which TV show features a vampire slayer with supernatural powers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Buffy the Vampire Slayer",
+        "Charmed",
+        "Angel",
+        "Xena: Warrior Princess"
+      ],
+      "answer": "Buffy the Vampire Slayer",
+      "explanation": "Buffy the Vampire Slayer follows the adventures of Buffy Summers, a young woman chosen to battle against vampires, demons, and other supernatural creatures.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which TV show centers around six siblings growing up in a small town in Pennsylvania?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Party of Five",
+        "The Wonder Years",
+        "My So-Called Life",
+        "Family Matters"
+      ],
+      "answer": "Party of Five",
+      "explanation": "Party of Five tells the story of the Salinger siblings who must navigate life after the loss of their parents in a car accident.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which TV show is about a group of teenagers with unique elemental powers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Captain Planet and the Planeteers",
+        "Power Rangers",
+        "Teenage Mutant Ninja Turtles",
+        "Captain Power and the Soldiers of the Future"
+      ],
+      "answer": "Power Rangers",
+      "explanation": "Power Rangers features a group of teenagers who morph into superheroes to protect the world from evil forces.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which TV show is a sitcom about a middle-class African-American family in a wealthy neighborhood?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Fresh Prince of Bel-Air",
+        "Family Matters",
+        "Living Single",
+        "Martin"
+      ],
+      "answer": "The Fresh Prince of Bel-Air",
+      "explanation": "The Fresh Prince of Bel-Air stars Will Smith as a teenager from a working-class background who moves in with his wealthy relatives in Bel-Air.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which TV show features a group of friends hanging out at a coffee shop in New York City?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Friends",
+        "Seinfeld",
+        "Cheers",
+        "Mad About You"
+      ],
+      "answer": "Friends",
+      "explanation": "Friends showcases the lives of six friends who spend a significant amount of time at Central Perk, a coffee shop in New York City.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which TV show revolves around the comedic misadventures of Jerry Seinfeld and his friends?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Seinfeld",
+        "Friends",
+        "The Simpsons",
+        "The Fresh Prince of Bel-Air"
+      ],
+      "answer": "Seinfeld",
+      "explanation": "Seinfeld is a popular sitcom that follows the lives of Jerry Seinfeld, George Costanza, Elaine Benes, and Cosmo Kramer.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which TV show is set in a small town called Capeside and follows the lives of a group of teenagers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Dawson's Creek",
+        "Beverly Hills, 90210",
+        "Saved by the Bell",
+        "The Wonder Years"
+      ],
+      "answer": "Dawson's Creek",
+      "explanation": "Dawson's Creek is a teen drama series that explores the lives of Dawson, Joey, Pacey, and Jen as they navigate adolescence in Capeside.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which TV show features a group of six high school friends dealing with love, family, and school life?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Saved by the Bell",
+        "Beverly Hills, 90210",
+        "Dawson's Creek",
+        "My So-Called Life"
+      ],
+      "answer": "My So-Called Life",
+      "explanation": "My So-Called Life is a critically acclaimed drama series that explores the life of Angela Chase and her friends during their high school years.",
+      "difficulty": "Medium"
+    }
+  ]
+}
