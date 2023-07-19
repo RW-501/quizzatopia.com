@@ -1,0 +1,234 @@
+{
+  "quizName": "Quiz on Wyoming",
+  "quizCode": "WY2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Wyoming!",
+  "quizTags": "Wyoming, Geography, States, USA",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the capital city of Wyoming?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cheyenne",
+        "Jackson",
+        "Casper",
+        "Laramie"
+      ],
+      "answer": "Cheyenne",
+      "explanation": "The capital city of Wyoming is Cheyenne, known for its western charm, rodeo traditions, and being the largest city in the state.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Wyoming is known as the 'Equality State.'",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Wyoming is often referred to as the 'Equality State' as it was the first U.S. state to grant women the right to vote and hold public office.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the nickname of Wyoming?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Equality State",
+        "The Lone Star State",
+        "The Beehive State",
+        "The Treasure State"
+      ],
+      "answer": "The Equality State",
+      "explanation": "Wyoming is often referred to as 'The Equality State' as it was the first U.S. state to grant women the right to vote and hold public office.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous national park, located in Wyoming, is known for its geothermal features, including the iconic Old Faithful geyser?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Grand Teton National Park",
+        "Yellowstone National Park",
+        "Glacier National Park",
+        "Rocky Mountain National Park"
+      ],
+      "answer": "Yellowstone National Park",
+      "explanation": "Yellowstone National Park, located in Wyoming, is known for its geothermal features, including the iconic Old Faithful geyser. It is the first national park in the United States.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which famous Wyoming city is known for its picturesque mountain views, outdoor recreational opportunities, and being the gateway to Grand Teton National Park?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cheyenne",
+        "Jackson",
+        "Casper",
+        "Laramie"
+      ],
+      "answer": "Jackson",
+      "explanation": "Jackson, located in Wyoming, is known for its picturesque mountain views, outdoor recreational opportunities, and being the gateway to Grand Teton National Park. It attracts visitors from around the world.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the official state bird of Wyoming?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Western Meadowlark",
+        "Bald Eagle",
+        "American Robin",
+        "Mountain Bluebird"
+      ],
+      "answer": "Western Meadowlark",
+      "explanation": "The official state bird of Wyoming is the Western Meadowlark, known for its melodious song and vibrant yellow plumage.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which famous Wyoming city is known for its historic downtown district, western heritage, and being home to the University of Wyoming?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cheyenne",
+        "Jackson",
+        "Casper",
+        "Laramie"
+      ],
+      "answer": "Laramie",
+      "explanation": "Laramie, located in Wyoming, is known for its historic downtown district, western heritage, and being home to the University of Wyoming. It has a vibrant college town atmosphere.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous Wyoming city is known for its outdoor recreational opportunities, including skiing, snowboarding, and being a popular destination for winter sports?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cheyenne",
+        "Jackson",
+        "Casper",
+        "Sheridan"
+      ],
+      "answer": "Jackson",
+      "explanation": "Jackson, located in Wyoming, is known for its outdoor recreational opportunities, including skiing, snowboarding, and being a popular destination for winter sports. It is a haven for outdoor enthusiasts.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous Wyoming city is known for its annual Cheyenne Frontier Days, historic downtown area, and being the 'Rodeo Capital of the World'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cheyenne",
+        "Jackson",
+        "Casper",
+        "Laramie"
+      ],
+      "answer": "Cheyenne",
+      "explanation": "Cheyenne, located in Wyoming, is known for its annual Cheyenne Frontier Days, historic downtown area, and being the 'Rodeo Capital of the World.' It celebrates its western heritage.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which famous Wyoming city is known for its scenic beauty, outdoor recreational opportunities, and being the home of the Buffalo Bill Center of the West?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cheyenne",
+        "Jackson",
+        "Cody",
+        "Sheridan"
+      ],
+      "answer": "Cody",
+      "explanation": "Cody, located in Wyoming, is known for its scenic beauty, outdoor recreational opportunities, and being the home of the Buffalo Bill Center of the West. It showcases the spirit of the American West.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous Wyoming city is known for its historic downtown area, beautiful riverfront, and being the home of the Nicolaysen Art Museum?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cheyenne",
+        "Jackson",
+        "Casper",
+        "Riverton"
+      ],
+      "answer": "Casper",
+      "explanation": "Casper, located in Wyoming, is known for its historic downtown area, beautiful riverfront along the North Platte River, and being the home of the Nicolaysen Art Museum. It has a thriving arts scene.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous Wyoming city is known for its natural hot springs, scenic mountain views, and being the county seat of Teton County?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cheyenne",
+        "Jackson",
+        "Cody",
+        "Thermopolis"
+      ],
+      "answer": "Thermopolis",
+      "explanation": "Thermopolis, located in Wyoming, is known for its natural hot springs, scenic mountain views, and being the county seat of Teton County. It is a popular destination for relaxation and outdoor activities.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which famous Wyoming city is known for its historic downtown area, western heritage, and being the home of the Wyoming State Museum?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cheyenne",
+        "Laramie",
+        "Rock Springs",
+        "Evanston"
+      ],
+      "answer": "Cheyenne",
+      "explanation": "Cheyenne, located in Wyoming, is known for its historic downtown area, western heritage, and being the home of the Wyoming State Museum. It celebrates the history and culture of Wyoming.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous Wyoming city is known for its vibrant arts scene, historic downtown area, and being the home of the Nicolaysen Art Museum?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cheyenne",
+        "Casper",
+        "Laramie",
+        "Rock Springs"
+      ],
+      "answer": "Laramie",
+      "explanation": "Laramie, located in Wyoming, is known for its vibrant arts scene, historic downtown area, and being the home of the Nicolaysen Art Museum. It showcases its cultural richness.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous Wyoming city is known for its historic downtown area, beautiful riverfront, and being the home of the National Historic Trails Interpretive Center?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cheyenne",
+        "Casper",
+        "Rock Springs",
+        "Cody"
+      ],
+      "answer": "Casper",
+      "explanation": "Casper, located in Wyoming, is known for its historic downtown area, beautiful riverfront along the North Platte River, and being the home of the National Historic Trails Interpretive Center. It honors the legacy of the trails.",
+      "difficulty": "Medium"
+    }
+  ]
+}
