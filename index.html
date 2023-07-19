@@ -1086,15 +1086,20 @@ const quizzesPerPage = 20;
 	
 var num = 0;
 // Function to fetch quiz data from Firestore and update the HTML
-async function fetchQuizzesFromDB() {
-  // Fetch the quizzes collection with ordering
-  const orderedQuerySnapshot = await db.collection('quizzes')
+async function fetchQuizzesFromDB(page) {
+  const startAtIndex = (page - 1) * quizzesPerPage;
+
+  // Fetch the quizzes collection with ordering and pagination
+  const querySnapshot = await db.collection('quizzes')
     .orderBy('quizCreatedDateDB', 'desc')
     .orderBy('quizRatingDB', 'desc')
     .orderBy('quizFinishedCount', 'desc')
     .orderBy('quizStartedCount', 'desc')
     .orderBy('quizNameDB', 'asc')
+    .startAt(startAtIndex)
+    .limit(quizzesPerPage)
     .get();
+
 
   // Fetch all the quizzes without any specific ordering
   const allQuizzesQuerySnapshot = await db.collection('quizzes').get();
@@ -1141,7 +1146,8 @@ async function fetchQuizzesFromDB() {
   let num = 0;
 
   // Iterate over each quiz item in the combined dataset
-  quizList.forEach((quizData) => {
+  quizList.forEach((quizData, index) => {
+    const num = startAtIndex + index + 1;
 	  
     num += 1;
     const stars = ratingToStars(quizData.quizRatingDB); // Assigned stars here
@@ -1177,7 +1183,7 @@ async function fetchQuizzesFromDB() {
 	  window.addEventListener("load", function() {
 
 // Call the function to fetch and populate the quiz data
-fetchQuizzesFromDB();
+fetchQuizzesFromDB(currentPage);
   });
 
 
@@ -1203,7 +1209,7 @@ quizContainer.addEventListener('scroll', () => {
 
 	      console.log(`currentPage: ${currentPage}`);
   
-   // fetchQuizzesFromDB(currentPage);
+    fetchQuizzesFromDB(currentPage);
   }
 });
 
