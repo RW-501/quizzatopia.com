@@ -1,0 +1,236 @@
+{
+  "quizName": "Poetry Quiz",
+  "quizCode": "POE2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Literature",
+  "quizDescription": "Test your knowledge about poetry!",
+  "quizTags": "Poetry, Literature, Words, Art",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who wrote the famous poem 'The Raven'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Emily Dickinson",
+        "Edgar Allan Poe",
+        "William Shakespeare",
+        "Robert Frost"
+      ],
+      "answer": "Edgar Allan Poe",
+      "explanation": "'The Raven' is a famous poem written by Edgar Allan Poe. It is known for its haunting and melancholic tone.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which poetic form consists of fourteen lines with a specific rhyme scheme?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Haiku",
+        "Sonnet",
+        "Limerick",
+        "Free Verse"
+      ],
+      "answer": "Sonnet",
+      "explanation": "A sonnet is a poetic form consisting of fourteen lines with a specific rhyme scheme. It is often associated with themes of love, beauty, and introspection.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Who wrote the famous poem 'The Waste Land'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Emily Dickinson",
+        "T.S. Eliot",
+        "Walt Whitman",
+        "Langston Hughes"
+      ],
+      "answer": "T.S. Eliot",
+      "explanation": "'The Waste Land' is a famous poem written by T.S. Eliot. It is considered one of the most important works of modernist literature.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Who wrote the famous poem 'The Road Not Taken'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Emily Dickinson",
+        "Edgar Allan Poe",
+        "William Shakespeare",
+        "Robert Frost"
+      ],
+      "answer": "Robert Frost",
+      "explanation": "'The Road Not Taken' is a famous poem written by Robert Frost. It explores the theme of choices and the uncertainty of life.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which poet is known for her reclusive lifestyle and unique style of punctuation and capitalization?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Emily Dickinson",
+        "Maya Angelou",
+        "Sylvia Plath",
+        "Rumi"
+      ],
+      "answer": "Emily Dickinson",
+      "explanation": "Emily Dickinson, known for her reclusive lifestyle, is a celebrated poet. Her poetry is characterized by its unconventional punctuation and capitalization.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which poet wrote the famous line 'Two roads diverged in a wood, and I - I took the one less traveled by'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Emily Dickinson",
+        "Edgar Allan Poe",
+        "William Shakespeare",
+        "Robert Frost"
+      ],
+      "answer": "Robert Frost",
+      "explanation": "The line 'Two roads diverged in a wood, and I - I took the one less traveled by' is from the poem 'The Road Not Taken' by Robert Frost.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Who wrote the famous poem 'If'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Emily Dickinson",
+        "Rudyard Kipling",
+        "Maya Angelou",
+        "Langston Hughes"
+      ],
+      "answer": "Rudyard Kipling",
+      "explanation": "'If' is a famous poem written by Rudyard Kipling. It offers guidance on how to live a virtuous and fulfilling life.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which poetic form consists of three-line stanzas with a 5-7-5 syllable count?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Haiku",
+        "Sonnet",
+        "Limerick",
+        "Free Verse"
+      ],
+      "answer": "Haiku",
+      "explanation": "A haiku is a poetic form consisting of three-line stanzas with a 5-7-5 syllable count. It originated in Japan and often focuses on nature and the seasons.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Who wrote the famous poem 'I Know Why the Caged Bird Sings'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Emily Dickinson",
+        "Maya Angelou",
+        "Sylvia Plath",
+        "Langston Hughes"
+      ],
+      "answer": "Maya Angelou",
+      "explanation": "'I Know Why the Caged Bird Sings' is a famous poem written by Maya Angelou. It explores themes of freedom, identity, and resilience.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which poet is known for his mystical and spiritual poetry, often expressing themes of love and divine union?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Emily Dickinson",
+        "Rumi",
+        "Walt Whitman",
+        "Langston Hughes"
+      ],
+      "answer": "Rumi",
+      "explanation": "Rumi, a 13th-century Persian poet, is known for his mystical and spiritual poetry. His works often explore themes of love, unity, and the divine.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which poet wrote the famous line 'Shall I compare thee to a summer's day?'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Emily Dickinson",
+        "Edgar Allan Poe",
+        "William Shakespeare",
+        "Robert Frost"
+      ],
+      "answer": "William Shakespeare",
+      "explanation": "The line 'Shall I compare thee to a summer's day?' is from Sonnet 18 written by William Shakespeare.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which poet is known for her confessional style of poetry, often exploring themes of mental health and personal struggles?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Emily Dickinson",
+        "Sylvia Plath",
+        "Maya Angelou",
+        "Langston Hughes"
+      ],
+      "answer": "Sylvia Plath",
+      "explanation": "Sylvia Plath is known for her confessional style of poetry, often exploring themes of mental health, personal struggles, and identity.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Who wrote the famous poem 'The Negro Speaks of Rivers'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Emily Dickinson",
+        "Rudyard Kipling",
+        "Maya Angelou",
+        "Langston Hughes"
+      ],
+      "answer": "Langston Hughes",
+      "explanation": "'The Negro Speaks of Rivers' is a famous poem written by Langston Hughes. It celebrates the rich history and resilience of African Americans.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which poet is known for his celebration of the beauty of the natural world and the human spirit?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Emily Dickinson",
+        "Walt Whitman",
+        "Rumi",
+        "Robert Frost"
+      ],
+      "answer": "Walt Whitman",
+      "explanation": "Walt Whitman is known for his celebration of the beauty of the natural world and the human spirit in his poetry. He is considered one of the most influential American poets.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Who wrote the famous poem 'Hope is the thing with feathers'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Emily Dickinson",
+        "Edgar Allan Poe",
+        "Maya Angelou",
+        "Langston Hughes"
+      ],
+      "answer": "Emily Dickinson",
+      "explanation": "'Hope is the thing with feathers' is a famous poem written by Emily Dickinson. It expresses the power of hope through the metaphor of a bird.",
+      "difficulty": "Medium"
+    }
+  ]
+}
