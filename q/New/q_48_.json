@@ -1,0 +1,229 @@
+{
+  "quizName": "Quiz on Hawaii",
+  "quizCode": "HI2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Hawaii!",
+  "quizTags": "Hawaii, Geography, States, USA",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Hawaii is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Pineapple",
+        "Volcano",
+        "Aloha",
+        "Paradise"
+      ],
+      "answer": "Aloha",
+      "explanation": "Hawaii is known as the Aloha State due to the popular Hawaiian greeting and the spirit of aloha, which promotes love, peace, and compassion.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Hawaii is the only U.S. state composed entirely of islands.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Hawaii is the only U.S. state that is entirely composed of islands.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of Hawaii?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Honolulu",
+        "Hilo",
+        "Kailua",
+        "Maui"
+      ],
+      "answer": "Honolulu",
+      "explanation": "The capital city of Hawaii is Honolulu, which is located on the island of Oahu.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous volcanic mountain, considered one of the world's most active volcanoes, is located on the island of Hawaii?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mount McKinley",
+        "Mount St. Helens",
+        "Mauna Loa",
+        "Mount Everest"
+      ],
+      "answer": "Mauna Loa",
+      "explanation": "Mauna Loa, located on the island of Hawaii (also known as the Big Island), is one of the world's most active volcanoes.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of Hawaii?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Aloha State",
+        "The Pineapple State",
+        "The Paradise State",
+        "The Island State"
+      ],
+      "answer": "The Aloha State",
+      "explanation": "Hawaii is often referred to as The Aloha State due to the popular Hawaiian greeting and the spirit of aloha that characterizes the state.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous national park, located on the island of Maui, is home to the dormant volcano 'Haleakalā' and a unique Mars-like landscape?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yellowstone National Park",
+        "Yosemite National Park",
+        "Haleakalā National Park",
+        "Grand Canyon National Park"
+      ],
+      "answer": "Haleakalā National Park",
+      "explanation": "Haleakalā National Park, located on the island of Maui, is known for its dormant volcano 'Haleakalā' and its unique Mars-like landscape at the summit.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state flower of Hawaii?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hibiscus",
+        "Plumeria",
+        "Orchid",
+        "Lily"
+      ],
+      "answer": "Hibiscus",
+      "explanation": "The official state flower of Hawaii is the Hibiscus, specifically the yellow hibiscus (Hibiscus brackenridgei).",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous historical site in Hawaii was attacked by the Japanese on December 7, 1941, leading to the United States' entry into World War II?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pearl Harbor",
+        "Waimea Canyon",
+        "Iolani Palace",
+        "Halema'uma'u Crater"
+      ],
+      "answer": "Pearl Harbor",
+      "explanation": "Pearl Harbor, a naval base on the island of Oahu, was attacked by the Japanese on December 7, 1941, leading to the United States' entry into World War II.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous Hawaiian musician and songwriter is often referred to as the 'King of Reggae' and is known for popularizing reggae music worldwide?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bob Marley",
+        "Elvis Presley",
+        "Michael Jackson",
+        "Prince"
+      ],
+      "answer": "Bob Marley",
+      "explanation": "Bob Marley, a legendary musician and songwriter from Jamaica, is often referred to as the 'King of Reggae' and is known for popularizing reggae music worldwide.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: The Hawaiian Islands are located in the Pacific Ring of Fire, an area known for frequent earthquakes and volcanic eruptions.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. The Hawaiian Islands are situated in the Pacific Ring of Fire, which is characterized by frequent seismic and volcanic activity.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous beach on the island of Oahu is known for its large waves, making it a popular spot for surfing competitions?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Waikiki Beach",
+        "Lanikai Beach",
+        "Hanauma Bay",
+        "Pipeline Beach"
+      ],
+      "answer": "Pipeline Beach",
+      "explanation": "Pipeline Beach, located on the North Shore of Oahu, is renowned for its large and powerful waves, attracting surfers from around the world.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous observatory, located near the summit of Mauna Kea on the island of Hawaii, is known for its groundbreaking astronomical research?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Griffith Observatory",
+        "Mount Wilson Observatory",
+        "Kitt Peak National Observatory",
+        "W. M. Keck Observatory"
+      ],
+      "answer": "W. M. Keck Observatory",
+      "explanation": "The W. M. Keck Observatory, situated near the summit of Mauna Kea on the island of Hawaii, is renowned for its cutting-edge astronomical research and the twin Keck telescopes.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the traditional Hawaiian dish made of raw fish, usually tuna, marinated in soy sauce and other seasonings?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sushi",
+        "Sashimi",
+        "Poke",
+        "Ceviche"
+      ],
+      "answer": "Poke",
+      "explanation": "Poke is a traditional Hawaiian dish made of raw fish, typically tuna, marinated in soy sauce, sesame oil, seaweed, and other seasonings.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous cultural event and festival is celebrated annually in Hawaii, featuring music, dance, and the iconic hula performances?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Oktoberfest",
+        "Carnival",
+        "Mardi Gras",
+        "Merrie Monarch Festival"
+      ],
+      "answer": "Merrie Monarch Festival",
+      "explanation": "The Merrie Monarch Festival is a famous cultural event celebrated annually in Hawaii, showcasing traditional music, dance, and the hula performances.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous bay on the island of Oahu is a renowned gathering place for Hawaiian green sea turtles, also known as 'honu'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hanauma Bay",
+        "Waimea Bay",
+        "Maunalua Bay",
+        "Lanikai Bay"
+      ],
+      "answer": "Lanikai Bay",
+      "explanation": "Lanikai Bay on the island of Oahu is a famous gathering place for Hawaiian green sea turtles, known as 'honu,' and offers a picturesque beach setting.",
+      "difficulty": "Medium"
+    }
+  ]
+}
