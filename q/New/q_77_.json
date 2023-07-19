@@ -1,0 +1,233 @@
+{
+  "quizName": "Quiz on South Carolina",
+  "quizCode": "SC2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of South Carolina!",
+  "quizTags": "South Carolina, Geography, States, USA",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the capital city of South Carolina?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Columbia",
+        "Charleston",
+        "Greenville",
+        "Myrtle Beach"
+      ],
+      "answer": "Columbia",
+      "explanation": "The capital city of South Carolina is Columbia, located in the central part of the state.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: South Carolina is known as the 'Palmetto State.'",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. South Carolina is known as the 'Palmetto State' because of the prevalence of palmetto trees in the state, particularly the state tree, the Sabal palmetto.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the nickname of South Carolina?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Empire State",
+        "The Garden State",
+        "The Palmetto State",
+        "The Sunshine State"
+      ],
+      "answer": "The Palmetto State",
+      "explanation": "South Carolina is often referred to as 'The Palmetto State' due to the prevalence of palmetto trees and its historical connection to the palmetto's use in defending the state during the American Revolution.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous historical city in South Carolina is known for its well-preserved antebellum homes, cobblestone streets, and horse-drawn carriages?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Columbia",
+        "Charleston",
+        "Greenville",
+        "Hilton Head Island"
+      ],
+      "answer": "Charleston",
+      "explanation": "Charleston, located on the coast of South Carolina, is a famous historical city known for its well-preserved antebellum homes, cobblestone streets, and horse-drawn carriages.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which famous American Civil War fort, located in Charleston Harbor, played a significant role in the early stages of the war?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Fort Sumter",
+        "Fort McHenry",
+        "Fort Pulaski",
+        "Fort Monroe"
+      ],
+      "answer": "Fort Sumter",
+      "explanation": "Fort Sumter, located in Charleston Harbor, South Carolina, is a famous American Civil War fort that played a significant role in the early stages of the war. It is now a national monument.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the official state bird of South Carolina?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Northern Cardinal",
+        "Carolina Wren",
+        "American Goldfinch",
+        "Eastern Bluebird"
+      ],
+      "answer": "Carolina Wren",
+      "explanation": "The official state bird of South Carolina is the Carolina Wren, a small bird known for its melodic song and distinctive appearance.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which famous plantation, located near Charleston, South Carolina, is known for its beautiful gardens, historic house tours, and its role in American history?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Boone Hall Plantation",
+        "Magnolia Plantation and Gardens",
+        "Middleton Place",
+        "Drayton Hall"
+      ],
+      "answer": "Magnolia Plantation and Gardens",
+      "explanation": "Magnolia Plantation and Gardens, located near Charleston, South Carolina, is a famous plantation known for its beautiful gardens, historic house tours, and its historical significance.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous beach destination, located along the South Carolina coast, is known for its wide sandy beaches, golf courses, and resort communities?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Myrtle Beach",
+        "Hilton Head Island",
+        "Charleston Beach",
+        "Folly Beach"
+      ],
+      "answer": "Hilton Head Island",
+      "explanation": "Hilton Head Island, located along the South Carolina coast, is a famous beach destination known for its wide sandy beaches, golf courses, and resort communities.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous American writer, known for his novel 'Gone with the Wind,' was born in Saint Pauls Parish, South Carolina?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Harper Lee",
+        "F. Scott Fitzgerald",
+        "Margaret Mitchell",
+        "William Faulkner"
+      ],
+      "answer": "Margaret Mitchell",
+      "explanation": "Margaret Mitchell, a famous American writer, was born in Atlanta, Georgia, and is best known for her novel 'Gone with the Wind,' which explores the American Civil War and its aftermath.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which famous waterway, located in South Carolina, is known for its unique tidal phenomenon called the 'Tide of Two Rivers'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Savannah River",
+        "Santee River",
+        "Cooper River",
+        "Waccamaw River"
+      ],
+      "answer": "Waccamaw River",
+      "explanation": "The Waccamaw River, located in South Carolina, is known for its unique tidal phenomenon called the 'Tide of Two Rivers,' where the flow direction changes with the tide.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous American golfer, known for his victories in major championships and his charitable work, was born in Columbia, South Carolina?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jack Nicklaus",
+        "Tiger Woods",
+        "Phil Mickelson",
+        "Davis Love III"
+      ],
+      "answer": "Tiger Woods",
+      "explanation": "Tiger Woods, a famous American golfer considered one of the greatest in the sport's history, was born in Cypress, California, and raised in Southern California.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous American actress, known for her roles in movies like 'The Notebook' and 'Mean Girls,' was born in Charleston, South Carolina?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Scarlett Johansson",
+        "Jennifer Lawrence",
+        "Rachel McAdams",
+        "Emma Stone"
+      ],
+      "answer": "Rachel McAdams",
+      "explanation": "Rachel McAdams, a famous Canadian actress, was born in London, Ontario, Canada.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which famous American singer and songwriter, known for his soulful voice and hits like 'Sittin' on the Dock of the Bay,' was born in Dawson, Georgia, but spent much of his career in South Carolina?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Elvis Presley",
+        "Stevie Wonder",
+        "Marvin Gaye",
+        "Otis Redding"
+      ],
+      "answer": "Otis Redding",
+      "explanation": "Otis Redding, a famous American singer and songwriter, was born in Dawson, Georgia, and is known for his soulful voice and hits like 'Sittin' on the Dock of the Bay.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous American Civil Rights leader, known for his nonviolent activism and his influential speeches, was born in Atlanta, Georgia, but spent much of his life in South Carolina?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Malcolm X",
+        "Jesse Jackson",
+        "Martin Luther King Jr.",
+        "Rosa Parks"
+      ],
+      "answer": "Jesse Jackson",
+      "explanation": "Jesse Jackson, a famous American Civil Rights leader and political activist, was born in Greenville, South Carolina, and is known for his nonviolent activism and influential speeches.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous island, located along the South Carolina coast, is known for its beautiful beaches, vibrant arts scene, and annual Spoleto Festival USA?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hilton Head Island",
+        "Kiawah Island",
+        "Sullivan's Island",
+        "Folly Beach"
+      ],
+      "answer": "Sullivan's Island",
+      "explanation": "Sullivan's Island, located along the South Carolina coast, is a famous island known for its beautiful beaches, vibrant arts scene, and hosting the annual Spoleto Festival USA.",
+      "difficulty": "Medium"
+    }
+  ]
+}
