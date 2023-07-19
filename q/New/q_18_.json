@@ -1,0 +1,159 @@
+{
+  "quizName": "Martin TV Show Quiz",
+  "quizCode": "MARTIN123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "TV",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the name of Martin's talk show host character?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jerome",
+        "Sheneneh",
+        "Otis",
+        "Roscoe"
+      ],
+      "answer": "Jerome",
+      "explanation": "Jerome is the flamboyant talk show host character played by Martin Lawrence in the show.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the name of Martin's girlfriend and eventual wife?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gina",
+        "Pam",
+        "Sheneneh",
+        "Cole"
+      ],
+      "answer": "Gina",
+      "explanation": "Gina Waters-Payne, portrayed by Tisha Campbell-Martin, is Martin's girlfriend and later wife in the show.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the name of Martin's best friend?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cole",
+        "Tommy",
+        "Pam",
+        "Jerome"
+      ],
+      "answer": "Tommy",
+      "explanation": "Tommy Strawn, played by Tommy Ford, is Martin's best friend who is often seen with him in various comedic situations.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which character is known for her catchphrase 'Hated it!'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sheneneh",
+        "Pam",
+        "Gina",
+        "Cole"
+      ],
+      "answer": "Sheneneh",
+      "explanation": "Sheneneh Jenkins, played by Martin Lawrence, is known for her sassy attitude and catchphrase 'Hated it!' in the show.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the name of the barbershop where the characters often hang out?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Nipsey's",
+        "Tommy's",
+        "Cole's",
+        "Otis's"
+      ],
+      "answer": "Nipsey's",
+      "explanation": "Nipsey's is the name of the barbershop where the characters frequently gather for discussions and comedic moments.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which character is known for his dim-witted yet lovable personality?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cole",
+        "Tommy",
+        "Jerome",
+        "Roscoe"
+      ],
+      "answer": "Cole",
+      "explanation": "Cole Brown, portrayed by Carl Anthony Payne II, is known for his dim-witted yet lovable personality in the show.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the name of Martin's obnoxious neighbor?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Stan",
+        "Reginald",
+        "LaWanda",
+        "Brother Man"
+      ],
+      "answer": "Stan",
+      "explanation": "Stan Winters, played by Garrett Morris, is Martin's obnoxious neighbor who often annoys him with his antics.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the name of the radio station where Martin works?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "WZUP",
+        "WPGR",
+        "WMRT",
+        "WAVV"
+      ],
+      "answer": "WZUP",
+      "explanation": "WZUP is the fictional radio station where Martin Payne, played by Martin Lawrence, works as a radio DJ.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which character often wears flashy and colorful outfits?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jerome",
+        "Cole",
+        "Sheneneh",
+        "Tommy"
+      ],
+      "answer": "Jerome",
+      "explanation": "Jerome is known for his extravagant and colorful fashion choices, often wearing flashy outfits and accessories.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the name of Martin's beloved pet dog?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Otis",
+        "Rex",
+        "Roscoe",
+        "Smokey"
+      ],
+      "answer": "Otis",
+      "explanation": "Otis is the name of Martin's pet dog, who occasionally appears in the show and adds to the comedic moments.",
+      "difficulty": "Medium"
+    }
+  ]
+}
