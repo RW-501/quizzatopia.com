@@ -1,0 +1,233 @@
+{
+  "quizName": "Quiz on Rhode Island",
+  "quizCode": "RI2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Rhode Island!",
+  "quizTags": "Rhode Island, Geography, States, USA",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the capital city of Rhode Island?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Providence",
+        "Newport",
+        "Warwick",
+        "Cranston"
+      ],
+      "answer": "Providence",
+      "explanation": "The capital city of Rhode Island is Providence, known for its historic architecture, vibrant arts scene, and renowned universities.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Rhode Island is the smallest state in the United States.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Rhode Island is the smallest state in the United States in terms of land area, but it is densely populated and has a rich history.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the nickname of Rhode Island?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Sunshine State",
+        "The Ocean State",
+        "The Garden State",
+        "The Bay State"
+      ],
+      "answer": "The Ocean State",
+      "explanation": "Rhode Island is often referred to as 'The Ocean State' due to its extensive coastline and maritime heritage.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous university, located in Providence, Rhode Island, is known for its prestigious Ivy League education and innovative teaching methods?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Harvard University",
+        "Yale University",
+        "Princeton University",
+        "Brown University"
+      ],
+      "answer": "Brown University",
+      "explanation": "Brown University, located in Providence, Rhode Island, is a famous university known for its prestigious Ivy League education and innovative teaching methods.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which famous mansion, located in Newport, Rhode Island, is a symbol of the Gilded Age and is known for its opulent architecture and beautiful gardens?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Breakers",
+        "Biltmore Estate",
+        "Hearst Castle",
+        "Monticello"
+      ],
+      "answer": "The Breakers",
+      "explanation": "The Breakers, located in Newport, Rhode Island, is a famous mansion and a symbol of the Gilded Age. It is known for its opulent architecture, grand interiors, and beautiful gardens.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the official state bird of Rhode Island?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Northern Cardinal",
+        "Rhode Island Red",
+        "American Goldfinch",
+        "Eastern Bluebird"
+      ],
+      "answer": "Rhode Island Red",
+      "explanation": "The official state bird of Rhode Island is the Rhode Island Red, a breed of domestic chicken known for its hardiness and distinctive red color.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which famous festival, held annually in Providence, Rhode Island, is one of the largest arts and music festivals in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mardi Gras",
+        "Carnival",
+        "Burning Man",
+        "WaterFire Providence"
+      ],
+      "answer": "WaterFire Providence",
+      "explanation": "WaterFire Providence, held annually in Providence, Rhode Island, is a famous festival that combines art, music, and the lighting of bonfires on the city's rivers. It attracts thousands of visitors.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous lighthouse, located in Narragansett Bay, Rhode Island, is the tallest lighthouse in New England?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cape Hatteras Lighthouse",
+        "Portland Head Light",
+        "Block Island Southeast Light",
+        "Point Judith Lighthouse"
+      ],
+      "answer": "Block Island Southeast Light",
+      "explanation": "Block Island Southeast Light, located on Block Island in Narragansett Bay, Rhode Island, is the tallest lighthouse in New England. It offers panoramic views of the surrounding area.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous artist, known for his vibrant and abstract expressionist paintings, was born in Providence, Rhode Island?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pablo Picasso",
+        "Jackson Pollock",
+        "Andy Warhol",
+        "Willem de Kooning"
+      ],
+      "answer": "Willem de Kooning",
+      "explanation": "Willem de Kooning, a famous artist associated with the Abstract Expressionist movement, was born in Rotterdam, Netherlands, but spent much of his artistic career in New York City.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which famous beach town, located in Rhode Island, is known for its scenic shoreline, historic charm, and vibrant summer atmosphere?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cape Cod",
+        "Martha's Vineyard",
+        "Block Island",
+        "Newport"
+      ],
+      "answer": "Newport",
+      "explanation": "Newport, located in Rhode Island, is a famous beach town known for its scenic shoreline, historic charm, and vibrant summer atmosphere. It is a popular destination for tourism and sailing.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous American tennis player, known for her powerful playing style and multiple Grand Slam titles, was born in Warwick, Rhode Island?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Serena Williams",
+        "Venus Williams",
+        "Steffi Graf",
+        "Martina Navratilova"
+      ],
+      "answer": "Venus Williams",
+      "explanation": "Venus Williams, a famous American tennis player and multiple Grand Slam champion, was born in Lynwood, California, and raised in Compton, California.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous island, located in Rhode Island, is known for its picturesque landscapes, sandy beaches, and relaxed atmosphere?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Long Island",
+        "Cape Cod",
+        "Nantucket",
+        "Block Island"
+      ],
+      "answer": "Block Island",
+      "explanation": "Block Island, located in Rhode Island, is a famous island known for its picturesque landscapes, sandy beaches, and relaxed atmosphere. It is a popular destination for outdoor activities and nature lovers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which famous colonial settlement, located in Rhode Island, is known for its well-preserved historic architecture and is a designated National Historic Landmark?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jamestown",
+        "Plymouth",
+        "Charleston",
+        "Newport"
+      ],
+      "answer": "Newport",
+      "explanation": "Newport, located in Rhode Island, is a famous colonial settlement known for its well-preserved historic architecture, including colonial-era buildings and mansions from the Gilded Age.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous sailing event, held annually in Newport, Rhode Island, is the oldest international sports trophy in the world?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "America's Cup",
+        "Olympic Sailing Regatta",
+        "Vendée Globe",
+        "Sydney to Hobart Yacht Race"
+      ],
+      "answer": "America's Cup",
+      "explanation": "The America's Cup, held annually in various locations including Newport, Rhode Island, is the oldest international sports trophy in the world. It is a prestigious sailing competition.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous Italian-American actor, known for his roles in movies like 'The Godfather' and 'Scarface,' was born in Providence, Rhode Island?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Al Pacino",
+        "Robert De Niro",
+        "Marlon Brando",
+        "Joe Pesci"
+      ],
+      "answer": "Joe Pesci",
+      "explanation": "Joe Pesci, a famous Italian-American actor known for his roles in movies like 'Goodfellas' and 'Home Alone,' was born in Newark, New Jersey.",
+      "difficulty": "Medium"
+    }
+  ]
+}
