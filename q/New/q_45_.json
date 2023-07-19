@@ -1,0 +1,231 @@
+{
+  "quizName": "Quiz on Delaware",
+  "quizCode": "DE2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Delaware!",
+  "quizTags": "Delaware, Geography, States, USA",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Delaware is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "First",
+        "Diamond",
+        "Blue Hen",
+        "Peach"
+      ],
+      "answer": "First",
+      "explanation": "Delaware is known as the First State because it was the first of the original 13 colonies to ratify the U.S. Constitution on December 7, 1787.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Delaware is the smallest state in the United States by area.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Delaware is the smallest state in the U.S. by land area.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of Delaware?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Dover",
+        "Wilmington",
+        "Newark",
+        "Lewes"
+      ],
+      "answer": "Dover",
+      "explanation": "The capital city of Delaware is Dover.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Delaware is bordered by which bodies of water?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Chesapeake Bay and Atlantic Ocean",
+        "Hudson River and Long Island Sound",
+        "Gulf of Mexico and Mississippi River",
+        "Lake Erie and Lake Ontario"
+      ],
+      "answer": "Chesapeake Bay and Atlantic Ocean",
+      "explanation": "Delaware is bordered by the Chesapeake Bay to the west and the Atlantic Ocean to the east.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of Delaware?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Diamond State",
+        "The Sunshine State",
+        "The Garden State",
+        "The Treasure State"
+      ],
+      "answer": "The Diamond State",
+      "explanation": "Delaware is often referred to as The Diamond State, a nickname inspired by Thomas Jefferson's description of it as a 'jewel' among the states.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which river forms the western border of Delaware with the state of Maryland?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Delaware River",
+        "Hudson River",
+        "Potomac River",
+        "Susquehanna River"
+      ],
+      "answer": "Susquehanna River",
+      "explanation": "The Susquehanna River forms the western border of Delaware with the state of Maryland.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state flower of Delaware?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Rose",
+        "Peach Blossom",
+        "Tulip",
+        "Violet"
+      ],
+      "answer": "Peach Blossom",
+      "explanation": "The official state flower of Delaware is the Peach Blossom.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous du Pont family mansion and gardens, now open to the public, is located in Wilmington, Delaware?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Biltmore Estate",
+        "Versailles Palace",
+        "Monticello",
+        "Winterthur Museum, Garden and Library"
+      ],
+      "answer": "Winterthur Museum, Garden and Library",
+      "explanation": "Winterthur Museum, Garden and Library, formerly the du Pont family mansion, is located in Wilmington, Delaware.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous aviator, the first woman to fly solo across the Atlantic Ocean, was born in Atchison, Kansas, but spent part of her childhood in Dover, Delaware?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bessie Coleman",
+        "Amelia Earhart",
+        "Charles Lindbergh",
+        "Wiley Post"
+      ],
+      "answer": "Amelia Earhart",
+      "explanation": "Amelia Earhart, the pioneering aviator, was born in Atchison, Kansas, but spent part of her childhood in Dover, Delaware.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: Delaware has no sales tax.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Delaware is one of the few states in the U.S. that does not impose a sales tax on most retail purchases.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous lighthouse, built in 1768, is one of the oldest surviving lighthouses in the United States and is located on the Delaware Bay?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Heceta Head Lighthouse",
+        "Cape Hatteras Lighthouse",
+        "Old Point Loma Lighthouse",
+        "Cape Henlopen Lighthouse"
+      ],
+      "answer": "Cape Henlopen Lighthouse",
+      "explanation": "The Cape Henlopen Lighthouse, built in 1768, is one of the oldest surviving lighthouses in the U.S. and is located on the Delaware Bay.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which major U.S. highway that runs from California to New Jersey passes through Delaware?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Route 66",
+        "Interstate 40",
+        "Interstate 95",
+        "Interstate 80"
+      ],
+      "answer": "Interstate 95",
+      "explanation": "Interstate 95, one of the major U.S. highways, passes through Delaware, connecting California to New Jersey.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Delaware is divided into three counties. Which one of the following is NOT a county in Delaware?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "New Castle County",
+        "Sussex County",
+        "Dover County",
+        "Kent County"
+      ],
+      "answer": "Dover County",
+      "explanation": "Dover County is not a county in Delaware. The three counties in Delaware are New Castle County, Kent County, and Sussex County.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which river, also known as the 'First State National Heritage River,' runs through northern Delaware?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Brandywine Creek",
+        "Schuylkill River",
+        "Christina River",
+        "Delaware River"
+      ],
+      "answer": "Brandywine Creek",
+      "explanation": "The Brandywine Creek, also known as the 'First State National Heritage River,' runs through northern Delaware.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the state marine animal of Delaware?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Atlantic Blue Crab",
+        "Loggerhead Sea Turtle",
+        "Bottlenose Dolphin",
+        "Horseshoe Crab"
+      ],
+      "answer": "Horseshoe Crab",
+      "explanation": "The horseshoe crab is the state marine animal of Delaware.",
+      "difficulty": "Medium"
+    }
+  ]
+}
