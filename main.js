@@ -621,7 +621,7 @@ async function reverseGeocode(latitude, longitude) {
 }
 
 
-
+getLocation();
 
 
 
