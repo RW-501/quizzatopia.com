@@ -1,0 +1,159 @@
+{
+  "quizName": "Kids Quiz",
+  "quizCode": "KIDS123",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Kids",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the capital city of France?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "London",
+        "Paris",
+        "Rome",
+        "Madrid"
+      ],
+      "answer": "Paris",
+      "explanation": "Paris is the capital city of France, known for its iconic landmarks such as the Eiffel Tower and Louvre Museum.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "How many legs does a spider have?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "answer": "8",
+      "explanation": "Spiders have 8 legs, which they use for walking, climbing, and capturing prey.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the color of the sun?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yellow",
+        "Red",
+        "Blue",
+        "Green"
+      ],
+      "answer": "Yellow",
+      "explanation": "The color of the sun appears yellow, although it may appear different at sunrise or sunset due to atmospheric effects.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which animal is known for its long neck?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Elephant",
+        "Giraffe",
+        "Lion",
+        "Tiger"
+      ],
+      "answer": "Giraffe",
+      "explanation": "The giraffe is known for its long neck, which helps it reach leaves on tall trees and gives it a unique appearance.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the largest planet in our solar system?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Earth",
+        "Mars",
+        "Jupiter",
+        "Saturn"
+      ],
+      "answer": "Jupiter",
+      "explanation": "Jupiter is the largest planet in our solar system, known for its distinctive bands of clouds and the Great Red Spot.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "How many colors are there in a rainbow?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "answer": "7",
+      "explanation": "There are 7 colors in a rainbow: red, orange, yellow, green, blue, indigo, and violet.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the primary language spoken in Japan?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "English",
+        "Spanish",
+        "Japanese",
+        "French"
+      ],
+      "answer": "Japanese",
+      "explanation": "The primary language spoken in Japan is Japanese. It has its own unique writing system and is spoken by the majority of the population.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which animal is known for hibernation?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Penguin",
+        "Kangaroo",
+        "Bear",
+        "Dolphin"
+      ],
+      "answer": "Bear",
+      "explanation": "Bears are known for hibernation, a state of inactivity during the winter months when they conserve energy by sleeping in dens.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the capital city of Australia?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sydney",
+        "Melbourne",
+        "Canberra",
+        "Brisbane"
+      ],
+      "answer": "Canberra",
+      "explanation": "Canberra is the capital city of Australia, known for its planned layout and being the seat of government.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which instrument is played by blowing air into it?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Guitar",
+        "Piano",
+        "Drums",
+        "Flute"
+      ],
+      "answer": "Flute",
+      "explanation": "The flute is an instrument that is played by blowing air into a hole, creating sound vibrations.",
+      "difficulty": "Easy"
+    }
+  ]
+}
