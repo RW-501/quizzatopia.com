@@ -129,16 +129,65 @@
         const quizDifficulty = quizInfo.quizDifficulty;
 
 
+
+  const db = firebase.firestore();
+
+  // Check if quiz already exists in Firestore
+  const querySnapshot = await db.collection('quizzes').where('quizCodeDB', '==', quizCode).get();
+
+  if (!querySnapshot.empty) {
+     logTextarea.value +=`Quiz with code ${quizCode} already saved.\n\n`;
+  } else {
+
+ let updateDate = new Date().toLocaleString();
+	  
+      // Save quiz information to Firestore with an automatically generated document ID
+     const saveQuizData = await db.collection('quizzes').add({
+        quizCodeDB: quizCode,
+        quizNameDB: quizName,
+        imageURLDB: "https://www.quizzatopia.com/images/sq/_.png",
+        quizJsonDB: "/q/New/q_"+counter+"_.json",	      
+        numberOfQuestionsDB: numberOfQuestions,
+        quizLinkDB: "/quiz/?e=New&q=q_"+counter+"_",
+        quizCategoryDB: quizCategory,
+        quizUpdateDateDB: updateDate,
+        quizDifficultyDB: quizDifficulty,
+	    quizStartedCount: 0 // Initialize the quizStartedCount to 0
+
+      });
+	      
+
+saveQuizData
+  .then((docRef) => {
+    console.log("Quiz data successfully saved with document ID:", docRef.id);
+
+	  
 const stringValues = `Quiz Name: ${quizName}\nQuiz Code: ${quizCode}\nNumber of Questions: ${numberOfQuestions}\nQuiz Category: ${quizCategory}\nQuiz Difficulty: ${quizDifficulty}`;
 
 console.log(stringValues);
-
-
-	      
         logTextarea.value += `JSON ${counter}: Adding: `+stringValues+`\n\n`;
 	            counter++;
 	            clearInterval(fetchInterval);
 	     fetchInterval = setInterval(fetchNextJSON, 1000); 
+
+	  
+  })
+  .catch((error) => {
+
+        logTextarea.value += `JSON ${counter}: Error saving quiz data:", error \n` });
+
+
+
+
+
+
+
+	  
+  
+      }
+
+
+
       } else {
         logTextarea.value += `JSON ${counter}: Fetch failed\n`;
       }
