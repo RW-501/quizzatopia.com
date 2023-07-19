@@ -1,0 +1,236 @@
+{
+  "quizName": "Learn Spanish Quiz",
+  "quizCode": "LEARNSPANISH2023",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Language Learning",
+  "quizDescription": "Test your knowledge of basic Spanish vocabulary and grammar!",
+  "quizTags": "Spanish, Language Learning, Vocabulary, Grammar",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the Spanish word for 'hello'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hola",
+        "Adiós",
+        "Gracias",
+        "Por favor"
+      ],
+      "answer": "Hola",
+      "explanation": "'Hola' is the Spanish word for 'hello'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the Spanish word for 'thank you'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hola",
+        "Adiós",
+        "Gracias",
+        "Por favor"
+      ],
+      "answer": "Gracias",
+      "explanation": "'Gracias' is the Spanish word for 'thank you'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the Spanish word for 'goodbye'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hola",
+        "Adiós",
+        "Gracias",
+        "Por favor"
+      ],
+      "answer": "Adiós",
+      "explanation": "'Adiós' is the Spanish word for 'goodbye'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the Spanish word for 'please'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hola",
+        "Adiós",
+        "Gracias",
+        "Por favor"
+      ],
+      "answer": "Por favor",
+      "explanation": "'Por favor' is the Spanish word for 'please'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the Spanish word for 'yes'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sí",
+        "No",
+        "Bueno",
+        "Mal"
+      ],
+      "answer": "Sí",
+      "explanation": "'Sí' is the Spanish word for 'yes'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the Spanish word for 'no'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sí",
+        "No",
+        "Bueno",
+        "Mal"
+      ],
+      "answer": "No",
+      "explanation": "'No' is the Spanish word for 'no'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the Spanish word for 'good'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bueno",
+        "Malo",
+        "Pequeño",
+        "Grande"
+      ],
+      "answer": "Bueno",
+      "explanation": "'Bueno' is the Spanish word for 'good'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the Spanish word for 'bad'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bueno",
+        "Malo",
+        "Pequeño",
+        "Grande"
+      ],
+      "answer": "Malo",
+      "explanation": "'Malo' is the Spanish word for 'bad'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the Spanish word for 'small'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bueno",
+        "Malo",
+        "Pequeño",
+        "Grande"
+      ],
+      "answer": "Pequeño",
+      "explanation": "'Pequeño' is the Spanish word for 'small'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the Spanish word for 'big'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bueno",
+        "Malo",
+        "Pequeño",
+        "Grande"
+      ],
+      "answer": "Grande",
+      "explanation": "'Grande' is the Spanish word for 'big'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the Spanish word for 'I love you'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Te quiero",
+        "Te amo",
+        "Te extraño",
+        "Me encantas"
+      ],
+      "answer": "Te quiero",
+      "explanation": "'Te quiero' is the Spanish phrase for 'I love you' (used in a casual or friendly context).",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the Spanish word for 'beautiful'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bello",
+        "Feo",
+        "Guapo",
+        "Bonito"
+      ],
+      "answer": "Bonito",
+      "explanation": "'Bonito' is the Spanish word for 'beautiful'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the Spanish word for 'friend'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hermano",
+        "Hijo",
+        "Amigo",
+        "Padre"
+      ],
+      "answer": "Amigo",
+      "explanation": "'Amigo' is the Spanish word for 'friend'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the Spanish word for 'family'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Amigo",
+        "Hermano",
+        "Familia",
+        "Padre"
+      ],
+      "answer": "Familia",
+      "explanation": "'Familia' is the Spanish word for 'family'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the Spanish word for 'house'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Casa",
+        "Perro",
+        "Gato",
+        "Carro"
+      ],
+      "answer": "Casa",
+      "explanation": "'Casa' is the Spanish word for 'house'.",
+      "difficulty": "Easy"
+    }
+  ]
+}
