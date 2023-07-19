@@ -1,0 +1,159 @@
+{
+  "quizName": "Saved by the Bell TV Show Quiz",
+  "quizCode": "SAVEDBELL123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "TV",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who is the main character of 'Saved by the Bell'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Zack Morris",
+        "Kelly Kapowski",
+        "Screech Powers",
+        "A.C. Slater"
+      ],
+      "answer": "Zack Morris",
+      "explanation": "Zack Morris, played by Mark-Paul Gosselaar, is the main character and the charismatic troublemaker at Bayside High School.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the name of the school the characters attend in the show?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bayside High School",
+        "Hillside High School",
+        "Valley High School",
+        "Ridgemont High School"
+      ],
+      "answer": "Bayside High School",
+      "explanation": "The characters in 'Saved by the Bell' attend Bayside High School, which serves as the primary setting for the show.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the name of Zack's best friend?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Screech Powers",
+        "A.C. Slater",
+        "Jessie Spano",
+        "Lisa Turtle"
+      ],
+      "answer": "Screech Powers",
+      "explanation": "Screech Powers, played by Dustin Diamond, is Zack Morris's best friend and a quirky character throughout the series.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Who is the captain of the Bayside High School cheerleading squad?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kelly Kapowski",
+        "Jessie Spano",
+        "Lisa Turtle",
+        "Tori Scott"
+      ],
+      "answer": "Kelly Kapowski",
+      "explanation": "Kelly Kapowski, portrayed by Tiffani Thiessen, is the captain of the Bayside High School cheerleading squad.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the name of the school's principal?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mr. Belding",
+        "Mr. Dewey",
+        "Mr. Tuttle",
+        "Mr. Carroll"
+      ],
+      "answer": "Mr. Belding",
+      "explanation": "Mr. Belding, portrayed by Dennis Haskins, is the affable and often bumbling principal of Bayside High School.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Who is Zack Morris's on-again, off-again girlfriend?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kelly Kapowski",
+        "Jessie Spano",
+        "Lisa Turtle",
+        "Tori Scott"
+      ],
+      "answer": "Kelly Kapowski",
+      "explanation": "Kelly Kapowski is Zack Morris's on-again, off-again girlfriend and one of the show's central love interests.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which character is known for his stylish wardrobe and curly hair?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A.C. Slater",
+        "Screech Powers",
+        "Zack Morris",
+        "Lisa Turtle"
+      ],
+      "answer": "A.C. Slater",
+      "explanation": "A.C. Slater, played by Mario Lopez, is known for his fashionable outfits, athletic prowess, and curly hair.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the name of the fashion-conscious character who loves shopping and designer clothes?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lisa Turtle",
+        "Jessie Spano",
+        "Kelly Kapowski",
+        "Tori Scott"
+      ],
+      "answer": "Lisa Turtle",
+      "explanation": "Lisa Turtle, portrayed by Lark Voorhies, is the fashion-conscious character who loves shopping and designer clothes.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the name of the character who later joins the cast in the final season?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tori Scott",
+        "Stacey Carosi",
+        "Maxwell Nerdstrom",
+        "Leon Carosi"
+      ],
+      "answer": "Tori Scott",
+      "explanation": "Tori Scott, played by Leanna Creel, joins the cast in the final season as a new student at Bayside High School.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the name of the energetic and academically-driven character?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jessie Spano",
+        "Kelly Kapowski",
+        "Lisa Turtle",
+        "Tori Scott"
+      ],
+      "answer": "Jessie Spano",
+      "explanation": "Jessie Spano, portrayed by Elizabeth Berkley, is the energetic and academically-driven character in 'Saved by the Bell.'",
+      "difficulty": "Medium"
+    }
+  ]
+}
