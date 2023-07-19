@@ -1,0 +1,159 @@
+{
+  "quizName": "MCU Doctor Strange Quiz",
+  "quizCode": "DOCTOR123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Movies",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is Doctor Strange's profession before becoming a sorcerer?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Surgeon",
+        "Engineer",
+        "Lawyer",
+        "Astronaut"
+      ],
+      "answer": "Surgeon",
+      "explanation": "Doctor Strange was a highly skilled neurosurgeon before he discovered the mystic arts and became a sorcerer.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the name of the ancient and mystical artifact that Doctor Strange wields?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Eye of Agamotto",
+        "Book of Vishanti",
+        "Cloak of Levitation",
+        "Wand of Watoomb"
+      ],
+      "answer": "Eye of Agamotto",
+      "explanation": "The Eye of Agamotto is an ancient relic that allows Doctor Strange to manipulate time and see into the future.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Who plays the role of Doctor Strange in the Marvel Cinematic Universe?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Benedict Cumberbatch",
+        "Tom Hiddleston",
+        "Robert Downey Jr.",
+        "Chris Hemsworth"
+      ],
+      "answer": "Benedict Cumberbatch",
+      "explanation": "Benedict Cumberbatch portrays the character of Doctor Strange in the Marvel Cinematic Universe.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the name of the mystical realm where Doctor Strange trains and learns sorcery?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kamar-Taj",
+        "Asgard",
+        "Nidavellir",
+        "Sokovia"
+      ],
+      "answer": "Kamar-Taj",
+      "explanation": "Kamar-Taj is the mystical realm in Nepal where Doctor Strange seeks training from the Ancient One and learns the mystic arts.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the source of Doctor Strange's powers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Mystic Arts",
+        "Gamma Radiation",
+        "Super Soldier Serum",
+        "Pym Particles"
+      ],
+      "answer": "The Mystic Arts",
+      "explanation": "Doctor Strange harnesses the power of the Mystic Arts, which involves manipulating energy, dimensions, and cosmic forces.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Who is Doctor Strange's mentor and the previous Sorcerer Supreme?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Ancient One",
+        "Kaecilius",
+        "Baron Mordo",
+        "Wong"
+      ],
+      "answer": "The Ancient One",
+      "explanation": "The Ancient One, portrayed by Tilda Swinton, is Doctor Strange's mentor and the previous Sorcerer Supreme.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the name of Doctor Strange's primary love interest?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Christine Palmer",
+        "Jane Foster",
+        "Pepper Potts",
+        "Peggy Carter"
+      ],
+      "answer": "Christine Palmer",
+      "explanation": "Christine Palmer, portrayed by Rachel McAdams, is a fellow surgeon and Doctor Strange's primary love interest in the MCU.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the name of the dimension from which Doctor Strange's main villain, Dormammu, hails?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Dark Dimension",
+        "Quantum Realm",
+        "Soul World",
+        "Negative Zone"
+      ],
+      "answer": "Dark Dimension",
+      "explanation": "Dormammu, the main villain in Doctor Strange, is from the Dark Dimension, a realm of dark energy and eternal darkness.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the name of Doctor Strange's sentient Cloak of Levitation?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Living Cloak",
+        "Mystic Mantle",
+        "Sentient Scarf",
+        "Vest of Vapors"
+      ],
+      "answer": "Cloak of Levitation",
+      "explanation": "The Cloak of Levitation is a sentient artifact that assists Doctor Strange in battle and has a personality of its own.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the name of Doctor Strange's standalone film released in 2016?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Doctor Strange: Sorcerer Supreme",
+        "Doctor Strange: Multiverse of Madness",
+        "Doctor Strange: The Timekeeper",
+        "Doctor Strange: In the Multiverse of Madness"
+      ],
+      "answer": "Doctor Strange: Sorcerer Supreme",
+      "explanation": "Doctor Strange's standalone film released in 2016 is titled 'Doctor Strange: Sorcerer Supreme.'",
+      "difficulty": "Medium"
+    }
+  ]
+}
