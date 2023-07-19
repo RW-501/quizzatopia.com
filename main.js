@@ -570,8 +570,57 @@ firebase.firestore().enablePersistence()
 }
 
 	
-// Function to retrieve user location using a geolocation API
-var locationV;
+      var region ="";
+      var country ="";
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+  } else {
+ //   alert("Geolocation is not supported by this browser.");
+  }
+}
+
+function onSuccess(position) {
+  const latitude = position.coords.latitude;
+  const longitude = position.coords.longitude;
+
+  // Now that you have the latitude and longitude, you can proceed with reverse geocoding.
+  reverseGeocode(latitude, longitude);
+}
+
+function onError(error) {
+//  alert("Error occurred while trying to get your location.");
+}
+
+async function reverseGeocode(latitude, longitude) {
+  try {
+    // Fetch the state data from the provided URL
+    const response = await fetch("https://www.quizzatopia.com/geo/usa_states.json");
+    const stateData = await response.json();
+
+    // Filter the "stateData" to find the state based on latitude and longitude
+    const stateInfo = stateData.find(
+      (data) => data.latitude === latitude && data.longitude === longitude
+    );
+
+    if (stateInfo) {
+       region = stateInfo.region;
+       country = stateInfo.country;
+      console.log("region:", region);
+      console.log("country:", country);
+	    
+      // Now you have the state information based on the latitude and longitude.
+      // You can use this state data for further processing.
+    } else {
+      console.log("State not found for the given coordinates.");
+    }
+  } catch (error) {
+    console.error("Error while performing reverse geocoding:", error);
+  }
+}
+
+
 
 function getUserLocation(ipAddress) {
   const USER_INFO_KEY = 'user_location';
