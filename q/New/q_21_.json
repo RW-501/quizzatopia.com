@@ -1,0 +1,159 @@
+{
+  "quizName": "Hygiene Quiz",
+  "quizCode": "HYGIENE123",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Health",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the recommended duration for washing your hands with soap and water?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "5 seconds",
+        "15 seconds",
+        "30 seconds",
+        "1 minute"
+      ],
+      "answer": "20 seconds",
+      "explanation": "It is recommended to wash your hands with soap and water for at least 20 seconds to effectively remove germs.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which of the following is an important step to maintain oral hygiene?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Flossing",
+        "Skipping brushing",
+        "Using toothpicks",
+        "Drinking soda"
+      ],
+      "answer": "Flossing",
+      "explanation": "Flossing is an important step in maintaining oral hygiene as it helps remove plaque and food particles between teeth.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "How often should you replace your toothbrush?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Once a month",
+        "Once every 3 months",
+        "Once every 6 months",
+        "Once a year"
+      ],
+      "answer": "Once every 3 months",
+      "explanation": "It is recommended to replace your toothbrush once every 3 months or sooner if the bristles become frayed.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which of the following is an effective way to prevent the spread of germs?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Covering your mouth with your hand when coughing",
+        "Using hand sanitizer instead of handwashing",
+        "Not washing your hands after using the restroom",
+        "Using disposable tissues or elbow to cover your mouth when coughing"
+      ],
+      "answer": "Using disposable tissues or elbow to cover your mouth when coughing",
+      "explanation": "Using disposable tissues or your elbow to cover your mouth when coughing can help prevent the spread of germs through respiratory droplets.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "How often should you take a shower or bathe to maintain good personal hygiene?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Once a week",
+        "Twice a week",
+        "Once a day",
+        "Once a month"
+      ],
+      "answer": "Once a day",
+      "explanation": "Taking a shower or bathing at least once a day helps keep the body clean and fresh.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which of the following is an important aspect of nail hygiene?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Biting your nails",
+        "Keeping your nails long",
+        "Regularly trimming and cleaning your nails",
+        "Applying excessive nail polish"
+      ],
+      "answer": "Regularly trimming and cleaning your nails",
+      "explanation": "Regularly trimming and cleaning your nails helps maintain good nail hygiene and prevents the buildup of dirt and bacteria.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the correct way to cough or sneeze to prevent the spread of germs?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cough or sneeze into your hands",
+        "Cough or sneeze into the air",
+        "Cough or sneeze into a tissue or your elbow",
+        "Cough or sneeze towards someone's face"
+      ],
+      "answer": "Cough or sneeze into a tissue or your elbow",
+      "explanation": "Coughing or sneezing into a tissue or your elbow helps prevent the spread of germs by containing respiratory droplets.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is an important practice for maintaining good foot hygiene?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Wearing dirty socks",
+        "Not washing your feet",
+        "Regularly washing and drying your feet",
+        "Wearing shoes without socks"
+      ],
+      "answer": "Regularly washing and drying your feet",
+      "explanation": "Regularly washing and drying your feet helps maintain good foot hygiene and prevents unpleasant odors and infections.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the recommended time to brush your teeth?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "10 seconds",
+        "30 seconds",
+        "1 minute",
+        "2 minutes"
+      ],
+      "answer": "2 minutes",
+      "explanation": "It is recommended to brush your teeth for at least 2 minutes to ensure thorough cleaning of your teeth and gums.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is an important hygiene practice for preventing the spread of foodborne illnesses?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Eating food that has been left at room temperature for hours",
+        "Not washing fruits and vegetables before consuming",
+        "Using the same cutting board for raw meat and vegetables",
+        "Properly storing and refrigerating perishable foods"
+      ],
+      "answer": "Properly storing and refrigerating perishable foods",
+      "explanation": "Properly storing and refrigerating perishable foods helps prevent the growth of harmful bacteria and reduces the risk of foodborne illnesses.",
+      "difficulty": "Easy"
+    }
+  ]
+}
