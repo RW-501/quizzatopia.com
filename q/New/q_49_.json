@@ -1,0 +1,229 @@
+{
+  "quizName": "Quiz on Idaho",
+  "quizCode": "ID2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Idaho!",
+  "quizTags": "Idaho, Geography, States, USA",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Idaho is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Potato",
+        "Gem",
+        "Mountain",
+        "Silver"
+      ],
+      "answer": "Gem",
+      "explanation": "Idaho is known as the Gem State due to its rich variety of precious and semi-precious gemstones found in the state.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Idaho is the largest state by land area in the contiguous United States.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "False",
+      "explanation": "False. While Idaho is a large state, it is not the largest by land area in the contiguous U.S.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of Idaho?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Boise",
+        "Nampa",
+        "Coeur d'Alene",
+        "Meridian"
+      ],
+      "answer": "Boise",
+      "explanation": "The capital city of Idaho is Boise, which is also the largest city in the state.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous river runs through Hells Canyon, the deepest river gorge in North America?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Colorado River",
+        "Snake River",
+        "Mississippi River",
+        "Columbia River"
+      ],
+      "answer": "Snake River",
+      "explanation": "The Snake River runs through Hells Canyon, which is the deepest river gorge in North America.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of Idaho?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Gem State",
+        "The Potato State",
+        "The Wilderness State",
+        "The Mountain State"
+      ],
+      "answer": "The Gem State",
+      "explanation": "Idaho is often referred to as The Gem State due to its diverse range of precious and semi-precious gemstones.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous national park, located in Idaho and neighboring states, is known for its stunning rugged mountains, including the Sawtooth Range?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yellowstone National Park",
+        "Glacier National Park",
+        "Rocky Mountain National Park",
+        "Sawtooth National Recreation Area"
+      ],
+      "answer": "Sawtooth National Recreation Area",
+      "explanation": "The Sawtooth National Recreation Area, located in Idaho and neighboring states, is renowned for its stunning rugged mountains, including the Sawtooth Range.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state bird of Idaho?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mountain Bluebird",
+        "Western Meadowlark",
+        "Peregrine Falcon",
+        "American Robin"
+      ],
+      "answer": "Mountain Bluebird",
+      "explanation": "The official state bird of Idaho is the Mountain Bluebird, known for its vibrant blue plumage.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous scenic byway, known as the 'Main Street of the Rockies,' stretches through Idaho and offers breathtaking views of the Rocky Mountains?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lincoln Highway",
+        "Beartooth Highway",
+        "San Juan Skyway",
+        "Sawtooth Scenic Byway"
+      ],
+      "answer": "Sawtooth Scenic Byway",
+      "explanation": "The Sawtooth Scenic Byway, also called the 'Main Street of the Rockies,' winds through Idaho and provides stunning views of the Rocky Mountains and Sawtooth Range.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous U.S. wilderness area, located in central Idaho, is known for its vast and rugged backcountry that attracts outdoor enthusiasts?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Everglades Wilderness",
+        "Yosemite Wilderness",
+        "Bob Marshall Wilderness",
+        "Frank Church-River of No Return Wilderness"
+      ],
+      "answer": "Frank Church-River of No Return Wilderness",
+      "explanation": "The Frank Church-River of No Return Wilderness in central Idaho is renowned for its vast and rugged backcountry, making it a popular destination for outdoor enthusiasts.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: Craters of the Moon National Monument and Preserve in Idaho is a volcanic area known for its otherworldly landscapes.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. Craters of the Moon National Monument and Preserve in Idaho features volcanic formations and landscapes that resemble the surface of the moon.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous ski resort, located in northern Idaho, is known for its deep powder and challenging terrain, attracting winter sports enthusiasts?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Aspen Snowmass",
+        "Jackson Hole Mountain Resort",
+        "Whistler Blackcomb",
+        "Sun Valley Resort"
+      ],
+      "answer": "Sun Valley Resort",
+      "explanation": "Sun Valley Resort in northern Idaho is renowned for its exceptional skiing, deep powder, and challenging terrain, making it a favorite destination for winter sports enthusiasts.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous river, known for its prized steelhead and salmon fishing, runs through central Idaho's rugged wilderness?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Colorado River",
+        "Snake River",
+        "Columbia River",
+        "Salmon River"
+      ],
+      "answer": "Salmon River",
+      "explanation": "The Salmon River, also known as the 'River of No Return,' runs through central Idaho's rugged wilderness and is famous for its prized steelhead and salmon fishing.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the traditional dance form of the Native American tribes in Idaho, often performed during social gatherings and ceremonies?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Square Dance",
+        "Hula",
+        "Round Dance",
+        "Flamenco"
+      ],
+      "answer": "Round Dance",
+      "explanation": "The Round Dance is a traditional dance form of the Native American tribes in Idaho and is often performed during social gatherings and ceremonies.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous lake, often called the 'Crown Jewel of Idaho,' is the deepest lake in the state and offers crystal-clear waters for various water activities?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lake Tahoe",
+        "Lake Mead",
+        "Coeur d'Alene Lake",
+        "Redfish Lake"
+      ],
+      "answer": "Redfish Lake",
+      "explanation": "Redfish Lake, often referred to as the 'Crown Jewel of Idaho,' is the deepest lake in the state and provides crystal-clear waters for various water activities.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous sand dunes, located in southern Idaho, are a popular spot for sandboarding and ATV riding?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Great Sand Dunes",
+        "Mesquite Flat Sand Dunes",
+        "Coral Pink Sand Dunes",
+        "Bruneau Dunes"
+      ],
+      "answer": "Bruneau Dunes",
+      "explanation": "Bruneau Dunes, situated in southern Idaho, are renowned for their impressive sand dunes and are a favorite destination for sandboarding and ATV riding.",
+      "difficulty": "Medium"
+    }
+  ]
+}
