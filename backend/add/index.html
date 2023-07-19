@@ -54,14 +54,103 @@
 
     
 		
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
 
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    button {
+      margin-bottom: 10px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 200px;
+      resize: vertical;
+    }
+  </style>
 <body>
 
 
   <div class="container mt-4">
 
-    
-    
+  <h1>JSON Fetch and Database</h1>
+  
+  <div>
+    <label for="counterLabel">Counter:</label>
+    <span id="counterLabel">0</span>
+  </div>
+
+  <button id="startButton" onclick="startFetching()">Start</button>
+  <button id="stopButton" onclick="stopFetching()" disabled>Stop</button>
+  <textarea id="log" rows="10" cols="50" readonly></textarea>
+
+  <script>
+    let counter = 0;
+    let fetchInterval;
+    const logTextarea = document.getElementById('log');
+    const counterLabel = document.getElementById('counterLabel');
+    const startButton = document.getElementById('startButton');
+    const stopButton = document.getElementById('stopButton');
+
+    // Function to fetch JSON files and process data
+    async function startFetching() {
+      counter = 0;
+      startButton.disabled = true;
+      stopButton.disabled = false;
+   //   logTextarea.value = '';
+      clearInterval(fetchInterval);
+      fetchInterval = setInterval(fetchNextJSON, 1000);
+    }
+
+    // Fetch the next JSON file
+    async function fetchNextJSON() {
+      counter++;
+      counterLabel.textContent = counter;
+
+      const url = `https://www.quizzatopia.com/quiz/?e=New&q=q_${counter}_.json`;
+      const response = await fetch(url);
+
+      if (response.ok) {
+        const quizInfo = await response.json();
+        const quizName = quizInfo.quizName;
+        const quizCode = quizInfo.quizCode;
+        const numberOfQuestions = quizInfo.numberOfQuestions;
+        const quizCategory = quizInfo.quizCategory;
+        const quizDifficulty = quizInfo.quizDifficulty;
+
+
+const stringValues = `Quiz Name: ${quizName}\nQuiz Code: ${quizCode}\nNumber of Questions: ${numberOfQuestions}\nQuiz Category: ${quizCategory}\nQuiz Difficulty: ${quizDifficulty}`;
+
+console.log(stringValues);
+
+
+	      
+        logTextarea.value += `JSON ${counter}: Adding: `+stringValues+`\n\n`;
+	            clearInterval(fetchInterval);
+	     fetchInterval = setInterval(fetchNextJSON, 1000); 
+      } else {
+        logTextarea.value += `JSON ${counter}: Fetch failed\n`;
+      }
+    }
+
+    // Stop fetching JSON files
+    function stopFetching() {
+      clearInterval(fetchInterval);
+      startButton.disabled = false;
+      stopButton.disabled = true;
+    }
+  </script>
     
     
     
