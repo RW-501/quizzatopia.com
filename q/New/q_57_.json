@@ -1,0 +1,233 @@
+{
+  "quizName": "Quiz on Maryland",
+  "quizCode": "MD2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Maryland!",
+  "quizTags": "Maryland, Geography, States, USA",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Maryland is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Chesapeake",
+        "Blue Crab",
+        "Old Line",
+        "Free State"
+      ],
+      "answer": "Free State",
+      "explanation": "Maryland is known as the Free State, a nickname that originated during the American Civil War when it remained in the Union despite being a slave state.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Maryland is located on the West Coast of the United States.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "False",
+      "explanation": "False. Maryland is located on the East Coast of the United States, along the Atlantic Ocean.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of Maryland?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Baltimore",
+        "Annapolis",
+        "Frederick",
+        "Rockville"
+      ],
+      "answer": "Annapolis",
+      "explanation": "The capital city of Maryland is Annapolis, making it one of the smallest capital cities by population in the United States.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous bay in Maryland is the largest estuary in the United States and known for its rich marine life?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Chesapeake Bay",
+        "Hudson Bay",
+        "Tampa Bay",
+        "San Francisco Bay"
+      ],
+      "answer": "Chesapeake Bay",
+      "explanation": "Chesapeake Bay is the largest estuary in the United States and known for its diverse marine life, including blue crabs and oysters.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of Maryland?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Chesapeake State",
+        "The Free State",
+        "The Old Line State",
+        "The Crab State"
+      ],
+      "answer": "The Old Line State",
+      "explanation": "Maryland is often referred to as The Old Line State, a nickname that dates back to the American Revolutionary War, when the state's troops were referred to as the 'Old Line' to honor their bravery.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous fort, located in Baltimore, Maryland, withstood a British naval bombardment during the War of 1812 and inspired the writing of the U.S. national anthem?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Fort Sumter",
+        "Fort McHenry",
+        "Fort Knox",
+        "Fort Jefferson"
+      ],
+      "answer": "Fort McHenry",
+      "explanation": "Fort McHenry, located in Baltimore, Maryland, withstood a British naval bombardment during the War of 1812 and inspired Francis Scott Key to write 'The Star-Spangled Banner,' which later became the U.S. national anthem.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state bird of Maryland?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Northern Cardinal",
+        "Baltimore Oriole",
+        "Eastern Bluebird",
+        "American Goldfinch"
+      ],
+      "answer": "Baltimore Oriole",
+      "explanation": "The official state bird of Maryland is the Baltimore Oriole, known for its bright orange and black plumage.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous island, located in Maryland, is known for its wild ponies and is a popular tourist destination?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Nantucket Island",
+        "Hilton Head Island",
+        "Assateague Island",
+        "Coney Island"
+      ],
+      "answer": "Assateague Island",
+      "explanation": "Assateague Island, located along the coasts of Maryland and Virginia, is known for its wild ponies and beautiful beaches, making it a popular tourist destination.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous female journalist and author, known for her groundbreaking reporting on gender and politics, was born in Takoma Park, Maryland?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gloria Steinem",
+        "Rachel Carson",
+        "Ida B. Wells",
+        "Betty Friedan"
+      ],
+      "answer": "Gloria Steinem",
+      "explanation": "Gloria Steinem, a renowned feminist, journalist, and political activist, was born in Takoma Park, Maryland, and became a prominent figure in the women's rights movement.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: Maryland is one of the original 13 colonies of the United States.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Maryland is one of the original 13 colonies and was founded as a proprietary colony by George Calvert, Lord Baltimore, in 1634.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous ballpark, located in Baltimore, Maryland, is the home stadium of the Baltimore Orioles?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Fenway Park",
+        "Wrigley Field",
+        "Yankee Stadium",
+        "Camden Yards"
+      ],
+      "answer": "Camden Yards",
+      "explanation": "Camden Yards, located in Baltimore, Maryland, is a famous ballpark and the home stadium of the Baltimore Orioles, known for its retro-modern design.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous university, located in College Park, Maryland, is the flagship institution of the University System of Maryland?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "University of Virginia",
+        "University of Maryland",
+        "University of Pennsylvania",
+        "Duke University"
+      ],
+      "answer": "University of Maryland",
+      "explanation": "The University of Maryland, College Park, is the flagship institution of the University System of Maryland and a prominent public research university.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the famous seafood delicacy that Maryland is known for, made from blue crabs and seasoned with Old Bay?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Crab Cakes",
+        "Crab Legs",
+        "Crab Bisque",
+        "Crab Rangoon"
+      ],
+      "answer": "Crab Cakes",
+      "explanation": "Crab Cakes are a famous seafood delicacy that Maryland is known for, made from blue crabs and seasoned with Old Bay or other spices.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous battle, fought during the American Civil War, took place near Sharpsburg, Maryland?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Battle of Gettysburg",
+        "Battle of Antietam",
+        "Battle of Bull Run",
+        "Battle of Chancellorsville"
+      ],
+      "answer": "Battle of Antietam",
+      "explanation": "The Battle of Antietam, also known as the Battle of Sharpsburg, was a significant battle of the American Civil War and the first major battle to take place on Union soil.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous museum and research institution, located in Baltimore, Maryland, is known for its collection of over 20 million specimens and artifacts?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Smithsonian Institution",
+        "Metropolitan Museum of Art",
+        "National Gallery of Art",
+        "The Walters Art Museum"
+      ],
+      "answer": "Smithsonian Institution",
+      "explanation": "While the Smithsonian Institution is indeed a prestigious institution, it is not located in Baltimore, Maryland. The correct answer for this question is the 'The Walters Art Museum,' which is a renowned museum in Baltimore known for its extensive collection of art and artifacts.",
+      "difficulty": "Medium"
+    }
+  ]
+}
+```
+
+This JSON format contains a quiz with 15 questions about the state of Maryland. If you would like to continue with quizzes for other states, please let me know, and I'll be happy to provide them in alphabetical order.
