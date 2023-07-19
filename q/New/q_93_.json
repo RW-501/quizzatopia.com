@@ -1,0 +1,237 @@
+
+{
+  "quizName": "Grammar Quiz",
+  "quizCode": "GRAMMAR2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Language",
+  "quizDescription": "Test your knowledge of grammar!",
+  "quizTags": "Grammar, Language, English, Writing",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which of the following is a complete sentence?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Running",
+        "The cat sat on the mat.",
+        "Quickly and quietly.",
+        "In the morning."
+      ],
+      "answer": "The cat sat on the mat.",
+      "explanation": "The sentence 'The cat sat on the mat.' is a complete sentence because it has a subject (the cat) and a predicate (sat on the mat).",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Identify the verb in the following sentence: 'She is singing a song.'",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "is",
+        "singing",
+        "a",
+        "song"
+      ],
+      "answer": "singing",
+      "explanation": "In the sentence, 'singing' is the verb as it describes the action being performed by 'she'.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which of the following is a pronoun?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Table",
+        "Happily",
+        "They",
+        "Quickly"
+      ],
+      "answer": "They",
+      "explanation": "'They' is a pronoun as it is used to refer to a group of people or things.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Identify the adverb in the following sentence: 'He ran quickly to catch the bus.'",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "He",
+        "ran",
+        "quickly",
+        "bus"
+      ],
+      "answer": "quickly",
+      "explanation": "In the sentence, 'quickly' is the adverb as it modifies the verb 'ran' by describing how he ran.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which of the following is a conjunction?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Book",
+        "And",
+        "Beautiful",
+        "Running"
+      ],
+      "answer": "And",
+      "explanation": "'And' is a conjunction as it is used to connect words, phrases, or clauses.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Identify the adjective in the following sentence: 'The blue car is parked outside.'",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "blue",
+        "car",
+        "is",
+        "parked"
+      ],
+      "answer": "blue",
+      "explanation": "In the sentence, 'blue' is the adjective as it describes the car by indicating its color.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which of the following is a preposition?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Dog",
+        "In",
+        "Running",
+        "Quickly"
+      ],
+      "answer": "In",
+      "explanation": "'In' is a preposition as it is used to show the relationship between a noun (or pronoun) and another word in the sentence.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Identify the subject in the following sentence: 'The dog barked loudly.'",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The",
+        "dog",
+        "barked",
+        "loudly"
+      ],
+      "answer": "dog",
+      "explanation": "In the sentence, 'dog' is the subject as it performs the action of barking.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which of the following is an interjection?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Table",
+        "Wow",
+        "Running",
+        "Quickly"
+      ],
+      "answer": "Wow",
+      "explanation": "'Wow' is an interjection as it expresses strong emotion or surprise.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Identify the direct object in the following sentence: 'She bought a new book.'",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "She",
+        "bought",
+        "a new book",
+        "new"
+      ],
+      "answer": "a new book",
+      "explanation": "In the sentence, 'a new book' is the direct object as it receives the action of the verb 'bought'.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which of the following is a relative pronoun?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Quickly",
+        "They",
+        "Who",
+        "Book"
+      ],
+      "answer": "Who",
+      "explanation": "'Who' is a relative pronoun as it is used to introduce a relative clause and relate it to the noun it modifies.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Identify the possessive pronoun in the following sentence: 'The car is hers.'",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "car",
+        "is",
+        "hers",
+        "the"
+      ],
+      "answer": "hers",
+      "explanation": "In the sentence, 'hers' is the possessive pronoun as it shows ownership.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which of the following is an indefinite article?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "a",
+        "the",
+        "an",
+        "and"
+      ],
+      "answer": "a",
+      "explanation": "'A' is an indefinite article as it is used to refer to a nonspecific or general noun.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Identify the past tense verb in the following sentence: 'He played the piano yesterday.'",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "He",
+        "played",
+        "the",
+        "piano"
+      ],
+      "answer": "played",
+      "explanation": "In the sentence, 'played' is the past tense verb as it indicates an action that occurred in the past.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which of the following is a coordinating conjunction?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Book",
+        "And",
+        "Beautiful",
+        "Running"
+      ],
+      "answer": "And",
+      "explanation": "'And' is a coordinating conjunction as it is used to connect words, phrases, or clauses of equal importance.",
+      "difficulty": "Medium"
+    }
+  ]
+}
