@@ -108,113 +108,95 @@
   <textarea id="log" rows="10" cols="50" readonly></textarea>
 
   <script>
-    let counter = 0;
-    let fetchInterval;
-    const logTextarea = document.getElementById('log');
-    const counterLabel = document.getElementById('counterLabel');
-    const startButton = document.getElementById('startButton');
-    const stopButton = document.getElementById('stopButton');
+let counter = 0;
+let fetchInterval;
+const logTextarea = document.getElementById('log');
+const counterLabel = document.getElementById('counterLabel');
+const startButton = document.getElementById('startButton');
+const stopButton = document.getElementById('stopButton');
 
-    // Function to fetch JSON files and process data
-    async function startFetching() {
-      
-      startButton.disabled = true;
-      stopButton.disabled = false;
-   //   logTextarea.value = '';
+// Function to fetch JSON files and process data
+async function startFetching() {
+  startButton.disabled = true;
+  stopButton.disabled = false;
+  logTextarea.value = '';
+  clearInterval(fetchInterval);
+  fetchInterval = setInterval(fetchNextJSON, 1000);
+}
+
+// Fetch the next JSON file
+async function fetchNextJSON() {
+  counterLabel.textContent = counter;
+
+  const url = `https://www.quizzatopia.com/q/New/q_${counter}_.json`;
+  const response = await fetch(url);
+
+  if (response.ok) {
+    const quizInfo = await response.json();
+    const quizName = quizInfo.quizName;
+    const quizCode = quizInfo.quizCode;
+    const numberOfQuestions = quizInfo.numberOfQuestions;
+    const quizCategory = quizInfo.quizCategory;
+    const quizDifficulty = quizInfo.quizDifficulty;
+    const quizDescription = quizInfo.quizDescription;
+    const quizTags = quizInfo.quizTags;
+
+    const db = firebase.firestore();
+
+    // Check if quiz already exists in Firestore
+    const querySnapshot = await db.collection('quizzes').where('quizCodeDB', '==', quizCode).get();
+
+    if (!querySnapshot.empty) {
+      logTextarea.value += `Quiz with code ${quizCode} already saved.\n\n`;
+      counter++;
       clearInterval(fetchInterval);
       fetchInterval = setInterval(fetchNextJSON, 1000);
-    }
+    } else {
+      let updateDate = new Date().toLocaleString();
 
-    // Fetch the next JSON file
-    async function fetchNextJSON() {
-      counterLabel.textContent = counter;
-
-      const url = `https://www.quizzatopia.com/q/New/q_${counter}_.json`;
-      const response = await fetch(url);
-
-      if (response.ok) {
-        const quizInfo = await response.json();
-        const quizName = quizInfo.quizName;
-        const quizCode = quizInfo.quizCode;
-        const numberOfQuestions = quizInfo.numberOfQuestions;
-        const quizCategory = quizInfo.quizCategory;
-        const quizDifficulty = quizInfo.quizDifficulty;
-
-
-
-  const db = firebase.firestore();
-
-  // Check if quiz already exists in Firestore
-  const querySnapshot = await db.collection('quizzes').where('quizCodeDB', '==', quizCode).get();
-
-  if (!querySnapshot.empty) {
-     logTextarea.value +=`Quiz with code ${quizCode} already saved.\n\n`;
-	  	            counter++;
-	            clearInterval(fetchInterval);
-	     fetchInterval = setInterval(fetchNextJSON, 1000); 
-  } else {
-
- let updateDate = new Date().toLocaleString();
-	  
       // Save quiz information to Firestore with an automatically generated document ID
-  await db.collection('quizzes').doc(quizCode).set({
+      await db.collection('quizzes').doc(quizCode).set({
         quizCodeDB: quizCode,
         quizNameDB: quizName,
         quizCreatedByDB: "Quizzatopia",
         quizRatingDB: 0,
         imageURLDB: "https://www.quizzatopia.com/images/sq/_.png",
-        quizJsonDB: "/q/New/q_"+counter+"_.json",	      
+        quizJsonDB: `/q/New/q_${counter}_.json`,
         numberOfQuestionsDB: numberOfQuestions,
-        quizLinkDB: "/quiz/?e=New&q=q_"+counter+"_",
+        quizTagsDB: quizTags,
+        quizDescriptionDB: quizDescription,
+        quizLinkDB: `/quiz/?e=New&q=q_${counter}_`,
         quizCategoryDB: quizCategory,
         quizCreatedDateDB: updateDate,
         quizDifficultyDB: quizDifficulty,
         quizFinishedCount: 0,
-	    quizStartedCount: 0 // Initialize the quizStartedCount to 0
-
+        quizStartedCount: 0 // Initialize the quizStartedCount to 0
       });
-	      
 
-saveQuizData
-  .then((docRef) => {
-    console.log("Quiz data successfully saved with document ID:", docRef.id);
+      console.log("Quiz data successfully saved with quiz code:", quizCode);
 
-	  
-const stringValues = `Quiz Name: ${quizName}\nQuiz Code: ${quizCode}\nNumber of Questions: ${numberOfQuestions}\nQuiz Category: ${quizCategory}\nQuiz Difficulty: ${quizDifficulty}`;
+      const stringValues = `Quiz Name: ${quizName}\nQuiz Code: ${quizCode}\nNumber of Questions: ${numberOfQuestions}\nQuiz Category: ${quizCategory}\nQuiz Difficulty: ${quizDifficulty}`;
 
-console.log(stringValues);
-        logTextarea.value += `JSON ${counter}: Adding: `+stringValues+`\n\n`;
-	            counter++;
-	            clearInterval(fetchInterval);
-	     fetchInterval = setInterval(fetchNextJSON, 1000); 
-
-	  
-  })
-  .catch((error) => {
-
-        logTextarea.value += `JSON ${counter}: Error saving quiz data:", error \n` });
-
-stopFetching();
-  	  	            counter++;
-
-      }
-
-
-
-      } else {
-        logTextarea.value += `JSON ${counter}: Fetch failed\n`;
-	      stopFetching();
-	  	            counter++;
-
-      }
-    }
-
-    // Stop fetching JSON files
-    function stopFetching() {
+      console.log(stringValues);
+      logTextarea.value += `JSON ${counter}: Adding: ${stringValues}\n\n`;
+      counter++;
       clearInterval(fetchInterval);
-      startButton.disabled = false;
-      stopButton.disabled = true;
+      fetchInterval = setInterval(fetchNextJSON, 1000);
     }
+  } else {
+    logTextarea.value += `JSON ${counter}: Fetch failed\n`;
+    stopFetching();
+    counter++;
+  }
+}
+
+// Stop fetching JSON files
+function stopFetching() {
+  clearInterval(fetchInterval);
+  startButton.disabled = false;
+  stopButton.disabled = true;
+}
+
   </script>
     
     
