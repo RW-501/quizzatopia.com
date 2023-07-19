@@ -1,0 +1,230 @@
+{
+  "quizName": "Quiz on New Mexico",
+  "quizCode": "NM2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of New Mexico!",
+  "quizTags": "New Mexico, Geography, States, USA",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "New Mexico is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Sunshine",
+        "Land of Enchantment",
+        "Pueblo",
+        "Desert"
+      ],
+      "answer": "Land of Enchantment",
+      "explanation": "New Mexico is known as the Land of Enchantment due to its diverse and enchanting landscapes, culture, and history.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: New Mexico shares a border with Mexico.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. New Mexico shares a border with Mexico to the south, making it one of the four U.S. states that share an international border.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of New Mexico?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Santa Fe",
+        "Albuquerque",
+        "Las Cruces",
+        "Roswell"
+      ],
+      "answer": "Santa Fe",
+      "explanation": "The capital city of New Mexico is Santa Fe, one of the oldest continuously inhabited cities in the United States.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous natural landmark, located in New Mexico, is a large cavern system known for its stunning stalactites and stalagmites?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Carlsbad Caverns",
+        "Mammoth Cave",
+        "Great Basin",
+        "Ruby Falls"
+      ],
+      "answer": "Carlsbad Caverns",
+      "explanation": "Carlsbad Caverns, located in New Mexico's Chihuahuan Desert, is a famous cavern system with impressive stalactites, stalagmites, and unique geological formations.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of New Mexico?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Centennial State",
+        "The Silver State",
+        "The Land of Enchantment",
+        "The Golden State"
+      ],
+      "answer": "The Land of Enchantment",
+      "explanation": "New Mexico is often referred to as The Land of Enchantment, a nickname that highlights its captivating beauty and cultural richness.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous rock formation, located in New Mexico's Monument Valley, is a popular symbol of the American Southwest?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Devils Tower",
+        "Delicate Arch",
+        "Shiprock",
+        "Balanced Rock"
+      ],
+      "answer": "Shiprock",
+      "explanation": "Shiprock, also known as 'The Winged Rock' or 'Tsé Bitʼaʼí' in Navajo, is a famous volcanic rock formation that rises dramatically from the desert landscape of New Mexico.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state bird of New Mexico?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Greater Roadrunner",
+        "Western Meadowlark",
+        "Mountain Bluebird",
+        "American Goldfinch"
+      ],
+      "answer": "Greater Roadrunner",
+      "explanation": "The official state bird of New Mexico is the Greater Roadrunner, a speedy and iconic bird known for its unique appearance and fast running abilities.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous artist, known for his vibrant and surreal paintings, lived and worked in New Mexico, particularly in the town of Abiquiú?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Vincent van Gogh",
+        "Pablo Picasso",
+        "Georgia O'Keeffe",
+        "Salvador Dalí"
+      ],
+      "answer": "Georgia O'Keeffe",
+      "explanation": "Georgia O'Keeffe, the renowned American artist, lived and worked in New Mexico, where she drew inspiration from the region's landscapes and produced many of her famous paintings.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous national park, located in northern New Mexico, is known for its ancient Pueblo cliff dwellings?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yosemite National Park",
+        "Arches National Park",
+        "Mesa Verde National Park",
+        "Grand Canyon National Park"
+      ],
+      "answer": "Mesa Verde National Park",
+      "explanation": "Mesa Verde National Park, although primarily located in Colorado, also extends into northern New Mexico. It is known for its well-preserved ancient Pueblo cliff dwellings.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: The city of Roswell, New Mexico, is famous for the alleged UFO incident in 1947.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Roswell, New Mexico, gained fame due to the alleged UFO incident in 1947, which has since become a prominent subject of UFO conspiracy theories.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous river, flowing through the state of New Mexico, is a major tributary of the Colorado River and passes through the Grand Canyon?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Colorado River",
+        "The Rio Grande",
+        "The Missouri River",
+        "The Mississippi River"
+      ],
+      "answer": "The Colorado River",
+      "explanation": "The Colorado River, one of the most important rivers in the western United States, flows through the state of New Mexico before passing through the Grand Canyon in Arizona.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous annual event, held in the city of Albuquerque, New Mexico, features colorful hot air balloons and draws thousands of visitors?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Macy's Thanksgiving Day Parade",
+        "The Rose Parade",
+        "The Albuquerque International Balloon Fiesta",
+        "The Coachella Valley Music and Arts Festival"
+      ],
+      "answer": "The Albuquerque International Balloon Fiesta",
+      "explanation": "The Albuquerque International Balloon Fiesta is an annual hot air balloon festival held in Albuquerque, New Mexico. It showcases hundreds of colorful hot air balloons and is a major tourist attraction.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the famous national preserve, located in southeastern New Mexico, that features unique underground salt formations?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Great Sand Dunes National Preserve",
+        "White Sands National Preserve",
+        "Big Bend National Preserve",
+        "Craters of the Moon National Preserve"
+      ],
+      "answer": "White Sands National Preserve",
+      "explanation": "White Sands National Preserve, located in the Tularosa Basin of New Mexico, is known for its stunning white gypsum sand dunes, which create a unique and otherworldly landscape.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous trail, stretching from Mexico to Canada and passing through New Mexico, is one of the longest hiking trails in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Pacific Crest Trail",
+        "The Appalachian Trail",
+        "The Continental Divide Trail",
+        "The Arizona Trail"
+      ],
+      "answer": "The Continental Divide Trail",
+      "explanation": "The Continental Divide Trail is a long-distance hiking trail that spans from Mexico to Canada, traversing through the Rocky Mountains and passing through New Mexico.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous Native American pueblo, situated on a high plateau in New Mexico, is known for its multi-storied adobe buildings?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Acoma Pueblo",
+        "Hopi Pueblo",
+        "Taos Pueblo",
+        "Zuni Pueblo"
+      ],
+      "answer": "Taos Pueblo",
+      "explanation": "Taos Pueblo, located in northern New Mexico, is one of the oldest continuously inhabited communities in the United States. It is known for its distinctive multi-storied adobe buildings.",
+      "difficulty": "Medium"
+    }
+  ]
+}
