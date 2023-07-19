@@ -1,0 +1,228 @@
+{
+  "quizName": "Call of Duty Quiz",
+  "quizCode": "COD123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Gaming",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which developer is known for creating the Call of Duty series?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Infinity Ward",
+        "Treyarch",
+        "Sledgehammer Games",
+        "Activision"
+      ],
+      "answer": "Infinity Ward",
+      "explanation": "Infinity Ward is one of the developers responsible for creating the Call of Duty series. They are known for developing several installments, including the original Call of Duty game.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "In which year was the first Call of Duty game released?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "2001",
+        "2003",
+        "2005",
+        "2007"
+      ],
+      "answer": "2003",
+      "explanation": "The first Call of Duty game was released in 2003. It introduced the franchise's focus on World War II settings and immersive combat experiences.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "True or False: Call of Duty games feature both single-player campaigns and multiplayer modes.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Call of Duty games typically include both single-player campaigns, offering immersive storylines, and multiplayer modes, allowing players to compete against each other online.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which Call of Duty game introduced the popular 'Zombies' mode?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Call of Duty: Modern Warfare",
+        "Call of Duty: Black Ops",
+        "Call of Duty: World at War",
+        "Call of Duty: Ghosts"
+      ],
+      "answer": "Call of Duty: World at War",
+      "explanation": "Call of Duty: World at War introduced the 'Zombies' mode, a cooperative game mode where players fight against waves of zombies. It became a popular addition to the franchise.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which Call of Duty game is set primarily in the Cold War era?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Call of Duty: Modern Warfare",
+        "Call of Duty: Black Ops",
+        "Call of Duty: World War II",
+        "Call of Duty: Advanced Warfare"
+      ],
+      "answer": "Call of Duty: Black Ops",
+      "explanation": "Call of Duty: Black Ops is set primarily in the Cold War era, featuring missions and settings inspired by historical events during the Cold War.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the name of the protagonist in the Call of Duty: Modern Warfare series?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Captain Price",
+        "Sgt. Woods",
+        "Soap MacTavish",
+        "Alex Mason"
+      ],
+      "answer": "Soap MacTavish",
+      "explanation": "Soap MacTavish, also known as 'Soap,' is the protagonist in the Call of Duty: Modern Warfare series. He serves as a key character throughout the trilogy.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which installment introduced the 'Warzone' battle royale mode in the Call of Duty franchise?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Call of Duty: Black Ops Cold War",
+        "Call of Duty: Modern Warfare",
+        "Call of Duty: Warzone",
+        "Call of Duty: Vanguard"
+      ],
+      "answer": "Call of Duty: Modern Warfare",
+      "explanation": "Call of Duty: Modern Warfare introduced the 'Warzone' battle royale mode, which later became a standalone free-to-play game under the name 'Call of Duty: Warzone.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "True or False: Call of Duty games often feature real-world military weapons and equipment.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Call of Duty games strive for authenticity and often include real-world military weapons, equipment, and vehicles to provide a realistic combat experience.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which Call of Duty game is set during the events of World War II?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Call of Duty: Modern Warfare",
+        "Call of Duty: Black Ops",
+        "Call of Duty: World at War",
+        "Call of Duty: Ghosts"
+      ],
+      "answer": "Call of Duty: World at War",
+      "explanation": "Call of Duty: World at War is set during World War II, featuring both single-player campaigns and multiplayer modes in various theaters of the war.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the name of the fictional terrorist organization in the Call of Duty: Modern Warfare series?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "U.S. Army Rangers",
+        "OpFor",
+        "Ultranationalists",
+        "Task Force 141"
+      ],
+      "answer": "Ultranationalists",
+      "explanation": "The fictional terrorist organization in the Call of Duty: Modern Warfare series is called the 'Ultranationalists.' They serve as the primary antagonists in the game's storyline.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which Call of Duty game features the futuristic setting of a war between private military corporations?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Call of Duty: Infinite Warfare",
+        "Call of Duty: Advanced Warfare",
+        "Call of Duty: Ghosts",
+        "Call of Duty: Black Ops III"
+      ],
+      "answer": "Call of Duty: Advanced Warfare",
+      "explanation": "Call of Duty: Advanced Warfare features a futuristic setting where private military corporations engage in a global conflict, introducing advanced weaponry and technology.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which Call of Duty game takes place during the Vietnam War?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Call of Duty: Black Ops",
+        "Call of Duty: Modern Warfare",
+        "Call of Duty: WWII",
+        "Call of Duty: Ghosts"
+      ],
+      "answer": "Call of Duty: Black Ops",
+      "explanation": "Call of Duty: Black Ops includes missions set during the Vietnam War, offering players a chance to experience the intense conflicts of that era.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "True or False: Call of Duty games often feature popular actors and celebrities in their campaigns.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Call of Duty games have featured popular actors and celebrities, such as Kit Harington and Kiefer Sutherland, who provided voice acting and performed motion capture for their respective roles.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which Call of Duty game is set in a near-future conflict between the United States and Russia?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Call of Duty: Modern Warfare",
+        "Call of Duty: Black Ops III",
+        "Call of Duty: Infinite Warfare",
+        "Call of Duty: WWII"
+      ],
+      "answer": "Call of Duty: Infinite Warfare",
+      "explanation": "Call of Duty: Infinite Warfare is set in a near-future conflict where the United States and Russia engage in a war for control of the solar system.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which Call of Duty game features a single-player campaign that follows the story of a squad in the 1st Infantry Division during World War II?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Call of Duty: Modern Warfare",
+        "Call of Duty: Black Ops",
+        "Call of Duty: World at War",
+        "Call of Duty: WWII"
+      ],
+      "answer": "Call of Duty: WWII",
+      "explanation": "Call of Duty: WWII features a single-player campaign that follows the story of a squad in the 1st Infantry Division during World War II, highlighting key battles and events of the war.",
+      "difficulty": "Easy"
+    }
+  ]
+}
