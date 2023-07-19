@@ -1,0 +1,159 @@
+{
+  "quizName": "Family Matters TV Show Quiz",
+  "quizCode": "FAMILYMATTERS123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "TV",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the name of the Winslow family's nerdy neighbor?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Steve Urkel",
+        "Eddie Winslow",
+        "Laura Winslow",
+        "Carl Winslow"
+      ],
+      "answer": "Steve Urkel",
+      "explanation": "Steve Urkel, played by Jaleel White, is the Winslow family's nerdy and eccentric neighbor.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the name of the Winslow family's matriarch?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Harriette Winslow",
+        "Estelle Winslow",
+        "Laura Winslow",
+        "Judy Winslow"
+      ],
+      "answer": "Harriette Winslow",
+      "explanation": "Harriette Winslow, portrayed by Jo Marie Payton (later Judyann Elder), is the matriarch of the Winslow family.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the occupation of Carl Winslow, the family's patriarch?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Police Officer",
+        "Doctor",
+        "Lawyer",
+        "Teacher"
+      ],
+      "answer": "Police Officer",
+      "explanation": "Carl Winslow, played by Reginald VelJohnson, is a police officer in the Chicago Police Department.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which character has a famous catchphrase, 'Did I do that?'",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Steve Urkel",
+        "Eddie Winslow",
+        "Laura Winslow",
+        "Carl Winslow"
+      ],
+      "answer": "Steve Urkel",
+      "explanation": "Steve Urkel is known for his catchphrase, 'Did I do that?' which he often says after causing unintentional mayhem.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the name of Eddie Winslow's best friend?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Waldo Geraldo Faldo",
+        "Maxine Johnson",
+        "Laura Winslow",
+        "Judy Winslow"
+      ],
+      "answer": "Waldo Geraldo Faldo",
+      "explanation": "Waldo Geraldo Faldo, played by Shawn Harrison, is Eddie Winslow's best friend and often provides comic relief in the show.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the name of the character that Laura Winslow has a romantic relationship with?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Steve Urkel",
+        "Eddie Winslow",
+        "Stefan Urquelle",
+        "Waldo Geraldo Faldo"
+      ],
+      "answer": "Steve Urkel",
+      "explanation": "Laura Winslow has a romantic relationship with Steve Urkel, who often expresses his love for her throughout the series.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the occupation of Harriette Winslow at the end of the series?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Security Guard",
+        "Teacher",
+        "Doctor",
+        "Police Officer"
+      ],
+      "answer": "Security Guard",
+      "explanation": "Harriette Winslow becomes a security guard at the end of the series after leaving her job at the Chronicle.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the name of the nerdier alter ego of Steve Urkel?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Stefan Urquelle",
+        "Myrtle Urkel",
+        "Bruce Urkel",
+        "Carl Urkel"
+      ],
+      "answer": "Stefan Urquelle",
+      "explanation": "Stefan Urquelle is the suave and confident alter ego of Steve Urkel, created by his transformation chamber.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the name of the youngest Winslow child who mysteriously disappeared from the show?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Judy Winslow",
+        "Richie Crawford",
+        "3J",
+        "Estelle Winslow"
+      ],
+      "answer": "Judy Winslow",
+      "explanation": "Judy Winslow, portrayed by Jaimee Foxworth, disappeared from the show after the fourth season with no explanation.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the occupation of Laura Winslow in the later seasons of the show?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "News Reporter",
+        "Lawyer",
+        "Doctor",
+        "Teacher"
+      ],
+      "answer": "News Reporter",
+      "explanation": "Laura Winslow becomes a news reporter in the later seasons of the show, pursuing a career in journalism.",
+      "difficulty": "Medium"
+    }
+  ]
+}
