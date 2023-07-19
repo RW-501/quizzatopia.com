@@ -1,0 +1,230 @@
+{
+  "quizName": "Quiz on Kansas",
+  "quizCode": "KS2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Kansas!",
+  "quizTags": "Kansas, Geography, States, USA",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Kansas is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Wheat",
+        "Sunflower",
+        "Jayhawker",
+        "Prairie"
+      ],
+      "answer": "Sunflower",
+      "explanation": "Kansas is known as the Sunflower State, reflecting the widespread presence of sunflowers throughout the state.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Kansas is home to the tallest mountain in the United States, Mount McKinley.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "False",
+      "explanation": "False. Mount McKinley, also known as Denali, is located in Alaska, not in Kansas.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of Kansas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Topeka",
+        "Wichita",
+        "Kansas City",
+        "Lawrence"
+      ],
+      "answer": "Topeka",
+      "explanation": "The capital city of Kansas is Topeka, which is also the fourth-largest city in the state.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous river forms the northern border of Kansas with the state of Nebraska?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mississippi River",
+        "Missouri River",
+        "Arkansas River",
+        "Platte River"
+      ],
+      "answer": "Platte River",
+      "explanation": "The Platte River forms the northern border of Kansas with the state of Nebraska.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of Kansas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Wheat State",
+        "The Jayhawker State",
+        "The Sunflower State",
+        "The Prairie State"
+      ],
+      "answer": "The Sunflower State",
+      "explanation": "Kansas is often referred to as The Sunflower State due to the abundance of sunflowers that can be found in the state.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous historical site in Kansas preserves the remains of multiple ancient bison that fell to their death off a high bluff?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Crazy Horse Memorial",
+        "Mount Rushmore",
+        "Chimney Rock",
+        "Monument Rocks"
+      ],
+      "answer": "Monument Rocks",
+      "explanation": "Monument Rocks, also known as the Chalk Pyramids, is a famous historical site in Kansas that preserves the remains of multiple ancient bison that fell to their death off a high bluff.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state bird of Kansas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Western Meadowlark",
+        "American Robin",
+        "Northern Cardinal",
+        "American Goldfinch"
+      ],
+      "answer": "Western Meadowlark",
+      "explanation": "The official state bird of Kansas is the Western Meadowlark, known for its distinctive and melodious song.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous landmark in Kansas, a unique rock formation, is often called the 'Mushroom Rock'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ayres Natural Bridge",
+        "Monument Rocks",
+        "Castle Rock",
+        "Rock City"
+      ],
+      "answer": "Castle Rock",
+      "explanation": "Castle Rock, a famous landmark in Kansas, is often referred to as the 'Mushroom Rock' due to its distinctive shape.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous physicist and mathematician, known for his theory of relativity, lived in Kansas for a brief period while teaching at a small college?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Isaac Newton",
+        "Albert Einstein",
+        "Niels Bohr",
+        "Stephen Hawking"
+      ],
+      "answer": "Albert Einstein",
+      "explanation": "Albert Einstein, the renowned physicist, lived in Kansas for a short time while teaching at the former Bethel College in North Newton.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: The city of Dodge City, Kansas, was once a famous frontier town and a wild west outpost.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Dodge City, Kansas, was once a famous frontier town and a wild west outpost known for its lawlessness and connection to the cattle trade.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous aviation pioneer, known for her solo transatlantic flight, was born in Atchison, Kansas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Charles Lindbergh",
+        "Amelia Earhart",
+        "Orville Wright",
+        "Wilbur Wright"
+      ],
+      "answer": "Amelia Earhart",
+      "explanation": "Amelia Earhart, a trailblazing aviator, was born in Atchison, Kansas, and became the first woman to fly solo across the Atlantic Ocean.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous university, located in Lawrence, Kansas, is known for its basketball program and is often referred to as 'KU'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kansas State University",
+        "University of Kansas",
+        "Oklahoma State University",
+        "University of Missouri"
+      ],
+      "answer": "University of Kansas",
+      "explanation": "The University of Kansas, located in Lawrence, is known for its successful basketball program and is often referred to as 'KU' or 'Kansas.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the famous tornado-prone region in the United States, including parts of Kansas, known as?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tornado Alley",
+        "Hurricane Zone",
+        "Earthquake Zone",
+        "Blizzard Belt"
+      ],
+      "answer": "Tornado Alley",
+      "explanation": "Tornado Alley is a region in the central United States, including parts of Kansas, known for its frequent tornado activity.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous civil rights leader, known for his efforts to secure civil rights for African Americans, was born in Topeka, Kansas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Martin Luther King Jr.",
+        "Malcolm X",
+        "Thurgood Marshall",
+        "Langston Hughes"
+      ],
+      "answer": "Thurgood Marshall",
+      "explanation": "Thurgood Marshall, a prominent civil rights leader and the first African American Supreme Court Justice, was born in Baltimore, Maryland, not in Topeka, Kansas.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous natural landmark, often called the 'Eight Wonders of Kansas,' is known for its stunning rock formations and scenic views?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tallgrass Prairie National Preserve",
+        "Garden of Eden",
+        "Cimarron National Grassland",
+        "Mushroom Rock State Park"
+      ],
+      "answer": "Mushroom Rock State Park",
+      "explanation": "Mushroom Rock State Park, located in Ellsworth County, Kansas, is a famous natural landmark known for its unique rock formations and scenic views, earning it the title of one of the 'Eight Wonders of Kansas.'",
+      "difficulty": "Medium"
+    }
+  ]
+}
