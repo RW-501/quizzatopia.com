@@ -1,0 +1,228 @@
+{
+  "quizName": "2K Sports Quiz",
+  "quizCode": "2KSPORTS123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Gaming",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which sports video game franchise is developed by 2K Sports?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "FIFA",
+        "Madden NFL",
+        "NBA 2K",
+        "MLB The Show"
+      ],
+      "answer": "NBA 2K",
+      "explanation": "NBA 2K is a sports video game franchise developed by 2K Sports. It focuses on basketball and has become one of the most popular basketball simulation games.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which NBA 2K game introduced the MyCareer mode?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "NBA 2K12",
+        "NBA 2K14",
+        "NBA 2K16",
+        "NBA 2K18"
+      ],
+      "answer": "NBA 2K10",
+      "explanation": "NBA 2K10 introduced the MyCareer mode, allowing players to create and control a custom player and guide their career in the NBA.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "True or False: The WWE 2K series is developed by 2K Sports.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. The WWE 2K series, which focuses on professional wrestling, is developed by 2K Sports. It showcases WWE superstars and features wrestling gameplay and storylines.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which MLB 2K game featured Roy Halladay on the cover?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "MLB 2K10",
+        "MLB 2K12",
+        "MLB 2K14",
+        "MLB 2K16"
+      ],
+      "answer": "MLB 2K11",
+      "explanation": "MLB 2K11 featured Roy Halladay, the accomplished pitcher, on the cover. He was recognized for his outstanding performance and achievements in Major League Baseball.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which famous basketball player has been featured on the cover of multiple NBA 2K games?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kobe Bryant",
+        "Michael Jordan",
+        "LeBron James",
+        "Shaquille O'Neal"
+      ],
+      "answer": "LeBron James",
+      "explanation": "LeBron James, one of the greatest basketball players of all time, has been featured on the cover of multiple NBA 2K games, including NBA 2K14, NBA 2K19, and NBA 2K20.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which gaming franchise is known for its iconic 'MyTeam' mode that focuses on building fantasy teams?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "NBA 2K",
+        "FIFA",
+        "Madden NFL",
+        "MLB The Show"
+      ],
+      "answer": "NBA 2K",
+      "explanation": "NBA 2K is known for its iconic 'MyTeam' mode, where players can build fantasy teams using trading cards and compete against other players' teams.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "True or False: 2K Sports has released a golf video game franchise called 'PGA 2K'.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. 2K Sports released 'PGA 2K21', a golf video game franchise that offers a realistic golfing experience with various courses and customizable golfers.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous wrestler has appeared as the cover athlete for several WWE 2K games?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "John Cena",
+        "The Rock",
+        "Stone Cold Steve Austin",
+        "Roman Reigns"
+      ],
+      "answer": "John Cena",
+      "explanation": "John Cena, a prominent professional wrestler and actor, has appeared as the cover athlete for several WWE 2K games, including WWE 2K15 and WWE 2K18.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which game mode in NBA 2K allows players to compete against each other online?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "MyCareer",
+        "MyGM",
+        "MyLeague",
+        "MyPark"
+      ],
+      "answer": "MyPark",
+      "explanation": "MyPark is a game mode in NBA 2K that allows players to compete against each other online in street basketball games. It emphasizes multiplayer competition and social interaction.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which soccer player has been featured on the cover of multiple FIFA games developed by EA Sports, not 2K Sports?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lionel Messi",
+        "Cristiano Ronaldo",
+        "Neymar Jr.",
+        "Kylian Mbappé"
+      ],
+      "answer": "Cristiano Ronaldo",
+      "explanation": "Cristiano Ronaldo, one of the most renowned soccer players, has been featured on the cover of multiple FIFA games developed by EA Sports, a different game developer than 2K Sports.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which game mode in WWE 2K allows players to create and customize their own wrestlers and storylines?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "MyCareer",
+        "Universe Mode",
+        "Road to WrestleMania",
+        "Create-a-Superstar"
+      ],
+      "answer": "Universe Mode",
+      "explanation": "Universe Mode is a game mode in WWE 2K that allows players to create and customize their own wrestlers, storylines, and events within the game's wrestling universe.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "True or False: 2K Sports has released a tennis video game franchise called 'Tennis 2K'.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. As of now, 2K Sports has not released a tennis video game franchise called 'Tennis 2K'. However, they have developed other sports games in various genres.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which famous basketball player served as the cover athlete for NBA 2K19?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kawhi Leonard",
+        "James Harden",
+        "Kevin Durant",
+        "Giannis Antetokounmpo"
+      ],
+      "answer": "Giannis Antetokounmpo",
+      "explanation": "Giannis Antetokounmpo, the Milwaukee Bucks superstar, served as the cover athlete for NBA 2K19. He was recognized for his exceptional skills and impact on the game.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which NHL 2K game was the last installment in the series released by 2K Sports?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "NHL 2K11",
+        "NHL 2K13",
+        "NHL 2K15",
+        "NHL 2K17"
+      ],
+      "answer": "NHL 2K11",
+      "explanation": "NHL 2K11 was the last installment in the NHL 2K series released by 2K Sports. The series has not seen a new release since then.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which game mode in NBA 2K allows players to take control of an NBA team as a coach or general manager?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "MyCareer",
+        "MyGM",
+        "MyLeague",
+        "MyTeam"
+      ],
+      "answer": "MyGM",
+      "explanation": "MyGM is a game mode in NBA 2K that allows players to take control of an NBA team as a coach or general manager, making managerial decisions and shaping the team's future.",
+      "difficulty": "Medium"
+    }
+  ]
+}
