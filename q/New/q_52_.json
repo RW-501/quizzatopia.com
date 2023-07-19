@@ -1,0 +1,231 @@
+{
+  "quizName": "Quiz on Iowa",
+  "quizCode": "IA2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Iowa!",
+  "quizTags": "Iowa, Geography, States, USA",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Iowa is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Corn",
+        "Hawkeye",
+        "Prairie",
+        "Tall Corn"
+      ],
+      "answer": "Hawkeye",
+      "explanation": "Iowa is known as the Hawkeye State, a nickname derived from the character Hawkeye in the novel 'The Last of the Mohicans' by James Fenimore Cooper.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Iowa is a landlocked state, meaning it does not have a coastline along an ocean or sea.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Iowa is a landlocked state located in the Midwestern region of the United States and does not have a coastline along an ocean or sea.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of Iowa?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Des Moines",
+        "Cedar Rapids",
+        "Davenport",
+        "Sioux City"
+      ],
+      "answer": "Des Moines",
+      "explanation": "The capital city of Iowa is Des Moines, which is also the largest city in the state.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous river forms the eastern border of Iowa with the state of Illinois?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mississippi River",
+        "Ohio River",
+        "Missouri River",
+        "Illinois River"
+      ],
+      "answer": "Mississippi River",
+      "explanation": "The Mississippi River forms the eastern border of Iowa with the state of Illinois.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of Iowa?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Corn State",
+        "The Hawkeye State",
+        "The Tall Corn State",
+        "The Prairie State"
+      ],
+      "answer": "The Hawkeye State",
+      "explanation": "Iowa is often referred to as The Hawkeye State, derived from the nickname of the state's residents and a character in 'The Last of the Mohicans.'",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous annual state fair, held in Des Moines, Iowa, is one of the largest and oldest agricultural fairs in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Texas State Fair",
+        "Iowa State Fair",
+        "Minnesota State Fair",
+        "Wisconsin State Fair"
+      ],
+      "answer": "Iowa State Fair",
+      "explanation": "The Iowa State Fair, held annually in Des Moines, is one of the largest and oldest agricultural fairs in the United States, attracting visitors from around the country.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state bird of Iowa?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "American Goldfinch",
+        "Eastern Bluebird",
+        "Northern Cardinal",
+        "Red-winged Blackbird"
+      ],
+      "answer": "Eastern Bluebird",
+      "explanation": "The official state bird of Iowa is the Eastern Bluebird, known for its vibrant blue plumage and melodious song.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous covered bridge, featured in the novel 'The Bridges of Madison County,' is located in Iowa?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Perrine Bridge",
+        "Brooklyn Bridge",
+        "Hogback Covered Bridge",
+        "Roseman Covered Bridge"
+      ],
+      "answer": "Roseman Covered Bridge",
+      "explanation": "The Roseman Covered Bridge, located in Winterset, Iowa, is a famous covered bridge featured in the novel 'The Bridges of Madison County' and the film adaptation.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous author, known for his children's novels, was born in Des Moines, Iowa?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Dr. Seuss",
+        "Roald Dahl",
+        "J.K. Rowling",
+        "Shel Silverstein"
+      ],
+      "answer": "Dr. Seuss",
+      "explanation": "Dr. Seuss, whose real name was Theodor Seuss Geisel, was born in Springfield, Massachusetts, not in Des Moines, Iowa.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: The University of Iowa is the oldest university in the state.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. The University of Iowa, located in Iowa City, Iowa, is the oldest university in the state and was founded in 1847.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous rock and roll icon, often referred to as 'The King of Rock and Roll,' was born in Tupelo, Mississippi, but famously performed at the legendary Surf Ballroom in Clear Lake, Iowa?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Elvis Presley",
+        "Chuck Berry",
+        "Buddy Holly",
+        "Jerry Lee Lewis"
+      ],
+      "answer": "Buddy Holly",
+      "explanation": "Buddy Holly, a rock and roll pioneer, was born in Lubbock, Texas, not in Tupelo, Mississippi. He famously performed at the Surf Ballroom in Clear Lake, Iowa, before his tragic death in a plane crash.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous religious university, located in Sioux City, Iowa, is associated with the Reformed Church in America?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Baylor University",
+        "Notre Dame University",
+        "Brigham Young University",
+        "Dordt University"
+      ],
+      "answer": "Dordt University",
+      "explanation": "Dordt University, located in Sioux Center, Iowa (not Sioux City), is a Christian university associated with the Reformed Church in America.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the famous Iowa State University football team called?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Buckeyes",
+        "Cyclones",
+        "Cornhuskers",
+        "Badgers"
+      ],
+      "answer": "Cyclones",
+      "explanation": "The Iowa State University football team is called the Cyclones, and they compete in the Big 12 Conference.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous artist and painter, known for his American Gothic painting, was born in Anamosa, Iowa?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Vincent van Gogh",
+        "Pablo Picasso",
+        "Grant Wood",
+        "Leonardo da Vinci"
+      ],
+      "answer": "Grant Wood",
+      "explanation": "Grant Wood, a renowned American artist, was born in Anamosa, Iowa, and is best known for his iconic painting 'American Gothic,' depicting a farmer and his daughter.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous river, the longest in the United States, forms part of Iowa's western border with the state of Nebraska?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Colorado River",
+        "Missouri River",
+        "Columbia River",
+        "Yukon River"
+      ],
+      "answer": "Missouri River",
+      "explanation": "The Missouri River, the longest river in the United States, forms part of Iowa's western border with the state of Nebraska.",
+      "difficulty": "Medium"
+    }
+  ]
+}
