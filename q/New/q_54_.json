@@ -1,0 +1,231 @@
+{
+  "quizName": "Quiz on Kentucky",
+  "quizCode": "KY2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Kentucky!",
+  "quizTags": "Kentucky, Geography, States, USA",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Kentucky is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Horse",
+        "Bourbon",
+        "Bluegrass",
+        "Coal"
+      ],
+      "answer": "Bluegrass",
+      "explanation": "Kentucky is known as the Bluegrass State, referring to the bluegrass found in many of its pastures and meadows.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Kentucky is known for its production of bourbon, a type of whiskey.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Kentucky is renowned for its production of bourbon, which is a type of whiskey made primarily from corn.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of Kentucky?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lexington",
+        "Louisville",
+        "Frankfort",
+        "Bowling Green"
+      ],
+      "answer": "Frankfort",
+      "explanation": "The capital city of Kentucky is Frankfort, making it one of the smallest capital cities by population in the United States.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous river forms the northern border of Kentucky with the state of Ohio?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mississippi River",
+        "Ohio River",
+        "Tennessee River",
+        "Cumberland River"
+      ],
+      "answer": "Ohio River",
+      "explanation": "The Ohio River forms the northern border of Kentucky with the state of Ohio.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of Kentucky?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Horse State",
+        "The Bluegrass State",
+        "The Bourbon State",
+        "The Coal State"
+      ],
+      "answer": "The Bluegrass State",
+      "explanation": "Kentucky is often referred to as The Bluegrass State due to the bluegrass found in its pastures, which is famous for its fine quality.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous horse race, often called 'The Most Exciting Two Minutes in Sports,' is held annually in Louisville, Kentucky?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Belmont Stakes",
+        "Preakness Stakes",
+        "Kentucky Derby",
+        "Royal Ascot"
+      ],
+      "answer": "Kentucky Derby",
+      "explanation": "The Kentucky Derby, held annually at Churchill Downs in Louisville, Kentucky, is a famous horse race known for its exciting and fast-paced action.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state bird of Kentucky?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Northern Cardinal",
+        "Eastern Bluebird",
+        "American Goldfinch",
+        "Red-winged Blackbird"
+      ],
+      "answer": "Northern Cardinal",
+      "explanation": "The official state bird of Kentucky is the Northern Cardinal, known for its brilliant red plumage and distinctive crest.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous national park, located in Kentucky, is known for its extensive cave system with unique limestone formations?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yellowstone National Park",
+        "Yosemite National Park",
+        "Mammoth Cave National Park",
+        "Great Smoky Mountains National Park"
+      ],
+      "answer": "Mammoth Cave National Park",
+      "explanation": "Mammoth Cave National Park, located in Kentucky, features an extensive cave system with unique limestone formations, making it a popular destination for spelunkers and tourists.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous college basketball team, located in Lexington, Kentucky, is known for its passionate fan base and historic success?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Duke Blue Devils",
+        "Kansas Jayhawks",
+        "North Carolina Tar Heels",
+        "Kentucky Wildcats"
+      ],
+      "answer": "Kentucky Wildcats",
+      "explanation": "The Kentucky Wildcats, based in Lexington, Kentucky, are a legendary college basketball team known for their passionate fan base and historic success in the sport.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: Kentucky is known for its thoroughbred horse farms and is a major center of the horse racing industry.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Kentucky is famous for its thoroughbred horse farms and is a major center of the horse racing industry in the United States.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous boxer, known for his 'float like a butterfly, sting like a bee' style, was born in Louisville, Kentucky?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Joe Louis",
+        "Muhammad Ali",
+        "Mike Tyson",
+        "Sugar Ray Robinson"
+      ],
+      "answer": "Muhammad Ali",
+      "explanation": "Muhammad Ali, one of the greatest boxers of all time and a cultural icon, was born in Louisville, Kentucky.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous baseball bat manufacturer, known for producing the 'Louisville Slugger,' is based in Louisville, Kentucky?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Rawlings",
+        "Easton",
+        "DeMarini",
+        "Hillerich & Bradsby"
+      ],
+      "answer": "Hillerich & Bradsby",
+      "explanation": "Hillerich & Bradsby, a renowned baseball bat manufacturer, is based in Louisville, Kentucky, and is known for producing the famous 'Louisville Slugger' bats.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the famous event, held annually in Louisville, Kentucky, that showcases a spectacular display of hot air balloons?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Albuquerque International Balloon Fiesta",
+        "Great Reno Balloon Race",
+        "Colorado Springs Labor Day Lift Off",
+        "Kentucky Derby Festival Great BalloonFest"
+      ],
+      "answer": "Kentucky Derby Festival Great BalloonFest",
+      "explanation": "The Kentucky Derby Festival Great BalloonFest, held annually in Louisville, Kentucky, features a spectacular display of hot air balloons as part of the Kentucky Derby Festival celebrations.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous American frontiersman, known for his exploration of the western frontier, was born in a log cabin in Kentucky?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Daniel Boone",
+        "Davy Crockett",
+        "Jim Bridger",
+        "Kit Carson"
+      ],
+      "answer": "Daniel Boone",
+      "explanation": "Daniel Boone, a legendary American frontiersman and explorer, was born in a log cabin in what is now Berks County, Pennsylvania, not in Kentucky.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous racetrack, located in Lexington, Kentucky, is known as the 'Thoroughbred Capital of the World'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Santa Anita Park",
+        "Churchill Downs",
+        "Belmont Park",
+        "Keeneland Race Course"
+      ],
+      "answer": "Keeneland Race Course",
+      "explanation": "Keeneland Race Course, located in Lexington, Kentucky, is renowned as the 'Thoroughbred Capital of the World' and is a prominent venue for horse racing.",
+      "difficulty": "Medium"
+    }
+  ]
+}
