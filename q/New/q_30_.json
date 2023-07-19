@@ -1,0 +1,159 @@
+{
+  "quizName": "Machine Learning AI Quiz",
+  "quizCode": "MLAI123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Technology",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is Machine Learning?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A subset of Artificial Intelligence (AI)",
+        "A type of computer programming",
+        "An advanced data analysis technique",
+        "A method for training robots"
+      ],
+      "answer": "A subset of Artificial Intelligence (AI)",
+      "explanation": "Machine Learning is a subset of Artificial Intelligence (AI) that focuses on creating algorithms and models that can learn from data and make predictions or decisions without being explicitly programmed.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which type of Machine Learning algorithm learns from labeled training data to make predictions?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Supervised Learning",
+        "Unsupervised Learning",
+        "Reinforcement Learning",
+        "Semi-supervised Learning"
+      ],
+      "answer": "Supervised Learning",
+      "explanation": "Supervised Learning algorithms learn from labeled training data, where the inputs are associated with corresponding outputs, allowing them to make predictions or classifications.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which type of Machine Learning algorithm learns from unlabeled data to find patterns or groupings?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Unsupervised Learning",
+        "Supervised Learning",
+        "Reinforcement Learning",
+        "Semi-supervised Learning"
+      ],
+      "answer": "Unsupervised Learning",
+      "explanation": "Unsupervised Learning algorithms learn from unlabeled data to discover patterns, structures, or groupings without the need for predefined outputs.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which type of Machine Learning algorithm learns through trial and error, using rewards and punishments?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Reinforcement Learning",
+        "Supervised Learning",
+        "Unsupervised Learning",
+        "Semi-supervised Learning"
+      ],
+      "answer": "Reinforcement Learning",
+      "explanation": "Reinforcement Learning algorithms learn through trial and error by interacting with an environment and receiving rewards or punishments based on their actions.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which Machine Learning technique involves using multiple models together to make more accurate predictions?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ensemble Learning",
+        "Deep Learning",
+        "Transfer Learning",
+        "Dimensionality Reduction"
+      ],
+      "answer": "Ensemble Learning",
+      "explanation": "Ensemble Learning combines multiple models or algorithms to improve prediction accuracy, often by taking a voting or averaging approach.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the process of evaluating a Machine Learning model's performance on unseen data?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Model Validation",
+        "Model Training",
+        "Model Deployment",
+        "Model Testing"
+      ],
+      "answer": "Model Validation",
+      "explanation": "Model Validation involves evaluating a trained Machine Learning model's performance on unseen data to assess its generalization ability and accuracy.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which Machine Learning technique aims to reduce the dimensionality of input data while preserving its important features?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Dimensionality Reduction",
+        "Feature Engineering",
+        "Hyperparameter Tuning",
+        "Regularization"
+      ],
+      "answer": "Dimensionality Reduction",
+      "explanation": "Dimensionality Reduction techniques aim to reduce the number of input features while retaining important information, helping to simplify the learning process and improve efficiency.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which Machine Learning algorithm is commonly used for classification tasks?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Decision Trees",
+        "Linear Regression",
+        "K-Means Clustering",
+        "Apriori"
+      ],
+      "answer": "Decision Trees",
+      "explanation": "Decision Trees are commonly used for classification tasks, where the algorithm learns a hierarchy of if-else conditions based on the training data to make predictions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which Machine Learning technique involves creating new features from existing ones to improve model performance?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Feature Engineering",
+        "Model Validation",
+        "Ensemble Learning",
+        "Transfer Learning"
+      ],
+      "answer": "Feature Engineering",
+      "explanation": "Feature Engineering involves creating new features or transforming existing ones to make them more informative or suitable for the Machine Learning task, ultimately improving model performance.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which evaluation metric is commonly used for regression tasks to measure the average squared difference between predicted and actual values?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mean Squared Error (MSE)",
+        "Accuracy",
+        "Precision",
+        "F1 Score"
+      ],
+      "answer": "Mean Squared Error (MSE)",
+      "explanation": "Mean Squared Error (MSE) is commonly used in regression tasks to measure the average squared difference between predicted and actual values, indicating the model's closeness to the true values.",
+      "difficulty": "Medium"
+    }
+  ]
+}
