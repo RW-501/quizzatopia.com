@@ -1,0 +1,234 @@
+{
+  "quizName": "Quiz on Wisconsin",
+  "quizCode": "WI2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Wisconsin!",
+  "quizTags": "Wisconsin, Geography, States, USA",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the capital city of Wisconsin?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Milwaukee",
+        "Madison",
+        "Green Bay",
+        "Kenosha"
+      ],
+      "answer": "Madison",
+      "explanation": "The capital city of Wisconsin is Madison, known for its beautiful lakes, vibrant cultural scene, and being home to the University of Wisconsin-Madison.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Wisconsin is known as the 'Badger State.'",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Wisconsin is often referred to as the 'Badger State' due to the early miners who lived in temporary caves cut into hillsides, similar to badgers.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the nickname of Wisconsin?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Badger State",
+        "The Sunflower State",
+        "The Keystone State",
+        "The Volunteer State"
+      ],
+      "answer": "The Badger State",
+      "explanation": "Wisconsin is often referred to as 'The Badger State' due to its association with early miners who lived in temporary caves cut into hillsides, similar to badgers.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous national park, located in Wisconsin, is known for its stunning sandstone formations, scenic hiking trails, and being the largest of its kind in the world?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yosemite National Park",
+        "Glacier National Park",
+        "Yellowstone National Park",
+        "Devil's Lake State Park"
+      ],
+      "answer": "Devil's Lake State Park",
+      "explanation": "Devil's Lake State Park, located in Wisconsin, is known for its stunning sandstone formations, scenic hiking trails, and being the largest of its kind in the world. It offers a unique natural landscape.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which famous Wisconsin city is known for its vibrant arts scene, historic Third Ward district, and being the largest city in the state?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Milwaukee",
+        "Madison",
+        "Green Bay",
+        "Kenosha"
+      ],
+      "answer": "Milwaukee",
+      "explanation": "Milwaukee, located in Wisconsin, is known for its vibrant arts scene, historic Third Ward district, and being the largest city in the state. It has a rich cultural heritage.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the official state bird of Wisconsin?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "American Robin",
+        "Bald Eagle",
+        "Northern Cardinal",
+        "Eastern Bluebird"
+      ],
+      "answer": "American Robin",
+      "explanation": "The official state bird of Wisconsin is the American Robin, known for its distinctive orange breast and melodious song.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which famous Wisconsin city is known for its scenic waterfront, historic downtown area, and being the 'Gateway to Door County'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Milwaukee",
+        "Madison",
+        "Green Bay",
+        "Kenosha"
+      ],
+      "answer": "Green Bay",
+      "explanation": "Green Bay, located in Wisconsin, is known for its scenic waterfront along the bay of Lake Michigan, historic downtown area, and being the 'Gateway to Door County.' It is a popular destination for outdoor enthusiasts.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous Wisconsin city is known for its beautiful lakes, vibrant college town atmosphere, and being home to the University of Wisconsin-Madison?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Milwaukee",
+        "Madison",
+        "Green Bay",
+        "Kenosha"
+      ],
+      "answer": "Madison",
+      "explanation": "Madison, located in Wisconsin, is known for its beautiful lakes, vibrant college town atmosphere, and being home to the University of Wisconsin-Madison. It offers a blend of natural beauty and cultural attractions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous Wisconsin city is known for its historic downtown area, beautiful riverfront, and being a major center for the paper industry?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Milwaukee",
+        "Appleton",
+        "La Crosse",
+        "Oshkosh"
+      ],
+      "answer": "Appleton",
+      "explanation": "Appleton, located in Wisconsin, is known for its historic downtown area, beautiful riverfront along the Fox River, and being a major center for the paper industry. It has a strong sense of community.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which famous Wisconsin city is known for its annual EAA AirVenture Oshkosh event, historic downtown area, and being the home of the Experimental Aircraft Association?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Milwaukee",
+        "Madison",
+        "Oshkosh",
+        "Green Bay"
+      ],
+      "answer": "Oshkosh",
+      "explanation": "Oshkosh, located in Wisconsin, is known for its annual EAA AirVenture Oshkosh event, historic downtown area, and being the home of the Experimental Aircraft Association. It attracts aviation enthusiasts from around the world.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous Wisconsin city is known for its historic downtown area, beautiful lakeside scenery, and being the 'Gateway to the Northwoods'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Milwaukee",
+        "Madison",
+        "Racine",
+        "Kenosha"
+      ],
+      "answer": "Kenosha",
+      "explanation": "Kenosha, located in Wisconsin, is known for its historic downtown area, beautiful lakeside scenery along Lake Michigan, and being the 'Gateway to the Northwoods.' It offers a mix of urban amenities and natural beauty.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous Wisconsin city is known for its historic downtown area, charming riverwalk, and being the 'Ginseng Capital of the World'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Milwaukee",
+        "Madison",
+        "Wausau",
+        "Green Bay"
+      ],
+      "answer": "Wausau",
+      "explanation": "Wausau, located in Wisconsin, is known for its historic downtown area, charming riverwalk along the Wisconsin River, and being the 'Ginseng Capital of the World.' It celebrates its cultural heritage and natural resources.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which famous Wisconsin city is known for its beautiful lakeside location, scenic waterfront park, and being the 'Festival City'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Milwaukee",
+        "Madison",
+        "Racine",
+        "Kenosha"
+      ],
+      "answer": "Racine",
+      "explanation": "Racine, located in Wisconsin, is known for its beautiful lakeside location along Lake Michigan, scenic waterfront park, and being the 'Festival City.' It hosts various cultural festivals throughout the year.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous Wisconsin city is known for its historic downtown area, iconic bronze Fonz statue, and being the hometown of Harley-Davidson?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Milwaukee",
+        "Madison",
+        "Racine",
+        "Green Bay"
+      ],
+      "answer": "Milwaukee",
+      "explanation": "Milwaukee, located in Wisconsin, is known for its historic downtown area, iconic bronze Fonz statue, and being the hometown of Harley-Davidson. It embraces its industrial and cultural heritage.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous Wisconsin city is known for its beautiful lakeside setting, historic downtown area, and being the hometown of architect Frank Lloyd Wright?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Milwaukee",
+        "Madison",
+        "Racine",
+        "Kenosha"
+      ],
+      "answer": "Madison",
+      "explanation": "Madison, located in Wisconsin, is known for its beautiful lakeside setting, historic downtown area, and being the hometown of architect Frank Lloyd Wright. It celebrates its architectural and natural treasures.",
+      "difficulty": "Medium"
+    }
+  ]
+}
