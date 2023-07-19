@@ -1,0 +1,159 @@
+{
+  "quizName": "Personality Quiz",
+  "quizCode": "PERSONALITY123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Personality",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "How would you describe your approach to challenges?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "I embrace challenges and see them as opportunities for growth.",
+        "I prefer to avoid challenges whenever possible.",
+        "I cautiously approach challenges and assess the risks involved.",
+        "I find challenges overwhelming and often give up."
+      ],
+      "answer": "I embrace challenges and see them as opportunities for growth.",
+      "explanation": "Embracing challenges and seeing them as opportunities for growth shows a positive and resilient attitude towards overcoming obstacles.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "How do you typically handle conflicts or disagreements?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "I prefer open communication and finding a win-win solution.",
+        "I avoid conflicts and try to maintain harmony.",
+        "I assert my position and prioritize my needs over others.",
+        "I become overwhelmed and struggle to handle conflicts."
+      ],
+      "answer": "I prefer open communication and finding a win-win solution.",
+      "explanation": "Preferring open communication and seeking win-win solutions indicates a cooperative and diplomatic approach to conflicts.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "How would you describe your level of extraversion?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "I am very outgoing and enjoy being around people.",
+        "I am somewhat reserved but comfortable in social situations.",
+        "I am a private person and prefer solitude over socializing.",
+        "I feel anxious and uncomfortable in social settings."
+      ],
+      "answer": "I am very outgoing and enjoy being around people.",
+      "explanation": "Being outgoing and enjoying social interactions suggests a higher level of extraversion and comfort in social settings.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "How do you handle changes or unexpected situations?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "I adapt quickly and view changes as opportunities.",
+        "I feel uneasy but eventually adjust to new circumstances.",
+        "I resist change and prefer things to stay consistent.",
+        "I become overwhelmed and struggle to cope with changes."
+      ],
+      "answer": "I adapt quickly and view changes as opportunities.",
+      "explanation": "Adapting quickly and seeing changes as opportunities suggests a flexible and resilient mindset towards unexpected situations.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "How would you describe your decision-making style?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "I am decisive and trust my instincts.",
+        "I prefer to gather information and consider all options.",
+        "I tend to be indecisive and struggle with making choices.",
+        "I rely on others to make decisions for me."
+      ],
+      "answer": "I prefer to gather information and consider all options.",
+      "explanation": "Preferring to gather information and consider options suggests a thoughtful and analytical approach to decision-making.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "How do you handle stress and pressure?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "I stay calm and focused, using stress as a motivator.",
+        "I feel stressed but manage to cope with it effectively.",
+        "I become overwhelmed and find it difficult to handle stress.",
+        "I avoid stressful situations whenever possible."
+      ],
+      "answer": "I stay calm and focused, using stress as a motivator.",
+      "explanation": "Staying calm and focused and using stress as a motivator demonstrates resilience and the ability to manage pressure effectively.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "How do you approach new ideas or perspectives?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "I am open-minded and enjoy exploring different viewpoints.",
+        "I am somewhat open to new ideas but prefer familiarity.",
+        "I am skeptical of new ideas and prefer to stick with what I know.",
+        "I am resistant to new ideas and prefer to maintain my beliefs."
+      ],
+      "answer": "I am open-minded and enjoy exploring different viewpoints.",
+      "explanation": "Being open-minded and willing to explore different viewpoints indicates a receptive and curious approach to new ideas.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "How do you handle failure or setbacks?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "I see failures as learning opportunities and bounce back quickly.",
+        "I feel disappointed but eventually recover from setbacks.",
+        "I struggle to recover from failures and often dwell on them.",
+        "I avoid taking risks to prevent failure or setbacks."
+      ],
+      "answer": "I see failures as learning opportunities and bounce back quickly.",
+      "explanation": "Viewing failures as learning opportunities and recovering quickly demonstrates resilience and a growth mindset.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "How do you approach tasks or projects?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "I am proactive and take initiative to get things done.",
+        "I complete tasks but prefer clear instructions and guidance.",
+        "I procrastinate and struggle to stay motivated.",
+        "I rely on others to handle tasks and projects for me."
+      ],
+      "answer": "I am proactive and take initiative to get things done.",
+      "explanation": "Being proactive and taking initiative demonstrates a self-driven and responsible approach to tasks and projects.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "How do you handle feedback or criticism?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "I value feedback and use it to improve myself.",
+        "I accept feedback but find it difficult to handle criticism.",
+        "I become defensive and struggle with receiving feedback.",
+        "I avoid seeking feedback or criticism."
+      ],
+      "answer": "I value feedback and use it to improve myself.",
+      "explanation": "Valuing feedback and using it constructively indicates a willingness to grow and learn from others' perspectives.",
+      "difficulty": "Medium"
+    }
+  ]
+}
