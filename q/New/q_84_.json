@@ -1,0 +1,231 @@
+{
+  "quizName": "Quiz on Washington",
+  "quizCode": "WA2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Washington!",
+  "quizTags": "Washington, Geography, States, USA",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the capital city of Washington?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Seattle",
+        "Tacoma",
+        "Olympia",
+        "Bellevue"
+      ],
+      "answer": "Olympia",
+      "explanation": "The capital city of Washington is Olympia, known for its scenic beauty, the State Capitol building, and its location on the southern end of Puget Sound.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Washington is known as the 'Evergreen State.'",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. Washington is often referred to as the 'Evergreen State' due to its lush forests and abundant greenery.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the nickname of Washington?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Evergreen State",
+        "The Sunshine State",
+        "The Empire State",
+        "The Volunteer State"
+      ],
+      "answer": "The Evergreen State",
+      "explanation": "Washington is often referred to as 'The Evergreen State' due to its abundant evergreen forests and lush green landscapes.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous national park, located in Washington, is known for its majestic mountains, stunning alpine lakes, and diverse wildlife?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yosemite National Park",
+        "Glacier National Park",
+        "Mount Rainier National Park",
+        "Olympic National Park"
+      ],
+      "answer": "Olympic National Park",
+      "explanation": "Olympic National Park, located in Washington, is known for its majestic mountains, stunning alpine lakes, and diverse wildlife. It showcases the natural beauty of the region.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which famous Washington city is known for its iconic Space Needle, vibrant music scene, and being the birthplace of grunge music?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Seattle",
+        "Spokane",
+        "Everett",
+        "Vancouver"
+      ],
+      "answer": "Seattle",
+      "explanation": "Seattle, located in Washington, is known for its iconic Space Needle, vibrant music scene, and being the birthplace of grunge music. It has a unique cultural identity.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the official state bird of Washington?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "American Goldfinch",
+        "Bald Eagle",
+        "Northern Flicker",
+        "American Robin"
+      ],
+      "answer": "American Goldfinch",
+      "explanation": "The official state bird of Washington is the American Goldfinch, known for its vibrant yellow plumage and melodic song.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which famous Washington city is known for its beautiful waterfront, historic Pike Place Market, and being home to the first Starbucks store?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Seattle",
+        "Spokane",
+        "Tacoma",
+        "Bellevue"
+      ],
+      "answer": "Seattle",
+      "explanation": "Seattle, located in Washington, is known for its beautiful waterfront, historic Pike Place Market, and being home to the first Starbucks store. It is a popular tourist destination.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous Washington city is known for its stunning tulip fields, annual Tulip Festival, and being a major hub for the flower industry?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Seattle",
+        "Spokane",
+        "Olympia",
+        "Mount Vernon"
+      ],
+      "answer": "Mount Vernon",
+      "explanation": "Mount Vernon, located in Washington, is known for its stunning tulip fields, annual Tulip Festival, and being a major hub for the flower industry. It attracts visitors from near and far.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous Washington city is known for its stunning views of Mount Rainier, outdoor recreational opportunities, and being a gateway to Mount Rainier National Park?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tacoma",
+        "Olympia",
+        "Bellevue",
+        "Enumclaw"
+      ],
+      "answer": "Enumclaw",
+      "explanation": "Enumclaw, located in Washington, is known for its stunning views of Mount Rainier, outdoor recreational opportunities, and being a gateway to Mount Rainier National Park.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which famous Washington city is known for its picturesque waterfront, historic downtown area, and being the capital of Kitsap County?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Seattle",
+        "Spokane",
+        "Bellingham",
+        "Port Orchard"
+      ],
+      "answer": "Port Orchard",
+      "explanation": "Port Orchard, located in Washington, is known for its picturesque waterfront, historic downtown area, and being the capital of Kitsap County.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous Washington city is known for its charming Bavarian-style architecture, annual Oktoberfest celebration, and being a popular destination for outdoor activities?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Seattle",
+        "Leavenworth",
+        "Wenatchee",
+        "Yakima"
+      ],
+      "answer": "Leavenworth",
+      "explanation": "Leavenworth, located in Washington, is known for its charming Bavarian-style architecture, annual Oktoberfest celebration, and being a popular destination for outdoor activities.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous Washington city is known for its vibrant arts scene, rich Native American heritage, and being the largest city in eastern Washington?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Seattle",
+        "Spokane",
+        "Yakima",
+        "Tacoma"
+      ],
+      "answer": "Spokane",
+      "explanation": "Spokane, located in Washington, is known for its vibrant arts scene, rich Native American heritage, and being the largest city in eastern Washington. It offers a mix of urban amenities and natural beauty.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which famous Washington city is known for its scenic beauty, outdoor recreational opportunities, and being the gateway to Mount Baker-Snoqualmie National Forest?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Everett",
+        "Bellevue",
+        "Issaquah",
+        "North Bend"
+      ],
+      "answer": "North Bend",
+      "explanation": "North Bend, located in Washington, is known for its scenic beauty, outdoor recreational opportunities, and being the gateway to Mount Baker-Snoqualmie National Forest. It is a haven for nature lovers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous Washington city is known for its vibrant downtown area, beautiful parks, and being the home of Microsoft Corporation?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Seattle",
+        "Bellevue",
+        "Redmond",
+        "Kirkland"
+      ],
+      "answer": "Bellevue",
+      "explanation": "Bellevue, located in Washington, is known for its vibrant downtown area, beautiful parks, and being the home of Microsoft Corporation. It is a major center for technology and business.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous Washington city is known for its vibrant arts scene, historic architecture, and being the home of the Museum of Glass?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Seattle",
+        "Tacoma",
+        "Olympia",
+        "Bremerton"
+      ],
+      "answer": "Tacoma",
+      "explanation": "Tacoma, located in Washington, is known for its vibrant arts scene, historic architecture, and being the home of the Museum of Glass. It offers a blend of culture and creativity.",
+      "difficulty": "Medium"
+    }
+  ]
+}
