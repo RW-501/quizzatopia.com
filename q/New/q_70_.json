@@ -1,0 +1,230 @@
+{
+  "quizName": "Quiz on North Carolina",
+  "quizCode": "NC2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of North Carolina!",
+  "quizTags": "North Carolina, Geography, States, USA",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "North Carolina is often referred to as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Tar Heel",
+        "Old North",
+        "Blue Ridge",
+        "Smoky"
+      ],
+      "answer": "Tar Heel",
+      "explanation": "North Carolina is often referred to as the Tar Heel State, a nickname that originated from the state's early production of tar, pitch, and turpentine.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: The capital of North Carolina is Charlotte.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "False",
+      "explanation": "False. While Charlotte is the largest city in North Carolina, the capital of the state is Raleigh.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of North Carolina?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Charlotte",
+        "Raleigh",
+        "Greensboro",
+        "Wilmington"
+      ],
+      "answer": "Raleigh",
+      "explanation": "The capital city of North Carolina is Raleigh, known for its vibrant cultural scene and as part of the Research Triangle.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous barrier island, located off the coast of North Carolina, is known for its beautiful beaches and wild horses?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cape Cod",
+        "Long Island",
+        "Hilton Head Island",
+        "Outer Banks"
+      ],
+      "answer": "Outer Banks",
+      "explanation": "The Outer Banks, a string of barrier islands off the coast of North Carolina, is renowned for its stunning beaches, lighthouses, and the presence of wild horses.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of North Carolina?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Sunshine State",
+        "The Old Dominion",
+        "The First State",
+        "The Tar Heel State"
+      ],
+      "answer": "The Tar Heel State",
+      "explanation": "North Carolina is often referred to as The Tar Heel State, a nickname that originated from the state's early production of tar, pitch, and turpentine.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous national park, located in western North Carolina, is known for its scenic beauty and the highest peak in the eastern United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Great Smoky Mountains National Park",
+        "Yellowstone National Park",
+        "Rocky Mountain National Park",
+        "Grand Canyon National Park"
+      ],
+      "answer": "Great Smoky Mountains National Park",
+      "explanation": "Great Smoky Mountains National Park, shared between North Carolina and Tennessee, is renowned for its majestic mountains, diverse wildlife, and stunning natural landscapes.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state bird of North Carolina?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Northern Cardinal",
+        "Eastern Bluebird",
+        "American Goldfinch",
+        "Red-winged Blackbird"
+      ],
+      "answer": "Northern Cardinal",
+      "explanation": "The official state bird of North Carolina is the Northern Cardinal, a vibrant red bird known for its beautiful song.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous university, located in Durham, North Carolina, is renowned for its basketball program and its rivalry with the University of North Carolina at Chapel Hill?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Duke University",
+        "University of North Carolina at Charlotte",
+        "North Carolina State University",
+        "Wake Forest University"
+      ],
+      "answer": "Duke University",
+      "explanation": "Duke University, located in Durham, North Carolina, is a prestigious university known for its academic excellence, basketball program, and historic rivalry with the University of North Carolina at Chapel Hill.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous outdoor drama, performed annually in the town of Manteo, North Carolina, recounts the story of the Lost Colony?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Lost Colony",
+        "Paul Bunyan",
+        "Blue Man Group",
+        "Cirque du Soleil"
+      ],
+      "answer": "The Lost Colony",
+      "explanation": "The Lost Colony, a famous outdoor drama, is performed annually in Manteo, North Carolina. It tells the story of the ill-fated Roanoke Island colony, also known as the Lost Colony.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: The Biltmore Estate, located in Asheville, North Carolina, is the largest privately-owned house in the United States.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. The Biltmore Estate, constructed by George Vanderbilt in the late 19th century, is the largest privately-owned house in the United States and a popular tourist attraction.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous rock formation, located near Chimney Rock, North Carolina, is a prominent landmark in the area?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Stone Mountain",
+        "Pilot Mountain",
+        "Table Rock",
+        "Hanging Rock"
+      ],
+      "answer": "Chimney Rock",
+      "explanation": "Chimney Rock is a famous rock formation near the town of Chimney Rock, North Carolina. It offers breathtaking views of the surrounding mountains and forests.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous motor speedway, located in Concord, North Carolina, is home to NASCAR races and is one of the largest sports venues in the world?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Indianapolis Motor Speedway",
+        "Daytona International Speedway",
+        "Charlotte Motor Speedway",
+        "Talladega Superspeedway"
+      ],
+      "answer": "Charlotte Motor Speedway",
+      "explanation": "Charlotte Motor Speedway, located in Concord, North Carolina, is a famous motor racing venue known for hosting NASCAR events and other racing competitions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the famous coastal city in North Carolina known for its historic lighthouses and beautiful beaches?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Myrtle Beach",
+        "Wilmington",
+        "Outer Banks",
+        "Cape Hatteras"
+      ],
+      "answer": "Wilmington",
+      "explanation": "Wilmington is a famous coastal city in North Carolina known for its historic lighthouses, such as the Cape Fear Light, and its picturesque beaches.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous flight, conducted by the Wright brothers, took place at Kill Devil Hills, North Carolina, and is considered the first powered flight in history?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Spirit of St. Louis",
+        "The Wright Flyer",
+        "The Red Baron",
+        "The Kitty Hawk Flight"
+      ],
+      "answer": "The Kitty Hawk Flight",
+      "explanation": "The Wright brothers conducted their famous flight at Kill Devil Hills, near Kitty Hawk, North Carolina, on December 17, 1903. This historic event marked the first powered flight in history.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous basketball player, often considered one of the greatest of all time, was born in Wilmington, North Carolina?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Michael Jordan",
+        "Magic Johnson",
+        "Larry Bird",
+        "Kobe Bryant"
+      ],
+      "answer": "Michael Jordan",
+      "explanation": "Michael Jordan, often regarded as one of the greatest basketball players in history, was born in Wilmington, North Carolina. He achieved great success playing for the Chicago Bulls and the Washington Wizards in the NBA.",
+      "difficulty": "Medium"
+    }
+  ]
+}
