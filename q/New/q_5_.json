@@ -1,0 +1,228 @@
+{
+  "quizName": "Madden Quiz",
+  "quizCode": "MADDEN123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Gaming",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which company develops the Madden NFL video game series?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Electronic Arts",
+        "2K Sports",
+        "Activision",
+        "Ubisoft"
+      ],
+      "answer": "Electronic Arts",
+      "explanation": "The Madden NFL video game series is developed by Electronic Arts (EA). They have been the sole developer of the franchise since acquiring the exclusive rights to the NFL license.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What year was the first Madden NFL video game released?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1985",
+        "1991",
+        "1997",
+        "2002"
+      ],
+      "answer": "1985",
+      "explanation": "The first Madden NFL video game, titled 'John Madden Football,' was released in 1985. It was initially developed for the Apple II computer platform.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "True or False: Madden NFL games feature real NFL teams and players.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Madden NFL games feature real NFL teams, stadiums, and players. The game strives for realism by replicating the NFL experience as closely as possible.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which player is featured on the cover of Madden NFL 22?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tom Brady",
+        "Patrick Mahomes",
+        "Lamar Jackson",
+        "Aaron Donald"
+      ],
+      "answer": "Tom Brady",
+      "explanation": "Tom Brady, the legendary quarterback, is featured on the cover of Madden NFL 22. He is widely regarded as one of the greatest quarterbacks in NFL history.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which game mode allows players to control a single player's career in Madden NFL?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Franchise Mode",
+        "Ultimate Team",
+        "Face of the Franchise",
+        "Superstar KO"
+      ],
+      "answer": "Face of the Franchise",
+      "explanation": "The 'Face of the Franchise' mode in Madden NFL allows players to control a single player's career, starting from high school and progressing to college and the NFL.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which quarterback has the highest overall rating in Madden NFL 22?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Patrick Mahomes",
+        "Aaron Rodgers",
+        "Russell Wilson",
+        "Tom Brady"
+      ],
+      "answer": "Patrick Mahomes",
+      "explanation": "In Madden NFL 22, Patrick Mahomes, the Kansas City Chiefs quarterback, has one of the highest overall ratings among all players. His exceptional skills and performance are reflected in the game.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which game mode allows players to build and manage their own NFL team using collectible player cards?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Franchise Mode",
+        "Ultimate Team",
+        "Face of the Franchise",
+        "Superstar KO"
+      ],
+      "answer": "Ultimate Team",
+      "explanation": "The 'Ultimate Team' mode in Madden NFL allows players to build and manage their own NFL team using collectible player cards. It combines elements of team management and card collecting.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "True or False: Madden NFL games feature realistic player animations and gameplay mechanics.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Madden NFL games aim to provide realistic player animations and gameplay mechanics, simulating the action and strategy of real NFL games.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which coach appears as a commentator in Madden NFL games alongside play-by-play announcer Brandon Gaudin?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "John Madden",
+        "Bill Belichick",
+        "Jon Gruden",
+        "Tony Romo"
+      ],
+      "answer": "Jon Gruden",
+      "explanation": "Jon Gruden, a former NFL coach and current ESPN analyst, appears as a commentator in Madden NFL games alongside play-by-play announcer Brandon Gaudin.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which game mode allows players to compete in quick, fast-paced games with simplified rules and unique power-ups?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Franchise Mode",
+        "Ultimate Team",
+        "Face of the Franchise",
+        "Superstar KO"
+      ],
+      "answer": "Superstar KO",
+      "explanation": "The 'Superstar KO' mode in Madden NFL allows players to compete in quick, fast-paced games with simplified rules and unique power-ups. It offers a unique and exciting multiplayer experience.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which team is known for having the highest team rating in Madden NFL 22?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kansas City Chiefs",
+        "Tampa Bay Buccaneers",
+        "San Francisco 49ers",
+        "Green Bay Packers"
+      ],
+      "answer": "Kansas City Chiefs",
+      "explanation": "In Madden NFL 22, the Kansas City Chiefs are known for having one of the highest team ratings. Their dynamic offense, led by Patrick Mahomes, contributes to their high rating.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which feature allows players to create and customize their own plays in Madden NFL?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Playmaker",
+        "Coach Suggestions",
+        "Formation Subs",
+        "Create-a-Play"
+      ],
+      "answer": "Create-a-Play",
+      "explanation": "The 'Create-a-Play' feature in Madden NFL allows players to design and customize their own plays, tailoring them to their preferred strategies and play styles.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "True or False: Madden NFL games include real NFL stadiums and crowd chants.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Madden NFL games strive to provide an authentic NFL experience by featuring real NFL stadiums, accurate team uniforms, and crowd chants specific to each team.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which running back holds the highest overall rating in Madden NFL 22?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Derrick Henry",
+        "Christian McCaffrey",
+        "Alvin Kamara",
+        "Saquon Barkley"
+      ],
+      "answer": "Christian McCaffrey",
+      "explanation": "In Madden NFL 22, Christian McCaffrey, the Carolina Panthers running back, holds one of the highest overall ratings among all running backs. His versatile skills make him a top-rated player.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which quarterback holds the highest overall rating in Madden NFL history?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tom Brady",
+        "Peyton Manning",
+        "Aaron Rodgers",
+        "Drew Brees"
+      ],
+      "answer": "Tom Brady",
+      "explanation": "Tom Brady holds the highest overall rating in Madden NFL history. His exceptional career and numerous accolades contribute to his status as one of the game's top-rated players.",
+      "difficulty": "Medium"
+    }
+  ]
+}
