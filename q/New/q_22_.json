@@ -1,0 +1,159 @@
+{
+  "quizName": "Historical Events Quiz",
+  "quizCode": "HISTORY123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "History",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In what year did World War I begin?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1914",
+        "1917",
+        "1939",
+        "1945"
+      ],
+      "answer": "1914",
+      "explanation": "World War I began in 1914 and lasted until 1918, involving many countries around the world.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which year marked the signing of the Declaration of Independence in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1776",
+        "1789",
+        "1812",
+        "1865"
+      ],
+      "answer": "1776",
+      "explanation": "The Declaration of Independence was signed in 1776, declaring the United States' independence from Great Britain.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "When did the Berlin Wall fall?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1989",
+        "1961",
+        "1991",
+        "1975"
+      ],
+      "answer": "1989",
+      "explanation": "The Berlin Wall fell in 1989, marking a significant event in the reunification of East and West Germany.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which year did the United States land the first humans on the moon?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1969",
+        "1975",
+        "1955",
+        "1982"
+      ],
+      "answer": "1969",
+      "explanation": "The United States landed the first humans on the moon in 1969 during the Apollo 11 mission.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "When did the French Revolution begin?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1789",
+        "1812",
+        "1914",
+        "1945"
+      ],
+      "answer": "1789",
+      "explanation": "The French Revolution began in 1789, leading to significant political and social changes in France.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which year did the Civil Rights Act of 1964 become law in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1964",
+        "1955",
+        "1975",
+        "1989"
+      ],
+      "answer": "1964",
+      "explanation": "The Civil Rights Act of 1964 became law in the United States, prohibiting discrimination based on race, color, religion, sex, or national origin.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "In what year did the Industrial Revolution begin?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1760",
+        "1804",
+        "1856",
+        "1901"
+      ],
+      "answer": "1760",
+      "explanation": "The Industrial Revolution began in the mid-18th century, around 1760, bringing significant changes in manufacturing, transportation, and technology.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which year saw the signing of the Treaty of Versailles, officially ending World War I?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1919",
+        "1914",
+        "1939",
+        "1945"
+      ],
+      "answer": "1919",
+      "explanation": "The Treaty of Versailles was signed in 1919, officially ending World War I and imposing conditions on Germany.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "When did the Cuban Missile Crisis occur?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1962",
+        "1955",
+        "1971",
+        "1987"
+      ],
+      "answer": "1962",
+      "explanation": "The Cuban Missile Crisis occurred in 1962, a tense confrontation between the United States and the Soviet Union over the placement of nuclear missiles in Cuba.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which year marked the end of apartheid in South Africa?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1994",
+        "1980",
+        "1971",
+        "1965"
+      ],
+      "answer": "1994",
+      "explanation": "Apartheid officially ended in South Africa in 1994, with the election of Nelson Mandela as the country's first black president.",
+      "difficulty": "Medium"
+    }
+  ]
+}
