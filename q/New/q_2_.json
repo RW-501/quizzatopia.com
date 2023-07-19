@@ -1,0 +1,228 @@
+{
+  "quizName": "Roblox Game Quiz",
+  "quizCode": "ROBLOX123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Gaming",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "When was Roblox officially released to the public?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "2004",
+        "2006",
+        "2008",
+        "2010"
+      ],
+      "answer": "2006",
+      "explanation": "Roblox was officially released to the public in 2006, after a period of beta testing and development.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which programming language is primarily used for scripting in Roblox?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "JavaScript",
+        "Python",
+        "Lua",
+        "C#"
+      ],
+      "answer": "Lua",
+      "explanation": "Lua is the primary programming language used for scripting in Roblox. It is a lightweight and versatile language that allows developers to create interactive gameplay elements.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "True or False: Roblox allows players to create their own games and experiences.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Roblox provides a platform where players can create their own games and experiences using the Roblox Studio, allowing for user-generated content and creativity.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the name of the in-game currency used in Roblox?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Robux",
+        "Coins",
+        "Credits",
+        "Tokens"
+      ],
+      "answer": "Robux",
+      "explanation": "Robux is the in-game currency used in Roblox. It can be used to purchase items, accessories, and game passes within the Roblox platform.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which of the following is not a game development feature in Roblox Studio?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Scripting",
+        "Building",
+        "Animation",
+        "Level Design"
+      ],
+      "answer": "Level Design",
+      "explanation": "While level design can be a part of game development in Roblox, it is not a specific feature within Roblox Studio. Roblox Studio primarily focuses on scripting, building, and animation.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the maximum number of players that can join a single Roblox game server?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "50",
+        "100",
+        "200",
+        "300"
+      ],
+      "answer": "200",
+      "explanation": "The maximum number of players that can join a single Roblox game server is 200. However, some games may have lower player limits depending on the game's design and server capacity.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which Roblox event allows players to participate in various limited-time games and earn exclusive virtual items?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Roblox Developer Conference (RDC)",
+        "Roblox Bloxy Awards",
+        "Roblox Egg Hunt",
+        "Roblox Builders Club"
+      ],
+      "answer": "Roblox Egg Hunt",
+      "explanation": "The Roblox Egg Hunt is an annual event where players can explore different games and collect virtual eggs to earn exclusive virtual items. It has become a popular event within the Roblox community.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "True or False: Roblox has a premium membership called Roblox Builders Club.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Roblox offers a premium membership called Roblox Builders Club, which provides additional benefits and features to its members, such as a monthly Robux stipend and access to premium items.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which of the following is not a Roblox game genre?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Role-Playing",
+        "First-Person Shooter",
+        "Simulator",
+        "Tower Defense"
+      ],
+      "answer": "First-Person Shooter",
+      "explanation": "While there are shooting games in Roblox, the specific genre of 'First-Person Shooter' is not officially recognized as a distinct genre within the Roblox platform.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the name of the virtual avatar that represents players in Roblox?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Player Model",
+        "Robloxian",
+        "Game Avatar",
+        "Virtual Persona"
+      ],
+      "answer": "Robloxian",
+      "explanation": "The virtual avatar that represents players in Roblox is commonly referred to as a 'Robloxian.' Players can customize their Robloxians with various clothing items, accessories, and animations.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which Roblox feature allows developers to monetize their games by selling in-game items directly to players?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Game Passes",
+        "Virtual Currency",
+        "Premium Subscriptions",
+        "In-Game Ads"
+      ],
+      "answer": "Game Passes",
+      "explanation": "Developers in Roblox can monetize their games by selling game passes, which grant players special abilities, access to exclusive areas, or other perks within the game.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which popular game mode in Roblox involves players trying to escape from a series of puzzles and obstacles?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Obstacle Course",
+        "Battle Royale",
+        "Tycoon",
+        "Survival"
+      ],
+      "answer": "Obstacle Course",
+      "explanation": "Obstacle Course games, often referred to as 'Obbys,' are popular in Roblox. Players navigate through a series of challenging puzzles and obstacles, aiming to reach the end.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "True or False: Roblox has a chat system that allows players to communicate with each other.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Roblox features a chat system that allows players to communicate with each other in-game, fostering social interactions and collaboration within the Roblox community.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which Roblox event celebrates the achievements of developers and creators on the platform?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Roblox Developer Conference (RDC)",
+        "Roblox Bloxy Awards",
+        "Roblox Egg Hunt",
+        "Roblox Builders Club"
+      ],
+      "answer": "Roblox Bloxy Awards",
+      "explanation": "The Roblox Bloxy Awards is an annual event that celebrates the achievements of developers and creators on the Roblox platform. It recognizes outstanding games, experiences, and contributions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which Roblox mode allows players to showcase their creativity by building and designing their own virtual worlds?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Obstacle Course",
+        "Battle Royale",
+        "Tycoon",
+        "Creative"
+      ],
+      "answer": "Creative",
+      "explanation": "The 'Creative' mode in Roblox, often referred to as 'Build Mode' or 'Build and Design,' allows players to showcase their creativity by building and designing their own virtual worlds, structures, and environments.",
+      "difficulty": "Easy"
+    }
+  ]
+}
