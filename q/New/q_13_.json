@@ -1,0 +1,159 @@
+{
+  "quizName": "MCU Thor Quiz",
+  "quizCode": "THOR123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Movies",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who is Thor's father?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Odin",
+        "Loki",
+        "Frigga",
+        "Heimdall"
+      ],
+      "answer": "Odin",
+      "explanation": "Thor's father is Odin, the ruler of Asgard. He is played by Sir Anthony Hopkins in the MCU.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is Thor's weapon called?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mjolnir",
+        "Stormbreaker",
+        "Gungnir",
+        "Excalibur"
+      ],
+      "answer": "Mjolnir",
+      "explanation": "Thor's iconic weapon is called Mjolnir. It is a hammer forged from Uru metal and grants him the power of lightning.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Who is Thor's adoptive brother?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Loki",
+        "Hela",
+        "Thanos",
+        "Heimdall"
+      ],
+      "answer": "Loki",
+      "explanation": "Thor's adoptive brother is Loki, the God of Mischief. He is portrayed by Tom Hiddleston in the MCU.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which realm is Thor from?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Asgard",
+        "Midgard",
+        "Jotunheim",
+        "Svartalfheim"
+      ],
+      "answer": "Asgard",
+      "explanation": "Thor is from Asgard, one of the Nine Realms in the MCU. Asgard is a majestic realm inhabited by the gods.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is Thor's signature attack?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lightning Strike",
+        "Thunder Clap",
+        "Mjolnir Strike",
+        "God Blast"
+      ],
+      "answer": "Thunder Clap",
+      "explanation": "Thor's signature attack is the Thunder Clap. He can generate powerful shockwaves by clapping his hands together.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Who is Thor's love interest?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jane Foster",
+        "Darcy Lewis",
+        "Valkyrie",
+        "Lady Sif"
+      ],
+      "answer": "Jane Foster",
+      "explanation": "Thor's love interest in the MCU is Jane Foster, a brilliant astrophysicist portrayed by Natalie Portman.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the name of Thor's home world?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Asgard",
+        "Vanaheim",
+        "Nidavellir",
+        "Sakaar"
+      ],
+      "answer": "Asgard",
+      "explanation": "Thor's home world is Asgard, a majestic realm governed by Odin and inhabited by the gods of Norse mythology.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Who becomes the new ruler of Asgard after Odin?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hela",
+        "Frigga",
+        "Thor",
+        "Loki"
+      ],
+      "answer": "Hela",
+      "explanation": "After Odin's death, Hela, Thor's sister, becomes the new ruler of Asgard. She is portrayed by Cate Blanchett.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Who helps Thor in his fight against Hela in Thor: Ragnarok?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hulk",
+        "Captain America",
+        "Black Widow",
+        "Iron Man"
+      ],
+      "answer": "Hulk",
+      "explanation": "Hulk, also known as Bruce Banner, helps Thor in his fight against Hela in Thor: Ragnarok.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the name of Thor's new weapon in Avengers: Infinity War?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Stormbreaker",
+        "Mjolnir",
+        "Gungnir",
+        "Bifrost"
+      ],
+      "answer": "Stormbreaker",
+      "explanation": "Thor wields a new weapon called Stormbreaker in Avengers: Infinity War. It was crafted by Eitri, the King of the Dwarves.",
+      "difficulty": "Medium"
+    }
+  ]
+}
