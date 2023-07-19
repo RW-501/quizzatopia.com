@@ -1,0 +1,231 @@
+{
+  "quizName": "Quiz on Connecticut",
+  "quizCode": "CT2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Connecticut!",
+  "quizTags": "Connecticut, Geography, States, USA",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Connecticut is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Nutmeg",
+        "Constitution",
+        "Yankee",
+        "Bluegrass"
+      ],
+      "answer": "Nutmeg",
+      "explanation": "Connecticut is known as the Nutmeg State, a nickname that dates back to the 18th century when some unscrupulous traders sold fake nutmegs made of wood.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Connecticut is the southernmost state in the New England region of the United States.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Connecticut is the southernmost state in the New England region, bordering New York to the west and Rhode Island to the east.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of Connecticut?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hartford",
+        "Bridgeport",
+        "New Haven",
+        "Stamford"
+      ],
+      "answer": "Hartford",
+      "explanation": "The capital city of Connecticut is Hartford.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which river forms the eastern border of Connecticut with the state of New York?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Connecticut River",
+        "Thames River",
+        "Housatonic River",
+        "Hudson River"
+      ],
+      "answer": "Housatonic River",
+      "explanation": "The Housatonic River forms the eastern border of Connecticut with the state of New York.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of Connecticut?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Constitution State",
+        "The Green Mountain State",
+        "The Ocean State",
+        "The Granite State"
+      ],
+      "answer": "The Constitution State",
+      "explanation": "Connecticut is often referred to as The Constitution State, commemorating its role in the development of the U.S. Constitution.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous Ivy League university is located in New Haven, Connecticut?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Harvard University",
+        "Yale University",
+        "Princeton University",
+        "Columbia University"
+      ],
+      "answer": "Yale University",
+      "explanation": "Yale University, one of the prestigious Ivy League institutions, is located in New Haven, Connecticut.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state bird of Connecticut?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "American Robin",
+        "Bald Eagle",
+        "Eastern Bluebird",
+        "American Goldfinch"
+      ],
+      "answer": "American Robin",
+      "explanation": "The official state bird of Connecticut is the American Robin.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous maritime museum, known for its collections related to ships and sea history, is located in Mystic, Connecticut?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "National Museum of the American Indian",
+        "The Mariners' Museum",
+        "Mystic Seaport Museum",
+        "Smithsonian National Museum of Natural History"
+      ],
+      "answer": "Mystic Seaport Museum",
+      "explanation": "The Mystic Seaport Museum in Connecticut is famous for its collections related to ships and maritime history.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous novelist and author of the classic novel 'Moby-Dick' was born in New London, Connecticut?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Herman Melville",
+        "Nathaniel Hawthorne",
+        "Mark Twain",
+        "Henry James"
+      ],
+      "answer": "Herman Melville",
+      "explanation": "Herman Melville, the author of 'Moby-Dick,' was born in New London, Connecticut.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: Connecticut is one of the original 13 colonies that formed the United States.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Connecticut was one of the original 13 colonies that played a crucial role in the American Revolutionary War.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous playwright and screenwriter, known for works such as 'A Streetcar Named Desire' and 'Cat on a Hot Tin Roof,' resided in Connecticut?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tennessee Williams",
+        "Arthur Miller",
+        "Edward Albee",
+        "Eugene O'Neill"
+      ],
+      "answer": "Tennessee Williams",
+      "explanation": "Tennessee Williams, the renowned playwright and screenwriter, resided in Connecticut.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the famous amusement park located in Bristol, Connecticut, known for its thrilling roller coasters and attractions?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Disneyland",
+        "Six Flags Magic Mountain",
+        "Cedar Point",
+        "Lake Compounce"
+      ],
+      "answer": "Lake Compounce",
+      "explanation": "Lake Compounce in Bristol, Connecticut, is one of the oldest continuously operating amusement parks in the United States.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which river runs through the capital city of Hartford, Connecticut?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hudson River",
+        "Connecticut River",
+        "Delaware River",
+        "Potomac River"
+      ],
+      "answer": "Connecticut River",
+      "explanation": "The Connecticut River runs through the capital city of Hartford, Connecticut.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the famous Ivy League university located in New Haven, Connecticut?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Harvard University",
+        "Yale University",
+        "Princeton University",
+        "Columbia University"
+      ],
+      "answer": "Yale University",
+      "explanation": "Yale University, one of the prestigious Ivy League institutions, is located in New Haven, Connecticut.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous submarine, the first to be operated by the United States Navy, is now a museum in Groton, Connecticut?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "USS Nautilus",
+        "USS Constitution",
+        "USS Monitor",
+        "USS Arizona"
+      ],
+      "answer": "USS Nautilus",
+      "explanation": "The USS Nautilus, the first submarine to be operated by the U.S. Navy, is now a museum in Groton, Connecticut.",
+      "difficulty": "Medium"
+    }
+  ]
+}
