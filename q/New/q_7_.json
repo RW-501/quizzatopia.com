@@ -1,0 +1,228 @@
+{
+  "quizName": "EV Cars Quiz",
+  "quizCode": "EVCARS123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Automotive",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does EV stand for in the context of cars?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Electric Vehicle",
+        "Efficient Vehicle",
+        "Eco-friendly Vehicle",
+        "Emission-free Vehicle"
+      ],
+      "answer": "Electric Vehicle",
+      "explanation": "EV stands for Electric Vehicle, which refers to vehicles that are powered by electric motors and use electricity as their primary source of propulsion.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which company is known for producing the popular electric car model called 'Tesla'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ford",
+        "General Motors",
+        "Toyota",
+        "Tesla"
+      ],
+      "answer": "Tesla",
+      "explanation": "Tesla is the company known for producing the popular electric car model. They have played a significant role in popularizing and advancing electric vehicles.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "True or False: Electric vehicles produce zero tailpipe emissions.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Electric vehicles produce zero tailpipe emissions, which means they do not release any pollutants or greenhouse gases from their exhaust systems.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which component of an electric vehicle stores electrical energy for use by the electric motor?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Alternator",
+        "Battery",
+        "Radiator",
+        "Spark Plug"
+      ],
+      "answer": "Battery",
+      "explanation": "The battery in an electric vehicle stores electrical energy, which is then used by the electric motor to propel the vehicle.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which country is the largest market for electric vehicles?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "United States",
+        "China",
+        "Germany",
+        "Norway"
+      ],
+      "answer": "China",
+      "explanation": "China is currently the largest market for electric vehicles, with a high demand for EVs and significant government support for their adoption.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the term used to describe recharging an electric vehicle's battery using a power source?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Refueling",
+        "Repowering",
+        "Recharging",
+        "Regenerating"
+      ],
+      "answer": "Recharging",
+      "explanation": "Recharging is the term used to describe the process of replenishing an electric vehicle's battery by connecting it to a power source, such as a charging station.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "True or False: Electric vehicles are generally more energy-efficient than internal combustion engine vehicles.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Electric vehicles are generally more energy-efficient than internal combustion engine vehicles since they convert a higher percentage of stored energy into actual vehicle movement.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous electric car model is known for its distinctive 'gull-wing' doors?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Chevrolet Bolt",
+        "Nissan Leaf",
+        "BMW i3",
+        "Tesla Model X"
+      ],
+      "answer": "Tesla Model X",
+      "explanation": "The Tesla Model X, a popular electric SUV, is known for its distinctive 'gull-wing' doors, which provide easy access to the rear seats.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which car manufacturer introduced the electric car model called 'Leaf'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Chevrolet",
+        "Nissan",
+        "BMW",
+        "Toyota"
+      ],
+      "answer": "Nissan",
+      "explanation": "Nissan introduced the electric car model called 'Leaf'. It is one of the best-selling electric vehicles globally.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the approximate range of a typical electric vehicle on a full charge?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "50-100 miles",
+        "100-200 miles",
+        "200-300 miles",
+        "300-400 miles"
+      ],
+      "answer": "200-300 miles",
+      "explanation": "A typical electric vehicle has an approximate range of 200-300 miles on a full charge. However, this range can vary depending on various factors such as vehicle model and driving conditions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which car manufacturer offers the electric car model known as the 'Chevrolet Bolt'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Chevrolet",
+        "Nissan",
+        "BMW",
+        "Toyota"
+      ],
+      "answer": "Chevrolet",
+      "explanation": "Chevrolet offers the electric car model known as the 'Chevrolet Bolt'. It is a compact electric vehicle with a relatively long electric range.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "True or False: Electric vehicles require less maintenance compared to internal combustion engine vehicles.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Electric vehicles generally require less maintenance compared to internal combustion engine vehicles since they have fewer moving parts and don't require oil changes or other engine-specific maintenance.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which car manufacturer offers the electric car model known as the 'i3'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Chevrolet",
+        "Nissan",
+        "BMW",
+        "Toyota"
+      ],
+      "answer": "BMW",
+      "explanation": "BMW offers the electric car model known as the 'i3'. It is a compact electric vehicle with a distinctive design and sustainable materials.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous electric car model is known for its high-performance and acceleration?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Chevrolet Bolt",
+        "Nissan Leaf",
+        "BMW i3",
+        "Tesla Model S"
+      ],
+      "answer": "Tesla Model S",
+      "explanation": "The Tesla Model S, a luxury electric sedan, is known for its high-performance and acceleration capabilities. It offers impressive speed and range.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which country has announced plans to ban the sale of new gasoline and diesel cars in the future?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "United States",
+        "China",
+        "Germany",
+        "Norway"
+      ],
+      "answer": "Norway",
+      "explanation": "Norway has announced plans to ban the sale of new gasoline and diesel cars by a certain year, aiming to promote the adoption of electric vehicles.",
+      "difficulty": "Medium"
+    }
+  ]
+}
