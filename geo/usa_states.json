@@ -1,342 +1,459 @@
 [
   {
-    "start_ip": "1.0.0.0",
-    "end_ip": "1.255.255.255",
-    "country": "Australia",
-    "state": "New South Wales"
+    "latitude": 32.8067,
+    "longitude": -86.7911,
+    "region": "Alabama",
+    "country": "United States"
   },
   {
-    "start_ip": "2.0.0.0",
-    "end_ip": "2.255.255.255",
-    "country": "Canada",
-    "state": "Alberta"
+    "latitude": 58.3019,
+    "longitude": -134.4197,
+    "region": "Alaska",
+    "country": "United States"
   },
   {
-    "start_ip": "3.0.0.0",
-    "end_ip": "3.255.255.255",
-    "country": "United States",
-    "state": "Arizona"
+    "latitude": 34.9697,
+    "longitude": -92.3731,
+    "region": "Arkansas",
+    "country": "United States"
   },
   {
-    "start_ip": "4.0.0.0",
-    "end_ip": "4.255.255.255",
-    "country": "United States",
-    "state": "Arkansas"
+    "latitude": 36.7783,
+    "longitude": -119.4179,
+    "region": "California",
+    "country": "United States"
   },
   {
-    "start_ip": "5.0.0.0",
-    "end_ip": "5.255.255.255",
-    "country": "United States",
-    "state": "California"
+    "latitude": 39.5501,
+    "longitude": -105.7821,
+    "region": "Colorado",
+    "country": "United States"
   },
   {
-    "start_ip": "6.0.0.0",
-    "end_ip": "6.255.255.255",
-    "country": "United States",
-    "state": "Colorado"
+    "latitude": 41.6032,
+    "longitude": -73.0877,
+    "region": "Connecticut",
+    "country": "United States"
   },
   {
-    "start_ip": "7.0.0.0",
-    "end_ip": "7.255.255.255",
-    "country": "United States",
-    "state": "Connecticut"
+    "latitude": 38.9072,
+    "longitude": -77.0369,
+    "region": "District of Columbia",
+    "country": "United States"
   },
   {
-    "start_ip": "8.0.0.0",
-    "end_ip": "8.255.255.255",
-    "country": "United States",
-    "state": "Delaware"
+    "latitude": 39.145,
+    "longitude": -75.4189,
+    "region": "Delaware",
+    "country": "United States"
   },
   {
-    "start_ip": "9.0.0.0",
-    "end_ip": "9.255.255.255",
-    "country": "United States",
-    "state": "Florida"
+    "latitude": 27.994402,
+    "longitude": -81.760254,
+    "region": "Florida",
+    "country": "United States"
   },
   {
-    "start_ip": "10.0.0.0",
-    "end_ip": "10.255.255.255",
-    "country": "United States",
-    "state": "Georgia"
+    "latitude": 33.247875,
+    "longitude": -83.441162,
+    "region": "Georgia",
+    "country": "United States"
   },
   {
-    "start_ip": "11.0.0.0",
-    "end_ip": "11.255.255.255",
-    "country": "United States",
-    "state": "Hawaii"
+    "latitude": 21.1098,
+    "longitude": -157.5311,
+    "region": "Hawaii",
+    "country": "United States"
   },
   {
-    "start_ip": "12.0.0.0",
-    "end_ip": "12.255.255.255",
-    "country": "United States",
-    "state": "Idaho"
+    "latitude": 44.2394,
+    "longitude": -114.5103,
+    "region": "Idaho",
+    "country": "United States"
   },
   {
-    "start_ip": "13.0.0.0",
-    "end_ip": "13.255.255.255",
-    "country": "United States",
-    "state": "Illinois"
+    "latitude": 40.3363,
+    "longitude": -89.0022,
+    "region": "Illinois",
+    "country": "United States"
   },
   {
-    "start_ip": "14.0.0.0",
-    "end_ip": "14.255.255.255",
-    "country": "United States",
-    "state": "Indiana"
+    "latitude": 39.8647,
+    "longitude": -86.2604,
+    "region": "Indiana",
+    "country": "United States"
   },
   {
-    "start_ip": "15.0.0.0",
-    "end_ip": "15.255.255.255",
-    "country": "United States",
-    "state": "Iowa"
+    "latitude": 42.0046,
+    "longitude": -93.214,
+    "region": "Iowa",
+    "country": "United States"
   },
   {
-    "start_ip": "16.0.0.0",
-    "end_ip": "16.255.255.255",
-    "country": "United States",
-    "state": "Kansas"
+    "latitude": 38.5111,
+    "longitude": -96.8005,
+    "region": "Kansas",
+    "country": "United States"
   },
   {
-    "start_ip": "17.0.0.0",
-    "end_ip": "17.255.255.255",
-    "country": "United States",
-    "state": "Kentucky"
+    "latitude": 37.8393,
+    "longitude": -84.270018,
+    "region": "Kentucky",
+    "country": "United States"
   },
   {
-    "start_ip": "18.0.0.0",
-    "end_ip": "18.255.255.255",
-    "country": "United States",
-    "state": "Louisiana"
+    "latitude": 31.1801,
+    "longitude": -91.8749,
+    "region": "Louisiana",
+    "country": "United States"
   },
   {
-    "start_ip": "19.0.0.0",
-    "end_ip": "19.255.255.255",
-    "country": "United States",
-    "state": "Maine"
+    "latitude": 45.3763,
+    "longitude": -68.7729,
+    "region": "Maine",
+    "country": "United States"
   },
   {
-    "start_ip": "20.0.0.0",
-    "end_ip": "20.255.255.255",
-    "country": "United States",
-    "state": "Maryland"
+    "latitude": 39.045755,
+    "longitude": -76.641271,
+    "region": "Maryland",
+    "country": "United States"
   },
   {
-    "start_ip": "21.0.0.0",
-    "end_ip": "21.255.255.255",
-    "country": "United States",
-    "state": "Massachusetts"
+    "latitude": 42.4072,
+    "longitude": -71.3824,
+    "region": "Massachusetts",
+    "country": "United States"
   },
   {
-    "start_ip": "22.0.0.0",
-    "end_ip": "22.255.255.255",
-    "country": "United States",
-    "state": "Michigan"
+    "latitude": 44.2685,
+    "longitude": -85.4123,
+    "region": "Michigan",
+    "country": "United States"
   },
   {
-    "start_ip": "23.0.0.0",
-    "end_ip": "23.255.255.255",
-    "country": "United States",
-    "state": "Minnesota"
+    "latitude": 46.7296,
+    "longitude": -94.6859,
+    "region": "Minnesota",
+    "country": "United States"
   },
   {
-    "start_ip": "24.0.0.0",
-    "end_ip": "24.255.255.255",
-    "country": "United States",
-    "state": "Mississippi"
+    "latitude": 32.3547,
+    "longitude": -89.3985,
+    "region": "Mississippi",
+    "country": "United States"
   },
   {
-    "start_ip": "25.0.0.0",
-    "end_ip": "25.255.255.255",
-    "country": "United States",
-    "state": "Missouri"
+    "latitude": 38.4623,
+    "longitude": -92.302,
+    "region": "Missouri",
+    "country": "United States"
   },
   {
-    "start_ip": "26.0.0.0",
-    "end_ip": "26.255.255.255",
-    "country": "United States",
-    "state": "Montana"
+    "latitude": 32.5851,
+    "longitude": -89.8772,
+    "region": "Mississippi",
+    "country": "United States"
   },
   {
-    "start_ip": "27.0.0.0",
-    "end_ip": "27.255.255.255",
-    "country": "United States",
-    "state": "Nebraska"
+    "latitude": 46.9048,
+    "longitude": -110.3261,
+    "region": "Montana",
+    "country": "United States"
   },
   {
-    "start_ip": "28.0.0.0",
-    "end_ip": "28.255.255.255",
-    "country": "United States",
-    "state": "Nevada"
+    "latitude": 41.1254,
+    "longitude": -98.2681,
+    "region": "Nebraska",
+    "country": "United States"
   },
   {
-    "start_ip": "29.0.0.0",
-    "end_ip": "29.255.255.255",
-    "country": "United States",
-    "state": "New Hampshire"
+    "latitude": 38.3135,
+    "longitude": -117.0554,
+    "region": "Nevada",
+    "country": "United States"
   },
   {
-    "start_ip": "30.0.0.0",
-    "end_ip": "30.255.255.255",
-    "country": "United States",
-    "state": "New Jersey"
+    "latitude": 43.0003,
+    "longitude": -71.5811,
+    "region": "New Hampshire",
+    "country": "United States"
   },
   {
-    "start_ip": "31.0.0.0",
-    "end_ip": "31.255.255.255",
-    "country": "United States",
-    "state": "New Mexico"
+    "latitude": 40.2989,
+    "longitude": -74.521,
+    "region": "New Jersey",
+    "country": "United States"
   },
   {
-    "start_ip": "32.0.0.0",
-    "end_ip": "32.255.255.255",
-    "country": "United States",
-    "state": "New York"
+    "latitude": 34.8405,
+    "longitude": -106.2485,
+    "region": "New Mexico",
+    "country": "United States"
   },
   {
-    "start_ip": "33.0.0.0",
-    "end_ip": "33.255.255.255",
-    "country": "United States",
-    "state": "North Carolina"
+    "latitude": 42.1497,
+    "longitude": -74.9384,
+    "region": "New York",
+    "country": "United States"
   },
   {
-    "start_ip": "34.0.0.0",
-    "end_ip": "34.255.255.255",
-    "country": "United States",
-    "state": "North Dakota"
+    "latitude": 35.6301,
+    "longitude": -79.8064,
+    "region": "North Carolina",
+    "country": "United States"
   },
   {
-    "start_ip": "35.0.0.0",
-    "end_ip": "35.255.255.255",
-    "country": "United States",
-    "state": "Ohio"
+    "latitude": 47.5289,
+    "longitude": -99.784,
+    "region": "North Dakota",
+    "country": "United States"
   },
   {
-    "start_ip": "36.0.0.0",
-    "end_ip": "36.255.255.255",
-    "country": "United States",
-    "state": "Oklahoma"
+    "latitude": 40.3888,
+    "longitude": -82.7649,
+    "region": "Ohio",
+    "country": "United States"
   },
   {
-    "start_ip": "37.0.0.0",
-    "end_ip": "37.255.255.255",
-    "country": "United States",
-    "state": "Oregon"
-  },
-{
-    "start_ip": "38.0.0.0",
-    "end_ip": "38.255.255.255",
-    "country": "United States",
-    "state": "Pennsylvania"
+    "latitude": 35.5653,
+    "longitude": -96.9289,
+    "region": "Oklahoma",
+    "country": "United States"
   },
   {
-    "start_ip": "39.0.0.0",
-    "end_ip": "39.255.255.255",
-    "country": "United States",
-    "state": "Rhode Island"
+    "latitude": 44.572,
+    "longitude": -122.0709,
+    "region": "Oregon",
+    "country": "United States"
   },
   {
-    "start_ip": "40.0.0.0",
-    "end_ip": "40.255.255.255",
-    "country": "United States",
-    "state": "South Carolina"
+    "latitude": 40.5908,
+    "longitude": -77.2098,
+    "region": "Pennsylvania",
+    "country": "United States"
   },
   {
-    "start_ip": "41.0.0.0",
-    "end_ip": "41.255.255.255",
-    "country": "United States",
-    "state": "South Dakota"
+    "latitude": 41.6809,
+    "longitude": -71.5118,
+    "region": "Rhode Island",
+    "country": "United States"
   },
   {
-    "start_ip": "42.0.0.0",
-    "end_ip": "42.255.255.255",
-    "country": "United States",
-    "state": "Tennessee"
+    "latitude": 33.8569,
+    "longitude": -80.945,
+    "region": "South Carolina",
+    "country": "United States"
   },
   {
-    "start_ip": "43.0.0.0",
-    "end_ip": "43.255.255.255",
-    "country": "United States",
-    "state": "Texas"
+    "latitude": 44.2998,
+    "longitude": -99.4388,
+    "region": "South Dakota",
+    "country": "United States"
   },
   {
-    "start_ip": "45.0.0.0",
-    "end_ip": "45.255.255.255",
-    "country": "United States",
-    "state": "Utah"
+    "latitude": 35.7478,
+    "longitude": -86.6923,
+    "region": "Tennessee",
+    "country": "United States"
   },
   {
-    "start_ip": "46.0.0.0",
-    "end_ip": "46.255.255.255",
-    "country": "United States",
-    "state": "Vermont"
+    "latitude": 31.0545,
+    "longitude": -97.5635,
+    "region": "Texas",
+    "country": "United States"
   },
   {
-    "start_ip": "47.0.0.0",
-    "end_ip": "47.255.255.255",
-    "country": "United States",
-    "state": "Virginia"
+    "latitude": 40.1505,
+    "longitude": -111.8624,
+    "region": "Utah",
+    "country": "United States"
   },
   {
-    "start_ip": "48.0.0.0",
-    "end_ip": "48.255.255.255",
-    "country": "United States",
-    "state": "Washington"
+    "latitude": 44.0459,
+    "longitude": -72.7107,
+    "region": "Vermont",
+    "country": "United States"
   },
   {
-    "start_ip": "49.0.0.0",
-    "end_ip": "49.255.255.255",
-    "country": "United States",
-    "state": "West Virginia"
+    "latitude": 37.7693,
+    "longitude": -78.1707,
+    "region": "Virginia",
+    "country": "United States"
   },
   {
-    "start_ip": "50.0.0.0",
-    "end_ip": "50.255.255.255",
-    "country": "United States",
-    "state": "Wisconsin"
+    "latitude": 47.4009,
+    "longitude": -121.4905,
+    "region": "Washington",
+    "country": "United States"
   },
   {
-    "start_ip": "51.0.0.0",
-    "end_ip": "51.255.255.255",
-    "country": "United States",
-    "state": "Wyoming"
+    "latitude": 38.4912,
+    "longitude": -80.9542,
+    "region": "West Virginia",
+    "country": "United States"
   },
   {
-    "start_ip": "192.168.0.0",
-    "end_ip": "192.168.255.255",
-    "country": "Private Network",
-    "state": "N/A"
+    "latitude": 44.2685,
+    "longitude": -89.6165,
+    "region": "Wisconsin",
+    "country": "United States"
   },
   {
-    "start_ip": "10.0.0.0",
-    "end_ip": "10.255.255.255",
-    "country": "Private Network",
-    "state": "N/A"
+    "latitude": 42.756,
+    "longitude": -107.3025,
+    "region": "Wyoming",
+    "country": "United States"
   },
   {
-    "start_ip": "172.16.0.0",
-    "end_ip": "172.31.255.255",
-    "country": "Private Network",
-    "state": "N/A"
+    "latitude": 51.5074,
+    "longitude": -0.1278,
+    "region": "London",
+    "country": "United Kingdom"
   },
   {
-    "start_ip": "200.0.0.0",
-    "end_ip": "200.255.255.255",
-    "country": "Brazil",
-    "state": "N/A"
+    "latitude": 52.5200,
+    "longitude": 13.4050,
+    "region": "Berlin",
+    "country": "Germany"
   },
   {
-    "start_ip": "180.0.0.0",
-    "end_ip": "180.255.255.255",
-    "country": "China",
-    "state": "N/A"
-  }
-,
+    "latitude": 40.7128,
+    "longitude": -74.0060,
+    "region": "New York",
+    "country": "United States"
+  },
   {
-    "start_ip": "1.0.0.0",
-    "end_ip": "27.255.255.255",
-    "country": "Australia",
-    "state": "N/A"
+    "latitude": 35.6895,
+    "longitude": 139.6917,
+    "region": "Tokyo",
+    "country": "Japan"
+  },
+  {
+    "latitude": 48.8566,
+    "longitude": 2.3522,
+    "region": "Paris",
+    "country": "France"
+  },
+  {
+    "latitude": 41.9028,
+    "longitude": 12.4964,
+    "region": "Rome",
+    "country": "Italy"
+  },
+  {
+    "latitude": 52.3667,
+    "longitude": 4.8945,
+    "region": "Amsterdam",
+    "country": "Netherlands"
+  },
+  {
+    "latitude": -34.6037,
+    "longitude": -58.3816,
+    "region": "Buenos Aires",
+    "country": "Argentina"
+  },
+  {
+    "latitude": 47.3769,
+    "longitude": 8.5417,
+    "region": "Zurich",
+    "country": "Switzerland"
+  },
+  {
+    "latitude": 35.6895,
+    "longitude": 51.3896,
+    "region": "Tehran",
+    "country": "Iran"
+  },
+  {
+    "latitude": 55.7558,
+    "longitude": 37.6173,
+    "region": "Moscow",
+    "country": "Russia"
+  },
+  {
+    "latitude": -33.8688,
+    "longitude": 151.2093,
+    "region": "Sydney",
+    "country": "Australia"
+  },
+  {
+    "latitude": 23.6345,
+    "longitude": -102.5528,
+    "region": "Mexico City",
+    "country": "Mexico"
+  },
+  {
+    "latitude": 50.8503,
+    "longitude": 4.3517,
+    "region": "Brussels",
+    "country": "Belgium"
+  },
+  {
+    "latitude": 60.1699,
+    "longitude": 24.9384,
+    "region": "Helsinki",
+    "country": "Finland"
+  },
+  {
+    "latitude": 56.2639,
+    "longitude": 9.5018,
+    "region": "Aarhus",
+    "country": "Denmark"
+  },
+  {
+    "latitude": -15.7801,
+    "longitude": -47.9292,
+    "region": "Brasilia",
+    "country": "Brazil"
+  },
+  {
+    "latitude": 36.2048,
+    "longitude": 138.2529,
+    "region": "Nagano",
+    "country": "Japan"
+  },
+  {
+    "latitude": 41.8719,
+    "longitude": 12.5674,
+    "region": "Vatican City",
+    "country": "Vatican City"
+  },
+  {
+    "latitude": -25.2744,
+    "longitude": 133.7751,
+    "region": "Alice Springs",
+    "country": "Australia"
+  },
+  {
+    "latitude": 43.7384,
+    "longitude": 7.4246,
+    "region": "Nice",
+    "country": "Monaco"
+  },
+  {
+    "latitude": 52.2297,
+    "longitude": 21.0122,
+    "region": "Warsaw",
+    "country": "Poland"
+  },
+  {
+    "latitude": 48.1351,
+    "longitude": 11.5820,
+    "region": "Munich",
+    "country": "Germany"
+  },
+  {
+    "latitude": 40.4637,
+    "longitude": -3.7492,
+    "region": "Madrid",
+    "country": "Spain"
+  },
+  {
+    "latitude": 46.8182,
+    "longitude": 8.2275,
+    "region": "Lucerne",
+    "country": "Switzerland"
   }
 ]
-
-
 
