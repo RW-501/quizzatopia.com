@@ -1,0 +1,159 @@
+{
+  "quizName": "Friends TV Show Quiz",
+  "quizCode": "FRIENDS123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "TV",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the name of Ross and Monica's sister?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Rachel",
+        "Phoebe",
+        "Janice",
+        "Jill"
+      ],
+      "answer": "Jill",
+      "explanation": "Jill is the name of Ross and Monica's sister. She is portrayed by Reese Witherspoon in the show.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which character famously says 'How you doin?'",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Joey",
+        "Ross",
+        "Chandler",
+        "Gunther"
+      ],
+      "answer": "Joey",
+      "explanation": "Joey Tribbiani, played by Matt LeBlanc, is known for his catchphrase 'How you doin?' when flirting with women.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the name of Ross' second wife?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Carol",
+        "Janice",
+        "Emily",
+        "Monica"
+      ],
+      "answer": "Emily",
+      "explanation": "Ross marries Emily Waltham, played by Helen Baxendale, in London. Their marriage faces many challenges throughout the series.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the name of Phoebe's most popular song?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Smelly Cat",
+        "Phoebe's Anthem",
+        "I'll Be There for You",
+        "Central Perk"
+      ],
+      "answer": "Smelly Cat",
+      "explanation": "Phoebe Buffay, portrayed by Lisa Kudrow, is known for her song 'Smelly Cat,' which becomes a recurring theme throughout the show.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the name of Joey's stuffed penguin?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hugsy",
+        "Waddle",
+        "Pingu",
+        "Mr. Penguin"
+      ],
+      "answer": "Hugsy",
+      "explanation": "Hugsy is Joey's beloved stuffed penguin that he holds dear throughout the series.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the name of Ross and Monica's dog?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Marcel",
+        "Chandler",
+        "Joey",
+        "Phoebe"
+      ],
+      "answer": "Chandler",
+      "explanation": "Ross and Monica had a dog named Chandler when they were younger. Chandler Bing is also the name of one of the main characters.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What instrument does Ross play?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Guitar",
+        "Drums",
+        "Keyboard",
+        "Flute"
+      ],
+      "answer": "Keyboard",
+      "explanation": "Ross Geller, played by David Schwimmer, is shown playing the keyboard at various points throughout the series.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Where does Joey Tribbiani originally come from?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Brooklyn",
+        "Queens",
+        "Staten Island",
+        "The Bronx"
+      ],
+      "answer": "Queens",
+      "explanation": "Joey Tribbiani is originally from Queens, New York. He often mentions his Queens upbringing throughout the show.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the name of the coffee shop where the friends often hang out?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Central Perk",
+        "Central Park",
+        "Perk Central",
+        "Friends Cafe"
+      ],
+      "answer": "Central Perk",
+      "explanation": "Central Perk is the name of the coffee shop where the friends often gather to socialize and have conversations.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which character works as a paleontologist?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ross",
+        "Chandler",
+        "Joey",
+        "Phoebe"
+      ],
+      "answer": "Ross",
+      "explanation": "Ross Geller works as a paleontologist and is passionate about dinosaurs and fossils.",
+      "difficulty": "Medium"
+    }
+  ]
+}
