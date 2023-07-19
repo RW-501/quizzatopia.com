@@ -1,0 +1,159 @@
+{
+  "quizName": "Decision Trees Quiz",
+  "quizCode": "DECISIONTREES123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Technology",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is a Decision Tree?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A flowchart-like structure for making decisions",
+        "A tree-shaped data structure",
+        "A visual representation of machine learning models",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "A Decision Tree is a flowchart-like structure, represented as a tree-shaped data structure, that is used for making decisions in machine learning. It can be visually represented and consists of nodes and branches.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the main goal of a Decision Tree algorithm?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To create a model that predicts target variables based on input features",
+        "To optimize the performance of the model by reducing errors",
+        "To minimize the depth of the tree for efficiency",
+        "To handle missing values in the dataset"
+      ],
+      "answer": "To create a model that predicts target variables based on input features",
+      "explanation": "The main goal of a Decision Tree algorithm is to create a model that can predict target variables (such as class labels or continuous values) based on input features or attributes.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "How does a Decision Tree make decisions?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "By splitting the data based on attribute values",
+        "By calculating probabilities and making statistical inferences",
+        "By performing feature selection",
+        "By using reinforcement learning techniques"
+      ],
+      "answer": "By splitting the data based on attribute values",
+      "explanation": "A Decision Tree makes decisions by splitting the data based on attribute values at each internal node, allowing it to create branches and determine the path to take based on the input data.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the criterion used in Decision Trees to measure the quality of a split?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Information Gain",
+        "Gini Index",
+        "Entropy",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Decision Trees use multiple criteria to measure the quality of a split, including Information Gain, Gini Index, and Entropy. These measures help in determining the best split for creating decision nodes.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is pruning in the context of Decision Trees?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The process of removing unnecessary branches from the tree",
+        "The process of adding more branches to the tree",
+        "The process of selecting the best attribute for splitting",
+        "The process of handling missing values in the dataset"
+      ],
+      "answer": "The process of removing unnecessary branches from the tree",
+      "explanation": "Pruning is the process of removing unnecessary branches from the Decision Tree to reduce overfitting and improve the model's generalization ability. It helps in creating a simpler and more accurate tree.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the maximum depth of a Decision Tree?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The maximum number of levels in the tree",
+        "The maximum number of nodes in the tree",
+        "The maximum number of features considered for splitting",
+        "The maximum number of data points in the dataset"
+      ],
+      "answer": "The maximum number of levels in the tree",
+      "explanation": "The maximum depth of a Decision Tree refers to the maximum number of levels or layers it can have. It determines the complexity and capacity of the model.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the process of traversing a Decision Tree from the root to a leaf node called?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tree traversal",
+        "Pathfinding",
+        "Decision making",
+        "Inference"
+      ],
+      "answer": "Tree traversal",
+      "explanation": "The process of traversing a Decision Tree from the root node to a leaf node, following the path determined by attribute values, is known as tree traversal. It helps in making decisions and reaching a prediction or classification.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the term used for Decision Trees with multiple levels of decision nodes?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Deep Decision Trees",
+        "Shallow Decision Trees",
+        "Wide Decision Trees",
+        "Narrow Decision Trees"
+      ],
+      "answer": "Deep Decision Trees",
+      "explanation": "Decision Trees with multiple levels of decision nodes, resulting in a longer path from the root to leaf nodes, are referred to as Deep Decision Trees. They are more complex and have a higher capacity for modeling data.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which attribute selection measure aims to maximize the separation between classes in Decision Trees?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gini Index",
+        "Information Gain",
+        "Entropy",
+        "Accuracy"
+      ],
+      "answer": "Gini Index",
+      "explanation": "The Gini Index is an attribute selection measure used in Decision Trees to maximize the separation between classes or target variables. It quantifies the impurity or diversity of a node's class distribution.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the term used for Decision Trees that include categorical variables as split criteria?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Categorical Decision Trees",
+        "Ordinal Decision Trees",
+        "Continuous Decision Trees",
+        "All of the above"
+      ],
+      "answer": "Categorical Decision Trees",
+      "explanation": "Categorical Decision Trees are Decision Trees that include categorical variables as split criteria. They can handle both categorical and numerical attributes in the data, making them more versatile for different types of datasets.",
+      "difficulty": "Medium"
+    }
+  ]
+}
