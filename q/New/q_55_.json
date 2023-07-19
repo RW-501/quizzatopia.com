@@ -1,0 +1,230 @@
+{
+  "quizName": "Quiz on Louisiana",
+  "quizCode": "LA2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Louisiana!",
+  "quizTags": "Louisiana, Geography, States, USA",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Louisiana is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Pelican",
+        "Mardi Gras",
+        "Cajun",
+        "Bayou"
+      ],
+      "answer": "Pelican",
+      "explanation": "Louisiana is known as the Pelican State, and the brown pelican is the state bird and symbol of the state.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Louisiana is bordered by the Pacific Ocean.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "False",
+      "explanation": "False. Louisiana is not bordered by the Pacific Ocean; it is bordered by the Gulf of Mexico to the south.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of Louisiana?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "New Orleans",
+        "Baton Rouge",
+        "Shreveport",
+        "Lafayette"
+      ],
+      "answer": "Baton Rouge",
+      "explanation": "The capital city of Louisiana is Baton Rouge, which is also the second-largest city in the state.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous river forms the eastern border of Louisiana with the state of Mississippi?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mississippi River",
+        "Ohio River",
+        "Tennessee River",
+        "Atchafalaya River"
+      ],
+      "answer": "Mississippi River",
+      "explanation": "The Mississippi River forms the eastern border of Louisiana with the state of Mississippi.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of Louisiana?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Mardi Gras State",
+        "The Pelican State",
+        "The Bayou State",
+        "The Jazz State"
+      ],
+      "answer": "The Pelican State",
+      "explanation": "Louisiana is often referred to as The Pelican State due to its association with the brown pelican, the state bird.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous festival, known for its vibrant parades and celebrations, is held annually in New Orleans, Louisiana?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Carnival",
+        "Oktoberfest",
+        "Dia de los Muertos",
+        "Chinese New Year"
+      ],
+      "answer": "Carnival",
+      "explanation": "Carnival, also known as Mardi Gras, is a famous festival celebrated annually in New Orleans and other parts of Louisiana, featuring vibrant parades, music, and colorful costumes.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state bird of Louisiana?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Northern Cardinal",
+        "Brown Pelican",
+        "American Goldfinch",
+        "Eastern Bluebird"
+      ],
+      "answer": "Brown Pelican",
+      "explanation": "The official state bird of Louisiana is the Brown Pelican, a symbol of the state's abundant wildlife and coastal habitats.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous wetlands in southern Louisiana are known for their unique ecosystem and are often referred to as the 'America's Wetland'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Everglades",
+        "Great Dismal Swamp",
+        "Okefenokee Swamp",
+        "Atchafalaya Basin"
+      ],
+      "answer": "Atchafalaya Basin",
+      "explanation": "The Atchafalaya Basin, located in southern Louisiana, is a vast wetland known for its unique ecosystem and is often referred to as 'America's Wetland.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous music genre, characterized by its lively and rhythmic style, has its roots in Louisiana and is often associated with New Orleans?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Country",
+        "Blues",
+        "Jazz",
+        "Rock and Roll"
+      ],
+      "answer": "Jazz",
+      "explanation": "Jazz, a genre of music with its origins in New Orleans, Louisiana, is characterized by its lively and improvisational style.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: Louisiana is home to the largest saltwater lake in the United States, the Great Salt Lake.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "False",
+      "explanation": "False. The Great Salt Lake is located in Utah, not in Louisiana. However, Louisiana is home to the largest freshwater lake in the state, Lake Pontchartrain.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous French Quarter in New Orleans is known for its historic architecture, lively nightlife, and cultural significance?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "French Riviera",
+        "French Lick",
+        "French Guiana",
+        "French Market"
+      ],
+      "answer": "French Market",
+      "explanation": "The French Market, located in the French Quarter of New Orleans, is a historic market known for its lively atmosphere, unique shops, and cultural significance.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous bayou, located in southern Louisiana, is known for its unique Cajun culture and swamp tours?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Chesapeake Bay",
+        "Mobile Bay",
+        "Bayou Lafourche",
+        "Bayou Teche"
+      ],
+      "answer": "Bayou Lafourche",
+      "explanation": "Bayou Lafourche, located in southern Louisiana, is known for its unique Cajun culture, beautiful scenery, and popular swamp tours.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the famous dish, considered a staple of Louisiana cuisine, that is made with rice, vegetables, and various meats or seafood?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gumbo",
+        "Jambalaya",
+        "Etouffee",
+        "Crawfish Boil"
+      ],
+      "answer": "Jambalaya",
+      "explanation": "Jambalaya is a famous dish in Louisiana cuisine, made with rice, vegetables, and a variety of meats or seafood, often seasoned with Cajun or Creole spices.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous antebellum mansion, located near New Orleans, is known for its grand architecture and beautiful gardens?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Biltmore Estate",
+        "Monticello",
+        "Vizcaya Museum and Gardens",
+        "Oak Alley Plantation"
+      ],
+      "answer": "Oak Alley Plantation",
+      "explanation": "Oak Alley Plantation, located on the Mississippi River near New Orleans, is a famous antebellum mansion known for its stunning architecture, lined with a double row of oak trees leading to the entrance.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous festival, celebrated in many Louisiana communities, marks the beginning of the Christian observance of Lent with parades, music, and colorful masks?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cinco de Mayo",
+        "Carnival",
+        "St. Patrick's Day",
+        "Easter"
+      ],
+      "answer": "Carnival",
+      "explanation": "Carnival, also known as Mardi Gras, is a famous festival celebrated in many Louisiana communities, marking the beginning of the Christian observance of Lent with lively parades, music, and colorful masks and costumes.",
+      "difficulty": "Medium"
+    }
+  ]
+}
