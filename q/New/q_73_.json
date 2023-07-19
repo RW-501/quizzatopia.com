@@ -1,0 +1,231 @@
+{
+  "quizName": "Quiz on Oklahoma",
+  "quizCode": "OK2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Oklahoma!",
+  "quizTags": "Oklahoma, Geography, States, USA",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the capital city of Oklahoma?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tulsa",
+        "Oklahoma City",
+        "Norman",
+        "Edmond"
+      ],
+      "answer": "Oklahoma City",
+      "explanation": "The capital city of Oklahoma is Oklahoma City, known for its vibrant arts and culture scene, as well as its cowboy heritage.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: Oklahoma is known as the 'Sooner State.'",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [],
+      "answer": "True",
+      "explanation": "True. Oklahoma is known as the 'Sooner State' because of the settlers who staked their claims on the land sooner than they were supposed to during the Land Run of 1889.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the nickname of Oklahoma?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Lone Star State",
+        "The Sunshine State",
+        "The Sooner State",
+        "The Garden State"
+      ],
+      "answer": "The Sooner State",
+      "explanation": "Oklahoma is often referred to as 'The Sooner State' due to the settlers who staked their claims on the land sooner than they were supposed to during the Land Run of 1889.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous national park, located in Oklahoma, preserves the remnants of ancient mountains and is home to unique geological formations?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yellowstone National Park",
+        "Grand Canyon National Park",
+        "Arches National Park",
+        "Chickasaw National Recreation Area"
+      ],
+      "answer": "Chickasaw National Recreation Area",
+      "explanation": "Chickasaw National Recreation Area, located in Oklahoma, preserves the remnants of ancient mountains and is known for its unique geological formations, mineral springs, and recreational opportunities.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which famous musical, set in the territory of Oklahoma just before statehood, features songs like 'Oh, What a Beautiful Mornin' and 'Oklahoma!'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Les Misérables",
+        "West Side Story",
+        "The Sound of Music",
+        "Oklahoma!"
+      ],
+      "answer": "Oklahoma!",
+      "explanation": "Oklahoma!, a famous musical by Rodgers and Hammerstein, is set in the territory of Oklahoma just before statehood. It features popular songs like 'Oh, What a Beautiful Mornin' and 'Oklahoma!'.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous city in Oklahoma is known as the 'Oil Capital of the World'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tulsa",
+        "Oklahoma City",
+        "Norman",
+        "Edmond"
+      ],
+      "answer": "Tulsa",
+      "explanation": "Tulsa, a famous city in Oklahoma, is known as the 'Oil Capital of the World' due to its history of oil production and the presence of major oil companies.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state bird of Oklahoma?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Northern Cardinal",
+        "Scissor-tailed Flycatcher",
+        "Eastern Bluebird",
+        "American Goldfinch"
+      ],
+      "answer": "Scissor-tailed Flycatcher",
+      "explanation": "The official state bird of Oklahoma is the Scissor-tailed Flycatcher, a beautiful bird known for its long, scissor-like tail feathers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous lake, located in Oklahoma, is one of the largest man-made lakes in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lake Superior",
+        "Lake Tahoe",
+        "Lake Texoma",
+        "Lake Michigan"
+      ],
+      "answer": "Lake Texoma",
+      "explanation": "Lake Texoma, located on the border of Oklahoma and Texas, is one of the largest man-made lakes in the United States. It offers recreational activities such as fishing, boating, and camping.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous American football team, based in Oklahoma, has won multiple national championships and is known for its passionate fanbase?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Oklahoma Sooners",
+        "Ohio State Buckeyes",
+        "Alabama Crimson Tide",
+        "Clemson Tigers"
+      ],
+      "answer": "Oklahoma Sooners",
+      "explanation": "The Oklahoma Sooners, a college football team representing the University of Oklahoma, have won multiple national championships and have a passionate fanbase known for their 'Boomer Sooner' chant.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which famous historical site, located in Oklahoma, preserves the remains of an ancient Native American city?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mesa Verde National Park",
+        "Chaco Culture National Historical Park",
+        "Cahokia Mounds State Historic Site",
+        "Spiro Mounds Archaeological Center"
+      ],
+      "answer": "Spiro Mounds Archaeological Center",
+      "explanation": "Spiro Mounds Archaeological Center, located in Oklahoma, preserves the remains of an ancient Native American city and is considered one of the most important archaeological sites in the United States.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous American folk hero, known for his sharpshooting skills and as a performer in Buffalo Bill's Wild West show, was born in Iowa but grew up in Oklahoma?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Davy Crockett",
+        "Annie Oakley",
+        "Wild Bill Hickok",
+        "Calamity Jane"
+      ],
+      "answer": "Annie Oakley",
+      "explanation": "Annie Oakley, a famous American folk hero and sharpshooter, was born in Iowa but grew up in Ohio. She gained fame as a performer in Buffalo Bill's Wild West show.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous meteorological event, often referred to as 'The Dust Bowl,' affected Oklahoma and other Great Plains states in the 1930s?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hurricane Katrina",
+        "Tornado Alley",
+        "Derecho",
+        "Dust Bowl"
+      ],
+      "answer": "Dust Bowl",
+      "explanation": "The Dust Bowl was a severe drought and dust storm event that affected Oklahoma and other Great Plains states in the 1930s. It resulted in significant agricultural and environmental damage.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which famous river, a major tributary of the Mississippi River, forms part of Oklahoma's eastern border?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mississippi River",
+        "Colorado River",
+        "Missouri River",
+        "Arkansas River"
+      ],
+      "answer": "Arkansas River",
+      "explanation": "The Arkansas River, a major tributary of the Mississippi River, forms part of Oklahoma's eastern border. It has played a significant role in the state's history and economy.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous museum, located in Oklahoma City, is dedicated to the history and culture of Native American tribes in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Smithsonian National Museum of Natural History",
+        "National Museum of the American Indian",
+        "National Cowboy & Western Heritage Museum",
+        "Gilcrease Museum"
+      ],
+      "answer": "National Cowboy & Western Heritage Museum",
+      "explanation": "The National Cowboy & Western Heritage Museum, located in Oklahoma City, showcases the history and culture of Native American tribes, as well as the cowboy and western heritage of the United States.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous western film, directed by Clint Eastwood and set in Oklahoma during the Great Depression, tells the story of a retired outlaw seeking redemption?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "True Grit",
+        "Unforgiven",
+        "The Searchers",
+        "No Country for Old Men"
+      ],
+      "answer": "Unforgiven",
+      "explanation": "Unforgiven, a famous western film directed by Clint Eastwood, is set in Oklahoma during the Great Depression. It tells the story of a retired outlaw seeking redemption.",
+      "difficulty": "Medium"
+    }
+  ]
+}
