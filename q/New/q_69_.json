@@ -1,0 +1,228 @@
+{
+  "quizName": "Quiz on New York",
+  "quizCode": "NY2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of New York!",
+  "quizTags": "New York, Geography, States, USA",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "New York is often referred to as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Empire",
+        "Big Apple",
+        "Liberty",
+        "Concrete Jungle"
+      ],
+      "answer": "Empire",
+      "explanation": "New York is often referred to as the Empire State, a nickname that symbolizes its economic prowess and historical significance.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: New York City is the capital of New York.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [],
+      "answer": "False",
+      "explanation": "False. While New York City is the largest city in New York and one of the most populous cities in the United States, the capital of New York State is Albany.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of New York?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Buffalo",
+        "Rochester",
+        "Syracuse",
+        "Albany"
+      ],
+      "answer": "Albany",
+      "explanation": "The capital city of New York is Albany, located along the Hudson River.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous natural wonder, located in upstate New York, forms a group of waterfalls that attract millions of visitors each year?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Niagara Falls",
+        "Victoria Falls",
+        "Iguazu Falls",
+        "Angel Falls"
+      ],
+      "answer": "Niagara Falls",
+      "explanation": "Niagara Falls, located on the border between New York and Canada, is a famous group of waterfalls that draws millions of tourists each year.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of New York City?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Big Easy",
+        "The Windy City",
+        "The Big Apple",
+        "The City of Angels"
+      ],
+      "answer": "The Big Apple",
+      "explanation": "New York City is often referred to as The Big Apple, a nickname that became popular in the 1920s and symbolizes the city's significance and allure.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which famous island, located in New York Harbor, is home to the Statue of Liberty?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ellis Island",
+        "Governors Island",
+        "Liberty Island",
+        "Roosevelt Island"
+      ],
+      "answer": "Liberty Island",
+      "explanation": "Liberty Island, situated in New York Harbor, is the location of the Statue of Liberty, a symbol of freedom and democracy.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the official state bird of New York?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Eastern Bluebird",
+        "American Goldfinch",
+        "Eastern Goldfinch",
+        "Eastern Blue Jay"
+      ],
+      "answer": "Eastern Bluebird",
+      "explanation": "The official state bird of New York is the Eastern Bluebird, a small and colorful songbird found across the state.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous waterfall, located in the Finger Lakes region of New York, is one of the tallest waterfalls in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Multnomah Falls",
+        "Yosemite Falls",
+        "Havasu Falls",
+        "Taughannock Falls"
+      ],
+      "answer": "Taughannock Falls",
+      "explanation": "Taughannock Falls, located in Taughannock Falls State Park in New York, is one of the tallest waterfalls in the United States, plunging approximately 215 feet.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous national park, shared with the state of New Jersey, is known for its close proximity to New York City and its diverse ecosystems?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yellowstone National Park",
+        "Acadia National Park",
+        "Everglades National Park",
+        "Gateway National Recreation Area"
+      ],
+      "answer": "Gateway National Recreation Area",
+      "explanation": "Gateway National Recreation Area, a unit of the National Park Service, is a popular park located near New York City and New Jersey. It features diverse ecosystems and historic sites.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: The iconic Times Square, known for its bright billboards and Broadway theaters, is located in downtown Manhattan, New York City.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],      "answer": "True",
+      "explanation": "True. Times Square, a famous commercial and entertainment hub, is located in the borough of Manhattan in New York City.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which famous university, located in Ithaca, New York, is a prestigious Ivy League institution known for its top-notch education?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Stanford University",
+        "Harvard University",
+        "Yale University",
+        "Cornell University"
+      ],
+      "answer": "Cornell University",
+      "explanation": "Cornell University, located in Ithaca, New York, is a prestigious Ivy League university renowned for its academic excellence and diverse programs.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which famous museum, located in New York City, is one of the largest and most visited art museums in the world?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Louvre",
+        "The British Museum",
+        "The Metropolitan Museum of Art",
+        "The Guggenheim Museum"
+      ],
+      "answer": "The Metropolitan Museum of Art",
+      "explanation": "The Metropolitan Museum of Art, commonly known as The Met, is a world-renowned museum located in New York City. It houses an extensive collection of art spanning thousands of years.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the famous avenue in New York City, often referred to as 'The Great White Way,' known for its theaters and Broadway shows?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Fifth Avenue",
+        "Madison Avenue",
+        "Broadway",
+        "Park Avenue"
+      ],
+      "answer": "Broadway",
+      "explanation": "Broadway is a famous avenue in New York City known for its theaters and Broadway shows. It is often referred to as 'The Great White Way' due to the bright lights of the theater marquees.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous landmark, located in New York City, is a historic transportation hub and a symbol of engineering and architectural excellence?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Golden Gate Bridge",
+        "The Eiffel Tower",
+        "The Great Wall of China",
+        "The Brooklyn Bridge"
+      ],
+      "answer": "The Brooklyn Bridge",
+      "explanation": "The Brooklyn Bridge, spanning the East River between Manhattan and Brooklyn, is a famous landmark and an iconic symbol of engineering and architectural achievement.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous park, located in New York City, is one of the most visited urban parks in the United States and is known for its expansive green spaces and iconic landmarks?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Central Park",
+        "Golden Gate Park",
+        "Griffith Park",
+        "Millennium Park"
+      ],
+      "answer": "Central Park",
+      "explanation": "Central Park, situated in the heart of Manhattan, New York City, is one of the most visited urban parks in the United States. It offers expansive green spaces, recreational activities, and iconic landmarks.",
+      "difficulty": "Medium"
+    }
+  ]
+}
