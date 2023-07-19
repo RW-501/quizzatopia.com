@@ -1077,7 +1077,7 @@ font-size: 30px;
 };
 
 
-
+var num = 0;
 	
 const db = firebase.firestore();
 const quizContainer = document.getElementById('updated_Quizzez');
@@ -1119,7 +1119,7 @@ async function fetchQuizzesFromDB(page) {
   let html = '';
 
   quizList.forEach((quizData, index) => {
-    let num = startAtIndex + index + 1;
+ num = startAtIndex + index + 1;
     let stars = ratingToStars(quizData.quizRatingDB);
 
     const quizHtml = `
