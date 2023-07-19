@@ -1054,10 +1054,15 @@ async function fetchQuizzesFromDB() {
 	
 	
   // Fetch the quizzes collection
-  const querySnapshot = await db.collection('quizzes').get();
+  const querySnapshot = await db.collection('quizzes')
+  .orderBy('quizCreatedDateDB', 'desc')
+  .orderBy('quizRatingDB', 'desc')
+  .orderBy('quizFinishedCount', 'desc')
+  .orderBy('quizStartedCount', 'desc')
+  .get();
 
   // Initialize the HTML string
-  let html = '<p><h2>Updated Quizzes</h2></p>';
+  let html = 'Updated Quizzes</h2></p>';
 
   // Iterate over each quiz document
   querySnapshot.forEach((doc) => {
@@ -1089,7 +1094,7 @@ num += 1;
   });
 
 	// Update the quizContainer with the generated HTML
-  document.getElementById('updated_Quizzez').innerHTML = "<h2>"+num+"</h2> " +html;
+  document.getElementById('updated_Quizzez').innerHTML = "<p><h2>"+num+" " +html;
 }
 
 // Call the function to fetch and populate the quiz data
