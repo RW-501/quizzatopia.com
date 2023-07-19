@@ -1,0 +1,233 @@
+{
+  "quizName": "Quiz on Arkansas",
+  "quizCode": "AR2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge about the state of Arkansas!",
+  "quizTags": "Arkansas, Geography, States, USA",
+
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Arkansas is known as the ________ State.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "Natural",
+        "Diamond",
+        "Rice",
+        "Land of Opportunity"
+      ],
+      "answer": "Natural",
+      "explanation": "Arkansas is known as the Natural State, highlighting its scenic beauty and abundant natural resources.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "True or False: The Ozark Mountains are located in the western region of Arkansas.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. The Ozark Mountains are situated in the northwestern region of Arkansas.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital city of Arkansas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Little Rock",
+        "Fayetteville",
+        "Fort Smith",
+        "Jonesboro"
+      ],
+      "answer": "Little Rock",
+      "explanation": "The capital city of Arkansas is Little Rock.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which river forms Arkansas's eastern border with the state of Mississippi?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Colorado River",
+        "Missouri River",
+        "Mississippi River",
+        "Arkansas River"
+      ],
+      "answer": "Mississippi River",
+      "explanation": "The Mississippi River forms Arkansas's eastern border with the state of Mississippi.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the nickname of Arkansas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Natural State",
+        "The Granite State",
+        "The Bayou State",
+        "The Palmetto State"
+      ],
+      "answer": "The Natural State",
+      "explanation": "Arkansas is often referred to as The Natural State due to its scenic landscapes and natural beauty.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which U.S. president was born in Arkansas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "John F. Kennedy",
+        "Bill Clinton",
+        "George Washington",
+        "Abraham Lincoln"
+      ],
+      "answer": "Bill Clinton",
+      "explanation": "Bill Clinton, the 42nd President of the United States, was born in Hope, Arkansas.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the highest point in Arkansas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mount Mitchell",
+        "Mount Elbert",
+        "Mount Magazine",
+        "Mount Washington"
+      ],
+      "answer": "Mount Magazine",
+      "explanation": "Mount Magazine, with an elevation of 2,753 feet (839 meters), is the highest point in Arkansas.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which of the following is a famous diamond mine in Arkansas where visitors can search for diamonds?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yellowstone Diamond Mine",
+        "Crater of Diamonds State Park",
+        "Emerald Hollow Mine",
+        "Diamond Hill Mine"
+      ],
+      "answer": "Crater of Diamonds State Park",
+      "explanation": "Crater of Diamonds State Park in Arkansas is a famous diamond mine where visitors can search for diamonds.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Arkansas is home to the only active diamond mine in the United States. True or False?",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Crater of Diamonds State Park in Arkansas is the only active diamond mine in the United States where the public can search for diamonds.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which famous river runs through the city of Little Rock in Arkansas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mississippi River",
+        "Arkansas River",
+        "Colorado River",
+        "Ohio River"
+      ],
+      "answer": "Arkansas River",
+      "explanation": "The Arkansas River runs through the city of Little Rock, the capital of Arkansas.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the official state bird of Arkansas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Northern Mockingbird",
+        "Eastern Bluebird",
+        "Cardinal",
+        "Mockingjay"
+      ],
+      "answer": "Northern Mockingbird",
+      "explanation": "The Northern Mockingbird is the official state bird of Arkansas.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Arkansas is bordered by six other states. Which state does NOT share a border with Arkansas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Texas",
+        "Tennessee",
+        "Oklahoma",
+        "Louisiana"
+      ],
+      "answer": "Tennessee",
+      "explanation": "Arkansas does not share a border with Tennessee. It is bordered by Texas, Oklahoma, Louisiana, Mississippi, Tennessee, and Missouri.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the famous hot spring located in Hot Springs, Arkansas, known for its therapeutic properties?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hot Springs Resort",
+        "Warm Springs",
+        "Thermal Springs",
+        "Bathhouse Row"
+      ],
+      "answer": "Bathhouse Row",
+      "explanation": "Hot Springs in Arkansas is famous for its thermal springs, and the area with several historic bathhouses is known as Bathhouse Row.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous cave system in Arkansas is a popular tourist attraction and is known as 'The Natural Entrance to Subterranean Adventure'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Carlsbad Caverns",
+        "Mammoth Cave",
+        "Blanchard Springs Caverns",
+        "Ruby Falls"
+      ],
+      "answer": "Blanchard Springs Caverns",
+      "explanation": "Blanchard Springs Caverns in Arkansas is a popular tourist attraction and is known as 'The Natural Entrance to Subterranean Adventure.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which famous folk musician known for his songs such as 'This Land Is Your Land' was born in Okemah, Oklahoma, but spent part of his childhood in Poteau, Arkansas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Woody Guthrie",
+        "Bob Dylan",
+        "Johnny Cash",
+        "Pete Seeger"
+      ],
+      "answer": "Woody Guthrie",
+      "explanation": "Woody Guthrie, the influential folk musician, was born in Okemah, Oklahoma, but spent part of his childhood in Poteau, Arkansas.",
+      "difficulty": "Medium"
+    }
+  ]
+}
