@@ -1,0 +1,236 @@
+{
+  "quizName": "Black History Quiz",
+  "quizCode": "BLACKHISTORY2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "History",
+  "quizDescription": "Test your knowledge of Black History!",
+  "quizTags": "Black History, Civil Rights, African American, Equality",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who is known as the 'Father of Black History'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Martin Luther King Jr.",
+        "Malcolm X",
+        "Rosa Parks",
+        "Carter G. Woodson"
+      ],
+      "answer": "Carter G. Woodson",
+      "explanation": "Carter G. Woodson is known as the 'Father of Black History' for his contributions to the study and celebration of Black history.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Who was the first African American to serve as President of the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Barack Obama",
+        "Nelson Mandela",
+        "Frederick Douglass",
+        "Thurgood Marshall"
+      ],
+      "answer": "Barack Obama",
+      "explanation": "Barack Obama was the first African American to serve as President of the United States, serving two terms from 2009 to 2017.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which landmark Supreme Court case ended racial segregation in public schools?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Brown v. Board of Education",
+        "Dred Scott v. Sandford",
+        "Plessy v. Ferguson",
+        "Loving v. Virginia"
+      ],
+      "answer": "Brown v. Board of Education",
+      "explanation": "Brown v. Board of Education (1954) ended racial segregation in public schools, declaring the 'separate but equal' doctrine unconstitutional.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Who is considered the 'Mother of the Civil Rights Movement'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Rosa Parks",
+        "Harriet Tubman",
+        "Sojourner Truth",
+        "Fannie Lou Hamer"
+      ],
+      "answer": "Rosa Parks",
+      "explanation": "Rosa Parks is considered the 'Mother of the Civil Rights Movement' for her pivotal role in the Montgomery Bus Boycott.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Who was the leader of the Nation of Islam and a prominent civil rights activist?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Martin Luther King Jr.",
+        "Malcolm X",
+        "Jesse Jackson",
+        "Medgar Evers"
+      ],
+      "answer": "Malcolm X",
+      "explanation": "Malcolm X was a leader of the Nation of Islam and a prominent civil rights activist known for his advocacy for Black empowerment.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Who was the first African American Supreme Court Justice?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Thurgood Marshall",
+        "Martin Luther King Jr.",
+        "Booker T. Washington",
+        "W. E. B. Du Bois"
+      ],
+      "answer": "Thurgood Marshall",
+      "explanation": "Thurgood Marshall was the first African American Supreme Court Justice, serving from 1967 to 1991.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which African American woman is known for her activism in the anti-lynching movement and women's suffrage?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ida B. Wells",
+        "Ella Baker",
+        "Angela Davis",
+        "Dorothy Height"
+      ],
+      "answer": "Ida B. Wells",
+      "explanation": "Ida B. Wells was an African American woman known for her activism in the anti-lynching movement and women's suffrage.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Who was the African American scientist and inventor known for his contributions to agricultural science?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "George Washington Carver",
+        "Lewis Latimer",
+        "Garrett Morgan",
+        "Granville T. Woods"
+      ],
+      "answer": "George Washington Carver",
+      "explanation": "George Washington Carver was an African American scientist and inventor known for his work in agricultural science, particularly with peanuts and sweet potatoes.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which African American poet and civil rights activist won the Nobel Prize in Literature in 1993?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Maya Angelou",
+        "Langston Hughes",
+        "Gwendolyn Brooks",
+        "Toni Morrison"
+      ],
+      "answer": "Toni Morrison",
+      "explanation": "Toni Morrison was an African American poet and civil rights activist who won the Nobel Prize in Literature in 1993 for her novels exploring the Black experience.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Who was the African American baseball player who broke the color barrier in Major League Baseball?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jackie Robinson",
+        "Satchel Paige",
+        "Hank Aaron",
+        "Willie Mays"
+      ],
+      "answer": "Jackie Robinson",
+      "explanation": "Jackie Robinson was the African American baseball player who broke the color barrier in Major League Baseball, playing for the Brooklyn Dodgers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which African American artist is known for her powerful and symbolic paintings depicting Black experiences?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Faith Ringgold",
+        "Augusta Savage",
+        "Elizabeth Catlett",
+        "Kara Walker"
+      ],
+      "answer": "Faith Ringgold",
+      "explanation": "Faith Ringgold is an African American artist known for her powerful and symbolic paintings, quilts, and story quilts depicting Black experiences.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Who was the African American abolitionist and women's rights activist who delivered the famous speech 'Ain't I a Woman?'",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sojourner Truth",
+        "Harriet Tubman",
+        "Frances Harper",
+        "Mary Church Terrell"
+      ],
+      "answer": "Sojourner Truth",
+      "explanation": "Sojourner Truth was an African American abolitionist and women's rights activist who delivered the famous speech 'Ain't I a Woman?' at a women's rights convention in 1851.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which African American mathematician and NASA employee played a crucial role in the early years of the U.S. space program?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Katherine Johnson",
+        "Dorothy Vaughan",
+        "Mary Jackson",
+        "Octavia E. Butler"
+      ],
+      "answer": "Katherine Johnson",
+      "explanation": "Katherine Johnson was an African American mathematician and NASA employee who played a crucial role in the early years of the U.S. space program, calculating trajectories for space missions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Who was the African American leader and spokesperson for the Nation of Islam known for his powerful speeches?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ella Baker",
+        "Jesse Jackson",
+        "Malcolm X",
+        "Medgar Evers"
+      ],
+      "answer": "Malcolm X",
+      "explanation": "Malcolm X was an African American leader and spokesperson for the Nation of Islam known for his powerful speeches advocating for Black empowerment and self-defense.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Who was the African American poet and playwright who became a central figure of the Harlem Renaissance?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Langston Hughes",
+        "James Baldwin",
+        "Zora Neale Hurston",
+        "Claude McKay"
+      ],
+      "answer": "Langston Hughes",
+      "explanation": "Langston Hughes was an African American poet and playwright who became a central figure of the Harlem Renaissance, a cultural and artistic movement in the 1920s and 1930s.",
+      "difficulty": "Medium"
+    }
+  ]
+}
