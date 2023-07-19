@@ -1,0 +1,159 @@
+{
+  "quizName": "Fresh Prince of Bel-Air TV Show Quiz",
+  "quizCode": "FRESHPRINCE123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "TV",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the name of the main character in 'Fresh Prince of Bel-Air'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Will Smith",
+        "Carlton Banks",
+        "Phillip Banks",
+        "Geoffrey Butler"
+      ],
+      "answer": "Will Smith",
+      "explanation": "Will Smith plays the main character, who shares the same first name in the show.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the name of the wealthy family that Will moves in with?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Banks",
+        "Hilton",
+        "Kardashian",
+        "Rockefeller"
+      ],
+      "answer": "Banks",
+      "explanation": "Will moves in with the Banks family, who live in the upscale neighborhood of Bel-Air.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the name of Will's best friend in Bel-Air?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jazz",
+        "Carlton",
+        "Philip",
+        "Geoffrey"
+      ],
+      "answer": "Jazz",
+      "explanation": "Jazz, played by DJ Jazzy Jeff, is Will's best friend in Bel-Air who often visits the Banks household.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the name of the butler who serves the Banks family?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Geoffrey",
+        "Carlton",
+        "Philip",
+        "Jazz"
+      ],
+      "answer": "Geoffrey",
+      "explanation": "Geoffrey Butler, portrayed by Joseph Marcell, is the sophisticated butler who serves the Banks family.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which character is known for his signature dance, 'The Carlton'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Carlton Banks",
+        "Will Smith",
+        "Geoffrey Butler",
+        "Philip Banks"
+      ],
+      "answer": "Carlton Banks",
+      "explanation": "Carlton Banks, played by Alfonso Ribeiro, is known for his iconic dance move called 'The Carlton'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the name of Will's cousin who often causes trouble?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ashley Banks",
+        "Hilary Banks",
+        "Vivian Banks",
+        "Nicky Banks"
+      ],
+      "answer": "Hilary Banks",
+      "explanation": "Hilary Banks, portrayed by Karyn Parsons, is Will's cousin who often finds herself in comedic and mischievous situations.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the name of Will's on-and-off love interest throughout the series?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lisa",
+        "Vivian",
+        "Jackie",
+        "Ashley"
+      ],
+      "answer": "Lisa",
+      "explanation": "Lisa, portrayed by Nia Long, is Will's on-and-off love interest throughout the series, adding a romantic element to the show.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the occupation of Philip Banks, the patriarch of the family?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lawyer",
+        "Doctor",
+        "Police Officer",
+        "Businessman"
+      ],
+      "answer": "Lawyer",
+      "explanation": "Philip Banks, played by James Avery, is a successful lawyer and the patriarch of the Banks family.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the name of Will's mother in the show?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Viola",
+        "Vivian",
+        "Veronica",
+        "Victoria"
+      ],
+      "answer": "Viola",
+      "explanation": "Viola Smith, portrayed by Vernee Watson, is Will's mother who appears in several episodes throughout the series.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the theme song of 'Fresh Prince of Bel-Air'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Fresh Prince",
+        "The Good Life",
+        "Summertime",
+        "Parents Just Don't Understand"
+      ],
+      "answer": "Fresh Prince",
+      "explanation": "The theme song of 'Fresh Prince of Bel-Air' is famously titled 'Fresh Prince' and is performed by Will Smith.",
+      "difficulty": "Medium"
+    }
+  ]
+}
