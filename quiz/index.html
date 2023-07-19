@@ -1367,6 +1367,7 @@ questionsCompleted.forEach(function(question) {
     let reviewQuestionResponse = document.createElement("br");
     console.log("questionsOG:", questionsOG);
     console.log("questions:", questions);
+    console.log("questions:", questions);
 
     let reviewQuestionText = document.createElement("span");
     reviewQuestionText.classList.add("question-text");
@@ -1374,7 +1375,7 @@ questionsCompleted.forEach(function(question) {
 
     questionDiv.appendChild(reviewQuestionNumber);
     questionDiv.appendChild(reviewQuestionResponse);
-    questionDiv.appendChild(reviewQuestionText);
+    questionsCompleted.appendChild(reviewQuestionText);
 
     if (question.correctness === "correct") {
       const parentElement = document.getElementById("correctList");
