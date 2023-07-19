@@ -1,0 +1,159 @@
+{
+  "quizName": "Deep Learning AI Quiz",
+  "quizCode": "DEEPLEARNING123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Technology",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is Deep Learning?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A subset of Artificial Intelligence (AI)",
+        "A programming language for AI",
+        "A technique for Machine Learning",
+        "A method for Data Analysis"
+      ],
+      "answer": "A subset of Artificial Intelligence (AI)",
+      "explanation": "Deep Learning is a subset of Artificial Intelligence (AI) that focuses on training artificial neural networks to learn from data and make accurate predictions.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which type of neural network architecture is commonly used in Deep Learning?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Convolutional Neural Networks (CNN)",
+        "Recurrent Neural Networks (RNN)",
+        "Generative Adversarial Networks (GAN)",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Deep Learning commonly utilizes various types of neural network architectures, including Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN), and Generative Adversarial Networks (GAN), among others.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the main advantage of using Deep Learning for AI tasks?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ability to learn complex patterns from large datasets",
+        "Faster training time compared to traditional Machine Learning",
+        "No need for labeled training data",
+        "Works well with small datasets"
+      ],
+      "answer": "Ability to learn complex patterns from large datasets",
+      "explanation": "Deep Learning excels in learning complex patterns and features from large datasets, enabling it to make accurate predictions or perform tasks that traditional methods may struggle with.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the activation function commonly used in Deep Learning networks?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "ReLU (Rectified Linear Unit)",
+        "Sigmoid",
+        "Tanh (Hyperbolic Tangent)",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Deep Learning networks commonly use activation functions such as ReLU (Rectified Linear Unit), Sigmoid, and Tanh (Hyperbolic Tangent), among others, to introduce non-linearity and enable complex mappings.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which company developed and popularized the deep learning library called 'TensorFlow'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Google",
+        "Microsoft",
+        "Facebook",
+        "Amazon"
+      ],
+      "answer": "Google",
+      "explanation": "Google developed and popularized the deep learning library called 'TensorFlow', which has become one of the most widely used frameworks for building and training deep neural networks.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the purpose of dropout in deep learning networks?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To prevent overfitting",
+        "To speed up training",
+        "To handle missing data",
+        "To reduce the number of parameters"
+      ],
+      "answer": "To prevent overfitting",
+      "explanation": "Dropout is a regularization technique used in deep learning networks to prevent overfitting. It randomly drops out some neurons during training, forcing the network to learn more robust and generalizable representations.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the main challenge in training deep learning networks?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Require large amounts of labeled training data",
+        "High computational resource requirements",
+        "Prone to overfitting",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Training deep learning networks can be challenging due to the need for large amounts of labeled training data, high computational resource requirements, and the risk of overfitting. These challenges often require careful data management and resource allocation.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the concept of transfer learning in deep learning?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Using pre-trained models on similar tasks",
+        "Transferring weights between layers",
+        "Transferring knowledge between domains",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Transfer learning in deep learning involves leveraging pre-trained models on similar tasks, transferring weights between layers, or transferring knowledge from one domain to another. It helps in speeding up training and achieving better performance with limited data.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the role of backpropagation in training deep learning networks?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To compute gradients and update network weights",
+        "To propagate errors backward through the network",
+        "To adjust learning rate dynamically",
+        "To prevent overfitting"
+      ],
+      "answer": "To compute gradients and update network weights",
+      "explanation": "Backpropagation is a key algorithm in training deep learning networks. It computes gradients of the loss function with respect to the network parameters, allowing for weight updates and optimization during the training process.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which deep learning technique is commonly used for image classification tasks?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Convolutional Neural Networks (CNN)",
+        "Recurrent Neural Networks (RNN)",
+        "Generative Adversarial Networks (GAN)",
+        "Self-Organizing Maps (SOM)"
+      ],
+      "answer": "Convolutional Neural Networks (CNN)",
+      "explanation": "Convolutional Neural Networks (CNN) are commonly used for image classification tasks. Their ability to capture local spatial patterns makes them highly effective in analyzing and classifying images.",
+      "difficulty": "Medium"
+    }
+  ]
+}
