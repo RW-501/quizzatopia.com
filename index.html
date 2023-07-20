@@ -1080,31 +1080,27 @@ font-size: 30px;
 
 
 var num = 0;
-
-
-	
 const db = firebase.firestore();
 const quizContainer = document.getElementById('parent_Container');
-let currentPage = 1;
-const quizzesPerPage = 20;
 
+	
 // Function to fetch quiz data from Firestore and update the HTML
-async function fetchQuizzesFromDB(page) {
-  const startAtIndex = (page - 1) * quizzesPerPage;
-
-  // Fetch the quizzes collection with ordering and pagination
-  const querySnapshot = await db.collection('quizzes')
+async function fetchQuizzesFromDB() {
+  // Fetch the quizzes collection with ordering
+  const orderedQuerySnapshot = await db.collection('quizzes')
     .orderBy('quizCreatedDateDB', 'desc')
     .orderBy('quizRatingDB', 'desc')
     .orderBy('quizFinishedCount', 'desc')
     .orderBy('quizStartedCount', 'desc')
     .orderBy('quizNameDB', 'asc')
-    .startAt(startAtIndex)
-    .limit(quizzesPerPage)
     .get();
 
+  // Fetch all the quizzes without any specific ordering
+  const allQuizzesQuerySnapshot = await db.collection('quizzes').get();
+
+  // Combine the results from both queries into a single array
   const quizList = [];
-  querySnapshot.forEach((doc) => {
+  orderedQuerySnapshot.forEach((doc) => {
     const quizData = doc.data();
     const quizItem = {
       quizRatingDB: quizData.quizRatingDB,
@@ -1120,18 +1116,41 @@ async function fetchQuizzesFromDB(page) {
     quizList.push(quizItem);
   });
 
-  let html = '';
+  allQuizzesQuerySnapshot.forEach((doc) => {
+    // Check if the quiz is not already included in the quizList array
+    if (!quizList.some((item) => item.quizCodeDB === doc.data().quizCodeDB)) {
+      const quizData = doc.data();
+      const quizItem = {
+        quizRatingDB: quizData.quizRatingDB,
+      quizDifficulty: quizData.quizDifficultyDB || quizData.quizDifficulty,
+        quizCreatedByDB: quizData.quizCreatedByDB,
+        quizNameDB: quizData.quizNameDB,
+        quizLinkDB: quizData.quizLinkDB,
+        quizStartedCount: quizData.quizStartedCount,
+        quizFinishedCount: quizData.quizFinishedCount,
+        numberOfQuestionsDB: quizData.numberOfQuestionsDB,
+        quizCodeDB: quizData.quizCodeDB,
+      };
+      quizList.push(quizItem);
+    }
+  });
 
-  quizList.forEach((quizData, index) => {
-    const num = startAtIndex + index + 1;
-    const stars = ratingToStars(quizData.quizRatingDB);
+  // Initialize the HTML string
+  let html = ' Updated Quizzes</h2><p>';
+  let num = 0;
 
+  // Iterate over each quiz item in the combined dataset
+  quizList.forEach((quizData) => {
+    num += 1;
+    const stars = ratingToStars(quizData.quizRatingDB); // Assigned stars here
+
+    // Generate the HTML for each quiz
     const quizHtml = `
       <div class="col-lg-12">
         <a href="${quizData.quizLinkDB}">
           <div class="list-item box">
             <h5 class="list-title">#${num} ${quizData.quizNameDB}</h5>
-            <div class="stars">${stars}</div>
+            <div class="stars"> ${stars} </div>
             <div class="quiz-info">
               <p><b>CreatedBy:</b> ${quizData.quizCreatedByDB || ""}</p>
               <p><b>Difficulty:</b> ${quizData.quizDifficultyDB || quizData.quizDifficulty}</p>
@@ -1145,14 +1164,18 @@ async function fetchQuizzesFromDB(page) {
       </div>
     `;
 
+    // Append the quiz HTML to the overall HTML string
     html += quizHtml;
   });
 
-  quizContainer.innerHTML += html;
+  // Update the quizContainer with the generated HTML
+  document.getElementById('updated_Quizzez').innerHTML = "<p><h2>"+num+" " +html;
+
 }
 
-// Call the function to fetch and populate the initial quizzes
-fetchQuizzesFromDB(currentPage);
+// Call the function to fetch and populate the quiz data
+fetchQuizzesFromDB();
+
 
 
 
