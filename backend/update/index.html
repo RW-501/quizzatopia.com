@@ -149,7 +149,7 @@ button {
   <script>
 
 const YourRootCollection = firebase.firestore();
-var kkk = "quizzes";
+var YourRootCollection = "quizzes";
 
 // Get references to DOM elements
 const collectionDropdown = document.getElementById("collection-dropdown");
@@ -163,7 +163,8 @@ const updateButton = document.getElementById("update-button");
 
 // Function to log messages
 function log(message) {
-  logTextarea.value += message + "\n";
+	let old = logTextarea.value;
+  logTextarea.value += message + "\n" + old;
 }
 
 // Function to populate the dropdown with collection names
@@ -189,7 +190,7 @@ function getData() {
     log("Please select a collection.");
     return;
   }
-
+	
   db.collection(YourRootCollection) // Replace "YourRootCollection" with your root collection name
     .doc(selectedCollection)
     .get()
