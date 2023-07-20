@@ -106,16 +106,11 @@ button {
   <div class="container mt-4">
 
    <h1>Firebase Data Viewer</h1>
-<div>
-  <!-- ...Other elements... -->
-  <button id="clear-json-button">Clear JSON</button>
-</div>
 
+	  
 <div>
-  <label for="new-data-input">New Data:</label>
-  <input type="text" id="new-data-input">
-  <button id="update-button">Update Collection</button>
-  <button id="clear-new-data-button">Clear Input</button>
+  <button id="clear-json-button">Clear JSON</button>
+
 </div>
 
   <div>
@@ -150,6 +145,7 @@ button {
     </select>
     <button id="get-button">Get Data</button>
   </div>
+  <button id="copy-json-button">Copy JSON</button>
 
   <textarea id="json-textarea" rows="10" cols="80" readonly></textarea>
 
@@ -188,7 +184,7 @@ const updateButton = document.getElementById("update-button");
 // Function to log messages
 function log(message) {
 	let old = logTextarea.value;
-  logTextarea.value += message + "\n" + old;
+  logTextarea.value = message + "\n" + old;
 }
 
 // Function to populate the dropdown with collection names
@@ -264,11 +260,7 @@ YourRootCollection = selectedCollection;
     log("Please select a collection.");
     return;
   }
-
-  if (!YourRootCollection) {
-    log("Please enter data to update.");
-    return;
-  }
+    log("New Collection: " + YourRootCollection);
 
   getData();
 	
@@ -277,22 +269,24 @@ YourRootCollection = selectedCollection;
 
 // Get references to DOM elements
 const clearJsonButton = document.getElementById("clear-json-button");
-const clearNewDataButton = document.getElementById("clear-new-data-button");
 
+	  
 // Function to clear JSON textarea
 function clearJsonTextarea() {
   jsonTextarea.value = "";
 }
+const copyJsonButton = document.getElementById("copy-json-button");
 
-// Function to clear New Data input field
-function clearNewDataInput() {
-  newDataInput.value = "";
+function copyJsonToClipboard() {
+  jsonTextarea.select();
+  document.execCommand("copy");
+  log("JSON copied to clipboard.");
 }
 
 // Add event listeners for the "Clear" buttons
 clearJsonButton.addEventListener("click", clearJsonTextarea);
-clearNewDataButton.addEventListener("click", clearNewDataInput);
 
+	  
 // ...Continue with the rest of the JavaScript code...
 
 // Add event listeners
