@@ -200,6 +200,7 @@ const logTextarea = document.getElementById("log-textarea");
 const newDataInput = document.getElementById("new-data-input");
 const updateButton = document.getElementById("update-button");
 const copyJsonButton = document.getElementById("copy-json-button");
+const getAllButton = document.getElementById("get-all-button");
 
 // Function to log messages
 function log(message) {
@@ -339,6 +340,7 @@ copyJsonButton.addEventListener("click", copyJsonToClipboard);
 
 	  
 // ...Continue with the rest of the JavaScript code...
+getAllButton.addEventListener("click", getAllDocuments);
 
 // Add event listeners
 getButton.addEventListener("click", getData);
