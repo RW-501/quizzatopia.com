@@ -106,7 +106,17 @@ button {
   <div class="container mt-4">
 
    <h1>Firebase Data Viewer</h1>
+<div>
+  <!-- ...Other elements... -->
+  <button id="clear-json-button">Clear JSON</button>
+</div>
 
+<div>
+  <label for="new-data-input">New Data:</label>
+  <input type="text" id="new-data-input">
+  <button id="update-button">Update Collection</button>
+  <button id="clear-new-data-button">Clear Input</button>
+</div>
 
   <div>
     <h2>Log:</h2>
@@ -247,21 +257,30 @@ YourRootCollection = selectedCollection;
     return;
   }
 
-  try {
-    const parsedData = JSON.parse(newData);
-  db.collection(YourRootCollection) // Replace "YourRootCollection" with your root collection name
-      .doc()
-      .set(parsedData)
-      .then(() => {
-        log("Collection updated successfully.");
-      })
-      .catch((error) => {
-        log("Error updating collection: " + error);
-      });
-  } catch (error) {
-    log("Error parsing JSON: " + error);
-  }
+  getData();
+	
 }
+// ...Previous JavaScript code...
+
+// Get references to DOM elements
+const clearJsonButton = document.getElementById("clear-json-button");
+const clearNewDataButton = document.getElementById("clear-new-data-button");
+
+// Function to clear JSON textarea
+function clearJsonTextarea() {
+  jsonTextarea.value = "";
+}
+
+// Function to clear New Data input field
+function clearNewDataInput() {
+  newDataInput.value = "";
+}
+
+// Add event listeners for the "Clear" buttons
+clearJsonButton.addEventListener("click", clearJsonTextarea);
+clearNewDataButton.addEventListener("click", clearNewDataInput);
+
+// ...Continue with the rest of the JavaScript code...
 
 // Add event listeners
 getButton.addEventListener("click", getData);
