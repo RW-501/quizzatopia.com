@@ -153,6 +153,8 @@ button {
 
 		  
   <button id="update-button">Update Collection</button>
+  <button id="get-all-button">Get All Documents</button>
+
 </div>
 	  
     <label for="collection-dropdown">Select Collection:</label>
@@ -197,6 +199,7 @@ const uploadButton = document.getElementById("upload-button");
 const logTextarea = document.getElementById("log-textarea");
 const newDataInput = document.getElementById("new-data-input");
 const updateButton = document.getElementById("update-button");
+const copyJsonButton = document.getElementById("copy-json-button");
 
 // Function to log messages
 function log(message) {
@@ -242,6 +245,40 @@ function getData() {
     });
 }
 
+
+// Function to get all documents from the selected collection
+function getAllDocuments() {
+  const selectedCollection = collectionDropdown.value; // Get the selected value
+  if (!selectedCollection) {
+    log("Please select a collection.");
+    return;
+  }
+
+  db.collection(YourRootCollection) // Replace "YourRootCollection" with your root collection name
+    .doc(selectedCollection)
+    .get()
+    .then((querySnapshot) => {
+      const allDocuments = []; // Array to store all documents
+
+      querySnapshot.forEach((doc) => {
+        allDocuments.push(doc.data());
+      });
+
+      if (allDocuments.length > 0) {
+        jsonTextarea.value = JSON.stringify(allDocuments, null, 2);
+        log("Data retrieved successfully.");
+      } else {
+        log("No documents found in the collection.");
+      }
+    })
+    .catch((error) => {
+      log("Error getting data: " + error);
+    });
+}
+
+
+
+	  
 // Function to upload data to the selected collection
 function uploadData() {
   const selectedCollection = collectionDropdown.value;
@@ -289,7 +326,6 @@ const clearJsonButton = document.getElementById("clear-json-button");
 function clearJsonTextarea() {
   jsonTextarea.value = "";
 }
-const copyJsonButton = document.getElementById("copy-json-button");
 
 function copyJsonToClipboard() {
   jsonTextarea.select();
@@ -299,6 +335,7 @@ function copyJsonToClipboard() {
 
 // Add event listeners for the "Clear" buttons
 clearJsonButton.addEventListener("click", clearJsonTextarea);
+copyJsonButton.addEventListener("click", copyJsonToClipboard);
 
 	  
 // ...Continue with the rest of the JavaScript code...
