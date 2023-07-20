@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	
+	
+	<meta charset="utf-8" /> <!-- Character encoding for the webpage -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Required for Internet Explorer compatibility -->
+
+<!-- Metadata for search engines -->
+<title>Backend Add | Quizzatopia - Explore a World of Quizzes</title>
+<meta name="generator" content="Quizzatopia" /> 
+<meta name="description" content="Welcome to Quizzatopia - the ultimate destination for all your quizzing needs. Discover a world of quizzes like never before, ranging from fun trivia to professional exam preparation. With our user-friendly interface and extensive question bank, learning has never been more enjoyable. Join now to compete with others, earn points, and unlock achievements. Sign up, log in, and embark on your quizzing journey today!">
+<meta itemprop="name" content="Quizzatopia">
+<meta property="og:title" content="Quizzatopia - Explore a World of Quizzes">
+<meta property="og:image" content="https://www.quizzatopia.com/images/logo.png">
+<meta name="Distribution" content="Global" />
+<meta name="Rating" content="General" />
+<meta name="copyright" content="Quizzatopia">
+<meta name="language" content="English">
+<meta name="reply-to" content="quizzatopia@gmail.com">
+<meta name="generator" content="Adobe Dreamweaver">
+<meta name="Developer" content="Ron Wilson II">
+<!-- Links to favicon images for various devices -->
+<link rel="icon" sizes="192x192" href="/favicon.ico">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+<link rel="apple-touch-icon" href="/favicon.ico" type="image/x-icon"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"> <!-- Alternate link to favicon image -->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /> <!-- Required for mobile devices -->
+<meta property="og:type" content="website">
+
+
+	
+<!-- Import navbar and footer components -->
+  <link rel="import" href="/elements/navbar.html">
+  <link rel="import" href="/elements/footer.html">
+
+
+
+  <div id="navbar"></div>
+  <!-- Rest of the page content -->
+  <div id="signupLoginArea"><div>
+
+  <!-- JavaScript dependencies async -->
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script  src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
+	  	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+	  	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+
+
+
+  <!-- Firebase SDK -->
+  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+  <!-- Custom scripts -->
+  <script  src="/main.js"></script> 
+</head>
+
+    <style>
+
+      body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+}
+
+div {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+button {
+  margin-left: 10px;
+}
+
+#log-textarea {
+  height: 100px;
+}
+
+    </style>
+
+
+<body>
+
+
+  <div class="container mt-4">
+
+   <h1>Firebase Data Viewer</h1>
+
+  <div>
+    <label for="collection-dropdown">Select Collection:</label>
+    <select id="collection-dropdown">
+      <!-- Add options dynamically using JavaScript -->
+    </select>
+    <button id="get-button">Get Data</button>
+  </div>
+
+  <textarea id="json-textarea" rows="10" cols="80" readonly></textarea>
+
+  <div>
+    <h2>Upload Data</h2>
+    <textarea id="upload-textarea" rows="10" cols="80"></textarea>
+    <button id="upload-button">Upload Data</button>
+  </div>
+
+  <textarea id="log-textarea" rows="10" cols="80" readonly></textarea>
+
+
+    
+    
+    
+    
+    
+    
+       
+	  </div>
+
+  <script>
+
+const db = firebase.firestore();
+
+// Get references to DOM elements
+const collectionDropdown = document.getElementById("collection-dropdown");
+const getButton = document.getElementById("get-button");
+const jsonTextarea = document.getElementById("json-textarea");
+const uploadTextarea = document.getElementById("upload-textarea");
+const uploadButton = document.getElementById("upload-button");
+const logTextarea = document.getElementById("log-textarea");
+
+// Function to log messages
+function log(message) {
+  logTextarea.value += message + "\n";
+}
+
+// Function to populate the dropdown with collection names
+function populateDropdown() {
+  db.collection("YourRootCollection") // Replace "YourRootCollection" with your root collection name
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        const option = document.createElement("option");
+        option.text = doc.id;
+        collectionDropdown.appendChild(option);
+      });
+    })
+    .catch((error) => {
+      log("Error getting collection names: " + error);
+    });
+}
+
+// Function to get data based on the selected collection
+function getData() {
+  const selectedCollection = collectionDropdown.value;
+  if (!selectedCollection) {
+    log("Please select a collection.");
+    return;
+  }
+
+  db.collection("YourRootCollection") // Replace "YourRootCollection" with your root collection name
+    .doc(selectedCollection)
+    .get()
+    .then((doc) => {
+      if (doc.exists) {
+        const data = doc.data();
+        jsonTextarea.value = JSON.stringify(data, null, 2);
+        log("Data retrieved successfully.");
+      } else {
+        log("Document not found.");
+      }
+    })
+    .catch((error) => {
+      log("Error getting data: " + error);
+    });
+}
+
+// Function to upload data to the selected collection
+function uploadData() {
+  const selectedCollection = collectionDropdown.value;
+  if (!selectedCollection) {
+    log("Please select a collection.");
+    return;
+  }
+
+  try {
+    const data = JSON.parse(uploadTextarea.value);
+    db.collection("YourRootCollection") // Replace "YourRootCollection" with your root collection name
+      .doc(selectedCollection)
+      .set(data)
+      .then(() => {
+        log("Data uploaded successfully.");
+      })
+      .catch((error) => {
+        log("Error uploading data: " + error);
+      });
+  } catch (error) {
+    log("Error parsing JSON: " + error);
+  }
+}
+
+// Add event listeners
+getButton.addEventListener("click", getData);
+uploadButton.addEventListener("click", uploadData);
+
+// Populate the dropdown on page load
+populateDropdown();
+
+</script>
+	
+
+    
+  </body>
+    </html>
