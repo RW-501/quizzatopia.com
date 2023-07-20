@@ -107,7 +107,19 @@ button {
 
    <h1>Firebase Data Viewer</h1>
 
+
   <div>
+    <h2>Log:</h2>
+  <textarea id="log-textarea" rows="10" cols="80" readonly></textarea>
+  </div>
+	  
+  <div>
+	  <div>
+  <label for="new-data-input">New Data:</label>
+  <input type="text" id="new-data-input">
+  <button id="update-button">Update Collection</button>
+</div>
+	  
     <label for="collection-dropdown">Select Collection:</label>
     <select id="collection-dropdown">
       <!-- Add options dynamically using JavaScript -->
@@ -123,7 +135,6 @@ button {
     <button id="upload-button">Upload Data</button>
   </div>
 
-  <textarea id="log-textarea" rows="10" cols="80" readonly></textarea>
 
 
     
@@ -137,7 +148,8 @@ button {
 
   <script>
 
-const db = firebase.firestore();
+const YourRootCollection = firebase.firestore();
+var kkk = "quizzes";
 
 // Get references to DOM elements
 const collectionDropdown = document.getElementById("collection-dropdown");
@@ -146,6 +158,8 @@ const jsonTextarea = document.getElementById("json-textarea");
 const uploadTextarea = document.getElementById("upload-textarea");
 const uploadButton = document.getElementById("upload-button");
 const logTextarea = document.getElementById("log-textarea");
+const newDataInput = document.getElementById("new-data-input");
+const updateButton = document.getElementById("update-button");
 
 // Function to log messages
 function log(message) {
@@ -154,7 +168,7 @@ function log(message) {
 
 // Function to populate the dropdown with collection names
 function populateDropdown() {
-  db.collection("YourRootCollection") // Replace "YourRootCollection" with your root collection name
+  db.collection(YourRootCollection) // Replace "YourRootCollection" with your root collection name
     .get()
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
@@ -176,7 +190,7 @@ function getData() {
     return;
   }
 
-  db.collection("YourRootCollection") // Replace "YourRootCollection" with your root collection name
+  db.collection(YourRootCollection) // Replace "YourRootCollection" with your root collection name
     .doc(selectedCollection)
     .get()
     .then((doc) => {
@@ -203,7 +217,7 @@ function uploadData() {
 
   try {
     const data = JSON.parse(uploadTextarea.value);
-    db.collection("YourRootCollection") // Replace "YourRootCollection" with your root collection name
+  db.collection(YourRootCollection) // Replace "YourRootCollection" with your root collection name
       .doc(selectedCollection)
       .set(data)
       .then(() => {
@@ -217,9 +231,41 @@ function uploadData() {
   }
 }
 
+// Function to update the collection
+function updateCollection() {
+  const selectedCollection = collectionDropdown.value;
+  const newData = newDataInput.value;
+
+  if (!selectedCollection) {
+    log("Please select a collection.");
+    return;
+  }
+
+  if (!newData) {
+    log("Please enter data to update.");
+    return;
+  }
+
+  try {
+    const parsedData = JSON.parse(newData);
+  db.collection(YourRootCollection) // Replace "YourRootCollection" with your root collection name
+      .doc(selectedCollection)
+      .set(parsedData)
+      .then(() => {
+        log("Collection updated successfully.");
+      })
+      .catch((error) => {
+        log("Error updating collection: " + error);
+      });
+  } catch (error) {
+    log("Error parsing JSON: " + error);
+  }
+}
+
 // Add event listeners
 getButton.addEventListener("click", getData);
 uploadButton.addEventListener("click", uploadData);
+updateButton.addEventListener("click", updateCollection);
 
 // Populate the dropdown on page load
 populateDropdown();
