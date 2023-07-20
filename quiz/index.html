@@ -2038,6 +2038,13 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageU
       const { score, percentage } = calculateScore(quizInfo);
       let ansWrong = numberOfQuestions - score;
 
+	    let descriptionArea = "";
+	    if(quizInfo.quizDescription){
+		descriptionArea = " <p><strong>Quiz Description:</strong> "+quizInfo.quizDescription || ''+"</p>";  	    
+	let categoryArea = "";
+	    if(quizInfo.quizCategory){
+		categoryArea = " <p><strong>Quiz Category:</strong> "+quizInfo.quizCategory || ''+"</p>";  
+		    
 	    if(score > 0){
       // Show the pie chart for correct and incorrect answers
       showPieChartFront(score, ansWrong);
@@ -2045,8 +2052,8 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageU
       testInfoDiv.innerHTML = `
         <h3>Quiz Information</h3>
         <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
-        <p><strong>Quiz Category:</strong> ${quizInfo.quizCategory || 'N/A'}</p>
-        <p><strong>Quiz Description:</strong> ${quizInfo.quizDescription || ''}</p>
+${categoryArea}
+${descriptionArea}
       <p><strong>Quiz Difficulty:</strong> ${quizDifficultyNS || 'N/A'}</p>
         <p><strong>Number of Questions:</strong> ${quizInfo.numberOfQuestions}</p>
         <p><strong>Question Correct:</strong> ${score}</p>
@@ -2067,13 +2074,21 @@ document.title = `${quizNameNS}`;
     }
   } else {
     // Handle case where there is no stored quiz info, display appropriate message or fallback behavior
+	    let descriptionArea = "";
+	    if(quizInfo.quizDescription){
+		descriptionArea = " <p><strong>Quiz Description:</strong> "+quizInfo.quizDescription || ''+"</p>";  	    
+	let categoryArea = "";
+	    if(quizInfo.quizCategory){
+		categoryArea = " <p><strong>Quiz Category:</strong> "+quizInfo.quizCategory || ''+"</p>";  
+	  
     const testInfoDiv = document.getElementById('testInfo');
     testInfoDiv.innerHTML = `
         <h3>Quiz Information</h3>
         <p><strong>Quiz Code:</strong> ${quizCodeNS}</p>
         <p><strong>Quiz Category:</strong> ${quizInfo.quizCategory || 'N/A'}</p>
-        <p><strong>Quiz Description:</strong> ${quizInfo.quizDescription || ''}</p>
-	<p><strong>Quiz Difficulty:</strong> ${quizDifficultyNS || 'N/A'}</p>
+${categoryArea}
+${descriptionArea}
+<p><strong>Quiz Difficulty:</strong> ${quizDifficultyNS || 'N/A'}</p>
         <p><strong>Number of Questions:</strong> ${numberOfQuestionsNS}</p>
         <p><strong>No quiz information found.</strong></p>
       `;
