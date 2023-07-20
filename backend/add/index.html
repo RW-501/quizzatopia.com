@@ -114,6 +114,7 @@ const logTextarea = document.getElementById('log');
 const counterLabel = document.getElementById('counterLabel');
 const startButton = document.getElementById('startButton');
 const stopButton = document.getElementById('stopButton');
+let logHistory = "";
 
 // Function to fetch JSON files and process data
 async function startFetching() {
@@ -234,6 +235,8 @@ function stopFetching() {
   clearInterval(fetchInterval);
   startButton.disabled = false;
   stopButton.disabled = true;
+	  logTextarea.value = "Stopped";;
+
 }
 
   </script>
