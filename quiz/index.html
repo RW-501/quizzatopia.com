@@ -1596,7 +1596,7 @@ questionsCompletedElement.textContent = quizInfo.questionsCompleted.length || 0;
 let qCorrect = quizInfo.questionCorrect || 0;
 let qIncorrect = quizInfo.questionIncorrect || 0;
 
-let qCompleted = qCorrect + qIncorrect;
+let qCompleted = quizInfo.questionsCompleted.length || 0;
 
 
 let totalQuestions = quizInfo.numberOfQuestions || 0;
@@ -1624,8 +1624,8 @@ timeSoFarElement.textContent = `${minutes} mins ${seconds} secs`;
 
 
 
-  document.getElementById("statsPopup").style.display = "block";
 		  slideIn("statsPopupBox");
+  document.getElementById("statsPopup").style.display = "block";
 
 }
 
