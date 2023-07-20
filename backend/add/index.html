@@ -152,12 +152,14 @@ async function fetchNextJSON() {
 
 
 
+  // Update logHistory with the new log at the top
+  logHistory = `JSON ${counter}: Adding: ${stringValues}\n\n${logHistory}`;
+
+  // Update the textarea with the entire log history
+  logTextarea.value = logHistory;
+
   // Scroll to the top of the textarea
-  logTextarea.scrollTo({ top: 0, behavior: "smooth" });
-
-  // Insert the new log at the top of the textarea
-  logTextarea.insertAdjacentText("afterbegin", `JSON ${counter}: Adding: ${stringValues}\n\n`);
-
+  logTextarea.scrollTop = 0;
 
 	    console.log("Skipped");
       counter++;
@@ -192,12 +194,14 @@ async function fetchNextJSON() {
      // console.log(stringValues);
 
 
+  // Update logHistory with the new log at the top
+  logHistory = `JSON ${counter}: Adding: ${stringValues}\n\n${logHistory}`;
+
+  // Update the textarea with the entire log history
+  logTextarea.value = logHistory;
+
   // Scroll to the top of the textarea
-  logTextarea.scrollTo({ top: 0, behavior: "smooth" });
-
-  // Insert the new log at the top of the textarea
-  logTextarea.insertAdjacentText("afterbegin", `JSON ${counter}: Adding: ${stringValues}\n\n`);
-
+  logTextarea.scrollTop = 0;
   // Increment the counter
   counter++;
       clearInterval(fetchInterval);
@@ -208,14 +212,17 @@ async function fetchNextJSON() {
 
       const stringValues = `JSON ${counter}: Fetch failed\n`;
 
-     // console.log(stringValues);
+  
+  // Update logHistory with the new log at the top
+  logHistory = `JSON ${counter}: Adding: ${stringValues}\n\n${logHistory}`;
 
+  // Update the textarea with the entire log history
+  logTextarea.value = logHistory;
 
   // Scroll to the top of the textarea
-  logTextarea.scrollTo({ top: 0, behavior: "smooth" });
+  logTextarea.scrollTop = 0;
 
-  // Insert the new log at the top of the textarea
-  logTextarea.insertAdjacentText("afterbegin", `JSON ${counter}: Adding: ${stringValues}\n\n`);
+	  
 	  
     stopFetching();
     counter++;
