@@ -1372,6 +1372,8 @@ questionsCompleted.forEach(function(question) {
     let reviewQuestionText = document.createElement("span");
     reviewQuestionText.classList.add("question-text");
     reviewQuestionText.textContent = questionsOG[questionIndex].question;
+	  
+    console.log("questionIndex:", questionIndex);
 
     questionDiv.appendChild(reviewQuestionNumber);
     questionDiv.appendChild(reviewQuestionResponse);
