@@ -177,7 +177,7 @@ async function fetchNextJSON() {
 
       const stringValues = `Quiz Name: ${quizName}\nQuiz Code: ${quizCode}\nNumber of Questions: ${numberOfQuestions}\nQuiz Category: ${quizCategory}\nQuiz Difficulty: ${quizDifficulty}`;
 
-      console.log(stringValues);
+     // console.log(stringValues);
 
 
   // Scroll to the top of the textarea
@@ -193,7 +193,18 @@ async function fetchNextJSON() {
 
     }
   } else {
-    logTextarea.value += `JSON ${counter}: Fetch failed\n`;
+
+      const stringValues = `JSON ${counter}: Fetch failed\n`;
+
+     // console.log(stringValues);
+
+
+  // Scroll to the top of the textarea
+  logTextarea.scrollTo({ top: 0, behavior: "smooth" });
+
+  // Insert the new log at the top of the textarea
+  logTextarea.insertAdjacentText("afterbegin", `JSON ${counter}: Adding: ${stringValues}\n\n`);
+	  
     stopFetching();
     counter++;
   }
