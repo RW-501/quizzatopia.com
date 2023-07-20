@@ -178,8 +178,8 @@ async function fetchNextJSON() {
         imageURLDB: "https://www.quizzatopia.com/images/sq/_.png",
         quizJsonDB: `/q/New/q_${counter}_.json`,
         numberOfQuestionsDB: numberOfQuestions,
-        quizTagsDB: quizTags,
-        quizDescriptionDB: quizDescription,
+        quizTagsDB: quizTags || "",
+        quizDescriptionDB: quizDescription || "",
         quizLinkDB: `/quiz/?e=New&q=q_${counter}_`,
         quizCategoryDB: quizCategory,
         quizCreatedDateDB: updateDate,
@@ -235,7 +235,9 @@ function stopFetching() {
   clearInterval(fetchInterval);
   startButton.disabled = false;
   stopButton.disabled = true;
-	  logTextarea.value = "Stopped";;
+
+	logHistory = "Stopped";
+	  logTextarea.value = logHistory;
 
 }
 
