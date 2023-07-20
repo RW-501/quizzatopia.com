@@ -121,4 +121,73 @@ body {
 }
 
 
-  
+
+
+
+
+
+
+
+
+
+
+/* Add your CSS styles here */
+.quiz-options-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.quiz-options {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.quiz-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-check {
+  margin-bottom: 10px;
+}
+
+.quiz-info {
+  margin-bottom: 20px;
+}
+
+.quiz-graph {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.quiz-controls {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.quiz-image-container {
+  text-align: center;
+}
+
+.quiz-image {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
