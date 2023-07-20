@@ -2040,10 +2040,12 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageU
 
 	    let descriptionArea = "";
 	    if(quizInfo.quizDescription){
-		descriptionArea = " <p><strong>Quiz Description:</strong> "+quizInfo.quizDescription+"</p>";  	    
+		descriptionArea = " <p><strong>Quiz Description:</strong> "+quizInfo.quizDescription+"</p>";  	
+	  }
 	let categoryArea = "";
 	    if(quizInfo.quizCategory){
 		categoryArea = " <p><strong>Quiz Category:</strong> "+quizInfo.quizCategory+"</p>";  
+	    }
 		    
 	    if(score > 0){
       // Show the pie chart for correct and incorrect answers
