@@ -1035,8 +1035,7 @@ function rateQuiz(stars) {
     if (isAnimationEnabled) {
       ratingStars.classList.add('shake-animation');
     }
-    alert('Please rate the quiz before leaving a review.');
-    return;
+   
   }
 
   let uID = userInfo.firebaseId;
@@ -1053,6 +1052,7 @@ function rateQuiz(stars) {
   };
 
   if (sendFeedbackToDBFunc(feedbackData)) {
+	  sendRatingToDBFunc(rating);
     alert('Thank you for your feedback!');
   }
 }
@@ -1080,6 +1080,7 @@ function submitReview() {
 
   const feedbackData = {
     rating: rating,
+    count: +1,
     feedback: feedback,
     userID: uID,
     feedbackType: "feedback",
@@ -1093,6 +1094,56 @@ function submitReview() {
     alert('Thank you for your review!');
   }
 }
+
+
+
+
+
+
+
+function sendRatingToDBFunc(stars) {
+ // const db = firebase.firestore();
+
+const collectionName = "quizzes"; // Replace with the actual collection name
+const nameToMatch = quizCode; // Replace with the name you want to match
+
+ const fieldsToUpdate = {
+      rateCount: firebase.firestore.FieldValue.increment(1), // Increment the 'count' field by 1
+      quizRatingDB: stars, // Set the 'rating' field to a new value (in this case, 4.5)
+      // Add more fields as neededount
+    };
+	
+// Find the document(s) where the 'name' field matches the given value
+const query = firebase.firestore().collection(collectionName).where('quizCodeDB', '==', nameToMatch);
+
+// Get the documents that match the query
+query.get().then((querySnapshot) => {
+  querySnapshot.forEach((doc) => {
+    // Increment the 'count' field of each matching document by 1
+    const docRef = firebase.firestore().collection(collectionName).doc(doc.id);
+    docRef.update(fieldsToUpdate)
+    .then(() => {
+      console.log(`Document with name '${nameToMatch}' has been updated.`);
+    })
+    .catch((error) => {
+      console.error('Error updating document:', error);
+    });
+  });
+})
+.catch((error) => {
+  console.error('Error getting documents:', error);
+});
+
+
+}
+
+
+
+
+
+
+
+
 
 function sendFeedbackToDBFunc(feedbackData) {
   const db = firebase.firestore();
@@ -1109,6 +1160,9 @@ function sendFeedbackToDBFunc(feedbackData) {
       console.error('Error adding feedback:', error);
       return false;
     });
+
+
+	
 }
 
 
