@@ -1,101 +1,73 @@
-
-
-/* Style the start quiz button */
-#start-btn {
-margin-top: 20px;
-    background-color: #fd7e14;
-    border: none;
-    margin-bottom: 15%;
-    font-size: calc(1.3rem + 2.6vw);
-    font-weight: 800;
-    padding: 4%;
-    color: white;
-    border-radius: 1em;
-    text-shadow: -4px 2px 0px #6b6a6a;
-    box-shadow: 3px 3px 0rem 3px #b98c03 !important;
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Add your desired background color or image here */
 }
 
-
-
-#optionsQuizNameWrap{
-      padding: 2%;
-}
-
-#optionsQuizName{
-  font-size: 1.5em;
-    text-transform: capitalize;
-    font-weight: 800;
-
-}
-.form-check {
-  
-    margin: 1%;
-      
-      
-}
-#timer-timeGroup{
-      display: none;
-}
-
-#timer-timeGroup label{
-      margain:2%;     
-      
-}
-
-
-
-/* Customize the checkbox */
-.form-check-input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
-  margin-top: 5px;
-}
-
-/* Style the checkbox label */
-.form-check-label {
-  margin-left: 10px;
-}
-
-/* Style the quiz time input */
-#quiz-time {
-  width: 80px;
-}
-
-/* Style the quiz time input group */
-.input-group {
-  margin-bottom: 20px;
-}
-
-/* Style the quiz time input group text */
-.input-group-text {
-  background-color: #007bff;
-  color: #fff;
-}
-
-
-
-/* Style the quiz options container */
-.quiz-options {
-  border: 1px solid #ddd;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
+}
+
+/* Option Container Styles */
+#optionContainer {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Make the quiz options container responsive */
+/* Left Column Styles */
+.col-md-6 {
+  margin-bottom: 20px;
+}
+
+/* Quiz Name Styles */
+#optionsQuizName {
+  font-size: 1.5em;
+  text-transform: capitalize;
+  font-weight: 800;
+}
+
+/* Quiz Options Styles */
+.quiz-options {
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Timer and Countdown Styles */
+.form-check {
+  margin: 1%;
+}
+
+/* Start Quiz Button Styles */
+#start-btn {
+  margin-top: 20px;
+  background-color: #fd7e14;
+  border: none;
+  margin-bottom: 15%;
+  font-size: calc(1.3rem + 2.6vw);
+  font-weight: 800;
+  padding: 4%;
+  color: white;
+  border-radius: 1em;
+  text-shadow: -4px 2px 0px #6b6a6a;
+  box-shadow: 3px 3px 0rem 3px #b98c03 !important;
+  cursor: pointer;
+}
+
+/* Join the Discussion Styles */
+.quiz-image-container {
+  text-align: center;
+}
+
+/* Add any other styles you need here */
+
+/* Media Queries */
 @media (max-width: 767px) {
   .quiz-options {
     margin-top: 20px;
   }
-}
-
-
-#msg_quiz_name {
-    font-size: 1.5em;
-    text-transform: capitalize;
-    font-weight: bold;
-}
-	
-
-#explanation{
-	
 }
