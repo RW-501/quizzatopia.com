@@ -196,7 +196,7 @@ async function fetchNextJSON() {
 
 
   // Update logHistory with the new log at the top
-  logHistory = `JSON ${counter}: Adding: ${stringValues}\n\n${logHistory}`;
+  logHistory = `JSON ${counter}: Adding: ${stringValues}\n${logHistory}`;
 
   // Update the textarea with the entire log history
   logTextarea.value = logHistory;
@@ -215,7 +215,7 @@ async function fetchNextJSON() {
 
   
   // Update logHistory with the new log at the top
-  logHistory = `JSON ${counter}: Adding: ${stringValues}\n\n${logHistory}`;
+  logHistory = `JSON ${counter}: Adding: ${stringValues}\n${logHistory}`;
 
   // Update the textarea with the entire log history
   logTextarea.value = logHistory;
@@ -236,7 +236,7 @@ function stopFetching() {
   startButton.disabled = false;
   stopButton.disabled = true;
 
-	logHistory = "Stopped";
+	logHistory = "Stopped " +\n logHistory;
 	  logTextarea.value = logHistory;
 
 }
