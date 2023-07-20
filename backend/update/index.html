@@ -234,15 +234,14 @@ function uploadData() {
 
 // Function to update the collection
 function updateCollection() {
-  const selectedCollection = collectionDropdown.value;
-  const newData = newDataInput.value;
-
-  if (!selectedCollection) {
+  const selectedCollection = newDataInput.value;
+YourRootCollection = selectedCollection;
+  if (!YourRootCollection) {
     log("Please select a collection.");
     return;
   }
 
-  if (!newData) {
+  if (!YourRootCollection) {
     log("Please enter data to update.");
     return;
   }
@@ -250,7 +249,7 @@ function updateCollection() {
   try {
     const parsedData = JSON.parse(newData);
   db.collection(YourRootCollection) // Replace "YourRootCollection" with your root collection name
-      .doc(selectedCollection)
+      .doc()
       .set(parsedData)
       .then(() => {
         log("Collection updated successfully.");
