@@ -23,6 +23,10 @@ body {
   margin-bottom: 20px;
 }
 
+#optionsQuizNameWrap{
+      padding: 2%;
+}
+
 /* Quiz Name Styles */
 #optionsQuizName {
   font-size: 1.5em;
@@ -35,6 +39,19 @@ body {
   padding: 20px;
   border: 1px solid #ddd;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Customize the checkbox */
+.form-check-input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 5px;
+}
+
+/* Style the checkbox label */
+.form-check-label {
+  margin-left: 10px;
 }
 
 /* Timer and Countdown Styles */
@@ -71,3 +88,38 @@ body {
     margin-top: 20px;
   }
 }
+
+
+#timer-timeGroup{
+      display: none;
+}
+
+#timer-timeGroup label{
+      margain:2%;     
+      
+}
+
+
+/* Style the checkbox label */
+.form-check-label {
+  margin-left: 10px;
+}
+
+/* Style the quiz time input */
+#quiz-time {
+  width: 80px;
+}
+
+/* Style the quiz time input group */
+.input-group {
+  margin-bottom: 20px;
+}
+
+#msg_quiz_name {
+    font-size: 1.5em;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+
+  
