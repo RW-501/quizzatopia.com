@@ -147,7 +147,20 @@ async function fetchNextJSON() {
     const querySnapshot = await db.collection('quizzes').where('quizCodeDB', '==', quizCode).get();
 
     if (!querySnapshot.empty) {
-      logTextarea.value += `Quiz with code ${quizCode} already saved.\n\n`;
+
+	          const stringValues = `Quiz with code ${quizCode} already saved.\n\n`;
+
+     // console.log(stringValues);
+
+
+  // Scroll to the top of the textarea
+  logTextarea.scrollTo({ top: 0, behavior: "smooth" });
+
+  // Insert the new log at the top of the textarea
+  logTextarea.insertAdjacentText("afterbegin", `JSON ${counter}: Adding: ${stringValues}\n\n`);
+
+
+	    
       counter++;
       clearInterval(fetchInterval);
       fetchInterval = setInterval(fetchNextJSON, 1000);
