@@ -206,10 +206,7 @@ function populateDropdown() {
 // Function to get data based on the selected collection
 function getData() {
   const selectedCollection = collectionDropdown.value;
-  if (!selectedCollection) {
-    log("Please select a collection.");
-    return;
-  }
+
 	
   db.collection(YourRootCollection) // Replace "YourRootCollection" with your root collection name
     .doc(selectedCollection)
