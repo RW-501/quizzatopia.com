@@ -1,0 +1,151 @@
+{
+  "quizName": "Cuisine and Cooking Quiz",
+  "quizCode": "COOK2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Food",
+  "quizDescription": "Test your knowledge about different cuisines and cooking techniques from around the world!",
+  "quizTags": "Cuisine, Cooking, Culinary, Dishes",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which cuisine is famous for its use of spices such as turmeric, cumin, coriander, and cardamom?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Italian Cuisine",
+        "Mexican Cuisine",
+        "Indian Cuisine",
+        "Japanese Cuisine"
+      ],
+      "answer": "Indian Cuisine",
+      "explanation": "Indian Cuisine is famous for its use of a wide variety of spices such as turmeric, cumin, coriander, and cardamom, which add rich flavors to their dishes."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What cooking technique involves cooking food in a small amount of hot oil or fat over high heat?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Roasting",
+        "Braising",
+        "Sautéing",
+        "Steaming"
+      ],
+      "answer": "Sautéing",
+      "explanation": "Sautéing is a cooking technique that involves cooking food in a small amount of hot oil or fat over high heat. It is a quick and efficient method to cook vegetables, meats, and seafood."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which cuisine is known for its dishes featuring raw fish and seafood, often served with soy sauce and wasabi?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Thai Cuisine",
+        "Korean Cuisine",
+        "Japanese Cuisine",
+        "Greek Cuisine"
+      ],
+      "answer": "Japanese Cuisine",
+      "explanation": "Japanese Cuisine is known for its dishes featuring raw fish and seafood, such as sushi and sashimi. These dishes are often served with soy sauce, wasabi, and pickled ginger."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What cooking technique involves cooking food by submerging it in hot liquid just below boiling point?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Baking",
+        "Boiling",
+        "Grilling",
+        "Frying"
+      ],
+      "answer": "Boiling",
+      "explanation": "Boiling is a cooking technique that involves cooking food by submerging it in hot liquid just below boiling point. It is commonly used for cooking pasta, vegetables, and eggs."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which cuisine is famous for its use of chili peppers, corn, beans, and avocados?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Italian Cuisine",
+        "Thai Cuisine",
+        "Mexican Cuisine",
+        "French Cuisine"
+      ],
+      "answer": "Mexican Cuisine",
+      "explanation": "Mexican Cuisine is famous for its use of chili peppers, corn, beans, and avocados. It features a wide variety of flavors and spices in dishes like tacos, enchiladas, and guacamole."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What cooking technique involves cooking food slowly in an oven with dry heat, often uncovered?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Steaming",
+        "Baking",
+        "Searing",
+        "Grilling"
+      ],
+      "answer": "Baking",
+      "explanation": "Baking is a cooking technique that involves cooking food slowly in an oven with dry heat, often uncovered. It is commonly used for baking bread, cakes, and casseroles."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which cuisine is known for its dishes featuring rice noodles, lemongrass, coconut milk, and fish sauce?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Chinese Cuisine",
+        "Indian Cuisine",
+        "Thai Cuisine",
+        "Italian Cuisine"
+      ],
+      "answer": "Thai Cuisine",
+      "explanation": "Thai Cuisine is known for its dishes featuring rice noodles, lemongrass, coconut milk, and fish sauce. It balances sweet, sour, salty, and spicy flavors in dishes like Pad Thai and Green Curry."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What cooking technique involves cooking food by direct exposure to flame or heat?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Grilling",
+        "Simmering",
+        "Frying",
+        "Steaming"
+      ],
+      "answer": "Grilling",
+      "explanation": "Grilling is a cooking technique that involves cooking food by direct exposure to flame or heat. It is often used for cooking meats, vegetables, and seafood on a grill or barbecue."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which cuisine is famous for its dishes featuring pasta, tomatoes, olive oil, and cheese?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "French Cuisine",
+        "Japanese Cuisine",
+        "Italian Cuisine",
+        "Greek Cuisine"
+      ],
+      "answer": "Italian Cuisine",
+      "explanation": "Italian Cuisine is famous for its dishes featuring pasta, tomatoes, olive oil, and cheese. It is well-known for dishes like spaghetti, pizza, and lasagna."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What cooking technique involves cooking food in a closed pot with a small amount of liquid for an extended period?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Searing",
+        "Roasting",
+        "Braising",
+        "Fermenting"
+      ],
+      "answer": "Braising",
+      "explanation": "Braising is a cooking technique that involves cooking food in a closed pot with a small amount of liquid, such as broth or wine, for an extended period. It is often used for cooking tough cuts of meat to achieve tenderness and flavor."
+    }
+  ]
+}
