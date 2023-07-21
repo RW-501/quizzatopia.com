@@ -63,15 +63,21 @@
       "answer": "Secretary of the Treasury",
       "explanation": "The head of the Department of the Treasury is known as the 'Secretary of the Treasury.' The Secretary is a member of the President's Cabinet and is appointed by the President."
     },
-    {
-      "questionNumber": 5,
-      "question": "What is the term for the government's income from taxes and other revenue sources?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Revenue",
-      "explanation": "Revenue refers to the government's income from taxes and other sources, which is used to fund public services, programs, and government operations."
-    },
+{
+  "questionNumber": 5,
+  "question": "What is the term for the government's income from taxes and other revenue sources?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Revenue",
+    "Government Income",
+    "Tax Income",
+    "Public Funds"
+  ],
+  "answer": "Revenue",
+  "explanation": "Revenue refers to the government's income from taxes and other sources, which is used to fund public services, programs, and government operations.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 6,
       "question": "Which of the following is an example of a duty of the Department of the Treasury?",
@@ -100,24 +106,36 @@
       "answer": "Office of Foreign Assets Control (OFAC)",
       "explanation": "The Office of Foreign Assets Control (OFAC) is an agency under the Department of the Treasury responsible for enforcing economic sanctions against targeted foreign countries and combating financial crimes, including money laundering and terrorism financing."
     },
-    {
-      "questionNumber": 8,
-      "question": "What is the term for the amount of money the federal government owes to its creditors?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "National Debt",
-      "explanation": "The National Debt is the total amount of money that the federal government owes to its creditors, resulting from years of budget deficits."
-    },
-    {
-      "questionNumber": 9,
-      "question": "What is the name of the government agency that designs and engraves currency and other security documents?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Bureau of Engraving and Printing (BEP)",
-      "explanation": "The Bureau of Engraving and Printing (BEP) is the government agency responsible for designing and engraving currency, as well as producing other security documents such as government bonds and identification cards."
-    },
+{
+  "questionNumber": 8,
+  "question": "What is the term for the amount of money the federal government owes to its creditors?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "National Debt",
+    "Government Liability",
+    "Federal Loan",
+    "Creditors' Balance"
+  ],
+  "answer": "National Debt",
+  "explanation": "The National Debt is the total amount of money that the federal government owes to its creditors, resulting from years of budget deficits.",
+  "difficulty": "Medium"
+},
+{
+  "questionNumber": 9,
+  "question": "What is the name of the government agency that designs and engraves currency and other security documents?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Bureau of Engraving and Printing (BEP)",
+    "Currency Design Agency",
+    "Federal Security Printing Bureau",
+    "Engraving and Security Department"
+  ],
+  "answer": "Bureau of Engraving and Printing (BEP)",
+  "explanation": "The Bureau of Engraving and Printing (BEP) is the government agency responsible for designing and engraving currency, as well as producing other security documents such as government bonds and identification cards.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 10,
       "question": "Which of the following is an agency responsible for investigating financial crimes and enforcing federal tax laws?",
@@ -132,15 +150,21 @@
       "answer": "Financial Crimes Enforcement Network (FinCEN)",
       "explanation": "The Financial Crimes Enforcement Network (FinCEN) is a bureau of the Department of the Treasury responsible for investigating financial crimes, including money laundering and terrorist financing, and enforcing federal tax laws related to money services businesses."
     },
-    {
-      "questionNumber": 11,
-      "question": "What is the term for the process of paying off government debt over time?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Debt Reduction",
-      "explanation": "Debt Reduction is the process of paying off government debt over time to reduce the National Debt and improve the financial health of the government."
-    },
+{
+  "questionNumber": 11,
+  "question": "What is the term for the process of paying off government debt over time?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Debt Reduction",
+    "Government Debt Payoff",
+    "National Debt Management",
+    "Financial Deficit Mitigation"
+  ],
+  "answer": "Debt Reduction",
+  "explanation": "Debt Reduction is the process of paying off government debt over time to reduce the National Debt and improve the financial health of the government.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 12,
       "question": "Which of the following is an example of a program administered by the Department of the Treasury to help low-income individuals and families?",
@@ -169,23 +193,35 @@
       "answer": "Office of the Comptroller of the Currency (OCC)",
       "explanation": "The Office of the Comptroller of the Currency (OCC) is an independent bureau of the Department of the Treasury that supervises and regulates national banks and federal savings associations to ensure safe and sound banking practices."
     },
-    {
-      "questionNumber": 14,
-      "question": "What is the term for the document issued by the Department of the Treasury to authorize federal agencies to incur obligations and make payments?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Warrant",
-      "explanation": "A Warrant is a document issued by the Department of the Treasury that authorizes federal agencies to incur obligations and make payments for specific government activities."
-    },
-    {
-      "questionNumber": 15,
-      "question": "What is the name of the department within the Department of the Treasury responsible for collecting federal tax revenues?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Internal Revenue Service (IRS)",
-      "explanation": "The Internal Revenue Service (IRS) is the department within the Department of the Treasury responsible for collecting federal tax revenues, processing tax returns, and enforcing tax laws."
-    }
+{
+  "questionNumber": 14,
+  "question": "What is the term for the document issued by the Department of the Treasury to authorize federal agencies to incur obligations and make payments?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Warrant",
+    "Authorization Order",
+    "Payment Voucher",
+    "Treasury Certificate"
+  ],
+  "answer": "Warrant",
+  "explanation": "A Warrant is a document issued by the Department of the Treasury that authorizes federal agencies to incur obligations and make payments for specific government activities.",
+  "difficulty": "Medium"
+},
+{
+  "questionNumber": 15,
+  "question": "What is the name of the department within the Department of the Treasury responsible for collecting federal tax revenues?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Internal Revenue Service (IRS)",
+    "Tax Revenue Bureau",
+    "Treasury Tax Collection",
+    "Federal Tax Agency"
+  ],
+  "answer": "Internal Revenue Service (IRS)",
+  "explanation": "The Internal Revenue Service (IRS) is the department within the Department of the Treasury responsible for collecting federal tax revenues, processing tax returns, and enforcing tax laws.",
+  "difficulty": "Medium"
+}
   ]
 }
