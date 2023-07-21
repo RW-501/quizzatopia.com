@@ -1,0 +1,151 @@
+{
+  "quizName": "Nirvana Quiz",
+  "quizCode": "NIRVANA2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Music",
+  "quizDescription": "Test your knowledge about the influential grunge band 'Nirvana,' their music, and their impact on the music scene of the 1990s!",
+  "quizTags": "Nirvana, Music, Grunge, Kurt Cobain, Smells Like Teen Spirit, Nevermind",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who was the lead vocalist and guitarist of Nirvana?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kurt Cobain",
+        "Dave Grohl",
+        "Krist Novoselic",
+        "Eddie Vedder"
+      ],
+      "answer": "Kurt Cobain",
+      "explanation": "Kurt Cobain was the lead vocalist and guitarist of Nirvana. He was the primary songwriter and played a significant role in defining the band's unique sound."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which Nirvana song became a massive hit and an anthem of the grunge era?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Come as You Are",
+        "In Bloom",
+        "Smells Like Teen Spirit",
+        "Lithium"
+      ],
+      "answer": "Smells Like Teen Spirit",
+      "explanation": "'Smells Like Teen Spirit' became a massive hit and an anthem of the grunge era. The song catapulted Nirvana to mainstream success and is considered one of the greatest rock songs of all time."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Nirvana's breakthrough album 'Nevermind' was released in which year?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1990",
+        "1991",
+        "1992",
+        "1993"
+      ],
+      "answer": "1991",
+      "explanation": "Nirvana's breakthrough album 'Nevermind' was released in 1991. The album's massive success helped bring grunge and alternative rock into the mainstream."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which drummer joined Nirvana and played on their album 'Nevermind'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Dave Grohl",
+        "Chad Channing",
+        "Taylor Hawkins",
+        "Krist Novoselic"
+      ],
+      "answer": "Dave Grohl",
+      "explanation": "Dave Grohl joined Nirvana as the drummer and played on their album 'Nevermind.' After Kurt Cobain's death, Grohl founded the Foo Fighters, where he became the frontman and guitarist."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What was the title of Nirvana's final studio album, released after Kurt Cobain's passing?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bleach",
+        "In Utero",
+        "MTV Unplugged in New York",
+        "Incesticide"
+      ],
+      "answer": "In Utero",
+      "explanation": "Nirvana's final studio album was titled 'In Utero.' It was released in 1993, seven months before Kurt Cobain's passing."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which Nirvana song features the opening line 'Load up on guns, bring your friends'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Heart-Shaped Box",
+        "Lithium",
+        "In Bloom",
+        "Smells Like Teen Spirit"
+      ],
+      "answer": "Smells Like Teen Spirit",
+      "explanation": "The Nirvana song 'Smells Like Teen Spirit' features the opening line 'Load up on guns, bring your friends.' It became a generational anthem and a symbol of the 1990s."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Nirvana's MTV Unplugged performance in 1993 featured an emotional and haunting cover of which song?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "All Apologies",
+        "Come as You Are",
+        "The Man Who Sold the World",
+        "Polly"
+      ],
+      "answer": "The Man Who Sold the World",
+      "explanation": "Nirvana's MTV Unplugged performance in 1993 featured an emotional and haunting cover of 'The Man Who Sold the World,' originally written and performed by David Bowie."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Nirvana was formed in which city?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Los Angeles",
+        "Seattle",
+        "New York City",
+        "London"
+      ],
+      "answer": "Seattle",
+      "explanation": "Nirvana was formed in Seattle, Washington, in 1987. The band's origin is closely tied to the development of the grunge music scene in Seattle during the late 1980s and early 1990s."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which Nirvana album featured the song 'Come as You Are'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Nevermind",
+        "In Utero",
+        "Bleach",
+        "Incesticide"
+      ],
+      "answer": "Nevermind",
+      "explanation": "The Nirvana album 'Nevermind' featured the song 'Come as You Are.' The album played a significant role in bringing alternative rock and grunge to a mainstream audience."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Nirvana's MTV Unplugged performance was recorded in which city?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "New York City",
+        "Seattle",
+        "Los Angeles",
+        "London"
+      ],
+      "answer": "New York City",
+      "explanation": "Nirvana's MTV Unplugged performance was recorded in New York City on November 18, 1993. The intimate acoustic show is considered one of the band's most memorable performances."
+    }
+  ]
+}
