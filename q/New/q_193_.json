@@ -1,0 +1,221 @@
+{
+  "quizName": "Are You a Nerd Quiz",
+  "quizCode": "NerdQuiz2023",
+  "quizDifficulty": "Fun",
+  "quizCategory": "Personality",
+  "quizDescription": "Discover if you have nerdy tendencies with this entertaining quiz!",
+  "quizTags": "Personality, Fun, Nerd",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What type of books do you prefer to read?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Fiction and fantasy novels",
+        "Science and technology books",
+        "Mystery and detective stories",
+        "Romance and drama novels"
+      ],
+      "answer": "Science and technology books",
+      "explanation": "A preference for reading science and technology books may indicate nerdy tendencies, as it shows an interest in acquiring knowledge about various subjects."
+    },
+    {
+      "questionNumber": 2,
+      "question": "How do you spend your free time?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Playing video games or board games",
+        "Attending social events and parties",
+        "Engaging in outdoor activities",
+        "Watching TV shows and movies"
+      ],
+      "answer": "Playing video games or board games",
+      "explanation": "Spending free time playing video games or board games can be a sign of nerdy tendencies, as it suggests a love for interactive and mentally stimulating activities."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What are your favorite movie genres?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sci-fi and fantasy films",
+        "Romantic comedies and dramas",
+        "Action and adventure movies",
+        "Documentaries and biographies"
+      ],
+      "answer": "Sci-fi and fantasy films",
+      "explanation": "Having a preference for sci-fi and fantasy films may indicate nerdy tendencies, as it suggests an appreciation for imaginative and otherworldly stories."
+    },
+    {
+      "questionNumber": 4,
+      "question": "How do you handle challenging problems or puzzles?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "I find them intriguing and enjoy solving them",
+        "I tend to avoid challenging problems",
+        "I seek help from others to solve them",
+        "I get frustrated and give up quickly"
+      ],
+      "answer": "I find them intriguing and enjoy solving them",
+      "explanation": "Enjoying challenging problems and puzzles is often associated with nerdy tendencies, as it suggests a love for intellectual challenges and problem-solving."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What type of events do you attend in your spare time?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Comic book conventions and fan expos",
+        "Music concerts and festivals",
+        "Sporting events and games",
+        "Art exhibitions and galleries"
+      ],
+      "answer": "Comic book conventions and fan expos",
+      "explanation": "Attending comic book conventions and fan expos may indicate nerdy tendencies, as it suggests a passion for pop culture and niche interests."
+    },
+    {
+      "questionNumber": 6,
+      "question": "How do you feel about technology?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "I love exploring and learning about new technologies",
+        "I use technology when necessary but don't find it exciting",
+        "I try to avoid using technology as much as possible",
+        "I'm indifferent to technology"
+      ],
+      "answer": "I love exploring and learning about new technologies",
+      "explanation": "Having a fascination with exploring and learning about new technologies may indicate nerdy tendencies, as it suggests a keen interest in the digital world."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What's your favorite type of trivia?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Science and technology trivia",
+        "Pop culture and entertainment trivia",
+        "Sports and history trivia",
+        "General knowledge trivia"
+      ],
+      "answer": "Science and technology trivia",
+      "explanation": "Preferring science and technology trivia is often associated with nerdy tendencies, as it indicates a love for facts and knowledge in those fields."
+    },
+    {
+      "questionNumber": 8,
+      "question": "How do you dress on a typical day?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Casual and comfortable attire",
+        "Fashionable and trendy outfits",
+        "Formal and professional clothing",
+        "A mix of geeky and nerdy-themed clothing"
+      ],
+      "answer": "A mix of geeky and nerdy-themed clothing",
+      "explanation": "Wearing geeky and nerdy-themed clothing is often associated with nerdy tendencies, as it suggests a love for showcasing pop culture and fandom interests."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What do you enjoy talking about the most?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Technology and science-related topics",
+        "Social events and gossip",
+        "Sports and fitness",
+        "Travel and vacations"
+      ],
+      "answer": "Technology and science-related topics",
+      "explanation": "Enjoying discussions about technology and science-related topics may indicate nerdy tendencies, as it shows a passion for intellectual and technical subjects."
+    },
+    {
+      "questionNumber": 10,
+      "question": "How do you handle pop culture references?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "I get excited and can easily identify them",
+        "I'm familiar with some pop culture references",
+        "I don't pay much attention to pop culture",
+        "I find pop culture references confusing"
+      ],
+      "answer": "I get excited and can easily identify them",
+      "explanation": "Getting excited and easily identifying pop culture references is often associated with nerdy tendencies, as it suggests a deep knowledge and interest in various media."
+    },
+    {
+      "questionNumber": 11,
+      "question": "What type of games do you enjoy playing?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Video games, especially strategy and RPGs",
+        "Card games and board games",
+        "Sports and outdoor games",
+        "I don't play games often"
+      ],
+      "answer": "Video games, especially strategy and RPGs",
+      "explanation": "Enjoying video games, especially strategy and RPGs, is often associated with nerdy tendencies, as it suggests a love for immersive and mentally engaging gameplay."
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is your response to nerdy jokes and puns?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "I find them hilarious and enjoy sharing them",
+        "I understand them but don't find them particularly funny",
+        "I don't get most nerdy jokes",
+        "I find them annoying and avoid them"
+      ],
+      "answer": "I find them hilarious and enjoy sharing them",
+      "explanation": "Finding nerdy jokes and puns hilarious and enjoying sharing them is often associated with nerdy tendencies, as it suggests a sense of humor aligned with geeky interests."
+    },
+    {
+      "questionNumber": 13,
+      "question": "What's your reaction to new movie or game releases?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "I eagerly anticipate them and plan to watch/play as soon as they're out",
+        "I keep an eye on them but might wait for reviews",
+        "I'm not particularly interested in new releases",
+        "I'm not aware of upcoming releases"
+      ],
+      "answer": "I eagerly anticipate them and plan to watch/play as soon as they're out",
+      "explanation": "Eagerly anticipating new movie or game releases and planning to watch/play them as soon as they're out is often associated with nerdy tendencies, as it shows a passion for media and entertainment."
+    },
+    {
+      "questionNumber": 14,
+      "question": "What type of conventions or events would you love to attend?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tech conferences and expos",
+        "Music festivals and concerts",
+        "Sports championships and tournaments",
+        "Comic book and gaming conventions"
+      ],
+      "answer": "Tech conferences and expos",
+      "explanation": "Having a preference for attending tech conferences and expos is often associated with nerdy tendencies, as it suggests an interest in the latest advancements and innovations."
+    },
+    {
+      "questionNumber": 15,
+      "question": "How do you handle discussions about obscure or niche topics?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "I enjoy engaging in discussions and sharing knowledge",
+        "I listen and learn from others without actively participating",
+        "I find obscure topics uninteresting and avoid discussions",
+        "I feel uncomfortable and out of place in such discussions"
+      ],
+      "answer": "I enjoy engaging in discussions and sharing knowledge",
+      "explanation": "Enjoying engaging in discussions about obscure or niche topics and sharing knowledge is often associated with nerdy tendencies, as it suggests a passion for specialized subjects."
+    }
+  ]
+}
