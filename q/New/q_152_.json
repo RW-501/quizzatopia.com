@@ -1,0 +1,146 @@
+{
+  "quizName": "The Supremes Quiz",
+  "quizCode": "SUPREMES2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Music",
+  "quizDescription": "Test your knowledge about the iconic Motown group, The Supremes, and their chart-topping hits!",
+  "quizTags": "The Supremes, Motown, Music, R&B, Soul",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "The Supremes, one of Motown's most successful acts, consisted of members Diana Ross, Florence Ballard, and __________.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Mary Wilson",
+      "explanation": "The Supremes, one of Motown's most successful acts, consisted of members Diana Ross, Florence Ballard, and Mary Wilson. They achieved numerous chart-topping hits."
+    },
+    {
+      "questionNumber": 2,
+      "question": "The Supremes achieved their first number one hit on the Billboard Hot 100 chart with the song ________.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Stop! In the Name of Love",
+        "You Can't Hurry Love",
+        "Where Did Our Love Go",
+        "Baby Love"
+      ],
+      "answer": "Where Did Our Love Go",
+      "explanation": "The Supremes achieved their first number one hit on the Billboard Hot 100 chart with the song 'Where Did Our Love Go.' It marked the beginning of their successful chart-topping streak."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which Motown songwriter and producer played a significant role in shaping The Supremes' sound and contributed to their hits like 'Baby Love' and 'Stop! In the Name of Love'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Berry Gordy",
+        "Smokey Robinson",
+        "Lamont Dozier",
+        "Holland-Dozier-Holland"
+      ],
+      "answer": "Holland-Dozier-Holland",
+      "explanation": "Holland-Dozier-Holland, a team of Motown songwriters and producers, played a significant role in shaping The Supremes' sound and contributed to their hits like 'Baby Love' and 'Stop! In the Name of Love.'"
+    },
+    {
+      "questionNumber": 4,
+      "question": "The Supremes achieved twelve number one hits on the Billboard Hot 100 chart during their career. Which song was their final number one hit?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Someday We'll Be Together",
+        "You Keep Me Hangin' On",
+        "Love Child",
+        "Reflections"
+      ],
+      "answer": "Someday We'll Be Together",
+      "explanation": "The Supremes' final number one hit on the Billboard Hot 100 chart was 'Someday We'll Be Together.' The song was released as Diana Ross' farewell single before she embarked on her solo career."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What was the name of The Supremes' debut album, released in 1962?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Meet The Supremes",
+        "Where Did Our Love Go",
+        "The Supremes Sing Holland-Dozier-Holland",
+        "More Hits by The Supremes"
+      ],
+      "answer": "Meet The Supremes",
+      "explanation": "The Supremes' debut album, released in 1962, was titled 'Meet The Supremes.' It featured songs like 'Your Heart Belongs to Me' and 'Buttered Popcorn.'"
+    },
+    {
+      "questionNumber": 6,
+      "question": "The Supremes achieved their first Grammy Award nomination for the song ________.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "You Can't Hurry Love",
+        "Baby Love",
+        "Stop! In the Name of Love",
+        "Reflections"
+      ],
+      "answer": "Baby Love",
+      "explanation": "The Supremes achieved their first Grammy Award nomination for the song 'Baby Love.' The song became one of their signature hits."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which of The Supremes' songs earned them an Academy Award nomination for Best Original Song?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Reflections",
+        "Love Child",
+        "Someday We'll Be Together",
+        "The Happening"
+      ],
+      "answer": "The Happening",
+      "explanation": "The Supremes' song 'The Happening,' from the 1967 film of the same name, earned them an Academy Award nomination for Best Original Song."
+    },
+    {
+      "questionNumber": 8,
+      "question": "In 1970, Diana Ross left The Supremes to pursue a solo career. Who replaced her as the lead singer of the group?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jean Terrell",
+        "Cindy Birdsong",
+        "Lynda Laurence",
+        "Scherrie Payne"
+      ],
+      "answer": "Jean Terrell",
+      "explanation": "In 1970, Diana Ross left The Supremes to pursue a solo career. Jean Terrell replaced her as the lead singer of the group, and they continued to release music together."
+    },
+    {
+      "questionNumber": 9,
+      "question": "The Supremes' song 'You Keep Me Hangin' On' is notable for its unique and innovative arrangement, which genre did it incorporate?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Rock",
+        "Jazz",
+        "Psychedelic",
+        "Funk"
+      ],
+      "answer": "Psychedelic",
+      "explanation": "The Supremes' song 'You Keep Me Hangin' On' is notable for its unique and innovative arrangement, incorporating elements of psychedelic rock."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What was the final studio album released by The Supremes before their disbandment in 1977?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Touch",
+        "High Energy",
+        "Mary, Scherrie & Susaye",
+        "The Supremes"
+      ],
+      "answer": "Mary, Scherrie & Susaye",
+      "explanation": "The final studio album released by The Supremes before their disbandment in 1977 was 'Mary, Scherrie & Susaye.' The album featured their last charting single, 'Let Yourself Go.'"
+    }
+  ]
+}
