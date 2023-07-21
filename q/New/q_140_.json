@@ -1,0 +1,151 @@
+{
+  "quizName": "Aerosmith Quiz",
+  "quizCode": "AEROSMITH2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Music",
+  "quizDescription": "Test your knowledge about the iconic rock band Aerosmith and their legendary music career!",
+  "quizTags": "Aerosmith, Music, Rock, Hard Rock",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which lead singer is often referred to as the 'Demon of Screamin' and one of the founding members of Aerosmith?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Steven Tyler",
+        "Joe Perry",
+        "Tom Hamilton",
+        "Brad Whitford"
+      ],
+      "answer": "Steven Tyler",
+      "explanation": "Steven Tyler, known for his powerful vocals and charismatic stage presence, is often referred to as the 'Demon of Screamin' and one of the founding members of Aerosmith."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Aerosmith's breakthrough album, released in 1975, is titled:",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Toys in the Attic",
+        "Rocks",
+        "Pump",
+        "Permanent Vacation"
+      ],
+      "answer": "Toys in the Attic",
+      "explanation": "Aerosmith's breakthrough album, released in 1975, is titled 'Toys in the Attic.' It featured hits like 'Sweet Emotion' and 'Walk This Way.'"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which Aerosmith song is a power ballad and a fan-favorite, often associated with romantic moments?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Crazy",
+        "Cryin'",
+        "Amazing",
+        "I Don't Want to Miss a Thing"
+      ],
+      "answer": "I Don't Want to Miss a Thing",
+      "explanation": "'I Don't Want to Miss a Thing' is a power ballad by Aerosmith, famous for its association with the movie 'Armageddon' and romantic moments."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which Aerosmith song became a massive hit in the 1980s and helped revitalize their career?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Love in an Elevator",
+        "Janie's Got a Gun",
+        "Sweet Emotion",
+        "Dude (Looks Like a Lady)"
+      ],
+      "answer": "Dude (Looks Like a Lady)",
+      "explanation": "'Dude (Looks Like a Lady)' became a massive hit in the 1980s and helped revitalize Aerosmith's career. It was featured on the album 'Permanent Vacation.'"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Aerosmith performed a duet with which rapper for the song 'Walk This Way,' creating a groundbreaking fusion of rock and hip-hop?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tupac Shakur",
+        "Jay-Z",
+        "Run-D.M.C.",
+        "Eminem"
+      ],
+      "answer": "Run-D.M.C.",
+      "explanation": "Aerosmith performed a duet with the rap group Run-D.M.C. for the song 'Walk This Way,' creating a groundbreaking fusion of rock and hip-hop. The collaboration introduced Aerosmith to a new generation of fans."
+    },
+    {
+      "questionNumber": 6,
+      "question": "The power ballad 'Dream On' is featured on which Aerosmith album?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Rocks",
+        "Toys in the Attic",
+        "Get a Grip",
+        "Aerosmith"
+      ],
+      "answer": "Aerosmith",
+      "explanation": "'Dream On' is featured on Aerosmith's self-titled debut studio album, released in 1973. The song has become one of the band's signature classics."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which Aerosmith song is known for its catchy guitar riff and high-energy chorus, making it a staple of their live performances?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Livin' on the Edge",
+        "Eat the Rich",
+        "Last Child",
+        "Draw the Line"
+      ],
+      "answer": "Last Child",
+      "explanation": "'Last Child' is known for its catchy guitar riff and high-energy chorus, making it a staple of Aerosmith's live performances."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which member of Aerosmith is the lead guitarist and a key songwriter for the band?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Steven Tyler",
+        "Joe Perry",
+        "Tom Hamilton",
+        "Brad Whitford"
+      ],
+      "answer": "Joe Perry",
+      "explanation": "Joe Perry is the lead guitarist and a key songwriter for Aerosmith. He, along with Steven Tyler, forms the core of the band's creative force."
+    },
+    {
+      "questionNumber": 9,
+      "question": "The album 'Get a Grip,' released in 1993, featured which famous actress in its music video for the song 'Crazy'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Angelina Jolie",
+        "Julia Roberts",
+        "Demi Moore",
+        "Alicia Silverstone"
+      ],
+      "answer": "Alicia Silverstone",
+      "explanation": "The album 'Get a Grip' featured Alicia Silverstone in its music video for the song 'Crazy.' The video gained significant popularity and became an MTV staple."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Aerosmith's album 'Pump' won which prestigious award in 1991?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Grammy Award",
+        "MTV Video Music Award",
+        "American Music Award",
+        "Brit Award"
+      ],
+      "answer": "Grammy Award",
+      "explanation": "Aerosmith's album 'Pump' won a Grammy Award in 1991 for 'Best Rock Performance by a Duo or Group with Vocal.' The album featured hits like 'Janie's Got a Gun' and 'Love in an Elevator.'"
+    }
+  ]
+}
