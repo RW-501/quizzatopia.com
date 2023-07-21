@@ -1,0 +1,151 @@
+{
+  "quizName": "Food and Ingredients Quiz",
+  "quizCode": "FOOD2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Food",
+  "quizDescription": "Test your knowledge about various foods and ingredients used in cooking!",
+  "quizTags": "Food, Ingredients, Culinary, Cooking",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which fruit is known as the 'king of fruits' and has a strong, distinctive aroma?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Apple",
+        "Banana",
+        "Durian",
+        "Mango"
+      ],
+      "answer": "Durian",
+      "explanation": "Durian is known as the 'king of fruits' due to its strong aroma and unique flavor. It is a tropical fruit popular in Southeast Asia."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the main ingredient used to make guacamole, a popular Mexican dip?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Avocado",
+        "Tomato",
+        "Onion",
+        "Chili Pepper"
+      ],
+      "answer": "Avocado",
+      "explanation": "The main ingredient in guacamole is avocado. It is mashed and mixed with other ingredients like onion, tomato, and chili pepper to create the delicious dip."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which spice is made from the dried stigma of a flower and is one of the most expensive spices by weight?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cinnamon",
+        "Saffron",
+        "Paprika",
+        "Turmeric"
+      ],
+      "answer": "Saffron",
+      "explanation": "Saffron is made from the dried stigma of the saffron crocus flower. It is one of the most expensive spices in the world and is valued for its unique flavor and color."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which dairy product is made by fermenting milk with specific bacteria to create a tangy and creamy product?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Butter",
+        "Cream",
+        "Yogurt",
+        "Cheese"
+      ],
+      "answer": "Yogurt",
+      "explanation": "Yogurt is made by fermenting milk with specific bacteria. The fermentation process creates a tangy and creamy product that can be enjoyed plain or with added flavors and toppings."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the main ingredient used in traditional Japanese miso soup?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Seaweed",
+        "Tofu",
+        "Fish",
+        "Miso Paste"
+      ],
+      "answer": "Miso Paste",
+      "explanation": "Miso soup is a traditional Japanese soup made with miso paste, which is a fermented soybean paste. It is often complemented with ingredients like tofu, seaweed, and green onions."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which type of pasta is shaped like small rice grains and is often used in soups?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Spaghetti",
+        "Farfalle",
+        "Orzo",
+        "Penne"
+      ],
+      "answer": "Orzo",
+      "explanation": "Orzo is a type of pasta that is shaped like small rice grains. It is commonly used in soups and salads and pairs well with various sauces and vegetables."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the main ingredient in hummus, a popular Middle Eastern dip?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Chickpeas",
+        "Eggplant",
+        "Tahini",
+        "Lentils"
+      ],
+      "answer": "Chickpeas",
+      "explanation": "The main ingredient in hummus is chickpeas, also known as garbanzo beans. It is blended with tahini (sesame seed paste), lemon juice, garlic, and olive oil to create the creamy dip."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which sweetener is made from the nectar of coconut flowers and is often used as an alternative to sugar?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Maple Syrup",
+        "Honey",
+        "Agave Nectar",
+        "Coconut Sugar"
+      ],
+      "answer": "Coconut Sugar",
+      "explanation": "Coconut sugar is made from the nectar of coconut flowers and is a natural sweetener. It is commonly used as an alternative to refined sugar in cooking and baking."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the primary ingredient in the popular Italian dish 'Risotto'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pasta",
+        "Rice",
+        "Potatoes",
+        "Couscous"
+      ],
+      "answer": "Rice",
+      "explanation": "Risotto is an Italian dish made with rice cooked in broth until creamy and tender. It is often flavored with various ingredients such as mushrooms, seafood, or cheese."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which tropical fruit has a yellow or green skin with a sweet and tangy flesh?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pineapple",
+        "Watermelon",
+        "Mango",
+        "Papaya"
+      ],
+      "answer": "Mango",
+      "explanation": "Mango is a tropical fruit with a sweet and tangy flesh. It is commonly enjoyed fresh, in smoothies, or as a topping for desserts and salads."
+    }
+  ]
+}
