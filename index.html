@@ -1142,7 +1142,9 @@ async function fetchQuizzesFromDB() {
   // Iterate over each quiz item in the combined dataset
   quizList.forEach((quizData) => {
     num += 1;
-    const stars = ratingToStars(quizData.quizRatingDB); // Assigned stars here
+
+	let rating =  quizData.quizRatingDB / quizData.quizRatingCountDB;
+    const stars = ratingToStars(rating); // Assigned stars here
 
     // Generate the HTML for each quiz
     const quizHtml = `
