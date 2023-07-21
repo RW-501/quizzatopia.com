@@ -1,0 +1,151 @@
+{
+  "quizName": "Golf Quiz",
+  "quizCode": "GOLF2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Sports",
+  "quizDescription": "Test your knowledge about the game of golf and its history!",
+  "quizTags": "Golf, Sports, Players, Courses, Tournaments",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In which country did golf originate?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Scotland",
+        "United States",
+        "England",
+        "Ireland"
+      ],
+      "answer": "Scotland",
+      "explanation": "Golf originated in Scotland, and the first official golf rules were written in Edinburgh in 1744."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the term for a hole completed in one stroke under par on a golf course?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bogey",
+        "Eagle",
+        "Birdie",
+        "Albatross"
+      ],
+      "answer": "Hole-in-One",
+      "explanation": "A 'Hole-in-One' is the term used in golf for completing a hole with just one stroke under par, achieving it in a single shot."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which golf tournament is considered one of the four major championships in professional golf?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Players Championship",
+        "The Masters",
+        "The Ryder Cup",
+        "The Arnold Palmer Invitational"
+      ],
+      "answer": "The Masters",
+      "explanation": "The Masters is one of the four major championships in professional golf and is held annually at Augusta National Golf Club in Georgia, USA."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the maximum number of clubs that a golfer is allowed to carry in their bag during a round of golf?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
+      "answer": "14",
+      "explanation": "A golfer is allowed to carry a maximum of 14 clubs in their bag during a round of golf, as per the official rules of golf."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which golfer holds the record for the most major championships won in men's golf?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tiger Woods",
+        "Jack Nicklaus",
+        "Arnold Palmer",
+        "Phil Mickelson"
+      ],
+      "answer": "Jack Nicklaus",
+      "explanation": "Jack Nicklaus holds the record for the most major championships won in men's golf, with 18 major titles to his name."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the term used for a score of one stroke over par on a golf hole?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Eagle",
+        "Birdie",
+        "Bogey",
+        "Par"
+      ],
+      "answer": "Bogey",
+      "explanation": "A 'Bogey' is the term used in golf for a score of one stroke over par on a hole."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which golf course is famously known as 'The Home of Golf'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Augusta National Golf Club",
+        "Pebble Beach Golf Links",
+        "St. Andrews Links",
+        "Pinehurst No. 2"
+      ],
+      "answer": "St. Andrews Links",
+      "explanation": "St. Andrews Links, located in Scotland, is famously known as 'The Home of Golf' and is one of the oldest and most prestigious golf courses in the world."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which golf tournament is played annually at TPC Sawgrass in Florida, featuring the iconic island green at the 17th hole?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Open Championship",
+        "The Players Championship",
+        "The U.S. Open",
+        "The PGA Championship"
+      ],
+      "answer": "The Players Championship",
+      "explanation": "The Players Championship is an annual golf tournament played at TPC Sawgrass in Florida, and it is often referred to as the 'Fifth Major' in professional golf."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which golfer is often referred to as 'The Golden Bear' and is considered one of the greatest golfers of all time?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tiger Woods",
+        "Jack Nicklaus",
+        "Arnold Palmer",
+        "Gary Player"
+      ],
+      "answer": "Jack Nicklaus",
+      "explanation": "Jack Nicklaus, also known as 'The Golden Bear,' is considered one of the greatest golfers of all time, with a record 18 major championship victories."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which golfer has won the most Masters Tournaments (The Masters) in professional golf history?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Arnold Palmer",
+        "Tiger Woods",
+        "Gary Player",
+        "Jack Nicklaus"
+      ],
+      "answer": "Jack Nicklaus",
+      "explanation": "Jack Nicklaus holds the record for the most Masters Tournament victories (The Masters) in professional golf history, with six green jackets."
+    }
+  ]
+}
