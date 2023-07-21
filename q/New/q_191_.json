@@ -1,0 +1,191 @@
+{
+  "quizName": "Using Technology Correctly Quiz",
+  "quizCode": "TechCorrectQuiz2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Technology",
+  "quizDescription": "Test your knowledge about using technology responsibly and effectively!",
+  "quizTags": "Technology, Responsible Use, Digital Etiquette",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does it mean to practice good digital etiquette?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ignoring online safety measures",
+        "Engaging in cyberbullying",
+        "Using technology responsibly and respectfully",
+        "Sharing personal information publicly"
+      ],
+      "answer": "Using technology responsibly and respectfully",
+      "explanation": "Practicing good digital etiquette involves using technology responsibly, being respectful to others online, and following appropriate online conduct."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which of the following is an example of using technology correctly in the workplace?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Using work devices for personal entertainment during work hours",
+        "Sharing confidential company information on social media",
+        "Keeping passwords secure and not sharing them with coworkers",
+        "Ignoring software updates and security patches"
+      ],
+      "answer": "Keeping passwords secure and not sharing them with coworkers",
+      "explanation": "Using technology correctly in the workplace includes keeping passwords secure and not sharing them with coworkers to protect sensitive information."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the term for the act of sending unsolicited and often irrelevant messages to a large number of users?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Spamming",
+      "explanation": "Spamming refers to the act of sending unsolicited and often irrelevant messages, advertisements, or promotional content to a large number of users, usually via email or social media."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which of the following practices demonstrates responsible smartphone use?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Using smartphones while driving",
+        "Ignoring notifications and messages",
+        "Setting the phone to silent mode in public places",
+        "Downloading apps from unknown sources"
+      ],
+      "answer": "Setting the phone to silent mode in public places",
+      "explanation": "Responsible smartphone use includes setting the phone to silent mode in public places to avoid disturbing others and maintaining focus on the surroundings."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the term for the practice of verifying the authenticity of information before sharing it online?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Fact-checking",
+      "explanation": "Fact-checking is the practice of verifying the accuracy and authenticity of information before sharing it online, helping to prevent the spread of misinformation."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which of the following is a potential consequence of oversharing personal information online?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Increased online privacy and security",
+        "Building strong online connections",
+        "Identity theft and cyberbullying",
+        "Enhanced digital reputation"
+      ],
+      "answer": "Identity theft and cyberbullying",
+      "explanation": "Oversharing personal information online can lead to potential risks such as identity theft and cyberbullying, as sensitive information may fall into the wrong hands."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the term for the practice of using someone else's work, ideas, or words without giving proper credit?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Plagiarism",
+      "explanation": "Plagiarism is the practice of using someone else's work, ideas, or words without giving proper credit, which is a violation of intellectual property rights and academic integrity."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which of the following practices promotes a healthy balance between screen time and other activities?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Spending all free time on digital devices",
+        "Prioritizing outdoor activities and face-to-face interactions",
+        "Multitasking with multiple screens",
+        "Constantly checking notifications and updates"
+      ],
+      "answer": "Prioritizing outdoor activities and face-to-face interactions",
+      "explanation": "Promoting a healthy balance between screen time and other activities involves prioritizing outdoor activities and face-to-face interactions to reduce excessive reliance on digital devices."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which of the following is a responsible social media practice?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Engaging in online arguments and conflicts",
+        "Posting personal information in public posts",
+        "Sharing others' content without permission",
+        "Using privacy settings to control who can view your posts"
+      ],
+      "answer": "Using privacy settings to control who can view your posts",
+      "explanation": "Using privacy settings to control who can view your posts is a responsible social media practice, helping you to maintain control over your online presence and protect your privacy."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the term for the act of using technology to harass, threaten, or humiliate others?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Cyberbullying",
+      "explanation": "Cyberbullying is the act of using technology, such as social media, email, or messaging apps, to harass, threaten, or humiliate others, which can have serious emotional and psychological consequences."
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which of the following is a way to protect your digital identity and online accounts?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Using the same password for all accounts",
+        "Sharing passwords with friends and family",
+        "Enabling two-factor authentication",
+        "Leaving devices unlocked and unattended"
+      ],
+      "answer": "Enabling two-factor authentication",
+      "explanation": "Enabling two-factor authentication adds an extra layer of security to your online accounts, reducing the risk of unauthorized access even if someone has your password."
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which of the following practices promotes responsible use of technology in educational settings?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Using technology for entertainment purposes during class",
+        "Sharing copyrighted materials without permission",
+        "Using credible sources and citing them properly",
+        "Copying and pasting content from websites without attribution"
+      ],
+      "answer": "Using credible sources and citing them properly",
+      "explanation": "Promoting responsible use of technology in educational settings includes using credible sources, citing them properly, and respecting copyright laws."
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the term for the act of using technology to spread false or misleading information with the intention to deceive?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Disinformation",
+      "explanation": "Disinformation refers to the act of using technology to spread false or misleading information with the intention to deceive, which can have significant social and political impacts."
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which of the following practices demonstrates good cybersecurity habits?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sharing sensitive information over public Wi-Fi networks",
+        "Using simple and easy-to-guess passwords",
+        "Downloading attachments from unknown emails without scanning for malware",
+        "Regularly updating software and antivirus programs"
+      ],
+      "answer": "Regularly updating software and antivirus programs",
+      "explanation": "Maintaining good cybersecurity habits includes regularly updating software and antivirus programs to protect against known vulnerabilities and potential malware threats."
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the term for the act of using technology to deceive individuals into revealing sensitive information, such as passwords or financial details?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Phishing",
+      "explanation": "Phishing is the act of using technology, such as fake emails or websites, to deceive individuals into revealing sensitive information, which is then used for malicious purposes."
+    }
+  ]
+}
