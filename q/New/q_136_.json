@@ -1,0 +1,151 @@
+{
+  "quizName": "Old School Musicians Quiz",
+  "quizCode": "OLDSCHOOL2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Music",
+  "quizDescription": "Test your knowledge about legendary old school musicians and their timeless music!",
+  "quizTags": "Old School, Music, Musicians, Legends",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which 'King of Rock 'n' Roll' is known for hits like 'Johnny B. Goode' and 'Roll Over Beethoven'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Little Richard",
+        "Chuck Berry",
+        "Fats Domino",
+        "Jerry Lee Lewis"
+      ],
+      "answer": "Chuck Berry",
+      "explanation": "Chuck Berry, the 'King of Rock 'n' Roll,' is known for hits like 'Johnny B. Goode' and 'Roll Over Beethoven.'"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which 'Queen of Jazz' is famous for her mesmerizing voice and classics like 'Summertime' and 'Strange Fruit'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ella Fitzgerald",
+        "Billie Holiday",
+        "Sarah Vaughan",
+        "Nina Simone"
+      ],
+      "answer": "Billie Holiday",
+      "explanation": "Billie Holiday, the 'Queen of Jazz,' is famous for her mesmerizing voice and classics like 'Summertime' and 'Strange Fruit.'"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which 'Godfather of Soul' is known for hits like 'I Got You (I Feel Good)' and 'Papa's Got a Brand New Bag'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Marvin Gaye",
+        "Ray Charles",
+        "James Brown",
+        "Sam Cooke"
+      ],
+      "answer": "James Brown",
+      "explanation": "James Brown, the 'Godfather of Soul,' is known for hits like 'I Got You (I Feel Good)' and 'Papa's Got a Brand New Bag.'"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which legendary singer-songwriter is famous for hits like 'Imagine' and 'Give Peace a Chance'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bob Marley",
+        "Bob Dylan",
+        "John Lennon",
+        "Jimi Hendrix"
+      ],
+      "answer": "John Lennon",
+      "explanation": "John Lennon, a celebrated singer-songwriter and member of The Beatles, is famous for hits like 'Imagine' and 'Give Peace a Chance.'"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which 'Queen of Soul' is known for her powerful voice and hits like 'Respect' and 'Natural Woman'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Aretha Franklin",
+        "Tina Turner",
+        "Diana Ross",
+        "Gladys Knight"
+      ],
+      "answer": "Aretha Franklin",
+      "explanation": "Aretha Franklin, the 'Queen of Soul,' is known for her powerful voice and hits like 'Respect' and 'Natural Woman.'"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which legendary guitarist is known for his innovative blues performances and classics like 'Cross Road Blues'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Muddy Waters",
+        "B.B. King",
+        "Robert Johnson",
+        "John Lee Hooker"
+      ],
+      "answer": "Robert Johnson",
+      "explanation": "Robert Johnson, a pioneering blues guitarist and singer, is known for his innovative blues performances and classics like 'Cross Road Blues.'"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which 'Queen of Rock 'n' Roll' is famous for her electrifying performances and hits like 'Proud Mary' and 'What's Love Got to Do with It'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Janis Joplin",
+        "Aretha Franklin",
+        "Tina Turner",
+        "Etta James"
+      ],
+      "answer": "Tina Turner",
+      "explanation": "Tina Turner, the 'Queen of Rock 'n' Roll,' is famous for her electrifying performances and hits like 'Proud Mary' and 'What's Love Got to Do with It.'"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which legendary crooner is known for his smooth vocals and timeless hits like 'My Way' and 'New York, New York'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Dean Martin",
+        "Frank Sinatra",
+        "Nat King Cole",
+        "Bing Crosby"
+      ],
+      "answer": "Frank Sinatra",
+      "explanation": "Frank Sinatra, a legendary crooner and entertainer, is known for his smooth vocals and timeless hits like 'My Way' and 'New York, New York.'"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which 'Godfather of Punk' is famous for his influential music with the band 'The Stooges'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Iggy Pop",
+        "Lou Reed",
+        "David Bowie",
+        "Patti Smith"
+      ],
+      "answer": "Iggy Pop",
+      "explanation": "Iggy Pop, the 'Godfather of Punk,' is famous for his influential music with the band 'The Stooges.'"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which iconic jazz pianist and composer is known for his contributions to the genre with classics like 'Take Five'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Duke Ellington",
+        "Thelonious Monk",
+        "Herbie Hancock",
+        "Dave Brubeck"
+      ],
+      "answer": "Dave Brubeck",
+      "explanation": "Dave Brubeck, an iconic jazz pianist and composer, is known for his contributions to the genre with classics like 'Take Five.'"
+    }
+  ]
+}
