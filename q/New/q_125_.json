@@ -1,0 +1,151 @@
+{
+  "quizName": "USA Economics Quiz",
+  "quizCode": "USAECON2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "USA Economics",
+  "quizDescription": "Test your knowledge of economic concepts and trends specific to the United States!",
+  "quizTags": "Economics, United States, US Economy, Economic Indicators",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which economic indicator measures the total value of all goods and services produced within the United States in a specific time period?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gross Domestic Product (GDP)",
+        "Consumer Price Index (CPI)",
+        "Unemployment Rate",
+        "Inflation Rate"
+      ],
+      "answer": "Gross Domestic Product (GDP)",
+      "explanation": "Gross Domestic Product (GDP) is a key economic indicator that measures the total value of all goods and services produced within the United States in a specific time period, typically a year. It is used to assess the overall economic performance and growth of the country."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which economic concept refers to a sustained increase in the general price level of goods and services in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Recession",
+        "Depression",
+        "Inflation",
+        "Deflation"
+      ],
+      "answer": "Inflation",
+      "explanation": "Inflation is a sustained increase in the general price level of goods and services in the United States over time. It reduces the purchasing power of money and can have various economic impacts, such as decreased consumer spending and reduced savings."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which term describes the labor market condition when the number of job seekers exceeds the number of available jobs in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Full employment",
+        "Labor force participation",
+        "Unemployment",
+        "Underemployment"
+      ],
+      "answer": "Unemployment",
+      "explanation": "Unemployment occurs in the United States when the number of individuals seeking employment (unemployed) exceeds the number of available job opportunities. It is an important economic indicator that reflects the health of the labor market and overall economic conditions."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which term describes a continuous decline in the general price level of goods and services in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Inflation",
+        "Deflation",
+        "Recession",
+        "Depression"
+      ],
+      "answer": "Deflation",
+      "explanation": "Deflation is a continuous decline in the general price level of goods and services in the United States. It is the opposite of inflation and can lead to economic challenges, such as reduced consumer spending and business investment."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which organization is responsible for conducting monetary policy in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Federal Reserve (the Fed)",
+        "Department of the Treasury",
+        "Securities and Exchange Commission (SEC)",
+        "Internal Revenue Service (IRS)"
+      ],
+      "answer": "Federal Reserve (the Fed)",
+      "explanation": "The Federal Reserve, commonly known as the Fed, is the central banking system of the United States. It is responsible for conducting monetary policy, regulating financial institutions, and stabilizing the economy by controlling the money supply and interest rates."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which term describes a situation in the United States where economic growth declines significantly, leading to a prolonged period of negative economic performance?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Recession",
+        "Depression",
+        "Inflation",
+        "Deflation"
+      ],
+      "answer": "Recession",
+      "explanation": "A recession is a significant decline in economic activity in the United States, lasting for several months or more. It is characterized by reduced consumer spending, business investment, and overall economic output. A recession is a normal part of the business cycle."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which term describes the percentage of the labor force that is employed or actively seeking employment in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Full employment",
+        "Labor force participation",
+        "Unemployment",
+        "Underemployment"
+      ],
+      "answer": "Labor force participation",
+      "explanation": "Labor force participation rate is the percentage of the working-age population in the United States that is either employed or actively seeking employment. It provides insights into the proportion of the population contributing to the labor force."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which economic indicator measures the average change in prices of a basket of goods and services typically consumed by urban households in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gross Domestic Product (GDP)",
+        "Consumer Price Index (CPI)",
+        "Unemployment Rate",
+        "Inflation Rate"
+      ],
+      "answer": "Consumer Price Index (CPI)",
+      "explanation": "The Consumer Price Index (CPI) in the United States measures the average change in prices of a specific basket of goods and services typically consumed by urban households. It is used to gauge inflation and cost of living changes over time."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which term describes a situation in the United States where the economy experiences a severe and prolonged contraction, resulting in high unemployment and reduced economic activity?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Recession",
+        "Depression",
+        "Inflation",
+        "Deflation"
+      ],
+      "answer": "Depression",
+      "explanation": "A depression is an extreme and long-lasting economic downturn in the United States, characterized by high unemployment, decreased consumer spending, and reduced business investment. Depressions are rare and more severe than recessions."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which economic concept refers to the total value of a country's exports minus the total value of its imports?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gross Domestic Product (GDP)",
+        "Balance of trade",
+        "Fiscal deficit",
+        "Trade surplus"
+      ],
+      "answer": "Balance of trade",
+      "explanation": "The balance of trade in the United States is the difference between the total value of the country's exports and the total value of its imports. A surplus occurs when exports exceed imports, while a deficit occurs when imports exceed exports."
+    }
+  ]
+}
