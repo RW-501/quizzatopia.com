@@ -244,14 +244,17 @@ const getAllButton = document.getElementById("get-all-button");
 const uploadAllButton = document.getElementById("upload-all-button");
 
 const deleteButton = document.getElementById("delete-button");
-function applyFilterAndLimit() {
+
+
+	  function applyFilterAndLimit() {
   const whereField = document.getElementById("where-field-input").value.trim();
-  const whereOperator = document.getElementById("where-operator-input").value.trim();
+  const whereOperator = document.getElementById("where-operator-input").value.trim(); // Get selected operator
   const whereValue = document.getElementById("where-value-input").value.trim();
   const limit = parseInt(document.getElementById("limit-input").value, 10);
 
   getAllDocuments(whereField, whereOperator, whereValue, limit);
 }
+
 const filterLimitButton = document.getElementById("filter-limit-button");
 filterLimitButton.addEventListener("click", applyFilterAndLimit);
 
