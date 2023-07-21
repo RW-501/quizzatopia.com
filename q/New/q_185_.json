@@ -1,0 +1,206 @@
+{
+  "quizName": "Securities and Exchange Commission (SEC) Quiz",
+  "quizCode": "SECQuiz2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Finance",
+  "quizDescription": "Test your knowledge about the Securities and Exchange Commission (SEC), the U.S. government agency responsible for regulating the securities industry!",
+  "quizTags": "SEC, Securities and Exchange Commission, Securities, Regulation, U.S. Government",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does 'SEC' stand for?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Securities Exchange Corporation",
+        "Securities and Exchange Commission",
+        "Stock Exchange Commission",
+        "Stocks and Equities Commission"
+      ],
+      "answer": "Securities and Exchange Commission",
+      "explanation": "'SEC' stands for Securities and Exchange Commission, the U.S. government agency responsible for regulating the securities industry, including securities exchanges and securities professionals."
+    },
+    {
+      "questionNumber": 2,
+      "question": "When was the Securities and Exchange Commission (SEC) established?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1933",
+        "1934",
+        "1940",
+        "1950"
+      ],
+      "answer": "1934",
+      "explanation": "The Securities and Exchange Commission (SEC) was established on July 2, 1934, through the Securities Exchange Act of 1934, in response to the stock market crash of 1929 and the Great Depression."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which of the following is the primary mission of the SEC?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Promote economic growth",
+        "Enforce antitrust laws",
+        "Regulate the banking industry",
+        "Protect investors and maintain fair and efficient markets"
+      ],
+      "answer": "Protect investors and maintain fair and efficient markets",
+      "explanation": "The primary mission of the SEC is to protect investors, maintain fair and efficient markets, and facilitate capital formation by regulating the securities industry."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which federal department oversees the SEC?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Department of Commerce",
+        "Department of the Treasury",
+        "Department of Justice",
+        "Department of Finance"
+      ],
+      "answer": "Department of the Treasury",
+      "explanation": "The Department of the Treasury oversees the Securities and Exchange Commission (SEC) and plays a role in shaping financial policy and regulation in the United States."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the name of the electronic data gathering, analysis, and retrieval system used by the SEC for accessing corporate filings?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "EDGAR",
+      "explanation": "EDGAR (Electronic Data Gathering, Analysis, and Retrieval) is the electronic filing system used by the SEC for accessing and analyzing corporate filings required by the agency."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which of the following is an example of a security regulated by the SEC?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Real Estate Properties",
+        "Government Bonds",
+        "Consumer Loans",
+        "Artworks and Collectibles"
+      ],
+      "answer": "Government Bonds",
+      "explanation": "Government Bonds are an example of a security regulated by the SEC. A security is a financial instrument that represents ownership or a creditor relationship with a corporation, municipality, or the U.S. government."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the term for the document that companies file with the SEC to register their securities offering before it is sold to the public?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Prospectus",
+      "explanation": "Companies file a 'Prospectus' with the SEC to register their securities offering before it is sold to the public. The Prospectus provides detailed information about the offering to potential investors."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which of the following is an example of insider trading?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Buying or selling securities based on publicly available information",
+        "Buying or selling securities based on non-public information",
+        "Investing in mutual funds",
+        "Diversifying an investment portfolio"
+      ],
+      "answer": "Buying or selling securities based on non-public information",
+      "explanation": "Insider trading involves buying or selling securities based on non-public information about a company, which gives an unfair advantage to the trader and is illegal."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the main goal of the 'Sarbanes-Oxley Act' passed by Congress in 2002?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Regulate the oil and gas industry",
+        "Enhance cybersecurity measures",
+        "Reform the healthcare system",
+        "Strengthen corporate governance and financial reporting"
+      ],
+      "answer": "Strengthen corporate governance and financial reporting",
+      "explanation": "The 'Sarbanes-Oxley Act' was passed in response to accounting scandals to strengthen corporate governance and financial reporting, aiming to enhance transparency and protect investors."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the term for the practice of spreading investments across different securities and asset classes to reduce risk?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Diversification",
+      "explanation": "Diversification is the practice of spreading investments across different securities and asset classes to reduce risk and avoid significant losses from the poor performance of a single investment."
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which of the following individuals is most likely to be subject to SEC regulations?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A college student investing in stocks",
+        "A homeowner taking out a mortgage loan",
+        "A business owner selling products online",
+        "A corporate executive of a publicly traded company"
+      ],
+      "answer": "A corporate executive of a publicly traded company",
+      "explanation": "A corporate executive of a publicly traded company is most likely to be subject to SEC regulations, especially concerning insider trading and financial reporting."
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the term for the process of determining the fair value of a security or asset?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Equity Valuation",
+        "Asset Pricing",
+        "Credit Analysis",
+        "Valuation"
+      ],
+      "answer": "Valuation",
+      "explanation": "Valuation is the process of determining the fair value of a security or asset, which is crucial for making investment decisions and assessing the financial health of a company."
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which of the following is an example of a violation of SEC regulations?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Failing to file a tax return",
+        "Failing to wear a seatbelt while driving",
+        "Insider trading",
+        "Driving above the speed limit"
+      ],
+      "answer": "Insider trading",
+      "explanation": "Insider trading, which involves buying or selling securities based on non-public information, is an example of a violation of SEC regulations and is considered illegal."
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the term for a type of investment fund that pools money from multiple investors to purchase securities?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Exchange-Traded Fund (ETF)",
+        "Hedge Fund",
+        "Mutual Fund",
+        "Real Estate Investment Trust (REIT)"
+      ],
+      "answer": "Mutual Fund",
+      "explanation": "A Mutual Fund is a type of investment fund that pools money from multiple investors to purchase a diversified portfolio of securities, managed by professional portfolio managers."
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the term for a legal document filed with the SEC that provides important information about a company's business, financial condition, and management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Annual Report",
+        "Proxy Statement",
+        "Registration Statement",
+        "Form 8-K"
+      ],
+      "answer": "Registration Statement",
+      "explanation": "A Registration Statement is a legal document filed with the SEC by companies planning to offer securities for public sale. It provides essential information about the company and its offering."
+    }
+  ]
+}
