@@ -52,16 +52,22 @@
       "explanation": "Hygiene and cleanliness are critical in a fast-food restaurant to ensure food safety, prevent foodborne illnesses, and maintain a positive reputation. A clean and hygienic environment also contributes to a pleasant dining experience for customers.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 4,
-      "question": "How do you handle a situation where a customer has a complaint or is dissatisfied with their order?",
-      "imageURL": "",
-      "questionType": "Open Text",
-      "options": [],
-      "answer": "The answer should demonstrate the ability to handle complaints with empathy and find a solution. For example, 'If a customer has a complaint or is dissatisfied with their order, I would first listen attentively to their concerns and apologize for any inconvenience caused. I would then try to understand the issue and offer a solution, such as replacing the order or providing a refund if necessary. The goal is to ensure the customer leaves the restaurant with a positive impression, even if there was an initial problem.'",
-      "explanation": "",
-      "difficulty": "Medium"
-    },
+   {
+  "questionNumber": 4,
+  "question": "How do you handle a situation where a customer has a complaint or is dissatisfied with their order?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "The answer should demonstrate the ability to handle complaints with empathy and find a solution. For example, 'If a customer has a complaint or is dissatisfied with their order, I would first listen attentively to their concerns and apologize for any inconvenience caused. I would then try to understand the issue and offer a solution, such as replacing the order or providing a refund if necessary. The goal is to ensure the customer leaves the restaurant with a positive impression, even if there was an initial problem.'",
+    "Listen attentively to the customer's concerns and apologize for any inconvenience caused.",
+    "Try to understand the issue and offer a solution, such as replacing the order or providing a refund if necessary.",
+    "Ensure the customer leaves the restaurant with a positive impression, even if there was an initial problem.",
+    "Handle complaints with empathy and strive to find a satisfactory resolution for the customer."
+  ],
+  "answer": "Listen attentively to the customer's concerns and apologize for any inconvenience caused. Try to understand the issue and offer a solution, such as replacing the order or providing a refund if necessary. Ensure the customer leaves the restaurant with a positive impression, even if there was an initial problem. Handle complaints with empathy and strive to find a satisfactory resolution for the customer.",
+  "explanation": "Handling customer complaints with empathy and finding a solution is crucial for maintaining customer satisfaction and loyalty. Listening attentively to the customer's concerns demonstrates that their feedback is valued. Apologizing for any inconvenience caused shows accountability and concern for the customer's experience. Trying to understand the issue helps identify the root cause of the problem. Offering a solution, such as replacing the order or providing a refund if necessary, addresses the customer's concerns directly. Ensuring the customer leaves with a positive impression, even if there was an initial problem, can turn a negative experience into a positive one. Handling complaints with empathy and striving to find a satisfactory resolution shows a commitment to excellent customer service.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 5,
       "question": "Why is it essential to work efficiently in a fast-paced environment?",
@@ -102,16 +108,22 @@
       "explanation": "",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 8,
-      "question": "How do you handle a situation where the restaurant experiences a sudden rush of customers?",
-      "imageURL": "",
-      "questionType": "Open Text",
-      "options": [],
-      "answer": "The answer should demonstrate the ability to remain calm and work efficiently during busy periods. For example, 'During a sudden rush of customers, I would stay calm and focused on providing quick and accurate service. I would prioritize orders based on their preparation time and communicate effectively with the kitchen staff to manage the workload. I would also ensure that customers are informed about any potential delays and provide them with accurate wait times. My goal would be to maintain smooth operations and ensure customer satisfaction despite the increased workload.'",
-      "explanation": "",
-      "difficulty": "Medium"
-    },
+ {
+  "questionNumber": 8,
+  "question": "How do you handle a situation where the restaurant experiences a sudden rush of customers?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "The answer should demonstrate the ability to remain calm and work efficiently during busy periods. For example, 'During a sudden rush of customers, I would stay calm and focused on providing quick and accurate service. I would prioritize orders based on their preparation time and communicate effectively with the kitchen staff to manage the workload. I would also ensure that customers are informed about any potential delays and provide them with accurate wait times. My goal would be to maintain smooth operations and ensure customer satisfaction despite the increased workload.'",
+    "Stay calm and focused on providing quick and accurate service.",
+    "Prioritize orders based on their preparation time and communicate effectively with the kitchen staff.",
+    "Ensure that customers are informed about any potential delays and provide them with accurate wait times.",
+    "Maintain smooth operations and ensure customer satisfaction despite the increased workload."
+  ],
+  "answer": "Stay calm and focused on providing quick and accurate service. Prioritize orders based on their preparation time and communicate effectively with the kitchen staff. Ensure that customers are informed about any potential delays and provide them with accurate wait times. Maintain smooth operations and ensure customer satisfaction despite the increased workload.",
+  "explanation": "Experiencing a sudden rush of customers can be challenging, but staying calm and focused is essential for providing efficient service. Prioritizing orders based on their preparation time helps manage the flow of orders and reduces wait times. Effective communication with the kitchen staff ensures that the workload is distributed evenly, preventing bottlenecks in food preparation. Informing customers about potential delays and providing accurate wait times manages their expectations and prevents dissatisfaction. Maintaining smooth operations and working efficiently during busy periods are crucial for ensuring a positive dining experience and customer satisfaction.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 9,
       "question": "Why is it essential to upsell and offer additional menu items to customers?",
@@ -127,16 +139,22 @@
       "explanation": "Upselling and offering additional menu items can improve the customer experience by suggesting items that complement their order. It also increases restaurant revenue by encouraging customers to try new items or add-ons.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 10,
-      "question": "How do you handle cash transactions and ensure accuracy in a fast-food restaurant?",
-      "imageURL": "",
-      "questionType": "Open Text",
-      "options": [],
-      "answer": "The answer should demonstrate the ability to handle cash responsibly and accurately. For example, 'When handling cash transactions, I would ensure accuracy by double-checking the change given to customers and using the cash register to calculate totals. I would avoid making calculations mentally to minimize errors. Additionally, I would follow established cash handling procedures, such as counting cash in the register at the beginning and end of each shift and reporting any discrepancies to the management immediately.'",
-      "explanation": "",
-      "difficulty": "Medium"
-    },
+{
+  "questionNumber": 10,
+  "question": "How do you handle cash transactions and ensure accuracy in a fast-food restaurant?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "The answer should demonstrate the ability to handle cash responsibly and accurately. For example, 'When handling cash transactions, I would ensure accuracy by double-checking the change given to customers and using the cash register to calculate totals. I would avoid making calculations mentally to minimize errors. Additionally, I would follow established cash handling procedures, such as counting cash in the register at the beginning and end of each shift and reporting any discrepancies to the management immediately.'",
+    "Ensure accuracy by double-checking the change given to customers and using the cash register to calculate totals.",
+    "Avoid making calculations mentally to minimize errors.",
+    "Follow established cash handling procedures, such as counting cash in the register at the beginning and end of each shift.",
+    "Report any cash discrepancies to the management immediately."
+  ],
+  "answer": "Ensure accuracy by double-checking the change given to customers and using the cash register to calculate totals. Avoid making calculations mentally to minimize errors. Follow established cash handling procedures, such as counting cash in the register at the beginning and end of each shift. Report any cash discrepancies to the management immediately.",
+  "explanation": "Handling cash transactions responsibly and accurately is crucial to maintaining the financial integrity of the fast-food restaurant. Double-checking the change given to customers ensures that they receive the correct amount. Using the cash register to calculate totals minimizes the risk of calculation errors. Avoiding mental calculations adds an extra layer of accuracy to the process. Following established cash handling procedures, such as counting cash at the beginning and end of each shift, helps identify any discrepancies and ensures accountability. Reporting any cash discrepancies to the management immediately allows for swift resolution and helps prevent financial losses. By adhering to these practices, fast-food restaurant employees can help ensure smooth cash transactions and maintain trust with customers and management.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 11,
       "question": "What are some common health and safety hazards in a fast-food restaurant?",
@@ -152,16 +170,22 @@
       "explanation": "Fast-food restaurants can have various health and safety hazards, including slippery floors, burns from hot equipment like fryers and grills, and cuts from handling knives and other sharp objects. Employees need to be aware of these hazards and take necessary precautions to prevent accidents.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 12,
-      "question": "What steps do you take to maintain the cleanliness of the dining area?",
-      "imageURL": "",
-      "questionType": "Open Text",
-      "options": [],
-      "answer": "The answer should demonstrate the ability to keep the dining area clean and presentable. For example, 'To maintain the cleanliness of the dining area, I would regularly clear and clean tables after customers finish their meals. I would promptly clean up any spills and ensure that trash bins are emptied regularly. I would also wipe down surfaces, sanitize high-touch areas like door handles and menus, and keep condiment stations organized. Maintaining a clean and tidy dining area enhances the overall customer experience.'",
-      "explanation": "",
-      "difficulty": "Medium"
-    },
+   {
+  "questionNumber": 12,
+  "question": "What steps do you take to maintain the cleanliness of the dining area?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "The answer should demonstrate the ability to keep the dining area clean and presentable. For example, 'To maintain the cleanliness of the dining area, I would regularly clear and clean tables after customers finish their meals. I would promptly clean up any spills and ensure that trash bins are emptied regularly. I would also wipe down surfaces, sanitize high-touch areas like door handles and menus, and keep condiment stations organized. Maintaining a clean and tidy dining area enhances the overall customer experience.'",
+    "Regularly clear and clean tables after customers finish their meals.",
+    "Promptly clean up any spills and ensure that trash bins are emptied regularly.",
+    "Wipe down surfaces and sanitize high-touch areas like door handles and menus.",
+    "Keep condiment stations organized for a clean and tidy dining area."
+  ],
+  "answer": "Regularly clear and clean tables after customers finish their meals. Promptly clean up any spills and ensure that trash bins are emptied regularly. Wipe down surfaces and sanitize high-touch areas like door handles and menus. Keep condiment stations organized for a clean and tidy dining area.",
+  "explanation": "Maintaining a clean and presentable dining area is essential for creating a positive and enjoyable dining experience for customers. Regularly clearing and cleaning tables after customers finish their meals helps ensure a smooth turnover and provides a clean space for the next guests. Promptly cleaning up spills prevents accidents and maintains a neat appearance. Regularly emptying trash bins keeps the dining area tidy and hygienic. Wiping down surfaces and sanitizing high-touch areas like door handles and menus helps prevent the spread of germs and ensures a safe environment for customers and staff. Keeping condiment stations organized ensures easy access to essentials and adds to the overall cleanliness and orderliness of the dining area.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 13,
       "question": "What is the role of suggestive selling in a fast-food restaurant?",
@@ -177,16 +201,22 @@
       "explanation": "Suggestive selling is used to promote new menu items, limited-time offers, and special deals to customers. It can increase the visibility of these items and encourage customers to try something different from their usual order.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 14,
-      "question": "How do you handle situations where there is a shortage of certain menu items?",
-      "imageURL": "",
-      "questionType": "Open Text",
-      "options": [],
-      "answer": "The answer should demonstrate the ability to handle shortages with a problem-solving approach. For example, 'If there is a shortage of certain menu items, I would inform the customers about the situation and apologize for any inconvenience caused. I would offer alternative menu items or suggest similar options to meet their preferences. If possible, I would provide estimated waiting times for the unavailable items and reassure customers that their satisfaction is a priority. Additionally, I would communicate the situation to the kitchen staff and management to address the shortage promptly.'",
-      "explanation": "",
-      "difficulty": "Medium"
-    },
+  {
+  "questionNumber": 14,
+  "question": "How do you handle situations where there is a shortage of certain menu items?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "The answer should demonstrate the ability to handle shortages with a problem-solving approach. For example, 'If there is a shortage of certain menu items, I would inform the customers about the situation and apologize for any inconvenience caused. I would offer alternative menu items or suggest similar options to meet their preferences. If possible, I would provide estimated waiting times for the unavailable items and reassure customers that their satisfaction is a priority. Additionally, I would communicate the situation to the kitchen staff and management to address the shortage promptly.'",
+    "Inform customers about the shortage and apologize for any inconvenience caused.",
+    "Offer alternative menu items or suggest similar options to meet their preferences.",
+    "Provide estimated waiting times for the unavailable items and reassure customers that their satisfaction is a priority.",
+    "Communicate the situation to the kitchen staff and management to address the shortage promptly."
+  ],
+  "answer": "Inform customers about the shortage and apologize for any inconvenience caused. Offer alternative menu items or suggest similar options to meet their preferences. Provide estimated waiting times for the unavailable items and reassure customers that their satisfaction is a priority. Communicate the situation to the kitchen staff and management to address the shortage promptly.",
+  "explanation": "Handling situations where there is a shortage of certain menu items requires effective communication and problem-solving skills. Informing customers about the shortage and apologizing for any inconvenience shows transparency and empathy. Offering alternative menu items or suggesting similar options helps meet customers' preferences and ensures they have a satisfying dining experience. Providing estimated waiting times for unavailable items manages customer expectations and allows them to make informed choices. Reassuring customers that their satisfaction is a priority reinforces the commitment to excellent service. Communicating the situation to the kitchen staff and management ensures that the shortage is addressed promptly and necessary actions are taken to avoid future shortages. By handling shortages with a problem-solving approach, restaurant employees can maintain customer satisfaction and mitigate any potential issues.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 15,
       "question": "What is the role of fast-food employees in promoting a positive restaurant image?",
