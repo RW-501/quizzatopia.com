@@ -1,0 +1,222 @@
+{
+  "quizName": "Black Mirror Quiz",
+  "quizCode": "BM2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge about the thought-provoking TV show 'Black Mirror'!",
+  "quizTags": "Black Mirror, Netflix, TV Shows, Science Fiction, Anthology",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which episode of Black Mirror features a society where people rate each other based on their social interactions?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Nosedive",
+        "San Junipero",
+        "White Bear",
+        "USS Callister"
+      ],
+      "answer": "Nosedive",
+      "explanation": "'Nosedive' is the episode that portrays a society where individuals rate each other using a smartphone app, influencing their social status.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the name of the theme park that allows visitors to experience nostalgic simulations of different time periods?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "San Junipero",
+      "explanation": "San Junipero is the name of the virtual reality-based theme park where visitors can experience different time periods and even choose to live there permanently after death.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "True or False: The episode 'White Christmas' features an advanced AI assistant named 'Ashley Too.'",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. 'White Christmas' follows the story of two men sharing disturbing stories, but it does not feature an AI assistant named 'Ashley Too.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the name of the game that leads to a nightmarish reality in the episode 'Playtest'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Infinity",
+        "Bandersnatch",
+        "Nosedive",
+        "SaitoGemu"
+      ],
+      "answer": "SaitoGemu",
+      "explanation": "'SaitoGemu' is the name of the mysterious augmented reality game that results in horrifying consequences for the protagonist in the episode 'Playtest.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "In the episode 'USS Callister,' what is the name of the virtual reality game that the characters are trapped in?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Starship Explorer",
+        "Infinity Quest",
+        "Space Fleet",
+        "Galactic Odyssey"
+      ],
+      "answer": "Space Fleet",
+      "explanation": "In 'USS Callister,' the characters are trapped in a virtual reality game called 'Space Fleet,' which is a creation of the antagonist, Robert Daly.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the name of the dating app that pairs people together based on their relationship's expiration date?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Honeymoon",
+        "Soulmate Match",
+        "Relationship Link",
+        "Coach Dating"
+      ],
+      "answer": "Coach Dating",
+      "explanation": "The dating app in the episode 'Hang the DJ' is called 'Coach Dating,' which pairs individuals together for predetermined relationships.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which episode of Black Mirror features an intelligent robot dog known as 'Metalhead'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "USS Callister",
+        "Metalhead",
+        "Crocodile",
+        "Hated in the Nation"
+      ],
+      "answer": "Metalhead",
+      "explanation": "The episode titled 'Metalhead' follows the story of a woman trying to survive in a post-apocalyptic world while being chased by an intelligent robot dog.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the name of the mysterious interactive film in Black Mirror that allows viewers to make choices for the main character?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Playtest",
+        "Bandersnatch",
+        "White Christmas",
+        "Fifteen Million Merits"
+      ],
+      "answer": "Bandersnatch",
+      "explanation": "'Bandersnatch' is a special interactive film in Black Mirror that allows viewers to make choices for the main character, influencing the storyline and outcomes.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "In the episode 'Shut Up and Dance,' what do hackers use to blackmail the protagonist?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Embarrassing photos",
+        "Bank account information",
+        "Personal secrets",
+        "Video footage of illegal activities"
+      ],
+      "answer": "Video footage of illegal activities",
+      "explanation": "In 'Shut Up and Dance,' hackers use video footage of the protagonist engaging in illegal activities to blackmail and manipulate him.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the name of the virtual reality game that allows participants to experience others' emotions?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "San Junipero",
+        "The Entire History of You",
+        "Playtest",
+        "Empathy Link"
+      ],
+      "answer": "Empathy Link",
+      "explanation": "'Empathy Link' is the name of the virtual reality game in the episode 'Black Museum,' where participants can experience others' emotions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "True or False: The episode 'Nosedive' is set in a futuristic society where people have ocular implants to record everything they see.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. In 'Nosedive,' people rate each other using smartphones, but there are no ocular implants to record everything they see.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the name of the mysterious killer in the episode 'White Bear'?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Victoria Skillane",
+      "explanation": "Victoria Skillane is the name of the protagonist in the episode 'White Bear,' which features a unique form of punishment for criminals.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "In the episode 'Hated in the Nation,' what type of robotic creatures are responsible for the killings?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "RoboBees",
+        "Killer Drones",
+        "RoboWasps",
+        "Metalhead Dogs"
+      ],
+      "answer": "RoboBees",
+      "explanation": "In 'Hated in the Nation,' robotic bees, known as 'RoboBees,' are responsible for the targeted killings as a result of public shaming.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the name of the virtual reality game that allows participants to experience their worst fears?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "San Junipero",
+        "Playtest",
+        "Striking Vipers",
+        "SaitoGemu"
+      ],
+      "answer": "Playtest",
+      "explanation": "'Playtest' is the name of the virtual reality game in the episode of the same name, where participants experience their worst fears.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which episode of Black Mirror features a story set in a dystopian future where individuals earn merits for physical activities?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Nosedive",
+        "Fifteen Million Merits",
+        "Hang the DJ",
+        "Men Against Fire"
+      ],
+      "answer": "Fifteen Million Merits",
+      "explanation": "In the episode 'Fifteen Million Merits,' people earn merits by pedaling on exercise bikes and can use them to gain access to different opportunities in a controlled society.",
+      "difficulty": "Medium"
+    }
+  ]
+}
