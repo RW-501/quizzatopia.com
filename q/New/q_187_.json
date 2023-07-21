@@ -1,0 +1,201 @@
+{
+  "quizName": "Federal Reserve (the Fed) Quiz",
+  "quizCode": "FedQuiz2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Government",
+  "quizDescription": "Test your knowledge about the Federal Reserve (the Fed) and its role in the U.S. economy!",
+  "quizTags": "Federal Reserve, the Fed, U.S. Economy, Central Bank, Monetary Policy",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the primary role of the Federal Reserve (the Fed) in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Fiscal policy implementation",
+        "Regulating the stock market",
+        "Controlling inflation",
+        "Monetary policy implementation"
+      ],
+      "answer": "Monetary policy implementation",
+      "explanation": "The primary role of the Federal Reserve (the Fed) is to implement monetary policy, which involves controlling the money supply and interest rates to achieve economic goals such as price stability and full employment."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which of the following is the central banking system of the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "World Bank",
+        "European Central Bank",
+        "Federal Reserve (the Fed)",
+        "Bank of England"
+      ],
+      "answer": "Federal Reserve (the Fed)",
+      "explanation": "The Federal Reserve, often referred to as 'the Fed,' is the central banking system of the United States, responsible for conducting monetary policy and regulating the country's financial system."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the term for the interest rate at which the Federal Reserve lends money to commercial banks?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Federal funds rate",
+      "explanation": "The Federal funds rate is the interest rate at which the Federal Reserve lends money to commercial banks on an overnight basis to meet reserve requirements."
+    },
+    {
+      "questionNumber": 4,
+      "question": "How many Federal Reserve banks are there in the United States?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "10",
+        "12",
+        "14",
+        "8"
+      ],
+      "answer": "12",
+      "explanation": "There are 12 Federal Reserve banks in the United States, located in major cities across the country, each serving its respective Federal Reserve District."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which Federal Reserve official is responsible for setting the monetary policy?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Chair of the Federal Reserve Board",
+        "Secretary of the Treasury",
+        "President of the World Bank",
+        "Chair of the Federal Deposit Insurance Corporation (FDIC)"
+      ],
+      "answer": "Chair of the Federal Reserve Board",
+      "explanation": "The Chair of the Federal Reserve Board is responsible for setting the monetary policy and is considered one of the most influential economic policymakers in the United States."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the term for the actions taken by the Federal Reserve to influence the money supply and interest rates?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Open market operations",
+      "explanation": "Open market operations refer to the buying and selling of government securities by the Federal Reserve to influence the money supply and interest rates in the economy."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which of the following is a tool used by the Federal Reserve to control the money supply?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Foreign exchange intervention",
+        "Price controls",
+        "Discount window lending",
+        "Export subsidies"
+      ],
+      "answer": "Discount window lending",
+      "explanation": "Discount window lending is a tool used by the Federal Reserve to control the money supply by providing short-term loans to commercial banks at the discount rate."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the term for the rate at which banks can borrow funds directly from the Federal Reserve?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Discount rate",
+      "explanation": "The discount rate is the rate at which banks can borrow funds directly from the Federal Reserve to meet short-term liquidity needs."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which of the following is a dual mandate of the Federal Reserve?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Promoting job growth and reducing income inequality",
+        "Maintaining price stability and promoting financial sector stability",
+        "Balancing the federal budget and reducing the national debt",
+        "Encouraging international trade and reducing trade deficits"
+      ],
+      "answer": "Maintaining price stability and promoting financial sector stability",
+      "explanation": "The Federal Reserve's dual mandate is to maintain price stability, aiming for low and stable inflation, and to promote financial sector stability to safeguard the overall health of the economy."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which of the following is an example of a regulatory responsibility of the Federal Reserve?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Regulating stock markets",
+        "Enforcing antitrust laws",
+        "Regulating commercial banks",
+        "Enforcing immigration laws"
+      ],
+      "answer": "Regulating commercial banks",
+      "explanation": "The Federal Reserve has regulatory responsibilities over commercial banks to ensure they operate safely, maintain sufficient reserves, and comply with banking laws and regulations."
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the term for the percentage of deposits that banks must hold as reserves?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Reserve ratio",
+      "explanation": "The reserve ratio is the percentage of deposits that banks must hold as reserves, as mandated by the Federal Reserve. It is used to control the money supply and influence lending."
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which of the following is an example of expansionary monetary policy?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Raising the reserve ratio",
+        "Selling government securities",
+        "Raising the discount rate",
+        "Lowering interest rates"
+      ],
+      "answer": "Lowering interest rates",
+      "explanation": "Lowering interest rates is an example of expansionary monetary policy, as it encourages borrowing and spending, thereby stimulating economic growth."
+    },
+    {
+      "questionNumber": 13,
+      "question": "The Federal Reserve has the authority to issue which of the following denominations of U.S. currency?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "$100",
+        "$500",
+        "$1,000",
+        "$10,000"
+      ],
+      "answer": "$100",
+      "explanation": "The Federal Reserve has the authority to issue and distribute U.S. currency in denominations up to $100, including $1, $5, $10, $20, $50, and $100 bills."
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which of the following is the current Chair of the Federal Reserve (as of 2023)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Janet Yellen",
+        "Jerome Powell",
+        "Ben Bernanke",
+        "Alan Greenspan"
+      ],
+      "answer": "Jerome Powell",
+      "explanation": "Jerome Powell is the current Chair of the Federal Reserve, having assumed office in 2018. He is responsible for leading the Federal Reserve in setting monetary policy and overseeing the nation's financial system."
+    },
+    {
+      "questionNumber": 15,
+      "question": "The Federal Reserve System was established by which act of Congress in 1913?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Federal Reserve Act",
+        "Glass-Steagall Act",
+        "Dodd-Frank Act",
+        "Sherman Antitrust Act"
+      ],
+      "answer": "Federal Reserve Act",
+      "explanation": "The Federal Reserve System was established by the Federal Reserve Act of 1913, signed into law by President Woodrow Wilson. The act created the central banking system to address banking panics and promote economic stability."
+    }
+  ]
+}
