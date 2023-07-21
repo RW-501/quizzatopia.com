@@ -189,8 +189,9 @@ button {
   <script>
 
 const db = firebase.firestore();
-var YourRootCollection = "quizzes";
-
+var YourRootCollection = "users";
+var  selectedCollection = "";
+	  
 // Get references to DOM elements
 const collectionDropdown = document.getElementById("collection-dropdown");
 const getButton = document.getElementById("get-button");
@@ -228,7 +229,7 @@ function populateDropdown() {
 
 // Function to get data based on the selected collection
 function getData() {
-  const selectedCollection = collectionDropdown.value;
+   selectedCollection = collectionDropdown.value;
 
 	
   db.collection(YourRootCollection) // Replace "YourRootCollection" with your root collection name
@@ -251,7 +252,7 @@ function getData() {
 
 // Function to get all documents from the selected collection
 function getAllDocuments() {
-  const selectedCollection = collectionDropdown.value; // Get the selected value
+   selectedCollection = collectionDropdown.value; // Get the selected value
   if (!selectedCollection) {
     log("Please select a collection.");
     return;
@@ -284,7 +285,7 @@ function getAllDocuments() {
 	  
 // Function to upload data to the selected collection
 function uploadData() {
-  const selectedCollection = collectionDropdown.value;
+   selectedCollection = collectionDropdown.value;
   if (!selectedCollection) {
     log("Please select a collection.");
     return;
@@ -322,7 +323,7 @@ populateDropdown();
 
 
 	  function uploadAllDocuments() {
-  const selectedCollection = collectionDropdown.value;
+   selectedCollection = collectionDropdown.value;
   if (!selectedCollection) {
     log("Please select a collection.");
     return;
