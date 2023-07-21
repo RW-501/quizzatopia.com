@@ -311,6 +311,7 @@ function uploadData() {
 // Function to update the collection
 function updateCollection() {
    YourRootCollection = newDataInput.value;
+	collectionDropdown.innerHTML = '';
 	collectionDropdown.value ="";
   if (!YourRootCollection) {
     log("Please select a collection.");
