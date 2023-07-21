@@ -1,0 +1,151 @@
+{
+  "quizName": "Food Quiz",
+  "quizCode": "FOOD2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Cuisine",
+  "quizDescription": "Test your knowledge about different types of food and culinary delights!",
+  "quizTags": "Food, Cuisine, Cooking, Ingredients, Dishes",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which cuisine is known for its spicy and flavorful dishes, often featuring ingredients like chilies, cumin, and turmeric?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Italian Cuisine",
+        "Chinese Cuisine",
+        "Indian Cuisine",
+        "French Cuisine"
+      ],
+      "answer": "Indian Cuisine",
+      "explanation": "Indian Cuisine is known for its bold flavors and use of spices like chilies, cumin, turmeric, and various herbs. It offers a wide range of regional dishes with distinct tastes."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which food item is a popular Japanese dish consisting of vinegared rice topped with raw fish or seafood?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sushi",
+        "Pasta",
+        "Taco",
+        "Burger"
+      ],
+      "answer": "Sushi",
+      "explanation": "Sushi is a popular Japanese dish that consists of vinegared rice served with various ingredients, including raw fish (sashimi) or seafood, and often garnished with vegetables and seaweed."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which dessert is made from whipped egg whites and sugar and is often flavored with vanilla or other extracts?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Chocolate Cake",
+        "Ice Cream",
+        "Macaron",
+        "Brownie"
+      ],
+      "answer": "Macaron",
+      "explanation": "Macaron is a delicate French dessert made from whipped egg whites, sugar, and almond flour. It is often flavored with vanilla, chocolate, or other extracts and is sandwiched with fillings like ganache or buttercream."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which dish is a traditional Italian pasta made from durum wheat semolina and water, served with various sauces?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pad Thai",
+        "Sushi",
+        "Ramen",
+        "Spaghetti"
+      ],
+      "answer": "Spaghetti",
+      "explanation": "Spaghetti is a popular Italian pasta made from durum wheat semolina and water. It is commonly served with a variety of sauces, such as marinara, bolognese, or pesto."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the main ingredient in traditional guacamole, a popular Mexican dip?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tomato",
+        "Onion",
+        "Avocado",
+        "Garlic"
+      ],
+      "answer": "Avocado",
+      "explanation": "Avocado is the main ingredient in traditional guacamole, a popular Mexican dip. It is mashed and mixed with lime juice, onion, cilantro, and sometimes tomatoes and garlic."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which cuisine is famous for its use of fresh herbs, fish sauce, and spicy flavors, and is often associated with dishes like Pad Thai and Tom Yum?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Indian Cuisine",
+        "Japanese Cuisine",
+        "Italian Cuisine",
+        "Thai Cuisine"
+      ],
+      "answer": "Thai Cuisine",
+      "explanation": "Thai Cuisine is known for its vibrant flavors, fresh herbs, and spicy dishes. It features ingredients like lemongrass, fish sauce, lime, and chilies, and is popular for dishes like Pad Thai and Tom Yum soup."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which type of bread is a staple in Indian cuisine, typically served with curries and other dishes?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Baguette",
+        "Pita",
+        "Naan",
+        "Rye Bread"
+      ],
+      "answer": "Naan",
+      "explanation": "Naan is a popular type of bread in Indian cuisine. It is a leavened flatbread, usually baked in a tandoor, and served with various curries and dishes."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which fruit is often referred to as the 'king of fruits' and is known for its strong aroma and distinctive taste?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mango",
+        "Apple",
+        "Banana",
+        "Orange"
+      ],
+      "answer": "Mango",
+      "explanation": "Mango is often referred to as the 'king of fruits' due to its rich flavor and aromatic sweetness. It is widely enjoyed in many cultures and used in various dishes and desserts."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which popular Italian dessert is made from coffee-soaked ladyfingers layered with mascarpone cheese and cocoa?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tiramisu",
+        "Eclair",
+        "Creme Brulee",
+        "Cheesecake"
+      ],
+      "answer": "Tiramisu",
+      "explanation": "Tiramisu is a classic Italian dessert made from layers of coffee-soaked ladyfingers and a mascarpone cheese mixture, topped with cocoa powder. It is creamy, indulgent, and full of flavor."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which traditional Middle Eastern dish consists of ground meat (often lamb) mixed with spices and formed into skewers or patties?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sushi",
+        "Falafel",
+        "Kebab",
+        "Dumplings"
+      ],
+      "answer": "Kebab",
+      "explanation": "Kebab is a traditional Middle Eastern dish made from ground meat, often lamb, mixed with spices like cumin and coriander. The mixture is then formed into skewers or patties and grilled to perfection."
+    }
+  ]
+}
