@@ -361,7 +361,7 @@ populateDropdown();
 */
     allDocuments.forEach((document) => {
       db.collection(YourRootCollection) // Replace "YourRootCollection" with your root collection name
-        .add(document)
+        .update(document)
         .then(() => {
           log("Document uploaded successfully.");
         })
