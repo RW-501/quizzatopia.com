@@ -1,0 +1,151 @@
+{
+  "quizName": "Cloud Computing Quiz",
+  "quizCode": "CLOUD2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Technology",
+  "quizDescription": "Test your knowledge about Cloud Computing and its fundamental concepts!",
+  "quizTags": "Cloud Computing, Technology, Virtualization, Cloud Services",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is Cloud Computing?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Storing data on physical servers",
+        "Running applications on local computers",
+        "Accessing and managing computing resources over the internet",
+        "Creating local area networks"
+      ],
+      "answer": "Accessing and managing computing resources over the internet",
+      "explanation": "Cloud Computing is a technology that allows users to access and manage computing resources, such as servers, storage, databases, and software, over the internet."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the primary benefit of Cloud Computing?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "High upfront costs",
+        "Limited scalability",
+        "Increased control over hardware",
+        "Cost efficiency and scalability"
+      ],
+      "answer": "Cost efficiency and scalability",
+      "explanation": "One of the primary benefits of Cloud Computing is cost efficiency and scalability. Users can pay for the resources they use and easily scale up or down based on their needs."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which of the following is an example of a Cloud Computing service model?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Virtual Private Network (VPN)",
+        "Infrastructure as a Service (IaaS)",
+        "Local Area Network (LAN)",
+        "Wide Area Network (WAN)"
+      ],
+      "answer": "Infrastructure as a Service (IaaS)",
+      "explanation": "Infrastructure as a Service (IaaS) is a Cloud Computing service model that provides virtualized computing resources over the internet, such as virtual machines and storage."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which Cloud Computing deployment model provides resources to the general public over the internet?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Community Cloud",
+        "Private Cloud",
+        "Hybrid Cloud",
+        "Public Cloud"
+      ],
+      "answer": "Public Cloud",
+      "explanation": "Public Cloud is a Cloud Computing deployment model where cloud services are provided to the general public over the internet by a third-party cloud service provider."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which Cloud Computing deployment model is dedicated to a specific organization and not shared with other organizations?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Community Cloud",
+        "Private Cloud",
+        "Hybrid Cloud",
+        "Public Cloud"
+      ],
+      "answer": "Private Cloud",
+      "explanation": "Private Cloud is a Cloud Computing deployment model that is dedicated to a specific organization or business and is not shared with other organizations. It offers greater control and privacy."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the name for a cloud computing model that combines public and private cloud services?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Community Cloud",
+        "Public Private Cloud",
+        "Hybrid Cloud",
+        "Combined Cloud"
+      ],
+      "answer": "Hybrid Cloud",
+      "explanation": "Hybrid Cloud is a cloud computing model that combines public cloud services and private cloud resources. It allows organizations to leverage both environments based on their needs."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the process of dividing physical servers into multiple virtual servers called?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Virtualization",
+        "Cloudification",
+        "Decentralization",
+        "Data Segmentation"
+      ],
+      "answer": "Virtualization",
+      "explanation": "Virtualization is the process of dividing physical servers into multiple virtual servers or machines, allowing multiple operating systems and applications to run on a single physical server."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which cloud computing service model provides software applications over the internet?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Platform as a Service (PaaS)",
+        "Infrastructure as a Service (IaaS)",
+        "Software as a Service (SaaS)",
+        "Function as a Service (FaaS)"
+      ],
+      "answer": "Software as a Service (SaaS)",
+      "explanation": "Software as a Service (SaaS) is a cloud computing service model that provides software applications over the internet. Users can access and use the software without the need for local installation."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which of the following cloud computing services allows developers to build, deploy, and manage applications without managing the underlying infrastructure?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Infrastructure as a Service (IaaS)",
+        "Platform as a Service (PaaS)",
+        "Software as a Service (SaaS)",
+        "Function as a Service (FaaS)"
+      ],
+      "answer": "Platform as a Service (PaaS)",
+      "explanation": "Platform as a Service (PaaS) is a cloud computing service model that allows developers to build, deploy, and manage applications without the complexity of managing the underlying infrastructure."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What cloud computing service allows users to run code in response to events without the need for server management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Infrastructure as a Service (IaaS)",
+        "Platform as a Service (PaaS)",
+        "Software as a Service (SaaS)",
+        "Function as a Service (FaaS)"
+      ],
+      "answer": "Function as a Service (FaaS)",
+      "explanation": "Function as a Service (FaaS) is a cloud computing service that allows users to run code in response to events or triggers without the need for server management. It is often used for serverless computing."
+    }
+  ]
+}
