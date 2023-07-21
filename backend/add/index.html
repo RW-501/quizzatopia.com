@@ -168,12 +168,12 @@ async function fetchNextJSON() {
 
     if (!querySnapshot.empty) {
 
-	          const stringValues = `Quiz with code ${quizCode} already saved.\n\n`;
+	          const stringValues = `Quiz with code ${quizCode} already saved.\n`;
 
 
 
   // Update logHistory with the new log at the top
-  logHistory = `JSON ${counter}: Adding: ${stringValues}\n\n${logHistory}`;
+  logHistory = `JSON ${counter}: Adding: ${stringValues}\n${logHistory}`;
 
   // Update the textarea with the entire log history
   logTextarea.value = logHistory;
