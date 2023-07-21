@@ -1,0 +1,151 @@
+{
+  "quizName": "Tennis Quiz",
+  "quizCode": "TENNIS2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Sports",
+  "quizDescription": "Test your knowledge about the sport of tennis and its history!",
+  "quizTags": "Tennis, Sports, Players, Grand Slams, Tournaments",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In tennis, what is the term used for a score of zero points in a game?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Love",
+        "Deuce",
+        "Advantage",
+        "Fifteen"
+      ],
+      "answer": "Love",
+      "explanation": "In tennis, a score of zero points in a game is referred to as 'Love.'"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which tennis player is known for his record 20 Grand Slam singles titles?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Rafael Nadal",
+        "Roger Federer",
+        "Novak Djokovic",
+        "Andy Murray"
+      ],
+      "answer": "Roger Federer",
+      "explanation": "Roger Federer, a Swiss tennis legend, holds the record for the most Grand Slam singles titles in men's tennis, with 20 championships."
+    },
+    {
+      "questionNumber": 3,
+      "question": "In tennis, what is the term used for a situation where the score is tied at 40-40 in a game?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Love",
+        "Deuce",
+        "Advantage",
+        "Fifteen"
+      ],
+      "answer": "Deuce",
+      "explanation": "In tennis, when the score is tied at 40-40 in a game, it is called 'Deuce,' and players must win two consecutive points to win the game."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which tennis player has won the most Grand Slam singles titles in women's tennis?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Serena Williams",
+        "Maria Sharapova",
+        "Steffi Graf",
+        "Martina Navratilova"
+      ],
+      "answer": "Margaret Court",
+      "explanation": "Margaret Court holds the record for the most Grand Slam singles titles in women's tennis, with 24 championships."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which tennis tournament is played on grass courts and is considered the oldest Grand Slam tournament?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Wimbledon",
+        "French Open",
+        "Australian Open",
+        "US Open"
+      ],
+      "answer": "Wimbledon",
+      "explanation": "Wimbledon, held in London, is played on grass courts and is considered the oldest and most prestigious Grand Slam tournament in tennis."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Who is known as the 'King of Clay' and has won a record 13 French Open titles?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Roger Federer",
+        "Rafael Nadal",
+        "Novak Djokovic",
+        "Andy Murray"
+      ],
+      "answer": "Rafael Nadal",
+      "explanation": "Rafael Nadal, a Spanish tennis star, is known as the 'King of Clay' for his dominance on clay courts and has won a record 13 French Open titles."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which tennis player is known for her powerful serve and holds the record for the fastest serve in women's tennis?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Venus Williams",
+        "Serena Williams",
+        "Maria Sharapova",
+        "Petra Kvitova"
+      ],
+      "answer": "Serena Williams",
+      "explanation": "Serena Williams, an American tennis legend, is known for her powerful serve and holds the record for the fastest serve in women's tennis, recorded at 207.6 km/h (128.6 mph)."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which tennis player is known for his intense baseline play and has won a record 9 Australian Open titles?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Roger Federer",
+        "Rafael Nadal",
+        "Novak Djokovic",
+        "Andy Murray"
+      ],
+      "answer": "Novak Djokovic",
+      "explanation": "Novak Djokovic, a Serbian tennis superstar, is known for his intense baseline play and holds the record for the most Australian Open titles, with 9 championships."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which tennis tournament is played on hard courts and is the last Grand Slam event of the year?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Wimbledon",
+        "French Open",
+        "Australian Open",
+        "US Open"
+      ],
+      "answer": "US Open",
+      "explanation": "The US Open, held in New York, is played on hard courts and is the last Grand Slam event of the year, typically taking place in August and September."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which pair of men's tennis players is known for their successful doubles partnership, known as the 'Bryan Brothers'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bob and Mike Bryan",
+        "Rafael Nadal and Roger Federer",
+        "Novak Djokovic and Andy Murray",
+        "John McEnroe and Bjorn Borg"
+      ],
+      "answer": "Bob and Mike Bryan",
+      "explanation": "Bob and Mike Bryan, identical twins from the United States, are known as the 'Bryan Brothers' and are one of the most successful men's doubles teams in tennis history."
+    }
+  ]
+}
