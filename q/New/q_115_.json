@@ -1,0 +1,151 @@
+{
+  "quizName": "Music Instruments and Bands Quiz",
+  "quizCode": "MUSIC2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Music",
+  "quizDescription": "Test your knowledge about musical instruments and famous bands!",
+  "quizTags": "Music, Instruments, Bands, Musicians",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which musical instrument is a member of the woodwind family and is known for its distinct sound and use in jazz and classical music?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Flute",
+        "Saxophone",
+        "Trumpet",
+        "Clarinet"
+      ],
+      "answer": "Saxophone",
+      "explanation": "The saxophone is a member of the woodwind family and is known for its unique sound. It is commonly used in jazz, classical, and various other genres of music."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which band is famous for its hits like 'Bohemian Rhapsody', 'We Will Rock You', and 'Another One Bites the Dust'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Beatles",
+        "Queen",
+        "Led Zeppelin",
+        "The Rolling Stones"
+      ],
+      "answer": "Queen",
+      "explanation": "Queen is a legendary British rock band known for their iconic hits like 'Bohemian Rhapsody', 'We Will Rock You', and 'Another One Bites the Dust'."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which musical instrument is a member of the percussion family and is played by striking wooden bars with mallets?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Flute",
+        "Saxophone",
+        "Marimba",
+        "Clarinet"
+      ],
+      "answer": "Marimba",
+      "explanation": "The marimba is a percussion instrument with wooden bars that are struck with mallets to produce sound. It is commonly used in both classical and contemporary music."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which band is known for their hits 'Stairway to Heaven', 'Whole Lotta Love', and 'Immigrant Song'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Rolling Stones",
+        "Led Zeppelin",
+        "The Beatles",
+        "Pink Floyd"
+      ],
+      "answer": "Led Zeppelin",
+      "explanation": "Led Zeppelin is a legendary rock band known for their influential hits like 'Stairway to Heaven', 'Whole Lotta Love', and 'Immigrant Song'."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which musical instrument is a member of the brass family and is often used in marching bands and orchestras?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Flute",
+        "Saxophone",
+        "Trumpet",
+        "Clarinet"
+      ],
+      "answer": "Trumpet",
+      "explanation": "The trumpet is a brass instrument commonly used in marching bands, orchestras, jazz ensembles, and various other musical settings."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which band is known for their hits 'Hotel California', 'Take It Easy', and 'Desperado'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Eagles",
+        "Fleetwood Mac",
+        "Aerosmith",
+        "The Beach Boys"
+      ],
+      "answer": "The Eagles",
+      "explanation": "The Eagles is a popular American rock band known for their classic hits like 'Hotel California', 'Take It Easy', and 'Desperado'."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which musical instrument is a member of the string family and is known for its unique sound, often used in country and folk music?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Violin",
+        "Cello",
+        "Banjo",
+        "Piano"
+      ],
+      "answer": "Banjo",
+      "explanation": "The banjo is a string instrument known for its distinct sound and is commonly used in country, folk, and bluegrass music."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which band is known for their hits 'Don't Stop Believin'', 'Separate Ways (Worlds Apart)', and 'Wheel in the Sky'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bon Jovi",
+        "Journey",
+        "Guns N' Roses",
+        "Metallica"
+      ],
+      "answer": "Journey",
+      "explanation": "Journey is a renowned American rock band known for their popular hits like 'Don't Stop Believin'', 'Separate Ways (Worlds Apart)', and 'Wheel in the Sky'."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which musical instrument is a member of the keyboard family and is used in various music genres, including classical, jazz, and pop?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Guitar",
+        "Violin",
+        "Piano",
+        "Cello"
+      ],
+      "answer": "Piano",
+      "explanation": "The piano is a versatile keyboard instrument used in various music genres, including classical, jazz, pop, and many others."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which band is known for their hits 'Smells Like Teen Spirit', 'Come as You Are', and 'Heart-Shaped Box'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Nirvana",
+        "The Rolling Stones",
+        "The Beatles",
+        "AC/DC"
+      ],
+      "answer": "Nirvana",
+      "explanation": "Nirvana was a popular American rock band known for their influential hits like 'Smells Like Teen Spirit', 'Come as You Are', and 'Heart-Shaped Box'."
+    }
+  ]
+}
