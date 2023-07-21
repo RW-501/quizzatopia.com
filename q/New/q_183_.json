@@ -1,0 +1,219 @@
+{
+  "quizName": "Gross Domestic Product (GDP) Quiz",
+  "quizCode": "GDPQuiz2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Economics",
+  "quizDescription": "Test your knowledge about Gross Domestic Product (GDP), a key indicator of a country's economic performance and productivity!",
+  "quizTags": "Gross Domestic Product, GDP, Economic Indicators, Macroeconomics",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does 'Gross Domestic Product (GDP)' measure?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The total value of exports and imports in a country.",
+        "The total value of all goods and services produced within a country's borders in a given period.",
+        "The total value of goods and services produced by a country's citizens around the world.",
+        "The total value of government spending in a country."
+      ],
+      "answer": "The total value of all goods and services produced within a country's borders in a given period.",
+      "explanation": "Gross Domestic Product (GDP) measures the total value of all goods and services produced within a country's borders, regardless of whether the production is done by domestic or foreign entities."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which of the following is NOT included in GDP?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Government spending on public infrastructure.",
+        "Investment in new machinery and equipment by businesses.",
+        "Income earned by citizens working abroad.",
+        "Transfer payments, such as social security benefits."
+      ],
+      "answer": "Transfer payments, such as social security benefits.",
+      "explanation": "Transfer payments, such as social security benefits and welfare payments, are not included in GDP as they do not represent the production of goods and services."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What are the three main components of GDP?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Consumption, Investment, and Government Spending.",
+        "Consumption, Savings, and Exports.",
+        "Investment, Imports, and Exports.",
+        "Consumption, Exports, and Imports."
+      ],
+      "answer": "Consumption, Investment, and Government Spending.",
+      "explanation": "The three main components of GDP are Consumption (C), Investment (I), and Government Spending (G). These components represent the total spending on goods and services by consumers, businesses, and the government, respectively."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which of the following is an example of 'Investment' in GDP?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A consumer purchasing a new smartphone.",
+        "A government building a new highway.",
+        "A company buying new machinery for its factory.",
+        "An individual saving money in a bank account."
+      ],
+      "answer": "A company buying new machinery for its factory.",
+      "explanation": "'Investment' in GDP refers to spending by businesses on new capital goods, such as machinery, equipment, and buildings, to increase their productive capacity."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is 'Nominal GDP'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "GDP measured in current prices.",
+        "GDP adjusted for inflation.",
+        "GDP measured in constant prices.",
+        "GDP adjusted for population growth."
+      ],
+      "answer": "GDP measured in current prices.",
+      "explanation": "'Nominal GDP' is GDP measured in current prices without adjusting for inflation or deflation. It reflects the actual market prices of goods and services in the given year."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is 'Real GDP'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "GDP measured in current prices.",
+        "GDP adjusted for inflation.",
+        "GDP measured in constant prices.",
+        "GDP adjusted for population growth."
+      ],
+      "answer": "GDP measured in constant prices.",
+      "explanation": "'Real GDP' is GDP adjusted for inflation or deflation. It measures the value of goods and services produced in a given year using constant prices from a specific base year."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What does a positive GDP growth rate indicate?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "An expanding economy.",
+        "A recessionary economy.",
+        "Stable economic conditions.",
+        "A declining population."
+      ],
+      "answer": "An expanding economy.",
+      "explanation": "A positive GDP growth rate indicates that the economy is expanding and producing more goods and services than in the previous period. It is a sign of economic growth."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What does a negative GDP growth rate indicate?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "An expanding economy.",
+        "A recessionary economy.",
+        "Stable economic conditions.",
+        "A declining population."
+      ],
+      "answer": "A recessionary economy.",
+      "explanation": "A negative GDP growth rate indicates that the economy is contracting and producing fewer goods and services than in the previous period. It is a sign of a recessionary phase."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is 'GDP per capita'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "GDP adjusted for population growth.",
+        "Total GDP divided by total population.",
+        "Total GDP divided by total labor force.",
+        "Total GDP divided by the working-age population."
+      ],
+      "answer": "Total GDP divided by total population.",
+      "explanation": "'GDP per capita' is the average GDP per person in a country. It is calculated by dividing the total GDP of a country by its total population."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which of the following is NOT a limitation of GDP as an economic indicator?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "It includes non-market activities.",
+        "It does not consider income inequality.",
+        "It does not account for environmental degradation.",
+        "It does not account for changes in technology."
+      ],
+      "answer": "It does not account for changes in technology.",
+      "explanation": "GDP measures the overall economic output but does not specifically account for changes in technology. However, technological advancements can indirectly influence GDP growth."
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the largest component of GDP in most economies?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Consumer spending (Consumption).",
+        "Government spending.",
+        "Business investment.",
+        "Net exports (Exports minus Imports)."
+      ],
+      "answer": "Consumer spending (Consumption).",
+      "explanation": "In most economies, the largest component of GDP is consumer spending, which includes expenditures by households on goods and services."
+    },
+    {
+      "questionNumber": 12,
+      "question": "What does 'GDP Deflator' measure?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Inflation rate.",
+        "Income inequality.",
+        "Interest rates.",
+        "Consumer Price Index (CPI)."
+      ],
+      "answer": "Inflation rate.",
+      "explanation": "The 'GDP Deflator' is a measure of inflation or deflation in an economy. It compares the nominal GDP to the real GDP to reflect the overall price level changes."
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the relationship between GDP and standard of living?",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. GDP per capita is often used as an indicator of the standard of living in a country. Higher GDP per capita generally indicates a higher standard of living for the population."
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which of the following is an example of 'Government Spending' in GDP?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A household buying groceries.",
+        "A company building a new factory.",
+        "A government constructing a new public school.",
+        "An individual purchasing a new car."
+      ],
+      "answer": "A government constructing a new public school.",
+      "explanation": "'Government Spending' in GDP refers to the total value of goods and services purchased by the government to provide public services, infrastructure, and other government activities."
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is 'GDP Growth Rate'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The percentage change in nominal GDP.",
+        "The percentage change in real GDP.",
+        "The percentage change in GDP per capita.",
+        "The percentage change in total population."
+      ],
+      "answer": "The percentage change in real GDP.",
+      "explanation": "'GDP Growth Rate' is the percentage change in real GDP over a specific period. It indicates the rate of economic growth or contraction in an economy."
+    }
+  ]
+}
