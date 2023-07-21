@@ -1,0 +1,151 @@
+{
+  "quizName": "Walmart Interview Quiz",
+  "quizCode": "WALMART2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Retail",
+  "quizDescription": "Test your knowledge about Walmart, one of the world's largest retail companies!",
+  "quizTags": "Walmart, Retail, Company, Business, Stores",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who founded Walmart?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sam Walton",
+        "Bill Gates",
+        "Jeff Bezos",
+        "Warren Buffett"
+      ],
+      "answer": "Sam Walton",
+      "explanation": "Walmart was founded by Sam Walton in 1962. He opened the first Walmart Discount City store in Rogers, Arkansas, USA."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What year was the first Walmart store opened?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1955",
+        "1962",
+        "1970",
+        "1985"
+      ],
+      "answer": "1962",
+      "explanation": "The first Walmart store was opened in 1962. It was a Walmart Discount City store located in Rogers, Arkansas."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Walmart is headquartered in which U.S. state?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Texas",
+        "California",
+        "Arkansas",
+        "New York"
+      ],
+      "answer": "Arkansas",
+      "explanation": "Walmart's headquarters is located in Bentonville, Arkansas, USA. The company was founded in Arkansas, and the headquarters remains there to this day."
+    },
+    {
+      "questionNumber": 4,
+      "question": "As of 2023, which of the following is the largest retail chain in the world by revenue?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Amazon",
+        "Alibaba",
+        "Walmart",
+        "Costco"
+      ],
+      "answer": "Walmart",
+      "explanation": "As of 2023, Walmart is the largest retail chain in the world by revenue. It has a significant global presence with thousands of stores and e-commerce operations."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the company's slogan?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Save Money. Live Better.",
+        "Everyday Low Prices.",
+        "Always Low Prices.",
+        "Your Everyday Savings Store."
+      ],
+      "answer": "Save Money. Live Better.",
+      "explanation": "Walmart's slogan is 'Save Money. Live Better.' It emphasizes the company's commitment to providing affordable prices and better living for its customers."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which major acquisition did Walmart make in 2016 to strengthen its e-commerce business?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jet.com",
+        "eBay",
+        "Alibaba",
+        "Flipkart"
+      ],
+      "answer": "Jet.com",
+      "explanation": "In 2016, Walmart acquired Jet.com, an online shopping platform, for approximately $3 billion. This acquisition aimed to enhance Walmart's e-commerce capabilities and compete with other online giants."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Walmart operates its stores under different names in various countries. In the United Kingdom, what is Walmart known as?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Asda",
+        "Tesco",
+        "Sainsbury's",
+        "Morrisons"
+      ],
+      "answer": "Asda",
+      "explanation": "In the United Kingdom, Walmart operates its stores under the name Asda. Asda is a major supermarket chain and a wholly-owned subsidiary of Walmart."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which sustainability initiative launched by Walmart aims to achieve zero waste, renewable energy, and sustainable products?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Green Impact Index",
+        "Sustainable Living Plan",
+        "Project Gigaton",
+        "Walmart Green Fund"
+      ],
+      "answer": "Project Gigaton",
+      "explanation": "Project Gigaton is a sustainability initiative launched by Walmart. It aims to reduce greenhouse gas emissions by one billion metric tons from the global value chain by 2030."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the name of Walmart's membership program that offers various benefits, including free shipping and discounts?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Walmart Prime",
+        "Walmart Plus",
+        "Walmart Max",
+        "Walmart Club"
+      ],
+      "answer": "Walmart Plus",
+      "explanation": "Walmart Plus is Walmart's membership program that offers benefits such as free shipping, discounts on fuel, and access to tools like Scan & Go for convenient shopping."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Walmart's e-commerce platform allows third-party sellers to list their products on the website. What is this program called?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Walmart Partners",
+        "Walmart Marketplace",
+        "Walmart Direct",
+        "Walmart Connect"
+      ],
+      "answer": "Walmart Marketplace",
+      "explanation": "Walmart's e-commerce platform that allows third-party sellers to list their products on the website is called Walmart Marketplace. It enables Walmart to offer a wide range of products to customers."
+    }
+  ]
+}
