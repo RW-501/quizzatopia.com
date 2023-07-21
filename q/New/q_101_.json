@@ -1,0 +1,229 @@
+{
+  "quizName": "The Office Show Quiz",
+  "quizCode": "TO2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge about the hilarious TV show 'The Office'!",
+  "quizTags": "The Office, TV Shows, Comedy, Workplace",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who is the bumbling and clueless regional manager of Dunder Mifflin Scranton branch?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jim Halpert",
+        "Dwight Schrute",
+        "Andy Bernard",
+        "Michael Scott"
+      ],
+      "answer": "Michael Scott",
+      "explanation": "Michael Scott, portrayed by Steve Carell, is the regional manager of the Dunder Mifflin Scranton branch known for his awkward and humorous leadership style.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which character often breaks the fourth wall and addresses the camera with amusing facial expressions?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ryan Howard",
+        "Pam Beesly",
+        "Creed Bratton",
+        "Jim Halpert"
+      ],
+      "answer": "Jim Halpert",
+      "explanation": "Jim Halpert, portrayed by John Krasinski, frequently breaks the fourth wall and interacts with the audience through the camera, adding to the show's humor.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "True or False: The character Dwight Schrute owns and operates a bed-and-breakfast farm.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Dwight Schrute, portrayed by Rainn Wilson, owns and operates a bed-and-breakfast farm called 'Schrute Farms' in his spare time.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the name of the paper company where the characters work?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Dunder Mifflin",
+      "explanation": "The characters in 'The Office' work at the paper company called 'Dunder Mifflin,' known for its humorous and quirky employees.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "In the show 'The Office,' who is known for their unusual and offbeat statements and behaviors?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kelly Kapoor",
+        "Kevin Malone",
+        "Angela Martin",
+        "Phyllis Smith"
+      ],
+      "answer": "Kevin Malone",
+      "explanation": "Kevin Malone, portrayed by Brian Baumgartner, is known for his odd and eccentric statements and behaviors throughout the series.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the name of the company that acquires Dunder Mifflin during the series?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Vance Refrigeration",
+        "Saber",
+        "Athlead",
+        "Hammermill"
+      ],
+      "answer": "Saber",
+      "explanation": "Saber is the name of the company that acquires Dunder Mifflin, leading to changes and uncertainty for the employees.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which character is the eccentric and enigmatic regional manager of the Dunder Mifflin Utica branch?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Karen Filippelli",
+        "Jan Levinson",
+        "Charles Miner",
+        "David Wallace"
+      ],
+      "answer": "Karen Filippelli",
+      "explanation": "Karen Filippelli, portrayed by Rashida Jones, is the regional manager of the Dunder Mifflin Utica branch known for her unique personality.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which character is known for their elaborate and imaginative pranks on Dwight Schrute?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ryan Howard",
+        "Jim Halpert",
+        "Andy Bernard",
+        "Pam Beesly"
+      ],
+      "answer": "Jim Halpert",
+      "explanation": "Jim Halpert is known for playing elaborate and imaginative pranks on Dwight Schrute throughout the series, creating memorable and humorous moments.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "In the 'Dinner Party' episode, what is the name of Jan Levinson's candle company?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Serenity by Jan",
+        "Candle-Lit Delights",
+        "Serenity Now",
+        "The Candle Depot"
+      ],
+      "answer": "Serenity by Jan",
+      "explanation": "Jan Levinson, portrayed by Melora Hardin, owns a candle company called 'Serenity by Jan,' which she introduces to the employees during a disastrous dinner party.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which character is known for their love of cats and strict adherence to company policies?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Stanley Hudson",
+        "Angela Martin",
+        "Creed Bratton",
+        "Meredith Palmer"
+      ],
+      "answer": "Angela Martin",
+      "explanation": "Angela Martin, portrayed by Angela Kinsey, is known for her love of cats, no-nonsense attitude, and strict adherence to company policies.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the name of the temporary office administrator who becomes known for her party planning skills?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Erin Hannon",
+        "Kelly Kapoor",
+        "Meredith Palmer",
+        "Phyllis Smith"
+      ],
+      "answer": "Erin Hannon",
+      "explanation": "Erin Hannon, portrayed by Ellie Kemper, is the temporary office administrator who becomes known for her party planning skills and friendly demeanor.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which character often shares bizarre stories about their past experiences and mysterious activities?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Creed Bratton",
+        "Dwight Schrute",
+        "Toby Flenderson",
+        "Andy Bernard"
+      ],
+      "answer": "Creed Bratton",
+      "explanation": "Creed Bratton, portrayed by Creed Bratton, is known for sharing bizarre stories about his past experiences and engaging in mysterious activities.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "In 'The Office,' what is the name of the documentary film crew that captures the daily lives of the employees?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Scranton Film Crew",
+        "Dunder Mifflin Documentaries",
+        "The Office Crew",
+        "The Docu-Crew"
+      ],
+      "answer": "The Docu-Crew",
+      "explanation": "The Docu-Crew is the name of the documentary film crew that captures the daily lives of the Dunder Mifflin employees as part of the show's premise.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which character is the quirky and awkward human resources representative at Dunder Mifflin?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Phyllis Smith",
+        "Kelly Kapoor",
+        "Pam Beesly",
+        "Toby Flenderson"
+      ],
+      "answer": "Toby Flenderson",
+      "explanation": "Toby Flenderson, portrayed by Paul Lieberstein, is the quirky and awkward human resources representative who often faces frustration from Michael Scott.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which character is known for their unique and eccentric fashion sense?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Oscar Martinez",
+        "Phyllis Smith",
+        "Meredith Palmer",
+        "Stanley Hudson"
+      ],
+      "answer": "Phyllis Smith",
+      "explanation": "Phyllis Smith, portrayed by Phyllis Smith, is known for her unique and eccentric fashion choices, adding to the character's charm and humor.",
+      "difficulty": "Medium"
+    }
+  ]
+}
