@@ -1,0 +1,222 @@
+{
+  "quizName": "Business Quiz",
+  "quizCode": "BIZ2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Business",
+  "quizDescription": "Test your knowledge about various aspects of the business world!",
+  "quizTags": "Business, Economics, Finance, Companies",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which famous entrepreneur co-founded Microsoft Corporation?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bill Gates",
+        "Steve Jobs",
+        "Mark Zuckerberg",
+        "Jeff Bezos"
+      ],
+      "answer": "Bill Gates",
+      "explanation": "Bill Gates co-founded Microsoft Corporation, one of the world's largest technology companies.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the primary goal of financial accounting?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To measure and communicate financial information to external parties",
+        "To control and manage an organization's internal operations",
+        "To develop marketing strategies for a business",
+        "To forecast future economic trends"
+      ],
+      "answer": "To measure and communicate financial information to external parties",
+      "explanation": "The primary goal of financial accounting is to measure and communicate financial information to external stakeholders like investors, creditors, and regulators.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "True or False: A monopoly is a market structure with many sellers offering identical products.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. A monopoly is a market structure with a single seller dominating the market and offering unique products or services.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What does the abbreviation 'CEO' stand for in the business world?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Chief Executive Officer",
+      "explanation": "The abbreviation 'CEO' stands for Chief Executive Officer, the highest-ranking executive in a company.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which economic indicator measures the average changes in prices of goods and services over time?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Consumer Price Index (CPI)",
+        "Gross Domestic Product (GDP)",
+        "Unemployment Rate",
+        "Producer Price Index (PPI)"
+      ],
+      "answer": "Consumer Price Index (CPI)",
+      "explanation": "The Consumer Price Index (CPI) measures the average changes in prices of goods and services consumed by households over time.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which negotiation strategy involves a win-win approach, aiming to find mutually beneficial solutions?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Competing",
+        "Avoiding",
+        "Collaborating",
+        "Accommodating"
+      ],
+      "answer": "Collaborating",
+      "explanation": "The collaborating negotiation strategy involves a cooperative approach, seeking win-win outcomes for both parties involved.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "In marketing, what does the 'SWOT' acronym stand for?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Strengths, Weaknesses, Opportunities, Threats",
+        "Sales, Wins, Opportunities, Targets",
+        "Strategy, Workforce, Objectives, Tactics",
+        "Shares, Website, Optimization, Traffic"
+      ],
+      "answer": "Strengths, Weaknesses, Opportunities, Threats",
+      "explanation": "In marketing, the 'SWOT' acronym represents Strengths, Weaknesses, Opportunities, and Threats – a tool for analyzing a company's internal and external factors.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which type of market research involves collecting new data specifically for a current research project?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Secondary research",
+        "Qualitative research",
+        "Observational research",
+        "Primary research"
+      ],
+      "answer": "Primary research",
+      "explanation": "Primary research involves collecting new data directly from respondents or sources for a specific research project.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What does ROI stand for in finance?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Return on Investment",
+      "explanation": "ROI stands for Return on Investment, a financial metric used to evaluate the profitability of an investment.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which concept refers to the process of converting inputs into outputs effectively?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Productivity",
+        "Profitability",
+        "Liquidity",
+        "Solvency"
+      ],
+      "answer": "Productivity",
+      "explanation": "Productivity is the measure of how efficiently inputs are transformed into outputs in a business or production process.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the full form of 'IPO' in finance?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Initial Profit Offering",
+        "International Public Option",
+        "Initial Public Offering",
+        "Investment Pricing Option"
+      ],
+      "answer": "Initial Public Offering",
+      "explanation": "IPO stands for Initial Public Offering, which is the first sale of a company's shares to the public on a stock exchange.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "True or False: 'Diversification' in investing refers to putting all your money into a single investment.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. 'Diversification' involves spreading investments across various assets to reduce risk and increase potential returns.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which pricing strategy involves setting a high initial price and gradually lowering it over time?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Penetration pricing",
+        "Skimming pricing",
+        "Cost-plus pricing",
+        "Promotional pricing"
+      ],
+      "answer": "Skimming pricing",
+      "explanation": "Skimming pricing is a strategy where a high initial price is set to target early adopters, and then the price is gradually lowered to reach broader market segments.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What type of business structure offers limited liability to its owners and is a separate legal entity?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sole proprietorship",
+        "Partnership",
+        "Corporation",
+        "Limited liability company (LLC)"
+      ],
+      "answer": "Corporation",
+      "explanation": "A corporation is a business structure that offers limited liability protection to its owners (shareholders) and is treated as a separate legal entity.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which market structure represents a market with few sellers and differentiated products?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Perfect competition",
+        "Monopoly",
+        "Oligopoly",
+        "Monopolistic competition"
+      ],
+      "answer": "Monopolistic competition",
+      "explanation": "Monopolistic competition is a market structure with few sellers offering differentiated products, giving each firm some degree of pricing power.",
+      "difficulty": "Medium"
+    }
+  ]
+}
