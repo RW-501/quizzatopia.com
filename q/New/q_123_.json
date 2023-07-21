@@ -1,0 +1,151 @@
+{
+  "quizName": "Business Economics Quiz",
+  "quizCode": "BUSINECO2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Business Economics",
+  "quizDescription": "Test your knowledge of economic concepts and principles in the business context!",
+  "quizTags": "Business, Economics, Microeconomics, Macroeconomics",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the fundamental economic problem all businesses face?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Maximizing profits",
+        "Allocating resources efficiently",
+        "Minimizing costs",
+        "Satisfying unlimited wants with limited resources"
+      ],
+      "answer": "Satisfying unlimited wants with limited resources",
+      "explanation": "The fundamental economic problem faced by all businesses (and societies) is the scarcity of resources relative to unlimited human wants. Businesses must make choices on how to allocate these limited resources to satisfy the most pressing wants and needs."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which economic concept refers to the total value of all goods and services produced within a country's borders in a given period?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gross Domestic Product (GDP)",
+        "Consumer Price Index (CPI)",
+        "Unemployment Rate",
+        "Inflation Rate"
+      ],
+      "answer": "Gross Domestic Product (GDP)",
+      "explanation": "Gross Domestic Product (GDP) is a key indicator of a country's economic performance. It measures the total value of all goods and services produced within a country's borders in a specific time period, typically a year."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the term for the level of output where a business neither makes a profit nor incurs a loss?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Economies of scale",
+        "Break-even point",
+        "Monopoly",
+        "Perfect competition"
+      ],
+      "answer": "Break-even point",
+      "explanation": "The break-even point is the level of output or sales where a business's total revenue equals its total costs, resulting in neither profit nor loss. Beyond the break-even point, the business starts making a profit."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which type of economic system is characterized by private ownership of resources and businesses, driven by the pursuit of profit?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Command economy",
+        "Traditional economy",
+        "Mixed economy",
+        "Market economy"
+      ],
+      "answer": "Market economy",
+      "explanation": "In a market economy, resources and businesses are privately owned, and economic decisions are driven by market forces, such as supply and demand. The pursuit of profit motivates businesses to produce goods and services that consumers demand."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the term for the measure of the responsiveness of quantity demanded or supplied to changes in price?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Market equilibrium",
+        "Price ceiling",
+        "Price elasticity of demand",
+        "Opportunity cost"
+      ],
+      "answer": "Price elasticity of demand",
+      "explanation": "Price elasticity of demand is a measure of how sensitive the quantity demanded of a good or service is to changes in its price. It indicates whether demand is relatively elastic (responsive to price changes) or inelastic (less responsive to price changes)."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the term for the percentage of the labor force that is unemployed and actively seeking employment?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Inflation Rate",
+        "Consumer Price Index (CPI)",
+        "Gross Domestic Product (GDP)",
+        "Unemployment Rate"
+      ],
+      "answer": "Unemployment Rate",
+      "explanation": "The unemployment rate is a key economic indicator that measures the percentage of the labor force (those willing and able to work) that is unemployed and actively seeking employment. It provides insight into the health of the labor market and overall economy."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which market structure features a large number of sellers and buyers, homogeneous products, and ease of entry and exit?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Oligopoly",
+        "Perfect competition",
+        "Monopoly",
+        "Monopolistic competition"
+      ],
+      "answer": "Perfect competition",
+      "explanation": "Perfect competition is a market structure where there are many small sellers and buyers, and each firm sells a homogeneous (identical) product. It allows for ease of entry and exit for businesses, resulting in no single firm having significant market power."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which economic indicator measures the average change in prices of a basket of goods and services over time?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gross Domestic Product (GDP)",
+        "Consumer Price Index (CPI)",
+        "Unemployment Rate",
+        "Inflation Rate"
+      ],
+      "answer": "Consumer Price Index (CPI)",
+      "explanation": "The Consumer Price Index (CPI) is a measure of the average change in prices of a specific basket of goods and services typically consumed by urban households. It is used to gauge inflation and cost of living changes over time."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the term for the reduction in per-unit production costs resulting from increased production levels?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Opportunity cost",
+        "Economies of scale",
+        "Marginal cost",
+        "Average revenue"
+      ],
+      "answer": "Economies of scale",
+      "explanation": "Economies of scale refer to the cost advantage that arises when the average cost per unit of production decreases as output increases. This reduction in per-unit costs is often achieved through increased efficiency and spreading fixed costs over higher production levels."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which economic concept suggests that as more of a specific good or service is consumed, the additional satisfaction or utility from each unit decreases?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Opportunity cost",
+        "Marginal utility",
+        "Price elasticity of demand",
+        "Perfect competition"
+      ],
+      "answer": "Marginal utility",
+      "explanation": "Marginal utility is the additional satisfaction or benefit derived from consuming one more unit of a good or service. It is a fundamental concept in microeconomics and helps explain consumer choices and demand patterns."
+    }
+  ]
+}
