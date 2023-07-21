@@ -1,0 +1,151 @@
+{
+  "quizName": "World Economics Quiz",
+  "quizCode": "WORLDECO2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "World Economics",
+  "quizDescription": "Test your knowledge of global economic trends, international trade, and economic development!",
+  "quizTags": "Economics, World Economy, International Trade, Economic Indicators",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which organization is responsible for regulating international trade and promoting global economic cooperation?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "United Nations (UN)",
+        "World Trade Organization (WTO)",
+        "International Monetary Fund (IMF)",
+        "World Bank"
+      ],
+      "answer": "World Trade Organization (WTO)",
+      "explanation": "The World Trade Organization (WTO) is an international organization that regulates international trade, enforces trade agreements, and resolves trade disputes between member countries. It aims to promote smooth and predictable trade relations among nations."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which economic indicator measures the total monetary value of all goods and services produced within a country's borders in a specific time period?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gross Domestic Product (GDP)",
+        "Consumer Price Index (CPI)",
+        "Unemployment Rate",
+        "Inflation Rate"
+      ],
+      "answer": "Gross Domestic Product (GDP)",
+      "explanation": "Gross Domestic Product (GDP) is a key economic indicator that measures the total monetary value of all goods and services produced within a country's borders in a specific time period, typically a year. It is used to assess a country's economic performance and growth."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which term describes a situation where a country imports more goods and services than it exports?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Trade deficit",
+        "Trade surplus",
+        "Balance of payments",
+        "Current account"
+      ],
+      "answer": "Trade deficit",
+      "explanation": "A trade deficit occurs when a country imports more goods and services from other countries than it exports. It means the country is buying more from foreign nations than it is selling, leading to a negative balance in the trade of goods and services."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which economic concept refers to the total value of a country's exports minus the total value of its imports?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gross Domestic Product (GDP)",
+        "Balance of trade",
+        "Fiscal deficit",
+        "Trade surplus"
+      ],
+      "answer": "Balance of trade",
+      "explanation": "The balance of trade is the difference between the total value of a country's exports and the total value of its imports. If the value of exports is higher than imports, it results in a trade surplus, and if imports exceed exports, it leads to a trade deficit."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which term describes a country's ability to produce a specific good or service at a lower opportunity cost compared to other countries?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Comparative advantage",
+        "Absolute advantage",
+        "Trade barrier",
+        "Economic sanction"
+      ],
+      "answer": "Comparative advantage",
+      "explanation": "Comparative advantage refers to a country's ability to produce a specific good or service at a lower opportunity cost (in terms of other goods or services foregone) compared to other countries. It is a key concept in international trade and forms the basis for mutually beneficial trade arrangements."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which term describes a tax imposed on imported goods to protect domestic industries from foreign competition?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Embargo",
+        "Quota",
+        "Tariff",
+        "Subsidy"
+      ],
+      "answer": "Tariff",
+      "explanation": "A tariff is a tax imposed by a government on imported goods. It is used as a trade barrier to make foreign goods more expensive in the domestic market, thereby protecting domestic industries and stimulating local production."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which economic indicator measures the percentage change in the general price level of goods and services over time?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gross Domestic Product (GDP)",
+        "Consumer Price Index (CPI)",
+        "Unemployment Rate",
+        "Inflation Rate"
+      ],
+      "answer": "Inflation Rate",
+      "explanation": "The inflation rate measures the percentage change in the general price level of goods and services in an economy over a specific period, usually a year. It reflects the erosion of purchasing power and can have significant impacts on consumers, businesses, and the overall economy."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which term describes a group of countries that have reduced or eliminated trade barriers among themselves?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "World Trade Organization (WTO)",
+        "Free trade agreement",
+        "Bretton Woods Agreement",
+        "International Monetary Fund (IMF)"
+      ],
+      "answer": "Free trade agreement",
+      "explanation": "A free trade agreement is a pact between two or more countries to reduce or eliminate trade barriers, such as tariffs and quotas, on goods and services traded between them. The aim is to promote economic integration and increase trade opportunities among the member countries."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which international organization provides financial assistance and policy advice to its member countries to promote global monetary cooperation and economic stability?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "World Trade Organization (WTO)",
+        "Free trade agreement",
+        "International Monetary Fund (IMF)",
+        "World Bank"
+      ],
+      "answer": "International Monetary Fund (IMF)",
+      "explanation": "The International Monetary Fund (IMF) is an international organization that aims to foster global monetary cooperation, secure financial stability, facilitate international trade, promote high employment and sustainable economic growth, and reduce poverty around the world."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which economic indicator measures the percentage of the labor force that is unemployed and actively seeking employment?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gross Domestic Product (GDP)",
+        "Consumer Price Index (CPI)",
+        "Unemployment Rate",
+        "Inflation Rate"
+      ],
+      "answer": "Unemployment Rate",
+      "explanation": "The unemployment rate is a key economic indicator that measures the percentage of the labor force (those willing and able to work) that is unemployed and actively seeking employment. It provides insight into the health of the labor market and overall economy."
+    }
+  ]
+}
