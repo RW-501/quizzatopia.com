@@ -131,15 +131,21 @@
       "answer": "Any individual, corporation, or partnership can be a member of an LLC.",
       "explanation": "LLCs have broad flexibility in their membership. Any individual, corporation, or partnership can become a member of an LLC, making it a versatile business structure."
     },
-    {
-      "questionNumber": 10,
-      "question": "What are the steps involved in forming an LLC?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Choose a business name, file articles of organization with the state, draft an operating agreement, obtain necessary licenses and permits, and hold an initial meeting with members.",
-      "explanation": "The steps involved in forming an LLC typically include choosing a business name, filing articles of organization with the state's business registration office, drafting an operating agreement, obtaining necessary licenses and permits, and holding an initial meeting with LLC members to discuss important matters."
-    },
+ {
+  "questionNumber": 10,
+  "question": "What are the steps involved in forming an LLC?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "The answer should include choosing a business name, filing articles of organization with the state, drafting an operating agreement, obtaining necessary licenses and permits, and holding an initial meeting with members.",
+    "Choosing a business name, filing articles of organization with the state, drafting an operating agreement, obtaining necessary licenses and permits, and holding an initial meeting with members.",
+    "Forming an LLC involves choosing a business name, filing articles of organization with the state, drafting an operating agreement, obtaining necessary licenses and permits, and holding an initial meeting with members.",
+    "The process of forming an LLC includes choosing a business name, filing articles of organization with the state, drafting an operating agreement, obtaining necessary licenses and permits, and holding an initial meeting with members."
+  ],
+  "answer": "Choosing a business name, filing articles of organization with the state, drafting an operating agreement, obtaining necessary licenses and permits, and holding an initial meeting with members.",
+  "explanation": "The steps involved in forming an LLC typically include choosing a business name, filing articles of organization with the state's business registration office, drafting an operating agreement, obtaining necessary licenses and permits, and holding an initial meeting with LLC members to discuss important matters.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 11,
       "question": "What is the duration of an LLC's existence?",
