@@ -1,0 +1,151 @@
+{
+  "quizName": "Soccer Quiz",
+  "quizCode": "SOCCER2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Sports",
+  "quizDescription": "Test your knowledge about the game of soccer and its history!",
+  "quizTags": "Soccer, Football, Sports, Players, World Cup",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which country won the first-ever FIFA World Cup in 1930?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Brazil",
+        "Germany",
+        "Argentina",
+        "Uruguay"
+      ],
+      "answer": "Uruguay",
+      "explanation": "Uruguay won the first-ever FIFA World Cup in 1930, which was held in Montevideo, Uruguay."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Who is the all-time leading goal scorer in men's FIFA World Cup history?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cristiano Ronaldo",
+        "Lionel Messi",
+        "Pele",
+        "Marta"
+      ],
+      "answer": "Marta",
+      "explanation": "Marta from Brazil is the all-time leading goal scorer in men's and women's FIFA World Cup history."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which club team has won the most UEFA Champions League titles?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Real Madrid",
+        "Barcelona",
+        "Liverpool",
+        "Manchester United"
+      ],
+      "answer": "Real Madrid",
+      "explanation": "Real Madrid, from Spain, holds the record for the most UEFA Champions League titles, with 13 championships as of the 2021-2022 season."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which player is often referred to as 'The King of Football' and is considered one of the greatest soccer players of all time?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Diego Maradona",
+        "Pele",
+        "Johan Cruyff",
+        "Franz Beckenbauer"
+      ],
+      "answer": "Pele",
+      "explanation": "Pele from Brazil is often referred to as 'The King of Football' and is considered one of the greatest soccer players of all time."
+    },
+    {
+      "questionNumber": 5,
+      "question": "In soccer, how many players from each team are allowed on the field during gameplay?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "8",
+        "10",
+        "11",
+        "12"
+      ],
+      "answer": "11",
+      "explanation": "In soccer, each team is allowed to have 11 players on the field during gameplay, including one goalkeeper."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which player has won the most Ballon d'Or awards, given to the best soccer player in the world?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lionel Messi",
+        "Cristiano Ronaldo",
+        "Neymar Jr.",
+        "Andres Iniesta"
+      ],
+      "answer": "Lionel Messi",
+      "explanation": "Lionel Messi from Argentina holds the record for the most Ballon d'Or awards, having won the prestigious honor multiple times."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which national team has won the most FIFA World Cup titles?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Brazil",
+        "Germany",
+        "Argentina",
+        "Italy"
+      ],
+      "answer": "Brazil",
+      "explanation": "Brazilian national team has won the most FIFA World Cup titles, with a record 5 championships as of the 2022 World Cup."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which country hosted the first Women's FIFA World Cup in 1991?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "USA",
+        "Brazil",
+        "Germany",
+        "China"
+      ],
+      "answer": "China",
+      "explanation": "China hosted the first-ever Women's FIFA World Cup in 1991, marking a significant milestone in women's soccer history."
+    },
+    {
+      "questionNumber": 9,
+      "question": "In soccer, what is the term used for a situation where a player scores three goals in a single game?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hat-Trick",
+        "Triple Play",
+        "Trifecta",
+        "Three-Pointer"
+      ],
+      "answer": "Hat-Trick",
+      "explanation": "In soccer, when a player scores three goals in a single game, it is called a 'Hat-Trick,' a term borrowed from cricket."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which player is known as 'The Egyptian King' and plays for Liverpool in the English Premier League?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lionel Messi",
+        "Cristiano Ronaldo",
+        "Mohamed Salah",
+        "Kylian Mbappe"
+      ],
+      "answer": "Mohamed Salah",
+      "explanation": "Mohamed Salah from Egypt is known as 'The Egyptian King' and plays as a forward for Liverpool in the English Premier League."
+    }
+  ]
+}
