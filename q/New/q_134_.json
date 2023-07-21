@@ -1,0 +1,151 @@
+{
+  "quizName": "Sports Players Quiz",
+  "quizCode": "SPORTSPLAYERS2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Sports",
+  "quizDescription": "Test your knowledge about famous players in various sports!",
+  "quizTags": "Sports, Players, Athletes, Legends",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which basketball player is often referred to as 'The King' and has won multiple NBA championships?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kobe Bryant",
+        "LeBron James",
+        "Michael Jordan",
+        "Magic Johnson"
+      ],
+      "answer": "LeBron James",
+      "explanation": "LeBron James, one of the greatest basketball players of all time, is often referred to as 'The King' and has won multiple NBA championships."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which soccer player is known as 'CR7' and has played for clubs like Manchester United, Real Madrid, and Juventus?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lionel Messi",
+        "Neymar Jr.",
+        "Cristiano Ronaldo",
+        "Andres Iniesta"
+      ],
+      "answer": "Cristiano Ronaldo",
+      "explanation": "Cristiano Ronaldo, a Portuguese soccer superstar, is known as 'CR7' and has played for top clubs like Manchester United, Real Madrid, and Juventus."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which tennis player has won the most Grand Slam singles titles in women's tennis?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Serena Williams",
+        "Maria Sharapova",
+        "Steffi Graf",
+        "Martina Navratilova"
+      ],
+      "answer": "Margaret Court",
+      "explanation": "Margaret Court holds the record for the most Grand Slam singles titles in women's tennis, with 24 championships."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which golfer has won the most Masters Tournament titles?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tiger Woods",
+        "Phil Mickelson",
+        "Jack Nicklaus",
+        "Arnold Palmer"
+      ],
+      "answer": "Jack Nicklaus",
+      "explanation": "Jack Nicklaus holds the record for the most Masters Tournament titles in golf, with 6 victories."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which athlete has won the most Olympic gold medals in the history of the Summer Olympics?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Michael Phelps",
+        "Usain Bolt",
+        "Carl Lewis",
+        "Jesse Owens"
+      ],
+      "answer": "Michael Phelps",
+      "explanation": "Michael Phelps, the legendary swimmer from the United States, has won the most Olympic gold medals in the history of the Summer Olympics."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which football quarterback has won the most Super Bowl MVP awards?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tom Brady",
+        "Peyton Manning",
+        "Joe Montana",
+        "Brett Favre"
+      ],
+      "answer": "Tom Brady",
+      "explanation": "Tom Brady, one of the greatest quarterbacks in NFL history, has won the most Super Bowl MVP awards."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which sprinter is known as the 'Fastest Man Alive' and has set numerous world records in track and field?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Usain Bolt",
+        "Carl Lewis",
+        "Jesse Owens",
+        "Tyson Gay"
+      ],
+      "answer": "Usain Bolt",
+      "explanation": "Usain Bolt from Jamaica, the 'Fastest Man Alive,' has set numerous world records in sprint events and is considered one of the greatest sprinters in history."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which hockey player is known as 'The Great One' and is considered one of the greatest hockey players of all time?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mario Lemieux",
+        "Wayne Gretzky",
+        "Bobby Orr",
+        "Gordie Howe"
+      ],
+      "answer": "Wayne Gretzky",
+      "explanation": "Wayne Gretzky, a Canadian hockey legend, is known as 'The Great One' and is widely regarded as one of the greatest hockey players in history."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which athlete, known as 'The Flying Sikh,' achieved numerous records in athletics and brought glory to India?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Usain Bolt",
+        "Carl Lewis",
+        "Jesse Owens",
+        "Milkha Singh"
+      ],
+      "answer": "Milkha Singh",
+      "explanation": "Milkha Singh, an Indian athlete known as 'The Flying Sikh,' achieved numerous records in track and field events and brought glory to India."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which baseball player holds the record for the most career home runs in MLB history?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Babe Ruth",
+        "Hank Aaron",
+        "Barry Bonds",
+        "Willie Mays"
+      ],
+      "answer": "Barry Bonds",
+      "explanation": "Barry Bonds holds the record for the most career home runs in MLB history, with 762 home runs."
+    }
+  ]
+}
