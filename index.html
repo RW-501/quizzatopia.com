@@ -1107,8 +1107,8 @@ async function fetchQuizzesFromDB() {
   orderedQuerySnapshot.forEach((doc) => {
     const quizData = doc.data();
     const quizItem = {
-      quizRatingDB: quizData.quizRatingDB,
-      quizRatingCountDB: quizData.quizRatingCountDB,
+      quizRatingDB: quizData.quizRatingDB || 0,
+      quizRatingCountDB: quizData.quizRatingCountDB || 0,
       quizDifficulty: quizData.quizDifficultyDB || quizData.quizDifficulty,
       quizCreatedByDB: quizData.quizCreatedByDB,
       quizNameDB: quizData.quizNameDB,
@@ -1126,8 +1126,8 @@ async function fetchQuizzesFromDB() {
     if (!quizList.some((item) => item.quizCodeDB === doc.data().quizCodeDB)) {
       const quizData = doc.data();
       const quizItem = {
-        quizRatingDB: quizData.quizRatingDB,
-      quizRatingCountDB: quizData.quizRatingCountDB,
+      quizRatingDB: quizData.quizRatingDB || 0,
+      quizRatingCountDB: quizData.quizRatingCountDB || 0,
       quizDifficulty: quizData.quizDifficultyDB || quizData.quizDifficulty,
         quizCreatedByDB: quizData.quizCreatedByDB,
         quizNameDB: quizData.quizNameDB,
