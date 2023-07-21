@@ -1,0 +1,151 @@
+{
+  "quizName": "AC/DC Quiz",
+  "quizCode": "ACDC2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Music",
+  "quizDescription": "Test your knowledge about the legendary rock band AC/DC, their electrifying music, and their influential presence in the world of rock and roll!",
+  "quizTags": "AC/DC, Music, Rock, Hard Rock, Angus Young, Highway to Hell, Back in Black",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who is the lead guitarist and co-founder of AC/DC?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bon Scott",
+        "Malcolm Young",
+        "Brian Johnson",
+        "Angus Young"
+      ],
+      "answer": "Angus Young",
+      "explanation": "Angus Young is the lead guitarist and co-founder of AC/DC. His energetic stage presence and signature schoolboy outfit have become iconic symbols of the band."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which AC/DC album featured the hit song 'Highway to Hell'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Let There Be Rock",
+        "Back in Black",
+        "High Voltage",
+        "Highway to Hell"
+      ],
+      "answer": "Highway to Hell",
+      "explanation": "The album 'Highway to Hell' by AC/DC, released in 1979, featured the hit song of the same name. The album was a commercial success and a breakthrough for the band."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which AC/DC album became one of the best-selling albums of all time and featured songs like 'Back in Black' and 'You Shook Me All Night Long'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "T.N.T.",
+        "Highway to Hell",
+        "For Those About to Rock We Salute You",
+        "Back in Black"
+      ],
+      "answer": "Back in Black",
+      "explanation": "The album 'Back in Black' by AC/DC, released in 1980, became one of the best-selling albums of all time. It was a tribute to their former lead singer Bon Scott and marked a new era for the band."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Who replaced Bon Scott as the lead vocalist of AC/DC after his untimely death?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Brian Johnson",
+        "Phil Rudd",
+        "Cliff Williams",
+        "Mark Evans"
+      ],
+      "answer": "Brian Johnson",
+      "explanation": "Brian Johnson replaced Bon Scott as the lead vocalist of AC/DC after Scott's untimely death in 1980. Johnson's powerful vocals contributed to the band's continued success."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which AC/DC song begins with the iconic bell tolling?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Thunderstruck",
+        "T.N.T.",
+        "Hells Bells",
+        "Shoot to Thrill"
+      ],
+      "answer": "Hells Bells",
+      "explanation": "The AC/DC song 'Hells Bells' begins with the iconic bell tolling, creating a dark and memorable introduction to the track. The song is featured on the album 'Back in Black.'"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which album by AC/DC includes the hit songs 'You Shook Me All Night Long' and 'Rock and Roll Ain't Noise Pollution'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "For Those About to Rock We Salute You",
+        "High Voltage",
+        "Dirty Deeds Done Dirt Cheap",
+        "Back in Black"
+      ],
+      "answer": "Back in Black",
+      "explanation": "The album 'Back in Black' by AC/DC includes the hit songs 'You Shook Me All Night Long' and 'Rock and Roll Ain't Noise Pollution.' The album remains one of their most successful releases."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which AC/DC song features the famous lyrics 'I'm TNT, I'm dynamite'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Dirty Deeds Done Dirt Cheap",
+        "Highway to Hell",
+        "T.N.T.",
+        "Shoot to Thrill"
+      ],
+      "answer": "T.N.T.",
+      "explanation": "The AC/DC song 'T.N.T.' features the famous lyrics 'I'm TNT, I'm dynamite.' The song is a fan favorite and has become one of their classic hits."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which album by AC/DC was released as a dedication to their former lead singer Bon Scott?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Highway to Hell",
+        "Powerage",
+        "High Voltage",
+        "Back in Black"
+      ],
+      "answer": "Back in Black",
+      "explanation": "The album 'Back in Black' by AC/DC was released as a dedication to their former lead singer Bon Scott, who tragically passed away in 1980. The album's title represents a return to music and life 'back in black.'"
+    },
+    {
+      "questionNumber": 9,
+      "question": "AC/DC was formed in which country?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "United States",
+        "United Kingdom",
+        "Australia",
+        "Canada"
+      ],
+      "answer": "Australia",
+      "explanation": "AC/DC was formed in Australia in 1973 by brothers Angus Young and Malcolm Young. The band's electrifying performances and hard rock sound quickly gained popularity."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which AC/DC album includes the song 'Thunderstruck'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Razors Edge",
+        "High Voltage",
+        "Powerage",
+        "Let There Be Rock"
+      ],
+      "answer": "The Razors Edge",
+      "explanation": "The AC/DC album 'The Razors Edge,' released in 1990, includes the hit song 'Thunderstruck.' The album marked a successful comeback for the band in the 1990s."
+    }
+  ]
+}
