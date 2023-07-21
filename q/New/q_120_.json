@@ -1,0 +1,151 @@
+{
+  "quizName": "Sales Techniques Quiz",
+  "quizCode": "SALES2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Sales",
+  "quizDescription": "Test your knowledge of various sales techniques and strategies!",
+  "quizTags": "Sales, Selling, Customer Service, Closing",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the purpose of the 'mirroring' technique in sales?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To reflect on past sales experiences.",
+        "To copy the body language and speech of the customer.",
+        "To use reflective surfaces as a selling tool.",
+        "To create illusions to impress the customer."
+      ],
+      "answer": "To copy the body language and speech of the customer.",
+      "explanation": "The 'mirroring' technique in sales involves mimicking the body language, speech, and mannerisms of the customer to build rapport and establish a connection. It helps to create a sense of familiarity and trust with the customer."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the primary goal of 'objection handling' in sales?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To ignore customer objections and proceed with the sale.",
+        "To discourage customers from raising objections.",
+        "To overcome customer objections and address their concerns.",
+        "To pass the responsibility of handling objections to the sales manager."
+      ],
+      "answer": "To overcome customer objections and address their concerns.",
+      "explanation": "The primary goal of 'objection handling' in sales is to overcome customer objections by addressing their concerns and providing relevant information. Effective objection handling can lead to a successful sale."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the 'SPIN Selling' technique?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A technique based on spinning products to showcase different angles.",
+        "A method of selling high-ticket items only.",
+        "A questioning technique focusing on Situation, Problem, Implication, and Need-Payoff.",
+        "A technique involving fast and aggressive sales pitches."
+      ],
+      "answer": "A questioning technique focusing on Situation, Problem, Implication, and Need-Payoff.",
+      "explanation": "'SPIN Selling' is a questioning technique in sales that involves asking the prospect about their Situation, Problem, Implication, and Need-Payoff. It helps salespeople understand the customer's needs and tailor their pitch accordingly."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What does the 'Fear of Missing Out (FOMO)' technique leverage?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Leveraging the customer's fear of missing out on the latest trends.",
+        "Encouraging customers to make impulsive decisions.",
+        "Using fear-based tactics to pressure customers into buying.",
+        "Creating urgency and scarcity to drive customer action."
+      ],
+      "answer": "Creating urgency and scarcity to drive customer action.",
+      "explanation": "The 'Fear of Missing Out (FOMO)' technique leverages the fear of losing out on an opportunity by creating a sense of urgency and scarcity. It encourages customers to take immediate action to avoid missing out on a valuable offer or deal."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which sales technique involves offering a lower-priced product before presenting a higher-priced one?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The 'Price Anchoring' technique.",
+        "The 'Bait and Switch' technique.",
+        "The 'Door in the Face' technique.",
+        "The 'Foot in the Door' technique."
+      ],
+      "answer": "The 'Door in the Face' technique.",
+      "explanation": "The 'Door in the Face' technique involves offering a higher-priced product or service initially, which is likely to be declined by the customer. After the initial refusal, a lower-priced and more desirable option is presented as an alternative."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the purpose of the 'Assumptive Close' technique?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To assume that the customer will buy without asking for confirmation.",
+        "To assume that the customer is not interested in the product.",
+        "To make assumptions about the customer's financial situation.",
+        "To assume that the customer will decline the offer."
+      ],
+      "answer": "To assume that the customer will buy without asking for confirmation.",
+      "explanation": "The 'Assumptive Close' technique involves assuming that the customer is ready to make a purchase and proceeding as if the sale is already confirmed. It is a confident approach that encourages the customer to go along with the assumption."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What does the 'Urgency' technique aim to achieve?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To create a sense of scarcity and encourage immediate action.",
+        "To rush the customer into making an impulsive decision.",
+        "To use fear-based tactics to pressure the customer.",
+        "To make the customer feel uncomfortable during the sales process."
+      ],
+      "answer": "To create a sense of scarcity and encourage immediate action.",
+      "explanation": "The 'Urgency' technique aims to create a sense of scarcity or time sensitivity to encourage customers to take immediate action. It can prompt them to make a purchase decision quickly to avoid missing out on a limited-time offer or deal."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which sales technique involves offering a product or service at a very low price to attract customers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The 'Price Anchoring' technique.",
+        "The 'Loss Leader' technique.",
+        "The 'Foot in the Door' technique.",
+        "The 'Upselling' technique."
+      ],
+      "answer": "The 'Loss Leader' technique.",
+      "explanation": "The 'Loss Leader' technique involves offering a product or service at a significantly low price, often below cost, to attract customers. The goal is to entice customers into the store or website, hoping they will make additional purchases alongside the discounted item."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the purpose of the 'Trial Close' technique?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To close the sale immediately without giving the customer time to think.",
+        "To persuade the customer to try the product before buying.",
+        "To gauge the customer's interest and readiness to make a purchase.",
+        "To offer a trial period for the product or service."
+      ],
+      "answer": "To gauge the customer's interest and readiness to make a purchase.",
+      "explanation": "The 'Trial Close' technique involves testing the customer's receptiveness to the sales pitch and assessing their readiness to buy. It helps the salesperson understand whether the customer is likely to move forward with the purchase or if further persuasion is needed."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which sales technique involves offering a customer multiple options with different features and prices?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The 'Bait and Switch' technique.",
+        "The 'Door in the Face' technique.",
+        "The 'Assumptive Close' technique.",
+        "The 'Alternative Choice' technique."
+      ],
+      "answer": "The 'Alternative Choice' technique.",
+      "explanation": "The 'Alternative Choice' technique involves presenting the customer with multiple options, each with different features and prices. It allows the customer to choose the option that best fits their needs and budget, increasing the likelihood of a successful sale."
+    }
+  ]
+}
