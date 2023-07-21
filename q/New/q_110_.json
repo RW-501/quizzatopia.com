@@ -1,0 +1,151 @@
+{
+  "quizName": "Amazon Interview Quiz",
+  "quizCode": "AMAZON2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "E-Commerce",
+  "quizDescription": "Test your knowledge about Amazon, one of the world's largest e-commerce companies!",
+  "quizTags": "Amazon, E-Commerce, Retail, Company, Jeff Bezos",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who is the founder of Amazon?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bill Gates",
+        "Steve Jobs",
+        "Jeff Bezos",
+        "Elon Musk"
+      ],
+      "answer": "Jeff Bezos",
+      "explanation": "Amazon was founded by Jeff Bezos in 1994. He started the company as an online bookstore and later expanded it into one of the largest e-commerce platforms in the world."
+    },
+    {
+      "questionNumber": 2,
+      "question": "In what year was Amazon founded?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1990",
+        "1994",
+        "2000",
+        "2004"
+      ],
+      "answer": "1994",
+      "explanation": "Amazon was founded by Jeff Bezos in 1994. The company initially operated as an online bookstore and later diversified into selling various products and services."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What was the original name of Amazon's online bookstore?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "BookLand",
+        "BookWorld",
+        "Earth's Biggest Bookstore",
+        "BookZone"
+      ],
+      "answer": "Earth's Biggest Bookstore",
+      "explanation": "Amazon's original online bookstore was named 'Earth's Biggest Bookstore.' It reflected the company's ambitious vision of offering an extensive selection of books to customers."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which Amazon product, introduced in 2007, revolutionized the e-reader market?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kindle",
+        "Echo",
+        "Fire Tablet",
+        "Prime Video"
+      ],
+      "answer": "Kindle",
+      "explanation": "Amazon's Kindle, introduced in 2007, revolutionized the e-reader market. It allowed users to download and read digital books, magazines, and newspapers on a portable device."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the cloud computing platform offered by Amazon?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Google Cloud Platform",
+        "Azure",
+        "IBM Cloud",
+        "Amazon Web Services (AWS)"
+      ],
+      "answer": "Amazon Web Services (AWS)",
+      "explanation": "Amazon Web Services (AWS) is Amazon's cloud computing platform, providing a wide range of cloud services such as storage, computing power, databases, and more to businesses and developers."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which acquisition allowed Amazon to expand into the online shoe and apparel market?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Zappos",
+        "Jet.com",
+        "Wayfair",
+        "Overstock"
+      ],
+      "answer": "Zappos",
+      "explanation": "Amazon acquired Zappos, an online shoe and apparel retailer, in 2009. This acquisition allowed Amazon to enter and expand its presence in the fashion e-commerce market."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Amazon's voice-controlled virtual assistant, which powers devices like the Echo, is named:",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cortana",
+        "Siri",
+        "Alexa",
+        "Google Assistant"
+      ],
+      "answer": "Alexa",
+      "explanation": "Amazon's voice-controlled virtual assistant is named Alexa. It powers devices like the Amazon Echo and allows users to perform various tasks using voice commands."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which Amazon service offers unlimited free two-day shipping on eligible items and other benefits?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Amazon Prime",
+        "Amazon Fresh",
+        "Amazon Pantry",
+        "Amazon Go"
+      ],
+      "answer": "Amazon Prime",
+      "explanation": "Amazon Prime is a subscription service that offers unlimited free two-day shipping on eligible items, access to streaming of movies and TV shows, music, and more."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is Amazon's annual shopping event for Prime members, featuring massive discounts and deals?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Amazon Black Friday",
+        "Amazon Cyber Monday",
+        "Amazon Prime Day",
+        "Amazon Holiday Sale"
+      ],
+      "answer": "Amazon Prime Day",
+      "explanation": "Amazon Prime Day is an annual shopping event exclusively for Amazon Prime members. It features massive discounts and deals on a wide range of products."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which of the following companies did Amazon acquire to expand its grocery and physical stores business?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kroger",
+        "Walmart",
+        "Whole Foods Market",
+        "Costco"
+      ],
+      "answer": "Whole Foods Market",
+      "explanation": "Amazon acquired Whole Foods Market, a high-end grocery store chain, in 2017. This acquisition allowed Amazon to enter the brick-and-mortar retail space and expand its grocery business."
+    }
+  ]
+}
