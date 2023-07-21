@@ -1104,9 +1104,9 @@ function sendRatingToDBFunc(stars) {
 
 const collectionName = "quizzes"; // Replace with the actual collection name
 const nameToMatch = quizCode; // Replace with the name you want to match
+	 let count = stars * 10;
 
  const fieldsToUpdate = {
-	 let count = stars * 10;
       quizRatingCountDB: firebase.firestore.FieldValue.increment(1), // Increment the 'count' field by 1
       quizRatingDB: firebase.firestore.FieldValue.increment(count), // Set the 'rating' field to a new value (in this case, 4.5)
       // Add more fields as neededount
