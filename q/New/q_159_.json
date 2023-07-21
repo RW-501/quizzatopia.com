@@ -1,0 +1,151 @@
+{
+  "quizName": "The Beatles Quiz",
+  "quizCode": "BEATLES2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Music",
+  "quizDescription": "Test your knowledge about the legendary rock band 'The Beatles,' their timeless music, and their impact on the world of popular music!",
+  "quizTags": "The Beatles, Music, Rock, John Lennon, Paul McCartney, George Harrison, Ringo Starr",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who was the lead guitarist of The Beatles?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "John Lennon",
+        "Paul McCartney",
+        "George Harrison",
+        "Ringo Starr"
+      ],
+      "answer": "George Harrison",
+      "explanation": "George Harrison was the lead guitarist of The Beatles. He was known for his distinctive guitar playing and contributed to some of the band's most memorable songs."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What was the debut studio album of The Beatles?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "With the Beatles",
+        "A Hard Day's Night",
+        "Please Please Me",
+        "Beatles for Sale"
+      ],
+      "answer": "Please Please Me",
+      "explanation": "The debut studio album of The Beatles was 'Please Please Me,' released in 1963. The album featured hits like 'Love Me Do' and 'Twist and Shout.'"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which member of The Beatles was tragically assassinated in 1980?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Paul McCartney",
+        "John Lennon",
+        "George Harrison",
+        "Ringo Starr"
+      ],
+      "answer": "John Lennon",
+      "explanation": "John Lennon, one of the primary songwriters and singers of The Beatles, was tragically assassinated in 1980 outside his apartment building in New York City."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which album by The Beatles is often regarded as one of the greatest albums of all time?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Rubber Soul",
+        "Sgt. Pepper's Lonely Hearts Club Band",
+        "Revolver",
+        "Abbey Road"
+      ],
+      "answer": "Sgt. Pepper's Lonely Hearts Club Band",
+      "explanation": "The album 'Sgt. Pepper's Lonely Hearts Club Band' by The Beatles is often regarded as one of the greatest albums in the history of popular music. It was released in 1967 and featured groundbreaking production and songwriting."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Who was the drummer of The Beatles?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "John Lennon",
+        "Paul McCartney",
+        "George Harrison",
+        "Ringo Starr"
+      ],
+      "answer": "Ringo Starr",
+      "explanation": "Ringo Starr was the drummer of The Beatles. He provided a steady and distinctive rhythm for the band's songs and also contributed as a singer."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which Beatles album is known for its innovative cover artwork featuring the band members surrounded by famous figures?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Revolver",
+        "Rubber Soul",
+        "Sgt. Pepper's Lonely Hearts Club Band",
+        "Abbey Road"
+      ],
+      "answer": "Sgt. Pepper's Lonely Hearts Club Band",
+      "explanation": "The album 'Sgt. Pepper's Lonely Hearts Club Band' by The Beatles is known for its innovative cover artwork featuring the band members surrounded by famous figures from various fields. It is a highly recognizable and iconic album cover."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which member of The Beatles wrote and sang the song 'Yesterday'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "John Lennon",
+        "Paul McCartney",
+        "George Harrison",
+        "Ringo Starr"
+      ],
+      "answer": "Paul McCartney",
+      "explanation": "Paul McCartney wrote and sang the song 'Yesterday.' It is one of the most covered songs in music history and is considered a masterpiece by many."
+    },
+    {
+      "questionNumber": 8,
+      "question": "The last studio album released by The Beatles before their breakup was titled?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Abbey Road",
+        "Let It Be",
+        "Magical Mystery Tour",
+        "Yellow Submarine"
+      ],
+      "answer": "Let It Be",
+      "explanation": "The last studio album released by The Beatles before their breakup was titled 'Let It Be.' It was released in 1970 and included songs recorded during their troubled 'Get Back' sessions."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which song by The Beatles famously features a sitar, contributing to its distinctive sound?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lucy in the Sky with Diamonds",
+        "A Hard Day's Night",
+        "Norwegian Wood (This Bird Has Flown)",
+        "Ticket to Ride"
+      ],
+      "answer": "Norwegian Wood (This Bird Has Flown)",
+      "explanation": "The song 'Norwegian Wood (This Bird Has Flown)' by The Beatles famously features a sitar, played by George Harrison, which contributes to its distinctive and exotic sound."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What was the final album released by The Beatles?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yellow Submarine",
+        "Let It Be",
+        "Abbey Road",
+        "Magical Mystery Tour"
+      ],
+      "answer": "Let It Be",
+      "explanation": "The final album released by The Beatles was 'Let It Be.' Though it was released after 'Abbey Road,' it was recorded earlier and is considered their final studio album as a band."
+    }
+  ]
+}
