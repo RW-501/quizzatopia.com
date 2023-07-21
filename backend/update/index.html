@@ -260,7 +260,7 @@ function getAllDocuments() {
   }
 
   db.collection(YourRootCollection) // Replace "YourRootCollection" with your root collection name
-    .doc(selectedCollection)
+    .doc()
     .get()
     .then((querySnapshot) => {
       const allDocuments = []; // Array to store all documents
