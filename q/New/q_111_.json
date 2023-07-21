@@ -1,0 +1,151 @@
+{
+  "quizName": "E-Commerce Quiz",
+  "quizCode": "ECOMMERCE2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "E-Commerce",
+  "quizDescription": "Test your knowledge about E-Commerce and the online retail industry!",
+  "quizTags": "E-Commerce, Online Retail, Online Shopping, Internet Business",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does E-Commerce stand for?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Electronic Communication",
+        "Electronic Community",
+        "Electronic Commerce",
+        "Electronic Cooperation"
+      ],
+      "answer": "Electronic Commerce",
+      "explanation": "E-Commerce stands for Electronic Commerce, which refers to the buying and selling of goods and services over the internet."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which company is credited with conducting the first secure retail transaction over the internet?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Amazon",
+        "eBay",
+        "Alibaba",
+        "NetMarket"
+      ],
+      "answer": "NetMarket",
+      "explanation": "In 1994, NetMarket, an online marketplace, conducted the first secure retail transaction over the internet by selling a CD by the band Sting."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the process of automatically recommending products to customers based on their past purchases and browsing behavior?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Personalization",
+        "Targeting",
+        "Recommendation Engine",
+        "Market Segmentation"
+      ],
+      "answer": "Recommendation Engine",
+      "explanation": "A Recommendation Engine is a technology used by E-Commerce platforms to automatically suggest products to customers based on their past purchases, browsing behavior, and preferences."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What term is used to describe the practice of offering free shipping to customers on certain purchases?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Premium Shipping",
+        "Fast Shipping",
+        "Free Shipping",
+        "Express Shipping"
+      ],
+      "answer": "Free Shipping",
+      "explanation": "Free Shipping is a marketing strategy used by E-Commerce businesses to attract customers by offering the delivery of products at no additional cost on certain purchases."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which type of E-Commerce involves businesses selling products directly to consumers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "B2B (Business-to-Business)",
+        "C2C (Consumer-to-Consumer)",
+        "B2C (Business-to-Consumer)",
+        "C2B (Consumer-to-Business)"
+      ],
+      "answer": "B2C (Business-to-Consumer)",
+      "explanation": "B2C (Business-to-Consumer) E-Commerce involves businesses selling products directly to consumers through online platforms or websites."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the process of transferring funds electronically from the customer to the seller during an online purchase?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Payment Gateway",
+        "Cryptocurrency",
+        "E-Wallet",
+        "Digital Currency"
+      ],
+      "answer": "Payment Gateway",
+      "explanation": "A Payment Gateway is a service that facilitates the secure transfer of funds from the customer to the seller during an online purchase. It authorizes credit card or other payment transactions and encrypts sensitive information."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which of the following is an example of a C2C (Consumer-to-Consumer) E-Commerce platform?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Amazon",
+        "eBay",
+        "Alibaba",
+        "Walmart"
+      ],
+      "answer": "eBay",
+      "explanation": "eBay is an example of a C2C (Consumer-to-Consumer) E-Commerce platform where individuals can buy and sell products directly to other consumers through online auctions and fixed-price listings."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the term used for the process of adding items to a virtual shopping cart while shopping online?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Digital Checkout",
+        "Virtual Shopping",
+        "E-Commerce Cart",
+        "Add to Cart"
+      ],
+      "answer": "Add to Cart",
+      "explanation": "The term 'Add to Cart' is used in E-Commerce to describe the process of selecting and adding items to a virtual shopping cart while shopping online before proceeding to checkout."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which E-Commerce giant, based in China, is known for its diverse product range and global shipping services?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Amazon",
+        "eBay",
+        "Alibaba",
+        "Walmart"
+      ],
+      "answer": "Alibaba",
+      "explanation": "Alibaba is an E-Commerce giant based in China. It is known for its diverse product range and global shipping services, connecting businesses and consumers worldwide."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the term used to describe the process of completing a purchase and payment for products in an online store?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Product Checkout",
+        "Online Purchase",
+        "E-Commerce Payment",
+        "Checkout Process"
+      ],
+      "answer": "Checkout Process",
+      "explanation": "The Checkout Process refers to the final steps of completing a purchase in an online store, where the customer reviews their selected items, provides shipping and payment information, and completes the payment transaction."
+    }
+  ]
+}
