@@ -125,10 +125,7 @@ button {
     <!-- Add more navigation items -->
   </ul>
 </nav>
-<div>
-  <button id="clear-json-button">Clear JSON</button>
 
-</div>
 
   <div>
     <h2>Log:</h2>
@@ -165,8 +162,20 @@ button {
     <button id="get-button">Get Data</button>
 
 <div>
-  <h2>Document Field Selector</h2>
-  <label for="field-dropdown">Select a field:</label>
+<div>
+  <h2>Filter and Limit</h2>
+  <label for="where-field-input">Field:</label>
+  <input type="text" id="where-field-input">
+  <label for="where-operator-input">Operator:</label>
+  <input type="text" id="where-operator-input">
+  <label for="where-value-input">Value:</label>
+  <input type="text" id="where-value-input">
+  <label for="limit-input">Limit:</label>
+  <input type="number" id="limit-input">
+  <button id="filter-limit-button">Apply Filter & Limit</button>
+</div>
+	
+	<label for="field-dropdown">Select a field:</label>
   <select id="field-dropdown"></select>
   <button id="select-field-button">Get Field Values</button>
 </div>
@@ -183,7 +192,9 @@ button {
 
 
 	  
-  </div>
+<div>
+  <button id="clear-json-button">Clear JSON</button>
+
   <button id="copy-json-button">Copy JSON</button>
 
   <textarea id="json-textarea" rows="10" cols="80" readonly></textarea>
@@ -296,11 +307,22 @@ function getData() {
 
 
 // Function to get all documents from the selected collection
-function getAllDocuments() {
-  db.collection(YourRootCollection) // Replace "YourRootCollection" with your root collection name
+function getAllDocuments(whereField, whereOperator, whereValue, limit) {
+let query = db.collection(YourRootCollection); // Replace "YourRootCollection" with your root collection name
+
+  if (whereField && whereOperator && whereValue) {
+    query = query.where(whereField, whereOperator, whereValue);
+  }
+
+  if (limit) {
+    query = query.limit(limit);
+  }
+
+  query
     .get()
     .then((querySnapshot) => {
       const allDocuments = []; // Array to store all documents
+
 
       querySnapshot.forEach((doc) => {
         const documentWithId = {
