@@ -1,0 +1,191 @@
+{
+  "quizName": "Department of the Treasury Quiz",
+  "quizCode": "TreasuryQuiz2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Government",
+  "quizDescription": "Test your knowledge about the U.S. Department of the Treasury and its role in managing the nation's finances!",
+  "quizTags": "Treasury, Department of the Treasury, U.S. Government, Finance, Economics",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which department of the U.S. federal government oversees the Department of the Treasury?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Department of Commerce",
+        "Department of Justice",
+        "Department of the Interior",
+        "Department of State"
+      ],
+      "answer": "Department of Commerce",
+      "explanation": "The Department of Commerce oversees the Department of the Treasury and plays a role in shaping economic policy and promoting economic growth."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the primary mission of the Department of the Treasury?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "National security and defense",
+        "Economic growth and trade",
+        "Public health and safety",
+        "Managing the nation's finances"
+      ],
+      "answer": "Managing the nation's finances",
+      "explanation": "The primary mission of the Department of the Treasury is to manage the nation's finances, including revenue collection, debt management, and currency production."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which of the following agencies is part of the Department of the Treasury?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Federal Reserve System",
+        "Central Intelligence Agency (CIA)",
+        "Federal Bureau of Investigation (FBI)",
+        "Internal Revenue Service (IRS)"
+      ],
+      "answer": "Internal Revenue Service (IRS)",
+      "explanation": "The Internal Revenue Service (IRS) is an agency within the Department of the Treasury responsible for administering and enforcing the federal tax laws."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the term for the head of the Department of the Treasury?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Secretary of the Treasury",
+        "Director of the Treasury",
+        "Chief Financial Officer",
+        "Treasurer of the United States"
+      ],
+      "answer": "Secretary of the Treasury",
+      "explanation": "The head of the Department of the Treasury is known as the 'Secretary of the Treasury.' The Secretary is a member of the President's Cabinet and is appointed by the President."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the term for the government's income from taxes and other revenue sources?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Revenue",
+      "explanation": "Revenue refers to the government's income from taxes and other sources, which is used to fund public services, programs, and government operations."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which of the following is an example of a duty of the Department of the Treasury?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Regulating the telecommunications industry",
+        "Issuing passports to U.S. citizens",
+        "Printing and minting currency",
+        "Managing national parks and wildlife refuges"
+      ],
+      "answer": "Printing and minting currency",
+      "explanation": "The Department of the Treasury is responsible for printing and minting currency, including producing coins and paper money in the United States."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which of the following is an agency responsible for enforcing economic sanctions and combating financial crimes?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Office of Foreign Assets Control (OFAC)",
+        "Environmental Protection Agency (EPA)",
+        "Food and Drug Administration (FDA)",
+        "Federal Communications Commission (FCC)"
+      ],
+      "answer": "Office of Foreign Assets Control (OFAC)",
+      "explanation": "The Office of Foreign Assets Control (OFAC) is an agency under the Department of the Treasury responsible for enforcing economic sanctions against targeted foreign countries and combating financial crimes, including money laundering and terrorism financing."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the term for the amount of money the federal government owes to its creditors?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "National Debt",
+      "explanation": "The National Debt is the total amount of money that the federal government owes to its creditors, resulting from years of budget deficits."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the name of the government agency that designs and engraves currency and other security documents?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Bureau of Engraving and Printing (BEP)",
+      "explanation": "The Bureau of Engraving and Printing (BEP) is the government agency responsible for designing and engraving currency, as well as producing other security documents such as government bonds and identification cards."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which of the following is an agency responsible for investigating financial crimes and enforcing federal tax laws?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Securities and Exchange Commission (SEC)",
+        "Federal Trade Commission (FTC)",
+        "Financial Crimes Enforcement Network (FinCEN)",
+        "Central Intelligence Agency (CIA)"
+      ],
+      "answer": "Financial Crimes Enforcement Network (FinCEN)",
+      "explanation": "The Financial Crimes Enforcement Network (FinCEN) is a bureau of the Department of the Treasury responsible for investigating financial crimes, including money laundering and terrorist financing, and enforcing federal tax laws related to money services businesses."
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the term for the process of paying off government debt over time?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Debt Reduction",
+      "explanation": "Debt Reduction is the process of paying off government debt over time to reduce the National Debt and improve the financial health of the government."
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which of the following is an example of a program administered by the Department of the Treasury to help low-income individuals and families?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Social Security Administration (SSA)",
+        "Supplemental Nutrition Assistance Program (SNAP)",
+        "Federal Housing Administration (FHA)",
+        "Federal Deposit Insurance Corporation (FDIC)"
+      ],
+      "answer": "Supplemental Nutrition Assistance Program (SNAP)",
+      "explanation": "The Supplemental Nutrition Assistance Program (SNAP) is a federal assistance program administered by the Department of Agriculture but funded through the Department of the Treasury. It helps low-income individuals and families afford nutritious food."
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which of the following agencies provides oversight and regulation of national banks and federal savings associations?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Federal Deposit Insurance Corporation (FDIC)",
+        "Office of the Comptroller of the Currency (OCC)",
+        "Consumer Financial Protection Bureau (CFPB)",
+        "Securities and Exchange Commission (SEC)"
+      ],
+      "answer": "Office of the Comptroller of the Currency (OCC)",
+      "explanation": "The Office of the Comptroller of the Currency (OCC) is an independent bureau of the Department of the Treasury that supervises and regulates national banks and federal savings associations to ensure safe and sound banking practices."
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the term for the document issued by the Department of the Treasury to authorize federal agencies to incur obligations and make payments?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Warrant",
+      "explanation": "A Warrant is a document issued by the Department of the Treasury that authorizes federal agencies to incur obligations and make payments for specific government activities."
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the name of the department within the Department of the Treasury responsible for collecting federal tax revenues?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Internal Revenue Service (IRS)",
+      "explanation": "The Internal Revenue Service (IRS) is the department within the Department of the Treasury responsible for collecting federal tax revenues, processing tax returns, and enforcing tax laws."
+    }
+  ]
+}
