@@ -1,0 +1,151 @@
+{
+  "quizName": "Hockey Quiz",
+  "quizCode": "HOCKEY2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Sports",
+  "quizDescription": "Test your knowledge about the game of hockey and its history!",
+  "quizTags": "Hockey, Sports, Players, NHL, Stanley Cup",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In ice hockey, how many players from each team are allowed on the ice during gameplay?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": "6",
+      "explanation": "In ice hockey, each team is allowed to have 6 players on the ice during gameplay, including one goaltender."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which country is traditionally considered the birthplace of ice hockey?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Canada",
+        "United States",
+        "Russia",
+        "Sweden"
+      ],
+      "answer": "Canada",
+      "explanation": "Ice hockey is traditionally considered to have originated in Canada, where the modern version of the sport began to take shape in the mid-19th century."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which NHL team holds the record for the most Stanley Cup championships?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Montreal Canadiens",
+        "Toronto Maple Leafs",
+        "Detroit Red Wings",
+        "Boston Bruins"
+      ],
+      "answer": "Montreal Canadiens",
+      "explanation": "The Montreal Canadiens hold the record for the most Stanley Cup championships in NHL history, with 24 titles as of 2021."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which hockey player is known as 'The Great One' and is considered one of the greatest hockey players of all time?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mario Lemieux",
+        "Wayne Gretzky",
+        "Bobby Orr",
+        "Gordie Howe"
+      ],
+      "answer": "Wayne Gretzky",
+      "explanation": "Wayne Gretzky, a Canadian hockey legend, is known as 'The Great One' and is widely regarded as one of the greatest hockey players in history."
+    },
+    {
+      "questionNumber": 5,
+      "question": "In field hockey, how many players from each team are allowed on the field during gameplay?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "8",
+        "10",
+        "11",
+        "12"
+      ],
+      "answer": "11",
+      "explanation": "In field hockey, each team is allowed to have 11 players on the field during gameplay, including one goalkeeper."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which player is known as 'The Finnish Flash' and is considered one of the greatest wingers in NHL history?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Teemu Selanne",
+        "Jaromir Jagr",
+        "Alex Ovechkin",
+        "Mats Sundin"
+      ],
+      "answer": "Teemu Selanne",
+      "explanation": "Teemu Selanne, from Finland, is known as 'The Finnish Flash' and is celebrated as one of the greatest wingers in NHL history."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which women's hockey team has won the most Olympic gold medals in the history of the Winter Olympics?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Canada",
+        "United States",
+        "Russia",
+        "Sweden"
+      ],
+      "answer": "Canada",
+      "explanation": "The Canadian women's hockey team has won the most Olympic gold medals in the history of the Winter Olympics, capturing several championships."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which hockey player is known for his incredible defensive skills and is widely regarded as one of the best defensemen in NHL history?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Chris Pronger",
+        "Paul Coffey",
+        "Scott Niedermayer",
+        "Bobby Orr"
+      ],
+      "answer": "Bobby Orr",
+      "explanation": "Bobby Orr, a Canadian hockey icon, is known for his incredible defensive skills and is widely regarded as one of the best defensemen in NHL history."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the term used for a situation in hockey when a player scores three goals in a single game?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hat-Trick",
+        "Triple Play",
+        "Trifecta",
+        "Three-Pointer"
+      ],
+      "answer": "Hat-Trick",
+      "explanation": "In hockey, when a player scores three goals in a single game, it is called a 'Hat-Trick,' a term borrowed from cricket."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which NHL team is known for its passionate fan base and is nicknamed 'The Red Wings'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Montreal Canadiens",
+        "Toronto Maple Leafs",
+        "Detroit Red Wings",
+        "Chicago Blackhawks"
+      ],
+      "answer": "Detroit Red Wings",
+      "explanation": "The Detroit Red Wings, based in Detroit, Michigan, are known for their passionate fan base and have been nicknamed 'The Red Wings.'"
+    }
+  ]
+}
