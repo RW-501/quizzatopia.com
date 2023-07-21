@@ -1,0 +1,219 @@
+{
+  "quizName": "Consumer Price Index (CPI) Quiz",
+  "quizCode": "CPIQuiz2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Economics",
+  "quizDescription": "Test your knowledge about Consumer Price Index (CPI), a crucial economic indicator that measures changes in the price level of a basket of consumer goods and services!",
+  "quizTags": "Consumer Price Index, CPI, Inflation, Economic Indicators",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does 'Consumer Price Index (CPI)' measure?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The rate of economic growth and expansion.",
+        "The rate of interest on loans and savings.",
+        "The percentage change in the price level of consumer goods and services.",
+        "The percentage of unemployed individuals in the labor force."
+      ],
+      "answer": "The percentage change in the price level of consumer goods and services.",
+      "explanation": "Consumer Price Index (CPI) measures the percentage change in the price level of a basket of consumer goods and services over time. It is a key indicator of inflation and purchasing power."
+    },
+    {
+      "questionNumber": 2,
+      "question": "How is 'Consumer Price Index (CPI)' calculated?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Number of consumer goods sold divided by total consumer spending.",
+        "Number of consumer goods produced divided by total population.",
+        "Price of the basket of consumer goods and services divided by the price in the base year, multiplied by 100.",
+        "Price of the basket of consumer goods and services divided by total consumer spending."
+      ],
+      "answer": "Price of the basket of consumer goods and services divided by the price in the base year, multiplied by 100.",
+      "explanation": "Consumer Price Index (CPI) is calculated by dividing the price of the basket of consumer goods and services in the current period by the price in the base year and then multiplying by 100 to express the result as a percentage."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the 'Basket of Goods and Services' in CPI?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A collection of all goods and services produced in an economy.",
+        "A representative selection of goods and services purchased by a typical consumer.",
+        "A collection of luxury goods and high-end services.",
+        "A representative selection of goods and services purchased by businesses."
+      ],
+      "answer": "A representative selection of goods and services purchased by a typical consumer.",
+      "explanation": "The 'Basket of Goods and Services' in CPI represents a typical consumer's spending pattern and includes a representative selection of goods and services that consumers commonly purchase."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the 'Base Year' in CPI?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The year with the lowest inflation rate.",
+        "The year with the highest inflation rate.",
+        "The year when CPI was first introduced.",
+        "The reference year against which price changes are measured."
+      ],
+      "answer": "The reference year against which price changes are measured.",
+      "explanation": "The 'Base Year' in CPI serves as the reference year against which price changes in subsequent years are measured. CPI in the base year is set to 100 for easy comparison."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What does a CPI value above 100 indicate?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Inflation and rising prices.",
+        "Deflation and falling prices.",
+        "Stable prices with no change.",
+        "A recessionary economy."
+      ],
+      "answer": "Inflation and rising prices.",
+      "explanation": "A CPI value above 100 indicates inflation and rising prices compared to the base year. It means the overall cost of the 'Basket of Goods and Services' has increased since the base year."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What does a CPI value below 100 indicate?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Inflation and rising prices.",
+        "Deflation and falling prices.",
+        "Stable prices with no change.",
+        "A recessionary economy."
+      ],
+      "answer": "Deflation and falling prices.",
+      "explanation": "A CPI value below 100 indicates deflation and falling prices compared to the base year. It means the overall cost of the 'Basket of Goods and Services' has decreased since the base year."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which of the following is NOT included in the 'Core CPI'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Food and beverages.",
+        "Energy prices.",
+        "Housing costs.",
+        "VolatilToptalransportation costs."
+      ],
+      "answer": "Energy prices.",
+      "explanation": "The 'Core CPI' excludes volatile food and energy prices to provide a more stable measure of underlying inflation trends."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the purpose of 'Chained CPI'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To measure inflation for fixed-income individuals.",
+        "To adjust government benefits and tax brackets for inflation.",
+        "To track changes in the price level of a specific industry.",
+        "To measure inflation for luxury goods and services."
+      ],
+      "answer": "To adjust government benefits and tax brackets for inflation.",
+      "explanation": "'Chained CPI' is used to adjust government benefits and tax brackets for inflation, accounting for changes in consumer behavior and spending patterns as prices change."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is 'Hyperinflation'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A sudden increase in the consumer price level by over 10%.",
+        "A sharp decline in the consumer price level by over 10%.",
+        "An annual inflation rate above 100%.",
+        "An annual inflation rate above 1,000%."
+      ],
+      "answer": "An annual inflation rate above 100%.",
+      "explanation": "'Hyperinflation' refers to an extreme and typically accelerating inflation, with an annual inflation rate that exceeds 100%. It erodes the purchasing power of a country's currency rapidly."
+    },
+    {
+      "questionNumber": 10,
+      "question": "How does CPI differ from 'Producer Price Index (PPI)'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "CPI measures the price changes of consumer goods and services, while PPI measures the price changes of producer goods and raw materials.",
+        "CPI includes volatile food and energy prices, while PPI excludes them.",
+        "CPI is used to adjust government benefits, while PPI is used to calculate GDP.",
+        "CPI is calculated using a fixed basket of goods, while PPI uses a changing basket."
+      ],
+      "answer": "CPI measures the price changes of consumer goods and services, while PPI measures the price changes of producer goods and raw materials.",
+      "explanation": "CPI measures changes in the price level of a basket of consumer goods and services, while PPI measures changes in the price level of producer goods and raw materials used in production."
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which type of inflation is caused by an increase in the costs of production?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Demand-Pull Inflation",
+        "Cost-Push Inflation",
+        "Hyperinflation",
+        "Stagflation"
+      ],
+      "answer": "Cost-Push Inflation",
+      "explanation": "Cost-Push Inflation occurs when there is an increase in production costs, such as labor or raw materials, leading to a decrease in the supply of goods and services and an increase in their prices."
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the main goal of policymakers in relation to inflation?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Achieve zero inflation.",
+        "Minimize demand-pull inflation.",
+        "Achieve price stability with low and steady inflation.",
+        "Minimize cost-push inflation."
+      ],
+      "answer": "Achieve price stability with low and steady inflation.",
+      "explanation": "The main goal of policymakers is to achieve price stability, which means maintaining low and steady inflation rates that do not significantly impact consumers' purchasing power or distort economic decisions."
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the relationship between interest rates and inflation?",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. In general, there is a positive relationship between interest rates and inflation. As inflation rises, central banks may increase interest rates to control inflation and vice versa."
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is 'Disinflation'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A decrease in the overall price level.",
+        "A situation with zero inflation.",
+        "A gradual decrease in the rate of inflation.",
+        "A sharp increase in the rate of inflation."
+      ],
+      "answer": "A gradual decrease in the rate of inflation.",
+      "explanation": "'Disinflation' refers to a situation where the rate of inflation is decreasing over time, but the overall price level is still rising, albeit at a slower pace than before."
+    },
+    {
+      "questionNumber": 15,
+      "question": "What economic condition is often associated with 'Deflation'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Rapid economic growth and expansion.",
+        "A decrease in business investment and consumer spending.",
+        "High levels of government spending and deficits.",
+        "An increase in imports and export-led growth."
+      ],
+      "answer": "A decrease in business investment and consumer spending.",
+      "explanation": "'Deflation' can be harmful to the economy as it leads to a decrease in business investment and consumer spending. Consumers may delay purchases in anticipation of lower prices, leading to reduced economic activity."
+    }
+  ]
+}
