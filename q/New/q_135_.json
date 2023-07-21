@@ -1,0 +1,151 @@
+{
+  "quizName": "Famous Musicians Quiz",
+  "quizCode": "MUSICIANS2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Music",
+  "quizDescription": "Test your knowledge about famous musicians and their contributions to the music world!",
+  "quizTags": "Music, Musicians, Artists, Singers, Bands",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which iconic musician is often referred to as 'The King of Rock 'n' Roll'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Elvis Presley",
+        "Michael Jackson",
+        "John Lennon",
+        "Bob Dylan"
+      ],
+      "answer": "Elvis Presley",
+      "explanation": "Elvis Presley, one of the most influential figures in the history of popular music, is often referred to as 'The King of Rock 'n' Roll.'"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which pop superstar is known for hits like 'Bad Romance,' 'Poker Face,' and 'Born This Way'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Beyoncé",
+        "Lady Gaga",
+        "Adele",
+        "Taylor Swift"
+      ],
+      "answer": "Lady Gaga",
+      "explanation": "Lady Gaga, a versatile and acclaimed pop artist, is known for hits like 'Bad Romance,' 'Poker Face,' and 'Born This Way.'"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which legendary guitarist is famous for his innovative playing style and hits like 'Purple Haze' and 'Hey Joe'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Eric Clapton",
+        "Jimmy Page",
+        "Jimi Hendrix",
+        "Keith Richards"
+      ],
+      "answer": "Jimi Hendrix",
+      "explanation": "Jimi Hendrix, a true guitar virtuoso, is famous for his innovative playing style and hits like 'Purple Haze' and 'Hey Joe.'"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which musical duo is known for songs like 'Imagine,' 'Hey Jude,' and 'Let It Be'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Simon & Garfunkel",
+        "The Beatles",
+        "The Rolling Stones",
+        "The Beach Boys"
+      ],
+      "answer": "The Beatles",
+      "explanation": "The Beatles, one of the most successful and influential bands in history, are known for songs like 'Imagine,' 'Hey Jude,' and 'Let It Be.'"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which iconic singer-songwriter is famous for hits like 'Like a Rolling Stone' and 'Blowin' in the Wind'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Johnny Cash",
+        "Bob Dylan",
+        "Neil Young",
+        "Paul McCartney"
+      ],
+      "answer": "Bob Dylan",
+      "explanation": "Bob Dylan, a celebrated singer-songwriter, is famous for hits like 'Like a Rolling Stone' and 'Blowin' in the Wind.'"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which 'Queen of Pop' is known for chart-topping hits like 'Like a Virgin,' 'Material Girl,' and 'Vogue'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Whitney Houston",
+        "Madonna",
+        "Janet Jackson",
+        "Mariah Carey"
+      ],
+      "answer": "Madonna",
+      "explanation": "Madonna, the 'Queen of Pop,' is known for chart-topping hits like 'Like a Virgin,' 'Material Girl,' and 'Vogue.'"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which music legend, known as 'The Boss,' is famous for hits like 'Born to Run' and 'Dancing in the Dark'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bruce Springsteen",
+        "Bob Seger",
+        "Tom Petty",
+        "Billy Joel"
+      ],
+      "answer": "Bruce Springsteen",
+      "explanation": "Bruce Springsteen, often referred to as 'The Boss,' is famous for hits like 'Born to Run' and 'Dancing in the Dark.'"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which music icon, known as the 'Queen of Soul,' is famous for songs like 'Respect' and 'Natural Woman'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Whitney Houston",
+        "Aretha Franklin",
+        "Diana Ross",
+        "Tina Turner"
+      ],
+      "answer": "Aretha Franklin",
+      "explanation": "Aretha Franklin, the 'Queen of Soul,' is famous for songs like 'Respect' and 'Natural Woman.'"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which legendary guitarist is known for his groundbreaking blues performances and hits like 'Purple Haze' and 'Voodoo Child'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Eric Clapton",
+        "B.B. King",
+        "Stevie Ray Vaughan",
+        "Jimi Hendrix"
+      ],
+      "answer": "Jimi Hendrix",
+      "explanation": "Jimi Hendrix, a true guitar virtuoso, is known for his groundbreaking blues performances and hits like 'Purple Haze' and 'Voodoo Child.'"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which pop and R&B superstar is known for hits like 'Crazy in Love,' 'Single Ladies,' and 'Formation'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Beyoncé",
+        "Ariana Grande",
+        "Rihanna",
+        "Taylor Swift"
+      ],
+      "answer": "Beyoncé",
+      "explanation": "Beyoncé, a multi-talented pop and R&B superstar, is known for hits like 'Crazy in Love,' 'Single Ladies,' and 'Formation.'"
+    }
+  ]
+}
