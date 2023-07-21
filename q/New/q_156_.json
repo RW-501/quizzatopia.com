@@ -1,0 +1,151 @@
+{
+  "quizName": "Michael Jackson Quiz",
+  "quizCode": "MICHAELJACKSON2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Music",
+  "quizDescription": "Test your knowledge about the legendary Michael Jackson, his iconic music, and his unparalleled impact on the world of entertainment!",
+  "quizTags": "Michael Jackson, Music, Pop, King of Pop, Thriller, Moonwalk",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is Michael Jackson's best-selling album of all time?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bad",
+        "Off the Wall",
+        "Dangerous",
+        "Thriller"
+      ],
+      "answer": "Thriller",
+      "explanation": "Michael Jackson's best-selling album of all time is 'Thriller,' released in 1982. It became the best-selling album in history and solidified his title as the King of Pop."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the iconic dance move associated with Michael Jackson?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Twerking",
+        "Moonwalk",
+        "Flossing",
+        "Dabbing"
+      ],
+      "answer": "Moonwalk",
+      "explanation": "The iconic dance move associated with Michael Jackson is the 'Moonwalk.' He popularized this dance step during a performance of 'Billie Jean' in 1983."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which music video by Michael Jackson is known for its groundbreaking special effects and iconic zombie dance sequence?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Black or White",
+        "Thriller",
+        "Smooth Criminal",
+        "Beat It"
+      ],
+      "answer": "Thriller",
+      "explanation": "The music video for 'Thriller' is known for its groundbreaking special effects and the iconic zombie dance sequence. It remains one of the most influential music videos in history."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which of these albums by Michael Jackson featured the hit songs 'Billie Jean' and 'Beat It'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Off the Wall",
+        "Dangerous",
+        "Thriller",
+        "Bad"
+      ],
+      "answer": "Thriller",
+      "explanation": "The album 'Thriller' by Michael Jackson featured the hit songs 'Billie Jean' and 'Beat It,' both of which became iconic and chart-topping singles."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What was the name of Michael Jackson's pet chimpanzee?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bubbles",
+        "Coco",
+        "Buddy",
+        "Sparky"
+      ],
+      "answer": "Bubbles",
+      "explanation": "Michael Jackson's pet chimpanzee was named Bubbles. Bubbles became famous for being the pop star's constant companion during the 1980s."
+    },
+    {
+      "questionNumber": 6,
+      "question": "In addition to his solo career, Michael Jackson was a member of which famous musical group during his childhood?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Supremes",
+        "The Jackson 5",
+        "The Temptations",
+        "The Four Tops"
+      ],
+      "answer": "The Jackson 5",
+      "explanation": "During his childhood, Michael Jackson was a member of the famous musical group The Jackson 5 along with his brothers. The group achieved early success with hits like 'ABC' and 'I Want You Back.'"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which album by Michael Jackson included the song 'Smooth Criminal'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Dangerous",
+        "Off the Wall",
+        "Thriller",
+        "Bad"
+      ],
+      "answer": "Bad",
+      "explanation": "The album 'Bad' by Michael Jackson included the song 'Smooth Criminal.' The album was released in 1987 and was a commercial success."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the title of Michael Jackson's autobiography, published in 1988?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Moonwalk",
+        "Dancing the Dream",
+        "King of Pop",
+        "The Thriller Years"
+      ],
+      "answer": "Moonwalk",
+      "explanation": "Michael Jackson's autobiography, published in 1988, is titled 'Moonwalk.' In the book, he shares his personal life, experiences, and the inspirations behind his music and dance."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Michael Jackson's Neverland Ranch was named after which fictional island from the story of Peter Pan?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Treasure Island",
+        "Skull Island",
+        "Neverland",
+        "Atlantis"
+      ],
+      "answer": "Neverland",
+      "explanation": "Michael Jackson's Neverland Ranch was named after the fictional island 'Neverland' from the story of Peter Pan. The ranch was Jackson's private residence and amusement park."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which Michael Jackson song won the Grammy Award for Record of the Year in 1984?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Billie Jean",
+        "Beat It",
+        "Thriller",
+        "We Are the World"
+      ],
+      "answer": "Beat It",
+      "explanation": "The Michael Jackson song 'Beat It' won the Grammy Award for Record of the Year in 1984. The song's powerful message and Eddie Van Halen's guitar solo contributed to its success."
+    }
+  ]
+}
