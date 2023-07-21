@@ -1,0 +1,232 @@
+{
+  "quizName": "Breaking Bad Quiz",
+  "quizCode": "BB2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge about the TV show 'Breaking Bad'!",
+  "quizTags": "Breaking Bad, TV Shows, Drama, Crime",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who is the main protagonist of the TV series 'Breaking Bad'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jesse Pinkman",
+        "Gus Fring",
+        "Saul Goodman",
+        "Walter White"
+      ],
+      "answer": "Walter White",
+      "explanation": "Walter White, portrayed by Bryan Cranston, is the main protagonist who turns to cooking methamphetamine to secure his family's financial future after being diagnosed with cancer.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the street name of the blue-colored methamphetamine manufactured by Walter White?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Blue Haze",
+        "Crystal Blue",
+        "Sky Blue",
+        "Blue Ice"
+      ],
+      "answer": "Blue Sky",
+      "explanation": "The blue-colored methamphetamine cooked by Walter White and Jesse Pinkman is known as 'Blue Sky.' Its distinctive color sets it apart from other meth in the market.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the nickname of Gustavo Fring's fast-food restaurant, which is a front for his drug empire?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tasty Chicks",
+        "Los Pollos Hermanos",
+        "Better Burger",
+        "Chicken Heaven"
+      ],
+      "answer": "Los Pollos Hermanos",
+      "explanation": "Gustavo Fring operates his drug business under the cover of a fast-food restaurant called 'Los Pollos Hermanos,' which means 'The Chicken Brothers' in Spanish.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "True or False: Walter White's alias in the drug trade is 'Saul Goodman.'",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. Walter White's alias in the drug trade is 'Heisenberg,' inspired by the renowned physicist Werner Heisenberg.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which character serves as a DEA agent and is the brother-in-law of Walter White?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hank Schrader",
+        "Mike Ehrmantraut",
+        "Ted Beneke",
+        "Skinny Pete"
+      ],
+      "answer": "Hank Schrader",
+      "explanation": "Hank Schrader, portrayed by Dean Norris, is a DEA agent and the brother-in-law of Walter White. He becomes obsessed with catching the elusive drug kingpin known as 'Heisenberg.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the name of the lawyer who becomes involved with Walter White's drug operation?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Saul Goodman",
+        "Huell Babineaux",
+        "Kim Wexler",
+        "Mike Ehrmantraut"
+      ],
+      "answer": "Saul Goodman",
+      "explanation": "Saul Goodman, portrayed by Bob Odenkirk, is the morally flexible lawyer who assists Walter White and Jesse Pinkman in their drug-related legal matters.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the name of the private investigator and fixer employed by Saul Goodman?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hank Schrader",
+        "Gus Fring",
+        "Mike Ehrmantraut",
+        "Tuco Salamanca"
+      ],
+      "answer": "Mike Ehrmantraut",
+      "explanation": "Mike Ehrmantraut, portrayed by Jonathan Banks, is a private investigator and fixer who becomes closely associated with Saul Goodman and later works for Gus Fring.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which element does Walter White use as his signature calling card in the drug trade?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A blue ribbon",
+        "A black hat",
+        "A red phosphorus",
+        "A white crystal"
+      ],
+      "answer": "A blue crystal",
+      "explanation": "Walter White's signature calling card in the drug trade is a distinctive blue-colored crystal methamphetamine, symbolizing the high-quality product he manufactures.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What medical condition does Walter White initially keep secret from his family and friends?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lung cancer",
+        "Heart disease",
+        "Diabetes",
+        "Alzheimer's disease"
+      ],
+      "answer": "Lung cancer",
+      "explanation": "Walter White is diagnosed with terminal lung cancer, and he initially keeps it a secret from his family and friends. This diagnosis motivates him to turn to drug manufacturing to secure his family's future.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: Walter White's son has cerebral palsy in the TV series.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Walter White's son, Walter White Jr., portrayed by RJ Mitte, has cerebral palsy in the TV series.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the name of the drug kingpin who becomes Walter White's employer?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tuco Salamanca",
+        "Gustavo Fring",
+        "Hector Salamanca",
+        "Huell Babineaux"
+      ],
+      "answer": "Gustavo Fring",
+      "explanation": "Gustavo Fring, portrayed by Giancarlo Esposito, is a well-respected businessman who operates a chain of fast-food restaurants as a front for his drug empire.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the name of the drug cartel associated with the character Hector Salamanca?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Juarez Cartel",
+        "Tijuana Cartel",
+        "Colombia Cartel",
+        "Medellin Cartel"
+      ],
+      "answer": "Juarez Cartel",
+      "explanation": "The Juarez Cartel is a powerful Mexican drug cartel associated with the character Hector Salamanca in 'Breaking Bad.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the name of the recovering addict who becomes Jesse Pinkman's girlfriend?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jane Margolis",
+        "Andrea Cantillo",
+        "Skyler White",
+        "Marie Schrader"
+      ],
+      "answer": "Jane Margolis",
+      "explanation": "Jane Margolis, portrayed by Krysten Ritter, is a recovering addict who enters a romantic relationship with Jesse Pinkman.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which fast-food restaurant does Hector Salamanca target as a front for drug smuggling?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Los Pollos Hermanos",
+        "Burger King",
+        "Taco Bell",
+        "Wendy's"
+      ],
+      "answer": "Los Pollos Hermanos",
+      "explanation": "Hector Salamanca targets 'Los Pollos Hermanos,' a fast-food restaurant chain owned by Gustavo Fring, as a front for drug smuggling.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the name of the criminal lawyer who represents Gus Fring and Mike Ehrmantraut?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Saul Goodman",
+        "Kim Wexler",
+        "Howard Hamlin",
+        "Chuck McGill"
+      ],
+      "answer": "Saul Goodman",
+      "explanation": "Saul Goodman, portrayed by Bob Odenkirk, is the criminal lawyer who represents Gus Fring and Mike Ehrmantraut in various legal matters.",
+      "difficulty": "Medium"
+    }
+  ]
+}
