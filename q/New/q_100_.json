@@ -163,16 +163,16 @@
       "explanation": "False. In 'Nosedive,' people rate each other using smartphones, but there are no ocular implants to record everything they see.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 12,
-      "question": "What is the name of the mysterious killer in the episode 'White Bear'?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Victoria Skillane",
-      "explanation": "Victoria Skillane is the name of the protagonist in the episode 'White Bear,' which features a unique form of punishment for criminals.",
-      "difficulty": "Medium"
-    },
+ {
+  "questionNumber": 12,
+  "question": "What is the name of the mysterious killer in the episode 'White Bear'?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": ["Alex Morgan", "Victoria Skillane", "John Smith", "Emma Johnson"],
+  "answer": "Victoria Skillane",
+  "explanation": "Victoria Skillane is the name of the protagonist in the episode 'White Bear,' which features a unique form of punishment for criminals.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 13,
       "question": "In the episode 'Hated in the Nation,' what type of robotic creatures are responsible for the killings?",
