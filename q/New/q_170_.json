@@ -1,0 +1,219 @@
+{
+  "quizName": "Partnership Quiz",
+  "quizCode": "Partnership2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Business",
+  "quizDescription": "Test your knowledge about partnerships, their characteristics, advantages, and legal structure!",
+  "quizTags": "Partnership, Business Structure, Collaboration, Co-owners",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is a partnership?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A business owned by a single individual.",
+        "A business owned by a group of shareholders.",
+        "A business owned and operated by the government.",
+        "A business owned and operated by two or more co-owners."
+      ],
+      "answer": "A business owned and operated by two or more co-owners.",
+      "explanation": "A partnership is a business owned and operated by two or more individuals (co-owners) who share the profits, losses, and responsibilities of the business."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the primary advantage of forming a partnership?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Limited liability for the partners",
+        "Ease of formation and management",
+        "Ability to issue stock and raise capital",
+        "Unlimited liability for the partners"
+      ],
+      "answer": "Ease of formation and management",
+      "explanation": "One of the main advantages of forming a partnership is the ease of formation and management. Partnerships generally have fewer regulatory requirements and less paperwork compared to corporations."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What are the owners of a partnership called?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Partners",
+        "Members",
+        "Shareholders",
+        "Stakeholders"
+      ],
+      "answer": "Partners",
+      "explanation": "The owners of a partnership are called partners. They are individuals who collaborate and jointly own the business."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What type of liability do partners have in a general partnership?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Limited liability",
+        "Unlimited liability",
+        "Liability limited to their investment",
+        "Liability limited to the partnership's debts"
+      ],
+      "answer": "Unlimited liability",
+      "explanation": "In a general partnership, partners have unlimited liability. This means that the partners are personally responsible for the partnership's debts and obligations, and their personal assets can be used to satisfy any business debts."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which statement is true about the taxation of a general partnership?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The partnership is taxed separately from the partners.",
+        "The partnership is not subject to any taxes.",
+        "The partners are taxed individually on their share of partnership income.",
+        "The partnership enjoys tax-exempt status."
+      ],
+      "answer": "The partners are taxed individually on their share of partnership income.",
+      "explanation": "In a general partnership, the partnership itself is not taxed separately. Instead, the partners report their share of the partnership income on their individual tax returns and pay taxes accordingly."
+    },
+    {
+      "questionNumber": 6,
+      "question": "True or False: Partnerships have perpetual existence.",
+      "imageURL": "",
+      "questionType": "True or False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. Unlike corporations, partnerships do not have perpetual existence. The partnership dissolves upon the death, withdrawal, or bankruptcy of a partner unless otherwise stated in the partnership agreement."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the main document that outlines the terms and conditions of a partnership?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Operating Agreement",
+        "Articles of Partnership",
+        "Bylaws",
+        "Certificate of Partnership"
+      ],
+      "answer": "Partnership Agreement",
+      "explanation": "The Partnership Agreement is the main document that outlines the terms and conditions of the partnership. It includes details such as profit-sharing, decision-making authority, responsibilities of partners, and procedures for dispute resolution."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which statement is true about the management of a general partnership?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Partnerships must have a CEO, CFO, and COO.",
+        "Partnerships are always managed by the government.",
+        "Partners have equal decision-making authority.",
+        "Partnerships are always managed by a board of directors and executive officers."
+      ],
+      "answer": "Partners have equal decision-making authority.",
+      "explanation": "In a general partnership, partners typically have equal decision-making authority, and major decisions are made jointly by the partners. The management structure may vary in other types of partnerships."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What type of partnership allows one or more partners to have limited liability while others have unlimited liability?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "General Partnership",
+        "Limited Partnership (LP)",
+        "Limited Liability Partnership (LLP)",
+        "Joint Venture"
+      ],
+      "answer": "Limited Partnership (LP)",
+      "explanation": "In a Limited Partnership (LP), there are two types of partners: general partners, who have unlimited liability, and limited partners, who have limited liability and are not actively involved in the management of the partnership."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the process of adding a new partner to an existing partnership called?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Liquidation",
+        "Amalgamation",
+        "Merger",
+        "Admission"
+      ],
+      "answer": "Admission",
+      "explanation": "The process of adding a new partner to an existing partnership is called admission. This usually involves amending the partnership agreement and distributing the profits and losses according to the new partnership structure."
+    },
+    {
+      "questionNumber": 11,
+      "question": "What type of liability do limited partners have in a limited partnership?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Unlimited liability",
+        "Limited liability",
+        "Liability limited to their investment",
+        "Liability limited to the partnership's debts"
+      ],
+      "answer": "Limited liability",
+      "explanation": "Limited partners in a limited partnership have limited liability, meaning their personal assets are protected, and they are not personally responsible for the partnership's debts beyond their investment in the partnership."
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the main advantage of a limited liability partnership (LLP)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Limited liability for all partners",
+        "Ease of formation and management",
+        "Ability to issue stock and raise capital",
+        "Limited number of partners"
+      ],
+      "answer": "Limited liability for all partners",
+      "explanation": "The main advantage of a limited liability partnership (LLP) is that all partners have limited liability, protecting their personal assets from business debts and liabilities."
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which statement is true about the dissolution of a partnership?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Partnerships cannot be dissolved",
+        "The partnership dissolves only upon the death of a partner",
+        "The partnership dissolves only upon the withdrawal of a partner",
+        "The partnership dissolves upon the death, withdrawal, or bankruptcy of a partner"
+      ],
+      "answer": "The partnership dissolves upon the death, withdrawal, or bankruptcy of a partner",
+      "explanation": "A partnership can dissolve for various reasons, including the death, withdrawal, or bankruptcy of a partner, unless otherwise specified in the partnership agreement."
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which type of partnership is typically formed for a specific project or limited period?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "General Partnership",
+        "Limited Partnership (LP)",
+        "Limited Liability Partnership (LLP)",
+        "Joint Venture"
+      ],
+      "answer": "Joint Venture",
+      "explanation": "A joint venture is a type of partnership formed for a specific project or limited period. Partners collaborate to achieve a specific goal, and once the project is completed, the joint venture may dissolve."
+    },
+    {
+      "questionNumber": 15,
+      "question": "In a limited partnership (LP), who assumes the role of managing the partnership?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "General partners",
+        "Limited partners",
+        "All partners have equal management authority",
+        "An external management team"
+      ],
+      "answer": "General partners",
+      "explanation": "In a limited partnership (LP), general partners are actively involved in the management of the partnership and assume the role of managing the business. Limited partners have limited liability and are not involved in day-to-day management."
+    }
+  ]
+}
