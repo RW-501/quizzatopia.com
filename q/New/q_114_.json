@@ -1,0 +1,151 @@
+{
+  "quizName": "Sports Quiz",
+  "quizCode": "SPORTS2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Sports",
+  "quizDescription": "Test your knowledge about various sports and athletic events!",
+  "quizTags": "Sports, Athletics, Games, Players",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which sport is played at Wimbledon, known for its grass courts and white dress code?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Soccer",
+        "Tennis",
+        "Basketball",
+        "Golf"
+      ],
+      "answer": "Tennis",
+      "explanation": "Wimbledon is a prestigious tennis tournament held in London, England. It is known for its grass courts and is one of the four Grand Slam tennis events."
+    },
+    {
+      "questionNumber": 2,
+      "question": "In which sport can a 'hat-trick' be achieved?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Baseball",
+        "Hockey",
+        "Soccer",
+        "Basketball"
+      ],
+      "answer": "Soccer",
+      "explanation": "In soccer (football), a 'hat-trick' is achieved when a player scores three goals in a single match."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which sport is known as 'The Sport of Kings'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cricket",
+        "Horse Racing",
+        "Polo",
+        "Rugby"
+      ],
+      "answer": "Horse Racing",
+      "explanation": "Horse Racing is often referred to as 'The Sport of Kings' due to its historical association with royalty and aristocracy."
+    },
+    {
+      "questionNumber": 4,
+      "question": "In which sport can you score a 'touchdown'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Baseball",
+        "Basketball",
+        "Football",
+        "Tennis"
+      ],
+      "answer": "Football",
+      "explanation": "In American football, a 'touchdown' is scored when a player carries the ball into the opposing team's end zone or catches a pass in the end zone."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which sport is played in the 'World Series' involving teams from the United States and Canada?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Baseball",
+        "Soccer",
+        "Basketball",
+        "Hockey"
+      ],
+      "answer": "Baseball",
+      "explanation": "The 'World Series' is a championship event in Major League Baseball (MLB) involving the top teams from the United States and sometimes Canada."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which sport is played in the 'Super Bowl', the championship game of the National Football League (NFL)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Soccer",
+        "Basketball",
+        "Football",
+        "Hockey"
+      ],
+      "answer": "Football",
+      "explanation": "The 'Super Bowl' is the championship game of the National Football League (NFL) in the United States, making it the culmination of the American football season."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which sport has four swimming styles: freestyle, backstroke, breaststroke, and butterfly?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Synchronized Swimming",
+        "Diving",
+        "Water Polo",
+        "Swimming"
+      ],
+      "answer": "Swimming",
+      "explanation": "Swimming is a sport that includes four primary swimming styles: freestyle, backstroke, breaststroke, and butterfly, each with its specific technique."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which sport is played at Augusta National Golf Club and has a famous green jacket for its winners?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tennis",
+        "Golf",
+        "Soccer",
+        "Basketball"
+      ],
+      "answer": "Golf",
+      "explanation": "The Masters Tournament, one of golf's major championships, is held at Augusta National Golf Club, and the winner is awarded a prestigious green jacket."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which sport is known for its 'Grand Slam' events, which include the Australian Open, French Open, Wimbledon, and US Open?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tennis",
+        "Soccer",
+        "Basketball",
+        "Cricket"
+      ],
+      "answer": "Tennis",
+      "explanation": "Tennis is known for its 'Grand Slam' events, which are the four most important annual tennis tournaments: the Australian Open, French Open, Wimbledon, and US Open."
+    },
+    {
+      "questionNumber": 10,
+      "question": "In which sport can a player achieve a 'hole-in-one'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tennis",
+        "Golf",
+        "Basketball",
+        "Soccer"
+      ],
+      "answer": "Golf",
+      "explanation": "In golf, a 'hole-in-one' is achieved when a player hits the ball directly into the cup with a single stroke from the tee."
+    }
+  ]
+}
