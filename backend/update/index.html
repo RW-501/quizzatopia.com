@@ -163,6 +163,17 @@ button {
 	    <!-- Add options dynamically using JavaScript -->
     </select>
     <button id="get-button">Get Data</button>
+
+<div>
+  <h2>Delete Document</h2>
+  <label for="document-id-input">Document ID:</label>
+  <input type="text" id="document-id-input">
+  <button id="delete-button">Delete Document</button>
+</div>
+
+
+
+	  
   </div>
   <button id="copy-json-button">Copy JSON</button>
 
@@ -205,6 +216,30 @@ const copyJsonButton = document.getElementById("copy-json-button");
 const getAllButton = document.getElementById("get-all-button");
 const uploadAllButton = document.getElementById("upload-all-button");
 
+const deleteButton = document.getElementById("delete-button");
+
+
+function deleteDocument() {
+const documentIdInput = document.getElementById("collection-dropdown");
+
+  const documentId = documentIdInput.value.trim();
+  if (!documentId) {
+    log("Please enter the Document ID.");
+    return;
+  }
+
+  db.collection(YourRootCollection) // Replace "YourRootCollection" with your root collection name
+    .doc(documentId)
+    .delete()
+    .then(() => {
+      log("Document deleted successfully.");
+    })
+    .catch((error) => {
+      log("Error deleting document: " + error);
+    });
+}
+
+	  
 // Function to log messages
 function log(message) {
 	let old = logTextarea.value;
@@ -364,6 +399,7 @@ function copyJsonToClipboard() {
 // Add event listeners for the "Clear" buttons
 clearJsonButton.addEventListener("click", clearJsonTextarea);
 copyJsonButton.addEventListener("click", copyJsonToClipboard);
+deleteButton.addEventListener("click", deleteDocument);
 
 	  
 // ...Continue with the rest of the JavaScript code...
