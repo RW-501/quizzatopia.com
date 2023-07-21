@@ -1,0 +1,151 @@
+{
+  "quizName": "International Cuisine Quiz",
+  "quizCode": "CUISINE2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Food",
+  "quizDescription": "Test your knowledge about various dishes and cuisines from around the world!",
+  "quizTags": "International Cuisine, Food, Cooking, Dishes",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which country is famous for its traditional dish 'Sushi,' which consists of vinegar-seasoned rice served with various toppings like raw fish?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Italy",
+        "Japan",
+        "India",
+        "Mexico"
+      ],
+      "answer": "Japan",
+      "explanation": "Japan is famous for its traditional dish 'Sushi,' which consists of vinegar-seasoned rice served with various toppings like raw fish, seafood, and vegetables."
+    },
+    {
+      "questionNumber": 2,
+      "question": "In which country would you find the popular dish 'Paella,' a saffron-infused rice dish often cooked with seafood, chicken, and vegetables?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "France",
+        "Spain",
+        "Greece",
+        "Thailand"
+      ],
+      "answer": "Spain",
+      "explanation": "The popular dish 'Paella' is from Spain. It is a saffron-infused rice dish often cooked with seafood, chicken, rabbit, and various vegetables."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which country is known for its traditional dish 'Moussaka,' a layered casserole dish made with eggplant, minced meat, and a creamy béchamel sauce?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Italy",
+        "Greece",
+        "Turkey",
+        "Lebanon"
+      ],
+      "answer": "Greece",
+      "explanation": "Greece is known for its traditional dish 'Moussaka,' which is a layered casserole dish made with eggplant, minced meat (often lamb or beef), and a creamy béchamel sauce."
+    },
+    {
+      "questionNumber": 4,
+      "question": "In which country would you find the well-known dish 'Pad Thai,' a stir-fried noodle dish often made with shrimp, tofu, bean sprouts, and peanuts?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Japan",
+        "Thailand",
+        "China",
+        "Vietnam"
+      ],
+      "answer": "Thailand",
+      "explanation": "The well-known dish 'Pad Thai' originates from Thailand. It is a stir-fried noodle dish often made with shrimp, tofu, bean sprouts, and peanuts, and is flavored with tamarind paste and fish sauce."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which country is famous for its traditional dish 'Tacos,' which are folded tortillas filled with various ingredients like seasoned meat, beans, and salsa?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mexico",
+        "Italy",
+        "Spain",
+        "Greece"
+      ],
+      "answer": "Mexico",
+      "explanation": "Mexico is famous for its traditional dish 'Tacos,' which are folded tortillas filled with various ingredients like seasoned meat (such as beef, pork, or chicken), beans, salsa, and toppings like cheese and guacamole."
+    },
+    {
+      "questionNumber": 6,
+      "question": "In which country would you find the popular dish 'Kimchi,' a fermented side dish made from vegetables, most commonly cabbage?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "China",
+        "South Korea",
+        "Japan",
+        "Vietnam"
+      ],
+      "answer": "South Korea",
+      "explanation": "The popular dish 'Kimchi' is from South Korea. It is a traditional side dish made from vegetables, most commonly cabbage, and is fermented with spices and seasonings."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which country is known for its traditional dish 'Haggis,' a savory pudding made from sheep's heart, liver, and lungs, mixed with onions, oats, and spices?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ireland",
+        "Scotland",
+        "England",
+        "Wales"
+      ],
+      "answer": "Scotland",
+      "explanation": "Scotland is known for its traditional dish 'Haggis,' a savory pudding made from sheep's heart, liver, and lungs, mixed with onions, oats, and spices, encased in a sheep's stomach."
+    },
+    {
+      "questionNumber": 8,
+      "question": "In which country would you find the popular dish 'Goulash,' a stew made with tender beef, onions, and paprika?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Italy",
+        "Hungary",
+        "Austria",
+        "Germany"
+      ],
+      "answer": "Hungary",
+      "explanation": "The popular dish 'Goulash' originates from Hungary. It is a stew made with tender beef, onions, and paprika, and often includes other vegetables and spices."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which country is famous for its traditional dish 'Poutine,' a Canadian comfort food made with french fries, cheese curds, and gravy?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Canada",
+        "United States",
+        "France",
+        "Belgium"
+      ],
+      "answer": "Canada",
+      "explanation": "Canada is famous for its traditional dish 'Poutine,' a comforting dish made with french fries topped with cheese curds and smothered in gravy."
+    },
+    {
+      "questionNumber": 10,
+      "question": "In which country would you find the well-known dish 'Rendang,' a rich and tender coconut beef stew with Indonesian roots?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Thailand",
+        "Malaysia",
+        "Indonesia",
+        "Philippines"
+      ],
+      "answer": "Indonesia",
+      "explanation": "The well-known dish 'Rendang' comes from Indonesia. It is a rich and tender coconut beef stew, simmered for hours with various spices to develop complex flavors."
+    }
+  ]
+}
