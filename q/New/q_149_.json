@@ -1,0 +1,81 @@
+{
+  "quizName": "B2C (Business-to-Consumer) Quiz",
+  "quizCode": "B2C2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Business",
+  "quizDescription": "Test your knowledge about the Business-to-Consumer (B2C) model and its significance in the business world!",
+  "quizTags": "B2C, Business-to-Consumer, Business, E-commerce",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does B2C stand for in the business context?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Business-to-Business",
+        "Business-to-Consumer",
+        "Consumer-to-Business",
+        "Consumer-to-Consumer"
+      ],
+      "answer": "Business-to-Consumer",
+      "explanation": "B2C stands for Business-to-Consumer, where businesses sell products or services directly to individual consumers."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which of the following is an example of the B2C model?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A company purchasing raw materials from a supplier",
+        "A customer buying shoes from an online retailer",
+        "A business consulting firm providing services to other businesses",
+        "A manufacturer selling products to retail stores"
+      ],
+      "answer": "A customer buying shoes from an online retailer",
+      "explanation": "A customer buying shoes from an online retailer is an example of the B2C model, where a business directly sells products or services to individual consumers."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the primary focus of businesses in the B2C model?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Businesses focus on selling to other businesses",
+        "Businesses focus on selling to government agencies",
+        "Businesses focus on selling to individual consumers",
+        "Businesses focus on selling to non-profit organizations"
+      ],
+      "answer": "Businesses focus on selling to individual consumers",
+      "explanation": "In the B2C model, the primary focus of businesses is to sell products or services directly to individual consumers, meeting their specific needs and preferences."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which of the following is a potential advantage of the B2C model for businesses?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Higher profit margins on consumer offerings",
+        "Access to a wider range of products and services",
+        "Reduced competition in the market",
+        "Decreased reliance on consumer feedback"
+      ],
+      "answer": "Higher profit margins on consumer offerings",
+      "explanation": "The B2C model can provide businesses with higher profit margins on consumer offerings, as they can set prices directly for individual consumers based on market demand and competition."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which type of business is most likely to use the B2C model?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Wholesale distributors",
+        "Software development firms",
+        "Retail stores",
+        "Logistics companies"
+      ],
+      "answer": "Retail stores",
+      "explanation": "Retail stores are most likely to use the B2C model as they directly sell products to individual consumers. They focus on providing a wide range of products and services to meet consumer demands."
+    }
+  ]
+}
