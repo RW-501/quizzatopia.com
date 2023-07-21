@@ -146,14 +146,20 @@
       "explanation": "The Statement of Retained Earnings is affected by revenues and expenses, dividends paid to shareholders, and adjustments to retained earnings, such as corrections of accounting errors."
     },
     {
-      "questionNumber": 11,
-      "question": "What is the formula to calculate retained earnings?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Beginning Retained Earnings + Net Income - Dividends = Ending Retained Earnings",
-      "explanation": "The formula to calculate retained earnings is: Beginning Retained Earnings + Net Income - Dividends = Ending Retained Earnings"
-    },
+  "questionNumber": 11,
+  "question": "What is the formula to calculate retained earnings?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "The formula to calculate retained earnings is: Beginning Retained Earnings + Net Income - Dividends = Ending Retained Earnings",
+    "Beginning Retained Earnings + Net Income - Dividends = Ending Retained Earnings",
+    "To calculate retained earnings, use the formula: Beginning Retained Earnings + Net Income - Dividends = Ending Retained Earnings",
+    "The calculation for retained earnings is: Beginning Retained Earnings + Net Income - Dividends = Ending Retained Earnings"
+  ],
+  "answer": "Beginning Retained Earnings + Net Income - Dividends = Ending Retained Earnings",
+  "explanation": "The formula to calculate retained earnings is: Beginning Retained Earnings + Net Income - Dividends = Ending Retained Earnings",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 12,
       "question": "What is the purpose of closing entries in accounting?",
