@@ -1,0 +1,151 @@
+{
+  "quizName": "Basketball Quiz",
+  "quizCode": "BASKETBALL2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Sports",
+  "quizDescription": "Test your knowledge about the game of basketball and its history!",
+  "quizTags": "Basketball, Sports, Players, Teams, NBA",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who is known as the 'Black Mamba' and is considered one of the greatest basketball players of all time?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "LeBron James",
+        "Michael Jordan",
+        "Kobe Bryant",
+        "Shaquille O'Neal"
+      ],
+      "answer": "Kobe Bryant",
+      "explanation": "Kobe Bryant, who tragically passed away in 2020, is known as the 'Black Mamba' and is considered one of the greatest basketball players of all time."
+    },
+    {
+      "questionNumber": 2,
+      "question": "In basketball, how many players from each team are allowed on the court during gameplay?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": "5",
+      "explanation": "In basketball, each team is allowed to have 5 players on the court during gameplay."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which basketball player is known for his signature 'skyhook' shot?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kareem Abdul-Jabbar",
+        "Magic Johnson",
+        "Larry Bird",
+        "Hakeem Olajuwon"
+      ],
+      "answer": "Kareem Abdul-Jabbar",
+      "explanation": "Kareem Abdul-Jabbar, one of the NBA's all-time leading scorers, is known for his unstoppable 'skyhook' shot."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which NBA team has won the most championships in the league's history?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Los Angeles Lakers",
+        "Boston Celtics",
+        "Chicago Bulls",
+        "Golden State Warriors"
+      ],
+      "answer": "Boston Celtics",
+      "explanation": "The Boston Celtics hold the record for the most NBA championships won, with 17 titles as of the 2021-2022 season."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Who is known as 'The King' and is considered one of the greatest basketball players of all time?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kobe Bryant",
+        "Michael Jordan",
+        "LeBron James",
+        "Tim Duncan"
+      ],
+      "answer": "LeBron James",
+      "explanation": "LeBron James, currently playing for the Los Angeles Lakers, is known as 'The King' and is considered one of the greatest basketball players of all time."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which NBA player is famously known as 'The Answer'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Allen Iverson",
+        "Ray Allen",
+        "Tracy McGrady",
+        "Dwyane Wade"
+      ],
+      "answer": "Allen Iverson",
+      "explanation": "Allen Iverson, a Hall of Fame point guard, is famously known as 'The Answer' for his exceptional skills and ability to impact games."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which basketball player is known for his iconic 'Dream Shake' move?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hakeem Olajuwon",
+        "Shaquille O'Neal",
+        "Dirk Nowitzki",
+        "Tim Duncan"
+      ],
+      "answer": "Hakeem Olajuwon",
+      "explanation": "Hakeem Olajuwon, a legendary center, is known for his signature 'Dream Shake' move, a series of deceptive and unstoppable low-post fakes."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which NBA team is known for its 'Showtime' era in the 1980s, featuring stars like Magic Johnson and Kareem Abdul-Jabbar?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Boston Celtics",
+        "Los Angeles Lakers",
+        "Chicago Bulls",
+        "Miami Heat"
+      ],
+      "answer": "Los Angeles Lakers",
+      "explanation": "The Los Angeles Lakers are known for their 'Showtime' era in the 1980s, characterized by fast-paced, high-scoring basketball led by Magic Johnson and Kareem Abdul-Jabbar."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which basketball player is known as 'The Greek Freak' and plays for the Milwaukee Bucks?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Giannis Antetokounmpo",
+        "Luka Doncic",
+        "Nikola Jokic",
+        "Joel Embiid"
+      ],
+      "answer": "Giannis Antetokounmpo",
+      "explanation": "Giannis Antetokounmpo, a forward for the Milwaukee Bucks, is known as 'The Greek Freak' for his extraordinary athleticism and versatility on the court."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which college basketball team is known for its dominant 'Fab Five' in the early 1990s?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Duke Blue Devils",
+        "University of North Carolina Tar Heels",
+        "University of Kentucky Wildcats",
+        "University of Michigan Wolverines"
+      ],
+      "answer": "University of Michigan Wolverines",
+      "explanation": "The University of Michigan Wolverines is known for its dominant 'Fab Five' in the early 1990s, a group of talented freshmen basketball players who made a significant impact on college basketball."
+    }
+  ]
+}
