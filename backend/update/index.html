@@ -172,6 +172,7 @@ button {
     <h2>Upload Data</h2>
     <textarea id="upload-textarea" rows="10" cols="80"></textarea>
     <button id="upload-button">Upload Data</button>
+  <button id="upload-all-button">Upload All Documents</button>
   </div>
 
 
@@ -201,6 +202,7 @@ const newDataInput = document.getElementById("new-data-input");
 const updateButton = document.getElementById("update-button");
 const copyJsonButton = document.getElementById("copy-json-button");
 const getAllButton = document.getElementById("get-all-button");
+const uploadAllButton = document.getElementById("upload-all-button");
 
 // Function to log messages
 function log(message) {
@@ -306,8 +308,8 @@ function uploadData() {
 
 // Function to update the collection
 function updateCollection() {
-  const selectedCollection = newDataInput.value;
-YourRootCollection = selectedCollection;
+   YourRootCollection = newDataInput.value;
+	
   if (!YourRootCollection) {
     log("Please select a collection.");
     return;
@@ -317,7 +319,43 @@ YourRootCollection = selectedCollection;
   getData();
 	
 }
-// ...Previous JavaScript code...
+
+
+	  function uploadAllDocuments() {
+  const selectedCollection = collectionDropdown.value;
+  if (!selectedCollection) {
+    log("Please select a collection.");
+    return;
+  }
+
+  try {
+    const allDocuments = JSON.parse(jsonTextarea.value);
+
+    if (!Array.isArray(allDocuments)) {
+      log("Invalid JSON data. The data should be an array of documents.");
+      return;
+    }
+
+    allDocuments.forEach((document) => {
+      db.collection(YourRootCollection) // Replace "YourRootCollection" with your root collection name
+        .doc(selectedCollection)
+        .add(document)
+        .then(() => {
+          log("Document uploaded successfully.");
+        })
+        .catch((error) => {
+          log("Error uploading document: " + error);
+        });
+    });
+
+    log("All documents uploaded successfully.");
+  } catch (error) {
+    log("Error parsing JSON: " + error);
+  }
+}
+
+// Add event listener to the "Upload All Documents" button
+uploadAllButton.addEventListener("click", uploadAllDocuments);
 
 // Get references to DOM elements
 const clearJsonButton = document.getElementById("clear-json-button");
