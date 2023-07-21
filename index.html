@@ -1083,22 +1083,28 @@ font-size: 30px;
 
 
 
-var num = 0;
 const db = firebase.firestore();
 const quizContainer = document.getElementById('parent_Container');
+let currentPage = 1; // Initialize the current page to 1
 
-	
 // Function to fetch quiz data from Firestore and update the HTML
-async function fetchQuizzesFromDB() {
-  // Fetch the quizzes collection with ordering
+async function fetchQuizzesFromDB(page = 1) {
+  const quizzesPerPage = 20; // Number of quizzes to fetch per page
+  const startIndex = (page - 1) * quizzesPerPage;
+
+  // Fetch the quizzes collection with ordering and pagination
   const orderedQuerySnapshot = await db.collection('quizzes')
     .orderBy('quizCreatedDateDB', 'desc')
     .orderBy('quizRatingDB', 'desc')
     .orderBy('quizFinishedCount', 'desc')
     .orderBy('quizStartedCount', 'desc')
     .orderBy('quizNameDB', 'asc')
-    .get();
+    .limit(quizzesPerPage)
+    .offset(startIndex)
+    .get()
 
+
+	
   // Fetch all the quizzes without any specific ordering
   const allQuizzesQuerySnapshot = await db.collection('quizzes').get();
 
@@ -1188,38 +1194,36 @@ ratingUI ="";
 
 }
 
-// Call the function to fetch and populate the quiz data
+  // Update the quizContainer with the generated HTML
+  if (page === 1) {
+    document.getElementById('updated_Quizzez').innerHTML = "<p><h2>" + num + " " + html;
+  } else {
+    document.getElementById('updated_Quizzez').innerHTML += html;
+  }
+}
+
+// Call the function to fetch and populate the quiz data for the first page
 fetchQuizzesFromDB();
 
-
-
-
-
-	
-// Function to check if user has scrolled to the bottom of the page
+// Function to check if the user has scrolled to the bottom of the page
 function isScrollAtBottom() {
   const containerHeight = quizContainer.clientHeight;
   const scrollOffset = quizContainer.scrollTop;
   const totalHeight = quizContainer.scrollHeight;
-
-	
-		      console.log(`containerHeight: ${containerHeight}`);
+ console.log(`containerHeight: ${containerHeight}`);
 		      console.log(`scrollOffset: ${scrollOffset}`);
 		      console.log(`totalHeight: ${totalHeight}`);
-
   return containerHeight + scrollOffset >= totalHeight;
 }
 
-// Event listener for scroll event on quiz container
+// Event listener for the scroll event on the quiz container
 quizContainer.addEventListener('scroll', () => {
   if (isScrollAtBottom()) {
-    currentPage++;
-
-	      console.log(`currentPage: ${currentPage}`);
-  
-    fetchQuizzesFromDB(currentPage);
+    currentPage++; // Increment the current page number
+    fetchQuizzesFromDB(currentPage); // Fetch quizzes for the next page
   }
 });
+		     
 
 
 	
