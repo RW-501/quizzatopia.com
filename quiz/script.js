@@ -1080,7 +1080,6 @@ function submitReview() {
 
   const feedbackData = {
     rating: rating,
-    count: +1,
     feedback: feedback,
     userID: uID,
     feedbackType: "feedback",
@@ -1108,8 +1107,8 @@ const collectionName = "quizzes"; // Replace with the actual collection name
 const nameToMatch = quizCode; // Replace with the name you want to match
 
  const fieldsToUpdate = {
-      rateCount: firebase.firestore.FieldValue.increment(1), // Increment the 'count' field by 1
-      quizRatingDB: stars, // Set the 'rating' field to a new value (in this case, 4.5)
+      quizRatingCountDB: firebase.firestore.FieldValue.increment(1), // Increment the 'count' field by 1
+      quizRatingDB: stars * 10, // Set the 'rating' field to a new value (in this case, 4.5)
       // Add more fields as neededount
     };
 	
