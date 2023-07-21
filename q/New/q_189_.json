@@ -49,15 +49,21 @@
       "answer": "Paddle attachment",
       "explanation": "The paddle attachment is best suited for mixing cake batters and cookie dough as it helps to incorporate ingredients evenly without overmixing."
     },
-    {
-      "questionNumber": 4,
-      "question": "What is the term for the rotating part of a food mixer that holds the attachments?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Beater shaft",
-      "explanation": "The beater shaft is the rotating part of a food mixer that holds the attachments such as the paddle, whisk, and dough hook."
-    },
+{
+  "questionNumber": 4,
+  "question": "What is the term for the rotating part of a food mixer that holds the attachments?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Beater shaft",
+    "Attachment holder",
+    "Mixer base",
+    "Rotating hub"
+  ],
+  "answer": "Beater shaft",
+  "explanation": "The beater shaft is the rotating part of a food mixer that holds the attachments such as the paddle, whisk, and dough hook.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 5,
       "question": "Which of the following is an advantage of using a stand mixer compared to a handheld mixer?",
@@ -128,15 +134,21 @@
       "answer": "High energy consumption",
       "explanation": "One of the disadvantages of using a food mixer is that it consumes more energy compared to manual mixing by hand."
     },
-    {
-      "questionNumber": 10,
-      "question": "What is the term for the adjustable speed control on a food mixer?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Speed dial",
-      "explanation": "The speed dial is the adjustable speed control on a food mixer that allows you to increase or decrease the mixing speed as needed."
-    },
+{
+  "questionNumber": 10,
+  "question": "What is the term for the adjustable speed control on a food mixer?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Speed dial",
+    "Variable speed knob",
+    "Mixer velocity lever",
+    "Speed adjuster"
+  ],
+  "answer": "Speed dial",
+  "explanation": "The speed dial is the adjustable speed control on a food mixer that allows you to increase or decrease the mixing speed as needed.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 11,
       "question": "Which of the following attachments is commonly used for kneading and mixing heavy bread dough?",
@@ -151,15 +163,21 @@
       "answer": "Dough hook attachment",
       "explanation": "The dough hook attachment is specifically designed for kneading and mixing heavy bread dough, saving time and effort in the bread-making process."
     },
-    {
-      "questionNumber": 12,
-      "question": "What is the term for the feature that allows you to tilt the head of a stand mixer for easy access to the mixing bowl?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Tilt-head",
-      "explanation": "The tilt-head feature on a stand mixer allows you to tilt the head of the mixer back, providing easy access to the mixing bowl and attachments for adding ingredients or scraping the sides."
-    },
+{
+  "questionNumber": 12,
+  "question": "What is the term for the feature that allows you to tilt the head of a stand mixer for easy access to the mixing bowl?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "Tilt-head",
+    "Bowl-tilt",
+    "Head-tilt",
+    "Bowl access"
+  ],
+  "answer": "Tilt-head",
+  "explanation": "The tilt-head feature on a stand mixer allows you to tilt the head of the mixer back, providing easy access to the mixing bowl and attachments for adding ingredients or scraping the sides.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 13,
       "question": "Which of the following is an example of a planetary mixing action in a stand mixer?",
