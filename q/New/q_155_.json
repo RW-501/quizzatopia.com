@@ -1,0 +1,151 @@
+{
+  "quizName": "Stevie Wonder Quiz",
+  "quizCode": "STEVIEWONDER2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Music",
+  "quizDescription": "Test your knowledge about the incomparable Stevie Wonder, his groundbreaking music, and his lasting impact on the industry!",
+  "quizTags": "Stevie Wonder, Music, R&B, Soul, Motown",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is Stevie Wonder's real name?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Stevland Hardaway Morris",
+        "Stevie Ray Vaughan",
+        "Stevenson Williams Jr.",
+        "Stephen Wright"
+      ],
+      "answer": "Stevland Hardaway Morris",
+      "explanation": "Stevie Wonder's real name is Stevland Hardaway Morris. He adopted the stage name 'Stevie Wonder' early in his career."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Stevie Wonder signed with which iconic record label, where he gained fame and released many of his classic hits?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Atlantic Records",
+        "Capitol Records",
+        "Motown Records",
+        "Warner Bros. Records"
+      ],
+      "answer": "Motown Records",
+      "explanation": "Stevie Wonder signed with Motown Records, where he gained fame and released many of his classic hits. Motown played a pivotal role in shaping his early career."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Stevie Wonder's first Grammy Award came in 1967 for his hit song:",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Superstition",
+        "I Wish",
+        "For Once in My Life",
+        "Sir Duke"
+      ],
+      "answer": "For Once in My Life",
+      "explanation": "Stevie Wonder's first Grammy Award came in 1967 for his hit song 'For Once in My Life.' The song showcased his exceptional vocal and musical talents."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which Stevie Wonder album earned him the Grammy Award for Album of the Year in 1974?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Talking Book",
+        "Innervisions",
+        "Songs in the Key of Life",
+        "Fulfillingness' First Finale"
+      ],
+      "answer": "Innervisions",
+      "explanation": "Stevie Wonder's album 'Innervisions' earned him the Grammy Award for Album of the Year in 1974. The album is considered one of his masterpieces."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which Stevie Wonder song includes the lyrics: 'Isn't she lovely? Isn't she wonderful? Isn't she precious?'",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "I Just Called to Say I Love You",
+        "Superstition",
+        "My Cherie Amour",
+        "You Are the Sunshine of My Life"
+      ],
+      "answer": "Isn't she lovely? Isn't she wonderful? Isn't she precious?",
+      "explanation": "The song 'Isn't She Lovely' includes the lyrics: 'Isn't she lovely? Isn't she wonderful? Isn't she precious?' Stevie Wonder wrote the song to celebrate the birth of his daughter Aisha."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Stevie Wonder received a Grammy Award for Best Male Pop Vocal Performance for which song?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Signed, Sealed, Delivered I'm Yours",
+        "You Are the Sunshine of My Life",
+        "Part-Time Lover",
+        "Sir Duke"
+      ],
+      "answer": "You Are the Sunshine of My Life",
+      "explanation": "Stevie Wonder received a Grammy Award for Best Male Pop Vocal Performance for the song 'You Are the Sunshine of My Life.' The song became one of his signature hits."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Stevie Wonder's album 'Songs in the Key of Life' features which hit song that pays tribute to jazz musicians?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sir Duke",
+        "Living for the City",
+        "I Wish",
+        "Master Blaster (Jammin')"
+      ],
+      "answer": "Sir Duke",
+      "explanation": "Stevie Wonder's album 'Songs in the Key of Life' features the hit song 'Sir Duke,' which pays tribute to jazz musicians Duke Ellington, Ella Fitzgerald, and Count Basie."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What was Stevie Wonder's first solo single to reach number one on the Billboard Hot 100 chart?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Superstition",
+        "I Just Called to Say I Love You",
+        "Higher Ground",
+        "You Are the Sunshine of My Life"
+      ],
+      "answer": "Superstition",
+      "explanation": "Stevie Wonder's first solo single to reach number one on the Billboard Hot 100 chart was 'Superstition.' The song became one of his most successful hits."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Stevie Wonder's song 'Higher Ground' has been covered by many artists, but which iconic rock band also released a version of the song?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Rolling Stones",
+        "The Beatles",
+        "Led Zeppelin",
+        "Red Hot Chili Peppers"
+      ],
+      "answer": "Red Hot Chili Peppers",
+      "explanation": "The iconic rock band Red Hot Chili Peppers also released a version of Stevie Wonder's song 'Higher Ground' in 1989. Their cover was well-received by fans and critics."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Stevie Wonder was awarded the Presidential Medal of Freedom in which year?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "2000",
+        "2005",
+        "2010",
+        "2014"
+      ],
+      "answer": "2014",
+      "explanation": "Stevie Wonder was awarded the Presidential Medal of Freedom, the nation's highest civilian honor, by President Barack Obama in 2014. The award recognized his contributions to American culture and music."
+    }
+  ]
+}
