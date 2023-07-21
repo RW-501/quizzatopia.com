@@ -167,7 +167,17 @@ button {
   <label for="where-field-input">Field:</label>
   <input type="text" id="where-field-input">
   <label for="where-operator-input">Operator:</label>
-  <input type="text" id="where-operator-input">
+  <select id="where-operator-input">
+    <option value="==" selected>Equal To (==)</option>
+    <option value="!=">Not Equal To (!=)</option>
+    <option value="<">Less Than (<)</option>
+    <option value="<=">Less Than or Equal To (<=)</option>
+    <option value=">">Greater Than (>)</option>
+    <option value=">=">Greater Than or Equal To (>=)</option>
+    <option value="array-contains">Array Contains</option>
+    <option value="in">In</option>
+    <option value="array-contains-any">Array Contains Any</option>
+  </select>
   <label for="where-value-input">Value:</label>
   <input type="text" id="where-value-input">
   <label for="limit-input">Limit:</label>
@@ -234,6 +244,16 @@ const getAllButton = document.getElementById("get-all-button");
 const uploadAllButton = document.getElementById("upload-all-button");
 
 const deleteButton = document.getElementById("delete-button");
+function applyFilterAndLimit() {
+  const whereField = document.getElementById("where-field-input").value.trim();
+  const whereOperator = document.getElementById("where-operator-input").value.trim();
+  const whereValue = document.getElementById("where-value-input").value.trim();
+  const limit = parseInt(document.getElementById("limit-input").value, 10);
+
+  getAllDocuments(whereField, whereOperator, whereValue, limit);
+}
+const filterLimitButton = document.getElementById("filter-limit-button");
+filterLimitButton.addEventListener("click", applyFilterAndLimit);
 
 
 function deleteDocument() {
