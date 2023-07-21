@@ -1152,6 +1152,14 @@ async function fetchQuizzesFromDB() {
 	let rating =  quizData.quizRatingDB / quizData.quizRatingCountDB;
     const stars = ratingToStars(rating); // Assigned stars here
 
+ let ratingUI;
+	      if(quizData.quizStartedCount  == 0){
+ratingUI ="";
+	      }else{
+
+         ratingUI =  "<p><b>Started:</b>"+ ${quizData.quizStartedCount || 0} +"</p><p><b>Finished:</b>"+
+		 ${quizData.quizFinishedCount || 0} +"</p>";
+	      }
     // Generate the HTML for each quiz
     const quizHtml = `
       <div class="col-lg-12">
@@ -1162,8 +1170,7 @@ async function fetchQuizzesFromDB() {
             <div class="quiz-info">
               <p><b>CreatedBy:</b> ${quizData.quizCreatedByDB || ""}</p>
               <p><b>Difficulty:</b> ${quizData.quizDifficultyDB || quizData.quizDifficulty}</p>
-              <p><b>Started:</b> ${quizData.quizStartedCount || 0}</p>
-              <p><b>Finished:</b> ${quizData.quizFinishedCount || 0}</p>
+
               <p><b>Questions:</b> ${quizData.numberOfQuestionsDB || 0}</p>
               <p><b>Quiz Code:</b> ${quizData.quizCodeDB || ""}</p>
             </div>
