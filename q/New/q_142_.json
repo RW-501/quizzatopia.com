@@ -1,0 +1,151 @@
+{
+  "quizName": "World Cuisine Quiz",
+  "quizCode": "CUISINE2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Food",
+  "quizDescription": "Test your knowledge about different cuisines and food from around the world!",
+  "quizTags": "Cuisine, Food, International Cuisine, World Food, Gastronomy",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which country is famous for its traditional dish 'Sushi'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Japan",
+        "Italy",
+        "India",
+        "Mexico"
+      ],
+      "answer": "Japan",
+      "explanation": "Sushi is a traditional dish from Japan, consisting of vinegared rice topped with various ingredients such as raw fish, vegetables, and seaweed."
+    },
+    {
+      "questionNumber": 2,
+      "question": "In which country is the famous pasta dish 'Spaghetti Carbonara' originated?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Italy",
+        "France",
+        "Spain",
+        "Greece"
+      ],
+      "answer": "Italy",
+      "explanation": "Spaghetti Carbonara is a classic pasta dish originated in Italy. It typically consists of spaghetti, eggs, cheese, pancetta or guanciale, and black pepper."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which country is known for its delicious 'Tacos'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mexico",
+        "India",
+        "Thailand",
+        "Lebanon"
+      ],
+      "answer": "Mexico",
+      "explanation": "Tacos are a popular Mexican dish. They are typically made with soft corn tortillas filled with various ingredients such as seasoned meat, beans, cheese, and salsa."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which country is famous for its traditional 'Paella'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Spain",
+        "Greece",
+        "Morocco",
+        "Brazil"
+      ],
+      "answer": "Spain",
+      "explanation": "Paella is a traditional Spanish dish that originated in the Valencia region. It is a flavorful rice dish cooked with saffron and various ingredients such as seafood, chicken, and vegetables."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which cuisine is known for its use of a wide range of spices and herbs, creating flavorful dishes such as 'Curry'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Indian Cuisine",
+        "Japanese Cuisine",
+        "Italian Cuisine",
+        "French Cuisine"
+      ],
+      "answer": "Indian Cuisine",
+      "explanation": "Indian Cuisine is known for its extensive use of spices and herbs, resulting in flavorful dishes like 'Curry.' Curries can include various meats, vegetables, and lentils in a richly spiced sauce."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which country is renowned for its delectable 'Croissant'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "France",
+        "Switzerland",
+        "Austria",
+        "Belgium"
+      ],
+      "answer": "France",
+      "explanation": "Croissant is a famous pastry that originated in France. It is a buttery and flaky bread roll often enjoyed as a breakfast treat."
+    },
+    {
+      "questionNumber": 7,
+      "question": "In which country is the popular 'Samosa' a common street food?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "India",
+        "China",
+        "Thailand",
+        "Vietnam"
+      ],
+      "answer": "India",
+      "explanation": "Samosa is a popular Indian snack and street food. It is a deep-fried pastry filled with spiced potatoes, peas, and sometimes meat."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which country is famous for its traditional 'Hamburger'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "United States",
+        "Germany",
+        "Canada",
+        "Australia"
+      ],
+      "answer": "United States",
+      "explanation": "The Hamburger is a classic American dish, often associated with fast-food culture. It consists of a ground beef patty served in a bun with various toppings and condiments."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which country is renowned for its exquisite 'Sushi'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Japan",
+        "Thailand",
+        "Korea",
+        "Vietnam"
+      ],
+      "answer": "Japan",
+      "explanation": "Sushi is a famous Japanese dish, celebrated for its artful presentation and use of fresh fish and other ingredients on vinegared rice."
+    },
+    {
+      "questionNumber": 10,
+      "question": "In which country is the delicious 'Baklava' a popular dessert?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Turkey",
+        "Greece",
+        "Egypt",
+        "Lebanon"
+      ],
+      "answer": "Turkey",
+      "explanation": "Baklava is a popular dessert in Turkish cuisine. It is made of layers of filo pastry filled with chopped nuts and sweetened with honey or syrup."
+    }
+  ]
+}
