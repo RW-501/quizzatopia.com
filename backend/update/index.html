@@ -313,10 +313,7 @@ function updateCollection() {
    YourRootCollection = newDataInput.value;
 	collectionDropdown.innerHTML = '';
 	collectionDropdown.value ="";
-  if (!YourRootCollection) {
-    log("Please select a collection.");
-    return;
-  }
+
     log("New Collection: " + YourRootCollection);
 
 populateDropdown();
