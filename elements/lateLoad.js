@@ -484,13 +484,15 @@ window.signInAnonymously = function() {
                 // Set the logged-in cookie
                 document.cookie = 'loggedIn=true';
 
-                // Sign-in successful
-                onAuthSuccess(userInfo);
 
                 updateUserInfo(userInfo);
 
                 // Check if user info changes
                 checkUserInfoChanges();
+
+		                      // Sign-in successful
+                onAuthSuccess(userInfo);
+
               })
               .catch((error) => {
                 // Handle error retrieving user info
@@ -524,14 +526,16 @@ window.signInAnonymously = function() {
                 // Set the logged-in cookie
                 document.cookie = 'loggedIn=true';
 
-                // Sign-in successful
-                onAuthSuccess(userInfo);
+
 
                 updateUserInfo(userInfo);
 
                 // Check if user info changes
                 checkUserInfoChanges();
-              })
+
+                // Sign-in successful
+                onAuthSuccess(userInfo);
+	      })
               .catch((error) => {
                 // Handle error saving user info
                 showStatusMessage('Error saving user info', 'error');
@@ -606,9 +610,10 @@ window.signInWithEmailAndPassword = function() {
               .then(() => {
                 saveUserInfoToLocalStorage(userInfo);
                 document.cookie = 'loggedIn=true';
-                onAuthSuccess(userInfo);
                 updateUserInfo(userInfo);
                 checkUserInfoChanges();
+                onAuthSuccess(userInfo);
+
               })
               .catch((error) => {
                 showStatusMessage('Error creating user', 'error');
@@ -656,13 +661,15 @@ window.signInWithGoogle = function () {
                 // Set the logged-in cookie
                 document.cookie = 'loggedIn=true';
 
-                // Sign-in successful
-                onAuthSuccess(userInfo);
+
 
                 updateUserInfo(userInfo);
 
                 // Check if user info changes
                 checkUserInfoChanges();
+		      
+                // Sign-in successful
+                onAuthSuccess(userInfo);
               })
               .catch((error) => {
                 // Handle error retrieving user info
@@ -697,13 +704,15 @@ window.signInWithGoogle = function () {
                 // Set the logged-in cookie
                 document.cookie = 'loggedIn=true';
 
-                // Sign-in successful
-                onAuthSuccess(userInfo);
+
 
                 updateUserInfo(userInfo);
 
                 // Check if user info changes
                 checkUserInfoChanges();
+
+                // Sign-in successful
+                onAuthSuccess(userInfo);
               })
               .catch((error) => {
                 // Handle error saving user info to Firestore
@@ -916,13 +925,15 @@ window.createUserWithEmailAndPassword = function (email, password) {
       // Set the logged-in cookie
       document.cookie = 'loggedIn=true';
 
-      // Sign-up successful
-      onAuthSuccess(userInfo);
 
       updateUserInfo(userInfo);
 
       // Check if user info changes
       checkUserInfoChanges();
+
+      // Sign-up successful
+      onAuthSuccess(userInfo);
+
     })
     .catch((error) => {
       // Handle any errors that occurred during sign-up
