@@ -189,7 +189,7 @@ button {
   <script>
 
 const db = firebase.firestore();
-var YourRootCollection = "users";
+var YourRootCollection = "channels";
 var  selectedCollection = "";
 	  
 // Get references to DOM elements
@@ -229,6 +229,7 @@ function populateDropdown() {
 
 // Function to get data based on the selected collection
 function getData() {
+	 
    selectedCollection = collectionDropdown.value;
 
 	
@@ -310,7 +311,7 @@ function uploadData() {
 // Function to update the collection
 function updateCollection() {
    YourRootCollection = newDataInput.value;
-	
+	collectionDropdown.value ="";
   if (!YourRootCollection) {
     log("Please select a collection.");
     return;
