@@ -1,0 +1,206 @@
+{
+  "quizName": "Internal Revenue Service (IRS) Quiz",
+  "quizCode": "IRSQuiz2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Finance",
+  "quizDescription": "Test your knowledge about the Internal Revenue Service (IRS), the tax collection agency of the United States!",
+  "quizTags": "IRS, Internal Revenue Service, Taxes, Taxation, U.S. Government",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does 'IRS' stand for?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Internal Revenue System",
+        "Internal Revenue Service",
+        "International Revenue System",
+        "International Revenue Service"
+      ],
+      "answer": "Internal Revenue Service",
+      "explanation": "'IRS' stands for Internal Revenue Service, which is the tax collection agency of the United States government."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which federal department oversees the IRS?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Department of Finance",
+        "Department of the Treasury",
+        "Department of Commerce",
+        "Department of Taxation"
+      ],
+      "answer": "Department of the Treasury",
+      "explanation": "The Department of the Treasury oversees the IRS and is responsible for managing federal finances and revenue collection."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the primary purpose of the IRS?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Enforcing tax laws and regulations",
+        "Providing financial assistance to taxpayers",
+        "Approving tax deductions",
+        "Promoting tax evasion"
+      ],
+      "answer": "Enforcing tax laws and regulations",
+      "explanation": "The primary purpose of the IRS is to enforce tax laws and regulations, ensuring that taxpayers comply with their tax obligations."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the annual deadline for most individual taxpayers to file their federal income tax returns?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "January 31st",
+        "April 15th",
+        "June 30th",
+        "October 31st"
+      ],
+      "answer": "April 15th",
+      "explanation": "April 15th is the annual deadline for most individual taxpayers to file their federal income tax returns in the United States."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the penalty for failing to file a tax return or paying taxes owed by the deadline?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Interest on taxes owed",
+        "A warning letter",
+        "20% of taxes owed",
+        "50% of taxes owed"
+      ],
+      "answer": "Interest on taxes owed",
+      "explanation": "Failure to file a tax return or pay taxes owed by the deadline results in interest being charged on the unpaid taxes. Additionally, there may be penalties for late filing and late payment."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the term for the form that individuals use to file their federal income tax returns?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Form 1040",
+      "explanation": "Individuals use 'Form 1040' to file their federal income tax returns with the IRS."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which form should a self-employed individual use to report their business income and expenses to the IRS?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Form 1040",
+        "Form 1099",
+        "Form W-2",
+        "Form Schedule C"
+      ],
+      "answer": "Form Schedule C",
+      "explanation": "A self-employed individual should use 'Form Schedule C' to report their business income and expenses as part of their personal income tax return."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the name of the form that employers use to report wages and salaries paid to employees?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Form W-2",
+      "explanation": "Employers use 'Form W-2' to report wages and salaries paid to their employees to the IRS and provide a copy to the employees for tax filing purposes."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the term for the money that an employer withholds from an employee's paycheck for income taxes?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tax Credit",
+        "Tax Deduction",
+        "Tax Liability",
+        "Tax Withholding"
+      ],
+      "answer": "Tax Withholding",
+      "explanation": "Tax withholding is the money that an employer withholds from an employee's paycheck for income taxes and other payroll taxes, which is then remitted to the IRS on behalf of the employee."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which type of IRS audit is conducted through the mail and requires the taxpayer to provide supporting documentation for specific items on their tax return?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Field Audit",
+        "Office Audit",
+        "Correspondence Audit",
+        "Random Audit"
+      ],
+      "answer": "Correspondence Audit",
+      "explanation": "A Correspondence Audit is conducted through the mail, where the IRS requests the taxpayer to provide supporting documentation for specific items on their tax return."
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the name of the tax-advantaged retirement savings account that allows individuals to contribute pre-tax income?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Traditional IRA",
+        "Roth IRA",
+        "401(k) Plan",
+        "HSA (Health Savings Account)"
+      ],
+      "answer": "Traditional IRA",
+      "explanation": "A Traditional IRA (Individual Retirement Account) is a tax-advantaged retirement savings account that allows individuals to contribute pre-tax income, reducing their taxable income for the year."
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the penalty for early withdrawal from a retirement account before the age of 59½?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "10% of the withdrawn amount",
+        "25% of the withdrawn amount",
+        "50% of the withdrawn amount",
+        "No penalty"
+      ],
+      "answer": "10% of the withdrawn amount",
+      "explanation": "Early withdrawal from a retirement account before the age of 59½ typically incurs a 10% penalty on the withdrawn amount, in addition to regular income tax on the distribution."
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the name of the form that businesses use to report their annual income and expenses to the IRS?",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Form 1120",
+      "explanation": "Businesses use 'Form 1120' to report their annual income and expenses to the IRS. It is used for corporate tax returns."
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the penalty for underreporting income on a tax return?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "5% of the underreported amount",
+        "10% of the underreported amount",
+        "20% of the underreported amount",
+        "50% of the underreported amount"
+      ],
+      "answer": "20% of the underreported amount",
+      "explanation": "The penalty for underreporting income on a tax return is generally 20% of the underreported amount. The penalty can increase to 40% in cases of gross negligence or fraud."
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the term for a tax professional who is authorized to represent taxpayers before the IRS?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tax Preparer",
+        "Tax Consultant",
+        "Enrolled Agent",
+        "Certified Public Accountant (CPA)"
+      ],
+      "answer": "Enrolled Agent",
+      "explanation": "An Enrolled Agent is a tax professional who is authorized to represent taxpayers before the IRS, providing tax advice and representing taxpayers during IRS audits and other tax matters."
+    }
+  ]
+}
