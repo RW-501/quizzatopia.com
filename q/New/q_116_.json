@@ -1,0 +1,151 @@
+{
+  "quizName": "Baseball Quiz",
+  "quizCode": "BASEBALL2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Sports",
+  "quizDescription": "Test your knowledge about the game of baseball and its history!",
+  "quizTags": "Baseball, Sports, MLB, Players, Teams",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "How many players are there on the field for a single team during a standard baseball game?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "answer": "9",
+      "explanation": "A standard baseball game consists of 9 players on the field for each team. These positions include pitcher, catcher, infielders, and outfielders."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which team holds the record for the most World Series championships in Major League Baseball (MLB) history?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "New York Yankees",
+        "Boston Red Sox",
+        "Los Angeles Dodgers",
+        "Chicago Cubs"
+      ],
+      "answer": "New York Yankees",
+      "explanation": "The New York Yankees hold the record for the most World Series championships in MLB history, with 27 titles."
+    },
+    {
+      "questionNumber": 3,
+      "question": "In baseball, a 'perfect game' refers to what achievement?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Scoring a run in every inning",
+        "No hits, walks, or errors by the opposing team",
+        "Winning the game by a large margin",
+        "Hitting a home run in every at-bat"
+      ],
+      "answer": "No hits, walks, or errors by the opposing team",
+      "explanation": "A 'perfect game' in baseball refers to a game in which a pitcher allows no hits, walks, or errors by the opposing team throughout the entire game."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which legendary baseball player broke the color barrier in Major League Baseball in 1947?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Babe Ruth",
+        "Hank Aaron",
+        "Jackie Robinson",
+        "Mickey Mantle"
+      ],
+      "answer": "Jackie Robinson",
+      "explanation": "Jackie Robinson is the legendary baseball player who broke the color barrier in MLB in 1947, becoming the first African American to play in the modern era of the league."
+    },
+    {
+      "questionNumber": 5,
+      "question": "How many strikes are needed to record a strikeout for a pitcher?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": "3",
+      "explanation": "A pitcher needs to record three strikes against a batter to achieve a strikeout. A strike is called when a batter swings and misses at a pitch or when the pitch crosses the plate within the strike zone and is not swung at."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which baseball player holds the record for the most career home runs in MLB history?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Babe Ruth",
+        "Barry Bonds",
+        "Hank Aaron",
+        "Willie Mays"
+      ],
+      "answer": "Barry Bonds",
+      "explanation": "Barry Bonds holds the record for the most career home runs in MLB history, with 762 home runs."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which MLB team's home games are played at Dodger Stadium?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Los Angeles Dodgers",
+        "New York Yankees",
+        "Boston Red Sox",
+        "San Francisco Giants"
+      ],
+      "answer": "Los Angeles Dodgers",
+      "explanation": "The Los Angeles Dodgers play their home games at Dodger Stadium, located in Los Angeles, California."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the term used in baseball when a player hits a home run with all bases occupied?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Grand Slam",
+        "Hat-Trick",
+        "Touchdown",
+        "Eagle"
+      ],
+      "answer": "Grand Slam",
+      "explanation": "In baseball, a 'Grand Slam' refers to a home run hit with all three bases occupied by baserunners, resulting in four runs scoring on a single play."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which MLB team is known as the 'Bronx Bombers'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Boston Red Sox",
+        "Los Angeles Dodgers",
+        "Chicago Cubs",
+        "New York Yankees"
+      ],
+      "answer": "New York Yankees",
+      "explanation": "The New York Yankees are known as the 'Bronx Bombers' due to their historically powerful lineup and strong hitting performances."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which baseball statistic is used to measure a player's batting average?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "ERA",
+        "RBI",
+        "OBP",
+        "BA"
+      ],
+      "answer": "BA",
+      "explanation": "BA stands for 'Batting Average', and it is used to measure a player's hitting performance by calculating the ratio of hits to at-bats."
+    }
+  ]
+}
