@@ -165,9 +165,7 @@ button {
     <button id="get-button">Get Data</button>
 
 <div>
-  <h2>Delete Document</h2>
-  <label for="document-id-input">Document ID:</label>
-  <input type="text" id="document-id-input">
+
   <button id="delete-button">Delete Document</button>
 </div>
 
@@ -232,7 +230,7 @@ const documentIdInput = document.getElementById("collection-dropdown");
     .doc(documentId)
     .delete()
     .then(() => {
-      log("Document deleted successfully.");
+      log("Document deleted successfully."+documentId);
     })
     .catch((error) => {
       log("Error deleting document: " + error);
