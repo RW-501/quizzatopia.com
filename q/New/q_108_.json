@@ -1,0 +1,151 @@
+{
+  "quizName": "Business, Economics, Finance, and Companies Quiz",
+  "quizCode": "BUSINESS2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Business",
+  "quizDescription": "Test your knowledge of business, economics, finance, and companies!",
+  "quizTags": "Business, Economics, Finance, Companies, Corporate, Entrepreneurship",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the study of how individuals and societies allocate resources to meet their wants and needs?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Business Management",
+        "Economics",
+        "Finance",
+        "Marketing"
+      ],
+      "answer": "Economics",
+      "explanation": "Economics is the study of how individuals, businesses, and societies allocate resources to meet their wants and needs. It analyzes production, distribution, and consumption of goods and services."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which term refers to the amount of money left over after deducting expenses from revenue?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Profit",
+        "Revenue",
+        "Debt",
+        "Investment"
+      ],
+      "answer": "Profit",
+      "explanation": "Profit is the amount of money a business earns after deducting all expenses from its revenue. It represents the financial gain or net income of a company."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which type of business entity offers limited liability to its owners?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sole Proprietorship",
+        "Partnership",
+        "Corporation",
+        "Limited Liability Company (LLC)"
+      ],
+      "answer": "Limited Liability Company (LLC)",
+      "explanation": "A Limited Liability Company (LLC) is a business entity that offers limited liability protection to its owners. This means that the personal assets of the owners are protected from the company's debts and liabilities."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the financial statement that summarizes a company's revenues, expenses, and profits over a specific period?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Balance Sheet",
+        "Cash Flow Statement",
+        "Income Statement",
+        "Statement of Retained Earnings"
+      ],
+      "answer": "Income Statement",
+      "explanation": "An Income Statement, also known as a Profit and Loss Statement, summarizes a company's revenues, expenses, and profits or losses over a specific period, such as a quarter or a year."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which economic concept refers to the total value of goods and services produced within a country's borders over a specific period?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Inflation",
+        "Gross Domestic Product (GDP)",
+        "Unemployment",
+        "Consumer Price Index (CPI)"
+      ],
+      "answer": "Gross Domestic Product (GDP)",
+      "explanation": "Gross Domestic Product (GDP) is the total value of all goods and services produced within a country's borders over a specific period. It is a key indicator of a country's economic performance."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the interest rate at which a central bank lends money to commercial banks?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Prime Rate",
+        "Federal Funds Rate",
+        "Discount Rate",
+        "Libor Rate"
+      ],
+      "answer": "Federal Funds Rate",
+      "explanation": "The Federal Funds Rate is the interest rate at which a central bank, such as the Federal Reserve in the United States, lends money to commercial banks to meet their reserve requirements and manage the money supply."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the process of acquiring and using funds for business activities, investments, or other financial transactions?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Economics",
+        "Investing",
+        "Accounting",
+        "Finance"
+      ],
+      "answer": "Finance",
+      "explanation": "Finance is the process of acquiring and using funds for business activities, investments, or other financial transactions. It involves managing money, assets, and liabilities to achieve financial goals."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which term refers to the practice of a company outsourcing certain business functions to third-party service providers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Diversification",
+        "Offshoring",
+        "Outsourcing",
+        "Consolidation"
+      ],
+      "answer": "Outsourcing",
+      "explanation": "Outsourcing is the practice of a company delegating specific business functions or processes to external third-party service providers. It is often done to reduce costs and focus on core competencies."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the study of how individuals and businesses make decisions about the allocation of scarce resources?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Business Management",
+        "Economics",
+        "Finance",
+        "Marketing"
+      ],
+      "answer": "Economics",
+      "explanation": "Economics is the study of how individuals and businesses make decisions about the allocation of scarce resources to meet their wants and needs. It examines supply, demand, production, and consumption."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which term refers to a legal form of business ownership where one person is solely responsible for all debts and obligations?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Partnership",
+        "Corporation",
+        "Sole Proprietorship",
+        "Limited Liability Company (LLC)"
+      ],
+      "answer": "Sole Proprietorship",
+      "explanation": "A Sole Proprietorship is a legal form of business ownership where one person is solely responsible for all debts and obligations of the business. The individual has complete control over the business and receives all profits."
+    }
+  ]
+}
