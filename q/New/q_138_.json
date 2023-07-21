@@ -1,0 +1,151 @@
+{
+  "quizName": "Guns N' Roses Quiz",
+  "quizCode": "GNR2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Music",
+  "quizDescription": "Test your knowledge about the iconic band Guns N' Roses and their legendary rock music!",
+  "quizTags": "Guns N' Roses, Music, Rock, Hard Rock",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which Guns N' Roses song features the famous line 'Welcome to the Jungle'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sweet Child o' Mine",
+        "Paradise City",
+        "November Rain",
+        "Welcome to the Jungle"
+      ],
+      "answer": "Welcome to the Jungle",
+      "explanation": "'Welcome to the Jungle' is a popular Guns N' Roses song known for its energetic and memorable opening line."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which member of Guns N' Roses is known for his exceptional guitar skills and solos?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Slash",
+        "Axl Rose",
+        "Duff McKagan",
+        "Izzy Stradlin"
+      ],
+      "answer": "Slash",
+      "explanation": "Slash, the lead guitarist of Guns N' Roses, is renowned for his exceptional guitar skills and soulful solos."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which Guns N' Roses album features the hit song 'Sweet Child o' Mine'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Appetite for Destruction",
+        "Use Your Illusion I",
+        "Use Your Illusion II",
+        "Chinese Democracy"
+      ],
+      "answer": "Appetite for Destruction",
+      "explanation": "The album 'Appetite for Destruction' features the hit song 'Sweet Child o' Mine.' It was released in 1987 and became one of their most successful albums."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the title of Guns N' Roses' debut studio album?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Appetite for Destruction",
+        "Use Your Illusion I",
+        "Use Your Illusion II",
+        "Chinese Democracy"
+      ],
+      "answer": "Appetite for Destruction",
+      "explanation": "Guns N' Roses' debut studio album is titled 'Appetite for Destruction.' It was released in 1987 and achieved massive commercial success."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which Guns N' Roses song is known for its emotional music video featuring a wedding scene?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "November Rain",
+        "Don't Cry",
+        "Estranged",
+        "Patience"
+      ],
+      "answer": "November Rain",
+      "explanation": "The song 'November Rain' is known for its emotional music video featuring a wedding scene. It is one of Guns N' Roses' most iconic ballads."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which member of Guns N' Roses is the lead vocalist and frontman of the band?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Slash",
+        "Axl Rose",
+        "Duff McKagan",
+        "Izzy Stradlin"
+      ],
+      "answer": "Axl Rose",
+      "explanation": "Axl Rose is the lead vocalist and frontman of Guns N' Roses. He is known for his powerful voice and charismatic stage presence."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which Guns N' Roses song features the famous line 'Take me down to the Paradise City'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sweet Child o' Mine",
+        "Paradise City",
+        "Welcome to the Jungle",
+        "Don't Cry"
+      ],
+      "answer": "Paradise City",
+      "explanation": "'Paradise City' is a popular Guns N' Roses song known for its catchy chorus with the line 'Take me down to the Paradise City.'"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which Guns N' Roses album features the ballad 'Patience'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Use Your Illusion I",
+        "Appetite for Destruction",
+        "Use Your Illusion II",
+        "G N' R Lies"
+      ],
+      "answer": "G N' R Lies",
+      "explanation": "The album 'G N' R Lies' features the ballad 'Patience.' It was released in 1988 and is known for its acoustic sound."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the title of Guns N' Roses' longest studio album, released as a double album?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Appetite for Destruction",
+        "Use Your Illusion I",
+        "Use Your Illusion II",
+        "The Spaghetti Incident?"
+      ],
+      "answer": "Use Your Illusion I",
+      "explanation": "Guns N' Roses' longest studio album, released as a double album, is titled 'Use Your Illusion I.' It was released in 1991 alongside 'Use Your Illusion II.'"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which member of Guns N' Roses plays the bass guitar?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Slash",
+        "Axl Rose",
+        "Duff McKagan",
+        "Izzy Stradlin"
+      ],
+      "answer": "Duff McKagan",
+      "explanation": "Duff McKagan is the bass guitarist of Guns N' Roses. He has been a key member of the band since 1985."
+    }
+  ]
+}
