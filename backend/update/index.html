@@ -354,13 +354,13 @@ populateDropdown();
 	  function uploadAllDocuments() {
 
   try {
-    const allDocuments = JSON.parse(jsonTextarea.value);
-
+    const allDocuments = JSON.parse(uploadTextarea.value);
+/*
     if (!Array.isArray(allDocuments)) {
       log("Invalid JSON data. The data should be an array of documents.");
       return;
     }
-
+*/
     allDocuments.forEach((document) => {
       db.collection(YourRootCollection) // Replace "YourRootCollection" with your root collection name
         .add(document)
