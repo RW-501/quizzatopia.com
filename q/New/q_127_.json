@@ -1,0 +1,151 @@
+{
+  "quizName": "SWOT Analysis Quiz",
+  "quizCode": "SWOT2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Business Strategy",
+  "quizDescription": "Test your knowledge of SWOT analysis and its application in strategic planning!",
+  "quizTags": "SWOT Analysis, Business Strategy, Strategic Planning, SWOT Matrix",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In SWOT analysis, what does the 'S' stand for?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Strategies",
+        "Strengths",
+        "Solutions",
+        "Success"
+      ],
+      "answer": "Strengths",
+      "explanation": "In SWOT analysis, 'S' stands for Strengths. This refers to the internal attributes and resources of an organization that provide a competitive advantage and contribute to its success."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which aspect of SWOT analysis examines the internal factors that hinder an organization's performance?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Opportunities",
+        "Strengths",
+        "Threats",
+        "Weaknesses"
+      ],
+      "answer": "Weaknesses",
+      "explanation": "In SWOT analysis, 'W' stands for Weaknesses. This involves evaluating the internal factors that may limit an organization's performance or competitive advantage."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What does the 'O' represent in SWOT analysis?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Obstacles",
+        "Opportunities",
+        "Outcomes",
+        "Organization"
+      ],
+      "answer": "Opportunities",
+      "explanation": "In SWOT analysis, 'O' stands for Opportunities. This refers to external factors and situations that an organization can leverage to its advantage and enhance its performance."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which component of SWOT analysis involves analyzing external factors that could potentially harm an organization?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Strengths",
+        "Opportunities",
+        "Threats",
+        "Weaknesses"
+      ],
+      "answer": "Threats",
+      "explanation": "In SWOT analysis, 'T' stands for Threats. This entails evaluating external factors and risks that could negatively impact an organization's performance and sustainability."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which part of SWOT analysis helps in identifying new markets, customer segments, or emerging trends that can benefit an organization?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Opportunities",
+        "Strengths",
+        "Weaknesses",
+        "Threats"
+      ],
+      "answer": "Opportunities",
+      "explanation": "In SWOT analysis, the 'O' represents Opportunities. This aspect helps identify external factors and trends that an organization can capitalize on to achieve growth and success."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which component of SWOT analysis focuses on an organization's competitive advantages and unique selling points?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Weaknesses",
+        "Opportunities",
+        "Threats",
+        "Strengths"
+      ],
+      "answer": "Strengths",
+      "explanation": "In SWOT analysis, the 'S' stands for Strengths. This involves evaluating an organization's internal attributes, resources, and capabilities that set it apart from competitors."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What does the 'T' represent in SWOT analysis?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Threats",
+        "Tactics",
+        "Trends",
+        "Targets"
+      ],
+      "answer": "Threats",
+      "explanation": "In SWOT analysis, 'T' stands for Threats. This part involves assessing external factors, such as competition, changing market trends, and economic challenges, that could pose risks to the organization."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which component of SWOT analysis helps in identifying areas where an organization needs improvement or development?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Opportunities",
+        "Threats",
+        "Strengths",
+        "Weaknesses"
+      ],
+      "answer": "Weaknesses",
+      "explanation": "In SWOT analysis, 'W' stands for Weaknesses. This entails evaluating internal factors that need improvement or development to enhance the organization's overall performance."
+    },
+    {
+      "questionNumber": 9,
+      "question": "In SWOT analysis, which aspect examines the external factors that an organization can leverage to its advantage?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Threats",
+        "Weaknesses",
+        "Opportunities",
+        "Strengths"
+      ],
+      "answer": "Opportunities",
+      "explanation": "In SWOT analysis, 'O' stands for Opportunities. This involves evaluating external factors and situations that an organization can leverage to its advantage and enhance its performance."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the main purpose of conducting a SWOT analysis?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To identify strengths and weaknesses",
+        "To predict future market trends",
+        "To create long-term business strategies",
+        "To evaluate employee performance"
+      ],
+      "answer": "To identify strengths and weaknesses",
+      "explanation": "The main purpose of conducting a SWOT analysis is to identify an organization's internal strengths and weaknesses and external opportunities and threats. This analysis helps inform strategic planning and decision-making to maximize opportunities and address challenges."
+    }
+  ]
+}
