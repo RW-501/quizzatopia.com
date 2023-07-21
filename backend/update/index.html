@@ -317,11 +317,6 @@ populateDropdown();
 
 
 	  function uploadAllDocuments() {
-   selectedCollection = collectionDropdown.value;
-  if (!selectedCollection) {
-    log("Please select a collection.");
-    return;
-  }
 
   try {
     const allDocuments = JSON.parse(jsonTextarea.value);
@@ -333,7 +328,6 @@ populateDropdown();
 
     allDocuments.forEach((document) => {
       db.collection(YourRootCollection) // Replace "YourRootCollection" with your root collection name
-        .doc(selectedCollection)
         .add(document)
         .then(() => {
           log("Document uploaded successfully.");
