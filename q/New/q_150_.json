@@ -1,0 +1,146 @@
+{
+  "quizName": "Motown Quiz",
+  "quizCode": "MOTOWN2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Music",
+  "quizDescription": "Test your knowledge about the legendary Motown record label and its influential artists!",
+  "quizTags": "Motown, Music, Soul, R&B, Record Label",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which city is known as the birthplace of Motown?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "New York City",
+        "Chicago",
+        "Los Angeles",
+        "Detroit"
+      ],
+      "answer": "Detroit",
+      "explanation": "Detroit is known as the birthplace of Motown, where the Motown record label was founded in 1959 by Berry Gordy."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which Motown artist is often referred to as the 'King of Pop' and had numerous hits like 'Thriller' and 'Billie Jean'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Marvin Gaye",
+        "Michael Jackson",
+        "Stevie Wonder",
+        "Diana Ross"
+      ],
+      "answer": "Michael Jackson",
+      "explanation": "Michael Jackson, one of Motown's most iconic artists, is often referred to as the 'King of Pop' and had numerous chart-topping hits during his career."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which Motown group was known for hits like 'My Girl' and 'Ain't Too Proud to Beg'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Temptations",
+        "The Four Tops",
+        "The Supremes",
+        "The Jackson 5"
+      ],
+      "answer": "The Temptations",
+      "explanation": "The Temptations were a legendary Motown group known for hits like 'My Girl,' 'Ain't Too Proud to Beg,' and 'Papa Was a Rollin' Stone.'"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which Motown artist recorded the iconic song 'What's Going On,' addressing social issues and advocating for peace?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Marvin Gaye",
+        "Smokey Robinson",
+        "Diana Ross",
+        "Stevie Wonder"
+      ],
+      "answer": "Marvin Gaye",
+      "explanation": "Marvin Gaye recorded the iconic song 'What's Going On,' which addressed social issues and advocated for peace and understanding during a turbulent time in the United States."
+    },
+    {
+      "questionNumber": 5,
+      "question": "The Supremes, one of Motown's most successful acts, consisted of members Diana Ross, Florence Ballard, and __________.",
+      "imageURL": "",
+      "questionType": "Fill in the Blank",
+      "options": [],
+      "answer": "Mary Wilson",
+      "explanation": "The Supremes, one of Motown's most successful acts, consisted of members Diana Ross, Florence Ballard, and Mary Wilson. They achieved numerous chart-topping hits."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which Motown artist is known for hits like 'Superstition' and 'I Just Called to Say I Love You'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Smokey Robinson",
+        "Marvin Gaye",
+        "Stevie Wonder",
+        "The Jackson 5"
+      ],
+      "answer": "Stevie Wonder",
+      "explanation": "Stevie Wonder is known for hits like 'Superstition,' 'I Just Called to Say I Love You,' and 'Signed, Sealed, Delivered I'm Yours.' He is one of Motown's most celebrated artists."
+    },
+    {
+      "questionNumber": 7,
+      "question": "The Jackson 5, featuring a young Michael Jackson, achieved their first major success with the hit song ________.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "ABC",
+        "I Want You Back",
+        "Dancing Machine",
+        "Never Can Say Goodbye"
+      ],
+      "answer": "I Want You Back",
+      "explanation": "The Jackson 5, featuring a young Michael Jackson, achieved their first major success with the hit song 'I Want You Back.' They became one of Motown's most popular groups."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which Motown artist is known for hits like 'My Guy' and 'You Beat Me to the Punch'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gladys Knight",
+        "Aretha Franklin",
+        "Mary Wells",
+        "Diana Ross"
+      ],
+      "answer": "Mary Wells",
+      "explanation": "Mary Wells is known for hits like 'My Guy' and 'You Beat Me to the Punch.' She was one of Motown's early successful female artists."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which Motown group is known for hits like 'Baby Love,' 'Stop! In the Name of Love,' and 'You Can't Hurry Love'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Marvelettes",
+        "Martha and the Vandellas",
+        "The Supremes",
+        "The Temptations"
+      ],
+      "answer": "The Supremes",
+      "explanation": "The Supremes, led by Diana Ross, achieved great success with hits like 'Baby Love,' 'Stop! In the Name of Love,' and 'You Can't Hurry Love.'"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which Motown artist is known for hits like 'Tears of a Clown' and 'Shop Around'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Marvin Gaye",
+        "Smokey Robinson",
+        "Stevie Wonder",
+        "The Temptations"
+      ],
+      "answer": "Smokey Robinson",
+      "explanation": "Smokey Robinson, both as a solo artist and as part of The Miracles, is known for hits like 'Tears of a Clown' and 'Shop Around.' He is a significant figure in Motown's history."
+    }
+  ]
+}
