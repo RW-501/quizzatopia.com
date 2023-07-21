@@ -1,0 +1,81 @@
+{
+  "quizName": "C2B (Consumer-to-Business) Quiz",
+  "quizCode": "C2B2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Business",
+  "quizDescription": "Test your knowledge about the Consumer-to-Business (C2B) model and its significance in the business world!",
+  "quizTags": "C2B, Consumer-to-Business, Business, E-commerce",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does C2B stand for in the business context?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Consumer-to-Business",
+        "Business-to-Consumer",
+        "Consumer-to-Consumer",
+        "Business-to-Business"
+      ],
+      "answer": "Consumer-to-Business",
+      "explanation": "C2B stands for Consumer-to-Business, where individual consumers offer products or services to businesses."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which of the following is an example of the C2B model?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A company purchasing software from a vendor",
+        "A consumer selling handmade crafts to an online marketplace",
+        "A business consulting firm providing services to other businesses",
+        "A manufacturer selling products to retail stores"
+      ],
+      "answer": "A consumer selling handmade crafts to an online marketplace",
+      "explanation": "A consumer selling handmade crafts to an online marketplace is an example of the C2B model, where an individual consumer offers products or services to businesses or a marketplace."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the primary role of consumers in the C2B model?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To offer products or services to businesses",
+        "To purchase products from businesses",
+        "To facilitate transactions between businesses",
+        "To provide feedback and reviews for businesses"
+      ],
+      "answer": "To offer products or services to businesses",
+      "explanation": "In the C2B model, the primary role of consumers is to offer products or services to businesses. Consumers act as suppliers or service providers to fulfill business needs."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which of the following is a potential advantage of the C2B model for businesses?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Access to a wider range of products and services",
+        "Decreased reliance on consumer feedback",
+        "Higher profit margins on consumer offerings",
+        "Reduced competition in the market"
+      ],
+      "answer": "Access to a wider range of products and services",
+      "explanation": "The C2B model can provide businesses with access to a wider range of products and services offered by individual consumers, allowing businesses to find unique offerings that align with their needs."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which type of platform is commonly used in the C2B model for consumer offerings?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Social media platforms",
+        "Supply chain management systems",
+        "Business-to-Consumer (B2C) marketplaces",
+        "Government procurement portals"
+      ],
+      "answer": "Business-to-Consumer (B2C) marketplaces",
+      "explanation": "Business-to-Consumer (B2C) marketplaces are commonly used platforms in the C2B model. These marketplaces connect individual consumers with businesses looking for consumer offerings."
+    }
+  ]
+}
