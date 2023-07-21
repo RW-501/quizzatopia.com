@@ -1,0 +1,216 @@
+{
+  "quizName": "Kanye West Quiz",
+  "quizCode": "KanyeWestQuiz2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Music",
+  "quizDescription": "Test your knowledge about Kanye West and his diverse career!",
+  "quizTags": "Kanye West, Music, Hip-Hop, Fashion, Celebrities",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is Kanye West's full name?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kanye Omari West",
+        "Kanye David West",
+        "Kanye Michael West",
+        "Kanye Christopher West"
+      ],
+      "answer": "Kanye Omari West",
+      "explanation": "Kanye West's full name is Kanye Omari West. He is professionally known as Kanye West."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which city is Kanye West associated with, as he was raised there and often mentions it in his music?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Chicago",
+        "Los Angeles",
+        "New York",
+        "Atlanta"
+      ],
+      "answer": "Chicago",
+      "explanation": "Kanye West was raised in Chicago, Illinois, and often mentions the city in his music, showing his strong connection to his hometown."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Kanye West's debut studio album, released in 2004, was titled:",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Late Registration",
+        "The College Dropout",
+        "My Beautiful Dark Twisted Fantasy",
+        "Yeezus"
+      ],
+      "answer": "The College Dropout",
+      "explanation": "Kanye West's debut studio album, released in 2004, was titled 'The College Dropout.' It received critical acclaim and showcased his unique style."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which album by Kanye West features the hit single 'Stronger,' which samples Daft Punk's 'Harder, Better, Faster, Stronger'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "808s & Heartbreak",
+        "Graduation",
+        "Yeezus",
+        "The Life of Pablo"
+      ],
+      "answer": "Graduation",
+      "explanation": "Kanye West's album 'Graduation' features the hit single 'Stronger,' which samples Daft Punk's 'Harder, Better, Faster, Stronger,' and became a major success."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which album by Kanye West was heavily influenced by themes of African American culture and identity?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yeezus",
+        "My Beautiful Dark Twisted Fantasy",
+        "The Life of Pablo",
+        "Jesus Is King"
+      ],
+      "answer": "My Beautiful Dark Twisted Fantasy",
+      "explanation": "Kanye West's album 'My Beautiful Dark Twisted Fantasy' was heavily influenced by themes of African American culture and identity and is considered one of his masterpieces."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which album by Kanye West includes the gospel-influenced track 'Ultralight Beam'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Life of Pablo",
+        "Jesus Is King",
+        "Ye",
+        "Yeezus"
+      ],
+      "answer": "The Life of Pablo",
+      "explanation": "Kanye West's album 'The Life of Pablo' includes the gospel-influenced track 'Ultralight Beam,' which features vocals from Chance the Rapper and a gospel choir."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which album by Kanye West was released as a surprise and featured a minimalistic cover with a blank CD case?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "808s & Heartbreak",
+        "Graduation",
+        "Yeezus",
+        "Ye"
+      ],
+      "answer": "Yeezus",
+      "explanation": "Kanye West's album 'Yeezus' was released as a surprise and featured a minimalistic cover with a blank CD case, symbolizing the raw and experimental nature of the music."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Kanye West made headlines during the 2009 MTV Video Music Awards when he interrupted which singer's acceptance speech?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Taylor Swift",
+        "Beyoncé",
+        "Lady Gaga",
+        "Adele"
+      ],
+      "answer": "Taylor Swift",
+      "explanation": "Kanye West made headlines during the 2009 MTV Video Music Awards when he interrupted Taylor Swift's acceptance speech for Best Female Video, stating that Beyoncé deserved the award instead."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which fashion brand did Kanye West collaborate with to launch the 'Yeezy' sneaker line?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Nike",
+        "Adidas",
+        "Puma",
+        "Reebok"
+      ],
+      "answer": "Adidas",
+      "explanation": "Kanye West collaborated with Adidas to launch the 'Yeezy' sneaker line, which became highly sought after and a significant influence in the fashion industry."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Kanye West's album 'Jesus Is King' is characterized by its exploration of themes related to his:",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Family",
+        "Marriage",
+        "Faith",
+        "Political Views"
+      ],
+      "answer": "Faith",
+      "explanation": "Kanye West's album 'Jesus Is King' is characterized by its exploration of themes related to his faith, Christianity, and devotion to God."
+    },
+    {
+      "questionNumber": 11,
+      "question": "In 2016, Kanye West went on a controversial tour to support which album, which was later canceled due to his hospitalization?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Life of Pablo",
+        "Yeezus",
+        "My Beautiful Dark Twisted Fantasy",
+        "Jesus Is King"
+      ],
+      "answer": "The Life of Pablo",
+      "explanation": "In 2016, Kanye West went on a controversial tour to support his album 'The Life of Pablo,' which was later canceled due to his hospitalization for exhaustion and mental health issues."
+    },
+{
+  "questionNumber": 12,
+  "question": "Kanye West has won multiple Grammy Awards over the years. How many Grammy Awards has he won in total (as of September 2021)?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": ["10", "15", "22", "30"],
+  "answer": "22",
+  "explanation": "As of September 2021, Kanye West has won a total of 22 Grammy Awards, making him one of the most awarded artists in Grammy history."
+},
+    {
+      "questionNumber": 13,
+      "question": "Which 2005 hit single by Kanye West features Jamie Foxx and is based on a sample from Ray Charles' 'I Got a Woman'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gold Digger",
+        "Stronger",
+        "Heartless",
+        "All of the Lights"
+      ],
+      "answer": "Gold Digger",
+      "explanation": "Kanye West's 2005 hit single 'Gold Digger' features Jamie Foxx and is based on a sample from Ray Charles' 'I Got a Woman.' It was a commercial success and topped the charts."
+    },
+    {
+      "questionNumber": 14,
+      "question": "Kanye West's 2010 album 'My Beautiful Dark Twisted Fantasy' features a critically acclaimed short film/music video for which song?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Runaway",
+        "All of the Lights",
+        "Monster",
+        "POWER"
+      ],
+      "answer": "Runaway",
+      "explanation": "Kanye West's 2010 album 'My Beautiful Dark Twisted Fantasy' features a critically acclaimed short film/music video for the song 'Runaway,' which explores themes of alienation and self-acceptance."
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which album by Kanye West features the track 'Ultralight Beam,' which opens with a powerful gospel choir?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Life of Pablo",
+        "Jesus Is King",
+        "Ye",
+        "Yeezus"
+      ],
+      "answer": "The Life of Pablo",
+      "explanation": "Kanye West's album 'The Life of Pablo' features the track 'Ultralight Beam,' which opens with a powerful gospel choir and sets the tone for the album's spiritual themes."
+    }
+  ]
+}
