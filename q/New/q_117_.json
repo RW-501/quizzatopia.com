@@ -1,0 +1,151 @@
+{
+  "quizName": "Football Quiz",
+  "quizCode": "FOOTBALL2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Sports",
+  "quizDescription": "Test your knowledge about the game of football (soccer) and its history!",
+  "quizTags": "Football, Soccer, Sports, Players, Teams",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In which country did football (soccer) originate?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "England",
+        "Brazil",
+        "Italy",
+        "Germany"
+      ],
+      "answer": "England",
+      "explanation": "Football (soccer) originated in England, where the modern rules of the game were established."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which international tournament is held every four years and is one of the most prestigious events in football?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "UEFA Champions League",
+        "FIFA World Cup",
+        "Copa America",
+        "UEFA European Championship (Euro)"
+      ],
+      "answer": "FIFA World Cup",
+      "explanation": "The FIFA World Cup is an international football tournament held every four years, bringing together teams from around the world to compete for the title of world champions."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which player is often referred to as 'The King of Football' and is widely regarded as one of the greatest footballers of all time?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lionel Messi",
+        "Diego Maradona",
+        "Cristiano Ronaldo",
+        "Pele"
+      ],
+      "answer": "Pele",
+      "explanation": "Pele, a Brazilian football legend, is often referred to as 'The King of Football' and is widely regarded as one of the greatest players in the history of the sport."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which football club has won the most UEFA Champions League titles?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Real Madrid",
+        "FC Barcelona",
+        "Bayern Munich",
+        "Liverpool"
+      ],
+      "answer": "Real Madrid",
+      "explanation": "Real Madrid is the football club that has won the most UEFA Champions League titles, with 13 championships as of the 2021-2022 season."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which player is known for his famous 'hand of god' goal and his remarkable 'Goal of the Century' in the 1986 FIFA World Cup?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Zinedine Zidane",
+        "Lionel Messi",
+        "Diego Maradona",
+        "Ronaldinho"
+      ],
+      "answer": "Diego Maradona",
+      "explanation": "Diego Maradona, an Argentine football legend, is known for his infamous 'hand of god' goal and his extraordinary 'Goal of the Century' during the 1986 FIFA World Cup."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which football club is based in Catalonia and has a fierce rivalry with Real Madrid?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "FC Barcelona",
+        "Atletico Madrid",
+        "Sevilla FC",
+        "Valencia CF"
+      ],
+      "answer": "FC Barcelona",
+      "explanation": "FC Barcelona, commonly known as Barcelona, is a football club based in Catalonia, Spain, and they have a fierce rivalry with Real Madrid, known as 'El Clasico.'"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which player is known for his record-breaking transfer from FC Barcelona to Paris Saint-Germain (PSG)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lionel Messi",
+        "Kylian Mbappe",
+        "Neymar Jr.",
+        "Cristiano Ronaldo"
+      ],
+      "answer": "Neymar Jr.",
+      "explanation": "Neymar Jr., a Brazilian forward, is known for his record-breaking transfer from FC Barcelona to Paris Saint-Germain (PSG) in 2017."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which national team won the 2018 FIFA World Cup held in Russia?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Argentina",
+        "France",
+        "Brazil",
+        "Germany"
+      ],
+      "answer": "France",
+      "explanation": "The French national team won the 2018 FIFA World Cup, defeating Croatia in the final to claim their second world championship."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which player is known for his incredible dribbling skills and is often referred to as 'The Magician'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Neymar Jr.",
+        "Lionel Messi",
+        "Cristiano Ronaldo",
+        "Eden Hazard"
+      ],
+      "answer": "Lionel Messi",
+      "explanation": "Lionel Messi, an Argentine forward, is known for his extraordinary dribbling skills and is often referred to as 'The Magician' for his ability to mesmerize defenders."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which player is known for his incredible goal-scoring ability and is often referred to as 'CR7'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lionel Messi",
+        "Cristiano Ronaldo",
+        "Neymar Jr.",
+        "Mohamed Salah"
+      ],
+      "answer": "Cristiano Ronaldo",
+      "explanation": "Cristiano Ronaldo, a Portuguese forward, is known for his prolific goal-scoring ability and is often referred to as 'CR7' due to his initials and jersey number."
+    }
+  ]
+}
