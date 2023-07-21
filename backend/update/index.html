@@ -165,6 +165,17 @@ button {
     <button id="get-button">Get Data</button>
 
 <div>
+  <h2>Document Field Selector</h2>
+  <label for="field-dropdown">Select a field:</label>
+  <select id="field-dropdown"></select>
+  <button id="select-field-button">Get Field Values</button>
+</div>
+
+
+
+
+	  
+<div>
 
   <button id="delete-button">Delete Document</button>
 </div>
@@ -299,9 +310,20 @@ function getAllDocuments() {
         allDocuments.push(documentWithId);
       });
 
-      if (allDocuments.length > 0) {
+       if (allDocuments.length > 0) {
         jsonTextarea.value = JSON.stringify(allDocuments, null, 2);
         log("Data retrieved successfully.");
+
+        // Populate the field names into the dropdown
+        const fieldDropdown = document.getElementById("field-dropdown");
+        fieldDropdown.innerHTML = ""; // Clear previous options
+
+        const firstDocumentKeys = Object.keys(allDocuments[0]);
+        firstDocumentKeys.forEach((key) => {
+          const option = document.createElement("option");
+          option.text = key;
+          fieldDropdown.appendChild(option);
+        });
       } else {
         log("No documents found in the collection.");
       }
@@ -312,7 +334,23 @@ function getAllDocuments() {
 }
 
 
+function getFieldValues() {
+  const selectedField = document.getElementById("field-dropdown").value;
+  if (!selectedField) {
+    log("Please select a field.");
+    return;
+  }
 
+  const allDocuments = JSON.parse(jsonTextarea.value);
+  const fieldValues = allDocuments.map((document) => document[selectedField]);
+
+  // Display the field values
+  jsonTextarea.value = JSON.stringify(fieldValues, null, 2);
+  log("Field values retrieved successfully.");
+}
+
+const selectFieldButton = document.getElementById("select-field-button");
+selectFieldButton.addEventListener("click", getFieldValues);
 
 	  
 // Function to upload data to the selected collection
