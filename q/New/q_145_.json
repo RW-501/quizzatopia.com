@@ -1,0 +1,151 @@
+{
+  "quizName": "Food Preparation Techniques Quiz",
+  "quizCode": "PREP2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Food",
+  "quizDescription": "Test your knowledge about various food preparation techniques used in cooking!",
+  "quizTags": "Food, Preparation, Culinary, Cooking Techniques",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What food preparation technique involves cutting food into small, uniform pieces of about 1/4 inch in size?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Dicing",
+        "Julienning",
+        "Mincing",
+        "Grating"
+      ],
+      "answer": "Dicing",
+      "explanation": "Dicing is a food preparation technique that involves cutting food into small, uniform pieces of about 1/4 inch in size. It is commonly used for onions, carrots, and other vegetables."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which food preparation technique involves quickly plunging vegetables into boiling water and then transferring them to ice-cold water to preserve their color and texture?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Blanching",
+        "Braising",
+        "Marinating",
+        "Fermenting"
+      ],
+      "answer": "Blanching",
+      "explanation": "Blanching is a food preparation technique used to preserve the color and texture of vegetables. It involves quickly plunging vegetables into boiling water and then transferring them to ice-cold water to halt the cooking process."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What food preparation technique involves cooking food in an oven using dry heat, often with added fats or oils?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Baking",
+        "Grilling",
+        "Sauteing",
+        "Boiling"
+      ],
+      "answer": "Baking",
+      "explanation": "Baking is a food preparation technique that involves cooking food in an oven using dry heat. It is commonly used for baking bread, cakes, cookies, and casseroles."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which food preparation technique involves slowly cooking food in liquid at a low temperature for an extended period to achieve tenderness?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Grilling",
+        "Boiling",
+        "Braising",
+        "Steaming"
+      ],
+      "answer": "Braising",
+      "explanation": "Braising is a food preparation technique that involves slow-cooking food in liquid at a low temperature for an extended period. It is often used for tougher cuts of meat to achieve tenderness and develop rich flavors."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What food preparation technique involves cutting vegetables into thin, matchstick-like pieces?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Dicing",
+        "Julienning",
+        "Slicing",
+        "Mincing"
+      ],
+      "answer": "Julienning",
+      "explanation": "Julienning is a food preparation technique that involves cutting vegetables into thin, matchstick-like pieces. It is often used for carrots, cucumbers, and bell peppers in stir-fries and salads."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which food preparation technique involves cooking food by immersing it in hot oil or fat?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Steaming",
+        "Boiling",
+        "Frying",
+        "Grilling"
+      ],
+      "answer": "Frying",
+      "explanation": "Frying is a food preparation technique that involves cooking food by immersing it in hot oil or fat. It can be done using deep-frying, shallow-frying, or pan-frying methods."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What food preparation technique involves cutting food into very small pieces, smaller than diced?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mincing",
+        "Chopping",
+        "Grating",
+        "Slicing"
+      ],
+      "answer": "Mincing",
+      "explanation": "Mincing is a food preparation technique that involves cutting food into very small pieces, smaller than diced. It is often used for garlic, ginger, and herbs to release their flavors."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which food preparation technique involves cooking food by dry heat on a grill or griddle?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Grilling",
+        "Baking",
+        "Boiling",
+        "Roasting"
+      ],
+      "answer": "Grilling",
+      "explanation": "Grilling is a food preparation technique that involves cooking food by dry heat on a grill or griddle. It is often used for meats, vegetables, and seafood."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What food preparation technique involves cooking food in a liquid at or just below boiling point?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Steaming",
+        "Simmering",
+        "Blanching",
+        "Frying"
+      ],
+      "answer": "Simmering",
+      "explanation": "Simmering is a food preparation technique that involves cooking food in a liquid at or just below boiling point. It is commonly used for soups, stews, and sauces."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which food preparation technique involves cutting food into large, equal-sized pieces, often used for vegetables and fruits?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Dicing",
+        "Chopping",
+        "Julienning",
+        "Slicing"
+      ],
+      "answer": "Chopping",
+      "explanation": "Chopping is a food preparation technique that involves cutting food into large, equal-sized pieces. It is often used for vegetables and fruits in various recipes."
+    }
+  ]
+}
