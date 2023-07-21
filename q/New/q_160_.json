@@ -1,0 +1,151 @@
+{
+  "quizName": "The Rolling Stones Quiz",
+  "quizCode": "ROLLINGSTONES2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Music",
+  "quizDescription": "Test your knowledge about the legendary rock band 'The Rolling Stones,' their classic hits, and their enduring legacy in the world of rock and roll!",
+  "quizTags": "The Rolling Stones, Music, Rock, Mick Jagger, Keith Richards, Sympathy for the Devil, Paint It Black",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who is the lead vocalist and frontman of The Rolling Stones?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mick Jagger",
+        "Keith Richards",
+        "Charlie Watts",
+        "Ronnie Wood"
+      ],
+      "answer": "Mick Jagger",
+      "explanation": "Mick Jagger is the lead vocalist and frontman of The Rolling Stones. His dynamic stage presence and distinctive voice have been a trademark of the band's performances."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which Rolling Stones album features the hit song 'Paint It Black'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Beggars Banquet",
+        "Let It Bleed",
+        "Aftermath",
+        "Out of Our Heads"
+      ],
+      "answer": "Aftermath",
+      "explanation": "The Rolling Stones album 'Aftermath,' released in 1966, features the hit song 'Paint It Black.' The song's haunting melody and lyrics have made it one of their most famous tracks."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Who is the guitarist and one of the primary songwriters of The Rolling Stones?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mick Jagger",
+        "Keith Richards",
+        "Charlie Watts",
+        "Brian Jones"
+      ],
+      "answer": "Keith Richards",
+      "explanation": "Keith Richards is the guitarist and one of the primary songwriters of The Rolling Stones. His iconic guitar riffs and songwriting contributions have shaped the band's sound."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which Rolling Stones song begins with the famous line 'Please allow me to introduce myself, I'm a man of wealth and taste'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sympathy for the Devil",
+        "Jumpin' Jack Flash",
+        "Gimme Shelter",
+        "Brown Sugar"
+      ],
+      "answer": "Sympathy for the Devil",
+      "explanation": "The Rolling Stones song 'Sympathy for the Devil' begins with the famous line 'Please allow me to introduce myself, I'm a man of wealth and taste.' The song is known for its dark and provocative lyrics."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Who replaced founding member Brian Jones as the guitarist of The Rolling Stones?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mick Taylor",
+        "Ronnie Wood",
+        "Charlie Watts",
+        "Bill Wyman"
+      ],
+      "answer": "Mick Taylor",
+      "explanation": "Mick Taylor replaced founding member Brian Jones as the guitarist of The Rolling Stones in 1969. He made significant contributions during his time with the band."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which Rolling Stones album features the iconic song '(I Can't Get No) Satisfaction'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Let It Bleed",
+        "Out of Our Heads",
+        "Beggars Banquet",
+        "Aftermath"
+      ],
+      "answer": "Out of Our Heads",
+      "explanation": "The Rolling Stones album 'Out of Our Heads,' released in 1965, features the iconic song '(I Can't Get No) Satisfaction.' The song became a massive hit and is one of their signature tracks."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which Rolling Stones album features the song 'Angie'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sticky Fingers",
+        "Goats Head Soup",
+        "Exile on Main St.",
+        "Some Girls"
+      ],
+      "answer": "Goats Head Soup",
+      "explanation": "The Rolling Stones album 'Goats Head Soup,' released in 1973, features the song 'Angie.' The ballad became a commercial success and remains a fan favorite."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Who is the drummer of The Rolling Stones?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mick Jagger",
+        "Keith Richards",
+        "Charlie Watts",
+        "Ronnie Wood"
+      ],
+      "answer": "Charlie Watts",
+      "explanation": "Charlie Watts is the drummer of The Rolling Stones. His steady and distinctive drumming style has been a vital component of the band's rhythm section."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which album by The Rolling Stones is often regarded as one of their best and features the song 'Gimme Shelter'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Exile on Main St.",
+        "Beggars Banquet",
+        "Let It Bleed",
+        "Sticky Fingers"
+      ],
+      "answer": "Let It Bleed",
+      "explanation": "The album 'Let It Bleed' by The Rolling Stones, released in 1969, is often regarded as one of their best. It features the song 'Gimme Shelter,' which is considered one of their greatest tracks."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which member of The Rolling Stones plays bass guitar?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mick Jagger",
+        "Keith Richards",
+        "Charlie Watts",
+        "Bill Wyman"
+      ],
+      "answer": "Bill Wyman",
+      "explanation": "Bill Wyman played bass guitar for The Rolling Stones until his departure from the band in 1993. He was a founding member and contributed to the band's early success."
+    }
+  ]
+}
