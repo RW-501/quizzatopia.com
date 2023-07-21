@@ -1,0 +1,151 @@
+{
+  "quizName": "TV Shows Quiz",
+  "quizCode": "TVSHOWS2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "TV Shows",
+  "quizDescription": "Test your knowledge of popular TV shows from various genres!",
+  "quizTags": "TV Shows, Television, Entertainment",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which TV show follows the lives of six friends living in New York City?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Office",
+        "Friends",
+        "Breaking Bad",
+        "Stranger Things"
+      ],
+      "answer": "Friends",
+      "explanation": "Friends is a popular TV show that revolves around the lives of six friends—Rachel, Ross, Monica, Chandler, Joey, and Phoebe—as they navigate personal and professional experiences in New York City."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which TV show features a high school teacher turned methamphetamine producer?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Walking Dead",
+        "Breaking Bad",
+        "Game of Thrones",
+        "Sherlock"
+      ],
+      "answer": "Breaking Bad",
+      "explanation": "Breaking Bad follows the journey of Walter White, a high school chemistry teacher, who turns to producing and selling methamphetamine after being diagnosed with cancer. The show depicts his transformation into a ruthless drug lord."
+    },
+    {
+      "questionNumber": 3,
+      "question": "In which TV show do characters often enter an alternate dimension called the 'Upside Down'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Stranger Things",
+        "The Crown",
+        "Black Mirror",
+        "The Handmaid's Tale"
+      ],
+      "answer": "Stranger Things",
+      "explanation": "Stranger Things is a sci-fi/horror TV show set in the 1980s. It follows a group of kids in the fictional town of Hawkins, Indiana, as they encounter supernatural events and a parallel dimension called the 'Upside Down.'"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which TV show is a British anthology series exploring the dark and often satirical sides of modern society?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Crown",
+        "Sherlock",
+        "Black Mirror",
+        "The Handmaid's Tale"
+      ],
+      "answer": "Black Mirror",
+      "explanation": "Black Mirror is a critically acclaimed anthology series that explores the impact of modern technology on society. Each episode presents a standalone story with dark, thought-provoking themes."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which TV show is based on the novel by Margaret Atwood, set in a dystopian society?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Stranger Things",
+        "The Crown",
+        "Black Mirror",
+        "The Handmaid's Tale"
+      ],
+      "answer": "The Handmaid's Tale",
+      "explanation": "The Handmaid's Tale is a dystopian TV show based on the novel by Margaret Atwood. It is set in the totalitarian society of Gilead, where fertile women called Handmaids are forced into reproductive servitude."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which TV show is a British crime drama featuring a modern-day adaptation of Arthur Conan Doyle's detective stories?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Crown",
+        "Sherlock",
+        "Black Mirror",
+        "The Handmaid's Tale"
+      ],
+      "answer": "Sherlock",
+      "explanation": "Sherlock is a modern-day adaptation of Sir Arthur Conan Doyle's classic detective stories. The show features Benedict Cumberbatch as Sherlock Holmes and Martin Freeman as Dr. John Watson."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which TV show explores the reign of Queen Elizabeth II and the British royal family?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Crown",
+        "Stranger Things",
+        "Black Mirror",
+        "Downton Abbey"
+      ],
+      "answer": "The Crown",
+      "explanation": "The Crown is a historical drama series that follows the reign of Queen Elizabeth II and the events that shaped the second half of the 20th century. It provides an insight into the British royal family and their public and private lives."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which TV show features a post-apocalyptic world overrun by zombies?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Walking Dead",
+        "Breaking Bad",
+        "Stranger Things",
+        "Black Mirror"
+      ],
+      "answer": "The Walking Dead",
+      "explanation": "The Walking Dead is a post-apocalyptic horror TV show based on the comic book series of the same name. It follows a group of survivors as they navigate a world overrun by zombies, known as 'walkers.'"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which TV show is a period drama set in early 20th-century England?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Crown",
+        "Sherlock",
+        "Black Mirror",
+        "Downton Abbey"
+      ],
+      "answer": "Downton Abbey",
+      "explanation": "Downton Abbey is a period drama that takes place in the early 20th century and focuses on the lives of the aristocratic Crawley family and their servants. The show explores themes of class, social changes, and historical events."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which TV show is a fantasy drama series based on the book series 'A Song of Ice and Fire'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Crown",
+        "Game of Thrones",
+        "Stranger Things",
+        "Sherlock"
+      ],
+      "answer": "Game of Thrones",
+      "explanation": "Game of Thrones is a fantasy drama series known for its epic battles, political intrigue, and complex characters. It is based on the 'A Song of Ice and Fire' books by George R.R. Martin and is set in the fictional continents of Westeros and Essos."
+    }
+  ]
+}
