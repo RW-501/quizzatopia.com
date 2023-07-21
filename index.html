@@ -1157,8 +1157,8 @@ async function fetchQuizzesFromDB() {
 ratingUI ="";
 	      }else{
 
-         ratingUI =  "<p><b>Started:</b>"+ ${quizData.quizStartedCount || 0} +"</p><p><b>Finished:</b>"+
-		 ${quizData.quizFinishedCount || 0} +"</p>";
+         ratingUI =  "<p><b>Started:</b>"+ quizData.quizStartedCount  +"</p><p><b>Finished:</b>"+
+		 quizData.quizFinishedCount  +"</p>";
 	      }
     // Generate the HTML for each quiz
     const quizHtml = `
