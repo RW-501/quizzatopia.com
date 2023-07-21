@@ -360,13 +360,17 @@ populateDropdown();
     }
 */
     allDocuments.forEach((document) => {
+      const documentId = document.id; // Assuming the document object has an 'id' field to identify the document
+      delete document.id; // Remove the 'id' field from the document data before updating
+
       db.collection(YourRootCollection) // Replace "YourRootCollection" with your root collection name
+        .doc(documentId)
         .update(document)
         .then(() => {
-          log("Document uploaded successfully.");
+          log("Document updated successfully.");
         })
         .catch((error) => {
-          log("Error uploading document: " + error);
+          log("Error updating document: " + error);
         });
     });
 
