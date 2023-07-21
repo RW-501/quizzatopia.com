@@ -1,0 +1,151 @@
+{
+  "quizName": "The Jackson 5 Quiz",
+  "quizCode": "JACKSON52023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Music",
+  "quizDescription": "Test your knowledge about the legendary Motown group, The Jackson 5, and their iconic music!",
+  "quizTags": "Jackson 5, Motown, Music, Pop, Soul",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "The Jackson 5 achieved their first major success with the hit song ________.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "ABC",
+        "I Want You Back",
+        "Dancing Machine",
+        "Never Can Say Goodbye"
+      ],
+      "answer": "I Want You Back",
+      "explanation": "The Jackson 5 achieved their first major success with the hit song 'I Want You Back.' This song became one of their most popular and enduring hits."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What was the name of The Jackson 5's first studio album, released in 1969?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "ABC",
+        "Diana Ross Presents The Jackson 5",
+        "Third Album",
+        "Jackson 5 Christmas Album"
+      ],
+      "answer": "Diana Ross Presents The Jackson 5",
+      "explanation": "The Jackson 5's first studio album, released in 1969, was titled 'Diana Ross Presents The Jackson 5.' It featured hits like 'I Want You Back' and 'Who's Lovin' You.'"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which Jackson 5 song was a major hit and peaked at number one on the Billboard Hot 100 chart?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "ABC",
+        "I'll Be There",
+        "Never Can Say Goodbye",
+        "Dancing Machine"
+      ],
+      "answer": "I'll Be There",
+      "explanation": "'I'll Be There' was a major hit for The Jackson 5 and peaked at number one on the Billboard Hot 100 chart. It remains one of their most beloved songs."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Who was the lead singer of The Jackson 5?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Michael Jackson",
+        "Jermaine Jackson",
+        "Tito Jackson",
+        "Marlon Jackson"
+      ],
+      "answer": "Michael Jackson",
+      "explanation": "Michael Jackson was the lead singer of The Jackson 5. His exceptional talent and charisma as a young performer set the group on a path to stardom."
+    },
+    {
+      "questionNumber": 5,
+      "question": "The Jackson 5's music is often described as a blend of which genres?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pop and Rock",
+        "Pop and R&B",
+        "Rock and Soul",
+        "R&B and Soul"
+      ],
+      "answer": "Pop and R&B",
+      "explanation": "The Jackson 5's music is often described as a blend of Pop and R&B. Their catchy melodies and soulful vocals contributed to their widespread appeal."
+    },
+    {
+      "questionNumber": 6,
+      "question": "The Jackson 5's popular song 'ABC' was released in which year?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1970",
+        "1971",
+        "1972",
+        "1973"
+      ],
+      "answer": "1970",
+      "explanation": "The Jackson 5's popular song 'ABC' was released in 1970. It became one of their signature songs and showcased their youthful energy and talent."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which album by The Jackson 5 featured the hit song 'Never Can Say Goodbye'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Third Album",
+        "ABC",
+        "Maybe Tomorrow",
+        "Goin' Back to Indiana"
+      ],
+      "answer": "Maybe Tomorrow",
+      "explanation": "The Jackson 5's album 'Maybe Tomorrow' featured the hit song 'Never Can Say Goodbye.' The song became a classic in their discography."
+    },
+    {
+      "questionNumber": 8,
+      "question": "The Jackson 5 made numerous appearances on which TV show, further boosting their popularity?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Ed Sullivan Show",
+        "The Dick Van Dyke Show",
+        "The Carol Burnett Show",
+        "Soul Train"
+      ],
+      "answer": "Soul Train",
+      "explanation": "The Jackson 5 made numerous appearances on 'Soul Train,' a popular TV show that featured performances from various R&B and soul artists."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which Jackson 5 song is known for its catchy dance groove and became a hit on the dance floors?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "I Want You Back",
+        "Dancing Machine",
+        "ABC",
+        "Shake Your Body (Down to the Ground)"
+      ],
+      "answer": "Dancing Machine",
+      "explanation": "'Dancing Machine' is known for its catchy dance groove and became a hit on the dance floors. It showcased The Jackson 5's evolving musical style."
+    },
+    {
+      "questionNumber": 10,
+      "question": "The Jackson 5's hit song 'ABC' was written and produced by which Motown songwriter and producer?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Berry Gordy",
+        "Smokey Robinson",
+        "Lamont Dozier",
+        "The Corporation"
+      ],
+      "answer": "The Corporation",
+      "explanation": "The Jackson 5's hit song 'ABC' was written and produced by The Corporation, a team of Motown songwriters and producers."
+    }
+  ]
+}
