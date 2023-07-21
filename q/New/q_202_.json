@@ -1,0 +1,221 @@
+{
+  "quizName": "Game Show Quiz",
+  "quizCode": "GameShowQuiz2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge about popular game shows and their iconic moments!",
+  "quizTags": "Game Shows, TV Shows, Entertainment, Iconic Moments",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which game show features contestants answering general knowledge questions to win cash prizes?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Wheel of Fortune",
+        "Jeopardy!",
+        "The Price Is Right",
+        "Family Feud"
+      ],
+      "answer": "Jeopardy!",
+      "explanation": "Jeopardy! features contestants answering general knowledge questions to win cash prizes."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which game show revolves around spinning a large wheel to win cash and prizes?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Price Is Right",
+        "Wheel of Fortune",
+        "Deal or No Deal",
+        "Who Wants to Be a Millionaire"
+      ],
+      "answer": "Wheel of Fortune",
+      "explanation": "Wheel of Fortune revolves around spinning a large wheel to win cash and prizes."
+    },
+    {
+      "questionNumber": 3,
+      "question": "In which game show do contestants try to guess the retail prices of various products to win them?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Family Feud",
+        "The Price Is Right",
+        "Let's Make a Deal",
+        "Deal or No Deal"
+      ],
+      "answer": "The Price Is Right",
+      "explanation": "The Price Is Right features contestants trying to guess the retail prices of various products to win them."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which game show requires contestants to choose briefcases containing different cash amounts while deciding to take the banker's offer or continue?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Who Wants to Be a Millionaire",
+        "Deal or No Deal",
+        "Jeopardy!",
+        "Wheel of Fortune"
+      ],
+      "answer": "Deal or No Deal",
+      "explanation": "Deal or No Deal requires contestants to choose briefcases containing different cash amounts while deciding to take the banker's offer or continue."
+    },
+    {
+      "questionNumber": 5,
+      "question": "In which game show do two families compete to answer survey questions and earn points?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Wheel of Fortune",
+        "The Price Is Right",
+        "Jeopardy!",
+        "Family Feud"
+      ],
+      "answer": "Family Feud",
+      "explanation": "Family Feud features two families competing to answer survey questions and earn points."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which game show tests contestants' knowledge with multiple-choice questions and lifelines?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Who Wants to Be a Millionaire",
+        "Deal or No Deal",
+        "The Price Is Right",
+        "Wheel of Fortune"
+      ],
+      "answer": "Who Wants to Be a Millionaire",
+      "explanation": "Who Wants to Be a Millionaire tests contestants' knowledge with multiple-choice questions and lifelines."
+    },
+    {
+      "questionNumber": 7,
+      "question": "In which game show do contestants make deals with the host and have to choose between unknown prizes and cash offers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Deal or No Deal",
+        "Let's Make a Deal",
+        "Wheel of Fortune",
+        "The Price Is Right"
+      ],
+      "answer": "Let's Make a Deal",
+      "explanation": "Let's Make a Deal features contestants making deals with the host and choosing between unknown prizes and cash offers."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which game show involves solving word puzzles and spinning a wheel to win prizes?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Price Is Right",
+        "Who Wants to Be a Millionaire",
+        "Wheel of Fortune",
+        "Deal or No Deal"
+      ],
+      "answer": "Wheel of Fortune",
+      "explanation": "Wheel of Fortune involves solving word puzzles and spinning a wheel to win prizes."
+    },
+    {
+      "questionNumber": 9,
+      "question": "In which game show do contestants answer trivia questions in various categories?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Deal or No Deal",
+        "Jeopardy!",
+        "Who Wants to Be a Millionaire",
+        "The Price Is Right"
+      ],
+      "answer": "Jeopardy!",
+      "explanation": "Jeopardy! features contestants answering trivia questions in various categories."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which game show allows contestants to call a friend, ask the audience, and use 50:50 lifelines to answer questions and win money?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Wheel of Fortune",
+        "The Price Is Right",
+        "Who Wants to Be a Millionaire",
+        "Family Feud"
+      ],
+      "answer": "Who Wants to Be a Millionaire",
+      "explanation": "Who Wants to Be a Millionaire allows contestants to call a friend, ask the audience, and use 50:50 lifelines to answer questions and win money."
+    },
+    {
+      "questionNumber": 11,
+      "question": "In which game show do contestants compete in cooking challenges and are judged by professional chefs?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Chopped",
+        "Wheel of Fortune",
+        "Family Feud",
+        "The Price Is Right"
+      ],
+      "answer": "Chopped",
+      "explanation": "Chopped features contestants competing in cooking challenges and being judged by professional chefs."
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which game show requires contestants to pick the right briefcase from 26 cases, each with a cash value?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Price Is Right",
+        "Who Wants to Be a Millionaire",
+        "Deal or No Deal",
+        "Jeopardy!"
+      ],
+      "answer": "Deal or No Deal",
+      "explanation": "Deal or No Deal requires contestants to pick the right briefcase from 26 cases, each with a cash value."
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which game show features contestants trying to complete tasks while facing hilarious obstacles?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Wipeout",
+        "Wheel of Fortune",
+        "Family Feud",
+        "Jeopardy!"
+      ],
+      "answer": "Wipeout",
+      "explanation": "Wipeout features contestants trying to complete tasks while facing hilarious obstacles."
+    },
+    {
+      "questionNumber": 14,
+      "question": "In which game show do teams compete in a race around the world, completing challenges and facing roadblocks?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Survivor",
+        "The Amazing Race",
+        "Family Feud",
+        "Wheel of Fortune"
+      ],
+      "answer": "The Amazing Race",
+      "explanation": "The Amazing Race features teams competing in a race around the world, completing challenges and facing roadblocks."
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which game show features contestants answering questions and taking on physical challenges to win crystals?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Double Dare",
+        "The Crystal Maze",
+        "Family Feud",
+        "The Price Is Right"
+      ],
+      "answer": "The Crystal Maze",
+      "explanation": "The Crystal Maze features contestants answering questions and taking on physical challenges to win crystals."
+    }
+  ]
+}
