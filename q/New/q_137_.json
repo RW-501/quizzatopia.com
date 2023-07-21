@@ -1,0 +1,151 @@
+{
+  "quizName": "Metallica Quiz",
+  "quizCode": "METALLICA2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Music",
+  "quizDescription": "Test your knowledge about the iconic band Metallica and their contribution to the world of heavy metal!",
+  "quizTags": "Metallica, Music, Heavy Metal, Rock",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which member of Metallica is the lead vocalist and rhythm guitarist?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lars Ulrich",
+        "Kirk Hammett",
+        "Robert Trujillo",
+        "James Hetfield"
+      ],
+      "answer": "James Hetfield",
+      "explanation": "James Hetfield is the lead vocalist and rhythm guitarist of Metallica. He co-founded the band and is one of its main songwriters."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which Metallica album features the hit songs 'Enter Sandman' and 'The Unforgiven'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Master of Puppets",
+        "Ride the Lightning",
+        "Metallica (The Black Album)",
+        "...And Justice for All"
+      ],
+      "answer": "Metallica (The Black Album)",
+      "explanation": "The album 'Metallica (The Black Album)' features hit songs like 'Enter Sandman' and 'The Unforgiven.' It was released in 1991 and became one of their most successful albums."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which Metallica song is known for its fast-paced guitar riff and iconic solo by Kirk Hammett?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Fade to Black",
+        "One",
+        "For Whom the Bell Tolls",
+        "Seek & Destroy"
+      ],
+      "answer": "One",
+      "explanation": "The song 'One' is known for its fast-paced guitar riff and iconic solo by Kirk Hammett. It was released in 1988 and earned Metallica its first Grammy Award."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which Metallica album features the instrumental track 'Orion'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kill 'Em All",
+        "...And Justice for All",
+        "Master of Puppets",
+        "Ride the Lightning"
+      ],
+      "answer": "Master of Puppets",
+      "explanation": "The album 'Master of Puppets' features the instrumental track 'Orion.' It is known for its complex musical arrangement and showcases the band's musical prowess."
+    },
+    {
+      "questionNumber": 5,
+      "question": "In what year was Metallica formed?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1981",
+        "1983",
+        "1985",
+        "1987"
+      ],
+      "answer": "1981",
+      "explanation": "Metallica was formed in 1981 in Los Angeles, California. The founding members were James Hetfield, Lars Ulrich, Dave Mustaine, and Ron McGovney."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which Metallica album features the anti-war song 'Disposable Heroes'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Load",
+        "Reload",
+        "...And Justice for All",
+        "Kill 'Em All"
+      ],
+      "answer": "...And Justice for All",
+      "explanation": "The album '...And Justice for All' features the anti-war song 'Disposable Heroes.' It was released in 1988 and is known for its socially conscious themes."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which member of Metallica is the drummer and co-founder of the band?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kirk Hammett",
+        "James Hetfield",
+        "Robert Trujillo",
+        "Lars Ulrich"
+      ],
+      "answer": "Lars Ulrich",
+      "explanation": "Lars Ulrich is the drummer and co-founder of Metallica. He played a pivotal role in forming the band along with James Hetfield."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which Metallica album features the song 'For Whom the Bell Tolls'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ride the Lightning",
+        "Master of Puppets",
+        "Metallica (The Black Album)",
+        "...And Justice for All"
+      ],
+      "answer": "Ride the Lightning",
+      "explanation": "The album 'Ride the Lightning' features the song 'For Whom the Bell Tolls.' It was released in 1984 and marked Metallica's growing success in the metal community."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which Metallica album features the ballad 'Nothing Else Matters'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "...And Justice for All",
+        "Load",
+        "Reload",
+        "Metallica (The Black Album)"
+      ],
+      "answer": "Metallica (The Black Album)",
+      "explanation": "The album 'Metallica (The Black Album)' features the ballad 'Nothing Else Matters.' The song became one of Metallica's most popular and enduring tracks."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which Metallica album is known for its complex instrumental track 'Dyers Eve'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Load",
+        "Reload",
+        "...And Justice for All",
+        "Master of Puppets"
+      ],
+      "answer": "...And Justice for All",
+      "explanation": "The album '...And Justice for All' is known for its complex instrumental track 'Dyers Eve.' The song addresses the death of James Hetfield's mother and showcases the band's musical skills."
+    }
+  ]
+}
