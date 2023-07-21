@@ -52,16 +52,22 @@
       "explanation": "Nurses play a crucial role in providing direct patient care, working with other healthcare professionals to develop treatment plans, and administering medications as prescribed by doctors.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 4,
-      "question": "How do you ensure patient safety in a healthcare setting?",
-      "imageURL": "",
-      "questionType": "Open Text",
-      "options": [],
-      "answer": "The answer should demonstrate the ability to follow safety protocols and monitor patients closely. For example, 'To ensure patient safety, I would follow established safety protocols and guidelines in all patient care activities. I would also conduct regular patient assessments and closely monitor any changes in their condition. Additionally, I would communicate effectively with the healthcare team to address potential safety concerns and take appropriate preventive measures.'",
-      "explanation": "",
-      "difficulty": "Medium"
-    },
+{
+  "questionNumber": 4,
+  "question": "How do you ensure patient safety in a healthcare setting?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "The answer should demonstrate the ability to follow safety protocols and monitor patients closely. For example, 'To ensure patient safety, I would follow established safety protocols and guidelines in all patient care activities. I would also conduct regular patient assessments and closely monitor any changes in their condition. Additionally, I would communicate effectively with the healthcare team to address potential safety concerns and take appropriate preventive measures.'",
+    "Follow established safety protocols and guidelines in all patient care activities.",
+    "Conduct regular patient assessments and closely monitor any changes in their condition.",
+    "Communicate effectively with the healthcare team to address potential safety concerns.",
+    "Take appropriate preventive measures to ensure patient safety."
+  ],
+  "answer": "Follow established safety protocols and guidelines in all patient care activities. Conduct regular patient assessments and closely monitor any changes in their condition. Communicate effectively with the healthcare team to address potential safety concerns. Take appropriate preventive measures to ensure patient safety.",
+  "explanation": "Ensuring patient safety is a critical aspect of healthcare. Following established safety protocols and guidelines is essential to maintain a safe environment for patients. Conducting regular patient assessments and closely monitoring their condition allows healthcare providers to identify any changes or potential risks promptly. Effective communication with the healthcare team ensures that safety concerns are addressed collaboratively. Taking appropriate preventive measures helps prevent accidents or adverse events, ultimately ensuring the well-being of patients.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 5,
       "question": "What is the significance of maintaining patient confidentiality?",
@@ -77,16 +83,22 @@
       "explanation": "Maintaining patient confidentiality is a legal and ethical requirement in healthcare. Respecting patient privacy helps build trust and fosters a positive patient-nurse relationship.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 6,
-      "question": "How do you handle a difficult or agitated patient?",
-      "imageURL": "",
-      "questionType": "Open Text",
-      "options": [],
-      "answer": "The answer should demonstrate the ability to remain calm and use effective communication techniques. For example, 'When dealing with a difficult or agitated patient, I would approach them with empathy and understanding. I would actively listen to their concerns and try to identify the root cause of their agitation. I would maintain a calm and composed demeanor, reassure the patient, and use appropriate communication techniques to de-escalate the situation. If necessary, I would involve the healthcare team to address the patient's needs effectively.'",
-      "explanation": "",
-      "difficulty": "Medium"
-    },
+   {
+  "questionNumber": 6,
+  "question": "How do you handle a difficult or agitated patient?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "The answer should demonstrate the ability to remain calm and use effective communication techniques. For example, 'When dealing with a difficult or agitated patient, I would approach them with empathy and understanding. I would actively listen to their concerns and try to identify the root cause of their agitation. I would maintain a calm and composed demeanor, reassure the patient, and use appropriate communication techniques to de-escalate the situation. If necessary, I would involve the healthcare team to address the patient's needs effectively.'",
+    "Approach the patient with empathy and understanding.",
+    "Actively listen to the patient's concerns and try to identify the root cause of their agitation.",
+    "Maintain a calm and composed demeanor.",
+    "Use appropriate communication techniques to de-escalate the situation."
+  ],
+  "answer": "Approach the patient with empathy and understanding. Actively listen to the patient's concerns and try to identify the root cause of their agitation. Maintain a calm and composed demeanor. Use appropriate communication techniques to de-escalate the situation.",
+  "explanation": "Dealing with a difficult or agitated patient requires a compassionate and composed approach. Approaching the patient with empathy and understanding helps build trust and rapport. Actively listening to their concerns allows you to comprehend the underlying reasons for their agitation. Maintaining a calm and composed demeanor prevents the situation from escalating further. Using appropriate communication techniques, such as reassurance and validation, can help de-escalate the patient's emotions. If necessary, involving the healthcare team ensures a collaborative effort to address the patient's needs effectively and promote a positive patient experience.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 7,
       "question": "What is the importance of hand hygiene in a healthcare setting?",
@@ -102,16 +114,22 @@
       "explanation": "Hand hygiene is critical in healthcare to prevent the spread of infections between patients and healthcare professionals. It is an essential practice in maintaining patient safety and reducing healthcare-associated infections.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 8,
-      "question": "What actions would you take in case of a medical emergency?",
-      "imageURL": "",
-      "questionType": "Open Text",
-      "options": [],
-      "answer": "The answer should demonstrate the ability to act promptly and efficiently in an emergency. For example, 'In case of a medical emergency, I would immediately assess the situation and prioritize patient safety. I would call for assistance from the healthcare team and follow established emergency protocols. If necessary, I would administer first aid or life-saving measures while waiting for the medical team to arrive. My focus would be on providing immediate care and support to the patient.'",
-      "explanation": "",
-      "difficulty": "Medium"
-    },
+ {
+  "questionNumber": 8,
+  "question": "What actions would you take in case of a medical emergency?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "The answer should demonstrate the ability to act promptly and efficiently in an emergency. For example, 'In case of a medical emergency, I would immediately assess the situation and prioritize patient safety. I would call for assistance from the healthcare team and follow established emergency protocols. If necessary, I would administer first aid or life-saving measures while waiting for the medical team to arrive. My focus would be on providing immediate care and support to the patient.'",
+    "Immediately assess the situation and prioritize patient safety.",
+    "Call for assistance from the healthcare team and follow established emergency protocols.",
+    "Administer first aid or life-saving measures while waiting for the medical team to arrive.",
+    "Provide immediate care and support to the patient in a medical emergency."
+  ],
+  "answer": "Immediately assess the situation and prioritize patient safety. Call for assistance from the healthcare team and follow established emergency protocols. Administer first aid or life-saving measures while waiting for the medical team to arrive. Provide immediate care and support to the patient in a medical emergency.",
+  "explanation": "Handling a medical emergency requires prompt and efficient actions to ensure patient safety and well-being. Immediately assessing the situation helps determine the severity of the emergency and the necessary course of action. Prioritizing patient safety is paramount during the emergency response. Calling for assistance from the healthcare team ensures that additional resources are available to manage the situation effectively. Following established emergency protocols ensures a standardized and organized response. If necessary, administering first aid or life-saving measures can stabilize the patient's condition until the medical team arrives. Providing immediate care and support helps instill confidence and comfort in the patient during a critical time.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 9,
       "question": "What is the role of a nurse in patient education?",
@@ -127,36 +145,37 @@
       "explanation": "Nurses are instrumental in patient education. They provide patients with essential information about their medical conditions, treatment plans, medications, and self-care instructions to empower patients in managing their health.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 10,
-      "question": "How do you handle a situation where a patient refuses treatment?",
-      "imageURL": "",
-      "questionType": "Open Text",
-      "options": [],
-      "answer": "The answer should demonstrate the ability to respect patient autonomy while ensuring informed decision-making. For example, 'If a patient refuses treatment, I would first listen attentively to their concerns and reasons for refusal. I would provide them with additional information about the treatment, its benefits, and potential risks. I would respect the patient's autonomy and right to make informed decisions about their care. If the refusal persists, I would document the patient's decision and involve the healthcare team to explore alternative options.'",
-      "explanation": "",
-      "difficulty": "Medium"
-    },
-    {
-      "questionNumber": 11,
-      "question": "How do you ensure accurate documentation in patient records?",
-      "imageURL": "",
-      "questionType": "Open Text",
-      "options": [],
-      "answer": "The answer should demonstrate the ability to maintain meticulous and accurate records. For example, 'To ensure accurate documentation in patient records, I would be meticulous in recording all relevant information, including patient assessments, treatments, medications, and any changes in their condition. I would follow the facility's documentation guidelines and avoid making assumptions or leaving gaps in the records. Accurate documentation is crucial for continuity of care and communication among the healthcare team.'",
-      "explanation": "",
-      "difficulty": "Medium"
-    },
-    {
-      "questionNumber": 12,
-      "question": "What steps would you take to prevent medication errors?",
-      "imageURL": "",
-      "questionType": "Open Text",
-      "options": [],
-      "answer": "The answer should demonstrate the ability to follow medication administration protocols and double-check medication orders. For example, 'To prevent medication errors, I would follow the five rights of medication administration - right patient, right medication, right dose, right route, and right time. I would verify the patient's identity before administering any medication and cross-check the medication order with the patient's medical record. If any discrepancies are found, I would immediately report them to the healthcare team. Additionally, I would stay updated with medication safety guidelines and best practices.'",
-      "explanation": "",
-      "difficulty": "Medium"
-    },
+ {
+  "questionNumber": 10,
+  "question": "How do you handle a situation where a patient refuses treatment?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "The answer should demonstrate the ability to respect patient autonomy while ensuring informed decision-making. For example, 'If a patient refuses treatment, I would first listen attentively to their concerns and reasons for refusal. I would provide them with additional information about the treatment, its benefits, and potential risks. I would respect the patient's autonomy and right to make informed decisions about their care. If the refusal persists, I would document the patient's decision and involve the healthcare team to explore alternative options.'",
+    "Listen attentively to the patient's concerns and reasons for refusal.",
+    "Provide the patient with additional information about the treatment, its benefits, and potential risks.",
+    "Respect the patient's autonomy and right to make informed decisions about their care.",
+    "Document the patient's decision and involve the healthcare team to explore alternative options."
+  ],
+  "answer": "Listen attentively to the patient's concerns and reasons for refusal. Provide the patient with additional information about the treatment, its benefits, and potential risks. Respect the patient's autonomy and right to make informed decisions about their care. Document the patient's decision and involve the healthcare team to explore alternative options.",
+  "explanation": "Respecting patient autonomy is essential in healthcare, and handling a patient's refusal of treatment requires sensitivity and understanding. Listening attentively to the patient's concerns and reasons for refusal helps you comprehend their perspective. Providing additional information about the treatment allows the patient to make an informed decision about their care. Respecting the patient's autonomy means honoring their right to decide what happens to their body. Documenting the patient's decision ensures that their refusal is documented in their medical record. Involving the healthcare team helps explore alternative options that align with the patient's preferences and health needs.",
+  "difficulty": "Medium"
+},{
+  "questionNumber": 11,
+  "question": "How do you ensure accurate documentation in patient records?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "The answer should demonstrate the ability to maintain meticulous and accurate records. For example, 'To ensure accurate documentation in patient records, I would be meticulous in recording all relevant information, including patient assessments, treatments, medications, and any changes in their condition. I would follow the facility's documentation guidelines and avoid making assumptions or leaving gaps in the records. Accurate documentation is crucial for continuity of care and communication among the healthcare team.'",
+    "Be meticulous in recording all relevant information, including patient assessments, treatments, medications, and any changes in their condition.",
+    "Follow the facility's documentation guidelines.",
+    "Avoid making assumptions or leaving gaps in the records.",
+    "Recognize that accurate documentation is crucial for continuity of care and communication among the healthcare team."
+  ],
+  "answer": "Be meticulous in recording all relevant information, including patient assessments, treatments, medications, and any changes in their condition. Follow the facility's documentation guidelines. Avoid making assumptions or leaving gaps in the records. Recognize that accurate documentation is crucial for continuity of care and communication among the healthcare team.",
+  "explanation": "Accurate documentation is a critical aspect of patient care, as it ensures that essential information is captured for continuity of care and effective communication among the healthcare team. Being meticulous in recording all relevant information helps provide a comprehensive view of the patient's health status. Following the facility's documentation guidelines ensures that documentation practices adhere to established standards. Avoiding assumptions or gaps in the records helps prevent misunderstandings or errors in patient care. Recognizing the significance of accurate documentation reinforces the importance of this responsibility in delivering high-quality healthcare services.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 13,
       "question": "What is the nurse's role in infection control?",
@@ -172,25 +191,37 @@
       "explanation": "Nurses are on the front lines of infection control. They follow strict protocols to prevent the spread of infections, including hand hygiene, using personal protective equipment (PPE), and implementing isolation precautions when necessary.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 14,
-      "question": "How do you handle end-of-life care and support for terminally ill patients?",
-      "imageURL": "",
-      "questionType": "Open Text",
-      "options": [],
-      "answer": "The answer should demonstrate the ability to provide compassionate end-of-life care. For example, 'In end-of-life care, I would prioritize the patient's comfort and dignity. I would communicate openly and honestly with the patient and their family, providing emotional support during this challenging time. I would ensure pain management and symptom control to keep the patient as comfortable as possible. Additionally, I would respect the patient's cultural and religious beliefs while providing care and support.'",
-      "explanation": "",
-      "difficulty": "Medium"
-    },
-    {
-      "questionNumber": 15,
-      "question": "How do you handle a situation where a patient or their family expresses dissatisfaction with the care provided?",
-      "imageURL": "",
-      "questionType": "Open Text",
-      "options": [],
-      "answer": "The answer should demonstrate the ability to address concerns and work towards resolution. For example, 'If a patient or their family expresses dissatisfaction with the care provided, I would first listen carefully to their concerns without becoming defensive. I would acknowledge their feelings and assure them that I take their feedback seriously. I would then work collaboratively with the healthcare team to identify any areas that need improvement and take appropriate steps to address the issues raised. My goal would be to resolve the situation to their satisfaction and maintain open communication throughout the process.'",
-      "explanation": "",
-      "difficulty": "Medium"
-    }
+{
+  "questionNumber": 14,
+  "question": "How do you handle end-of-life care and support for terminally ill patients?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "The answer should demonstrate the ability to provide compassionate end-of-life care. For example, 'In end-of-life care, I would prioritize the patient's comfort and dignity. I would communicate openly and honestly with the patient and their family, providing emotional support during this challenging time. I would ensure pain management and symptom control to keep the patient as comfortable as possible. Additionally, I would respect the patient's cultural and religious beliefs while providing care and support.'",
+    "Prioritize the patient's comfort and dignity in end-of-life care.",
+    "Communicate openly and honestly with the patient and their family, providing emotional support.",
+    "Ensure pain management and symptom control to keep the patient as comfortable as possible.",
+    "Respect the patient's cultural and religious beliefs while providing care and support."
+  ],
+  "answer": "Prioritize the patient's comfort and dignity in end-of-life care. Communicate openly and honestly with the patient and their family, providing emotional support. Ensure pain management and symptom control to keep the patient as comfortable as possible. Respect the patient's cultural and religious beliefs while providing care and support.",
+  "explanation": "End-of-life care requires a compassionate and patient-centered approach. Prioritizing the patient's comfort and dignity is fundamental to ensure a peaceful and respectful experience. Open and honest communication with the patient and their family helps foster trust and understanding during this emotionally challenging time. Ensuring pain management and symptom control helps alleviate suffering and enhance the patient's quality of life. Respecting the patient's cultural and religious beliefs is crucial to provide care that aligns with their values and preferences, promoting a personalized end-of-life experience.",
+  "difficulty": "Medium"
+},{
+  "questionNumber": 15,
+  "question": "How do you handle a situation where a patient or their family expresses dissatisfaction with the care provided?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "The answer should demonstrate the ability to address concerns and work towards resolution. For example, 'If a patient or their family expresses dissatisfaction with the care provided, I would first listen carefully to their concerns without becoming defensive. I would acknowledge their feelings and assure them that I take their feedback seriously. I would then work collaboratively with the healthcare team to identify any areas that need improvement and take appropriate steps to address the issues raised. My goal would be to resolve the situation to their satisfaction and maintain open communication throughout the process.'",
+    "Listen carefully to their concerns without becoming defensive.",
+    "Acknowledge their feelings and assure them that I take their feedback seriously.",
+    "Work collaboratively with the healthcare team to identify areas that need improvement.",
+    "Take appropriate steps to address the issues raised and resolve the situation to their satisfaction."
+  ],
+  "answer": "Listen carefully to their concerns without becoming defensive. Acknowledge their feelings and assure them that I take their feedback seriously. Work collaboratively with the healthcare team to identify areas that need improvement. Take appropriate steps to address the issues raised and resolve the situation to their satisfaction.",
+  "explanation": "Patient or family dissatisfaction with care is an opportunity for improvement and better patient outcomes. Listening carefully to their concerns without becoming defensive demonstrates empathy and a willingness to understand their perspective. Acknowledging their feelings validates their emotions and shows that their feedback is valued. Collaborating with the healthcare team allows for a comprehensive assessment of potential issues and a collective effort to address any shortcomings. Taking appropriate steps to address the issues raised and working towards resolution shows a commitment to providing quality care and a positive patient experience. Maintaining open communication throughout the process fosters trust and reassures the patient and their family that their well-being is a top priority.",
+  "difficulty": "Medium"
+}
+   
   ]
 }
