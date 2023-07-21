@@ -1,0 +1,161 @@
+{
+  "quizName": "Quiz on Famous Scientists",
+  "quizCode": "SC2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Science",
+  "quizDescription": "Test your knowledge about some of the world's most famous scientists!",
+  "quizTags": "Scientists, Science, History, Inventions",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who is known as the father of modern physics?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Albert Einstein",
+        "Isaac Newton",
+        "Galileo Galilei",
+        "Nikola Tesla"
+      ],
+      "answer": "Albert Einstein",
+      "explanation": "Albert Einstein is known as the father of modern physics for his groundbreaking contributions, including the theory of relativity.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which scientist formulated the laws of motion and universal gravitation?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Isaac Newton",
+        "Marie Curie",
+        "Charles Darwin",
+        "Thomas Edison"
+      ],
+      "answer": "Isaac Newton",
+      "explanation": "Isaac Newton formulated the laws of motion and universal gravitation, making significant contributions to classical physics.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Who discovered penicillin, the first antibiotic drug?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Alexander Fleming",
+        "Louis Pasteur",
+        "Marie Curie",
+        "Robert Koch"
+      ],
+      "answer": "Alexander Fleming",
+      "explanation": "Alexander Fleming discovered penicillin in 1928, which revolutionized medicine and saved countless lives.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which scientist proposed the theory of evolution by natural selection?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Charles Darwin",
+        "Gregor Mendel",
+        "Sigmund Freud",
+        "Alfred Wegener"
+      ],
+      "answer": "Charles Darwin",
+      "explanation": "Charles Darwin proposed the theory of evolution by natural selection, explaining the diversity of life on Earth.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Who is credited with the discovery of the double helix structure of DNA?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Rosalind Franklin",
+        "James Watson",
+        "Francis Crick",
+        "Gregor Mendel"
+      ],
+      "answer": "James Watson and Francis Crick",
+      "explanation": "James Watson and Francis Crick are credited with discovering the double helix structure of DNA, a crucial milestone in genetics.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which scientist is known for his theory of general relativity and famous equation E=mc^2?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Albert Einstein",
+        "Werner Heisenberg",
+        "Niels Bohr",
+        "Erwin Schrödinger"
+      ],
+      "answer": "Albert Einstein",
+      "explanation": "Albert Einstein is known for his theory of general relativity and the famous equation E=mc^2, which relates mass and energy.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Who is the scientist credited with discovering radioactivity?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Marie Curie",
+        "Max Planck",
+        "Enrico Fermi",
+        "Ernest Rutherford"
+      ],
+      "answer": "Marie Curie",
+      "explanation": "Marie Curie is credited with discovering radioactivity and was the first woman to win a Nobel Prize.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which scientist is known as the 'father of genetics' for his work with pea plants?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gregor Mendel",
+        "James Clerk Maxwell",
+        "Antoine Lavoisier",
+        "Carl Linnaeus"
+      ],
+      "answer": "Gregor Mendel",
+      "explanation": "Gregor Mendel is known as the 'father of genetics' for his pioneering work on the inheritance of traits using pea plants.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which scientist formulated the three laws of motion?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Isaac Newton",
+        "Albert Einstein",
+        "Galileo Galilei",
+        "Blaise Pascal"
+      ],
+      "answer": "Isaac Newton",
+      "explanation": "Isaac Newton formulated the three laws of motion, providing fundamental insights into classical mechanics.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Who is known for his theory of general relativity and won the Nobel Prize in Physics for his explanation of the photoelectric effect?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Albert Einstein",
+        "Werner Heisenberg",
+        "Niels Bohr",
+        "Erwin Schrödinger"
+      ],
+      "answer": "Albert Einstein",
+      "explanation": "Albert Einstein is known for his theory of general relativity and his explanation of the photoelectric effect, which contributed to the development of quantum mechanics.",
+      "difficulty": "Medium"
+    }
+  ]
+}
