@@ -1687,14 +1687,15 @@ function fetchQuizzesFromDB() {
       console.error("Error fetching quizzes:", error);
     });
 }
-window.addEventListener("load", function() {
+//window.addEventListener("load", function() {
+window.onload = function() {
 
 // Call the function to fetch and populate the quiz data
  fetchQuizzesFromDB();
 
-	
+	  }
 
-});
+//});
 
 	  
 const element = document.getElementById("discussionContainer");
