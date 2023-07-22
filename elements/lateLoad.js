@@ -1031,7 +1031,8 @@ function onAuthSuccess(userInfo) {
   saveUserInfoToFirestore(userInfo)
     .then(() => delay(500)) // Adjust the delay time as needed
     .then(() => {
-	      slideOut("loginPopup");
+	 //     slideOut("loginPopup");
+	    closePopup();
     })
     .catch(error => console.error(error));
 }
