@@ -1127,7 +1127,7 @@ async function fetchQuizzesFromDB(page = 1) {
       quizDifficulty: quizData.quizDifficultyDB || quizData.quizDifficulty,
       quizCreatedByDB: quizData.quizCreatedByDB,
       quizNameDB: quizData.quizNameDB,
-      quizTags: quizData.quizTagsDB || "",
+      quizTags: quizData.quizTagsDB || quizData.quizCategoryDB,
       quizLinkDB: quizData.quizLinkDB,
       quizStartedCount: quizData.quizStartedCount,
       quizFinishedCount: quizData.quizFinishedCount,
