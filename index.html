@@ -1090,6 +1090,7 @@ let lastVisibleDoc = null; // To keep track of the last visible document
 // Function to fetch quiz data from Firestore and update the HTML
 async function fetchQuizzesFromDB(page = 1) {
   const quizzesPerPage = 20; // Number of quizzes to fetch per page
+  const orderedQuerySnapshot = await db.collection('quizzes')
 
   // Build the query to fetch quizzes with ordering
   let query = db.collection('quizzes')
