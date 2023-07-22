@@ -1189,7 +1189,7 @@ fetchQuizzesFromDB();
 
 // Function to check if the user has scrolled to the bottom of the page
 function isScrollAtBottom() {
-  const containerHeight = quizContainer.clientHeight;
+  const containerHeight = quizContainer.clientHeight +100;
   const scrollOffset = quizContainer.scrollTop;
   const totalHeight = quizContainer.scrollHeight;
 
