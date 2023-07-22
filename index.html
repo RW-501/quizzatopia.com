@@ -1180,7 +1180,7 @@ ratingUI ="";
   if (page === 1) {
     document.getElementById('updated_Quizzez').innerHTML = "<h2>" + num + " New Quizzes</h2> " + html;
   } else {
-	  num = num * currentPage;
+	  num = currentPage * 20;
     document.getElementById('updated_Quizzez').innerHTML += html;
   }
 }
