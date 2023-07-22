@@ -1064,7 +1064,14 @@ font-size: 30px;
 </div>
 
 <script>
+function getTag(xxxx){
 
+console.log(`Tag: `+xxxx);
+
+
+}
+
+	
 	const ratingToStars = (rating) => {
   const filledStar = "<span>&#9733;</span>";
   const emptyStar = "<span>&#9734;</span>";
@@ -1120,6 +1127,7 @@ async function fetchQuizzesFromDB(page = 1) {
       quizDifficulty: quizData.quizDifficultyDB || quizData.quizDifficulty,
       quizCreatedByDB: quizData.quizCreatedByDB,
       quizNameDB: quizData.quizNameDB,
+      quizTags: quizData.quizTags,
       quizLinkDB: quizData.quizLinkDB,
       quizStartedCount: quizData.quizStartedCount,
       quizFinishedCount: quizData.quizFinishedCount,
@@ -1149,11 +1157,23 @@ ratingUI ="";
          ratingUI =  "<p><b>Started:</b>"+ quizData.quizStartedCount  +"</p><p><b>Finished:</b>"+
 		 quizData.quizFinishedCount  +"</p>";
 	      }
-    // Generate the HTML for each quiz
+
+	// Generate the HTML for tags if they exist in quizData
+let tagsUI = "";
+if (quizData.quizTags) {
+  const tagsArray = quizData.quizTags.split(', ');
+
+  // Use map to iterate over the tagsArray and generate tag elements
+  const tagsElements = tagsArray.map((tag) => `<div class='tagEl' onclick="getTag('${tag}')">${tag}</div>`);
+
+  // Join the tag elements to create the tagsUI
+  tagsUI = `<span>${tagsElements.join('')}</span>`;
+}
     const quizHtml = `
       <div class="col-lg-12">
-        <a href="${quizData.quizLinkDB}">
           <div class="list-item box">
+	  
+	          <a href="${quizData.quizLinkDB}">
             <h5 class="list-title">#${num } ${quizData.quizNameDB}</h5>
             <div class="stars"> ${stars} </div>
             <div class="quiz-info">
@@ -1163,8 +1183,11 @@ ratingUI ="";
               <p><b>Questions:</b> ${quizData.numberOfQuestionsDB || 0}</p>
               <p><b>Quiz Code:</b> ${quizData.quizCodeDB || ""}</p>
             </div>
-          </div>
         </a>
+
+                 <div class="tagsUI"> ${tagsUI} </div>
+
+          </div>
       </div>
     `;
 
