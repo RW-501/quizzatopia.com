@@ -1,0 +1,151 @@
+{
+  "quizName": "501(c)(3) Organizations Quiz",
+  "quizCode": "501C3Quiz2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Business",
+  "quizDescription": "Test your knowledge about 501(c)(3) organizations and their role in the nonprofit sector!",
+  "quizTags": "501(c)(3), Nonprofit, Tax-Exempt, Charitable Organizations",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does the term '501(c)(3)' refer to?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A section of the U.S. Internal Revenue Code",
+        "A type of nonprofit organization",
+        "A specific tax form for charitable donations",
+        "A federal grant program for nonprofits"
+      ],
+      "answer": "A section of the U.S. Internal Revenue Code",
+      "explanation": "The term '501(c)(3)' refers to a specific section of the U.S. Internal Revenue Code that grants tax-exempt status to charitable organizations. These organizations are commonly referred to as 501(c)(3) organizations."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the primary purpose of a 501(c)(3) organization?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To promote political campaigns",
+        "To generate profits for shareholders",
+        "To engage in lobbying activities",
+        "To operate exclusively for charitable, religious, educational, or scientific purposes"
+      ],
+      "answer": "To operate exclusively for charitable, religious, educational, or scientific purposes",
+      "explanation": "The primary purpose of a 501(c)(3) organization is to operate exclusively for charitable, religious, educational, or scientific purposes. These organizations are dedicated to serving the public good and are prohibited from engaging in substantial lobbying activities or supporting political campaigns."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the key benefit of obtaining 501(c)(3) status for a nonprofit organization?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Access to government grants",
+        "Exemption from all taxes",
+        "Ability to pay employees higher salaries",
+        "Eligibility for private foundation grants"
+      ],
+      "answer": "Exemption from all taxes",
+      "explanation": "The key benefit of obtaining 501(c)(3) status is exemption from all taxes, including federal income tax, state income tax, and often local property tax. This tax-exempt status allows the organization to retain more of its revenue for its charitable activities."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which of the following activities is generally permissible for a 501(c)(3) organization?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Endorsing political candidates",
+        "Conducting extensive commercial activities",
+        "Engaging in religious proselytizing",
+        "Participating in nonpartisan educational activities"
+      ],
+      "answer": "Participating in nonpartisan educational activities",
+      "explanation": "501(c)(3) organizations are allowed to engage in nonpartisan educational activities that further their exempt purposes. However, they are strictly prohibited from endorsing political candidates or engaging in excessive commercial activities, as these could jeopardize their tax-exempt status."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which of the following is an example of a 501(c)(3) organization?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A for-profit corporation selling consumer electronics",
+        "A charitable foundation funding medical research",
+        "A political action committee (PAC) supporting a political candidate",
+        "A private school offering exclusive education services"
+      ],
+      "answer": "A charitable foundation funding medical research",
+      "explanation": "A charitable foundation funding medical research is an example of a 501(c)(3) organization. These organizations are dedicated to supporting charitable, scientific, and educational activities that benefit the public."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the maximum percentage of unrelated business income a 501(c)(3) organization can generate without risking its tax-exempt status?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "10%",
+        "25%",
+        "50%",
+        "75%"
+      ],
+      "answer": "25%",
+      "explanation": "A 501(c)(3) organization can generate up to 25% of its total revenue from unrelated business activities without jeopardizing its tax-exempt status. Any income beyond this limit could be subject to unrelated business income tax (UBIT)."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the process called when a 501(c)(3) organization transfers some or all of its activities to another nonprofit organization?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tax evasion",
+        "Charitable solicitation",
+        "Lobbying",
+        "Fiscal sponsorship"
+      ],
+      "answer": "Fiscal sponsorship",
+      "explanation": "The process of a 501(c)(3) organization transferring some or all of its activities to another nonprofit organization is called fiscal sponsorship. It allows a new or smaller organization to benefit from the tax-exempt status and administrative support of an established 501(c)(3) organization."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which federal agency is responsible for overseeing tax-exempt organizations, including 501(c)(3) organizations?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Federal Trade Commission (FTC)",
+        "Internal Revenue Service (IRS)",
+        "Securities and Exchange Commission (SEC)",
+        "Federal Communications Commission (FCC)"
+      ],
+      "answer": "Internal Revenue Service (IRS)",
+      "explanation": "The Internal Revenue Service (IRS) is responsible for overseeing tax-exempt organizations, including 501(c)(3) organizations. The IRS reviews and grants tax-exempt status, ensures compliance with tax regulations, and provides guidance to nonprofit organizations."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the annual filing requirement for most 501(c)(3) organizations to maintain their tax-exempt status?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Form 1040",
+        "Form 990",
+        "Form W-2",
+        "Form SS-4"
+      ],
+      "answer": "Form 990",
+      "explanation": "Most 501(c)(3) organizations are required to file Form 990 with the IRS annually to maintain their tax-exempt status. Form 990 provides detailed information about the organization's activities, finances, and governance."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Can donors to a 501(c)(3) organization claim a tax deduction for their contributions?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yes, all contributions are tax-deductible",
+        "No, 501(c)(3) organizations cannot accept donations",
+        "Only contributions above $500 are tax-deductible",
+        "Yes, within certain limits and rules set by the IRS"
+      ],
+      "answer": "Yes, within certain limits and rules set by the IRS",
+      "explanation": "Yes, donors to a 501(c)(3) organization can claim a tax deduction for their contributions, but there are limits and rules set by the IRS. Donors must itemize their deductions, and the deductibility of contributions depends on factors such as the donor's tax situation and the nature of the donation."
+    }
+  ]
+}
