@@ -1,6 +1,3 @@
-Certainly! Let's create a quiz focused on "C2B (Consumer-to-Business)" in JSON format with multiple-choice questions:
-
-```json
 {
   "quizName": "C2B (Consumer-to-Business) Quiz",
   "quizCode": "C2B2023",
@@ -8,7 +5,7 @@ Certainly! Let's create a quiz focused on "C2B (Consumer-to-Business)" in JSON f
   "quizCategory": "Business",
   "quizDescription": "Test your knowledge about the Consumer-to-Business (C2B) model and its applications in the business world!",
   "quizTags": "C2B, Consumer-to-Business, Business, E-commerce",
-  "numberOfQuestions": 5,
+  "numberOfQuestions": 15,
   "questions": [
     {
       "questionNumber": 1,
@@ -79,6 +76,146 @@ Certainly! Let's create a quiz focused on "C2B (Consumer-to-Business)" in JSON f
       ],
       "answer": "Startups and small businesses",
       "explanation": "Startups and small businesses are more likely to benefit from the C2B model as it allows them to access a diverse pool of products and services without the need for extensive supply chain management. This can help startups and small businesses to find cost-effective solutions and unique offerings to differentiate themselves in the market."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the primary difference between C2B and B2C models?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "C2B involves businesses selling products to consumers, while B2C involves consumers selling products to businesses",
+        "C2B is exclusively for digital products, while B2C is for physical products",
+        "C2B operates in a global market, while B2C is limited to a local market",
+        "C2B requires consumers to have a business license, while B2C does not have such requirements"
+      ],
+      "answer": "C2B involves businesses selling products to consumers, while B2C involves consumers selling products to businesses",
+      "explanation": "In the C2B model, businesses are the buyers, and individual consumers are the sellers offering products or services to those businesses. In contrast, the B2C model involves businesses selling products directly to individual consumers."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which of the following is an example of a C2B platform?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Amazon",
+        "eBay",
+        "Upwork",
+        "Alibaba"
+      ],
+      "answer": "Upwork",
+      "explanation": "Upwork is an example of a C2B platform where individual freelancers (consumers) offer their services to businesses (clients) seeking specific projects or tasks to be completed."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What role do online reviews and ratings play in the C2B model?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Online reviews and ratings are not relevant in the C2B model",
+        "They are used by businesses to assess the financial stability of individual consumers",
+        "They help businesses to evaluate the quality of products and services offered by consumers",
+        "They are primarily used for marketing purposes by businesses"
+      ],
+      "answer": "They help businesses to evaluate the quality of products and services offered by consumers",
+      "explanation": "Online reviews and ratings are essential in the C2B model as they allow businesses to assess the quality and reputation of individual consumers offering products or services. Positive reviews can build trust, while negative reviews may raise concerns for businesses."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which of the following is an example of a C2B payment model?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Paying rent to a landlord",
+        "A consumer receiving payment for renting out their property on a short-term rental platform",
+        "Purchasing groceries from a supermarket",
+        "A business paying its suppliers for raw materials"
+      ],
+      "answer": "A consumer receiving payment for renting out their property on a short-term rental platform",
+      "explanation": "A consumer receiving payment for renting out their property on a short-term rental platform exemplifies the C2B payment model, where businesses (renters or users) pay individual consumers for using their products or services."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the main reason why businesses might choose to adopt the C2B model?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To reduce consumer choices and streamline offerings",
+        "To focus solely on business-to-business transactions",
+        "To engage in direct competition with other businesses",
+        "To access unique products or services offered by consumers"
+      ],
+      "answer": "To access unique products or services offered by consumers",
+      "explanation": "Businesses might choose to adopt the C2B model to access unique and diverse products or services offered by individual consumers. This allows businesses to find innovative offerings that can differentiate them in the market and cater to niche demands."
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which technology has played a significant role in the growth of the C2B model?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Social media platforms",
+        "Television advertising",
+        "Traditional print media",
+        "Landline telephones"
+      ],
+      "answer": "Social media platforms",
+      "explanation": "Social media platforms have played a significant role in the growth of the C2B model. They provide a space where individual consumers can showcase their products or services to businesses and a wide audience, enabling more efficient and direct communication between the two parties."
+    },
+    {
+      "questionNumber": 12,
+      "question": "In the C2B model, how is the pricing of products or services typically determined?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pricing is set by individual consumers without any market research",
+        "Pricing is based on the business's production cost and profit margin",
+        "Pricing is solely determined by consumer demand",
+        "Pricing is negotiated between the business and the consumer"
+      ],
+      "answer": "Pricing is negotiated between the business and the consumer",
+      "explanation": "In the C2B model, pricing is often negotiated between the business and the individual consumer offering the product or service. Since each offering may be unique, the pricing can be influenced by factors such as demand, quality, and the specific requirements of the business."
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which legal aspect should businesses consider when engaging in the C2B model?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Consumer privacy laws",
+        "Antitrust laws",
+        "Taxation regulations for businesses",
+        "International trade agreements"
+      ],
+      "answer": "Consumer privacy laws",
+      "explanation": "Businesses should consider consumer privacy laws when engaging in the C2B model. Since individual consumers may share personal information or data while offering their products or services, businesses must ensure compliance with privacy regulations to protect consumer information."
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which of the following statements is true regarding the C2B model?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "It is a relatively new concept with limited applications",
+        "It is exclusively used in the financial industry",
+        "It is only applicable to e-commerce businesses",
+        "It can be applied in various industries and business types"
+      ],
+      "answer": "It can be applied in various industries and business types",
+      "explanation": "The C2B model is versatile and can be applied in various industries and business types. It is not limited to a specific sector and has seen applications in e-commerce, freelancing, service industries, and more."
+    },
+    {
+      "questionNumber": 15,
+      "question": "What potential risk should businesses be aware of when adopting the C2B model?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Limited exposure to consumer trends",
+        "Increased dependency on traditional supply chains",
+        "Difficulty in managing business-to-business transactions",
+        "Reliance on individual consumers' reliability and credibility"
+      ],
+      "answer": "Reliance on individual consumers' reliability and credibility",
+      "explanation": "One potential risk of adopting the C2B model is the reliance on individual consumers' reliability and credibility. Since businesses source products or services directly from consumers, they need to trust that the offerings are of high quality and delivered as promised."
     }
   ]
 }
