@@ -1131,7 +1131,7 @@ async function fetchQuizzesFromDB(page = 1) {
 	
 
   // Initialize the HTML string
-  let html = ' <h2>New Quizzes</h2>';
+  let html = ' ';
   let num = 0;
 
   // Iterate over each quiz item in the combined dataset
@@ -1178,21 +1178,25 @@ ratingUI ="";
 
   // Update the quizContainer with the generated HTML
   if (page === 1) {
-    document.getElementById('updated_Quizzez').innerHTML = "<h2>" + num * currentPage + "<h2> " + html;
+    document.getElementById('updated_Quizzez').innerHTML = "<h2>" + num + " New Quizzes</h2> " + html;
   } else {
+	  num = num * currentPage;
     document.getElementById('updated_Quizzez').innerHTML += html;
   }
 }
+window.onload = function() {
 
 // Call the function to fetch and populate the quiz data for the first page
 fetchQuizzesFromDB();
-
+}
+	
 // Function to check if the user has scrolled to the bottom of the page
 function isScrollAtBottom() {
   const containerHeight = quizContainer.clientHeight +100;
   const scrollOffset = quizContainer.scrollTop;
   const totalHeight = quizContainer.scrollHeight;
-
+console.log(`num: ${num}`);
+	
 		     //console.log(`containerHeight: ${containerHeight}`);
 		      //console.log(`scrollOffset: ${scrollOffset}`);
 		      //console.log(`totalHeight: ${totalHeight}`);
