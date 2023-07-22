@@ -101,4 +101,141 @@
       "questionNumber": 7,
       "question": "Which indigenous civilization built the city of Machu Picchu in present-day Peru?",
       "imageURL": "",
-     
+"questionType": "Multiple Choice",
+"options": [
+"Inca",
+"Maya",
+"Aztec",
+"Moche"
+],
+"answer": "Inca",
+"explanation": "The Inca civilization built the city of Machu Picchu in present-day Peru. It is an iconic archaeological site and a UNESCO World Heritage Site.",
+"difficulty": "Medium"
+},
+{
+"questionNumber": 8,
+"question": "Who was the first Hispanic justice of the United States Supreme Court?",
+"imageURL": "",
+"questionType": "Multiple Choice",
+"options": [
+"Sonia Sotomayor",
+"Cesar Chavez",
+"Carlos R. Moreno",
+"Ruth Bader Ginsburg"
+],
+"answer": "Sonia Sotomayor",
+"explanation": "Sonia Sotomayor is the first Hispanic justice of the United States Supreme Court. She was appointed in 2009.",
+"difficulty": "Medium"
+},
+{
+"questionNumber": 9,
+"question": "Which Spanish conquistador conquered the Inca Empire in present-day Peru?",
+"imageURL": "",
+"questionType": "Multiple Choice",
+"options": [
+"Hernán Cortés",
+"Francisco Pizarro",
+"Pedro Álvares Cabral",
+"Christopher Columbus"
+],
+"answer": "Francisco Pizarro",
+"explanation": "Francisco Pizarro was the Spanish conquistador who conquered the Inca Empire in present-day Peru in the 16th century.",
+"difficulty": "Medium"
+},
+{
+"questionNumber": 10,
+"question": "Who was the first Hispanic woman to serve as a U.S. ambassador?",
+"imageURL": "",
+"questionType": "Multiple Choice",
+"options": [
+"Sonia Sotomayor",
+"Dolores Huerta",
+"Ellen Ochoa",
+"Mari Carmen Aponte"
+],
+"answer": "Mari Carmen Aponte",
+"explanation": "Mari Carmen Aponte was the first Hispanic woman to serve as a U.S. ambassador. She served as the U.S. Ambassador to El Salvador and the U.S. Ambassador to Honduras.",
+"difficulty": "Medium"
+},
+{
+"questionNumber": 11,
+"question": "Which Hispanic artist is known for his surrealist paintings, including 'The Persistence of Memory'?",
+"imageURL": "",
+"questionType": "Multiple Choice",
+"options": [
+"Pablo Picasso",
+"Diego Rivera",
+"Frida Kahlo",
+"Salvador Dalí"
+],
+"answer": "Salvador Dalí",
+"explanation": "Salvador Dalí, a Spanish artist, is known for his surrealist paintings, including 'The Persistence of Memory', which features melting clocks.",
+"difficulty": "Medium"
+},
+{
+"questionNumber": 12,
+"question": "Which Hispanic Nobel Prize-winning author wrote the novel 'One Hundred Years of Solitude'?",
+"imageURL": "",
+"questionType": "Multiple Choice",
+"options": [
+"Gabriel García Márquez",
+"Isabel Allende",
+"Julio Cortázar",
+"Pablo Neruda"
+],
+"answer": "Gabriel García Márquez",
+"explanation": "Gabriel García Márquez, a Colombian author, wrote the novel 'One Hundred Years of Solitude', a masterpiece of magical realism.",
+"difficulty": "Medium"
+},
+{
+"questionNumber": 13,
+"question": "Who was the first Hispanic person to travel to space?",
+"imageURL": "",
+"questionType": "Multiple Choice",
+"options": [
+"Ellen Ochoa",
+"Franklin Chang-Díaz",
+"Michael López-Alegría",
+"Carlos Noriega"
+],
+"answer": "Franklin Chang-Díaz",
+"explanation": "Franklin Chang-Díaz, a Costa Rican-American astronaut, was the first Hispanic person to travel to space. He flew on seven space shuttle missions.",
+"difficulty": "Medium"
+},
+{
+"questionNumber": 14,
+"question": "Who was the Mexican-American labor leader and civil rights activist who co-founded the National Farm Workers Association (NFWA), later known as the United Farm Workers (UFW)?",
+"imageURL": "",
+"questionType": "Multiple Choice",
+"options": [
+"Cesar Chavez",
+"Dolores Huerta",
+"Luis Valdez",
+"Eva Longoria"
+],
+"answer": "Cesar Chavez",
+"explanation": "Cesar Chavez was a Mexican-American labor leader and civil rights activist who co-founded the National Farm Workers Association (NFWA), which later became the United Farm Workers (UFW).",
+"difficulty": "Medium"
+},
+{
+"questionNumber": 15,
+"question": "Which Hispanic athlete is known as 'The Golden Boy' and won an Olympic gold medal in boxing?",
+"imageURL": "",
+"questionType": "Multiple Choice",
+"options": [
+"Oscar De La Hoya",
+"Rafael Nadal",
+"Lionel Messi",
+"Pele"
+],
+"answer": "Oscar De La Hoya",
+"explanation": "Oscar De La Hoya, a Mexican-American boxer, is known as 'The Golden Boy' and won an Olympic gold medal in boxing at the 1992 Barcelona Olympics.",
+"difficulty": "Medium"
+}
+]
+}
+
+
+
+
+
