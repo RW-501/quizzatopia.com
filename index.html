@@ -1188,12 +1188,12 @@ ratingUI ="";
 
 
 
-
-	  
+//quizData.quizTags
+	//  quizData.quizCategoryDB
 	// Generate the HTML for tags if they exist in quizData
 let tagsUI = "";
-if (quizData.quizTags) {
-  const tagsArray = quizData.quizTags.split(', ');
+if (quizData.quizTagsDB) {
+  const tagsArray = quizData.quizTagsDB.split(', ');
 
   // Use map to iterate over the tagsArray and generate tag elements
   const tagsElements = tagsArray.map((tag) => `<h4 class='tagEl' onclick="getTag('${tag}')">${tag}</h4>`);
