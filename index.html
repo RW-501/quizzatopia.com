@@ -1131,7 +1131,7 @@ async function fetchQuizzesFromDB(page = 1) {
 	
 
   // Initialize the HTML string
-  let html = ' Updated Quizzes</h2><p>';
+  let html = ' <h2>New Quizzes</h2>';
   let num = 0;
 
   // Iterate over each quiz item in the combined dataset
@@ -1154,7 +1154,7 @@ ratingUI ="";
       <div class="col-lg-12">
         <a href="${quizData.quizLinkDB}">
           <div class="list-item box">
-            <h5 class="list-title">#${num} ${quizData.quizNameDB}</h5>
+            <h5 class="list-title">#${num * currentPage} ${quizData.quizNameDB}</h5>
             <div class="stars"> ${stars} </div>
             <div class="quiz-info">
               <p><b>CreatedBy:</b> ${quizData.quizCreatedByDB || ""}</p>
@@ -1178,7 +1178,7 @@ ratingUI ="";
 
   // Update the quizContainer with the generated HTML
   if (page === 1) {
-    document.getElementById('updated_Quizzez').innerHTML = "<p><h2>" + num + " " + html;
+    document.getElementById('updated_Quizzez').innerHTML = "<h2>" + num * currentPage + "<h2> " + html;
   } else {
     document.getElementById('updated_Quizzez').innerHTML += html;
   }
@@ -1193,9 +1193,9 @@ function isScrollAtBottom() {
   const scrollOffset = quizContainer.scrollTop;
   const totalHeight = quizContainer.scrollHeight;
 
-		      console.log(`containerHeight: ${containerHeight}`);
-		      console.log(`scrollOffset: ${scrollOffset}`);
-		      console.log(`totalHeight: ${totalHeight}`);
+		     //console.log(`containerHeight: ${containerHeight}`);
+		      //console.log(`scrollOffset: ${scrollOffset}`);
+		      //console.log(`totalHeight: ${totalHeight}`);
 	
   return containerHeight + scrollOffset >= totalHeight;
 }
@@ -1204,7 +1204,7 @@ function isScrollAtBottom() {
 quizContainer.addEventListener('scroll', () => {
   if (isScrollAtBottom()) {
     currentPage++; // Increment the current page number
-	  	      console.log(`currentPage: ${currentPage}`);
+	  	    //  console.log(`currentPage: ${currentPage}`);
 
     fetchQuizzesFromDB(currentPage); // Fetch quizzes for the next page
   }
