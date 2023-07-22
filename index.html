@@ -1085,25 +1085,29 @@ font-size: 30px;
 
 const db = firebase.firestore();
 const quizContainer = document.getElementById('parent_Container');
-let currentPage = 1; // Initialize the current page to 1
+let lastVisibleDoc = null; // To keep track of the last visible document
 
 // Function to fetch quiz data from Firestore and update the HTML
 async function fetchQuizzesFromDB(page = 1) {
   const quizzesPerPage = 20; // Number of quizzes to fetch per page
-  const startIndex = (page - 1) * quizzesPerPage;
 
-  // Fetch the quizzes collection with ordering and pagination
-  const orderedQuerySnapshot = await db.collection('quizzes')
+  // Build the query to fetch quizzes with ordering
+  let query = db.collection('quizzes')
     .orderBy('quizCreatedDateDB', 'desc')
     .orderBy('quizRatingDB', 'desc')
     .orderBy('quizFinishedCount', 'desc')
     .orderBy('quizStartedCount', 'desc')
     .orderBy('quizNameDB', 'asc')
-    .limit(quizzesPerPage)
-    .offset(startIndex)
-    .get()
+    .limit(quizzesPerPage);
 
 
+if (lastVisibleDoc && page > 1) {
+    // Use startAfter() to get quizzes after the last visible document from the previous page
+    query = query.startAfter(lastVisibleDoc);
+  }
+
+  // Execute the query
+  const querySnapshot = await query.get();
 	
   // Fetch all the quizzes without any specific ordering
   const allQuizzesQuerySnapshot = await db.collection('quizzes').get();
@@ -1189,6 +1193,9 @@ ratingUI ="";
     html += quizHtml;
   });
 
+// Update the last visible document for pagination
+  const lastDoc = querySnapshot.docs[querySnapshot.docs.length - 1];
+  lastVisibleDoc = lastDoc;
 
   // Update the quizContainer with the generated HTML
   if (page === 1) {
@@ -1206,9 +1213,7 @@ function isScrollAtBottom() {
   const containerHeight = quizContainer.clientHeight;
   const scrollOffset = quizContainer.scrollTop;
   const totalHeight = quizContainer.scrollHeight;
- console.log(`containerHeight: ${containerHeight}`);
-		      console.log(`scrollOffset: ${scrollOffset}`);
-		      console.log(`totalHeight: ${totalHeight}`);
+
   return containerHeight + scrollOffset >= totalHeight;
 }
 
@@ -1218,8 +1223,7 @@ quizContainer.addEventListener('scroll', () => {
     currentPage++; // Increment the current page number
     fetchQuizzesFromDB(currentPage); // Fetch quizzes for the next page
   }
-});
-		     
+});     
 
 
 	
