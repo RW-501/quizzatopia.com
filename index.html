@@ -1081,7 +1081,7 @@ font-size: 30px;
   return filledStars + emptyStars;
 };
 
-
+var currentPage = 1;
 const db = firebase.firestore();
 const quizContainer = document.getElementById('parent_Container');
 let lastVisibleDoc = null; // To keep track of the last visible document
