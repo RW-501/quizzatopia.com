@@ -1178,9 +1178,9 @@ ratingUI ="";
 
   // Update the quizContainer with the generated HTML
   if (page === 1) {
-    document.getElementById('updated_Quizzez').innerHTML = "<h2>" + num + " New Quizzes</h2> " + html;
+    document.getElementById('updated_Quizzez').innerHTML = "<h2>" +  + " New Quizzes</h2> " + html;
   } else {
-	  num = currentPage * 20;
+	//  num = currentPage * 20;
     document.getElementById('updated_Quizzez').innerHTML += html;
   }
 }
