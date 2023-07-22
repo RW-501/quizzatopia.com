@@ -1080,6 +1080,7 @@ font-size: 30px;
 
   return filledStars + emptyStars;
 };
+  var num = 0;
 
 var currentPage = 1;
 const db = firebase.firestore();
@@ -1132,7 +1133,6 @@ async function fetchQuizzesFromDB(page = 1) {
 
   // Initialize the HTML string
   let html = ' ';
-  let num = 0;
 
   // Iterate over each quiz item in the combined dataset
   quizList.forEach((quizData) => {
@@ -1195,7 +1195,8 @@ function isScrollAtBottom() {
   const containerHeight = quizContainer.clientHeight +100;
   const scrollOffset = quizContainer.scrollTop;
   const totalHeight = quizContainer.scrollHeight;
-console.log(`num: ${num}`);
+	
+console.log(`num: `+num);
 	
 		     //console.log(`containerHeight: ${containerHeight}`);
 		      //console.log(`scrollOffset: ${scrollOffset}`);
