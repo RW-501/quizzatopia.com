@@ -1193,6 +1193,10 @@ function isScrollAtBottom() {
   const scrollOffset = quizContainer.scrollTop;
   const totalHeight = quizContainer.scrollHeight;
 
+		      console.log(`containerHeight: ${containerHeight}`);
+		      console.log(`scrollOffset: ${scrollOffset}`);
+		      console.log(`totalHeight: ${totalHeight}`);
+	
   return containerHeight + scrollOffset >= totalHeight;
 }
 
@@ -1200,6 +1204,8 @@ function isScrollAtBottom() {
 quizContainer.addEventListener('scroll', () => {
   if (isScrollAtBottom()) {
     currentPage++; // Increment the current page number
+	  	      console.log(`currentPage: ${currentPage}`);
+
     fetchQuizzesFromDB(currentPage); // Fetch quizzes for the next page
   }
 });
