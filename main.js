@@ -460,7 +460,7 @@ function viewDashboard() {
       // Show the login popup
      			
 openPopup();
-switchTab('login');
+//switchTab('login');
 
 	}
 }
