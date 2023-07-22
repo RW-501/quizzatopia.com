@@ -1082,7 +1082,6 @@ font-size: 30px;
 };
 
 
-
 const db = firebase.firestore();
 const quizContainer = document.getElementById('parent_Container');
 let lastVisibleDoc = null; // To keep track of the last visible document
@@ -1090,7 +1089,6 @@ let lastVisibleDoc = null; // To keep track of the last visible document
 // Function to fetch quiz data from Firestore and update the HTML
 async function fetchQuizzesFromDB(page = 1) {
   const quizzesPerPage = 20; // Number of quizzes to fetch per page
-  const orderedQuerySnapshot = await db.collection('quizzes')
 
   // Build the query to fetch quizzes with ordering
   let query = db.collection('quizzes')
@@ -1101,21 +1099,19 @@ async function fetchQuizzesFromDB(page = 1) {
     .orderBy('quizNameDB', 'asc')
     .limit(quizzesPerPage);
 
-
-if (lastVisibleDoc && page > 1) {
+  if (lastVisibleDoc && page > 1) {
     // Use startAfter() to get quizzes after the last visible document from the previous page
     query = query.startAfter(lastVisibleDoc);
   }
 
   // Execute the query
   const querySnapshot = await query.get();
-	
-  // Fetch all the quizzes without any specific ordering
-  const allQuizzesQuerySnapshot = await db.collection('quizzes').get();
 
-  // Combine the results from both queries into a single array
+  // Create an array to store quiz data
   const quizList = [];
-  orderedQuerySnapshot.forEach((doc) => {
+
+  // Loop through each document in the query result
+  querySnapshot.forEach((doc) => {
     const quizData = doc.data();
     const quizItem = {
       quizRatingDB: quizData.quizRatingDB || 0,
@@ -1132,25 +1128,7 @@ if (lastVisibleDoc && page > 1) {
     quizList.push(quizItem);
   });
 
-  allQuizzesQuerySnapshot.forEach((doc) => {
-    // Check if the quiz is not already included in the quizList array
-    if (!quizList.some((item) => item.quizCodeDB === doc.data().quizCodeDB)) {
-      const quizData = doc.data();
-      const quizItem = {
-      quizRatingDB: quizData.quizRatingDB || 0,
-      quizRatingCountDB: quizData.quizRatingCountDB || 0,
-      quizDifficulty: quizData.quizDifficultyDB || quizData.quizDifficulty,
-        quizCreatedByDB: quizData.quizCreatedByDB,
-        quizNameDB: quizData.quizNameDB,
-        quizLinkDB: quizData.quizLinkDB,
-        quizStartedCount: quizData.quizStartedCount,
-        quizFinishedCount: quizData.quizFinishedCount,
-        numberOfQuestionsDB: quizData.numberOfQuestionsDB,
-        quizCodeDB: quizData.quizCodeDB,
-      };
-      quizList.push(quizItem);
-    }
-  });
+	
 
   // Initialize the HTML string
   let html = ' Updated Quizzes</h2><p>';
@@ -1224,9 +1202,7 @@ quizContainer.addEventListener('scroll', () => {
     currentPage++; // Increment the current page number
     fetchQuizzesFromDB(currentPage); // Fetch quizzes for the next page
   }
-});     
-
-
+});
 	
 	
 	
