@@ -1191,9 +1191,14 @@ ratingUI ="";
 //quizData.quizTags
 	//  quizData.quizCategoryDB
 	// Generate the HTML for tags if they exist in quizData
+
 let tagsUI = "";
-if (quizData.quizTagsDB) {
-  const tagsArray = quizData.quizTagsDB.split(', ');
+if (quizData.quizTags) {
+  const tagsArray = quizData.quizTags.split(', ');
+  const maxTagsToShow = 3;
+
+  // Use slice to get at most maxTagsToShow number of tags
+  const tagsToShow = tagsArray.slice(0, maxTagsToShow);
 
   // Use map to iterate over the tagsArray and generate tag elements
   const tagsElements = tagsArray.map((tag) => `<h4 class='tagEl' onclick="getTag('${tag}')">${tag}</h4>`);
@@ -1201,8 +1206,6 @@ if (quizData.quizTagsDB) {
   // Join the tag elements to create the tagsUI
   tagsUI = `${tagsElements.join('')}`;
 }
-
-
 
 
 
