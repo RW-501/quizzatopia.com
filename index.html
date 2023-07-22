@@ -478,6 +478,22 @@ width: 750%;
     margin: 1%;
 }
 
+
+
+
+
+.tagsUI {
+    display: flex;
+    width: 100%;
+    padding: 2%;
+    justify-content: center;
+}
+
+.tagEl {
+    width: auto;
+    display: block;
+    padding: 1%;
+}
 		  
 </style>
 	  
@@ -1169,10 +1185,10 @@ if (quizData.quizTags) {
   const tagsArray = quizData.quizTags.split(', ');
 
   // Use map to iterate over the tagsArray and generate tag elements
-  const tagsElements = tagsArray.map((tag) => `<div class='tagEl' onclick="getTag('${tag}')">${tag}</div>`);
+  const tagsElements = tagsArray.map((tag) => `<h4 class='tagEl' onclick="getTag('${tag}')">${tag}</h4>`);
 
   // Join the tag elements to create the tagsUI
-  tagsUI = `<span>${tagsElements.join('')}</span>`;
+  tagsUI = `${tagsElements.join('')}`;
 }
 
 
