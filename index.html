@@ -1092,10 +1092,10 @@ async function fetchQuizzesFromDB(page = 1) {
 
   // Build the query to fetch quizzes with ordering
   let query = db.collection('quizzes')
-    .orderBy('quizCreatedDateDB', 'desc')
     .orderBy('quizRatingDB', 'desc')
     .orderBy('quizFinishedCount', 'desc')
     .orderBy('quizStartedCount', 'desc')
+    .orderBy('quizCreatedDateDB', 'desc')
     .orderBy('quizNameDB', 'asc')
     .limit(quizzesPerPage);
 
