@@ -283,68 +283,53 @@ console.log('userInfo main: ', userInfo);
   return userInfo;
 }
 
-
+// Global variables
 let pointsRewards;
+var userDashboard;
+var currentPagePath = window.location.pathname;
+console.log("currentPagePath:", currentPagePath);
 
-
-  var userDashboard;
-
-  var currentPagePath = window.location.pathname;
-    console.log("currentPagePath:", currentPagePath);
-
-	  let navbarPath, footerPath;
+let navbarPath, footerPath;
 
 // Function to fetch and insert HTML based on the page level
 function fetchAndInsertContent() {
-
+  // Determine the path of the navbar HTML based on the current page
   if (currentPagePath === '/' || currentPagePath === '/index.html') {
     navbarPath = './elements/navbar.html';
   } else {
     navbarPath = '/elements/navbar2.html';
-	  
   }
 
-	
-
+  // Fetch the navbar HTML and insert it into the page
   fetch(navbarPath)
     .then(response => response.text())
     .then(data => {
       document.querySelector('#navbar').innerHTML = data;
       initializeNavbarToggler();
     });
-
 }
-	
+
+// Function to initialize the navbar toggler and update user-related elements
 function initializeNavbarToggler() {
-       const loggedInDiv = document.getElementById('navLoggedin');
-    const navbarNav = document.querySelector('#navbarNav')
-	
-	navbarNav.classList.add('collapse');
+  const loggedInDiv = document.getElementById('navLoggedin');
+  const navbarNav = document.querySelector('#navbarNav');
+  navbarNav.classList.add('collapse');
 
-	const userInfo = getUserInfo();
-	
-    document.getElementById('profile-pic').src = userInfo.userProfilePic;
+  const userInfo = getUserInfo();
 
-    console.log('userInfo firebaseId:', userInfo.firebaseId);
+  // Set user profile picture and log the Firebase ID to the console
+  document.getElementById('profile-pic').src = userInfo.userProfilePic;
+  console.log('userInfo firebaseId:', userInfo.firebaseId);
 
-	  updateNavBar();
-	  displayUserInfo();
-	
-
-
+  // Update the navigation bar elements based on login status
+  updateNavBar();
+  displayUserInfo();
 }
 
-
-
-
-
-
-
-
+// Function to display user information fetched from local storage
 function displayUserInfo() {
   const userInfo = JSON.parse(localStorage.getItem('userInfo'));
 
-	
   const profilePicElement = document.getElementById('profile-pic');
   if (profilePicElement) {
     profilePicElement.src = userInfo.userProfilePic;
@@ -355,119 +340,85 @@ function displayUserInfo() {
     taglineElement.textContent = userInfo.userTagLine;
   }
 
+  userDashboard = document.getElementById("user-dashboard");
 
-
-
-	
-userDashboard = document.getElementById("user-dashboard");
-
-
-
-if (loggedIn === true && userDashboard !== null) {
-//  console.log("userDashboard !== null");
-  userDashboard.innerHTML = "Dashboard"; // Clear previous content and set to "Dashboard"
-} else {
-  if (userDashboard !== null) {
-
-    userDashboard.innerHTML = "Login"; // Clear previous content and set to "Login"
-  }
-}
-
-	
-
-}
-
-
-
-
-
-
-  function updateNavBar() {
-    // Check if user is logged in
-    if (loggedIn === true) {
-      // User is logged in
-      document.getElementById('navLoggedin').innerHTML = '<div onclick="logOutFunction()">Log Out</div>';
-	    
-	        var navLoggedinElement = document.getElementById('navLoggedin');
-      if (!navLoggedinElement) {
-        // Create the navLoggedin element if it doesn't exist
-        navLoggedinElement = document.createElement('div');
-        navLoggedinElement.id = 'navLoggedin';
-        // Append the new element to the appropriate parent element in your HTML markup
-        // For example, if it should be part of a navigation bar, find the parent element of the navigation bar and append it there.
-        var parentElement = document.getElementById('auth-buttons');
-        parentElement.appendChild(navLoggedinElement);
-      navLoggedinElement.innerHTML = '<div onclick="logOutFunction()">Log Out</div>';
-      }
-	       
-	    
-    } else {
-      // User is not logged in
- document.getElementById('navLoggedin').innerHTML = '<div onclick="viewDashboard();">Log In</div>';
-	        var navLoggedinElement = document.getElementById('navLoggedin');
-	    if (!navLoggedinElement) {
-        // Create the navLoggedin element if it doesn't exist
-        navLoggedinElement = document.createElement('div');
-        navLoggedinElement.id = 'navLoggedin';
-        // Append the new element to the appropriate parent element in your HTML markup
-        // For example, if it should be part of a navigation bar, find the parent element of the navigation bar and append it there.
-        var parentElement = document.getElementById('auth-buttons');
-        parentElement.appendChild(navLoggedinElement);
-
-      navLoggedinElement.innerHTML = '<div onclick="viewDashboard();">Log In</div>';
-
-      }
-	      
+  if (loggedIn === true && userDashboard !== null) {
+    userDashboard.innerHTML = "Dashboard"; // Clear previous content and set to "Dashboard"
+  } else {
+    if (userDashboard !== null) {
+      userDashboard.innerHTML = "Login"; // Clear previous content and set to "Login"
     }
-	
-
   }
- 
+}
 
- document.addEventListener('click', function(event) {
+// Function to update the navigation bar based on login status
+function updateNavBar() {
+  // Check if the user is logged in
+  if (loggedIn === true) {
+    // User is logged in, show logout button
+    document.getElementById('navLoggedin').innerHTML = '<div onclick="logOutFunction()">Log Out</div>';
+
+    var navLoggedinElement = document.getElementById('navLoggedin');
+    if (!navLoggedinElement) {
+      // Create the navLoggedin element if it doesn't exist
+      navLoggedinElement = document.createElement('div');
+      navLoggedinElement.id = 'navLoggedin';
+      // Append the new element to the appropriate parent element in your HTML markup
+      // For example, if it should be part of a navigation bar, find the parent element of the navigation bar and append it there.
+      var parentElement = document.getElementById('auth-buttons');
+      parentElement.appendChild(navLoggedinElement);
+      navLoggedinElement.innerHTML = '<div onclick="logOutFunction()">Log Out</div>';
+    }
+  } else {
+    // User is not logged in, show login button
+    document.getElementById('navLoggedin').innerHTML = '<div onclick="viewDashboard();">Log In</div>';
+
+    var navLoggedinElement = document.getElementById('navLoggedin');
+    if (!navLoggedinElement) {
+      // Create the navLoggedin element if it doesn't exist
+      navLoggedinElement = document.createElement('div');
+      navLoggedinElement.id = 'navLoggedin';
+      // Append the new element to the appropriate parent element in your HTML markup
+      // For example, if it should be part of a navigation bar, find the parent element of the navigation bar and append it there.
+      var parentElement = document.getElementById('auth-buttons');
+      parentElement.appendChild(navLoggedinElement);
+      navLoggedinElement.innerHTML = '<div onclick="viewDashboard();">Log In</div>';
+    }
+  }
+}
+
+// Event listener to close the navbar dropdown when clicking outside of it
+document.addEventListener('click', function(event) {
   const navbar = document.getElementById('navbar');
-    const navbarNav = document.querySelector('#navbarNav');
-	 if (!navbarNav.classList.contains('show')) {
+  const navbarNav = document.querySelector('#navbarNav');
+  if (!navbarNav.classList.contains('show')) {
     if (!navbar.contains(event.target)) {
-navbarNav.classList.remove('show'); 
+      navbarNav.classList.remove('show');
     }
   }
 });
 
+// Function to toggle the navbar
 function navbarToggler() {
   var navbarNav = document.querySelector('#navbarNav');
   navbarNav.classList.toggle('collapse');
 }
 
-
-
-
-// Call the function to fetch and insert the HTML based on the page level
+// Call the function to fetch and insert the HTML based on the page level when the DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
   fetchAndInsertContent();
-	 //   console.log('DOMContentLoaded 1296 :   ');
-
 });
 
-
-
-
+// Function to view the user dashboard or show the login popup
 function viewDashboard() {
- 
-	if (loggedIn === true) {		
-  window.location.href = '/user/';
-	}else{
-      // Show the login popup
-     			
-//openPopup();
-switchTab('login');
-
-	}
+  if (loggedIn === true) {
+    window.location.href = '/user/'; // Redirect to the user dashboard
+  } else {
+    // Show the login popup or switch to the login tab in the popup
+    // openPopup();
+    switchTab('login');
+  }
 }
-	
-
-
-
 
 
 
