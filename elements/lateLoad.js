@@ -511,7 +511,7 @@ window.signInAnonymously = function() {
               userCountry: '',
               userState: '',
               animationEnabled: true,
-              userIP: ipAddress,
+              userIP:  getIPAddress(),
               userLatitude: 0,
               userLongitude: 0,
               firebaseId: firebaseId,
@@ -661,6 +661,7 @@ window.signInWithGoogle = function () {
                 // Set the logged-in cookie
                 document.cookie = 'loggedIn=true';
 
+  loggedIn = true;
 
 
                 updateUserInfo(userInfo);
@@ -687,8 +688,8 @@ window.signInWithGoogle = function () {
               userQuizzesTaken: 0,
               userCountry: '',
               userState: '',
- animationEnabled: true,
-              userIP: ipAddress,
+              animationEnabled: true,
+              userIP:  getIPAddress(),
 		    userLatitude: 0,
               userLongitude: 0,
               firebaseId: firebaseId,
@@ -704,7 +705,7 @@ window.signInWithGoogle = function () {
                 // Set the logged-in cookie
                 document.cookie = 'loggedIn=true';
 
-
+  loggedIn = true;
 
                 updateUserInfo(userInfo);
 
@@ -914,8 +915,8 @@ window.createUserWithEmailAndPassword = function (email, password) {
         userCountry: '',
         userState: '',
         userLatitude: 0,
- animationEnabled: true,
-              userIP: ipAddress,
+              animationEnabled: true,
+              userIP:  getIPAddress(),
 	      userLongitude: 0,
         firebaseId: firebaseId,
         lastUpdated: new Date().getTime(),
