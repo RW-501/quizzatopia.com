@@ -1117,7 +1117,8 @@ console.log(`Tag: `+xxxx);
   var num = 0;
 
 var currentPage = 1;
-const db = firebase.firestore();
+	
+//const db = firebase.firestore();
 const quizContainer = document.getElementById('parent_Container');
 let lastVisibleDoc = null; // To keep track of the last visible document
 
@@ -1249,6 +1250,7 @@ if (quizData.quizTags) {
   }
 }
 window.onload = function() {
+console.log(`fetchQuizzesFromDB: `);
 
 // Call the function to fetch and populate the quiz data for the first page
 fetchQuizzesFromDB();
