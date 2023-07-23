@@ -1205,7 +1205,8 @@ function generateQuizHTML(quizList, page) {
 let tagsUI = "";
 if (quizData.quizTags) {
   // Check if quizTagsDB is already an array
-  const tagsArray = Array.isArray(quizData.quizTags) ? quizData.quizTags : quizData.quizTags.split(', ');
+  var  tagsArray = quizData.quizCategoryDB;
+	tagsArray += Array.isArray(quizData.quizTags) ? quizData.quizTags : quizData.quizTags.split(', '); 
   console.log(`tagsArray: ` + tagsArray);
 
   const maxTagsToShow = 3;
