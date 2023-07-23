@@ -1272,10 +1272,21 @@ async function getTag(tag) {
   let query = db.collection('quizzes').where('quizTagsDB', 'array-contains', tag);
 
   // Execute the query
-  const querySnapshotTag = await query.get();
+  let querySnapshotTag = await query.get();
 
   // Check if the query returned any documents
+  if (querySnapshotTag.empty) {
+
+   query = db.collection('quizzes').where('quizCategoryDB' ,"==", tag);
+
+  // Execute the query
+   querySnapshotTag = await query.get();
+
   if (!querySnapshotTag.empty) {
+	      // Handle the case when no quizzes are found with the provided tag.
+    console.log("No quizzes found with the provided tag.");
+  }
+  }else{
     // Convert the query snapshot to quizList using the function
     const quizListTag = convertSnapshotToQuizList(querySnapshotTag);
 
@@ -1285,10 +1296,7 @@ async function getTag(tag) {
     document.getElementById('updated_Quizzez').innerHTML = "";
     document.getElementById('updated_Quizzez').innerHTML += generatedHtmlTag;
     quizContainer.scrollTop = 0;
-  } else {
-    // Handle the case when no quizzes are found with the provided tag.
-    console.log("No quizzes found with the provided tag.");
-  }
+  } 
 }
 
 // Load quizzes on window load
