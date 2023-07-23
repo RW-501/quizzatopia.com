@@ -1141,6 +1141,8 @@ async function getTag(tag) {
     // Call the function to generate quiz HTML
     const generatedHtmlTag = generateQuizHTML(quizListTag, 1);
 
+	      document.getElementById('updated_Quizzez').innerHTML = "";
+
     document.getElementById('updated_Quizzez').innerHTML += generatedHtmlTag;
   } else {
     // Handle the case when no quizzes are found with the provided tag
