@@ -417,8 +417,13 @@ function viewDashboard() {
       console.log("test viewDashboard:");
 
     // Show the login popup or switch to the login tab in the popup
-     openPopup();
+   //  openPopup();
    // switchTab('login');
+
+      // Show the login popup
+     			slideIn("loginPopupBody");
+openPopup();switchTab('login');
+	  
   }
 }
 
