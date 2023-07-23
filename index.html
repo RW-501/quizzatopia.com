@@ -1160,7 +1160,6 @@ async function getTag(tag) {
 	// Function to convert Firestore query snapshot to quizList
 function convertSnapshotToQuizList(querySnapshot) {
   const quizList = [];
-  console.log(`querySnapshot: ` + querySnapshot);
 
   querySnapshot.forEach((doc) => {
     const quizData = doc.data();
@@ -1207,6 +1206,7 @@ let tagsUI = "";
 if (quizData.quizTags) {
   // Check if quizTagsDB is already an array
   const tagsArray = Array.isArray(quizData.quizTags) ? quizData.quizTags : quizData.quizTags.split(', ');
+  console.log(`tagsArray: ` + tagsArray);
 
   const maxTagsToShow = 3;
 
