@@ -1204,8 +1204,10 @@ function generateQuizHTML(quizList, page) {
 
 
 	    console.log(`quizData.quizTags: ` + quizData.quizTags);
+	    console.log(`quizData.quizCategoryDB: ` + quizData.quizCategoryDB);
+	    console.log(`quizData.quizTagsDB: ` + quizData.quizTagsDB);
 let tagsUI = "";
-if (quizData.quizTags || quizItem.quizCategoryDB) {
+if (quizData.quizTags || quizData.quizCategoryDB) {
   let tagsArray = [];
 
   if (typeof quizData.quizTags !== "undefined") {
@@ -1215,8 +1217,8 @@ if (quizData.quizTags || quizItem.quizCategoryDB) {
   console.log(`tagsArray: ` + tagsArray);
 
   // Use push to add quizData.quizCategoryDB to the array
-  if (quizItem.quizCategoryDB) {
-    tagsArray.push(quizItem.quizCategoryDB);
+  if (quizData.quizCategoryDB) {
+    tagsArray.push(quizData.quizCategoryDB);
   }
 
   console.log(`tagsArray 2: ` + tagsArray);
