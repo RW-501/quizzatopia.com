@@ -1156,6 +1156,7 @@ async function getTag(tag) {
 	// Function to convert Firestore query snapshot to quizList
 function convertSnapshotToQuizList(querySnapshot) {
   const quizList = [];
+  console.log(`querySnapshot: ` + querySnapshot);
 
   querySnapshot.forEach((doc) => {
     const quizData = doc.data();
