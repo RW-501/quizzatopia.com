@@ -1202,12 +1202,13 @@ if (quizData.quizTags) {
   // Use slice to get at most maxTagsToShow number of tags
   const tagsToShow = tagsArray.slice(0, maxTagsToShow);
 
-  // Use map to iterate over the tagsArray and generate tag elements
-  const tagsElements = tagsArray.map((tag) => `<h4 class='tagEl' onclick="getTag('${tag}')">${tag}</h4>`);
+  // Use map to iterate over the tagsToShow and generate tag elements
+  const tagsElements = tagsToShow.map((tag) => `<h4 class='tagEl' onclick="getTag('${tag}')">${tag}</h4>`);
 
   // Join the tag elements to create the tagsUI
   tagsUI = `${tagsElements.join('')}`;
 }
+
 
 
 
