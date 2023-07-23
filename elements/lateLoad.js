@@ -1049,28 +1049,29 @@ function SetupLoginBTNFunc(){
 	
 		
 	
-function onAuthSuccess(userInfo) {
-  checkUserInfoChanges();
-  loggedIn = true;
-  setLoggedInCookie();
+async function onAuthSuccess(userInfo) {
+  try {
+    checkUserInfoChanges();
+    loggedIn = true;
+    setLoggedInCookie();
 
-  console.log('Welcome, ' + userInfo.userName + '!');
+    console.log('Welcome, ' + userInfo.userName + '!');
 
-  updateNavBar();
-  displayUserInfo();
+    updateNavBar();
+    displayUserInfo();
 
-  // Add a delay using a promise
-  const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
-	
-  saveUserInfoToFirestore(userInfo)
-    .then(() => delay(500)) // Adjust the delay time as needed
-    .then(() => {
-	      slideOut("loginPopup");
-	    closePopup();
-    })
-    .catch(error => console.error(error));
+    // Add a delay using a promise
+    const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+    await saveUserInfoToFirestore(userInfo);
+    await delay(500); // Adjust the delay time as needed
+
+    slideOut("loginPopup");
+    closePopup();
+  } catch (error) {
+    console.error(error);
+  }
 }
-
 
 
 
