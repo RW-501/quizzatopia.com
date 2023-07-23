@@ -459,8 +459,8 @@ function viewDashboard() {
 	}else{
       // Show the login popup
      			
-openPopup();
-//switchTab('login');
+//openPopup();
+switchTab('login');
 
 	}
 }
