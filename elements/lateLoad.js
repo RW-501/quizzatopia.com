@@ -1064,9 +1064,9 @@ async function onAuthSuccess(userInfo) {
     const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
     await saveUserInfoToFirestore(userInfo);
-    await delay(500); // Adjust the delay time as needed
+    await delay(300); // Adjust the delay time as needed
 
-    slideOut("loginPopup");
+ //   slideOut("loginPopup");
     closePopup();
   } catch (error) {
     console.error(error);
