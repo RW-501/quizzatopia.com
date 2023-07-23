@@ -1125,29 +1125,26 @@ let lastVisibleDoc = null; // To keep track of the last visible document
 async function getTag(tag) {
   console.log(`Tag: ` + tag);
 
-  // Query for quizzes with 'tag' in 'quizTagsDB'
-  const queryTags = db.collection('quizzes')
+  let query = db.collection('quizzes')
     .where('quizTagsDB', 'array-contains', tag);
+	
+  // Execute the query
+  const querySnapshotTag = await query.get();
 
-  // Query for quizzes with 'tag' in 'quizCategoryDB'
-  const queryCategory = db.collection('quizzes')
-    .where('quizCategoryDB', 'array-contains', tag);
+  // Check if the query returned any documents
+  if (!querySnapshotTag.empty) {
+    // Convert the query snapshot to quizList using the function
+   const quizListTag = convertSnapshotToQuizList(querySnapshotTag);
 
-  // Execute both queries concurrently using Promise.all
-  const [querySnapshotTags, querySnapshotCategory] = await Promise.all([queryTags.get(), queryCategory.get()]);
+    // Call the function to generate quiz HTML
+    const generatedHtmlTag = generateQuizHTML(quizListTag, 1);
 
-  // Combine the two query snapshots
-  const combinedQuerySnapshot = {
-    docs: [...querySnapshotTags.docs, ...querySnapshotCategory.docs],
-  };
-
-  // Convert the merged query snapshot to quizList using the function
-  const quizListTag = convertSnapshotToQuizList(combinedQuerySnapshot);
-
-  // Call the function to generate quiz HTML
-  const generatedHtmlTag = generateQuizHTML(quizListTag, 1);
-
-  document.getElementById('updated_Quizzez').innerHTML += generatedHtmlTag;
+    document.getElementById('updated_Quizzez').innerHTML += generatedHtmlTag;
+  } else {
+    // Handle the case when no quizzes are found with the provided tag
+    console.log("No quizzes found with the provided tag.");
+  }
+	
 }
 
 
