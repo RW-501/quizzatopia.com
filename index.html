@@ -1201,17 +1201,23 @@ function generateQuizHTML(quizList, page) {
         quizData.quizFinishedCount + "</p>";
     }
 
-    let tagsUI = "";
-    if (quizData.quizTags) {
-      const tagsArray = quizData.quizTags.split(', ');
-      const maxTagsToShow = 3;
+let tagsUI = "";
+if (quizData.quizTags) {
+  // Check if quizTagsDB is already an array
+  const tagsArray = Array.isArray(quizData.quizTags) ? quizData.quizTags : quizData.quizTags.split(', ');
 
-      const tagsToShow = tagsArray.slice(0, maxTagsToShow);
+  const maxTagsToShow = 3;
 
-      const tagsElements = tagsToShow.map((tag) => `<h4 class='tagEl' onclick="getTag('${tag}')">${tag}</h4>`);
+  // Use slice to get at most maxTagsToShow number of tags
+  const tagsToShow = tagsArray.slice(0, maxTagsToShow);
 
-      tagsUI = `${tagsElements.join('')}`;
-    }
+  // Use map to iterate over the tagsToShow and generate tag elements
+  const tagsElements = tagsToShow.map((tag) => `<h4 class='tagEl' onclick="getTag('${tag}')">${tag}</h4>`);
+
+  // Join the tag elements to create the tagsUI
+  tagsUI = `${tagsElements.join('')}`;
+}
+
 
     const quizHtml = `
       <div class="col-lg-12">
