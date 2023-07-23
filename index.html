@@ -1120,21 +1120,23 @@ const db = firebase.firestore();
 const quizContainer = document.getElementById('parent_Container');
 let lastVisibleDoc = null; // To keep track of the last visible document
 
-
-	
+	/*
+DB: quizTagsDB
+"Alaska, Geography, States, USA"
+	*/
 async function getTag(tag) {
   console.log(`Tag: ` + tag);
 
   let query = db.collection('quizzes')
     .where('quizTagsDB', 'array-contains', tag);
-	
+
   // Execute the query
   const querySnapshotTag = await query.get();
 
   // Check if the query returned any documents
   if (!querySnapshotTag.empty) {
     // Convert the query snapshot to quizList using the function
-   const quizListTag = convertSnapshotToQuizList(querySnapshotTag);
+    const quizListTag = convertSnapshotToQuizList(querySnapshotTag);
 
     // Call the function to generate quiz HTML
     const generatedHtmlTag = generateQuizHTML(quizListTag, 1);
@@ -1144,8 +1146,8 @@ async function getTag(tag) {
     // Handle the case when no quizzes are found with the provided tag
     console.log("No quizzes found with the provided tag.");
   }
-	
 }
+
 
 
 
