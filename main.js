@@ -409,23 +409,6 @@ document.addEventListener('DOMContentLoaded', function() {
   fetchAndInsertContent();
 });
 
-// Function to view the user dashboard or show the login popup
-function viewDashboard() {
-  if (loggedIn === true) {
-    window.location.href = '/user/'; // Redirect to the user dashboard
-  } else {
-      console.log("test viewDashboard:");
-
-    // Show the login popup or switch to the login tab in the popup
-   //  openPopup();
-   // switchTab('login');
-
-      // Show the login popup
-     			slideIn("loginPopupBody");
-openPopup();switchTab('login');
-	  
-  }
-}
 
 
 
