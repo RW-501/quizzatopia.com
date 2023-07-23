@@ -1206,10 +1206,13 @@ let tagsUI = "";
 if (quizData.quizTags || quizData.quizCategoryDB) {
  // let tagsArray = quizData.quizCategoryDB || '';
   
-  var  tagsArray = quizData.quizCategoryDB +",";
-	tagsArray += Array.isArray(quizData.quizTags) ? quizData.quizTags : quizData.quizTags.split(', '); 
+	var tagsArray = Array.isArray(quizData.quizTags) ? quizData.quizTags : quizData.quizTags.split(', '); 
+	
   console.log(`tagsArray: ` + tagsArray);
-  
+	
+  tagsArray += quizData.quizCategoryDB +",";
+	
+  console.log(`tagsArray 2: ` + tagsArray);
 
 
   const maxTagsToShow = 3;
