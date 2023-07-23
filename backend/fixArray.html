@@ -109,6 +109,7 @@
       const logTextArea = document.getElementById('logTextArea');
       logTextArea.value += message + '\n';
     }
+const db = firebase.firestore();
 
     // Function to fetch all documents from the 'quizzes' collection
 async function fetchAllQuizzes() {
