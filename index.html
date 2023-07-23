@@ -1203,14 +1203,14 @@ function generateQuizHTML(quizList, page) {
     }
 
 let tagsUI = "";
-if (quizData.quizTags || quizData.quizCategoryDB) {
+if (quizData.quizTagsDB || quizData.quizCategoryDB) {
  // let tagsArray = quizData.quizCategoryDB || '';
   
-	var tagsArray = Array.isArray(quizData.quizTags) ? quizData.quizTags : quizData.quizTags.split(', '); 
+  var tagsArray = Array.isArray(quizData.quizTagsDB) ? quizData.quizTagsDB : quizData.quizTagsDB.split(', ');
 	
   console.log(`tagsArray: ` + tagsArray);
 	
-  tagsArray += quizData.quizCategoryDB +",";
+  tagsArray += " , " + quizData.quizCategoryDB +" , ";
 	
   console.log(`tagsArray 2: ` + tagsArray);
 
