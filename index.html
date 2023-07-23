@@ -1203,7 +1203,7 @@ function generateQuizHTML(quizList, page) {
     }
 
 let tagsUI = "";
-if (quizTags || quizData.quizCategoryDB) {
+if (quizData.quizTags || quizItem.quizCategoryDB) {
  // let tagsArray = quizData.quizCategoryDB || '';
   
   var tagsArray = Array.isArray(quizData.quizTagsDB) ? quizData.quizTagsDB : quizData.quizTagsDB.split(', ');
