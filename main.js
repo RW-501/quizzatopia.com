@@ -1,89 +1,4 @@
 
-function loadScreenFunc(){
-// Create the <style> element
-var styleElement = document.createElement("style");
-
-// Set the CSS styles
-var cssStyles = `
-  /* CSS styles for the overlay and loader */
-
-  html{
-width: 100% !important;
-  }
-  body{
-width: 100% !important;
-  }
-  
-  #overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-    z-index: 9999;
-  }
-
-  #loader {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 6px solid #aaaaaa;
-    border-top-color: #ff8c00;
-    animation: loader-spin 1s infinite linear;
-  }
-
-  @keyframes loader-spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-
-.btnFX .btn .category-image .btnMain .font-weight-bold .btnMainBottom .BottomCloseOptionsButton  .close      {
-  /* Default styles */
-
-  transition: background-color 0.3s ease;
-
-  /* Hover effect */
-  &:hover {
-    background-color: #ff0000;
-  }
-
-  /* Click effect */
-  &:active {
-    transform: scale(0.95);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  }
-
-  /* Custom animation */
-  animation: fade-in 0.5s ease-in-out forwards;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateX(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-
-
-
-    
-  }
-`;
-
 // Set the CSS code as the content of the <style> element
 styleElement.textContent = cssStyles;
 
@@ -128,6 +43,119 @@ function loadScreenFunc() {
 
 // Call the function to display the loading screen
 loadScreenFunc();
+
+// Function to convert images to low resolution
+function convertImagesToLowResolution() {
+  // Select all <img> elements on the page
+  const images = document.querySelectorAll('img');
+
+  // Iterate over each image
+  images.forEach(function(image) {
+    // Store the original source URL in a data attribute
+    image.dataset.originalSrc = image.src;
+
+    // Create a new <canvas> element
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+
+    // Set the canvas dimensions to match the image dimensions
+    canvas.width = image.width;
+    canvas.height = image.height;
+
+    // Create an ImageBitmap object from the original image
+    createImageBitmap(image)
+      .then(function(bitmap) {
+        // Draw the ImageBitmap on the canvas with lower resolution
+        context.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+
+        // Set the canvas image data as the new image source
+        image.src = canvas.toDataURL();
+
+        // Log the resolution value
+        console.log('Image is low resolution:', image.width, image.height);
+      })
+      .catch(function(error) {
+        console.error('Error converting image to low resolution:', error);
+      });
+  });
+}
+
+// Function to revert images back to normal resolution
+function revertImagesToNormalResolution() {
+  // Select all <img> elements on the page
+  const images = document.querySelectorAll('img');
+
+  // Iterate over each image
+  images.forEach(function(image) {
+    // Check if the image has a stored original source URL
+    if (image.dataset.originalSrc) {
+      // Set the original source URL back to the image
+      image.src = image.dataset.originalSrc;
+
+      // Clear the data attribute
+      delete image.dataset.originalSrc;
+
+      // Log the resolution value
+      console.log('Image is high resolution:', image.width, image.height);
+    }
+  });
+}
+
+// Call the function to convert images to low resolution when the page has finished loading
+window.onload = function() {
+  convertImagesToLowResolution();
+  console.log('Start high resolution: ???');
+};
+
+// Example usage to revert images back to normal resolution after some event
+// Call revertImagesToNormalResolution() when needed
+// For example, on a button click or after a certain time period
+setTimeout(function() {
+  revertImagesToNormalResolution();
+  console.log('End high resolution: ???');
+}, 5000);  // Revert after 5 seconds (adjust the duration as needed)
+
+// Function to set the loggedIn cookie with a 3-day expiration date
+function setLoggedInCookie() {
+  var expirationDate = new Date();
+  expirationDate.setDate(expirationDate.getDate() + 3);
+
+  document.cookie = "loggedIn=true; expires=" + expirationDate.toUTCString() + "; path=/";
+}
+
+// Function to get the value of a cookie by its name
+function getCookieValue(cookieName) {
+  const cookies = document.cookie.split(';');
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i].trim();
+    if (cookie.startsWith(cookieName + '=')) {
+      return cookie.substring(cookieName.length + 1);
+    }
+  }
+  return null;
+}
+
+// Check the value of the loggedIn cookie
+const cookieValue = getCookieValue('loggedIn');
+// console.log(cookieValue);
+
+var loggedIn;
+if (cookieValue === 'true') {
+  // User is logged in
+  console.log('User is logged in');
+  loggedIn = true;
+} else {
+  // User is not logged in
+  console.log('User is not logged in');
+  loggedIn = false;
+}
+
+// console.log('loggedIn:', loggedIn);
+
+
+
+
+
 
 // Function to convert images to low resolution
 function convertImagesToLowResolution() {
