@@ -414,9 +414,11 @@ function viewDashboard() {
   if (loggedIn === true) {
     window.location.href = '/user/'; // Redirect to the user dashboard
   } else {
+      console.log("test viewDashboard:");
+
     // Show the login popup or switch to the login tab in the popup
-    // openPopup();
-    switchTab('login');
+     openPopup();
+   // switchTab('login');
   }
 }
 
