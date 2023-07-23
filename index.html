@@ -1209,7 +1209,7 @@ if (quizData.quizTags || quizItem.quizCategoryDB) {
  // let tagsArray = quizData.quizCategoryDB || '';
   var tagsArray;
 
-	if(quizData.quizTags !== "undefined"){
+if (typeof quizData.quizTags !== "undefined") {
    tagsArray = Array.isArray(quizData.quizTags) ? quizData.quizTags : quizData.quizTags.split(', ');
 	}
   console.log(`tagsArray: ` + tagsArray);
