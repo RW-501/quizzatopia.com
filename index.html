@@ -1145,6 +1145,8 @@ async function getTag(tag) {
 	      document.getElementById('updated_Quizzez').innerHTML = "";
 
     document.getElementById('updated_Quizzez').innerHTML += generatedHtmlTag;
+    quizContainer.scrollTop = 0;
+	  
   } else {
     // Handle the case when no quizzes are found with the provided tag
     console.log("No quizzes found with the provided tag.");
