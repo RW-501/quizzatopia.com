@@ -1,3 +1,87 @@
+function loadScreenFunc(){
+// Create the <style> element
+var styleElement = document.createElement("style");
+
+// Set the CSS styles
+var cssStyles = `
+  /* CSS styles for the overlay and loader */
+
+  html{
+width: 100% !important;
+  }
+  body{
+width: 100% !important;
+  }
+  
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    z-index: 9999;
+  }
+
+  #loader {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 6px solid #aaaaaa;
+    border-top-color: #ff8c00;
+    animation: loader-spin 1s infinite linear;
+  }
+
+  @keyframes loader-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+
+.btnFX {
+  /* Default styles */
+
+  transition: background-color 0.3s ease;
+
+  /* Hover effect */
+  &:hover {
+    background-color: #ff0000;
+  }
+
+  /* Click effect */
+  &:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Custom animation */
+  animation: fade-in 0.5s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+    
+  }
+`;
 
 // Set the CSS code as the content of the <style> element
 styleElement.textContent = cssStyles;
@@ -5,80 +89,45 @@ styleElement.textContent = cssStyles;
 // Append the <style> element to the <head> section of the document
 document.head.appendChild(styleElement);
 
-// Function to display a loading overlay and remove it after a delay
-function loadScreenFunc() {
-  // Create the overlay div
-  var overlay = document.createElement("div");
-  overlay.setAttribute("id", "overlay");
 
-  // Create the loader div
-  var loader = document.createElement("div");
-  loader.setAttribute("id", "loader");
+// Create the overlay div
+var overlay = document.createElement("div");
+overlay.setAttribute("id", "overlay");
 
-  // Append the loader to the overlay
-  overlay.appendChild(loader);
+// Create the loader div
+var loader = document.createElement("div");
+loader.setAttribute("id", "loader");
 
-  // Append the overlay to the body
-  document.body.appendChild(overlay);
+// Append the loader to the overlay
+overlay.appendChild(loader);
 
-  // Add the "loaded" class to the overlay to show it
-  overlay.classList.add("loaded");
+// Append the overlay to the body
+document.body.appendChild(overlay);
 
-  console.log('Load');
+   overlay.classList.add("loaded");
 
-  // Remove the overlay after a delay of 3 seconds (3000 milliseconds)
-  setTimeout(function() {
-    console.log('overlay ???');
-    overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
-    if (overlay) {
-      overlay.remove();
-      overlay.style.display = 'none'; // Hide the overlay if it exists
-      console.log('overlay Removed');
-    }
-    // Scroll to the top of the page after removing the overlay
+
+	  	  console.log('Load');
+
+	
+setTimeout(function() {
+	  	  console.log('overlay ????');
+ overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
+  if (overlay) {
+	overlay.remove();  
+overlay.style.display = 'none'; // Hide the overlay if it exists
+	  	  console.log('overlay Removed');
+
+  }
     document.documentElement.scrollTop = 0; // For modern browsers
-    document.body.scrollTop = 0; // For older browsers
-  }, 3000); // Delay in milliseconds before removing the overlay
+  document.body.scrollTop = 0; // For older browsers
+	
+}, 3000); // Delay in milliseconds before removing the overlay
+
 }
 
-// Call the function to display the loading screen
+	
 loadScreenFunc();
-
-// Function to convert images to low resolution
-function convertImagesToLowResolution() {
-  // Select all <img> elements on the page
-  const images = document.querySelectorAll('img');
-
-  // Iterate over each image
-  images.forEach(function(image) {
-    // Store the original source URL in a data attribute
-    image.dataset.originalSrc = image.src;
-
-    // Create a new <canvas> element
-    const canvas = document.createElement('canvas');
-    const context = canvas.getContext('2d');
-
-    // Set the canvas dimensions to match the image dimensions
-    canvas.width = image.width;
-    canvas.height = image.height;
-
-    // Create an ImageBitmap object from the original image
-    createImageBitmap(image)
-      .then(function(bitmap) {
-        // Draw the ImageBitmap on the canvas with lower resolution
-        context.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
-
-        // Set the canvas image data as the new image source
-        image.src = canvas.toDataURL();
-
-        // Log the resolution value
-        console.log('Image is low resolution:', image.width, image.height);
-      })
-      .catch(function(error) {
-        console.error('Error converting image to low resolution:', error);
-      });
-  });
-}
 
 // Function to revert images back to normal resolution
 function revertImagesToNormalResolution() {
