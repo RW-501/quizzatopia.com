@@ -277,42 +277,6 @@ setTimeout(function() {
   console.log('End high resolution: ???');
 }, 5000);  // Revert after 5 seconds (adjust the duration as needed)
 
-// Function to set the loggedIn cookie with a 3-day expiration date
-function setLoggedInCookie() {
-  var expirationDate = new Date();
-  expirationDate.setDate(expirationDate.getDate() + 3);
-
-  document.cookie = "loggedIn=true; expires=" + expirationDate.toUTCString() + "; path=/";
-}
-
-// Function to get the value of a cookie by its name
-function getCookieValue(cookieName) {
-  const cookies = document.cookie.split(';');
-  for (let i = 0; i < cookies.length; i++) {
-    const cookie = cookies[i].trim();
-    if (cookie.startsWith(cookieName + '=')) {
-      return cookie.substring(cookieName.length + 1);
-    }
-  }
-  return null;
-}
-
-// Check the value of the loggedIn cookie
-var cookieValue = getCookieValue('loggedIn');
-// console.log(cookieValue);
-
-var loggedIn;
-if (cookieValue === 'true') {
-  // User is logged in
-  console.log('User is logged in');
-  loggedIn = true;
-} else {
-  // User is not logged in
-  console.log('User is not logged in');
-  loggedIn = false;
-}
-
-// console.log('loggedIn:', loggedIn);
 
 
 // load.js
