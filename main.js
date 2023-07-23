@@ -298,7 +298,7 @@ function getCookieValue(cookieName) {
 }
 
 // Check the value of the loggedIn cookie
-const cookieValue = getCookieValue('loggedIn');
+var cookieValue = getCookieValue('loggedIn');
 // console.log(cookieValue);
 
 var loggedIn;
