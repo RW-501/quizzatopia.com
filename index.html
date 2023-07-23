@@ -1206,16 +1206,19 @@ function generateQuizHTML(quizList, page) {
 	    console.log(`quizData.quizTags: ` + quizData.quizTags);
 let tagsUI = "";
 if (quizData.quizTags || quizItem.quizCategoryDB) {
- // let tagsArray = quizData.quizCategoryDB || '';
-  var tagsArray;
+  let tagsArray = [];
 
-if (typeof quizData.quizTags !== "undefined") {
-   tagsArray = Array.isArray(quizData.quizTags) ? quizData.quizTags : quizData.quizTags.split(', ');
-	}
+  if (typeof quizData.quizTags !== "undefined") {
+    tagsArray = Array.isArray(quizData.quizTags) ? quizData.quizTags : quizData.quizTags.split(', ');
+  }
+
   console.log(`tagsArray: ` + tagsArray);
-	
-  tagsArray += " , " + quizData.quizCategoryDB ;
-	
+
+  // Use push to add quizData.quizCategoryDB to the array
+  if (quizItem.quizCategoryDB) {
+    tagsArray.push(quizItem.quizCategoryDB);
+  }
+
   console.log(`tagsArray 2: ` + tagsArray);
 
 
