@@ -1207,9 +1207,11 @@ function generateQuizHTML(quizList, page) {
 let tagsUI = "";
 if (quizData.quizTags || quizItem.quizCategoryDB) {
  // let tagsArray = quizData.quizCategoryDB || '';
-  
-  var tagsArray = Array.isArray(quizData.quizTags) ? quizData.quizTags : quizData.quizTags.split(', ');
-	
+  var tagsArray;
+
+	if(quizData.quizTags){
+   tagsArray = Array.isArray(quizData.quizTags) ? quizData.quizTags : quizData.quizTags.split(', ');
+	}
   console.log(`tagsArray: ` + tagsArray);
 	
   tagsArray += " , " + quizData.quizCategoryDB ;
