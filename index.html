@@ -1129,7 +1129,7 @@ async function getTag(tag) {
 
   let query = db.collection('quizzes')
    // .where('quizTagsDB', '>=', tag); // Using '>=' for partial string comparison
-    .where('quizTagsDB', '<', tag + '\uf8ff'); // '\uf8ff' is a high Unicode character
+    .where('quizTagsDB', '==', `*${tag}*`); // Using `==` with wildcard `*` for partial string comparison
 
   // Execute the query
   const querySnapshotTag = await query.get();
