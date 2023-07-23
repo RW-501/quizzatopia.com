@@ -1093,8 +1093,8 @@ font-size: 30px;
 </div>
 
 <script>
-	
-	const ratingToStars = (rating) => {
+	// Function to convert the rating to star symbols
+const ratingToStars = (rating) => {
   const filledStar = "<span>&#9733;</span>";
   const emptyStar = "<span>&#9734;</span>";
 
@@ -1110,54 +1110,52 @@ font-size: 30px;
   return filledStars + emptyStars;
 };
 
-
-		
-  var num = 0;
-
+// Global variables
+var num = 0;
 var currentPage = 1;
-	
 const db = firebase.firestore();
 const quizContainer = document.getElementById('parent_Container');
 let lastVisibleDoc = null; // To keep track of the last visible document
 
-	/*
-DB: quizTagsDB
-"Alaska, Geography, States, USA"
-	*/
-async function getTag(tag) {
-  console.log(`Tag: ` + tag);
+// Function to fetch quiz data from Firestore and update the HTML
+async function fetchQuizzesFromDB(page = 1) {
+  const quizzesPerPage = 20; // Number of quizzes to fetch per page
 
+  // Build the query to fetch quizzes with ordering
   let query = db.collection('quizzes')
-    .where('quizTagsDB', 'array-contains', tag);
+    .orderBy('quizRatingDB', 'desc')
+    .orderBy('quizFinishedCount', 'desc')
+    .orderBy('quizStartedCount', 'desc')
+    .orderBy('quizCreatedDateDB', 'desc')
+    .orderBy('quizNameDB', 'asc')
+    .limit(quizzesPerPage);
 
+  if (lastVisibleDoc && page > 1) {
+    // Use startAfter() to get quizzes after the last visible document from the previous page
+    query = query.startAfter(lastVisibleDoc);
+  }
 
   // Execute the query
-  const querySnapshotTag = await query.get();
+  const querySnapshot = await query.get();
 
-  // Check if the query returned any documents
-  if (!querySnapshotTag.empty) {
-    // Convert the query snapshot to quizList using the function
-    const quizListTag = convertSnapshotToQuizList(querySnapshotTag);
+  const quizList = convertSnapshotToQuizList(querySnapshot);
 
-    // Call the function to generate quiz HTML
-    const generatedHtmlTag = generateQuizHTML(quizListTag, 1);
+  // Call the function to generate quiz HTML
+  const generatedHtml = generateQuizHTML(quizList, page);
 
-	      document.getElementById('updated_Quizzez').innerHTML = "";
+  // Update the last visible document for pagination
+  const lastDoc = querySnapshot.docs[querySnapshot.docs.length - 1];
+  lastVisibleDoc = lastDoc;
 
-    document.getElementById('updated_Quizzez').innerHTML += generatedHtmlTag;
-    quizContainer.scrollTop = 0;
-	  
+  // Update the quizContainer with the generated HTML
+  if (page === 1) {
+    document.getElementById('updated_Quizzez').innerHTML = "<h2>" + " New Quizzes</h2> " + generatedHtml;
   } else {
-    // Handle the case when no quizzes are found with the provided tag
-    console.log("No quizzes found with the provided tag.");
+    document.getElementById('updated_Quizzez').innerHTML += generatedHtml;
   }
 }
 
-
-
-
-
-	// Function to convert Firestore query snapshot to quizList
+// Function to convert Firestore query snapshot to quizList
 function convertSnapshotToQuizList(querySnapshot) {
   const quizList = [];
 
@@ -1182,8 +1180,6 @@ function convertSnapshotToQuizList(querySnapshot) {
   return quizList;
 }
 
-
-
 // Function to generate HTML for quizzes
 function generateQuizHTML(quizList, page) {
   let html = ' ';
@@ -1202,40 +1198,30 @@ function generateQuizHTML(quizList, page) {
         quizData.quizFinishedCount + "</p>";
     }
 
+    let tagsUI = "";
+    if (quizData.quizTags || quizData.quizCategoryDB) {
+      let tagsArray = [];
 
-	 //   console.log(`quizData.quizTags: ` + quizData.quizTags);
-	//    console.log(`quizData.quizCategoryDB: ` + quizData.quizCategoryDB);
-	 //   console.log(`quizData.quizTagsDB: ` + quizData.quizTagsDB);
-let tagsUI = "";
-if (quizData.quizTags || quizData.quizCategoryDB) {
-  let tagsArray = [];
+      if (typeof quizData.quizTags !== "undefined") {
+        tagsArray = Array.isArray(quizData.quizTags) ? quizData.quizTags : quizData.quizTags.split(', ');
+      }
 
-  if (typeof quizData.quizTags !== "undefined") {
-    tagsArray = Array.isArray(quizData.quizTags) ? quizData.quizTags : quizData.quizTags.split(', ');
-  }
+      // Use push to add quizData.quizCategoryDB to the array
+      if (quizData.quizCategoryDB) {
+        tagsArray.push(quizData.quizCategoryDB);
+      }
 
-//  console.log(`tagsArray: ` + tagsArray);
+      const maxTagsToShow = 3;
 
-  // Use push to add quizData.quizCategoryDB to the array
-  if (quizData.quizCategoryDB) {
-    tagsArray.push(quizData.quizCategoryDB);
-  }
+      // Use slice to get at most maxTagsToShow number of tags
+      const tagsToShow = tagsArray.slice(0, maxTagsToShow);
 
-//  console.log(`tagsArray 2: ` + tagsArray);
+      // Use map to iterate over the tagsToShow and generate tag elements
+      const tagsElements = tagsToShow.map((tag) => `<h4 class='tagEl' onclick="getTag('${tag}')">${tag}</h4>`);
 
-
-  const maxTagsToShow = 3;
-
-  // Use slice to get at most maxTagsToShow number of tags
-  const tagsToShow = tagsArray.slice(0, maxTagsToShow);
-
-  // Use map to iterate over the tagsToShow and generate tag elements
-  const tagsElements = tagsToShow.map((tag) => `<h4 class='tagEl' onclick="getTag('${tag}')">${tag}</h4>`);
-
-  // Join the tag elements to create the tagsUI
-  tagsUI = `${tagsElements.join('')}`;
-}
-
+      // Join the tag elements to create the tagsUI
+      tagsUI = `${tagsElements.join('')}`;
+    }
 
     const quizHtml = `
       <div class="col-lg-12">
@@ -1263,72 +1249,11 @@ if (quizData.quizTags || quizData.quizCategoryDB) {
   return html;
 }
 
-
-
-
-
-
-	
-// Function to fetch quiz data from Firestore and update the HTML
-async function fetchQuizzesFromDB(page = 1) {
-  const quizzesPerPage = 20; // Number of quizzes to fetch per page
-
-  // Build the query to fetch quizzes with ordering
-  let query = db.collection('quizzes')
-    .orderBy('quizRatingDB', 'desc')
-    .orderBy('quizFinishedCount', 'desc')
-    .orderBy('quizStartedCount', 'desc')
-    .orderBy('quizCreatedDateDB', 'desc')
-    .orderBy('quizNameDB', 'asc')
-    .limit(quizzesPerPage);
-
-  if (lastVisibleDoc && page > 1) {
-    // Use startAfter() to get quizzes after the last visible document from the previous page
-    query = query.startAfter(lastVisibleDoc);
-  }
-
-  // Execute the query
-  const querySnapshot = await query.get();
-
-  const quizList = convertSnapshotToQuizList(querySnapshot);
-
-	
-// Call the function to generate quiz HTML
-const generatedHtml = generateQuizHTML(quizList, page);
-
-// Update the last visible document for pagination
-const lastDoc = querySnapshot.docs[querySnapshot.docs.length - 1];
-lastVisibleDoc = lastDoc;
-
-// Update the quizContainer with the generated HTML
-if (page === 1) {
-  document.getElementById('updated_Quizzez').innerHTML = "<h2>" + " New Quizzes</h2> " + generatedHtml;
-} else {
-  document.getElementById('updated_Quizzez').innerHTML += generatedHtml;
-}
-	
-}
-
-	
-window.onload = function() {
-console.log(`fetchQuizzesFromDB: `);
-
-// Call the function to fetch and populate the quiz data for the first page
-fetchQuizzesFromDB();
-}
-	
 // Function to check if the user has scrolled to the bottom of the page
 function isScrollAtBottom() {
-  const containerHeight = quizContainer.clientHeight +100;
+  const containerHeight = quizContainer.clientHeight + 100;
   const scrollOffset = quizContainer.scrollTop;
   const totalHeight = quizContainer.scrollHeight;
-	
-//console.log(`num: `+num);
-	
-		     //console.log(`containerHeight: ${containerHeight}`);
-		      //console.log(`scrollOffset: ${scrollOffset}`);
-		      //console.log(`totalHeight: ${totalHeight}`);
-	
   return containerHeight + scrollOffset >= totalHeight;
 }
 
@@ -1336,17 +1261,44 @@ function isScrollAtBottom() {
 quizContainer.addEventListener('scroll', () => {
   if (isScrollAtBottom()) {
     currentPage++; // Increment the current page number
-	  	    //  console.log(`currentPage: ${currentPage}`);
-
     fetchQuizzesFromDB(currentPage); // Fetch quizzes for the next page
   }
 });
-	
-	
-	
-	
-	  
-	
+
+// Function to handle tag filtering
+async function getTag(tag) {
+  console.log(`Tag: ` + tag);
+
+  let query = db.collection('quizzes').where('quizTagsDB', 'array-contains', tag);
+
+  // Execute the query
+  const querySnapshotTag = await query.get();
+
+  // Check if the query returned any documents
+  if (!querySnapshotTag.empty) {
+    // Convert the query snapshot to quizList using the function
+    const quizListTag = convertSnapshotToQuizList(querySnapshotTag);
+
+    // Call the function to generate quiz HTML
+    const generatedHtmlTag = generateQuizHTML(quizListTag, 1);
+
+    document.getElementById('updated_Quizzez').innerHTML = "";
+    document.getElementById('updated_Quizzez').innerHTML += generatedHtmlTag;
+    quizContainer.scrollTop = 0;
+  } else {
+    // Handle the case when no quizzes are found with the provided tag.
+    console.log("No quizzes found with the provided tag.");
+  }
+}
+
+// Load quizzes on window load
+window.onload = function() {
+  console.log(`fetchQuizzesFromDB: `);
+
+  // Call the function to fetch and populate the quiz data for the first page
+  fetchQuizzesFromDB();
+};
+
 	
 	
 function getQuizLink() {
