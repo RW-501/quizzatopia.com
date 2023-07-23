@@ -1128,8 +1128,8 @@ async function getTag(tag) {
   console.log(`Tag: ` + tag);
 
   let query = db.collection('quizzes')
-   // .where('quizTagsDB', '>=', tag); // Using '>=' for partial string comparison
-    .where('quizTagsDB', '==', `*${tag}*`); // Using `==` with wildcard `*` for partial string comparison
+    .where('quizTagsDB', 'array-contains', tag);
+
 
   // Execute the query
   const querySnapshotTag = await query.get();
