@@ -90,44 +90,43 @@ styleElement.textContent = cssStyles;
 // Append the <style> element to the <head> section of the document
 document.head.appendChild(styleElement);
 
+// Function to display a loading overlay and remove it after a delay
+function loadScreenFunc() {
+  // Create the overlay div
+  var overlay = document.createElement("div");
+  overlay.setAttribute("id", "overlay");
 
-// Create the overlay div
-var overlay = document.createElement("div");
-overlay.setAttribute("id", "overlay");
+  // Create the loader div
+  var loader = document.createElement("div");
+  loader.setAttribute("id", "loader");
 
-// Create the loader div
-var loader = document.createElement("div");
-loader.setAttribute("id", "loader");
+  // Append the loader to the overlay
+  overlay.appendChild(loader);
 
-// Append the loader to the overlay
-overlay.appendChild(loader);
+  // Append the overlay to the body
+  document.body.appendChild(overlay);
 
-// Append the overlay to the body
-document.body.appendChild(overlay);
+  // Add the "loaded" class to the overlay to show it
+  overlay.classList.add("loaded");
 
-   overlay.classList.add("loaded");
+  console.log('Load');
 
-
-	  	  console.log('Load');
-
-	
-setTimeout(function() {
-	  	  console.log('overlay ????');
- overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
-  if (overlay) {
-	overlay.remove();  
-overlay.style.display = 'none'; // Hide the overlay if it exists
-	  	  console.log('overlay Removed');
-
-  }
+  // Remove the overlay after a delay of 3 seconds (3000 milliseconds)
+  setTimeout(function() {
+    console.log('overlay ???');
+    overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
+    if (overlay) {
+      overlay.remove();
+      overlay.style.display = 'none'; // Hide the overlay if it exists
+      console.log('overlay Removed');
+    }
+    // Scroll to the top of the page after removing the overlay
     document.documentElement.scrollTop = 0; // For modern browsers
-  document.body.scrollTop = 0; // For older browsers
-	
-}, 3000); // Delay in milliseconds before removing the overlay
-
+    document.body.scrollTop = 0; // For older browsers
+  }, 3000); // Delay in milliseconds before removing the overlay
 }
 
-	
+// Call the function to display the loading screen
 loadScreenFunc();
 
 // Function to convert images to low resolution
@@ -190,8 +189,7 @@ function revertImagesToNormalResolution() {
 // Call the function to convert images to low resolution when the page has finished loading
 window.onload = function() {
   convertImagesToLowResolution();
-		  	  console.log('Start high resolution: ????');
-
+  console.log('Start high resolution: ???');
 };
 
 // Example usage to revert images back to normal resolution after some event
@@ -199,14 +197,10 @@ window.onload = function() {
 // For example, on a button click or after a certain time period
 setTimeout(function() {
   revertImagesToNormalResolution();
-			  	  console.log('End high resolution: ????');
-
+  console.log('End high resolution: ???');
 }, 5000);  // Revert after 5 seconds (adjust the duration as needed)
 
-
-
-
-
+// Function to set the loggedIn cookie with a 3-day expiration date
 function setLoggedInCookie() {
   var expirationDate = new Date();
   expirationDate.setDate(expirationDate.getDate() + 3);
@@ -214,7 +208,7 @@ function setLoggedInCookie() {
   document.cookie = "loggedIn=true; expires=" + expirationDate.toUTCString() + "; path=/";
 }
 
-
+// Function to get the value of a cookie by its name
 function getCookieValue(cookieName) {
   const cookies = document.cookie.split(';');
   for (let i = 0; i < cookies.length; i++) {
@@ -226,8 +220,9 @@ function getCookieValue(cookieName) {
   return null;
 }
 
+// Check the value of the loggedIn cookie
 const cookieValue = getCookieValue('loggedIn');
-//console.log(cookieValue);
+// console.log(cookieValue);
 
 var loggedIn;
 if (cookieValue === 'true') {
@@ -240,8 +235,7 @@ if (cookieValue === 'true') {
   loggedIn = false;
 }
 
-//console.log('loggedIn:', loggedIn);
-
+// console.log('loggedIn:', loggedIn);
 
 
 // load.js
