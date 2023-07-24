@@ -1469,6 +1469,28 @@ logVisitorInformation();
 
 
 
+// Check if the user is logged in and their IP address matches the allowed IP
+function checkUserAndIP() {
+  const user = firebase.auth().currentUser;
+
+  if (!user || ipAddress !== "172.223.110.58") {
+    // Redirect the user to the login page or any other page
+    window.location.href = "/login"; // Replace "/login" with the URL you want to redirect the user to
+  } else {
+    // User is logged in and IP matches, proceed to the backend page
+    window.location.href = "/backend"; // Replace "/backend" with the URL of the backend page
+  }
+}
+
+
+// Run the checkUserAndIP function when the page loads
+window.onload = function () {
+  // Check if the current URL matches the pattern "/backend*"
+  const currentURL = window.location.href;
+  if (currentURL.startsWith("/backend")) {
+    checkUserAndIP();
+  }
+};
 
 
 
