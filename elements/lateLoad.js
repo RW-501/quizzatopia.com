@@ -695,16 +695,16 @@ window.createUserWithEmailAndPassword = function () {
 
 
 window.signInWithEmailAndPassword = function() {
-  const email = document.getElementById('lemail').value;
+  const emailOG = document.getElementById('lemail').value;
   const password = document.getElementById('lpassword').value;
 
-  if (typeof email !== 'string' || email.trim() === '') {
+  if (typeof emailOG !== 'string' || emailOG.trim() === '') {
     showStatusMessage('Please enter a valid email address.', 'error');
     return;
   }
 
   // Trim the email to remove leading/trailing whitespaces
-  email = email.trim();
+  const email = emailOG.trim();
 
   // Check if the email is a valid email address
   if (!isValidEmail(email)) {
