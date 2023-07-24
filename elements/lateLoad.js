@@ -695,8 +695,8 @@ window.createUserWithEmailAndPassword = function () {
 
 
 window.signInWithEmailAndPassword = function() {
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
+  const email = document.getElementById('lemail').value;
+  const password = document.getElementById('lpassword').value;
 
   if (typeof email !== 'string' || email.trim() === '') {
     showStatusMessage('Please enter a valid email address.', 'error');
