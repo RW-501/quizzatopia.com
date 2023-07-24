@@ -856,9 +856,9 @@ function loadQuestions() {
     addTag(tag);
   });
 	  
-var categoryOption = quizData.category;
+//var categoryOption = quizData.category;
 // Set the select element based on the option name
-$('#category').val(categoryOption);
+//$('#category').val(categoryOption);
 	
 var questionTypeOption = quizData.questionType;
 // Set the select element based on the option name
@@ -882,9 +882,32 @@ $('#questionType').val(questionTypeOption);
 	
 }
 
+	  
+$(document).ready(function() {
+  // Load existing quiz data if available
+  loadQuestions();
 
-        loadQuestions();
   
+
+  // Add event listener to save the quiz data when the user tries to leave the page or close the tab
+  $(window).on('beforeunload', function() {
+    saveQuizData();
+  });
+});
+  
+// Function to save the quiz data to local storage
+function saveQuizData() {
+  var quizData = {
+    quizName: $('#quizName').val(),
+    quizCode: $('#quizCode').val(),
+    quizCategory: $('#category').val(),
+    quizDescription: $('#description').val(),
+    quizTags: getTags(), // Implement getTags() to fetch the tags from the input field
+    questionType: $('#questionType').val(),
+    questions: getQuestions() // Implement getQuestions() to fetch all questions from the form
+  };
+  localStorage.setItem('quizData', JSON.stringify(quizData));
+}
 
 
 
