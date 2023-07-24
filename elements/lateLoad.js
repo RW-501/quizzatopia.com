@@ -1569,15 +1569,19 @@ function escapeRegExp(word) {
   return word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-
+/*
 // Example usage:
 const userInput = "Hello, this is a muthafucking malicious <script>alert('Gotcha hoe ass!');</script> Bitch content!";
 const filteredContent = filterContent(userInput);
 console.log("filteredContent   "   +filteredContent);
 
+*/
 
+function input(text){
 
-
+	let userInput = filterContent(text);
+	return userInput;
+}
 
 
 
