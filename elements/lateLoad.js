@@ -429,8 +429,9 @@ signupLoginArea.display = "none";
 	  }else{
 	switchTab('login');   
 	  }
-slideIn("loginPopupBody");
   document.getElementById('loginPopup').classList.remove('d-none');
+	  slideIn("loginPopupBody");
+
 	SetupLoginBTNFunc();
  });
 
