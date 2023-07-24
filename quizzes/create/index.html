@@ -927,7 +927,7 @@ $(document).ready(function() {
       quizDescription: input($('#description').val()),
       quizTags: tagsArray, // Implement getTags() to fetch the tags from the input field
       questionType: input($('#questionType').val()),
-      questions: input(getQuestions()) // Implement getQuestions() to fetch all questions from the form
+   //   questions: input(getQuestions()) // Implement getQuestions() to fetch all questions from the form
     };
     localStorage.setItem('quizData', JSON.stringify(quizData));
 	      console.log('Saved Quiz   ' );
