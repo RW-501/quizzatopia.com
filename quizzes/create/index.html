@@ -238,7 +238,7 @@ display: none;
 }
 
 .tagButton {
-  background-color: #007bff;
+  background-color: #fd7e14;
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
@@ -247,9 +247,11 @@ display: none;
 }
 
 .tagButton:hover {
-  background-color: #0056b3;
+  background-color: #fd7e14c7;
 }
-
+#tagInput{
+    width: 20%;
+}
 </style>
 	  	
 	
@@ -455,58 +457,68 @@ display: none;
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
 
-const tagInput = document.getElementById('tagInput');
-const tagList = document.getElementById('tagList');
-let tagsArray = [];
+    const tagInput = document.getElementById('tagInput');
+    const tagList = document.getElementById('tagList');
+    let tagsArray = [];
 
-tagInput.addEventListener('keydown', function (event) {
-  if (event.key === ' ' || event.key === 'Enter') {
-    event.preventDefault();
-    const tagText = tagInput.innerText.trim();
-    if (tagText !== '') {
-      addTag(tagText);
-      tagInput.innerText = '';
+    tagInput.addEventListener('keydown', function (event) {
+      if (event.key === ' ' || event.key === 'Enter') {
+        event.preventDefault();
+        const tagText = tagInput.innerText.trim();
+        if (tagText !== '') {
+          addTag(tagText);
+          tagInput.innerText = '';
+        }
+      }
+    });
+
+    tagInput.addEventListener('click', function (event) {
+      const clickedElement = event.target;
+      if (clickedElement === tagInput) {
+        tagInput.focus();
+      }
+    });
+
+    function addTag(tagText) {
+      tagsArray.push(tagText);
+
+      const tagButton = document.createElement('button');
+      tagButton.textContent = tagText;
+      tagButton.classList.add('tagButton');
+      tagButton.addEventListener('click', () => editTag(tagText));
+      tagList.appendChild(tagButton);
+
+      updateTagsArray();
     }
-  }
-});
 
-tagInput.addEventListener('click', function (event) {
-  const clickedElement = event.target;
-  if (clickedElement === tagInput) {
-    tagInput.focus();
-  }
-});
-
-function addTag(tagText) {
-  tagsArray.push(tagText);
-
-  const tagButton = document.createElement('button');
-  tagButton.textContent = tagText;
-  tagButton.classList.add('tagButton');
-  tagButton.addEventListener('click', () => editTag(tagText));
-  tagList.appendChild(tagButton);
-}
-
-function editTag(tagText) {
-  const updatedTagText = prompt('Edit Tag:', tagText);
-  if (updatedTagText !== null && updatedTagText !== '') {
-    const index = tagsArray.indexOf(tagText);
-    if (index !== -1) {
-      tagsArray[index] = updatedTagText;
-      const tagButton = tagList.querySelector(`button:nth-child(${index + 1})`);
-      tagButton.textContent = updatedTagText;
+    function editTag(tagText) {
+      const updatedTagText = prompt('Edit Tag:', tagText);
+      if (updatedTagText !== null && updatedTagText !== '') {
+        const index = tagsArray.indexOf(tagText);
+        if (index !== -1) {
+          tagsArray[index] = updatedTagText;
+          const tagButton = tagList.querySelector(`button:nth-child(${index + 1})`);
+          tagButton.textContent = updatedTagText;
+        }
+      }
+      updateTagsArray();
     }
-  }
-}
 
-function removeTag(tagText) {
-  const index = tagsArray.indexOf(tagText);
-  if (index !== -1) {
-    tagsArray.splice(index, 1);
-    const tagButton = tagList.querySelector(`button:nth-child(${index + 1})`);
-    tagButton.remove();
-  }
-}
+    function removeTag(tagText) {
+      const index = tagsArray.indexOf(tagText);
+      if (index !== -1) {
+        tagsArray.splice(index, 1);
+        const tagButton = tagList.querySelector(`button:nth-child(${index + 1})`);
+        tagButton.remove();
+      }
+      updateTagsArray();
+    }
+
+    function updateTagsArray() {
+      tagsArray = [];
+      const tagButtons = tagList.querySelectorAll('.tagButton');
+      tagButtons.forEach(button => tagsArray.push(button.textContent));
+    }
 
 
 
