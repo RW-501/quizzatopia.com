@@ -898,17 +898,21 @@ $('#questionType').val(questionTypeOption);
 
 	  
     $('#questionList').empty();
-    $.each(quizData.questions, function(index, question) {
-      var questionListItem = $('<div class="questionListItem"></div>');
-      questionListItem.text(question.question);
-      $('#questionList').append(questionListItem);
-    });
-    if (quizData.questions.length >= 5) {
-      $('#quizForm :input[type="submit"]').prop('disabled', true);
-    }
-  }else{
+// Make sure quizData is defined and has the questions property before accessing it
+if (quizData && quizData.questions) {
+  $.each(quizData.questions, function(index, question) {
+    var questionListItem = $('<div class="questionListItem"></div>');
+    questionListItem.text(question.question);
+    $('#questionList').append(questionListItem);
+  });
 
+  if (quizData.questions.length >= 5) {
+    $('#quizForm :input[type="submit"]').prop('disabled', true);
   }
+} else {
+  // Handle the case where quizData or quizData.questions is not defined or null
+  console.log('quizData or quizData.questions is not defined or null');
+}
 
 	
 }
