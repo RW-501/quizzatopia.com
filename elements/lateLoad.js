@@ -587,15 +587,48 @@ window.signInAnonymously = function() {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+// Helper function to check if the input is a valid email address
+function isValidEmail(email) {
+  // Use a simple regular expression to validate the email format
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 // Update the createUserWithEmailAndPassword function
 window.createUserWithEmailAndPassword = function (email, password) {
+   // Check if email is provided and is a string
+  if (typeof email !== 'string' || email.trim() === '') {
+    showStatusMessage('Please enter a valid email address.', 'error');
+    return;
+  }
+
   // Trim the email to remove leading/trailing whitespaces
   email = email.trim();
 
-  // Check if the email is a valid string
-  if (typeof email !== 'string' || !email.includes('@') || !email.includes('.')) {
-    // Show an error message or handle the invalid email
-	            showStatusMessage('Invalid email address.', 'error');
+  // Check if the email is a valid email address
+  if (!isValidEmail(email)) {
+    showStatusMessage('Invalid email address.', 'error');
     return;
   }
 	const auth = firebase.auth();
