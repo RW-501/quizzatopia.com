@@ -493,7 +493,7 @@ display: none;
     });
 	  
 
-document.addEventListener('keydown', function (event) {
+tagInput.addEventListener('keydown', function (event) {
   if (event.key === 'Backspace') {
     const lastTagButton = tagList.lastChild;
     if (lastTagButton && lastTagButton.classList.contains('tagButton')) {
