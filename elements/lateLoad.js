@@ -1250,34 +1250,33 @@ async function onAuthSuccess(userInfo) {
     console.error(error);
   }
 }
-function showResetPasswordForm(){
-      var resetPasswordForm = document.getElementById('resetPasswordForm');
-      resetPasswordForm.classList.remove('d-none');
+
+
+
+// Cache DOM elements for reuse
+const resetPasswordForm = document.getElementById('resetPasswordForm');
+const resetEmailInput = document.getElementById('resetEmail');
+
+// Function to show the password reset form
+function showResetPasswordForm() {
+  resetPasswordForm.classList.remove('d-none');
 }
 
 
-
-		
-function resetPassword() {
-  var resetEmail = document.getElementById('resetEmail').value;
-  firebase.auth().sendPasswordResetEmail(resetEmail)
-    .then(function () {
-      // Password reset email sent
-      // You can display a success message to the user
-      var statusMessage = document.getElementById('statusMessage');
-      statusMessage.textContent = 'Password reset email sent';
-      statusMessage.classList.remove('error');
-      statusMessage.classList.add('success');
-    })
-    .catch(function (error) {
-      // An error occurred while attempting to send the password reset email
-      // You can display an error message to the user
-      var statusMessage = document.getElementById('statusMessage');
-      statusMessage.textContent = 'Error sending password reset email: ' + error.message;
-      statusMessage.classList.remove('success');
-      statusMessage.classList.add('error');
-      console.error('Error sending password reset email:', error);
-    });
+// Function to reset the password
+async function resetPassword() {
+  const resetEmail = resetEmailInput.value;
+  try {
+    await firebase.auth().sendPasswordResetEmail(resetEmail);
+    // Password reset email sent
+    showStatusMessage('Password reset email sent', 'success');
+    resetPasswordForm.classList.add('d-none');
+  } catch (error) {
+    // An error occurred while attempting to send the password reset email
+    // Display an error message to the user
+    showStatusMessage('Error sending password reset email: ' + error.message, 'error');
+    console.error('Error sending password reset email:', error);
+  }
 }
 
 		
