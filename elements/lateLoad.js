@@ -1525,7 +1525,7 @@ function getBadWords() {
 
 // Import a list of bad words and profanity filter
 //const badWords = getBadWords();
-  const badWords = ['shit', 's h i t', 'queer', 'q u e e r', 'gay', 'pussy', 'dick', 'nigger', 'n i g g e r', 'nigga', 'damn', 'd a m n', 'God damn', 'fuck', 'f u c k', 'b i t c h', 'bitch', '.com', 'cum'];
+  const badWords = ['shit', 's h i t', 'queer', 'q u e e r', 'gay', 'pussy', 'dick', 'nigger', 'n i g g e r', 'nigga', 'damn', 'd a m n', 'God damn', 'fucking','fuck', 'f u c k', 'b i t c h', 'bitch', '.com', 'cum'];
 
 function filterContent(content) {
   if (content == null) {
@@ -1540,7 +1540,7 @@ function filterContent(content) {
 
   // Replace bad words with asterisks
   caseInsensitiveBadWords.forEach((word) => {
-    const regex = new RegExp(`\\b${word}\\b`, 'gi');
+    const regex = new RegExp(`\\b(${escapeRegExp(word)})\\b`, 'gi');
     content = content.replace(regex, '***');
   });
 
@@ -1564,8 +1564,14 @@ function sanitizeHTML(content) {
   return content;
 }
 
+// Helper function to escape special characters in the word
+function escapeRegExp(word) {
+  return word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+
 // Example usage:
-const userInput = "Hello, this is a muthafucking malicious <script>alert('Gotcha!');</script> Bitch content!";
+const userInput = "Hello, this is a muthafucking malicious <script>alert('Gotcha hoe ass!');</script> Bitch content!";
 const filteredContent = filterContent(userInput);
 console.log("filteredContent   "   +filteredContent);
 
