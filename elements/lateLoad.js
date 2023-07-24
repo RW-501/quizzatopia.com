@@ -1498,8 +1498,120 @@ window.onload = function () {
 
 
 
+function getBadWords() {
+  const db = firebase.firestore();
+  const settingsRef = db.collection('settings').doc('general');
+
+  settingsRef.get()
+    .then(doc => {
+      if (doc.exists) {
+        const data = doc.data();
+        const badWords = data.badWords || [];
+
+        
+        // Display or use the retrieved bad words array
+        console.log('Retrieved Bad Words:', badWords);
+	      return badWords;
+      } else {
+        console.log('No bad words found in the database.');
+      }
+    })
+    .catch(error => {
+      console.error('Error retrieving bad words:', error);
+    });
+}
 
 
+
+// Import a list of bad words and profanity filter
+//const badWords = getBadWords();
+  const badWords = ['shit', 's h i t', 'queer', 'q u e e r', 'gay', 'pussy', 'dick', 'nigger', 'n i g g e r', 'nigga', 'damn', 'd a m n', 'God damn', 'fuck', 'f u c k', 'b i t c h', 'bitch', '.com', 'cum'];
+
+function filterContent(content) {
+  if (content == null) {
+    return '';
+  }
+
+  // Convert content to a string if it's not already
+  content = String(content);
+
+  // Perform case-insensitive matching for bad words
+  const caseInsensitiveBadWords = badWords.map((word) => word.toLowerCase());
+
+  // Replace bad words with asterisks
+  caseInsensitiveBadWords.forEach((word) => {
+    const regex = new RegExp(`\\b${word}\\b`, 'gi');
+    content = content.replace(regex, '***');
+  });
+
+  // Regular expression for matching contact information
+  const contactInfoRegex = /\b(?:\d{10}|\d{3}[-.\s]\d{3}[-.\s]\d{4}|(?:\+\d{1,2}\s?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4})\b/g;
+
+  // Replace contact information with asterisks
+  content = content.replace(contactInfoRegex, '***');
+
+  // Sanitize HTML content to remove potentially harmful elements and attributes
+  content = sanitizeHTML(content);
+
+  return content;
+}
+
+// Sample HTML sanitizer function (replace with a more robust library in your implementation)
+function sanitizeHTML(content) {
+ const parser = new DOMParser();
+  const doc = parser.parseFromString(content, 'text/html');
+  const sanitizedContent = doc.body.textContent || doc.body.innerText;
+  return content;
+}
+
+// Example usage:
+const userInput = "Hello, this is a muthafucking malicious <script>alert('Gotcha!');</script> Bitch content!";
+const filteredContent = filterContent(userInput);
+console.log("filteredContent   "   +filteredContent);
+
+
+
+
+
+
+
+		/*
+function filterContent(content) {
+	 if (content == null) {
+    return ''; // Return an empty string if content is null or undefined
+  } 
+
+  // Array of bad words const badWords = getBadWords();
+  const badWords = ['shit', 's h i t', 'queer', 'q u e e r', 'gay', 'pussy', 'dick', 'nigger', 'n i g g e r', 'nigga', 'damn', 'd a m n', 'God damn', 'fuck', 'f u c k', 'b i t c h', 'bitch', '.com', 'cum'];
+
+  // Regular expression for matching contact information
+  const contactInfoRegex = /\b(?:\d{10}|\d{3}[-.\s]\d{3}[-.\s]\d{4}|(?:\+\d{1,2}\s?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4})\b/g;
+
+  // Replace bad words with asterisks
+  badWords.forEach((word) => {
+    const regex = new RegExp(`\\b${word}\\b`, 'gi');
+    content = content.replace(regex, '***');
+  });
+
+  // Replace contact information with asterisks
+  content = content.replace(contactInfoRegex, '***');
+
+// Remove HTML tags for additional safety
+  const tempElement = document.createElement('div');
+  tempElement.innerHTML = content;
+  content = tempElement.textContent || tempElement.innerText;
+
+  // Prevent script injection by removing JavaScript event handlers
+  if (typeof content === 'string') {
+    content = content.replace(/<[^>]+? on\w+="[^"]*"[^>]*>/gi, (match) => {
+      return match.replace(/ on\w+="[^"]*"/gi, '');
+    });
+  }
+  return content;
+}
+		
+
+*/
 
 
 
