@@ -1114,7 +1114,8 @@ const ratingToStars = (rating) => {
 const db = firebase.firestore();
 const quizContainer = document.getElementById('parent_Container');
 let lastVisibleDoc = null; // To keep track of the last visible document
-
+let currentPage = 1;
+	
 // Function to fetch quiz data from Firestore and update the HTML
 async function fetchQuizzesFromDB(page = 1) {
   const quizzesPerPage = 20; // Number of quizzes to fetch per page
