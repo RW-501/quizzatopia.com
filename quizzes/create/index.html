@@ -672,13 +672,12 @@ var questionObj = {
 
 // Check if the question is blank or empty
 if (question.trim() === '') {
-  alert('Please enter a valid question before saving.');
-  return; // Do not save the question if it is blank
-}	      
+}else{	      
 // Save question to quizObj
 quizObj.questions.push(questionObj);
 quizObj.numberOfQuestions = quizObj.questions.length;
-
+}
+	      
 // Save quizObj to local storage
 localStorage.setItem('quizData', JSON.stringify(quizObj));
 
