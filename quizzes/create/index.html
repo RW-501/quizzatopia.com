@@ -472,10 +472,10 @@ display: none;
 
 
 
-
+//  || event.key === 'Backspace'
 	  
     tagInput.addEventListener('keydown', function (event) {
-      if (event.key === ' ' || event.key === 'Enter' || event.key === 'Backspace') {
+      if (event.key === ' ' || event.key === 'Enter' ) {
         event.preventDefault();
         const tagText = tagInput.innerText.trim();
         if (tagText !== '') {
