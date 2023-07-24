@@ -505,24 +505,24 @@ document.addEventListener('keydown', function (event) {
   }
 });
 
-    function addTag(tagText) {
-      tagsArray.push(tagText);
+function addTag(tagText) {
+  tagsArray.push(tagText);
 
-      if (tagsArray.lenght > 5) {
-          alert('The maximum number of Tags has been reached.');
+  if (tagsArray.length > 5) {
+    alert('The maximum number of Tags has been reached.');
+    tagsArray.pop(); // Remove the last added tag from tagsArray
+    return;
+  }
 
-	      return;
-        }
+  const tagButton = document.createElement('button');
+  tagButton.textContent = tagText;
+  tagButton.classList.add('tagButton');
+  tagButton.addEventListener('click', () => editTag(tagText, tagButton));
+  tagList.appendChild(tagButton);
 
-	    
-      const tagButton = document.createElement('button');
-      tagButton.textContent = tagText;
-      tagButton.classList.add('tagButton');
-      tagButton.addEventListener('click', () => editTag(tagText, tagButton));
-      tagList.appendChild(tagButton);
+  updateTagsArray();
+}
 
-      updateTagsArray();
-    }
 
     function editTag(oldTagText, tagButton) {
       const tagInput = document.createElement('input');
