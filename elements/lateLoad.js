@@ -784,6 +784,122 @@ window.signInWithEmailAndPassword = function() {
 }
 
 
+
+
+
+window.signInWithFacebook = function () {
+  const provider = new firebase.auth.FacebookAuthProvider();
+
+  firebase.auth()
+    .signInWithPopup(provider)
+    .then((result) => {
+      const user = result.user;
+
+      // Get the user's display name and Firebase ID
+      const displayName = user.displayName;
+      const firebaseId = user.uid;
+
+      // Example: Show a success message and user info
+      showStatusMessage('Sign-in successful', 'success');
+      console.log('User display name:', displayName);
+      console.log('Firebase ID:', firebaseId);
+
+      // Check if the user already exists in the Firestore database
+      checkUserExistence(firebaseId)
+        .then((exists) => {
+          if (exists) {
+            // Existing user
+            retrieveUserInfoFromFirestore(firebaseId)
+              .then((userInfo) => {
+                // Save database info to local storage
+                saveUserInfoToLocalStorage(userInfo);
+
+                // Set the logged-in cookie
+                document.cookie = 'loggedIn=true';
+
+                loggedIn = true;
+
+                updateUserInfo(userInfo);
+
+                // Check if user info changes
+                checkUserInfoChanges();
+
+                // Sign-in successful
+                onAuthSuccess(userInfo);
+              })
+              .catch((error) => {
+                // Handle error retrieving user info
+                showStatusMessage('Error retrieving user info', 'error');
+              });
+          } else {
+            // New user
+            const userInfo = {
+              userName: displayName,
+              userEmail: user.email,
+              userProfilePic: user.photoURL,
+              userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+              userRank: 'Beginner',
+              userPoints: 0,
+              userQuizzesTaken: 0,
+              userCountry: '',
+              userState: '',
+              animationEnabled: true,
+              userIP: ipAddress,
+              userLatitude: 0,
+              userLongitude: 0,
+              firebaseId: firebaseId,
+              lastUpdated: new Date().getTime(),
+            };
+
+            // Save local storage info to Firestore database
+            saveUserInfoToFirestore(userInfo)
+              .then(() => {
+                // Save user info to local storage
+                saveUserInfoToLocalStorage(userInfo);
+
+                // Set the logged-in cookie
+                document.cookie = 'loggedIn=true';
+
+                loggedIn = true;
+
+                updateUserInfo(userInfo);
+
+                // Check if user info changes
+                checkUserInfoChanges();
+
+                // Sign-in successful
+                onAuthSuccess(userInfo);
+              })
+              .catch((error) => {
+                // Handle error saving user info to Firestore
+                showStatusMessage('Error saving user info', 'error');
+              });
+          }
+        })
+        .catch((error) => {
+          // Handle error checking user existence
+          showStatusMessage('Error checking user existence', 'error');
+        });
+    })
+    .catch((error) => {
+      // Handle any errors that occurred during sign-in
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      showStatusMessage(errorMessage, 'error');
+      document.cookie = 'loggedIn=false';
+    });
+};
+
+
+
+
+
+
+
+
+
+
+
 window.signInWithGoogle = function () {
   const provider = new firebase.auth.GoogleAuthProvider();
 
