@@ -587,6 +587,66 @@ window.signInAnonymously = function() {
 }
 
 
+// Update the createUserWithEmailAndPassword function
+window.createUserWithEmailAndPassword = function (email, password) {
+	const auth = firebase.auth();
+
+  auth
+    .createUserWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+
+      // Get the user's email and Firebase ID
+      const userEmail = user.email;
+      const firebaseId = user.uid;
+
+      // Example: Show a success message and user info
+      showStatusMessage('Signup successful', 'success');
+      console.log('User email:', userEmail);
+      console.log('Firebase ID:', firebaseId);
+
+      // Save user info to Firestore database
+      const userInfo = {
+        userName: '',
+        userEmail: userEmail,
+        userProfilePic: '/images/avatar/w1.png',
+        userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+        userRank: 'Beginner',
+        userPoints: 0,
+        userQuizzesTaken: 0,
+        userCountry: '',
+        userState: '',
+        userLatitude: 0,
+              animationEnabled: true,
+              userIP:  getIPAddress(),
+	      userLongitude: 0,
+        firebaseId: firebaseId,
+        lastUpdated: new Date().getTime(),
+      };
+      saveUserInfoToFirestore(userInfo); // Save user info to Firestore
+
+      // Set the logged-in cookie
+      document.cookie = 'loggedIn=true';
+
+
+      updateUserInfo(userInfo);
+
+      // Check if user info changes
+      checkUserInfoChanges();
+
+      // Sign-up successful
+      onAuthSuccess(userInfo);
+
+    })
+    .catch((error) => {
+      // Handle any errors that occurred during sign-up
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      showStatusMessage(errorMessage, 'error');
+      document.cookie = 'loggedIn=false';
+    });
+};
+	
 
 window.signInWithEmailAndPassword = function() {
   const email = document.getElementById('email').value;
@@ -920,64 +980,6 @@ function updateUserInfo(updatedInfo) {
 
 
 
-// Update the createUserWithEmailAndPassword function
-window.createUserWithEmailAndPassword = function (email, password) {
-  auth
-    .createUserWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      const user = userCredential.user;
-
-      // Get the user's email and Firebase ID
-      const userEmail = user.email;
-      const firebaseId = user.uid;
-
-      // Example: Show a success message and user info
-      showStatusMessage('Signup successful', 'success');
-      console.log('User email:', userEmail);
-      console.log('Firebase ID:', firebaseId);
-
-      // Save user info to Firestore database
-      const userInfo = {
-        userName: '',
-        userEmail: userEmail,
-        userProfilePic: '/images/avatar/w1.png',
-        userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-        userRank: 'Beginner',
-        userPoints: 0,
-        userQuizzesTaken: 0,
-        userCountry: '',
-        userState: '',
-        userLatitude: 0,
-              animationEnabled: true,
-              userIP:  getIPAddress(),
-	      userLongitude: 0,
-        firebaseId: firebaseId,
-        lastUpdated: new Date().getTime(),
-      };
-      saveUserInfoToFirestore(userInfo); // Save user info to Firestore
-
-      // Set the logged-in cookie
-      document.cookie = 'loggedIn=true';
-
-
-      updateUserInfo(userInfo);
-
-      // Check if user info changes
-      checkUserInfoChanges();
-
-      // Sign-up successful
-      onAuthSuccess(userInfo);
-
-    })
-    .catch((error) => {
-      // Handle any errors that occurred during sign-up
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      showStatusMessage(errorMessage, 'error');
-      document.cookie = 'loggedIn=false';
-    });
-};
-	
 	// Function to validate the username, email, and password fields
 function validateFields(username, email, password) {
   if (username.trim() === '' || email.trim() === '' || password.trim() === '') {
