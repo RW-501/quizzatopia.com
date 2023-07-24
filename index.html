@@ -1243,6 +1243,11 @@ function generateQuizHTML(quizList, page) {
 }
 
 
+
+
+
+	
+
 // Function to check if the user has scrolled to the bottom of the page
 function isScrollAtBottom() {
   const containerHeight = quizContainer.clientHeight + 100;
@@ -1294,12 +1299,13 @@ async function getTag(tag) {
 }
 
 // Load quizzes on window load
-window.onload = function() {
-  console.log(`fetchQuizzesFromDB: `);
+window.addEventListener('load', function() {
+
+ console.log(`fetchQuizzesFromDB: `);
 
   // Call the function to fetch and populate the quiz data for the first page
   fetchQuizzesFromDB();
-};
+}); 
 
 	
 	
