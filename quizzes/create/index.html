@@ -871,7 +871,7 @@ $('#questionList').on('click', '.questionListItem', function() {
         // Load questions from local storage
 function loadQuestions() {
   var quizData = JSON.parse(localStorage.getItem('quizData'));
-  if (quizData && quizData.questions) {
+  if (quizData) {
 
     $('#quizName').val(quizData.quizName);
     $('#quizCode').val(quizData.quizCode);
