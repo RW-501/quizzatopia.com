@@ -82,7 +82,27 @@ width: 100% !important;
     
   }
 `;
+/*
+div.loading-icon {
+    color: #646569;
+    overflow: visible;
+    width: 49px;
+    height: 49px;
+    max-width: 49px;
+    max-height: 49px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border-top-color: #646569;
+    border-left-color: #646569;
+    border-right-color: #646569;
+    box-shadow: 3px 3px 1px #646569;
+    -moz-animation: cssload-spin 690ms infinite linear;
+    -o-animation: cssload-spin 690ms infinite linear;
+    -webkit-animation: cssload-spin 690ms infinite linear;
+    animation: cssload-spin 690ms infinite linear;
+}
 
+*/
 // Set the CSS code as the content of the <style> element
 styleElement.textContent = cssStyles;
 
