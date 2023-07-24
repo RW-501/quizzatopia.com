@@ -471,17 +471,7 @@ display: none;
 
 
 
-document.addEventListener('keydown', function (event) {
-  if (event.key === 'Backspace') {
-    const lastTagButton = tagList.lastChild;
-    if (lastTagButton && lastTagButton.classList.contains('tagButton')) {
-      const tagText = lastTagButton.textContent;
-      if (tagText.trim() === '') {
-        removeTag('', lastTagButton);
-      }
-    }
-  }
-});
+
 
 	  
     tagInput.addEventListener('keydown', function (event) {
@@ -503,11 +493,28 @@ document.addEventListener('keydown', function (event) {
     });
 	  
 
-
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Backspace') {
+    const lastTagButton = tagList.lastChild;
+    if (lastTagButton && lastTagButton.classList.contains('tagButton')) {
+      const tagText = lastTagButton.textContent;
+      if (tagText.trim() === '') {
+        removeTag('', lastTagButton);
+      }
+    }
+  }
+});
 
     function addTag(tagText) {
       tagsArray.push(tagText);
 
+      if (tagsArray.lenght > 5) {
+          alert('The maximum number of Tags has been reached.');
+
+	      return;
+        }
+
+	    
       const tagButton = document.createElement('button');
       tagButton.textContent = tagText;
       tagButton.classList.add('tagButton');
@@ -569,6 +576,8 @@ function updateTagsArray() {
 
 function showSection(sectionId) {
   // Hide all div elements with the class "mainSection"
+	    saveQuizData();
+
   var mainSections = document.getElementsByClassName('mainSection');
   for (var i = 0; i < mainSections.length; i++) {
     mainSections[i].style.display = 'none';
@@ -638,7 +647,7 @@ var explanation = input($('#explanation').val());
 
 
 
-	
+	/*
 // Create quiz object
 var quizObj = JSON.parse(localStorage.getItem('quizData')) || {
   quizName: quizName,
@@ -669,7 +678,7 @@ quizObj.numberOfQuestions = quizObj.questions.length;
 // Save quizObj to local storage
 localStorage.setItem('quizData', JSON.stringify(quizObj));
 
-	      
+	   */   
 
         // Display question in the question list
         var questionListItem = $('<div class="questionListItem"></div>');
@@ -862,7 +871,6 @@ function loadQuestions() {
 	  
   const initialTags = quizData.quizTags;
   initialTags.forEach(tag => {
-    console.log('initialTags   ' + tag);
     addTag(tag);
   });
 	  
@@ -917,6 +925,8 @@ $(document).ready(function() {
       questions: input(getQuestions()) // Implement getQuestions() to fetch all questions from the form
     };
     localStorage.setItem('quizData', JSON.stringify(quizData));
+	      console.log('Saved Quiz   ' );
+
   }
 
 
