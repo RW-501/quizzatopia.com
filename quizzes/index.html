@@ -581,8 +581,11 @@ function openCreateQuizFunc(){
 const user = firebase.auth().currentUser;
       console.log("user  "+user);
 
-if (user) {
-  // User is logged in, redirect to the create quizzes page
+//if (user) {
+  
+	if(  loggedIn === true){
+
+	// User is logged in, redirect to the create quizzes page
   window.location.href = "/quizzes/create/";
 } else {
   // User is not logged in, call the viewDashboard function
