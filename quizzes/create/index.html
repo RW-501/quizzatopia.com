@@ -459,20 +459,40 @@ display: none;
 
 
 
-   const tagList = document.getElementById('tagList');
+     const tagInput = document.getElementById('tagInput');
+    const tagList = document.getElementById('tagList');
     let tagsArray = [];
+	  
+    tagInput.addEventListener('keydown', function (event) {
+      if (event.key === ' ' || event.key === 'Enter') {
+        event.preventDefault();
+        const tagText = tagInput.innerText.trim();
+        if (tagText !== '') {
+          addTag(tagText);
+          tagInput.innerText = '';
+        }
+      }
+    });
 
+    tagInput.addEventListener('click', function (event) {
+      const clickedElement = event.target;
+      if (clickedElement === tagInput) {
+        tagInput.focus();
+      }
+    });
+	  
     document.addEventListener('keydown', function (event) {
       if (event.key === 'Backspace') {
         const lastTagButton = tagList.lastChild;
         if (lastTagButton && lastTagButton.classList.contains('tagButton')) {
           const tagText = lastTagButton.textContent;
           if (tagText.trim() === '') {
-            removeTag(lastTagButton);
+            removeTag('', lastTagButton);
           }
         }
       }
     });
+
 
     function addTag(tagText) {
       tagsArray.push(tagText);
@@ -482,6 +502,8 @@ display: none;
       tagButton.classList.add('tagButton');
       tagButton.addEventListener('click', () => editTag(tagText, tagButton));
       tagList.appendChild(tagButton);
+
+      updateTagsArray();
     }
 
     function editTag(oldTagText, tagButton) {
@@ -495,7 +517,7 @@ display: none;
           if (updatedTagText !== '') {
             updateTag(oldTagText, updatedTagText, tagButton);
           } else {
-            removeTag(tagButton);
+            removeTag(oldTagText, tagButton);
           }
         }
       });
@@ -505,20 +527,28 @@ display: none;
       tagInput.focus();
     }
 
-    function updateTag(oldTagText, newTagText, tagButton) {
+   function updateTag(oldTagText, newTagText, tagButton) {
       const index = tagsArray.indexOf(oldTagText);
       if (index !== -1) {
         tagsArray[index] = newTagText;
         tagButton.textContent = newTagText;
       }
+      updateTagsArray();
     }
 
-    function removeTag(tagButton) {
-      const index = Array.from(tagList.children).indexOf(tagButton);
+    function removeTag(tagText, tagButton) {
+      const index = tagsArray.indexOf(tagText);
       if (index !== -1) {
         tagsArray.splice(index, 1);
+        tagButton.remove();
       }
-      tagButton.remove();
+      updateTagsArray();
+    }
+
+    function updateTagsArray() {
+      tagsArray = [];
+      const tagButtons = tagList.querySelectorAll('.tagButton');
+      tagButtons.forEach(button => tagsArray.push(button.textContent));
     }
 
 
