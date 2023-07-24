@@ -920,7 +920,7 @@ $(document).ready(function() {
       quizCode: input($('#quizCode').val()),
       quizCategory: input($('#category').val()),
       quizDescription: input($('#description').val()),
-      quizTags: input(getTags()), // Implement getTags() to fetch the tags from the input field
+      quizTags: tagsArray, // Implement getTags() to fetch the tags from the input field
       questionType: input($('#questionType').val()),
       questions: input(getQuestions()) // Implement getQuestions() to fetch all questions from the form
     };
