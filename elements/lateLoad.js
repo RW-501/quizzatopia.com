@@ -1080,7 +1080,7 @@ function SetupLoginBTNFunc(){
   const signupButton = document.getElementById('signupButton');
   const googleButton = document.getElementById('googleButtonC');
   const facebookButton = document.getElementById('facebookButtonC');
-
+/*
   // Add event listeners to the buttons
   loginButton.addEventListener('click', (event) => {
     event.preventDefault();
@@ -1099,7 +1099,7 @@ function SetupLoginBTNFunc(){
   facebookButton.addEventListener('click', () => {
     signInWithFacebook();
   });
-
+*/
   document.addEventListener('DOMContentLoaded', function () {
     displayUserInfo();
   });
