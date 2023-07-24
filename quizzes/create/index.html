@@ -475,7 +475,7 @@ display: none;
 
 	  
     tagInput.addEventListener('keydown', function (event) {
-      if (event.key === ' ' || event.key === 'Enter') {
+      if (event.key === ' ' || event.key === 'Enter' || event.key === 'Backspace') {
         event.preventDefault();
         const tagText = tagInput.innerText.trim();
         if (tagText !== '') {
