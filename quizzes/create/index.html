@@ -605,22 +605,27 @@ console.log('userID:', userID);
         e.preventDefault();
 
         // Get user inputs
-        var quizName = $('#quizName').val();
-        var quizCode = $('#quizCode').val();
-        var category = $('#category').val();
-        var description = $('#description').val();
-        var quizTags = $('#quizTags').val();
-        var questionType = $('#questionType').val();
-        var question = $('#question').val();
+  
         var options = [];
         var quizArray = [];
-        var correctAnswer = $('#answer').val();
-        var difficulty = $('#difficulty').val();
-        var explanation = $('#explanation').val();
 
+	      
+var quizName = input($('#quizName').val());
+var quizCode = input($('#quizCode').val());
+var category = input($('#category').val());
+var description = input($('#description').val());
+var quizTags = input($('#quizTags').val());
+var questionType = input($('#questionType').val());
+var question = input($('#question').val());
+	      
+var correctAnswer = input($('#answer').val());
+var difficulty = input($('#difficulty').val());
+var explanation = input($('#explanation').val());
+	      
         // Get options and their corresponding correct answers
     $('.optionRow').each(function() {
   var option = $(this).find('.option').val();
+	 option =  input(option);
   options.push(option);
 });
 
@@ -635,7 +640,7 @@ var quizObj = JSON.parse(localStorage.getItem('quizData')) || {
   numberOfQuestions: 0,
   quizCategory: category,
   quizDescription: description,
-  quiztags: tagsArray,
+  quizTags: tagsArray,
   questions: []
 };
 
@@ -847,12 +852,11 @@ function loadQuestions() {
     $('#quizCode').val(quizData.quizCode);
   $('#category').val(quizData.quizCategory);
   $('#description').val(quizData.quizDescription);
-    
-	  
-	const initialTags = quizData.quizTags;
-  initialTags.forEach(tag => {
 
-	  console.log('initialTags   '+initialTags);
+	  
+  const initialTags = quizData.quizTags;
+  initialTags.forEach(tag => {
+    console.log('initialTags   ' + tag);
     addTag(tag);
   });
 	  
@@ -896,19 +900,18 @@ $(document).ready(function() {
 });
   
 // Function to save the quiz data to local storage
-function saveQuizData() {
-  var quizData = {
-    quizName: $('#quizName').val(),
-    quizCode: $('#quizCode').val(),
-    quizCategory: $('#category').val(),
-    quizDescription: $('#description').val(),
-    quizTags: getTags(), // Implement getTags() to fetch the tags from the input field
-    questionType: $('#questionType').val(),
-    questions: getQuestions() // Implement getQuestions() to fetch all questions from the form
-  };
-  localStorage.setItem('quizData', JSON.stringify(quizData));
-}
-
+  function saveQuizData() {
+    var quizData = {
+      quizName: input($('#quizName').val()),
+      quizCode: input($('#quizCode').val()),
+      quizCategory: input($('#category').val()),
+      quizDescription: input($('#description').val()),
+      quizTags: input(getTags()), // Implement getTags() to fetch the tags from the input field
+      questionType: input($('#questionType').val()),
+      questions: input(getQuestions()) // Implement getQuestions() to fetch all questions from the form
+    };
+    localStorage.setItem('quizData', JSON.stringify(quizData));
+  }
 
 
 $(document).ready(function() {
@@ -943,7 +946,7 @@ var quizDate = new Date().toISOString();
 var saveType = "user";
 var userID = userInfo.firebaseId || "";
 var quizDataDB = jsonData;
-var quizTagsDB =  quizData.quiztags;
+var quizTagsDB =  quizData.quizTags;
 var quizCreatedByDB =  userInfo.userName;
 var quizDescriptionDB =  quizData.quizDescription;
 
