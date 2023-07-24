@@ -1084,7 +1084,7 @@ function SetupLoginBTNFunc(){
   // Add event listeners to the buttons
   loginButton.addEventListener('click', (event) => {
     event.preventDefault();
-    signInWithUserWithEmailAndPassword(event);
+    signInWithEmailAndPassword(event);
   });
 
   signupButton.addEventListener('click', (event) => {
