@@ -473,7 +473,7 @@ display: none;
 
      const tagInput = document.getElementById('tagInput');
     const tagList = document.getElementById('tagList');
-    let tagsArray = [];
+var tagsArray = []; // Make sure this array is defined
 
 
 
@@ -654,7 +654,8 @@ var explanation = input($('#explanation').val());
 
 
 // Create quiz object
-var quizObj = JSON.parse(localStorage.getItem('quizData')) || {
+var quizDataString = localStorage.getItem('quizData');
+var quizObj = quizDataString ? JSON.parse(quizDataString) : {
   quizName: quizName,
   quizCode: quizCode,
   numberOfQuestions: 0,
@@ -675,14 +676,16 @@ var questionObj = {
   explanation: explanation,
   difficulty: difficulty
 };
-
+	      
+//console.log()
+	      
 // Check if the question is blank or empty
-if (question.trim() === '') {
-}else{	      
-// Save question to quizObj
-quizObj.questions.push(questionObj);
-quizObj.numberOfQuestions = quizObj.questions.length;
+if (question.trim() !== '') {
+  // Save question to quizObj
+  quizObj.questions.push(questionObj);
+  quizObj.numberOfQuestions = quizObj.questions.length;
 }
+
 	      
 // Save quizObj to local storage
 localStorage.setItem('quizData', JSON.stringify(quizObj));
