@@ -392,7 +392,7 @@ display: none;
 
   <section>
     <label for="question">Question:</label>
-    <textarea id="question" rows="3" required></textarea>
+    <textarea id="question" name="question" rows="3" required></textarea>
   </section>
   <!-- 	
   <section>
@@ -407,7 +407,7 @@ display: none;
     <label for="options">Options:</label>
     <div id="optionsContainer">
       <div class="optionRow">
-        <input type="text" class="option" required>
+        <input type="text" class="option"  name="option" required>
         <input type="checkbox" class="correctAnswer">
       </div>
     </div>
@@ -417,7 +417,7 @@ display: none;
 
   <section>
     <label for="answer">Correct Answer:</label>
-    <select id="answer" required>
+    <select id="answer"  name="answer"  required>
       <option value="">Select correct answer...</option>
     </select>
   </section>
