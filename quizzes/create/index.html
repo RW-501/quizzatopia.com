@@ -468,6 +468,21 @@ display: none;
      const tagInput = document.getElementById('tagInput');
     const tagList = document.getElementById('tagList');
     let tagsArray = [];
+
+
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Backspace') {
+    const lastTagButton = tagList.lastChild;
+    if (lastTagButton && lastTagButton.classList.contains('tagButton')) {
+      const tagText = lastTagButton.textContent;
+      if (tagText.trim() === '') {
+        removeTag('', lastTagButton);
+      }
+    }
+  }
+});
+
 	  
     tagInput.addEventListener('keydown', function (event) {
       if (event.key === ' ' || event.key === 'Enter') {
@@ -487,17 +502,7 @@ display: none;
       }
     });
 	  
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Backspace') {
-        const lastTagButton = tagList.lastChild;
-        if (lastTagButton && lastTagButton.classList.contains('tagButton')) {
-          const tagText = lastTagButton.textContent;
-          if (tagText.trim() === '') {
-            removeTag('', lastTagButton);
-          }
-        }
-      }
-    });
+
 
 
     function addTag(tagText) {
@@ -542,20 +547,21 @@ display: none;
       updateTagsArray();
     }
 
-    function removeTag(tagText, tagButton) {
-      const index = tagsArray.indexOf(tagText);
-      if (index !== -1) {
-        tagsArray.splice(index, 1);
-        tagButton.remove();
-      }
-      updateTagsArray();
-    }
 
-    function updateTagsArray() {
-      tagsArray = [];
-      const tagButtons = tagList.querySelectorAll('.tagButton');
-      tagButtons.forEach(button => tagsArray.push(button.textContent));
-    }
+function removeTag(tagText, tagButton) {
+  const index = tagsArray.indexOf(tagText);
+  if (index !== -1) {
+    tagsArray.splice(index, 1);
+    tagButton.remove();
+  }
+  updateTagsArray();
+}
+
+function updateTagsArray() {
+  tagsArray = [];
+  const tagButtons = tagList.querySelectorAll('.tagButton');
+  tagButtons.forEach(button => tagsArray.push(button.textContent.trim()));
+}
 
 
 
