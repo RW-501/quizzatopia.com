@@ -616,21 +616,19 @@ function isValidEmail(email) {
 
 
 // Update the createUserWithEmailAndPassword function
-window.createUserWithEmailAndPassword = function (email, password) {
+window.createUserWithEmailAndPassword = function () {
+ const username = document.getElementById('susername').value;
+ const email = document.getElementById('semail').value;
+  const password = document.getElementById('spassword').value;
+
+	
    // Check if email is provided and is a string
-  if (typeof email !== 'string' || email.trim() === '') {
-    showStatusMessage('Please enter a valid email address.', 'error');
+  if ( !validateFields(username, email, password)) {
     return;
   }
 
-  // Trim the email to remove leading/trailing whitespaces
-  email = email.trim();
 
-  // Check if the email is a valid email address
-  if (!isValidEmail(email)) {
-    showStatusMessage('Invalid email address.', 'error');
-    return;
-  }
+
 	const auth = firebase.auth();
 
   auth
@@ -649,7 +647,7 @@ window.createUserWithEmailAndPassword = function (email, password) {
 
       // Save user info to Firestore database
       const userInfo = {
-        userName: '',
+        userName: username,
         userEmail: userEmail,
         userProfilePic: '/images/avatar/w1.png',
         userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
@@ -690,18 +688,27 @@ window.createUserWithEmailAndPassword = function (email, password) {
 };
 	
 
+
+
+
+
+
+
 window.signInWithEmailAndPassword = function() {
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
-	// Trim the email to remove leading/trailing whitespaces
+  if (typeof email !== 'string' || email.trim() === '') {
+    showStatusMessage('Please enter a valid email address.', 'error');
+    return;
+  }
+
+  // Trim the email to remove leading/trailing whitespaces
   email = email.trim();
 
-  // Check if the email is a valid string
-  if (typeof email !== 'string' || !email.includes('@') || !email.includes('.')) {
-    // Show an error message or handle the invalid email
-	            showStatusMessage('Invalid email address.', 'error');
-
+  // Check if the email is a valid email address
+  if (!isValidEmail(email)) {
+    showStatusMessage('Invalid email address.', 'error');
     return;
   }
 	
