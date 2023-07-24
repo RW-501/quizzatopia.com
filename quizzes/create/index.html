@@ -455,6 +455,63 @@ display: none;
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
 
+const tagInput = document.getElementById('tagInput');
+const tagList = document.getElementById('tagList');
+let tagsArray = [];
+
+tagInput.addEventListener('keydown', function (event) {
+  if (event.key === ' ' || event.key === 'Enter') {
+    event.preventDefault();
+    const tagText = tagInput.innerText.trim();
+    if (tagText !== '') {
+      addTag(tagText);
+      tagInput.innerText = '';
+    }
+  }
+});
+
+tagInput.addEventListener('click', function (event) {
+  const clickedElement = event.target;
+  if (clickedElement === tagInput) {
+    tagInput.focus();
+  }
+});
+
+function addTag(tagText) {
+  tagsArray.push(tagText);
+
+  const tagButton = document.createElement('button');
+  tagButton.textContent = tagText;
+  tagButton.classList.add('tagButton');
+  tagButton.addEventListener('click', () => editTag(tagText));
+  tagList.appendChild(tagButton);
+}
+
+function editTag(tagText) {
+  const updatedTagText = prompt('Edit Tag:', tagText);
+  if (updatedTagText !== null && updatedTagText !== '') {
+    const index = tagsArray.indexOf(tagText);
+    if (index !== -1) {
+      tagsArray[index] = updatedTagText;
+      const tagButton = tagList.querySelector(`button:nth-child(${index + 1})`);
+      tagButton.textContent = updatedTagText;
+    }
+  }
+}
+
+function removeTag(tagText) {
+  const index = tagsArray.indexOf(tagText);
+  if (index !== -1) {
+    tagsArray.splice(index, 1);
+    const tagButton = tagList.querySelector(`button:nth-child(${index + 1})`);
+    tagButton.remove();
+  }
+}
+
+
+
+
+	  
 
 function showSection(sectionId) {
   // Hide all div elements with the class "mainSection"
@@ -477,6 +534,8 @@ function showSection(sectionId) {
 function generateQuizCode() {
 	 const userInfo = getUserInfo();
   let userID = userInfo.firebaseId ;
+	
+console.log('userID:', userID);
 
   // Extract the first 2 or 3 characters from the userID
   let shortUserID = userID.substring(0, 3); // Change 3 to 2 if you only want 2 characters
@@ -516,51 +575,8 @@ function generateQuizCode() {
   options.push(option);
 });
 
-const tagInput = document.getElementById('tagInput');
-const tagList = document.getElementById('tagList');
-let tagsArray = [];
 
-tagInput.addEventListener('keydown', function (event) {
-  if (event.key === ' ' || event.key === 'Enter') {
-    event.preventDefault();
-    const tagText = tagInput.innerText.trim();
-    if (tagText !== '') {
-      addTag(tagText);
-      tagInput.innerText = '';
-    }
-  }
-});
 
-function addTag(tagText) {
-  tagsArray.push(tagText);
-
-  const tagButton = document.createElement('button');
-  tagButton.textContent = tagText;
-  tagButton.classList.add('tagButton');
-  tagButton.addEventListener('click', () => editTag(tagText));
-  tagList.appendChild(tagButton);
-}
-
-function editTag(tagText) {
-  const updatedTagText = prompt('Edit Tag:', tagText);
-  if (updatedTagText !== null && updatedTagText !== '') {
-    const index = tagsArray.indexOf(tagText);
-    if (index !== -1) {
-      tagsArray[index] = updatedTagText;
-      const tagButton = tagList.querySelector(`button:nth-child(${index + 1})`);
-      tagButton.textContent = updatedTagText;
-    }
-  }
-}
-
-function removeTag(tagText) {
-  const index = tagsArray.indexOf(tagText);
-  if (index !== -1) {
-    tagsArray.splice(index, 1);
-    const tagButton = tagList.querySelector(`button:nth-child(${index + 1})`);
-    tagButton.remove();
-  }
-}
 
 	
 // Create quiz object
@@ -613,8 +629,7 @@ localStorage.setItem('quizData', JSON.stringify(quizObj));
         questionNumber++;
         questionObj.questionNumber = questionNumber;
 
-        // Update quiz code field with new code
-        $('#quizCode').val(generateQuizCode());
+   
 
         // Alert if the maximum number of questions is reached
         if (questionNumber > 5) {
@@ -779,6 +794,8 @@ function loadQuestions() {
     $('#quizName').val(quizData.quizName);
     $('#quizCode').val(quizData.quizCode);
   //  $('#category').val(quizData.category);
+     // Update quiz code field with new code
+        $('#quizCode').val(generateQuizCode());
 	  
 	const initialTags = quizData.quizTags;
   initialTags.forEach(tag => {
@@ -804,7 +821,11 @@ $('#questionType').val(questionTypeOption);
     if (quizData.questions.length >= 5) {
       $('#quizForm :input[type="submit"]').prop('disabled', true);
     }
+  }else{
+
   }
+
+	
 }
 
 
