@@ -475,7 +475,8 @@ function showSection(sectionId) {
     $(document).ready(function() {
       // Generate a random quiz code
 function generateQuizCode() {
-  let userID = userInfo.firebaseId;
+	 const userInfo = getUserInfo();
+  let userID = userInfo.firebaseId ;
 
   // Extract the first 2 or 3 characters from the userID
   let shortUserID = userID.substring(0, 3); // Change 3 to 2 if you only want 2 characters
