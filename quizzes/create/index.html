@@ -366,7 +366,12 @@ display: none;
   <div id="tagInput" contenteditable="true"></div>
 </div>
   </section>
-
+	  
+  <section>
+    <label for="Description">Description:</label>
+    <textarea id="description" rows="3" ></textarea>
+  </section>
+	  
 	  
 <button class="sectionBTN"  onclick="showSection('area-2')">Add Question</button>
   </div>
@@ -389,14 +394,15 @@ display: none;
     <label for="question">Question:</label>
     <textarea id="question" rows="3" required></textarea>
   </section>
-	
+  <!-- 	
   <section>
 <label for="image" class="custom-file-upload">
   <span>Image</span>
 <input type="file" id="image" accept="image/jpeg, image/png, image/gif">
 </label>
   </section>
-	
+	-->
+	  
   <section>
     <label for="options">Options:</label>
     <div id="optionsContainer">
@@ -569,9 +575,6 @@ function showSection(sectionId) {
   }
 }
 
-
-	  
-    $(document).ready(function() {
       // Generate a random quiz code
 function generateQuizCode() {
 	 const userInfo = getUserInfo();
@@ -589,6 +592,9 @@ console.log('userID:', userID);
 
   return finalQuizCode;
 }
+	  
+    $(document).ready(function() {
+
 
 
       // Update quiz code field with generated code
@@ -602,6 +608,7 @@ console.log('userID:', userID);
         var quizName = $('#quizName').val();
         var quizCode = $('#quizCode').val();
         var category = $('#category').val();
+        var description = $('#description').val();
         var quizTags = $('#quizTags').val();
         var questionType = $('#questionType').val();
         var question = $('#question').val();
@@ -627,6 +634,7 @@ var quizObj = JSON.parse(localStorage.getItem('quizData')) || {
   quizCode: quizCode,
   numberOfQuestions: 0,
   quizCategory: category,
+  quizDescription: description,
   quiztags: tagsArray,
   questions: []
 };
@@ -776,16 +784,18 @@ optionTwo.val("False");
 });
 
 //  quiztags: tagsArray,
+//  quizDescription: description,
 
-	  
   $('#questionList').on('click', '.questionListItem', function() {
     var questionIndex = $(this).index();
     var questionData = JSON.parse(localStorage.getItem('questions'))[questionIndex];
     clearFormInputs();
     $('#quizName').val(questionData.quizName);
     $('#quizCode').val(questionData.quizCode);
-    $('#category').val(questionData.category);
-    $('#questionType').val(questionData.questionType);
+    $('#category').val(questionData.quizCategory);
+    $('#description').val(questionData.quizDescription);
+
+$('#questionType').val(questionData.questionType);
     $('#question').val(questionData.question);
     questionData.options.forEach(function(option) {
       if (option !== '') {
@@ -835,12 +845,14 @@ function loadQuestions() {
 
     $('#quizName').val(quizData.quizName);
     $('#quizCode').val(quizData.quizCode);
-  //  $('#category').val(quizData.category);
-     // Update quiz code field with new code
-        $('#quizCode').val(generateQuizCode());
+  $('#category').val(quizData.quizCategory);
+  $('#description').val(quizData.quizDescription);
+    
 	  
 	const initialTags = quizData.quizTags;
   initialTags.forEach(tag => {
+
+	  console.log('initialTags   '+initialTags);
     addTag(tag);
   });
 	  
@@ -909,12 +921,15 @@ var saveType = "user";
 var userID = userInfo.firebaseId || "";
 var quizDataDB = jsonData;
 var quizTagsDB =  quizData.quiztags;
+var quizCreatedByDB =  userInfo.userName;
+var quizDescriptionDB =  quizData.quizDescription;
 
-// Create an object with the data to be saved
 var quizData = {
   quizCodeDB: quizCodeDB,
   quizNameDB: quizNameDS,
   categoryDB: categoryDB,
+  quizCreatedByDB: quizCreatedByDB,
+  quizDescriptionDB: quizDescriptionDB,
   quizTagsDB: quizTagsDB,
   quizLinkDB: quizLinkDB,
   imageURLDB: imageURLDB,
