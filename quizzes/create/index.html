@@ -226,6 +226,30 @@ display: none;
 .custom-file-upload input[type="file"] {
   display: none;
 }
+
+
+		#tagInputContainer {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+  min-height: 50px;
+}
+
+.tagButton {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.tagButton:hover {
+  background-color: #0056b3;
+}
+
 </style>
 	  	
 	
@@ -327,7 +351,21 @@ display: none;
       <option value="random">Random</option>
     </select>
   </section>
-	
+
+
+
+
+  <section>
+    <label for="tagInputContainer">Quiz Tags:</label>
+<div id="tagInputContainer">
+  <div id="tagList">
+    <!-- Tag buttons will be dynamically added here -->
+  </div>
+  <div id="tagInput" contenteditable="true"></div>
+</div>
+  </section>
+
+	  
 <button class="sectionBTN"  onclick="showSection('area-2')">Add Question</button>
   </div>
 </form>
@@ -436,9 +474,20 @@ function showSection(sectionId) {
 	  
     $(document).ready(function() {
       // Generate a random quiz code
-      function generateQuizCode() {
-        return 'uQuiz' + Math.random().toString(36).substr(2, 8);
-      }
+function generateQuizCode() {
+  let userID = userInfo.firebaseId;
+
+  // Extract the first 2 or 3 characters from the userID
+  let shortUserID = userID.substring(0, 3); // Change 3 to 2 if you only want 2 characters
+
+  let quizCode = 'uQuiz' + Math.random().toString(36).substr(2, 5);
+
+  // Concatenate the shortUserID with the generated quiz code
+  let finalQuizCode = shortUserID + '_' + quizCode;
+
+  return finalQuizCode;
+}
+
 
       // Update quiz code field with generated code
       $('#quizCode').val(generateQuizCode());
@@ -451,6 +500,7 @@ function showSection(sectionId) {
         var quizName = $('#quizName').val();
         var quizCode = $('#quizCode').val();
         var category = $('#category').val();
+        var quizTags = $('#quizTags').val();
         var questionType = $('#questionType').val();
         var question = $('#question').val();
         var options = [];
@@ -465,6 +515,51 @@ function showSection(sectionId) {
   options.push(option);
 });
 
+const tagInput = document.getElementById('tagInput');
+const tagList = document.getElementById('tagList');
+let tagsArray = [];
+
+tagInput.addEventListener('keydown', function (event) {
+  if (event.key === ' ' || event.key === 'Enter') {
+    event.preventDefault();
+    const tagText = tagInput.innerText.trim();
+    if (tagText !== '') {
+      addTag(tagText);
+      tagInput.innerText = '';
+    }
+  }
+});
+
+function addTag(tagText) {
+  tagsArray.push(tagText);
+
+  const tagButton = document.createElement('button');
+  tagButton.textContent = tagText;
+  tagButton.classList.add('tagButton');
+  tagButton.addEventListener('click', () => editTag(tagText));
+  tagList.appendChild(tagButton);
+}
+
+function editTag(tagText) {
+  const updatedTagText = prompt('Edit Tag:', tagText);
+  if (updatedTagText !== null && updatedTagText !== '') {
+    const index = tagsArray.indexOf(tagText);
+    if (index !== -1) {
+      tagsArray[index] = updatedTagText;
+      const tagButton = tagList.querySelector(`button:nth-child(${index + 1})`);
+      tagButton.textContent = updatedTagText;
+    }
+  }
+}
+
+function removeTag(tagText) {
+  const index = tagsArray.indexOf(tagText);
+  if (index !== -1) {
+    tagsArray.splice(index, 1);
+    const tagButton = tagList.querySelector(`button:nth-child(${index + 1})`);
+    tagButton.remove();
+  }
+}
 
 	
 // Create quiz object
@@ -473,6 +568,7 @@ var quizObj = JSON.parse(localStorage.getItem('quizData')) || {
   quizCode: quizCode,
   numberOfQuestions: 0,
   quizCategory: category,
+  quiztags: tagsArray,
   questions: []
 };
 
@@ -621,6 +717,7 @@ optionTwo.val("False");
 	
 });
 
+//  quiztags: tagsArray,
 
 	  
   $('#questionList').on('click', '.questionListItem', function() {
@@ -670,6 +767,7 @@ $('#questionList').on('click', '.questionListItem', function() {
     $('#quizForm :input[type="submit"]').prop('disabled', false);
   }
 });
+	  
 
 
         // Load questions from local storage
@@ -679,7 +777,13 @@ function loadQuestions() {
 
     $('#quizName').val(quizData.quizName);
     $('#quizCode').val(quizData.quizCode);
-
+  //  $('#category').val(quizData.category);
+	  
+	const initialTags = quizData.quizTags;
+  initialTags.forEach(tag => {
+    addTag(tag);
+  });
+	  
 var categoryOption = quizData.category;
 // Set the select element based on the option name
 $('#category').val(categoryOption);
@@ -740,12 +844,14 @@ var quizDate = new Date().toISOString();
 var saveType = "user";
 var userID = userInfo.firebaseId || "";
 var quizDataDB = jsonData;
+var quizTagsDB =  quizData.quiztags;
 
 // Create an object with the data to be saved
 var quizData = {
   quizCodeDB: quizCodeDB,
   quizNameDB: quizNameDS,
   categoryDB: categoryDB,
+  quizTagsDB: quizTagsDB,
   quizLinkDB: quizLinkDB,
   imageURLDB: imageURLDB,
   numberOfQuestionsDB: numberOfQuestionsDB,
