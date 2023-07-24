@@ -1250,7 +1250,10 @@ async function onAuthSuccess(userInfo) {
     console.error(error);
   }
 }
-
+function showResetPasswordForm(){
+      var resetPasswordForm = document.getElementById('resetPasswordForm');
+      resetPasswordForm.classList.remove('d-none');
+}
 
 
 
