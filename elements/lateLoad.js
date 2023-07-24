@@ -589,6 +589,15 @@ window.signInAnonymously = function() {
 
 // Update the createUserWithEmailAndPassword function
 window.createUserWithEmailAndPassword = function (email, password) {
+  // Trim the email to remove leading/trailing whitespaces
+  email = email.trim();
+
+  // Check if the email is a valid string
+  if (typeof email !== 'string' || !email.includes('@') || !email.includes('.')) {
+    // Show an error message or handle the invalid email
+	            showStatusMessage('Invalid email address.', 'error');
+    return;
+  }
 	const auth = firebase.auth();
 
   auth
@@ -652,6 +661,17 @@ window.signInWithEmailAndPassword = function() {
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
 
+	// Trim the email to remove leading/trailing whitespaces
+  email = email.trim();
+
+  // Check if the email is a valid string
+  if (typeof email !== 'string' || !email.includes('@') || !email.includes('.')) {
+    // Show an error message or handle the invalid email
+	            showStatusMessage('Invalid email address.', 'error');
+
+    return;
+  }
+	
   firebase.auth().signInWithEmailAndPassword(email, password)
     .then((userCredential) => {
       const user = userCredential.user;
