@@ -1212,7 +1212,7 @@ function generateQuizHTML(quizList, page) {
       const tagsToShow = tagsArray.slice(0, maxTagsToShow);
 
       // Use map to iterate over the tagsToShow and generate tag elements
-      const tagsElements = tagsToShow.map((tag) => `<h4 class='tagEl' onclick="getTag('${tag}')">${tag}</h4>`);
+      const tagsElements = tagsToShow.map((tag) => `<div class='tagEl' onclick="getTag('${tag}')">${tag}</div>`);
 
       // Join the tag elements to create the tagsUI
       tagsUI = tagsElements.join('');
