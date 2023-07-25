@@ -910,15 +910,13 @@ var questionData = JSON.parse(localStorage.getItem('quizData'));
 
 console.log('questionData.quizName: ' + questionData.quizName);
 
-	 console.log('questionData.questions: ' + questionData.questions);
+console.log('questionData.questions: ' + JSON.stringify(questionData.questions));
 
 var qustionsData = questionData.questions[questionIndex];
-console.log('qustionsData: ' + qustionsData);
+console.log('qustionsData: ' + JSON.stringify(qustionsData));
 
-
-	 var optionsData = qustionsData.options;
-console.log('optionsData: ' + JSON.stringify(optionsData)); // Use JSON.stringify() to log the array of objects
-
+var optionsData = qustionsData.options;
+console.log('optionsData: ' + JSON.stringify(optionsData));
 
 /*
     clearFormInputs();
