@@ -1336,6 +1336,25 @@ firebase.firestore()
   .add(quizData)
   .then(function(docRef) {
     console.log("Quiz document written with ID: ", docRef.id);
+
+  document.getElementById('closeStatsButton').addEventListener('click', function() {
+window.location.href = "https://www.quizzatopia.com/quiz/stats/?q" + quizCodeDB;
+  });
+	  
+  document.getElementById('shareButton').addEventListener('click', function() {
+window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
+  });
+	  
+  document.getElementById('discussionButton').addEventListener('click', function() {
+window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
+  });
+	  
+function closeEndPopup (){
+window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
+}
+	   showPopup(quizNameDS, quizLinkDB);
+
+	  
   })
   .catch(function(error) {
     console.error("Error adding quiz document: ", error);
@@ -1353,8 +1372,8 @@ firebase.firestore()
 document.addEventListener('DOMContentLoaded', function() {
   // Function to show the pop-up
   function showPopup(quizName, shareURL) {
-    document.getElementById('quizName').textContent = quizNameDS;
-    document.getElementById('shareURL').value = quizLinkDB;
+    document.getElementById('quizName').textContent = quizName;
+    document.getElementById('shareURL').value = shareURL;
     document.getElementById('popupOverlay').style.display = 'flex';
   }
 
@@ -1373,18 +1392,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
  
  
-  document.getElementById('closeStatsButton').addEventListener('click', function() {
-window.location.href = "https://www.quizzatopia.com/quiz/stats/?q" + quizCodeDB;
 
-  });
-  document.getElementById('shareButton').addEventListener('click', function() {
-window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
-
-  });
-  document.getElementById('discussionButton').addEventListener('click', function() {
-window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
-
-  });
 	
   // Close the pop-up when clicking outside the popup
   document.addEventListener('click', function(event) {
@@ -1394,11 +1402,7 @@ window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeD
   });
 });
 
-function closeEndPopup (){
-window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
 
-
-}
 
 	  
 	  
