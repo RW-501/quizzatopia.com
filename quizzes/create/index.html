@@ -836,6 +836,9 @@ function viewQuestionListFunc() {
   }
 }
 
+
+	
+
 // Add event listener to the #quizForm for clicks on .removeButton
 $('#quizForm').on('click', '.removeButton', function () {
   // Find the index of the question associated with the clicked button
@@ -885,7 +888,8 @@ function loadQuestions() {
     // Make sure quizData is defined and has the questions property before accessing it
     if (quizData.questions && Array.isArray(quizData.questions)) {
       // Loop through each question in quizData.questions and add it to the question list
-      quizData.questions.forEach(function (question) {
+     
+	    quizData.questions.forEach(function (question) {
         var questionListItem = $('<div class="questionListItem"></div>');
         questionListItem.text(question.question);
         $('#questionList').append(questionListItem);
@@ -903,7 +907,7 @@ function loadQuestions() {
     console.log('quizData is not defined');
   }
 }
-	  }
+	  });
 	  
 	  
 $(document).ready(function() {
@@ -916,6 +920,7 @@ $(document).ready(function() {
   $(window).on('beforeunload', function() {
   //  saveQuizData();
   });
+	
 });
   
 // Function to save the quiz data to local storage
