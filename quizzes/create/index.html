@@ -909,15 +909,19 @@ function removeQuestionFunc(questionIndex) {
 let questionIndex = $(this).index();
 
 let questionData = JSON.parse(localStorage.getItem('quizData'));
+let questionData2 = JSON.parse(localStorage.getItem('quizData'));
 
 console.log('questionData.quizName: ' + questionData.quizName);
 
-console.log('questionData.questions: ' + JSON.stringify(questionData.questions));
+console.log('questionData ?????: ' + JSON.stringify(questionData2));
 
-let qustionsData = JSON.stringify(questionData.questions);
+let qustionsData = JSON.stringify(questionData2);
 
-let question = questionData.question;
+let question = questionData.questions[1];
 console.log("question: " + question);
+	 
+let question1 = questionData.questions[1]question;
+console.log("question1: " + question1);
 
 
 
