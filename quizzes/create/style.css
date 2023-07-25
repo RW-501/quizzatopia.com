@@ -126,10 +126,18 @@
     cursor: pointer;
     width: 100%;
     position: relative;
+  
+  }
+.questionListtext{
+    padding: 10px;
+  top: 0;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    position: relative;
     font-size: 1.5em;
     font-weight: 500;
-  }
-
+}
 
 .removeButton {
     position: absolute;
@@ -140,8 +148,10 @@
     bottom: 0;
     border: none;
     background-color: red;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 500;
+     width: 10%;
+
 }
 
 select, textarea {
