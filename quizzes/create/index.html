@@ -808,7 +808,7 @@ function viewQuestionListFunc() {
   var quizQuestions = JSON.parse(localStorage.getItem('quizQuestions'));
 
   var questionListItems = document.getElementsByClassName('questionListItem');
-
+/*
   // Now you can loop through the questionListItems collection and access each element
   for (var i = 0; i < questionListItems.length; i++) {
 	 console.log('loadQuestions '+i);
@@ -816,12 +816,12 @@ function viewQuestionListFunc() {
     var questionListItem = questionListItems[i];
 	  
     questionListItem.innerHTML = quizQuestions.questions[i].question;
-/*
+
     // Check if the question is blank or empty, and remove it from the list
     if (questionText === "") {
      // questionListItem.remove();
     }
-    */
+    
  console.log('loadQuestions '+i);
 	  
     // Create the "Remove" button and attach the removeQuestionFunc to it
@@ -835,6 +835,8 @@ function viewQuestionListFunc() {
 
     // Append the "Remove" button to the question list item
     questionListItem.appendChild(removeButton);
+
+    */
   }
 
   // Enable the submit button if the number of questions is less than 5
