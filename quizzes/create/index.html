@@ -801,6 +801,9 @@ optionTwo.val("False");
   $('#questionList').on('click', '.questionListItem', function() {
     var questionIndex = $(this).index();
     var questionData = JSON.parse(localStorage.getItem('questions'))[questionIndex];
+
+    console.log('questionData ???????????????  ' +questionData.question);
+	  
     clearFormInputs();
     $('#quizName').val(questionData.quizName);
     $('#quizCode').val(questionData.quizCode);
@@ -809,6 +812,7 @@ optionTwo.val("False");
 
 $('#questionType').val(questionData.questionType);
     $('#question').val(questionData.question);
+	  
     questionData.options.forEach(function(option) {
       if (option !== '') {
         var optionRow = $('<div class="optionRow"></div>');
@@ -839,10 +843,15 @@ $('#questionType').val(questionData.questionType);
         // Remove question
 $('#questionList').on('click', '.questionListItem', function() {
   var questionIndex = $(this).index();
+    console.log('questionIndex 1  ' +questionIndex);
+
+	
   var quizQuestions = JSON.parse(localStorage.getItem('quizQuestions'));
-  quizQuestions.splice(questionIndex, 1);
+//  quizQuestions.splice(questionIndex, 1);
   localStorage.setItem('quizQuestions', JSON.stringify(quizQuestions));
-  
+	
+      console.log('quizQuestions  2 ' +quizQuestions[questionIndex]);
+
   if (quizQuestions.length < 5) {
     $('#quizForm :input[type="submit"]').prop('disabled', false);
   }
