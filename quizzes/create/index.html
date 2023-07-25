@@ -839,6 +839,10 @@ $('#questionType').val(questionData.questionType);
     // Process the form data and save the question to local storage or database
     // ...
   //  clearFormInputs();
+
+
+
+	  
   });
 });
 
@@ -851,9 +855,9 @@ $('#questionList').on('click', '.questionListItem', function() {
 	
   var quizQuestions = JSON.parse(localStorage.getItem('quizQuestions'));
 //  quizQuestions.splice(questionIndex, 1);
-  localStorage.setItem('quizQuestions', JSON.stringify(quizQuestions));
+ // localStorage.setItem('quizQuestions', JSON.stringify(quizQuestions));
 	
-      console.log('quizQuestions  2 ' +quizQuestions[questionIndex]);
+      console.log('quizQuestions  2 ' +quizQuestions.questions);
 
   if (quizQuestions.length < 5) {
     $('#quizForm :input[type="submit"]').prop('disabled', false);
@@ -861,6 +865,11 @@ $('#questionList').on('click', '.questionListItem', function() {
 });
 	  
 
+
+
+
+
+	  
 
         // Load questions from local storage
 function loadQuestions() {
