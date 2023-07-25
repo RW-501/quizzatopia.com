@@ -827,10 +827,15 @@ questionEntries.forEach(([key, value]) => {
     // Create a new div element with the class "questionListItem"
     var questionListItem = document.createElement('div');
     questionListItem.className = 'questionListItem';
-    // Set the text content of the div to the question's text
-    questionListItem.textContent = question;
+
+  var questionListtext = document.createElement('div');
+    questionListtext.className = 'questionListtext';
+	  
+	  
+	  questionListtext.textContent = question;
     // Append the questionListItem to the questionList
     questionList.appendChild(questionListItem);
+    questionListItem.appendChild(questionListtext);
   }
 });
 
@@ -900,7 +905,7 @@ function removeQuestionFunc(questionIndex) {
 
 
 
-/*
+
 
  $('#questionList').on('click', '.questionListItem', function() {
     var questionIndex = $(this).index();
@@ -941,7 +946,7 @@ $('#questionType').val(questionData.questionType);
 
 
 
-*/
+
 
 
 
@@ -981,7 +986,7 @@ function loadQuestions() {
 
   
 
-
+/*
   
 // Clear the content of the questionList
 var questionList = document.getElementById('questionList');
@@ -1009,7 +1014,7 @@ questionEntries.forEach(([key, value]) => {
   }
 });
 
-
+*/
 
 	  
       if (quizData.questions.length >= 5) {
