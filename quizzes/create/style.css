@@ -161,8 +161,11 @@ height: auto;
 }
 
 section {
-    margin-bottom: 10px;
-  }
+      margin-bottom: 5%;
+    margin-top: 5%;
+    font-weight: 700;
+    font-size: 1.2em;
+}
 
 
 
