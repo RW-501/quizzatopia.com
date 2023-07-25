@@ -675,7 +675,9 @@ console.log('userID:', userID);
   // Check if the question is not blank or empty
   if (question.trim() !== '') {
     // Save question to quizObj
-    quizObj.questions = questionObj;
+  //  quizObj.questions = questionObj;
+  quizObj.questions.push(questionObj);
+
   }
 
   // Save quizObj to local storage
