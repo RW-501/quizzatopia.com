@@ -813,7 +813,7 @@ function viewQuestionListFunc() {
   for (var i = 0; i < questionListItems.length; i++) {
     var questionListItem = questionListItems[i];
 	  
-    questionListItem.innerHTML = quizQuestions.questions[i];
+    questionListItem.innerHTML = quizQuestions.questions[i].question;
 /*
     // Check if the question is blank or empty, and remove it from the list
     if (questionText === "") {
