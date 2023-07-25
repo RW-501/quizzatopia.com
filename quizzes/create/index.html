@@ -351,7 +351,7 @@ width: 70%;
 	background-color: #fd7e14;
 	color:white;
 }
-		#shareButton{
+		.btnRnd{
 width: 20%;
     border: none;
     margin: 0;
@@ -607,10 +607,11 @@ width: 20%;
     <div id="copyURL"><input type="text" id="shareURL" readonly>
     <button id="copyButton">Copy URL</button></div>
 	  
-    <button id="shareButton">Share</button>
+    <button class="btnRnd" id="shareButton">Share</button>
+    <button class="btnRnd" id="takeQuizButton">Take Quiz</button>
 	  <hr>
-    <button id="discussionButton">Start a Discussion</button>
-    <button id="statsButton">Quiz Stats Page</button>
+    <button class="btnRnd" id="discussionButton">Start a Discussion</button>
+    <button class="btnRnd" id="statsButton">Quiz Stats Page</button>
     <!-- Add any other information or buttons you want here -->
 
 	  <button id="closeStatsButton " class="close BottomCloseOptionsButton" onclick="closeStatsPopup()">Close</button>
@@ -1361,13 +1362,22 @@ document.addEventListener('DOMContentLoaded', function() {
     alert('URL copied to clipboard!');
   });
  
-
-  document.getElementById('closeStatsButton').addEventListener('click', function() {
+  document.getElementById('takeQuizButton').addEventListener('click', function() {
 window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
 
   });
+  document.getElementById('closeStatsButton').addEventListener('click', function() {
+window.location.href = "https://www.quizzatopia.com/quiz/stats/?q" + quizCodeDB;
 
+  });
+  document.getElementById('shareButton').addEventListener('click', function() {
+window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
 
+  });
+  document.getElementById('discussionButton').addEventListener('click', function() {
+window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
+
+  });
 	
   // Close the pop-up when clicking outside the popup
   document.addEventListener('click', function(event) {
