@@ -112,8 +112,9 @@
 
 
 #questionList {
-    max-width: 500px;
-    margin: 5% auto;
+       max-width: 800px;
+      margin: 5% auto;
+     width: 80%;
 }
 
   .questionListItem {
