@@ -815,7 +815,7 @@ function viewQuestionListFunc() {
 
     // Check if the question is blank or empty, and remove it from the list
     if (questionText === "") {
-      questionListItem.remove();
+     // questionListItem.remove();
     }
 
     // Create the "Remove" button and attach the removeQuestionFunc to it
@@ -860,14 +860,14 @@ function removeQuestionFunc(questionIndex) {
   localStorage.setItem('quizQuestions', JSON.stringify(quizQuestions));
 
   // Remove the questionListItem from the DOM
-  $('.questionListItem').eq(questionIndex).remove();
+//  $('.questionListItem').eq(questionIndex).remove();
 }
 
 
 
 
 
-
+/*
 
  $('#questionList').on('click', '.questionListItem', function() {
     var questionIndex = $(this).index();
@@ -909,7 +909,7 @@ $('#questionType').val(questionData.questionType);
 
 
 
-
+*/
 
 
 
