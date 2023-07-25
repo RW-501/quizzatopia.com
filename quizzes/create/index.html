@@ -816,6 +816,10 @@ questionList.innerHTML = '';
 let listArray = quizQuestions.questions; // Use 'quizQuestions' instead of 'quizData.questions'
 var questionEntries = Object.entries(listArray);
 
+
+
+console.log('question ' + listArray.question[0]);
+
 	
 questionEntries.forEach(([key, value]) => {
   // Check if the current key is "question"
@@ -999,12 +1003,11 @@ function loadQuestions() {
 
     // Load initial tags from quizData.quizTags
     let initialTags = quizData.quizTags;
-let data = JSON.stringify(initialTags);
-
-    data.forEach(tag => {
+if(initialTags){
+    initialTags.forEach(tag => {
       addTag(tag);
     });
-
+}
     var questionTypeOption = quizData.questionType;
     // Set the select element based on the option name
     $('#questionType').val(questionTypeOption);
