@@ -680,12 +680,12 @@ console.log('userID:', userID);
 
   // Save quizObj to local storage
   localStorage.setItem('quizData', JSON.stringify(quizObj));
-
+/*
   // Display question in the question list
   var questionListItem = $('<div class="questionListItem"></div>');
   questionListItem.text(questionObj.question);
   $('#questionList').append(questionListItem);
-
+*/
   // Clear form fields
   $('#question').val('');
   $('.optionRow').not(':first').remove();
@@ -811,6 +811,8 @@ function viewQuestionListFunc() {
 
   // Now you can loop through the questionListItems collection and access each element
   for (var i = 0; i < questionListItems.length; i++) {
+	 console.log('loadQuestions '+i);
+  
     var questionListItem = questionListItems[i];
 	  
     questionListItem.innerHTML = quizQuestions.questions[i].question;
