@@ -966,8 +966,8 @@ questionList.innerHTML = '';
 if (quizData && quizData.questions) {
 	
 let listArray = quizData.questions;
-	
-	 listArray.forEach(function (question) {
+    listArray.forEach(question => {
+	    
     // Create a new div element with the class "questionListItem"
     var questionListItem = document.createElement('div');
     questionListItem.className = 'questionListItem';
