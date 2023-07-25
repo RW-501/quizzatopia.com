@@ -692,7 +692,7 @@ if (question.trim() !== '') {
 
 	console.log("questionObj  "+questionObj.question)
   // Save question to quizObj
-quizObj.questions.push(questionObj);
+quizObj.questions = questionObj;
 quizObj.numberOfQuestions = quizObj.questions.length;
 }
 	console.log("quizObj info  "+quizObj.questions)    
