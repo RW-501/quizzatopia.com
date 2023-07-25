@@ -122,10 +122,11 @@
     background-color: #f1f1f1;
     padding: 10px;
     margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: .5em;
     cursor: pointer;
     width: 100%;
     position: relative;
+   overflow: hidden;
   
   }
 .questionListtext{
