@@ -798,98 +798,61 @@ optionTwo.val("False");
 	
 });
 
-function viewQuestionListFunc(){
-	
-var removeButton = document.createElement('button');
-removeButton.className = 'removeButton';
-removeButton.textContent = 'Remove';
-	
- var questionListItems = document.getElementsByClassName('questionListItem');
+// Function to add a "Remove" button to each question list item
+function viewQuestionListFunc() {
+  var questionListItems = document.getElementsByClassName('questionListItem');
 
-// Now you can loop through the questionListItems collection and access each element
-for (var i = 0; i < questionListItems.length; i++) {
-  var questionListItem = questionListItems[i];
-	var questionText = questionListItem.innerText;
+  // Now you can loop through the questionListItems collection and access each element
+  for (var i = 0; i < questionListItems.length; i++) {
+    var questionListItem = questionListItems[i];
+    var questionText = questionListItem.innerText;
 
-	if(questionText === ""){
-		questionListItems.remove(); 
-	}	
-removeButton.onclick = removeQuestionFunc(i,questionListItem);
-  targetElement.appendChild(removeButton.cloneNode(true));
+    // Check if the question is blank or empty, and remove it from the list
+    if (questionText === "") {
+      questionListItem.remove();
+    }
 
+    // Create the "Remove" button and attach the removeQuestionFunc to it
+    var removeButton = document.createElement('button');
+    removeButton.className = 'removeButton';
+    removeButton.textContent = 'Remove';
+    removeButton.onclick = function () {
+      // Pass the question index to removeQuestionFunc when the button is clicked
+      removeQuestionFunc(i);
+    };
 
+    // Append the "Remove" button to the question list item
+    questionListItem.appendChild(removeButton);
+  }
 
-
-
-	
-//  console.log(questionText);
-}
-	
+  // Enable the submit button if the number of questions is less than 5
   if (questionListItems.length < 5) {
     $('#quizForm :input[type="submit"]').prop('disabled', false);
   }
-
 }
 
-
-	    
-//  quiztags: tagsArray,
-//  quizDescription: description,
-
-  $('#questionList').on('click', '.questionListItem', function() {
-    var questionIndex = $(this).index();
-    var questionData = JSON.parse(localStorage.getItem('questions'))[questionIndex];
-
-    console.log('questionData ???????????????  ' +questionData.question);
-	  
-    clearFormInputs();
-    $('#quizName').val(questionData.quizName);
-    $('#quizCode').val(questionData.quizCode);
-    $('#category').val(questionData.quizCategory);
-    $('#description').val(questionData.quizDescription);
-
-$('#questionType').val(questionData.questionType);
-    $('#question').val(questionData.question);
-	  
-    questionData.options.forEach(function(option) {
-      if (option !== '') {
-        var optionRow = $('<div class="optionRow"></div>');
-        var optionInput = $('<input type="text" class="option" required>');
-        optionInput.val(option);
-        var correctAnswerCheckbox = $('<input type="checkbox" class="correctAnswer">');
-        if (option === questionData.answer) {
-          correctAnswerCheckbox.prop('checked', true);
-          $('#answer').val(option);
-        }
-        optionRow.append(optionInput, correctAnswerCheckbox);
-        $('#optionsContainer').append(optionRow);
-      }
-    });
-
-	  
-    $('#difficulty').val(questionData.difficulty);
-    $('#explanation').val(questionData.explanation);
-  });
-
-
-	  
-  $('#quizForm').submit(function(event) {
-    event.preventDefault();
-    // Process the form data and save the question to local storage or database
-    // ...
-  //  clearFormInputs();
+// Add event listener to the #quizForm for clicks on .removeButton
+$('#quizForm').on('click', '.removeButton', function () {
+  // Find the index of the question associated with the clicked button
+  var questionIndex = $(this).closest('.questionListItem').index();
+  // Call removeQuestionFunc with the question index
+  removeQuestionFunc(questionIndex);
 });
 
-	  function removeQuestionFunc(questionIndex,ele){
-
+// Function to remove a question from the list and local storage
+function removeQuestionFunc(questionIndex) {
+  // Get the list of questions from local storage
   var quizQuestions = JSON.parse(localStorage.getItem('quizQuestions'));
-      console.log('quizQuestions   ' +quizQuestions.questions);
-quizQuestions.splice(questionIndex, 1);
 
-$(ele).remove();  
-	  }
+  // Remove the question at the specified index
+  quizQuestions.splice(questionIndex, 1);
 
-	  
+  // Save the updated quizQuestions back to localStorage
+  localStorage.setItem('quizQuestions', JSON.stringify(quizQuestions));
+
+  // Remove the questionListItem from the DOM
+  $('.questionListItem').eq(questionIndex).remove();
+}
 
 
 
