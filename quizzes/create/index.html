@@ -702,6 +702,7 @@ console.log('userID:', userID);
   }
   });
 
+$(document).ready(function() {
 
 	   
   var maxOptions = 4;
@@ -797,6 +798,11 @@ optionTwo.val("False");
 	
 });
 
+
+
+
+
+	  
 // Function to add a "Remove" button to each question list item
 function viewQuestionListFunc() {
   var questionListItems = document.getElementsByClassName('questionListItem');
@@ -897,9 +903,21 @@ function loadQuestions() {
     console.log('quizData is not defined');
   }
 }
+	  }
+	  
+	  
+$(document).ready(function() {
+  // Load existing quiz data if available
+  loadQuestions();
 
+  
 
-
+  // Add event listener to save the quiz data when the user tries to leave the page or close the tab
+  $(window).on('beforeunload', function() {
+  //  saveQuizData();
+  });
+});
+  
 // Function to save the quiz data to local storage
   function saveQuizData() {
     var quizData = {
@@ -918,17 +936,8 @@ function loadQuestions() {
 
 
 $(document).ready(function() {
-  // Load existing quiz data if available
-  loadQuestions();
+  // Existing code
 
-  // Add event listener to save the quiz data when the user tries to leave the page or close the tab
-  $(window).on('beforeunload', function () {
-    // Call the function to save quiz data here if needed
-    // saveQuizData();
-  });
-
-
-	
   $('#generateJSONButton').click(function() {
     var questionsData = localStorage.getItem('quizData');
     if (questionsData) {
@@ -990,11 +999,13 @@ firebase.firestore()
     console.error("Error adding quiz document: ", error);
   });
 
+
+	    
     } else {
       console.log("No questions found in local storage.");
     }
-	  
   });
+});
 
 
 
