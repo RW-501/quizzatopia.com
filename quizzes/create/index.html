@@ -811,32 +811,15 @@ var questionListItems = document.getElementsByClassName('questionListItem');
 var questionList = document.getElementById('questionList');
 questionList.innerHTML = '';
 	
+
+
+
 let quizData = JSON.parse(localStorage.getItem('quizData'));
 let listArray = quizData.questions;
 
-console.log('question: ' + listArray[0].question);
-
-let questionsData = JSON.stringify(listArray);
-
-let question = quizData.questions[0];
-console.log("question: " + JSON.stringify(question));
-
-
-
-
-	
-var questionEntries = Object.entries(listArray);
-
-
-
-
-	
-questionEntries.forEach(([key, value]) => {
-  // Check if the current key is "question"
-  if (key === "question") {
-    let question = value;
-
-    // Create a new div element with the class "questionListItem"
+for (let i = 0; i < listArray.length; i++) {
+  let question = listArray[i].question;
+ // console.log("Question " + (i + 1) + ": " + question);
     var questionListItem = document.createElement('div');
     questionListItem.className = 'questionListItem';
 
@@ -848,12 +831,10 @@ questionEntries.forEach(([key, value]) => {
     // Append the questionListItem to the questionList
     questionList.appendChild(questionListItem);
     questionListItem.appendChild(questionListtext);
-  }
-});
-
-
-
 	
+}
+
+
   // Now you can loop through the questionListItems collection and access each element
   for (var i = 0; i < questionListItems.length; i++) {
 	 console.log('loadQuestions '+i);
