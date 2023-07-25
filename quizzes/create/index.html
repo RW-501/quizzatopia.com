@@ -856,7 +856,7 @@ questionEntries.forEach(([key, value]) => {
     // Create the "Remove" button and attach the removeQuestionFunc to it
     var removeButton = document.createElement('button');
     removeButton.className = 'removeButton';
-    removeButton.textContent = '&#x1F5D1;&#xFE0F;';
+    removeButton.innerHTML = '&#x1F5D1;&#xFE0F;';
     removeButton.onclick = function () {
       // Pass the question index to removeQuestionFunc when the button is clicked
       removeQuestionFunc(i);
