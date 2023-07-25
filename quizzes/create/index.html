@@ -686,7 +686,7 @@ var questionObj = {
 //console.log()
 if (quizObj.quizTags !== '') {
 
-  quizObj.quizTags.push(tagsArray);
+  quizObj.quizTags = tagsArray;
 }
 	      
 // Check if the question is blank or empty
@@ -694,7 +694,7 @@ if (question.trim() !== '') {
 
 	console.log("questionObj  "+questionObj)
   // Save question to quizObj
-  quizObj.questions.push(questionObj);
+  quizObj.questions = questionObj;
   quizObj.numberOfQuestions = quizObj.questions.length;
 }
 
