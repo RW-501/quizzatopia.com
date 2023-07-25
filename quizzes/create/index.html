@@ -909,8 +909,14 @@ var questionIndex = $(this).index();
 var questionData = JSON.parse(localStorage.getItem('quizData'));
 
 console.log('questionData.quizName: ' + questionData.quizName);
-var optionsData = questionData.questions[questionIndex].options;
 
+	 console.log('questionData.questions: ' + questionData.questions);
+
+var qustionsData = questionData.questions[questionIndex];
+console.log('qustionsData: ' + qustionsData);
+
+
+	 var optionsData = qustionsData.options;
 console.log('optionsData: ' + JSON.stringify(optionsData)); // Use JSON.stringify() to log the array of objects
 
 
