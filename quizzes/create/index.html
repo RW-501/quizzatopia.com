@@ -619,6 +619,16 @@ console.log('userID:', userID);
 	  
     $(document).ready(function() {
 
+function clearFormInputs(){
+  $('#question').val('');
+  $('.optionRow').not(':first').remove();
+  $('.option').val('');
+  $('.correctAnswer').prop('checked', false);
+  $('#answer').val('');
+  $('#image').val('');
+  $('#explanation').val('');
+}
+
 
 
       // Update quiz code field with generated code
@@ -689,13 +699,7 @@ console.log('userID:', userID);
   $('#questionList').append(questionListItem);
 */
   // Clear form fields
-  $('#question').val('');
-  $('.optionRow').not(':first').remove();
-  $('.option').val('');
-  $('.correctAnswer').prop('checked', false);
-  $('#answer').val('');
-  $('#image').val('');
-  $('#explanation').val('');
+clearFormInputs();
 
   // Alert if the maximum number of questions is reached
   if (quizObj.questions && quizObj.questions.length >= 5) {
@@ -704,9 +708,8 @@ console.log('userID:', userID);
   }
   });
 
-$(document).ready(function() {
 
-	    }); 
+	  
   var maxOptions = 4;
 	
 	
