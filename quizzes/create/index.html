@@ -805,19 +805,23 @@ optionTwo.val("False");
 	  
 // Function to add a "Remove" button to each question list item
 function viewQuestionListFunc() {
+  var quizQuestions = JSON.parse(localStorage.getItem('quizQuestions'));
+
   var questionListItems = document.getElementsByClassName('questionListItem');
-  console.log('???????????????????????????????????????????????????????????????????????????????????????');
 
   // Now you can loop through the questionListItems collection and access each element
   for (var i = 0; i < questionListItems.length; i++) {
     var questionListItem = questionListItems[i];
-    var questionText = questionListItem.innerText;
-
+	  
+    questionListItem.innerHTML = quizQuestions.questions[i];
+/*
     // Check if the question is blank or empty, and remove it from the list
     if (questionText === "") {
      // questionListItem.remove();
     }
-
+    */
+ console.log('loadQuestions '+i);
+	  
     // Create the "Remove" button and attach the removeQuestionFunc to it
     var removeButton = document.createElement('button');
     removeButton.className = 'removeButton';
