@@ -837,7 +837,7 @@ for (let i = 0; i < listArray.length; i++) {
 
   // Now you can loop through the questionListItems collection and access each element
   for (var i = 0; i < questionListItems.length; i++) {
-	 console.log('loadQuestions '+i);
+	// console.log('loadQuestions '+i);
   
     var questionListItem = questionListItems[i];
 	
@@ -846,7 +846,7 @@ for (let i = 0; i < listArray.length; i++) {
      // questionListItem.remove();
     }
     
- console.log('loadQuestions '+i);
+// console.log('loadQuestions '+i);
 	  
     // Create the "Remove" button and attach the removeQuestionFunc to it
     var removeButton = document.createElement('button');
@@ -907,14 +907,14 @@ let questionsData = JSON.parse(localStorage.getItem('quizData'));
 let questionData = questionsData.questions[questionIndex];
 
 let question = questionData.question;
-console.log("question1: " + question);
+//console.log("question1: " + question);
 
 
 
 var optionsData = questionData["options"];
-console.log("options: " + optionsData);
+//console.log("options: " + optionsData);
 	 
-/*
+
     clearFormInputs();
     $('#quizName').val(questionsData.quizName);
     $('#quizCode').val(questionsData.quizCode);
@@ -941,7 +941,7 @@ $('#questionType').val(questionData.questionType);
     $('#difficulty').val(questionData.difficulty);
     $('#explanation').val(questionData.explanation);
 
-    */
+    
 showSection('area-2');
 
 	 
