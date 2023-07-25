@@ -811,15 +811,15 @@ var questionListItems = document.getElementsByClassName('questionListItem');
 var questionList = document.getElementById('questionList');
 questionList.innerHTML = '';
 	
-let quizQuestions = JSON.parse(localStorage.getItem('quizData'));
-let listArray = quizQuestions.questions; 
+let quizData = JSON.parse(localStorage.getItem('quizData'));
+let listArray = quizData.questions;
 
-console.log('question ' + listArray.question[0]);
-	
-let qustionsData = JSON.stringify(listArray);
+console.log('question: ' + listArray[0].question);
 
-let question = questionData.questions[0];
-console.log("question: " + question);
+let questionsData = JSON.stringify(listArray);
+
+let question = quizData.questions[0];
+console.log("question: " + JSON.stringify(question));
 
 
 
