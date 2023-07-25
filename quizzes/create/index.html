@@ -904,19 +904,25 @@ function removeQuestionFunc(questionIndex) {
 
 
  $('#questionList').on('click', '.questionListItem', function() {
-var questionIndex = $(this).index();
+let questionIndex = $(this).index();
 
-var questionData = JSON.parse(localStorage.getItem('quizData'));
+let questionData = JSON.parse(localStorage.getItem('quizData'));
 
 console.log('questionData.quizName: ' + questionData.quizName);
 
 console.log('questionData.questions: ' + JSON.stringify(questionData.questions));
 
-var qustionsData = questionData.questions[questionIndex];
-console.log('qustionsData: ' + JSON.stringify(qustionsData));
+let qustionsData = JSON.stringify(questionData.questions));
 
-var optionsData = qustionsData.options;
-console.log('optionsData: ' + JSON.stringify(optionsData));
+let question = qustionsData.question;
+console.log("question: " + question);
+
+let questionType = qustionsData.questionType;
+console.log("questionType: " + questionType);
+
+var options = qustionsData["options"];
+console.log("options: " + options);
+	 
 
 /*
     clearFormInputs();
