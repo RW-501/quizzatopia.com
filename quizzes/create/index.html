@@ -927,7 +927,7 @@ var optionsData = questionData["options"];
 $('#questionType').val(questionData.questionType);
     $('#question').val(question);
 	 
-    optionsData.options.forEach(function(option) {
+    optionsData.forEach(function(option) {
       if (option !== '') {
         var optionRow = $('<div class="optionRow"></div>');
         var optionInput = $('<input type="text" class="option" required>');
