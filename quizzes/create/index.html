@@ -469,17 +469,17 @@ display: none;
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
 
+var mainSections = document.getElementsByClassName('mainSection');
+
 
 
      const tagInput = document.getElementById('tagInput');
     const tagList = document.getElementById('tagList');
 var tagsArray = []; // Make sure this array is defined
 
+if (window.getComputedStyle(mainSections[0]).display !== 'none') {
 
 
-
-//  || event.key === 'Backspace'
-	  
     tagInput.addEventListener('keydown', function (event) {
       if (event.key === ' ' || event.key === 'Enter' ) {
         event.preventDefault();
@@ -551,6 +551,9 @@ function addTag(tagText) {
       tagInput.focus();
     }
 
+}
+
+	
    function updateTag(oldTagText, newTagText, tagButton) {
       const index = tagsArray.indexOf(oldTagText);
       if (index !== -1) {
