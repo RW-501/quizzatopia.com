@@ -627,7 +627,6 @@ console.log('userID:', userID);
 
   // Get user inputs
   var options = [];
-  var quizArray = [];
 
   var quizName = input($('#quizName').val());
   var quizCode = input($('#quizCode').val());
@@ -660,7 +659,7 @@ console.log('userID:', userID);
 
   // Create question object
   var questionObj = {
-    questionNumber: quizObj.questions ? quizObj.questions.length + 1 : 1, // Set to 1 if questions is undefined or null
+    questionNumber: quizObj.questions ? quizObj.questions.length + 1 : 0, // Set to 1 if questions is undefined or null
     question: question,
     imageURL: "", // Add the image URL here if available
     questionType: questionType,
@@ -674,7 +673,6 @@ console.log('userID:', userID);
   if (question.trim() !== '') {
     // Save question to quizObj
     quizObj.questions.push(questionObj);
-    quizObj.numberOfQuestions = quizObj.questions.length || 0;
   }
 
   // Save quizObj to local storage
