@@ -811,19 +811,19 @@ var questionListItems = document.getElementsByClassName('questionListItem');
 
 var questionList = document.getElementById('questionList');
 questionList.innerHTML = '';
-let listArray = quizQuestions; // Use 'quizQuestions' instead of 'quizData.questions'
+let listArray = quizQuestions.questions; // Use 'quizQuestions' instead of 'quizData.questions'
 var questionEntries = Object.entries(listArray);
 	
 questionEntries.forEach(([key, value]) => {
   // Check if the current key is "question"
-  if (key === "questions") {
-    let questions = value;
+  if (key === "question") {
+    let question = value;
 
     // Create a new div element with the class "questionListItem"
     var questionListItem = document.createElement('div');
     questionListItem.className = 'questionListItem';
     // Set the text content of the div to the question's text
-    questionListItem.textContent = questions.question;
+    questionListItem.textContent = question;
     // Append the questionListItem to the questionList
     questionList.appendChild(questionListItem);
   }
