@@ -619,16 +619,6 @@ console.log('userID:', userID);
 	  
     $(document).ready(function() {
 
-function clearFormInputs(){
-  $('#question').val('');
-  $('.optionRow').not(':first').remove();
-  $('.option').val('');
-  $('.correctAnswer').prop('checked', false);
-  $('#answer').val('');
-  $('#image').val('');
-  $('#explanation').val('');
-}
-
 
 
       // Update quiz code field with generated code
@@ -803,6 +793,16 @@ optionTwo.val("False");
 	
 });
 
+
+function clearFormInputs(){
+  $('#question').val('');
+  $('.optionRow').not(':first').remove();
+  $('.option').val('');
+  $('.correctAnswer').prop('checked', false);
+  $('#answer').val('');
+  $('#image').val('');
+  $('#explanation').val('');
+}
 
 
 
