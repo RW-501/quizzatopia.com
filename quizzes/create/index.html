@@ -957,14 +957,24 @@ function loadQuestions() {
   
 
 
-    $('#questionList').empty();
+  
+// Clear the content of the questionList
+var questionList = document.getElementById('questionList');
+questionList.innerHTML = '';
+
 // Make sure quizData is defined and has the questions property before accessing it
 if (quizData && quizData.questions) {
-  $.each(quizData.questions, function(index, question) {
-    var questionListItem = $('<div class="questionListItem"></div>');
-    questionListItem.text(question.question);
-    $('#questionList').append(questionListItem);
+  // Loop through each question in quizData.questions and add it to the questionList
+  quizData.questions.forEach(function (question) {
+    // Create a new div element with the class "questionListItem"
+    var questionListItem = document.createElement('div');
+    questionListItem.className = 'questionListItem';
+    // Set the text content of the div to the question's text
+    questionListItem.textContent = question.question;
+    // Append the questionListItem to the questionList
+    questionList.appendChild(questionListItem);
   });
+}
 
 
 	  
