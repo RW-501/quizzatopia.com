@@ -271,15 +271,47 @@ display: none;
 }
 
 .popup {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  text-align: center;
-}
 
+  text-align: center;
+
+    background-color: #e7e7e7;
+    padding: 5% 0 0 0;
+    border-radius: 2em;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    overflow-y: clip;
+    box-shadow: inset 0px 1px 0rem 14px #fd7e14 !important;
+    display: block;
+    overflow: hidden;
+}
 /* Add any additional styles for the buttons and other elements as needed */
 
+.BottomCloseOptionsButton {
+    width: 100%;
+    background-color: #fd7e14;
+    padding: 1%;
+    border: none;
+    font-size: 3em;
+    font-weight: 800;
+    color: white;
+    box-sizing: border-box;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.close:hover, .close:focus {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
 </style>
 	  	
 	
@@ -500,14 +532,19 @@ display: none;
   <div class="popup">
     <h2>Congratulations!</h2>
     <p>Your quiz has been created successfully!</p>
+    <p>Quiz Name: <span id="quizName"></span></p>
     <p>Share URL:</p>
-    <input type="text" id="shareURL" readonly>
-    <button id="copyButton">Copy URL</button>
+	  
+    <div id="copyURL"><input type="text" id="shareURL" readonly>
+    <button id="copyButton">Copy URL</button></div>
+	  
     <button id="shareButton">Share</button>
+	  <hr>
     <button id="discussionButton">Start a Discussion</button>
     <button id="statsButton">Quiz Stats Page</button>
-    <p>Quiz Name: <span id="quizName"></span></p>
     <!-- Add any other information or buttons you want here -->
+
+	  <button id="closeStatsButton " class="close BottomCloseOptionsButton" onclick="closeStatsPopup()">Close</button>
   </div>
 </div>
 
