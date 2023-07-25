@@ -899,16 +899,7 @@ function loadQuestions() {
   }
 }
 
-$(document).ready(function () {
-  // Load existing quiz data if available
-  loadQuestions();
 
-  // Add event listener to save the quiz data when the user tries to leave the page or close the tab
-  $(window).on('beforeunload', function () {
-    // Call the function to save quiz data here if needed
-    // saveQuizData();
-  });
-});
 
 // Function to save the quiz data to local storage
   function saveQuizData() {
@@ -928,8 +919,17 @@ $(document).ready(function () {
 
 
 $(document).ready(function() {
-  // Existing code
+  // Load existing quiz data if available
+  loadQuestions();
 
+  // Add event listener to save the quiz data when the user tries to leave the page or close the tab
+  $(window).on('beforeunload', function () {
+    // Call the function to save quiz data here if needed
+    // saveQuizData();
+  });
+
+
+	
   $('#generateJSONButton').click(function() {
     var questionsData = localStorage.getItem('quizData');
     if (questionsData) {
@@ -997,6 +997,8 @@ firebase.firestore()
       console.log("No questions found in local storage.");
     }
   });
+
+	  
 });
 
 
