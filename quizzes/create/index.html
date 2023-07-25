@@ -855,72 +855,61 @@ function removeQuestionFunc(questionIndex) {
 }
 
 
-
-	  
-
-        // Load questions from local storage
+// Load questions from local storage
 function loadQuestions() {
-	    console.log('loadQuestions ' );
+  console.log('loadQuestions');
 
   var quizData = JSON.parse(localStorage.getItem('quizData'));
   if (quizData) {
-
     $('#quizName').val(quizData.quizName);
     $('#quizCode').val(quizData.quizCode);
-  $('#category').val(quizData.quizCategory);
-  $('#description').val(quizData.quizDescription);
+    $('#category').val(quizData.quizCategory);
+    $('#description').val(quizData.quizDescription);
 
-	  
-  const initialTags = quizData.quizTags;
-  initialTags.forEach(tag => {
-    addTag(tag);
-  });
-	  
-//var categoryOption = quizData.category;
-// Set the select element based on the option name
-//$('#category').val(categoryOption);
-	
-var questionTypeOption = quizData.questionType;
-// Set the select element based on the option name
-$('#questionType').val(questionTypeOption);
-	  
+    // Load initial tags from quizData.quizTags
+    var initialTags = quizData.quizTags;
+    initialTags.forEach(tag => {
+      addTag(tag);
+    });
 
-	  
+    var questionTypeOption = quizData.questionType;
+    // Set the select element based on the option name
+    $('#questionType').val(questionTypeOption);
+
     $('#questionList').empty();
-// Make sure quizData is defined and has the questions property before accessing it
-if (quizData && quizData.questions) {
-  $.each(quizData.questions, function(index, question) {
-    var questionListItem = $('<div class="questionListItem"></div>');
-    questionListItem.text(question.question);
-    $('#questionList').append(questionListItem);
-  });
+    // Make sure quizData is defined and has the questions property before accessing it
+    if (quizData.questions && Array.isArray(quizData.questions)) {
+      // Loop through each question in quizData.questions and add it to the question list
+      quizData.questions.forEach(function (question) {
+        var questionListItem = $('<div class="questionListItem"></div>');
+        questionListItem.text(question.question);
+        $('#questionList').append(questionListItem);
+      });
 
-  if (quizData.questions.length >= 5) {
-    $('#quizForm :input[type="submit"]').prop('disabled', true);
+      if (quizData.questions.length >= 5) {
+        $('#quizForm :input[type="submit"]').prop('disabled', true);
+      }
+    } else {
+      // Handle the case where quizData or quizData.questions is not defined or not an array
+      console.log('quizData or quizData.questions is not defined or not an array');
+    }
+  } else {
+    // Handle the case where quizData is not defined
+    console.log('quizData is not defined');
   }
-} else {
-  // Handle the case where quizData or quizData.questions is not defined or null
-  console.log('quizData or quizData.questions is not defined or null');
 }
 
-	
-}
-
-	  }
-
-	  
-$(document).ready(function() {
+$(document).ready(function () {
   // Load existing quiz data if available
   loadQuestions();
 
-  
-
   // Add event listener to save the quiz data when the user tries to leave the page or close the tab
-  $(window).on('beforeunload', function() {
-  //  saveQuizData();
+  $(window).on('beforeunload', function () {
+    // Call the function to save quiz data here if needed
+    // saveQuizData();
   });
 });
-  
+
 // Function to save the quiz data to local storage
   function saveQuizData() {
     var quizData = {
