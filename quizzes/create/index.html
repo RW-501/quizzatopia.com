@@ -465,10 +465,38 @@ display: none;
   </div>
 
 </form>
+
+
+<!-- Add this div for the pop-up overlay -->
+<div id="popupOverlay" class="overlay">
+  <div class="popup">
+    <h2>Congratulations!</h2>
+    <p>Your quiz has been created successfully!</p>
+    <p>Share URL:</p>
+    <input type="text" id="shareURL" readonly>
+    <button id="copyButton">Copy URL</button>
+    <button id="shareButton">Share</button>
+    <button id="discussionButton">Start a Discussion</button>
+    <button id="statsButton">Quiz Stats Page</button>
+    <p>Quiz Name: <span id="quizName"></span></p>
+    <!-- Add any other information or buttons you want here -->
+  </div>
+</div>
+
+
+
+
 	
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
 
+
+
+
+
+
+
+	  
 var mainSections = document.getElementsByClassName('mainSection');
 
 
@@ -1177,6 +1205,35 @@ firebase.firestore()
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  // Function to show the pop-up
+  function showPopup(quizName, shareURL) {
+    document.getElementById('quizName').textContent = quizNameDS;
+    document.getElementById('shareURL').value = quizLinkDB;
+    document.getElementById('popupOverlay').style.display = 'flex';
+  }
+
+  // Function to hide the pop-up
+  function hidePopup() {
+    document.getElementById('popupOverlay').style.display = 'none';
+  }
+
+  // Copy URL to clipboard
+  document.getElementById('copyButton').addEventListener('click', function() {
+    var shareURLInput = document.getElementById('shareURL');
+    shareURLInput.select();
+    document.execCommand('copy');
+    // Optionally show a success message
+    alert('URL copied to clipboard!');
+  });
+
+  // Close the pop-up when clicking outside the popup
+  document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('overlay')) {
+      hidePopup();
+    }
+  });
+});
 
 
 	  
