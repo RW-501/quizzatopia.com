@@ -704,7 +704,7 @@ console.log('userID:', userID);
 
 $(document).ready(function() {
 
-	   
+	    }); 
   var maxOptions = 4;
 	
 	
@@ -862,6 +862,7 @@ function removeQuestionFunc(questionIndex) {
   $('.questionListItem').eq(questionIndex).remove();
 }
 
+  console.log('???????????????????????????????????????????????????????????????????????????????????????');
 
 // Load questions from local storage
 function loadQuestions() {
@@ -907,21 +908,21 @@ function loadQuestions() {
     console.log('quizData is not defined');
   }
 }
-	  });
+	
 	  
 	  
 $(document).ready(function() {
   // Load existing quiz data if available
   loadQuestions();
 
-  
+  	
+});
 
   // Add event listener to save the quiz data when the user tries to leave the page or close the tab
   $(window).on('beforeunload', function() {
   //  saveQuizData();
   });
-	
-});
+
   
 // Function to save the quiz data to local storage
   function saveQuizData() {
