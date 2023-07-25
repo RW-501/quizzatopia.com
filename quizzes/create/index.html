@@ -695,10 +695,12 @@ console.log('userID:', userID);
   $('#explanation').val('');
 
   // Alert if the maximum number of questions is reached
-  if (quizObj.questions.length >= 5) {
+  if (quizObj.questions && quizObj.questions.length >= 5) {
     alert('The maximum number of questions has been reached.');
     $('#quizForm :input[type="submit"]').prop('disabled', true);
   }
+
+	  
 });
 
 $(document).ready(function() {
