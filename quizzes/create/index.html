@@ -807,19 +807,28 @@ optionTwo.val("False");
 	  
 // Function to add a "Remove" button to each question list item
 function viewQuestionListFunc() {
-var quizQuestions = JSON.parse(localStorage.getItem('quizData'));
-
 var questionListItems = document.getElementsByClassName('questionListItem');
-
 var questionList = document.getElementById('questionList');
 questionList.innerHTML = '';
-let listArray = quizQuestions.questions; // Use 'quizQuestions' instead of 'quizData.questions'
+	
+let quizQuestions = JSON.parse(localStorage.getItem('quizData'));
+let listArray = quizQuestions.questions; 
+
+console.log('question ' + listArray.question[0]);
+	
+let qustionsData = JSON.stringify(listArray);
+
+let question = questionData.questions[0];
+console.log("question: " + question);
+
+
+
+
+	
 var questionEntries = Object.entries(listArray);
 
 
 
-console.log('question ' + listArray.[0].question);
-console.log('question 2' + listArray.question);
 
 	
 questionEntries.forEach(([key, value]) => {
