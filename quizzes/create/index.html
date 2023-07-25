@@ -903,33 +903,23 @@ function removeQuestionFunc(questionIndex) {
  $('#questionList').on('click', '.questionListItem', function() {
 let questionIndex = $(this).index();
 
-let questionData = JSON.parse(localStorage.getItem('quizData'));
-let questionData2 = JSON.parse(localStorage.getItem('quizData'));
+let questionsData = JSON.parse(localStorage.getItem('quizData'));
+let questionData = questionsData.questions[questionIndex];
 
-console.log('questionData.quizName: ' + questionData.quizName);
+let question = questionData.question;
+console.log("question1: " + question);
 
-console.log('questionData ?????: ' + JSON.stringify(questionData2));
 
-let qustionsData = JSON.stringify(questionData2);
 
-let question = questionData.questions[1];
-console.log("question: " + question);
+var optionsData = questionData["options"];
+console.log("options: " + optionsData);
 	 
-let question1 = questionData.questions[1].question;
-console.log("question1: " + question1);
-
-
-
-var options = questionData["options"];
-console.log("options: " + options);
-	 
-
 /*
     clearFormInputs();
-    $('#quizName').val(questionData.quizName);
-    $('#quizCode').val(questionData.quizCode);
-    $('#category').val(questionData.quizCategory);
-    $('#description').val(questionData.quizDescription);
+    $('#quizName').val(questionsData.quizName);
+    $('#quizCode').val(questionsData.quizCode);
+    $('#category').val(questionsData.quizCategory);
+    $('#description').val(questionsData.quizDescription);
 
 $('#questionType').val(questionData.questionType);
     $('#question').val(questionData.questions[questionIndex]);
@@ -952,8 +942,15 @@ $('#questionType').val(questionData.questionType);
     $('#explanation').val(questionData.explanation);
 
     */
+showSection('area-2');
+
+	 
   });
 
+
+
+
+	  
   $('#quizForm').submit(function(event) {
     event.preventDefault();
     // Process the form data and save the question to local storage or database
