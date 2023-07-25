@@ -445,7 +445,7 @@ display: none;
   </section>
 
   <input type="submit" value="Add Question">
-<button class="sectionBTN"  onclick="showSection('area-3')">Ouestions List</button>
+<button class="sectionBTN"  onclick="showSection('area-3'); viewQuestionListFunc();">Ouestions List</button>
   </div>
 
 
@@ -798,6 +798,27 @@ optionTwo.val("False");
 	
 });
 
+function viewQuestionListFunc(){
+
+	
+ var questionListItems = document.getElementsByClassName('questionListItem');
+
+// Now you can loop through the questionListItems collection and access each element
+for (var i = 0; i < questionListItems.length; i++) {
+  var questionListItem = questionListItems[i];
+	var questionText = questionListItem.innerText;
+
+	if(questionText === ""){
+		questionListItems.remove(); 
+	}	
+//  console.log(questionText);
+}
+
+
+}
+
+
+	    
 //  quiztags: tagsArray,
 //  quizDescription: description,
 
