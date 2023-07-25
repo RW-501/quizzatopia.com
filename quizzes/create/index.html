@@ -622,116 +622,84 @@ console.log('userID:', userID);
       $('#quizCode').val(generateQuizCode());
 
       // Handle form submission
-      $('.quizForm').submit(function(e) {
-        e.preventDefault();
+   $('.quizForm').submit(function(e) {
+  e.preventDefault();
 
-        // Get user inputs
-  
-        var options = [];
-        var quizArray = [];
+  // Get user inputs
+  var options = [];
+  var quizArray = [];
 
-	      
-var quizName = input($('#quizName').val());
-var quizCode = input($('#quizCode').val());
-var category = input($('#category').val());
-var description = input($('#description').val());
-var quizTags = input($('#quizTags').val());
-var questionType = input($('#questionType').val());
-var question = input($('#question').val());
-	      
-var correctAnswer = input($('#answer').val());
-var difficulty = input($('#difficulty').val());
-var explanation = input($('#explanation').val());
-	      
-        // Get options and their corresponding correct answers
-    $('.optionRow').each(function() {
-  var option = $(this).find('.option').val();
-	 option =  input(option);
-  options.push(option);
+  var quizName = input($('#quizName').val());
+  var quizCode = input($('#quizCode').val());
+  var category = input($('#category').val());
+  var description = input($('#description').val());
+  var quizTags = input($('#quizTags').val());
+  var questionType = input($('#questionType').val());
+  var question = input($('#question').val());
+  var correctAnswer = input($('#answer').val());
+  var difficulty = input($('#difficulty').val());
+  var explanation = input($('#explanation').val());
+
+  // Get options and their corresponding correct answers
+  $('.optionRow').each(function() {
+    var option = $(this).find('.option').val();
+    option = input(option);
+    options.push(option);
+  });
+
+  // Create quiz object
+  var quizObj = JSON.parse(localStorage.getItem('quizData')) || {
+    quizName: quizName,
+    quizCode: quizCode,
+    numberOfQuestions: 0,
+    quizCategory: category,
+    quizDescription: description,
+    quizTags: quizTags,
+    questions: []
+  };
+
+  // Create question object
+  var questionObj = {
+    questionNumber: quizObj.questions.length + 1, // Dynamically set the question number
+    question: question,
+    imageURL: "", // Add the image URL here if available
+    questionType: questionType,
+    options: options,
+    answer: correctAnswer,
+    explanation: explanation,
+    difficulty: difficulty
+  };
+
+  // Check if the question is not blank or empty
+  if (question.trim() !== '') {
+    // Save question to quizObj
+    quizObj.questions.push(questionObj);
+    quizObj.numberOfQuestions = quizObj.questions.length;
+  }
+
+  // Save quizObj to local storage
+  localStorage.setItem('quizData', JSON.stringify(quizObj));
+
+  // Display question in the question list
+  var questionListItem = $('<div class="questionListItem"></div>');
+  questionListItem.text(questionObj.question);
+  $('#questionList').append(questionListItem);
+
+  // Clear form fields
+  $('#question').val('');
+  $('.optionRow').not(':first').remove();
+  $('.option').val('');
+  $('.correctAnswer').prop('checked', false);
+  $('#answer').val('');
+  $('#image').val('');
+  $('#explanation').val('');
+
+  // Alert if the maximum number of questions is reached
+  if (quizObj.questions.length >= 5) {
+    alert('The maximum number of questions has been reached.');
+    $('#quizForm :input[type="submit"]').prop('disabled', true);
+  }
 });
-
-
-
-
-// Create quiz object
-var quizObj = JSON.parse(localStorage.getItem('quizData')) || {
-  quizName: quizName,
-  quizCode: quizCode,
-  numberOfQuestions: 0,
-  quizCategory: category,
-  quizDescription: description,
- // quizTags: tagsArray,
-  questions: []
-};
-//  quizTags: tagsArray,
-
-
-	  
-
-
-// Create question object
-var questionObj = {
-  questionNumber: optionCount, // Update this dynamically when adding multiple questions
-  question: question,
-  imageURL: "", // Add the image URL here if available
-  questionType: questionType,
-  options: options,
-  answer: correctAnswer,
-  explanation: explanation,
-  difficulty: difficulty
-};
-	//  	console.log("tagsArray  "+tagsArray)
-	console.log("quizTags  "+quizObj.quizTags)    
-	//console.log("questionObj  "+questionObj[0])    
-	console.log("quizObj blank  "+quizObj.questions)    
-//console.log()
-
-	      
-// Check if the question is blank or empty
-if (question.trim() !== '') {
-
-	console.log("questionObj  "+questionObj.question)
-  // Save question to quizObj
-quizObj.questions = questionObj;
-quizObj.numberOfQuestions = quizObj.questions.length;
-}
-	console.log("quizObj info  "+quizObj.questions)    
-
-	      
-// Save quizObj to local storage
-localStorage.setItem('quizData', JSON.stringify(quizObj));
-
-	   
-
-        // Display question in the question list
-        var questionListItem = $('<div class="questionListItem"></div>');
-        questionListItem.text(questionObj.question);
-        $('#questionList').append(questionListItem);
-
-        // Clear form fields
-        $('#question').val('');
-        $('.optionRow').not(':first').remove();
-        $('.option').val('');
-        $('.correctAnswer').prop('checked', false);
-        $('#answer').val('');
-        $('#image').val('');
-        $('#explanation').val('');
-
-        // Increment question number
-        var questionNumber = parseInt(questionObj.questionNumber);
-        questionNumber++;
-        questionObj.questionNumber = questionNumber;
-
-   
-
-        // Alert if the maximum number of questions is reached
-        if (questionNumber > 5) {
-          alert('The maximum number of questions has been reached.');
-          $('#quizForm :input[type="submit"]').prop('disabled', true);
-        }
-      });
-	    
-var optionCount;
 
 $(document).ready(function() {
   var maxOptions = 4;
