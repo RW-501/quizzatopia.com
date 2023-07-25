@@ -998,8 +998,10 @@ function loadQuestions() {
     $('#description').val(quizData.quizDescription);
 
     // Load initial tags from quizData.quizTags
-    var initialTags = quizData.quizTags;
-    initialTags.forEach(tag => {
+    let initialTags = quizData.quizTags;
+let data = JSON.stringify(initialTags);
+
+    data.forEach(tag => {
       addTag(tag);
     });
 
