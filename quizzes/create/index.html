@@ -967,9 +967,12 @@ if (quizData && quizData.questions) {
 	
 let listArray = quizData.questions;
 
-for (const key in listArray) {
-  if (listArray.hasOwnProperty(key)) {
-    const question = listArray[key];
+var questionEntries = Object.entries(listArray);
+
+questionEntries.forEach(([key, value]) => {
+  // Check if the current key is "questionNumber"
+  if (key === "question") {
+    let question = value;
 
     // Create a new div element with the class "questionListItem"
     var questionListItem = document.createElement('div');
