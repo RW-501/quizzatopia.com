@@ -1291,7 +1291,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Optionally show a success message
     alert('URL copied to clipboard!');
   });
+ 
 
+  document.getElementById('closeStatsButton').addEventListener('click', function() {
+window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
+
+  });
+
+
+	
   // Close the pop-up when clicking outside the popup
   document.addEventListener('click', function(event) {
     if (event.target.classList.contains('overlay')) {
