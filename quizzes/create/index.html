@@ -808,15 +808,38 @@ function viewQuestionListFunc() {
   var quizQuestions = JSON.parse(localStorage.getItem('quizQuestions'));
 
   var questionListItems = document.getElementsByClassName('questionListItem');
-/*
+
+var questionList = document.getElementById('questionList');
+questionList.innerHTML = '';
+let listArray = quizData.questions;
+var questionEntries = Object.entries(listArray);
+questionEntries.forEach(([key, value]) => {
+  // Check if the current key is "questionNumber"
+  if (key === "question") {
+    let question = value;
+
+    // Create a new div element with the class "questionListItem"
+    var questionListItem = document.createElement('div');
+    questionListItem.className = 'questionListItem';
+    // Set the text content of the div to the question's text
+    questionListItem.textContent = question;
+    // Append the questionListItem to the questionList
+    questionList.appendChild(questionListItem);
+  }
+}
+
+
+
+
+
+
+	
   // Now you can loop through the questionListItems collection and access each element
   for (var i = 0; i < questionListItems.length; i++) {
 	 console.log('loadQuestions '+i);
   
     var questionListItem = questionListItems[i];
-	  
-    questionListItem.innerHTML = quizQuestions.questions[i].question;
-
+	
     // Check if the question is blank or empty, and remove it from the list
     if (questionText === "") {
      // questionListItem.remove();
@@ -838,7 +861,6 @@ function viewQuestionListFunc() {
 
   }
 
-    */
   // Enable the submit button if the number of questions is less than 5
   if (questionListItems.length < 5) {
     $('#quizForm :input[type="submit"]').prop('disabled', false);
