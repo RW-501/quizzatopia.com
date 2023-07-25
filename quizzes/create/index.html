@@ -692,7 +692,7 @@ console.log('userID:', userID);
 clearFormInputs();
 
   // Alert if the maximum number of questions is reached
-  if (quizObj.questions && quizObj.questions.length >= 5) {
+  if (quizObj.questions && quizObj.questions.length >= 15) {
     alert('The maximum number of questions has been reached.');
     $('#quizForm :input[type="submit"]').prop('disabled', true);
   }
@@ -867,7 +867,7 @@ for (let i = 0; i < listArray.length; i++) {
 
   // Enable the submit button if the number of questions is less than 5
   if (questionListItems.length < 5) {
-    $('#quizForm :input[type="submit"]').prop('disabled', false);
+    $('#quizForm :input[type="submit"]').prop('disabled', true);
   }
 }
 
@@ -882,19 +882,21 @@ $('#quizForm').on('click', '.removeButton', function () {
   removeQuestionFunc(questionIndex);
 });
 
-// Function to remove a question from the list and local storage
+
+
+	  
 function removeQuestionFunc(questionIndex) {
   // Get the list of questions from local storage
   var quizQuestions = JSON.parse(localStorage.getItem('quizData'));
 
   // Remove the question at the specified index
-  quizQuestions.splice(questionIndex, 1);
+  quizQuestions.questions.splice(questionIndex, 1);
 
   // Save the updated quizQuestions back to localStorage
   localStorage.setItem('quizData', JSON.stringify(quizQuestions));
 
   // Remove the questionListItem from the DOM
-//  $('.questionListItem').eq(questionIndex).remove();
+  $('.questionListItem').eq(questionIndex).remove();
 }
 
 
@@ -902,8 +904,7 @@ function removeQuestionFunc(questionIndex) {
 
 
 
-
- $('#questionList').on('click', '.questionListItem', function() {
+ $('.questionListtext').on('click', '.questionListItem', function() {
 let questionIndex = $(this).index();
 
 let questionsData = JSON.parse(localStorage.getItem('quizData'));
@@ -935,7 +936,24 @@ $('#questionType').val(questionData.questionType);
         var correctAnswerCheckbox = $('<input type="checkbox" class="correctAnswer">');
         if (option === questionData.answer) {
           correctAnswerCheckbox.prop('checked', true);
-          $('#answer').val(option);
+       //   $('#answer').val(option);
+
+var answerSelect = document.getElementById('answer');
+
+// Clear any existing options
+answerSelect.innerHTML = '';
+
+// Create the default option with an empty value
+var defaultOption = document.createElement('option');
+defaultOption.value = option;
+defaultOption.textContent = option;
+
+// Append the default option to the select element
+answerSelect.insertBefore(defaultOption);
+
+
+
+		
         }
         optionRow.append(optionInput, correctAnswerCheckbox);
         $('#optionsContainer').append(optionRow);
