@@ -654,8 +654,7 @@ var explanation = input($('#explanation').val());
 
 
 // Create quiz object
-var quizDataString = localStorage.getItem('quizData');
-var quizObj = quizDataString ? JSON.parse(quizDataString) : {
+var quizObj = JSON.parse(localStorage.getItem('quizData')) || {
   quizName: quizName,
   quizCode: quizCode,
   numberOfQuestions: 0,
@@ -693,8 +692,8 @@ if (question.trim() !== '') {
 
 	console.log("questionObj  "+questionObj.question)
   // Save question to quizObj
-  quizObj.questions.push(questionObj);
-  quizObj.numberOfQuestions = quizObj.questions.length;
+quizObj.questions.push(questionObj);
+quizObj.numberOfQuestions = quizObj.questions.length;
 }
 	console.log("quizObj info  "+quizObj.questions)    
 
