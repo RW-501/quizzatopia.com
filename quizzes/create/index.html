@@ -878,8 +878,6 @@ $('#questionType').val(questionData.questionType);
     // Process the form data and save the question to local storage or database
     // ...
   //  clearFormInputs();
-
-
 });
 
 	  function removeQuestionFunc(questionIndex,ele){
@@ -899,6 +897,8 @@ $(ele).remove();
 
         // Load questions from local storage
 function loadQuestions() {
+	    console.log('loadQuestions ' );
+
   var quizData = JSON.parse(localStorage.getItem('quizData'));
   if (quizData) {
 
