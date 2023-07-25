@@ -814,10 +814,6 @@ questionList.innerHTML = '';
 let listArray = quizQuestions.questions; // Use 'quizQuestions' instead of 'quizData.questions'
 var questionEntries = Object.entries(listArray);
 
-
-
-
-
 	
 questionEntries.forEach(([key, value]) => {
   // Check if the current key is "question"
@@ -889,13 +885,13 @@ $('#quizForm').on('click', '.removeButton', function () {
 // Function to remove a question from the list and local storage
 function removeQuestionFunc(questionIndex) {
   // Get the list of questions from local storage
-  var quizQuestions = JSON.parse(localStorage.getItem('quizQuestions'));
+  var quizQuestions = JSON.parse(localStorage.getItem('quizData'));
 
   // Remove the question at the specified index
   quizQuestions.splice(questionIndex, 1);
 
   // Save the updated quizQuestions back to localStorage
-  localStorage.setItem('quizQuestions', JSON.stringify(quizQuestions));
+  localStorage.setItem('quizData', JSON.stringify(quizQuestions));
 
   // Remove the questionListItem from the DOM
 //  $('.questionListItem').eq(questionIndex).remove();
@@ -909,7 +905,13 @@ function removeQuestionFunc(questionIndex) {
 
  $('#questionList').on('click', '.questionListItem', function() {
     var questionIndex = $(this).index();
-    var questionData = JSON.parse(localStorage.getItem('questions'))[questionIndex];
+
+	 
+    var questionData = JSON.parse(localStorage.getItem('quizData'));
+	 var optionsData = questionData.questions[questionIndex].options;
+	 
+	 console.log('questionData.quizName   '+questionData.quizName);
+
     clearFormInputs();
     $('#quizName').val(questionData.quizName);
     $('#quizCode').val(questionData.quizCode);
@@ -917,8 +919,9 @@ function removeQuestionFunc(questionIndex) {
     $('#description').val(questionData.quizDescription);
 
 $('#questionType').val(questionData.questionType);
-    $('#question').val(questionData.question);
-    questionData.options.forEach(function(option) {
+    $('#question').val(questionData.questions[questionIndex]);
+	 
+    optionsData.options.forEach(function(option) {
       if (option !== '') {
         var optionRow = $('<div class="optionRow"></div>');
         var optionInput = $('<input type="text" class="option" required>');
