@@ -620,12 +620,11 @@ margin: auto;
     <button id="copyButton">Copy URL</button></div>
 	  
     <button class="btnRnd" id="shareButton">Share</button>
-    <button class="btnRnd" id="takeQuizButton">Take Quiz</button>
     <button class="btnRnd" id="discussionButton">Start a Discussion</button>
     <button class="btnRnd" id="statsButton">Quiz Stats Page</button>
     <!-- Add any other information or buttons you want here -->
 
-	  <button id="closeStatsButton " class="close BottomCloseOptionsButton" onclick="closeStatsPopup()">Close</button>
+	  <button id="closePopupButton " class="close BottomCloseOptionsButton" onclick="closeEndPopup()">Take Quiz</button>
   </div>
 </div>
 
@@ -1373,10 +1372,7 @@ document.addEventListener('DOMContentLoaded', function() {
     alert('URL copied to clipboard!');
   });
  
-  document.getElementById('takeQuizButton').addEventListener('click', function() {
-window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
-
-  });
+ 
   document.getElementById('closeStatsButton').addEventListener('click', function() {
 window.location.href = "https://www.quizzatopia.com/quiz/stats/?q" + quizCodeDB;
 
@@ -1398,7 +1394,13 @@ window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeD
   });
 });
 
+function closeEndPopup (){
+window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
 
+
+}
+
+	  
 	  
 	  
     </script>
