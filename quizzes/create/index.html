@@ -661,9 +661,15 @@ var quizObj = quizDataString ? JSON.parse(quizDataString) : {
   numberOfQuestions: 0,
   quizCategory: category,
   quizDescription: description,
-  quizTags: tagsArray,
+  quizTags: [],
   questions: []
 };
+//  quizTags: tagsArray,
+
+
+	  
+	console.log("tagsArray  "+tagsArray)
+	console.log("quizObj  "+quizObj)
 
 // Create question object
 var questionObj = {
@@ -678,9 +684,15 @@ var questionObj = {
 };
 	      
 //console.log()
+if (quizObj.quizTags !== '') {
+
+  quizObj.quizTags.push(tagsArray);
+}
 	      
 // Check if the question is blank or empty
 if (question.trim() !== '') {
+
+	console.log("questionObj  "+questionObj)
   // Save question to quizObj
   quizObj.questions.push(questionObj);
   quizObj.numberOfQuestions = quizObj.questions.length;
