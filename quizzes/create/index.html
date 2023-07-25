@@ -660,7 +660,7 @@ console.log('userID:', userID);
 
   // Create question object
   var questionObj = {
-    questionNumber: quizObj.questions.length + 1 || 0, // Dynamically set the question number
+    questionNumber: quizObj.questions ? quizObj.questions.length + 1 : 1, // Set to 1 if questions is undefined or null
     question: question,
     imageURL: "", // Add the image URL here if available
     questionType: questionType,
