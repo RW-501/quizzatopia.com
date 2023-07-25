@@ -799,7 +799,10 @@ optionTwo.val("False");
 });
 
 function viewQuestionListFunc(){
-
+	
+var removeButton = document.createElement('button');
+removeButton.className = 'removeButton';
+removeButton.textContent = 'Remove';
 	
  var questionListItems = document.getElementsByClassName('questionListItem');
 
@@ -811,9 +814,20 @@ for (var i = 0; i < questionListItems.length; i++) {
 	if(questionText === ""){
 		questionListItems.remove(); 
 	}	
+removeButton.onclick = removeQuestionFunc(i,questionListItem);
+  targetElement.appendChild(removeButton.cloneNode(true));
+
+
+
+
+
+	
 //  console.log(questionText);
 }
-
+	
+  if (questionListItems.length < 5) {
+    $('#quizForm :input[type="submit"]').prop('disabled', false);
+  }
 
 }
 
@@ -851,10 +865,14 @@ $('#questionType').val(questionData.questionType);
         $('#optionsContainer').append(optionRow);
       }
     });
+
+	  
     $('#difficulty').val(questionData.difficulty);
     $('#explanation').val(questionData.explanation);
   });
 
+
+	  
   $('#quizForm').submit(function(event) {
     event.preventDefault();
     // Process the form data and save the question to local storage or database
@@ -862,31 +880,18 @@ $('#questionType').val(questionData.questionType);
   //  clearFormInputs();
 
 
-
-	  
-  });
 });
 
-	  // $(this).remove();  
-        // Remove question
-$('#questionList').on('click', '.questionListItem', function() {
-  var questionIndex = $(this).index();
-    console.log('questionIndex 1  ' +questionIndex);
+	  function removeQuestionFunc(questionIndex,ele){
 
-	
   var quizQuestions = JSON.parse(localStorage.getItem('quizQuestions'));
-//  quizQuestions.splice(questionIndex, 1);
- // localStorage.setItem('quizQuestions', JSON.stringify(quizQuestions));
-	
-      console.log('quizQuestions  2 ' +quizQuestions.questions);
+      console.log('quizQuestions   ' +quizQuestions.questions);
+quizQuestions.splice(questionIndex, 1);
 
-  if (quizQuestions.length < 5) {
-    $('#quizForm :input[type="submit"]').prop('disabled', false);
-  }
-});
+$(ele).remove();  
+	  }
+
 	  
-
-
 
 
 
