@@ -966,8 +966,11 @@ questionList.innerHTML = '';
 if (quizData && quizData.questions) {
 	
 let listArray = quizData.questions;
-    listArray.forEach(question => {
-	    
+
+for (const key in listArray) {
+  if (listArray.hasOwnProperty(key)) {
+    const question = listArray[key];
+
     // Create a new div element with the class "questionListItem"
     var questionListItem = document.createElement('div');
     questionListItem.className = 'questionListItem';
@@ -975,7 +978,8 @@ let listArray = quizData.questions;
     questionListItem.textContent = question;
     // Append the questionListItem to the questionList
     questionList.appendChild(questionListItem);
-  });
+  }
+}
 
 
 
