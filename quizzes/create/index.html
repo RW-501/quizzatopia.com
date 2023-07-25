@@ -964,8 +964,10 @@ questionList.innerHTML = '';
 
 // Make sure quizData is defined and has the questions property before accessing it
 if (quizData && quizData.questions) {
-  // Loop through each question in quizData.questions and add it to the questionList
-  quizData.questions.forEach(function (question) {
+	
+let listArray = quizData.questions;
+	
+	 listArray.forEach(function (question) {
     // Create a new div element with the class "questionListItem"
     var questionListItem = document.createElement('div');
     questionListItem.className = 'questionListItem';
