@@ -1356,8 +1356,8 @@ questionsCompleted.forEach(function(question) {
 
     let responseTime = questionsCompleted[resultCount].responseTime;
 
-    console.log("count:", resultCount);
-    console.log("questionIndex:", questionIndex);
+   // console.log("count:", resultCount);
+   // console.log("questionIndex:", questionIndex);
 
     let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
     let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining milliseconds to seconds
@@ -1373,10 +1373,10 @@ questionsCompleted.forEach(function(question) {
    // console.log("questionsOG:", questionsOG);
   //  console.log("questions:", questions);
  //   console.log("questionsCompleted:", questionsCompleted);
-	      console.log("QuizFromDB  :", QuizFromDB);
+	 /*     console.log("QuizFromDB  :", QuizFromDB);
 	      console.log("questionsOG:   ", questionsOG.length);
 	      console.log("questions:   ", questions.length);
-
+*/
 
 
 	  
@@ -1384,11 +1384,11 @@ questionsCompleted.forEach(function(question) {
     reviewQuestionText.classList.add("question-text");
 if(QuizFromDB === true){
 reviewQuestionText.textContent = questionsOG[resultCount].question;
-    console.log("QuizFromDB === true [questionIndex].question:", questions[resultCount].question);
-    console.log("QuizFromDB === true [questionIndex].question:", questionsOG[resultCount].question);
+//    console.log("QuizFromDB === true [questionIndex].question:", questions[resultCount].question);
+  //  console.log("QuizFromDB === true [questionIndex].question:", questionsOG[resultCount].question);
 }else{
 reviewQuestionText.textContent = questionsOG[questionIndex].question;
-    console.log("questionsOG[questionIndex].question:", questionsOG[questionIndex].question);
+ //   console.log("questionsOG[questionIndex].question:", questionsOG[questionIndex].question);
 
 }
 	  
