@@ -827,7 +827,10 @@ console.log('userID:', userID);
   $('.optionRow').each(function() {
     var option = $(this).find('.option').val();
     option = input(option);
+  if (option.trim() !== '') {
+	  
     options.push(option);
+  }
   });
 
   // Create quiz object
