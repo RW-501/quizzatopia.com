@@ -1382,7 +1382,7 @@ questionsCompleted.forEach(function(question) {
     let reviewQuestionText = document.createElement("span");
     reviewQuestionText.classList.add("question-text");
 if(QuizFromDB === true){
-reviewQuestionText.textContent = questions[questionIndex].question;
+reviewQuestionText.textContent = questionsOG[questionIndex - 1].question;
     console.log("QuizFromDB === true [questionIndex].question:", questions[questionIndex].question);
     console.log("QuizFromDB === true [questionIndex].question:", questionsOG[questionIndex].question);
 }else{
