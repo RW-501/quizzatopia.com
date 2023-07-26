@@ -1370,13 +1370,12 @@ questionsCompleted.forEach(function(question) {
     reviewQuestionNumber.innerHTML = "<b>Question:</b> " + (questionIndex + 1) + "  <b>Response Time:</b> " + responseTimeText;
 
     let reviewQuestionResponse = document.createElement("br");
-    console.log("questionsOG:", questionsOG);
-    console.log("questions:", questions);
-    console.log("questionsCompleted:", questionsCompleted);
-	      console.log("questionIndex:", questionIndex);
+   // console.log("questionsOG:", questionsOG);
+  //  console.log("questions:", questions);
+ //   console.log("questionsCompleted:", questionsCompleted);
+	      console.log("QuizFromDB  :", QuizFromDB);
+	      console.log("questionIndex:   ", questionIndex);
 
-    console.log("questionsOG[questionIndex].question:", questionsOG[questionIndex].question);
-    console.log("questionsOG[questionIndex].question:", questionsOG[questionIndex + 1].question);
 
 
 	  
@@ -1384,8 +1383,10 @@ questionsCompleted.forEach(function(question) {
     reviewQuestionText.classList.add("question-text");
 if(QuizFromDB === true){
 reviewQuestionText.textContent = questionsOG[questionIndex + 1].question;
+    console.log("QuizFromDB === true [questionIndex].question:", questionsOG[questionIndex + 1].question);
 }else{
 reviewQuestionText.textContent = questionsOG[questionIndex].question;
+    console.log("questionsOG[questionIndex].question:", questionsOG[questionIndex].question);
 
 }
 	  
