@@ -519,19 +519,10 @@ if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function')
   const signInWithPopup = firebase.auth().signInWithPopup;
 	
 // Enable Firestore offline persistence
-firebase.firestore().enablePersistence()
-  .then(() => {
-    // Offline persistence enabled
-	//  const savedUserInfoDB = localStorage.getItem("userInfo");
-//  const savedUserInfoDB = getUserInfo();
-
-	//saveUserInfoToFirestore(savedUserInfoDB);
-  })
-  .catch((error) => {
-    // Error enabling offline persistence
-    console.error('Error enabling Firestore offline persistence:', error);
+firebase.firestore().enablePersistence({ synchronizeTabs: true })
+  .catch((err) => {
+    console.error("Error enabling Firestore offline persistence:", err);
   });
-
 
 } else {
   // The Firebase scripts are not loaded
