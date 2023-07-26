@@ -853,7 +853,7 @@ display: block !important;
   <span class="star" onclick="rateQuiz(5)">&#9734;</span>
 </div>
 	  <div id="endBtns" class="" >
-<button id="leaveReviewBtn" class="other-quiz-btn  btn-secondary mt-4">Leave Review</button>
+<button id="leaveReviewBtn" class="other-quiz-btn  btn-secondary mt-4">Leave Feedback</button>
 	  
     <button id="retake-btn" class="other-quiz-btn  btnMain mt-4 "  onclick="retakeQuizFunc()">Retake Quiz</button>
     <!-- Retake Quiz Button -->
@@ -863,7 +863,8 @@ display: block !important;
     <!-- Try Another Quiz Button -->
 	  </div>
 <div>
-    <button id="endReviewBtn" class="other-quiz-btn  btnMain mt-4 "  onclick="openReviewFunc(); openPopupsFunc('reviewPopup','reviewPopupBox');">Review</button>
+    <button id="endReviewBtn" class="other-quiz-btn  btnMain mt-4 "  onclick="openReviewFunc(); openPopupsFunc('reviewPopup','reviewPopupBox');">Review Quiz</button>
+<button id="viewStatsBtn" class="other-quiz-btn  btnMain mt-4 "  onclick="viewStatsFunc();">View Stats</button>
 </div>
 	  <br>
  <div class="share-link-container">
@@ -1238,7 +1239,10 @@ function openPopupsFunc(xxx, zzz) {
 }
 
 
+function viewStatsFunc(){
+window.location.href = "https://www.quizzatopia.com/quiz/stats/?q" + quizCodeDB;
 
+}
 	  
 
 // Close the question popup
