@@ -1300,10 +1300,10 @@ var formattedDate = date.toLocaleString('en-US', {
   second: 'numeric',
   hour12: true
 });
-const userInfo = getUserInfo();
 
 $(document).ready(function() {
   // Existing code
+const userInfo = getUserInfo();
 
   $('#generateJSONButton').click(function() {
     var questionsData = localStorage.getItem('quizData');
