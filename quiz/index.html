@@ -1376,13 +1376,19 @@ questionsCompleted.forEach(function(question) {
 	      console.log("questionIndex:", questionIndex);
 
     console.log("questionsOG[questionIndex].question:", questionsOG[questionIndex].question);
-    console.log("questionsOG[resultCount].question:", questionsOG[resultCount].question);
+    console.log("questionsOG[questionIndex].question:", questionsOG[questionIndex + 1].question);
 
 
 	  
     let reviewQuestionText = document.createElement("span");
     reviewQuestionText.classList.add("question-text");
-reviewQuestionText.textContent = questionsOG[questionIndex].question || questionsOG[resultCount].question;
+if(QuizFromDB === true){
+reviewQuestionText.textContent = questionsOG[questionIndex + 1].question;
+}else{
+reviewQuestionText.textContent = questionsOG[questionIndex].question;
+
+}
+	  
 	  
 
     questionDiv.appendChild(reviewQuestionNumber);
@@ -1635,7 +1641,6 @@ timeSoFarElement.textContent = `${minutes} mins ${seconds} secs`;
   document.getElementById("statsPopup").style.display = "block";
 
 }
-
 
 	  
 function fetchQuizzesFromDB() {
@@ -2143,6 +2148,7 @@ quizInfo.quizLink = quizUrl;  // Add the "q" parameter to the quizInfo object
 }
 	  
 let quizUrl;
+var QuizFromDB = false;
 
 function fetchData(q, e) {
  // console.log("fetchDataq:", q + '   e:    ' + e);
@@ -2152,7 +2158,7 @@ function fetchData(q, e) {
     if (e === "user") {
       console.log("DB JSON structure");
 	    window.addEventListener("load", function() {
-
+QuizFromDB = true;
       const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "==", q);
       quizRef.get().then(function(querySnapshot) {
         if (!querySnapshot.empty) {
@@ -2222,6 +2228,7 @@ function fetchData(q, e) {
   // Fetch data from URL or database here
 
     if (e !== "user") {
+	    QuizFromDB = false;
   fetch(stringEnt)
     .then(response => response.json())
     .then(data => {
