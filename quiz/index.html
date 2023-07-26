@@ -1373,12 +1373,17 @@ questionsCompleted.forEach(function(question) {
     console.log("questionsOG:", questionsOG);
     console.log("questions:", questions);
     console.log("questionsCompleted:", questionsCompleted);
+	      console.log("questionIndex:", questionIndex);
 
+    console.log("questionsOG[questionIndex].question:", questionsOG[questionIndex].question);
+    console.log("questionsOG[resultCount].question:", questionsOG[resultCount].question);
+
+
+	  
     let reviewQuestionText = document.createElement("span");
     reviewQuestionText.classList.add("question-text");
-    reviewQuestionText.textContent = questionsOG[questionIndex].question || questionsOG[resultCount].question;
+reviewQuestionText.textContent = questionsOG[questionIndex].question || questionsOG[resultCount].question;
 	  
-    console.log("questionIndex:", questionIndex);
 
     questionDiv.appendChild(reviewQuestionNumber);
     questionDiv.appendChild(reviewQuestionResponse);
