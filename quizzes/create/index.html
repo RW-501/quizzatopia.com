@@ -1279,6 +1279,20 @@ $(document).ready(function() {
 	      console.log('Saved Quiz   ' );
 
   }
+var quizCodeDB;
+var quizNameDS;
+var categoryDB;
+var quizLinkDB;
+var imageURLDB;
+var numberOfQuestionsDB;
+var quizStartedCount;
+var quizDate;
+var saveType;
+var userID;
+var quizDataDB;
+var quizTagsDB;
+var quizCreatedByDB;
+var quizDescriptionDB;
 
 
 $(document).ready(function() {
@@ -1302,20 +1316,20 @@ const userInfo = getUserInfo();
 
 // Assuming you have initialized Firebase and obtained a Firestore database reference
 // Replace the following placeholders with your actual values
-var quizCodeDB = quizData.quizCode;
-var quizNameDS = quizData.quizName;
-var categoryDB = quizData.quizCategory; 
-var quizLinkDB = "/quiz/?e=user&q=" + quizCodeDB;
-var imageURLDB = "https://www.quizzatopia.com/images/sq/_.png";
-var numberOfQuestionsDB = quizData.numberOfQuestions;
-var quizStartedCount = 0;
-var quizDate = new Date().toISOString();
-var saveType = "user";
-var userID = userInfo.firebaseId || "";
-var quizDataDB = jsonData;
-var quizTagsDB =  quizData.quizTags;
-var quizCreatedByDB =  userInfo.userName;
-var quizDescriptionDB =  quizData.quizDescription;
+ quizCodeDB = quizData.quizCode;
+ quizNameDS = quizData.quizName;
+ categoryDB = quizData.quizCategory; 
+ quizLinkDB = "/quiz/?e=user&q=" + quizCodeDB;
+ imageURLDB = "https://www.quizzatopia.com/images/sq/_.png";
+ numberOfQuestionsDB = quizData.numberOfQuestions;
+ quizStartedCount = 0;
+ quizDate = new Date().toISOString();
+ saveType = "user";
+ userID = userInfo.firebaseId || "";
+ quizDataDB = jsonData;
+ quizTagsDB =  quizData.quizTags;
+ quizCreatedByDB =  userInfo.userName;
+ quizDescriptionDB =  quizData.quizDescription;
 
 var quizData = {
   quizCodeDB: quizCodeDB,
@@ -1341,21 +1355,7 @@ firebase.firestore()
   .then(function(docRef) {
     console.log("Quiz document written with ID: ", docRef.id);
 
-  document.getElementById('closeStatsButton').addEventListener('click', function() {
-window.location.href = "https://www.quizzatopia.com/quiz/stats/?q" + quizCodeDB;
-  });
-	  
-  document.getElementById('shareButton').addEventListener('click', function() {
-window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
-  });
-	  
-  document.getElementById('discussionButton').addEventListener('click', function() {
-window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
-  });
-	  
-function closeEndPopup (){
-window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
-}
+
 	   showPopup(quizNameDS, quizLinkDB);
 	  slideIn("popupBody");
 
@@ -1373,7 +1373,21 @@ window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeD
   });
 });
 
-
+  document.getElementById('closeStatsButton').addEventListener('click', function() {
+window.location.href = "https://www.quizzatopia.com/quiz/stats/?q" + quizCodeDB;
+  });
+	  
+  document.getElementById('shareButton').addEventListener('click', function() {
+window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
+  });
+	  
+  document.getElementById('discussionButton').addEventListener('click', function() {
+window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
+  });
+	  
+function closeEndPopup (){
+window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
+}
 document.addEventListener('DOMContentLoaded', function() {
   // Function to show the pop-up
   function showPopup(quizName, shareURL) {
