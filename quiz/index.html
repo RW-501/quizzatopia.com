@@ -1330,7 +1330,7 @@ questionsCompleted = loadQuestionsCompleted(quizCode);
 let resultCount = 0;
 questionsCompleted.forEach(function(question) {
   var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
-  console.log(questionIndex + " questionIndex   " + resultCount + " count  " + realQuestionNumber + "   realQuestionNumber");
+ // console.log(questionIndex + " questionIndex   " + resultCount + " count  " + realQuestionNumber + "   realQuestionNumber");
 
   let questionIndexBool = checkVarForValueFunc(questionIndex);
   if (questionIndexBool) {
@@ -1343,11 +1343,11 @@ questionsCompleted.forEach(function(question) {
       questionDiv.classList.add("incorrect");
     }
 
-    console.log("1349?????? count:", resultCount);
+    console.log("1349?????? resultCount:", resultCount);
 	  
  (function(resultCount) { // Use an IIFE to create a new scope for resultCount
       questionDiv.addEventListener("click", function() {
-        console.log("sending ???????????????    " + questionIndex + "   ??????? count:", resultCount);
+      //  console.log("sending ???????????????    " + questionIndex + "   ??????? count:", resultCount);
 
         // Handle click event for each question
         openQuestionPopup(questionIndex, resultCount);
@@ -1357,7 +1357,7 @@ questionsCompleted.forEach(function(question) {
     let responseTime = questionsCompleted[resultCount].responseTime;
 
     console.log("count:", resultCount);
-    console.log("responseTime:", responseTime);
+    console.log("questionIndex:", questionIndex);
 
     let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
     let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining milliseconds to seconds
