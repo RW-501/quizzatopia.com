@@ -1112,7 +1112,7 @@ $('#questionType').val(questionData.questionType);
         var correctAnswerCheckbox = $('<input type="checkbox" class="correctAnswer">');
         if (option === questionData.answer) {
           correctAnswerCheckbox.prop('checked', true);
-       //   $('#answer').val(option);
+          $('#answer').val(option);
 
 var answerSelect = document.getElementById('answer');
 
@@ -1125,7 +1125,8 @@ defaultOption.value = option;
 defaultOption.textContent = option;
 
 // Append the default option to the select element
-answerSelect.insertBefore(defaultOption);
+answerSelect.appendChild(defaultOption);
+
 
 
 
