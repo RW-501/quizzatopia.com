@@ -1051,7 +1051,7 @@ for (let i = 0; i < listArray.length; i++) {
 	
 
 // Add event listener to the #quizForm for clicks on .removeButton
-$('#removeButtonID').on('click', '.removeButton', function () {
+$('#questionList').on('click', '.removeButton', function () {
   // Find the index of the question associated with the clicked button
   var questionIndex = $(this).closest('.questionListItem').index();
   // Call removeQuestionFunc with the question index
@@ -1080,7 +1080,7 @@ function removeQuestionFunc(questionIndex) {
 
 
 
- $('#questionListtextID').on('click', '.questionListItem', function() {
+ $('#questionList').on('click', '.questionListItem', function() {
 let questionIndex = $(this).index();
 
 let questionsData = JSON.parse(localStorage.getItem('quizData'));
