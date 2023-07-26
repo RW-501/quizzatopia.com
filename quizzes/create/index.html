@@ -1002,6 +1002,7 @@ for (let i = 0; i < listArray.length; i++) {
 
   var questionListtext = document.createElement('div');
     questionListtext.className = 'questionListtext';
+    questionListtext.id = 'questionListtextID';
 	  
 	  
 	  questionListtext.textContent = question;
@@ -1028,6 +1029,7 @@ for (let i = 0; i < listArray.length; i++) {
     // Create the "Remove" button and attach the removeQuestionFunc to it
     var removeButton = document.createElement('button');
     removeButton.className = 'removeButton';
+    removeButton.id = 'removeButtonID';
     removeButton.innerHTML = '&#x1F5D1;&#xFE0F;';
     removeButton.onclick = function () {
       // Pass the question index to removeQuestionFunc when the button is clicked
@@ -1049,7 +1051,7 @@ for (let i = 0; i < listArray.length; i++) {
 	
 
 // Add event listener to the #quizForm for clicks on .removeButton
-$('#quizForm').on('click', '.removeButton', function () {
+$('#removeButtonID').on('click', '.removeButton', function () {
   // Find the index of the question associated with the clicked button
   var questionIndex = $(this).closest('.questionListItem').index();
   // Call removeQuestionFunc with the question index
@@ -1078,7 +1080,7 @@ function removeQuestionFunc(questionIndex) {
 
 
 
- $('#questionList .questionListtext').on('click', '.questionListItem', function() {
+ $('#questionListtextID').on('click', '.questionListItem', function() {
 let questionIndex = $(this).index();
 
 let questionsData = JSON.parse(localStorage.getItem('quizData'));
