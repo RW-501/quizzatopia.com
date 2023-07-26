@@ -655,7 +655,7 @@ if (window.getComputedStyle(mainSections[0]).display !== 'none') {
 
 
     tagInput.addEventListener('keydown', function (event) {
-      if (event.key === ' ' || event.key === 'Enter' ) {
+      if (event.key === ' ' || event.key === 'Enter'|| event.key === ',' ) {
         event.preventDefault();
         const tagText = tagInput.innerText.trim();
         if (tagText !== '') {
