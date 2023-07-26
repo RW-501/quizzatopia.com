@@ -618,9 +618,9 @@ margin: auto;
     <div id="copyURL"><input type="text" id="shareURL" readonly>
     <button id="copyButton">Copy URL</button></div>
 	  
-    <button class="btnRnd" id="shareButton">Share</button>
-    <button class="btnRnd" id="discussionButton">Start a Discussion</button>
-    <button class="btnRnd" id="statsButton">Quiz Stats Page</button>
+    <button class="btnRnd" id="shareButton"  onclick="openShareFunc()">Share</button>
+    <button class="btnRnd" id="discussionButton"  onclick="openDiscussionFunc()">Start a Discussion</button>
+    <button class="btnRnd" id="statsButton"  onclick="openStatsFunc()">Quiz Stats Page</button>
     <!-- Add any other information or buttons you want here -->
 <hr>
 	  <a href="https://www.buymeacoffee.com/Quizzatopia" target="_blank"><img src="/images/bmc.png" alt="Buy Me A Coffee" id="adPic" ></a>
@@ -1413,21 +1413,24 @@ db.collection(collectionName)
 }
 
 
+function openDiscussionFunc(){
+window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
 
+}
 
+function openShareFunc(){
+window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
 
-	  
-  document.getElementById('closeStatsButton').addEventListener('click', function() {
+}
+
+function openStatsFunc(){
 window.location.href = "https://www.quizzatopia.com/quiz/stats/?q" + quizCodeDB;
-  });
+
+}
+
+
 	  
-  document.getElementById('shareButton').addEventListener('click', function() {
-window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
-  });
-	  
-  document.getElementById('discussionButton').addEventListener('click', function() {
-window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
-  });
+
 	  
 function closeEndPopup (){
 window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeDB;
