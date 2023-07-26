@@ -665,6 +665,14 @@ if (window.getComputedStyle(mainSections[0]).display !== 'none') {
       }
     });
 
+	tagInput.addEventListener('blur', function (event) {
+  const tagText = tagInput.innerText.trim();
+  if (tagText !== '') {
+    addTag(tagText);
+    tagInput.innerText = '';
+  }
+});  
+
     tagInput.addEventListener('click', function (event) {
       const clickedElement = event.target;
       if (clickedElement === tagInput) {
