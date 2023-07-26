@@ -580,6 +580,9 @@ cards.forEach(card => {
 function openCreateQuizFunc(){
 // Assuming you have initialized your Firebase app and authenticated the user.
 // Get a reference to the Firestore database
+	if(loggedIn === false){
+     openPopup();
+	}
 var db = firebase.firestore();
 
 // Define the collection and field values
