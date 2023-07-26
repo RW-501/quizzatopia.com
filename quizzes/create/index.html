@@ -1293,7 +1293,16 @@ var quizDataDB;
 var quizTagsDB;
 var quizCreatedByDB;
 var quizDescriptionDB;
-
+var date = new Date();
+var formattedDate = date.toLocaleString('en-US', {
+  month: 'numeric',
+  day: 'numeric',
+  year: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  second: 'numeric',
+  hour12: true
+});
 
 $(document).ready(function() {
   // Existing code
@@ -1321,9 +1330,9 @@ const userInfo = getUserInfo();
  categoryDB = quizData.quizCategory; 
  quizLinkDB = "/quiz/?e=user&q=" + quizCodeDB;
  imageURLDB = "https://www.quizzatopia.com/images/sq/_.png";
- numberOfQuestionsDB = quizData.numberOfQuestions;
+ numberOfQuestionsDB = questionsData.lenghts;
  quizStartedCount = 0;
- quizDate = new Date().toISOString();
+ quizDate = formattedDate;
  saveType = "user";
  userID = userInfo.firebaseId || "";
  quizDataDB = jsonData;
@@ -1352,7 +1361,7 @@ var quizData = {
 firebase.firestore()
   .collection("quizzes")
   .add(quizData)
-  .then(function(docRef) {
+  .then(function(quizCodeDB) {
     console.log("Quiz document written with ID: ", docRef.id);
 
 
