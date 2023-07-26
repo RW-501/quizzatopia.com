@@ -582,7 +582,7 @@ function openCreateQuizFunc(){
 // Get a reference to the Firestore database
 	if(loggedIn === false){
      openPopup();
-	}
+	}else{
 var db = firebase.firestore();
 
 // Define the collection and field values
@@ -619,7 +619,7 @@ db.collection(collectionName)
   });
 
 
-
+	}
 	
 }
 	
