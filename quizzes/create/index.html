@@ -667,7 +667,8 @@ if (window.getComputedStyle(mainSections[0]).display !== 'none') {
 
 	tagInput.addEventListener('blur', function (event) {
   const tagText = tagInput.innerText.trim();
-  if (tagText !== '') {
+  if (tagText) {
+ // if (tagText !== '') {
     addTag(tagText);
     tagInput.innerText = '';
   }
