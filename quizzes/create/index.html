@@ -378,7 +378,7 @@ width: 20%;
     width: 90%;
 margin: auto;
 		}
-#quizName{
+#quizNameEnd{
     font-size: 1.5em;
     font-weight: 800;
 }
@@ -613,7 +613,7 @@ margin: auto;
     <p>Your quiz has been created successfully!</p>
 	  	  <hr>
 
-    <p>Quiz Name: <span id="quizName"></span></p>
+    <p>Quiz Name: <span id="quizNameEnd"></span></p>
     <p>Share URL:</p>
     <div id="copyURL"><input type="text" id="shareURL" readonly>
     <button id="copyButton">Copy URL</button></div>
@@ -792,7 +792,6 @@ console.log('userID:', userID);
 }
 	  
     $(document).ready(function() {
-
 
 
       // Update quiz code field with generated code
@@ -1089,8 +1088,6 @@ let questionData = questionsData.questions[questionIndex];
 let question = questionData.question;
 //console.log("question1: " + question);
 
-
-
 var optionsData = questionData["options"];
 //console.log("options: " + optionsData);
 	 
@@ -1303,6 +1300,7 @@ var formattedDate = date.toLocaleString('en-US', {
   second: 'numeric',
   hour12: true
 });
+const userInfo = getUserInfo();
 
 $(document).ready(function() {
   // Existing code
@@ -1320,7 +1318,6 @@ var jsonData = JSON.stringify(quizData, null, 2);
 console.log("quizData   "+quizData.quizCode);
 	    
       // You can do further processing with the generated JSON, such as sending it to a server or displaying it to the user.
-const userInfo = getUserInfo();
 	
 
 // Assuming you have initialized Firebase and obtained a Firestore database reference
@@ -1367,7 +1364,8 @@ firebase.firestore()
 
 	   showPopup(quizNameDS, quizLinkDB);
 	  slideIn("popupBody");
-
+//localStorage.removeItem(docRef.id);
+createdQuizFunc();
 	  
   })
   .catch(function(error) {
@@ -1382,6 +1380,43 @@ firebase.firestore()
   });
 });
 
+function createdQuizFunc(){
+// Assuming you have initialized your Firebase app and authenticated the user.
+// Get a reference to the Firestore database
+var db = firebase.firestore();
+
+// Define the collection and field values
+var collectionName = "users";
+var fieldToCheck = "firebaseId";
+var fieldValue =  userInfo.firebaseId; // Replace this with the actual user's firebaseId
+//var quizCodeDB = quizCodeDB; // Replace this with the actual quiz code
+
+// Update the "quizCreated" field directly using FieldValue.arrayUnion()
+db.collection(collectionName)
+  .where(fieldToCheck, "==", fieldValue)
+  .limit(1) // Assuming there's only one matching user document
+  .get()
+  .then((querySnapshot) => {
+    if (!querySnapshot.empty) {
+      // User document exists
+      var userDocRef = querySnapshot.docs[0].ref;
+      userDocRef.update({ quizCreated: firebase.firestore.FieldValue.arrayUnion(quizCodeDB) });
+      console.log("Quiz code added to the user's quizCreated field.");
+    } else {
+      console.log("User not found.");
+    }
+  })
+  .catch((error) => {
+    console.error("Error updating document: ", error);
+  });
+
+}
+
+
+
+
+
+	  
   document.getElementById('closeStatsButton').addEventListener('click', function() {
 window.location.href = "https://www.quizzatopia.com/quiz/stats/?q" + quizCodeDB;
   });
