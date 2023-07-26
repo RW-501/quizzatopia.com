@@ -1533,7 +1533,8 @@ function filterContent(content) {
   }
 
   // Convert content to a string if it's not already
-  content = String(content);
+let  trimmedStr = String(content);
+ content = trimmedStr.trim();
 
   // Perform case-insensitive matching for bad words
   const caseInsensitiveBadWords = badWords.map((word) => word.toLowerCase());
