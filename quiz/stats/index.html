@@ -627,7 +627,7 @@ const db = firebase.firestore();
     }
 
     // Usage: Call the functions with the quizCode
-    const quizCode = 'YOUR_QUIZ_CODE'; // Replace this with the actual quiz code you want to retrieve data for
+//    const quizCode = 'YOUR_QUIZ_CODE'; // Replace this with the actual quiz code you want to retrieve data for
 
     Promise.all([getQuizData(quizCode), getQuizReviewData(quizCode)])
       .then(([quizDoc, reviewDataDoc]) => {
