@@ -1345,13 +1345,13 @@ console.log("quizData   "+quizData.quizCode);
  categoryDB = quizData.quizCategory; 
  quizLinkDB = "/quiz/?e=user&q=" + quizCodeDB;
  imageURLDB = "https://www.quizzatopia.com/images/sq/_.png";
- numberOfQuestionsDB = questionsData.lenghts;
+ numberOfQuestionsDB = questionsData.length || 0;
  quizStartedCount = 0;
  quizDate = formattedDate;
  saveType = "user";
  userID = userInfo.firebaseId || "";
  quizDataDB = jsonData;
- quizTagsDB =  quizData.quizTags;
+ quizTagsDB =  quizData.quizTags || [];
  quizCreatedByDB =  userInfo.userName;
  quizDescriptionDB =  quizData.quizDescription;
 
