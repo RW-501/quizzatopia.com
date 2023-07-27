@@ -494,9 +494,18 @@ quizzesRef.where('quizCodeDB', '==', quizCode).get()
     const quizDoc = querySnapshot.docs[0].data();
 
     // Populate the quiz information in the page
-    document.getElementById('quizName').textContent = quizDoc.quizName;
-    document.getElementById('quizCode').textContent = quizDoc.quizCode;
-    document.getElementById('numQuestions').textContent = quizDoc.questions.length;
+    document.getElementById('quizName').textContent = quizDoc.quizNameDB;
+    document.getElementById('quizCode').textContent = quizDoc.quizCodeDB;
+    document.getElementById('numQuestions').textContent = quizDoc.numberOfQuestionsDB;
+    document.getElementById('numQuestions').textContent = quizDoc.quizDifficultyDB;
+    document.getElementById('numQuestions').textContent = quizDoc.quizCreatedByDB;
+    document.getElementById('numQuestions').textContent = quizDoc.quizDescriptionDB;
+    document.getElementById('numQuestions').textContent = quizDoc.quizCreatedDateDB;
+    document.getElementById('numQuestions').textContent = quizDoc.quizRatingDB;
+    document.getElementById('numQuestions').textContent = quizDoc.quizLinkDB;
+    document.getElementById('numQuestions').textContent = quizDoc.quizTagsDB;
+    document.getElementById('numQuestions').textContent = quizDoc.quizStartedCount;
+    document.getElementById('numQuestions').textContent = quizDoc.quizFinishedCount;
 
     // Perform calculations and display statistics
     const totalAttempts = 100; // Replace this with the actual total attempts
