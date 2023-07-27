@@ -53,8 +53,6 @@ console.log('questionIncorrect ', questionIncorrect);
 
 
 
-var quizName;
-
 // Check if quizCode matches and retrieve or save quiz info
 function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
   const savedQuizInfo = localStorage.getItem(`quizInfo_${quizCode}`);
