@@ -845,7 +845,7 @@ console.log('userID:', userID);
   var quizObj = JSON.parse(localStorage.getItem('quizData')) || {
     quizName: quizName,
     quizCode: quizCode,
-    numberOfQuestions: 0,
+    numberOfQuestions: quizObj.questions.length || 0, 
     quizCategory: category,
     quizDescription: description,
     quizTags: quizTags,
@@ -854,7 +854,7 @@ console.log('userID:', userID);
 
   // Create question object
   var questionObj = {
-    questionNumber:  quizObj.questions.length || 0, 
+    questionNumber:  quizObj.questions.length + 1 || 0, 
     question: question,
     imageURL: "", // Add the image URL here if available
     questionType: questionType,
@@ -866,7 +866,6 @@ console.log('userID:', userID);
 
   // Check if the question is not blank or empty
   if (question.trim() !== '') {
-    // Save question to quizObj
   //  quizObj.questions = questionObj;
   quizObj.questions.push(questionObj);
 
