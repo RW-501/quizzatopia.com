@@ -267,6 +267,7 @@ display: none;
   display: none;
   justify-content: center;
   align-items: center;
+    z-index: 300;
 }
 
 .popup {
@@ -281,7 +282,7 @@ display: none;
     bottom: 0;
     position: absolute;
     width: 80%;
-    height: 80%;
+    height: 85%;
     overflow-y: clip;
     box-shadow: inset 0px 1px 0rem 14px #fd7e14 !important;
     display: block;
@@ -396,6 +397,7 @@ margin: auto;
 		#popupBody img{
     margin: auto;
     width: 20%;
+    padding: 2;
 		}
 </style>
 	  	
@@ -1465,7 +1467,7 @@ window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeD
 	    // Function to show the pop-up
   function showPopup(quizName, shareURL) {
     document.getElementById('quizName').textContent = quizName;
-    document.getElementById('shareURL').value = "https://www.quizzatopia.com/"+ shareURL;
+    document.getElementById('shareURL').value = "https://www.quizzatopia.com"+ shareURL;
     document.getElementById('popupOverlay').style.display = 'flex';
   }
 
