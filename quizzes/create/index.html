@@ -667,8 +667,7 @@ if (window.getComputedStyle(mainSections[0]).display !== 'none') {
 
 	tagInput.addEventListener('blur', function (event) {
   const tagText = tagInput.innerText.trim();
-  if (tagText) {
- // if (tagText !== '') {
+ if (tagText !== '') {
     addTag(tagText);
     tagInput.innerText = '';
   }
@@ -719,8 +718,9 @@ function addTag(tagText) {
       tagInput.value = oldTagText;
       tagInput.classList.add('tagInput');
       tagInput.addEventListener('keydown', function (event) {
-        if (event.key === 'Enter') {
-          const updatedTagText = tagInput.value.trim();
+      //  if (event.key === 'Enter') {
+      if (event.key === ' ' || event.key === 'Enter'|| event.key === ',' ) {
+          let updatedTagText = tagInput.value.trim();
           if (updatedTagText !== '') {
             updateTag(oldTagText, updatedTagText, tagButton);
           } else {
@@ -728,14 +728,21 @@ function addTag(tagText) {
           }
         }
       });
-
+	tagInput.addEventListener('blur', function (event) {
+          let updatedTagText = tagInput.value.trim();
+          if (updatedTagText !== '') {
+            updateTag(oldTagText, updatedTagText, tagButton);
+          } else {
+            removeTag(oldTagText, tagButton);
+          }
+}); 
       tagButton.textContent = '';
       tagButton.appendChild(tagInput);
       tagInput.focus();
     }
 
 }
-
+ 	
 	
    function updateTag(oldTagText, newTagText, tagButton) {
       const index = tagsArray.indexOf(oldTagText);
