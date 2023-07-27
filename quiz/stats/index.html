@@ -464,7 +464,14 @@ firebase.initializeApp(firebaseConfig);
 // Get the quiz code from the URL parameters
 const urlParams = new URLSearchParams(window.location.search);
 const quizCode = urlParams.get('q');
+	
+if(quizCode){
+      console.log('Quiz:  '+quizCode);
+}else{
 
+}
+
+	
 // Get reference to Firestore database
 const db = firebase.firestore();
 
