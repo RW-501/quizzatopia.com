@@ -779,7 +779,9 @@ async function updatequizDB() {
 
 function endQuiz() {
   clearTimeout(timeoutId);
-
+	
+ openReviewFunc(true);
+	
   clearInterval(timer);
   quizStarted = false;
 
