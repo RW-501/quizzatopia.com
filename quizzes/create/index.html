@@ -333,16 +333,16 @@ display: none;
 #shareURL {
 width: 79%;
     background-color: transparent;
-	border: none;
+    border: none;
     margin: 0;
-    padding:  0;
+    padding: 2%;
     border-radius: 0;
-	   top: 0;
+    top: 0;
     bottom: 0;
     left: 0;
     position: absolute;
-	font-weight: 500;
-	    font-size: 1em;
+    font-weight: 500;
+    font-size: 1em;
 
 }
 #copyButton{
@@ -390,6 +390,12 @@ margin: auto;
 .popup p{
     font-size: 1em;
     font-weight: 700;
+		}
+
+
+		#popupBody img{
+    margin: auto;
+    width: 20%;
 		}
 </style>
 	  	
@@ -1382,7 +1388,7 @@ db.collection("quizzes")
     console.log("Quiz document written with ID: ", quizCodeDB);
 
 
-	   showPopup(quizNameDS, quizLinkDB);
+	   showPopup(quizNameDB, quizLinkDB);
 	  slideIn("popupBody");
 //localStorage.removeItem(docRef.id);
 createdQuizFunc();
@@ -1459,7 +1465,7 @@ window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeD
 	    // Function to show the pop-up
   function showPopup(quizName, shareURL) {
     document.getElementById('quizName').textContent = quizName;
-    document.getElementById('shareURL').value = shareURL;
+    document.getElementById('shareURL').value = "https://www.quizzatopia.com/"+ shareURL;
     document.getElementById('popupOverlay').style.display = 'flex';
   }
 
