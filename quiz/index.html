@@ -1312,7 +1312,7 @@ function checkVarForValueFunc(questionIndex) {
 
 	  
 // Open the review popup
-function openReviewFunc() {
+function openReviewFunc(save) {
 
   const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
   const quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
@@ -1326,22 +1326,26 @@ correctTab.innerHTML = "<h3>Correct Answers</h3><div id='correctList'></div>";
 
 	document.getElementById("quizReviewName").innerHTML = quizInfo.quizName;
 
-questionsCompleted = loadQuestionsCompleted(quizCode);
-let resultCount = 0;
-questionsCompleted.forEach(function(question) {
-  var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
- // console.log(questionIndex + " questionIndex   " + resultCount + " count  " + realQuestionNumber + "   realQuestionNumber");
+  questionsCompleted = loadQuestionsCompleted(quizCode);
 
-  let questionIndexBool = checkVarForValueFunc(questionIndex);
-  if (questionIndexBool) {
-    var questionDiv = document.createElement("div");
-    questionDiv.classList.add("quiz-result-item");
+  let correctQuestionNumbers = [];
+  let incorrectQuestionNumbers = [];
 
-    if (question.correctness === "correct") {
-      questionDiv.classList.add("correct");
-    } else if (question.correctness === "incorrect") {
-      questionDiv.classList.add("incorrect");
-    }
+  questionsCompleted.forEach(function (question) {
+    var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
+
+    let questionIndexBool = checkVarForValueFunc(questionIndex);
+    if (questionIndexBool) {
+      var questionDiv = document.createElement("div");
+      questionDiv.classList.add("quiz-result-item");
+
+      if (question.correctness === "correct") {
+        questionDiv.classList.add("correct");
+        correctQuestionNumbers.push(questionIndex + 1); // Add 1 to adjust to actual question number
+      } else if (question.correctness === "incorrect") {
+        questionDiv.classList.add("incorrect");
+        incorrectQuestionNumbers.push(questionIndex + 1); // Add 1 to adjust to actual question number
+      }
 
     console.log("1349?????? resultCount:", resultCount);
 	  
@@ -1358,6 +1362,8 @@ questionsCompleted.forEach(function(question) {
 
    // console.log("count:", resultCount);
    // console.log("questionIndex:", questionIndex);
+	    
+      saveReviewDataToFirestore(quizCode, quizInfo.quizName, correctQuestionNumbers, incorrectQuestionNumbers, responseTime);
 
     let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
     let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining milliseconds to seconds
@@ -1417,18 +1423,39 @@ reviewQuestionText.textContent = questionsOG[questionIndex].question;
 });
 
 // Remove resultCount++ from here
-
+if(save === true){
 slideIn("reviewPopupBox");
 
 document.getElementById("reviewPopup").style.display = "block";
-
+	  }
 
 
 }
 	  
 
 
+function saveReviewDataToFirestore(quizCode, quizName, correctQuestionNumbers, incorrectQuestionNumbers, responseTime) {
+  // Get reference to Firestore database
+  const db = firebase.firestore();
 
+  // Reference to the 'quizReviewData' collection
+  const quizReviewDataRef = db.collection('quizReviewData');
+
+  // Create a new document in the 'quizReviewData' collection
+  quizReviewDataRef.add({
+    quizCode: quizCode,
+    quizName: quizName,
+    correctQuestionNumbers: correctQuestionNumbers,
+    incorrectQuestionNumbers: incorrectQuestionNumbers,
+    responseTime: responseTime,
+  })
+    .then(docRef => {
+      console.log("Review data saved successfully. Document ID:", docRef.id);
+    })
+    .catch(error => {
+      console.error("Error saving review data:", error);
+    });
+}
 
 
 
