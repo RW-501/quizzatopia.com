@@ -1371,7 +1371,8 @@ var quizData = {
   userID: userID,
   quizDataDB: quizDataDB
 };
-
+  // Get reference to Firestore database
+  const db = firebase.firestore();
 
 // Add the quizData with the specified customQuizCode as the document ID
 db.collection("quizzes")
