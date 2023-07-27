@@ -490,9 +490,24 @@ if(quizCode){
 //  window.open("https://www.quizzatopia.com/", "_blank");
 
 }
+  // Get the quiz code from the URL parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  const quizCode = urlParams.get('q');
 
-	// Get reference to Firestore database
-const db = firebase.firestore();
+  // Wrap the code inside the DOMContentLoaded event listener
+  document.addEventListener('DOMContentLoaded', function() {
+    if (quizCode) {
+      console.log('Quiz: ' + quizCode);
+      // Call the function to fetch and display quiz data and statistics
+      fetchQuizDataAndStats(quizCode);
+    } else {
+      // Open the main page if the quiz code is not available
+      // window.open("https://www.quizzatopia.com/", "_blank");
+    }
+  });
+
+  // Get reference to Firestore database
+  const db = firebase.firestore();
 		  
     // Function to fetch quiz review data
     function getQuizReviewData(quizCode) {
@@ -642,7 +657,22 @@ const db = firebase.firestore();
       });
 
 
-
+ // Function to fetch and display quiz data and statistics
+  function fetchQuizDataAndStats(quizCode) {
+    Promise.all([getQuizData(quizCode), getQuizReviewData(quizCode)])
+      .then(([quizDoc, reviewDataDoc]) => {
+        if (quizDoc && reviewDataDoc) {
+          displayQuizStats(quizDoc, reviewDataDoc);
+          displayQuizStatsTable(reviewDataDoc.questionsCompleted);
+          displayScoreChart(
+            reviewDataDoc.correctQuestionNumbers,
+            quizDoc.numberOfQuestionsDB
+          );
+        } else {
+          console.log('Quiz or review data not found.');
+        }
+      });
+  }
 </script> 
  </body>
 	
