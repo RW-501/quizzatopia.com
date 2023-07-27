@@ -1372,12 +1372,13 @@ var quizData = {
   quizDataDB: quizDataDB
 };
 
-// Post the data to the Firestore collection "quizzes"
-firebase.firestore()
-  .collection("quizzes")
-  .add(quizData)
-  .then(function(quizCodeDB) {
-    console.log("Quiz document written with ID: ", docRef.id);
+
+// Add the quizData with the specified customQuizCode as the document ID
+db.collection("quizzes")
+  .doc(quizCodeDB) // Use the customQuizCode as the document ID
+  .set(quizData)
+  .then(() => {
+    console.log("Quiz document written with ID: ", quizCodeDB);
 
 
 	   showPopup(quizNameDS, quizLinkDB);
