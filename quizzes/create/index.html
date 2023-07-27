@@ -518,13 +518,13 @@ margin: auto;
   </section>
 	  
 	  
-<button class="sectionBTN"  onclick="showSection('area-2')">Add Question</button>
+<button  type="submit" class="sectionBTN"  onclick="showSection('area-2')">Add Question</button>
   </div>
 </form>
 	<form class="quizForm">
 	
   <div class="mainSection" id="area-2">
-<button class="sectionBTN"  onclick="showSection('area-1')">Quiz Info</button>
+<button  type="submit" class="sectionBTN"  onclick="showSection('area-1')">Quiz Info</button>
 
   <section>
     <label for="questionType">Question Type:</label>
@@ -584,7 +584,7 @@ margin: auto;
   </section>
 
   <input type="submit" value="Add Question">
-<button class="sectionBTN"  onclick="showSection('area-3'); viewQuestionListFunc();">Questions List</button>
+<button  type="submit" class="sectionBTN"  onclick="showSection('area-3'); viewQuestionListFunc();">Questions List</button>
   </div>
 
 
@@ -814,8 +814,7 @@ console.log('userID:', userID);
       $('#quizCode').val(generateQuizCode());
 
       // Handle form submission
-   $('.sectionBTN').submit(function(e) {
-//   $('.quizForm').submit(function(e) {
+   $('.quizForm').submit(function(e) {
   e.preventDefault();
 
   // Get user inputs
