@@ -53,6 +53,7 @@ console.log('questionIncorrect ', questionIncorrect);
 
 
 
+var quizName;
 
 // Check if quizCode matches and retrieve or save quiz info
 function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
@@ -75,6 +76,7 @@ function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
       startTime: startTime,
       quizLink: q  // Add the "q" parameter to the quizInfo object
     };
+quizName = quizNameNS;
 
     localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
   } else {
@@ -86,8 +88,9 @@ function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
     quizInfo.startTime = startTime;
     quizInfo.quizLink = q;  // Add the "q" parameter to the quizInfo object
     localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
-  }
+	  quizName = quizName;
 
+  }
   return quizInfo;
 }
 
@@ -1599,6 +1602,66 @@ stopBlinking();
 window.addEventListener('beforeunload', function(event) {
 
 	stopSpeaking(); 
-//  event.returnValue = 'Are you sure you want to leave this page?';
 });
 
+var userExitNotificationBool = true;
+
+window.addEventListener('resize', function () {
+  if (document.visibilityState === 'hidden' && window.innerWidth === 0 && window.innerHeight === 0) {
+    // Show notification when the screen is minimized
+    if (quizStarted === true && userExitNotificationBool === true) {
+      userExitNotification("User Minimize Tab");
+    }
+  }
+});
+
+window.addEventListener('beforeunload', function (event) {
+  // Show exit notification or confirmation message here
+  if (quizStarted === true && userExitNotificationBool === true) {
+    event.returnValue = "Are you sure you want to leave? Your progress in the quiz will be lost.";
+    userExitNotification("User Exit Tab");
+  }
+});
+
+document.addEventListener('visibilitychange', function () {
+  if (quizStarted === true && userExitNotificationBool === true) {
+    if (document.hidden) {
+      // Show notification when the tab is hidden (user switched tabs)
+      userExitNotification("User Switch Tabs");
+    } else {
+      // Show notification when the tab is visible again
+      userExitNotification("User Switch Back");
+    }
+  }
+});
+
+// Add the user quiz action to Firestore
+function saveUserQuizAction(quizCode, quizName, questionNumber, actionType, timestamp) {
+  const db = firebase.firestore();
+
+  // Create a new document in the "userQuizActions" collection
+  db.collection("userQuizActions").add({
+    quizCode: quizCode,
+    quizName: quizName,
+    questionNumber: questionNumber,
+    actionType: actionType,
+    timestamp: timestamp,
+  })
+  .then((docRef) => {
+    console.log("User quiz action saved with ID: ", docRef.id);
+  })
+  .catch((error) => {
+    console.error("Error saving user quiz action: ", error);
+  });
+}
+
+function userExitNotification(actionType) {
+  // Get the current local time
+  const localTime = new Date().toLocaleString();
+
+  // Implement your code to show the exit notification here, such as displaying a popup or toast message
+  console.log("Exit notification:", actionType, "at", localTime);
+
+	  saveUserQuizAction(quizCode, quizName, realQuestionNumber, actionType, localTime);
+
+}
