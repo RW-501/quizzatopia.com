@@ -824,7 +824,7 @@ console.log('userID:', userID);
   var quizCode = input($('#quizCode').val());
   var category = input($('#category').val());
   var description = input($('#description').val());
-  var quizTags = input($('#quizTags').val());
+ // var quizTags = input($('#quizTags').val());
   var questionType = input($('#questionType').val());
   var question = input($('#question').val());
   var correctAnswer = input($('#answer').val());
@@ -851,7 +851,7 @@ console.log('quizTags: ', quizTags); // Add this line to check the value of quiz
     numberOfQuestions: quizObj.questions.length || 0, 
     quizCategory: category,
     quizDescription: description,
-    quizTags: quizTags,
+    quizTags: tagsArray ,
     questions: []
   };
 
