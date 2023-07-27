@@ -434,30 +434,56 @@ width: 20%;
   <header>
     <h1>Quiz Stat Page</h1>
   </header>
-  <main>
-    <div class="quiz-info">
-      <h2>Quiz Information</h2>
-      <p><strong>Quiz Name:</strong> <span id="quizName"></span></p>
-      <p><strong>Quiz Code:</strong> <span id="quizCode"></span></p>
-      <p><strong>Number of Questions:</strong> <span id="numQuestions"></span></p>
+<main>
+  <div class="quiz-info">
+    <h2>Quiz Information</h2>
+    <p><strong>Quiz Name:</strong> <span id="quizName"></span></p>
+    <p><strong>Quiz Code:</strong> <span id="quizCode"></span></p>
+    <p><strong>Number of Questions:</strong> <span id="numQuestions"></span></p>
+  </div>
+
+  <div class="stats">
+    <h2>Quiz Statistics</h2>
+    <!-- Add statistics elements here -->
+    <p><strong>Total Attempts:</strong> <span id="totalAttempts"></span></p>
+    <p><strong>Average Score:</strong> <span id="averageScore"></span></p>
+    <p><strong>Best Score:</strong> <span id="bestScore"></span></p>
+
+    <!-- Add charts and tables here -->
+    <div class="row">
+      <div class="col-md-6">
+        <canvas id="scoreChart"></canvas>
+      </div>
+      <div class="col-md-6">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Question Number</th>
+              <th>Response Time</th>
+              <th>Correctness</th>
+            </tr>
+          </thead>
+          <tbody id="questionTableBody">
+            <!-- This table will be populated dynamically using JavaScript -->
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div class="stats">
-      <h2>Quiz Statistics</h2>
-      <!-- Add statistics elements here -->
-      <p><strong>Total Attempts:</strong> <span id="totalAttempts"></span></p>
-      <p><strong>Average Score:</strong> <span id="averageScore"></span></p>
-      <p><strong>Best Score:</strong> <span id="bestScore"></span></p>
-    </div>
-	  <div id="bMC_link">
-	  <a href="https://www.buymeacoffee.com/Quizzatopia" target="_blank"><img src="/images/bmc.png" alt="Buy Me A Coffee" id="adPic" ></a>
-	  </div>
-  </main>
+  </div>
+
+  <div id="bMC_link">
+    <a href="https://www.buymeacoffee.com/Quizzatopia" target="_blank"><img src="/images/bmc.png" alt="Buy Me A Coffee" id="adPic" ></a>
+  </div>
+</main>
 
 
 
 
 
 
+
+<!-- Chart.js library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
   
@@ -474,50 +500,106 @@ if(quizCode){
 
 }
 
-	
-// Get reference to Firestore database
+	// Get reference to Firestore database
 const db = firebase.firestore();
 
-// Reference to the 'quizzes' collection
-const quizzesRef = db.collection('quizzes');
+// Function to fetch quiz review data
+function getQuizReviewData(quizCode) {
+  const quizReviewDataRef = db.collection('quizReviewData');
+  return quizReviewDataRef.where('quizCode', '==', quizCode).get()
+    .then(querySnapshot => {
+      if (querySnapshot.empty) {
+        // Quiz review data with the given quizCode not found
+        console.log('Quiz review data not found');
+        return null;
+      }
+      // Assuming quizCode is unique, there should be only one document in the querySnapshot
+      const reviewDataDoc = querySnapshot.docs[0].data();
+      return reviewDataDoc;
+    })
+    .catch(error => {
+      console.error('Error fetching quiz review data:', error);
+      return null;
+    });
+}
 
-// Query the Firestore database for the quiz with the given quiz code
-quizzesRef.where('quizCodeDB', '==', quizCode).get()
-  .then(querySnapshot => {
-    if (querySnapshot.empty) {
-      // Quiz with the given code not found
-      console.log('Quiz not found');
-      return;
+// Function to fetch quiz data
+function getQuizData(quizCode) {
+  const quizzesRef = db.collection('quizzes');
+  return quizzesRef.where('quizCodeDB', '==', quizCode).get()
+    .then(querySnapshot => {
+      if (querySnapshot.empty) {
+        // Quiz with the given code not found
+        console.log('Quiz not found');
+        return null;
+      }
+      // Assuming quizCode is unique, there should be only one document in the querySnapshot
+      const quizDoc = querySnapshot.docs[0].data();
+      return quizDoc;
+    })
+    .catch(error => {
+      console.error('Error fetching quiz data:', error);
+      return null;
+    });
+}
+
+// Function to calculate the average score
+function calculateAverageScore(correctQuestionNumbers, totalQuestions) {
+  return (correctQuestionNumbers.length / totalQuestions) * 100;
+}
+
+// Function to calculate the best score
+function calculateBestScore(correctQuestionNumbers, totalQuestions) {
+  const totalCorrect = correctQuestionNumbers.length;
+  const maxPossibleCorrect = totalQuestions;
+  return (totalCorrect / maxPossibleCorrect) * 100;
+}
+
+// Function to calculate the total attempts
+function calculateTotalAttempts(correctQuestionNumbers, incorrectQuestionNumbers) {
+  return correctQuestionNumbers.length + incorrectQuestionNumbers.length;
+}
+
+// Function to display quiz information and statistics
+function displayQuizStats(quizDoc, reviewDataDoc) {
+  // Populate the quiz information in the page
+  document.getElementById('quizName').textContent = quizDoc.quizNameDB;
+  document.getElementById('quizCode').textContent = quizDoc.quizCodeDB;
+  document.getElementById('numQuestions').textContent = quizDoc.numberOfQuestionsDB;
+  document.getElementById('quizDifficulty').textContent = quizDoc.quizDifficultyDB;
+  document.getElementById('quizCreatedBy').textContent = quizDoc.quizCreatedByDB;
+  document.getElementById('quizDescription').textContent = quizDoc.quizDescriptionDB;
+  document.getElementById('quizCreatedDate').textContent = quizDoc.quizCreatedDateDB;
+  document.getElementById('quizRating').textContent = quizDoc.quizRatingDB;
+  document.getElementById('quizLink').textContent = quizDoc.quizLinkDB;
+  document.getElementById('quizTags').textContent = quizDoc.quizTagsDB;
+  document.getElementById('quizStartedCount').textContent = quizDoc.quizStartedCount;
+  document.getElementById('quizFinishedCount').textContent = quizDoc.quizFinishedCount;
+
+  // Perform calculations and display statistics
+  const totalQuestions = quizDoc.numberOfQuestionsDB;
+  const correctQuestionNumbers = reviewDataDoc ? reviewDataDoc.correctQuestionNumbers : [];
+  const incorrectQuestionNumbers = reviewDataDoc ? reviewDataDoc.incorrectQuestionNumbers : [];
+
+  const totalAttempts = calculateTotalAttempts(correctQuestionNumbers, incorrectQuestionNumbers);
+  const averageScore = calculateAverageScore(correctQuestionNumbers, totalQuestions);
+  const bestScore = calculateBestScore(correctQuestionNumbers, totalQuestions);
+
+  document.getElementById('totalAttempts').textContent = totalAttempts;
+  document.getElementById('averageScore').textContent = averageScore.toFixed(2) + '%';
+  document.getElementById('bestScore').textContent = bestScore.toFixed(2) + '%';
+}
+
+// Usage: Call the functions with the quizCode
+//const quizCode = 'YOUR_QUIZ_CODE'; // Replace this with the actual quiz code you want to retrieve data for
+
+Promise.all([getQuizData(quizCode), getQuizReviewData(quizCode)])
+  .then(([quizDoc, reviewDataDoc]) => {
+    if (quizDoc && reviewDataDoc) {
+      displayQuizStats(quizDoc, reviewDataDoc);
+    } else {
+      console.log('Quiz or review data not found.');
     }
-
-    // Assuming quizCode is unique, there should be only one document in the querySnapshot
-    const quizDoc = querySnapshot.docs[0].data();
-
-    // Populate the quiz information in the page
-    document.getElementById('quizName').textContent = quizDoc.quizNameDB;
-    document.getElementById('quizCode').textContent = quizDoc.quizCodeDB;
-    document.getElementById('numQuestions').textContent = quizDoc.numberOfQuestionsDB;
-    document.getElementById('numQuestions').textContent = quizDoc.quizDifficultyDB;
-    document.getElementById('numQuestions').textContent = quizDoc.quizCreatedByDB;
-    document.getElementById('numQuestions').textContent = quizDoc.quizDescriptionDB;
-    document.getElementById('numQuestions').textContent = quizDoc.quizCreatedDateDB;
-    document.getElementById('numQuestions').textContent = quizDoc.quizRatingDB;
-    document.getElementById('numQuestions').textContent = quizDoc.quizLinkDB;
-    document.getElementById('numQuestions').textContent = quizDoc.quizTagsDB;
-    document.getElementById('numQuestions').textContent = quizDoc.quizStartedCount;
-    document.getElementById('numQuestions').textContent = quizDoc.quizFinishedCount;
-
-    // Perform calculations and display statistics
-    const totalAttempts = 100; // Replace this with the actual total attempts
-    const averageScore = 75; // Replace this with the actual average score
-    const bestScore = 95; // Replace this with the actual best score
-
-    document.getElementById('totalAttempts').textContent = totalAttempts;
-    document.getElementById('averageScore').textContent = averageScore + '%';
-    document.getElementById('bestScore').textContent = bestScore + '%';
-  })
-  .catch(error => {
-    console.error('Error fetching quiz data:', error);
   });
 
 	
@@ -529,9 +611,76 @@ quizzesRef.where('quizCodeDB', '==', quizCode).get()
   });
 
 
-	  
-	  
-    </script>
+
+  // Function to display the table with quiz statistics
+  function displayQuizStatsTable(questionsCompleted) {
+    const tableBody = document.getElementById('questionTableBody');
+
+    questionsCompleted.forEach(question => {
+      const questionRow = document.createElement('tr');
+      questionRow.innerHTML = `
+        <td>${question.questionNumber}</td>
+        <td>${formatResponseTime(question.responseTime)}</td>
+        <td>${question.correctness}</td>
+      `;
+      tableBody.appendChild(questionRow);
+    });
+  }
+
+  // Function to format response time in minutes and seconds
+  function formatResponseTime(responseTime) {
+    const minutes = Math.floor(responseTime / 60000);
+    const seconds = Math.floor((responseTime % 60000) / 1000);
+    return `${minutes} mins ${seconds} secs`;
+  }
+
+  // Function to display the score chart
+  function displayScoreChart(correctQuestionNumbers, totalQuestions) {
+    const averageScore = calculateAverageScore(correctQuestionNumbers, totalQuestions);
+    const bestScore = calculateBestScore(correctQuestionNumbers, totalQuestions);
+
+    const ctx = document.getElementById('scoreChart').getContext('2d');
+    const scoreChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Average Score', 'Best Score'],
+        datasets: [{
+          label: 'Score',
+          data: [averageScore, bestScore],
+          backgroundColor: ['#36A2EB', '#4CAF50'],
+        }],
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100,
+            title: {
+              display: true,
+              text: 'Percentage (%)',
+            },
+          },
+        },
+      },
+    });
+  }
+
+  // Usage: Call the functions with the quiz statistics data
+ // const quizCode = 'YOUR_QUIZ_CODE'; // Replace this with the actual quiz code you want to retrieve data for
+
+  Promise.all([getQuizData(quizCode), getQuizReviewData(quizCode)])
+    .then(([quizDoc, reviewDataDoc]) => {
+      if (quizDoc && reviewDataDoc) {
+        displayQuizStats(quizDoc, reviewDataDoc);
+        displayQuizStatsTable(reviewDataDoc.questionsCompleted);
+        displayScoreChart(reviewDataDoc.correctQuestionNumbers, quizDoc.numberOfQuestionsDB);
+      } else {
+        console.log('Quiz or review data not found.');
+      }
+    });
+</script>
+
 	  <script src="script.js" defer></script>
  </body>
 	
