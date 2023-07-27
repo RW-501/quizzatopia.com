@@ -527,7 +527,7 @@ width: 20%;
         .then(querySnapshot => {
           if (querySnapshot.empty) {
             // Quiz with the given code not found
-            console.log('Quiz not found');
+            console.log('Quiz not found getQuizData');
             return null;
           }
           // Assuming quizCode is unique, there should be only one document in the querySnapshot
