@@ -1301,7 +1301,7 @@ $(document).ready(function() {
 
   }
 var quizCodeDB;
-var quizNameDS;
+var quizNameDB;
 var categoryDB;
 var quizLinkDB;
 var imageURLDB;
@@ -1347,7 +1347,7 @@ console.log("quizData   "+quizData.quizCode);
 // Assuming you have initialized Firebase and obtained a Firestore database reference
 // Replace the following placeholders with your actual values
  quizCodeDB = quizData.quizCode;
- quizNameDS = quizData.quizName;
+ quizNameDB = quizData.quizName;
  categoryDB = quizData.quizCategory; 
  quizLinkDB = "/quiz/?e=user&q=" + quizCodeDB;
  imageURLDB = "https://www.quizzatopia.com/images/sq/_.png";
@@ -1363,7 +1363,7 @@ console.log("quizData   "+quizData.quizCode);
 
 var quizData = {
   quizCodeDB: quizCodeDB,
-  quizNameDB: quizNameDS,
+  quizNameDB: quizNameDB,
   categoryDB: categoryDB,
   quizCreatedByDB: quizCreatedByDB,
   quizDescriptionDB: quizDescriptionDB,
@@ -1390,7 +1390,7 @@ db.collection("quizzes")
 
 	   showPopup(quizNameDB, quizLinkDB);
 	  slideIn("popupBody");
-//localStorage.removeItem(docRef.id);
+//localStorage.removeItem(quizCodeDB);
 createdQuizFunc();
 	  
   })
