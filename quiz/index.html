@@ -2096,7 +2096,7 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageU
   const storedQuizInfo = localStorage.getItem(`quizInfo_${quizCodeNS}`);
   const testInfoDiv = document.getElementById('testInfo');
   const optionsQuizNameDiv = document.getElementById('optionsQuizName');
-  
+ console.log('displayTestInfo ???????????????????????????Start ???????    '+currentTimeInMillis);
   if (storedQuizInfo) {
     try {
       const quizInfo = JSON.parse(storedQuizInfo);
@@ -2107,7 +2107,9 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageU
 
       let descriptionArea = quizInfo.quizDescription ? `<p><strong>Quiz Description:</strong> ${quizInfo.quizDescription}</p>` : "";
       let categoryArea = quizInfo.quizCategory ? `<p><strong>Quiz Category:</strong> ${quizInfo.quizCategory}</p>` : "";
-      
+      	  
+ console.log('showPieChartFront ???????????????????????????Start ???????    '+currentTimeInMillis);
+
       if (score > 0) {
         // Show the pie chart for correct and incorrect answers
         showPieChartFront(score, ansWrong);
@@ -2188,6 +2190,8 @@ function checkQuizCodeAndGetInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, qu
     quizInfo.quizLink = quizUrl; // Add the "q" parameter to the quizInfo object
     localStorage.setItem(`quizInfo_${quizCodeNS}`, JSON.stringify(quizInfo));
   }
+	  
+ console.log('3 ???????????????????????????Start ???????    '+currentTimeInMillis);
 
   return quizInfo;
 }
@@ -2269,7 +2273,7 @@ function fetchData(q, e) {
   }
 
   quizUrl = stringEnt;
-  // Fetch data from URL or database here
+  // Fetch data from URL 
   if (e !== "user") {
     QuizFromDB = false;
     fetch(stringEnt)
