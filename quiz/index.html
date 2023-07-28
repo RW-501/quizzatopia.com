@@ -2214,6 +2214,34 @@ function fetchData(q, e) {
               const quizDataDB = doc.data();
               const parsedQuizDataDB = JSON.parse(quizDataDB.quizDataDB);
 
+
+
+         // Use the quizDataDB here
+    // Update quizCode, quizName, numberOfQuestions
+      quizCode = parsedQuizDataDB.quizCode;
+      quizName = parsedQuizDataDB.quizName;
+      numberOfQuestions = parsedQuizDataDB.numberOfQuestions || "";
+      quizImageURL = parsedQuizDataDB.imageURL;
+      quizDifficulty = parsedQuizDataDB.quizDifficulty || "";
+      quizCategory = parsedQuizDataDB.quizCategory || "";
+
+    // Parse the quizDataDB.quizDataDB string to a JSON object
+	     //         console.log("parsedQuizDataDB Data from DB: ", parsedQuizDataDB);
+
+      // Use the parsedQuizDataDB.questions array to populate questionData
+      const questionData = parsedQuizDataDB.questions.map(questionObj => ({
+        questionNumber: questionObj.questionNumber,
+        question: questionObj.question,
+        imageURL: questionObj.imageURL,
+        questionType: questionObj.questionType,
+        options: questionObj.options,
+        answer: questionObj.answer,
+        explanation: questionObj.explanation,
+        difficulty: questionObj.difficulty
+      }));
+    
+
+	  
               // Rest of the code...
             });
           } else {
