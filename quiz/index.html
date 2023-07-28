@@ -620,7 +620,8 @@ display: block !important;
 
   <!-- Custom scripts -->
   <script  src="/main.js" defer></script> 
-	  </head>
+
+  </head>
 	  <!-- Google Tag Manager -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9VG78SV9KZ"></script>
   <script>
@@ -1879,8 +1880,9 @@ function logStorageContents(quizCode) {
 		  
 	  
 	  
-	  
-	  
+	  const currentTimeInMillis = Date.now();
+ console.log('???????????????????????????Start ???????    '+currentTimeInMillis);
+
 	  
 var quizLinkURL = '';
 
@@ -2081,6 +2083,8 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageU
     try {
       const quizInfo = JSON.parse(storedQuizInfo);
       const testInfoDiv = document.getElementById('testInfo');
+	    
+ console.log('2 ???????????????????????????Start ???????    '+currentTimeInMillis);
 
       // Calculate user score and completion percentage
       const { score, percentage } = calculateScore(quizInfo);
@@ -2250,6 +2254,7 @@ QuizFromDB = true;
     } else {
       console.log("New JSON structure");
       stringEnt = "/q/" + e + "/" + q + ".json";
+	    
     }
   } else {
     console.log("Old JSON structure");
@@ -2261,6 +2266,8 @@ QuizFromDB = true;
   // Fetch data from URL or database here
 
     if (e !== "user") {
+	     console.log('3 ???????????????????????????Start ???????    '+currentTimeInMillis);
+
 	    QuizFromDB = false;
   fetch(stringEnt)
     .then(response => response.json())
@@ -2303,6 +2310,7 @@ QuizFromDB = true;
 
           // Access and use the retrieved quiz information
           const questionsCompleted = quizInfo.questionsCompleted;
+ console.log('4 ???????????????????????????Start ???????    '+currentTimeInMillis);
 
           // Display the test information
           displayTestInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
@@ -2346,6 +2354,7 @@ QuizFromDB = true;
 
           // Access and use the retrieved quiz information
           const questionsCompleted = quizInfo.questionsCompleted;
+ console.log('5 ???????????????????????????Start ???????    '+currentTimeInMillis);
 
           // Display the test information
           displayTestInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
