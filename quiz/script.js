@@ -645,7 +645,7 @@ function nextQuestion() {
     explanationContainer.style.display = 'none';
   }
 
-  if (currentQuestion < totalQuestions) {
+  if (currentQuestion + 1 < totalQuestions) {
     enableAnswerButtons();
     showQuestion();
   } else {
