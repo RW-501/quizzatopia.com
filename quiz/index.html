@@ -2109,7 +2109,7 @@ function fetchData(q, e) {
         }
 
         QuizFromDB = true;
-        const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "==", q);
+const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "==", q).limit(1);
         quizRef.get().then(function(querySnapshot) {
           if (!querySnapshot.empty) {
             console.log('Found quiz with quizCodeDB equal to', q);
