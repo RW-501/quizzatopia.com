@@ -128,7 +128,16 @@ document.body.appendChild(overlay);
 
 
 	  	  console.log('Load');
-/*
+
+
+
+
+}
+
+
+
+
+	
 // Function to remove the overlay with a timer (3 seconds delay)
 function removeOverlayWithTimer() {
   setTimeout(function() {
@@ -156,7 +165,7 @@ function removeOverlayWithoutTimer() {
   document.documentElement.scrollTop = 0; // For modern browsers
   document.body.scrollTop = 0; // For older browsers
 }
-*/
+
 	
 loadScreenFunc();
 	
