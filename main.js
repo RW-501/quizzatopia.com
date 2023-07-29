@@ -169,7 +169,7 @@ function removeOverlayWithoutTimer() {
 	
 loadScreenFunc();
 	
-//removeOverlayWithTimer();
+removeOverlayWithTimer();
 	
 // Function to revert images back to normal resolution
 function revertImagesToNormalResolution() {
