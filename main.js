@@ -168,9 +168,16 @@ function removeOverlayWithoutTimer() {
 
 	
 loadScreenFunc();
-	
+
+function isQuizURL(url) {
+  const pattern = /^https:\/\/www\.quizzatopia\.com\/quiz\/.*/;
+  return pattern.test(url);
+}
+const currentURL = window.location.href;
+
+if(isQuizURL(currentURL)){}else{
 removeOverlayWithTimer();
-	
+}
 // Function to revert images back to normal resolution
 function revertImagesToNormalResolution() {
   // Select all <img> elements on the page
