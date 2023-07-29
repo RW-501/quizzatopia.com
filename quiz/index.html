@@ -2260,6 +2260,69 @@ const firestore = firebase.firestore();
   });
 }
 
+
+function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageURL_NS, quizDifficultyNS) {
+  const storedQuizInfo = localStorage.getItem(`quizInfo_${quizCodeNS}`);
+  const testInfoDiv = document.getElementById('testInfo');
+  const optionsQuizNameDiv = document.getElementById('optionsQuizName');
+  
+  if (storedQuizInfo) {
+    try {
+      const quizInfo = JSON.parse(storedQuizInfo);
+
+      // Calculate user score and completion percentage
+      const { score, percentage } = calculateScore(quizInfo);
+      let ansWrong = numberOfQuestionsNS - score;
+
+      let descriptionArea = quizInfo.quizDescription ? `<p><strong>Quiz Description:</strong> ${quizInfo.quizDescription}</p>` : "";
+      let categoryArea = quizInfo.quizCategory ? `<p><strong>Quiz Category:</strong> ${quizInfo.quizCategory}</p>` : "";
+      
+      if (score > 0) {
+        // Show the pie chart for correct and incorrect answers
+        showPieChartFront(score, ansWrong);
+      }
+
+      testInfoDiv.innerHTML = `
+        <h3>Quiz Information</h3>
+        <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
+        ${categoryArea}
+        ${descriptionArea}
+        <p><strong>Quiz Difficulty:</strong> ${quizDifficultyNS || 'N/A'}</p>
+        <p><strong>Number of Questions:</strong> ${quizInfo.numberOfQuestions}</p>
+        <p><strong>Question Correct:</strong> ${score}</p>
+        <p><strong>Best Score:</strong> ${percentage.toFixed(0)}%</p>
+      `;
+
+      // Update the title tag
+      document.title = quizNameNS;
+      optionsQuizNameDiv.innerHTML = `<h1>${quizNameNS}<h1>`;
+
+      logStorageContents(quizInfo.quizCode);
+    } catch (error) {
+      console.error('Error parsing stored quiz info:', error);
+      // Handle error, display appropriate message or fallback behavior
+    }
+  } else {
+    // Handle case where there is no stored quiz info, display appropriate message or fallback behavior
+    testInfoDiv.innerHTML = `
+        <h3>Quiz Information</h3>
+        <p><strong>Quiz Code:</strong> ${quizCodeNS}</p>
+        <p><strong>Quiz Difficulty:</strong> ${quizDifficultyNS || 'N/A'}</p>
+        <p><strong>Number of Questions:</strong> ${numberOfQuestionsNS}</p>
+        <p><strong>No quiz information found.</strong></p>
+      `;
+
+    // Update the title tag
+    document.title = quizNameNS;
+    optionsQuizNameDiv.innerHTML = `<h1>${quizNameNS}<h1>`;
+  }
+}
+
+
+
+
+
+	  
 // Now, we can use the fetchData function and ensure that displayTestInfo is called only once after all data is fetched:
 window.addEventListener("load", function() {
 fetchData(q, e)
