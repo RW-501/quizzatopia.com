@@ -1366,9 +1366,10 @@ correctTab.innerHTML = "<h3>Correct Answers</h3><div id='correctList'></div>";
 
    // console.log("count:", resultCount);
    // console.log("questionIndex:", questionIndex);
-	    
+if(save === true){
       saveReviewDataToFirestore(quizCode, quizInfo.quizName, correctQuestionNumbers, incorrectQuestionNumbers, responseTime);
-
+	  }
+	    
     let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
     let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining milliseconds to seconds
 
@@ -1427,7 +1428,7 @@ reviewQuestionText.textContent = questionsOG[questionIndex].question;
 });
 
 // Remove resultCount++ from here
-if(save === true){
+if(save === false){
 slideIn("reviewPopupBox");
 
 document.getElementById("reviewPopup").style.display = "block";
