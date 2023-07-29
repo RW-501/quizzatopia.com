@@ -2089,20 +2089,21 @@ let quizUrl;
 var QuizFromDB = false;
 
 function fetchData(q, e) {
-// Initialize Firebase app
-//firebase.initializeApp(firebaseConfig);
+  // Initialize Firebase app
+  //firebase.initializeApp(firebaseConfig);
 
-// Now you can use Firestore and other Firebase services
-const firestore = firebase.firestore();
-	  
+  // Now you can use Firestore and other Firebase services
+  const firestore = firebase.firestore();
+  
   return new Promise((resolve, reject) => {
     let stringEnt;
     if (e) {
       if (e === "user") {
-        console.log(' load DB ???????????????????????????Start ???????    '+currentTimeInMillis);
+        console.log(' load DB ???????????????????????????Start ???????    ' + currentTimeInMillis);
         console.log("DB JSON structure");
         if (QuizFromDB) {
           // If data is already fetched, resolve the promise and return early
+          console.log('Data is already fetched from DB');
           resolve();
           return;
         }
@@ -2111,6 +2112,7 @@ const firestore = firebase.firestore();
         const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "==", q);
         quizRef.get().then(function(querySnapshot) {
           if (!querySnapshot.empty) {
+            console.log('Found quiz with quizCodeDB equal to', q);
             querySnapshot.forEach(function(doc) {
               const quizDataDB = doc.data();
               const parsedQuizDataDB = JSON.parse(quizDataDB.quizDataDB);
@@ -2123,6 +2125,8 @@ const firestore = firebase.firestore();
               quizImageURL = parsedQuizDataDB.imageURL;
               quizDifficulty = parsedQuizDataDB.quizDifficulty || "";
               quizCategory = parsedQuizDataDB.quizCategory || "";
+
+              console.log('Fetched quiz data from DB:', parsedQuizDataDB);
 
               // Parse the quizDataDB.quizDataDB string to a JSON object
               // Use the parsedQuizDataDB.questions array to populate questionData
@@ -2259,6 +2263,9 @@ const firestore = firebase.firestore();
     }
   });
 }
+
+// Rest of the code remains the same...
+
 
 
 function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageURL_NS, quizDifficultyNS) {
