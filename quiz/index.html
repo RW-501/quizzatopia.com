@@ -2323,23 +2323,17 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageU
 
 
 	  
-// Now, we can use the fetchData function and ensure that displayTestInfo is called only once after all data is fetched:
 window.addEventListener("load", function() {
-fetchData(q, e)
-  .then(() => {
-    // Data is fetched and processed, call displayTestInfo here
-    displayTestInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
-  })
-  .catch(error => {
-    // Handle any errors that occurred during fetchData
-    console.error("Error fetching data:", error);
-  });
-
-
-
-
-
-      });
+  fetchData(q, e)
+    .then(() => {
+      // Data is fetched and processed, call displayTestInfo here
+      displayTestInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
+    })
+    .catch(error => {
+      // Handle any errors that occurred during fetchData
+      console.error("Error fetching data:", error);
+    });
+});
 
 	  
 const reportForm = document.getElementById('reportForm');
