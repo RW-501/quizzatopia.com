@@ -2261,7 +2261,7 @@ const firestore = firebase.firestore();
 }
 
 // Now, we can use the fetchData function and ensure that displayTestInfo is called only once after all data is fetched:
-
+window.addEventListener("load", function() {
 fetchData(q, e)
   .then(() => {
     // Data is fetched and processed, call displayTestInfo here
@@ -2272,10 +2272,9 @@ fetchData(q, e)
     console.error("Error fetching data:", error);
   });
 
-	  
-      window.addEventListener("load", function() {
 
-fetchData(q, e);
+
+
 
       });
 
