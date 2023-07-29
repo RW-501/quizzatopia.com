@@ -215,7 +215,11 @@ function revertImagesToNormalResolution() {
 setTimeout(function() {
   revertImagesToNormalResolution();
   console.log('End high resolution: ???');
-}, 5000);  // Revert after 5 seconds (adjust the duration as needed)
+}, 10000);  // Revert after 5 seconds (adjust the duration as needed)
+
+
+
+
 
 // Function to set the loggedIn cookie with a 3-day expiration date
 function setLoggedInCookie() {
