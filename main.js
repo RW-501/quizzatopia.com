@@ -175,9 +175,13 @@ function isQuizURL(url) {
 }
 const currentURL = window.location.href;
 
-if(isQuizURL(currentURL)){}else{
+if(isQuizURL(currentURL)){
+removeOverlayWithoutTimer();	
+}else{
 removeOverlayWithTimer();
 }
+
+
 // Function to revert images back to normal resolution
 function revertImagesToNormalResolution() {
   // Select all <img> elements on the page
