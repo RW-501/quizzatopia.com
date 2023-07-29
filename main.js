@@ -129,26 +129,39 @@ document.body.appendChild(overlay);
 
 	  	  console.log('Load');
 
-	
-setTimeout(function() {
-	  	  console.log('overlay ????');
- overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
-  if (overlay) {
-	overlay.remove();  
-overlay.style.display = 'none'; // Hide the overlay if it exists
-	  	  console.log('overlay Removed');
-
-  }
+// Function to remove the overlay with a timer (3 seconds delay)
+function removeOverlayWithTimer() {
+  setTimeout(function() {
+    console.log('overlay ???');
+    const overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
+    if (overlay) {
+      overlay.remove();
+      overlay.style.display = 'none'; // Hide the overlay if it exists
+      console.log('overlay Removed');
+    }
     document.documentElement.scrollTop = 0; // For modern browsers
-  document.body.scrollTop = 0; // For older browsers
-	
-}, 3000); // Delay in milliseconds before removing the overlay
+    document.body.scrollTop = 0; // For older browsers
+  }, 3000); // Delay in milliseconds before removing the overlay
+}
 
+// Function to remove the overlay immediately without a timer
+function removeOverlayWithoutTimer() {
+  console.log('overlay ???');
+  const overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
+  if (overlay) {
+    overlay.remove();
+    overlay.style.display = 'none'; // Hide the overlay if it exists
+    console.log('overlay Removed');
+  }
+  document.documentElement.scrollTop = 0; // For modern browsers
+  document.body.scrollTop = 0; // For older browsers
 }
 
 	
 loadScreenFunc();
-
+	
+removeOverlayWithTimer();
+	
 // Function to revert images back to normal resolution
 function revertImagesToNormalResolution() {
   // Select all <img> elements on the page
