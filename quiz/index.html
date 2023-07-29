@@ -2092,277 +2092,186 @@ function shuffleArray(array) {
 	  
 
 // Retrieve the stored test information and display it
-function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageURL_NS, quizDifficultyNS) {
-  const storedQuizInfo = localStorage.getItem(`quizInfo_${quizCodeNS}`);
-  const testInfoDiv = document.getElementById('testInfo');
-  const optionsQuizNameDiv = document.getElementById('optionsQuizName');
- console.log('displayTestInfo ???????????????????????????Start ???????    '+currentTimeInMillis);
-  if (storedQuizInfo) {
-    try {
-      const quizInfo = JSON.parse(storedQuizInfo);
-
-      // Calculate user score and completion percentage
-      const { score, percentage } = calculateScore(quizInfo);
-      let ansWrong = numberOfQuestionsNS - score;
-
-      let descriptionArea = quizInfo.quizDescription ? `<p><strong>Quiz Description:</strong> ${quizInfo.quizDescription}</p>` : "";
-      let categoryArea = quizInfo.quizCategory ? `<p><strong>Quiz Category:</strong> ${quizInfo.quizCategory}</p>` : "";
-      	  
- console.log('showPieChartFront ???????????????????????????Start ???????    '+currentTimeInMillis);
-
-      if (score > 0) {
-        // Show the pie chart for correct and incorrect answers
-        showPieChartFront(score, ansWrong);
-      }
-
-      testInfoDiv.innerHTML = `
-        <h3>Quiz Information</h3>
-        <p><strong>Quiz Code:</strong> ${quizInfo.quizCode}</p>
-        ${categoryArea}
-        ${descriptionArea}
-        <p><strong>Quiz Difficulty:</strong> ${quizDifficultyNS || 'N/A'}</p>
-        <p><strong>Number of Questions:</strong> ${quizInfo.numberOfQuestions}</p>
-        <p><strong>Question Correct:</strong> ${score}</p>
-        <p><strong>Best Score:</strong> ${percentage.toFixed(0)}%</p>
-      `;
-
-      // Update the title tag
-      document.title = quizNameNS;
-      optionsQuizNameDiv.innerHTML = `<h1>${quizNameNS}<h1>`;
-
-      logStorageContents(quizInfo.quizCode);
-    } catch (error) {
-      console.error('Error parsing stored quiz info:', error);
-      // Handle error, display appropriate message or fallback behavior
-    }
-  } else {
-    // Handle case where there is no stored quiz info, display appropriate message or fallback behavior
-    testInfoDiv.innerHTML = `
-        <h3>Quiz Information</h3>
-        <p><strong>Quiz Code:</strong> ${quizCodeNS}</p>
-        <p><strong>Quiz Difficulty:</strong> ${quizDifficultyNS || 'N/A'}</p>
-        <p><strong>Number of Questions:</strong> ${numberOfQuestionsNS}</p>
-        <p><strong>No quiz information found.</strong></p>
-      `;
-
-    // Update the title tag
-    document.title = quizNameNS;
-    optionsQuizNameDiv.innerHTML = `<h1>${quizNameNS}<h1>`;
-  }
-}
-
-
-
-
-
-
-
-	  
-// Check if quizCode matches and retrieve or save quiz info
-function checkQuizCodeAndGetInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageURL, quizUrl) {
-  const savedQuizInfo = localStorage.getItem(`quizInfo_${quizCodeNS}`);
-  let quizInfo;
-  let startTime = new Date().toLocaleString();
-
-  if (!savedQuizInfo) {
-    // Quiz info doesn't exist, save new quiz info to storage
-    quizInfo = {
-      quizCode: quizCodeNS,
-      quizName: quizNameNS,
-      quizImageURL: quizImageURL,
-      questionIncorrect: questionIncorrect,
-      questionCorrect: questionCorrect,
-      quizType: quizType,
-      numberOfQuestions: numberOfQuestionsNS,
-      questionsCompleted: questionsCompleted,
-      startTime: startTime,
-      quizLink: quizUrl // Add the "q" parameter to the quizInfo object
-    };
-    localStorage.setItem(`quizInfo_${quizCodeNS}`, JSON.stringify(quizInfo));
-  } else {
-    // Quiz info exists, retrieve existing quiz info from storage
-    quizInfo = JSON.parse(savedQuizInfo);
-    quizInfo.quizName = quizNameNS;
-    quizInfo.quizImageURL = quizImageURL;
-    quizInfo.quizType = quizType || "";
-    quizInfo.numberOfQuestions = numberOfQuestionsNS || "";
-    quizInfo.startTime = startTime;
-    quizInfo.quizLink = quizUrl; // Add the "q" parameter to the quizInfo object
-    localStorage.setItem(`quizInfo_${quizCodeNS}`, JSON.stringify(quizInfo));
-  }
-	  
- console.log('3 ???????????????????????????Start ???????    '+currentTimeInMillis);
-
-  return quizInfo;
-}
-
-
-
-
-
-
-
-	  let quizUrl;
+let quizUrl;
 var QuizFromDB = false;
 
 function fetchData(q, e) {
-  let stringEnt;
-  if (e) {
-    if (e === "user") {
-      console.log(' load DB ???????????????????????????Start ???????    '+currentTimeInMillis);
-      console.log("DB JSON structure");
-      if (QuizFromDB) {
-        // If data is already fetched, return early
-        return;
-      }
-
-      QuizFromDB = true;
-      const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "==", q);
-      quizRef.get().then(function(querySnapshot) {
-        if (!querySnapshot.empty) {
-          querySnapshot.forEach(function(doc) {
-            const quizDataDB = doc.data();
-            const parsedQuizDataDB = JSON.parse(quizDataDB.quizDataDB);
-
-            // Use the quizDataDB here
-            // Update quizCode, quizName, numberOfQuestions
-            quizCode = parsedQuizDataDB.quizCode;
-            quizName = parsedQuizDataDB.quizName;
-            numberOfQuestions = parsedQuizDataDB.numberOfQuestions || "";
-            quizImageURL = parsedQuizDataDB.imageURL;
-            quizDifficulty = parsedQuizDataDB.quizDifficulty || "";
-            quizCategory = parsedQuizDataDB.quizCategory || "";
-
-            // Parse the quizDataDB.quizDataDB string to a JSON object
-            // Use the parsedQuizDataDB.questions array to populate questionData
-            const questionData = parsedQuizDataDB.questions.map(questionObj => ({
-              questionNumber: questionObj.questionNumber,
-              question: questionObj.question,
-              imageURL: questionObj.imageURL,
-              questionType: questionObj.questionType,
-              options: questionObj.options,
-              answer: questionObj.answer,
-              explanation: questionObj.explanation,
-              difficulty: questionObj.difficulty
-            }));
-
-            questions.push(...questionData);
-            questionsOG.push(...questionData);
-
-            shuffleArray(questions);
-
-            // Access and use the retrieved quiz information
-            const questionsCompleted = quizInfo.questionsCompleted;
-
-            // Display the test information
-            displayTestInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
-          });
-        } else {
-          console.log("No quiz found with quizCodeDB equal to", q);
-        }
-      }).catch(function(error) {
-        console.error("Error getting quiz document: ", error);
-      });
-    } else {
-      console.log("New JSON structure");
-      stringEnt = "/q/" + e + "/" + q + ".json";
-    }
-  } else {
-    console.log("Old JSON structure");
-    stringEnt = "/q/" + q + ".json";
-  }
-
-  quizUrl = stringEnt;
-  // Fetch data from URL 
-  if (e !== "user") {
-    QuizFromDB = false;
-    fetch(stringEnt)
-      .then(response => response.json())
-      .then(data => {
-        // Determine the JSON structure directly from the data
-        const isOldJSONStructure = data.length !== undefined;
-        console.log(isOldJSONStructure ? "Old JSON structure" : "New JSON structure");
-
-        if (isOldJSONStructure ? data.length === 0 : data.questions.length === 0) {
-          // Handle empty data
-          console.log("Empty data");
-          const randomFile = getRandomFile(files);
-          fetchData(randomFile);
+  return new Promise((resolve, reject) => {
+    let stringEnt;
+    if (e) {
+      if (e === "user") {
+        console.log(' load DB ???????????????????????????Start ???????    '+currentTimeInMillis);
+        console.log("DB JSON structure");
+        if (QuizFromDB) {
+          // If data is already fetched, resolve the promise and return early
+          resolve();
           return;
         }
 
-        // Use the questions data here
-        const questionData = isOldJSONStructure
-          ? data.map(questionObj => ({
-              question: questionObj.question,
-              answer: questionObj.answer,
-              options: questionObj.options,
-              difficulty: questionObj.difficulty,
-              imageURL: questionObj.imageURL,
-              questionType: questionObj.questionType,
-              questionNumber: questionObj.questionNumber,
-              explanation: questionObj.explanation,
-            }))
-          : data.questions.map(questionObj => ({
-              question: questionObj.question,
-              answer: questionObj.answer,
-              options: questionObj.options,
-              difficulty: questionObj.difficulty,
-              imageURL: questionObj.imageURL,
-              questionType: questionObj.questionType,
-              questionNumber: questionObj.questionNumber,
-              explanation: questionObj.explanation,
-            }));
+        QuizFromDB = true;
+        const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "==", q);
+        quizRef.get().then(function(querySnapshot) {
+          if (!querySnapshot.empty) {
+            querySnapshot.forEach(function(doc) {
+              const quizDataDB = doc.data();
+              const parsedQuizDataDB = JSON.parse(quizDataDB.quizDataDB);
 
-        // Update quizCode, quizName, numberOfQuestions
-        quizCode = isOldJSONStructure ? "" : data.quizCode;
-        quizName = isOldJSONStructure ? "" : data.quizName;
-        numberOfQuestions = isOldJSONStructure ? data.length : data.numberOfQuestions || "";
-        quizImageURL = isOldJSONStructure ? "" : data.quizImageURL;
-        quizDifficulty = isOldJSONStructure ? "" : data.quizDifficulty || "";
+              // Use the quizDataDB here
+              // Update quizCode, quizName, numberOfQuestions
+              quizCode = parsedQuizDataDB.quizCode;
+              quizName = parsedQuizDataDB.quizName;
+              numberOfQuestions = parsedQuizDataDB.numberOfQuestions || "";
+              quizImageURL = parsedQuizDataDB.imageURL;
+              quizDifficulty = parsedQuizDataDB.quizDifficulty || "";
+              quizCategory = parsedQuizDataDB.quizCategory || "";
 
-        // Check quiz code and retrieve or save quiz info
-        const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
+              // Parse the quizDataDB.quizDataDB string to a JSON object
+              // Use the parsedQuizDataDB.questions array to populate questionData
+              const questionData = parsedQuizDataDB.questions.map(questionObj => ({
+                questionNumber: questionObj.questionNumber,
+                question: questionObj.question,
+                imageURL: questionObj.imageURL,
+                questionType: questionObj.questionType,
+                options: questionObj.options,
+                answer: questionObj.answer,
+                explanation: questionObj.explanation,
+                difficulty: questionObj.difficulty
+              }));
 
-        questions.push(...questionData);
-        questionsOG.push(...questionData);
-        shuffleArray(questions);
+              questions.push(...questionData);
+              questionsOG.push(...questionData);
 
-        // Access and use the retrieved quiz information
-        const questionsCompleted = quizInfo.questionsCompleted;
+              shuffleArray(questions);
 
-        // Display the test information
-        displayTestInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
+              // Access and use the retrieved quiz information
+              const questionsCompleted = quizInfo.questionsCompleted;
 
-        //quizDifficulty = typeof quizDifficulty !== 'undefined' ? quizDifficulty : "";
-        let q_link = "/quiz" + q;
+              // Resolve the promise since data is fetched
+              resolve();
+            });
+          } else {
+            console.log("No quiz found with quizCodeDB equal to", q);
+            // Resolve the promise even if there's no quiz found to avoid blocking
+            resolve();
+          }
+        }).catch(function(error) {
+          console.error("Error getting quiz document: ", error);
+          // Reject the promise if there's an error
+          reject(error);
+        });
+      } else {
+        console.log("New JSON structure");
+        stringEnt = "/q/" + e + "/" + q + ".json";
+      }
+    } else {
+      console.log("Old JSON structure");
+      stringEnt = "/q/" + q + ".json";
+    }
 
-        const quizZZ = {
-          quizCodeX: quizCode,
-          quizNameX: quizName,
-          imageURLX: "https://www.quizzatopia.com/images/sq/_.png",
-          numberOfQuestionsX: numberOfQuestions,
-          quizJsonX: quizUrl,
-          quizLinkX: quizLinkURL ? quizLinkURL : q_link, // Use 'q' if quizLinkURL is empty
-          quizDifficultyX: quizDifficulty ? quizDifficulty : "",
-        };
+    quizUrl = stringEnt;
+    // Fetch data from URL
+    if (e !== "user") {
+      QuizFromDB = false;
+      fetch(stringEnt)
+        .then(response => response.json())
+        .then(data => {
+          // Determine the JSON structure directly from the data
+          const isOldJSONStructure = data.length !== undefined;
+          console.log(isOldJSONStructure ? "Old JSON structure" : "New JSON structure");
 
-        console.log("quizZZ:", quizZZ);
+          if (isOldJSONStructure ? data.length === 0 : data.questions.length === 0) {
+            // Handle empty data
+            console.log("Empty data");
+            const randomFile = getRandomFile(files);
+            fetchData(randomFile);
+            return;
+          }
 
-        if (e === null || e === "") {} else {
-          saveQuizToDB(quizZZ);
-        }
-      })
-      .catch(error => console.error(error));
-  }
+          // Use the questions data here
+          const questionData = isOldJSONStructure
+            ? data.map(questionObj => ({
+                question: questionObj.question,
+                answer: questionObj.answer,
+                options: questionObj.options,
+                difficulty: questionObj.difficulty,
+                imageURL: questionObj.imageURL,
+                questionType: questionObj.questionType,
+                questionNumber: questionObj.questionNumber,
+                explanation: questionObj.explanation,
+              }))
+            : data.questions.map(questionObj => ({
+                question: questionObj.question,
+                answer: questionObj.answer,
+                options: questionObj.options,
+                difficulty: questionObj.difficulty,
+                imageURL: questionObj.imageURL,
+                questionType: questionObj.questionType,
+                questionNumber: questionObj.questionNumber,
+                explanation: questionObj.explanation,
+              }));
+
+          // Update quizCode, quizName, numberOfQuestions
+          quizCode = isOldJSONStructure ? "" : data.quizCode;
+          quizName = isOldJSONStructure ? "" : data.quizName;
+          numberOfQuestions = isOldJSONStructure ? data.length : data.numberOfQuestions || "";
+          quizImageURL = isOldJSONStructure ? "" : data.quizImageURL;
+          quizDifficulty = isOldJSONStructure ? "" : data.quizDifficulty || "";
+
+          // Check quiz code and retrieve or save quiz info
+          const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
+
+          questions.push(...questionData);
+          questionsOG.push(...questionData);
+          shuffleArray(questions);
+
+          // Access and use the retrieved quiz information
+          const questionsCompleted = quizInfo.questionsCompleted;
+
+          //quizDifficulty = typeof quizDifficulty !== 'undefined' ? quizDifficulty : "";
+          let q_link = "/quiz" + q;
+
+          const quizZZ = {
+            quizCodeX: quizCode,
+            quizNameX: quizName,
+            imageURLX: "https://www.quizzatopia.com/images/sq/_.png",
+            numberOfQuestionsX: numberOfQuestions,
+            quizJsonX: quizUrl,
+            quizLinkX: quizLinkURL ? quizLinkURL : q_link, // Use 'q' if quizLinkURL is empty
+            quizDifficultyX: quizDifficulty ? quizDifficulty : "",
+          };
+
+          console.log("quizZZ:", quizZZ);
+
+          if (e === null || e === "") {} else {
+            saveQuizToDB(quizZZ);
+          }
+
+          // Resolve the promise since data is fetched
+          resolve();
+        })
+        .catch(error => {
+          console.error(error);
+          // Reject the promise if there's an error
+          reject(error);
+        });
+    } else {
+      // Resolve the promise since data is fetched
+      resolve();
+    }
+  });
 }
 
-	  
+// Now, we can use the fetchData function and ensure that displayTestInfo is called only once after all data is fetched:
 
-
-
-
-
+fetchData(q, e)
+  .then(() => {
+    // Data is fetched and processed, call displayTestInfo here
+    displayTestInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
+  })
+  .catch(error => {
+    // Handle any errors that occurred during fetchData
+    console.error("Error fetching data:", error);
+  });
 
 	  
       window.addEventListener("load", function() {
