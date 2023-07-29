@@ -141,7 +141,7 @@ document.body.appendChild(overlay);
 // Function to remove the overlay with a timer (3 seconds delay)
 function removeOverlayWithTimer() {
   setTimeout(function() {
-    console.log('overlay ???');
+    console.log('removeOverlayWithTimer overlay ???');
     const overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
     if (overlay) {
       overlay.remove();
@@ -155,7 +155,7 @@ function removeOverlayWithTimer() {
 
 // Function to remove the overlay immediately without a timer
 function removeOverlayWithoutTimer() {
-  console.log('overlay ???');
+  console.log('removeOverlayWithoutTimer overlay ???');
   const overlay = document.getElementById('overlay'); // Assuming the overlay element has the ID "overlay"
   if (overlay) {
     overlay.remove();
