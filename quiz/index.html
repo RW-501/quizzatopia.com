@@ -2088,6 +2088,50 @@ function shuffleArray(array) {
 let quizUrl;
 var QuizFromDB = false;
 
+
+
+
+
+function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty) {
+  // Check if quiz info exists in localStorage
+  const storedQuizInfo = localStorage.getItem(`quizInfo_${quizCode}`);
+
+  if (storedQuizInfo) {
+    try {
+      // If quiz info exists, parse and return it
+      const quizInfo = JSON.parse(storedQuizInfo);
+      return quizInfo;
+    } catch (error) {
+      console.error('Error parsing stored quiz info:', error);
+      // Handle error, display appropriate message or fallback behavior
+    }
+  } else {
+    // If quiz info doesn't exist, create and store a new quizInfo object
+    const quizInfo = {
+      quizCode,
+      quizName,
+      numberOfQuestions,
+      quizImageURL,
+      quizDifficulty,
+      questionsCompleted: 0, // Initialize questionsCompleted to 0
+      // Add any other properties you want to store for quizInfo
+    };
+
+    // Store the quizInfo object in localStorage
+    localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
+
+    // Return the newly created quizInfo object
+    return quizInfo;
+  }
+}
+
+
+
+
+
+
+
+	  
 function fetchData(q, e) {
   // Initialize Firebase app
   //firebase.initializeApp(firebaseConfig);
