@@ -1166,7 +1166,8 @@ display: block !important;
 
 	
   <script>
-
+loadScreenFunc();
+	  
 function loadQuestionsCompleted(quizCode) {
   const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
   const quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
@@ -2368,6 +2369,8 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageU
     // Update the title tag
     document.title = quizNameNS;
     optionsQuizNameDiv.innerHTML = `<h1>${quizNameNS}<h1>`;
+	  
+	  removeOverlayWithoutTimer();
   }
 }
 
