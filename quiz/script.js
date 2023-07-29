@@ -417,6 +417,7 @@ for (let i = 0; i < Math.min(shuffledOptions.length, answerButtons.length); i++)
   answerButtons[i].innerHTML = shuffledOptions[i] || "";
   answerButtons[i].addEventListener("click", checkAnswer);
 }
+removeOverlayWithoutTimer();	
 
   document.getElementById("explanation").innerHTML = "";
 
