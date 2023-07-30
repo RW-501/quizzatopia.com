@@ -1439,7 +1439,8 @@ reviewQuestionText.textContent = questionsOG[questionIndex].question;
   // Calculate the percent done and current score
   const totalQuestions = questionsCompleted.length;
   const percentDone = (questionsCompleted.length / questions.length) * 100;
-  const currentScore = correctCount;
+	
+  const currentScore =  (correctQuestionNumbers.length / questions.length) * 100;
 	
         // Update the HTML display with the calculated values
         document.getElementById('totalQuestions').textContent = totalQuestions;
