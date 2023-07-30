@@ -993,7 +993,13 @@ display: block !important;
 
 <div id="reviewPopup" class="popup">
   <div id="reviewPopupBox" class="popup-content">
-	   <h2 id="quizReviewName"></h2><br>
+	   <h2 id="quizReviewName"></h2>
+    <div>
+        <p><strong>Total Questions:</strong> <span id="totalQuestions"></span></p>
+        <p><strong>Percent Done:</strong> <span id="percentDone"></span>%</p>
+        <p><strong>Current Score:</strong> <span id="currentScore"></span></p>
+    </div>
+	  <br>
     <div class="tab">
 		   
 	    <button id="sortByAdded" class="sort-button">Last Added</button>
@@ -1419,6 +1425,7 @@ reviewQuestionText.textContent = questionsOG[questionIndex].question;
       const firstChild = parentElement.firstChild;
       parentElement.insertBefore(questionDiv, firstChild);
     }
+    resultCount++; // Increment resultCount here
 
   } else {
     console.log("1426?????? no resultCount:", resultCount);
@@ -1426,10 +1433,21 @@ reviewQuestionText.textContent = questionsOG[questionIndex].question;
     incorrectTab.innerHTML = "<h3>No Results</h3>";
     correctTab.innerHTML = "";
   }
-    resultCount++; // Increment resultCount here
 
 });
 
+  // Calculate the percent done and current score
+  const totalQuestions = questionsCompleted.length;
+  const percentDone = (questionsCompleted.length / questions.length) * 100;
+  const currentScore = correctCount;
+	
+        // Update the HTML display with the calculated values
+        document.getElementById('totalQuestions').textContent = totalQuestions;
+        document.getElementById('percentDone').textContent = percentDone;
+        document.getElementById('currentScore').textContent = currentScore;
+  
+	
+	  
 // Remove resultCount++ from here
 if(save === false){
 slideIn("reviewPopupBox");
