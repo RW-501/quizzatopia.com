@@ -777,12 +777,13 @@ async function updatequizDB() {
 }
 
 function endQuiz() {
+  quizStarted = false;
+
   clearTimeout(timeoutId);
 	
  openReviewFunc(true);
 	
   clearInterval(timer);
-  quizStarted = false;
 
    timerDisplay = document.getElementById("timer");
   timerDisplay.innerHTML = "";
