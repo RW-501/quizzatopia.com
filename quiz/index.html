@@ -1373,7 +1373,7 @@ correctTab.innerHTML = "<h3>Correct Answers</h3><div id='correctList'></div>";
 
    // console.log("count:", resultCount);
    // console.log("questionIndex:", questionIndex);
-if(save === true){
+if(save === true && quizStarted === false){
       saveReviewDataToFirestore(quizCode, quizInfo.quizName, correctQuestionNumbers, incorrectQuestionNumbers, responseTime);
 	  }
 	    
