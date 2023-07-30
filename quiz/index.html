@@ -1420,11 +1420,13 @@ reviewQuestionText.textContent = questionsOG[questionIndex].question;
       parentElement.insertBefore(questionDiv, firstChild);
     }
 
-    resultCount++; // Increment resultCount here
   } else {
+    console.log("1426?????? no resultCount:", resultCount);
+	    
     incorrectTab.innerHTML = "<h3>No Results</h3>";
     correctTab.innerHTML = "";
   }
+    resultCount++; // Increment resultCount here
 
 });
 
