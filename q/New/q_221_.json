@@ -1,101 +1,236 @@
 {
   "quizName": "Job Interview Preparation Quiz (Hard)",
-  "quizCode": "JIQH2023",
+  "quizCode": "Job_Interview_Quiz_Hard_2023",
   "quizDifficulty": "Hard",
-  "quizCategory": "Job Interview",
-  "quizDescription": "Test your knowledge and preparation for a challenging job interview!",
-  "quizTags": "Job Interview, Career, Interview Preparation",
+  "quizCategory": "Career & Professional Development",
+  "quizDescription": "Test your knowledge and skills for acing job interviews with this challenging quiz!",
+  "quizTags": "Job Interview, Interview Skills, Career, Job Search",
   "numberOfQuestions": 15,
   "questions": [
     {
       "questionNumber": 1,
-      "question": "Tell me about a challenging situation you encountered at work and how you resolved it.",
+      "question": "What is the STAR method used for in job interviews?",
       "imageURL": "",
-      "questionType": "Free Response"
+      "questionType": "Multiple Choice",
+      "options": [
+        "Answering technical questions",
+        "Providing references",
+        "Writing a thank-you note",
+        "Structuring behavioral interview responses"
+      ],
+      "answer": "Structuring behavioral interview responses",
+      "explanation": "The STAR method is used for structuring behavioral interview responses. It stands for Situation, Task, Action, and Result.",
+      "difficulty": "Hard"
     },
     {
       "questionNumber": 2,
-      "question": "What are your greatest strengths, and how have you applied them to achieve results in your previous role?",
+      "question": "Which of the following is NOT a common type of job interview?",
       "imageURL": "",
-      "questionType": "Free Response"
+      "questionType": "Multiple Choice",
+      "options": [
+        "Phone interview",
+        "Panel interview",
+        "Group interview",
+        "Informal chat"
+      ],
+      "answer": "Informal chat",
+      "explanation": "An informal chat is not a formal type of job interview. It may be a casual conversation but does not follow the structure of a typical job interview.",
+      "difficulty": "Hard"
     },
     {
       "questionNumber": 3,
-      "question": "Explain a complex project you worked on and the strategies you used to manage it effectively.",
+      "question": "During a job interview, when should you ask about the salary and benefits?",
       "imageURL": "",
-      "questionType": "Free Response"
+      "questionType": "Multiple Choice",
+      "options": [
+        "At the beginning of the interview",
+        "After you receive the job offer",
+        "During the follow-up email",
+        "Never, it's impolite to ask"
+      ],
+      "answer": "After you receive the job offer",
+      "explanation": "It is best to discuss salary and benefits after you receive the job offer. This ensures that you have more leverage during negotiations.",
+      "difficulty": "Hard"
     },
     {
       "questionNumber": 4,
-      "question": "How do you handle constructive criticism and feedback from your supervisors or colleagues?",
+      "question": "What is the purpose of asking the interviewer questions at the end of the interview?",
       "imageURL": "",
-      "questionType": "Free Response"
+      "questionType": "Multiple Choice",
+      "options": [
+        "To show off your knowledge",
+        "To avoid awkward silence",
+        "To make a good impression",
+        "To demonstrate your interest and understanding of the role"
+      ],
+      "answer": "To demonstrate your interest and understanding of the role",
+      "explanation": "Asking the interviewer questions at the end of the interview shows your interest in the company and the position. It also allows you to gather important information for your decision-making.",
+      "difficulty": "Hard"
     },
     {
       "questionNumber": 5,
-      "question": "Describe a time when you had to make a difficult decision with limited information. How did you approach it?",
+      "question": "What is the best way to handle a challenging question during a job interview?",
       "imageURL": "",
-      "questionType": "Free Response"
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ignore the question and move on",
+        "Give a vague answer",
+        "Be honest and acknowledge the challenge",
+        "Pretend not to understand the question"
+      ],
+      "answer": "Be honest and acknowledge the challenge",
+      "explanation": "The best way to handle a challenging question is to be honest and acknowledge the challenge. You can express your willingness to learn and improve in that area.",
+      "difficulty": "Hard"
     },
     {
       "questionNumber": 6,
-      "question": "What strategies do you use to stay organized and manage multiple tasks or projects simultaneously?",
+      "question": "Which of the following is an appropriate attire for a formal job interview?",
       "imageURL": "",
-      "questionType": "Free Response"
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jeans and a t-shirt",
+        "Business casual attire",
+        "Sweatpants and a hoodie",
+        "Suit and tie or professional dress"
+      ],
+      "answer": "Suit and tie or professional dress",
+      "explanation": "For a formal job interview, wearing a suit and tie or professional dress is appropriate. It shows that you take the interview seriously and respect the company's culture.",
+      "difficulty": "Hard"
     },
     {
       "questionNumber": 7,
-      "question": "In your previous roles, how have you contributed to the growth and success of the company or team?",
+      "question": "What is the purpose of a cover letter in a job application?",
       "imageURL": "",
-      "questionType": "Free Response"
+      "questionType": "Multiple Choice",
+      "options": [
+        "To provide a summary of your work experience",
+        "To showcase your artistic skills",
+        "To express your gratitude",
+        "To introduce yourself and explain your interest in the position"
+      ],
+      "answer": "To introduce yourself and explain your interest in the position",
+      "explanation": "The purpose of a cover letter is to introduce yourself to the employer, explain your interest in the position, and highlight relevant skills and experiences.",
+      "difficulty": "Hard"
     },
     {
       "questionNumber": 8,
-      "question": "Tell me about a time when you had to work with a difficult coworker or team member. How did you handle the situation?",
+      "question": "Which of the following is a common behavioral interview question?",
       "imageURL": "",
-      "questionType": "Free Response"
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tell me about your greatest weakness.",
+        "What are your salary expectations?",
+        "How many vacation days do you need?",
+        "Can you list all the software programs you can use?"
+      ],
+      "answer": "Tell me about your greatest weakness.",
+      "explanation": "The question 'Tell me about your greatest weakness' is a common behavioral interview question that assesses self-awareness and how you handle challenges.",
+      "difficulty": "Hard"
     },
     {
       "questionNumber": 9,
-      "question": "What do you consider your biggest professional achievement, and why are you proud of it?",
+      "question": "Why is it important to research the company before a job interview?",
       "imageURL": "",
-      "questionType": "Free Response"
+      "questionType": "Multiple Choice",
+      "options": [
+        "To impress the interviewer with your knowledge",
+        "To find out if they offer free lunch",
+        "To see if the company is hiring",
+        "To understand the company's values, culture, and goals"
+      ],
+      "answer": "To understand the company's values, culture, and goals",
+      "explanation": "Researching the company before a job interview allows you to understand its values, culture, and goals. It helps you tailor your responses and show genuine interest in the organization.",
+      "difficulty": "Hard"
     },
     {
       "questionNumber": 10,
-      "question": "How do you stay motivated and overcome challenges when working on long-term projects?",
+      "question": "How can you effectively showcase your soft skills during a job interview?",
       "imageURL": "",
-      "questionType": "Free Response"
+      "questionType": "Multiple Choice",
+      "options": [
+        "By sharing your technical expertise",
+        "By listing your certifications",
+        "By providing specific examples of past experiences",
+        "By talking about your hobbies"
+      ],
+      "answer": "By providing specific examples of past experiences",
+      "explanation": "Effectively showcasing soft skills involves providing specific examples of past experiences where you demonstrated those skills. It helps the interviewer understand how you handle various situations.",
+      "difficulty": "Hard"
     },
     {
       "questionNumber": 11,
-      "question": "Describe a situation where you had to take the lead in a team project. How did you motivate and guide the team to success?",
+      "question": "What should you do if you don't know the answer to a technical question during a job interview?",
       "imageURL": "",
-      "questionType": "Free Response"
+      "questionType": "Multiple Choice",
+      "options": [
+        "Make up an answer",
+        "Admit that you don't know",
+        "Change the subject",
+        "Ask the interviewer to explain the question again"
+      ],
+      "answer": "Admit that you don't know",
+      "explanation": "If you don't know the answer to a technical question, it's best to admit that you don't know. Honesty is appreciated, and you can express your willingness to learn more about the topic.",
+      "difficulty": "Hard"
     },
     {
       "questionNumber": 12,
-      "question": "What steps do you take to keep your skills and knowledge up-to-date in your field?",
+      "question": "Why is it essential to have good body language during a job interview?",
       "imageURL": "",
-      "questionType": "Free Response"
+      "questionType": "Multiple Choice",
+      "options": [
+        "To show off your fitness",
+        "To impress the interviewer with your style",
+        "To make the interviewer feel comfortable",
+        "To convey confidence and professionalism"
+      ],
+      "answer": "To convey confidence and professionalism",
+      "explanation": "Good body language is essential during a job interview as it conveys confidence, professionalism, and genuine interest in the conversation. It helps create a positive impression on the interviewer.",
+      "difficulty": "Hard"
     },
     {
       "questionNumber": 13,
-      "question": "Discuss a time when you had to meet a tight deadline. How did you prioritize tasks to deliver on time?",
+      "question": "How should you follow up after a job interview?",
       "imageURL": "",
-      "questionType": "Free Response"
+      "questionType": "Multiple Choice",
+      "options": [
+        "Send a generic thank-you email",
+        "Do nothing and wait for the result",
+        "Call the interviewer every day for an update",
+        "Send a personalized thank-you note expressing appreciation and reiterating your interest"
+      ],
+      "answer": "Send a personalized thank-you note expressing appreciation and reiterating your interest",
+      "explanation": "After a job interview, it is essential to send a personalized thank-you note to the interviewer. It shows appreciation for their time and allows you to reiterate your interest in the position.",
+      "difficulty": "Hard"
     },
     {
       "questionNumber": 14,
-      "question": "How do you handle stressful situations or high-pressure environments in the workplace?",
+      "question": "Why is it important to practice for a job interview?",
       "imageURL": "",
-      "questionType": "Free Response"
+      "questionType": "Multiple Choice",
+      "options": [
+        "To memorize the answers",
+        "To impress the interviewer with your knowledge",
+        "To reduce nervousness and build confidence",
+        "To show off your speaking skills"
+      ],
+      "answer": "To reduce nervousness and build confidence",
+      "explanation": "Practicing for a job interview helps reduce nervousness and build confidence. It allows you to prepare for potential questions and respond more effectively during the actual interview.",
+      "difficulty": "Hard"
     },
     {
       "questionNumber": 15,
-      "question": "What is your long-term career goal, and how does this position align with your aspirations?",
+      "question": "How can you effectively demonstrate your passion for the role during a job interview?",
       "imageURL": "",
-      "questionType": "Free Response"
+      "questionType": "Multiple Choice",
+      "options": [
+        "By talking about your personal life",
+        "By mentioning how much you need the job",
+        "By emphasizing your love for the company's products",
+        "By highlighting relevant experiences and skills that align with the role"
+      ],
+      "answer": "By highlighting relevant experiences and skills that align with the role",
+      "explanation": "To demonstrate passion for the role, focus on highlighting relevant experiences and skills that align with the job requirements. Discuss your enthusiasm for contributing to the company's success.",
+      "difficulty": "Hard"
     }
   ]
 }
