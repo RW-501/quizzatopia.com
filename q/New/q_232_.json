@@ -1,0 +1,86 @@
+{
+  "quizName": "Oldies Movie Trivia Quiz",
+  "quizCode": "OLDIES2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of classic oldies with this nostalgic movie trivia quiz!",
+  "quizTags": "Oldies, Classic Films, Vintage Movies, Nostalgia",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which 1939 movie features a young girl named Dorothy who gets transported to the magical land of Oz?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gone with the Wind",
+        "Casablanca",
+        "The Wizard of Oz",
+        "It Happened One Night"
+      ],
+      "answer": "The Wizard of Oz",
+      "explanation": "'The Wizard of Oz' is a timeless classic that tells the story of Dorothy's journey to Oz and her adventures with the Scarecrow, Tin Man, and Cowardly Lion.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which 1942 film is set in Morocco during World War II and stars Humphrey Bogart and Ingrid Bergman?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Maltese Falcon",
+        "Casablanca",
+        "Double Indemnity",
+        "His Girl Friday"
+      ],
+      "answer": "Casablanca",
+      "explanation": "'Casablanca' is a romantic drama set against the backdrop of war and remains one of the most beloved films of all time.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "In which 1953 film does Marilyn Monroe famously stand over a subway grate with her dress billowing up?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gentlemen Prefer Blondes",
+        "Some Like It Hot",
+        "The Seven Year Itch",
+        "How to Marry a Millionaire"
+      ],
+      "answer": "The Seven Year Itch",
+      "explanation": "'The Seven Year Itch' features the iconic scene with Marilyn Monroe standing over a subway grate in a white dress.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which 1960 film is a psychological horror thriller directed by Alfred Hitchcock, featuring a famous shower scene?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Psycho",
+        "North by Northwest",
+        "Vertigo",
+        "Rebecca"
+      ],
+      "answer": "Psycho",
+      "explanation": "'Psycho,' directed by Alfred Hitchcock, is known for its groundbreaking horror elements and the unforgettable shower scene.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which 1972 film follows the life of a mafia family and features the memorable line, 'I'm gonna make him an offer he can't refuse.'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Godfather",
+        "Apocalypse Now",
+        "Taxi Driver",
+        "One Flew Over the Cuckoo's Nest"
+      ],
+      "answer": "The Godfather",
+      "explanation": "'The Godfather,' directed by Francis Ford Coppola, is a crime epic that has become a cultural phenomenon with numerous iconic quotes.",
+      "difficulty": "Medium"
+    }
+  ]
+}
