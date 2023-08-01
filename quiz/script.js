@@ -1667,3 +1667,62 @@ function userExitNotification(actionType) {
 	  saveUserQuizAction(quizCode, quizName, realQuestionNumber, actionType, localTime);
 
 }
+
+
+
+
+<script>
+  function applyPaddingAnimation(targetElement) {
+    const initialPadding = window.getComputedStyle(targetElement).padding;
+    const initialPaddingValue = parseInt(initialPadding.replace('px', ''));
+
+    // Calculate the new padding value that is 5% lower
+    const newPaddingValue = Math.floor(initialPaddingValue * 0.95) + 'px';
+
+    // Set the new padding value
+    targetElement.style.padding = newPaddingValue;
+
+    // Return to the initial state after 3 seconds
+    setTimeout(() => {
+      targetElement.style.padding = initialPadding;
+    }, 3000);
+  }
+
+  const btnsWithClass5 = document.querySelectorAll('.font-weight-bold');
+  const btnsWithClass4 = document.querySelectorAll('.other-quiz-btn');
+  const btnsWithClass3 = document.querySelectorAll('.star');
+  const btnsWithClass2 = document.querySelectorAll('.btnMain');
+  const btnsWithClass1 = document.querySelectorAll('.btnMainBottom  ');
+  const btnsWithClass = document.querySelectorAll('.BTN');
+  const allButtons = document.querySelectorAll('button');
+
+
+  btnsWithClass5.forEach((btn) => {
+    btn.addEventListener('click', () => applyPaddingAnimation(btn));
+  });  
+btnsWithClass4.forEach((btn) => {
+    btn.addEventListener('click', () => applyPaddingAnimation(btn));
+  });
+  btnsWithClass3.forEach((btn) => {
+    btn.addEventListener('click', () => applyPaddingAnimation(btn));
+  });
+  btnsWithClass2.forEach((btn) => {
+    btn.addEventListener('click', () => applyPaddingAnimation(btn));
+  });  
+btnsWithClass1.forEach((btn) => {
+    btn.addEventListener('click', () => applyPaddingAnimation(btn));
+  });
+  btnsWithClass.forEach((btn) => {
+    btn.addEventListener('click', () => applyPaddingAnimation(btn));
+  });
+
+  allButtons.forEach((btn) => {
+    btn.addEventListener('click', () => applyPaddingAnimation(btn));
+  });
+</script>
+
+
+
+
+
+
