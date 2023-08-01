@@ -1,0 +1,86 @@
+{
+  "quizName": "Comedy Movie Trivia Quiz",
+  "quizCode": "COMEDY2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of comedy movies with this hilarious trivia quiz!",
+  "quizTags": "Comedy, Movies, Humor, Fun",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In which comedy movie does a group of friends go on a road trip to attend a wedding?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Hangover",
+        "Bridesmaids",
+        "Superbad",
+        "Dumb and Dumber"
+      ],
+      "answer": "The Hangover",
+      "explanation": "'The Hangover' follows a group of friends who travel to Las Vegas for a bachelor party but wake up the next morning with no memory of the previous night.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which comedy movie features a bumbling detective played by Leslie Nielsen?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ace Ventura: Pet Detective",
+        "The Naked Gun",
+        "Johnny English",
+        "Police Academy"
+      ],
+      "answer": "The Naked Gun",
+      "explanation": "In 'The Naked Gun' series, Leslie Nielsen plays the role of Detective Frank Drebin, a clueless but well-intentioned police officer.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which comedy movie features a journalist traveling to Afghanistan and unexpectedly finding himself as a war correspondent?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Anchorman: The Legend of Ron Burgundy",
+        "Tropic Thunder",
+        "Zoolander",
+        "The Dictator"
+      ],
+      "answer": "Tropic Thunder",
+      "explanation": "'Tropic Thunder' follows a group of actors making a war film who end up in a real war zone, and a journalist gets caught up in the chaos.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which comedy movie centers around a character who becomes a mall security guard to impress his dream girl?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Observe and Report",
+        "Paul Blart: Mall Cop",
+        "Hot Fuzz",
+        "The Other Guys"
+      ],
+      "answer": "Paul Blart: Mall Cop",
+      "explanation": "'Paul Blart: Mall Cop' follows Paul Blart, a mild-mannered man who becomes a mall security guard to win the heart of a woman.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which comedy movie tells the story of a man who ages backward, starting as an elderly man and growing younger over time?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Big",
+        "Benjamin Button",
+        "Click",
+        "The Curious Case of Benjamin Button"
+      ],
+      "answer": "The Curious Case of Benjamin Button",
+      "explanation": "'The Curious Case of Benjamin Button' follows the life of a man who is born elderly and ages backward, experiencing life in reverse.",
+      "difficulty": "Medium"
+    }
+  ]
+}
