@@ -1,0 +1,236 @@
+{
+  "quizName": "Project Management Quiz - Medium",
+  "quizCode": "PM_Quiz_Medium_2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Business & Management",
+  "quizDescription": "Test your knowledge of Project Management concepts with this medium-level quiz!",
+  "quizTags": "Project Management, Business, Management, PM",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the primary purpose of a project charter?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To define the project scope",
+        "To allocate resources",
+        "To create a project timeline",
+        "To provide regular project updates"
+      ],
+      "answer": "To define the project scope",
+      "explanation": "The primary purpose of a project charter is to define the project scope, including objectives, deliverables, and stakeholders.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which of the following is a key responsibility of a project manager?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Managing project risks",
+        "Creating project budgets",
+        "Designing project deliverables",
+        "Performing project quality audits"
+      ],
+      "answer": "Managing project risks",
+      "explanation": "One of the key responsibilities of a project manager is to identify, assess, and manage project risks to ensure successful project delivery.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What does the critical path method (CPM) help project managers determine?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The most critical tasks in the project",
+        "The project's total duration",
+        "The total cost of the project",
+        "The available project resources"
+      ],
+      "answer": "The project's total duration",
+      "explanation": "The critical path method (CPM) is used to determine the project's total duration by identifying the longest sequence of dependent tasks.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which project management technique is used to identify the root causes of issues or problems?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "SWOT analysis",
+        "Ishikawa diagram",
+        "Gantt chart",
+        "PERT analysis"
+      ],
+      "answer": "Ishikawa diagram",
+      "explanation": "An Ishikawa diagram, also known as a fishbone diagram, is a project management technique used to identify the root causes of issues or problems by organizing potential causes into categories.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "In project management, what does the term 'RACI' refer to?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Resource Allocation and Control Index",
+        "Risk Assessment and Control Information",
+        "Responsible, Accountable, Consulted, Informed",
+        "Requirements Analysis and Customer Interaction"
+      ],
+      "answer": "Responsible, Accountable, Consulted, Informed",
+      "explanation": "The term 'RACI' stands for Responsible, Accountable, Consulted, and Informed. It is used to define the roles and responsibilities of individuals involved in a project.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which project management approach is known for its iterative and incremental development process?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Waterfall",
+        "Scrum",
+        "Six Sigma",
+        "Lean"
+      ],
+      "answer": "Scrum",
+      "explanation": "Scrum is a project management approach that follows an iterative and incremental development process, often used in Agile project management.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the purpose of a project kick-off meeting?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To celebrate the start of the project",
+        "To introduce team members",
+        "To discuss project risks",
+        "To align stakeholders and set project expectations"
+      ],
+      "answer": "To align stakeholders and set project expectations",
+      "explanation": "The purpose of a project kick-off meeting is to align stakeholders, introduce team members, and set project expectations, goals, and roles.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which project management tool helps in visualizing the project schedule and task dependencies?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "SWOT analysis",
+        "Gantt chart",
+        "Ishikawa diagram",
+        "PERT analysis"
+      ],
+      "answer": "Gantt chart",
+      "explanation": "A Gantt chart is a project management tool that helps in visualizing the project schedule, task dependencies, and progress over time.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What does the term 'scope creep' refer to in project management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Unplanned changes or additions to the project scope",
+        "The expansion of the project team",
+        "The shrinking of the project timeline",
+        "The reduction of the project budget"
+      ],
+      "answer": "Unplanned changes or additions to the project scope",
+      "explanation": "Scope creep refers to the unplanned changes or additions to the project scope, leading to an increase in project work and potentially impacting project timelines and budgets.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the purpose of a project status report?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To provide updates on team member performance",
+        "To track project expenses",
+        "To communicate project progress and performance",
+        "To document project risks"
+      ],
+      "answer": "To communicate project progress and performance",
+      "explanation": "The purpose of a project status report is to communicate the project's progress, performance, and any issues to stakeholders and team members.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the purpose of a project retrospective?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To celebrate project success",
+        "To review and document lessons learned",
+        "To create a project timeline",
+        "To analyze project risks"
+      ],
+      "answer": "To review and document lessons learned",
+      "explanation": "The purpose of a project retrospective is to review and document lessons learned from the project, identifying successes and areas for improvement in future projects.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "In project management, what does the term 'PERT' stand for?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Project Execution and Review Technique",
+        "Program Evaluation and Reporting Technique",
+        "Project Evaluation and Risk Tracking",
+        "Performance Evaluation and Reporting Tool"
+      ],
+      "answer": "Program Evaluation and Reporting Technique",
+      "explanation": "The term 'PERT' stands for Program Evaluation and Reporting Technique, a project management method used to analyze and represent the tasks involved in completing a project.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the critical path in a project schedule?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The shortest path to complete the project",
+        "The longest path to complete the project",
+        "The path with the most critical tasks",
+        "The path that requires the most resources"
+      ],
+      "answer": "The longest path to complete the project",
+      "explanation": "The critical path in a project schedule is the longest sequence of dependent tasks that determines the project's total duration and sets the project's finish date.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which project management document outlines the project's objectives, scope, deliverables, and stakeholders?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Project plan",
+        "Risk register",
+        "Project charter",
+        "Issue log"
+      ],
+      "answer": "Project charter",
+      "explanation": "The project charter is a project management document that outlines the project's objectives, scope, deliverables, and stakeholders, providing a high-level overview of the project.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the purpose of a stakeholder analysis in project management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To identify project risks",
+        "To determine project timelines",
+        "To manage project resources",
+        "To understand stakeholder interests and influence"
+      ],
+      "answer": "To understand stakeholder interests and influence",
+      "explanation": "The purpose of a stakeholder analysis is to identify and understand stakeholder interests, expectations, and influence in the project, helping project managers effectively engage and communicate with stakeholders.",
+      "difficulty": "Medium"
+    }
+  ]
+}
