@@ -1,0 +1,86 @@
+{
+  "quizName": "Pop Culture Quiz - Movies Edition",
+  "quizCode": "POPCMOVIES2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of iconic movies that have left a mark on pop culture!",
+  "quizTags": "Pop Culture, Movies, Film, Hollywood, Iconic",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which movie features a memorable dance scene with John Travolta and Uma Thurman at the 'Jack Rabbit Slims' restaurant?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Grease",
+        "Pulp Fiction",
+        "Saturday Night Fever",
+        "Dirty Dancing"
+      ],
+      "answer": "Pulp Fiction",
+      "explanation": "The dance scene with John Travolta and Uma Thurman takes place in 'Pulp Fiction,' a classic film directed by Quentin Tarantino.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which movie features a young boy who befriends an alien and helps him return home?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "E.T. the Extra-Terrestrial",
+        "Close Encounters of the Third Kind",
+        "The Goonies",
+        "Star Wars: Episode IV - A New Hope"
+      ],
+      "answer": "E.T. the Extra-Terrestrial",
+      "explanation": "'E.T. the Extra-Terrestrial,' directed by Steven Spielberg, became a beloved family film and a pop culture phenomenon.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which movie features a group of friends who embark on a journey to find a dead body and face various challenges along the way?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Stand by Me",
+        "The Goonies",
+        "The Breakfast Club",
+        "Ferris Bueller's Day Off"
+      ],
+      "answer": "Stand by Me",
+      "explanation": "'Stand by Me,' based on Stephen King's novella 'The Body,' is a coming-of-age film that has become a pop culture classic.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which movie features a team of thieves attempting to pull off a heist at the Bellagio, Mirage, and MGM Grand casinos in Las Vegas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ocean's Eleven",
+        "The Italian Job",
+        "Heat",
+        "The Thomas Crown Affair"
+      ],
+      "answer": "Ocean's Eleven",
+      "explanation": "'Ocean's Eleven,' directed by Steven Soderbergh, stars George Clooney and an ensemble cast in a stylish and entertaining heist film.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which movie follows the life and career of a famous rock star named Freddie Mercury and his band?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "La La Land",
+        "Rocketman",
+        "Bohemian Rhapsody",
+        "A Star Is Born"
+      ],
+      "answer": "Bohemian Rhapsody",
+      "explanation": "'Bohemian Rhapsody' is a biographical film that celebrates the music and legacy of Freddie Mercury and Queen.",
+      "difficulty": "Medium"
+    }
+  ]
+}
