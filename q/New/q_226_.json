@@ -1,0 +1,236 @@
+{
+  "quizName": "Marvel Cinematic Universe Quiz",
+  "quizCode": "MCU2023",
+  "quizDifficulty": "Hard",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge about the Marvel Cinematic Universe!",
+  "quizTags": "MCU, Marvel, Superheroes, Movies",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who was the main villain in 'Avengers: Infinity War'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Red Skull",
+        "Loki",
+        "Thanos",
+        "Ultron"
+      ],
+      "answer": "Thanos",
+      "explanation": "Thanos, the Mad Titan, was the main antagonist in 'Avengers: Infinity War' as he sought to collect all the Infinity Stones.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the name of Tony Stark's AI assistant in the Iron Man suits?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "J.A.R.V.I.S.",
+        "F.R.I.D.A.Y.",
+        "D.U.M.E.",
+        "U.L.T.R.O.N."
+      ],
+      "answer": "J.A.R.V.I.S.",
+      "explanation": "J.A.R.V.I.S. (Just A Rather Very Intelligent System) is Tony Stark's AI assistant and was later integrated into Vision.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What material is Thor's enchanted hammer, Mjölnir, made of?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Adamantium",
+        "Vibranium",
+        "Uru",
+        "Promethium"
+      ],
+      "answer": "Uru",
+      "explanation": "Thor's enchanted hammer, Mjölnir, is made of the Asgardian metal known as Uru.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the name of Black Panther's homeland?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Wakanda",
+        "Zamunda",
+        "Genovia",
+        "Sokovia"
+      ],
+      "answer": "Wakanda",
+      "explanation": "Black Panther's homeland, a technologically advanced African nation, is called Wakanda.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the real name of the hero known as Black Widow?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Natasha Romanoff",
+        "Carol Danvers",
+        "Wanda Maximoff",
+        "Melina Vostokoff"
+      ],
+      "answer": "Natasha Romanoff",
+      "explanation": "The real name of the hero Black Widow, portrayed by Scarlett Johansson, is Natasha Romanoff.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 6,
+      "question": "In 'Guardians of the Galaxy,' what is the name of the criminal group led by Star-Lord?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Nova Corps",
+        "Ravagers",
+        "Chitauri",
+        "Kree Empire"
+      ],
+      "answer": "Ravagers",
+      "explanation": "The Ravagers, led by Yondu Udonta, are the criminal group that Star-Lord, also known as Peter Quill, is associated with.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What was the first Marvel Cinematic Universe movie to be released?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Iron Man",
+        "The Incredible Hulk",
+        "Captain America: The First Avenger",
+        "Thor"
+      ],
+      "answer": "Iron Man",
+      "explanation": "'Iron Man,' released in 2008, was the first movie in the Marvel Cinematic Universe.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the name of the alien race that Loki belongs to?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kree",
+        "Skrulls",
+        "Chitauri",
+        "Frost Giants"
+      ],
+      "answer": "Frost Giants",
+      "explanation": "Loki, the adopted brother of Thor, belongs to the Frost Giants, an alien race from Jotunheim.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the name of the artifact that holds the Space Stone?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tesseract",
+        "Aether",
+        "Orb",
+        "Eye of Agamotto"
+      ],
+      "answer": "Tesseract",
+      "explanation": "The Tesseract is the cube-shaped artifact that contains the Space Stone, which grants the power of teleportation.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which MCU movie features the villain Hela, the Goddess of Death?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Thor: Ragnarok",
+        "Avengers: Infinity War",
+        "Captain Marvel",
+        "Guardians of the Galaxy Vol. 2"
+      ],
+      "answer": "Thor: Ragnarok",
+      "explanation": "Hela, the Goddess of Death and Thor's sister, is the main antagonist in the movie 'Thor: Ragnarok.'",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 11,
+      "question": "In 'Spider-Man: Homecoming,' who is revealed to be the Vulture, the movie's main antagonist?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Adrian Toomes",
+        "Max Dillon",
+        "Otto Octavius",
+        "Quentin Beck"
+      ],
+      "answer": "Adrian Toomes",
+      "explanation": "Adrian Toomes, played by Michael Keaton, is revealed to be the Vulture, the main antagonist in 'Spider-Man: Homecoming.'",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which character's alter ego is Scott Lang?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ant-Man",
+        "Doctor Strange",
+        "Falcon",
+        "Star-Lord"
+      ],
+      "answer": "Ant-Man",
+      "explanation": "Scott Lang is the alter ego of the superhero Ant-Man, who can shrink in size and communicate with ants.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 13,
+      "question": "In 'Captain America: Civil War,' which hero's actions lead to the implementation of the Sokovia Accords?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Captain America",
+        "Iron Man",
+        "Black Widow",
+        "Scarlet Witch"
+      ],
+      "answer": "Scarlet Witch",
+      "explanation": "Scarlet Witch, also known as Wanda Maximoff, accidentally causes civilian casualties in a mission, leading to the Sokovia Accords.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which movie features the mystical city of Kamar-Taj and the introduction of the Time Stone?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Doctor Strange",
+        "Thor: Ragnarok",
+        "Guardians of the Galaxy Vol. 2",
+        "Black Panther"
+      ],
+      "answer": "Doctor Strange",
+      "explanation": "The movie 'Doctor Strange' introduces the mystical city of Kamar-Taj and the Time Stone, one of the Infinity Stones.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the name of the ancient civilization that built the advanced city of Atlantis in the MCU?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kree",
+        "Skrulls",
+        "Asgardians",
+        "Eternals"
+      ],
+      "answer": "Asgardians",
+      "explanation": "In the MCU, the Asgardians, a powerful race of beings, are responsible for the construction of the advanced city of Atlantis.",
+      "difficulty": "Hard"
+    }
+  ]
+}
