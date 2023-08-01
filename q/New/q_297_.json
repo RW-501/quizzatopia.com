@@ -1,0 +1,236 @@
+{
+  "quizName": "Horror Movie Trivia Quiz",
+  "quizCode": "HorrorMovieQuiz2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of horror movies with this spooky trivia quiz!",
+  "quizTags": "Horror Movies, Scary Films, Halloween",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In the movie 'The Shining,' what phrase does Jack Nicholson's character repeatedly type on the typewriter?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "All work and no play makes Jack a dull boy",
+        "Redrum",
+        "Heeere's Johnny!",
+        "Come play with us"
+      ],
+      "answer": "All work and no play makes Jack a dull boy",
+      "explanation": "Jack Nicholson's character, Jack Torrance, repeatedly types the phrase 'All work and no play makes Jack a dull boy' in 'The Shining.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which horror movie features a killer doll named Chucky?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Child's Play",
+        "The Exorcist",
+        "Saw",
+        "Halloween"
+      ],
+      "answer": "Child's Play",
+      "explanation": "The horror movie 'Child's Play' features a killer doll named Chucky, possessed by the spirit of a serial killer.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the name of the fictional town where the events of the movie 'Halloween' take place?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Crystal Lake",
+        "Elm Street",
+        "Haddonfield",
+        "Derry"
+      ],
+      "answer": "Haddonfield",
+      "explanation": "The events of the movie 'Halloween' take place in the fictional town of Haddonfield.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "In the film 'Psycho,' what iconic scene occurs in the Bates Motel shower?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The killer hides under the bed",
+        "The protagonist discovers a hidden room",
+        "A ghostly figure appears in the mirror",
+        "A brutal murder takes place"
+      ],
+      "answer": "A brutal murder takes place",
+      "explanation": "In 'Psycho,' the iconic shower scene features a brutal murder taking place.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What horror movie is based on the novel by Stephen King and features a terrifying clown named Pennywise?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "It",
+        "The Conjuring",
+        "A Nightmare on Elm Street",
+        "The Exorcist"
+      ],
+      "answer": "It",
+      "explanation": "The horror movie 'It' is based on the novel by Stephen King and features a terrifying clown named Pennywise.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which horror movie follows a group of friends who stay at a remote cabin and accidentally summon evil spirits?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Texas Chainsaw Massacre",
+        "Cabin Fever",
+        "The Evil Dead",
+        "Paranormal Activity"
+      ],
+      "answer": "The Evil Dead",
+      "explanation": "The horror movie 'The Evil Dead' follows a group of friends who stay at a remote cabin and accidentally summon evil spirits.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "In the movie 'Get Out,' what disturbing procedure is revealed to be happening to the protagonist's victims?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Brainwashing",
+        "Surgery",
+        "Lobotomy",
+        "Body swapping"
+      ],
+      "answer": "Body swapping",
+      "explanation": "In 'Get Out,' the disturbing procedure revealed to be happening to the protagonist's victims is body swapping.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which classic horror movie features a character named Norman Bates and his eerie motel?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Friday the 13th",
+        "Halloween",
+        "Psycho",
+        "A Nightmare on Elm Street"
+      ],
+      "answer": "Psycho",
+      "explanation": "The classic horror movie 'Psycho' features a character named Norman Bates and his eerie motel.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the name of the demon that possesses Regan in the horror movie 'The Exorcist'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Beelzebub",
+        "Lucifer",
+        "Pazuzu",
+        "Belphegor"
+      ],
+      "answer": "Pazuzu",
+      "explanation": "The demon that possesses Regan in 'The Exorcist' is named Pazuzu.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "In the horror movie 'Scream,' what is the killer's signature disguise?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A clown mask",
+        "A ghostface mask",
+        "A hockey mask",
+        "A doll mask"
+      ],
+      "answer": "A ghostface mask",
+      "explanation": "In 'Scream,' the killer's signature disguise is a ghostface mask.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What horror movie features a group of friends who become trapped in a secluded ski resort and are attacked by cannibalistic creatures?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Wrong Turn",
+        "The Hills Have Eyes",
+        "Cabin Fever",
+        "The Descent"
+      ],
+      "answer": "Wrong Turn",
+      "explanation": "The horror movie 'Wrong Turn' features a group of friends who become trapped in a secluded ski resort and are attacked by cannibalistic creatures.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which horror movie revolves around a cursed videotape that causes anyone who watches it to die within seven days?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Ring",
+        "The Grudge",
+        "Ringu",
+        "Dark Water"
+      ],
+      "answer": "The Ring",
+      "explanation": "The horror movie 'The Ring' revolves around a cursed videotape that causes anyone who watches it to die within seven days.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the name of the haunted hotel in the movie '1408' starring John Cusack?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Overlook Hotel",
+        "The Marsten House",
+        "The Dolphin Hotel",
+        "The Amityville House"
+      ],
+      "answer": "The Dolphin Hotel",
+      "explanation": "The haunted hotel in the movie '1408' is called The Dolphin Hotel.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "In the movie 'A Nightmare on Elm Street,' what iconic character haunts the dreams of teenagers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Freddy Krueger",
+        "Jason Voorhees",
+        "Michael Myers",
+        "Leatherface"
+      ],
+      "answer": "Freddy Krueger",
+      "explanation": "In 'A Nightmare on Elm Street,' the iconic character who haunts the dreams of teenagers is Freddy Krueger.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the name of the demon who possesses the young girl Regan in 'The Exorcist'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Beelzebub",
+        "Lucifer",
+        "Pazuzu",
+        "Belphegor"
+      ],
+      "answer": "Pazuzu",
+      "explanation": "The demon who possesses the young girl Regan in 'The Exorcist' is named Pazuzu.",
+      "difficulty": "Medium"
+    }
+  ]
+}
