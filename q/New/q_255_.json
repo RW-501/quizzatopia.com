@@ -1,0 +1,147 @@
+{
+  "quizName": "Hard Web Development Quiz",
+  "quizCode": "WEBDEVHARD2023",
+  "quizDifficulty": "Hard",
+  "quizCategory": "Web Development",
+  "quizDescription": "Put your web development skills to the test with this hard-level quiz!",
+  "quizTags": "Web Development, Frontend, Backend, JavaScript, Frameworks, Security",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the purpose of the 'defer' attribute in the 'script' tag?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To indicate that the script should be executed after the page is parsed",
+        "To defer the loading of the script until the page is fully loaded",
+        "To prevent the script from being cached by the browser",
+        "To indicate that the script should be executed in strict mode"
+      ],
+      "answer": "To indicate that the script should be executed after the page is parsed",
+      "explanation": "The 'defer' attribute in the 'script' tag is used to indicate that the script should be executed after the page is parsed, allowing the HTML content to load first.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the purpose of the 'async' attribute in the 'script' tag?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To specify that the script should be executed asynchronously",
+        "To specify that the script should be executed synchronously",
+        "To defer the loading of the script until the page is fully loaded",
+        "To indicate that the script should be executed in strict mode"
+      ],
+      "answer": "To specify that the script should be executed asynchronously",
+      "explanation": "The 'async' attribute in the 'script' tag is used to specify that the script should be executed asynchronously, meaning it will not block the rendering of the page.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is a 'closure' in JavaScript?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A function that has access to variables from its containing function",
+        "A built-in method to close a browser window",
+        "A mechanism to securely close an API endpoint",
+        "A process of closing browser tabs programmatically"
+      ],
+      "answer": "A function that has access to variables from its containing function",
+      "explanation": "A closure in JavaScript is a function that has access to variables from its containing (enclosing) function's scope, even after the containing function has finished executing.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which HTTP method is used for idempotent requests in web development?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "POST",
+        "GET",
+        "PUT",
+        "DELETE"
+      ],
+      "answer": "GET",
+      "explanation": "The GET method is used for idempotent requests in web development. Idempotent requests are those that can be safely repeated without changing the result.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the purpose of Cross-Origin Resource Sharing (CORS) in web development?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To allow a web page to access resources from another domain",
+        "To block access to resources from a specific domain",
+        "To compress resources for faster loading",
+        "To encrypt resources for secure transmission"
+      ],
+      "answer": "To allow a web page to access resources from another domain",
+      "explanation": "CORS is a security feature in web development that allows a web page from one domain to make requests and access resources from another domain.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is a 'Promise' in JavaScript?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A way to handle errors in asynchronous code",
+        "A built-in function for event handling",
+        "A method to control CSS animations",
+        "An object representing the eventual completion (or failure) of an asynchronous operation and its resulting value"
+      ],
+      "answer": "An object representing the eventual completion (or failure) of an asynchronous operation and its resulting value",
+      "explanation": "In JavaScript, a Promise is an object representing the eventual completion (or failure) of an asynchronous operation and the resulting value.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which header is used for secure HTTP requests to prevent cross-site request forgery (CSRF) attacks?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "X-XSS-Protection",
+        "X-Content-Type-Options",
+        "X-Frame-Options",
+        "X-CSRF-Token"
+      ],
+      "answer": "X-CSRF-Token",
+      "explanation": "The 'X-CSRF-Token' header is used for secure HTTP requests to prevent cross-site request forgery (CSRF) attacks, where an attacker tricks a user into making unintended requests.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What does the acronym 'SPA' stand for in web development?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Single Process Application",
+        "Serverless Progressive App",
+        "Single Page Application",
+        "Secure Public Access"
+      ],
+      "answer": "Single Page Application",
+      "explanation": "SPA stands for Single Page Application, which is a web application that loads a single HTML page and dynamically updates the content as the user interacts with the app.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is 'bundling' in the context of frontend web development?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A technique to compress images for faster loading",
+        "A process of combining multiple JavaScript or CSS files into a single file",
+        "A method to optimize database queries",
+        "A way to secure web application authentication"
+      ],
+      "answer": "A process of combining multiple JavaScript or CSS files into a single file",
+      "explanation": "In frontend web development, bundling is the process of combining multiple JavaScript or CSS files into a single file to reduce the number of HTTP requests and improve performance.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 10,
+      "question":
