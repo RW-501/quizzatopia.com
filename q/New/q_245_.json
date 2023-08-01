@@ -1,0 +1,86 @@
+{
+  "quizName": "Pop Culture Quiz - 1970s Edition",
+  "quizCode": "POPC70S2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of pop culture highlights from the 1970s!",
+  "quizTags": "Pop Culture, 1970s, Seventies, Music, Movies, Fashion",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which movie, released in 1972, featured Marlon Brando as the titular mafia patriarch and became an iconic film in cinematic history?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Rocky",
+        "Star Wars: Episode IV - A New Hope",
+        "The Godfather",
+        "One Flew Over the Cuckoo's Nest"
+      ],
+      "answer": "The Godfather",
+      "explanation": "'The Godfather,' directed by Francis Ford Coppola, is considered one of the greatest films ever made, and Marlon Brando's portrayal of Don Vito Corleone is legendary.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which musical duo, known for hits like 'Dancing Queen' and 'Mamma Mia,' gained international fame during the 1970s?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Rolling Stones",
+        "ABBA",
+        "The Bee Gees",
+        "Simon & Garfunkel"
+      ],
+      "answer": "ABBA",
+      "explanation": "ABBA, a Swedish pop group, achieved immense popularity in the 1970s with their catchy songs and distinctive harmonies.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which fashion trend of the 1970s was characterized by flared pants that became wider from the knee down?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bell-bottoms",
+        "Platform Shoes",
+        "Disco Fashion",
+        "Hippie Style"
+      ],
+      "answer": "Bell-bottoms",
+      "explanation": "Bell-bottoms were a popular fashion trend in the 1970s, reflecting the era's free-spirited and bohemian style.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which American TV series, set in the 1970s, focused on the lives of the Evans family and became known for its catchphrase 'Dy-no-mite!'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Happy Days",
+        "Good Times",
+        "The Brady Bunch",
+        "All in the Family"
+      ],
+      "answer": "Good Times",
+      "explanation": "'Good Times' was a popular sitcom that portrayed the struggles and joys of an African American family living in a Chicago housing project.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which event, held in New York City in 1973, is considered a pivotal moment in hip-hop history, often called the 'birth of hip-hop'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Harlem Cultural Festival",
+        "Woodstock",
+        "The Summer Jam at Watkins Glen",
+        "The Back to School Jam"
+      ],
+      "answer": "The Harlem Cultural Festival",
+      "explanation": "The Harlem Cultural Festival showcased various elements of hip-hop culture, including music, dance, and graffiti art, laying the foundation for the hip-hop movement.",
+      "difficulty": "Medium"
+    }
+  ]
+}
