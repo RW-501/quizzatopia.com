@@ -1,0 +1,86 @@
+{
+  "quizName": "Romantic Comedy Movie Trivia Quiz",
+  "quizCode": "ROMCOM2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of romantic comedies with this heartwarming trivia quiz!",
+  "quizTags": "Rom-Com, Romantic Movies, Comedy, Love, Relationships",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which rom-com movie follows a woman who starts a freelance writing career after a painful breakup and ends up falling for her new boss?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Notebook",
+        "27 Dresses",
+        "How to Lose a Guy in 10 Days",
+        "The Devil Wears Prada"
+      ],
+      "answer": "The Devil Wears Prada",
+      "explanation": "'The Devil Wears Prada' stars Anne Hathaway as a young writer working for a demanding fashion magazine editor, played by Meryl Streep.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which rom-com movie features two characters who meet on a flight and decide to spend time together in the city of angels?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "500 Days of Summer",
+        "Sleepless in Seattle",
+        "La La Land",
+        "Before Sunrise"
+      ],
+      "answer": "Before Sunrise",
+      "explanation": "'Before Sunrise' follows a young man and woman who meet on a train and spend a magical night together in Vienna.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which rom-com movie centers around a man who can time travel to correct mistakes in his love life?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Serendipity",
+        "Groundhog Day",
+        "The Time Traveler's Wife",
+        "About Time"
+      ],
+      "answer": "About Time",
+      "explanation": "'About Time' tells the story of a man who discovers his ability to travel through time and uses it to find true love.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which rom-com movie follows the life of a young woman who has a strange ability to hear her boyfriend's innermost thoughts?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "What Women Want",
+        "Pretty Woman",
+        "Crazy Rich Asians",
+        "Someone Like You"
+      ],
+      "answer": "What Women Want",
+      "explanation": "'What Women Want' stars Mel Gibson as a man who gains the ability to hear women's thoughts.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which rom-com movie features a high school student who makes a bet to turn a shy art student into the prom queen?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "She's the Man",
+        "Never Been Kissed",
+        "10 Things I Hate About You",
+        "Mean Girls"
+      ],
+      "answer": "She's the Man",
+      "explanation": "'She's the Man' is a modern retelling of William Shakespeare's 'Twelfth Night,' with Amanda Bynes playing a girl who disguises herself as her twin brother to attend his school.",
+      "difficulty": "Medium"
+    }
+  ]
+}
