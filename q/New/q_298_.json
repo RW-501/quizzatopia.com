@@ -1,0 +1,236 @@
+{
+  "quizName": "Comedy Movie Trivia Quiz",
+  "quizCode": "ComedyMovieQuiz2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of comedy movies with this fun trivia quiz!",
+  "quizTags": "Comedy Movies, Humorous Films, Funny",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In the movie 'Anchorman: The Legend of Ron Burgundy,' what is Ron Burgundy's signature catchphrase?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Stay classy, San Diego!",
+        "I'm kind of a big deal",
+        "That escalated quickly",
+        "Great Odin's raven!"
+      ],
+      "answer": "Stay classy, San Diego!",
+      "explanation": "Ron Burgundy's signature catchphrase in 'Anchorman' is 'Stay classy, San Diego!'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which comedy movie features two bumbling burglars trying to break into a family's house during Christmas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Home Alone",
+        "National Lampoon's Christmas Vacation",
+        "Elf",
+        "A Christmas Story"
+      ],
+      "answer": "Home Alone",
+      "explanation": "The comedy movie 'Home Alone' features two bumbling burglars trying to break into a family's house during Christmas.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the name of the talking toy cowboy in the 'Toy Story' movies?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Buzz Lightyear",
+        "Slinky Dog",
+        "Mr. Potato Head",
+        "Woody"
+      ],
+      "answer": "Woody",
+      "explanation": "The talking toy cowboy in the 'Toy Story' movies is named Woody.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "In the comedy film 'Groundhog Day,' what event keeps repeating itself?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Birthday party",
+        "Job interview",
+        "First date",
+        "Groundhog Day"
+      ],
+      "answer": "Groundhog Day",
+      "explanation": "In the comedy film 'Groundhog Day,' the event that keeps repeating itself is Groundhog Day.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the name of the legendary news anchor played by Will Ferrell in 'Anchorman: The Legend of Ron Burgundy'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Brian Fantana",
+        "Champ Kind",
+        "Brick Tamland",
+        "Ron Burgundy"
+      ],
+      "answer": "Ron Burgundy",
+      "explanation": "The legendary news anchor played by Will Ferrell in 'Anchorman: The Legend of Ron Burgundy' is Ron Burgundy.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which comedy movie features a group of friends going on a bachelor party trip to Las Vegas and waking up with no memory of the previous night?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bridesmaids",
+        "The Hangover",
+        "Superbad",
+        "Wedding Crashers"
+      ],
+      "answer": "The Hangover",
+      "explanation": "The comedy movie 'The Hangover' features a group of friends going on a bachelor party trip to Las Vegas and waking up with no memory of the previous night.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which comedy movie features a young boy named Kevin McCallister defending his home from burglars during Christmas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Home Alone",
+        "The Santa Clause",
+        "Elf",
+        "A Christmas Carol"
+      ],
+      "answer": "Home Alone",
+      "explanation": "The comedy movie 'Home Alone' features a young boy named Kevin McCallister defending his home from burglars during Christmas.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the name of the talking toy space ranger in the 'Toy Story' movies?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Buzz Lightyear",
+        "Slinky Dog",
+        "Mr. Potato Head",
+        "Woody"
+      ],
+      "answer": "Buzz Lightyear",
+      "explanation": "The talking toy space ranger in the 'Toy Story' movies is named Buzz Lightyear.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which comedy movie follows the misadventures of a man who becomes the caretaker of a resort during the summer?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Caddyshack",
+        "Groundhog Day",
+        "National Lampoon's Vacation",
+        "Weekend at Bernie's"
+      ],
+      "answer": "Caddyshack",
+      "explanation": "The comedy movie 'Caddyshack' follows the misadventures of a man who becomes the caretaker of a resort during the summer.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "In the comedy film 'Ferris Bueller's Day Off,' what does Ferris Bueller pretend to be when skipping school?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A doctor",
+        "A teacher",
+        "A lawyer",
+        "Sick"
+      ],
+      "answer": "Sick",
+      "explanation": "In 'Ferris Bueller's Day Off,' Ferris Bueller pretends to be sick when skipping school.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which comedy movie features a group of misfit fraternity members who start their own fraternity to compete with the popular frat on campus?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Old School",
+        "Animal House",
+        "Neighbors",
+        "Superbad"
+      ],
+      "answer": "Old School",
+      "explanation": "The comedy movie 'Old School' features a group of misfit fraternity members who start their own fraternity to compete with the popular frat on campus.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the name of the eccentric anchorman played by Will Ferrell in the comedy film 'Anchorman: The Legend of Ron Burgundy'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Brian Fantana",
+        "Champ Kind",
+        "Brick Tamland",
+        "Ron Burgundy"
+      ],
+      "answer": "Brick Tamland",
+      "explanation": "The eccentric anchorman played by Steve Carell in 'Anchorman: The Legend of Ron Burgundy' is Brick Tamland.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which comedy movie follows a group of friends who go on a cross-country road trip to attend a wedding?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Road Trip",
+        "EuroTrip",
+        "Dumb and Dumber",
+        "Due Date"
+      ],
+      "answer": "Road Trip",
+      "explanation": "The comedy movie 'Road Trip' follows a group of friends who go on a cross-country road trip to attend a wedding.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "In the movie 'Superbad,' what are the names of the two high school friends trying to secure alcohol for a party?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Seth and Evan",
+        "Dave and Mike",
+        "Ben and Jerry",
+        "Tom and Jerry"
+      ],
+      "answer": "Seth and Evan",
+      "explanation": "In 'Superbad,' the names of the two high school friends trying to secure alcohol for a party are Seth and Evan.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the name of the talking potato character in the 'Toy Story' movies?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Buzz Lightyear",
+        "Slinky Dog",
+        "Mr. Potato Head",
+        "Woody"
+      ],
+      "answer": "Mr. Potato Head",
+      "explanation": "The talking potato character in the 'Toy Story' movies is named Mr. Potato Head.",
+      "difficulty": "Medium"
+    }
+  ]
+}
