@@ -1,0 +1,86 @@
+{
+  "quizName": "Sci-Fi Movie Trivia Quiz",
+  "quizCode": "SCIFI2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of science fiction movies with this futuristic trivia quiz!",
+  "quizTags": "Sci-Fi, Movies, Science Fiction, Futuristic",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which sci-fi movie franchise follows the intergalactic adventures of a smuggler named Han Solo and his Wookiee co-pilot, Chewbacca?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Star Trek",
+        "Guardians of the Galaxy",
+        "Alien",
+        "Star Wars"
+      ],
+      "answer": "Star Wars",
+      "explanation": "The 'Star Wars' franchise, created by George Lucas, is a space opera that has become a cultural phenomenon.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which sci-fi movie features a cyborg assassin sent back in time to kill the mother of a future resistance leader?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Blade Runner",
+        "The Matrix",
+        "Terminator",
+        "RoboCop"
+      ],
+      "answer": "Terminator",
+      "explanation": "'The Terminator' stars Arnold Schwarzenegger as the iconic cyborg assassin, also known as the T-800.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which sci-fi movie follows a group of explorers who discover a mysterious black monolith on the Moon?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "2001: A Space Odyssey",
+        "Interstellar",
+        "Inception",
+        "Gravity"
+      ],
+      "answer": "2001: A Space Odyssey",
+      "explanation": "'2001: A Space Odyssey,' directed by Stanley Kubrick, is a landmark film known for its visual effects and enigmatic storytelling.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which sci-fi movie features a genetically engineered dinosaur theme park that goes awry?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jurassic Park",
+        "Avatar",
+        "E.T. the Extra-Terrestrial",
+        "Close Encounters of the Third Kind"
+      ],
+      "answer": "Jurassic Park",
+      "explanation": "'Jurassic Park,' based on Michael Crichton's novel, showcases cloned dinosaurs as the park's main attraction.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which sci-fi movie involves a time loop, with the protagonist reliving the same day repeatedly?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Inception",
+        "Edge of Tomorrow",
+        "Looper",
+        "Groundhog Day"
+      ],
+      "answer": "Edge of Tomorrow",
+      "explanation": "'Edge of Tomorrow,' starring Tom Cruise, follows a soldier caught in a time loop during an alien invasion.",
+      "difficulty": "Medium"
+    }
+  ]
+}
