@@ -1,0 +1,236 @@
+{
+  "quizName": "Romantic Comedy Movie Trivia Quiz",
+  "quizCode": "RomComMovieQuiz2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of romantic comedy movies with this heartwarming trivia quiz!",
+  "quizTags": "Romantic Comedies, Love Stories, Relationships, Comedy",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In the movie 'Pretty Woman,' what is the profession of the character played by Julia Roberts?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Fashion Designer",
+        "Event Planner",
+        "Waitress",
+        "Prostitute"
+      ],
+      "answer": "Prostitute",
+      "explanation": "In 'Pretty Woman,' the character played by Julia Roberts is a prostitute.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which romantic comedy movie follows the story of two best friends who realize they have feelings for each other?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "When Harry Met Sally...",
+        "Love Actually",
+        "You've Got Mail",
+        "The Wedding Singer"
+      ],
+      "answer": "When Harry Met Sally...",
+      "explanation": "The romantic comedy movie 'When Harry Met Sally...' follows the story of two best friends who realize they have feelings for each other.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "In the movie 'Bridget Jones's Diary,' what is the name of the main character played by Renée Zellweger?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bridget Jones",
+        "Elizabeth Bennett",
+        "Carrie Bradshaw",
+        "Rachel Green"
+      ],
+      "answer": "Bridget Jones",
+      "explanation": "In 'Bridget Jones's Diary,' the name of the main character played by Renée Zellweger is Bridget Jones.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which romantic comedy movie features a young woman who writes letters to all the boys she has ever loved?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To All the Boys I've Loved Before",
+        "13 Going on 30",
+        "The Princess Diaries",
+        "Clueless"
+      ],
+      "answer": "To All the Boys I've Loved Before",
+      "explanation": "The romantic comedy movie 'To All the Boys I've Loved Before' features a young woman who writes letters to all the boys she has ever loved.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "In the movie 'Crazy Rich Asians,' where does Rachel Chu travel with her boyfriend Nick Young?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hong Kong",
+        "Singapore",
+        "Tokyo",
+        "Seoul"
+      ],
+      "answer": "Singapore",
+      "explanation": "In 'Crazy Rich Asians,' Rachel Chu travels with her boyfriend Nick Young to Singapore.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which romantic comedy movie follows the story of a man who can time travel and tries to win the heart of his best friend?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Time Traveler's Wife",
+        "About Time",
+        "Eternal Sunshine of the Spotless Mind",
+        "Groundhog Day"
+      ],
+      "answer": "About Time",
+      "explanation": "The romantic comedy movie 'About Time' follows the story of a man who can time travel and tries to win the heart of his best friend.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "In the movie 'Notting Hill,' what is the profession of the character played by Julia Roberts?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Actress",
+        "Chef",
+        "Bookstore Owner",
+        "Columnist"
+      ],
+      "answer": "Actress",
+      "explanation": "In 'Notting Hill,' the character played by Julia Roberts is an actress.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which romantic comedy movie features a high school student who becomes a matchmaker for her teachers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Never Been Kissed",
+        "Easy A",
+        "10 Things I Hate About You",
+        "She's All That"
+      ],
+      "answer": "Never Been Kissed",
+      "explanation": "The romantic comedy movie 'Never Been Kissed' features a high school student who becomes a matchmaker for her teachers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "In the movie 'Hitch,' Will Smith's character is a professional dating consultant known as the ______.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Love Guru",
+        "Date Doctor",
+        "Relationship Whisperer",
+        "Matchmaker"
+      ],
+      "answer": "Date Doctor",
+      "explanation": "In 'Hitch,' Will Smith's character is a professional dating consultant known as the Date Doctor.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which romantic comedy movie features a journalist who goes undercover as a tutor to get closer to a single father?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Proposal",
+        "27 Dresses",
+        "Maid in Manhattan",
+        "The Nanny Diaries"
+      ],
+      "answer": "The Nanny Diaries",
+      "explanation": "The romantic comedy movie 'The Nanny Diaries' features a journalist who goes undercover as a tutor to get closer to a single father.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "In the movie 'Sleepless in Seattle,' the characters Sam and Annie are brought together by a radio show host on ______.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Valentine's Day",
+        "Christmas",
+        "New Year's Eve",
+        "Halloween"
+      ],
+      "answer": "Christmas",
+      "explanation": "In 'Sleepless in Seattle,' the characters Sam and Annie are brought together by a radio show host on Christmas.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which romantic comedy movie features a woman who discovers she can hear men's thoughts?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "What Women Want",
+        "How to Lose a Guy in 10 Days",
+        "The Holiday",
+        "Crazy, Stupid, Love"
+      ],
+      "answer": "What Women Want",
+      "explanation": "The romantic comedy movie 'What Women Want' features a woman who discovers she can hear men's thoughts.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "In the movie '13 Going on 30,' the main character magically transforms from a 13-year-old girl to a ______.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "20-year-old",
+        "25-year-old",
+        "30-year-old",
+        "40-year-old"
+      ],
+      "answer": "30-year-old",
+      "explanation": "In '13 Going on 30,' the main character magically transforms from a 13-year-old girl to a 30-year-old woman.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which romantic comedy movie features a woman who can see and talk to the ghosts of her deceased lovers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ghost",
+        "Over Her Dead Body",
+        "Just Like Heaven",
+        "The Ghost and Mrs. Muir"
+      ],
+      "answer": "Over Her Dead Body",
+      "explanation": "The romantic comedy movie 'Over Her Dead Body' features a woman who can see and talk to the ghosts of her deceased lovers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "In the movie 'Serendipity,' what item do Jonathan and Sara write their contact information on and later try to find each other with?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Napkin",
+        "Book",
+        "Coin",
+        "Glove"
+      ],
+      "answer": "Coin",
+      "explanation": "In 'Serendipity,' Jonathan and Sara write their contact information on a coin and later try to find each other with it.",
+      "difficulty": "Medium"
+    }
+  ]
+}
