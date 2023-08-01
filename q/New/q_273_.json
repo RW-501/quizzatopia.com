@@ -1,0 +1,161 @@
+{
+  "quizName": "Famous Fairy Tales Quiz for Kids",
+  "quizCode": "FAIRYTALE2023",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of classic and beloved fairy tales from around the world.",
+  "quizTags": "Fairy Tales, Stories, Classic, Kids, Folklore",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which fairy tale features a young girl who wears a red hood and encounters a cunning wolf?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cinderella",
+        "Snow White",
+        "Little Red Riding Hood",
+        "Beauty and the Beast"
+      ],
+      "answer": "Little Red Riding Hood",
+      "explanation": "Little Red Riding Hood is a fairy tale about a young girl who wears a red hood and encounters a cunning wolf on her way to her grandmother's house.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which fairy tale follows the journey of a wooden puppet who wants to become a real boy?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cinderella",
+        "Sleeping Beauty",
+        "Pinocchio",
+        "The Little Mermaid"
+      ],
+      "answer": "Pinocchio",
+      "explanation": "Pinocchio is a fairy tale about a wooden puppet who wants to become a real boy and learns valuable life lessons on his journey.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which fairy tale features a young woman who is cursed to sleep for a hundred years?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cinderella",
+        "Snow White",
+        "Sleeping Beauty",
+        "Rapunzel"
+      ],
+      "answer": "Sleeping Beauty",
+      "explanation": "Sleeping Beauty is a fairy tale about a young woman who is cursed to sleep for a hundred years until she is awakened by true love's kiss.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which fairy tale follows the adventures of a young girl with magical long hair?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cinderella",
+        "Snow White",
+        "Rapunzel",
+        "The Little Mermaid"
+      ],
+      "answer": "Rapunzel",
+      "explanation": "Rapunzel is a fairy tale about a young girl with magical long hair who is kept in a tower by a wicked witch.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which fairy tale features a young woman who is poisoned by an evil queen's magic apple?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cinderella",
+        "Snow White",
+        "Sleeping Beauty",
+        "Beauty and the Beast"
+      ],
+      "answer": "Snow White",
+      "explanation": "Snow White is a fairy tale about a young woman who is poisoned by an evil queen's magic apple and is later awakened by true love's kiss.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which fairy tale features a young girl named Cinderella who attends a royal ball with the help of her fairy godmother?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cinderella",
+        "Sleeping Beauty",
+        "Rapunzel",
+        "The Little Mermaid"
+      ],
+      "answer": "Cinderella",
+      "explanation": "Cinderella is a fairy tale about a young girl who attends a royal ball with the help of her fairy godmother and wins the heart of a prince.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which fairy tale features a young mermaid who dreams of living on land?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cinderella",
+        "Snow White",
+        "Sleeping Beauty",
+        "The Little Mermaid"
+      ],
+      "answer": "The Little Mermaid",
+      "explanation": "The Little Mermaid is a fairy tale about a young mermaid who dreams of living on land and falls in love with a human prince.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which fairy tale features a young woman who befriends a group of seven dwarfs while hiding from a wicked queen?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cinderella",
+        "Snow White",
+        "Sleeping Beauty",
+        "Rapunzel"
+      ],
+      "answer": "Snow White",
+      "explanation": "Snow White is a fairy tale about a young woman who befriends a group of seven dwarfs while hiding from a wicked queen.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which fairy tale features a prince who is cursed to live as a beast until he finds true love?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cinderella",
+        "Beauty and the Beast",
+        "Sleeping Beauty",
+        "Rapunzel"
+      ],
+      "answer": "Beauty and the Beast",
+      "explanation": "Beauty and the Beast is a fairy tale about a prince who is cursed to live as a beast until he finds true love.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which fairy tale features a young woman named Belle who loves reading and falls in love with a cursed prince?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cinderella",
+        "Beauty and the Beast",
+        "The Little Mermaid",
+        "Snow White"
+      ],
+      "answer": "Beauty and the Beast",
+      "explanation": "Beauty and the Beast is a fairy tale about a young woman named Belle who loves reading and falls in love with a cursed prince.",
+      "difficulty": "Easy"
+    }
+  ]
+}
