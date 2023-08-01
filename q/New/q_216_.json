@@ -1,0 +1,224 @@
+{
+  "quizName": "High School Science Quiz",
+  "quizCode": "HS2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Science",
+  "quizDescription": "Test your knowledge of various science topics at the high school level!",
+  "quizTags": "High School Science, Biology, Chemistry, Physics",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the chemical symbol for water?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "H2O2",
+        "H2O",
+        "CO2",
+        "O2"
+      ],
+      "answer": "H2O",
+      "explanation": "The chemical symbol for water is H2O, representing two hydrogen atoms and one oxygen atom.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which of the following is the primary function of the mitochondria?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cellular respiration and energy production",
+        "Protein synthesis",
+        "Cell division",
+        "Waste elimination"
+      ],
+      "answer": "Cellular respiration and energy production",
+      "explanation": "The mitochondria are known as the 'powerhouses' of the cell and are responsible for cellular respiration, generating energy in the form of ATP.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What type of chemical bond involves the sharing of electron pairs between atoms?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ionic bond",
+        "Covalent bond",
+        "Hydrogen bond",
+        "Metallic bond"
+      ],
+      "answer": "Covalent bond",
+      "explanation": "A covalent bond involves the sharing of electron pairs between atoms, resulting in the formation of molecules.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which of the following is a greenhouse gas that plays a role in regulating Earth's temperature?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Oxygen (O2)",
+        "Methane (CH4)",
+        "Nitrogen (N2)",
+        "Carbon Dioxide (CO2)"
+      ],
+      "answer": "Carbon Dioxide (CO2)",
+      "explanation": "Carbon dioxide is a greenhouse gas that helps regulate Earth's temperature by trapping heat in the atmosphere.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which subatomic particles are found in the nucleus of an atom?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Protons and electrons",
+        "Neutrons and electrons",
+        "Protons and neutrons",
+        "Protons, neutrons, and electrons"
+      ],
+      "answer": "Protons and neutrons",
+      "explanation": "The nucleus of an atom contains protons, which are positively charged, and neutrons, which are electrically neutral.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the process by which plants convert light energy into chemical energy?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Photosynthesis",
+        "Respiration",
+        "Transpiration",
+        "Fermentation"
+      ],
+      "answer": "Photosynthesis",
+      "explanation": "Photosynthesis is the process by which plants convert light energy from the sun into chemical energy (glucose) to be used as food.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which of the following is a characteristic of an acid?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bitter taste",
+        "pH greater than 7",
+        "Reacts with metals to produce hydrogen gas",
+        "Feels slippery"
+      ],
+      "answer": "Reacts with metals to produce hydrogen gas",
+      "explanation": "Acids react with metals to produce hydrogen gas and have a pH less than 7.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the SI unit of force?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Newton",
+        "Joule",
+        "Watt",
+        "Volt"
+      ],
+      "answer": "Newton",
+      "explanation": "The SI unit of force is the Newton, which is defined as the amount of force required to accelerate a mass of one kilogram at a rate of one meter per second squared.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which of the following is an example of a chemical change?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Melting ice",
+        "Boiling water",
+        "Burning wood",
+        "Mixing salt and water"
+      ],
+      "answer": "Burning wood",
+      "explanation": "Burning wood is an example of a chemical change, as it involves the combustion of wood, resulting in the production of new substances and energy.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the unit of electric current?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Volt",
+        "Ampere",
+        "Ohm",
+        "Watt"
+      ],
+      "answer": "Ampere",
+      "explanation": "The unit of electric current is the Ampere (A), which represents the rate of flow of electric charge.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which process involves the conversion of a solid directly to a gas without passing through the liquid state?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Condensation",
+        "Sublimation",
+        "Evaporation",
+        "Freezing"
+      ],
+      "answer": "Sublimation",
+      "explanation": "Sublimation is the process in which a solid directly transforms into a gas without becoming a liquid first.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the name of the process by which cells replicate and divide to produce new cells?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Photosynthesis",
+        "Cellular respiration",
+        "Mitosis",
+        "Meiosis"
+      ],
+      "answer": "Mitosis",
+      "explanation": "Mitosis is the process by which cells replicate and divide to produce two genetically identical daughter cells.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which type of electromagnetic wave has the highest energy?",
+      "questionType
+
+": "Multiple Choice",
+      "options": [
+        "Radio waves",
+        "Microwaves",
+        "X-rays",
+        "Infrared waves"
+      ],
+      "answer": "X-rays",
+      "explanation": "X-rays have the highest energy among the given options and are commonly used in medical imaging and other applications.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which gas is most abundant in Earth's atmosphere?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Oxygen (O2)",
+        "Nitrogen (N2)",
+        "Carbon Dioxide (CO2)",
+        "Argon (Ar)"
+      ],
+      "answer": "Nitrogen (N2)",
+      "explanation": "Nitrogen (N2) is the most abundant gas in Earth's atmosphere, making up about 78% of the air we breathe.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the term for the process by which a liquid changes into a gas at the surface?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Condensation",
+        "Sublimation",
+        "Evaporation",
+        "Freezing"
+      ],
+      "answer": "Evaporation",
+      "explanation": "Evaporation is the process by which a liquid changes into a gas at the surface, typically due to heating.",
+      "difficulty": "Easy"
+    }
+  ]
+}
