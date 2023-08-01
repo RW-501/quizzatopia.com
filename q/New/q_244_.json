@@ -1,0 +1,86 @@
+{
+  "quizName": "Pop Culture Quiz - 1960s Edition",
+  "quizCode": "POPC60S2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of pop culture highlights from the 1960s!",
+  "quizTags": "Pop Culture, 1960s, Sixties, Music, Movies, Fashion",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which legendary band made its U.S. television debut on 'The Ed Sullivan Show' in 1964, causing a phenomenon known as the 'British Invasion'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Rolling Stones",
+        "The Beach Boys",
+        "The Who",
+        "The Beatles"
+      ],
+      "answer": "The Beatles",
+      "explanation": "The Beatles' appearance on 'The Ed Sullivan Show' on February 9, 1964, marked the beginning of the British Invasion and their rise to global stardom.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which iconic music festival, held in 1969, became a symbol of the counterculture movement and featured performances by Jimi Hendrix and Janis Joplin?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Woodstock",
+        "Monterey Pop Festival",
+        "Altamont Free Concert",
+        "Isle of Wight Festival"
+      ],
+      "answer": "Woodstock",
+      "explanation": "Woodstock, held in Bethel, New York, in August 1969, was a three-day festival that attracted hundreds of thousands of music lovers and became an iconic event of the 1960s.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which movie, released in 1960, starred Audrey Hepburn as a New York socialite on a romantic adventure in Rome?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Breakfast at Tiffany's",
+        "My Fair Lady",
+        "Roman Holiday",
+        "Charade"
+      ],
+      "answer": "Roman Holiday",
+      "explanation": "'Roman Holiday' showcased Audrey Hepburn's charm and talent, earning her an Academy Award for Best Actress.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which political movement, advocating for civil rights and equality for African Americans, peaked with the famous March on Washington in 1963?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Black Panther Party",
+        "Civil Rights Movement",
+        "Black Power Movement",
+        "Malcolm X Movement"
+      ],
+      "answer": "Civil Rights Movement",
+      "explanation": "The Civil Rights Movement was a pivotal struggle for equal rights and justice for African Americans, culminating in the March on Washington, where Martin Luther King Jr. delivered his iconic 'I Have a Dream' speech.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which fashion trend, characterized by colorful and psychedelic patterns, was popularized in the late 1960s?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Glam Rock",
+        "Mod Fashion",
+        "Hippie Style",
+        "Flower Power"
+      ],
+      "answer": "Hippie Style",
+      "explanation": "The Hippie Style embraced nonconformity and self-expression, often incorporating tie-dye, bell-bottoms, and colorful patterns.",
+      "difficulty": "Medium"
+    }
+  ]
+}
