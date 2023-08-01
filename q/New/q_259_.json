@@ -1,0 +1,236 @@
+{
+  "quizName": "Toxicity Scale Quiz - Health and Wellness",
+  "quizCode": "TOXSCALE2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Health and Wellness",
+  "quizDescription": "Test your knowledge of toxicity levels for various substances in the context of health and wellness.",
+  "quizTags": "Toxicity, Health, Wellness, Substances, Poisons",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the primary toxic component in tobacco smoke?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Nicotine",
+        "Carbon Monoxide",
+        "Tar",
+        "Lead"
+      ],
+      "answer": "Nicotine",
+      "explanation": "Nicotine is the primary toxic component in tobacco smoke, responsible for addiction and various health risks.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which heavy metal is notorious for its toxicity and accumulates in fish?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cadmium",
+        "Zinc",
+        "Calcium",
+        "Iron"
+      ],
+      "answer": "Cadmium",
+      "explanation": "Cadmium is a highly toxic heavy metal that can accumulate in fish, posing health risks to those who consume contaminated fish.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the toxic substance produced by certain molds found in damp indoor environments?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Chloroform",
+        "Methanol",
+        "Formaldehyde",
+        "Mycotoxins"
+      ],
+      "answer": "Mycotoxins",
+      "explanation": "Mycotoxins are toxic substances produced by certain molds in damp indoor environments. Prolonged exposure to these toxins can cause health problems.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which household product contains toxic substances like ammonia and should be used in well-ventilated areas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Toilet Bowl Cleaner",
+        "Laundry Detergent",
+        "Hand Soap",
+        "Window Cleaner"
+      ],
+      "answer": "Window Cleaner",
+      "explanation": "Window cleaners often contain toxic substances like ammonia. It's essential to use them in well-ventilated areas and follow safety guidelines.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the toxic substance found in certain types of shellfish that can cause paralytic poisoning?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mercury",
+        "Arsenic",
+        "Strychnine",
+        "Saxitoxin"
+      ],
+      "answer": "Saxitoxin",
+      "explanation": "Saxitoxin is a potent neurotoxin found in certain types of shellfish. Consuming contaminated shellfish can lead to paralytic poisoning.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the active ingredient in many antifreeze products that is highly toxic?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Methanol",
+        "Ethanol",
+        "Isopropanol",
+        "Glycol"
+      ],
+      "answer": "Ethanol",
+      "explanation": "Ethanol, also known as ethylene glycol, is the active ingredient in many antifreeze products and is highly toxic if ingested.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which toxic heavy metal is commonly found in lead-based paints?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cadmium",
+        "Mercury",
+        "Arsenic",
+        "Lead"
+      ],
+      "answer": "Lead",
+      "explanation": "Lead is a toxic heavy metal commonly found in lead-based paints. Ingesting or inhaling lead particles can lead to lead poisoning.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the toxic substance found in certain species of pufferfish?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cyanide",
+        "Arsenic",
+        "Tetrodotoxin",
+        "Ricin"
+      ],
+      "answer": "Tetrodotoxin",
+      "explanation": "Tetrodotoxin is a potent neurotoxin found in certain species of pufferfish. Ingesting this toxin can be fatal.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What toxic substance is often used in rat poison?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Vitamin D",
+        "Calcium",
+        "Strychnine",
+        "Warfarin"
+      ],
+      "answer": "Warfarin",
+      "explanation": "Warfarin is a toxic substance commonly used in rat poison to kill rodents.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which toxic element is commonly found in old water pipes and can contaminate drinking water?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Iron",
+        "Copper",
+        "Zinc",
+        "Lead"
+      ],
+      "answer": "Lead",
+      "explanation": "Lead is commonly found in old water pipes and can leach into drinking water, posing health risks.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which toxic substance is produced by burning tobacco and is a known carcinogen?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Methanol",
+        "Acetone",
+        "Nicotine",
+        "Tar"
+      ],
+      "answer": "Tar",
+      "explanation": "Tar is a toxic substance produced by burning tobacco and is a known carcinogen, linked to various cancers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the toxic component in some cleaning agents that can release harmful fumes?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Alcohol",
+        "Bleach",
+        "Vinegar",
+        "Ammonia"
+      ],
+      "answer": "Ammonia",
+      "explanation": "Ammonia is a toxic component in some cleaning agents that can release harmful fumes. It should be used with caution in well-ventilated areas.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which toxic substance is commonly found in contaminated seafood and can cause neurological damage?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Selenium",
+        "Mercury",
+        "Arsenic",
+        "Lead"
+      ],
+      "answer": "Mercury",
+      "explanation": "Mercury is commonly found in contaminated seafood and can cause neurological damage, especially in pregnant women and children.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What toxic substance is used in the illegal drug known as 'meth' or 'crystal meth'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cocaine",
+        "Heroin",
+        "Methanol",
+        "Methamphetamine"
+      ],
+      "answer": "Methamphetamine",
+      "explanation": "Methamphetamine, commonly known as 'meth' or 'crystal meth,' is a highly addictive and toxic illegal drug.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What toxic substance is present in certain types of wild mushrooms and can cause severe poisoning?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cyanide",
+        "Methanol",
+        "Amanitin",
+        "Caffeine"
+      ],
+      "answer": "Amanitin",
+      "explanation": "Amanitin is a toxic substance present in certain types of wild mushrooms and can cause severe poisoning when ingested.",
+      "difficulty": "Medium"
+    }
+  ]
+}
