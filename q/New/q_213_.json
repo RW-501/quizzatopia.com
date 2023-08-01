@@ -1,0 +1,236 @@
+{
+  "quizName": "Mission: Impossible Universe Quiz",
+  "quizCode": "MI_Universe_Quiz_2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge about the Mission: Impossible movie series with this medium-level quiz!",
+  "quizTags": "Mission: Impossible, Movies, Tom Cruise, Action",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who plays the lead role of Ethan Hunt in the Mission: Impossible movie series?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Brad Pitt",
+        "Tom Cruise",
+        "Matt Damon",
+        "Will Smith"
+      ],
+      "answer": "Tom Cruise",
+      "explanation": "Tom Cruise plays the lead role of Ethan Hunt, an IMF agent, in the Mission: Impossible movie series.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which government agency does Ethan Hunt work for?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "FBI",
+        "CIA",
+        "NSA",
+        "IMF"
+      ],
+      "answer": "IMF",
+      "explanation": "Ethan Hunt works for the IMF (Impossible Mission Force), a top-secret government agency that handles covert and high-risk missions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "In which city is the IMF headquarters located?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "New York",
+        "London",
+        "Washington D.C.",
+        "Langley"
+      ],
+      "answer": "Langley",
+      "explanation": "The IMF headquarters is located in Langley, Virginia, which is the same location as the CIA headquarters.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which installment of the Mission: Impossible series is known for the Burj Khalifa stunt?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mission: Impossible III",
+        "Mission: Impossible - Ghost Protocol",
+        "Mission: Impossible - Rogue Nation",
+        "Mission: Impossible - Fallout"
+      ],
+      "answer": "Mission: Impossible - Ghost Protocol",
+      "explanation": "The Burj Khalifa stunt, where Tom Cruise's character Ethan Hunt climbs the world's tallest building, is featured in the movie Mission: Impossible - Ghost Protocol.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the name of the secret organization and terrorist group that often opposes Ethan Hunt?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Syndicate",
+        "SPECTRE",
+        "HYDRA",
+        "The League of Shadows"
+      ],
+      "answer": "The Syndicate",
+      "explanation": "The Syndicate is a secret organization and terrorist group that often opposes Ethan Hunt and the IMF in several Mission: Impossible movies.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "In which Mission: Impossible film does Ethan Hunt famously dangle from the ceiling while trying to retrieve the NOC list?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mission: Impossible",
+        "Mission: Impossible II",
+        "Mission: Impossible III",
+        "Mission: Impossible - Rogue Nation"
+      ],
+      "answer": "Mission: Impossible",
+      "explanation": "The iconic scene of Ethan Hunt dangling from the ceiling to retrieve the NOC list is from the first Mission: Impossible movie.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which actress played the role of Nyah Nordoff-Hall, Ethan Hunt's love interest, in Mission: Impossible 2?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Charlize Theron",
+        "Penélope Cruz",
+        "Nicole Kidman",
+        "Cameron Diaz"
+      ],
+      "answer": "Thandie Newton",
+      "explanation": "Thandie Newton played the role of Nyah Nordoff-Hall, Ethan Hunt's love interest, in the movie Mission: Impossible 2.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "In Mission: Impossible - Rogue Nation, what type of vehicle does Ethan Hunt chase down the streets of Morocco?",
+      "
+
+imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Helicopter",
+        "Train",
+        "Motorcycle",
+        "Sports Car"
+      ],
+      "answer": "Motorcycle",
+      "explanation": "In Mission: Impossible - Rogue Nation, Ethan Hunt chases a cargo plane down the streets of Morocco using a high-speed motorcycle.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which actor portrayed the villainous Owen Davian in Mission: Impossible III?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Philip Seymour Hoffman",
+        "Sean Bean",
+        "Hugo Weaving",
+        "Christoph Waltz"
+      ],
+      "answer": "Philip Seymour Hoffman",
+      "explanation": "The late Philip Seymour Hoffman portrayed the villainous arms dealer Owen Davian in Mission: Impossible III.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the codename given to the mysterious woman played by Rebecca Ferguson in Mission: Impossible - Rogue Nation?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ghost",
+        "Viper",
+        "Fury",
+        "Ilsa Faust"
+      ],
+      "answer": "Ilsa Faust",
+      "explanation": "Rebecca Ferguson's character in Mission: Impossible - Rogue Nation is named Ilsa Faust, and she is a skilled undercover agent with her own agenda.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "True or False: The character Luther Stickell, played by Ving Rhames, appears in all of the Mission: Impossible films.",
+      "imageURL": "",
+      "questionType": "True and False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. Luther Stickell, played by Ving Rhames, is one of the recurring characters and appears in all of the Mission: Impossible films.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which actor plays the role of Benji Dunn, an IMF technician, in the Mission: Impossible movies?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Simon Pegg",
+        "Jeremy Renner",
+        "Simon Baker",
+        "Jude Law"
+      ],
+      "answer": "Simon Pegg",
+      "explanation": "Simon Pegg plays the role of Benji Dunn, a talented and comedic IMF technician, in the Mission: Impossible movies.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which iconic landmark is featured in the thrilling climax of Mission: Impossible - Fallout?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Eiffel Tower",
+        "Great Wall of China",
+        "Taj Mahal",
+        "Palais de Justice"
+      ],
+      "answer": "Palais de Justice",
+      "explanation": "The Palais de Justice in Paris, France, is featured in the thrilling climax of Mission: Impossible - Fallout.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which installment of the Mission: Impossible series was directed by Brad Bird?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mission: Impossible III",
+        "Mission: Impossible - Ghost Protocol",
+        "Mission: Impossible - Rogue Nation",
+        "Mission: Impossible - Fallout"
+      ],
+      "answer": "Mission: Impossible - Ghost Protocol",
+      "explanation": "Mission: Impossible - Ghost Protocol was directed by Brad Bird, who brought his expertise in animation to the live-action film.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "In which Mission: Impossible movie does Ethan Hunt race against time to prevent a deadly virus outbreak?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mission: Impossible",
+        "Mission: Impossible II",
+        "Mission: Impossible III",
+        "Mission: Impossible - Fallout"
+      ],
+      "answer": "Mission: Impossible II",
+      "explanation": "In Mission: Impossible II, Ethan Hunt races against time to prevent a deadly virus outbreak that could cause a global pandemic.",
+      "difficulty": "Medium"
+    }
+  ]
+}
