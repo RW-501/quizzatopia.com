@@ -1,0 +1,236 @@
+{
+  "quizName": "ServSafe Food Quiz",
+  "quizCode": "SERVSAFE2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Food Safety",
+  "quizDescription": "Test your knowledge of food safety principles and best practices with ServSafe.",
+  "quizTags": "ServSafe, Food Handling, Foodborne Illness, Food Safety Practices",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the temperature danger zone for food?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "32°F to 41°F (0°C to 5°C)",
+        "41°F to 135°F (5°C to 57°C)",
+        "135°F to 165°F (57°C to 74°C)",
+        "165°F to 212°F (74°C to 100°C)"
+      ],
+      "answer": "41°F to 135°F (5°C to 57°C)",
+      "explanation": "The temperature danger zone for food is between 41°F to 135°F (5°C to 57°C), where bacteria can grow rapidly and cause foodborne illnesses.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the best way to thaw frozen food?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Leave it on the counter to thaw naturally",
+        "Thaw it under running water",
+        "Microwave it on high power",
+        "Thaw it in the refrigerator"
+      ],
+      "answer": "Thaw it in the refrigerator",
+      "explanation": "The best and safest way to thaw frozen food is in the refrigerator to prevent bacterial growth and ensure even thawing.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the correct order for washing hands?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Water, soap, lather, scrub, rinse, dry",
+        "Soap, water, lather, scrub, rinse, dry",
+        "Water, lather, soap, scrub, rinse, dry",
+        "Water, soap, scrub, lather, rinse, dry"
+      ],
+      "answer": "Water, soap, lather, scrub, rinse, dry",
+      "explanation": "The correct order for washing hands is: Wet hands with water, apply soap, lather and scrub for at least 20 seconds, rinse thoroughly, and dry hands with a single-use towel or air dryer.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Cross-contamination occurs when:",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Food is left at room temperature for too long",
+        "Contaminated food is consumed",
+        "Harmful bacteria multiply in food",
+        "Harmful pathogens are transferred from one surface to another"
+      ],
+      "answer": "Harmful pathogens are transferred from one surface to another",
+      "explanation": "Cross-contamination occurs when harmful pathogens are transferred from one surface (such as raw meat) to another (such as ready-to-eat food) through direct contact or contact with contaminated utensils.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the minimum internal cooking temperature for poultry?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "145°F (63°C)",
+        "155°F (68°C)",
+        "165°F (74°C)",
+        "175°F (79°C)"
+      ],
+      "answer": "165°F (74°C)",
+      "explanation": "The minimum internal cooking temperature for poultry, including chicken and turkey, is 165°F (74°C) to ensure that harmful bacteria are destroyed.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the danger of storing food in the temperature danger zone for an extended period?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Food may develop an off-flavor",
+        "Food may lose its nutritional value",
+        "Harmful bacteria may multiply rapidly",
+        "Food may become too dry"
+      ],
+      "answer": "Harmful bacteria may multiply rapidly",
+      "explanation": "Storing food in the temperature danger zone (41°F to 135°F / 5°C to 57°C) allows harmful bacteria to multiply rapidly, increasing the risk of foodborne illnesses.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What should be done with food that has been left in the temperature danger zone for more than two hours?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Reheat it to a high temperature",
+        "Serve it immediately",
+        "Discard it",
+        "Cool it down and store it in the refrigerator"
+      ],
+      "answer": "Discard it",
+      "explanation": "Food that has been left in the temperature danger zone (41°F to 135°F / 5°C to 57°C) for more than two hours should be discarded to prevent foodborne illnesses.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the most important factor in preventing foodborne illnesses?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cooking food at high temperatures",
+        "Using fresh ingredients",
+        "Frequent handwashing",
+        "Storing food in airtight containers"
+      ],
+      "answer": "Frequent handwashing",
+      "explanation": "Frequent and proper handwashing is the most important factor in preventing foodborne illnesses, as it reduces the risk of cross-contamination.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the purpose of the 'first-in, first-out' (FIFO) method in food storage?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To prioritize newer food items over older ones",
+        "To ensure proper rotation of food stock",
+        "To prevent cross-contamination",
+        "To reduce waste"
+      ],
+      "answer": "To ensure proper rotation of food stock",
+      "explanation": "The 'first-in, first-out' (FIFO) method is used to ensure proper rotation of food stock, using older items first to minimize waste and maintain freshness.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Why is it important to clean and sanitize food-contact surfaces?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To remove food stains",
+        "To prevent pest infestation",
+        "To eliminate unpleasant odors",
+        "To reduce the risk of contamination"
+      ],
+      "answer": "To reduce the risk of contamination",
+      "explanation": "Cleaning and sanitizing food-contact surfaces is essential to reduce the risk of contamination and prevent the spread of harmful pathogens.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the temperature requirement for hot-holding food on a buffet?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "100°F (38°C) or above",
+        "120°F (49°C) or above",
+        "135°F (57°C) or above",
+        "150°F (66°C) or above"
+      ],
+      "answer": "135°F (57°C) or above",
+      "explanation": "Hot-holding food on a buffet should be maintained at a temperature of 135°F (57°C) or above to prevent bacterial growth.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the correct way to use a food thermometer?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Insert it into the thickest part of the food",
+        "Insert it into the center of the food",
+        "Insert it into the bottom of the food",
+        "Insert it into the top of the food"
+      ],
+      "answer": "Insert it into the thickest part of the food",
+      "explanation": "When using a food thermometer, insert it into the thickest part of the food, away from bones and the container, to get an accurate internal temperature reading.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the purpose of a food safety management system?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To enhance food flavor and quality",
+        "To streamline food production",
+        "To train employees on proper food handling",
+        "To prevent foodborne illnesses"
+      ],
+      "answer": "To prevent foodborne illnesses",
+      "explanation": "The purpose of a food safety management system is to prevent foodborne illnesses by implementing practices and procedures that ensure the safe handling and preparation of food.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the temperature requirement for cold-holding food in a refrigerator?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "32°F (0°C) or below",
+        "40°F (4°C) or below",
+        "45°F (7°C) or below",
+        "50°F (10°C) or below"
+      ],
+      "answer": "40°F (4°C) or below",
+      "explanation": "Cold-holding food in a refrigerator should be kept at a temperature of 40°F (4°C) or below to slow down bacterial growth and maintain food safety.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the primary cause of foodborne illnesses?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Improper food handling",
+        "Contaminated ingredients",
+        "Spoiled food",
+        "High cooking temperatures"
+      ],
+      "answer": "Improper food handling",
+      "explanation": "The primary cause of foodborne illnesses is improper food handling, such as inadequate cooking, cross-contamination, and improper storage.",
+      "difficulty": "Medium"
+    }
+  ]
+}
