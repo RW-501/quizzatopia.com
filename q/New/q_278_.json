@@ -1,0 +1,236 @@
+{
+  "quizName": "Video Games Trivia Quiz",
+  "quizCode": "GAMETRIVIA2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Video Games",
+  "quizDescription": "Test your knowledge of video games with this exciting trivia quiz!",
+  "quizTags": "Video Games, Gaming, Characters, History, Pop Culture",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In the game 'Minecraft,' what material is used to craft torches?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Stone",
+        "Iron",
+        "Coal",
+        "Wood"
+      ],
+      "answer": "Coal",
+      "explanation": "In 'Minecraft,' torches are crafted using coal, which provides light in the game.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which character is known as the 'Blue Blur' and is the mascot of Sega?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sonic the Hedgehog",
+        "Mario",
+        "Pac-Man",
+        "Crash Bandicoot"
+      ],
+      "answer": "Sonic the Hedgehog",
+      "explanation": "Sonic the Hedgehog is known as the 'Blue Blur' and is the iconic mascot of Sega.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the main objective of the game 'Fortnite'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Survive the night",
+        "Build a city",
+        "Rescue hostages",
+        "Be the last player standing"
+      ],
+      "answer": "Be the last player standing",
+      "explanation": "In 'Fortnite,' the main objective is to be the last player or team surviving in the Battle Royale mode.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which video game series features a time-traveling protagonist named Link?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Legend of Zelda",
+        "Final Fantasy",
+        "Assassin's Creed",
+        "Skyrim"
+      ],
+      "answer": "The Legend of Zelda",
+      "explanation": "The video game series 'The Legend of Zelda' features the protagonist Link, who embarks on time-traveling adventures.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "In the game 'Pokémon GO,' what is the goal of players?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Defeat Team Rocket",
+        "Collect Poké Balls",
+        "Catch Pokémon in the real world",
+        "Solve puzzles"
+      ],
+      "answer": "Catch Pokémon in the real world",
+      "explanation": "In 'Pokémon GO,' players use augmented reality to catch Pokémon in the real world using their mobile devices.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which video game franchise features a plumber named Mario?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sonic the Hedgehog",
+        "The Legend of Zelda",
+        "Super Mario",
+        "Donkey Kong"
+      ],
+      "answer": "Super Mario",
+      "explanation": "The 'Super Mario' franchise features a plumber named Mario, created by Nintendo.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "In the game 'Overwatch,' how many players are there on each team?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "answer": "6",
+      "explanation": "In 'Overwatch,' each team consists of 6 players, each playing a unique hero with different abilities.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which video game is set in a post-apocalyptic world where players must survive against zombies?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Minecraft",
+        "Fallout",
+        "The Last of Us",
+        "Left 4 Dead"
+      ],
+      "answer": "The Last of Us",
+      "explanation": "'The Last of Us' is set in a post-apocalyptic world infested with infected humans and emphasizes survival and emotional storytelling.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "In the game 'League of Legends,' how many players are there on each team?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": "5",
+      "explanation": "In 'League of Legends,' each team consists of 5 players, each controlling a champion with unique abilities.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which popular video game features a building and survival gameplay set in a blocky world?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Fortnite",
+        "Minecraft",
+        "Terraria",
+        "Roblox"
+      ],
+      "answer": "Minecraft",
+      "explanation": "'Minecraft' is a popular video game that allows players to build and explore a blocky, procedurally-generated world.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which video game franchise features a fantasy world called Azeroth and various playable races?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "World of Warcraft",
+        "Elder Scrolls",
+        "Dragon Age",
+        "Dark Souls"
+      ],
+      "answer": "World of Warcraft",
+      "explanation": "'World of Warcraft' is a massively multiplayer online role-playing game (MMORPG) set in the fantasy world of Azeroth.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which gaming console was released by Sony and became highly successful in the 1990s?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Nintendo 64",
+        "PlayStation",
+        "Sega Genesis",
+        "Atari 2600"
+      ],
+      "answer": "PlayStation",
+      "explanation": "The 'PlayStation' gaming console, released by Sony, became highly successful in the 1990s and beyond.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "In the 'Super Smash Bros.' series, which character is known for swallowing opponents and copying their abilities?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Link",
+        "Kirby",
+        "Mario",
+        "Donkey Kong"
+      ],
+      "answer": "Kirby",
+      "explanation": "In the 'Super Smash Bros.' series, Kirby is known for swallowing opponents and copying their abilities.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which iconic video game character collects rings and battles against the villain Dr. Robotnik?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Crash Bandicoot",
+        "Pac-Man",
+        "Sonic the Hedgehog",
+        "Donkey Kong"
+      ],
+      "answer": "Sonic the Hedgehog",
+      "explanation": "Sonic the Hedgehog collects rings and battles against the villain Dr. Robotnik (also known as Dr. Eggman).",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the name of the virtual world created by a brilliant game designer in the novel 'Ready Player One'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Matrix",
+        "Oasis",
+        "Cyberspace",
+        "Tron"
+      ],
+      "answer": "Oasis",
+      "explanation": "In the novel 'Ready Player One' by Ernest Cline, the virtual world created by a brilliant game designer is called Oasis.",
+      "difficulty": "Medium"
+    }
+  ]
+}
