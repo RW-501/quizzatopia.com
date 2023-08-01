@@ -1,0 +1,236 @@
+{
+  "quizName": "ARE Quiz: Construction & Evaluation",
+  "quizCode": "ARE2023CE",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Professional Certification",
+  "quizDescription": "Test your knowledge of construction and evaluation concepts in preparation for the Architect Registration Examination (ARE)!",
+  "quizTags": "Architecture, ARE, Construction, Evaluation, Professional",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does RFI stand for in the context of construction?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Request for Inspection",
+        "Request for Information",
+        "Ready for Installation",
+        "Required for Inspection"
+      ],
+      "answer": "Request for Information",
+      "explanation": "RFI stands for Request for Information, which is a formal process to seek clarification or information about construction drawings or specifications.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the purpose of a punch list in the construction phase?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To list items that require additional funding",
+        "To create a final budget for the project",
+        "To identify incomplete or deficient work",
+        "To schedule construction site visits"
+      ],
+      "answer": "To identify incomplete or deficient work",
+      "explanation": "A punch list is a list of items that need to be addressed or corrected before the project can be considered complete. It includes incomplete or deficient work that needs to be fixed or completed.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the purpose of a submittal in the construction process?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To request approval for construction changes",
+        "To schedule progress meetings",
+        "To communicate with the client",
+        "To advertise the project"
+      ],
+      "answer": "To request approval for construction changes",
+      "explanation": "A submittal is a formal request to the architect or engineer for approval of materials, products, or shop drawings before they are used in construction.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the primary purpose of commissioning in the construction phase?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To inspect construction progress",
+        "To verify compliance with building codes",
+        "To evaluate the design concept",
+        "To ensure systems operate correctly and efficiently"
+      ],
+      "answer": "To ensure systems operate correctly and efficiently",
+      "explanation": "Commissioning is the process of verifying and ensuring that building systems and equipment operate correctly and efficiently according to the design intent.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the purpose of a change order in the construction phase?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To request additional funding for the project",
+        "To make minor adjustments to the design",
+        "To modify the construction schedule",
+        "To document changes to the contract"
+      ],
+      "answer": "To document changes to the contract",
+      "explanation": "A change order is a written document that records any modifications or revisions to the original construction contract, including scope, schedule, or cost changes.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which of the following is an example of sustainable design in construction?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Installing energy-efficient windows",
+        "Reducing the project budget",
+        "Increasing the project's square footage",
+        "Using more construction materials"
+      ],
+      "answer": "Installing energy-efficient windows",
+      "explanation": "Installing energy-efficient windows is an example of sustainable design as it reduces energy consumption and promotes environmental conservation.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the purpose of a construction mock-up?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To demonstrate the construction process to stakeholders",
+        "To provide a realistic view of the finished project",
+        "To test and approve materials and construction techniques",
+        "To showcase architectural design options"
+      ],
+      "answer": "To test and approve materials and construction techniques",
+      "explanation": "A construction mock-up is a full-scale replica or sample built to test and approve materials, construction methods, and techniques before starting actual construction.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "During construction, what is the purpose of a site observation report?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To report any hazardous conditions at the construction site",
+        "To record site visitor information",
+        "To document project costs",
+        "To track construction progress and compliance"
+      ],
+      "answer": "To track construction progress and compliance",
+      "explanation": "A site observation report is used by the architect to document construction progress, identify issues, and ensure compliance with the construction documents.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the purpose of a closeout meeting at the end of a construction project?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To discuss potential change orders",
+        "To finalize the construction schedule",
+        "To resolve disputes between stakeholders",
+        "To review the project's performance and lessons learned"
+      ],
+      "answer": "To review the project's performance and lessons learned",
+      "explanation": "A closeout meeting is conducted to review the project's overall performance, assess lessons learned, and discuss any remaining tasks before project completion.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which construction document provides a detailed breakdown of the work to be completed and their respective costs?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Specifications",
+        "Construction drawings",
+        "Contractor's bid",
+        "Request for Proposal (RFP)"
+      ],
+      "answer": "Contractor's bid",
+      "explanation": "The Contractor's bid provides a detailed breakdown of the work items and their respective costs submitted by the contractor in response to the RFP.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the primary responsibility of the general contractor during the construction phase?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To manage the construction budget",
+        "To provide architectural design services",
+        "To prepare construction documents",
+        "To review and approve submittals"
+      ],
+      "answer": "To manage the construction budget",
+      "explanation": "The general contractor's primary responsibility is to manage the construction budget and oversee the construction process to ensure timely completion.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the purpose of a lien release in the construction process?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To release a contractor from liability",
+        "To request additional funding for the project",
+        "To authorize changes to the construction plans",
+        "To remove a claim on the property"
+      ],
+      "answer": "To remove a claim on the property",
+      "explanation": "A lien release is a document provided by a contractor or subcontractor to remove any claim or encumbrance on the property due to non-payment or other contractual obligations.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What does LEED stand for in the context of sustainable construction?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Leadership in Energy and Environmental Design",
+        "Local Engineering and Environmental Design",
+        "Low Energy and Efficient Design",
+        "Licensed Engineering and Environmental Development"
+      ],
+      "answer": "Leadership in Energy and Environmental Design",
+      "explanation": "LEED stands for Leadership in Energy and Environmental Design, a globally recognized rating system for sustainable building design and construction.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the purpose of a site plan in the construction process?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To show a 3D representation of the building's interior",
+        "To provide a detailed schedule of construction activities",
+        "To display the building's structural layout",
+        "To illustrate the project's layout on the site"
+      ],
+      "answer": "To illustrate the project's layout on the site",
+      "explanation": "A site plan is a graphic representation that shows the project's layout, including buildings, parking lots, landscaping, and other site features.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the purpose of a construction progress meeting?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To discuss the project's budget and costs",
+        "To conduct safety training for construction workers",
+        "To make design decisions",
+        "To update stakeholders on the project's status"
+      ],
+      "answer": "To update stakeholders on the project's status",
+      "explanation": "A construction progress meeting is held to update stakeholders on the project's status, discuss any issues, and address upcoming construction activities.",
+      "difficulty": "Medium"
+    }
+  ]
+}
