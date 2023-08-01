@@ -1,0 +1,161 @@
+{
+  "quizName": "Buying a House Quiz",
+  "quizCode": "HOUSE2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Real Estate",
+  "quizDescription": "Test your knowledge about buying a house and the home-buying process!",
+  "quizTags": "Home Buying, Real Estate, Mortgage, Property",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is a common range for a down payment on a house?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1% - 5%",
+        "10% - 20%",
+        "30% - 40%",
+        "50% or more"
+      ],
+      "answer": "10% - 20%",
+      "explanation": "A common range for a down payment on a house is usually between 10% to 20% of the home's purchase price.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is a pre-approval in the home-buying process?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Signing the final purchase agreement",
+        "Getting approval from the seller",
+        "Being prequalified for a mortgage",
+        "Getting the keys to the house"
+      ],
+      "answer": "Being prequalified for a mortgage",
+      "explanation": "A pre-approval is when a lender evaluates your financial information and determines the amount of mortgage you are qualified to receive.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the purpose of a home inspection?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To assess the market value of the home",
+        "To negotiate the final price with the seller",
+        "To identify potential issues and defects in the property",
+        "To determine the monthly mortgage payment"
+      ],
+      "answer": "To identify potential issues and defects in the property",
+      "explanation": "A home inspection is conducted to identify any underlying problems or defects in the property before the purchase is finalized.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is a contingency in a real estate contract?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A clause that allows the seller to back out of the deal",
+        "A clause that allows the buyer to back out of the deal",
+        "A clause that sets the closing date",
+        "A clause that determines the property tax"
+      ],
+      "answer": "A clause that allows the buyer to back out of the deal",
+      "explanation": "A contingency is a condition or requirement that must be met for the contract to be legally binding. It allows the buyer to back out of the deal under certain circumstances.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What does PMI stand for in the context of a mortgage?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Personal Mortgage Insurance",
+        "Property Management Insurance",
+        "Private Mortgage Insurance",
+        "Prime Mortgage Insurance"
+      ],
+      "answer": "Private Mortgage Insurance",
+      "explanation": "PMI stands for Private Mortgage Insurance, and it is typically required when a borrower makes a down payment of less than 20% on a conventional mortgage.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the purpose of an appraisal in the home-buying process?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To determine the closing costs",
+        "To estimate the property tax",
+        "To assess the market value of the home",
+        "To negotiate the home inspection results"
+      ],
+      "answer": "To assess the market value of the home",
+      "explanation": "An appraisal is conducted by a licensed appraiser to determine the fair market value of the property, ensuring that it aligns with the purchase price.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the purpose of a title search?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To verify the credit score of the buyer",
+        "To verify the seller's identity",
+        "To ensure the property has a clear title",
+        "To verify the authenticity of the property listing"
+      ],
+      "answer": "To ensure the property has a clear title",
+      "explanation": "A title search is conducted to ensure there are no outstanding claims or liens on the property that could affect the buyer's ownership.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is a fixed-rate mortgage?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A mortgage with a fixed term",
+        "A mortgage with a fixed interest rate",
+        "A mortgage with a fixed down payment",
+        "A mortgage with a fixed closing cost"
+      ],
+      "answer": "A mortgage with a fixed interest rate",
+      "explanation": "A fixed-rate mortgage has an interest rate that remains constant throughout the entire term of the loan, providing predictability for the borrower.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the final step in the home-buying process?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Closing",
+        "Home Inspection",
+        "Pre-approval",
+        "Appraisal"
+      ],
+      "answer": "Closing",
+      "explanation": "Closing, also known as settlement, is the final step in the home-buying process where all necessary documents are signed, and ownership of the property is transferred to the buyer.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the purpose of a real estate agent in the home-buying process?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To negotiate a lower price for the buyer",
+        "To ensure the seller gets the highest price",
+        "To provide legal advice to the buyer",
+        "To guide and assist the buyer throughout the process"
+      ],
+      "answer": "To guide and assist the buyer throughout the process",
+      "explanation": "A real estate agent represents the buyer's interests and provides guidance and support throughout the home-buying process.",
+      "difficulty": "Medium"
+    }
+  ]
+}
