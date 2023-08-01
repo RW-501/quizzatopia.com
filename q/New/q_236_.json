@@ -1,0 +1,86 @@
+{
+  "quizName": "Tom Hanks Movie Trivia Quiz",
+  "quizCode": "TOMHANKS2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of movies starring Tom Hanks with this quiz!",
+  "quizTags": "Tom Hanks, Movies, Actor, Hollywood",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which movie stars Tom Hanks as a FedEx executive who becomes stranded on a deserted island?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Forrest Gump",
+        "The Terminal",
+        "Cast Away",
+        "Saving Private Ryan"
+      ],
+      "answer": "Cast Away",
+      "explanation": "'Cast Away' follows Tom Hanks as Chuck Noland, a man who survives a plane crash and must learn to survive on a remote island.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "In which movie does Tom Hanks play the role of a prison guard who forms a friendship with an inmate on death row?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Green Mile",
+        "Catch Me If You Can",
+        "A League of Their Own",
+        "Philadelphia"
+      ],
+      "answer": "The Green Mile",
+      "explanation": "'The Green Mile,' based on Stephen King's novel, features Tom Hanks as Paul Edgecomb, a compassionate prison guard.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which movie stars Tom Hanks as an astronaut leading a crew on a mission to Mars?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Apollo 13",
+        "The Da Vinci Code",
+        "Sully",
+        "Bridge of Spies"
+      ],
+      "answer": "Apollo 13",
+      "explanation": "'Apollo 13' is based on the true story of the ill-fated 1970 space mission, with Tom Hanks playing astronaut Jim Lovell.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which movie stars Tom Hanks as a man who befriends a young boy, forming a heartwarming friendship?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Big",
+        "Toy Story",
+        "Road to Perdition",
+        "The Polar Express"
+      ],
+      "answer": "Big",
+      "explanation": "'Big' follows Tom Hanks as a young boy who wishes to be big and wakes up in an adult's body, leading to hilarious and touching moments.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "In which movie does Tom Hanks portray a lawyer who battles AIDS-related discrimination in the workplace?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Philadelphia",
+        "Sleepless in Seattle",
+        "Captain Phillips",
+        "Road to Perdition"
+      ],
+      "answer": "Philadelphia",
+      "explanation": "'Philadelphia' is a groundbreaking film that earned Tom Hanks an Academy Award for his powerful portrayal of Andrew Beckett.",
+      "difficulty": "Medium"
+    }
+  ]
+}
