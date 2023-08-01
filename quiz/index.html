@@ -2391,7 +2391,10 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageU
     // Update the title tag
     document.title = quizNameNS;
     optionsQuizNameDiv.innerHTML = `<h1>${quizNameNS}<h1>`;
+	  removeOverlayWithoutTimer();
 
+	      document.getElementById("start-btn").removeAttribute("disabled");
+	 console.log("loaded ?????????????????????      "); 
   }
 
 }
@@ -2405,10 +2408,7 @@ window.addEventListener("load", function() {
   fetchData(q, e)
     .then(() => {
       // Data is fetched and processed, call displayTestInfo here
-	    	  		  removeOverlayWithoutTimer();
-
-	      document.getElementById("start-btn").removeAttribute("disabled");
-	 console.log("loaded ?????????????????????      "); 
+	    	  	
 
     })
     .catch(error => {
