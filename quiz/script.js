@@ -98,10 +98,10 @@ quizName = quizNameNS;
 
 
 
-//  async
+//  
 
 
- function startQuiz() {
+async function startQuiz() {
   loadScreenFunc();
 
   const divElement = document.getElementById("testInfo");
