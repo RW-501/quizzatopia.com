@@ -1,0 +1,236 @@
+{
+  "quizName": "Action Movie Trivia Quiz",
+  "quizCode": "ActionMovieQuiz2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of action movies with this thrilling trivia quiz!",
+  "quizTags": "Action Movies, Adventure Films, Thrillers",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In the movie 'Die Hard,' what is the name of the protagonist played by Bruce Willis?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "John McClane",
+        "Martin Riggs",
+        "John Wick",
+        "Frank Castle"
+      ],
+      "answer": "John McClane",
+      "explanation": "The protagonist played by Bruce Willis in 'Die Hard' is named John McClane.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which action movie features a former Green Beret who must rescue his daughter from human traffickers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Taken",
+        "The Equalizer",
+        "Man on Fire",
+        "John Wick"
+      ],
+      "answer": "Taken",
+      "explanation": "The action movie 'Taken' features a former Green Beret who must rescue his daughter from human traffickers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the name of the fictional secret agent character played by Daniel Craig in the James Bond movies?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jason Bourne",
+        "Ethan Hunt",
+        "Jack Ryan",
+        "James Bond"
+      ],
+      "answer": "James Bond",
+      "explanation": "The fictional secret agent character played by Daniel Craig in the James Bond movies is James Bond.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which action movie features a former black-ops operative seeking revenge against his former agency?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Bourne Identity",
+        "The Equalizer",
+        "Man on Fire",
+        "John Wick"
+      ],
+      "answer": "John Wick",
+      "explanation": "The action movie 'John Wick' features a former black-ops operative seeking revenge against his former agency.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "In the movie 'Gladiator,' what is the famous line spoken by Russell Crowe's character before entering the arena?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "I'll be back",
+        "Are you not entertained?",
+        "Yippee ki-yay, motherf****r!",
+        "I have nothing to declare except my genius."
+      ],
+      "answer": "Are you not entertained?",
+      "explanation": "In 'Gladiator,' the famous line spoken by Russell Crowe's character before entering the arena is 'Are you not entertained?'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which action movie follows a group of elite soldiers on a mission to stop a madman with a deadly weapon?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Black Hawk Down",
+        "Rambo: First Blood",
+        "The Expendables",
+        "Mission: Impossible"
+      ],
+      "answer": "The Expendables",
+      "explanation": "The action movie 'The Expendables' follows a group of elite soldiers on a mission to stop a madman with a deadly weapon.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which action movie features a skilled thief who is coerced into pulling off an impossible heist?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ocean's Eleven",
+        "The Italian Job",
+        "Heat",
+        "Inception"
+      ],
+      "answer": "Inception",
+      "explanation": "The action movie 'Inception' features a skilled thief who is coerced into pulling off an impossible heist.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the name of the highly skilled assassin played by Keanu Reeves in the 'John Wick' movies?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jason Bourne",
+        "John Wick",
+        "Ethan Hunt",
+        "Dominic Toretto"
+      ],
+      "answer": "John Wick",
+      "explanation": "The highly skilled assassin played by Keanu Reeves in the 'John Wick' movies is named John Wick.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which action movie follows a group of astronauts on a dangerous mission to save Earth from a deadly asteroid?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Armageddon",
+        "Interstellar",
+        "Gravity",
+        "The Martian"
+      ],
+      "answer": "Armageddon",
+      "explanation": "The action movie 'Armageddon' follows a group of astronauts on a dangerous mission to save Earth from a deadly asteroid.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "In the movie 'The Dark Knight,' who portrays the Joker, Batman's arch-nemesis?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tom Hardy",
+        "Heath Ledger",
+        "Joaquin Phoenix",
+        "Jared Leto"
+      ],
+      "answer": "Heath Ledger",
+      "explanation": "Heath Ledger portrays the Joker, Batman's arch-nemesis, in 'The Dark Knight.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which action movie follows a team of elite agents known as IMF who take on high-stakes espionage missions?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "James Bond",
+        "The Expendables",
+        "The Bourne Identity",
+        "Mission: Impossible"
+      ],
+      "answer": "Mission: Impossible",
+      "explanation": "The action movie 'Mission: Impossible' follows a team of elite agents known as IMF who take on high-stakes espionage missions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the name of the genetically enhanced soldier played by Dwayne Johnson in 'G.I. Joe: Retaliation'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Roadblock",
+        "Duke",
+        "Snake Eyes",
+        "Storm Shadow"
+      ],
+      "answer": "Roadblock",
+      "explanation": "The genetically enhanced soldier played by Dwayne Johnson in 'G.I. Joe: Retaliation' is named Roadblock.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which action movie features a retired CIA agent who is pulled back into action to save his kidnapped daughter?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Taken",
+        "The Equalizer",
+        "Man on Fire",
+        "John Wick"
+      ],
+      "answer": "Man on Fire",
+      "explanation": "The action movie 'Man on Fire' features a retired CIA agent who is pulled back into action to save his kidnapped daughter.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "In the movie 'Mad Max: Fury Road,' what is the name of the main protagonist played by Tom Hardy?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Max Rockatansky",
+        "Bane",
+        "Imperator Furiosa",
+        "Nux"
+      ],
+      "answer": "Max Rockatansky",
+      "explanation": "The main protagonist played by Tom Hardy in 'Mad Max: Fury Road' is Max Rockatansky.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which action movie follows a highly skilled thief who plans heists using elaborate disguises?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ocean's Eleven",
+        "The Italian Job",
+        "Heat",
+        "Inception"
+      ],
+      "answer": "The Italian Job",
+      "explanation": "The action movie 'The Italian Job' follows a highly skilled thief who plans heists using elaborate disguises.",
+      "difficulty": "Medium"
+    }
+  ]
+}
