@@ -1,0 +1,86 @@
+{
+  "quizName": "Pop Culture Quiz - 2010s Edition",
+  "quizCode": "POPC2010S2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of pop culture highlights from the 2010s!",
+  "quizTags": "Pop Culture, 2010s, Tens, Music, Movies, Technology",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which Swedish pop group gained worldwide fame in the 2010s with hits like 'Dancing Queen' and 'Waterloo'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "ABBA",
+        "Backstreet Boys",
+        "One Direction",
+        "BTS"
+      ],
+      "answer": "ABBA",
+      "explanation": "ABBA, a legendary pop group from the 1970s, continued to be celebrated in the 2010s for their timeless music and musical 'Mamma Mia!'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which TV series, based on George R.R. Martin's novels, gained massive popularity for its epic fantasy storyline?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Breaking Bad",
+        "The Walking Dead",
+        "Game of Thrones",
+        "Stranger Things"
+      ],
+      "answer": "Game of Thrones",
+      "explanation": "'Game of Thrones' became a cultural phenomenon, attracting a large and devoted fanbase for its complex characters and intricate plotlines.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which popular app, launched in 2010, allows users to share photos and videos with their followers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Snapchat",
+        "Instagram",
+        "TikTok",
+        "Vine"
+      ],
+      "answer": "Instagram",
+      "explanation": "Instagram became one of the most widely-used social media platforms, allowing users to share visual content and connect with others.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which superhero film, released in 2012, brought together iconic Marvel characters like Iron Man, Captain America, Thor, and Hulk?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Iron Man",
+        "The Avengers",
+        "Thor",
+        "Guardians of the Galaxy"
+      ],
+      "answer": "The Avengers",
+      "explanation": "'The Avengers,' directed by Joss Whedon, was a groundbreaking ensemble superhero film that set the stage for the Marvel Cinematic Universe.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which music streaming service, launched in 2011, offers personalized playlists and has a vast library of songs?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Apple Music",
+        "Tidal",
+        "Deezer",
+        "Spotify"
+      ],
+      "answer": "Spotify",
+      "explanation": "Spotify continued to dominate the music streaming industry, offering users personalized playlists and a wide selection of songs.",
+      "difficulty": "Medium"
+    }
+  ]
+}
