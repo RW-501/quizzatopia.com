@@ -1,0 +1,161 @@
+{
+  "quizName": "Science Fun Quiz for Kids",
+  "quizCode": "SCIENCEFUN2023",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Science",
+  "quizDescription": "Embark on a thrilling science adventure and explore the wonders of the natural world.",
+  "quizTags": "Science, Fun, Kids, Animals, Nature",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the process by which plants make their food using sunlight?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Photosynthesis",
+        "Respiration",
+        "Transpiration",
+        "Germination"
+      ],
+      "answer": "Photosynthesis",
+      "explanation": "Photosynthesis is the process by which plants make their food using sunlight, water, and carbon dioxide.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the closest planet to the Sun in our solar system?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mars",
+        "Venus",
+        "Earth",
+        "Mercury"
+      ],
+      "answer": "Mercury",
+      "explanation": "Mercury is the closest planet to the Sun in our solar system.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the study of living organisms and their interactions with the environment called?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Geology",
+        "Biology",
+        "Chemistry",
+        "Physics"
+      ],
+      "answer": "Biology",
+      "explanation": "Biology is the study of living organisms and their interactions with the environment.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which mammal can fly and sleeps upside down?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bat",
+        "Mouse",
+        "Rabbit",
+        "Squirrel"
+      ],
+      "answer": "Bat",
+      "explanation": "Bats are mammals that can fly and often sleep upside down.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the process by which water evaporates from plants' leaves?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Condensation",
+        "Transpiration",
+        "Precipitation",
+        "Infiltration"
+      ],
+      "answer": "Transpiration",
+      "explanation": "Transpiration is the process by which water evaporates from plants' leaves into the atmosphere.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the solid state of water?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ice",
+        "Steam",
+        "Gas",
+        "Liquid"
+      ],
+      "answer": "Ice",
+      "explanation": "Ice is the solid state of water, formed when water freezes.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What gas do plants absorb from the air to release oxygen during photosynthesis?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Nitrogen",
+        "Carbon Dioxide",
+        "Oxygen",
+        "Hydrogen"
+      ],
+      "answer": "Carbon Dioxide",
+      "explanation": "Plants absorb carbon dioxide from the air to release oxygen during photosynthesis.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the largest organ in the human body?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Brain",
+        "Heart",
+        "Liver",
+        "Skin"
+      ],
+      "answer": "Skin",
+      "explanation": "The skin is the largest organ in the human body, covering the entire external surface.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which planet is known as the 'Red Planet'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mars",
+        "Venus",
+        "Jupiter",
+        "Saturn"
+      ],
+      "answer": "Mars",
+      "explanation": "Mars is known as the 'Red Planet' due to its reddish appearance caused by iron oxide on its surface.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the process by which a caterpillar transforms into a butterfly?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hibernation",
+        "Metamorphosis",
+        "Pollination",
+        "Erosion"
+      ],
+      "answer": "Metamorphosis",
+      "explanation": "Metamorphosis is the process by which a caterpillar transforms into a butterfly.",
+      "difficulty": "Easy"
+    }
+  ]
+}
