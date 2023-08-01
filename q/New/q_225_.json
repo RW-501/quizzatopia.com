@@ -1,0 +1,161 @@
+{
+  "quizName": "DC Universe Quiz",
+  "quizCode": "DCU2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge about the DC Universe!",
+  "quizTags": "DC Comics, Superheroes, Villains, Movies",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who is Batman's arch-nemesis?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Joker",
+        "Lex Luthor",
+        "Ra's al Ghul",
+        "Bane"
+      ],
+      "answer": "The Joker",
+      "explanation": "The Joker, the Clown Prince of Crime, is Batman's most famous and enduring arch-nemesis.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What superhero is known as the 'Man of Steel'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Green Lantern",
+        "Aquaman",
+        "Superman",
+        "The Flash"
+      ],
+      "answer": "Superman",
+      "explanation": "Superman, also known as the 'Man of Steel' and Clark Kent, is one of the most iconic superheroes in the DC Universe.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which city does Green Arrow protect?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Gotham City",
+        "Central City",
+        "Star City",
+        "Metropolis"
+      ],
+      "answer": "Star City",
+      "explanation": "Green Arrow, also known as Oliver Queen, protects Star City with his exceptional archery skills.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Who is the fastest man alive in the DC Universe?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Green Arrow",
+        "The Flash",
+        "Superman",
+        "Wonder Woman"
+      ],
+      "answer": "The Flash",
+      "explanation": "The Flash, also known as Barry Allen, gains super-speed powers after a freak accident and becomes the fastest man alive.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the real name of Wonder Woman?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Diana Prince",
+        "Barbara Gordon",
+        "Selina Kyle",
+        "Kara Danvers"
+      ],
+      "answer": "Diana Prince",
+      "explanation": "Wonder Woman's real name is Diana Prince, an Amazonian warrior princess from Themyscira.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Who is the king of Atlantis and possesses superhuman strength?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Superman",
+        "Green Lantern",
+        "The Flash",
+        "Aquaman"
+      ],
+      "answer": "Aquaman",
+      "explanation": "Aquaman, also known as Arthur Curry, is the king of Atlantis and has superhuman strength, aquatic abilities, and can communicate with marine life.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which villain is known as the 'Caped Crusader'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Joker",
+        "The Penguin",
+        "Bane",
+        "Batman"
+      ],
+      "answer": "Batman",
+      "explanation": "Batman, also known as the 'Caped Crusader' and Bruce Wayne, fights crime in Gotham City using his intellect and gadgets.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which supervillain is an enemy of the Justice League and possesses genius-level intellect?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Harley Quinn",
+        "The Riddler",
+        "Lex Luthor",
+        "Sinestro"
+      ],
+      "answer": "Lex Luthor",
+      "explanation": "Lex Luthor is a brilliant scientist and businessman who is a formidable enemy of the Justice League, particularly Superman.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Who is the arch-enemy of the Teen Titans and seeks revenge against the Justice League?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Deathstroke",
+        "Joker",
+        "Darkseid",
+        "Harley Quinn"
+      ],
+      "answer": "Deathstroke",
+      "explanation": "Deathstroke, also known as Slade Wilson, is a skilled mercenary and assassin, and a major foe of the Teen Titans.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which superhero has a power ring that can create energy constructs based on the user's willpower?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Green Lantern",
+        "The Flash",
+        "Martian Manhunter",
+        "Cyborg"
+      ],
+      "answer": "Green Lantern",
+      "explanation": "The Green Lantern Corps is an intergalactic police force, and each member wields a power ring that grants them incredible abilities based on their willpower.",
+      "difficulty": "Medium"
+    }
+  ]
+}
