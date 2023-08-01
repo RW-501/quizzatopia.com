@@ -1,0 +1,86 @@
+{
+  "quizName": "Pop Culture Quiz - Fashion Edition",
+  "quizCode": "POPCFASHION2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of fashion trends and icons that have influenced pop culture!",
+  "quizTags": "Pop Culture, Fashion, Trends, Styles, Icons",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which fashion designer is known for creating the little black dress (LBD) and iconic Chanel suits?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ralph Lauren",
+        "Yves Saint Laurent",
+        "Coco Chanel",
+        "Christian Dior"
+      ],
+      "answer": "Coco Chanel",
+      "explanation": "Coco Chanel revolutionized fashion with her elegant and timeless designs, including the iconic little black dress and Chanel suits.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which fashion model became a '90s supermodel and was famously known for her mole?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Naomi Campbell",
+        "Cindy Crawford",
+        "Kate Moss",
+        "Christy Turlington"
+      ],
+      "answer": "Cindy Crawford",
+      "explanation": "Cindy Crawford, with her signature mole, was one of the most recognizable supermodels of the 1990s, dominating the fashion industry.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which music icon popularized the 'Thriller' jacket, military-inspired fashion, and the single white glove?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Madonna",
+        "Michael Jackson",
+        "Prince",
+        "David Bowie"
+      ],
+      "answer": "Michael Jackson",
+      "explanation": "Michael Jackson, the 'King of Pop,' had a significant impact on fashion, introducing iconic pieces like the 'Thriller' jacket and white glove.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which fashion trend of the 1970s featured wide-legged, high-waisted pants that flared from the knees down?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bell-bottoms",
+        "Jumpsuits",
+        "Platform Shoes",
+        "Maxi Dresses"
+      ],
+      "answer": "Bell-bottoms",
+      "explanation": "Bell-bottoms were a popular fashion trend in the 1970s, characterized by their wide flared bottoms, which became a symbol of the era.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which influential fashion editor-in-chief is known for her tenure at Vogue magazine and her distinctive style?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Anna Wintour",
+        "Carine Roitfeld",
+        "Grace Coddington",
+        "Alexandra Shulman"
+      ],
+      "answer": "Anna Wintour",
+      "explanation": "Anna Wintour, the editor-in-chief of Vogue, is a prominent figure in the fashion industry and is renowned for her iconic bob haircut and sunglasses.",
+      "difficulty": "Medium"
+    }
+  ]
+}
