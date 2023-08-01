@@ -1,0 +1,234 @@
+{
+  "quizName": "Architect Registration Examination Quiz - Medium",
+  "quizCode": "ARE_Quiz_Medium_2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Architecture",
+  "quizDescription": "Test your knowledge of the Architect Registration Examination (ARE) concepts with this medium-level quiz!",
+  "quizTags": "ARE, Architecture, Exam, Registration",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does the Architect Registration Examination (ARE) assess?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Architectural design skills",
+        "Understanding of building codes",
+        "Architectural history knowledge",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "The Architect Registration Examination (ARE) assesses various aspects of an architect's knowledge, including architectural design skills, understanding of building codes, and knowledge of architectural history.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "How many divisions are there in the Architect Registration Examination (ARE)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "answer": "5",
+      "explanation": "The Architect Registration Examination (ARE) consists of five divisions that cover different aspects of architectural practice and knowledge.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which of the following is a division of the Architect Registration Examination (ARE)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Architectural Graphics",
+        "Schematic Design",
+        "Project Management",
+        "Architectural Theory"
+      ],
+      "answer": "Project Management",
+      "explanation": "Project Management is one of the divisions of the Architect Registration Examination (ARE), focusing on testing an architect's ability to manage architectural projects.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the purpose of the Architect Registration Examination (ARE)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To assess an architect's technical drawing skills",
+        "To determine an architect's artistic abilities",
+        "To evaluate an architect's competence to practice architecture",
+        "To test an architect's knowledge of architectural software"
+      ],
+      "answer": "To evaluate an architect's competence to practice architecture",
+      "explanation": "The purpose of the Architect Registration Examination (ARE) is to evaluate an architect's competence and readiness to practice architecture independently.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "True or False: The Architect Registration Examination (ARE) is a multiple-choice test only.",
+      "imageURL": "",
+      "questionType": "True and False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The Architect Registration Examination (ARE) includes multiple-choice questions as well as other question types, such as fill-in-the-blank and graphical response.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the passing score for the Architect Registration Examination (ARE)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "80%",
+        "70%",
+        "60%",
+        "50%"
+      ],
+      "answer": "70%",
+      "explanation": "The passing score for the Architect Registration Examination (ARE) is typically around 70% for most divisions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which division of the Architect Registration Examination (ARE) tests an architect's understanding of building systems?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Construction & Evaluation",
+        "Programming & Analysis",
+        "Site Planning & Design",
+        "Building Design & Construction Systems"
+      ],
+      "answer": "Building Design & Construction Systems",
+      "explanation": "The Building Design & Construction Systems division of the Architect Registration Examination (ARE) tests an architect's knowledge of building systems and integration.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the total duration of the Architect Registration Examination (ARE)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "10 hours",
+        "15 hours",
+        "20 hours",
+        "25 hours"
+      ],
+      "answer": "20 hours",
+      "explanation": "The total duration of the Architect Registration Examination (ARE) is approximately 20 hours, spread across the five divisions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the first division of the Architect Registration Examination (ARE)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Programming & Analysis",
+        "Construction & Evaluation",
+        "Project Management",
+        "Practice Management"
+      ],
+      "answer": "Practice Management",
+      "explanation": "Practice Management is the first division of the Architect Registration Examination (ARE), focusing on topics related to managing an architectural practice.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the minimum eligibility requirement to take the Architect Registration Examination (ARE)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Completion of a Bachelor's degree in architecture",
+        "Completion of an accredited architecture program",
+        "Obtaining architectural work experience",
+        "All of the above"
+      ],
+      "answer": "Completion of an accredited architecture program",
+      "explanation": "The minimum eligibility requirement to take the Architect Registration Examination (ARE) is the completion of an accredited architecture program.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which division of the Architect Registration Examination (ARE) assesses an architect's ability to understand a project's requirements?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Site Planning & Design",
+        "Building Design & Construction Systems",
+        "Programming & Analysis",
+        "Project Development & Documentation"
+      ],
+      "answer": "Programming & Analysis",
+      "explanation": "The Programming & Analysis division of the Architect Registration Examination (ARE) assesses an architect's ability to understand a project's requirements and develop design concepts.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the final division of the Architect Registration Examination (ARE)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Project Management",
+        "Construction & Evaluation",
+        "Project Development & Documentation",
+        "Building Design & Construction Systems"
+      ],
+      "answer": "Construction & Evaluation",
+      "explanation": "The Construction & Evaluation division is the final division of the Architect Registration Examination (ARE), focusing on testing an architect's knowledge of construction administration and project evaluation.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the purpose of the Graphic Vignette section in the Architect Registration Examination (ARE)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To assess an architect's hand-drawing skills",
+        "To evaluate an architect's graphic presentation abilities",
+        "To test an architect's understanding of building codes",
+        "To measure an architect's problem-solving skills"
+      ],
+      "answer": "To evaluate an architect's graphic presentation abilities",
+      "explanation": "The purpose of the Graphic Vignette section in the Architect Registration Examination (ARE) is to evaluate an architect's graphic presentation abilities and problem-solving skills.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the purpose of the Architect Registration Examination (ARE) 5.0?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To assess an architect's knowledge of architectural history",
+        "To measure an architect's technical drawing skills",
+        "To evaluate an architect's competence in modern architectural practice",
+        "To test an architect's understanding of sustainable design"
+      ],
+      "answer": "To evaluate an architect's competence in modern architectural practice",
+      "explanation": "The purpose of the Architect Registration Examination (ARE) 5.0 is to evaluate an architect's competence in modern architectural practice, covering a wide range of knowledge and skills required in the profession.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the recommended study approach for the Architect Registration Examination (ARE)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Focusing only on specific divisions",
+        "Cramming all study materials in a short period",
+        "Studying in groups with fellow architects",
+        "Developing a comprehensive and organized study plan"
+      ],
+      "answer": "Developing a comprehensive and organized study plan",
+      "explanation": "The recommended study approach for the Architect Registration Examination (ARE) is to develop a comprehensive and organized study plan that covers all relevant topics and allows sufficient time for preparation.",
+      "difficulty": "Medium"
+    }
+  ]
+}
