@@ -695,7 +695,7 @@ display: block !important;
           <!-- Pie graph -->
 
              <div class="text-center">
-            <button id="start-btn" class=" " onclick="startQuiz()">Start Quiz</button><br>
+            <button id="start-btn" class=" " onclick="startQuiz()" disabled>Start Quiz</button><br>
             <!-- Start Quiz Button onclick="retakeButton()" -->
             <button id="retakeButton" class="btnMain    " >Retake</button>
 
@@ -1444,8 +1444,8 @@ reviewQuestionText.textContent = questionsOG[questionIndex].question;
 	
         // Update the HTML display with the calculated values
         document.getElementById('totalQuestions').textContent = totalQuestions;
-        document.getElementById('percentDone').textContent = percentDone;
-        document.getElementById('currentScore').textContent = currentScore;
+        document.getElementById('percentDone').textContent =  Math.round(percentDone);
+        document.getElementById('currentScore').textContent =  Math.round(currentScore); 
   
 	
 	  
@@ -2391,9 +2391,8 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageU
     // Update the title tag
     document.title = quizNameNS;
     optionsQuizNameDiv.innerHTML = `<h1>${quizNameNS}<h1>`;
-	  
+
   }
-		  removeOverlayWithoutTimer();
 
 }
 
@@ -2406,6 +2405,11 @@ window.addEventListener("load", function() {
   fetchData(q, e)
     .then(() => {
       // Data is fetched and processed, call displayTestInfo here
+	    	  		  removeOverlayWithoutTimer();
+
+	      document.getElementById("start-btn").removeAttribute("disabled");
+	 console.log("loaded ?????????????????????      "); 
+
     })
     .catch(error => {
       // Handle any errors that occurred during fetchData
