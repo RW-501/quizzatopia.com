@@ -1,86 +1,236 @@
 {
   "quizName": "Microsoft Certified Solutions Expert (MCSE) Quiz",
-  "quizCode": "MCSE2023",
-  "quizDifficulty": "Medium",
-  "quizCategory": "IT Certification",
-  "quizDescription": "Test your knowledge of Microsoft technologies with this MCSE quiz!",
-  "quizTags": "MCSE, Microsoft, IT Certification, Server Infrastructure, Cloud, Data Management",
-  "numberOfQuestions": 5,
+  "quizCode": "MCSE_Quiz_2023",
+  "quizDifficulty": "Hard",
+  "quizCategory": "Information Technology",
+  "quizDescription": "Test your knowledge and skills for the Microsoft Certified Solutions Expert (MCSE) certification with this challenging quiz!",
+  "quizTags": "MCSE, Microsoft Certification, Information Technology, IT Professionals",
+  "numberOfQuestions": 15,
   "questions": [
     {
       "questionNumber": 1,
-      "question": "Which Microsoft certification path includes the MCSE certification?",
+      "question": "Which MCSE certification focuses on designing, building, and managing effective and innovative cloud solutions using Microsoft Azure?",
       "imageURL": "",
       "questionType": "Multiple Choice",
       "options": [
-        "MCSA (Microsoft Certified Solutions Associate)",
-        "MTA (Microsoft Technology Associate)",
-        "MCSD (Microsoft Certified Solutions Developer)",
-        "MOS (Microsoft Office Specialist)"
+        "MCSE: Cloud Platform and Infrastructure",
+        "MCSE: Data Management and Analytics",
+        "MCSE: Productivity",
+        "MCSE: Core Infrastructure"
       ],
-      "answer": "MCSA (Microsoft Certified Solutions Associate)",
-      "explanation": "The MCSE certification is part of the Microsoft Certified Solutions Associate (MCSA) certification path.",
-      "difficulty": "Medium"
+      "answer": "MCSE: Cloud Platform and Infrastructure",
+      "explanation": "MCSE: Cloud Platform and Infrastructure certification focuses on designing, building, and managing cloud solutions using Microsoft Azure.",
+      "difficulty": "Hard"
     },
     {
       "questionNumber": 2,
-      "question": "Which MCSE specialization focuses on designing and implementing Microsoft Azure cloud solutions?",
+      "question": "What is the prerequisite certification for MCSE: Core Infrastructure?",
       "imageURL": "",
       "questionType": "Multiple Choice",
       "options": [
-        "MCSE: Cloud Platform and Infrastructure",
-        "MCSE: Data Management and Analytics",
-        "MCSE: Mobility",
-        "MCSE: Productivity"
+        "MCSA: Windows Server 2012",
+        "MCSA: Windows Server 2016",
+        "MCSA: Windows Server 2019",
+        "MCSA: Office 365"
       ],
-      "answer": "MCSE: Cloud Platform and Infrastructure",
-      "explanation": "The MCSE: Cloud Platform and Infrastructure specialization focuses on Microsoft Azure cloud solutions.",
-      "difficulty": "Medium"
+      "answer": "MCSA: Windows Server 2019",
+      "explanation": "The prerequisite certification for MCSE: Core Infrastructure is MCSA: Windows Server 2019.",
+      "difficulty": "Hard"
     },
     {
       "questionNumber": 3,
-      "question": "Which MCSE specialization focuses on data management and analytics using Microsoft SQL Server?",
+      "question": "Which MCSE certification focuses on data management and analytics using SQL Server?",
       "imageURL": "",
       "questionType": "Multiple Choice",
       "options": [
         "MCSE: Cloud Platform and Infrastructure",
         "MCSE: Data Management and Analytics",
-        "MCSE: Mobility",
-        "MCSE: Productivity"
+        "MCSE: Productivity",
+        "MCSE: Core Infrastructure"
       ],
       "answer": "MCSE: Data Management and Analytics",
-      "explanation": "The MCSE: Data Management and Analytics specialization focuses on data management using Microsoft SQL Server.",
-      "difficulty": "Medium"
+      "explanation": "MCSE: Data Management and Analytics certification focuses on data management and analytics using SQL Server.",
+      "difficulty": "Hard"
     },
     {
       "questionNumber": 4,
-      "question": "Which MCSE specialization focuses on managing and securing Microsoft Windows Server infrastructure?",
+      "question": "What is the prerequisite certification for MCSE: Productivity?",
       "imageURL": "",
       "questionType": "Multiple Choice",
       "options": [
-        "MCSE: Cloud Platform and Infrastructure",
-        "MCSE: Data Management and Analytics",
-        "MCSE: Mobility",
-        "MCSE: Productivity"
+        "MCSA: Office 365",
+        "MCSA: Windows Server 2016",
+        "MCSA: Windows Server 2019",
+        "MCSA: SQL Server 2016"
       ],
-      "answer": "MCSE: Cloud Platform and Infrastructure",
-      "explanation": "The MCSE: Cloud Platform and Infrastructure specialization covers Microsoft Windows Server infrastructure management and security.",
-      "difficulty": "Medium"
+      "answer": "MCSA: Office 365",
+      "explanation": "The prerequisite certification for MCSE: Productivity is MCSA: Office 365.",
+      "difficulty": "Hard"
     },
     {
       "questionNumber": 5,
-      "question": "Which MCSE specialization focuses on productivity solutions using Microsoft Office 365 and SharePoint?",
+      "question": "Which MCSE certification focuses on managing and securing devices in an enterprise environment?",
       "imageURL": "",
       "questionType": "Multiple Choice",
       "options": [
         "MCSE: Cloud Platform and Infrastructure",
         "MCSE: Data Management and Analytics",
         "MCSE: Mobility",
-        "MCSE: Productivity"
+        "MCSE: Core Infrastructure"
+      ],
+      "answer": "MCSE: Mobility",
+      "explanation": "MCSE: Mobility certification focuses on managing and securing devices in an enterprise environment.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which MCSE certification validates expertise in Windows Server 2016?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "MCSE: Cloud Platform and Infrastructure",
+        "MCSE: Data Management and Analytics",
+        "MCSE: Productivity",
+        "MCSE: Core Infrastructure"
+      ],
+      "answer": "MCSE: Core Infrastructure",
+      "explanation": "MCSE: Core Infrastructure certification validates expertise in Windows Server 2016.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the prerequisite certification for MCSE: Cloud Platform and Infrastructure?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "MCSA: Windows Server 2012",
+        "MCSA: Windows Server 2016",
+        "MCSA: Windows Server 2019",
+        "MCSA: Office 365"
+      ],
+      "answer": "MCSA: Windows Server 2016",
+      "explanation": "The prerequisite certification for MCSE: Cloud Platform and Infrastructure is MCSA: Windows Server 2016.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which MCSE certification focuses on managing Office 365 and productivity solutions?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "MCSE: Cloud Platform and Infrastructure",
+        "MCSE: Data Management and Analytics",
+        "MCSE: Productivity",
+        "MCSE: Core Infrastructure"
       ],
       "answer": "MCSE: Productivity",
-      "explanation": "The MCSE: Productivity specialization focuses on productivity solutions using Microsoft Office 365 and SharePoint.",
-      "difficulty": "Medium"
+      "explanation": "MCSE: Productivity certification focuses on managing Office 365 and productivity solutions.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the prerequisite certification for MCSE: Data Management and Analytics?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "MCSA: SQL Server 2012/2014",
+        "MCSA: SQL Server 2016",
+        "MCSA: Windows Server 2019",
+        "MCSA: Office 365"
+      ],
+      "answer": "MCSA: SQL Server 2016",
+      "explanation": "The prerequisite certification for MCSE: Data Management and Analytics is MCSA: SQL Server 2016.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which MCSE certification focuses on modern desktop deployment, management, and security?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "MCSE: Cloud Platform and Infrastructure",
+        "MCSE: Data Management and Analytics",
+        "MCSE: Productivity",
+        "MCSE: Modern Desktop Administrator"
+      ],
+      "answer": "MCSE: Modern Desktop Administrator",
+      "explanation": "MCSE: Modern Desktop Administrator certification focuses on modern desktop deployment, management, and security.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the prerequisite certification for MCSE: Modern Desktop Administrator?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "MCSA: Windows Server 2016",
+        "MCSA: Windows Server 2019",
+        "MCSA: Windows 10",
+        "MCSA: Office 365"
+      ],
+      "answer": "MCSA: Windows 10",
+      "explanation": "The prerequisite certification for MCSE: Modern Desktop Administrator is MCSA: Windows 10.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which MCSE certification focuses on designing and implementing cloud data platform solutions?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "MCSE: Cloud Platform and Infrastructure",
+        "MCSE: Data Management and Analytics",
+        "MCSE: Productivity",
+        "MCSE: Cloud Data Platform"
+      ],
+      "answer": "MCSE: Cloud Data Platform",
+      "explanation": "MCSE: Cloud Data Platform certification focuses on designing and implementing cloud data platform solutions.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the prerequisite certification for MCSE: Cloud Data Platform?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "MCSA: SQL Server 2012/2014",
+        "MCSA: SQL Server 2016",
+        "MCSA: Windows Server 2019",
+        "MCSA: Office 365"
+      ],
+      "answer": "MCSA: SQL Server 2016",
+      "explanation": "The prerequisite certification for MCSE: Cloud Data Platform is MCSA: SQL Server 2016.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which MCSE certification focuses on deploying and managing Windows and web services?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "MCSE: Cloud Platform and Infrastructure",
+        "MCSE: Data Management and Analytics",
+        "MCSE: Productivity",
+        "MCSE: App Builder"
+      ],
+      "answer": "MCSE: App Builder",
+      "explanation": "MCSE: App Builder certification focuses on deploying and managing Windows and web services.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the prerequisite certification for MCSE: App Builder?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "MCSA: SQL Server 2016",
+        "MCSA: Windows Server 2016",
+        "MCSA: Universal Windows Platform",
+        "MCSA: Office 365"
+      ],
+      "answer": "MCSA: Universal Windows Platform",
+      "explanation": "The prerequisite certification for MCSE: App Builder is MCSA: Universal Windows Platform.",
+      "difficulty": "Hard"
     }
   ]
 }
