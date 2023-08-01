@@ -1,0 +1,161 @@
+{
+  "quizName": "Geography Adventure Quiz for Kids",
+  "quizCode": "GEOADVENTURE2023",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Geography",
+  "quizDescription": "Embark on a thrilling geography adventure and explore the wonders of the world.",
+  "quizTags": "Geography, Adventure, Kids, Countries, Landmarks",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the capital city of France?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Berlin",
+        "London",
+        "Paris",
+        "Madrid"
+      ],
+      "answer": "Paris",
+      "explanation": "The capital city of France is Paris, known for its iconic landmarks like the Eiffel Tower and Louvre Museum.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which continent is known as the 'Land Down Under'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Europe",
+        "North America",
+        "Australia",
+        "Africa"
+      ],
+      "answer": "Australia",
+      "explanation": "Australia is known as the 'Land Down Under,' located in the southern hemisphere.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which famous river is the longest in the world?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Nile River",
+        "Amazon River",
+        "Yangtze River",
+        "Mississippi River"
+      ],
+      "answer": "Nile River",
+      "explanation": "The Nile River is the longest river in the world, flowing through northeastern Africa.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous landmark is located in India and considered one of the New Seven Wonders of the World?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Colosseum",
+        "The Great Wall of China",
+        "Taj Mahal",
+        "Machu Picchu"
+      ],
+      "answer": "Taj Mahal",
+      "explanation": "The Taj Mahal is located in India and is considered one of the New Seven Wonders of the World.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which country is known for its pyramids, including the Great Sphinx?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "China",
+        "Mexico",
+        "Egypt",
+        "Greece"
+      ],
+      "answer": "Egypt",
+      "explanation": "Egypt is known for its pyramids, including the Great Sphinx, which are ancient wonders.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which country is famous for its kangaroos, koalas, and the Sydney Opera House?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Brazil",
+        "Australia",
+        "Canada",
+        "Japan"
+      ],
+      "answer": "Australia",
+      "explanation": "Australia is famous for its unique wildlife, including kangaroos and koalas, and iconic landmarks like the Sydney Opera House.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which continent is home to the Sahara Desert, the largest hot desert in the world?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Africa",
+        "South America",
+        "Asia",
+        "Antarctica"
+      ],
+      "answer": "Africa",
+      "explanation": "Africa is home to the Sahara Desert, the largest hot desert in the world.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous canal connects the Atlantic and Pacific Oceans?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Suez Canal",
+        "Panama Canal",
+        "Kiel Canal",
+        "Erie Canal"
+      ],
+      "answer": "Panama Canal",
+      "explanation": "The Panama Canal is a famous canal that connects the Atlantic and Pacific Oceans, facilitating international trade.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which country is known for its tulip fields, windmills, and wooden clogs?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Italy",
+        "France",
+        "Netherlands",
+        "Spain"
+      ],
+      "answer": "Netherlands",
+      "explanation": "The Netherlands is known for its picturesque tulip fields, iconic windmills, and traditional wooden clogs.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which famous landmark in the United States is known for its green color and stands in New York Harbor?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Golden Gate Bridge",
+        "Mount Rushmore",
+        "Statue of Liberty",
+        "White House"
+      ],
+      "answer": "Statue of Liberty",
+      "explanation": "The Statue of Liberty, located in New York Harbor, is a symbol of freedom and democracy in the United States.",
+      "difficulty": "Easy"
+    }
+  ]
+}
