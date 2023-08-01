@@ -1,0 +1,236 @@
+{
+  "quizName": "Oldies Movie Trivia Quiz",
+  "quizCode": "OldiesMovieQuiz2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of classic oldies movies with this nostalgic trivia quiz!",
+  "quizTags": "Oldies Movies, Classic Films, Nostalgia",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In the classic film 'Gone with the Wind,' who plays the role of Scarlett O'Hara?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Audrey Hepburn",
+        "Katharine Hepburn",
+        "Vivien Leigh",
+        "Grace Kelly"
+      ],
+      "answer": "Vivien Leigh",
+      "explanation": "In 'Gone with the Wind,' Vivien Leigh portrays the iconic role of Scarlett O'Hara.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which classic movie stars Marilyn Monroe as a young woman who becomes the center of attention in a small town?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Some Like It Hot",
+        "Breakfast at Tiffany's",
+        "Gentlemen Prefer Blondes",
+        "The Seven Year Itch"
+      ],
+      "answer": "The Seven Year Itch",
+      "explanation": "In 'The Seven Year Itch,' Marilyn Monroe plays a young woman who becomes the center of attention in a small town.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which classic movie follows the story of a newspaper tycoon's rise to power and his eventual downfall?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Casablanca",
+        "Gone with the Wind",
+        "Citizen Kane",
+        "It's a Wonderful Life"
+      ],
+      "answer": "Citizen Kane",
+      "explanation": "The classic movie 'Citizen Kane' follows the story of a newspaper tycoon's rise to power and his eventual downfall.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the name of the spaceship in the sci-fi movie '2001: A Space Odyssey'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Millennium Falcon",
+        "Discovery One",
+        "USS Enterprise",
+        "Galactic Cruiser"
+      ],
+      "answer": "Discovery One",
+      "explanation": "In '2001: A Space Odyssey,' the name of the spaceship is Discovery One.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "In the classic movie 'Casablanca,' what is the famous line spoken by Humphrey Bogart's character?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Here's looking at you, kid.",
+        "Play it, Sam.",
+        "We'll always have Paris.",
+        "Of all the gin joints in all the towns in all the world, she walks into mine."
+      ],
+      "answer": "Here's looking at you, kid.",
+      "explanation": "In 'Casablanca,' Humphrey Bogart's character says the famous line, 'Here's looking at you, kid.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which classic movie stars Audrey Hepburn as a young New York socialite with a passion for high fashion?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Some Like It Hot",
+        "Breakfast at Tiffany's",
+        "Gentlemen Prefer Blondes",
+        "The Seven Year Itch"
+      ],
+      "answer": "Breakfast at Tiffany's",
+      "explanation": "In 'Breakfast at Tiffany's,' Audrey Hepburn portrays a young New York socialite with a passion for high fashion.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which classic movie features a group of Allied prisoners attempting to escape from a German POW camp during World War II?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Great Escape",
+        "Bridge on the River Kwai",
+        "Stalag 17",
+        "The Longest Day"
+      ],
+      "answer": "The Great Escape",
+      "explanation": "The classic movie 'The Great Escape' features a group of Allied prisoners attempting to escape from a German POW camp during World War II.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "In the classic film 'Roman Holiday,' which actress plays the role of Princess Ann?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Katharine Hepburn",
+        "Grace Kelly",
+        "Audrey Hepburn",
+        "Vivien Leigh"
+      ],
+      "answer": "Audrey Hep burn",
+      "explanation": "In 'Roman Holiday,' Audrey Hepburn plays the role of Princess Ann.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which classic movie follows the story of a man who gets a chance to see what life would have been like if he had never been born?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Casablanca",
+        "Gone with the Wind",
+        "Citizen Kane",
+        "It's a Wonderful Life"
+      ],
+      "answer": "It's a Wonderful Life",
+      "explanation": "The classic movie 'It's a Wonderful Life' follows the story of a man who gets a chance to see what life would have been like if he had never been born.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the name of the iconic character played by Marlon Brando in the classic film 'The Godfather'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tony Montana",
+        "Don Vito Corleone",
+        "Michael Corleone",
+        "Frank Costello"
+      ],
+      "answer": "Don Vito Corleone",
+      "explanation": "In 'The Godfather,' Marlon Brando plays the iconic character Don Vito Corleone.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which classic movie follows the story of a lawyer defending a black man accused of raping a white woman?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "12 Angry Men",
+        "To Kill a Mockingbird",
+        "The Grapes of Wrath",
+        "Mr. Smith Goes to Washington"
+      ],
+      "answer": "To Kill a Mockingbird",
+      "explanation": "The classic movie 'To Kill a Mockingbird' follows the story of a lawyer defending a black man accused of raping a white woman.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the name of the fictional African country in the classic movie 'Coming to America'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Zamunda",
+        "Wakanda",
+        "Genovia",
+        "Agrabah"
+      ],
+      "answer": "Zamunda",
+      "explanation": "The fictional African country in the classic movie 'Coming to America' is called Zamunda.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which classic movie features a man who is accidentally sent 30 years into the past in a time-traveling DeLorean?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Back to the Future",
+        "Blade Runner",
+        "E.T. the Extra-Terrestrial",
+        "Raiders of the Lost Ark"
+      ],
+      "answer": "Back to the Future",
+      "explanation": "The classic movie 'Back to the Future' features a man who is accidentally sent 30 years into the past in a time-traveling DeLorean.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "In the classic movie 'Breakfast at Tiffany's,' what is the name of the character played by George Peppard?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Paul Varjak",
+        "Holly Golightly",
+        "Truman Capote",
+        "Tom Baxter"
+      ],
+      "answer": "Paul Varjak",
+      "explanation": "In 'Breakfast at Tiffany's,' George Peppard plays the character named Paul Varjak.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which classic movie follows the story of a man who is wrongly accused of murdering his wife and must prove his innocence?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Psycho",
+        "Rear Window",
+        "North by Northwest",
+        "The Fugitive"
+      ],
+      "answer": "The Fugitive",
+      "explanation": "The classic movie 'The Fugitive' follows the story of a man who is wrongly accused of murdering his wife and must prove his innocence.",
+      "difficulty": "Medium"
+    }
+  ]
+}
