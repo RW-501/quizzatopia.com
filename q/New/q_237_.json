@@ -1,0 +1,86 @@
+{
+  "quizName": "Quentin Tarantino Movie Trivia Quiz",
+  "quizCode": "TARANTINO2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of movies directed by Quentin Tarantino with this quiz!",
+  "quizTags": "Quentin Tarantino, Movies, Director, Filmmaker",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which Quentin Tarantino film follows two hitmen, Vincent Vega and Jules Winnfield, as they navigate the criminal underworld?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kill Bill: Volume 1",
+        "Pulp Fiction",
+        "Reservoir Dogs",
+        "Inglourious Basterds"
+      ],
+      "answer": "Pulp Fiction",
+      "explanation": "'Pulp Fiction' is a cult classic that weaves multiple interconnected stories and is known for its nonlinear narrative.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "In which Quentin Tarantino film does a group of strangers find themselves trapped in a remote cabin during a snowstorm?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Django Unchained",
+        "The Hateful Eight",
+        "Jackie Brown",
+        "Once Upon a Time in Hollywood"
+      ],
+      "answer": "The Hateful Eight",
+      "explanation": "'The Hateful Eight' is a tense and violent Western film set in post-Civil War Wyoming.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which Quentin Tarantino movie follows the story of a bride seeking revenge on her former assassination team?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Reservoir Dogs",
+        "Death Proof",
+        "Inglourious Basterds",
+        "Kill Bill: Volume 1"
+      ],
+      "answer": "Kill Bill: Volume 1",
+      "explanation": "'Kill Bill: Volume 1' is the first installment of a revenge saga featuring Uma Thurman as The Bride.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "In which Quentin Tarantino film does a group of Jewish-American soldiers plan to assassinate Nazi leaders during World War II?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Django Unchained",
+        "Inglourious Basterds",
+        "Once Upon a Time in Hollywood",
+        "Jackie Brown"
+      ],
+      "answer": "Inglourious Basterds",
+      "explanation": "'Inglourious Basterds' is an alternate history war film that earned critical acclaim for its unique take on historical events.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which Quentin Tarantino film features a stuntman and his friend, an aging actor, who become entangled with the Manson family murders?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kill Bill: Volume 2",
+        "Death Proof",
+        "The Hateful Eight",
+        "Once Upon a Time in Hollywood"
+      ],
+      "answer": "Once Upon a Time in Hollywood",
+      "explanation": "'Once Upon a Time in Hollywood' is a nostalgic tribute to the golden age of Hollywood and features Leonardo DiCaprio and Brad Pitt in the lead roles.",
+      "difficulty": "Medium"
+    }
+  ]
+}
