@@ -1,0 +1,224 @@
+{
+  "quizName": "Google Ads Certification Quiz",
+  "quizCode": "GAC2023",
+  "quizDifficulty": "Hard",
+  "quizCategory": "Technology",
+  "quizDescription": "Test your knowledge about Google Ads and get prepared for the certification exam!",
+  "quizTags": "Google Ads, AdWords, Digital Marketing, PPC",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the main purpose of Google Ads?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To improve website SEO",
+        "To increase organic search traffic",
+        "To advertise products and services",
+        "To boost social media engagement"
+      ],
+      "answer": "To advertise products and services",
+      "explanation": "The main purpose of Google Ads is to enable businesses to advertise their products and services on Google's advertising network.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which of the following campaign types in Google Ads is best suited for increasing website traffic?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Search Campaign",
+        "Display Campaign",
+        "Video Campaign",
+        "Shopping Campaign"
+      ],
+      "answer": "Search Campaign",
+      "explanation": "A Search Campaign in Google Ads is designed to show ads to users actively searching for specific keywords, making it ideal for driving website traffic.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the primary pricing model used in Google Ads for most advertisers?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pay-Per-Conversion (PPC)",
+        "Cost-Per-Click (CPC)",
+        "Cost-Per-Impression (CPM)",
+        "Cost-Per-View (CPV)"
+      ],
+      "answer": "Cost-Per-Click (CPC)",
+      "explanation": "The primary pricing model used in Google Ads for most advertisers is Cost-Per-Click (CPC), where advertisers pay for each click on their ads.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the minimum age requirement for someone to become Google Ads certified?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "18 years old",
+        "16 years old",
+        "21 years old",
+        "There is no minimum age requirement"
+      ],
+      "answer": "There is no minimum age requirement",
+      "explanation": "There is no minimum age requirement for someone to become Google Ads certified. Anyone can take the certification exams regardless of age.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which of the following is NOT a valid campaign goal in Google Ads?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Brand Awareness and Reach",
+        "Lead Generation",
+        "App Installs",
+        "Social Media Followers"
+      ],
+      "answer": "Social Media Followers",
+      "explanation": "While Google Ads offers various campaign goals, 'Social Media Followers' is not one of the predefined goals in the platform.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the maximum number of characters allowed in a Google Ads expanded text ad headline?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "25",
+        "30",
+        "35",
+        "40"
+      ],
+      "answer": "30",
+      "explanation": "In a Google Ads expanded text ad, the maximum number of characters allowed in the headline is 30.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the Google Ads Editor?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A tool for designing ad creatives",
+        "A tool for managing Google Analytics",
+        "A tool for creating custom audiences",
+        "A desktop application for managing Google Ads campaigns offline"
+      ],
+      "answer": "A desktop application for managing Google Ads campaigns offline",
+      "explanation": "Google Ads Editor is a desktop application that allows advertisers to manage their Google Ads campaigns offline, make bulk changes, and review performance data.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which ad extension in Google Ads allows advertisers to display their business address and phone number?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sitelink Extensions",
+        "Callout Extensions",
+        "Location Extensions",
+        "Price Extensions"
+      ],
+      "answer": "Location Extensions",
+      "explanation": "Location Extensions in Google Ads enable advertisers to display their business address and phone number along with their ad.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the quality score in Google Ads?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A score that reflects an ad's historical performance",
+        "A score that determines an ad's position on the search results page",
+        "A score that reflects an ad's relevance and expected click-through rate",
+        "A score that impacts an ad's daily budget"
+      ],
+      "answer": "A score that reflects an ad's relevance and expected click-through rate",
+      "explanation": "The quality score in Google Ads is a score that reflects an ad's relevance to the keywords and expected click-through rate. It influences ad performance and position.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the maximum number of ad units allowed per page by Google's AdSense program?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": "3",
+      "explanation": "Google's AdSense program allows a maximum of 3 ad units per page to maintain a good user experience and ad relevance.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the Google Ads policy regarding the use of trademarks in ad text?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Trademarks cannot be used in ad text",
+        "Advertisers can use any trademarks without restrictions",
+        "Trademarks can only be used with permission from the trademark owner",
+        "Only registered trademarks can be used in ad text"
+      ],
+      "answer": "Trademarks can only be used with permission from the trademark owner",
+      "explanation": "Google Ads policy requires advertisers to have explicit permission from the trademark owner to use trademarks in their ad text.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which bidding strategy in Google Ads focuses on getting the most clicks within a defined budget?",
+      "questionType
+
+": "Multiple Choice",
+      "options": [
+        "Target Impression Share",
+        "Maximize Clicks",
+        "Target CPA",
+        "Enhanced Cost-Per-Click (eCPC)"
+      ],
+      "answer": "Maximize Clicks",
+      "explanation": "The 'Maximize Clicks' bidding strategy in Google Ads focuses on getting the maximum number of clicks within a defined budget.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the maximum number of characters allowed in a Google Ads responsive search ad headline?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "25",
+        "30",
+        "35",
+        "40"
+      ],
+      "answer": "30",
+      "explanation": "In a Google Ads responsive search ad, the maximum number of characters allowed in the headline is 30.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the main advantage of using remarketing in Google Ads?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "It allows ads to be shown on multiple platforms simultaneously",
+        "It helps increase the Quality Score of ads",
+        "It targets users who have previously interacted with the website or app",
+        "It allows unlimited ad impressions for a fixed budget"
+      ],
+      "answer": "It targets users who have previously interacted with the website or app",
+      "explanation": "Remarketing in Google Ads allows advertisers to target users who have previously visited their website or interacted with their app, increasing the chances of conversion.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which report in Google Ads provides insights into how customers have interacted with a website?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Clicks Report",
+        "Impressions Report",
+        "Audience Report",
+        "Conversion Tracking Report"
+      ],
+      "answer": "Audience Report",
+      "explanation": "The Audience Report in Google Ads provides insights into how customers have interacted with a website, including behavior and conversion data.",
+      "difficulty": "Hard"
+    }
+  ]
+}
