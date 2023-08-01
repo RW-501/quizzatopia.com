@@ -1,0 +1,86 @@
+{
+  "quizName": "Director Movie Trivia Quiz",
+  "quizCode": "DIRECTOR2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of famous film directors with this quiz!",
+  "quizTags": "Directors, Movies, Filmmakers, Hollywood",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who directed the 'Lord of the Rings' film trilogy, bringing J.R.R. Tolkien's fantasy world to life?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Steven Spielberg",
+        "Peter Jackson",
+        "Christopher Nolan",
+        "James Cameron"
+      ],
+      "answer": "Peter Jackson",
+      "explanation": "Peter Jackson directed the 'Lord of the Rings' trilogy, which consists of 'The Fellowship of the Ring,' 'The Two Towers,' and 'The Return of the King.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which director is known for iconic films such as 'Taxi Driver,' 'Raging Bull,' and 'Goodfellas'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Francis Ford Coppola",
+        "Quentin Tarantino",
+        "Martin Scorsese",
+        "Alfred Hitchcock"
+      ],
+      "answer": "Martin Scorsese",
+      "explanation": "Martin Scorsese is a highly acclaimed director known for his gritty and powerful films that often explore themes of crime and violence.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Who directed the science fiction masterpiece 'Blade Runner' and the epic fantasy film 'Gladiator'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "James Cameron",
+        "Ridley Scott",
+        "Tim Burton",
+        "David Fincher"
+      ],
+      "answer": "Ridley Scott",
+      "explanation": "Ridley Scott is a visionary director known for his work in various genres, including science fiction and historical epics.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which director helmed the dark and mind-bending films 'Inception,' 'The Dark Knight,' and 'Interstellar'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Christopher Nolan",
+        "David Lynch",
+        "Wes Anderson",
+        "Darren Aronofsky"
+      ],
+      "answer": "Christopher Nolan",
+      "explanation": "Christopher Nolan is known for his thought-provoking and visually stunning films that often explore complex themes.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Who directed the classic horror film 'Psycho' and is often referred to as the 'Master of Suspense'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Stanley Kubrick",
+        "Steven Spielberg",
+        "Alfred Hitchcock",
+        "George Lucas"
+      ],
+      "answer": "Alfred Hitchcock",
+      "explanation": "Alfred Hitchcock is an iconic director known for his mastery of suspense and his influential contributions to the thriller genre.",
+      "difficulty": "Medium"
+    }
+  ]
+}
