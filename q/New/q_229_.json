@@ -1,0 +1,86 @@
+{
+  "quizName": "Horror Movie Trivia Quiz",
+  "quizCode": "HORROR2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of horror movies with this spine-chilling trivia quiz!",
+  "quizTags": "Horror, Movies, Thriller, Scary, Halloween",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In which horror movie does a group of kids encounter a shape-shifting clown named Pennywise?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Conjuring",
+        "A Nightmare on Elm Street",
+        "Saw",
+        "It"
+      ],
+      "answer": "It",
+      "explanation": "Pennywise the Dancing Clown terrorizes a group of kids in the horror movie 'It,' based on Stephen King's novel.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which horror movie features a haunted house located in Rhode Island and is based on real events?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Insidious",
+        "The Amityville Horror",
+        "Hereditary",
+        "The Exorcist"
+      ],
+      "answer": "The Amityville Horror",
+      "explanation": "'The Amityville Horror' is based on the real-life haunting that occurred in a house in Amityville, New York.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which horror movie features a family tormented by a supernatural entity that only appears in the dark?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sinister",
+        "Lights Out",
+        "The Babadook",
+        "The Conjuring"
+      ],
+      "answer": "Lights Out",
+      "explanation": "'Lights Out' centers around a malevolent entity that can only be seen when the lights are out.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "In the movie 'The Shining,' what phrase is repeatedly written by Jack Torrance?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Don't Look Back",
+        "Red Rum",
+        "All Work and No Play",
+        "Stay Away"
+      ],
+      "answer": "All Work and No Play",
+      "explanation": "Jack Torrance repeatedly types the phrase 'All work and no play makes Jack a dull boy' in 'The Shining.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which horror movie revolves around a videotape that curses anyone who watches it, leading to their death in seven days?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Grudge",
+        "The Ring",
+        "Ringu",
+        "Ju-on"
+      ],
+      "answer": "The Ring",
+      "explanation": "'The Ring' is a horror film that centers on a cursed videotape that brings death to anyone who watches it within seven days.",
+      "difficulty": "Medium"
+    }
+  ]
+}
