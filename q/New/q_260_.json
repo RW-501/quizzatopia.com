@@ -1,0 +1,236 @@
+{
+  "quizName": "Technical Skills Assessment - Job Interviews",
+  "quizCode": "TECHSKILLS2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Job Interview",
+  "quizDescription": "Test your technical skills commonly assessed in job interviews for technical positions.",
+  "quizTags": "Technical Skills, Job Interview, Programming, Algorithms, Databases",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the time complexity of a binary search algorithm in the worst case?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "O(1)",
+        "O(n)",
+        "O(log n)",
+        "O(n log n)"
+      ],
+      "answer": "O(log n)",
+      "explanation": "The time complexity of a binary search algorithm in the worst case is O(log n) since it divides the search space in half at each step.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which data structure is best suited for implementing a LIFO (Last-In, First-Out) behavior?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Queue",
+        "Stack",
+        "LinkedList",
+        "Hash Table"
+      ],
+      "answer": "Stack",
+      "explanation": "A Stack data structure is best suited for implementing LIFO behavior, where the last element added is the first one to be removed.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the purpose of an SQL JOIN clause in database queries?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To perform mathematical operations on data",
+        "To combine rows from different tables based on a related column",
+        "To filter data based on specific conditions",
+        "To group data and calculate aggregates"
+      ],
+      "answer": "To combine rows from different tables based on a related column",
+      "explanation": "An SQL JOIN clause is used to combine rows from different tables based on a related column, allowing data to be retrieved from multiple tables in a single query.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which programming language is commonly used for web development and can be run on both the client and server sides?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Python",
+        "Java",
+        "Ruby",
+        "JavaScript"
+      ],
+      "answer": "JavaScript",
+      "explanation": "JavaScript is commonly used for web development and is capable of running on both the client and server sides with the help of frameworks like Node.js.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "In object-oriented programming, what is the concept of 'inheritance'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The ability to hide certain aspects of an object from the outside world",
+        "The process of creating multiple instances of a class",
+        "The ability of one class to acquire properties and behaviors of another class",
+        "The process of converting an object into a byte stream for storage or transmission"
+      ],
+      "answer": "The ability of one class to acquire properties and behaviors of another class",
+      "explanation": "In object-oriented programming, 'inheritance' allows one class to acquire properties and behaviors (methods) of another class, promoting code reuse and creating a hierarchical relationship between classes.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What does the term 'HTTP' stand for in web development?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hypertext Transfer Protocol",
+        "Hypertext Markup Language",
+        "Hyperlink Text Protocol",
+        "Hypertext Technology Protocol"
+      ],
+      "answer": "Hypertext Transfer Protocol",
+      "explanation": "HTTP stands for Hypertext Transfer Protocol, a standard protocol used for communication between a client and a server in web development.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the purpose of the 'try-catch' block in programming?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To define a loop that iterates through a collection of elements",
+        "To handle exceptions and errors in a controlled manner",
+        "To create a conditional statement with multiple branches",
+        "To execute a block of code repeatedly until a condition is met"
+      ],
+      "answer": "To handle exceptions and errors in a controlled manner",
+      "explanation": "The 'try-catch' block is used to handle exceptions and errors in a controlled manner, allowing the program to gracefully recover from unexpected situations.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What does the 'href' attribute in HTML anchor tags specify?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The height of the element",
+        "The background color of the element",
+        "The target URL or destination of the hyperlink",
+        "The alignment of the element within its container"
+      ],
+      "answer": "The target URL or destination of the hyperlink",
+      "explanation": "The 'href' attribute in HTML anchor tags specifies the target URL or destination of the hyperlink when the user clicks on it.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What does the term 'DNS' stand for in networking?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Dynamic Network Service",
+        "Domain Name System",
+        "Data Network Security",
+        "Distributed Network Server"
+      ],
+      "answer": "Domain Name System",
+      "explanation": "DNS stands for Domain Name System, a system that translates domain names (e.g., www.example.com) into IP addresses (e.g., 192.168.0.1) to facilitate communication between devices over the internet.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What does the term 'API' stand for in software development?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Application Programming Interface",
+        "Application Process Integration",
+        "Automated Programming Interface",
+        "Automated Process Integration"
+      ],
+      "answer": "Application Programming Interface",
+      "explanation": "API stands for Application Programming Interface, which defines the methods and protocols through which different software components can interact and communicate with each other.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What does the acronym 'OOP' stand for in programming?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ordered Object Programming",
+        "Object-Oriented Programming",
+        "Optimized Object Processing",
+        "Object Observation Protocol"
+      ],
+      "answer": "Object-Oriented Programming",
+      "explanation": "OOP stands for Object-Oriented Programming, a programming paradigm that uses objects and classes to structure and organize code.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which data structure is used to implement a First-In, First-Out (FIFO) behavior?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Queue",
+        "Stack",
+        "LinkedList",
+        "Hash Table"
+      ],
+      "answer": "Queue",
+      "explanation": "A Queue data structure is used to implement FIFO behavior, where the first element added is the first one to be removed.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "In the context of networking, what is the purpose of an IP address?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To uniquely identify a device on a network",
+        "To specify the network speed and bandwidth",
+        "To encrypt data during transmission",
+        "To manage network routing and switching"
+      ],
+      "answer": "To uniquely identify a device on a network",
+      "explanation": "An IP address is used to uniquely identify a device on a network, allowing data to be sent to and received from the correct device.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the purpose of the 'git' command in version control systems?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To compile and build the project",
+        "To create a backup of the project files",
+        "To manage and track changes in the project's source code",
+        "To deploy the project to a production server"
+      ],
+      "answer": "To manage and track changes in the project's source code",
+      "explanation": "The 'git' command in version control systems (like Git) is used to manage and track changes in the project's source code, allowing developers to collaborate and revert changes if needed.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the purpose of a 'foreign key' in a relational database?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To create a reference to another table's primary key",
+        "To enforce uniqueness of a column in a table",
+        "To calculate aggregate functions on a group of records",
+        "To define an index for faster data retrieval"
+      ],
+      "answer": "To create a reference to another table's primary key",
+      "explanation": "A 'foreign key' in a relational database creates a reference to another table's primary key, establishing a relationship between the two tables.",
+      "difficulty": "Medium"
+    }
+  ]
+}
