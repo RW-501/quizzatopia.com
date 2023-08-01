@@ -1,0 +1,221 @@
+{
+  "quizName": "Marvel Cinematic Universe Quiz",
+  "quizCode": "MCUQUIZ2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Movies",
+  "quizDescription": "Test your knowledge about the Marvel Cinematic Universe and its iconic characters!",
+  "quizTags": "MCU, Marvel, Superheroes, Villains",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who is the main villain in 'The Avengers'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Loki",
+        "Thanos",
+        "Ultron",
+        "Red Skull"
+      ],
+      "answer": "Loki",
+      "explanation": "Loki is the main villain in 'The Avengers.'"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the name of Tony Stark's father?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Howard",
+        "Henry",
+        "Harold",
+        "Hank"
+      ],
+      "answer": "Howard",
+      "explanation": "Tony Stark's father's name is Howard."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the name of the group of intergalactic criminals that includes Gamora, Drax, and Groot?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Ravagers",
+        "The Brood",
+        "The Skrulls",
+        "The Guardians of the Galaxy"
+      ],
+      "answer": "The Guardians of the Galaxy",
+      "explanation": "The group that includes Gamora, Drax, and Groot is called The Guardians of the Galaxy."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Who is the director of S.H.I.E.L.D. in the Marvel Cinematic Universe?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Nick Fury",
+        "Maria Hill",
+        "Phil Coulson",
+        "Alexander Pierce"
+      ],
+      "answer": "Nick Fury",
+      "explanation": "Nick Fury is the director of S.H.I.E.L.D. in the Marvel Cinematic Universe."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the name of the villainous organization that opposes S.H.I.E.L.D. in the Marvel Cinematic Universe?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "HYDRA",
+        "A.I.M.",
+        "The Hand",
+        "The Brotherhood of Mutants"
+      ],
+      "answer": "HYDRA",
+      "explanation": "HYDRA is the villainous organization that opposes S.H.I.E.L.D. in the Marvel Cinematic Universe."
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which Avenger is known for wielding a mighty hammer called Mjolnir?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Iron Man",
+        "Captain America",
+        "Hulk",
+        "Thor"
+      ],
+      "answer": "Thor",
+      "explanation": "Thor, the God of Thunder, is known for wielding the mighty hammer called Mjolnir."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which superhero can shrink to the size of an ant and communicate with ants?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Spider-Man",
+        "Black Panther",
+        "Ant-Man",
+        "Wasp"
+      ],
+      "answer": "Ant-Man",
+      "explanation": "Ant-Man can shrink to the size of an ant and communicate with ants, thanks to his suit and Pym Particles."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Who is the master of the mystic arts and the Sorcerer Supreme?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Doctor Strange",
+        "Black Widow",
+        "Scarlet Witch",
+        "Vision"
+      ],
+      "answer": "Doctor Strange",
+      "explanation": "Doctor Strange is the master of the mystic arts and holds the title of the Sorcerer Supreme."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which Infinity Stone is embedded in Vision's forehead?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Time Stone",
+        "Reality Stone",
+        "Mind Stone",
+        "Power Stone"
+      ],
+      "answer": "Mind Stone",
+      "explanation": "The Mind Stone is embedded in Vision's forehead, granting him various powers and abilities."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Who is the green-skinned rage-filled superhero and a member of the Avengers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hawkeye",
+        "Black Panther",
+        "Hulk",
+        "Falcon"
+      ],
+      "answer": "Hulk",
+      "explanation": "Hulk is the green-skinned, rage-filled superhero and a member of the Avengers, possessing incredible strength."
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which superhero is also known as Natasha Romanoff and is a former Russian spy?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Scarlet Witch",
+        "Black Widow",
+        "Gamora",
+        "Nebula"
+      ],
+      "answer": "Black Widow",
+      "explanation": "Black Widow, also known as Natasha Romanoff, is a former Russian spy and a skilled assassin."
+    },
+    {
+      "questionNumber": 12,
+      "question": "Who is the tech genius and billionaire who becomes Iron Man?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tony Stark",
+        "Bruce Banner",
+        "Peter Parker",
+        "Stephen Strange"
+      ],
+      "answer": "Tony Stark",
+      "explanation": "Tony Stark is the tech genius and billionaire who becomes Iron Man, using his suit to fight crime and protect the world."
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which villain seeks to wipe out half of all life in the universe to bring balance?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Loki",
+        "Ultron",
+        "Thanos",
+        "Red Skull"
+      ],
+      "answer": "Thanos",
+      "explanation": "Thanos seeks to wipe out half of all life in the universe to bring what he perceives as balance, wielding the Infinity Gauntlet."
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which superhero is the king and protector of Wakanda, a technologically advanced African nation?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Captain America",
+        "Black Panther",
+        "Falcon",
+        "War Machine"
+      ],
+      "answer": "Black Panther",
+      "explanation": "Black Panther is the king and protector of Wakanda, a technologically advanced African nation."
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which alien race invaded Earth in the first 'Avengers' film?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Chitauri",
+        "Kree",
+        "Skrulls",
+        "Sakaarans"
+      ],
+      "answer": "Chitauri",
+      "explanation": "The Chitauri, a powerful alien race, invaded Earth in the first 'Avengers' film as part of Loki's plan."
+    }
+  ]
+}
