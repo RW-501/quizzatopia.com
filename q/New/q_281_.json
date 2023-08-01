@@ -1,0 +1,236 @@
+{
+  "quizName": "Superheroes and Villains Trivia Quiz",
+  "quizCode": "HEROES2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of legendary superheroes and formidable villains from various universes!",
+  "quizTags": "Superheroes, Villains, Comics, Movies, TV Shows",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the real name of the superhero with the alias 'Batman'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bruce Banner",
+        "Tony Stark",
+        "Clark Kent",
+        "Bruce Wayne"
+      ],
+      "answer": "Bruce Wayne",
+      "explanation": "The real name of the superhero known as 'Batman' is Bruce Wayne.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which superhero possesses the ability to climb walls and has a 'spider-sense' that warns of danger?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Spider-Man",
+        "Superman",
+        "Iron Man",
+        "Wonder Woman"
+      ],
+      "answer": "Spider-Man",
+      "explanation": "Spider-Man, also known as Peter Parker, has the powers of climbing walls and a 'spider-sense' that alerts him to threats.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the name of the villainous arch-enemy of Batman who is known for his eerie smile?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Joker",
+        "Lex Luthor",
+        "Green Goblin",
+        "Magneto"
+      ],
+      "answer": "The Joker",
+      "explanation": "The Joker is the notorious arch-enemy of Batman, recognized for his chilling smile and chaotic nature.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which superhero is the alter ego of Diana Prince and wields the Lasso of Truth?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Black Widow",
+        "Scarlet Witch",
+        "Wonder Woman",
+        "Rogue"
+      ],
+      "answer": "Wonder Woman",
+      "explanation": "Wonder Woman, also known as Diana Prince, wields the Lasso of Truth and fights for justice.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the name of the superhero with a suit of high-tech armor built by Tony Stark?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Spider-Man",
+        "Superman",
+        "Iron Man",
+        "Captain America"
+      ],
+      "answer": "Iron Man",
+      "explanation": "Iron Man's real identity is Tony Stark, and he wears a powerful suit of high-tech armor.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which villain is the nemesis of the X-Men and has the power to manipulate magnetic fields?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Loki",
+        "Green Goblin",
+        "Magneto",
+        "Venom"
+      ],
+      "answer": "Magneto",
+      "explanation": "Magneto is the formidable nemesis of the X-Men and possesses the power to manipulate magnetic fields.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the name of the superhero who is also known as the 'Man of Steel'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Spider-Man",
+        "Superman",
+        "Iron Man",
+        "Black Panther"
+      ],
+      "answer": "Superman",
+      "explanation": "Superman is often referred to as the 'Man of Steel' due to his incredible strength and invulnerability.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which superhero is a member of the Avengers and carries a shield made of vibranium?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Spider-Man",
+        "Thor",
+        "Iron Man",
+        "Captain America"
+      ],
+      "answer": "Captain America",
+      "explanation": "Captain America, also known as Steve Rogers, wields a shield made of vibranium and is a prominent member of the Avengers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the name of the villainous alien who is a frequent adversary of Superman?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lex Luthor",
+        "Green Goblin",
+        "Darkseid",
+        "Joker"
+      ],
+      "answer": "Darkseid",
+      "explanation": "Darkseid is a powerful and malevolent alien who often opposes Superman in battle.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which superhero is a mutant with retractable claws and accelerated healing powers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Wolverine",
+        "The Flash",
+        "Hulk",
+        "Aquaman"
+      ],
+      "answer": "Wolverine",
+      "explanation": "Wolverine, also known as Logan, is a mutant with retractable claws and a remarkable healing factor.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the name of the superhero team that consists of Thor, Iron Man, Hulk, Captain America, and others?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Fantastic Four",
+        "The X-Men",
+        "The Justice League",
+        "The Avengers"
+      ],
+      "answer": "The Avengers",
+      "explanation": "The Avengers is a superhero team comprising various iconic heroes, including Thor, Iron Man, Hulk, and Captain America.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which villain is the primary enemy of Spider-Man and has abilities similar to those of a spider?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Venom",
+        "Green Goblin",
+        "The Joker",
+        "Loki"
+      ],
+      "answer": "Venom",
+      "explanation": "Venom is a dangerous foe of Spider-Man and possesses powers similar to those of a spider.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the name of the superhero with a magical hammer called Mjolnir?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Wolverine",
+        "Spider-Man",
+        "Thor",
+        "Wonder Woman"
+      ],
+      "answer": "Thor",
+      "explanation": "Thor is the superhero who wields the enchanted hammer Mjolnir and is the Norse God of Thunder.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which villain is the main antagonist in the 'Black Panther' movie and seeks to overthrow Wakanda?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Magneto",
+        "Killmonger",
+        "Lex Luthor",
+        "Ultron"
+      ],
+      "answer": "Killmonger",
+      "explanation": "Killmonger, also known as Erik Stevens, is the primary antagonist in the 'Black Panther' movie.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the name of the superhero who is the king of Atlantis and can communicate with marine life?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Black Panther",
+        "Aquaman",
+        "Captain Marvel",
+        "Green Lantern"
+      ],
+      "answer": "Aquaman",
+      "explanation": "Aquaman, also known as Arthur Curry, is the king of Atlantis and possesses the ability to communicate with marine creatures.",
+      "difficulty": "Medium"
+    }
+  ]
+}
