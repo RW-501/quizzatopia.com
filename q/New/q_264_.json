@@ -1,0 +1,236 @@
+{
+  "quizName": "Increase Credit Score Quiz",
+  "quizCode": "CREDITSCORE2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Personal Finance",
+  "quizDescription": "Test your knowledge of credit scores and strategies to improve them.",
+  "quizTags": "Credit Score, Credit Management, Personal Finance, Credit Report",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is a credit score?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A measure of an individual's income",
+        "A numerical representation of creditworthiness",
+        "The total amount of debt an individual owes",
+        "A measure of an individual's savings"
+      ],
+      "answer": "A numerical representation of creditworthiness",
+      "explanation": "A credit score is a numerical representation of an individual's creditworthiness, indicating how likely they are to repay debts based on their credit history.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which credit bureau provides credit scores?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Experian",
+        "Equifax",
+        "TransUnion",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "All of the above-mentioned credit bureaus (Experian, Equifax, and TransUnion) provide credit scores based on the information in their credit reports.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the highest possible credit score in most scoring models?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "500",
+        "750",
+        "850",
+        "1000"
+      ],
+      "answer": "850",
+      "explanation": "The highest possible credit score in most scoring models is 850. However, different scoring models may have varying score ranges.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is one of the most significant factors that influence your credit score?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Age",
+        "Gender",
+        "Ethnicity",
+        "Payment history"
+      ],
+      "answer": "Payment history",
+      "explanation": "One of the most significant factors that influence your credit score is your payment history, including on-time payments and any missed or late payments.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the recommended utilization ratio for credit cards to improve your credit score?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "10%",
+        "25%",
+        "50%",
+        "75%"
+      ],
+      "answer": "10%",
+      "explanation": "The recommended utilization ratio for credit cards to improve your credit score is around 10% of your available credit limit. Keeping your utilization low shows responsible credit management.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "How long do late payments typically stay on your credit report?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1 year",
+        "3 years",
+        "5 years",
+        "7 years"
+      ],
+      "answer": "7 years",
+      "explanation": "Late payments can stay on your credit report for up to 7 years, impacting your credit score during that time.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which of the following actions can negatively impact your credit score?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Opening a new credit account",
+        "Making on-time payments",
+        "Regularly checking your credit report",
+        "Paying off a loan early"
+      ],
+      "answer": "Opening a new credit account",
+      "explanation": "Opening a new credit account can negatively impact your credit score temporarily due to the new credit inquiry and reduction in the average age of accounts.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Why is it essential to review your credit report regularly?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To increase your credit score instantly",
+        "To find errors or inaccuracies",
+        "To hide negative information",
+        "To avoid paying bills"
+      ],
+      "answer": "To find errors or inaccuracies",
+      "explanation": "Reviewing your credit report regularly is essential to identify errors or inaccuracies that may be negatively impacting your credit score. Disputing and correcting these errors can help improve your score.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the term for the length of time you've held specific credit accounts?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Credit mix",
+        "Credit history",
+        "Credit utilization",
+        "Credit inquiry"
+      ],
+      "answer": "Credit history",
+      "explanation": "Credit history refers to the length of time you've held specific credit accounts, and it is a factor that influences your credit score.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which of the following actions can help you improve your credit score?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Applying for multiple credit cards at once",
+        "Closing old credit accounts",
+        "Paying bills late",
+        "Paying off outstanding debts"
+      ],
+      "answer": "Paying off outstanding debts",
+      "explanation": "Paying off outstanding debts can help improve your credit score by reducing your overall debt and demonstrating responsible credit management.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the term for reducing your debt by paying fixed amounts over a period?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Debt consolidation",
+        "Debt negotiation",
+        "Debt repayment",
+        "Debt management"
+      ],
+      "answer": "Debt repayment",
+      "explanation": "Debt repayment refers to reducing your debt by paying fixed amounts over a period, helping to improve your credit score over time.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "How often can you request a free credit report from each credit bureau?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Once a year",
+        "Once every 6 months",
+        "Once a month",
+        "Once every 2 years"
+      ],
+      "answer": "Once a year",
+      "explanation": "You can request a free credit report from each credit bureau once a year. Reviewing your credit report can help you monitor your credit and identify potential issues.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the term for the process of settling your debt for less than the full amount?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Debt consolidation",
+        "Debt negotiation",
+        "Debt repayment",
+        "Debt management"
+      ],
+      "answer": "Debt negotiation",
+      "explanation": "Debt negotiation refers to the process of settling your debt for less than the full amount. It may have negative implications for your credit score.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What should you do if you find errors on your credit report?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ignore the errors as they won't impact your score",
+        "Contact the credit bureau to dispute the errors",
+        "Wait for the errors to be automatically corrected",
+        "Close all your credit accounts"
+      ],
+      "answer": "Contact the credit bureau to dispute the errors",
+      "explanation": "If you find errors on your credit report, you should contact the credit bureau to dispute the errors and have them corrected.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the term for the variety of credit types in your credit history?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Credit mix",
+        "Credit history",
+        "Credit utilization",
+        "Credit inquiry"
+      ],
+      "answer": "Credit mix",
+      "explanation": "Credit mix refers to the variety of credit types in your credit history, such as credit cards, loans, and mortgages, which can impact your credit score.",
+      "difficulty": "Medium"
+    }
+  ]
+}
