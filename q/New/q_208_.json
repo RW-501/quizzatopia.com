@@ -1,0 +1,193 @@
+{
+  "quizName": "General Knowledge Quiz",
+  "quizCode": "GENKNOW2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "General Knowledge",
+  "quizDescription": "Test your general knowledge with this diverse quiz!",
+  "quizTags": "General Knowledge, Trivia, Facts, Information",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "The capital of Australia is Sydney.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "The capital of Australia is Canberra, not Sydney."
+    },
+    {
+      "questionNumber": 2,
+      "question": "The Great Wall of China is visible from space.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "Contrary to popular belief, the Great Wall of China is not visible from space with the naked eye."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Mount Everest is the tallest mountain in the world.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Mount Everest is the highest peak in the world, standing at a height of 8,848 meters (29,029 feet) above sea level."
+    },
+    {
+      "questionNumber": 4,
+      "question": "The currency of Japan is the yen.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The currency of Japan is indeed the yen."
+    },
+    {
+      "questionNumber": 5,
+      "question": "The Mona Lisa was painted by Vincent van Gogh.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "The Mona Lisa was painted by Leonardo da Vinci, not Vincent van Gogh."
+    },
+    {
+      "questionNumber": 6,
+      "question": "The Nile River is the longest river in the world.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The Nile River, flowing through several countries in northeastern Africa, is widely considered to be the longest river in the world."
+    },
+    {
+      "questionNumber": 7,
+      "question": "The Statue of Liberty was a gift from France to the United States.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The Statue of Liberty was a gift from France to the United States and has since become an iconic symbol of freedom and democracy."
+    },
+    {
+      "questionNumber": 8,
+      "question": "The planet Mars is known as the 'Red Planet'.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "Mars is often referred to as the 'Red Planet' due to its reddish appearance caused by iron oxide (rust) on its surface."
+    },
+    {
+      "questionNumber": 9,
+      "question": "The Taj Mahal is located in Istanbul, Turkey.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "The Taj Mahal is located in Agra, India, not Istanbul, Turkey."
+    },
+    {
+      "questionNumber": 10,
+      "question": "The Declaration of Independence was signed in 1776.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The Declaration of Independence was indeed signed on July 4, 1776, marking the United States' independence from Great Britain."
+    },
+    {
+      "questionNumber": 11,
+      "question": "The human heart has four chambers.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The human heart has four chambers: two atria and two ventricles, which are responsible for pumping blood throughout the body."
+    },
+    {
+      "questionNumber": 12,
+      "question": "The primary colors in the RGB color model are red, green, and blue.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "In the RGB color model, red, green, and blue are the primary colors used to create a wide range of colors on electronic displays and screens."
+    },
+    {
+      "questionNumber": 13,
+      "question": "The human body has 206 bones.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+     
+
+ "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "The adult human body has 206 bones, but the number can vary slightly from person to person due to the presence of additional small sesamoid bones in some individuals."
+    },
+    {
+      "questionNumber": 14,
+      "question": "The Pacific Ocean is the largest ocean on Earth.",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "The Pacific Ocean is the largest and deepest ocean on Earth, covering more than 30% of the planet's surface."
+    },
+    {
+      "questionNumber": 15,
+      "question": "William Shakespeare wrote 'Romeo and Juliet.'",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "William Shakespeare, the renowned English playwright, is the author of the tragedy 'Romeo and Juliet,' which tells the story of two young star-crossed lovers."
+    }
+  ]
+}
