@@ -1,0 +1,236 @@
+{
+  "quizName": "Musical Movie Trivia Quiz",
+  "quizCode": "MusicalMovieQuiz2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of musical movies with this toe-tapping trivia quiz!",
+  "quizTags": "Musical Movies, Singing, Dance, Broadway",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which musical movie features a young woman named Maria who becomes a governess for the Von Trapp family?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "West Side Story",
+        "The Sound of Music",
+        "Mary Poppins",
+        "Grease"
+      ],
+      "answer": "The Sound of Music",
+      "explanation": "The musical movie 'The Sound of Music' features a young woman named Maria who becomes a governess for the Von Trapp family.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "In the movie 'Grease,' who plays the role of Danny Zuko?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "John Travolta",
+        "Elvis Presley",
+        "Patrick Swayze",
+        "Zac Efron"
+      ],
+      "answer": "John Travolta",
+      "explanation": "In 'Grease,' the role of Danny Zuko is played by John Travolta.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which musical movie follows the story of a young woman who dreams of becoming a professional ballerina?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "An American in Paris",
+        "Dirty Dancing",
+        "Fame",
+        "The Nutcracker and the Four Realms"
+      ],
+      "answer": "Fame",
+      "explanation": "The musical movie 'Fame' follows the story of a young woman who dreams of becoming a professional ballerina.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the name of the magical nanny in the movie 'Mary Poppins'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Nanny McPhee",
+        "Mrs. Doubtfire",
+        "Mary Poppins",
+        "Annie"
+      ],
+      "answer": "Mary Poppins",
+      "explanation": "In 'Mary Poppins,' the name of the magical nanny is Mary Poppins.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which musical movie features a group of New York City street dancers known as the Sharks and the Jets?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "West Side Story",
+        "Chicago",
+        "Hairspray",
+        "Moulin Rouge!"
+      ],
+      "answer": "West Side Story",
+      "explanation": "The musical movie 'West Side Story' features a group of New York City street dancers known as the Sharks and the Jets.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the name of the fairy tale character who wishes to be 'Part of Your World' in the movie 'The Little Mermaid'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Belle",
+        "Ariel",
+        "Cinderella",
+        "Jasmine"
+      ],
+      "answer": "Ariel",
+      "explanation": "In 'The Little Mermaid,' the fairy tale character who wishes to be 'Part of Your World' is Ariel.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which musical movie features a young woman who moves to Los Angeles to pursue her dream of becoming a famous singer?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "La La Land",
+        "Dreamgirls",
+        "Mamma Mia!",
+        "Cabaret"
+      ],
+      "answer": "La La Land",
+      "explanation": "The musical movie 'La La Land' features a young woman who moves to Los Angeles to pursue her dream of becoming a famous singer.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "In the movie 'The Greatest Showman,' who plays the role of circus impresario P.T. Barnum?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hugh Jackman",
+        "Bradley Cooper",
+        "Ryan Gosling",
+        "Johnny Depp"
+      ],
+      "answer": "Hugh Jackman",
+      "explanation": "In 'The Greatest Showman,' the role of circus impresario P.T. Barnum is played by Hugh Jackman.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which musical movie follows the story of a talented but arrogant jazz pianist and a struggling actress who fall in love in Los Angeles?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Whiplash",
+        "La La Land",
+        "Chicago",
+        "An American in Paris"
+      ],
+      "answer": "La La Land",
+      "explanation": "The musical movie 'La La Land' follows the story of a talented but arrogant jazz pianist and a struggling actress who fall in love in Los Angeles.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the name of the street-smart orphan girl who wins the heart of billionaire Oliver Warbucks in the movie 'Annie'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Matilda",
+        "Annie",
+        "Oliver",
+        "Fiona"
+      ],
+      "answer": "Annie",
+      "explanation": "In the movie 'Annie,' the name of the street-smart orphan girl who wins the heart of billionaire Oliver Warbucks is Annie.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which musical movie tells the story of a young ballerina who gets caught up in a rivalry between two dance companies?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Black Swan",
+        "Flashdance",
+        "Center Stage",
+        "Fame"
+      ],
+      "answer": "Center Stage",
+      "explanation": "The musical movie 'Center Stage' tells the story of a young ballerina who gets caught up in a rivalry between two dance companies.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "In the movie 'Mamma Mia!,' what is the name of the island where the story takes place?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Santorini",
+        "Capri",
+        "Kalokairi",
+        "Crete"
+      ],
+      "answer": "Kalokairi",
+      "explanation": "In 'Mamma Mia!,' the story takes place on the island of Kalokairi.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which musical movie follows the story of a young woman who dreams of becoming a star and enters a TV dance competition?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Chicago",
+        "Singin' in the Rain",
+        "Flashdance",
+        "Footloose"
+      ],
+      "answer": "Flashdance",
+      "explanation": "The musical movie 'Flashdance' follows the story of a young woman who dreams of becoming a star and enters a TV dance competition.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the name of the mischievous Genie who grants three wishes to the main character in the movie 'Aladdin'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mushu",
+        "Abu",
+        "Rajah",
+        "Genie"
+      ],
+      "answer": "Genie",
+      "explanation": "In 'Aladdin,' the name of the mischievous Genie who grants three wishes is Genie.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which musical movie tells the story of a group of performers who band together to prove that 'There's No Business Like Show Business'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cabaret",
+        "The Greatest Showman",
+        "42nd Street",
+        "Annie Get Your Gun"
+      ],
+      "answer": "Annie Get Your Gun",
+      "explanation": "The musical movie 'Annie Get Your Gun' tells the story of a group of performers who band together to prove that 'There's No Business Like Show Business'.",
+      "difficulty": "Medium"
+    }
+  ]
+}
