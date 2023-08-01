@@ -1,0 +1,161 @@
+{
+  "quizName": "Math Fun Quiz for Kids",
+  "quizCode": "MATHFUN2023",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Education",
+  "quizDescription": "Have fun with math through exciting and interactive questions!",
+  "quizTags": "Math, Fun, Kids, Numbers, Education",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the result of 5 + 3?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "answer": "8",
+      "explanation": "5 + 3 equals 8.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "If you have 3 apples and you eat 1 apple, how many apples do you have left?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "answer": "2",
+      "explanation": "If you have 3 apples and eat 1, you will have 2 apples left.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the sum of the first three even numbers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "6",
+        "9",
+        "10",
+        "12"
+      ],
+      "answer": "12",
+      "explanation": "The first three even numbers are 2, 4, and 6. Their sum is 2 + 4 + 6 = 12.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "How many sides does a triangle have?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": "3",
+      "explanation": "A triangle has three sides.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the result of 4 x 5?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "9",
+        "16",
+        "20",
+        "25"
+      ],
+      "answer": "20",
+      "explanation": "4 x 5 equals 20.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "How many days are there in a week?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": "7",
+      "explanation": "There are 7 days in a week.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the result of 10 - 3?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "8"
+      ],
+      "answer": "7",
+      "explanation": "10 - 3 equals 7.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "If you have 8 crayons and give away 2 crayons, how many crayons do you have left?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "0",
+        "2",
+        "6",
+        "8"
+      ],
+      "answer": "6",
+      "explanation": "If you have 8 crayons and give away 2, you will have 6 crayons left.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "How many sides does a square have?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": "4",
+      "explanation": "A square has four sides.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the result of 15 ÷ 3?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "3",
+        "5",
+        "10",
+        "15"
+      ],
+      "answer": "5",
+      "explanation": "15 ÷ 3 equals 5.",
+      "difficulty": "Easy"
+    }
+  ]
+}
