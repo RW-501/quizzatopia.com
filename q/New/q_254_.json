@@ -1,0 +1,236 @@
+{
+  "quizName": "Web Development Quiz",
+  "quizCode": "WEBDEV2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Web Development",
+  "quizDescription": "Test your knowledge of web development concepts and technologies with this medium-level quiz!",
+  "quizTags": "Web Development, Frontend, Backend, HTML, CSS, JavaScript, Frameworks",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which language is used for defining the structure of a web page?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "JavaScript",
+        "CSS",
+        "HTML",
+        "Python"
+      ],
+      "answer": "HTML",
+      "explanation": "HTML (Hypertext Markup Language) is used for defining the structure and content of a web page.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What does CSS stand for in web development?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cascading Style Sheets",
+        "Creative Style Source",
+        "Computer Style Sheet",
+        "Coded Styling Scheme"
+      ],
+      "answer": "Cascading Style Sheets",
+      "explanation": "CSS (Cascading Style Sheets) is used to define the presentation and layout of HTML documents.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which programming language is often referred to as the 'language of the web'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Java",
+        "Python",
+        "PHP",
+        "JavaScript"
+      ],
+      "answer": "JavaScript",
+      "explanation": "JavaScript is often referred to as the 'language of the web' because it is widely used for creating interactive and dynamic web pages.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What does the 'D' stand for in 'DOM' in web development?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Design",
+        "Data",
+        "Document",
+        "Development"
+      ],
+      "answer": "Document",
+      "explanation": "DOM stands for Document Object Model, which represents the structure of an HTML or XML document as objects that can be manipulated with programming languages like JavaScript.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which tag is used to link an external CSS file to an HTML document?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "link",
+        "style",
+        "css",
+        "script"
+      ],
+      "answer": "link",
+      "explanation": "The 'link' tag is used to link an external CSS file to an HTML document, allowing the styles to be applied to the web page.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the purpose of the 'alt' attribute in the 'img' tag?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To specify the image width",
+        "To define the image source",
+        "To add alternative text for accessibility",
+        "To apply a CSS style to the image"
+      ],
+      "answer": "To add alternative text for accessibility",
+      "explanation": "The 'alt' attribute in the 'img' tag is used to provide alternative text for the image, which is displayed if the image fails to load or for accessibility purposes.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which CSS property is used to create space between the content and the border of an element?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "padding",
+        "margin",
+        "border",
+        "spacing"
+      ],
+      "answer": "padding",
+      "explanation": "The 'padding' property is used to create space between the content and the border of an element in CSS.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which method is commonly used to make asynchronous HTTP requests in JavaScript?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "fetch",
+        "get",
+        "load",
+        "request"
+      ],
+      "answer": "fetch",
+      "explanation": "The 'fetch' method is commonly used to make asynchronous HTTP requests in JavaScript to interact with APIs and retrieve data.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which CSS property is used to create a horizontal line that separates content?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "line-style",
+        "separator",
+        "border-bottom",
+        "border-top"
+      ],
+      "answer": "border-top",
+      "explanation": "The 'border-top' property is used to create a horizontal line that separates content in CSS, often used for styling section headers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "In JavaScript, what is the purpose of the 'typeof' operator?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To check if a variable is defined",
+        "To check the type of a variable",
+        "To assign a type to a variable",
+        "To convert data types"
+      ],
+      "answer": "To check the type of a variable",
+      "explanation": "The 'typeof' operator is used in JavaScript to check the type of a variable and returns a string indicating the data type.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which HTTP status code indicates a successful request in web development?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "200",
+        "404",
+        "500",
+        "302"
+      ],
+      "answer": "200",
+      "explanation": "The HTTP status code '200' (OK) indicates a successful request in web development, meaning the server has successfully processed the request.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which JavaScript framework is often used for building single-page applications?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Angular",
+        "React",
+        "Vue.js",
+        "Ember"
+      ],
+      "answer": "React",
+      "explanation": "React is a popular JavaScript framework used for building single-page applications (SPAs) and handling the view layer of web applications.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the purpose of the 'action' attribute in an HTML form element?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To define the form's method",
+        "To specify the form's encoding type",
+        "To set the form's width",
+        "To indicate the URL to handle form data"
+      ],
+      "answer": "To indicate the URL to handle form data",
+      "explanation": "The 'action' attribute in an HTML form element is used to specify the URL to which the form data should be submitted when the user clicks the submit button.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which CSS property is used to change the order of flex items in a flex container?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "order",
+        "flex-order",
+        "flex-wrap",
+        "flex-direction"
+      ],
+      "answer": "order",
+      "explanation": "The 'order' property is used in CSS flexbox to change the order of flex items within a flex container. Items with lower values appear first.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What does SQL stand for in web development?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Structured Query Language",
+        "Standard Query Language",
+        "Sequential Query Language",
+        "Structured Question Language"
+      ],
+      "answer": "Structured Query Language",
+      "explanation": "SQL stands for Structured Query Language, used for managing and querying databases in web development.",
+      "difficulty": "Medium"
+    }
+  ]
+}
