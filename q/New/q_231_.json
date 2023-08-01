@@ -1,0 +1,86 @@
+{
+  "quizName": "Action Movie Trivia Quiz",
+  "quizCode": "ACTION2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of action movies with this adrenaline-pumping trivia quiz!",
+  "quizTags": "Action, Movies, Thriller, Adventure, Excitement",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which action movie franchise features a character named John McClane, a tough and resourceful police officer?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Die Hard",
+        "Lethal Weapon",
+        "Mission: Impossible",
+        "Mad Max"
+      ],
+      "answer": "Die Hard",
+      "explanation": "The 'Die Hard' franchise follows John McClane, portrayed by Bruce Willis, as he battles terrorists and criminals in various high-stakes situations.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which action movie features a retired CIA agent seeking vengeance for the death of his daughter?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Taken",
+        "The Equalizer",
+        "John Wick",
+        "Man on Fire"
+      ],
+      "answer": "Taken",
+      "explanation": "'Taken' stars Liam Neeson as Bryan Mills, a former CIA agent who uses his skills to rescue his daughter from human traffickers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which action movie features a character named Indiana Jones, an archaeologist who goes on daring adventures to uncover ancient artifacts?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Mummy",
+        "National Treasure",
+        "Tomb Raider",
+        "Indiana Jones"
+      ],
+      "answer": "Indiana Jones",
+      "explanation": "The 'Indiana Jones' series stars Harrison Ford as the titular character, an adventurous archaeologist known for his iconic hat and whip.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which action movie follows a team of skilled thieves led by Dominic Toretto, who are known for their love of fast cars?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ocean's Eleven",
+        "The Italian Job",
+        "The Fast and the Furious",
+        "Point Break"
+      ],
+      "answer": "The Fast and the Furious",
+      "explanation": "'The Fast and the Furious' franchise centers around Dominic Toretto, played by Vin Diesel, and his team of street racers who become skilled thieves.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which action movie features a secret agent known by the code name '007'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Bourne Identity",
+        "Jason Bourne",
+        "Mission: Impossible",
+        "James Bond"
+      ],
+      "answer": "James Bond",
+      "explanation": "The 'James Bond' series follows the adventures of a British secret service agent known by the code name '007' and is famous for its action-packed spy missions.",
+      "difficulty": "Medium"
+    }
+  ]
+}
