@@ -1,0 +1,236 @@
+{
+  "quizName": "Real Estate Quiz",
+  "quizCode": "REAL2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Real Estate",
+  "quizDescription": "Test your knowledge about the real estate industry, home buying, selling, and more!",
+  "quizTags": "Real Estate, Property, Home Buying, Home Selling",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does MLS stand for in real estate?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Multiple Listing Service",
+        "Market Listing Source",
+        "Most Listed Sellers",
+        "Multiple Loan Search"
+      ],
+      "answer": "Multiple Listing Service",
+      "explanation": "MLS stands for Multiple Listing Service, which is a database used by real estate agents to share information about properties available for sale.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the process of evaluating a property's value called?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Home Assessment",
+        "Market Analysis",
+        "Appraisal",
+        "House Inspection"
+      ],
+      "answer": "Appraisal",
+      "explanation": "An appraisal is the process of determining the market value of a property by a licensed appraiser.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the main purpose of escrow in a real estate transaction?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To hold the earnest money deposit",
+        "To provide a loan to the buyer",
+        "To ensure the seller's compliance",
+        "To prepare legal documents"
+      ],
+      "answer": "To hold the earnest money deposit",
+      "explanation": "Escrow is a neutral third-party account that holds the buyer's earnest money deposit until all conditions of the sale are met.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which type of mortgage requires the borrower to make fixed monthly payments that gradually reduce the loan amount?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Adjustable-Rate Mortgage",
+        "Interest-Only Mortgage",
+        "Reverse Mortgage",
+        "Amortizing Mortgage"
+      ],
+      "answer": "Amortizing Mortgage",
+      "explanation": "An amortizing mortgage requires fixed monthly payments that gradually reduce the loan amount over time.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What does the abbreviation REO stand for in real estate?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Real Estate Owner",
+        "Real Estate Offer",
+        "Real Estate Organization",
+        "Real Estate Owned"
+      ],
+      "answer": "Real Estate Owned",
+      "explanation": "REO stands for Real Estate Owned, which refers to properties that have been acquired by a lender through foreclosure.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the term for the legal document that conveys ownership of a property from the seller to the buyer?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Purchase Agreement",
+        "Title Deed",
+        "Mortgage Note",
+        "Property Disclosure"
+      ],
+      "answer": "Title Deed",
+      "explanation": "A title deed is the legal document that transfers ownership of a property from the seller to the buyer.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which type of real estate investment allows multiple investors to pool their funds and invest in a property?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Real Estate Syndication",
+        "Real Estate Investment Trust (REIT)",
+        "Real Estate Crowdfunding",
+        "Real Estate Partnership"
+      ],
+      "answer": "Real Estate Syndication",
+      "explanation": "Real estate syndication allows multiple investors to pool their funds to invest in a property, typically led by a sponsor or general partner.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is a contingency in a real estate contract?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A clause that allows the seller to back out of the deal",
+        "A clause that allows the buyer to back out of the deal",
+        "A clause that sets the closing date",
+        "A clause that determines the property tax"
+      ],
+      "answer": "A clause that allows the buyer to back out of the deal",
+      "explanation": "A contingency is a condition or requirement that must be met for the contract to be legally binding. It allows the buyer to back out of the deal under certain circumstances.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the purpose of a comparative market analysis (CMA) in real estate?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To assess the property's tax value",
+        "To estimate the property's potential rental income",
+        "To determine the cost of home improvements",
+        "To determine the property's fair market value"
+      ],
+      "answer": "To determine the property's fair market value",
+      "explanation": "A comparative market analysis (CMA) is used to estimate the fair market value of a property based on recent comparable sales in the area.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the process of transferring a mortgage from one borrower to another called?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Refinancing",
+        "Mortgage Assumption",
+        "Home Equity Loan",
+        "Mortgage Modification"
+      ],
+      "answer": "Mortgage Assumption",
+      "explanation": "Mortgage assumption is the process of transferring the responsibility of a mortgage from one borrower to another.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the term for the current real estate market condition with limited inventory and high demand from buyers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Buyer's Market",
+        "Seller's Market",
+        "Neutral Market",
+        "Stagnant Market"
+      ],
+      "answer": "Seller's Market",
+      "explanation": "A seller's market is characterized by limited housing inventory and high demand from buyers, often leading to competitive bidding and higher prices.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the term for the right of a government to take private property for public use with fair compensation?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Foreclosure",
+        "Eminent Domain",
+        "Condemnation",
+        "Seizure"
+      ],
+      "answer": "Eminent Domain",
+      "explanation": "Eminent domain is the right of a government to take private property for public use, with fair compensation to the property owner.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the term for a real estate contract that is not legally binding and can be canceled by either party?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Contingent Contract",
+        "Exclusive Listing",
+        "Void Contract",
+        "Executory Contract"
+      ],
+      "answer": "Void Contract",
+      "explanation": "A void contract is a real estate contract that is not legally binding, and it is considered as if it never existed. Either party can cancel it without legal consequences.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the process of physically inspecting a property before completing the purchase called?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Home Appraisal",
+        "Home Staging",
+        "Home Inspection",
+        "Home Survey"
+      ],
+      "answer": "Home Inspection",
+      "explanation": "A home inspection is the process of physically inspecting a property to assess its condition and identify any potential issues or defects.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the term for a loan that covers both the purchase of a property and the cost of home improvements?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Construction Loan",
+        "Home Equity Loan",
+        "FHA Loan",
+        "203(k) Loan"
+      ],
+      "answer": "203(k) Loan",
+      "explanation": "A 203(k) loan is a type of FHA loan that covers both the purchase of a property and the cost of home improvements or renovations.",
+      "difficulty": "Medium"
+    }
+  ]
+}
