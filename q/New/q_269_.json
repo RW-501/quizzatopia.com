@@ -1,0 +1,236 @@
+{
+  "quizName": "CompTIA Network+ Quiz",
+  "quizCode": "NET2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Information Technology",
+  "quizDescription": "Test your knowledge of networking concepts and technologies for the CompTIA Network+ certification.",
+  "quizTags": "CompTIA, Network+, Networking, IT Certification",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does the acronym 'LAN' stand for?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Local Area Network",
+        "Large Area Network",
+        "Longitudinal Access Network",
+        "Limited Access Node"
+      ],
+      "answer": "Local Area Network",
+      "explanation": "LAN stands for 'Local Area Network,' which is a network of connected devices within a limited geographic area, such as a home, office, or campus.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which network device operates at Layer 3 (Network Layer) of the OSI model and makes forwarding decisions based on IP addresses?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Switch",
+        "Router",
+        "Hub",
+        "Bridge"
+      ],
+      "answer": "Router",
+      "explanation": "A router operates at Layer 3 (Network Layer) of the OSI model and makes forwarding decisions based on IP addresses to route data between different networks.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which TCP/IP protocol is responsible for assigning IP addresses to devices on a network?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "HTTP",
+        "DNS",
+        "DHCP",
+        "SMTP"
+      ],
+      "answer": "DHCP",
+      "explanation": "DHCP (Dynamic Host Configuration Protocol) is responsible for assigning IP addresses to devices automatically on a network.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the purpose of subnetting in networking?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To connect two LANs",
+        "To secure a network from unauthorized access",
+        "To divide a large network into smaller logical segments",
+        "To enhance wireless signal strength"
+      ],
+      "answer": "To divide a large network into smaller logical segments",
+      "explanation": "Subnetting is the process of dividing a large network into smaller logical segments, allowing for better network management and improved performance.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which TCP/IP protocol is used for transferring files from a local system to a remote system over a network?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "SSH",
+        "FTP",
+        "SNMP",
+        "RDP"
+      ],
+      "answer": "FTP",
+      "explanation": "FTP (File Transfer Protocol) is used for transferring files from a local system to a remote system over a network.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What type of network topology uses a central node to connect all devices on the network?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Star",
+        "Ring",
+        "Bus",
+        "Mesh"
+      ],
+      "answer": "Star",
+      "explanation": "A star network topology uses a central node (such as a switch or hub) to connect all devices on the network.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which IP address range is reserved for private internal networks?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "10.0.0.0 - 10.255.255.255",
+        "172.16.0.0 - 172.31.255.255",
+        "192.168.0.0 - 192.168.255.255",
+        "169.254.0.0 - 169.254.255.255"
+      ],
+      "answer": "192.168.0.0 - 192.168.255.255",
+      "explanation": "The IP address range 192.168.0.0 - 192.168.255.255 is reserved for private internal networks.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which network device operates at Layer 2 (Data Link Layer) of the OSI model and is used to forward data based on MAC addresses?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Switch",
+        "Router",
+        "Hub",
+        "Bridge"
+      ],
+      "answer": "Switch",
+      "explanation": "A switch operates at Layer 2 (Data Link Layer) of the OSI model and is used to forward data based on MAC addresses within a local network.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which protocol is used to convert domain names (e.g., www.example.com) into IP addresses?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "HTTP",
+        "DNS",
+        "DHCP",
+        "SMTP"
+      ],
+      "answer": "DNS",
+      "explanation": "DNS (Domain Name System) is used to convert domain names into IP addresses, allowing users to access websites using human-readable names.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which wireless security protocol is considered the most secure?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "WEP",
+        "WPA",
+        "WPA2",
+        "WPA3"
+      ],
+      "answer": "WPA3",
+      "explanation": "WPA3 (Wi-Fi Protected Access 3) is considered the most secure wireless security protocol, offering improved encryption and protection against attacks.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the purpose of a subnet mask in TCP/IP networking?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To identify the default gateway",
+        "To identify the network ID and host ID",
+        "To identify the DNS server",
+        "To identify the MAC address"
+      ],
+      "answer": "To identify the network ID and host ID",
+      "explanation": "A subnet mask is used in TCP/IP networking to identify the network ID and host ID of an IP address, determining the boundaries of a network segment.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which network topology connects devices in a circular manner, where each device is connected to exactly two other devices?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Star",
+        "Ring",
+        "Bus",
+        "Mesh"
+      ],
+      "answer": "Ring",
+      "explanation": "A ring network topology connects devices in a circular manner, where each device is connected to exactly two other devices, forming a closed-loop.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which device is used to connect multiple network segments and forward data between them at Layer 2 of the OSI model?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Switch",
+        "Router",
+        "Hub",
+        "Bridge"
+      ],
+      "answer": "Bridge",
+      "explanation": "A bridge is used to connect multiple network segments and forward data between them at Layer 2 (Data Link Layer) of the OSI model.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the purpose of NAT (Network Address Translation) in networking?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To convert MAC addresses to IP addresses",
+        "To convert public IP addresses to private IP addresses",
+        "To convert domain names to IP addresses",
+        "To convert binary data to hexadecimal"
+      ],
+      "answer": "To convert public IP addresses to private IP addresses",
+      "explanation": "NAT (Network Address Translation) is used to convert public IP addresses to private IP addresses, allowing multiple devices in a private network to share a single public IP address.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which networking device operates at Layer 1 (Physical Layer) of the OSI model and regenerates signals to extend the network's reach?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Switch",
+        "Router",
+        "Hub",
+        "Repeater"
+      ],
+      "answer": "Repeater",
+      "explanation": "A repeater operates at Layer 1 (Physical Layer) of the OSI model and regenerates signals to extend the network's reach over long distances.",
+      "difficulty": "Medium"
+    }
+  ]
+}
