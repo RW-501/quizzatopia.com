@@ -1,0 +1,86 @@
+{
+  "quizName": "Pop Culture Quiz - 1980s Edition",
+  "quizCode": "POPC80S2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of pop culture highlights from the 1980s!",
+  "quizTags": "Pop Culture, 1980s, Eighties, Music, Movies, Fashion",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which science fiction film, released in 1982, directed by Ridley Scott, and starring Harrison Ford, is set in a dystopian future and has become a cult classic?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "E.T. the Extra-Terrestrial",
+        "Blade Runner",
+        "Back to the Future",
+        "Star Wars: Episode VI - Return of the Jedi"
+      ],
+      "answer": "Blade Runner",
+      "explanation": "'Blade Runner' is a sci-fi noir film set in a futuristic Los Angeles and has gained a dedicated following over the years.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which pop icon, often referred to as the 'King of Pop,' released his best-selling album 'Thriller' in 1982?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Prince",
+        "Elvis Presley",
+        "Michael Jackson",
+        "David Bowie"
+      ],
+      "answer": "Michael Jackson",
+      "explanation": "Michael Jackson's 'Thriller' became one of the best-selling albums of all time and had a significant impact on the music industry.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which beloved fantasy film, released in 1987, directed by Rob Reiner, follows the story of a young boy and his adventures in a magical kingdom?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Goonies",
+        "The Princess Bride",
+        "Labyrinth",
+        "Legend"
+      ],
+      "answer": "The Princess Bride",
+      "explanation": "'The Princess Bride' is a charming and witty film that has become a cult classic, delighting audiences of all ages.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which iconic dance film, released in 1987, starred Patrick Swayze and Jennifer Grey and became a box office hit?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Footloose",
+        "Flashdance",
+        "Dirty Dancing",
+        "Fame"
+      ],
+      "answer": "Dirty Dancing",
+      "explanation": "'Dirty Dancing' captured the hearts of audiences with its passionate dance sequences and memorable soundtrack.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which popular fashion trend of the 1980s featured oversized tops, leggings, and bold colors?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Punk Fashion",
+        "Glam Rock",
+        "Preppy Style",
+        "80s Aerobics Fashion"
+      ],
+      "answer": "80s Aerobics Fashion",
+      "explanation": "80s Aerobics Fashion was a fitness-inspired trend characterized by vibrant colors, leg warmers, and high-cut leotards.",
+      "difficulty": "Medium"
+    }
+  ]
+}
