@@ -1,0 +1,161 @@
+{
+  "quizName": "Disney Characters Quiz for Kids",
+  "quizCode": "DISNEY2023",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of beloved Disney characters from movies and cartoons.",
+  "quizTags": "Disney, Characters, Cartoons, Movies, Kids",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who is the princess with long golden hair and a chameleon friend in the movie 'Tangled'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cinderella",
+        "Ariel",
+        "Rapunzel",
+        "Snow White"
+      ],
+      "answer": "Rapunzel",
+      "explanation": "Rapunzel is the princess with long golden hair and a chameleon friend named Pascal in the movie 'Tangled'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Who is the adventurous young boy who can fly and never grows up in 'Peter Pan'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Aladdin",
+        "Mowgli",
+        "Tarzan",
+        "Peter Pan"
+      ],
+      "answer": "Peter Pan",
+      "explanation": "Peter Pan is the adventurous young boy who can fly and never grows up in the movie 'Peter Pan'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the name of the lion cub who becomes the king of the Pride Lands in 'The Lion King'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Simba",
+        "Nala",
+        "Mufasa",
+        "Timon"
+      ],
+      "answer": "Simba",
+      "explanation": "Simba is the lion cub who becomes the king of the Pride Lands in the movie 'The Lion King'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Who is the little wooden puppet who dreams of becoming a real boy in 'Pinocchio'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Dumbo",
+        "Pinocchio",
+        "Bambi",
+        "Stitch"
+      ],
+      "answer": "Pinocchio",
+      "explanation": "Pinocchio is the little wooden puppet who dreams of becoming a real boy in the movie 'Pinocchio'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which Disney princess is known for her kindness to animals and her glass slippers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cinderella",
+        "Belle",
+        "Aurora",
+        "Jasmine"
+      ],
+      "answer": "Cinderella",
+      "explanation": "Cinderella is the Disney princess known for her kindness to animals and her glass slippers.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Who is the adventurous sea princess who dreams of exploring the human world in 'The Little Mermaid'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ariel",
+        "Moana",
+        "Merida",
+        "Elsa"
+      ],
+      "answer": "Ariel",
+      "explanation": "Ariel is the adventurous sea princess who dreams of exploring the human world in the movie 'The Little Mermaid'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the name of the lovable snowman who loves warm hugs in 'Frozen'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Olaf",
+        "Sven",
+        "Kristoff",
+        "Elsa"
+      ],
+      "answer": "Olaf",
+      "explanation": "Olaf is the lovable snowman who loves warm hugs in the movie 'Frozen'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Who is the brave and adventurous girl who sets out to find her sister and save her kingdom in 'Frozen'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Anna",
+        "Elsa",
+        "Rapunzel",
+        "Moana"
+      ],
+      "answer": "Anna",
+      "explanation": "Anna is the brave and adventurous girl who sets out to find her sister and save her kingdom in the movie 'Frozen'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the name of the young elephant with big ears who can fly in 'Dumbo'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Bambi",
+        "Thumper",
+        "Dumbo",
+        "Timothy"
+      ],
+      "answer": "Dumbo",
+      "explanation": "Dumbo is the young elephant with big ears who can fly in the movie 'Dumbo'.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Who is the playful and mischievous experiment created by Dr. Jumba Jookiba in 'Lilo & Stitch'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Stitch",
+        "Jumba",
+        "Nani",
+        "Lilo"
+      ],
+      "answer": "Stitch",
+      "explanation": "Stitch is the playful and mischievous experiment created by Dr. Jumba Jookiba in the movie 'Lilo & Stitch'.",
+      "difficulty": "Easy"
+    }
+  ]
+}
