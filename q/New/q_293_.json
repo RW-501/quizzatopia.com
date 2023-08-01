@@ -1,0 +1,234 @@
+{
+  "quizName": "Project Management Quiz - Hard",
+  "quizCode": "PM_Quiz_Hard_2023",
+  "quizDifficulty": "Hard",
+  "quizCategory": "Business & Management",
+  "quizDescription": "Test your advanced knowledge of Project Management concepts with this challenging quiz!",
+  "quizTags": "Project Management, Business, Management, PM",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which project management approach emphasizes adaptability, collaboration, and customer feedback?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Waterfall",
+        "Scrum",
+        "Six Sigma",
+        "Lean"
+      ],
+      "answer": "Scrum",
+      "explanation": "Scrum is a project management approach that emphasizes adaptability, collaboration, and customer feedback, making it well-suited for complex and rapidly changing projects.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the purpose of a project change control process?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To prevent any changes to the project scope",
+        "To review and approve proposed changes to the project",
+        "To limit communication with stakeholders about project changes",
+        "To delay project delivery to accommodate changes"
+      ],
+      "answer": "To review and approve proposed changes to the project",
+      "explanation": "The purpose of a project change control process is to review and approve proposed changes to the project, ensuring that changes align with project objectives and do not disrupt the project's success.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which project management tool is used to identify the dependencies between project tasks?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "SWOT analysis",
+        "Gantt chart",
+        "Ishikawa diagram",
+        "Network diagram"
+      ],
+      "answer": "Network diagram",
+      "explanation": "A network diagram is a project management tool used to visually represent the dependencies between project tasks, helping project managers identify critical paths and potential scheduling constraints.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 4,
+      "question": "True or False: The Project Management Plan is a static document that remains unchanged throughout the project.",
+      "imageURL": "",
+      "questionType": "True and False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The Project Management Plan is a dynamic document that evolves throughout the project as new information becomes available and project requirements change.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What does the term 'float' refer to in project scheduling?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The time a task can be delayed without delaying the project",
+        "The time a task is expected to take",
+        "The time added to a task to create buffer time",
+        "The time a task is behind schedule"
+      ],
+      "answer": "The time a task can be delayed without delaying the project",
+      "explanation": "In project scheduling, 'float' refers to the time a task can be delayed without delaying the project's overall completion date. Tasks with float have flexibility in their start and finish dates.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the purpose of a risk register in project management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To track the project's financial performance",
+        "To manage project resources",
+        "To document and manage project risks",
+        "To create a project schedule"
+      ],
+      "answer": "To document and manage project risks",
+      "explanation": "The purpose of a risk register in project management is to document and manage project risks, including identifying potential risks, assessing their impact and likelihood, and developing risk response strategies.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 7,
+      "question": "In earned value management (EVM), what does the term 'CPI' represent?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cost Performance Index",
+        "Cost Performance Indicator",
+        "Cost Productivity Index",
+        "Cost Progress Indicator"
+      ],
+      "answer": "Cost Performance Index",
+      "explanation": "In earned value management (EVM), the term 'CPI' represents the Cost Performance Index, which is a measure of cost efficiency in a project, calculated as Earned Value (EV) divided by Actual Cost (AC).",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the primary goal of quality control in project management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To identify project risks",
+        "To manage project resources",
+        "To prevent changes to the project scope",
+        "To ensure deliverables meet quality standards"
+      ],
+      "answer": "To ensure deliverables meet quality standards",
+      "explanation": "The primary goal of quality control in project management is to ensure that project deliverables meet the defined quality standards and are fit for their intended purpose.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the purpose of a lessons learned report in project management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To provide updates on team member performance",
+        "To track project expenses",
+        "To document project risks",
+        "To capture insights and knowledge gained from the project"
+      ],
+      "answer": "To capture insights and knowledge gained from the project",
+      "explanation": "The purpose of a lessons learned report in project management is to capture insights, knowledge, and experiences gained from the project to inform future projects and improve project management practices.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which project management approach is known for its emphasis on minimizing waste and maximizing value?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Waterfall",
+        "Scrum",
+        "Six Sigma",
+        "Lean"
+      ],
+      "answer": "Lean",
+      "explanation": "Lean is a project management approach known for its emphasis on minimizing waste and maximizing value by continuously improving processes and eliminating activities that do not add value.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the primary focus of a stakeholder engagement plan?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To create a communication plan",
+        "To manage project resources",
+        "To prevent scope creep",
+        "To effectively engage stakeholders throughout the project"
+      ],
+      "answer": "To effectively engage stakeholders throughout the project",
+      "explanation": "The primary focus of a stakeholder engagement plan is to outline strategies and approaches to effectively engage and communicate with stakeholders throughout the project lifecycle.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the purpose of a project status meeting?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To celebrate project milestones",
+        "To review project risks",
+        "To communicate project progress and address issues",
+        "To conduct team-building activities"
+      ],
+      "answer": "To communicate project progress and address issues",
+      "explanation": "The purpose of a project status meeting is to communicate project progress, address project issues, and ensure alignment among project team members.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What does the term 'SWOT' stand for in project management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Strengths, Weaknesses, Opportunities, Threats",
+        "Schedule, Work, Objectives, Tasks",
+        "Scope, Work Breakdown Structure, Objectives, Timelines",
+        "Schedule, Work Breakdown Structure, Objectives, Tasks"
+      ],
+      "answer": "Strengths, Weaknesses, Opportunities, Threats",
+      "explanation": "The term 'SWOT' stands for Strengths, Weaknesses, Opportunities, and Threats, and it is a project management technique used to identify internal and external factors that may impact the project's success.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the purpose of a project audit in project management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To verify the accuracy of project expenses",
+        "To ensure the project remains within budget",
+        "To review and assess project performance",
+        "To perform a technical review of project deliverables"
+      ],
+      "answer": "To review and assess project performance",
+      "explanation": "The purpose of a project audit in project management is to review and assess project performance, identify areas for improvement, and ensure adherence to project management processes and standards.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 15,
+      "question": "In earned value management (EVM), what does the term 'SPI' represent?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Schedule Performance Index",
+        "Schedule Performance Indicator",
+        "Schedule Productivity Index",
+        "Schedule Progress Indicator"
+      ],
+      "answer": "Schedule Performance Index",
+      "explanation": "In earned value management (EVM), the term 'SPI' represents the Schedule Performance Index, which is a measure of schedule efficiency in a project, calculated as Earned Value (EV) divided by Planned Value (PV).",
+      "difficulty": "Hard"
+    }
+  ]
+}
