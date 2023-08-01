@@ -1,0 +1,161 @@
+{
+  "quizName": "Star Wars Universe Quiz",
+  "quizCode": "SWU2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge about the Star Wars universe!",
+  "quizTags": "Star Wars, Sci-Fi, Movies, Characters",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who is Luke Skywalker's twin sister?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Princess Leia",
+        "Padmé Amidala",
+        "Rey",
+        "Ahsoka Tano"
+      ],
+      "answer": "Princess Leia",
+      "explanation": "Princess Leia, played by Carrie Fisher, is Luke Skywalker's twin sister and a key figure in the Rebel Alliance.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the name of Han Solo's ship?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "TIE Fighter",
+        "X-Wing",
+        "Millennium Falcon",
+        "Star Destroyer"
+      ],
+      "answer": "Millennium Falcon",
+      "explanation": "The Millennium Falcon is Han Solo's iconic and highly modified YT-1300 light freighter used throughout the Star Wars saga.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which Sith Lord serves as the main antagonist in 'Star Wars: Episode I - The Phantom Menace'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Count Dooku",
+        "Darth Maul",
+        "Emperor Palpatine",
+        "Darth Vader"
+      ],
+      "answer": "Darth Maul",
+      "explanation": "Darth Maul, portrayed by Ray Park, is the Sith Lord and skilled lightsaber duelist who serves as the main antagonist in Episode I.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the homeworld of Chewbacca?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Endor",
+        "Kashyyyk",
+        "Tatooine",
+        "Naboo"
+      ],
+      "answer": "Kashyyyk",
+      "explanation": "Chewbacca, also known as Chewie, is a Wookiee from the planet Kashyyyk and the loyal co-pilot of the Millennium Falcon.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Who trained Obi-Wan Kenobi as a Jedi?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yoda",
+        "Qui-Gon Jinn",
+        "Mace Windu",
+        "Anakin Skywalker"
+      ],
+      "answer": "Qui-Gon Jinn",
+      "explanation": "Obi-Wan Kenobi was trained as a Jedi by Qui-Gon Jinn, his wise and noble Master.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the name of the desert planet where Anakin Skywalker was discovered?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jakku",
+        "Tatooine",
+        "Hoth",
+        "Dagobah"
+      ],
+      "answer": "Tatooine",
+      "explanation": "Tatooine is the desert planet where Anakin Skywalker was discovered and later became the home planet of Luke Skywalker.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Who is the wise Jedi Master who trains Luke Skywalker in the ways of the Force?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Yoda",
+        "Obi-Wan Kenobi",
+        "Qui-Gon Jinn",
+        "Mace Windu"
+      ],
+      "answer": "Yoda",
+      "explanation": "Yoda is the small, green-skinned Jedi Master known for his wisdom and training abilities. He trains Luke Skywalker in 'The Empire Strikes Back.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Who is the main protagonist in the sequel trilogy of Star Wars films?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Luke Skywalker",
+        "Han Solo",
+        "Rey",
+        "Kylo Ren"
+      ],
+      "answer": "Rey",
+      "explanation": "Rey, portrayed by Daisy Ridley, is the main protagonist in the sequel trilogy, discovering her Force sensitivity and lineage.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which powerful space station is capable of destroying entire planets?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Death Star",
+        "Starkiller Base",
+        "Star Destroyer",
+        "Trade Federation Battleship"
+      ],
+      "answer": "Death Star",
+      "explanation": "The Death Star is a massive space station with a planet-destroying superlaser, first introduced in 'Star Wars: Episode IV - A New Hope.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Who is the central antagonist in the original trilogy of Star Wars films?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Emperor Palpatine",
+        "Darth Vader",
+        "Darth Maul",
+        "Kylo Ren"
+      ],
+      "answer": "Darth Vader",
+      "explanation": "Darth Vader, formerly known as Anakin Skywalker, is the central antagonist in the original trilogy before his redemption.",
+      "difficulty": "Medium"
+    }
+  ]
+}
