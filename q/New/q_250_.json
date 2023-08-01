@@ -1,0 +1,236 @@
+{
+  "quizName": "Pop Culture Quiz",
+  "quizCode": "POPCULTURE2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of diverse pop culture highlights!",
+  "quizTags": "Pop Culture, Entertainment, Movies, Music, TV Shows, Celebrities",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which legendary band made its U.S. television debut on 'The Ed Sullivan Show' in 1964, causing a phenomenon known as the 'British Invasion'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Rolling Stones",
+        "The Beach Boys",
+        "The Who",
+        "The Beatles"
+      ],
+      "answer": "The Beatles",
+      "explanation": "The Beatles' appearance on 'The Ed Sullivan Show' on February 9, 1964, marked the beginning of the British Invasion and their rise to global stardom.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which famous female artist released her critically acclaimed album 'Jagged Little Pill' in 1995, featuring hits like 'You Oughta Know'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Celine Dion",
+        "Shania Twain",
+        "Madonna",
+        "Alanis Morissette"
+      ],
+      "answer": "Alanis Morissette",
+      "explanation": "Alanis Morissette's 'Jagged Little Pill' was a huge success, earning her multiple Grammy Awards and commercial acclaim.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which science fiction film, released in 1977, directed by George Lucas, became a cultural phenomenon and launched a beloved film franchise?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Star Wars: Episode IV - A New Hope",
+        "Blade Runner",
+        "E.T. the Extra-Terrestrial",
+        "Back to the Future"
+      ],
+      "answer": "Star Wars: Episode IV - A New Hope",
+      "explanation": "'Star Wars: Episode IV - A New Hope' is the original installment in the iconic 'Star Wars' saga that captured the imagination of audiences worldwide.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which animated TV show, created by Matt Groening, follows the misadventures of the Simpson family in the fictional town of Springfield?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Family Guy",
+        "South Park",
+        "The Simpsons",
+        "Futurama"
+      ],
+      "answer": "The Simpsons",
+      "explanation": "'The Simpsons' became a cultural phenomenon and the longest-running scripted prime-time TV series in the United States.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which superhero film, released in 2018, featured an ensemble cast of Marvel characters and became one of the highest-grossing films of all time?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Avengers",
+        "Black Panther",
+        "Avengers: Endgame",
+        "Spider-Man: Homecoming"
+      ],
+      "answer": "Avengers: Endgame",
+      "explanation": "'Avengers: Endgame' was a monumental superhero film that marked the epic conclusion of the Marvel Cinematic Universe's Infinity Saga.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which popular social networking platform was founded in 2004 and became a global phenomenon, connecting millions of users?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "MySpace",
+        "Facebook",
+        "LinkedIn",
+        "Twitter"
+      ],
+      "answer": "Facebook",
+      "explanation": "Facebook, founded by Mark Zuckerberg, revolutionized social networking and communication on the internet.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which fantasy book series, written by J.K. Rowling, became a global phenomenon and inspired a successful film franchise?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Lord of the Rings",
+        "The Chronicles of Narnia",
+        "Harry Potter",
+        "Percy Jackson & the Olympians"
+      ],
+      "answer": "Harry Potter",
+      "explanation": "The 'Harry Potter' book series, authored by J.K. Rowling, captured the hearts of readers and was adapted into a successful film series.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which dance-based video game, released in 2005, became a cultural phenomenon and a staple at parties and gatherings?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Guitar Hero",
+        "Dance Dance Revolution",
+        "Rock Band",
+        "Just Dance"
+      ],
+      "answer": "Dance Dance Revolution",
+      "explanation": "'Dance Dance Revolution' featured a dance pad that players used to follow on-screen dance moves, creating an addictive and entertaining experience.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which famous director is known for creating critically acclaimed films such as 'Pulp Fiction' and 'Django Unchained'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Steven Spielberg",
+        "Martin Scorsese",
+        "Christopher Nolan",
+        "Quentin Tarantino"
+      ],
+      "answer": "Quentin Tarantino",
+      "explanation": "Quentin Tarantino is a celebrated director known for his unique storytelling and stylized approach to filmmaking.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which famous female singer is often referred to as the 'Queen of Pop' and has hits like 'Like a Virgin' and 'Material Girl'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Madonna",
+        "Beyoncé",
+        "Lady Gaga",
+        "Taylor Swift"
+      ],
+      "answer": "Madonna",
+      "explanation": "Madonna is an iconic pop star who has had a lasting impact on the music industry and popular culture.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which American TV series, set in the 1970s, follows the lives of an extended family and became one of the most-watched TV shows in the 1970s and 1980s?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Brady Bunch",
+        "Happy Days",
+        "The Partridge Family",
+        "Family Ties"
+      ],
+      "answer": "Happy Days",
+      "explanation": "'Happy Days' was a beloved sitcom that portrayed life in the 1950s and became a cultural touchstone for nostalgia.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which iconic fashion trend of the 1980s featured oversized tops, leggings, and bold colors?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Punk Fashion",
+        "Glam Rock",
+        "Preppy Style",
+        "80s Aerobics Fashion"
+      ],
+      "answer": "80s Aerobics Fashion",
+      "explanation": "80s Aerobics Fashion was a fitness-inspired trend characterized by vibrant colors, leg warmers, and high-cut leotards.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which hit TV show, set in a post-apocalyptic world, follows a group of survivors trying to navigate through a zombie-infested world?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Walking Dead",
+        "Lost",
+        "Stranger Things",
+        "Breaking Bad"
+      ],
+      "answer": "The Walking Dead",
+      "explanation": "'The Walking Dead' is a highly popular TV series that has become a cultural phenomenon, attracting a dedicated fanbase.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which famous film director, known for his work on 'Inception' and 'The Dark Knight' trilogy, founded the production company Syncopy Inc.?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Steven Spielberg",
+        "Christopher Nolan",
+        "James Cameron",
+        "Quentin Tarantino"
+      ],
+      "answer": "Christopher Nolan",
+      "explanation": "Christopher Nolan is a renowned filmmaker known for his mind-bending narratives and blockbuster films.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which music-streaming platform, launched in 2008, transformed how people access and listen to music?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "iTunes",
+        "Pandora",
+        "Spotify",
+        "SoundCloud"
+      ],
+      "answer": "Spotify",
+      "explanation": "Spotify introduced the concept of on-demand music streaming, providing a vast library of songs accessible to users worldwide.",
+      "difficulty": "Medium"
+    }
+  ]
+}
