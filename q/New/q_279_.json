@@ -1,0 +1,236 @@
+{
+  "quizName": "Dinosaur Trivia Quiz",
+  "quizCode": "DINO2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Science",
+  "quizDescription": "Test your knowledge of ancient dinosaurs and their world with this exciting quiz!",
+  "quizTags": "Dinosaurs, Prehistoric, Science, Extinct Animals",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What was the largest dinosaur ever to roam the Earth?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tyrannosaurus Rex",
+        "Brachiosaurus",
+        "Stegosaurus",
+        "Triceratops"
+      ],
+      "answer": "Brachiosaurus",
+      "explanation": "Brachiosaurus was one of the largest dinosaurs, known for its long neck and massive size.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which dinosaur is known for its three prominent facial horns?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tyrannosaurus Rex",
+        "Brachiosaurus",
+        "Stegosaurus",
+        "Triceratops"
+      ],
+      "answer": "Triceratops",
+      "explanation": "The Triceratops is recognized for its three facial horns and a bony frill at the back of its head.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the name of the dinosaur known for its long, bony plates along its back?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tyrannosaurus Rex",
+        "Brachiosaurus",
+        "Stegosaurus",
+        "Velociraptor"
+      ],
+      "answer": "Stegosaurus",
+      "explanation": "Stegosaurus is famous for its distinctive back plates and tail spikes.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which dinosaur is believed to have been one of the fastest predators?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tyrannosaurus Rex",
+        "Velociraptor",
+        "Brachiosaurus",
+        "Triceratops"
+      ],
+      "answer": "Velociraptor",
+      "explanation": "Velociraptor was a fast and agile dinosaur, often portrayed as a fearsome predator in popular media.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the name of the dinosaur that had a large sail-like structure on its back?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tyrannosaurus Rex",
+        "Spinosaurus",
+        "Brachiosaurus",
+        "Stegosaurus"
+      ],
+      "answer": "Spinosaurus",
+      "explanation": "Spinosaurus had a distinctive sail-like structure on its back, possibly used for display or thermoregulation.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which dinosaur is known as the 'king of the dinosaurs'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Brachiosaurus",
+        "Stegosaurus",
+        "Triceratops",
+        "Tyrannosaurus Rex"
+      ],
+      "answer": "Tyrannosaurus Rex",
+      "explanation": "Tyrannosaurus Rex, often abbreviated as T. rex, is called the 'king of the dinosaurs' due to its immense size and power.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the name of the small, intelligent dinosaur portrayed in the 'Jurassic Park' movie franchise?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tyrannosaurus Rex",
+        "Brachiosaurus",
+        "Stegosaurus",
+        "Velociraptor"
+      ],
+      "answer": "Velociraptor",
+      "explanation": "The 'Jurassic Park' movie franchise features Velociraptors as highly intelligent and cunning dinosaurs.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which dinosaur had a long, whip-like tail and a narrow snout with rows of sharp teeth?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Brachiosaurus",
+        "Stegosaurus",
+        "Velociraptor",
+        "Diplodocus"
+      ],
+      "answer": "Diplodocus",
+      "explanation": "Diplodocus was a long-necked dinosaur with a whip-like tail and narrow snout containing rows of sharp teeth.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the name of the dinosaur known for its massive, bony head crest?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pterodactyl",
+        "Parasaurolophus",
+        "Ankylosaurus",
+        "Iguanodon"
+      ],
+      "answer": "Parasaurolophus",
+      "explanation": "Parasaurolophus had a large, bony crest on its head that may have been used for communication.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the name of the flying reptiles that lived during the time of dinosaurs?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pterosaurs",
+        "Plesiosaurs",
+        "Ichthyosaurs",
+        "Mosasaurs"
+      ],
+      "answer": "Pterosaurs",
+      "explanation": "Pterosaurs were flying reptiles that lived alongside dinosaurs during the Mesozoic Era.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which dinosaur is famous for its long, sharp claws on its hind limbs?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Deinonychus",
+        "Stegosaurus",
+        "Triceratops",
+        "Brachiosaurus"
+      ],
+      "answer": "Deinonychus",
+      "explanation": "Deinonychus had long, sharp claws on its hind limbs, which it likely used to catch prey.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the name of the dinosaur with a large bony club at the end of its tail?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Triceratops",
+        "Ankylosaurus",
+        "Stegosaurus",
+        "Pterodactyl"
+      ],
+      "answer": "Ankylosaurus",
+      "explanation": "Ankylosaurus had a large bony club at the end of its tail, which may have been used for defense.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which dinosaur is known for its massive size and two sets of large, bony frills on its head?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Stegosaurus",
+        "Triceratops",
+        "Brachiosaurus",
+        "Pachycephalosaurus"
+      ],
+      "answer": "Pachycephalosaurus",
+      "explanation": "Pachycephalosaurus had a thick, dome-shaped skull with two sets of large, bony frills on its head.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the name of the dinosaur known for its impressive size and short, powerful front limbs?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Brachiosaurus",
+        "Tyrannosaurus Rex",
+        "Velociraptor",
+        "Spinosaurus"
+      ],
+      "answer": "Tyrannosaurus Rex",
+      "explanation": "Tyrannosaurus Rex had massive size and short, powerful front limbs, though its hind limbs were long and strong.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which dinosaur is known for its long neck and herbivorous diet?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Velociraptor",
+        "Tyrannosaurus Rex",
+        "Brachiosaurus",
+        "Triceratops"
+      ],
+      "answer": "Brachiosaurus",
+      "explanation": "Brachiosaurus had a long neck and was a herbivorous dinosaur.",
+      "difficulty": "Medium"
+    }
+  ]
+}
