@@ -1,0 +1,236 @@
+{
+  "quizName": "Health and Wellness Quiz",
+  "quizCode": "HealthWellnessQuiz2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Health & Lifestyle",
+  "quizDescription": "Test your knowledge about health and wellness with this medium-level quiz!",
+  "quizTags": "Health, Wellness, Fitness, Nutrition",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which of the following is a macronutrient that provides the body with energy?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Vitamin C",
+        "Protein",
+        "Iron",
+        "Fiber"
+      ],
+      "answer": "Protein",
+      "explanation": "Protein is a macronutrient that provides the body with energy and is essential for the growth and repair of tissues.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the recommended amount of physical activity for adults per week, as per the World Health Organization (WHO)?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "30 minutes",
+        "1 hour",
+        "2.5 hours",
+        "5 hours"
+      ],
+      "answer": "2.5 hours",
+      "explanation": "The World Health Organization (WHO) recommends that adults engage in at least 150 minutes (2.5 hours) of moderate-intensity aerobic activity or 75 minutes of vigorous-intensity aerobic activity per week.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which of the following is an example of a low-impact exercise?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Running",
+        "Cycling",
+        "Swimming",
+        "Yoga"
+      ],
+      "answer": "Yoga",
+      "explanation": "Yoga is considered a low-impact exercise as it involves gentle movements and is easy on the joints.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the body's primary source of energy during high-intensity activities?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Protein",
+        "Carbohydrates",
+        "Fats",
+        "Vitamins"
+      ],
+      "answer": "Carbohydrates",
+      "explanation": "Carbohydrates are the body's primary source of energy during high-intensity activities and provide quick fuel for muscles.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which of the following is a fat-soluble vitamin?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Vitamin C",
+        "Vitamin B12",
+        "Vitamin D",
+        "Vitamin K"
+      ],
+      "answer": "Vitamin D",
+      "explanation": "Vitamin D is a fat-soluble vitamin that is essential for calcium absorption and bone health.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the recommended daily intake of water for adults?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1 liter",
+        "2 liters",
+        "3 liters",
+        "4 liters"
+      ],
+      "answer": "2 liters",
+      "explanation": "The recommended daily intake of water for adults is approximately 2 liters (or about 8 cups).",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which of the following nutrients is essential for maintaining healthy vision?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Iron",
+        "Vitamin A",
+        "Calcium",
+        "Magnesium"
+      ],
+      "answer": "Vitamin A",
+      "explanation": "Vitamin A is essential for maintaining healthy vision and plays a crucial role in the functioning of the retina.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the body's main organ responsible for detoxification?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Liver",
+        "Heart",
+        "Lungs",
+        "Stomach"
+      ],
+      "answer": "Liver",
+      "explanation": "The liver is the body's main organ responsible for detoxification, filtering toxins from the blood and breaking them down for elimination.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the term for the chemical processes that occur within the cells of the body to sustain life?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Metabolism",
+        "Digestion",
+        "Circulation",
+        "Respiration"
+      ],
+      "answer": "Metabolism",
+      "explanation": "Metabolism refers to the chemical processes that occur within the cells of the body to convert food into energy and sustain life.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which of the following is a good source of omega-3 fatty acids?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Avocado",
+        "Olive oil",
+        "Salmon",
+        "Chicken"
+      ],
+      "answer": "Salmon",
+      "explanation": "Salmon is a good source of omega-3 fatty acids, which are beneficial for heart health and brain function.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the recommended daily intake of fruits and vegetables for adults?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1 serving",
+        "2 servings",
+        "3 servings",
+        "5 servings"
+      ],
+      "answer": "5 servings",
+      "explanation": "The recommended daily intake of fruits and vegetables for adults is at least 5 servings, as they are rich in vitamins, minerals, and fiber.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "Which of the following is a common symptom of dehydration?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Sweating",
+        "Pale skin",
+        "Increased urination",
+        "Dry mouth"
+      ],
+      "answer": "Dry mouth",
+      "explanation": "Dry mouth is a common symptom of dehydration, which occurs when the body does not have enough fluids to function properly.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the term for the ability of the body to resist infection and disease?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Endurance",
+        "Flexibility",
+        "Strength",
+        "Immunity"
+      ],
+      "answer": "Immunity",
+      "explanation": "Immunity is the term for the ability of the body to resist infection and disease, which is supported by a healthy immune system.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which of the following is a form of aerobic exercise?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Weightlifting",
+        "Cycling",
+        "Yoga",
+        "Pilates"
+      ],
+      "answer": "Cycling",
+      "explanation": "Cycling is a form of aerobic exercise that increases cardiovascular endurance and promotes overall fitness.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the term for the state of complete physical, mental, and social well-being?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Fitness",
+        "Balance",
+        "Wellness",
+        "Vitality"
+      ],
+      "answer": "Wellness",
+      "explanation": "Wellness is the term for the state of complete physical, mental, and social well-being, not merely the absence of disease or infirmity.",
+      "difficulty": "Medium"
+    }
+  ]
+}
