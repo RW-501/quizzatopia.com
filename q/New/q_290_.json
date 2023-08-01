@@ -1,6 +1,6 @@
 {
   "quizName": "Architect Registration Examination: Programming & Analysis Quiz - Hard",
-  "quizCode": "ARE_PnA_Hard_2023",
+  "quizCode": "ARE_PnAHard2023",
   "quizDifficulty": "Hard",
   "quizCategory": "Professional Certification",
   "quizDescription": "Test your advanced knowledge of programming and analysis concepts in preparation for the challenging Programming & Analysis division of the Architect Registration Examination (ARE)!",
@@ -9,139 +9,215 @@
   "questions": [
     {
       "questionNumber": 1,
-      "question": "In the Programming & Analysis phase, the architect gathers information from the client to understand the project's ______ and ______.",
+      "question": "In the Programming & Analysis phase, the architect conducts a thorough analysis of the project's ______, including life cycle costs, to make informed decisions.",
       "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "answer": ["requirements", "objectives"],
-      "explanation": "During the Programming & Analysis phase, the architect gathers information from the client to understand the project's requirements and objectives.",
+      "questionType": "Fill in the Blank",  
+      "options": [
+        "financial viability",
+        "design aesthetics",
+        "material availability",
+        "constructability"
+      ],
+      "answer": "financial viability",
+      "explanation": "In the Programming & Analysis phase, the architect conducts a thorough analysis of the project's financial viability, including life cycle costs, to make informed decisions.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 2,
-      "question": "True or False: In Programming & Analysis, the architect develops detailed construction documents and specifications for the project.",
+      "question": "True or False: The Programming & Analysis phase is solely focused on the conceptualization of the design.",
       "imageURL": "",
-      "questionType": "True and False",
-      "answer": [false],
-      "explanation": "False. In the Programming & Analysis phase, the architect focuses on understanding the project's scope, goals, and constraints, and does not develop detailed construction documents.",
+      "questionType": "True and False",    
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. While the Programming & Analysis phase involves conceptualization, it also includes detailed analysis and decision-making.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 3,
-      "question": "The process of analyzing a site's physical, environmental, and cultural characteristics is known as ________ analysis.",
+      "question": "In the Programming & Analysis phase, the architect assesses the project's compliance with ________ codes, ensuring the safety and accessibility of the design.",
       "imageURL": "",
       "questionType": "Fill in the Blank",
-      "answer": ["site"],
-      "explanation": "Site analysis involves studying a site's physical, environmental, and cultural characteristics to inform the design process.",
+      "options": [
+        "international",
+        "energy",
+        "local",
+        "occupancy"
+      ],
+      "answer": "local",
+      "explanation": "In the Programming & Analysis phase, the architect assesses the project's compliance with local codes, ensuring the safety and accessibility of the design.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 4,
-      "question": "True or False: In Programming & Analysis, the architect evaluates the project's compliance with building codes and regulations.",
+      "question": "True or False: The architect's analysis in Programming & Analysis includes evaluating the project's potential impact on the environment and implementing sustainable design strategies.",
       "imageURL": "",
       "questionType": "True and False",
-      "answer": [true],
-      "explanation": "True. In Programming & Analysis, the architect assesses the project's compliance with relevant building codes and regulations.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "True. In Programming & Analysis, the architect evaluates the project's potential impact on the environment and implements sustainable design strategies.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 5,
-      "question": "The process of calculating the total area of a building or project is known as ________ calculation.",
+      "question": "The process of analyzing the project's impact on the surrounding context and neighborhood is known as ________ analysis.",
       "imageURL": "",
       "questionType": "Fill in the Blank",
-      "answer": ["area"],
-      "explanation": "Area calculation involves determining the total area of a building or project, which is essential for various design and planning aspects.",
+      "options": [
+        "neighborhood",
+        "urban",
+        "contextual",
+        "community"
+      ],
+      "answer": "contextual",
+      "explanation": "Contextual analysis involves analyzing the project's impact on the surrounding context and neighborhood to create harmonious designs.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 6,
-      "question": "True or False: The Programming & Analysis phase typically includes preparing construction cost estimates for the project.",
+      "question": "True or False: The architect's analysis in Programming & Analysis is limited to the building's design and does not consider external factors.",
       "imageURL": "",
       "questionType": "True and False",
-      "answer": [false],
-      "explanation": "False. While cost estimates are essential, they are usually prepared in later phases like Schematic Design and Design Development.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The architect's analysis in Programming & Analysis considers both internal and external factors that may influence the design.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 7,
-      "question": "The process of identifying potential risks and uncertainties that may impact the project's success is called ________ assessment.",
+      "question": "The process of analyzing the building's energy usage and implementing energy-efficient strategies is known as ________ analysis.",
       "imageURL": "",
       "questionType": "Fill in the Blank",
-      "answer": ["risk"],
-      "explanation": "Risk assessment involves identifying potential risks and uncertainties to develop strategies for risk management and mitigation.",
+      "options": [
+        "energy",
+        "sustainability",
+        "efficiency",
+        "conservation"
+      ],
+      "answer": "energy",
+      "explanation": "Energy analysis involves assessing the building's energy usage and implementing energy-efficient strategies to reduce consumption.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 8,
-      "question": "True or False: The Programming & Analysis phase is primarily concerned with developing detailed design drawings and renderings.",
+      "question": "True or False: The architect's analysis in Programming & Analysis is limited to the physical aspects of the project and does not consider the financial aspects.",
       "imageURL": "",
       "questionType": "True and False",
-      "answer": [false],
-      "explanation": "False. The Programming & Analysis phase focuses on defining the project's requirements and goals, and not on detailed design drawings and renderings.",
+      "options
+
+": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The architect's analysis in Programming & Analysis includes financial analysis, such as cost estimation and budget management.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 9,
-      "question": "The analysis of a project's financial feasibility, including its costs and potential revenue, is known as ________ analysis.",
+      "question": "In the Programming & Analysis phase, the architect collaborates with stakeholders to define the project's ________ and align design decisions with the project's vision.",
       "imageURL": "",
       "questionType": "Fill in the Blank",
-      "answer": ["financial"],
-      "explanation": "Financial analysis assesses the project's financial feasibility, including costs, potential revenue, and return on investment.",
+      "options": [
+        "objectives",
+        "aesthetics",
+        "materiality",
+        "concept"
+      ],
+      "answer": "objectives",
+      "explanation": "In the Programming & Analysis phase, the architect collaborates with stakeholders to define the project's objectives and align design decisions with the project's vision.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 10,
-      "question": "True or False: In Programming & Analysis, the architect evaluates the project's constructability and feasibility.",
+      "question": "True or False: The architect's analysis in Programming & Analysis includes evaluating the project's constructability and feasibility.",
       "imageURL": "",
       "questionType": "True and False",
-      "answer": [true],
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
       "explanation": "True. The architect assesses the constructability and feasibility of the project design during the Programming & Analysis phase.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 11,
-      "question": "The process of understanding the needs and preferences of the building's future occupants is known as ________ analysis.",
+      "question": "The process of analyzing the project's impact on historical landmarks and preserving their cultural significance is known as ________ analysis.",
       "imageURL": "",
       "questionType": "Fill in the Blank",
-      "answer": ["occupant"],
-      "explanation": "Occupant analysis involves understanding the needs and preferences of the building's future occupants to create user-friendly designs.",
+      "options": [
+        "historical",
+        "cultural",
+        "heritage",
+        "landmark"
+      ],
+      "answer": "cultural",
+      "explanation": "Cultural analysis assesses the project's potential impact on historical landmarks and aims to preserve their cultural significance.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 12,
-      "question": "True or False: The Programming & Analysis phase is focused on evaluating the project's compliance with environmental regulations.",
+      "question": "True or False: The architect's analysis in Programming & Analysis is limited to the interior spaces and does not consider the exterior spaces and landscape.",
       "imageURL": "",
       "questionType": "True and False",
-      "answer": [true],
-      "explanation": "True. In Programming & Analysis, the architect evaluates the project's compliance with relevant environmental regulations and sustainability goals.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The architect's analysis in Programming & Analysis considers both interior and exterior spaces, as well as the landscape.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 13,
-      "question": "The process of analyzing the project's impact on the surrounding community and environment is known as ________ analysis.",
+      "question": "The process of analyzing the project's impact on traffic flow, transportation, and accessibility is known as ________ analysis.",
       "imageURL": "",
       "questionType": "Fill in the Blank",
-      "answer": ["impact"],
-      "explanation": "Impact analysis assesses the project's effect on the surrounding community and environment, considering factors like traffic, noise, and visual impacts.",
+      "options": [
+        "transportation",
+        "traffic",
+        "accessibility",
+        "mobility"
+      ],
+      "answer": "traffic",
+      "explanation": "Traffic analysis involves analyzing the project's impact on traffic flow, transportation, and accessibility to ensure safe and efficient movement.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 14,
-      "question": "True or False: In the Programming & Analysis phase, the architect develops the detailed project schedule and timeline.",
+      "question": "True or False: The Programming & Analysis phase does not include coordination with other design disciplines.",
       "imageURL": "",
       "questionType": "True and False",
-      "answer": [false],
-      "explanation": "False. While the project schedule is essential, it is typically developed in later phases such as Design Development and Construction Documents.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The Programming & Analysis phase involves coordination with other design disciplines to ensure a holistic approach to the project.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 15,
-      "question": "The process of analyzing the project's potential impact on historical or cultural landmarks is known as ________ analysis.",
+      "question": "In the Programming & Analysis phase, the architect evaluates the project's compliance with ________ regulations to ensure the safety and well-being of the occupants.",
       "imageURL": "",
-      "questionType": "Fill in the
-
- Blank",
-      "answer": ["cultural"],
-      "explanation": "Cultural analysis assesses the project's potential impact on historical or cultural landmarks and aims to preserve their significance.",
+      "questionType": "Fill in the Blank",
+      "options": [
+        "occupancy",
+        "building",
+        "environmental",
+        "zoning"
+      ],
+      "answer": "occupancy",
+      "explanation": "In the Programming & Analysis phase, the architect evaluates the project's compliance with occupancy regulations to ensure the safety and well-being of the occupants.",
       "difficulty": "Hard"
     }
   ]
