@@ -1,0 +1,236 @@
+{
+  "quizName": "Cartoon Shows Trivia Quiz",
+  "quizCode": "CARTOON2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of beloved cartoon shows from different eras with this exciting trivia quiz!",
+  "quizTags": "Cartoons, Animated Series, TV Shows, Entertainment",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In the cartoon 'Scooby-Doo, Where Are You!', what is the name of the Great Dane dog?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Scooby",
+        "Shaggy",
+        "Spike",
+        "Scrappy"
+      ],
+      "answer": "Scooby",
+      "explanation": "The Great Dane dog in 'Scooby-Doo, Where Are You!' is named Scooby-Doo.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which cartoon follows the adventures of a boy named Finn and his magical dog, Jake?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Flintstones",
+        "Adventure Time",
+        "SpongeBob SquarePants",
+        "Teen Titans Go!"
+      ],
+      "answer": "Adventure Time",
+      "explanation": "'Adventure Time' follows the adventures of Finn the Human and Jake the Dog in the Land of Ooo.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the name of the cartoon that features four turtles named after Renaissance artists, trained as ninjas?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Teen Titans Go!",
+        "The Powerpuff Girls",
+        "Teenage Mutant Ninja Turtles",
+        "Paw Patrol"
+      ],
+      "answer": "Teenage Mutant Ninja Turtles",
+      "explanation": "The cartoon 'Teenage Mutant Ninja Turtles' follows the adventures of Leonardo, Michelangelo, Donatello, and Raphael.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "In the cartoon 'SpongeBob SquarePants,' where does SpongeBob work?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Krusty Krab",
+        "The Chum Bucket",
+        "The Salty Spittoon",
+        "The Jellyfish Fields"
+      ],
+      "answer": "The Krusty Krab",
+      "explanation": "SpongeBob SquarePants works at the Krusty Krab, a fast-food restaurant in Bikini Bottom.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the name of the cartoon about three kindergarten-aged girls with superpowers?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Flintstones",
+        "The Powerpuff Girls",
+        "My Little Pony: Friendship is Magic",
+        "PJ Masks"
+      ],
+      "answer": "The Powerpuff Girls",
+      "explanation": "The cartoon 'The Powerpuff Girls' features three kindergarten-aged girls with superpowers: Blossom, Bubbles, and Buttercup.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which cartoon features a yellow sea sponge who lives in a pineapple under the sea?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Teen Titans Go!",
+        "Adventure Time",
+        "The Flintstones",
+        "SpongeBob SquarePants"
+      ],
+      "answer": "SpongeBob SquarePants",
+      "explanation": "'SpongeBob SquarePants' features the adventures of SpongeBob, who lives in a pineapple under the sea in Bikini Bottom.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the name of the cartoon that follows the lives of magical ponies in the land of Equestria?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Teenage Mutant Ninja Turtles",
+        "My Little Pony: Friendship is Magic",
+        "The Powerpuff Girls",
+        "Paw Patrol"
+      ],
+      "answer": "My Little Pony: Friendship is Magic",
+      "explanation": "'My Little Pony: Friendship is Magic' follows the adventures of magical ponies, including Twilight Sparkle and Pinkie Pie.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "In the cartoon 'The Flintstones,' what is the name of Fred Flintstone's best friend?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Barney Rubble",
+        "George Jetson",
+        "Homer Simpson",
+        "Peter Griffin"
+      ],
+      "answer": "Barney Rubble",
+      "explanation": "Barney Rubble is Fred Flintstone's best friend in 'The Flintstones.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which cartoon features a group of young heroes with superpowers, led by Robin?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Teen Titans Go!",
+        "The Powerpuff Girls",
+        "Teenage Mutant Ninja Turtles",
+        "Paw Patrol"
+      ],
+      "answer": "Teen Titans Go!",
+      "explanation": "'Teen Titans Go!' follows the adventures of Robin, Starfire, Raven, Beast Boy, and Cyborg.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "In the cartoon 'Paw Patrol,' what type of animals are the main characters?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Dogs",
+        "Cats",
+        "Birds",
+        "Rabbits"
+      ],
+      "answer": "Dogs",
+      "explanation": "The main characters in 'Paw Patrol' are a group of helpful and brave dogs.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the name of the cartoon that follows the adventures of a family living in the Stone Age?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Teen Titans Go!",
+        "Adventure Time",
+        "The Flintstones",
+        "SpongeBob SquarePants"
+      ],
+      "answer": "The Flintstones",
+      "explanation": "'The Flintstones' follows the daily life of the Flintstone family during the Stone Age.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "In the cartoon 'Gravity Falls,' what is the name of the curious and adventurous twins who spend the summer with their great-uncle?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Dipper and Mabel",
+        "Fred and Wilma",
+        "Phineas and Ferb",
+        "Homer and Marge"
+      ],
+      "answer": "Dipper and Mabel",
+      "explanation": "The curious and adventurous twins in 'Gravity Falls' are named Dipper and Mabel Pines.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which cartoon features three young kids who have everyday adventures with their animal friends?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Dora the Explorer",
+        "Paw Patrol",
+        "Blue's Clues",
+        "Peppa Pig"
+      ],
+      "answer": "Blue's Clues",
+      "explanation": "'Blue's Clues' follows three kids, Steve and later Joe, who solve everyday problems with the help of their animated dog, Blue.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the name of the cartoon about a boy genius who invents gadgets with his stepbrother?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Teen Titans Go!",
+        "Adventure Time",
+        "The Flintstones",
+        "Phineas and Ferb"
+      ],
+      "answer": "Phineas and Ferb",
+      "explanation": "'Phineas and Ferb' follows the adventures of Phineas Flynn and his stepbrother Ferb Fletcher.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which cartoon features a group of superheroes who are descendants of famous fairy tale characters?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Teen Titans Go!",
+        "Ever After High",
+        "PJ Masks",
+        "Paw Patrol"
+      ],
+      "answer": "Ever After High",
+      "explanation": "'Ever After High' follows the lives of the teenage sons and daughters of famous fairy tale characters.",
+      "difficulty": "Medium"
+    }
+  ]
+}
