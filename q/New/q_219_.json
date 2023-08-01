@@ -1,0 +1,222 @@
+{
+  "quizName": "Social Media Marketing Quiz",
+  "quizCode": "HSM2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Marketing",
+  "quizDescription": "Test your knowledge of Social Media Marketing concepts and best practices!",
+  "quizTags": "Social Media, Marketing, Digital Marketing",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the term used for creating and sharing content on social media platforms to achieve marketing and branding goals?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Search Engine Optimization (SEO)",
+        "Pay-Per-Click (PPC) Advertising",
+        "Content Marketing",
+        "Social Media Marketing"
+      ],
+      "answer": "Social Media Marketing",
+      "explanation": "Social Media Marketing involves creating and sharing content on social media platforms to achieve marketing and branding goals.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which social media platform is best suited for sharing short, concise, and engaging messages limited to 280 characters?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Instagram",
+        "Facebook",
+        "Twitter",
+        "LinkedIn"
+      ],
+      "answer": "Twitter",
+      "explanation": "Twitter is best suited for sharing short, concise, and engaging messages limited to 280 characters.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What type of content format on Instagram disappears after 24 hours and is commonly used for sharing temporary updates?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Instagram Feed Posts",
+        "Instagram Reels",
+        "Instagram Stories",
+        "IGTV Videos"
+      ],
+      "answer": "Instagram Stories",
+      "explanation": "Instagram Stories are content formats that disappear after 24 hours and are commonly used for sharing temporary updates.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which social media platform is known for its professional networking and is often used for B2B (business-to-business) marketing?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Twitter",
+        "Facebook",
+        "Instagram",
+        "LinkedIn"
+      ],
+      "answer": "LinkedIn",
+      "explanation": "LinkedIn is known for its professional networking and is often used for B2B (business-to-business) marketing.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the term used for the practice of attracting and engaging a target audience on social media platforms?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Inbound Marketing",
+        "Content Marketing",
+        "Social Media Engagement",
+        "Lead Generation"
+      ],
+      "answer": "Social Media Engagement",
+      "explanation": "Social Media Engagement refers to the practice of attracting and engaging a target audience on social media platforms.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the recommended aspect ratio for images to be used in most social media posts?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "1:1 (Square)",
+        "4:3",
+        "16:9 (Widescreen)",
+        "9:16 (Vertical)"
+      ],
+      "answer": "1:1 (Square)",
+      "explanation": "The recommended aspect ratio for images in most social media posts is 1:1 (Square).",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What social media metric measures the total number of times your content is displayed, including shares, clicks, and impressions?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Reach",
+        "Engagement",
+        "Conversion Rate",
+        "Impressions"
+      ],
+      "answer": "Impressions",
+      "explanation": "Impressions measure the total number of times your content is displayed, including shares, clicks, and impressions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which of the following is an example of user-generated content (UGC)?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A promotional video created by the brand's marketing team",
+        "A sponsored post featuring a celebrity endorsement",
+        "A post shared by a customer using the brand's product",
+        "A paid advertisement on social media"
+      ],
+      "answer": "A post shared by a customer using the brand's product",
+      "explanation": "User-generated content (UGC) is content created and shared by customers or users of a brand, such as a post featuring a customer using the brand's product.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which social media platform is particularly popular for beauty, fashion, and lifestyle influencers and often used for visual content?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Twitter",
+        "Facebook",
+        "Instagram",
+        "LinkedIn"
+      ],
+      "answer": "Instagram",
+      "explanation": "Instagram is particularly popular for beauty, fashion, and lifestyle influencers and is often used for visual content.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the term used for the strategy of engaging with and responding to customers' comments, messages, and mentions on social media?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Social Listening",
+        "Social Selling",
+        "Social Monitoring",
+        "Social Customer Service"
+      ],
+      "answer": "Social Customer Service",
+      "explanation": "Social Customer Service is the strategy of engaging with and responding to customers' comments, messages, and mentions on social media.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which social media platform is known for its use of hashtags and is often used for discovering trending topics?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Twitter",
+        "Facebook",
+        "Instagram",
+        "LinkedIn"
+      ],
+      "answer": "Twitter",
+      "explanation": "Twitter is known for its use of hashtags and is often used for discovering trending topics.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the term used for the practice of promoting content on social media platforms to reach a larger audience?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Social Media Optimization (SMO)",
+        "Social Media Marketing (SMM)",
+        "Social Media Engagement",
+        "Social Media Advertising"
+      ],
+      "answer": "Social Media Advertising",
+      "explanation": "Social Media Advertising refers to the practice of promoting content on social media platforms to reach a larger audience.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What type of social media content format involves live broadcasting and interacting with the audience in real-time?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Instagram Reels",
+        "IGTV Videos",
+        "Facebook Live",
+        "Twitter Fleets"
+      ],
+      "answer": "Facebook Live",
+      "explanation": "Facebook Live is a social media content format that involves live broadcasting and interacting with the audience in real-time.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the term used for the process of identifying and analyzing what people are saying about a brand or topic on social media?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Social Listening",
+        "Social Selling",
+        "Social Monitoring",
+        "Social Customer Service"
+      ],
+      "answer": "Social Listening",
+      "explanation": "Social Listening is the process of identifying and analyzing what people are saying about a brand or topic on social media.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What social media metric measures the number of unique users who see your content?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Reach",
+        "Engagement",
+        "Conversion Rate",
+        "Impressions"
+      ],
+      "answer": "Reach",
+      "explanation": "Reach measures the number of unique users who see your content on social media.",
+      "difficulty": "Medium"
+    }
+  ]
+}
