@@ -98,10 +98,10 @@ quizName = quizNameNS;
 
 
 
+//  async
 
 
-
-async function startQuiz() {
+ function startQuiz() {
   loadScreenFunc();
 
   const divElement = document.getElementById("testInfo");
@@ -1671,7 +1671,6 @@ function userExitNotification(actionType) {
 
 
 
-<script>
   function applyPaddingAnimation(targetElement) {
     const initialPadding = window.getComputedStyle(targetElement).padding;
     const initialPaddingValue = parseInt(initialPadding.replace('px', ''));
@@ -1719,7 +1718,7 @@ btnsWithClass1.forEach((btn) => {
   allButtons.forEach((btn) => {
     btn.addEventListener('click', () => applyPaddingAnimation(btn));
   });
-</script>
+
 
 
 
