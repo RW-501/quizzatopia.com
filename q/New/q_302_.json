@@ -1,0 +1,236 @@
+{
+  "quizName": "Sci-Fi Movie Trivia Quiz",
+  "quizCode": "SciFiMovieQuiz2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of sci-fi movies with this futuristic trivia quiz!",
+  "quizTags": "Sci-Fi Movies, Science Fiction, Futuristic",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In the movie 'Star Wars: A New Hope,' what is the name of Luke Skywalker's home planet?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tatooine",
+        "Endor",
+        "Hoth",
+        "Naboo"
+      ],
+      "answer": "Tatooine",
+      "explanation": "In 'Star Wars: A New Hope,' Luke Skywalker's home planet is Tatooine.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which sci-fi movie follows a group of intergalactic criminals who must work together to stop a powerful orb from falling into the wrong hands?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Guardians of the Galaxy",
+        "Interstellar",
+        "The Fifth Element",
+        "Blade Runner"
+      ],
+      "answer": "Guardians of the Galaxy",
+      "explanation": "The sci-fi movie 'Guardians of the Galaxy' follows a group of intergalactic criminals who must work together to stop a powerful orb from falling into the wrong hands.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "In the movie 'Back to the Future,' what is the name of the time-traveling car?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Time Cruiser",
+        "Time Hopper",
+        "Time Machine",
+        "DeLorean"
+      ],
+      "answer": "DeLorean",
+      "explanation": "In 'Back to the Future,' the name of the time-traveling car is DeLorean.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which sci-fi movie is set in a post-apocalyptic world where machines have taken over and enslaved humanity?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Blade Runner",
+        "The Matrix",
+        "Terminator 2: Judgment Day",
+        "RoboCop"
+      ],
+      "answer": "The Matrix",
+      "explanation": "The sci-fi movie 'The Matrix' is set in a post-apocalyptic world where machines have taken over and enslaved humanity.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which sci-fi movie features a genetically engineered dinosaur theme park that goes awry?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jurassic Park",
+        "Godzilla",
+        "Pacific Rim",
+        "King Kong"
+      ],
+      "answer": "Jurassic Park",
+      "explanation": "The sci-fi movie 'Jurassic Park' features a genetically engineered dinosaur theme park that goes awry.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "In the movie 'Inception,' what is the process of entering another person's dreams called?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Time Travel",
+        "Hypnosis",
+        "Dreamwalking",
+        "Extraction"
+      ],
+      "answer": "Dreamwalking",
+      "explanation": "In 'Inception,' the process of entering another person's dreams is called dreamwalking.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which sci-fi movie features a spaceship crew that encounters a hostile alien creature with acid for blood?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Predator",
+        "Alien",
+        "Starship Troopers",
+        "Independence Day"
+      ],
+      "answer": "Alien",
+      "explanation": "The sci-fi movie 'Alien' features a spaceship crew that encounters a hostile alien creature with acid for blood.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "In the movie 'E.T. the Extra-Terrestrial,' what is the name of the friendly alien?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "E.T.",
+        "R2-D2",
+        "Yoda",
+        "ALF"
+      ],
+      "answer": "E.T.",
+      "explanation": "In 'E.T. the Extra-Terrestrial,' the name of the friendly alien is E.T.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which sci-fi movie explores the concept of a computer program creating a simulated reality for humans?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "TRON",
+        "The Terminator",
+        "The Matrix",
+        "Inception"
+      ],
+      "answer": "The Matrix",
+      "explanation": "The sci-fi movie 'The Matrix' explores the concept of a computer program creating a simulated reality for humans.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the name of the planet-destroying weapon in the 'Star Wars' franchise?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Death Star",
+        "Star Destroyer",
+        "Galactic Empire",
+        "TIE Fighter"
+      ],
+      "answer": "Death Star",
+      "explanation": "In the 'Star Wars' franchise, the planet-destroying weapon is called the Death Star.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which sci-fi movie features a team of explorers who travel through a wormhole in search of a new habitable planet for humanity?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Star Wars: Episode IV - A New Hope",
+        "Interstellar",
+        "2001: A Space Odyssey",
+        "Gravity"
+      ],
+      "answer": "Interstellar",
+      "explanation": "The sci-fi movie 'Interstellar' features a team of explorers who travel through a wormhole in search of a new habitable planet for humanity.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "In the movie 'Blade Runner,' what is the primary task of the replicants?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Time Travel",
+        "Human Reproduction",
+        "Emotional Simulation",
+        "Off-World Colonization"
+      ],
+      "answer": "Off-World Colonization",
+      "explanation": "In 'Blade Runner,' the primary task of the replicants is Off-World Colonization.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which sci-fi movie features a young boy who discovers a stranded alien and helps him return to his home planet?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "E.T. the Extra-Terrestrial",
+        "Close Encounters of the Third Kind",
+        "The Day the Earth Stood Still",
+        "Contact"
+      ],
+      "answer": "E.T. the Extra-Terrestrial",
+      "explanation": "The sci-fi movie 'E.T. the Extra-Terrestrial' features a young boy who discovers a stranded alien and helps him return to his home planet.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the name of the highly intelligent and malevolent computer system in the '2001: A Space Odyssey'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "HAL 9000",
+        "R2-D2",
+        "C-3PO",
+        "Skynet"
+      ],
+      "answer": "HAL 9000",
+      "explanation": "In '2001: A Space Odyssey,' the highly intelligent and malevolent computer system is named HAL 9000.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which sci-fi movie features a group of astronauts who are sent to investigate a mysterious monolith discovered on the Moon?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Day the Earth Stood Still",
+        "Contact",
+        "Apollo 13",
+        "2001: A Space Odyssey"
+      ],
+      "answer": "2001: A Space Odyssey",
+      "explanation": "The sci-fi movie '2001: A Space Odyssey' features a group of astronauts who are sent to investigate a mysterious monolith discovered on the Moon.",
+      "difficulty": "Medium"
+    }
+  ]
+}
