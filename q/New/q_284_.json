@@ -1,0 +1,236 @@
+{
+  "quizName": "Practice Management (PcM) Quiz",
+  "quizCode": "PcM2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Professional Certification",
+  "quizDescription": "Test your knowledge of practice management concepts in preparation for the Practice Management (PcM) division of the Architect Registration Examination (ARE)!",
+  "quizTags": "Architecture, PcM, Practice Management, Professional",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the primary purpose of a project management plan?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To establish the project's design concept",
+        "To allocate project resources",
+        "To define project goals and objectives",
+        "To outline the project's quality control plan"
+      ],
+      "answer": "To define project goals and objectives",
+      "explanation": "A project management plan outlines the project's goals, objectives, and strategies to achieve them during the project lifecycle.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What does the term 'scope creep' refer to in project management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A sudden increase in project costs",
+        "A significant change in project team members",
+        "The expansion of project goals and deliverables",
+        "The reduction of project deadlines"
+      ],
+      "answer": "The expansion of project goals and deliverables",
+      "explanation": "Scope creep is the gradual expansion of project goals, deliverables, or requirements beyond the original scope, leading to potential delays and cost overruns.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the purpose of a risk management plan?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To assess potential hazards on the construction site",
+        "To allocate project resources effectively",
+        "To identify and mitigate project risks",
+        "To ensure compliance with building codes"
+      ],
+      "answer": "To identify and mitigate project risks",
+      "explanation": "A risk management plan is designed to identify potential risks and uncertainties in a project and develop strategies to mitigate or manage them.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the purpose of a project schedule in practice management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To create a timeline for the project design phase",
+        "To allocate project resources efficiently",
+        "To outline the project's quality control plan",
+        "To establish a timeline for project tasks and milestones"
+      ],
+      "answer": "To establish a timeline for project tasks and milestones",
+      "explanation": "A project schedule outlines the sequence and timeline of tasks and milestones for the entire project to ensure timely completion.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the purpose of a project budget in practice management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To allocate project resources efficiently",
+        "To define project goals and objectives",
+        "To establish a timeline for the project design phase",
+        "To evaluate the project's sustainability"
+      ],
+      "answer": "To allocate project resources efficiently",
+      "explanation": "A project budget allocates financial resources for various project tasks and activities, ensuring efficient use of resources.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the purpose of a fee proposal in practice management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To outline the project's quality control plan",
+        "To establish a timeline for project tasks",
+        "To define project goals and objectives",
+        "To present the project's cost and scope to the client"
+      ],
+      "answer": "To present the project's cost and scope to the client",
+      "explanation": "A fee proposal outlines the project's cost, scope of services, and deliverables to be presented to the client for approval.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the primary purpose of a contract in practice management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To allocate project resources efficiently",
+        "To define project goals and objectives",
+        "To establish a timeline for project tasks",
+        "To legally bind the parties involved in the project"
+      ],
+      "answer": "To legally bind the parties involved in the project",
+      "explanation": "A contract legally binds the parties involved in the project, outlining their rights, obligations, and responsibilities.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the purpose of professional liability insurance in practice management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To ensure compliance with building codes",
+        "To protect against legal claims due to errors or omissions",
+        "To establish a timeline for project tasks",
+        "To allocate project resources efficiently"
+      ],
+      "answer": "To protect against legal claims due to errors or omissions",
+      "explanation": "Professional liability insurance provides coverage in case of legal claims arising from errors or omissions in professional services.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the purpose of conducting a post-occupancy evaluation (POE) in practice management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To establish a timeline for project tasks",
+        "To identify potential construction defects",
+        "To evaluate the building's performance after occupancy",
+        "To allocate project resources efficiently"
+      ],
+      "answer": "To evaluate the building's performance after occupancy",
+      "explanation": "A post-occupancy evaluation (POE) assesses the building's performance, functionality, and user satisfaction after occupancy to identify areas for improvement.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the primary purpose of a change order in practice management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To define project goals and objectives",
+        "To authorize minor design changes",
+        "To establish a timeline for project tasks",
+        "To allocate project resources efficiently"
+      ],
+      "answer": "To authorize minor design changes",
+      "explanation": "A change order is issued to authorize minor design changes during the project's construction phase.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the purpose of conducting a post-occupancy evaluation (POE) in practice management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To establish a timeline for project tasks",
+        "To identify potential construction defects",
+        "To evaluate the building's performance after occupancy",
+        "To allocate project resources efficiently"
+      ],
+      "answer": "To evaluate the building's performance after occupancy",
+      "explanation": "A post-occupancy evaluation (POE) assesses the building's performance, functionality, and user satisfaction after occupancy to identify areas for improvement.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the primary purpose of a change order in practice management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To define project goals and objectives",
+        "To authorize minor design changes",
+        "To establish a timeline for project tasks",
+        "To allocate project resources efficiently"
+      ],
+      "answer": "To authorize minor design changes",
+      "explanation": "A change order is issued to authorize minor design changes during the project's construction phase.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the purpose of conducting a post-occupancy evaluation (POE) in practice management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To establish a timeline for project tasks",
+        "To identify potential construction defects",
+        "To evaluate the building's performance after occupancy",
+        "To allocate project resources efficiently"
+      ],
+      "answer": "To evaluate the building's performance after occupancy",
+      "explanation": "A post-occupancy evaluation (POE) assesses the building's performance, functionality, and user satisfaction after occupancy to identify areas for improvement.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the primary purpose of a change order in practice management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To define project goals and objectives",
+        "To authorize minor design changes",
+        "To establish a timeline for project tasks",
+        "To allocate project resources efficiently"
+      ],
+      "answer": "To authorize minor design changes",
+      "explanation": "A change order is issued to authorize minor design changes during the project's construction phase.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the purpose of a punch list in practice management?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To schedule construction site visits",
+        "To create a final budget for the project",
+        "To identify incomplete or deficient work",
+        "To list items that require additional funding"
+      ],
+      "answer": "To identify incomplete or deficient work",
+      "explanation": "A punch list is a list of items that need to be addressed or corrected before the project can be considered complete. It includes incomplete or deficient work that needs to be fixed or completed.",
+      "difficulty": "Medium"
+    }
+  ]
+}
