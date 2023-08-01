@@ -1,0 +1,222 @@
+{
+  "quizName": "General Knowledge Quiz",
+  "quizCode": "GK2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "General Knowledge",
+  "quizDescription": "Test your general knowledge with this diverse quiz!",
+  "quizTags": "General Knowledge, Trivia, Facts",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which planet is known as the 'Red Planet'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Venus",
+        "Mars",
+        "Mercury",
+        "Jupiter"
+      ],
+      "answer": "Mars",
+      "explanation": "Mars is known as the 'Red Planet' due to its reddish appearance caused by iron oxide on its surface.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which famous scientist formulated the theory of relativity?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Isaac Newton",
+        "Albert Einstein",
+        "Galileo Galilei",
+        "Marie Curie"
+      ],
+      "answer": "Albert Einstein",
+      "explanation": "Albert Einstein, a renowned physicist, formulated the theory of relativity, including the famous equation E=mc^2.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the largest mammal in the world?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "African Elephant",
+        "Blue Whale",
+        "Giraffe",
+        "Polar Bear"
+      ],
+      "answer": "Blue Whale",
+      "explanation": "The Blue Whale is the largest mammal on Earth, and it is also the largest animal ever known to have existed.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "In which country would you find the ancient ruins of Machu Picchu?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Peru",
+        "Mexico",
+        "Brazil",
+        "Greece"
+      ],
+      "answer": "Peru",
+      "explanation": "The ancient ruins of Machu Picchu are located in Peru, and it is a UNESCO World Heritage site.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which famous playwright wrote the tragedy 'Romeo and Juliet'?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "William Shakespeare",
+        "Oscar Wilde",
+        "Jane Austen",
+        "Mark Twain"
+      ],
+      "answer": "William Shakespeare",
+      "explanation": "The tragedy 'Romeo and Juliet' was written by the famous playwright William Shakespeare.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the capital city of Japan?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tokyo",
+        "Beijing",
+        "Seoul",
+        "Bangkok"
+      ],
+      "answer": "Tokyo",
+      "explanation": "Tokyo is the capital city of Japan and one of the most populous cities in the world.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the largest organ in the human body?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Liver",
+        "Brain",
+        "Skin",
+        "Heart"
+      ],
+      "answer": "Skin",
+      "explanation": "The skin is the largest organ in the human body and serves as a protective barrier.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous artist painted the 'Mona Lisa'?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Vincent van Gogh",
+        "Leonardo da Vinci",
+        "Pablo Picasso",
+        "Michelangelo"
+      ],
+      "answer": "Leonardo da Vinci",
+      "explanation": "The 'Mona Lisa' was painted by the Italian artist Leonardo da Vinci, and it is one of the most famous artworks in the world.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the chemical symbol for the element gold?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ag",
+        "Au",
+        "Go",
+        "Gl"
+      ],
+      "answer": "Au",
+      "explanation": "The chemical symbol for the element gold is 'Au,' which comes from the Latin word 'aurum.'",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which famous speech by Martin Luther King Jr. begins with 'I have a dream'?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "I Have a Dream",
+        "I Dream of Equality",
+        "Equality for All",
+        "Dreaming of Freedom"
+      ],
+      "answer": "I Have a Dream",
+      "explanation": "The famous speech by Martin Luther King Jr. that begins with 'I have a dream' was delivered during the March on Washington for Jobs and Freedom in 1963.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the tallest mountain in the world?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Mount Kilimanjaro",
+        "Mount Everest",
+        "Mount McKinley (Denali)",
+        "Mount Fuji"
+      ],
+      "answer": "Mount Everest",
+      "explanation": "Mount Everest, located in the Himalayas, is the tallest mountain in the world, measured from sea level to its summit.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the chemical symbol for the element oxygen?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ox",
+        "O",
+        "Oy",
+        "Om"
+      ],
+      "answer": "O",
+      "explanation": "The chemical symbol for the element oxygen is 'O,' and it is an essential element for life on Earth.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which continent is known as the 'Dark Continent'?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Africa",
+        "Asia",
+        "South America",
+        "Australia"
+      ],
+      "answer": "Africa",
+      "explanation": "Africa is often referred to as the 'Dark Continent' due to its historical mysteries and unexplored regions during the European exploration period.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the largest ocean on Earth?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Indian Ocean",
+        "Atlantic Ocean",
+        "Arctic Ocean",
+        "Pacific Ocean"
+      ],
+      "answer": "Pacific Ocean",
+      "explanation": "The Pacific Ocean is the largest and deepest ocean on Earth, covering a vast area.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Who wrote the famous play 'Hamlet'?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "William Shakespeare",
+        "George Bernard Shaw",
+        "Arthur Miller",
+        "Tennessee Williams"
+      ],
+      "answer": "William Shakespeare",
+      "explanation": "The famous play 'Hamlet' was written by the renowned playwright William Shakespeare.",
+      "difficulty": "Easy"
+    }
+  ]
+}
