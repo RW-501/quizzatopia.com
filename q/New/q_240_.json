@@ -1,0 +1,86 @@
+{
+  "quizName": "Pop Culture Quiz - Music Edition",
+  "quizCode": "POPCMUSIC2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of popular music and its impact on pop culture!",
+  "quizTags": "Pop Culture, Music, Artists, Songs, Celebrities",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which artist is known as the 'Queen of Pop' and has hits like 'Like a Virgin' and 'Material Girl'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Madonna",
+        "Beyoncé",
+        "Britney Spears",
+        "Taylor Swift"
+      ],
+      "answer": "Madonna",
+      "explanation": "Madonna is often referred to as the 'Queen of Pop' and has been an influential figure in the music industry for decades.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which legendary musician was known as the 'King of Pop' and gave us timeless hits like 'Thriller' and 'Billie Jean'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Elvis Presley",
+        "Michael Jackson",
+        "Prince",
+        "Stevie Wonder"
+      ],
+      "answer": "Michael Jackson",
+      "explanation": "Michael Jackson, the 'King of Pop,' was a global icon whose music and dance moves left an indelible mark on pop culture.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which female artist made a splash in the music industry with her debut single 'Bad Guy'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ariana Grande",
+        "Dua Lipa",
+        "Billie Eilish",
+        "Selena Gomez"
+      ],
+      "answer": "Billie Eilish",
+      "explanation": "Billie Eilish gained widespread popularity with her unique style and captivating voice, making her a rising star in the music world.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which boy band became a global sensation with hits like 'I Want It That Way' and 'Everybody'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Backstreet Boys",
+        "NSYNC",
+        "One Direction",
+        "Boyz II Men"
+      ],
+      "answer": "Backstreet Boys",
+      "explanation": "The Backstreet Boys achieved massive success in the late '90s and early 2000s, becoming one of the best-selling boy bands of all time.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which singer-songwriter's debut single 'Someone Like You' became a heartbreak anthem worldwide?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Adele",
+        "Lady Gaga",
+        "Rihanna",
+        "Katy Perry"
+      ],
+      "answer": "Adele",
+      "explanation": "Adele's soulful voice and emotionally charged lyrics have earned her immense popularity and critical acclaim in the music industry.",
+      "difficulty": "Medium"
+    }
+  ]
+}
