@@ -1,0 +1,236 @@
+{
+  "quizName": "Self-Health Quiz",
+  "quizCode": "SELFHEALTH2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Health & Wellness",
+  "quizDescription": "Test your knowledge of various aspects of personal health and well-being.",
+  "quizTags": "Self-Health, Wellness, Nutrition, Fitness, Mental Health",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the recommended daily water intake for adults?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "4 cups",
+        "8 cups",
+        "12 cups",
+        "16 cups"
+      ],
+      "answer": "8 cups",
+      "explanation": "The recommended daily water intake for adults is 8 cups, which is equivalent to about 2 liters or half a gallon.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which of the following is a good source of protein?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "White rice",
+        "Broccoli",
+        "Banana",
+        "Chicken breast"
+      ],
+      "answer": "Chicken breast",
+      "explanation": "Chicken breast is a good source of protein, which is essential for building and repairing tissues in the body.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the importance of stretching before exercise?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "It helps burn more calories",
+        "It increases muscle strength",
+        "It improves flexibility and reduces the risk of injury",
+        "It speeds up heart rate"
+      ],
+      "answer": "It improves flexibility and reduces the risk of injury",
+      "explanation": "Stretching before exercise helps improve flexibility and reduces the risk of injury by warming up the muscles and increasing blood flow to the tissues.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the recommended amount of physical activity per week for adults?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "30 minutes",
+        "60 minutes",
+        "90 minutes",
+        "120 minutes"
+      ],
+      "answer": "150 minutes",
+      "explanation": "The recommended amount of physical activity per week for adults is 150 minutes of moderate-intensity aerobic activity or 75 minutes of vigorous-intensity aerobic activity.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the best way to manage stress?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ignoring stressors and hoping they will go away",
+        "Avoiding social interactions",
+        "Engaging in regular physical activity",
+        "Overindulging in unhealthy foods"
+      ],
+      "answer": "Engaging in regular physical activity",
+      "explanation": "Engaging in regular physical activity is an effective way to manage stress as it helps release endorphins, which are natural stress-relievers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the recommended amount of sleep for adults per night?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "4-5 hours",
+        "6-7 hours",
+        "8-9 hours",
+        "10-11 hours"
+      ],
+      "answer": "7-9 hours",
+      "explanation": "The recommended amount of sleep for adults per night is 7-9 hours, which is essential for overall health and well-being.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is a balanced diet?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Eating only fruits and vegetables",
+        "Eating a variety of foods from all food groups in appropriate portions",
+        "Eating only low-calorie foods",
+        "Eating high-protein foods only"
+      ],
+      "answer": "Eating a variety of foods from all food groups in appropriate portions",
+      "explanation": "A balanced diet involves eating a variety of foods from all food groups, including fruits, vegetables, grains, protein sources, and dairy, in appropriate portions to meet nutritional needs.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the primary benefit of regular cardiovascular exercise?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Increased muscle mass",
+        "Improved flexibility",
+        "Strengthened immune system",
+        "Enhanced heart and lung function"
+      ],
+      "answer": "Enhanced heart and lung function",
+      "explanation": "Regular cardiovascular exercise, such as running or swimming, improves heart and lung function, leading to better cardiovascular health.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is mindfulness?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Focusing on multiple tasks at once",
+        "Engaging in regular physical activity",
+        "Being fully present and aware of the present moment",
+        "Avoiding stressful situations"
+      ],
+      "answer": "Being fully present and aware of the present moment",
+      "explanation": "Mindfulness involves being fully present and aware of the present moment without judgment, which can help reduce stress and improve mental well-being.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the purpose of warm-up exercises before a workout?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To improve flexibility",
+        "To gradually increase heart rate and body temperature",
+        "To target specific muscle groups",
+        "To burn more calories"
+      ],
+      "answer": "To gradually increase heart rate and body temperature",
+      "explanation": "Warm-up exercises before a workout gradually increase heart rate and body temperature, preparing the body for more intense physical activity.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which of the following is a common symptom of dehydration?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Excessive hunger",
+        "Frequent urination",
+        "Dry mouth and throat",
+        "Increased energy levels"
+      ],
+      "answer": "Dry mouth and throat",
+      "explanation": "A common symptom of dehydration is a dry mouth and throat, indicating that the body needs more fluids.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the importance of regular health check-ups?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To save money on healthcare expenses",
+        "To obtain medical certificates",
+        "To monitor health status and detect potential health issues",
+        "To receive free medications"
+      ],
+      "answer": "To monitor health status and detect potential health issues",
+      "explanation": "Regular health check-ups are important to monitor health status, detect potential health issues early, and take preventive measures to maintain overall well-being.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the primary purpose of setting SMART goals in fitness?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To compete in sports events",
+        "To show off physical abilities",
+        "To compare progress with others",
+        "To create a clear and achievable plan"
+      ],
+      "answer": "To create a clear and achievable plan",
+      "explanation": "Setting SMART goals (Specific, Measurable, Achievable, Relevant, Time-bound) in fitness helps create a clear and achievable plan to track progress and stay motivated.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the best way to improve overall well-being?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Avoiding all forms of stress",
+        "Maintaining a balanced diet and staying physically active",
+        "Using social media frequently",
+        "Spending more time indoors"
+      ],
+      "answer": "Maintaining a balanced diet and staying physically active",
+      "explanation": "Maintaining a balanced diet and staying physically active are essential for improving overall well-being and promoting good health.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "What is the recommended frequency for strength training exercises?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Once a week",
+        "Twice a week",
+        "Three times a week",
+        "Every day"
+      ],
+      "answer": "Twice a week",
+      "explanation": "The recommended frequency for strength training exercises is twice a week to allow sufficient time for muscle recovery and growth.",
+      "difficulty": "Medium"
+    }
+  ]
+}
