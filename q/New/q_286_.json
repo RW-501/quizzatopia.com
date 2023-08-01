@@ -1,0 +1,234 @@
+{
+  "quizName": "Project Planning & Design (PPD) Quiz - Medium",
+  "quizCode": "PPD_Quiz_Medium_2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Architecture",
+  "quizDescription": "Test your knowledge of Project Planning & Design concepts with this medium-level quiz!",
+  "quizTags": "Project Planning, Design, Architecture, PPD",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the primary goal of the pre-design phase in project planning?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To create detailed construction documents",
+        "To establish the project budget",
+        "To gather information about the site and project requirements",
+        "To obtain necessary permits and approvals"
+      ],
+      "answer": "To gather information about the site and project requirements",
+      "explanation": "The primary goal of the pre-design phase in project planning is to gather information about the site and project requirements, which serves as the foundation for the design process.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which of the following is an important consideration in site analysis during the project planning phase?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Structural analysis of existing buildings",
+        "Analysis of zoning laws and regulations",
+        "Assessment of interior design elements",
+        "Budget allocation for construction materials"
+      ],
+      "answer": "Analysis of zoning laws and regulations",
+      "explanation": "During site analysis in the project planning phase, it is crucial to consider zoning laws and regulations to ensure the proposed design complies with local codes and restrictions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "True or False: The schematic design phase typically involves developing detailed construction documents.",
+      "imageURL": "",
+      "questionType": "True and False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. The schematic design phase focuses on developing conceptual drawings and initial design ideas, not detailed construction documents.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the purpose of a building program in the project planning phase?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To define the project schedule",
+        "To outline the construction sequence",
+        "To establish the project budget",
+        "To identify project requirements and spaces"
+      ],
+      "answer": "To identify project requirements and spaces",
+      "explanation": "The purpose of a building program in the project planning phase is to identify project requirements, including the functional spaces and specific needs of the project.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which project planning document outlines the project's scope, schedule, and budget?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Project plan",
+        "Risk register",
+        "Project charter",
+        "Project budget"
+      ],
+      "answer": "Project plan",
+      "explanation": "The project plan is a comprehensive project planning document that outlines the project's scope, schedule, budget, resources, and other key details necessary for successful project execution.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the primary purpose of a design development phase in project planning?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To produce detailed construction documents",
+        "To finalize the project budget",
+        "To obtain permits for construction",
+        "To refine and develop the design concept"
+      ],
+      "answer": "To refine and develop the design concept",
+      "explanation": "The primary purpose of a design development phase in project planning is to refine and develop the design concept based on feedback and input from stakeholders.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the purpose of a cost estimate in the project planning phase?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To provide an assessment of construction quality",
+        "To determine the project's schedule",
+        "To evaluate potential project risks",
+        "To estimate the project's total cost"
+      ],
+      "answer": "To estimate the project's total cost",
+      "explanation": "The purpose of a cost estimate in the project planning phase is to assess and determine the project's total cost, including construction materials, labor, and other expenses.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which of the following is a primary consideration in sustainable design during the project planning phase?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Structural analysis of existing buildings",
+        "Energy efficiency and environmental impact",
+        "Budget allocation for construction materials",
+        "Analysis of zoning laws and regulations"
+      ],
+      "answer": "Energy efficiency and environmental impact",
+      "explanation": "In sustainable design during the project planning phase, a primary consideration is energy efficiency and environmental impact to create environmentally-friendly and resource-efficient buildings.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the purpose of a construction document phase in project planning?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To define the project schedule",
+        "To create detailed technical drawings and specifications",
+        "To obtain necessary permits and approvals",
+        "To conduct post-occupancy evaluations"
+      ],
+      "answer": "To create detailed technical drawings and specifications",
+      "explanation": "The purpose of a construction document phase in project planning is to produce detailed technical drawings and specifications necessary for construction.",
+      "difficulty": "Medium"
+    },
+
+
+    {
+      "questionNumber": 10,
+      "question": "Which project planning document outlines the project's goals, objectives, and stakeholders?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Project plan",
+        "Risk register",
+        "Project charter",
+        "Project budget"
+      ],
+      "answer": "Project charter",
+      "explanation": "The project charter is a project planning document that outlines the project's goals, objectives, stakeholders, and high-level requirements.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "What is the purpose of a design brief in the project planning phase?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To provide updates on team member performance",
+        "To outline the construction sequence",
+        "To document the project's history",
+        "To capture project goals and design objectives"
+      ],
+      "answer": "To capture project goals and design objectives",
+      "explanation": "The purpose of a design brief in the project planning phase is to capture project goals and design objectives, helping guide the design process.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 12,
+      "question": "True or False: A feasibility study is typically conducted during the schematic design phase.",
+      "imageURL": "",
+      "questionType": "True and False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "False. A feasibility study is typically conducted during the pre-design phase to assess the viability of the project and explore alternative solutions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 13,
+      "question": "What is the purpose of a design presentation in the project planning phase?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To create detailed construction documents",
+        "To present the project schedule",
+        "To obtain permits for construction",
+        "To showcase and explain the design concept"
+      ],
+      "answer": "To showcase and explain the design concept",
+      "explanation": "The purpose of a design presentation in the project planning phase is to showcase and explain the design concept to stakeholders, obtaining feedback and approval before proceeding with detailed design.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "What is the primary goal of value engineering in project planning?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To reduce the project's environmental impact",
+        "To evaluate potential project risks",
+        "To improve the project's quality and value",
+        "To finalize the project budget"
+      ],
+      "answer": "To improve the project's quality and value",
+      "explanation": "The primary goal of value engineering in project planning is to improve the project's quality and value by identifying cost-saving opportunities and enhancing performance.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "In project planning, what is the purpose of a project timeline?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To evaluate potential project risks",
+        "To establish the project budget",
+        "To outline the construction sequence",
+        "To set the project's schedule and milestones"
+      ],
+      "answer": "To set the project's schedule and milestones",
+      "explanation": "The purpose of a project timeline in project planning is to set the project's schedule and milestones, defining the sequence of project activities and their durations.",
+      "difficulty": "Medium"
+    }
+  ]
+}
