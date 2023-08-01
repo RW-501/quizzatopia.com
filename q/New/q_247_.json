@@ -1,0 +1,86 @@
+{
+  "quizName": "Pop Culture Quiz - 1990s Edition",
+  "quizCode": "POPC90S2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of pop culture highlights from the 1990s!",
+  "quizTags": "Pop Culture, 1990s, Nineties, Music, Movies, Fashion",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which animated TV show, created by Matt Groening, follows the misadventures of the Simpson family in the fictional town of Springfield?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Family Guy",
+        "South Park",
+        "The Simpsons",
+        "Futurama"
+      ],
+      "answer": "The Simpsons",
+      "explanation": "'The Simpsons' became a cultural phenomenon and the longest-running scripted prime-time TV series in the United States.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which famous female artist released her critically acclaimed album 'Jagged Little Pill' in 1995, featuring hits like 'You Oughta Know'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Celine Dion",
+        "Shania Twain",
+        "Madonna",
+        "Alanis Morissette"
+      ],
+      "answer": "Alanis Morissette",
+      "explanation": "Alanis Morissette's 'Jagged Little Pill' was a huge success, earning her multiple Grammy Awards and commercial acclaim.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which classic romantic comedy film, released in 1993, stars Tom Hanks and Meg Ryan and revolves around the world of online dating?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pretty Woman",
+        "Sleepless in Seattle",
+        "You've Got Mail",
+        "When Harry Met Sally..."
+      ],
+      "answer": "You've Got Mail",
+      "explanation": "'You've Got Mail' is a heartwarming film that captured the charm of online communication and its impact on modern relationships.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which popular toy of the 1990s was a handheld virtual pet that users had to take care of, often displayed on a small keychain screen?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Tamagotchi",
+        "Furby",
+        "Tickle Me Elmo",
+        "Bop It"
+      ],
+      "answer": "Tamagotchi",
+      "explanation": "Tamagotchis were a cultural phenomenon, requiring users to feed, play, and care for their virtual pets, leading to a global trend.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which fashion trend of the 1990s involved wearing oversized flannel shirts, ripped jeans, and combat boots?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Preppy Style",
+        "Grunge Fashion",
+        "Hip Hop Fashion",
+        "Rave Culture"
+      ],
+      "answer": "Grunge Fashion",
+      "explanation": "Grunge Fashion emerged as an alternative and anti-fashion movement, heavily influenced by the music scene and characterized by its laid-back, edgy style.",
+      "difficulty": "Medium"
+    }
+  ]
+}
