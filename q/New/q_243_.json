@@ -1,0 +1,86 @@
+{
+  "quizName": "Pop Culture Quiz - Lifestyle Edition",
+  "quizCode": "POPCSTYLE2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of lifestyle trends and habits that have influenced pop culture!",
+  "quizTags": "Pop Culture, Lifestyle, Trends, Habits, Popular",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which popular video-sharing app allows users to create short lip-sync, dance, and comedy videos?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Instagram",
+        "Snapchat",
+        "TikTok",
+        "YouTube"
+      ],
+      "answer": "TikTok",
+      "explanation": "TikTok has become a global phenomenon, with users creating and sharing short, entertaining videos across various genres.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which lifestyle trend promotes reducing clutter and organizing belongings to create a harmonious living space?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Minimalism",
+        "Hygge",
+        "Feng Shui",
+        "KonMari"
+      ],
+      "answer": "KonMari",
+      "explanation": "The KonMari method, popularized by Marie Kondo, focuses on keeping only items that spark joy and decluttering for a more organized life.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which lifestyle trend emphasizes enjoying life's simple pleasures and creating a cozy atmosphere?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Minimalism",
+        "Hygge",
+        "Feng Shui",
+        "KonMari"
+      ],
+      "answer": "Hygge",
+      "explanation": "Hygge is a Danish concept that encourages comfort, contentment, and coziness, especially during colder months.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which leisure activity, popularized by celebrities, focuses on exploring the great outdoors and connecting with nature?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Hiking",
+        "Camping",
+        "Glamping",
+        "Rock Climbing"
+      ],
+      "answer": "Glamping",
+      "explanation": "Glamping, a portmanteau of 'glamorous' and 'camping,' offers luxurious camping experiences with modern amenities.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which health and wellness trend promotes a diet rich in whole foods and limits processed foods and added sugars?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Paleo",
+        "Vegan",
+        "Keto",
+        "Mediterranean"
+      ],
+      "answer": "Mediterranean",
+      "explanation": "The Mediterranean diet emphasizes fruits, vegetables, whole grains, fish, and olive oil, known for its potential health benefits.",
+      "difficulty": "Medium"
+    }
+  ]
+}
