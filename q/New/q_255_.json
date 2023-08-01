@@ -1,147 +1,236 @@
 {
   "quizName": "Hard Web Development Quiz",
-  "quizCode": "WEBDEVHARD2023",
+  "quizCode": "WebDevQuizHard2023",
   "quizDifficulty": "Hard",
-  "quizCategory": "Web Development",
-  "quizDescription": "Put your web development skills to the test with this hard-level quiz!",
-  "quizTags": "Web Development, Frontend, Backend, JavaScript, Frameworks, Security",
+  "quizCategory": "Technology",
+  "quizDescription": "Test your advanced knowledge of web development with this challenging quiz!",
+  "quizTags": "Web Development, HTML, CSS, JavaScript, Programming",
   "numberOfQuestions": 15,
   "questions": [
     {
       "questionNumber": 1,
-      "question": "What is the purpose of the 'defer' attribute in the 'script' tag?",
+      "question": "What does CSS stand for in web development?",
       "imageURL": "",
       "questionType": "Multiple Choice",
       "options": [
-        "To indicate that the script should be executed after the page is parsed",
-        "To defer the loading of the script until the page is fully loaded",
-        "To prevent the script from being cached by the browser",
-        "To indicate that the script should be executed in strict mode"
+        "Computer Style Sheets",
+        "Cascading Style Sheets",
+        "Creative Style Sheets",
+        "Colorful Style Sheets"
       ],
-      "answer": "To indicate that the script should be executed after the page is parsed",
-      "explanation": "The 'defer' attribute in the 'script' tag is used to indicate that the script should be executed after the page is parsed, allowing the HTML content to load first.",
+      "answer": "Cascading Style Sheets",
+      "explanation": "CSS stands for Cascading Style Sheets and is used to style the appearance of web pages.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 2,
-      "question": "What is the purpose of the 'async' attribute in the 'script' tag?",
+      "question": "Which HTML element is used to define an unordered list?",
       "imageURL": "",
       "questionType": "Multiple Choice",
       "options": [
-        "To specify that the script should be executed asynchronously",
-        "To specify that the script should be executed synchronously",
-        "To defer the loading of the script until the page is fully loaded",
-        "To indicate that the script should be executed in strict mode"
+        "<ul>",
+        "<ol>",
+        "<li>",
+        "<dl>"
       ],
-      "answer": "To specify that the script should be executed asynchronously",
-      "explanation": "The 'async' attribute in the 'script' tag is used to specify that the script should be executed asynchronously, meaning it will not block the rendering of the page.",
+      "answer": "<ul>",
+      "explanation": "The <ul> element is used to define an unordered list in HTML.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 3,
-      "question": "What is a 'closure' in JavaScript?",
+      "question": "In JavaScript, what is the purpose of the 'use strict' directive?",
       "imageURL": "",
       "questionType": "Multiple Choice",
       "options": [
-        "A function that has access to variables from its containing function",
-        "A built-in method to close a browser window",
-        "A mechanism to securely close an API endpoint",
-        "A process of closing browser tabs programmatically"
+        "To enable strict mode for the entire script",
+        "To include a JavaScript library",
+        "To prevent syntax errors",
+        "To optimize code performance"
       ],
-      "answer": "A function that has access to variables from its containing function",
-      "explanation": "A closure in JavaScript is a function that has access to variables from its containing (enclosing) function's scope, even after the containing function has finished executing.",
+      "answer": "To enable strict mode for the entire script",
+      "explanation": "The 'use strict' directive is used in JavaScript to enable strict mode for the entire script, which helps in writing secure and optimized code.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 4,
-      "question": "Which HTTP method is used for idempotent requests in web development?",
+      "question": "What is the purpose of a media query in CSS?",
       "imageURL": "",
       "questionType": "Multiple Choice",
       "options": [
-        "POST",
-        "GET",
-        "PUT",
-        "DELETE"
+        "To create animations",
+        "To apply styles based on the user's location",
+        "To optimize images for different screen sizes",
+        "To apply styles based on the device's characteristics and screen size"
       ],
-      "answer": "GET",
-      "explanation": "The GET method is used for idempotent requests in web development. Idempotent requests are those that can be safely repeated without changing the result.",
+      "answer": "To apply styles based on the device's characteristics and screen size",
+      "explanation": "A media query in CSS is used to apply styles based on the device's characteristics and screen size, allowing for responsive web design.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 5,
-      "question": "What is the purpose of Cross-Origin Resource Sharing (CORS) in web development?",
+      "question": "Which JavaScript function is used to make an asynchronous HTTP request?",
       "imageURL": "",
       "questionType": "Multiple Choice",
       "options": [
-        "To allow a web page to access resources from another domain",
-        "To block access to resources from a specific domain",
-        "To compress resources for faster loading",
-        "To encrypt resources for secure transmission"
+        "fetch()",
+        "get()",
+        "xhr()",
+        "async()"
       ],
-      "answer": "To allow a web page to access resources from another domain",
-      "explanation": "CORS is a security feature in web development that allows a web page from one domain to make requests and access resources from another domain.",
+      "answer": "fetch()",
+      "explanation": "The fetch() function is used in JavaScript to make an asynchronous HTTP request to a server and handle the response.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 6,
-      "question": "What is a 'Promise' in JavaScript?",
+      "question": "What is the purpose of the 'defer' attribute in the <script> element?",
       "imageURL": "",
       "questionType": "Multiple Choice",
       "options": [
-        "A way to handle errors in asynchronous code",
-        "A built-in function for event handling",
-        "A method to control CSS animations",
-        "An object representing the eventual completion (or failure) of an asynchronous operation and its resulting value"
+        "To delay the execution of the script until the page has finished loading",
+        "To prevent the script from executing",
+        "To load an external JavaScript file",
+        "To execute the script synchronously"
       ],
-      "answer": "An object representing the eventual completion (or failure) of an asynchronous operation and its resulting value",
-      "explanation": "In JavaScript, a Promise is an object representing the eventual completion (or failure) of an asynchronous operation and the resulting value.",
+      "answer": "To delay the execution of the script until the page has finished loading",
+      "explanation": "The 'defer' attribute in the <script> element is used to delay the execution of the script until the page has finished loading, ensuring that the HTML document is fully parsed before the script is executed.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 7,
-      "question": "Which header is used for secure HTTP requests to prevent cross-site request forgery (CSRF) attacks?",
+      "question": "In CSS, what is the purpose of the 'transform' property?",
       "imageURL": "",
       "questionType": "Multiple Choice",
       "options": [
-        "X-XSS-Protection",
-        "X-Content-Type-Options",
-        "X-Frame-Options",
-        "X-CSRF-Token"
+        "To apply 3D effects to elements",
+        "To change the position of an element",
+        "To create animations",
+        "To apply styling to a form"
       ],
-      "answer": "X-CSRF-Token",
-      "explanation": "The 'X-CSRF-Token' header is used for secure HTTP requests to prevent cross-site request forgery (CSRF) attacks, where an attacker tricks a user into making unintended requests.",
+      "answer": "To apply 3D effects to elements",
+      "explanation": "The 'transform' property in CSS is used to apply 2D or 3D transformations to elements, allowing for rotation, scaling, and translation.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 8,
-      "question": "What does the acronym 'SPA' stand for in web development?",
+      "question": "What is the purpose of the 'localStorage' object in JavaScript?",
       "imageURL": "",
       "questionType": "Multiple Choice",
       "options": [
-        "Single Process Application",
-        "Serverless Progressive App",
-        "Single Page Application",
-        "Secure Public Access"
+        "To store data locally in the browser",
+        "To fetch data from a server",
+        "To perform mathematical calculations",
+        "To validate user input"
       ],
-      "answer": "Single Page Application",
-      "explanation": "SPA stands for Single Page Application, which is a web application that loads a single HTML page and dynamically updates the content as the user interacts with the app.",
+      "answer": "To store data locally in the browser",
+      "explanation": "The 'localStorage' object in JavaScript is used to store data locally in the browser, allowing web applications to save user preferences and data without relying on a server.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 9,
-      "question": "What is 'bundling' in the context of frontend web development?",
+      "question": "Which CSS property is used to create rounded corners for an element?",
       "imageURL": "",
       "questionType": "Multiple Choice",
       "options": [
-        "A technique to compress images for faster loading",
-        "A process of combining multiple JavaScript or CSS files into a single file",
-        "A method to optimize database queries",
-        "A way to secure web application authentication"
+        "border-radius",
+        "box-shadow",
+        "border-style",
+        "corner-radius"
       ],
-      "answer": "A process of combining multiple JavaScript or CSS files into a single file",
-      "explanation": "In frontend web development, bundling is the process of combining multiple JavaScript or CSS files into a single file to reduce the number of HTTP requests and improve performance.",
+      "answer": "border-radius",
+      "explanation": "The 'border-radius' property in CSS is used to create rounded corners for an element.",
       "difficulty": "Hard"
     },
     {
       "questionNumber": 10,
-      "question":
+      "question": "In HTML, which attribute is used to associate a label with an input element?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "name",
+        "for",
+        "id",
+        "label"
+      ],
+      "answer": "for",
+      "explanation": "The 'for' attribute in HTML is used to associate a label with an input element. It specifies which input element the label is associated with by matching the 'for' attribute value with the input element's 'id' attribute value.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which JavaScript method is used to remove the last element from an array?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "pop()",
+        "shift()",
+        "splice()",
+        "remove()"
+      ],
+      "answer": "pop()",
+      "explanation": "The pop() method in JavaScript is used to remove the last element from an array and return that element.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the purpose of the 'flexbox' layout model in CSS?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To create responsive web designs",
+        "To apply animations to elements",
+        "To change the font size of elements",
+        "To implement a grid-based layout"
+      ],
+      "answer": "To create responsive web designs",
+      "explanation": "The 'flexbox' layout model in CSS is used to create flexible and responsive web designs, allowing for dynamic and adaptive layouts.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 13,
+      "question": "In JavaScript, what is the purpose of the 'bind' method?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To create a new array",
+        "To add event listeners to elements",
+        "To bind a function to a specific context",
+        "To append elements to the DOM"
+      ],
+      "answer": "To bind a function to a specific context",
+      "explanation": "The 'bind' method in JavaScript is used to bind a function to a specific context, ensuring that the 'this' keyword inside the function refers to the specified object.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which CSS property is used to create a shadow effect behind an element?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "box-shadow",
+        "text-shadow",
+        "element-shadow",
+        "shadow-effect"
+      ],
+      "answer": "box-shadow",
+      "explanation": "The 'box-shadow' property in CSS is used to create a shadow effect behind an element, adding depth and visual appeal to the design.",
+      "difficulty": "Hard"
+    },
+    {
+      "questionNumber": 15,
+      "question": "In web development, what is the purpose of minification?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To compress and reduce the size of image files",
+        "To optimize website performance and load time",
+        "To secure the website against cyberattacks",
+        "To convert code from one programming language to another"
+      ],
+      "answer": "To optimize website performance and load time",
+      "explanation": "Minification in web development is the process of removing unnecessary characters and white spaces from the code, reducing its size and improving website performance and load time.",
+      "difficulty": "Hard"
+    }
+  ]
+}
