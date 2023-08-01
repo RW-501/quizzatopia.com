@@ -1,0 +1,161 @@
+{
+  "quizName": "Animal Kingdom Quiz for Kids",
+  "quizCode": "ANIMAL2023",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Science",
+  "quizDescription": "Explore the fascinating world of animals with this fun quiz for kids.",
+  "quizTags": "Animals, Nature, Kids, Wildlife, Zoology",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which animal is known for its distinctive black and white stripes and is native to Africa?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Zebra",
+        "Giraffe",
+        "Elephant",
+        "Panda"
+      ],
+      "answer": "Zebra",
+      "explanation": "The zebra is known for its distinctive black and white stripes and is native to Africa.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which animal is the largest mammal on Earth and lives in the ocean?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Dolphin",
+        "Blue Whale",
+        "Shark",
+        "Octopus"
+      ],
+      "answer": "Blue Whale",
+      "explanation": "The blue whale is the largest mammal on Earth and lives in the ocean.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which bird is known for its colorful feathers and is often associated with rainbows?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Penguin",
+        "Parrot",
+        "Ostrich",
+        "Seagull"
+      ],
+      "answer": "Parrot",
+      "explanation": "Parrots are known for their colorful feathers and are often associated with rainbows due to their vibrant plumage.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which animal has a long neck and is often seen grazing on leaves in the savanna?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Zebra",
+        "Giraffe",
+        "Elephant",
+        "Kangaroo"
+      ],
+      "answer": "Giraffe",
+      "explanation": "The giraffe has a long neck and is often seen grazing on leaves in the savanna.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What animal has a prehensile tail, swings from trees, and is native to the rainforests?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kangaroo",
+        "Lion",
+        "Sloth",
+        "Elephant"
+      ],
+      "answer": "Sloth",
+      "explanation": "The sloth has a prehensile tail, swings from trees, and is native to the rainforests of Central and South America.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which animal is known for its black and white fur, eats bamboo, and lives in China?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Zebra",
+        "Giraffe",
+        "Panda",
+        "Kangaroo"
+      ],
+      "answer": "Panda",
+      "explanation": "The panda is known for its black and white fur, eats bamboo, and lives in the forests of China.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What animal has a pouch to carry its babies and is native to Australia?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kangaroo",
+        "Lion",
+        "Elephant",
+        "Dolphin"
+      ],
+      "answer": "Kangaroo",
+      "explanation": "The kangaroo has a pouch to carry its babies, called joeys, and is native to Australia.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which animal is often associated with wisdom and is the symbol of Athena, the Greek goddess of wisdom?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Elephant",
+        "Owl",
+        "Penguin",
+        "Lion"
+      ],
+      "answer": "Owl",
+      "explanation": "The owl is often associated with wisdom and is the symbol of Athena, the Greek goddess of wisdom.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What animal is known for its black and white coloration, lives in cold regions, and is a skilled swimmer?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Polar Bear",
+        "Lion",
+        "Koala",
+        "Kangaroo"
+      ],
+      "answer": "Polar Bear",
+      "explanation": "The polar bear is known for its black and white coloration, lives in cold regions, and is a skilled swimmer.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which animal has a hump on its back and can survive for long periods without water?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Elephant",
+        "Camel",
+        "Tiger",
+        "Koala"
+      ],
+      "answer": "Camel",
+      "explanation": "Camels have a hump on their back and can survive for long periods without water, making them well-adapted to arid environments.",
+      "difficulty": "Easy"
+    }
+  ]
+}
