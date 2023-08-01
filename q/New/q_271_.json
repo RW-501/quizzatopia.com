@@ -1,0 +1,161 @@
+{
+  "quizName": "Science Fun Facts Quiz for Kids",
+  "quizCode": "SCIENCE2023",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Science",
+  "quizDescription": "Discover fascinating science fun facts that will amaze and excite you!",
+  "quizTags": "Science, Fun Facts, Kids, Curiosity, Knowledge",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the fastest land animal in the world?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Cheetah",
+        "Lion",
+        "Giraffe",
+        "Elephant"
+      ],
+      "answer": "Cheetah",
+      "explanation": "The cheetah is the fastest land animal, capable of running at speeds of up to 70 miles per hour (113 km/h).",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which planet is known as the 'Red Planet'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Earth",
+        "Mars",
+        "Venus",
+        "Jupiter"
+      ],
+      "answer": "Mars",
+      "explanation": "Mars is known as the 'Red Planet' due to its reddish appearance caused by iron oxide on its surface.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the largest organ in the human body?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Heart",
+        "Liver",
+        "Lungs",
+        "Skin"
+      ],
+      "answer": "Skin",
+      "explanation": "The skin is the largest organ in the human body, serving as a protective barrier and regulating body temperature.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What gas do plants absorb from the air to make their own food?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Carbon Monoxide",
+        "Oxygen",
+        "Nitrogen",
+        "Carbon Dioxide"
+      ],
+      "answer": "Carbon Dioxide",
+      "explanation": "Plants absorb carbon dioxide from the air through tiny pores called stomata to conduct photosynthesis and produce their own food.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "How many bones are there in the adult human body?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "100",
+        "206",
+        "300",
+        "420"
+      ],
+      "answer": "206",
+      "explanation": "There are 206 bones in the adult human body, which provide structure, protect organs, and allow for movement.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What force keeps objects on the ground and prevents them from floating away?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Magnetism",
+        "Gravity",
+        "Friction",
+        "Electricity"
+      ],
+      "answer": "Gravity",
+      "explanation": "Gravity is the force that keeps objects on the ground and prevents them from floating away into space.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which animal is known as the 'King of the Jungle'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lion",
+        "Tiger",
+        "Elephant",
+        "Gorilla"
+      ],
+      "answer": "Lion",
+      "explanation": "The lion is often referred to as the 'King of the Jungle' due to its majestic appearance and dominance in its habitat.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the state of matter that has a definite shape and volume?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Solid",
+        "Liquid",
+        "Gas",
+        "Plasma"
+      ],
+      "answer": "Solid",
+      "explanation": "A solid is a state of matter that has a definite shape and volume, with tightly packed particles.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What do you call a baby sheep?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Lamb",
+        "Cub",
+        "Kitten",
+        "Foal"
+      ],
+      "answer": "Lamb",
+      "explanation": "A baby sheep is called a lamb, and they are known for their adorable appearance and gentle nature.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the process of a caterpillar turning into a butterfly called?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Metamorphosis",
+        "Pollination",
+        "Germination",
+        "Photosynthesis"
+      ],
+      "answer": "Metamorphosis",
+      "explanation": "The process of a caterpillar turning into a butterfly is called metamorphosis, involving distinct stages of growth and transformation.",
+      "difficulty": "Easy"
+    }
+  ]
+}
