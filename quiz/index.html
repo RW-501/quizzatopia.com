@@ -575,6 +575,13 @@ display: block !important;
     margin: auto;
 
   }
+
+		#reviewTop {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    font-size: 1.2em;
+}
 </style>
 	  	
 	
@@ -994,7 +1001,7 @@ display: block !important;
 <div id="reviewPopup" class="popup">
   <div id="reviewPopupBox" class="popup-content">
 	   <h2 id="quizReviewName"></h2>
-    <div>
+    <div id="reviewTop">
         <p><strong>Total Questions:</strong> <span id="totalQuestions"></span></p>
         <p><strong>Percent Done:</strong> <span id="percentDone"></span>%</p>
         <p><strong>Current Score:</strong> <span id="currentScore"></span></p>
