@@ -1,0 +1,86 @@
+{
+  "quizName": "Musical Movie Trivia Quiz",
+  "quizCode": "MUSICAL2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Entertainment",
+  "quizDescription": "Test your knowledge of musical movies with this melodious trivia quiz!",
+  "quizTags": "Musicals, Movies, Songs, Dance, Singing",
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which musical movie features a young woman named Maria who falls in love with a naval officer named Captain von Trapp?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Sound of Music",
+        "West Side Story",
+        "Chicago",
+        "Grease"
+      ],
+      "answer": "The Sound of Music",
+      "explanation": "'The Sound of Music' is a classic musical that tells the story of Maria and the von Trapp family against the backdrop of World War II.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which musical movie centers around the rivalry between two New York City gangs, the Sharks and the Jets?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Grease",
+        "West Side Story",
+        "Mamma Mia!",
+        "Hairspray"
+      ],
+      "answer": "West Side Story",
+      "explanation": "'West Side Story' is a musical adaptation of Shakespeare's 'Romeo and Juliet,' set in modern-day New York City with rival street gangs.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which musical movie features a magical nanny named Mary Poppins who brings joy to the Banks family?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Greatest Showman",
+        "Mary Poppins",
+        "La La Land",
+        "Beauty and the Beast"
+      ],
+      "answer": "Mary Poppins",
+      "explanation": "'Mary Poppins' is a beloved Disney musical that combines live-action and animation and is known for its memorable songs and characters.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which musical movie follows the story of a young woman who dreams of becoming a star and rises to fame in 1920s Chicago?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Les Misérables",
+        "Moulin Rouge!",
+        "Chicago",
+        "Cabaret"
+      ],
+      "answer": "Chicago",
+      "explanation": "'Chicago' is a musical set in the Jazz Age, telling the story of Roxie Hart's rise to stardom amid a murder trial.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which musical movie features a young woman named Tracy Turnblad who dreams of dancing on a TV show in 1960s Baltimore?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "La La Land",
+        "The Greatest Showman",
+        "Mamma Mia!",
+        "Hairspray"
+      ],
+      "answer": "Hairspray",
+      "explanation": "'Hairspray' is a musical that addresses issues of racial integration and body positivity, with lively dance numbers and catchy tunes.",
+      "difficulty": "Medium"
+    }
+  ]
+}
