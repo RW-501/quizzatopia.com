@@ -1,0 +1,224 @@
+{
+  "quizName": "Hip Hop Quiz",
+  "quizCode": "HH2023",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Music",
+  "quizDescription": "Test your knowledge of hip hop music and culture!",
+  "quizTags": "Hip Hop, Rap, Music, Culture",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who is often referred to as the 'King of Hip Hop'?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Eminem",
+        "Jay-Z",
+        "Kendrick Lamar",
+        "Drake"
+      ],
+      "answer": "Jay-Z",
+      "explanation": "Jay-Z is often referred to as the 'King of Hip Hop' for his immense influence and success in the genre.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which hip hop group released the album 'Straight Outta Compton' in 1988?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Run-D.M.C.",
+        "N.W.A",
+        "Wu-Tang Clan",
+        "Public Enemy"
+      ],
+      "answer": "N.W.A",
+      "explanation": "N.W.A (Niggaz Wit Attitudes) released the album 'Straight Outta Compton,' which is considered one of the most influential albums in hip hop history.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Who won the Grammy Award for Best Rap Album in 2021 for the album 'King's Disease'?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kendrick Lamar",
+        "Drake",
+        "Nas",
+        "J. Cole"
+      ],
+      "answer": "Nas",
+      "explanation": "Nas won the Grammy Award for Best Rap Album in 2021 for his album 'King's Disease.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which hip hop artist is known for their alter ego 'Slim Shady'?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Jay-Z",
+        "Eminem",
+        "Kanye West",
+        "Snoop Dogg"
+      ],
+      "answer": "Eminem",
+      "explanation": "Eminem is known for his alter ego 'Slim Shady,' which he used in his earlier music to express darker themes.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which famous hip hop producer is also known as 'The Doctor'?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Dr. Dre",
+        "DJ Khaled",
+        "Timbaland",
+        "Kanye West"
+      ],
+      "answer": "Dr. Dre",
+      "explanation": "Dr. Dre is known as 'The Doctor' and is a highly influential hip hop producer, rapper, and entrepreneur.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the name of the famous hip hop dance move that involves hopping on one leg while kicking the other out?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The Running Man",
+        "The Dougie",
+        "The Cabbage Patch",
+        "The Kid 'n Play"
+      ],
+      "answer": "The Running Man",
+      "explanation": "The Running Man is a popular hip hop dance move that involves hopping on one leg while kicking the other leg out and back in a running motion.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which hip hop group released the hit song 'Gangsta's Paradise' in 1995?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "N.W.A",
+        "Wu-Tang Clan",
+        "Public Enemy",
+        "Coolio featuring L.V."
+      ],
+      "answer": "Coolio featuring L.V.",
+      "explanation": "Coolio featuring L.V. released the hit song 'Gangsta's Paradise,' which became one of the most iconic hip hop songs of the 1990s.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which female hip hop artist released the album 'The Miseducation of Lauryn Hill' in 1998?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Missy Elliott",
+        "Lil' Kim",
+        "Foxy Brown",
+        "Lauryn Hill"
+      ],
+      "answer": "Lauryn Hill",
+      "explanation": "Lauryn Hill released the album 'The Miseducation of Lauryn Hill,' which won multiple Grammy Awards and is considered a classic in hip hop and R&B.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which hip hop artist is known for their iconic album 'To Pimp a Butterfly'?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kendrick Lamar",
+        "Drake",
+        "J. Cole",
+        "Travis Scott"
+      ],
+      "answer": "Kendrick Lamar",
+      "explanation": "Kendrick Lamar is known for his critically acclaimed album 'To Pimp a Butterfly,' which explores themes of race, identity, and social issues.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which hip hop artist is famous for wearing a clock as a necklace?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Nelly",
+        "50 Cent",
+        "Flavor Flav",
+        "Lil Wayne"
+      ],
+      "answer": "Flavor Flav",
+      "explanation": "Flavor Flav, a member of Public Enemy, is famous for wearing a large clock as a necklace, becoming one of his signature looks.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 11,
+      "question": "Which hip hop artist is known for the hit song 'Hotline Bling'?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Kanye West",
+        "Drake",
+        "Travis Scott",
+        "Post Malone"
+      ],
+      "answer": "Drake",
+      "explanation": "Drake is known for the hit song 'Hotline Bling,' which became a viral sensation and spawned numerous parodies and memes.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 12,
+      "question": "What is the term for a spontaneous, unscripted rap performance often seen in hip hop culture?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Freestyle",
+        "
+
+Breakdance",
+        "Graffiti",
+        "Scratching"
+      ],
+      "answer": "Freestyle",
+      "explanation": "A freestyle is a spontaneous and improvised rap performance, often showcasing a rapper's lyrical skills and creativity.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 13,
+      "question": "Which hip hop group is known for the song 'California Love'?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Run-D.M.C.",
+        "The Notorious B.I.G.",
+        "N.W.A",
+        "2Pac featuring Dr. Dre"
+      ],
+      "answer": "2Pac featuring Dr. Dre",
+      "explanation": "The song 'California Love' is by 2Pac featuring Dr. Dre and is one of the most iconic hip hop songs of the 1990s.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 14,
+      "question": "Which hip hop artist is known for the song 'Sicko Mode'?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Travis Scott",
+        "Future",
+        "Migos",
+        "Lil Uzi Vert"
+      ],
+      "answer": "Travis Scott",
+      "explanation": "Travis Scott is known for the hit song 'Sicko Mode,' which received critical acclaim and commercial success.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 15,
+      "question": "Which hip hop duo is composed of Andre 3000 and Big Boi?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "OutKast",
+        "Mobb Deep",
+        "EPMD",
+        "UGK"
+      ],
+      "answer": "OutKast",
+      "explanation": "OutKast is a hip hop duo consisting of Andre 3000 and Big Boi, known for their unique style and hits like 'Hey Ya!' and 'Ms. Jackson.'",
+      "difficulty": "Medium"
+    }
+  ]
+}
