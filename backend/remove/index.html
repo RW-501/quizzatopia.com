@@ -97,6 +97,8 @@ var count = 0;
           const userListDiv = document.getElementById("userList");
           userListDiv.innerHTML = "";
 	          querySnapshot.forEach((doc) => {
+			  count++;
+			     document.getElementById("theCount").innerHTML =  ('Total users '+ count || "");
             const user = doc.data();
             userListDiv.innerHTML += `
               <p>
