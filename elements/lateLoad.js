@@ -1481,7 +1481,7 @@ logVisitorInformation();
   }
 
  function redirectToLogin() {
-    window.location.href = "/login"; // Replace "/login" with the URL you want to redirect the user to
+    window.location.href = "/quizzes"; // Replace "/login" with the URL you want to redirect the user to
   }
 
   // Run the checkUserAndIP function when the page loads
