@@ -1471,7 +1471,7 @@ async function checkUserAndIP() {
 
     if (!user || ALLOWED_USER !== userInfo.firebaseId) {
       console.log("Not Admin");
-      console.log("Admin   " + !user + "|| " + userInfo.firebaseId);
+      console.log("Admin   " + user + "|| " + userInfo.firebaseId);
       // redirectToLogin();
     } else {
       console.log("Admin");
