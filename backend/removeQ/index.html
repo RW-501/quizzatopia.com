@@ -62,14 +62,25 @@ var count = 0;
 	    
 
 	      console.log("??????????????????????????????????????????.");
+const quizzesRef = db.collection("quizzes");
 
-  db.collection("quizzes")
-    .where("quizCategoryDB", "==", firebase.firestore.FieldValue.delete())
-    .get()
-    .then((querySnapshot) => {
-          const userListDiv = document.getElementById("quizList");
+// Query to get documents where "quizCategoryDB" field does not exist
+const query1 = quizzesRef.where("quizCategoryDB", "==", firebase.firestore.FieldValue.delete());
+
+// Query to get documents where "quizCategoryDB" field is null
+const query2 = quizzesRef.where("quizCategoryDB", "==", null);
+
+// Combine the two queries using Promise.all to get all matching documents
+Promise.all([query1.get(), query2.get()])
+  .then(([querySnapshot1, querySnapshot2]) => {
+    // Combine the results of both queries
+    const combinedQuerySnapshot = querySnapshot1.docs.concat(querySnapshot2.docs);
+  const userListDiv = document.getElementById("quizList");
           userListDiv.innerHTML = "";
-	          querySnapshot.forEach((doc) => {
+    // Process the combined query snapshot
+    combinedQuerySnapshot.forEach((doc) => {
+      // Access the data of each document
+     
 			  count++;
             const quiz = doc.data();
             userListDiv.innerHTML += `
