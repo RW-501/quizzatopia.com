@@ -91,19 +91,32 @@ var count = 0;
 	      console.log("??????????????????????????????????????????.");
 
   db.collection("users")
-    .where("testUsers", "==", "YES")
+    .where("userAds", "==", "")
     .get()
     .then((querySnapshot) => {
-      const batch = db.batch();
+
+	          querySnapshot.forEach((doc) => {
+            const user = doc.data();
+            userListDiv.innerHTML += `
+              <p>
+                Email: ${user.email}<br>
+                Name: ${user.name}<br>
+                firebaseId: ${user.firebaseId}<br>
+                userPoints: ${user.userPoints}<br>
+                <button onclick="removeUser('${doc.id}')">Remove</button>
+              </p>
+            `;
+          });
+/*      const batch = db.batch();
 
       querySnapshot.forEach((doc) => {
-        batch.delete(doc.ref);
+       batch.delete(doc.ref);
 	      count++;
 	            console.log("count "+count+"   doc   "+doc.ref);
 
       });
-
-      return batch.commit();
+      return batch.commit();*/
+	    
     })
     .then(() => {
       console.log("Users with blank firebaseId removed successfully.");
