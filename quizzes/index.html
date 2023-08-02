@@ -1010,12 +1010,12 @@ function generateQuizHTML(quizList, page) {
     // Check if the current quiz's category is different from the previous one
     if (quizData.quizCategoryDB !== currentCatergory) {
       currentCatergory = quizData.quizCategoryDB; // Update the current category
-      catergoryName = `<h2 class="list-category">${quizData.quizCategoryDB}</h2>`; // Create the category HTML
+      catergoryName = `<h2  id="${quizData.quizCategoryDB}" class="list-category">${quizData.quizCategoryDB}</h2>`; // Create the category HTML
     } else {
       catergoryName = ''; // If it's the same category, leave it empty
     }
 
-    const quizHtml = `
+	  const quizHtml = `
       <div class="col-lg-12">
         <div class="list-item box">
           <a href="${quizData.quizLinkDB}">
