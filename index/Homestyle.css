@@ -48,6 +48,15 @@ a{
   margin: 0;
 }
 
+.category-link{
+    text-decoration: none;
+
+}
+
+.category-link a{
+    text-decoration: none;
+
+}
 
  .quiz-card_top {
   text-decoration: none; /* Remove underline */
