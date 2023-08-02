@@ -387,13 +387,6 @@ const badges = [
 
 
 
-
-
-// auth.js
-
-
-
-
    function openPopup(xxx){
 
 if(document.getElementById('loginPopup')){
