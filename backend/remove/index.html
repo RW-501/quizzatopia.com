@@ -83,9 +83,37 @@
 
 
     function getUsersWithoutFirebaseId() {
-	      const firestore = firebase.firestore();
+const firestore = firebase.firestore();
+const db = firebase.firestore();
 
-    const db = firebase.firestore();
+function removeUsersWithBlankFirebaseId() {
+  db.collection("users")
+    .where("firebaseId", "==", "")
+    .get()
+    .then((querySnapshot) => {
+      const batch = db.batch();
+
+      querySnapshot.forEach((doc) => {
+        batch.delete(doc.ref);
+      });
+
+      return batch.commit();
+    })
+    .then(() => {
+      console.log("Users with blank firebaseId removed successfully.");
+    })
+    .catch((error) => {
+      console.error("Error removing users:", error);
+    });
+}
+
+
+
+
+
+
+	  
+	    /*
       db.collection("users")
         .where("userAds", "==", "")
         .get()
@@ -100,7 +128,8 @@
               <p>
                 Email: ${user.email}<br>
                 Name: ${user.name}<br>
-                Name: ${user.firebaseId}<br>
+                firebaseId: ${user.firebaseId}<br>
+                userPoints: ${user.userPoints}<br>
                 <button onclick="removeUser('${doc.id}')">Remove</button>
               </p>
             `;
@@ -108,7 +137,7 @@
         })
         .catch((error) => {
           console.error("Error getting users:", error);
-        });
+        });*/
     }
 
     function removeUser(userId) {
