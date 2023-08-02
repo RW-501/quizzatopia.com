@@ -54,34 +54,53 @@
   <div id="quizList"></div>
 
   <script>
-  const firestore = firebase.firestore();
-
-
-
-    const db = firebase.firestore();
 
     function getQuizzesWithoutCategory() {
-      db.collection("quizzes")
-        .where("category", "==", "")
-        .get()
-        .then((querySnapshot) => {
-          const quizListDiv = document.getElementById("quizList");
-          quizListDiv.innerHTML = "";
 
-          querySnapshot.forEach((doc) => {
+
+const firestore = firebase.firestore();
+const db = firebase.firestore();
+var count = 0;
+	    
+
+	      console.log("??????????????????????????????????????????.");
+
+  db.collection("quizzes")
+    .where("quizCategoryDB", "==", firebase.firestore.FieldValue.delete())
+    .get()
+    .then((querySnapshot) => {
+          const userListDiv = document.getElementById("quizList");
+          userListDiv.innerHTML = "";
+	          querySnapshot.forEach((doc) => {
             const quiz = doc.data();
-            quizListDiv.innerHTML += `
-              <p>
-                Quiz Name: ${quiz.name}<br>
-                Description: ${quiz.description}<br>
+            userListDiv.innerHTML += `
+           <p>
+                Quiz Name: ${quiz.quizNameDB}<br>
+                quizJsonDB: ${quiz.quizJsonDB}<br>
+                quizCodeDB: ${quiz.quizCodeDB}<br>
                 <button onclick="removeQuiz('${doc.id}')">Remove</button>
               </p>
             `;
           });
-        })
-        .catch((error) => {
-          console.error("Error getting quizzes:", error);
-        });
+/*      const batch = db.batch();
+
+      querySnapshot.forEach((doc) => {
+       batch.delete(doc.ref);
+	      count++;
+	            console.log("count "+count+"   doc   "+doc.ref);
+
+      });
+      return batch.commit();*/
+	    
+    })
+    .then(() => {
+      console.log("Users with blank firebaseId removed successfully.");
+    })
+    .catch((error) => {
+      console.error("Error removing users:", error);
+    });
+
+
     }
 
     function removeQuiz(quizId) {
