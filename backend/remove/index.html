@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Control Panel</title>
+  <title>User Review and Removal</title>
   <!-- Include CSS and JavaScript dependencies -->
 
 	
@@ -74,32 +74,57 @@
 </nav>
 
 <main class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <!-- Main content area -->
-      <h2>Welcome to the Dashboard</h2>
-      <p>This is the main content area of your dashboard.</p>
-      <!-- Add your charts, tables, or other components here -->
-      <div id="userStatsChart"></div>
-      <table id="userTable">
-        <thead>
-          <tr>
-            <th>User ID</th>
-            <th>Name</th>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Dynamically populate the user table using JavaScript -->
-        </tbody>
-      </table>
-    </div>
-  </div>
+  <h1>User Review and Removal</h1>
+  <button onclick="getUsersWithoutFirebaseId()">Get Users without Firebase ID</button>
+  <div id="userList"></div>
+
+  <script>
+
+
+    const db = firebase.firestore();
+
+    function getUsersWithoutFirebaseId() {
+      db.collection("users")
+        .where("firebaseId", "==", "")
+        .get()
+        .then((querySnapshot) => {
+          const userListDiv = document.getElementById("userList");
+          userListDiv.innerHTML = "";
+
+          querySnapshot.forEach((doc) => {
+            const user = doc.data();
+            userListDiv.innerHTML += `
+              <p>
+                Email: ${user.email}<br>
+                Name: ${user.name}<br>
+                <button onclick="removeUser('${doc.id}')">Remove</button>
+              </p>
+            `;
+          });
+        })
+        .catch((error) => {
+          console.error("Error getting users:", error);
+        });
+    }
+
+    function removeUser(userId) {
+      db.collection("users")
+        .doc(userId)
+        .delete()
+        .then(() => {
+          console.log("User removed successfully.");
+          getUsersWithoutFirebaseId();
+        })
+        .catch((error) => {
+          console.error("Error removing user:", error);
+        });
+    }
+  </script>
 </main>
 
   <!-- Include JavaScript dependencies -->
 
-  <script src="users.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
