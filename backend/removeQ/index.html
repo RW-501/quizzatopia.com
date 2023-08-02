@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz Review and Removal</title>
+
+  <!-- Chart.js library -->
+  <script  src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+ <!--  <link rel="stylesheet" href="/style.css">-->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Import navbar and footer components -->
+  <link rel="import" href="/elements/navbar.html">
+  <link rel="import" href="/elements/footer.html">
+
+  <div id="navbar"></div>
+  <!-- Rest of the page content -->
+  <div id="signupLoginArea"><div>
+
+  <!-- JavaScript dependencies async -->
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  crossorigin="anonymous">
+
+
+  <script  defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+
+  <script  defer src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+	  <script  defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
+
+  <!-- Firebase SDK -->
+  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+  <!-- Custom scripts -->
+  <script  src="/main.js" defer></script> 
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Quiz Review and Removal</h1>
+  <button onclick="getQuizzesWithoutCategory()">Get Quizzes without Category</button>
+  <div id="quizList"></div>
+
+  <script>
+
+    const db = firebase.firestore();
+
+    function getQuizzesWithoutCategory() {
+      db.collection("quizzes")
+        .where("category", "==", "")
+        .get()
+        .then((querySnapshot) => {
+          const quizListDiv = document.getElementById("quizList");
+          quizListDiv.innerHTML = "";
+
+          querySnapshot.forEach((doc) => {
+            const quiz = doc.data();
+            quizListDiv.innerHTML += `
+              <p>
+                Quiz Name: ${quiz.name}<br>
+                Description: ${quiz.description}<br>
+                <button onclick="removeQuiz('${doc.id}')">Remove</button>
+              </p>
+            `;
+          });
+        })
+        .catch((error) => {
+          console.error("Error getting quizzes:", error);
+        });
+    }
+
+    function removeQuiz(quizId) {
+      db.collection("quizzes")
+        .doc(quizId)
+        .delete()
+        .then(() => {
+          console.log("Quiz removed successfully.");
+          getQuizzesWithoutCategory();
+        })
+        .catch((error) => {
+          console.error("Error removing quiz:", error);
+        });
+    }
+
+
+// Function to get quizzes without "category"
+async function getQuizzesWithoutCategory() {
+  const querySnapshot = await db.collection("quizzes").where("category", "==", "").get();
+  const quizzes = [];
+
+  querySnapshot.forEach((doc) => {
+    quizzes.push({
+      id: doc.id,
+      data: doc.data(),
+    });
+  });
+
+  return quizzes;
+}
+
+// Function to remove a quiz by ID
+async function removeQuiz(quizId) {
+  try {
+    await db.collection("quizzes").doc(quizId).delete();
+    console.log("Quiz removed successfully.");
+  } catch (error) {
+    console.error("Error removing quiz:", error);
+  }
+}
+
+module.exports = {
+  // ... (other exported functions)
+  getQuizzesWithoutCategory,
+  removeQuiz,
+};
+
+
+    
+  </script>
+</body>
+</html>
