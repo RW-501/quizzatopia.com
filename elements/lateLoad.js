@@ -1469,9 +1469,12 @@ logVisitorInformation();
     try {
       const user = await firebase.auth().currentUser;
   const userInfo = getUserInfo();
+	    
+    if (!user || ipAddress /* !== ALLOWED_IP_ADDRESS || ALLOWED_IP_USER !== userInfo.data().firebaseId */ ) {
 
-      if (!user || ipAddress !== ALLOWED_IP_ADDRESS || ALLOWED_IP_USER !== userInfo.firebaseId ) {
+  //    if (!user || ipAddress !== ALLOWED_IP_ADDRESS || ALLOWED_IP_USER !== userInfo.firebaseId ) {
       //  redirectToLogin();
+        console.log("Not Admin");
 	              console.log("Admin   "+!user+" || "+ipAddress +" || "+ ALLOWED_IP_ADDRESS +" || "+ ALLOWED_IP_USER +" || "+ userInfo.firebaseId );
 
       } else {
