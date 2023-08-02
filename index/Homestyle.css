@@ -293,53 +293,6 @@ color: #fff;
 }
 
 
-/* CSS comments for the quiz recommendations section */
-.quiz-recommendations {
-  padding: 4rem 0;
-}
-
-.quiz-recommendations h2 {
-  font-size: 2.5
-  font-weight: 700;
-  margin-bottom: 2rem;
-}
-
-.quiz-info-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.quiz-info {
-  background-color: #f8f9fa;
-  border-radius: 0.5rem;
-  padding: 2rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-}
-
-.quiz-info a {
-  font-size: 1.8rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s ease;
-}
-
-.quiz-info a:hover {
-  color: #0d6efd;
-}
-
-.quiz-info p {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-}
-
-.quiz-info p:last-child {
-  margin-bottom: 0;
-}
-
-
-
 
 
 
