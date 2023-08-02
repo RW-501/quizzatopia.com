@@ -670,26 +670,40 @@ display: block;
 	<style>
     
 	    
-	    
-	    .leaderboard-btn {
-  display: inline-block;
-  padding: 12px 24px;
+.leaderboard-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.banner-text {
+  font-size: 18px;
+  margin-right: 20px;
+}
+
+.leaderboard-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #45a049;
   color: white;
   font-size: 16px;
   text-decoration: none;
   border-radius: 4px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.2s ease;
 }
 
 .leaderboard-btn:hover {
-  background-color: #45a049;
+  background-color: #4CAF50;
 }
 
 .leaderboard-btn:active {
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  transform: translateY(2px);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  transform: translateY(1px);
 }
 
 .leaderboard-btn:focus {
@@ -701,12 +715,11 @@ display: block;
     
 	    
 	    
-	  
+	  <div class="leaderboard-banner">
+  <p class="banner-text">Check out the Leaderboard!</p>
+  <a href="https://www.quizzatopia.com/Leaderboard/" class="leaderboard-btn">Leaderboard</a>
+</div>
 
-	  <a href="https://www.quizzatopia.com/Leaderboard/" class="leaderboard-btn">Leaderboard</a>
-
-	  
-	  
 	
 
 	 
