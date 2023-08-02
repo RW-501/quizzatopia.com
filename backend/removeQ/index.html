@@ -49,8 +49,14 @@
   <button onclick="getQuizzesWithoutCategory()">Get Quizzes without Category</button>
   <div id="quizList"></div>
 
+
+  <button onclick="getQuizzesWithoutCategory()">Get Quizzes without Category</button>
+  <div id="quizList"></div>
+
   <script>
   const firestore = firebase.firestore();
+
+
 
     const db = firebase.firestore();
 
@@ -90,41 +96,6 @@
           console.error("Error removing quiz:", error);
         });
     }
-
-
-// Function to get quizzes without "category"
-async function getQuizzesWithoutCategory() {
-  const querySnapshot = await db.collection("quizzes").where("category", "==", "").get();
-  const quizzes = [];
-
-  querySnapshot.forEach((doc) => {
-    quizzes.push({
-      id: doc.id,
-      data: doc.data(),
-    });
-  });
-
-  return quizzes;
-}
-
-// Function to remove a quiz by ID
-async function removeQuiz(quizId) {
-  try {
-    await db.collection("quizzes").doc(quizId).delete();
-    console.log("Quiz removed successfully.");
-  } catch (error) {
-    console.error("Error removing quiz:", error);
-  }
-}
-
-module.exports = {
-  // ... (other exported functions)
-  getQuizzesWithoutCategory,
-  removeQuiz,
-};
-
-
-    
   </script>
 </body>
 </html>
