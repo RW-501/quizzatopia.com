@@ -100,8 +100,8 @@ var count = 0;
             const user = doc.data();
             userListDiv.innerHTML += `
               <p>
-                Email: ${user.email}<br>
-                Name: ${user.name}<br>
+                Email: ${user.userEmail}<br>
+                Name: ${user.userName}<br>
                 firebaseId: ${user.firebaseId}<br>
                 userPoints: ${user.userPoints}<br>
                 <button onclick="removeUser('${doc.id}')">Remove</button>
@@ -133,31 +133,7 @@ var count = 0;
 
 
 	  
-	    /*
-      db.collection("users")
-        .where("userAds", "==", "")
-        .get()
-        .then((querySnapshot) => {
-          const userListDiv = document.getElementById("userList");
-          userListDiv.innerHTML = "";
-      console.log("getUsersWithoutFirebaseId");
 
-          querySnapshot.forEach((doc) => {
-            const user = doc.data();
-            userListDiv.innerHTML += `
-              <p>
-                Email: ${user.email}<br>
-                Name: ${user.name}<br>
-                firebaseId: ${user.firebaseId}<br>
-                userPoints: ${user.userPoints}<br>
-                <button onclick="removeUser('${doc.id}')">Remove</button>
-              </p>
-            `;
-          });
-        })
-        .catch((error) => {
-          console.error("Error getting users:", error);
-        });*/
     }
 
     function removeUser(userId) {
