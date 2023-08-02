@@ -15,6 +15,7 @@ async function removeUser(userId) {
 // Function to get users without "firebaseId"
 async function getUsersWithoutFirebaseId() {
   try {
+      const db = firebase.firestore();
     const querySnapshot = await db.collection('users').where('firebaseId', '==', '').get();
     const users = [];
 
