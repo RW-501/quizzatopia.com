@@ -1461,23 +1461,21 @@ logVisitorInformation();
 
 
 
- const ALLOWED_IP_ADDRESS = '172.223.104.113';
- const ALLOWED_IP_USER = "fM2CtVN59wNwrZeQZrSqlp4rUcr2";
+ const ALLOWED_USER = "fM2CtVN59wNwrZeQZrSqlp4rUcr2";
   const BACKEND_URL_PATTERN = /^\/backend(\/|$)/;
 
   async  function checkUserAndIP() {
     try {
       const user = await firebase.auth().currentUser;
   const userInfo = getUserInfo();
-	      const visitorIpPromise = getIPAddress(); // Retrieve the visitor's IP address as a promise
+	   //   const visitorIpPromise = getIPAddress(); // Retrieve the visitor's IP address as a promise
 
-    if (!user || visitorIpPromise !== ALLOWED_IP_ADDRESS /*  || ALLOWED_IP_USER !== userInfo.data().firebaseId */ ) {
+    if (!user || ALLOWED_USER !== userInfo.data().firebaseId ) {
 
-  //    if (!user || visitorIpPromise !== ALLOWED_IP_ADDRESS || ALLOWED_IP_USER !== userInfo.firebaseId ) {
-      //  redirectToLogin();
+
         console.log("Not Admin");
-	              console.log("Admin   "+!user+" || "+visitorIpPromise +" || "+ ALLOWED_IP_ADDRESS +" || "+ ALLOWED_IP_USER +" || "+ userInfo.firebaseId );
-
+	              console.log("Admin   "+!user+"|| "+ userInfo.firebaseId );
+// redirectToLogin();
       } else {
         console.log("Admin");
       }
