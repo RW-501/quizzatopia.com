@@ -94,7 +94,8 @@ var count = 0;
     .where("userAds", "==", "")
     .get()
     .then((querySnapshot) => {
-
+          const userListDiv = document.getElementById("userList");
+          userListDiv.innerHTML = "";
 	          querySnapshot.forEach((doc) => {
             const user = doc.data();
             userListDiv.innerHTML += `
