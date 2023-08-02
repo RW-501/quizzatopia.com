@@ -808,11 +808,7 @@ display: block;
 
 </style>
 
-  <!--
-
-<div id="parent_Container" style="max-height: 650px; overflow-y: scroll;">
-  <div id="updated_Quizzez" class="container">
-   Quizzes will be dynamically added here -->
+	
 
 <section>
  
@@ -853,13 +849,13 @@ display: block;
 
 -->
 
-         <button type="button" class="btn btn-primary btn-lg back-to-top" onclick="scrollToDiv()"><i class="fas fa-chevron-up"></i></button>
 
     
     
     
     
   </div>
+	    <button type="button" class="btn btn-primary btn-lg back-to-top" onclick="scrollToDiv()"><i class="fas fa-chevron-up"></i></button>
 </div>
 
 </section>section>
@@ -938,6 +934,7 @@ async function fetchQuizzesFromDB(page = 1) {
   if (page === 1) {
     document.getElementById('updated_Quizzez').innerHTML = `<h2>New Quizzes</h2>${generatedHtml}`;
   } else {
+generatedHtml +=  '<br><br> <button type="button" class="btn btn-primary btn-lg back-to-top" onclick="scrollToDiv()"><i class="fas fa-chevron-up"></i></button>';
     document.getElementById('updated_Quizzez').innerHTML += generatedHtml;
   }
 }
