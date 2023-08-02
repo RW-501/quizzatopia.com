@@ -2,7 +2,6 @@
   
 async function removeUser(userId) {
   try {
-  const firestore = firebase.firestore();
 
     const db = firebase.firestore();
 
