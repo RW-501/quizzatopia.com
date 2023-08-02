@@ -2548,7 +2548,7 @@ isAnimationEnabled = userInfo.animationEnabled;
     const initialPaddingValue = parseInt(initialPadding.replace('px', ''));
 
     // Calculate the new padding value that is 5% lower
-    const newPaddingValue = Math.floor(initialPaddingValue * 0.90) + 'px';
+    const newPaddingValue = Math.floor(initialPaddingValue * 0.80) + 'px';
 
     // Set the new padding value
     targetElement.style.padding = newPaddingValue;
@@ -2556,7 +2556,7 @@ isAnimationEnabled = userInfo.animationEnabled;
     // Return to the initial state after 3 seconds
     setTimeout(() => {
       targetElement.style.padding = initialPadding;
-    }, 3000);
+    }, 2000);
   }
 
   const btnsWithClass5 = document.querySelectorAll('.font-weight-bold');
