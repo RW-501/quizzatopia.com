@@ -58,13 +58,13 @@
 <nav class="navbar">
   <ul class="nav">
     <li class="nav-item">
-      <a class="nav-link" href="index.html">Dashboard</a>
+      <a class="nav-link" href="../backend/index.html">Dashboard</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="users.html">Users</a>
+      <a class="nav-link" href="../backend/users.html">Users</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="quizzes.html">Quizzes</a>
+      <a class="nav-link" href="../backend/quizzes.html">Quizzes</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="../backend/guest">Guest Log</a>
@@ -85,16 +85,20 @@
     function getUsersWithoutFirebaseId() {
 const firestore = firebase.firestore();
 const db = firebase.firestore();
-
+var count = 0;
+	    
 function removeUsersWithBlankFirebaseId() {
   db.collection("users")
-    .where("firebaseId", "==", "")
+    .where("userEmail", "==", "")
     .get()
     .then((querySnapshot) => {
       const batch = db.batch();
 
       querySnapshot.forEach((doc) => {
         batch.delete(doc.ref);
+	      count++;
+	            console.log("count "+count+"   doc   "+doc.ref);
+
       });
 
       return batch.commit();
