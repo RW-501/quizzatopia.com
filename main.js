@@ -168,7 +168,7 @@ function removeOverlayWithoutTimer() {
 
 	
 loadScreenFunc();
-https://www.quizzatopia.com/quiz/?e=New&q=q_194_
+
 function isQuizURL(url) {
   const pattern = /quizzatopia\.com\/quiz\/.*/;
   return pattern.test(url);
