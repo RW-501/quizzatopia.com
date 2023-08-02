@@ -87,7 +87,9 @@ const firestore = firebase.firestore();
 const db = firebase.firestore();
 var count = 0;
 	    
-function removeUsersWithBlankFirebaseId() {
+
+	      console.log("??????????????????????????????????????????.");
+
   db.collection("users")
     .where("userEmail", "==", "")
     .get()
@@ -109,7 +111,7 @@ function removeUsersWithBlankFirebaseId() {
     .catch((error) => {
       console.error("Error removing users:", error);
     });
-}
+
 
 
 
