@@ -858,7 +858,7 @@ display: block;
 	    <button type="button" class="btn btn-primary btn-lg back-to-top" onclick="scrollToDiv()"><i class="fas fa-chevron-up"></i></button>
 </div>
 
-</section>section>
+</section>
 
 
 
@@ -955,6 +955,7 @@ function convertSnapshotToQuizList(querySnapshot) {
       quizLinkDB: quizData.quizLinkDB,
       quizStartedCount: quizData.quizStartedCount,
       quizFinishedCount: quizData.quizFinishedCount,
+      quizCategoryDB: quizData.quizCategoryDB,
       numberOfQuestionsDB: quizData.numberOfQuestionsDB,
       quizDescriptionDB: quizData.quizDescriptionDB,
       quizCodeDB: quizData.quizCodeDB,
@@ -1141,10 +1142,10 @@ window.addEventListener('load', function() {
   // Scroll to top when the button is clicked
   function scrollToDiv() {
 
-    window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+  const updatedQuizzesDiv = document.getElementById("quiz_list");
+  if (updatedQuizzesDiv) {
+    updatedQuizzesDiv.scrollIntoView({ behavior: "smooth" });
+  }
 	  
   }
   
