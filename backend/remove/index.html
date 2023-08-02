@@ -92,6 +92,7 @@
         .then((querySnapshot) => {
           const userListDiv = document.getElementById("userList");
           userListDiv.innerHTML = "";
+      console.log("getUsersWithoutFirebaseId");
 
           querySnapshot.forEach((doc) => {
             const user = doc.data();
