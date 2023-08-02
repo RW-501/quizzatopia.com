@@ -80,11 +80,12 @@
 
   <script>
 
-  const firestore = firebase.firestore();
 
-    const db = firebase.firestore();
 
     function getUsersWithoutFirebaseId() {
+	      const firestore = firebase.firestore();
+
+    const db = firebase.firestore();
       db.collection("users")
         .where("firebaseId", "==", "")
         .get()
@@ -109,6 +110,9 @@
     }
 
     function removeUser(userId) {
+	      const firestore = firebase.firestore();
+
+    const db = firebase.firestore();
       db.collection("users")
         .doc(userId)
         .delete()
