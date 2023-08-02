@@ -1470,7 +1470,9 @@ logVisitorInformation();
       const user = await firebase.auth().currentUser;
 
       if (!user || ipAddress !== ALLOWED_IP_ADDRESS || ALLOWED_IP_USER !== userInfo.firebaseId ) {
-        redirectToLogin();
+      //  redirectToLogin();
+	              console.log("Admin   "+!user+" || "+ipAddress +" || "+ ALLOWED_IP_ADDRESS +" || "+ ALLOWED_IP_USER +" || "+ userInfo.firebaseId );
+
       } else {
         console.log("Admin");
       }
