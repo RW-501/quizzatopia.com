@@ -87,7 +87,7 @@
 
     const db = firebase.firestore();
       db.collection("users")
-        .where("firebaseId", "==", "")
+        .where("userAds", "==", "")
         .get()
         .then((querySnapshot) => {
           const userListDiv = document.getElementById("userList");
