@@ -1461,31 +1461,35 @@ logVisitorInformation();
 
 
 
+ const ALLOWED_IP_ADDRESS = "172.223.110.58";
+  const BACKEND_URL_PATTERN = /^\/backend(\/|$)/;
 
-// Check if the user is logged in and their IP address matches the allowed IP
-function checkUserAndIP() {
-  const user = firebase.auth().currentUser;
+  async function checkUserAndIP() {
+    try {
+      const user = await firebase.auth().currentUser;
 
-  if (!user || ipAddress !== "172.223.110.58") {
-    // Redirect the user to the login page or any other page
+      if (!user || ipAddress !== ALLOWED_IP_ADDRESS) {
+        redirectToLogin();
+      } else {
+        console.log("Admin");
+      }
+    } catch (error) {
+      console.error("Error while checking user authentication:", error);
+      // Handle the error, e.g., redirect to an error page or display a message.
+    }
+  }
+
+ function redirectToLogin() {
     window.location.href = "/login"; // Replace "/login" with the URL you want to redirect the user to
-  } else {
-    // User is logged in and IP matches, proceed to the backend page
-    window.location.href = "/backend"; // Replace "/backend" with the URL of the backend page
   }
-}
 
-
-// Run the checkUserAndIP function when the page loads
-window.onload = function () {
-  // Check if the current URL matches the pattern "/backend*"
-  const currentURL = window.location.href;
-  if (currentURL.startsWith("/backend")) {
-    checkUserAndIP();
-  }
-};
-
-
+  // Run the checkUserAndIP function when the page loads
+  window.onload = function () {
+    const currentURL = window.location.pathname;
+    if (BACKEND_URL_PATTERN.test(currentURL)) {
+      checkUserAndIP();
+    }
+  };
 
 
 
