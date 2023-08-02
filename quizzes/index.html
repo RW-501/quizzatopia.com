@@ -495,6 +495,16 @@ cards.forEach(card => {
     window.location.href = link;
   });
 });
+
+
+		    var uniqueCategories: [
+  "Healthcare", "Gaming", "Business", "Driving", "TV", "Architecture", "Technology", "Music", "Entertainment",
+  "Marketing", "Geography", "E-Commerce", "Science", "Personality", "Professional Certification", "Finance",
+  "History", "Business Economics", "Self-Help", "Health", "Health & Lifestyle", "Communication Skills", "Law",
+  "Food", "Cooking", "Economics", "Personal Finance", "Job Interview", "Food Safety", "Sports", "Movies",
+  "Real Estate", "Relationships", "Sales", "USA Economics", "History & Politics", "Language", "Retail",
+  "Web Development", "World Economics", "Career", "Game Development", "Healthcare & Management"
+]
 		    </script>
 	    
 	    
@@ -505,38 +515,31 @@ cards.forEach(card => {
   <div class="row justify-content-center">
     <div class="col-md-4">
       <div class="list-group">
-        <a href="#information_technology" class="list-group-item list-group-item-action btn-primary">Information Technology</a>
-        <a href="#healthcare" class="list-group-item list-group-item-action btn-primary">Healthcare</a>
-        <a href="#education" class="list-group-item list-group-item-action btn-primary">Education</a>
-        <a href="#finance" class="list-group-item list-group-item-action btn-primary">Finance</a>
-        <a href="#trades" class="list-group-item list-group-item-action btn-primary">Trades</a>
-        <a href="#language_proficiency" class="list-group-item list-group-item-action btn-primary">Language Proficiency</a>
-        <a href="#health-wellness" class="list-group-item list-group-item-action btn-primary">Health Wellness</a>
+        <!-- Generate category links dynamically -->
+        ${uniqueCategories.slice(0, 7).map(category => `
+          <a href="#${category.replace(/ /g, '_').toLowerCase()}" class="list-group-item list-group-item-action btn-primary">${category}</a>
+        `).join('')}
       </div>
     </div>
     <div class="col-md-4">
       <div class="list-group">
-        <a href="#military" class="list-group-item list-group-item-action btn-primary">Military</a>
-        <a href="#cooking" class="list-group-item list-group-item-action btn-primary">Cooking</a>
-        <a href="#driving" class="list-group-item list-group-item-action btn-primary">Driving</a>
-        <a href="#project_management" class="list-group-item list-group-item-action btn-primary">Project Management</a>
-        <a href="#architecture" class="list-group-item list-group-item-action btn-primary">Architecture</a>
-        <a href="#business" class="list-group-item list-group-item-action btn-primary">Business</a>
+        <!-- Generate category links dynamically -->
+        ${uniqueCategories.slice(7, 13).map(category => `
+          <a href="#${category.replace(/ /g, '_').toLowerCase()}" class="list-group-item list-group-item-action btn-primary">${category}</a>
+        `).join('')}
       </div>
     </div>
     <div class="col-md-4">
       <div class="list-group">
-        <a href="#marketing" class="list-group-item list-group-item-action btn-primary">Marketing</a>
-        <a href="#design" class="list-group-item list-group-item-action btn-primary">Design</a>
-        <a href="#real_estate" class="list-group-item list-group-item-action btn-primary">Real Estate</a>
-        <a href="#fitness" class="list-group-item list-group-item-action btn-primary">Fitness</a>
-        <a href="#school" class="list-group-item list-group-item-action btn-primary">School</a>
-        <a href="#random" class="list-group-item list-group-item-action btn-primary">Random</a>
-        <a href="#job-preparation" class="list-group-item list-group-item-action btn-primary">Job Preparation</a>
+        <!-- Generate category links dynamically -->
+        ${uniqueCategories.slice(13, 20).map(category => `
+          <a href="#${category.replace(/ /g, '_').toLowerCase()}" class="list-group-item list-group-item-action btn-primary">${category}</a>
+        `).join('')}
       </div>
     </div>
   </div>
 </div>
+
 
 	<div class="container">
   <svg xmlns="http://www.w3.org/2000/svg" width="85%" height="300px" viewBox="0 0 1000 300" style="display: block; margin: auto;" onclick="openCreateQuizFunc()">
@@ -980,6 +983,7 @@ function convertSnapshotToQuizList(querySnapshot) {
 // Function to generate HTML for quizzes
 function generateQuizHTML(quizList, page) {
   let html = '';
+  let html2 = '';
   const startNum = (page - 1) * 20 + 1;
   let currentCatergory = ''; // Variable to keep track of the current category
   let catergoryName = ''; // Variable to store the category HTML
@@ -1050,10 +1054,10 @@ if (quizData.quizCategoryDB !== currentCatergory) {
   });
 
   // Add the category name HTML to the end of the quiz HTML
-  html += catergoryName;
+  html2 += catergoryName;
   console.log(`catergoryName: ` + catergoryName);
 
-  return html;
+  return html + html2;
 }
 
 
