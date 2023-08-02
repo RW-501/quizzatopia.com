@@ -1465,7 +1465,7 @@ logVisitorInformation();
  const ALLOWED_IP_USER = "fM2CtVN59wNwrZeQZrSqlp4rUcr2";
   const BACKEND_URL_PATTERN = /^\/backend(\/|$)/;
 
-  async function checkUserAndIP() {
+   function checkUserAndIP() {
     try {
       const user = await firebase.auth().currentUser;
   const userInfo = getUserInfo();
