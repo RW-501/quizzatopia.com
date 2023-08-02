@@ -87,9 +87,8 @@
     margin-bottom: 10px;
   }
 
-  #quiz_list p {
+  #quiz_list b {
     color: #666;
-    font-size: 14px;
   }
 
   #quiz_list .lazyloadtext {
