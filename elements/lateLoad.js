@@ -1461,29 +1461,27 @@ logVisitorInformation();
 
 
 
- const ALLOWED_USER = "fM2CtVN59wNwrZeQZrSqlp4rUcr2";
-  const BACKEND_URL_PATTERN = /^\/backend(\/|$)/;
+const ALLOWED_USER = "fM2CtVN59wNwrZeQZrSqlp4rUcr2";
+const BACKEND_URL_PATTERN = /^\/backend(\/|$)/;
 
-  async  function checkUserAndIP() {
-    try {
-      const user = await firebase.auth().currentUser;
-  const userInfo = getUserInfo();
-	   //   const visitorIpPromise = getIPAddress(); // Retrieve the visitor's IP address as a promise
+async function checkUserAndIP() {
+  try {
+    const user = await firebase.auth().currentUser;
+    const userInfo = getUserInfo();
 
-    if (!user || ALLOWED_USER !== userInfo.data().firebaseId ) {
-
-
-        console.log("Not Admin");
-	              console.log("Admin   "+!user+"|| "+ userInfo.firebaseId );
-// redirectToLogin();
-      } else {
-        console.log("Admin");
-      }
-    } catch (error) {
-      console.error("Error while checking user authentication:", error);
-      // Handle the error, e.g., redirect to an error page or display a message.
+    if (!user || ALLOWED_USER !== userInfo.data().firebaseId) {
+      console.log("Not Admin");
+      console.log("Admin   " + !user + "|| " + userInfo.data().firebaseId);
+      // redirectToLogin();
+    } else {
+      console.log("Admin");
     }
+  } catch (error) {
+    console.error("Error while checking user authentication:", error);
+    // Handle the error, e.g., redirect to an error page or display a message.
   }
+}
+
 
  function redirectToLogin() {
     window.location.href = "/quizzes"; // Replace "/login" with the URL you want to redirect the user to
