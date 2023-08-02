@@ -2543,6 +2543,121 @@ isAnimationEnabled = userInfo.animationEnabled;
 
 
 
+ function applyPaddingAnimation(targetElement) {
+    const initialPadding = window.getComputedStyle(targetElement).padding;
+    const initialPaddingValue = parseInt(initialPadding.replace('px', ''));
+
+    // Calculate the new padding value that is 5% lower
+    const newPaddingValue = Math.floor(initialPaddingValue * 0.90) + 'px';
+
+    // Set the new padding value
+    targetElement.style.padding = newPaddingValue;
+
+    // Return to the initial state after 3 seconds
+    setTimeout(() => {
+      targetElement.style.padding = initialPadding;
+    }, 3000);
+  }
+
+  const btnsWithClass5 = document.querySelectorAll('.font-weight-bold');
+  const btnsWithClass4 = document.querySelectorAll('.other-quiz-btn');
+  const btnsWithClass3 = document.querySelectorAll('.star');
+  const btnsWithClass2 = document.querySelectorAll('.btnMain');
+  const btnsWithClass1 = document.querySelectorAll('.btnMainBottom  ');
+  const btnsWithClass = document.querySelectorAll('.BTN');
+  const allButtons = document.querySelectorAll('button');
+
+
+  btnsWithClass5.forEach((btn) => {
+    const originalOnClick = btn.onclick;
+    btn.onclick = function () {
+    btn.addEventListener('click', () => applyPaddingAnimation(btn));
+      setTimeout(() => {
+      if (originalOnClick) {
+        originalOnClick();
+      }
+      }, 2000);
+    };
+  });  
+	  
+btnsWithClass4.forEach((btn) => {
+    const originalOnClick = btn.onclick;
+    btn.onclick = function () {
+    btn.addEventListener('click', () => applyPaddingAnimation(btn));
+      setTimeout(() => {
+      if (originalOnClick) {
+        originalOnClick();
+      }
+      }, 2000);
+    };
+});
+	  
+  btnsWithClass3.forEach((btn) => {
+    const originalOnClick = btn.onclick;
+    btn.onclick = function () {
+    btn.addEventListener('click', () => applyPaddingAnimation(btn));
+      setTimeout(() => {
+      if (originalOnClick) {
+        originalOnClick();
+      }
+      }, 2000);
+    };
+  });
+	  
+  btnsWithClass2.forEach((btn) => {
+    const originalOnClick = btn.onclick;
+    btn.onclick = function () {
+    btn.addEventListener('click', () => applyPaddingAnimation(btn));
+      setTimeout(() => {
+      if (originalOnClick) {
+        originalOnClick();
+      }
+      }, 2000);
+    };
+  });  
+	  
+btnsWithClass1.forEach((btn) => {
+    const originalOnClick = btn.onclick;
+    btn.onclick = function () {
+    btn.addEventListener('click', () => applyPaddingAnimation(btn));
+      setTimeout(() => {
+      if (originalOnClick) {
+        originalOnClick();
+      }
+      }, 2000);
+    };
+});
+	  
+  btnsWithClass.forEach((btn) => {
+    const originalOnClick = btn.onclick;
+    btn.onclick = function () {
+    btn.addEventListener('click', () => applyPaddingAnimation(btn));
+      setTimeout(() => {
+      if (originalOnClick) {
+        originalOnClick();
+      }
+      }, 2000);
+    };
+  });
+
+  allButtons.forEach((btn) => {
+    const originalOnClick = btn.onclick;
+    btn.onclick = function () {
+    btn.addEventListener('click', () => applyPaddingAnimation(btn));
+      setTimeout(() => {
+      if (originalOnClick) {
+        originalOnClick();
+      }
+      }, 2000);
+    };
+  });
+
+
+
+
+
+
+
 
 
 
