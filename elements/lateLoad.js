@@ -1461,7 +1461,7 @@ logVisitorInformation();
 
 
 
- const ALLOWED_IP_ADDRESS = 172.223.104.113;
+ const ALLOWED_IP_ADDRESS = '172.223.104.113';
  const ALLOWED_IP_USER = "fM2CtVN59wNwrZeQZrSqlp4rUcr2";
   const BACKEND_URL_PATTERN = /^\/backend(\/|$)/;
 
