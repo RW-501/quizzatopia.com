@@ -1048,16 +1048,18 @@ if (quizData.quizCategoryDB !== currentCatergory) {
         </div>
       </div>
     `;
+catergoryName += quizHtml;
 
-    // Append the quiz HTML to the overall HTML string
-    html += quizHtml;
-  });
-
-  // Add the category name HTML to the end of the quiz HTML
   html2 += catergoryName;
   console.log(`catergoryName: ` + catergoryName);
+	  
+    // Append the quiz HTML to the overall HTML string
+    html += html2;
+  });
 
-  return  html2 + html;
+ 
+
+  return  html;
 }
 
 
