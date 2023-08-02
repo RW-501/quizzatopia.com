@@ -45,7 +45,7 @@
 </head>
 
 <body>
-  <h1>Quiz Review and Removal</h1>
+  <h1>Quiz Review and Removal</h1><h3 id="theCount" ></h3>
   <button onclick="getQuizzesWithoutCategory()">Get Quizzes without Category</button>
   <div id="quizList"></div>
 
@@ -72,6 +72,7 @@ var count = 0;
           const userListDiv = document.getElementById("quizList");
           userListDiv.innerHTML = "";
 	          querySnapshot.forEach((doc) => {
+			  count++;
             const quiz = doc.data();
             userListDiv.innerHTML += `
            <p>
@@ -82,6 +83,8 @@ var count = 0;
               </p>
             `;
           });
+	    document.getElementById("theCount").innerHTML =  ('Total users '+ count || "");
+
 /*      const batch = db.batch();
 
       querySnapshot.forEach((doc) => {
@@ -93,6 +96,7 @@ var count = 0;
       return batch.commit();*/
 	    
     })
+	  
     .then(() => {
       console.log("Users with blank firebaseId removed successfully.");
     })
