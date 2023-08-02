@@ -52,40 +52,29 @@
 
 
   <script>
+// Function to fetch and remove documents without a category
+async function getQuizzesWithoutCategory() {
+  const db = firebase.firestore();
+  let countDeleted = 0;
 
-async    function getQuizzesWithoutCategory() {
-
-
-const firestore = firebase.firestore();
-const db = firebase.firestore();
-var count = 0;
-	    
-
-	      console.log("??????????????????????????????????????????.");
   try {
     const snapshot = await db.collection('quizzes').get();
 
-    snapshot.forEach((doc) => {
-	    			  count++;
-
+    snapshot.forEach(async (doc) => {
       const data = doc.data();
       if (!data.quizCategoryDB) {
-        doc.ref.delete();
+        await doc.ref.delete();
+        countDeleted++;
         console.log(`Document ${doc.id} deleted.`);
       }
     });
+
+    // Display the total count of deleted documents
+    document.getElementById("theCount").innerHTML = `Total quizzes deleted: ${countDeleted}`;
   } catch (error) {
     console.error('Error removing documents:', error);
   }
 }
-         
-	    document.getElementById("theCount").innerHTML =  ('Total quizzes '+ count || "");
-
-
-  
-
-
-    }
 
     function removeQuiz(quizId) {
       db.collection("quizzes")
