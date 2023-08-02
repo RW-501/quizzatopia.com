@@ -1,28 +1,11 @@
 
-// Function to get users without "firebaseId"
-async function getUsersWithoutFirebaseId() {
-
+  
+async function removeUser(userId) {
+  try {
   const firestore = firebase.firestore();
 
     const db = firebase.firestore();
 
-  
-  const querySnapshot = await db.collection('users').where('firebaseId', '==', '').get();
-  const users = [];
-
-  querySnapshot.forEach((doc) => {
-    users.push({
-      id: doc.id,
-      data: doc.data(),
-    });
-  });
-
-  return users;
-}
-
-// Function to remove a user by ID
-async function removeUser(userId) {
-  try {
     await db.collection('users').doc(userId).delete();
     console.log('User removed successfully.');
   } catch (error) {
@@ -30,7 +13,25 @@ async function removeUser(userId) {
   }
 }
 
-module.exports = {
-  getUsersWithoutFirebaseId,
-  removeUser,
-};
+// Function to get users without "firebaseId"
+async function getUsersWithoutFirebaseId() {
+  try {
+    const querySnapshot = await db.collection('users').where('firebaseId', '==', '').get();
+    const users = [];
+
+    querySnapshot.forEach((doc) => {
+      users.push({
+        id: doc.id,
+        data: doc.data(),
+      });
+    });
+
+    return users;
+  } catch (error) {
+    console.error('Error getting users:', error);
+    throw error;
+  }
+}
+
+
+
