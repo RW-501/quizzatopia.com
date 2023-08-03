@@ -910,12 +910,9 @@ async function fetchQuizzesFromDB(page = 1) {
   const lastDoc = querySnapshot.docs[querySnapshot.docs.length - 1];
   lastVisibleDoc = lastDoc;
 
-  // Update the quizContainer with the generated HTML
-  if (page === 1) {
-    document.getElementById('updated_Quizzez').innerHTML = `<h2>New Quizzes</h2>${generatedHtml}`;
-  } else {
+
     document.getElementById('updated_Quizzez').innerHTML += generatedHtml;
-  }
+  
 }
 
 // Function to convert Firestore query snapshot to quizList
@@ -993,7 +990,7 @@ if (quizData.quizCategoryDB !== currentCatergory) {
 	if(count > 1){
 	 upBTN =  '<br><br> <button type="button" class="btn btn-primary btn-lg back-to-top" onclick="scrollToDiv()"><i class="fas fa-chevron-up"></i></button><br><br> ';
 	}
-  catergoryName = `<h2 class="list-catergory">${quizData.quizCategoryDB}</h2>`+upBTN; // Create the category HTML with the correct class name
+  catergoryName = upBTN +`<h2 class="list-catergory">${quizData.quizCategoryDB}</h2>`; // Create the category HTML with the correct class name
 } else {
   catergoryName = ''; // If it's the same category, leave it empty
 }
