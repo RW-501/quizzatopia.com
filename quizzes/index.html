@@ -497,48 +497,14 @@ cards.forEach(card => {
 });
 
 
-		    var uniqueCategories: [
-  "Healthcare", "Gaming", "Business", "Driving", "TV", "Architecture", "Technology", "Music", "Entertainment",
-  "Marketing", "Geography", "E-Commerce", "Science", "Personality", "Professional Certification", "Finance",
-  "History", "Business Economics", "Self-Help", "Health", "Health & Lifestyle", "Communication Skills", "Law",
-  "Food", "Cooking", "Economics", "Personal Finance", "Job Interview", "Food Safety", "Sports", "Movies",
-  "Real Estate", "Relationships", "Sales", "USA Economics", "History & Politics", "Language", "Retail",
-  "Web Development", "World Economics", "Career", "Game Development", "Healthcare & Management"
-]
+
 		    </script>
 	    
 	    
 	    
 
 
-<div class="container mt-4" style="">
-  <div class="row justify-content-center">
-    <div class="col-md-4">
-      <div class="list-group">
-        <!-- Generate category links dynamically -->
-        ${uniqueCategories.slice(0, 7).map(category => `
-          <a href="#${category.replace(/ /g, '_').toLowerCase()}" class="list-group-item list-group-item-action btn-primary">${category}</a>
-        `).join('')}
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="list-group">
-        <!-- Generate category links dynamically -->
-        ${uniqueCategories.slice(7, 13).map(category => `
-          <a href="#${category.replace(/ /g, '_').toLowerCase()}" class="list-group-item list-group-item-action btn-primary">${category}</a>
-        `).join('')}
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="list-group">
-        <!-- Generate category links dynamically -->
-        ${uniqueCategories.slice(13, 20).map(category => `
-          <a href="#${category.replace(/ /g, '_').toLowerCase()}" class="list-group-item list-group-item-action btn-primary">${category}</a>
-        `).join('')}
-      </div>
-    </div>
-  </div>
-</div>
+
 
 
 	<div class="container">
@@ -1024,7 +990,7 @@ let count = 0;
 let upBTN ='';
 if (quizData.quizCategoryDB !== currentCatergory) {
   currentCatergory = quizData.quizCategoryDB; // Update the current category
-	if(count > 0){
+	if(count > 1){
 	 upBTN =  '<br><br> <button type="button" class="btn btn-primary btn-lg back-to-top" onclick="scrollToDiv()"><i class="fas fa-chevron-up"></i></button><br><br> ';
 	}
   catergoryName = `<h2 class="list-catergory">${quizData.quizCategoryDB}</h2>`+upBTN; // Create the category HTML with the correct class name
@@ -1051,14 +1017,14 @@ if (quizData.quizCategoryDB !== currentCatergory) {
         </div>
       </div>
     `;
-	  
+	 
+	  console.log(`catergoryName: ` + catergoryName);
+  
 catergoryName += quizHtml;
 
-  html2 += catergoryName;
-  console.log(`catergoryName: ` + catergoryName);
+  html += catergoryName;
 	  
-    // Append the quiz HTML to the overall HTML string
-    html += html2;
+  
   });
 
  
