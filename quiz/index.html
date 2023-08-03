@@ -2804,13 +2804,15 @@ btnsWithClass1.forEach((btn) => {
 
 
 
+
+
 // Function to generate a random challenge ID (you may use a better approach for production)
 function generateChallengeID() {
   return Math.random().toString(36).substr(2, 9);
 }
 
 // Function to generate the share link with the challenge ID
-function generateShareLink(challengeID) {
+function setShareableLink(quizCode, challengeID) {
   return `https://quizzatopia.com/quiz/challenge/${challengeID}#share`;
 }
 
@@ -2835,7 +2837,7 @@ function showPopover() {
   const challengeID = generateChallengeID();
   
   // Generate the share link with the challenge ID
-  const shareLink = generateShareLink(challengeID);
+  const shareLink = setShareableLink(quizCode, challengeID);
   
   // Populate the input field with the share link
   $("#shareLink").val(shareLink);
