@@ -1530,7 +1530,7 @@ if(save === true && quizStarted === false){
 
 	 console.log("incorrectQuestionNumbers:", incorrectQuestionNumbers);
 	 console.log("responseTime:", responseTime);
-  //    saveReviewDataToFirestore(quizCode, quizInfo.quizName, correctQuestionNumbers, incorrectQuestionNumbers, responseTime);
+      saveReviewDataToFirestore(quizCode, quizInfo.quizName, correctQuestionNumbers, incorrectQuestionNumbers, responseTime);
 	  }
 	    
     let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
