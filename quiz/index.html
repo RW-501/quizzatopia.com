@@ -869,6 +869,11 @@ display: block !important;
   <span class="star" onclick="rateQuiz(4)">&#9734;</span>
   <span class="star" onclick="rateQuiz(5)">&#9734;</span>
 </div>
+
+<!-- Button to challenge a user -->
+<button id="challengeButton" class="btnMain mt-4 other-quiz-btn">Challenge a Friend</button>
+
+	  
 	  <div id="endBtns" class="" >
 <button id="leaveReviewBtn" class="other-quiz-btn  btn-secondary mt-4">Leave Feedback</button>
 	  
@@ -921,6 +926,45 @@ display: block !important;
 	</main_section>
 
 
+<!-- Popover content for sharing -->
+<div id="popoverContent" style="display: none;">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="linkTab" data-toggle="tab" href="#linkSection" role="tab" aria-controls="linkSection" aria-selected="true">Share with a Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="friendsTab" data-toggle="tab" href="#friendsSection" role="tab" aria-controls="friendsSection" aria-selected="false">Share with Friends</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="facebookTab" data-toggle="tab" href="#facebookSection" role="tab" aria-controls="facebookSection" aria-selected="false">Share on Facebook</a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <!-- Share with a Link section -->
+    <div class="tab-pane fade show active" id="linkSection" role="tabpanel" aria-labelledby="linkTab">
+      <input type="text" id="quizLink" readonly>
+      <button id="copyLinkButton" class="btn btn-primary">Copy Link</button>
+    </div>
+
+    <!-- Share with Friends section -->
+    <div class="tab-pane fade" id="friendsSection" role="tabpanel" aria-labelledby="friendsTab">
+      <ul id="friendsList">
+        <!-- Dynamically generated list of friends -->
+      </ul>
+    </div>
+
+    <!-- Share on Facebook section -->
+    <div class="tab-pane fade" id="facebookSection" role="tabpanel" aria-labelledby="facebookTab">
+      <button id="facebookShareButton" class="btn btn-primary">Share on Facebook</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+	
 
 <div id="reviewModal" class="modal">
   <div class="modal-content">
@@ -2662,10 +2706,82 @@ btnsWithClass1.forEach((btn) => {
 
 
 
+// Function to generate a random challenge ID (you may use a better approach for production)
+function generateChallengeID() {
+  return Math.random().toString(36).substr(2, 9);
+}
 
+// Function to generate the share link with the challenge ID
+function generateShareLink(challengeID) {
+  return `https://quizzatopia.com/quiz/challenge/${challengeID}`;
+}
 
-	  
-    </script>
+// Function to dynamically generate the friends list (replace this with your actual logic to fetch friends)
+function generateFriendsList() {
+  // Sample list of friends (replace this with your own data from Firebase)
+  const friends = ["Friend1", "Friend2", "Friend3"];
+  
+  // Clear previous list items
+  $("#friendsList").empty();
+  
+  // Generate list items for each friend
+  friends.forEach((friend) => {
+    const listItem = $("<li></li>").text(friend);
+    $("#friendsList").append(listItem);
+  });
+}
+
+// Function to open the popover and dynamically populate its content
+function showPopover() {
+  // Get the challenge ID (you may generate it based on your logic)
+  const challengeID = generateChallengeID();
+  
+  // Generate the share link with the challenge ID
+  const shareLink = generateShareLink(challengeID);
+  
+  // Populate the input field with the share link
+  $("#quizLink").val(shareLink);
+  
+  // Generate the friends list dynamically
+  generateFriendsList();
+  
+  // Show the popover
+  $("#popoverContent").show();
+}
+
+// Function to copy the link to the clipboard
+function copyLinkToClipboard() {
+  const linkInput = document.getElementById("quizLink");
+  linkInput.select();
+  document.execCommand("copy");
+  // Optionally, show a success message to the user
+  alert("Link copied to clipboard!");
+}
+
+// Function to handle sharing on Facebook (you need to implement this based on Facebook API)
+function shareOnFacebook() {
+  // Add your code to share the quiz on Facebook using the Facebook API
+  // For simplicity, we'll just show an alert here
+  alert("Sharing on Facebook is not implemented yet.");
+}
+
+// Event listener for the challenge button
+$("#challengeButton").on("click", showPopover);
+
+// Event listener for copying the link to clipboard
+$("#copyLinkButton").on("click", copyLinkToClipboard);
+
+// Event listener for sharing on Facebook
+$("#facebookShareButton").on("click", shareOnFacebook);
+
+// Hide the popover when clicking outside
+$(document).on("click", function (event) {
+  if (!$(event.target).closest("#challengeButton, #popoverContent").length) {
+    $("#popoverContent").hide();
+  }
+});
+</script>
+
 
 	  <script src="script.js" defer></script>
 
