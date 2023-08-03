@@ -962,7 +962,7 @@ ul.nav-tabs li.nav-item a.nav-link.active {
 </div>
 
 <!-- Button to challenge a user -->
-<button id="challengeButton" class="btnMain mt-4 other-quiz-btn">Challenge a Friend</button>
+<button id="challengeButton" class="btnMain mt-4 other-quiz-btn" onclick="openChellPopup();" >Challenge a Friend</button>
 
 	  
 	  <div id="endBtns" class="" >
@@ -2892,7 +2892,10 @@ $(document).on("click", function (event) {
     switchTab('facebookTab');
   });
 
+  function openChellPopup(){
+  document.getElementById('popoverContent').style.display = 'block';
 
+	  }
 	  function closeChellPopup(){
   document.getElementById('popoverContent').style.display = 'none';
 
