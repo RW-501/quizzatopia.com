@@ -616,14 +616,14 @@ ul.nav-tabs li.nav-item {
 
 ul.nav-tabs li.nav-item a.nav-link {
   padding: 10px 15px;
-  color: #007bff;
+  color: #fd7e14;
   border: none;
   border-radius: 0;
 }
 
 ul.nav-tabs li.nav-item a.nav-link.active {
-  background-color: #007bff;
-  color: #fff;
+    background-color: #fd7e14;
+    color: #fff;
 }
 
 /* Styling for the tab content */
@@ -645,7 +645,7 @@ ul.nav-tabs li.nav-item a.nav-link.active {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #fd7e14;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -980,16 +980,7 @@ ul.nav-tabs li.nav-item a.nav-link.active {
 <button id="viewStatsBtn" class="other-quiz-btn  btnMain mt-4 "  onclick="viewStatsFunc();">View Stats</button>
 </div>
 	  <br>
- <div class="share-link-container">
-      <input
-        type="text"
-        id="shareLink"
-        class="share-link-input"
-        value="https://example.com/share"
-        readonly
-      />
-      <button class="btnMain  game-button copy-button " onclick="copyLink()">Copy</button>
-    </div>
+
 	  
     <div id="social-sharing" class="mt-4">
       <!-- Social Sharing Section -->
@@ -1034,9 +1025,19 @@ ul.nav-tabs li.nav-item a.nav-link.active {
 
   <div class="tab-content">
     <!-- Share with a Link section -->
-    <div class="tab-pane fade show active" id="linkSection" role="tabpanel" aria-labelledby="linkTab">
-      <input type="text" id="quizLink" readonly>
-      <button id="copyLinkButton" class="btn btn-primary">Copy Link</button>
+
+
+
+	  
+    <div class="tab-pane fade show active" id="linkSection" role="tabpanel" aria-labelledby="shareLink">
+      <input
+        type="text"
+        id="shareLink"
+        class="share-link-input"
+        value="https://example.com/share"
+        readonly
+      />
+	    <button id="copyLinkButton" class="btn btn-primary" onclick="copyLink()">Copy Link</button>
     </div>
 
     <!-- Share with Friends section -->
@@ -2810,7 +2811,7 @@ function generateChallengeID() {
 
 // Function to generate the share link with the challenge ID
 function generateShareLink(challengeID) {
-  return `https://quizzatopia.com/quiz/challenge/${challengeID}`;
+  return `https://quizzatopia.com/quiz/challenge/${challengeID}#share`;
 }
 
 // Function to dynamically generate the friends list (replace this with your actual logic to fetch friends)
@@ -2837,7 +2838,7 @@ function showPopover() {
   const shareLink = generateShareLink(challengeID);
   
   // Populate the input field with the share link
-  $("#quizLink").val(shareLink);
+  $("#shareLink").val(shareLink);
   
   // Generate the friends list dynamically
   generateFriendsList();
@@ -2846,14 +2847,7 @@ function showPopover() {
   $("#popoverContent").show();
 }
 
-// Function to copy the link to the clipboard
-function copyLinkToClipboard() {
-  const linkInput = document.getElementById("quizLink");
-  linkInput.select();
-  document.execCommand("copy");
-  // Optionally, show a success message to the user
-  alert("Link copied to clipboard!");
-}
+
 
 // Function to handle sharing on Facebook (you need to implement this based on Facebook API)
 function shareOnFacebook() {
