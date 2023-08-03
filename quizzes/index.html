@@ -1088,13 +1088,12 @@ async function getTag(tag) {
 }
 
 // Load quizzes on window load
-window.addEventListener('load', function() {
-
- console.log(`fetchQuizzesFromDB: `);
+document.addEventListener('DOMContentLoaded', function() {
+  console.log(`fetchQuizzesFromDB: `);
 
   // Call the function to fetch and populate the quiz data for the first page
   fetchQuizzesFromDB();
-}); 
+});
 
 		    
 		    
