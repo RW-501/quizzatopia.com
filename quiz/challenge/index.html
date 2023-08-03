@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Challenge</title>
+	
+  <!-- Chart.js library   background-color: yellow; -->
+  <script  src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+
+  <!-- Import navbar and footer components -->
+  <link rel="import" href="/elements/navbar.html">
+  <link rel="import" href="/elements/footer.html">
+
+  <div id="navbar"></div>
+  <!-- Rest of the page content -->
+  <div id="signupLoginArea"><div>
+
+  <!-- JavaScript dependencies async -->
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  crossorigin="anonymous">
+
+
+  <script  defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+
+  <script  defer src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+	  <script  defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
+
+  <!-- Firebase SDK -->
+  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+  <!-- Custom scripts   <script  src="/main.js" defer></script> 
+-->
+  <script  src="/main.js" ></script> 
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+#challengeNumber,
+#challengeResult {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#shareButton,
+#statsButton {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#shareButton:hover,
+#statsButton:hover {
+  background-color: #0056b3;
+}
+
+/* Popover Styling */
+#popoverContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#popoverContent {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-width: 300px;
+}
+
+#closeButton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 20px;
+  color: #333;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#closeButton:hover {
+  color: #777;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+
+
+
+  
+</style>
+
+
+
+    
+  </head>
+<body>
+  <!-- Add your HTML content here -->
+  <h1>Quiz Challenge Page</h1>
+  <div id="challengeNumber">Challenge Number: </div>
+  <div id="challengeResult">Result: </div>
+  <button id="shareButton">Share</button>
+  <button id="statsButton">Stats</button>
+
+  <!-- Popover -->
+  <div id="popoverContainer" style="display: none;">
+    <div id="popoverContent">
+      <button id="closeButton">&times;</button>
+      <ul>
+        <li><a href="#">Share with a link</a></li>
+        <li><a href="#">Share with friends</a></li>
+        <li><a href="#">Share on Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script >
+document.addEventListener('DOMContentLoaded', () => {
+  // Function to read URL parameters
+  function getURLParams() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams;
+  }
+
+  // Get the challenge number from URL parameters
+  const urlParams = getURLParams();
+  const challengeNumber = urlParams.get('challenge');
+  document.getElementById('challengeNumber').innerText += challengeNumber;
+
+  // Check if the URL parameters have #share or #stats
+  if (window.location.hash === '#share') {
+    // Do something if URL has #share
+    console.log('Share mode activated');
+    // Show the popover when the Share button is clicked
+    document.getElementById('shareButton').addEventListener('click', () => {
+      document.getElementById('popoverContainer').style.display = 'block';
+    });
+  }
+
+  if (window.location.hash === '#stats') {
+    // Do something if URL has #stats
+    console.log('Stats mode activated');
+    // Show the popover when the Stats button is clicked
+    document.getElementById('statsButton').addEventListener('click', () => {
+      document.getElementById('popoverContainer').style.display = 'block';
+    });
+  }
+
+  // Add event listener for the close button
+  document.getElementById('closeButton').addEventListener('click', () => {
+    // Hide the popover when the close button is clicked
+    document.getElementById('popoverContainer').style.display = 'none';
+  });
+});
+
+
+
+    
+  </script>
+</body>
+</html>
