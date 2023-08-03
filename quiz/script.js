@@ -1175,21 +1175,6 @@ function sendFeedbackToDBFunc(feedbackData) {
 
 
 
- function setShareableLink(data) {
-        var shareLink = document.getElementById("shareLink");
-        // Build the shareable link based on the provided data
-        shareLink.value = data;
-      }
-
-      function copyLink() {
-        var shareLink = document.getElementById("shareLink");
-        shareLink.select();
-        shareLink.setSelectionRange(0, 99999); /* For mobile devices */
-        document.execCommand("copy");
-        alert("Link copied to clipboard!");
-      }
-
-
 
 
 
