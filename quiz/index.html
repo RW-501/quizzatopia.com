@@ -587,6 +587,104 @@ display: block !important;
     justify-content: space-evenly;
     font-size: 1.2em;
 }
+
+
+
+
+
+		/* Styling for the button */
+#chell_list {
+  position: absolute;
+  left: 0;
+  top: 0;  right: 0;
+  bottom: 0;	
+  width: 80%;
+
+	    height: 90%;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the popover container */
+#popoverContent {
+	    z-index: 9999999;
+
+}
+
+/* Styling for the tab navigation */
+ul.nav-tabs {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+ul.nav-tabs li.nav-item {
+  margin: 0;
+}
+
+ul.nav-tabs li.nav-item a.nav-link {
+  padding: 10px 15px;
+  color: #007bff;
+  border: none;
+  border-radius: 0;
+}
+
+ul.nav-tabs li.nav-item a.nav-link.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Styling for the tab content */
+.tab-content .tab-pane {
+  padding: 15px 0;
+}
+
+/* Styling for the input field */
+#quizLink {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Styling for the copy link button */
+#copyLinkButton {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Styling for the friends list */
+#friendsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#friendsList li {
+  margin-bottom: 5px;
+}
+
+/* Styling for the Facebook share button */
+#facebookShareButton {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 </style>
 	  	
 	
@@ -927,7 +1025,8 @@ display: block !important;
 
 
 <!-- Popover content for sharing -->
-<div id="popoverContent" style="display: none;">
+<div id="popoverContent" class="popup" style="display: none;">
+	<div id="chell_list">
   <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
       <a class="nav-link active" id="linkTab" data-toggle="tab" href="#linkSection" role="tab" aria-controls="linkSection" aria-selected="true">Share with a Link</a>
@@ -958,6 +1057,7 @@ display: block !important;
     <div class="tab-pane fade" id="facebookSection" role="tabpanel" aria-labelledby="facebookTab">
       <button id="facebookShareButton" class="btn btn-primary">Share on Facebook</button>
     </div>
+  </div>
   </div>
 </div>
 
