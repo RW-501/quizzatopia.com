@@ -1494,7 +1494,7 @@ correctTab.innerHTML = "<h3>Correct Answers</h3><div id='correctList'></div>";
 
   let correctQuestionNumbers = [];
   let incorrectQuestionNumbers = [];
-
+let responseTime =0;
   questionsCompleted.forEach(function (question) {
     var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
 
@@ -1522,7 +1522,7 @@ correctTab.innerHTML = "<h3>Correct Answers</h3><div id='correctList'></div>";
       });
     })(resultCount); // Pass resultCount as an argument to the IIFE
 
-    let responseTime = questionsCompleted[resultCount].responseTime;
+     responseTime = questionsCompleted[resultCount].responseTime;
 
    // console.log("count:", resultCount);
    // console.log("questionIndex:", questionIndex);
