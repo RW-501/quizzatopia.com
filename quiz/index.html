@@ -714,11 +714,8 @@ ul.nav-tabs li.nav-item a.nav-link.active {
 	  <script  defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
 
 <!-- Add this in the <head> section of your HTML -->
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-	  
   <!-- Firebase SDK -->
   <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
@@ -2865,14 +2862,7 @@ function shareOnFacebook() {
   alert("Sharing on Facebook is not implemented yet.");
 }
 
-// Event listener for the challenge button
-$("#challengeButton").on("click", showPopover);
 
-// Event listener for copying the link to clipboard
-$("#copyLinkButton").on("click", copyLinkToClipboard);
-
-// Event listener for sharing on Facebook
-$("#facebookShareButton").on("click", shareOnFacebook);
 
 // Hide the popover when clicking outside
 $(document).on("click", function (event) {
@@ -2880,7 +2870,31 @@ $(document).on("click", function (event) {
     $("#popoverContent").hide();
   }
 });
+ // Function to switch tabs
+  function switchTab(tabId) {
+    const tabLinks = document.querySelectorAll('.nav-link');
+    const tabPanes = document.querySelectorAll('.tab-pane');
 
+    tabLinks.forEach((link) => link.classList.remove('active')); // Remove active class from all tab links
+    tabPanes.forEach((pane) => pane.classList.remove('show', 'active')); // Remove active class from all tab panes
+
+    // Add active class to the selected tab link and tab pane
+    document.getElementById(tabId).classList.add('active');
+    document.getElementById(`${tabId}Section`).classList.add('show', 'active');
+  }
+
+  // Event listeners for tab links
+  document.getElementById('linkTab').addEventListener('click', function() {
+    switchTab('linkTab');
+  });
+
+  document.getElementById('friendsTab').addEventListener('click', function() {
+    switchTab('friendsTab');
+  });
+
+  document.getElementById('facebookTab').addEventListener('click', function() {
+    switchTab('facebookTab');
+  });
 
 
 	  function closeChellPopup(){
