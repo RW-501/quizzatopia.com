@@ -2812,7 +2812,10 @@ function generateChallengeID() {
 
 // Function to generate the share link with the challenge ID
 function setShareableLink(quizCode, challengeID) {
-  return `https://quizzatopia.com/quiz/challenge/${challengeID}#share`;
+  const userInfo = getUserInfo();
+let uID = userInfo.firebaseId;
+	  
+  return `https://quizzatopia.com/quiz/challenge/${uID}&?share=${quizCode}`;
 }
 
 // Function to dynamically generate the friends list (replace this with your actual logic to fetch friends)
