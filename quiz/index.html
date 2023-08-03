@@ -2855,8 +2855,14 @@ function showPopover() {
   // Generate the friends list dynamically
   generateFriendsList();
   
-  // Show the popover
-  $("#popoverContent").show();
+    // Get the popover content element
+    const popoverContent = document.getElementById('popoverContent');
+
+    // Toggle the display of the popover content
+ 
+      popoverContent.style.display = 'block';
+
+  
 }
 
 
