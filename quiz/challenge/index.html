@@ -164,6 +164,12 @@ a:hover {
   </div>
 
   <script >
+
+////   `https://quizzatopia.com/quiz/challenge/${uID}&?share=${quizCode}`;
+////   `https://quizzatopia.com/quiz/challenge/2455865&?share=86953`;
+
+//https://quizzatopia.com/quiz/challenge/2455865&?share=86953
+
 document.addEventListener('DOMContentLoaded', () => {
   // Function to read URL parameters
   function getURLParams() {
@@ -171,11 +177,31 @@ document.addEventListener('DOMContentLoaded', () => {
     return urlParams;
   }
 
-  // Get the challenge number from URL parameters
-  const urlParams = getURLParams();
-  const challengeNumber = urlParams.get('challenge');
-  document.getElementById('challengeNumber').innerText += challengeNumber;
+    // Get the challenge number and quiz code from URL parameters
+    const urlParams = getURLParams();
+    const challengeNumber = urlParams.get('challenge');
+    const quizCode = urlParams.get('share');
 
+    // Display challenge number and quiz code in the HTML elements
+    document.getElementById('challengeNumber').innerText = challengeNumber;
+    document.getElementById('quizCode').innerText = quizCode;
+
+    // Get the user ID using the getUserInfo function (assuming you have implemented it)
+    const userInfo = getUserInfo();
+    const uID = userInfo.firebaseId;
+
+    // Log the values for testing
+    console.log('Challenge Number: ' + challengeNumber);
+    console.log('Quiz Code: ' + quizCode);
+    console.log('User ID: ' + uID);
+
+
+
+
+
+
+
+	
   // Check if the URL parameters have #share or #stats
   if (window.location.hash === '#share') {
     // Do something if URL has #share
