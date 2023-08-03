@@ -1474,6 +1474,7 @@ function checkVarForValueFunc(questionIndex) {
   }
 }
 
+	  var responseTimeTotal = 0;
 // Open the review popup
 function openReviewFunc(save) {
 	  var resultCount = 0;
@@ -1494,7 +1495,7 @@ correctTab.innerHTML = "<h3>Correct Answers</h3><div id='correctList'></div>";
 
   let correctQuestionNumbers = [];
   let incorrectQuestionNumbers = [];
-let responseTime =0;
+let responseTime =[];
   questionsCompleted.forEach(function (question) {
     var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
 
@@ -1520,18 +1521,14 @@ let responseTime =0;
         // Handle click event for each question
         openQuestionPopup(questionIndex, resultCount);
       });
-    })(resultCount); // Pass resultCount as an argument to the IIFE
+    })(resultCount); // Pass result count as an argument to the IIFE
 
-     responseTime = questionsCompleted[resultCount].responseTime;
+     ).push(questionsCompleted[resultCount].responseTime);
 
+	    
    // console.log("count:", resultCount);
    // console.log("questionIndex:", questionIndex);
-if(save === true && quizStarted === false){
 
-	 console.log("incorrectQuestionNumbers:", incorrectQuestionNumbers);
-	 console.log("responseTime:", responseTime);
-      saveReviewDataToFirestore(quizCode, quizInfo.quizName, correctQuestionNumbers, incorrectQuestionNumbers, responseTime);
-	  }
 	    
     let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
     let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining milliseconds to seconds
@@ -1591,10 +1588,14 @@ reviewQuestionText.textContent = questionsOG[questionIndex].question;
   }
 
 });
+if(save === true && quizStarted === false){
 
 	 console.log("correctQuestionNumbers:", correctQuestionNumbers);
 	 console.log("incorrectQuestionNumbers:", incorrectQuestionNumbers);
 	 console.log("responseTime:", responseTime);
+      saveReviewDataToFirestore(quizCode, quizInfo.quizName, correctQuestionNumbers, incorrectQuestionNumbers, ));
+	  }
+
 	
   // Calculate the percent done and current score
   const totalQuestions = questionsCompleted.length;
