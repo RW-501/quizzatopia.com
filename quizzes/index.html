@@ -501,7 +501,46 @@ cards.forEach(card => {
 		    </script>
 	    
 	    
-	    
+	      <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="list-group">
+  <a href="#healthcare" class="list-group-item list-group-item-action btn-primary">Healthcare</a>
+    <a href="#gaming" class="list-group-item list-group-item-action btn-primary">Gaming</a>
+    <a href="#business" class="list-group-item list-group-item-action btn-primary">Business</a>
+    <a href="#driving" class="list-group-item list-group-item-action btn-primary">Driving</a>
+    <a href="#tv" class="list-group-item list-group-item-action btn-primary">TV</a>
+    <a href="#architecture" class="list-group-item list-group-item-action btn-primary">Architecture</a>
+    <a href="#technology" class="list-group-item list-group-item-action btn-primary">Technology</a>
+    
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="list-group">
+  <a href="#music" class="list-group-item list-group-item-action btn-primary">Music</a>
+    <a href="#entertainment" class="list-group-item list-group-item-action btn-primary">Entertainment</a>
+    <a href="#marketing" class="list-group-item list-group-item-action btn-primary">Marketing</a>
+    <a href="#geography" class="list-group-item list-group-item-action btn-primary">Geography</a>
+    <a href="#e-commerce" class="list-group-item list-group-item-action btn-primary">E-Commerce</a>
+    <a href="#science" class="list-group-item list-group-item-action btn-primary">Science</a>
+    <a href="#personality" class="list-group-item list-group-item-action btn-primary">Personality</a>
+
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="list-group">
+  <a href="#professional-certification" class="list-group-item list-group-item-action btn-primary">Professional Certification</a>
+    <a href="#finance" class="list-group-item list-group-item-action btn-primary">Finance</a>
+    <a href="#history" class="list-group-item list-group-item-action btn-primary">History</a>
+    <a href="#language" class="list-group-item list-group-item-action btn-primary">Language</a>
+    <a href="#self-help" class="list-group-item list-group-item-action btn-primary">Self-Help</a>
+    <a href="#health" class="list-group-item list-group-item-action btn-primary">Health</a>
+    <a href="#sports" class="list-group-item list-group-item-action btn-primary">Sports</a>
+    <a href="#communication-skills" class="list-group-item list-group-item-action btn-primary">Communication Skills</a>
+    
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -795,47 +834,8 @@ display: block;
     <div class="container  justify-content-center" id="quiz_list">
   <div id="updated_Quizzez" class="container">
 	  
-	<!-- Job Preparation  d-flex
-<div class="col-12">
-  <h2 id="job-preparation">Job Preparation</h2>
-  <div class="col-lg-12 order-lg-2">
-    <img src="/images/lan/3.png" alt="Quiztopia Platform" class="img-fluid w-100" loading="lazy">
-  </div>
-	
-  <div id="job_interviews" class="lazyloadtext">
-    <a href="/quiz/?q=job_interviews"><h4>Job Interviews Quiz</h4></a>
-    <p>Get ready for your next job interview with this quiz that covers common questions and best practices.</p>
-  </div>
-	<div id="technical_skills_assessments" class="lazyloadtext">
-    <a href="/quiz/?q=technical_skills_assessments"><h4>Technical Skills Assessments</h4></a>
-    <p>These quizzes are designed to evaluate candidates' technical knowledge and skills related to the job they are applying for. They can include coding challenges, problem-solving exercises, or domain-specific questions.</p>
-  </div>
-  <div id="cognitive_ability_tests" class="lazyloadtext">
-    <a href="/quiz/?q=cognitive_ability_tests"><h4>Cognitive Ability Tests</h4></a>
-    <p>These assessments measure candidates' cognitive abilities, such as critical thinking, problem-solving, logical reasoning, and numerical or verbal aptitude. They help recruiters assess candidates' potential for learning, adapting, and performing well in the role.</p>
-  </div>
-  <div id="personality_assessments" class="lazyloadtext">
-    <a href="/quiz/?q=personality_assessments"><h4>Personality Assessments</h4></a>
-    <p>Recruiters may use personality quizzes or psychometric tests to gain insights into candidates' personality traits, work styles, and preferences. These assessments can provide recruiters with information about cultural fit, teamwork, leadership potential, and communication styles.</p>
-  </div>
-  <div id="behavioral_interviews" class="lazyloadtext">
-    <a href="/quiz/?q=behavioral_interviews"><h4>Behavioral Interviews</h4></a>
-    <p>While not quizzes in the traditional sense, behavioral interviews involve asking candidates situational or behavioral questions to understand how they have handled past work situations or challenges. Recruiters assess candidates' skills, experiences, and decision-making abilities based on their responses.</p>
-  </div>
-</div>
-  
 
-	         <button type="button" class="btn btn-primary btn-lg back-to-top" onclick="scrollToDiv()"><i class="fas fa-chevron-up"></i></button>
-
--->
-
-
-    
-    
-    
-    
   </div>
-	    <button type="button" class="btn btn-primary btn-lg back-to-top" onclick="scrollToDiv()"><i class="fas fa-chevron-up"></i></button>
 </div>
 
 </section>
@@ -988,9 +988,13 @@ let upBTN ='';
 if (quizData.quizCategoryDB !== currentCatergory) {
   currentCatergory = quizData.quizCategoryDB; // Update the current category
 	if(count > 1){
-	 upBTN =  '<br><br> <button type="button" class="btn btn-primary btn-lg back-to-top" onclick="scrollToDiv()"><i class="fas fa-chevron-up"></i></button><br><br> ';
+	 upBTN =  '<br><br> <button type="button" class="btn btn-primary btn-lg back-to-top" onclick="scrollToDiv()"><i class="fas fa-chevron-up w-100"></i></button><br><br> ';
 	}
-  catergoryName = upBTN +`<h2 class="list-catergory">${quizData.quizCategoryDB}</h2>`; // Create the category HTML with the correct class name
+	
+	const lowercaseString = currentCatergory.toLowerCase();
+const stringWithHyphens = lowercaseString.replace(/ /g, "-");
+
+  catergoryName = upBTN +`<h2 id="${stringWithHyphens}" class="list-catergory">${currentCatergory}</h2>`; // Create the category HTML with the correct class name
 } else {
   catergoryName = ''; // If it's the same category, leave it empty
 }
@@ -1015,7 +1019,7 @@ if (quizData.quizCategoryDB !== currentCatergory) {
       </div>
     `;
 	 
-	  console.log(`catergoryName: ` + catergoryName);
+	 // console.log(`catergoryName: ` + catergoryName);
   
 catergoryName += quizHtml;
 
@@ -1078,7 +1082,6 @@ async function getTag(tag) {
     // Call the function to generate quiz HTML
     const generatedHtmlTag = generateQuizHTML(quizListTag, 1);
 
-    document.getElementById('updated_Quizzez').innerHTML = "";
     document.getElementById('updated_Quizzez').innerHTML += generatedHtmlTag;
     quizContainer.scrollTop = 0;
   } 
