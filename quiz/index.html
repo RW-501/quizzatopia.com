@@ -1527,7 +1527,10 @@ correctTab.innerHTML = "<h3>Correct Answers</h3><div id='correctList'></div>";
    // console.log("count:", resultCount);
    // console.log("questionIndex:", questionIndex);
 if(save === true && quizStarted === false){
-      saveReviewDataToFirestore(quizCode, quizInfo.quizName, correctQuestionNumbers, incorrectQuestionNumbers, responseTime);
+
+	 console.log("incorrectQuestionNumbers:", incorrectQuestionNumbers);
+	 console.log("responseTime:", responseTime);
+  //    saveReviewDataToFirestore(quizCode, quizInfo.quizName, correctQuestionNumbers, incorrectQuestionNumbers, responseTime);
 	  }
 	    
     let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
@@ -1589,6 +1592,10 @@ reviewQuestionText.textContent = questionsOG[questionIndex].question;
 
 });
 
+	 console.log("correctQuestionNumbers:", correctQuestionNumbers);
+	 console.log("incorrectQuestionNumbers:", incorrectQuestionNumbers);
+	 console.log("responseTime:", responseTime);
+	
   // Calculate the percent done and current score
   const totalQuestions = questionsCompleted.length;
   const percentDone = (questionsCompleted.length / questions.length) * 100;
