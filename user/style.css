@@ -8,10 +8,12 @@
   }
 
 #userNameQ{
-      display: block;
+    display: block;
     margin: auto;
-  border: none;
-      text-align: center;
+    border: none;
+    text-align: center;
+    font-weight: 800;
+    font-size: 2em;
   
 }
 
