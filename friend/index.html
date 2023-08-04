@@ -261,7 +261,7 @@ let friendFirebaseId = input(friendFirebaseIdxx);
 
   function getURLParams() {
   const urlParams = window.location.href;
-	      console.log('1111 urlParams: ' + urlParams);
+	     // console.log('1111 urlParams: ' + urlParams);
 
     return urlParams;
   }
@@ -304,7 +304,10 @@ async function generateFriendsList() {
 
     // Clear previous list items
 	  document.getElementById("friendsList").innerHTML = '';
+if(friends.length === 0){
+	  document.getElementById("friendsList").innerHTML = `<div class='points'>Send Your Link to your Friends</div>`;
 
+}
     // Generate list items for each friend
       let friendsHTML = "";
     friends.forEach((friend) => {
