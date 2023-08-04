@@ -2822,28 +2822,15 @@ let uID = userInfo.firebaseId;
   return `https://quizzatopia.com/quiz/challenge/${uID}&?share=${quizCode}`;
 }
 
-// Function to dynamically generate the friends list (replace this with your actual logic to fetch friends)
-function generateFriendsList() {
-  // Sample list of friends (replace this with your own data from Firebase)
-  const friends = ["Friend1", "Friend2", "Friend3"];
-  
-  // Clear previous list items
-  $("#friendsList").empty();
-  
-  // Generate list items for each friend
-  friends.forEach((friend) => {
-    const listItem = $("<li></li>").text(friend);
-    $("#friendsList").append(listItem);
-  });
-}
+
 
 // Function to open the popover and dynamically populate its content
 function showSharePopover() {
 
-	 console.log("showSharePopover      "); 
+	// console.log("showSharePopover      "); 
 
 	  
-/*  // Get the challenge ID (you may generate it based on your logic)
+ // Get the challenge ID (you may generate it based on your logic)
   const challengeID = generateChallengeID();
   
   // Generate the share link with the challenge ID
@@ -2854,7 +2841,7 @@ function showSharePopover() {
   
   // Generate the friends list dynamically
   generateFriendsList();
-  */
+  
     // Get the popover content element
   document.getElementById('popoverContent').style.display = 'block';
  	  slideIn("chell_list");
@@ -2891,9 +2878,9 @@ function shareSwitchTab(tabId) {
   const selectedTabLink = document.getElementById(tabId);
   const selectedTabPane = document.getElementById(tabId+"Section");
   if (!selectedTabLink || !selectedTabPane) {
-    console.error(`Element with id "${tabId}" not found.`);
-    console.log(`Selected tab link:`, selectedTabLink);
-    console.log(`Selected tab pane:`, selectedTabPane);
+//    console.error(`Element with id "${tabId}" not found.`);
+//    console.log(`Selected tab link:`, selectedTabLink);
+ //   console.log(`Selected tab pane:`, selectedTabPane);
     return; // Exit the function if the element is not found
   }
 
@@ -2911,9 +2898,81 @@ function shareSwitchTab(tabId) {
 
 	  function closeChellPopup(){
   document.getElementById('popoverContent').style.display = 'none';
+ 	  slideOut("chell_list");
 
 	  }
-	  
+
+// Function to dynamically generate the friends list (replace this with your actual logic to fetch friends)
+function generateFriendsList() {
+  // Sample list of friends (replace this with your own data from Firebase)
+	  const userInfo = getUserInfo();
+
+
+  // Update the navigation ba
+  const friends = getUserFriends(userInfo.firebaseId);
+  
+  // Clear previous list items
+  $("#friendsList").empty();
+  
+  // Generate list items for each friend
+  friends.forEach((friend) => {
+    const listItem = $("<li></li>").text(friend);
+    $("#friendsList").append(listItem);
+  });
+}
+
+
+	  // Function to get a user's friends
+async function getUserFriends(currentUserFirebaseId) {
+  try {
+    // Get a reference to the "friends" collection
+    const friendsCollectionRef = firebase.firestore().collection("friends");
+
+    // Query for all documents where user1 or user2 is equal to the current user ID
+    const querySnapshot = await friendsCollectionRef
+      .where("user1", "==", currentUserFirebaseId)
+      .get();
+
+    const friends = [];
+
+    // Loop through the query results
+    querySnapshot.forEach((doc) => {
+      // Get the friend's Firebase ID from the document
+      const friendFirebaseId = doc.data().user2;
+
+      // You can then use this friendFirebaseId to retrieve additional friend data
+      // For example, you may have a "users" collection that stores user profiles
+      // Retrieve the friend's data and add it to the friends array
+      // Here's an example assuming you have a "users" collection:
+      firebase.firestore().collection("users").doc(friendFirebaseId).get()
+        .then((friendDoc) => {
+          if (friendDoc.exists) {
+            const friendData = friendDoc.data();
+            friends.push(friendData);
+            // Now, you can update your UI to display the list of friends
+            // For example, you can render a list of friends using a template engine or directly update the DOM
+		  return friends;
+          }
+        });
+    });
+
+    // If you prefer to use async/await for the friend data retrieval
+    // You can use Promise.all to wait for all promises to resolve before updating the UI
+    // const friendPromises = querySnapshot.docs.map((doc) => {
+    //   const friendFirebaseId = doc.data().user2;
+    //   return firebase.firestore().collection("users").doc(friendFirebaseId).get();
+    // });
+
+    // const friendDocs = await Promise.all(friendPromises);
+    // const friends = friendDocs.map((friendDoc) => friendDoc.data());
+
+    // Now, you can update your UI to display the list of friends
+    // For example, you can render a list of friends using a template engine or directly update the DOM
+  } catch (error) {
+    console.error("Error getting user's friends:", error);
+  }
+}
+
 </script>
 
 
