@@ -118,7 +118,7 @@
   const currentUserFirebaseId = userInfo.firebaseId;
 	    
       const userIdInput = document.getElementById("userIdInput");
-	    userIdInput.value = "https://www.quizzatopia.com/friend"+currentUserFirebaseId;
+	    userIdInput.value = "https://www.quizzatopia.com/friend/"+currentUserFirebaseId;
 		    
 	       function copyFriendCodeToClipboard() {
       userIdInput.select();
@@ -196,7 +196,7 @@ window.addEventListener('load', () => {
   async function main() {
     // Get the challenge number and quiz code from URL parameters
     const url = getURLParams();
- const startIndex = url.indexOf('friend') + 6;
+const startIndex = url.indexOf('friend') + 6;
 const friendID = url.substring(startIndex);
 
     // Log the values for testing
