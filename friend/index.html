@@ -270,7 +270,7 @@ async function generateFriendsList() {
     });
 
     // Set the innerHTML of friendsList with the generated HTML
-    $("#friendsList").html(friendsHTML);
+	  document.getElementById("friendsList").innerHTML = friendsHTML;
   } catch (error) {
     console.error('Error fetching friends and user data:', error);
   }
