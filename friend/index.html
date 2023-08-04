@@ -138,6 +138,10 @@ font-size: 1.5em;
     margin: auto;
     width: 95%;	  
 	  }
+
+	  .picWrap{
+
+	  }
   </style>
 </head>
 
@@ -298,12 +302,14 @@ async function generateFriendsList() {
 
       // Create the list item HTML with the friend's name, picture, and points
       const listItemHTML = `
-        <li class='friends' >
-        <div  class='bg' onclick="handleFriendClick('${friendName}', '${friendfirebaseId}')"> <divclass='picArea'> ${imgElement}</div>
+        <li class='friends' ><div  class='bg'> 
+        <div  class='picWrap' onclick="handleFriendClick('${friendName}', '${friendfirebaseId}')"> 
+	<div class='picArea'> ${imgElement}</div>
          <div> ${name}</div></div>
          <div> </div>
          <div class='points'> ${points} Points</div>
          <div class='remove ' onclick=" removeFriend('${friendfirebaseId}');"> Remove</div>
+	 </div>
         </li>
       `;
 
