@@ -2890,7 +2890,7 @@ function shareSwitchTab(tabId) {
 
   // Check if the tabId corresponds to a valid element
   const selectedTabLink = document.getElementById(tabId);
-  const selectedTabPane = document.getElementById(`friendsSection`);
+  const selectedTabPane = document.getElementById(tabId+"Section");
   if (!selectedTabLink || !selectedTabPane) {
     console.error(`Element with id "${tabId}" not found.`);
     console.log(`Selected tab link:`, selectedTabLink);
