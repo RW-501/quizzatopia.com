@@ -173,15 +173,21 @@ a:hover {
 document.addEventListener('DOMContentLoaded', () => {
   // Function to read URL parameters
   function getURLParams() {
-    const urlParams = new URLSearchParams(window.location.search);
+    const urlParams = window.location;
     return urlParams;
   }
 
     // Get the challenge number and quiz code from URL parameters
-    const urlParams = getURLParams();
-    const challengeNumber = urlParams.get('challenge');
-    const quizCode = urlParams.get('share');
+    const url = getURLParams();
 
+	
+ const startIndex = url.indexOf('challenge') + 9;
+const challengeNumber = url.substring(startIndex);
+
+ const startIndex2 = url.indexOf('share') + 5;
+const quizCode = url.substring(startIndex2);
+
+	
     // Display challenge number and quiz code in the HTML elements
     document.getElementById('challengeNumber').innerText = challengeNumber;
     document.getElementById('quizCode').innerText = quizCode;
@@ -195,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Quiz Code: ' + quizCode);
     console.log('User ID: ' + uID);
 
-
+   
 
 
 
