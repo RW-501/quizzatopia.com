@@ -181,10 +181,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const url = getURLParams();
 
 	
- const startIndex = url.indexOf('challenge') + 9;
+ const startIndex = url.indexOf('?') + 1;
 const challengeNumber = url.substring(startIndex);
 
- const startIndex2 = url.indexOf('share') + 5;
+ const startIndex2 = url.indexOf('=') + 1;
 const quizCode = url.substring(startIndex2);
 
 	
