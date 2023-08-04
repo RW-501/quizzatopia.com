@@ -237,7 +237,7 @@ async function generateFriendsList() {
     const { friends, userData } = await getUserFriendsWithUserData(userInfo.firebaseId);
 
     // Clear previous list items
-    $("#friendsList").empty();
+	  document.getElementById("friendsList").innerHTML = '';
 
     // Generate list items for each friend
       let friendsHTML = "";
