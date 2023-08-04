@@ -94,14 +94,35 @@
 
 	  
 .friends{
-      cursor: pointer;
-      font-size: 1.2em;
-      width: 100%;
-	      color: #000;
-      display: flex;
-    background-color: #fff;
+cursor: pointer;
+font-size: 1.5em;
+    font-weight: 500;
+	width: 100%;
+    color: #000;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 2% 0;
 }
-	  
+	  .picArea{
+    border: 1px solid #fd7e14;
+    border-radius: 5em;
+    padding: 1%;
+	  }
+
+	  .points{
+	    font-weight: 800;
+	  }
+	  .remove{
+    border: 1px solid #fd7e14;
+    border-radius: 5em;
+    padding: 1%;
+color: #fff;
+	    background-color: red;	  
+	  }
   </style>
 </head>
 
@@ -263,10 +284,10 @@ async function generateFriendsList() {
       // Create the list item HTML with the friend's name, picture, and points
       const listItemHTML = `
         <li class='friends' >
-        <div onclick="handleFriendClick('${friendName}', '${friendfirebaseId}')"> <div> ${imgElement}</div>
+        <div class='picArea' onclick="handleFriendClick('${friendName}', '${friendfirebaseId}')"> <div> ${imgElement}</div>
          <div> ${name}</div></div>
          <div> </div>
-         <div> ${points}</div>
+         <div class='points'> ${points}</div>
          <div class='remove ' onclick=" removeFriend('${friendfirebaseId}');"> Remove</div>
         </li>
       `;
