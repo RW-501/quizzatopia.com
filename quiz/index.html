@@ -2898,8 +2898,11 @@ function shareSwitchTab(tabId) {
 
   // Check if the tabId corresponds to a valid element
   const selectedTabLink = document.getElementById(tabId);
-  if (!selectedTabLink) {
+  const selectedTabPane = document.getElementById(`${tabId}Section`);
+  if (!selectedTabLink || !selectedTabPane) {
     console.error(`Element with id "${tabId}" not found.`);
+    console.log(`Selected tab link:`, selectedTabLink);
+    console.log(`Selected tab pane:`, selectedTabPane);
     return; // Exit the function if the element is not found
   }
 
@@ -2908,8 +2911,9 @@ function shareSwitchTab(tabId) {
 
   // Add active class to the selected tab link and tab pane
   selectedTabLink.classList.add('active');
-  document.getElementById(`${tabId}Section`).classList.add('show', 'active');
+  selectedTabPane.classList.add('show', 'active');
 }
+
 
 
 
