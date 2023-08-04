@@ -2979,7 +2979,7 @@ async function removeFriend(friendFirebaseId) {
     console.error("Error removing friend:", error);
   }
 }
-
+/*
 async function getUserFriends(firebaseId) {
   try {
     // Fetch the user's friends from Firebase (replace this with your actual Firebase code)
@@ -2995,55 +2995,28 @@ async function getUserFriends(firebaseId) {
     return []; // Return an empty array in case of an error
   }
 }
-
-	  // Function to get a user's friends
-async function XXgetUserFriends(currentUserFirebaseId) {
+*/
+async function getUserFriendsWithUserData(firebaseId) {
   try {
-    // Get a reference to the "friends" collection
-    const friendsCollectionRef = firebase.firestore().collection("friends");
-
-    // Query for all documents where user1 or user2 is equal to the current user ID
-    const querySnapshot = await friendsCollectionRef
-      .where("user1", "==", currentUserFirebaseId)
+    // Fetch the user's friends from Firebase (replace this with your actual Firebase code)
+    const friendsSnapshot = await firebase.firestore()
+      .collection('friends')
+      .where('user1', '==', firebaseId)
       .get();
 
-    const friends = [];
+    // Fetch the user's data from the users collection
+    const userSnapshot = await firebase.firestore()
+      .collection('users')
+      .doc(firebaseId)
+      .get();
 
-    // Loop through the query results
-    querySnapshot.forEach((doc) => {
-      // Get the friend's Firebase ID from the document
-      const friendFirebaseId = doc.data().user2;
+    const friends = friendsSnapshot.docs.map((doc) => doc.data().user2);
+    const userData = userSnapshot.data(); // User's data from the users collection
 
-      // You can then use this friendFirebaseId to retrieve additional friend data
-      // For example, you may have a "users" collection that stores user profiles
-      // Retrieve the friend's data and add it to the friends array
-      // Here's an example assuming you have a "users" collection:
-      firebase.firestore().collection("users").doc(friendFirebaseId).get()
-        .then((friendDoc) => {
-          if (friendDoc.exists) {
-            const friendData = friendDoc.data();
-            friends.push(friendData);
-            // Now, you can update your UI to display the list of friends
-            // For example, you can render a list of friends using a template engine or directly update the DOM
-		  return friendData;
-          }
-        });
-    });
-
-    // If you prefer to use async/await for the friend data retrieval
-    // You can use Promise.all to wait for all promises to resolve before updating the UI
-    // const friendPromises = querySnapshot.docs.map((doc) => {
-    //   const friendFirebaseId = doc.data().user2;
-    //   return firebase.firestore().collection("users").doc(friendFirebaseId).get();
-    // });
-
-    // const friendDocs = await Promise.all(friendPromises);
-    // const friends = friendDocs.map((friendDoc) => friendDoc.data());
-
-    // Now, you can update your UI to display the list of friends
-    // For example, you can render a list of friends using a template engine or directly update the DOM
+    return { friends, userData };
   } catch (error) {
-    console.error("Error getting user's friends:", error);
+    console.error('Error getting user\'s friends and data:', error);
+    return { friends: [], userData: null }; // Return empty array and null user data in case of an error
   }
 }
 
