@@ -962,7 +962,7 @@ ul.nav-tabs li.nav-item a.nav-link.active {
 </div>
 
 <!-- Button to challenge a user -->
-<button id="challengeButton" class="btnMain mt-4 other-quiz-btn" onclick="showPopover()">Challenge a Friend</button>
+<button id="challengeButton" class="btnMain mt-4 other-quiz-btn" onclick="showSharePopover()">Challenge a Friend</button>
 
 	  
 	  <div id="endBtns" class="" >
@@ -2838,9 +2838,9 @@ function generateFriendsList() {
 }
 
 // Function to open the popover and dynamically populate its content
-function showPopover() {
+function showSharePopover() {
 
-	 console.log("openModal      "); 
+	 console.log("showSharePopover      "); 
 
 	  
 /*  // Get the challenge ID (you may generate it based on your logic)
@@ -2856,10 +2856,9 @@ function showPopover() {
   generateFriendsList();
   */
     // Get the popover content element
- ///   const popoverContent = document.getElementById('popoverContent');
- //	  slideIn("chell_list");
+  document.getElementById('popoverContent').style.display = 'block';
+ 	  slideIn("chell_list");
 
-   //   popoverContent.style.display = 'block';
 
   
 }
