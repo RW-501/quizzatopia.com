@@ -175,31 +175,30 @@ let friendFirebaseId = input(friendFirebaseId);
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams;
   }
-document.addEventListener('DOMContentLoaded', () => {
-
-  // Wrap the code in an async function
-async function main() {
-  // Get the challenge number and quiz code from URL parameters
-  const urlParams = getURLParams();
-  const friendID = urlParams.get('#');
-
+document.addEventListener('DOMContentLoaded', async () => {
   // Get the user ID using the getUserInfo function (assuming you have implemented it)
-  const userInfo = getUserInfo();
+  const userInfo = await getUserInfo();
   const uID = userInfo.firebaseId;
 
-  // Log the values for testing
-  console.log('friendID: ' + friendID);
-  console.log('urlParams: ' + urlParams);
-  console.log('User ID: ' + uID);
+  // Wrap the code in an async function
+  async function main() {
+    // Get the challenge number and quiz code from URL parameters
+    const urlParams = getURLParams();
+    const friendID = urlParams.get('#');
 
-  // Add friend
-  await addFriend(uID, friendID);
-}
+    // Log the values for testing
+    console.log('friendID: ' + friendID);
+    console.log('urlParams: ' + urlParams);
+    console.log('User ID: ' + uID);
 
-// Call the async function
-main();
+    // Add friend
+    await addFriend(uID, friendID);
+  }
 
+  // Call the async function
+  await main();
 });
+
 
     </script>
 </body>
