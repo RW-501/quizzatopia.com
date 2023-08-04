@@ -165,9 +165,6 @@ a:hover {
 
   <script >
 
-////   `https://quizzatopia.com/quiz/challenge/${uID}&?share=${quizCode}`;
-////   `https://quizzatopia.com/quiz/challenge/2455865&?share=86953`;
-
 //https://quizzatopia.com/quiz/challenge/?2455865&86953
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -181,11 +178,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const url = getURLParams();
 
 	
- const startIndex = url.indexOf('&') + 1;
-const quizCode = url.substring(startIndex);
-	
- const startIndex2 = startIndex.indexOf('?') + 1;
-const challengeNumber = startIndex.substring(startIndex2);
+const startIndex = url.indexOf('?') + 1; // Find the index of '?' character
+const endIndex = url.indexOf('&', startIndex); // Find the index of '&' character after '?'
+const quizCode = url.substring(startIndex, endIndex);
+
+// Extract the challengeNumber
+const challengeNumber = url.substring(endIndex + 1);
+
+console.log("quizCode:", quizCode);
+console.log("challengeNumber:", challengeNumber);
 
 
 	
@@ -198,8 +199,7 @@ const challengeNumber = startIndex.substring(startIndex2);
     const uID = userInfo.firebaseId;
 
     // Log the values for testing
-    console.log('Challenge Number: ' + challengeNumber);
-    console.log('Quiz Code: ' + quizCode);
+ 
     console.log('User ID: ' + uID);
 
    
