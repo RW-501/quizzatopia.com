@@ -2959,9 +2959,24 @@ async function removeFriend(friendFirebaseId) {
   }
 }
 
+async function getUserFriends(firebaseId) {
+  try {
+    // Fetch the user's friends from Firebase (replace this with your actual Firebase code)
+    const friendsSnapshot = await firebase.firestore()
+      .collection('friends')
+      .where('user1', '==', firebaseId)
+      .get();
+
+    const friends = friendsSnapshot.docs.map((doc) => doc.data().user2);
+    return friends;
+  } catch (error) {
+    console.error('Error getting user\'s friends:', error);
+    return []; // Return an empty array in case of an error
+  }
+}
 
 	  // Function to get a user's friends
-async function getUserFriends(currentUserFirebaseId) {
+async function XXgetUserFriends(currentUserFirebaseId) {
   try {
     // Get a reference to the "friends" collection
     const friendsCollectionRef = firebase.firestore().collection("friends");
