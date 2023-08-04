@@ -146,6 +146,12 @@ let friendFirebaseId = input(friendFirebaseIdxx);
       .where("user2", "==", friendFirebaseId)
       .get();
 
+    if (friendFirebaseId.empty) {
+      // Friendship already exists, show an error message
+      const messageDiv = document.getElementById("message");
+      messageDiv.innerText = "Not a Friend Yet!";
+      return;
+    }
     if (!existingFriendship.empty) {
       // Friendship already exists, show an error message
       const messageDiv = document.getElementById("message");
