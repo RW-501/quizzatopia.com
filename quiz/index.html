@@ -2904,26 +2904,30 @@ function shareSwitchTab(tabId) {
 	  }
 
 // Function to dynamically generate the friends list (replace this with your actual logic to fetch friends)
-function generateFriendsList() {
-  // Sample list of friends (replace this with your own data from Firebase)
-	  const userInfo = getUserInfo();
+async function generateFriendsList() {
+  const userInfo = getUserInfo();
 
-  	      console.log('1111 userInfo: ' + userInfo);
+  console.log('1111 userInfo: ' + userInfo);
 
-  // Update the navigation ba
-  const friends = getUserFriends(userInfo.firebaseId);
-  	      console.log('userInfo.firebaseId: ' + userInfo.firebaseId);
-  	      console.log('1111 friends: ' + friends);
+  // Update the navigation bar
+  try {
+    const friends = await getUserFriends(userInfo.firebaseId);
+    console.log('userInfo.firebaseId: ' + userInfo.firebaseId);
+    console.log('1111 friends: ' + friends);
 
-  // Clear previous list items
-  $("#friendsList").empty();
-  
-  // Generate list items for each friend
-  friends.forEach((friend) => {
-    const listItem = $("<li></li>").text(friend.user2);
-    $("#friendsList").append(listItem);
-  });
+    // Clear previous list items
+    $("#friendsList").empty();
+
+    // Generate list items for each friend
+    friends.forEach((friend) => {
+      const listItem = $("<li></li>").text(friend.user2);
+      $("#friendsList").append(listItem);
+    });
+  } catch (error) {
+    console.error('Error fetching friends:', error);
+  }
 }
+
 
 
 	  
