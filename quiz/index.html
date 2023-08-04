@@ -2902,7 +2902,7 @@ function shareSwitchTab(tabId) {
 
 // Function to dynamically generate the friends list (replace this with your actual logic to fetch friends)
 // Function to generate the list of friends
-function generateFriendsList() {
+async function generateFriendsList() {
   try {
     const { friends, userData } = await getUserFriendsWithUserData(userInfo.firebaseId);
 
