@@ -105,18 +105,31 @@
     </div>
     <button onclick="addFriendFromInput()">Add Friend</button>
     <div id="message"></div>
+   
+
+ <div class="input-wrapper">
+      <input type="text" id="userIdInput" placeholder="User ID" />
+      <button onclick="copyFriendCodeToClipboard()">Auto Copy</button>
+    </div>
+	  
   </div>
 
 
     <script>
+	    		  const userInfo = getUserInfo();
+  const currentUserFirebaseId = userInfo.firebaseId;
+	    
+      const userIdInput = document.getElementById("userIdInput");
+	    userIdInput.value = "https://www.quizzatopia.com/friend/"+currentUserFirebaseId;
+		    
+	       function copyFriendCodeToClipboard() {
+      userIdInput.select();
+      document.execCommand("copy");
+      showCopiedMessage();
+    }
       // Function to add a friend from the input field
 function addFriendFromInput() {
   const friendId = document.getElementById("friendIdInput").value.trim();
-
-		  const userInfo = getUserInfo();
-
-  // Update the navigation ba
-  const currentUserFirebaseId = userInfo.firebaseId;
 
   // Call the addFriend function with the input friend's ID
   addFriend(currentUserFirebaseId, friendId);
