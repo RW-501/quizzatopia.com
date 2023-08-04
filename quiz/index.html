@@ -2908,10 +2908,12 @@ function generateFriendsList() {
   // Sample list of friends (replace this with your own data from Firebase)
 	  const userInfo = getUserInfo();
 
+  	      console.log('1111 userInfo: ' + userInfo);
 
   // Update the navigation ba
   const friends = getUserFriends(userInfo.firebaseId);
-  
+  	      console.log('1111 friends: ' + friends);
+
   // Clear previous list items
   $("#friendsList").empty();
   
@@ -2920,6 +2922,41 @@ function generateFriendsList() {
     const listItem = $("<li></li>").text(friend);
     $("#friendsList").append(listItem);
   });
+}
+
+
+	  
+// Function to remove a friend
+async function removeFriend(friendFirebaseId) {
+  try {
+    // Get a reference to the "friends" collection
+    const friendsCollectionRef = firebase.firestore().collection("friends");
+  const userInfo = getUserInfo();
+
+
+  // Update the navigation ba
+  const currentUserFirebaseId = userInfo.firebaseId;
+	  
+    // Find the friendship documents where either user1 or user2 matches the current user or friend id
+    const friendshipQuery = await friendsCollectionRef
+      .where("user1", "in", [currentUserFirebaseId, friendFirebaseId])
+      .where("user2", "in", [currentUserFirebaseId, friendFirebaseId])
+      .get();
+
+    if (friendshipQuery.empty) {
+      // Friendship does not exist, handle accordingly (e.g., show an error message)
+      console.log("Friendship does not exist.");
+      return;
+    }
+
+    // Delete each friendship document found in the query
+    const deletePromises = friendshipQuery.docs.map((doc) => doc.ref.delete());
+    await Promise.all(deletePromises);
+
+    console.log("Friend removed successfully.");
+  } catch (error) {
+    console.error("Error removing friend:", error);
+  }
 }
 
 
@@ -2952,7 +2989,7 @@ async function getUserFriends(currentUserFirebaseId) {
             friends.push(friendData);
             // Now, you can update your UI to display the list of friends
             // For example, you can render a list of friends using a template engine or directly update the DOM
-		  return friends;
+		  return friendData;
           }
         });
     });
