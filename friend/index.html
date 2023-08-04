@@ -212,10 +212,7 @@ let currentUserFirebaseId = input(currentUserFirebaseIdxx);
 let friendFirebaseId = input(friendFirebaseIdxx);
 
 	  // Check if the friendship already exists
-    const existingFriendship = await friendsCollectionRef
-      .where("user1", "==", currentUserFirebaseId)
-      .where("user2", "==", friendFirebaseId)
-      .get();
+
 
     if (friendFirebaseId === currentUserFirebaseId) {
       // Friendship already exists, show an error message
@@ -226,7 +223,7 @@ let friendFirebaseId = input(friendFirebaseIdxx);
     if (friendFirebaseId.empty) {
       // Friendship already exists, show an error message
       const messageDiv = document.getElementById("message");
-      messageDiv.innerText = "Send You Link To A Friend!";
+      messageDiv.innerText = "Send Your Link To A Friend!";
       return;
     }
     if (!existingFriendship.empty) {
@@ -235,7 +232,11 @@ let friendFirebaseId = input(friendFirebaseIdxx);
       messageDiv.innerText = "Friendship already exists.";
       return;
     }
-
+    const existingFriendship = await friendsCollectionRef
+      .where("user1", "==", currentUserFirebaseId)
+      .where("user2", "==", friendFirebaseId)
+      .get();
+	  
     // Add the new friendship document to the "friends" collection
     await friendsCollectionRef.add({
       user1: currentUserFirebaseId,
@@ -245,6 +246,7 @@ let friendFirebaseId = input(friendFirebaseIdxx);
     // Show a success message
     const messageDiv = document.getElementById("message");
     messageDiv.innerText = "Friend added successfully.";
+	  generateFriendsList();
   } catch (error) {
     // Show an error message
     console.error("Error adding friend:", error);
