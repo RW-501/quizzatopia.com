@@ -284,7 +284,9 @@ const friendID = url.substring(startIndex);
     // Log the values for testing
     console.log('friendID: ' + friendID);
     console.log('User ID: ' + uID);
-
+if (friendID === '' || friendID === null || friendID === undefined) {
+  return;
+}
     // Add friend
      addFriend(uID, friendID);
   }
