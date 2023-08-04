@@ -92,18 +92,29 @@
 
 <body>
     <h1>Add Friend</h1>
-	  
+	    <div class="input-wrapper">
+    <div id="message"></div>
+ </div>
+	
     <div class="input-wrapper">
       <input type="text" id="friendIdInput" placeholder="Enter friend's ID" />
  
     <button onclick="addFriendFromInput()">Add Friend</button>
    </div>
 	
-  <div class="input-wrapper">
-	  
-    <div id="message"></div>
-   
- </div>
+
+
+      <div class="input-wrapper">
+        <ul id="friendsList">
+          <!-- Dynamically generated list of friends -->
+          <!-- Add your list of friends here or populate it dynamically using JavaScript -->
+
+        </ul>
+      </div>
+
+
+
+
 	
  <div class="input-wrapper">
       <input type="text" id="userIdInput" placeholder="User ID" />
@@ -211,6 +222,133 @@ const friendID = url.substring(startIndex);
    main();
 });
 
+async function generateFriendsList() {
+  try {
+    const { friends, userData } = await getUserFriendsWithUserData(userInfo.firebaseId);
+
+    // Clear previous list items
+    $("#friendsList").empty();
+
+    // Generate list items for each friend
+      let friendsHTML = "";
+    friends.forEach((friend) => {
+      // Assuming userData contains properties 'userName', 'userProfilePic', and 'userPoints'
+      const friendName = userData.userName;
+      const friendPicture = userData.userProfilePic;
+      const friendPoints = userData.userPoints;
+      const friendfirebaseId = userData.firebaseId;
+
+      // Create an image element with its source set to the friend's picture
+      const imgElement = `<img src="${friendPicture}" alt="${friendName}" width="40" height="40">`;
+
+      // Create a span element for the friend's points
+      const name = `<span>${friendName}</span>`;
+      const points = `<span>${friendPoints}</span>`;
+
+      // Create the list item HTML with the friend's name, picture, and points
+      const listItemHTML = `
+        <li class='friends' onclick="handleFriendClick('${friendName}', '${friendfirebaseId}')">
+        <div> <div> ${imgElement}</div>
+         <div> ${name}</div></div>
+         <div> ${points}</div>
+         <div> ${friend}</div>
+        </li>
+      `;
+
+      // Concatenate the HTML for each friend
+      friendsHTML += listItemHTML;
+    });
+
+    // Set the innerHTML of friendsList with the generated HTML
+    $("#friendsList").html(friendsHTML);
+  } catch (error) {
+    console.error('Error fetching friends and user data:', error);
+  }
+}
+
+
+function handleFriendClick(friendName, friendfirebaseId) {
+  // Add your logic to handle the click event here
+  console.log("Friend clicked:", friendName);
+  // For example, you can display more details about the friend or perform some action.
+  removeFriend(friendfirebaseId);
+}
+
+
+
+	  
+// Function to remove a friend
+async function removeFriend(friendFirebaseId) {
+  try {
+    // Get a reference to the "friends" collection
+    const friendsCollectionRef = firebase.firestore().collection("friends");
+  const userInfo = getUserInfo();
+
+
+  // Update the navigation ba
+  const currentUserFirebaseId = userInfo.firebaseId;
+	  
+    // Find the friendship documents where either user1 or user2 matches the current user or friend id
+    const friendshipQuery = await friendsCollectionRef
+      .where("user1", "in", [currentUserFirebaseId, friendFirebaseId])
+      .where("user2", "in", [currentUserFirebaseId, friendFirebaseId])
+      .get();
+
+    if (friendshipQuery.empty) {
+      // Friendship does not exist, handle accordingly (e.g., show an error message)
+      console.log("Friendship does not exist.");
+      return;
+    }
+
+    // Delete each friendship document found in the query
+    const deletePromises = friendshipQuery.docs.map((doc) => doc.ref.delete());
+    await Promise.all(deletePromises);
+
+    console.log("Friend removed successfully.");
+  } catch (error) {
+    console.error("Error removing friend:", error);
+  }
+}
+/*
+async function getUserFriends(firebaseId) {
+  try {
+    // Fetch the user's friends from Firebase (replace this with your actual Firebase code)
+    const friendsSnapshot = await firebase.firestore()
+      .collection('friends')
+      .where('user1', '==', firebaseId)
+      .get();
+
+    const friends = friendsSnapshot.docs.map((doc) => doc.data().user2);
+    return friends;
+  } catch (error) {
+    console.error('Error getting user\'s friends:', error);
+    return []; // Return an empty array in case of an error
+  }
+}
+*/
+async function getUserFriendsWithUserData(firebaseId) {
+  try {
+    // Fetch the user's friends from Firebase (replace this with your actual Firebase code)
+    const friendsSnapshot = await firebase.firestore()
+      .collection('friends')
+      .where('user1', '==', firebaseId)
+      .get();
+
+    // Fetch the user's data from the users collection
+    const userSnapshot = await firebase.firestore()
+      .collection('users')
+      .doc(firebaseId)
+      .get();
+
+    const friends = friendsSnapshot.docs.map((doc) => doc.data().user2);
+    const userData = userSnapshot.data(); // User's data from the users collection
+
+    return { friends, userData };
+  } catch (error) {
+    console.error('Error getting user\'s friends and data:', error);
+    return { friends: [], userData: null }; // Return empty array and null user data in case of an error
+  }
+}
 
     </script>
 </body>
