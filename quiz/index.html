@@ -2843,6 +2843,10 @@ function generateFriendsList() {
 
 // Function to open the popover and dynamically populate its content
 function showPopover() {
+
+	 console.log("openModal      "); 
+
+	  
 /*  // Get the challenge ID (you may generate it based on your logic)
   const challengeID = generateChallengeID();
   
@@ -2857,7 +2861,8 @@ function showPopover() {
   */
     // Get the popover content element
     const popoverContent = document.getElementById('popoverContent');
- 
+ 	  slideIn("chell_list");
+
       popoverContent.style.display = 'block';
 
   
@@ -2905,11 +2910,7 @@ $(document).on("click", function (event) {
   document.getElementById('facebookTab').addEventListener('click', function() {
     switchTab('facebookTab');
   });
-/*
-  function openChellPopup(){
-  document.getElementById('popoverContent').style.display = 'block';
 
-	  }*/
 	  function closeChellPopup(){
   document.getElementById('popoverContent').style.display = 'none';
 
