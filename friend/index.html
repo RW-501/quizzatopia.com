@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Friend</title>
+	
+  <!-- Chart.js library   background-color: yellow; -->
+  <script  src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+
+  <!-- Import navbar and footer components -->
+  <link rel="import" href="/elements/navbar.html">
+  <link rel="import" href="/elements/footer.html">
+
+  <div id="navbar"></div>
+  <!-- Rest of the page content -->
+  <div id="signupLoginArea"><div>
+
+  <!-- JavaScript dependencies async -->
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  crossorigin="anonymous">
+
+
+  <script  defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+
+  <script  defer src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+	  <script  defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
+
+  <!-- Firebase SDK -->
+  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+  <!-- Custom scripts   <script  src="/main.js" defer></script> 
+-->
+  <script  src="/main.js" ></script> 
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: #fd7e14;
+      color: #fff;
+      max-width: 400px;
+    }
+
+    .container h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .input-wrapper {
+      margin-bottom: 20px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #message {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Add Friend</h1>
+    <div class="input-wrapper">
+      <input type="text" id="friendIdInput" placeholder="Enter friend's ID" />
+    </div>
+    <button onclick="addFriendFromInput()">Add Friend</button>
+    <div id="message"></div>
+  </div>
+
+
+    <script>
+      // Function to add a friend from the input field
+function addFriendFromInput() {
+  const friendId = document.getElementById("friendIdInput").value.trim();
+  const currentUserFirebaseId = "YOUR_CURRENT_USER_FIREBASE_ID"; // Replace with your current user's Firebase ID (You can get this from Firebase Authentication)
+
+  // Call the addFriend function with the input friend's ID
+  addFriend(currentUserFirebaseId, friendId);
+}
+
+// Function to add a friend
+async function addFriend(currentUserFirebaseId, friendFirebaseId) {
+  try {
+    // Get a reference to the "friends" collection
+    const friendsCollectionRef = firebase.firestore().collection("friends");
+
+    // Check if the friendship already exists
+    const existingFriendship = await friendsCollectionRef
+      .where("user1", "==", currentUserFirebaseId)
+      .where("user2", "==", friendFirebaseId)
+      .get();
+
+    if (!existingFriendship.empty) {
+      // Friendship already exists, show an error message
+      const messageDiv = document.getElementById("message");
+      messageDiv.innerText = "Friendship already exists.";
+      return;
+    }
+
+    // Add the new friendship document to the "friends" collection
+    await friendsCollectionRef.add({
+      user1: currentUserFirebaseId,
+      user2: friendFirebaseId,
+    });
+
+    // Show a success message
+    const messageDiv = document.getElementById("message");
+    messageDiv.innerText = "Friend added successfully.";
+  } catch (error) {
+    // Show an error message
+    console.error("Error adding friend:", error);
+    const messageDiv = document.getElementById("message");
+    messageDiv.innerText = "Error adding friend. Please try again later.";
+  }
+}
+
+    </script>
+</body>
+</html>
