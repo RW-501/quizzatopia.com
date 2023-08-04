@@ -152,7 +152,6 @@ font-size: 1.5em;
 </head>
 
 <body>
-    <h1>Add Friend</h1>
 	    <div class="input-wrapper">
     <div id="message"></div>
  </div>
@@ -350,6 +349,8 @@ function handleFriendClick(friendName, friendfirebaseId) {
 // Function to remove a friend
 async function removeFriend(friendFirebaseId) {
   try {
+	    console.log("Friend friendFirebaseId:", friendFirebaseId);
+
     // Get a reference to the "friends" collection
     const friendsCollectionRef = firebase.firestore().collection("friends");
   const userInfo = getUserInfo();
@@ -357,12 +358,17 @@ async function removeFriend(friendFirebaseId) {
 
   // Update the navigation ba
   const currentUserFirebaseId = userInfo.firebaseId;
-	  
+	  	    console.log("currentUserFirebaseId:", currentUserFirebaseId);
+
     // Find the friendship documents where either user1 or user2 matches the current user or friend id
-    const friendshipQuery = await friendsCollectionRef
-      .where("user1", "in", [currentUserFirebaseId, friendFirebaseId])
-      .where("user2", "in", [currentUserFirebaseId, friendFirebaseId])
-      .get();
+const friendshipQuery = await friendsCollectionRef
+  .where(
+    firebase.firestore.FieldPath.documentId(),
+    "==",
+    `${currentUserFirebaseId}_${friendFirebaseId}`
+  )
+  .get();
+
 
     if (friendshipQuery.empty) {
       // Friendship does not exist, handle accordingly (e.g., show an error message)
@@ -373,6 +379,7 @@ async function removeFriend(friendFirebaseId) {
     // Delete each friendship document found in the query
     const deletePromises = friendshipQuery.docs.map((doc) => doc.ref.delete());
     await Promise.all(deletePromises);
+	    generateFriendsList();
 
     console.log("Friend removed successfully.");
   } catch (error) {
