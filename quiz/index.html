@@ -2892,17 +2892,24 @@ $(document).on("click", function (event) {
   }
 });
  // Function to switch tabs
-  function shareSwitchTab(tabId) {
-    const tabLinks = document.querySelectorAll('.nav-link');
-    const tabPanes = document.querySelectorAll('.tab-pane');
+function shareSwitchTab(tabId) {
+  const tabLinks = document.querySelectorAll('.nav-link');
+  const tabPanes = document.querySelectorAll('.tab-pane');
 
-    tabLinks.forEach((link) => link.classList.remove('active')); // Remove active class from all tab links
-    tabPanes.forEach((pane) => pane.classList.remove('show', 'active')); // Remove active class from all tab panes
-
-    // Add active class to the selected tab link and tab pane
-    document.getElementById(tabId).classList.add('active');
-    document.getElementById(`${tabId}Section`).classList.add('show', 'active');
+  // Check if the tabId corresponds to a valid element
+  const selectedTabLink = document.getElementById(tabId);
+  if (!selectedTabLink) {
+    console.error(`Element with id "${tabId}" not found.`);
+    return; // Exit the function if the element is not found
   }
+
+  tabLinks.forEach((link) => link.classList.remove('active')); // Remove active class from all tab links
+  tabPanes.forEach((pane) => pane.classList.remove('show', 'active')); // Remove active class from all tab panes
+
+  // Add active class to the selected tab link and tab pane
+  selectedTabLink.classList.add('active');
+  document.getElementById(`${tabId}Section`).classList.add('show', 'active');
+}
 
 
 
