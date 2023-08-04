@@ -167,7 +167,6 @@ a:hover {
 
 //https://quizzatopia.com/quiz/challenge/?2455865&86953
 
-document.addEventListener('DOMContentLoaded', () => {
   // Function to read URL parameters
   function getURLParams() {
   const urlParams = window.location.href;
@@ -176,8 +175,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Get the challenge number and quiz code from URL parameters
     const url = getURLParams();
+console.log("url:", url);
 
-	
+	/*
 const startIndex = url.indexOf('?') + 1; // Find the index of '?' character
 const endIndex = url.indexOf('&', startIndex); // Find the index of '&' character after '?'
 const quizCode = url.substring(startIndex, endIndex);
@@ -187,9 +187,10 @@ const challengeNumber = url.substring(endIndex + 1);
 
 console.log("quizCode:", quizCode);
 console.log("challengeNumber:", challengeNumber);
-
+*/
 /*
-	
+	document.addEventListener('DOMContentLoaded', () => {
+
     // Display challenge number and quiz code in the HTML elements
     document.getElementById('challengeNumber').innerText = challengeNumber;
     document.getElementById('quizCode').innerText = quizCode;
@@ -234,9 +235,9 @@ console.log("challengeNumber:", challengeNumber);
     document.getElementById('popoverContainer').style.display = 'none';
   });
 
-			*/				  
+							  
 });
-
+*/
 
 
     
