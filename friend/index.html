@@ -133,12 +133,12 @@ function addFriendFromInput() {
 }
 
 // Function to add a friend
-async function addFriend(currentUserFirebaseId, friendFirebaseId) {
+async function addFriend(currentUserFirebaseIdxx, friendFirebaseIdxx) {
   try {
     // Get a reference to the "friends" collection
     const friendsCollectionRef = firebase.firestore().collection("friends");
-let currentUserFirebaseId = input(currentUserFirebaseId);
-let friendFirebaseId = input(friendFirebaseId);
+let currentUserFirebaseId = input(currentUserFirebaseIdxx);
+let friendFirebaseId = input(friendFirebaseIdxx);
 
 	  // Check if the friendship already exists
     const existingFriendship = await friendsCollectionRef
@@ -173,6 +173,8 @@ let friendFirebaseId = input(friendFirebaseId);
 
   function getURLParams() {
     const urlParams = new URLSearchParams(window.location.search);
+	      console.log('1111 urlParams: ' + urlParams);
+
     return urlParams;
   }
 
