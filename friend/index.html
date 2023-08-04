@@ -368,12 +368,17 @@ async function removeFriend(friendFirebaseId) {
 	  	    console.log("currentUserFirebaseId:", currentUserFirebaseId);
 const friendsCollectionRef = firebase.firestore().collection("friends");
 
+/*
 // Find the friendship documents where either user1 or user2 matches the current user or friend id
 const friendshipQuery = await friendsCollectionRef
   .where("user1", "in", [currentUserFirebaseId, friendFirebaseId])
   .where("user2", "in", [currentUserFirebaseId, friendFirebaseId])
   .get();
-
+*/
+	  const friendshipQuery = await friendsCollectionRef
+      .where("user1", "==", currentUserFirebaseId)
+      .where("user2", "==", friendFirebaseId)
+      .get();
 
 
     if (friendshipQuery.empty) {
