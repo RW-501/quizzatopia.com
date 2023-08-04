@@ -175,7 +175,7 @@ let friendFirebaseId = input(friendFirebaseId);
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams;
   }
-document.addEventListener('DOMContentLoaded', async () => {
+window.addEventListener('load', () => {
   // Get the user ID using the getUserInfo function (assuming you have implemented it)
   const userInfo = await getUserInfo();
   const uID = userInfo.firebaseId;
