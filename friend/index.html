@@ -137,11 +137,13 @@ async function addFriend(currentUserFirebaseId, friendFirebaseId) {
   try {
     // Get a reference to the "friends" collection
     const friendsCollectionRef = firebase.firestore().collection("friends");
+let currentUserFirebaseId = input(currentUserFirebaseId);
+let friendFirebaseId = input(friendFirebaseId);
 
-    // Check if the friendship already exists
+	  // Check if the friendship already exists
     const existingFriendship = await friendsCollectionRef
-      .where("user1", "==", input(currentUserFirebaseId))
-      .where("user2", "==", input(friendFirebaseId))
+      .where("user1", "==", currentUserFirebaseId)
+      .where("user2", "==", friendFirebaseId)
       .get();
 
     if (!existingFriendship.empty) {
@@ -175,20 +177,28 @@ async function addFriend(currentUserFirebaseId, friendFirebaseId) {
   }
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Get the challenge number and quiz code from URL parameters
-    const urlParams = getURLParams();
-    const friendID = urlParams.get('#');
+  // Wrap the code in an async function
+async function main() {
+  // Get the challenge number and quiz code from URL parameters
+  const urlParams = getURLParams();
+  const friendID = urlParams.get('#');
 
-    // Get the user ID using the getUserInfo function (assuming you have implemented it)
-    const userInfo = getUserInfo();
-    const uID = userInfo.firebaseId;
+  // Get the user ID using the getUserInfo function (assuming you have implemented it)
+  const userInfo = getUserInfo();
+  const uID = userInfo.firebaseId;
 
-    // Log the values for testing
-    console.log('friendID: ' + friendID);
-    console.log('urlParams: ' + urlParams);
-    console.log('User ID: ' + uID);
-	
-addFriend(uID, friendID);
+  // Log the values for testing
+  console.log('friendID: ' + friendID);
+  console.log('urlParams: ' + urlParams);
+  console.log('User ID: ' + uID);
+
+  // Add friend
+  await addFriend(uID, friendID);
+}
+
+// Call the async function
+main();
+
 });
 
     </script>
