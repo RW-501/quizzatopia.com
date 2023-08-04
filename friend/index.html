@@ -359,25 +359,21 @@ function handleFriendClick(friendName, friendfirebaseId) {
 // Function to remove a friend
 async function removeFriend(friendFirebaseId) {
   try {
-	    console.log("Friend friendFirebaseId:", friendFirebaseId);
+	    console.log("remove friendFirebaseId:", friendFirebaseId);
 
     // Get a reference to the "friends" collection
-    const friendsCollectionRef = firebase.firestore().collection("friends");
   const userInfo = getUserInfo();
-
-
   // Update the navigation ba
   const currentUserFirebaseId = userInfo.firebaseId;
 	  	    console.log("currentUserFirebaseId:", currentUserFirebaseId);
+const friendsCollectionRef = firebase.firestore().collection("friends");
 
-    // Find the friendship documents where either user1 or user2 matches the current user or friend id
+// Find the friendship documents where either user1 or user2 matches the current user or friend id
 const friendshipQuery = await friendsCollectionRef
-  .where(
-    firebase.firestore.FieldPath.documentId(),
-    "==",
-    `${currentUserFirebaseId}_${friendFirebaseId}`
-  )
+  .where("user1", "in", [currentUserFirebaseId, friendFirebaseId])
+  .where("user2", "in", [currentUserFirebaseId, friendFirebaseId])
   .get();
+
 
 
     if (friendshipQuery.empty) {
