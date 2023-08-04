@@ -175,9 +175,13 @@ let friendFirebaseId = input(friendFirebaseId);
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams;
   }
+
+
+
+	    
 window.addEventListener('load', () => {
   // Get the user ID using the getUserInfo function (assuming you have implemented it)
-  const userInfo = await getUserInfo();
+  const userInfo =  getUserInfo();
   const uID = userInfo.firebaseId;
 
   // Wrap the code in an async function
@@ -192,11 +196,11 @@ window.addEventListener('load', () => {
     console.log('User ID: ' + uID);
 
     // Add friend
-    await addFriend(uID, friendID);
+     addFriend(uID, friendID);
   }
 
   // Call the async function
-  await main();
+   main();
 });
 
 
