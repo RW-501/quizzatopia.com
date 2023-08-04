@@ -45,21 +45,13 @@
   <script  src="/main.js" ></script> 
 
   <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f8f9fa;
-    }
+
 
     .container {
       text-align: center;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      background-color: #fd7e14;
       color: #fff;
       max-width: 400px;
     }
@@ -98,21 +90,25 @@
 </head>
 
 <body>
-  <div class="container">
     <h1>Add Friend</h1>
+	  
     <div class="input-wrapper">
       <input type="text" id="friendIdInput" placeholder="Enter friend's ID" />
     </div>
     <button onclick="addFriendFromInput()">Add Friend</button>
+
+  <div class="container">
+	  
     <div id="message"></div>
    
-
+ </div>
+	
  <div class="input-wrapper">
       <input type="text" id="userIdInput" placeholder="User ID" />
       <button onclick="copyFriendCodeToClipboard()">Auto Copy</button>
     </div>
 	  
-  </div>
+ 
 
 
     <script>
