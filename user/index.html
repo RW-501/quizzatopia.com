@@ -79,8 +79,9 @@
         <!-- Buttons -->
         <div class="d-flex justify-contgent-center mt-4">
           <!-- Message User button -->
+          <button onclick="redirectToFriends()" class="btn btn-primary mr-2"> Friends</button>
+          <button onclick="redirectToChallenge()" class="btn btn-primary mr-2"> Challenge</button>
           <button onclick="redirectToCommunity()" class="btn btn-primary mr-2">Our Community</button>
-
           <!-- Add User button -->
           <button class="btn btn-success d-none">Add User</button>
         </div>
@@ -198,13 +199,19 @@
   <!-- Add more images here -->
 </div>
 
-	      
+	               <button onclick="redirectToFriends()" class="btn btn-primary mr-2"> Friends</button>
+          <button onclick="redirectToChallenge()" class="btn btn-primary mr-2"> Challenge</button>
+          <button onclick="redirectToCommunity()" class="btn btn-primary mr-2">Our Community</button>
 	
   <script>
+function redirectToChallenge(){
+	window.location.href = '/challenge';	
+}
+function redirectToFriends(){
+	window.location.href = '/friend';	
+}
 function redirectToCommunity(){
-	window.location.href = '/community';
-
-	
+	window.location.href = '/community';	
 }
 	  
 var timerId;
