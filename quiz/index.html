@@ -1009,59 +1009,49 @@ ul.nav-tabs li.nav-item a.nav-link.active {
 
 
 <!-- Popover content for sharing -->
-<div id="popoverContent" class="popup" >
-	<div id="chell_list" class="optionspopup" >
-  <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
-      <a class="nav-link active" id="linkTab" href="#linkSection" role="tab" aria-controls="linkSection" aria-selected="true" onclick="shareSwitchTab('linkTab')">Share with a Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="friendsTab" href="#friendsSection" role="tab" aria-controls="friendsSection" aria-selected="false" onclick="shareSwitchTab('friendsTab')">Share with Friends</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="facebookTab" href="#facebookSection" role="tab" aria-controls="facebookSection" aria-selected="false" onclick="shareSwitchTab('facebookTab')">Share on Facebook</a>
-    </li>
-  </ul>
+<div id="popoverContent" class="popup">
+  <div id="chell_list" class="optionspopup">
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="linkTab" href="#linkSection" role="tab" aria-controls="linkSection" aria-selected="true" onclick="shareSwitchTab('linkTab')">Share with a Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="friendsTab" href="#friendsSection" role="tab" aria-controls="friendsSection" aria-selected="false" onclick="shareSwitchTab('friendsTab')">Share with Friends</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="facebookTab" href="#facebookSection" role="tab" aria-controls="facebookSection" aria-selected="false" onclick="shareSwitchTab('facebookTab')">Share on Facebook</a>
+      </li>
+    </ul>
 
-  <div class="tab-content">
-    <!-- Share with a Link section -->
+    <div class="tab-content">
+      <!-- Share with a Link section -->
+      <div class="tab-pane fade show active" id="linkSection" role="tabpanel" aria-labelledby="linkTab">
+        <input type="text" id="shareLink" class="share-link-input" value="https://example.com/share" readonly />
+        <button id="copyLinkButton" class="btn btn-primary" onclick="copyLink()">Copy Link</button>
+      </div>
 
+      <!-- Share with Friends section -->
+      <div class="tab-pane fade" id="friendsSection" role="tabpanel" aria-labelledby="friendsTab">
+        <ul id="friendsList">
+          <!-- Dynamically generated list of friends -->
+          <!-- Add your list of friends here or populate it dynamically using JavaScript -->
+          <li>Friend 1</li>
+          <li>Friend 2</li>
+          <li>Friend 3</li>
+          <!-- Add more friends as needed -->
+        </ul>
+      </div>
 
-
-	  
-    <div class="tab-pane fade show active" id="linkSection" role="tabpanel" aria-labelledby="shareLink">
-      <input
-        type="text"
-        id="shareLink"
-        class="share-link-input"
-        value="https://example.com/share"
-        readonly
-      />
-	    <button id="copyLinkButton" class="btn btn-primary" onclick="copyLink()">Copy Link</button>
+      <!-- Share on Facebook section -->
+      <div class="tab-pane fade" id="facebookSection" role="tabpanel" aria-labelledby="facebookTab">
+        <button id="facebookShareButton" class="btn btn-primary">Share on Facebook</button>
+        <!-- Add the Facebook share functionality here -->
+        <!-- You can implement the Facebook share functionality using their SDK or other methods -->
+      </div>
     </div>
-
-    <!-- Share with Friends section -->
-    <div class="tab-pane fade" id="friendsSection" role="tabpanel" aria-labelledby="friendsTab">
-      <ul id="friendsList">
-        <!-- Dynamically generated list of friends -->
-
-	      ??????? friends?
-      </ul>
-    </div>
-
-    <!-- Share on Facebook section -->
-    <div class="tab-pane fade" id="facebookSection" role="tabpanel" aria-labelledby="facebookTab">
-      <button id="facebookShareButton" class="btn btn-primary">Share on Facebook</button>
-	    facebook???
-    </div>
-  </div>
-<button id="closeButtonChell" onclick="closeChellPopup()" class="close BottomCloseOptionsButton" >Close</button>
-
-		
+    <button id="closeButtonChell" onclick="closeChellPopup()" class="close BottomCloseOptionsButton">Close</button>
   </div>
 </div>
-
-
 
 
 	
