@@ -2919,7 +2919,7 @@ function generateFriendsList() {
   
   // Generate list items for each friend
   friends.forEach((friend) => {
-    const listItem = $("<li></li>").text(friend);
+    const listItem = $("<li></li>").text(friend.user2);
     $("#friendsList").append(listItem);
   });
 }
