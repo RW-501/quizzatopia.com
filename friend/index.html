@@ -226,12 +226,6 @@ let friendFirebaseId = input(friendFirebaseIdxx);
       messageDiv.innerText = "Send Your Link To A Friend!";
       return;
     }
-    if (!existingFriendship.empty) {
-      // Friendship already exists, show an error message
-      const messageDiv = document.getElementById("message");
-      messageDiv.innerText = "Friendship already exists.";
-      return;
-    }
     const existingFriendship = await friendsCollectionRef
       .where("user1", "==", currentUserFirebaseId)
       .where("user2", "==", friendFirebaseId)
@@ -242,6 +236,15 @@ let friendFirebaseId = input(friendFirebaseIdxx);
       user1: currentUserFirebaseId,
       user2: friendFirebaseId,
     });
+
+
+	  
+    if (!existingFriendship.empty) {
+      // Friendship already exists, show an error message
+      const messageDiv = document.getElementById("message");
+      messageDiv.innerText = "Friendship already exists.";
+      return;
+    }
 
     // Show a success message
     const messageDiv = document.getElementById("message");
