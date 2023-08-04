@@ -168,7 +168,7 @@ a:hover {
 ////   `https://quizzatopia.com/quiz/challenge/${uID}&?share=${quizCode}`;
 ////   `https://quizzatopia.com/quiz/challenge/2455865&?share=86953`;
 
-//https://quizzatopia.com/quiz/challenge/2455865&?share=86953
+//https://quizzatopia.com/quiz/challenge/?2455865&86953
 
 document.addEventListener('DOMContentLoaded', () => {
   // Function to read URL parameters
@@ -181,11 +181,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const url = getURLParams();
 
 	
- const startIndex = url.indexOf('?') + 1;
-const challengeNumber = url.substring(startIndex);
+ const startIndex = url.indexOf('&') + 1;
+const quizCode = url.substring(startIndex);
+	
+ const startIndex2 = startIndex.indexOf('?') + 1;
+const challengeNumber = startIndex.substring(startIndex2);
 
- const startIndex2 = url.indexOf('=') + 1;
-const quizCode = url.substring(startIndex2);
 
 	
     // Display challenge number and quiz code in the HTML elements
