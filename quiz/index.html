@@ -1036,10 +1036,7 @@ ul.nav-tabs li.nav-item a.nav-link.active {
         <ul id="friendsList">
           <!-- Dynamically generated list of friends -->
           <!-- Add your list of friends here or populate it dynamically using JavaScript -->
-          <li>Friend 1</li>
-          <li>Friend 2</li>
-          <li>Friend 3</li>
-          <!-- Add more friends as needed -->
+
         </ul>
       </div>
 
@@ -2904,27 +2901,46 @@ function shareSwitchTab(tabId) {
 	  }
 
 // Function to dynamically generate the friends list (replace this with your actual logic to fetch friends)
-async function generateFriendsList() {
-  const userInfo = getUserInfo();
-
-  console.log('1111 userInfo: ' + userInfo);
-
-  // Update the navigation bar
+// Function to generate the list of friends
+function generateFriendsList() {
   try {
-    const friends = await getUserFriends(userInfo.firebaseId);
-    console.log('userInfo.firebaseId: ' + userInfo.firebaseId);
-    console.log('1111 friends: ' + friends);
+    const { friends, userData } = await getUserFriendsWithUserData(userInfo.firebaseId);
 
     // Clear previous list items
     $("#friendsList").empty();
 
     // Generate list items for each friend
     friends.forEach((friend) => {
-      const listItem = $("<li></li>").text(friend.user2);
+      // Create a list item for each friend
+      const listItem = $("<li></li>").text(friend);
+
+      // Assuming userData contains properties 'userName', 'userProfilePic', and 'userPoints'
+      const friendName = userData.userName;
+      const friendPicture = userData.userProfilePic;
+      const friendPoints = userData.userPoints;
+      const friendfirebaseId = userData.firebaseId;
+
+      // Create an image element and set its source to the friend's picture
+      const imgElement = $("<img>").attr("src", friendPicture);
+
+      // Create a span element for the friend's points
+      const points = $("<span></span>").text(friendPoints);
+
+      // Add an onclick event to the list item
+      listItem.on("click", () => {
+        // Add your logic to handle the click event here
+        console.log("Friend clicked:", friendName);
+        // For example, you can display more details about the friend or perform some action.
+	      removeFriend(friendfirebaseId);
+      });
+
+      // Append the elements to the friendsList
+      $("#friendsList").append(points);
+      $("#friendsList").append(imgElement);
       $("#friendsList").append(listItem);
     });
   } catch (error) {
-    console.error('Error fetching friends:', error);
+    console.error('Error fetching friends and user data:', error);
   }
 }
 
