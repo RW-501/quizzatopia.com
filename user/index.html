@@ -139,14 +139,14 @@
       <div class="col-md-6 quizzes-taken">
         <!-- Tab Div -->
 <div class="tab-pane fade show active" id="quizTab" role="tabpanel" aria-labelledby="quizTabLink">
-  <button id="matchingQuizzesButton" class="btn btn-primary" onclick="getMatchingQuizzes()"><h5>Quizzes Created</h5></button>
+  <button id="matchingQuizzesButton" class="btn btn-primary" onclick="getMatchingQuizzesFunc()"><h5>Quizzes Created</h5></button>
   <button id="quizInfoButton" class="btn btn-primary" onclick="getQuizInfo()"><h5>Quizzes Taken</h5></button>
-  <div id="output"></div>
 </div>
 
         <div class="card-deck">
           <div class="card">
             <div id="quizInfoContainer" class="quiz-list"> </div>
+           <!--  <div id="CreatedQuizInfoContainer" class="quiz-list"> </div> -->
             <div id="localStorageUsage" class="localStorage-usage">
               <p>Your Quiz History</p>
             </div>
@@ -329,6 +329,7 @@ async function getMatchingQuizzes() {
   }
 }
 
+	  function getMatchingQuizzesFunc(){
 // Usage example
 getMatchingQuizzes()
   .then((matchingQuizzes) => {
@@ -336,7 +337,10 @@ getMatchingQuizzes()
     console.log('Matching Quizzes:', matchingQuizzes);
 
       const quizInfoContainer = document.getElementById('quizInfoContainer');
-      quizInfoContainer.innerHTML = '';
+      quizInfoContainer.innerHTML = '';     
+	//  const CreatedQuizInfoContainer = document.getElementById('CreatedQuizInfoContainer');
+      //CreatedQuizInfoContainer.innerHTML = '';
+	  
           const quizInfo = matchingQuizzes;
           const quizCode = quizInfo.quizCode;
           const quizName = quizInfo.quizName;
@@ -370,7 +374,7 @@ getMatchingQuizzes()
     console.error('Error:', error);
   });
 
-
+	  }
 
 
 	  
@@ -480,10 +484,7 @@ getMatchingQuizzes()
       popupContainer.style.display = "block";
     }
 
-    function closePopup() {
-      const popupContainer = document.getElementById("popupContainer");
-      popupContainer.style.display = "none";
-    }
+
 function removeLoginCookie() {
   document.cookie = "loggedIn=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 		  loggedIn = false;
@@ -515,7 +516,10 @@ removeLoginCookie();
 	  
 	  
 	  
-	  
+    function closePopup() {
+      const popupContainer = document.getElementById("popupContainer");
+      popupContainer.style.display = "none";
+    }
 	  
     // Initialization
     function initialize() {
