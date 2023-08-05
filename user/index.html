@@ -302,11 +302,10 @@ function displayProfileInfo() {
 // Function to get the matching quiz information based on qn array in the users collection
 async function getMatchingQuizzes() {
 
-	const userId = 'userId1'; // Replace with the actual userId
 
   try {
     // Fetch the qn array from the users collection
-    const userDoc = await firebase.firestore().collection('users').doc(userId).get();
+    const userDoc = await firebase.firestore().collection('users').doc().get();
     const qnArray = userDoc.data()?.quizCreated || [];
 
     // Fetch the quizzes from the quizzes collection based on the quiz codes in qnArray
