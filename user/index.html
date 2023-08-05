@@ -137,7 +137,13 @@
 
       <!-- Quizzes Taken -->
       <div class="col-md-6 quizzes-taken">
-        <h5>Quizzes Taken</h5>
+        <!-- Tab Div -->
+<div class="tab-pane fade show active" id="quizTab" role="tabpanel" aria-labelledby="quizTabLink">
+  <button id="matchingQuizzesButton" class="btn btn-primary" onclick="getMatchingQuizzes()"><h5>Quizzes Created</h5></button>
+  <button id="quizInfoButton" class="btn btn-primary" onclick="getQuizInfo()"><h5>Quizzes Taken</h5></button>
+  <div id="output"></div>
+</div>
+
         <div class="card-deck">
           <div class="card">
             <div id="quizInfoContainer" class="quiz-list"> </div>
@@ -291,6 +297,83 @@ function displayProfileInfo() {
       closeImagePopup();
     }
 
+
+
+// Function to get the matching quiz information based on qn array in the users collection
+async function getMatchingQuizzes() {
+
+	const userId = 'userId1'; // Replace with the actual userId
+
+  try {
+    // Fetch the qn array from the users collection
+    const userDoc = await firebase.firestore().collection('users').doc(userId).get();
+    const qnArray = userDoc.data()?.quizCreated || [];
+
+    // Fetch the quizzes from the quizzes collection based on the quiz codes in qnArray
+    const matchingQuizzesQuery = await firebase.firestore().collection('quizzes').where('quizCode', 'in', qnArray).get();
+
+    // Process the matching quiz documents
+    const matchingQuizzes = [];
+    matchingQuizzesQuery.forEach((doc) => {
+      const quizData = doc.data();
+      const quizCode = quizData.quizCode;
+
+      // Add the quiz data along with the quiz code to the matchingQuizzes array
+      matchingQuizzes.push({ quizCode, ...quizData });
+    });
+
+    return matchingQuizzes;
+  } catch (error) {
+    console.error('Error fetching matching quizzes:', error);
+    return [];
+  }
+}
+
+// Usage example
+getMatchingQuizzes()
+  .then((matchingQuizzes) => {
+    // Do something with the matching quizzes data
+    console.log('Matching Quizzes:', matchingQuizzes);
+
+      const quizInfoContainer = document.getElementById('quizInfoContainer');
+      quizInfoContainer.innerHTML = '';
+          const quizInfo = matchingQuizzes;
+          const quizCode = quizInfo.quizCode;
+          const quizName = quizInfo.quizName;
+          const questionCorrect = quizInfo.questionCorrect;
+          const numberOfQuestions = quizInfo.numberOfQuestions;
+          const quizLink = quizInfo.quizLink;
+          const quizTime = quizInfo.timestamp;
+
+          const quizInfoElement = document.createElement('div');
+          quizInfoElement.classList.add('quiz-infop');
+          quizInfoElement.innerHTML = `
+            <a href="/quiz/?q=${quizLink}" class=""><h4>${quizName}</h4></a>
+            <p>Quiz Taken: ${quizTime}</p>
+            <p>Scored: ${questionCorrect}/${numberOfQuestions} Questions</p>
+          `;
+
+          const removeButton = document.createElement('button');
+          removeButton.innerText = 'Remove';
+          removeButton.classList.add('remove-button');
+          removeButton.addEventListener('click', function () {
+           // removeQuiz(key);
+          });
+
+          quizInfoElement.appendChild(removeButton);
+          quizInfoContainer.appendChild(quizInfoElement);
+
+
+	  
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+
+
+
+
+	  
     // Quiz information related functions
     function getQuizInfo() {
       const quizInfoContainer = document.getElementById('quizInfoContainer');
