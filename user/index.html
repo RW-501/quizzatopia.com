@@ -295,19 +295,22 @@ function displayProfileInfo() {
 
 // Function to get the matching quiz information based on qn array in the users collection
 async function getMatchingQuizzes() {
-
-
   try {
     const userInfo = getUserInfo();
 
-	  
     // Fetch the qn array from the users collection
-      const userId = userInfo.firebaseId;
-    
+    const userId = userInfo.firebaseId;
+
     // Get the user document with the specified firebaseID
     const userDoc = await firebase.firestore().collection('users').doc(userId).get();
     const qnArray = userDoc.data()?.quizCreated || [];
     console.log('qnArray: ', qnArray);
+
+    // Check if qnArray is not empty before executing the query
+    if (qnArray.length === 0) {
+      console.log('No quizzes found in the array.');
+      return [];
+    }
 
     // Fetch the quizzes from the "quizzes" collection based on the quiz codes in qnArray
     const matchingQuizzesQuery = await firebase.firestore().collection('quizzes').where('quizCodeDB', 'in', qnArray).get();
@@ -322,13 +325,13 @@ async function getMatchingQuizzes() {
       matchingQuizzes.push({ quizCode, ...quizData });
     });
 
-
     return matchingQuizzes;
   } catch (error) {
     console.error('Error fetching matching quizzes:', error);
     return [];
   }
 }
+
 function switchFunc(id) {
   const divElements = document.querySelectorAll(".quiz-list");
   for (const divElement of divElements) {
