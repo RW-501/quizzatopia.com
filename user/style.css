@@ -117,7 +117,7 @@ background-color: #fd7e14;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 .topBTNs{
-    display: flex;
+    display: flex  !important;
     justify-content: space-around;
 }
 
