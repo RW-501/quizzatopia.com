@@ -385,9 +385,9 @@ const quizTime = quizInfo[0]?.quizDate;
           });
 	  
           const statsButton = document.createElement('button');
-          removeButton.innerText = 'Stats';
-          removeButton.classList.add('stats-button');
-          removeButton.addEventListener('click', function () {
+          statsButton.innerText = 'Stats';
+          statsButton.classList.add('stats-button');
+          statsButton.addEventListener('click', function () {
            viewStatsFunc(quizCode);
           });
 
