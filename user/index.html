@@ -345,14 +345,14 @@ getMatchingQuizzes()
 	//  const CreatedQuizInfoContainer = document.getElementById('CreatedQuizInfoContainer');
       //CreatedQuizInfoContainer.innerHTML = '';
 	  
-          const quizInfo = matchingQuizzes;
-          const quizInfo2 = matchingQuizzes.quizNameDB;
-          const quizCode = quizInfo.quizCode || quizInfo.quizCodeDB;
-          const quizName = quizInfo.quizNameDB;
-          const quizStartedCount = quizInfo.quizStartedCount;
-          const numberOfQuestions = quizInfo.numberOfQuestionsDB;
-          const quizLink = quizInfo.quizLinkDB;
-          const quizTime = quizInfo.quizDate;
+const quizInfo = matchingQuizzes;
+const quizInfo2 = quizInfo[0]?.quizNameDB;
+const quizCode = quizInfo[0]?.quizCode || quizInfo[0]?.quizCodeDB;
+const quizName = quizInfo[0]?.quizNameDB;
+const quizStartedCount = quizInfo[0]?.quizStartedCount;
+const numberOfQuestions = quizInfo[0]?.numberOfQuestionsDB;
+const quizLink = quizInfo[0]?.quizLinkDB;
+const quizTime = quizInfo[0]?.quizDate;
 
     console.log('quizInfo:', quizInfo);
     console.log('quizName:', quizName);
