@@ -16,6 +16,12 @@
     font-size: 2em;
   
 }
+.badge-card{
+        width: 49% !important;
+
+
+}
+
 
 #quizTab{
     background-color: #fd7e14;
