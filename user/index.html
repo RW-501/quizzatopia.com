@@ -375,18 +375,24 @@ const quizTime = quizInfo[0]?.quizDate;
             <p>Quiz Created: ${quizTime}</p>
             <p>${numberOfQuestions} Questions</p>
             <p>${quizStartedCount} Quizzes Started</p>
-            <p><a href="https://www.quizzatopia.com/quiz/stats/?q=${quizCode}" class="">Stats</a></p>
 
           `;
-
           const removeButton = document.createElement('button');
           removeButton.innerText = 'Remove';
           removeButton.classList.add('remove-button');
           removeButton.addEventListener('click', function () {
-           // removeQuiz(key);
+            removeCreatedQuiz(quizCode);
+          });
+	  
+          const statsButton = document.createElement('button');
+          removeButton.innerText = 'Stats';
+          removeButton.classList.add('stats-button');
+          removeButton.addEventListener('click', function () {
+           viewStatsFunc(quizCode);
           });
 
           quizInfoElement.appendChild(removeButton);
+          quizInfoElement.appendChild(statsButton);
           quizInfoContainer.appendChild(quizInfoElement);
 
 
@@ -398,7 +404,59 @@ const quizTime = quizInfo[0]?.quizDate;
 
 	  }
 
+function viewStatsFunc(xxx){
+window.location = "http://www.quizzatopia.com/quiz/stats/?q="${xxx};
 
+}
+
+async function removeCreatedQuiz(valueToRemove) {
+  try {
+
+	  // Usage example:
+    const userInfo = getUserInfo();
+    // Fetch the qn array from the users collection
+      const userId = userInfo.firebaseId;
+//const valueToRemove = 'quizCode123'; // Replace with the value you want to remove from the array
+
+    // Get a reference to the user document
+    const userRef = firebase.firestore().collection('users').doc(userId);
+
+    // Fetch the user document
+    const userDoc = await userRef.get();
+
+    // Check if the document exists
+    if (!userDoc.exists) {
+      console.log('User document not found.');
+      return;
+    }
+
+    // Get the current array from the user document
+    const qnArray = userDoc.data()?.quizCreated || [];
+
+    // Check if the value to remove is in the array
+    if (!qnArray.includes(valueToRemove)) {
+      console.log('Value to remove not found in the array.');
+      return;
+    }
+
+    // Remove the value from the array
+    const updatedArray = qnArray.filter((value) => value !== valueToRemove);
+
+    // Update the user document with the new array
+    await userRef.update({ quizCreated: updatedArray });
+
+    console.log('Value removed successfully.');
+  } catch (error) {
+    console.error('Error removing value from array:', error);
+  }
+
+
+
+	  }
+
+
+
+		  
 	  
     // Quiz information related functions
     function getQuizInfo() {
