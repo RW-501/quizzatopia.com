@@ -346,6 +346,7 @@ getMatchingQuizzes()
       //CreatedQuizInfoContainer.innerHTML = '';
 	  
           const quizInfo = matchingQuizzes;
+          const quizInfo2 = matchingQuizzes.quizNameDB;
           const quizCode = quizInfo.quizCode || quizInfo.quizCodeDB;
           const quizName = quizInfo.quizNameDB;
           const quizStartedCount = quizInfo.quizStartedCount;
@@ -353,6 +354,11 @@ getMatchingQuizzes()
           const quizLink = quizInfo.quizLinkDB;
           const quizTime = quizInfo.quizDate;
 
+    console.log('quizInfo:', quizInfo);
+    console.log('quizName:', quizName);
+    console.log('quizInfo2:', quizInfo2);
+
+	  
           const quizInfoElement = document.createElement('div');
           quizInfoElement.classList.add('quiz-infop');
           quizInfoElement.innerHTML = `
