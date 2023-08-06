@@ -122,31 +122,21 @@
     </div>
 
     <div class="row mt-4">
-      <!-- User badges -->
-      <div class="col-md-6 badges">
-        <h5>Badges</h5>
-        <div class="card-deck">
-          <div class="card">
-            <div id="badgesContainer" style="height: 420px;overflow: auto;width: 105%;padding: 0%;">  </div>
-            <!-- Badges will be dynamically added here -->
-		 
 
-          </div>
-        </div>
-      </div>
-
-      <!-- Quizzes Taken -->
       <div class="col-md-6 quizzes-taken">
         <!-- Tab Div -->
 <div class="tab-pane fade show active" id="quizTab" role="tabpanel" aria-labelledby="quizTabLink">
-  <button id="matchingQuizzesButton" class="btn btn-primary" onclick="getMatchingQuizzesFunc()"><h5>Quizzes Created</h5></button>
-  <button id="quizInfoButton" class="btn btn-primary" onclick="getQuizInfo()"><h5>Quizzes Taken</h5></button>
+  <button id="matchingQuizzesButton" class="btn btn-primary" onclick="switchFunc('CreatedQuizContainer')"><h5>Quizzes Created</h5></button>
+  <button id="quizInfoButton" class="btn btn-primary" onclick="switchFunc('quizInfoContainer')"><h5>Quizzes Taken</h5></button>
+  <button id="badgesButton" class="btn btn-primary" onclick="switchFunc('badgesContainer')"><h5>Badges</h5></button>
 </div>
 
         <div class="card-deck">
           <div class="card">
             <div id="quizInfoContainer" class="quiz-list"> </div>
-           <!--  <div id="CreatedQuizInfoContainer" class="quiz-list"> </div> -->
+       <div id="CreatedQuizContainer" class="quiz-list"> </div>       
+		  <div id="badgesContainer" class="quiz-list">  </div>
+
             <div id="localStorageUsage" class="localStorage-usage">
               <p>Your Quiz History</p>
             </div>
@@ -304,8 +294,11 @@ async function getMatchingQuizzes() {
 
 
   try {
+    const userInfo = getUserInfo();
+
+	  
     // Fetch the qn array from the users collection
-      const userId = "fM2CtVN59wNwrZeQZrSqlp4rUcr2";
+      const userId = userInfo.firebaseId;
     
     // Get the user document with the specified firebaseID
     const userDoc = await firebase.firestore().collection('users').doc(userId).get();
@@ -332,6 +325,18 @@ async function getMatchingQuizzes() {
     return [];
   }
 }
+function switchFunc(id) {
+  const divElements = document.querySelectorAll(".quiz-list div");
+  for (const divElement of divElements) {
+    if (divElement.id === id) {
+      divElement.style.display = "block"; // Show the selected div
+    } else {
+      divElement.style.display = "none"; // Hide other divs
+    }
+  }
+}
+
+
 
 	  function getMatchingQuizzesFunc(){
 // Usage example
@@ -340,7 +345,7 @@ getMatchingQuizzes()
     // Do something with the matching quizzes data
     console.log('Matching Quizzes:', matchingQuizzes);
 
-      const quizInfoContainer = document.getElementById('quizInfoContainer');
+      const quizInfoContainer = document.getElementById('CreatedQuizContainer');
       quizInfoContainer.innerHTML = '';     
 	//  const CreatedQuizInfoContainer = document.getElementById('CreatedQuizInfoContainer');
       //CreatedQuizInfoContainer.innerHTML = '';
