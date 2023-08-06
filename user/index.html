@@ -123,12 +123,12 @@
 
     <div class="row mt-4">
 
-      <div class="col-md-6 quizzes-taken">
+      <div class=" quizzes-taken">
         <!-- Tab Div -->
 <div class="tab-pane fade show active" id="quizTab" role="tabpanel" aria-labelledby="quizTabLink">
-  <button id="matchingQuizzesButton" class="btn btn-primary" onclick="switchFunc('CreatedQuizContainer')"><h5>Quizzes Created</h5></button>
-  <button id="quizInfoButton" class="btn btn-primary" onclick="switchFunc('quizInfoContainer')"><h5>Quizzes Taken</h5></button>
-  <button id="badgesButton" class="btn btn-primary" onclick="switchFunc('badgesContainer')"><h5>Badges</h5></button>
+  <button id="quizInfoButton" class="tabBTN" onclick="switchFunc('quizInfoContainer')"><h5>Quizzes Taken</h5></button>
+  <button id="badgesButton" class="tabBTN" onclick="switchFunc('badgesContainer')"><h5>Badges</h5></button>
+  <button id="matchingQuizzesButton" class="tabBTN" onclick="switchFunc('CreatedQuizContainer')"><h5>Quizzes Created</h5></button>
 </div>
 
         <div class="card-deck">
@@ -326,7 +326,7 @@ async function getMatchingQuizzes() {
   }
 }
 function switchFunc(id) {
-  const divElements = document.querySelectorAll(".quiz-list div");
+  const divElements = document.querySelectorAll(".quiz-list");
   for (const divElement of divElements) {
     if (divElement.id === id) {
       divElement.style.display = "block"; // Show the selected div
@@ -547,6 +547,7 @@ removeLoginCookie();
       displayBadges();
 	  //  let updatedInfo = getUserInfo();
 	//updateUserInfo(updatedInfo);
+	    switchFunc('quizInfoContainer');
     }
 
     initialize();
