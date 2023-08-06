@@ -30,6 +30,7 @@
         border-top-left-radius: 1em !important;
     border-top-right-radius: 1em !important;
       overflow: hidden;
+      text-align-last: justify;
 }
 
 
@@ -44,7 +45,7 @@
     padding: 2% 6%;
     font-weight: 500;
     cursor: pointer;
-
+width: fit-content;
     background-color: transparent;
 }
 
@@ -88,7 +89,10 @@ height: 320px;
         width: 100% !important;
 
   }
-
+#badgesContainer {
+    display: flex;
+    flex-flow: wrap;
+}
   /* User Profile Styles */
   .profile-container {
     background-color: white;
