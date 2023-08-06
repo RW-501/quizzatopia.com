@@ -226,7 +226,7 @@ background-color: #fd7e14;
     border: none;
     background-color: #fafafa;
         overflow: hidden;
-        width: 50%;
+        width: 100%;
   }
 
   .quizzes-taken .card-title {
