@@ -573,8 +573,8 @@ cards.forEach(card => {
 
 
 
-	<div class="container">
-  <svg xmlns="http://www.w3.org/2000/svg" width="85%" height="300px" viewBox="0 0 1000 300" style="display: block; margin: auto;" onclick="openCreateQuizFunc()">
+	<div class="container"  onclick="openCreateQuizFunc()">
+  <svg xmlns="http://www.w3.org/2000/svg" width="85%" height="300px" viewBox="0 0 1000 300" style="display: block; margin: auto;">
     <style>
       .banner {
         fill: #0d6efd;
@@ -612,53 +612,56 @@ cards.forEach(card => {
 
 
 <script>
-	const userInfo = getUserInfo();
 
-function openCreateQuizFunc(){
-// Assuming you have initialized your Firebase app and authenticated the user.
-// Get a reference to the Firestore database
-	if(loggedIn === false){
-     openPopup();
-	}else{
-var db = firebase.firestore();
+function openCreateQuizFunc() {
+  const userInfo = getUserInfo();
+  var userPoints = userInfo.userPoints;
 
-// Define the collection and field values
-var collectionName = "users";
-var fieldToCheck = "firebaseId";
-var fieldValue = userInfo.firebaseId; // Replace this with the actual user's firebaseId
-
-// Perform the query to find the user document
-db.collection(collectionName)
-  .where(fieldToCheck, "==", fieldValue)
-  .limit(1) // Assuming there's only one matching user document
-  .get()
-  .then((querySnapshot) => {
-    if (!querySnapshot.empty) {
-      // User document exists
-      var userDocRef = querySnapshot.docs[0].ref;
-      var quizCreatedArray = querySnapshot.docs[0].data().quizCreated;
-      
-      // Check if the user has more than 3 quizzes created
-      if (quizCreatedArray && quizCreatedArray.length > 3) {
-        console.log("User has more than 3 quizzes created.");
-      } else {
-        console.log("User has 3 or fewer quizzes created.");
-  window.location.href = "/quizzes/create/";
-
-      }
+  if (userPoints > 100) {
+    // Assuming you have initialized your Firebase app and authenticated the user.
+    // Get a reference to the Firestore database
+    if (loggedIn === false) {
+      openPopup();
     } else {
-      console.log("User not found.");
-	     openPopup();
+      var db = firebase.firestore();
+
+      // Define the collection and field values
+      var collectionName = "users";
+      var fieldToCheck = "firebaseId";
+      var fieldValue = userInfo.firebaseId; // Replace this with the actual user's firebaseId
+
+      // Perform the query to find the user document
+      db.collection(collectionName)
+        .where(fieldToCheck, "==", fieldValue)
+        .limit(1) // Assuming there's only one matching user document
+        .get()
+        .then((querySnapshot) => {
+          if (!querySnapshot.empty) {
+            // User document exists
+            var userDocRef = querySnapshot.docs[0].ref;
+            var quizCreatedArray = querySnapshot.docs[0].data().quizCreated;
+
+            // Check if the user has more than 3 quizzes created
+            if (quizCreatedArray && quizCreatedArray.length > 3) {
+              alert("User has more than 3 quizzes created.");
+            } else {
+              // console.log("User has 3 or fewer quizzes created.");
+              window.location.href = "/quizzes/create/";
+            }
+          } else {
+            console.log("User not found.");
+            openPopup();
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching user document: ", error);
+        });
     }
-  })
-  .catch((error) => {
-    console.error("Error fetching user document: ", error);
-  });
-
-
-	}
-	
+  } else {
+    alert("User needs 100 Points first");
+  }
 }
+
 	
 </script>
 
