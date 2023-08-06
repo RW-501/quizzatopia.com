@@ -862,10 +862,11 @@ console.log('quizTags: ', tagsArray); // Add this line to check the value of qui
     quizTags: tagsArray ,
     questions: []
   };
+	  console.log("submit quizObj   "+quizObj);
 
   // Create question object
   var questionObj = {
-    questionNumber:  quizObj.questions.length + 1 || 0, 
+    questionNumber:  quizObj.questions.length  || 0, 
     question: question,
     imageURL: "", // Add the image URL here if available
     questionType: questionType,
@@ -1289,6 +1290,8 @@ $(document).ready(function() {
   
 // Function to save the quiz data to local storage
   function saveQuizData() {
+	  console.log("tagsArray   "+tagsArray);
+
     var quizData = {
       quizName: input($('#quizName').val()),
       quizCode: input($('#quizCode').val()),
