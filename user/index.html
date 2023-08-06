@@ -313,13 +313,13 @@ async function getMatchingQuizzes() {
     console.log('qnArray: ', qnArray);
 
     // Fetch the quizzes from the "quizzes" collection based on the quiz codes in qnArray
-    const matchingQuizzesQuery = await firebase.firestore().collection('quizzes').where('quizCode', 'in', qnArray).get();
+    const matchingQuizzesQuery = await firebase.firestore().collection('quizzes').where('quizCodeDB', 'in', qnArray).get();
 
     // Process the matching quiz documents
     const matchingQuizzes = [];
     matchingQuizzesQuery.forEach((doc) => {
       const quizData = doc.data();
-      const quizCode = quizData.quizCode;
+      const quizCode = quizData.quizCodeDB;
 
       // Add the quiz data along with the quiz code to the matchingQuizzes array
       matchingQuizzes.push({ quizCode, ...quizData });
