@@ -126,9 +126,9 @@
       <div class=" quizzes-taken">
         <!-- Tab Div -->
 <div class="tab-pane fade show active" id="quizTab" role="tabpanel" aria-labelledby="quizTabLink">
-  <button id="quizInfoButton" class="tabBTN" onclick="switchFunc('quizInfoContainer')"><h5>Quizzes Taken</h5></button>
-  <button id="badgesButton" class="tabBTN" onclick="switchFunc('badgesContainer')"><h5>Badges</h5></button>
-  <button id="matchingQuizzesButton" class="tabBTN" onclick="switchFunc('CreatedQuizContainer')"><h5>Quizzes Created</h5></button>
+  <div id="quizInfoButton" class="tabBTN" onclick="switchFunc('quizInfoContainer')"><h5>Quizzes Taken</h5></div>
+  <div id="badgesButton" class="tabBTN" onclick="switchFunc('badgesContainer')"><h5>Badges</h5></div>
+  <div id="matchingQuizzesButton" class="tabBTN" onclick="switchFunc('CreatedQuizContainer')"><h5>Quizzes Created</h5></div>
 </div>
 
         <div id='maiinCard' class="card-deck">
@@ -150,7 +150,7 @@
 				  
 	<div id="popupContainer" class="popup-container">
   <div class="popup-content">
-    <button id="closeButton" class="close-button" onclick="closePopup()"></button>
+    <button id="closeButton" class="close-button" onclick="closeQPopup()"></button>
     <div id="popupDetails" class="popup-details">
       <!-- Badge details content will be dynamically added here -->
     </div>
@@ -271,11 +271,15 @@ function displayProfileInfo() {
     // Image popup related functions
     function openImagePopup() {
       const popup = document.getElementById("imagePopup");
+	    	    slideIn("imagePopup");
+
       popup.style.display = "block";
     }
 
     function closeImagePopup() {
       const popup = document.getElementById("imagePopup");
+	    	    slideOut("imagePopup");
+
       popup.style.display = "none";
       document.getElementById('profile-pic').src = userInfo.userProfilePic;
 
@@ -534,9 +538,10 @@ removeLoginCookie();
 	  
 	  
 	  
-    function closePopup() {
+    function closeQPopup() {
       const popupContainer = document.getElementById("popupContainer");
       popupContainer.style.display = "none";
+	    slideOut("popupContainer");
     }
 	  
     // Initialization
