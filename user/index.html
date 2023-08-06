@@ -343,7 +343,7 @@ function switchFunc(id) {
 getMatchingQuizzes()
   .then((matchingQuizzes) => {
     // Do something with the matching quizzes data
-    console.log('Matching Quizzes:', matchingQuizzes);
+ //   console.log('Matching Quizzes:', matchingQuizzes);
 
       const quizInfoContainer = document.getElementById('CreatedQuizContainer');
       quizInfoContainer.innerHTML = '';     
@@ -546,7 +546,7 @@ removeLoginCookie();
       getLocalStorageUsage();
       displayBadges();
 	  //  let updatedInfo = getUserInfo();
-	//updateUserInfo(updatedInfo);
+	getMatchingQuizzesFunc();
 	    switchFunc('quizInfoContainer');
     }
 
