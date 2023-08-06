@@ -342,32 +342,32 @@ function switchFunc(id) {
 
 
 
-	  function getMatchingQuizzesFunc(){
-// Usage example
-getMatchingQuizzes()
-  .then((matchingQuizzes) => {
-    // Do something with the matching quizzes data
- //   console.log('Matching Quizzes:', matchingQuizzes);
-
+	function getMatchingQuizzesFunc() {
+  // Usage example
+  getMatchingQuizzes()
+    .then((matchingQuizzes) => {
       const quizInfoContainer = document.getElementById('CreatedQuizContainer');
-      quizInfoContainer.innerHTML = '';     
-	//  const CreatedQuizInfoContainer = document.getElementById('CreatedQuizInfoContainer');
-      //CreatedQuizInfoContainer.innerHTML = '';
-	  
-const quizInfo = matchingQuizzes;
-const quizInfo2 = quizInfo[0]?.quizNameDB;
-const quizCode = quizInfo[0]?.quizCode || quizInfo[0]?.quizCodeDB;
-const quizName = quizInfo[0]?.quizNameDB;
-const quizStartedCount = quizInfo[0]?.quizStartedCount;
-const numberOfQuestions = quizInfo[0]?.numberOfQuestionsDB;
-const quizLink = quizInfo[0]?.quizLinkDB;
-const quizTime = quizInfo[0]?.quizDate;
+      quizInfoContainer.innerHTML = '';
 
-    console.log('quizInfo:', quizInfo);
-    console.log('quizName:', quizName);
-    console.log('quizInfo2:', quizInfo2);
+      if (matchingQuizzes.length === 0) {
+        // Display "No quizzes" message
+        const noQuizzesElement = document.createElement('div');
+        noQuizzesElement.innerText = 'Create A Quiz';
+          noQuizzesElement.classList.add('stats-button');
+          noQuizzesElement.addEventListener('click', function () {
+            createQuiz();
+          });
+        quizInfoContainer.appendChild(noQuizzesElement);
+      } else {
+        // Display quiz info for each matching quiz
+        matchingQuizzes.forEach((quizInfo) => {
+          const quizCode = quizInfo?.quizCode || quizInfo?.quizCodeDB;
+          const quizName = quizInfo?.quizNameDB;
+          const quizStartedCount = quizInfo?.quizStartedCount;
+          const numberOfQuestions = quizInfo?.numberOfQuestionsDB;
+          const quizLink = quizInfo?.quizLinkDB;
+          const quizTime = quizInfo?.quizDate;
 
-	  
           const quizInfoElement = document.createElement('div');
           quizInfoElement.classList.add('quiz-infop');
           quizInfoElement.innerHTML = `
@@ -375,54 +375,53 @@ const quizTime = quizInfo[0]?.quizDate;
             <p>Quiz Created: ${quizTime}</p>
             <p>${numberOfQuestions} Questions</p>
             <p>${quizStartedCount} Quizzes Started</p>
-
           `;
+
           const removeButton = document.createElement('button');
           removeButton.innerText = 'Remove';
           removeButton.classList.add('remove-button');
           removeButton.addEventListener('click', function () {
-            removeCreatedQuiz(quizCode);
-          });
-	  
+      const confirmed = confirm('Are you sure?');
+      if (confirmed) {
+        removeCreatedQuiz(quizCode);
+      }
+	  });
+
           const statsButton = document.createElement('button');
           statsButton.innerText = 'Stats';
           statsButton.classList.add('stats-button');
           statsButton.addEventListener('click', function () {
-           viewStatsFunc(quizCode);
+            viewStatsFunc(quizCode);
           });
 
           quizInfoElement.appendChild(removeButton);
           quizInfoElement.appendChild(statsButton);
           quizInfoContainer.appendChild(quizInfoElement);
-
-
-	  
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
-
-	  }
+        });
+      }
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+}
 
 function viewStatsFunc(xxx){
 window.location = "http://www.quizzatopia.com/quiz/stats/?q="+xxx;
 
 }
 
-async function removeCreatedQuiz(valueToRemove) {
+// Function to fetch the user document
+async function getUserDocument(userId) {
+  const userRef = firebase.firestore().collection('users').doc(userId);
+  const userDoc = await userRef.get();
+  return userDoc;
+}
+
+// Function to remove a value from the quizCreated array in the user document
+async function removeFromQuizCreated(userId, valueToRemove) {
   try {
-
-	  // Usage example:
-    const userInfo = getUserInfo();
-    // Fetch the qn array from the users collection
-      const userId = userInfo.firebaseId;
-//const valueToRemove = 'quizCode123'; // Replace with the value you want to remove from the array
-
-    // Get a reference to the user document
-    const userRef = firebase.firestore().collection('users').doc(userId);
-
     // Fetch the user document
-    const userDoc = await userRef.get();
+    const userDoc = await getUserDocument(userId);
 
     // Check if the document exists
     if (!userDoc.exists) {
@@ -443,18 +442,53 @@ async function removeCreatedQuiz(valueToRemove) {
     const updatedArray = qnArray.filter((value) => value !== valueToRemove);
 
     // Update the user document with the new array
-    await userRef.update({ quizCreated: updatedArray });
+    await userDoc.ref.update({ quizCreated: updatedArray });
 
-    console.log('Value removed successfully.');
+    console.log('Value removed successfully from the array.');
   } catch (error) {
     console.error('Error removing value from array:', error);
   }
+}
+
+// Function to delete the quiz document from the "quizzes" collection
+async function deleteQuizDocument(quizCode) {
+  try {
+    // Get a reference to the quiz document
+    const quizDocRef = firebase.firestore().collection('quizzes').doc(quizCode);
+
+    // Delete the quiz document
+    await quizDocRef.delete();
+
+    console.log('Quiz document deleted successfully.');
+  } catch (error) {
+    console.error('Error deleting quiz document:', error);
+  }
+}
+
+// Function to remove a created quiz and delete the corresponding quiz document
+async function removeCreatedQuiz(valueToRemove) {
+  try {
+    // Usage example:
+    const userInfo = getUserInfo();
+    const userId = userInfo.firebaseId;
+
+    // Remove the value from the quizCreated array in the user document
+    await removeFromQuizCreated(userId, valueToRemove);
+
+    // Delete the quiz document from the "quizzes" collection
+    await deleteQuizDocument(valueToRemove);
+
+    // Display success message or perform any additional actions
+    console.log('Quiz removed successfully.');
+  } catch (error) {
+    console.error('Error removing quiz:', error);
+  }
+}
 
 
+function createQuiz(){
 
-	  }
-
-
+	}
 
 		  
 	  
