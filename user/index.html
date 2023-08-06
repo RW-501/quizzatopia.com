@@ -333,9 +333,9 @@ function switchFunc(id) {
   const divElements = document.querySelectorAll(".quiz-list");
   for (const divElement of divElements) {
     if (divElement.id === id) {
-      divElement.style.display = "block"; // Show the selected div
+      divElement.classList.remove("d-none");
     } else {
-      divElement.style.display = "none"; // Hide other divs
+      divElement.classList.add("d-none");
     }
   }
 }
