@@ -404,7 +404,8 @@ position: absolute;
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 1em;
+  margin: 1%;
 }
 
 .remove-button:hover {
@@ -414,7 +415,24 @@ position: absolute;
 .remove-button:focus {
   outline: none;
 }
+.stats-button {
+  background-color: #fd7e14;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 1%;
+}
 
+.stats-button:hover {
+  background-color: #6c757d;
+}
+
+.stats-button:focus {
+  outline: none;
+}
 .popup-header {
   display: flex;
   justify-content: space-between;
