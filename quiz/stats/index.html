@@ -570,6 +570,11 @@ width: 20%;
       const correctQuestionNumbers = reviewDataDoc ? reviewDataDoc.correctQuestionNumbers : [];
       const incorrectQuestionNumbers = reviewDataDoc ? reviewDataDoc.incorrectQuestionNumbers : [];
 
+
+
+
+
+		  
       const totalAttempts = calculateTotalAttempts(correctQuestionNumbers, incorrectQuestionNumbers);
       const averageScore = calculateAverageScore(correctQuestionNumbers, totalQuestions);
       const bestScore = calculateBestScore(correctQuestionNumbers, totalQuestions);
@@ -654,7 +659,7 @@ width: 20%;
       .then(([quizDoc, reviewDataDoc]) => {
         if (quizDoc && reviewDataDoc) {
           displayQuizStats(quizDoc, reviewDataDoc);
-          displayQuizStatsTable(reviewDataDoc.questionsCompleted);
+          displayQuizStatsTable(reviewDataDoc.questionStatInfo);
           displayScoreChart(
             reviewDataDoc.correctQuestionNumbers,
             quizDoc.numberOfQuestionsDB
