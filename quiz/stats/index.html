@@ -510,7 +510,7 @@ function getQuizReviewData(quizCode, userID) {
 
   return quizReviewDataRef
     .where('quizCode', '==', quizCode)
-    .where('userID', '==', userInfo.firebaseId) // Add the additional where clause for userID
+    .where('userID', '==', "fM2CtVN59wNwrZeQZrSqlp4rUcr2") // Add the additional where clause for userID
     .get()
     .then(querySnapshot => {
       if (querySnapshot.empty) {
