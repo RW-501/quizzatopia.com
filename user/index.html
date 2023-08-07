@@ -46,12 +46,10 @@
 <style>
 
 
-	.createBox{
+	.checkDiv{
 display:flex;
 	}
-	.box1, .box2{
-    width: 49%;
-	}
+	
 </style>
 <body>
 
@@ -470,17 +468,14 @@ quizInfoElement.innerHTML = `
   privateCheckboxLabel.innerText = 'Make Quiz Private:';
   privateCheckboxLabel.setAttribute('for', `privateCheckbox${quizCode}`);
 
-  // Add the checkbox and label elements to the qcontainer
+          const checkDiv = document.createElement('div');
+          checkDiv.classList.add('checkDiv');
 
-  // Add the event listener to the checkbox
-  privateCheckbox.addEventListener('change', function () {
-    // Get the value of the checkbox (true or false)
-    const isPrivate = privateCheckbox.checked;
+checkDiv.appendChild(privateCheckboxLabel);
+checkDiv.appendChild(privateCheckbox);
 
-    // Call a function to update the "private" field in the Firestore collection
-    updateQuizPrivacy(isPrivate, quizCode);
-  });
-
+		
+  quizInfoElement.appendChild(checkDiv);
 
   // Add the checkbox element to the qcontainer
 
@@ -492,8 +487,7 @@ quizInfoElement.innerHTML = `
     // Call a function to update the "private" field in the Firestore collection
     updateQuizPrivacy(isPrivate, quizCode);
   });
-  privateCheckbox.appendChild(privateCheckboxLabel);
-  quizInfoElement.appendChild(privateCheckbox);
+
 
 
 	  
