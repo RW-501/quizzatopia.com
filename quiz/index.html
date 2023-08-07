@@ -2538,8 +2538,11 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageU
   const userInfo = getUserInfo();
 
   const attemptsMade =  countDocumentsWithQuizCodeAndUserID(quizCodeNS, userInfo.firebaseId);
+          console.log("attemptsMade:", attemptsMade);
 
-
+if(attemptsMade >= 3){
+document.getElementById('start-btn').style.display = "none";
+	  }
 
 
   if (storedQuizInfo) {
@@ -3061,23 +3064,7 @@ async function removeFriend(friendFirebaseId) {
     console.error("Error removing friend:", error);
   }
 }
-/*
-async function getUserFriends(firebaseId) {
-  try {
-    // Fetch the user's friends from Firebase (replace this with your actual Firebase code)
-    const friendsSnapshot = await firebase.firestore()
-      .collection('friends')
-      .where('user1', '==', firebaseId)
-      .get();
 
-    const friends = friendsSnapshot.docs.map((doc) => doc.data().user2);
-    return friends;
-  } catch (error) {
-    console.error('Error getting user\'s friends:', error);
-    return []; // Return an empty array in case of an error
-  }
-}
-*/
 async function getUserFriendsWithUserData(firebaseId) {
   try {
     // Fetch the user's friends from Firebase (replace this with your actual Firebase code)
@@ -3104,7 +3091,9 @@ async function getUserFriendsWithUserData(firebaseId) {
 	  
 async function countDocumentsWithQuizCodeAndUserID(quizCode, userID) {
   try {
-    const quizReviewDataRef = db.collection('quizReviewData');
+const db = firebase.firestore();
+
+	  const quizReviewDataRef = db.collection('quizReviewData');
     const snapshot = await quizReviewDataRef
       .where('quizCode', '==', quizCode)
       .where('userID', '==', userID)
