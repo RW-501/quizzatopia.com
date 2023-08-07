@@ -853,13 +853,13 @@ console.log('userID:', userID);
 console.log('quizTags: ', tagsArray); // Add this line to check the value of quizTags
 
   // Create quiz object
-  var quizObj = JSON.parse(localStorage.getItem('quizData')) || {
+  var quizObj =  {
     quizName: quizName,
     quizCode: quizCode,
     numberOfQuestions: quizObj.questions.length || 0, 
     quizCategory: category,
     quizDescription: description,
-    quizTags: tagsArray ,
+    quizTags: tagsArray,
     questions: []
   };
 	  console.log("submit quizObj   "+quizObj.quizTags);
