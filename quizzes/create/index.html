@@ -887,6 +887,16 @@ console.log('userID:', userID);
     questions: []
   };
 
+
+if (JSON.parse(localStorage.getItem('quizData')) !== quizObj) {
+  // Save quizObj in localStorage
+  localStorage.setItem('quizDataRoot', JSON.stringify(quizObj));
+} else {
+  // Load quizObj from localStorage
+  quizObj = JSON.parse(localStorage.getItem('quizDataRoot'));
+}
+
+	   
   // Create question object
   var questionObj = {
     questionNumber:  quizObj.questions.length + 1 || 0, 
