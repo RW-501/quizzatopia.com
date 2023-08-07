@@ -850,10 +850,12 @@ console.log('userID:', userID);
   });
 
 
-console.log('quizTags: ', tagsArray); // Add this line to check the value of quizTags
+//console.log('quizTags: ', tagsArray); // Add this line to check the value of quizTags
 
   // Create quiz object
-  var quizObj =  {
+	
+	   
+  var quizObj =   {
     quizName: quizName,
     quizCode: quizCode,
     numberOfQuestions:  0, 
@@ -865,7 +867,7 @@ console.log('quizTags: ', tagsArray); // Add this line to check the value of qui
 
   // Create question object
   var questionObj = {
-    questionNumber:  quizObj.questions.length  || 0, 
+    questionNumber:  quizObj.questions.length + 1 || 0, 
     question: question,
     imageURL: "", // Add the image URL here if available
     questionType: questionType,
