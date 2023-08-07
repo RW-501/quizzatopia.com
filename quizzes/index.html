@@ -912,9 +912,11 @@ async function fetchQuizzesFromDB(page = 1) {
   const quizzesPerPage = 20; // Number of quizzes to fetch per page
 
   // Build the query to fetch quizzes with ordering
-  let query = db.collection('quizzes')
+let query = db.collection('quizzes')
+    .where('private', '!=', true)
     .orderBy('quizCategoryDB', 'asc')
     .orderBy('quizNameDB', 'asc');
+
 
 	  /*
     .orderBy('quizRatingDB', 'desc')
@@ -1028,6 +1030,12 @@ const stringWithHyphens = lowercaseString.replace(/ /g, "-");
 } else {
   catergoryName = ''; // If it's the same category, leave it empty
 }
+const difficultyDisplay;
+if (quizData.quizDifficultyDB || quizData.quizDifficulty === undefined || quizData.quizDifficulty === null || quizData.quizDifficulty === '') {
+  difficultyDisplay = "";
+} else {
+  difficultyDisplay = `<p><b>Difficulty:</b> ${quizData.quizDifficultyDB || quizData.quizDifficulty}</p>`;
+}
 
 
 	  const quizHtml = `
@@ -1039,7 +1047,7 @@ const stringWithHyphens = lowercaseString.replace(/ /g, "-");
             <p><b>${quizData.quizDescriptionDB || ''}</b></p>
             <div class="quiz-info">
               <p><b>CreatedBy:</b> ${quizData.quizCreatedByDB || ''}</p>
-              <p><b>Difficulty:</b> ${quizData.quizDifficultyDB || quizData.quizDifficulty}</p>
+              ${difficultyDisplay}
               <p><b>Questions:</b> ${quizData.numberOfQuestionsDB || 0}</p>
               <p><b>Quiz Code:</b> ${quizData.quizCodeDB || ''}</p>
             </div>
