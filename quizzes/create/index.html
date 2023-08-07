@@ -1172,12 +1172,12 @@ if (listArray.length < 5) {
   document.getElementById('generateJSONButton').style.display = 'none';
 } else {
   questionField.removeAttribute('required');
-  optionFields.forEach((option) => option.removeAttribute('required');
+  optionFields.forEach((option) => option.removeAttribute('required'));
   answerField.removeAttribute('required');
   document.getElementById('generateJSONButton').style.display = 'block';
 }
   questionField.setAttribute('tabindex', '-1');
-  optionFields.forEach((option) => option.setAttribute('tabindex', '-1');
+  optionFields.forEach((option) => option.setAttribute('tabindex', '-1'));
   answerField.setAttribute('tabindex', '-1');
 }
 
