@@ -43,7 +43,13 @@
   gtag('config', 'G-9VG78SV9KZ');
 </script>
 
+<style>
 
+
+	.createBox{
+display:flex;
+	}
+</style>
 <body>
 
 	
@@ -424,8 +430,13 @@ function openCreateQuizFunc() {
           quizInfoElement.innerHTML = `
             <a href="${quizLink}" class=""><h4>${quizName}</h4></a>
             <p>Quiz Created: ${quizTime}</p>
-            <p>${numberOfQuestions} Questions</p>
-            <p>${quizStartedCount} Quizzes Started</p>
+	    <div>
+         <div>   <p>${numberOfQuestions} Questions</p>
+            <p>${quizStartedCount} Quizzes Started</p></div>
+	    <div class='createBox'>
+<label for="privateCheckbox">Make Quiz Private:</label>
+<input type="checkbox" id="privateCheckbox" name="privateCheckbox"></div>
+</div>
           `;
 
           const removeButton = document.createElement('button');
@@ -539,11 +550,8 @@ ele.style.display = 'none';
 }
 
 
-function createQuiz(){
 
-	}
-
-		  
+	  
 	  
     // Quiz information related functions
     function getQuizInfo() {
@@ -679,7 +687,40 @@ removeLoginCookie();
 //const clearStorageBtn = document.getElementById('clearStorageBtn');
 //clearStorageBtn.addEventListener('click', clearLocalStorage);
 
-		    
+	// Get a reference to the checkbox element
+const privateCheckbox = document.getElementById('privateCheckbox');
+
+// Add an event listener to the checkbox
+privateCheckbox.addEventListener('change', function () {
+  // Get the value of the checkbox (true or false)
+  const isPrivate = privateCheckbox.checked;
+
+  // Call a function to update the "private" field in the Firestore collection
+  updateQuizPrivacy(isPrivate);
+});
+
+async function updateQuizPrivacy(isPrivate) {
+  try {
+    // Assuming you have the quizCode of the quiz you want to update
+    const quizCode = quizCodeDB;
+
+    // Get a reference to the quiz document in the Firestore collection
+    const quizRef = firebase.firestore().collection('quizzes').doc(quizCode);
+
+    // Update the "private" field in the quiz document
+    await quizRef.update({ private: isPrivate });
+
+    // Show a confirmation message to the user
+    if (isPrivate) {
+      alert('Quiz is now private. ');
+    } else {
+      alert('Quiz is now public.');
+    }
+  } catch (error) {
+    console.error('Error updating quiz privacy:', error);
+  }
+}
+	    
 	  
 	  
 	  
