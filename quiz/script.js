@@ -58,6 +58,7 @@ function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
   const savedQuizInfo = localStorage.getItem(`quizInfo_${quizCode}`);
   let quizInfo;
   let startTime = new Date().toLocaleString();
+let questionsCompleted = loadQuestionsCompleted(quizCode);
 
 	
   if (!savedQuizInfo) {
@@ -82,7 +83,7 @@ quizName = quizNameNS;
     quizInfo = JSON.parse(savedQuizInfo);
     quizInfo.quizName = quizName;
     quizInfo.quizName = quizName;
-    quizInfo.questionsCompleted = questionsCompleted;
+    quizInfo.questionsCompleted = questionsCompleted || [];
     quizInfo.startTime = startTime;
     quizInfo.quizLink = q;  // Add the "q" parameter to the quizInfo object
     localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
