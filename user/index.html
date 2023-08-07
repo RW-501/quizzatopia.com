@@ -541,7 +541,7 @@ async function removeCreatedQuiz(valueToRemove,ele) {
     await deleteQuizDocument(valueToRemove);
 	  
 ele.style.display = 'none';
-	  
+	  	getMatchingQuizzesFunc();
     // Display success message or perform any additional actions
     console.log('Quiz removed successfully.');
   } catch (error) {
