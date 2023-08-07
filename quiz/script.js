@@ -139,11 +139,12 @@ async function startQuiz() {
       totalQuestions = questions.length;
 
       // Retrieve the quizInfo from the array quiz
-      const quizInfo = setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions);
+      const quizInfo = setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions,questionsCompleted);
 
       quizCode = quizInfo.quizCode;
       quizName = quizInfo.quizName;
       numberOfQuestions = quizInfo.numberOfQuestions;
+      questionsCompleted = quizInfo.questionsCompleted;
 
 
       document.getElementById("optionContainer").classList.add("d-none");
