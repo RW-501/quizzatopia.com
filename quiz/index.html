@@ -683,7 +683,8 @@ ul.nav-tabs li.nav-item a.nav-link.active {
 }
 
 .stars {
-  font-size: 20px;
+  font-size: 2.5em;
+font-weight: 800;
 }
 
 .filled-star {
@@ -698,6 +699,10 @@ ul.nav-tabs li.nav-item a.nav-link.active {
   margin-left: 10px;
 }
 
+		.attempts-container {
+    display: block;
+    font-size: 1.5em;
+}
 </style>
 	  	
 	
@@ -2560,7 +2565,7 @@ for (let i = 0; i < totalAttempts; i++) {
 }
 
 // Update the attempts text
-attemptsContainer.querySelector('.attempts-text').textContent = `${attemptsMade}/${totalAttempts} attempts`;
+attemptsContainer.querySelector('.attempts-text').innerHTML = `${attemptsMade}/${totalAttempts} <strong>attempts</strong>`;
 
 
 	  
@@ -2599,11 +2604,9 @@ attemptsContainer.querySelector('.attempts-text').textContent = `${attemptsMade}
         <p><strong>Question Correct:</strong> ${score}</p>
         <p><strong>Best Score:</strong> ${percentage.toFixed(0)}%</p>
 	<div class="attempts-container">
-   <div class="attempts-text">2/3 attempts</div>
+   <div class="attempts-text">2/3 Attempts</div><br>
   <div class="stars">
-    <span class="filled-star">★</span>
-    <span class="filled-star">★</span>
-    <span class="empty-star">☆</span>
+
   </div>
 </div>
       `;
