@@ -912,39 +912,14 @@ async function fetchQuizzesFromDB(page = 1) {
   const quizzesPerPage = 20; // Number of quizzes to fetch per page
 
 
-const collectionRef = db.collection('quizzes');
 
-// Query the documents that do not have the 'private' field
-const query = collectionRef.orderBy('quizNameDB', 'asc');
-
-
-// Run the query to get the matching documents
-query.get().then((querySnapshot) => {
-  // Use a batched write to update the documents
-  const batch = db.batch();
-  querySnapshot.forEach((doc) => {
-    // Set the 'private' field to false for each document
-    const docRef = collectionRef.doc(doc.id);
-    batch.update(docRef, { private: false });
-  });
-
-  // Commit the batched write to update all documents at once
-  return batch.commit();
-}).then(() => {
-	countQ ++;
-  console.log('Documents updated successfully. '+countQ);
-}).catch((error) => {
-  console.error('Error updating documents:', error);
-});
-
-/*	
   // Build the query to fetch quizzes with ordering
 let query = db.collection('quizzes')
     .where('private', '!=', true)
-    .orderBy('private')
+  //  .orderBy('private')
     .orderBy('quizCategoryDB', 'asc')
     .orderBy('quizNameDB', 'asc');
-*/
+
 
 	  /*
     .orderBy('quizRatingDB', 'desc')
@@ -1109,6 +1084,9 @@ function isScrollAtBottom() {
   const containerHeight = quizContainer.clientHeight + 100;
   const scrollOffset = quizContainer.scrollTop;
   const totalHeight = quizContainer.scrollHeight;
+  console.log(`containerHeight: ` + containerHeight);
+  console.log(`scrollOffset: ` + scrollOffset);
+  console.log(`totalHeight: ` + totalHeight);
   return containerHeight + scrollOffset >= totalHeight;
 }
 
