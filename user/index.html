@@ -399,6 +399,26 @@ function openCreateQuizFunc() {
 }
 
 
+async function updateQuizPrivacy(isPrivate,quizCode) {
+  try {
+    // Assuming you have the quizCode of the quiz you want to update
+
+    // Get a reference to the quiz document in the Firestore collection
+    const quizRef = firebase.firestore().collection('quizzes').doc(quizCode);
+
+    // Update the "private" field in the quiz document
+    await quizRef.update({ private: isPrivate });
+
+    // Show a confirmation message to the user
+    if (isPrivate) {
+      alert('Quiz is now private. ');
+    } else {
+      alert('Quiz is now public.');
+    }
+  } catch (error) {
+    console.error('Error updating quiz privacy:', error);
+  }
+}
 	function getMatchingQuizzesFunc() {
   // Usage example
   getMatchingQuizzes()
@@ -435,10 +455,25 @@ function openCreateQuizFunc() {
             <p>${quizStartedCount} Quizzes Started</p></div>
 	    <div class='createBox'>
 <label for="privateCheckbox">Make Quiz Private:</label>
-<input type="checkbox" id="privateCheckbox" name="privateCheckbox"></div>
+<input type="checkbox" id="privateCheckbox${quizCode}" name="privateCheckbox"></div>
 </div>
           `;
 
+	// Get a reference to the checkbox element
+const privateCheckbox = document.getElementById('privateCheckbox'quizCode);
+
+// Add an event listener to the checkbox
+privateCheckbox.addEventListener('change', function () {
+  // Get the value of the checkbox (true or false)
+  const isPrivate = privateCheckbox.checked;
+
+  // Call a function to update the "private" field in the Firestore collection
+  updateQuizPrivacy(isPrivate,quizCode);
+});
+
+
+
+	  
           const removeButton = document.createElement('button');
           removeButton.innerText = 'Remove';
           removeButton.classList.add('remove-button');
@@ -456,6 +491,7 @@ function openCreateQuizFunc() {
             viewStatsFunc(quizCode);
           });
 
+          quizInfoElement.appendChild(privateCheckbox);
           quizInfoElement.appendChild(removeButton);
           quizInfoElement.appendChild(statsButton);
           quizInfoContainer.appendChild(quizInfoElement);
@@ -687,39 +723,7 @@ removeLoginCookie();
 //const clearStorageBtn = document.getElementById('clearStorageBtn');
 //clearStorageBtn.addEventListener('click', clearLocalStorage);
 
-	// Get a reference to the checkbox element
-const privateCheckbox = document.getElementById('privateCheckbox');
 
-// Add an event listener to the checkbox
-privateCheckbox.addEventListener('change', function () {
-  // Get the value of the checkbox (true or false)
-  const isPrivate = privateCheckbox.checked;
-
-  // Call a function to update the "private" field in the Firestore collection
-  updateQuizPrivacy(isPrivate);
-});
-
-async function updateQuizPrivacy(isPrivate) {
-  try {
-    // Assuming you have the quizCode of the quiz you want to update
-    const quizCode = quizCodeDB;
-
-    // Get a reference to the quiz document in the Firestore collection
-    const quizRef = firebase.firestore().collection('quizzes').doc(quizCode);
-
-    // Update the "private" field in the quiz document
-    await quizRef.update({ private: isPrivate });
-
-    // Show a confirmation message to the user
-    if (isPrivate) {
-      alert('Quiz is now private. ');
-    } else {
-      alert('Quiz is now public.');
-    }
-  } catch (error) {
-    console.error('Error updating quiz privacy:', error);
-  }
-}
 	    
 	  
 	  
