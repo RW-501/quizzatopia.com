@@ -569,16 +569,25 @@ width: 20%;
 
 
 
-  const userInfo = getUserInfo();
 
-  const totalAttempts =  countDocumentsWithQuizCodeAndUserID(quizDoc.quizCodeDB, userInfo.firebaseId);
+  var totalAttempts;
+const userInfo = getUserInfo();
+countDocumentsWithQuizCodeAndUserID(quizDoc.quizCodeDB, userInfo.firebaseId)
+  .then((totalAttempts) => {
+    console.log("attemptsMade:", totalAttempts);
+
+      document.getElementById('totalAttempts').textContent = totalAttempts;
+
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
 
 
 		  
       let averageScore;// = calculateAverageScore(correctQuestionNumbers, totalQuestions);
       let bestScore;// = calculateBestScore(correctQuestionNumbers, totalQuestions);
 
-      document.getElementById('totalAttempts').textContent = totalAttempts;
       document.getElementById('averageScore').textContent = averageScore.toFixed(2) + '%';
       document.getElementById('bestScore').textContent = bestScore.toFixed(2) + '%';
     }
