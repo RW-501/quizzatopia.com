@@ -1482,6 +1482,8 @@ correctTab.innerHTML = "<h3>Correct Answers</h3><div id='correctList'></div>";
 
   questionsCompleted = loadQuestionsCompleted(quizCode);
 
+	let questionStatInfo = [];
+
   let correctQuestionNumbers = [];
   let incorrectQuestionNumbers = [];
 let responseTime =[];
@@ -1493,12 +1495,22 @@ let responseTime =[];
       var questionDiv = document.createElement("div");
       questionDiv.classList.add("quiz-result-item");
 
+
+      let questionNumber = questionIndex + 1;
+let questionResponseTime = questionsCompleted[resultCount].responseTime;
+
+
       if (question.correctness === "correct") {
         questionDiv.classList.add("correct");
-        correctQuestionNumbers.push(questionIndex + 1); // Add 1 to adjust to actual question number
+       // correctQuestionNumbers.push(questionIndex + 1); // Add 1 to adjust to actual question number
+let correctness = "correct";
+questionStatInfo.push({ questionNumber: questionNumber, responseTime: questionResponseTime, correctness:correctness });
+
       } else if (question.correctness === "incorrect") {
         questionDiv.classList.add("incorrect");
-        incorrectQuestionNumbers.push(questionIndex + 1); // Add 1 to adjust to actual question number
+       // incorrectQuestionNumbers.push(questionIndex + 1); // Add 1 to adjust to actual question number
+let correctness = "incorrect";
+questionStatInfo.push({ questionNumber: questionNumber, responseTime: questionResponseTime, correctness:correctness });
       }
 
     console.log("1349?????? resultCount:", resultCount);
@@ -1582,7 +1594,7 @@ if(save === true && quizStarted === false){
 	 console.log("correctQuestionNumbers:", correctQuestionNumbers);
 	 console.log("incorrectQuestionNumbers:", incorrectQuestionNumbers);
 	 console.log("responseTime:", responseTime);
-      saveReviewDataToFirestore(quizCode, quizInfo.quizName, correctQuestionNumbers, incorrectQuestionNumbers, responseTime);
+      saveReviewDataToFirestore(quizCode, quizInfo.quizName, questionStatInfo, responseTime);
 	  }
 /*
 ?e=New&q=q_6_:1593 correctQuestionNumbers: (7) [1, 12, 10, 14, 11, 15, 13]
@@ -1616,7 +1628,8 @@ document.getElementById("reviewPopup").style.display = "block";
 	  
 
 
-function saveReviewDataToFirestore(quizCode, quizName, correctQuestionNumbers, incorrectQuestionNumbers, responseTime) {
+function saveReviewDataToFirestore(quizCode, quizName, questionStatInfo, responseTime) {
+	  const userInfo = getUserInfo();
   // Get reference to Firestore database
   const db = firebase.firestore();
 
@@ -1625,10 +1638,11 @@ function saveReviewDataToFirestore(quizCode, quizName, correctQuestionNumbers, i
 
   // Create a new document in the 'quizReviewData' collection
   quizReviewDataRef.add({
+    userID:  userInfo.firebaseId,
+    timeStamp: new Date();,
     quizCode: quizCode,
     quizName: quizName,
-    correctQuestionNumbers: correctQuestionNumbers,
-    incorrectQuestionNumbers: incorrectQuestionNumbers,
+    questionStatInfo: questionStatInfo,
     responseTime: responseTime,
   })
     .then(docRef => {
