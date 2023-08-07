@@ -463,7 +463,7 @@ async function updateQuizPrivacy(isPrivate,quizCode) {
           `;
 
 	// Get a reference to the checkbox element
-const privateCheckbox = document.getElementById("privateCheckbox${quizCode}");
+const privateCheckbox = document.getElementById(`privateCheckbox${quizCode}`);
 
 // Add an event listener to the checkbox
 privateCheckbox.addEventListener('change', function () {
