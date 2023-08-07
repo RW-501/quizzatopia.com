@@ -501,17 +501,20 @@ width: 20%;
   const db = firebase.firestore();
 		  
     // Function to fetch quiz review data
-    function getQuizReviewData(quizCode) {
-      const quizReviewDataRef = db.collection('quizReviewData');
-      return quizReviewDataRef.where('quizCode', '==', quizCode).get()
-        .then(querySnapshot => {
-          if (querySnapshot.empty) {
-            // Quiz review data with the given quizCode not found
-            console.log('Quiz review data not found');
-            return null;
-          }
+function getQuizReviewData(quizCode, userID) {
+  const quizReviewDataRef = db.collection('quizReviewData');
+  return quizReviewDataRef
+    .where('quizCode', '==', quizCode)
+    .where('userID', '==', userID) // Add the additional where clause for userID
+    .get()
+    .then(querySnapshot => {
+      if (querySnapshot.empty) {
+        // Quiz review data with the given quizCode and userID not found
+        console.log('Quiz review data not found');
+        return null;
+      }
           // Assuming quizCode is unique, there should be only one document in the querySnapshot
-          const reviewDataDoc = querySnapshot.docs[0].data();
+          const reviewDataDoc = querySnapshot.docs[2].data();
           return reviewDataDoc;
         })
         .catch(error => {
