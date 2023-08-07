@@ -506,7 +506,8 @@ width: 20%;
 function getQuizReviewData(quizCode, userID) {
   const quizReviewDataRef = db.collection('quizReviewData');
   const userInfo = getUserInfo();
-	
+	        console.log('userInfo.firebaseId  '+userInfo.firebaseId);
+
   return quizReviewDataRef
     .where('quizCode', '==', quizCode)
     .where('userID', '==', userInfo.firebaseId) // Add the additional where clause for userID
