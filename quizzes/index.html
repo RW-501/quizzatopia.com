@@ -912,11 +912,11 @@ async function fetchQuizzesFromDB(page = 1) {
   const quizzesPerPage = 20; // Number of quizzes to fetch per page
 
 
-// Assuming 'firebase' is already initialized and 'db' is the reference to your Firestore database
 const collectionRef = db.collection('quizzes');
 
 // Query the documents that do not have the 'private' field
-const query = collectionRef.where();
+const query = collectionRef.orderBy('private').startAt(null).endAt(undefined);
+
 
 // Run the query to get the matching documents
 query.get().then((querySnapshot) => {
@@ -941,7 +941,6 @@ query.get().then((querySnapshot) => {
   // Build the query to fetch quizzes with ordering
 let query = db.collection('quizzes')
     .where('private', '!=', true)
-  .where('private', '==', undefined)
     .orderBy('private')
     .orderBy('quizCategoryDB', 'asc')
     .orderBy('quizNameDB', 'asc');
