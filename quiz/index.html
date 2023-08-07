@@ -1591,17 +1591,12 @@ reviewQuestionText.textContent = questionsOG[questionIndex].question;
 });
 if(save === true && quizStarted === false){
 
-	 console.log("correctQuestionNumbers:", correctQuestionNumbers);
-	 console.log("incorrectQuestionNumbers:", incorrectQuestionNumbers);
+
 	 console.log("responseTime:", responseTime);
-      saveReviewDataToFirestore(quizCode, quizInfo.quizName, questionStatInfo, responseTime);
+	responseTimeTotal =  getArraySum(responseTime);
+      saveReviewDataToFirestore(quizCode, quizInfo.quizName, questionStatInfo, responseTimeTotal);
 	  }
-/*
-?e=New&q=q_6_:1593 correctQuestionNumbers: (7) [1, 12, 10, 14, 11, 15, 13]
-19:50:55.985 ?e=New&q=q_6_:1594 incorrectQuestionNumbers: (7) [6, 2, 8, 5, 4, 3, 7]
-19:50:55.986 ?e=New&q=q_6_:1595 responseTime: (14) [21432, 2295, 1906, 10337, 3463, 5433, 2802, 1623, 1903, 2598, 19903, 48263, 29176, 3177]
-19:50:55.991 lateLoad.js:1130 updateUserInfo
-*/
+
 	
   // Calculate the percent done and current score
   const totalQuestions = questionsCompleted.length;
@@ -1626,9 +1621,17 @@ document.getElementById("reviewPopup").style.display = "block";
 
 }
 	  
+function getArraySum(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === 'number') {
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
 
-
-function saveReviewDataToFirestore(quizCode, quizName, questionStatInfo, responseTime) {
+function saveReviewDataToFirestore(quizCode, quizName, questionStatInfo, responseTimeTotal) {
 	  const userInfo = getUserInfo();
   // Get reference to Firestore database
   const db = firebase.firestore();
@@ -1643,7 +1646,7 @@ function saveReviewDataToFirestore(quizCode, quizName, questionStatInfo, respons
     quizCode: quizCode,
     quizName: quizName,
     questionStatInfo: questionStatInfo,
-    responseTime: responseTime,
+    responseTimeTotal: responseTimeTotal,
   })
     .then(docRef => {
       console.log("Review data saved successfully. Document ID:", docRef.id);
