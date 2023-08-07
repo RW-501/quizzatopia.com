@@ -54,11 +54,10 @@ console.log('questionIncorrect ', questionIncorrect);
 
 
 // Check if quizCode matches and retrieve or save quiz info
-function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS) {
+function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS,questionsCompleted) {
   const savedQuizInfo = localStorage.getItem(`quizInfo_${quizCode}`);
   let quizInfo;
   let startTime = new Date().toLocaleString();
-let questionsCompleted = loadQuestionsCompleted(quizCode);
 
 	
   if (!savedQuizInfo) {
