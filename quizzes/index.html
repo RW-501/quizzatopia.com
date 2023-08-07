@@ -916,7 +916,7 @@ async function fetchQuizzesFromDB(page = 1) {
 const collectionRef = db.collection('quizzes');
 
 // Query the documents that do not have the 'private' field
-const query = collectionRef.where('private', '==', undefined);
+const query = collectionRef.where();
 
 // Run the query to get the matching documents
 query.get().then((querySnapshot) => {
