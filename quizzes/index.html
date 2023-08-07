@@ -916,7 +916,7 @@ async function fetchQuizzesFromDB(page = 1) {
   // Build the query to fetch quizzes with ordering
 let query = db.collection('quizzes')
     .where('private', '!=', true)
-  //  .orderBy('private')
+    .orderBy('private')
     .orderBy('quizCategoryDB', 'asc')
     .orderBy('quizNameDB', 'asc');
 
