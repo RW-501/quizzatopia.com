@@ -49,6 +49,9 @@
 	.createBox{
 display:flex;
 	}
+	.box1, .box2{
+    width: 49%;
+	}
 </style>
 <body>
 
@@ -450,10 +453,10 @@ async function updateQuizPrivacy(isPrivate,quizCode) {
           quizInfoElement.innerHTML = `
             <a href="${quizLink}" class=""><h4>${quizName}</h4></a>
             <p>Quiz Created: ${quizTime}</p>
-	    <div>
-         <div>   <p>${numberOfQuestions} Questions</p>
-            <p>${quizStartedCount} Quizzes Started</p></div>
 	    <div class='createBox'>
+         <div class='box1'>   <p>${numberOfQuestions} Questions</p>
+            <p>${quizStartedCount} Quizzes Started</p></div>
+	    <div class='box2' >
 <label for="privateCheckbox">Make Quiz Private:</label>
 <input type="checkbox" id="privateCheckbox${quizCode}" name="privateCheckbox"></div>
 </div>
