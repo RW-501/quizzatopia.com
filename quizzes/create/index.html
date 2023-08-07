@@ -312,7 +312,21 @@ display: none;
     text-decoration: none;
     cursor: pointer;
 }
+.buttons{
+    display: inline-flex;
+    background-color: #198754;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+	
 
+		
 
 #copyURL{
     width: 69%;
@@ -611,7 +625,7 @@ margin: auto;
   </section>
 
 	  <div id='submiteArea'>
-  <button  id='submitQuestion'  class="btnRnd" type="submit" value="Add Question" onclick="submitQuestionFunc();">Add Question</button> <div id="submitMessage"></div></div>
+  <button  id='submitQuestion'  class="buttons" type="submit" value="Add Question" onclick="submitQuestionFunc();">Add Question</button> <div id="submitMessage"></div></div>
 
 	
 <button type="submit" class="sectionBTN"  onclick="showSection('area-3'); viewQuestionListFunc();">Questions List</button>
