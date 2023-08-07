@@ -454,15 +454,8 @@ quizInfoElement.classList.add('quiz-infop');
 quizInfoElement.innerHTML = `
   <a href="${quizLink}" class=""><h4>${quizName}</h4></a>
   <p>Quiz Created: ${quizTime}</p>
-  <div class='createBox'>
-    <div class='box1'>
-      <p>${numberOfQuestions} Questions</p>
-      <p>${quizStartedCount} Quizzes Started</p>
-    </div>
-    <div class='box2'>
-      <div id='privateCheckbox${quizCode}'></div>
-    </div>
-  </div>
+  <p>${numberOfQuestions} Questions</p>
+  <p>${quizStartedCount} Quizzes Started</p>
 `;
 
 // Check if the quizCode element exists in the DOM
@@ -472,8 +465,15 @@ if (qcontainer) {
   const privateCheckbox = document.createElement('input');
   privateCheckbox.type = 'checkbox';
   privateCheckbox.name = 'privateCheckbox';
+  privateCheckbox.id = `privateCheckbox${quizCode}`;
 
-  // Add the checkbox element to the qcontainer
+  // Create a label element
+  const privateCheckboxLabel = document.createElement('label');
+  privateCheckboxLabel.innerText = 'Make Quiz Private:';
+  privateCheckboxLabel.setAttribute('for', `privateCheckbox${quizCode}`);
+
+  // Add the checkbox and label elements to the qcontainer
+  qcontainer.appendChild(privateCheckboxLabel);
   qcontainer.appendChild(privateCheckbox);
 
   // Add the event listener to the checkbox
@@ -487,6 +487,18 @@ if (qcontainer) {
 } else {
   console.error(`Element with ID "privateCheckbox${quizCode}" not found.`);
 }
+
+  // Add the checkbox element to the qcontainer
+
+  // Add the event listener to the checkbox
+  privateCheckbox.addEventListener('change', function () {
+    // Get the value of the checkbox (true or false)
+    const isPrivate = privateCheckbox.checked;
+
+    // Call a function to update the "private" field in the Firestore collection
+    updateQuizPrivacy(isPrivate, quizCode);
+  });
+
 
 
 	  
@@ -506,6 +518,7 @@ if (qcontainer) {
           statsButton.addEventListener('click', function () {
             viewStatsFunc(quizCode);
           });
+  quizInfoElement.appendChild(privateCheckbox);
 
           quizInfoElement.appendChild(removeButton);
           quizInfoElement.appendChild(statsButton);
