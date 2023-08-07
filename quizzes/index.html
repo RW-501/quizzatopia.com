@@ -1076,14 +1076,15 @@ catergoryName += quizHtml;
 
 
 
+const quizzesContainer = document.querySelector('body');
 
 	
 
 // Function to check if the user has scrolled to the bottom of the page
 function isScrollAtBottom() {
-  const containerHeight = quizContainer.clientHeight + 100;
-  const scrollOffset = quizContainer.scrollTop;
-  const totalHeight = quizContainer.scrollHeight;
+  const containerHeight = quizzesContainer.clientHeight + 100;
+  const scrollOffset = quizzesContainer.scrollTop;
+  const totalHeight = quizzesContainer.scrollHeight;
   console.log(`containerHeight: ` + containerHeight);
   console.log(`scrollOffset: ` + scrollOffset);
   console.log(`totalHeight: ` + totalHeight);
