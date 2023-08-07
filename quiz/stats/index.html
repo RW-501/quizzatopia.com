@@ -593,7 +593,7 @@ countDocumentsWithQuizCodeAndUserID(quizDoc.quizCodeDB, userInfo.firebaseId)
     }
 
     // Function to display the table with quiz statistics
-    function displayQuizStatsTable(questionStatInfo) {
+    function displayQuizStatsTable(questionStatInfo, quizDoc) {
       const tableBody = document.getElementById('questionTableBody');
     console.log("questionStatInfo:", questionStatInfo);
 
@@ -673,7 +673,7 @@ async function countDocumentsWithQuizCodeAndUserID(quizCode, userID) {
     }
 
 
-
+/*
     Promise.all([getQuizData(quizCode), getQuizReviewData(quizCode)])
       .then(([quizDoc, reviewDataDoc]) => {
         if (quizDoc && reviewDataDoc) {
@@ -684,7 +684,7 @@ async function countDocumentsWithQuizCodeAndUserID(quizCode, userID) {
           console.log('Quiz or review data not found.');
         }
       });
-
+*/
 
  // Function to fetch and display quiz data and statistics
   function fetchQuizDataAndStats(quizCode) {
@@ -692,7 +692,7 @@ async function countDocumentsWithQuizCodeAndUserID(quizCode, userID) {
       .then(([quizDoc, reviewDataDoc]) => {
         if (quizDoc && reviewDataDoc) {
           displayQuizStats(quizDoc, reviewDataDoc);
-          displayQuizStatsTable(reviewDataDoc.questionStatInfo);
+          displayQuizStatsTable(reviewDataDoc.questionStatInfo, quizDoc);
           displayScoreChart(
             reviewDataDoc.correctQuestionNumbers,
             quizDoc.numberOfQuestionsDB
