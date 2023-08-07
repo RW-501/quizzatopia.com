@@ -611,8 +611,10 @@ margin: auto;
   </section>
 
 	  <div id='submiteArea'>
-  <input type="submit" value="Add Question"> <div id="submitMessage"></div></div>
-<button id='submitQuestion' type="submit" class="sectionBTN"  onclick="showSection('area-3'); viewQuestionListFunc();">Questions List</button>
+  <input  id='submitQuestion' type="submit" value="Add Question" onclick="submitQuestion();"> <div id="submitMessage"></div></div>
+
+	
+<button type="submit" class="sectionBTN"  onclick="showSection('area-3'); viewQuestionListFunc();">Questions List</button>
   </div>
 
 
@@ -1031,7 +1033,15 @@ function clearFormInputs(){
 }
 
 
+function submitQuestion() {
+  // Show the message "Question Added"
+  document.getElementById('submitMessage').innerHTML = "Question Added";
 
+  // Remove the message after 4 seconds
+  setTimeout(function () {
+    document.getElementById('submitMessage').innerHTML = "";
+  }, 4000); // 4 seconds (4000 milliseconds)
+}
 
 	  
 // Function to add a "Remove" button to each question list item
