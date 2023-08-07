@@ -593,10 +593,14 @@ countDocumentsWithQuizCodeAndUserID(quizDoc.quizCodeDB, userInfo.firebaseId)
     }
 
     // Function to display the table with quiz statistics
-    function displayQuizStatsTable(questionsCompleted) {
+    function displayQuizStatsTable(questionStatInfo) {
       const tableBody = document.getElementById('questionTableBody');
+    console.log("questionStatInfo:", questionStatInfo);
 
-      questionsCompleted.forEach(question => {
+      questionStatInfo.forEach(question => {
+
+		      console.log("question:", question);
+
         const questionRow = document.createElement('tr');
         questionRow.innerHTML = `
           <td>${question.questionNumber}</td>
