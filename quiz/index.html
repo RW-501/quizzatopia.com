@@ -2536,9 +2536,17 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageU
   const testInfoDiv = document.getElementById('testInfo');
   const optionsQuizNameDiv = document.getElementById('optionsQuizName');
   const userInfo = getUserInfo();
+var attemptsMade;
+const userInfo = getUserInfo();
+countDocumentsWithQuizCodeAndUserID(quizCodeNS, userInfo.firebaseId)
+  .then((attemptsMade) => {
+	  
+    console.log("attemptsMade:", attemptsMade);
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
 
-  const attemptsMade =  countDocumentsWithQuizCodeAndUserID(quizCodeNS, userInfo.firebaseId);
-          console.log("attemptsMade:", attemptsMade);
 
 if(attemptsMade >= 3){
 document.getElementById('start-btn').style.display = "none";
