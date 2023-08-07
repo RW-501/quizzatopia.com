@@ -399,6 +399,25 @@ margin: auto;
     width: 20%;
     padding: 2%;
 		}
+
+
+#submiteArea{
+    width: 90%;
+	display:flex;
+}
+#submitQuestion{
+    width: 30%;
+margin: auto;
+		}
+		
+#submitMessage{
+    width: 40%;
+margin: auto;
+   font-weight: 500;
+    font-size: 1.5em;
+	    padding: 2%;
+
+		}
 </style>
 	  	
 	
@@ -591,8 +610,9 @@ margin: auto;
     <textarea id="explanation" rows="3"></textarea>
   </section>
 
-  <input type="submit" value="Add Question">
-<button  type="submit" class="sectionBTN"  onclick="showSection('area-3'); viewQuestionListFunc();">Questions List</button>
+	  <div id='submiteArea'>
+  <input type="submit" value="Add Question"> <div id="submitMessage"></div></div>
+<button id='submitQuestion' type="submit" class="sectionBTN"  onclick="showSection('area-3'); viewQuestionListFunc();">Questions List</button>
   </div>
 
 
