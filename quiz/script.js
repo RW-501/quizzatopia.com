@@ -649,7 +649,7 @@ function nextQuestion() {
     explanationContainer.style.display = 'none';
   }
 
-  if (currentQuestion + 1 < totalQuestions) {
+  if (currentQuestion  < totalQuestions) {
     enableAnswerButtons();
     showQuestion();
   } else {
@@ -665,7 +665,7 @@ function nextQuestion() {
 function skipQuestion() {
   currentQuestion++;
 
-  if (currentQuestion + 1 < totalQuestions) {
+  if (currentQuestion < totalQuestions) {
     enableAnswerButtons();
     showQuestion();
   } else {
