@@ -505,12 +505,9 @@ width: 20%;
     // Function to fetch quiz review data
 function getQuizReviewData(quizCode, userID) {
   const quizReviewDataRef = db.collection('quizReviewData');
-  const userInfo = getUserInfo();
-	        console.log('userInfo.firebaseId  '+userInfo.firebaseId);
-
   return quizReviewDataRef
     .where('quizCode', '==', quizCode)
-    .where('userID', '==', "fM2CtVN59wNwrZeQZrSqlp4rUcr2") // Add the additional where clause for userID
+    .where('userID', '==', userID) // Use the passed userID parameter here
     .get()
     .then(querySnapshot => {
       if (querySnapshot.empty) {
@@ -518,15 +515,16 @@ function getQuizReviewData(quizCode, userID) {
         console.log('Quiz review data not found');
         return null;
       }
-          // Assuming quizCode is unique, there should be only one document in the querySnapshot
-          const reviewDataDoc = querySnapshot.docs[2].data();
-          return reviewDataDoc;
-        })
-        .catch(error => {
-          console.error('Error fetching quiz review data:', error);
-          return null;
-        });
-    }
+      // Assuming quizCode and userID combination is unique, there should be only one document in the querySnapshot
+      const reviewDataDoc = querySnapshot.docs[0].data(); // Change index to 0
+      return reviewDataDoc;
+    })
+    .catch(error => {
+      console.error('Error fetching quiz review data:', error);
+      return null;
+    });
+}
+
 
     // Function to fetch quiz data
     function getQuizData(quizCode) {
