@@ -438,6 +438,7 @@ async function updateQuizPrivacy(isPrivate,quizCode) {
             openCreateQuizFunc();
           });
         quizInfoContainer.appendChild(noQuizzesElement);
+	      
       } else {
         // Display quiz info for each matching quiz
         matchingQuizzes.forEach((quizInfo) => {
@@ -457,21 +458,23 @@ async function updateQuizPrivacy(isPrivate,quizCode) {
          <div class='box1'>   <p>${numberOfQuestions} Questions</p>
             <p>${quizStartedCount} Quizzes Started</p></div>
 	    <div class='box2' >
-<label for="privateCheckbox">Make Quiz Private:</label>
-<input type="checkbox" id="privateCheckbox${quizCode}" name="privateCheckbox"></div>
+<div id="privateCheckbox${quizCode}"></div></div>
 </div>
           `;
+      const qcontainer = document.getElementById(`privateCheckbox${quizCode}`);
 
 	// Get a reference to the checkbox element
-const privateCheckbox = document.getElementById(`privateCheckbox${quizCode}`);
+const privateCheckbox = document.createElement('input');
+privateCheckbox.type = 'checkbox';
+privateCheckbox.name = 'privateCheckbox';
 
-// Add an event listener to the checkbox
+// Add the event listener to the checkbox
 privateCheckbox.addEventListener('change', function () {
   // Get the value of the checkbox (true or false)
   const isPrivate = privateCheckbox.checked;
 
   // Call a function to update the "private" field in the Firestore collection
-  updateQuizPrivacy(isPrivate,quizCode);
+  updateQuizPrivacy(isPrivate, quizCode);
 });
 
 
@@ -494,7 +497,7 @@ privateCheckbox.addEventListener('change', function () {
             viewStatsFunc(quizCode);
           });
 
-         quizInfoElement.appendChild(privateCheckbox);
+         qcontainer.appendChild(privateCheckbox);
           quizInfoElement.appendChild(removeButton);
           quizInfoElement.appendChild(statsButton);
           quizInfoContainer.appendChild(quizInfoElement);
