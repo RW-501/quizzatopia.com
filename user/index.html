@@ -458,9 +458,7 @@ quizInfoElement.innerHTML = `
   <p>${quizStartedCount} Quizzes Started</p>
 `;
 
-// Check if the quizCode element exists in the DOM
-const qcontainer = document.getElementById(`privateCheckbox${quizCode}`);
-if (qcontainer) {
+
   // Get a reference to the checkbox element
   const privateCheckbox = document.createElement('input');
   privateCheckbox.type = 'checkbox';
@@ -473,7 +471,7 @@ if (qcontainer) {
   privateCheckboxLabel.setAttribute('for', `privateCheckbox${quizCode}`);
 
   // Add the checkbox and label elements to the qcontainer
-  qcontainer.appendChild(privateCheckboxLabel);
+  privateCheckbox.appendChild(privateCheckboxLabel);
   qcontainer.appendChild(privateCheckbox);
 
   // Add the event listener to the checkbox
@@ -499,6 +497,7 @@ if (qcontainer) {
     updateQuizPrivacy(isPrivate, quizCode);
   });
 
+  quizInfoElement.appendChild(privateCheckbox);
 
 
 	  
@@ -518,7 +517,6 @@ if (qcontainer) {
           statsButton.addEventListener('click', function () {
             viewStatsFunc(quizCode);
           });
-  quizInfoElement.appendChild(privateCheckbox);
 
           quizInfoElement.appendChild(removeButton);
           quizInfoElement.appendChild(statsButton);
