@@ -862,7 +862,6 @@ console.log('quizTags: ', tagsArray); // Add this line to check the value of qui
     quizTags: tagsArray,
     questions: []
   };
-	  console.log("submit quizObj   "+quizObj.quizTags);
 
   // Create question object
   var questionObj = {
@@ -883,10 +882,15 @@ console.log('quizTags: ', tagsArray); // Add this line to check the value of qui
 
   }
 
+
+
+
+
+	  
   // Save quizObj to local storage
   localStorage.setItem('quizData', JSON.stringify(quizObj));
 
-	      alert('Saved');
+	    //  alert('Saved');
  
   // Clear form fields
 clearFormInputs();
@@ -1066,11 +1070,34 @@ for (let i = 0; i < listArray.length; i++) {
     questionListItem.appendChild(removeButton);
 
   }
+  // Check if the question, option, and answer are all filled out
+  const questionField = document.getElementById('question');
+  const optionFields = document.querySelectorAll('.option');
+  const answerField = document.getElementById('answer');
+
+  const isQuestionFilled = questionField.value.trim() !== '';
+  const areOptionsFilled = Array.from(optionFields).every((option) => option.value.trim() !== '');
+  const isAnswerFilled = answerField.value !== '';
+
+  // Add or remove the 'required' attribute based on the filled conditions
+
 
   // Enable the submit button if the number of questions is less than 5
   if (questionListItems.length < 5) {
-    $('#quizForm :input[type="submit"]').prop('disabled', true);
-  }
+  questionField.setAttribute('required', !isQuestionFilled);
+  optionFields.forEach((option) => option.setAttribute('required', !areOptionsFilled));
+  answerField.setAttribute('required', !isAnswerFilled);
+document.getElementById('generateJSONButton').style.dispay = 'none';
+	  
+  }else{
+	    questionField.setAttribute('required', isQuestionFilled);
+  optionFields.forEach((option) => option.setAttribute('required', areOptionsFilled));
+  answerField.setAttribute('required', isAnswerFilled);
+document.getElementById('generateJSONButton').style.dispay = 'block';
+
+
+
+	  }
 }
 
 
