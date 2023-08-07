@@ -471,8 +471,6 @@ quizInfoElement.innerHTML = `
   privateCheckboxLabel.setAttribute('for', `privateCheckbox${quizCode}`);
 
   // Add the checkbox and label elements to the qcontainer
-  privateCheckbox.appendChild(privateCheckboxLabel);
-  qcontainer.appendChild(privateCheckbox);
 
   // Add the event listener to the checkbox
   privateCheckbox.addEventListener('change', function () {
@@ -494,7 +492,7 @@ quizInfoElement.innerHTML = `
     // Call a function to update the "private" field in the Firestore collection
     updateQuizPrivacy(isPrivate, quizCode);
   });
-
+  privateCheckbox.appendChild(privateCheckboxLabel);
   quizInfoElement.appendChild(privateCheckbox);
 
 
