@@ -426,8 +426,12 @@ removeOverlayWithoutTimer();
     startTimer();
   }
 
-  const skipNextBtn = document.getElementById('skip-next-btn');
-  skipNextBtn.innerHTML = questionCorrect > currentQuestion ? 'Next' : 'Skip';
+let questionCorrect = 0; // Initialize with a default value
+
+const skipNextBtn = document.getElementById('skip-next-btn');
+skipNextBtn.innerHTML = questionCorrect > currentQuestion ? 'Next' : 'Skip';
+
+
 }
 
 // Function to update the progress bar
