@@ -449,24 +449,31 @@ async function updateQuizPrivacy(isPrivate,quizCode) {
           const quizLink = quizInfo?.quizLinkDB;
           const quizTime = quizInfo?.quizDate;
 
-          const quizInfoElement = document.createElement('div');
-          quizInfoElement.classList.add('quiz-infop');
-          quizInfoElement.innerHTML = `
-            <a href="${quizLink}" class=""><h4>${quizName}</h4></a>
-            <p>Quiz Created: ${quizTime}</p>
-	    <div class='createBox'>
-         <div class='box1'>   <p>${numberOfQuestions} Questions</p>
-            <p>${quizStartedCount} Quizzes Started</p></div>
-	    <div class='box2' >
-<div id="privateCheckbox${quizCode}"></div></div>
-</div>
-          `;
-      const qcontainer = document.getElementById(`privateCheckbox${quizCode}`);
+const quizInfoElement = document.createElement('div');
+quizInfoElement.classList.add('quiz-infop');
+quizInfoElement.innerHTML = `
+  <a href="${quizLink}" class=""><h4>${quizName}</h4></a>
+  <p>Quiz Created: ${quizTime}</p>
+  <div class='createBox'>
+    <div class='box1'>
+      <p>${numberOfQuestions} Questions</p>
+      <p>${quizStartedCount} Quizzes Started</p>
+    </div>
+    <div class='box2'>
+      <div id="privateCheckbox${quizCode}"></div>
+    </div>
+  </div>
+`;
 
-	// Get a reference to the checkbox element
+const qcontainer = document.getElementById(`privateCheckbox${quizCode}`);
+
+// Get a reference to the checkbox element
 const privateCheckbox = document.createElement('input');
 privateCheckbox.type = 'checkbox';
 privateCheckbox.name = 'privateCheckbox';
+
+// Add the checkbox element to the qcontainer
+qcontainer.appendChild(privateCheckbox);
 
 // Add the event listener to the checkbox
 privateCheckbox.addEventListener('change', function () {
@@ -497,7 +504,6 @@ privateCheckbox.addEventListener('change', function () {
             viewStatsFunc(quizCode);
           });
 
-         qcontainer.appendChild(privateCheckbox);
           quizInfoElement.appendChild(removeButton);
           quizInfoElement.appendChild(statsButton);
           quizInfoContainer.appendChild(quizInfoElement);
