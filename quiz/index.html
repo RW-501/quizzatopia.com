@@ -2540,17 +2540,19 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageU
 const userInfo = getUserInfo();
 countDocumentsWithQuizCodeAndUserID(quizCodeNS, userInfo.firebaseId)
   .then((attemptsMade) => {
-	  
+	  attemptsMade = attemptsMade;
     console.log("attemptsMade:", attemptsMade);
+
+	  if(attemptsMade >= 3){
+document.getElementById('start-btn').style.display = "none";
+	  }
   })
   .catch((error) => {
     console.error("Error:", error);
   });
 
 
-if(attemptsMade >= 3){
-document.getElementById('start-btn').style.display = "none";
-	  }
+
 
 
   if (storedQuizInfo) {
