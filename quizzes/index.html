@@ -1006,7 +1006,7 @@ let count = 0;
       }
 
       const maxTagsToShow = 3;
-
+var difficultyDisplay;
       // Use slice to get at most maxTagsToShow number of tags
       const tagsToShow = tagsArray.slice(0, maxTagsToShow);
 
@@ -1030,7 +1030,7 @@ const stringWithHyphens = lowercaseString.replace(/ /g, "-");
 } else {
   catergoryName = ''; // If it's the same category, leave it empty
 }
-const difficultyDisplay;
+
 if (quizData.quizDifficultyDB || quizData.quizDifficulty === undefined || quizData.quizDifficulty === null || quizData.quizDifficulty === '') {
   difficultyDisplay = "";
 } else {
