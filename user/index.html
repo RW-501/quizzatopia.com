@@ -465,25 +465,28 @@ quizInfoElement.innerHTML = `
   </div>
 `;
 
+// Check if the quizCode element exists in the DOM
 const qcontainer = document.getElementById(`privateCheckbox${quizCode}`);
+if (qcontainer) {
+  // Get a reference to the checkbox element
+  const privateCheckbox = document.createElement('input');
+  privateCheckbox.type = 'checkbox';
+  privateCheckbox.name = 'privateCheckbox';
 
-// Get a reference to the checkbox element
-const privateCheckbox = document.createElement('input');
-privateCheckbox.type = 'checkbox';
-privateCheckbox.name = 'privateCheckbox';
+  // Add the checkbox element to the qcontainer
+  qcontainer.appendChild(privateCheckbox);
 
-// Add the checkbox element to the qcontainer
-qcontainer.appendChild(privateCheckbox);
+  // Add the event listener to the checkbox
+  privateCheckbox.addEventListener('change', function () {
+    // Get the value of the checkbox (true or false)
+    const isPrivate = privateCheckbox.checked;
 
-// Add the event listener to the checkbox
-privateCheckbox.addEventListener('change', function () {
-  // Get the value of the checkbox (true or false)
-  const isPrivate = privateCheckbox.checked;
-
-  // Call a function to update the "private" field in the Firestore collection
-  updateQuizPrivacy(isPrivate, quizCode);
-});
-
+    // Call a function to update the "private" field in the Firestore collection
+    updateQuizPrivacy(isPrivate, quizCode);
+  });
+} else {
+  console.error(`Element with ID "privateCheckbox${quizCode}" not found.`);
+}
 
 
 	  
