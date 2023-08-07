@@ -505,9 +505,11 @@ width: 20%;
     // Function to fetch quiz review data
 function getQuizReviewData(quizCode, userID) {
   const quizReviewDataRef = db.collection('quizReviewData');
+  const userInfo = getUserInfo();
+	
   return quizReviewDataRef
     .where('quizCode', '==', quizCode)
-    .where('userID', '==', userID) // Add the additional where clause for userID
+    .where('userID', '==', userInfo.firebaseId) // Add the additional where clause for userID
     .get()
     .then(querySnapshot => {
       if (querySnapshot.empty) {
