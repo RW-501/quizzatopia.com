@@ -571,7 +571,7 @@ width: 20%;
 
   const userInfo = getUserInfo();
 
-  const totalAttempts =  countDocumentsWithQuizCodeAndUserID(quizCodeNS, userInfo.firebaseId);
+  const totalAttempts =  countDocumentsWithQuizCodeAndUserID(quizDoc.quizCodeDB, userInfo.firebaseId);
 
 
 		  
@@ -609,6 +609,8 @@ width: 20%;
 
 async function countDocumentsWithQuizCodeAndUserID(quizCode, userID) {
   try {
+	  const db = firebase.firestore();
+
     const quizReviewDataRef = db.collection('quizReviewData');
     const snapshot = await quizReviewDataRef
       .where('quizCode', '==', quizCode)
