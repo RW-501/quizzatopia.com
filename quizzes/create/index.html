@@ -883,24 +883,44 @@ console.log('userID:', userID);
   // Create quiz object
 	
 	   
-  var quizObj =   {
+var storedQuizData = JSON.parse(localStorage.getItem('quizDataRoot'));
+
+if (storedQuizData) {
+  // Compare each property of the stored data with the current variables
+  if (storedQuizData.quizName === quizName &&
+      storedQuizData.quizCode === quizCode &&
+      storedQuizData.quizCategory === category &&
+      storedQuizData.quizDescription === description &&
+      // Add other properties to compare here as needed...
+  ) {
+    // If all properties match, use the stored data
+    quizObj = storedQuizData;
+  } else {
+    // If any property has changed, use the current variables
+    quizObj = {
+      quizName: quizName,
+      quizCode: quizCode,
+      numberOfQuestions: 0,
+      quizCategory: category,
+      quizDescription: description,
+      quizTags: tagsArray,
+      questions: []
+    };
+  }
+} else {
+  // If no data is found in localStorage, use the current variables
+  quizObj = {
     quizName: quizName,
     quizCode: quizCode,
-    numberOfQuestions:  0, 
+    numberOfQuestions: 0,
     quizCategory: category,
     quizDescription: description,
     quizTags: tagsArray,
     questions: []
   };
-
-
-if (JSON.parse(localStorage.getItem('quizData')) !== quizObj) {
-  // Save quizObj in localStorage
-  localStorage.setItem('quizDataRoot', JSON.stringify(quizObj));
-} else {
-  // Load quizObj from localStorage
-  quizObj = JSON.parse(localStorage.getItem('quizDataRoot'));
 }
+
+
 
 	   
   // Create question object
