@@ -603,50 +603,45 @@ countDocumentsWithQuizCodeAndUserID(quizDoc.quizCodeDB, userInfo.firebaseId)
     }
 
     // Function to display the table with quiz statistics
-    function displayQuizStatsTable(questionStatInfo, quizDoc) {
-      const tableBody = document.getElementById('questionTableBody');
-    console.log("questionStatInfo:", questionStatInfo);
-let timeStamp;
-let responseTime;
-	    
-const counts = questionStatInfo.reduce(
-  (accumulator, current) => {
+function displayQuizStatsTable(reviewDataDoc, quizDoc) {
+  const tableBody = document.getElementById('questionTableBody');
+  let questionStatInfo = reviewDataDoc.questionStatInfo;
+  console.log("questionStatInfo:", questionStatInfo);
+
+  let timeStamp = reviewDataDoc.timeStamp;
+  let responseTime = reviewDataDoc.responseTimeTotal;
+
+  const counts = questionStatInfo.reduce((accumulator, current) => {
     if (current.correctness === 'correct') {
       accumulator.correct++;
     } else if (current.correctness === 'incorrect') {
       accumulator.incorrect++;
     }
     return accumulator;
-  },
-  { correct: 0, incorrect: 0 }
-);
-	    questionStatInfo.sort((a, b) => a.questionNumber - b.questionNumber);
-	    
-const correctResponsesCount = counts.correct;
-const incorrectResponsesCount = counts.incorrect;
-	    
-      questionStatInfo.forEach(question => {
+  }, { correct: 0, incorrect: 0 });
 
-		     // console.log("question:", question);
-	      
-if(timeStamp != question.timeStamp){
-	timeStamp = question.timeStamp;
-	responseTime = question.responseTimeTotal;
-}
-        const questionRow = document.createElement('tr');
-        questionRow.innerHTML = `
-          <td>${question.questionNumber}</td>
-          <td>${formatResponseTime(question.responseTime)}</td>
-          <td>${question.correctness}</td>
-        `;
+  questionStatInfo.sort((a, b) => a.questionNumber - b.questionNumber);
 
+  const correctResponsesCount = counts.correct;
+  const incorrectResponsesCount = counts.incorrect;
 
-
-
-	      
-        tableBody.appendChild(questionRow);
-      });
+  questionStatInfo.forEach(question => {
+    if (timeStamp != question.timeStamp) {
+      timeStamp = question.timeStamp;
+      responseTime = question.responseTimeTotal;
     }
+
+    const questionRow = document.createElement('tr');
+    questionRow.innerHTML = `
+      <td>${question.questionNumber}</td>
+      <td>${formatResponseTime(question.responseTime)}</td>
+      <td>${question.correctness}</td>
+    `;
+
+    tableBody.appendChild(questionRow);
+  });
+}
+
 
     // Function to format response time in minutes and seconds
     function formatResponseTime(responseTime) {
@@ -730,7 +725,7 @@ async function countDocumentsWithQuizCodeAndUserID(quizCode, userID) {
       .then(([quizDoc, reviewDataDoc]) => {
         if (quizDoc && reviewDataDoc) {
           displayQuizStats(quizDoc, reviewDataDoc);
-          displayQuizStatsTable(reviewDataDoc.questionStatInfo, quizDoc);
+          displayQuizStatsTable(reviewDataDoc, quizDoc);
       /*    displayScoreChart(
             reviewDataDoc.correctQuestionNumbers,
             quizDoc.numberOfQuestionsDB
