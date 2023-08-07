@@ -220,22 +220,41 @@ let friendFirebaseId = input(friendFirebaseIdxx);
       messageDiv.innerText = "Oh No!";
       return;
     }
-    if (friendFirebaseId.empty) {
-      // Friendship already exists, show an error message
-      const messageDiv = document.getElementById("message");
-      messageDiv.innerText = "Send Your Link To A Friend!";
-      return;
-    }
-    const existingFriendship = await friendsCollectionRef
-      .where("user1", "==", currentUserFirebaseId)
-      .where("user2", "==", friendFirebaseId)
-      .get();
-	  
-    // Add the new friendship document to the "friends" collection
-    await friendsCollectionRef.add({
-      user1: currentUserFirebaseId,
-      user2: friendFirebaseId,
-    });
+const today = new Date();
+today.setHours(0, 0, 0, 0); // Set time to midnight for the current day
+
+// Check if user1 has added more than 25 users on the current day
+const user1AddedTodayQuery = await friendsCollectionRef
+  .where("user1", "==", currentUserFirebaseId)
+  .where("addDate", ">=", today)
+  .get();
+
+if (user1AddedTodayQuery.size >= 25) {
+  // User1 has added more than 25 users today, show an error message
+  const messageDiv = document.getElementById("message");
+  messageDiv.innerText = "You have added too many friends today. Try again tomorrow.";
+  return;
+}
+
+const existingFriendship = await friendsCollectionRef
+  .where("user1", "==", currentUserFirebaseId)
+  .where("user2", "==", friendFirebaseId)
+  .get();
+
+if (!existingFriendship.empty) {
+  // Friendship already exists, show an error message
+  const messageDiv = document.getElementById("message");
+  messageDiv.innerText = "Send Your Link To A Friend!";
+  return;
+}
+
+// Add the new friendship document to the "friends" collection
+await friendsCollectionRef.add({
+  user1: currentUserFirebaseId,
+  user2: friendFirebaseId,
+  addDate: today, // Use the server date here
+});
+
 
 
 	  
