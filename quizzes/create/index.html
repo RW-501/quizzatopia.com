@@ -1158,9 +1158,7 @@ for (let i = 0; i < listArray.length; i++) {
   const optionFields = document.querySelectorAll('.option');
   const answerField = document.getElementById('answer');
 
-  const isQuestionFilled = questionField.value.trim() !== '';
-  const areOptionsFilled = Array.from(optionFields).every((option) => option.value.trim() !== '');
-  const isAnswerFilled = answerField.value !== '';
+
 
   // Add or remove the 'required' attribute based on the filled conditions
 
@@ -1168,17 +1166,19 @@ console.log("listArray: " + listArray.length);
 
 // Enable the submit button if the number of questions is less than 5
 if (listArray.length < 5) {
-  questionField.setAttribute('required', !isQuestionFilled);
-  optionFields.forEach((option) => option.setAttribute('required', !areOptionsFilled));
-  answerField.setAttribute('required', !isAnswerFilled);
+  questionField.setAttribute('required', true);
+//  optionFields.forEach((option) => option.setAttribute('required', !areOptionsFilled));
+  answerField.setAttribute('required', true);
   document.getElementById('generateJSONButton').style.display = 'none';
 } else {
-  questionField.setAttribute('required', isQuestionFilled);
-  optionFields.forEach((option) => option.setAttribute('required', areOptionsFilled));
-  answerField.setAttribute('required', isAnswerFilled);
+  questionField.removeAttribute('required');
+  optionFields.forEach((option) => option.removeAttribute('required');
+  answerField.removeAttribute('required');
   document.getElementById('generateJSONButton').style.display = 'block';
 }
-
+  questionField.setAttribute('tabindex', '-1');
+  optionFields.forEach((option) => option.setAttribute('tabindex', '-1');
+  answerField.setAttribute('tabindex', '-1');
 }
 
 
