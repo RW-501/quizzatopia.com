@@ -2546,6 +2546,24 @@ countDocumentsWithQuizCodeAndUserID(quizCodeNS, userInfo.firebaseId)
 	  if(attemptsMade >= 3){
 document.getElementById('start-btn').style.display = "none";
 	  }
+const totalAttempts = 3;
+
+// Get the attempts container element
+const attemptsContainer = document.querySelector('.attempts-container');
+
+// Update the stars based on the number of attempts made
+for (let i = 0; i < totalAttempts; i++) {
+  const star = document.createElement('span');
+  star.textContent = i < attemptsMade ? '★' : '☆';
+  star.classList.add(i < attemptsMade ? 'filled-star' : 'empty-star');
+  attemptsContainer.querySelector('.stars').appendChild(star);
+}
+
+// Update the attempts text
+attemptsContainer.querySelector('.attempts-text').textContent = `${attemptsMade}/${totalAttempts} attempts`;
+
+
+	  
   })
   .catch((error) => {
     console.error("Error:", error);
@@ -2594,21 +2612,6 @@ document.getElementById('start-btn').style.display = "none";
       document.title = quizNameNS;
       optionsQuizNameDiv.innerHTML = `<h1>${quizNameNS}<h1>`;
 
-const totalAttempts = 3;
-
-// Get the attempts container element
-const attemptsContainer = document.querySelector('.attempts-container');
-
-// Update the stars based on the number of attempts made
-for (let i = 0; i < totalAttempts; i++) {
-  const star = document.createElement('span');
-  star.textContent = i < attemptsMade ? '★' : '☆';
-  star.classList.add(i < attemptsMade ? 'filled-star' : 'empty-star');
-  attemptsContainer.querySelector('.stars').appendChild(star);
-}
-
-// Update the attempts text
-attemptsContainer.querySelector('.attempts-text').textContent = `${attemptsMade}/${totalAttempts} attempts`;
 
 
 
