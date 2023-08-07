@@ -862,7 +862,7 @@ console.log('quizTags: ', tagsArray); // Add this line to check the value of qui
     quizTags: tagsArray ,
     questions: []
   };
-	  console.log("submit quizObj   "+quizObj);
+	  console.log("submit quizObj   "+quizObj.quizTags);
 
   // Create question object
   var questionObj = {
@@ -1303,6 +1303,7 @@ $(document).ready(function() {
     };
     localStorage.setItem('quizData', JSON.stringify(quizData));
 	      console.log('Saved Quiz   ' );
+	  console.log("quizData   "+quizData.quizTags);
 
   }
 var quizCodeDB;
