@@ -507,7 +507,7 @@ function getQuizReviewData(quizCode, userID) {
   const quizReviewDataRef = db.collection('quizReviewData');
   return quizReviewDataRef
     .where('quizCode', '==', quizCode)
-    .where('userID', '==', userID) // Use the passed userID parameter here
+    .where('userID', '==', "fM2CtVN59wNwrZeQZrSqlp4rUcr2") // Use the passed userID parameter here
     .get()
     .then(querySnapshot => {
       if (querySnapshot.empty) {
