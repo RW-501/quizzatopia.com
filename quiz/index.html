@@ -676,6 +676,28 @@ ul.nav-tabs li.nav-item a.nav-link.active {
   cursor: pointer;
 }
 
+
+		.attempts-container {
+  display: flex;
+  align-items: center;
+}
+
+.stars {
+  font-size: 20px;
+}
+
+.filled-star {
+  color: gold;
+}
+
+.empty-star {
+  color: gray;
+}
+
+.attempts-text {
+  margin-left: 10px;
+}
+
 </style>
 	  	
 	
@@ -2513,7 +2535,13 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageU
   const storedQuizInfo = localStorage.getItem(`quizInfo_${quizCodeNS}`);
   const testInfoDiv = document.getElementById('testInfo');
   const optionsQuizNameDiv = document.getElementById('optionsQuizName');
-  
+  const userInfo = getUserInfo();
+
+  const attemptsMade =  countDocumentsWithQuizCodeAndUserID(quizCodeNS, userInfo.firebaseId);
+
+
+
+
   if (storedQuizInfo) {
     try {
       const quizInfo = JSON.parse(storedQuizInfo);
@@ -2539,12 +2567,39 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageU
         <p><strong>Number of Questions:</strong> ${quizInfo.numberOfQuestions}</p>
         <p><strong>Question Correct:</strong> ${score}</p>
         <p><strong>Best Score:</strong> ${percentage.toFixed(0)}%</p>
+	<div class="attempts-container">
+   <div class="attempts-text">2/3 attempts</div>
+  <div class="stars">
+    <span class="filled-star">★</span>
+    <span class="filled-star">★</span>
+    <span class="empty-star">☆</span>
+  </div>
+</div>
       `;
 
       // Update the title tag
       document.title = quizNameNS;
       optionsQuizNameDiv.innerHTML = `<h1>${quizNameNS}<h1>`;
 
+const totalAttempts = 3;
+
+// Get the attempts container element
+const attemptsContainer = document.querySelector('.attempts-container');
+
+// Update the stars based on the number of attempts made
+for (let i = 0; i < totalAttempts; i++) {
+  const star = document.createElement('span');
+  star.textContent = i < attemptsMade ? '★' : '☆';
+  star.classList.add(i < attemptsMade ? 'filled-star' : 'empty-star');
+  attemptsContainer.querySelector('.stars').appendChild(star);
+}
+
+// Update the attempts text
+attemptsContainer.querySelector('.attempts-text').textContent = `${attemptsMade}/${totalAttempts} attempts`;
+
+
+
+	  
       logStorageContents(quizInfo.quizCode);
     } catch (error) {
       console.error('Error parsing stored quiz info:', error);
@@ -3044,6 +3099,21 @@ async function getUserFriendsWithUserData(firebaseId) {
   } catch (error) {
     console.error('Error getting user\'s friends and data:', error);
     return { friends: [], userData: null }; // Return empty array and null user data in case of an error
+  }
+}
+	  
+async function countDocumentsWithQuizCodeAndUserID(quizCode, userID) {
+  try {
+    const quizReviewDataRef = db.collection('quizReviewData');
+    const snapshot = await quizReviewDataRef
+      .where('quizCode', '==', quizCode)
+      .where('userID', '==', userID)
+      .get();
+
+    return snapshot.size;
+  } catch (error) {
+    console.error('Error counting documents:', error);
+    return 0;
   }
 }
 
