@@ -1469,7 +1469,7 @@ var jsonData = JSON.stringify(quizData, null, 2);
  categoryDB = quizData.quizCategory; 
  quizLinkDB = "/quiz/?e=user&q=" + quizCodeDB;
  imageURLDB = "https://www.quizzatopia.com/images/sq/_.png";
- numberOfQuestionsDB  jsonData.questions.length || 0;
+ numberOfQuestionsDB = jsonData.questions.length || 0;
  quizStartedCount = 0;
  quizDate = formattedDate;
  saveType = "user";
