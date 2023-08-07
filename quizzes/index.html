@@ -900,7 +900,7 @@ const ratingToStars = (rating) => {
 
   return filledStars + emptyStars;
 };
-
+let countQ = 0;
 // Global variables
 const db = firebase.firestore();
 const quizContainer = document.getElementById('quiz_list');
@@ -912,26 +912,31 @@ async function fetchQuizzesFromDB(page = 1) {
   const quizzesPerPage = 20; // Number of quizzes to fetch per page
 
 
-const query = db.collection('quizzes').where('private', '==', undefined);
+// Assuming 'firebase' is already initialized and 'db' is the reference to your Firestore database
+const collectionRef = db.collection('quizzes');
+
+// Query the documents that do not have the 'private' field
+const query = collectionRef.where('private', '==', undefined);
 
 // Run the query to get the matching documents
 query.get().then((querySnapshot) => {
-  // Update each document to include the 'private' field with a default value
+  // Use a batched write to update the documents
   const batch = db.batch();
   querySnapshot.forEach((doc) => {
-    const docRef = db.collection('quizzes').doc(doc.id);
+    // Set the 'private' field to false for each document
+    const docRef = collectionRef.doc(doc.id);
     batch.update(docRef, { private: false });
   });
 
-  // Commit the batch update
-  batch.commit().then(() => {
-    console.log('Documents updated successfully.');
-  }).catch((error) => {
-    console.error('Error updating documents:', error);
-  });
+  // Commit the batched write to update all documents at once
+  return batch.commit();
+}).then(() => {
+	countQ ++;
+  console.log('Documents updated successfully. '+countQ);
 }).catch((error) => {
-  console.error('Error fetching documents:', error);
+  console.error('Error updating documents:', error);
 });
+
 /*	
   // Build the query to fetch quizzes with ordering
 let query = db.collection('quizzes')
