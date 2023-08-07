@@ -14,7 +14,7 @@
 
 const featuredQuizzes = [
 { title: 'Job Interview', image: '/images/sq/26.png', description: 'Land Your Dream Job with Confidence!', url: '/quiz/?e=New&q=q_209_' },
-{ title: 'Pop Culture', image: '/images/sq/3.png', description: 'Test Your Pop Culture Knowledge and Become the Ultimate Trendsetter!', url: '/?e=New&q=q_23_' },
+{ title: 'Pop Culture', image: '/images/sq/3.png', description: 'Test Your Pop Culture Knowledge and Become the Ultimate Trendsetter!', url: '/quiz/?e=New&q=q_23_' },
 { title: 'Web Development', image: '/images/sq/45.png', description: 'Unlock the Secrets of Web Development and Master the Digital Frontier!', url: '/quiz/?e=New&q=q_255_' },
 { title: 'Self Health', image: '/images/sq/54.png', description: 'Discover Your Path to Wellness and Embrace a Healthier You!', url: '/quiz/?e=New&q=q_190_' },
 { title: 'Movies', image: '/images/sq/35.png', description: 'Lights, Camera, Action! Dive into the Cinematic Universe and Become a Movie Guru!', url: '/quiz/?e=New&q=q_238_' }
