@@ -2535,8 +2535,8 @@ function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageU
   const storedQuizInfo = localStorage.getItem(`quizInfo_${quizCodeNS}`);
   const testInfoDiv = document.getElementById('testInfo');
   const optionsQuizNameDiv = document.getElementById('optionsQuizName');
-  const userInfo = getUserInfo();
-var attemptsMade;
+
+	var attemptsMade;
 const userInfo = getUserInfo();
 countDocumentsWithQuizCodeAndUserID(quizCodeNS, userInfo.firebaseId)
   .then((attemptsMade) => {
