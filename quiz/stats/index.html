@@ -503,11 +503,13 @@ width: 20%;
   const db = firebase.firestore();
 		  
     // Function to fetch quiz review data
-function getQuizReviewData(quizCode, userID) {
+function getQuizReviewData(quizCode,userID) {
   const quizReviewDataRef = db.collection('quizReviewData');
+
+	
   return quizReviewDataRef
     .where('quizCode', '==', quizCode)
-    .where('userID', '==', "fM2CtVN59wNwrZeQZrSqlp4rUcr2") // Use the passed userID parameter here
+    .where('userID', '==', userID) // Use the passed userID parameter here
     .get()
     .then(querySnapshot => {
       if (querySnapshot.empty) {
@@ -694,7 +696,8 @@ async function countDocumentsWithQuizCodeAndUserID(quizCode, userID) {
 
  // Function to fetch and display quiz data and statistics
   function fetchQuizDataAndStats(quizCode) {
-    Promise.all([getQuizData(quizCode), getQuizReviewData(quizCode)])
+	  const userInfo = getUserInfo();
+    Promise.all([getQuizData(quizCode), getQuizReviewData(quizCode, userInfo.firebaseId)])
       .then(([quizDoc, reviewDataDoc]) => {
         if (quizDoc && reviewDataDoc) {
           displayQuizStats(quizDoc, reviewDataDoc);
