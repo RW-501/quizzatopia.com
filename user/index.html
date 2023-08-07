@@ -458,9 +458,9 @@ async function updateQuizPrivacy(isPrivate,quizCode) {
 <input type="checkbox" id="privateCheckbox${quizCode}" name="privateCheckbox"></div>
 </div>
           `;
-/*
+
 	// Get a reference to the checkbox element
-const privateCheckbox = document.getElementById('privateCheckbox'+quizCode);
+const privateCheckbox = document.getElementById("privateCheckbox${quizCode}");
 
 // Add an event listener to the checkbox
 privateCheckbox.addEventListener('change', function () {
@@ -471,7 +471,7 @@ privateCheckbox.addEventListener('change', function () {
   updateQuizPrivacy(isPrivate,quizCode);
 });
 
-*/
+
 
 	  
           const removeButton = document.createElement('button');
@@ -491,7 +491,7 @@ privateCheckbox.addEventListener('change', function () {
             viewStatsFunc(quizCode);
           });
 
-         // quizInfoElement.appendChild(privateCheckbox);
+         quizInfoElement.appendChild(privateCheckbox);
           quizInfoElement.appendChild(removeButton);
           quizInfoElement.appendChild(statsButton);
           quizInfoContainer.appendChild(quizInfoElement);
