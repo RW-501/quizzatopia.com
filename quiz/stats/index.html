@@ -438,11 +438,11 @@ width: 20%;
       <p><strong>Quiz Name:</strong> <span id="quizName"></span></p>
       <p><strong>Quiz Code:</strong> <span id="quizCode"></span></p>
       <p><strong>Number of Questions:</strong> <span id="numQuestions"></span></p>
+      <p><strong>Total Attempts:</strong> <span id="totalAttempts"></span></p>
     </div>
 
     <div class="stats">
       <h2>Quiz Statistics</h2>
-      <p><strong>Total Attempts:</strong> <span id="totalAttempts"></span></p>
       <p><strong>Average Score:</strong> <span id="averageScore"></span></p>
       <p><strong>Best Score:</strong> <span id="bestScore"></span></p>
 
@@ -552,10 +552,7 @@ width: 20%;
       return (totalCorrect / maxPossibleCorrect) * 100;
     }
 
-    // Function to calculate the total attempts
-    function calculateTotalAttempts(correctQuestionNumbers, incorrectQuestionNumbers) {
-      return correctQuestionNumbers.length + incorrectQuestionNumbers.length;
-    }
+
 
     // Function to display quiz information and statistics
     function displayQuizStats(quizDoc, reviewDataDoc) {
@@ -572,10 +569,12 @@ width: 20%;
 
 
 
+  const userInfo = getUserInfo();
+
+  const totalAttempts =  countDocumentsWithQuizCodeAndUserID(quizCodeNS, userInfo.firebaseId);
 
 
 		  
-      const totalAttempts = calculateTotalAttempts(correctQuestionNumbers, incorrectQuestionNumbers);
       const averageScore = calculateAverageScore(correctQuestionNumbers, totalQuestions);
       const bestScore = calculateBestScore(correctQuestionNumbers, totalQuestions);
 
@@ -606,6 +605,26 @@ width: 20%;
       return `${minutes} mins ${seconds} secs`;
     }
 
+
+
+async function countDocumentsWithQuizCodeAndUserID(quizCode, userID) {
+  try {
+    const quizReviewDataRef = db.collection('quizReviewData');
+    const snapshot = await quizReviewDataRef
+      .where('quizCode', '==', quizCode)
+      .where('userID', '==', userID)
+      .get();
+
+    return snapshot.size;
+  } catch (error) {
+    console.error('Error counting documents:', error);
+    return 0;
+  }
+}
+
+
+
+		  
     // Function to display the score chart
     function displayScoreChart(correctQuestionNumbers, totalQuestions) {
       const averageScore = calculateAverageScore(correctQuestionNumbers, totalQuestions);
