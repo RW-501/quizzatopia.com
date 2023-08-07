@@ -1639,7 +1639,7 @@ function saveReviewDataToFirestore(quizCode, quizName, questionStatInfo, respons
   // Create a new document in the 'quizReviewData' collection
   quizReviewDataRef.add({
     userID:  userInfo.firebaseId,
-    timeStamp: new Date();,
+    timeStamp: new Date(),
     quizCode: quizCode,
     quizName: quizName,
     questionStatInfo: questionStatInfo,
