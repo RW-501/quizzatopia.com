@@ -434,7 +434,7 @@ function openCreateQuizFunc() {
           removeButton.addEventListener('click', function () {
       const confirmed = confirm('Are you sure?');
       if (confirmed) {
-        removeCreatedQuiz(quizCode);
+        removeCreatedQuiz(quizCode,quizInfoElement);
       }
 	  });
 
@@ -517,7 +517,7 @@ async function deleteQuizDocument(quizCode) {
 }
 
 // Function to remove a created quiz and delete the corresponding quiz document
-async function removeCreatedQuiz(valueToRemove) {
+async function removeCreatedQuiz(valueToRemove,ele) {
   try {
     // Usage example:
     const userInfo = getUserInfo();
@@ -528,7 +528,9 @@ async function removeCreatedQuiz(valueToRemove) {
 
     // Delete the quiz document from the "quizzes" collection
     await deleteQuizDocument(valueToRemove);
-
+	  
+ele.style.display = 'none';
+	  
     // Display success message or perform any additional actions
     console.log('Quiz removed successfully.');
   } catch (error) {
