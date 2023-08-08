@@ -426,13 +426,13 @@ background-color: #fb505099;
 background-color: #7afb5099;
 }
 
-.attmept1{
+.attempt1{
     background-color: #5065fb99;
 }
-.attmept2{
+.attempt2{
 background-color: #f850fb99;
 }
-.attmept3{
+.attempt3{
 background-color: #fbe65099;
 }
 		
@@ -686,7 +686,7 @@ quizAttemptCount++;
 		    responseTime = reviewDataDoc.responseTimeTotal;
 		    timeStamp = reviewDataDoc.timeStamp;
 		          const rowTop = document.createElement('tr');
-  card.classList.add('card', 'quiz-summary-card', "attmept"+quizAttemptCount);
+  rowTop.classList.add('card', 'quiz-summary-card', "attempt"+quizAttemptCount);
 
       rowTop.innerHTML = `Quiz Attempt ${quizAttemptCount} `;
 		          tableBody.appendChild(rowTop);
@@ -767,7 +767,7 @@ var quizCountSummary = 0;
 function createQuizSummaryCard(quizResult) {
 quizCountSummary++;
   const card = document.createElement('div');
-  card.classList.add('card', 'quiz-summary-card', "attmept"+quizCountSummary);
+  card.classList.add('card', 'quiz-summary-card', "attempt"+quizCountSummary);
 	
   card.innerHTML = `
     <div class="card-body">
