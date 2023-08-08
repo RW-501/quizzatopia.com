@@ -604,7 +604,7 @@ countDocumentsWithQuizCodeAndUserID(quizDoc.quizCodeDB, userInfo.firebaseId)
     // Function to display the table with quiz statistics
 function displayQuizStatsTable(reviewDataDoc, quizDoc) {
   const tableBody = document.getElementById('questionTableBody');
-  let questionStatInfo = reviewDataDoc.[0].questionStatInfo;
+  let questionStatInfo = reviewDataDoc[0].questionStatInfo;
 	
   console.log("reviewDataDoc:", reviewDataDoc);
   console.log("questionStatInfo:", questionStatInfo);
