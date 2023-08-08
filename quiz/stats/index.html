@@ -210,9 +210,32 @@ h1 {
 }
 
 .quiz-info {
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    display: flex;
+}
+.retakeBtn {
+    width: fit-content;
+    display: block;
+    margin-top: 20px;
+    background-color: #fd7e14;
+    border: none;
+    margin-bottom: 15%;
+    font-size: calc(1rem + 2.6vw);
+    font-weight: 600;
+    padding: 1%;
+    color: white;
+    text-align: center;
+    border-radius: 1em;
+    /* text-shadow: -4px 2px 0px #6b6a6a; */
+    box-shadow: 3px 3px 0rem 3px #b98c03 !important;
+    cursor: pointer;
+}
+.box {
+    width: 80%;
 }
 
+		
 h2 {
   margin-bottom: 1rem;
 }
@@ -586,17 +609,6 @@ function getQuizReviewData(quizCode, userID) {
         });
     }
 
-    // Function to calculate the average score
-    function calculateAverageScore(correctQuestionNumbers, totalQuestions) {
-      return (correctQuestionNumbers.length / totalQuestions) * 100;
-    }
-
-    // Function to calculate the best score
-    function calculateBestScore(correctQuestionNumbers, totalQuestions) {
-      const totalCorrect = correctQuestionNumbers.length;
-      const maxPossibleCorrect = totalQuestions;
-      return (totalCorrect / maxPossibleCorrect) * 100;
-    }
 
 
 
@@ -661,16 +673,13 @@ function displayQuizStatsTable(reviewDataDocs, quizDoc) {
   });
 }
 
-
-		  function getBestScore(quizResults) {
   let bestScore = 0;
 
-  quizResults.forEach((reviewDataDoc) => {
-    const quizResult = getQuizResultSummary(reviewDataDoc);
-    if (quizResult.percentCorrect > bestScore) {
-      bestScore = quizResult.percentCorrect;
+		  function getBestScore(quizResults) {
+
+    if (quizResult > bestScore) {
+      bestScore = quizResult;
     }
-  });
 
   return bestScore;
 }
