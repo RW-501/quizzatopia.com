@@ -725,7 +725,7 @@ questions = jsonData.questions;
     questionStatInfo.sort((a, b) => a.questionNumber - b.questionNumber);
 
 	  let timeStamp =0, responseTime =0;
-    questionStatInfo.forEach((question) => {
+    questionStatInfo.forEach((quest) => {
 	    if(reviewDataDoc.timeStamp != timeStamp || reviewDataDoc.responseTimeTotal != responseTime){
 		    quizAttemptCount++;
 		    responseTime = reviewDataDoc.responseTimeTotal;
@@ -743,20 +743,20 @@ questions = jsonData.questions;
       const questionRow = document.createElement('tr');
 	    questionRow.classList.add('correct');
       questionRow.innerHTML = `
-        <td class='num1'>${question.questionNumber}</td>
-        <td  class='num2'>${questions[question.questionNumber -1].question}</td>
-        <td class='num3'>${formatResponseTime(question.responseTime)}</td>
-        <td class='num4'>${question.correctness}</td>
+        <td class='num1'>${quest.questionNumber}</td>
+        <td  class='num2'>${questions[quest.questionNumber -1].question}</td>
+        <td class='num3'>${formatResponseTime(quest.responseTime)}</td>
+        <td class='num4'>${quest.correctness}</td>
       `;
       tableBody.appendChild(questionRow);
 	    }else{
       const questionRow = document.createElement('tr');
 	    questionRow.classList.add('incorrect');
       questionRow.innerHTML = `
-        <td>${question.questionNumber}</td>
-        <td>${questions[question.questionNumber -1].question}</td>
-	<td>${formatResponseTime(question.responseTime)}</td>
-        <td>${question.correctness}</td>
+        <td>${quest.questionNumber}</td>
+        <td>${questions[quest.questionNumber -1].question}</td>
+	<td>${formatResponseTime(quest.responseTime)}</td>
+        <td>${quest.correctness}</td>
       `;
       tableBody.appendChild(questionRow);
 	    }
