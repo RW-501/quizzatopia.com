@@ -1567,7 +1567,9 @@ let responseTime = [];
 
       let questionNumber = questionIndex + 1;
 
-
+    console.log("1349?????? resultCount:", resultCount);
+	  let questionResponseTime = questionsCompleted[resultCount].responseTime;
+	    
       if (question.correctness === "correct") {
         questionDiv.classList.add("correct");
        // correctQuestionNumbers.push(questionIndex + 1); // Add 1 to adjust to actual question number
@@ -1581,8 +1583,7 @@ let correctness = "incorrect";
 questionStatInfo.push({ questionNumber: questionNumber, responseTime: questionResponseTime, correctness:correctness });
       }
 
-    console.log("1349?????? resultCount:", resultCount);
-	  let questionResponseTime = questionsCompleted[resultCount].responseTime;
+
 
  (function(resultCount) { // Use an IIFE to create a new scope for resultCount
       questionDiv.addEventListener("click", function() {
