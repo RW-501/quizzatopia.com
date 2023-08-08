@@ -2536,9 +2536,9 @@ const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "
 }
 
 // Rest of the code remains the same...
-function viewStatsFunc(xxx){
+function viewStatsFunc(){
 	
-window.location.href = "https://www.quizzatopia.com/quiz/stats/?q=" + xxx;
+window.location.href = "https://www.quizzatopia.com/quiz/stats/?q=" + quizCode;
 	  }
 
 
