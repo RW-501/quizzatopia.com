@@ -435,6 +435,21 @@ background-color: #f850fb99  !important;
 .attempt3{
 background-color: #fbe65099 !important;
 }
+.num1{
+    width: 10%;
+}
+.num2{
+    width: 60%;
+word-wrap: break-word;
+    text-align: center;
+}
+.num3{
+    width: 20%;
+}
+.num4{
+    width: 20%;
+}
+
 		
 	</style>
 	  	
@@ -728,10 +743,10 @@ questions = jsonData.questions;
       const questionRow = document.createElement('tr');
 	    questionRow.classList.add('correct');
       questionRow.innerHTML = `
-        <td>${question.questionNumber}</td>
-        <td>${questions[question.questionNumber -1].question}</td>
-        <td>${formatResponseTime(question.responseTime)}</td>
-        <td>${question.correctness}</td>
+        <td class='num1'>${question.questionNumber}</td>
+        <td  class='num2'>${questions[question.questionNumber -1].question}</td>
+        <td class='num3'>${formatResponseTime(question.responseTime)}</td>
+        <td class='num4'>${question.correctness}</td>
       `;
       tableBody.appendChild(questionRow);
 	    }else{
