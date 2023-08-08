@@ -32,63 +32,57 @@ function fetchVisitorData() {
   });
 }
 
+// Function to format duration in HH:MM:SS format
+function formatDuration(duration) {
+  const hours = Math.floor(duration / 3600);
+  const minutes = Math.floor((duration % 3600) / 60);
+  const seconds = duration % 60;
+  return `${hours}:${minutes}:${seconds}`;
+}
+
+// Function to populate visitor details in the DOM
 function populateVisitorDetails(visitorData) {
   const visitorDetailsContainer = document.querySelector('.visitor-details');
-
-  // Clear existing content
   visitorDetailsContainer.innerHTML = '';
 
   visitorData.forEach(visitor => {
-    // Create and append HTML elements for visitor details
-    const ipElement = document.createElement('p');
-    ipElement.textContent = `IP Address: ${visitor.ip}`;
-    visitorDetailsContainer.appendChild(ipElement);
+    const newRow = document.createElement('div');
+    newRow.classList.add('visitor-row');
 
-    const firstVisitElement = document.createElement('p');
-    firstVisitElement.textContent = `First Visit: ${visitor.firstVisit}`;
-    visitorDetailsContainer.appendChild(firstVisitElement);
+    const ipElement = createDetailElement('IP Address', visitor.ip);
+    const firstVisitElement = createDetailElement('First Visit', visitor.firstVisit);
+    const lastVisitElement = createDetailElement('Last Visit', visitor.lastVisit);
+    const durationElement = createDetailElement('Visit Duration', formatDuration(visitor.lastVisitTime - visitor.firstVisitTime));
+    const bannedElement = createDetailElement('Banned', visitor.banned);
+    const browserElement = createDetailElement('Browser', visitor.browser);
+    const deviceElement = createDetailElement('Device', visitor.device);
+    const lastVisitPageElement = createDetailElement('Last Visit Page', visitor.lastVisitPage);
+    const referralPageElement = createDetailElement('Referral Page', visitor.referralPage);
+    const userVisitCountElement = createDetailElement('User Visit Count', visitor.userVisitCount);
 
-    const lastVisitElement = document.createElement('p');
-    lastVisitElement.textContent = `Last Visit: ${visitor.lastVisit}`;
-    visitorDetailsContainer.appendChild(lastVisitElement);
+    newRow.appendChild(ipElement);
+    newRow.appendChild(firstVisitElement);
+    newRow.appendChild(lastVisitElement);
+    newRow.appendChild(durationElement);
+    newRow.appendChild(bannedElement);
+    newRow.appendChild(browserElement);
+    newRow.appendChild(deviceElement);
+    newRow.appendChild(lastVisitPageElement);
+    newRow.appendChild(referralPageElement);
+    newRow.appendChild(userVisitCountElement);
 
-    // Calculate and display visit duration
-    const durationElement = document.createElement('p');
-    const visitDuration = visitor.lastVisitTime - visitor.firstVisitTime;
-    const formattedDuration = formatDuration(visitDuration);
-    durationElement.textContent = `Visit Duration: ${formattedDuration}`;
-    visitorDetailsContainer.appendChild(durationElement);
-
-    // ... Add more visitor details as needed
-    const bannedElement = document.createElement('p');
-    bannedElement.textContent = `Banned: ${visitor.banned}`;
-    visitorDetailsContainer.appendChild(bannedElement);
-
-    const browserElement = document.createElement('p');
-    browserElement.textContent = `Browser: ${visitor.browser}`;
-    visitorDetailsContainer.appendChild(browserElement);
-
-    const deviceElement = document.createElement('p');
-    deviceElement.textContent = `Device: ${visitor.device}`;
-    visitorDetailsContainer.appendChild(deviceElement);
-
-    const lastVisitPageElement = document.createElement('p');
-    lastVisitPageElement.textContent = `Last Visit Page: ${visitor.lastVisitPage}`;
-    visitorDetailsContainer.appendChild(lastVisitPageElement);
-
-    const referralPageElement = document.createElement('p');
-    referralPageElement.textContent = `Referral Page: ${visitor.referralPage}`;
-    visitorDetailsContainer.appendChild(referralPageElement);
-
-    const userVisitCountElement = document.createElement('p');
-    userVisitCountElement.textContent = `User Visit Count: ${visitor.userVisitCount}`;
-    visitorDetailsContainer.appendChild(userVisitCountElement);
-
-    // ... Add more visitor details as needed
+    visitorDetailsContainer.appendChild(newRow);
   });
 }
 
-// Function to generate a chart using visitor data (adjust based on the chart library you're using)
+// Helper function to create a visitor detail element
+function createDetailElement(label, value) {
+  const element = document.createElement('p');
+  element.innerHTML = `<strong>${label}:</strong> ${value}`;
+  return element;
+}
+
+
 
 
 function getTopReferralPages(visitorData) {
@@ -199,6 +193,7 @@ function formatDuration(duration) {
   return `${minutes} minutes`;
 }
 
+
 // Entry point
 document.addEventListener('DOMContentLoaded', function () {
   // Fetch visitor data from the backend
@@ -215,5 +210,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Calculate and display visit durations
       calculateVisitDurations(visitorData);
-    });
-});
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+  });
