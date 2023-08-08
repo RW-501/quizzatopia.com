@@ -852,8 +852,9 @@ if (quest.correctness === "correct") {
 
 // Append the click event listener to each question row
 questionRow.addEventListener('click', () => {
-  // Populate the popup content with answers
-  popupContent.innerHTML = '';
+const popupContainer = document.getElementById('popupContainer');
+const popupContent = document.getElementById('popupContent');
+	popupContent.innerHTML = '';
 
   const answerElement = document.createElement('p');
   answerElement.textContent = `Question ${quest.questionNumber} Answer: ${questions[quest.questionNumber - 1].answer}`;
