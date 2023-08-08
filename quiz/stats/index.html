@@ -825,14 +825,13 @@ document.getElementById('bestScore').innerHTML = getBestScore(percentCorrect)+"%
 var quizCountSummary = 0;
 function createQuizSummaryCard(quizResult) {
 quizCountSummary++;
-  const card = document.createElement('div');
-  card.classList.add('card', 'quiz-summary-card', "attempt"+quizCountSummary);
-	
-	card.addEventListener('click', () => {
-  // Redirect to the desired URL
-  window.location.href = '#quiz'${quizCountSummary};
-});
+const card = document.createElement('div');
+card.classList.add('card', 'quiz-summary-card', "attempt" + quizCountSummary);
 
+card.addEventListener('click', () => {
+  // Redirect to the desired URL
+  window.location.href = '#quiz' + quizCountSummary; // Concatenate correctly
+});
 
   card.innerHTML = `
     <div class="card-body">
