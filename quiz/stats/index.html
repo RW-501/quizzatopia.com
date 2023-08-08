@@ -449,7 +449,10 @@ word-wrap: break-word;
 .num4{
     width: 20%;
 }
+.quiz-summary-card{
+    cursor: pointer;
 
+}
 		
 	</style>
 	  	
@@ -740,6 +743,7 @@ questions = jsonData.questions;
 		    timeStamp = reviewDataDoc.timeStamp;
 		          const rowTop = document.createElement('th');
   rowTop.classList.add(  "attempt"+quizAttemptCount);
+  rowTop.id = `quiz${quizCountSummary}`; // Set the id
 
       rowTop.innerHTML = `Quiz Attempt ${quizAttemptCount} `;
 		          tableBody.appendChild(rowTop);
@@ -824,6 +828,12 @@ quizCountSummary++;
   const card = document.createElement('div');
   card.classList.add('card', 'quiz-summary-card', "attempt"+quizCountSummary);
 	
+	card.addEventListener('click', () => {
+  // Redirect to the desired URL
+  window.location.href = '#quiz'${quizCountSummary};
+});
+
+
   card.innerHTML = `
     <div class="card-body">
       <h5 class="card-title">Quiz Summary Attempt ${quizCountSummary}</h5>
