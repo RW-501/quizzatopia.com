@@ -530,7 +530,10 @@ word-wrap: break-word;
       <p><strong>Best Score:</strong> <span id="bestScore"></span></p>
 
     </div>
-	    <div class="retakeBtn" onclick="takeQuiz()";>Take Quiz</div>    
+            <button class="retakeBtn" class=" " onclick="takeQuiz()" >Take Quiz </button><br>
+
+            <button class="retakeBtn" class=" " onclick="startChallegeFunc()" >Start Challenge</button>
+
     </div>
 
     <div class="stats">
@@ -627,6 +630,11 @@ function getQuizReviewData(quizCode, userID) {
     });
 }
 
+	function startChallegeFunc(){
+		
+  window.location.href =  `https://quizzatopia.com/challenge/?${quizCode}&start`;
+
+	  }
 
 
     // Function to fetch quiz data
@@ -838,7 +846,7 @@ function getQuizResultSummary(reviewDataDoc) {
 const dateObject = new Date(reviewDataDoc.timeStamp.seconds * 1000); // Convert seconds to milliseconds
 const formattedDate = dateObject.toLocaleDateString();
 
-document.getElementById('bestScore').innerHTML = getBestScore(percentCorrect)+"%"; 
+document.getElementById('bestScore').innerHTML = getBestScore(percentCorrect).toFixed(0)+"%"; 
   return {
 
 	
