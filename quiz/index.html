@@ -704,6 +704,22 @@ font-weight: 800;
     font-size: 1.5em;
 			cursor: pointer;
 }
+
+#challengeBTN{
+    margin-top: 20px;
+    background-color: #fd7e14;
+    border: none;
+    margin-bottom: 15%;
+    font-size: calc(1rem + 2vw);
+    font-weight: 600;
+    padding: 2%;
+    color: white;
+    border-radius: 1em;
+    text-shadow: -4px 2px 0px #6b6a6a;
+    box-shadow: 3px 3px 0rem 3px #b98c03 !important;
+    cursor: pointer;
+	text-align: center;
+}		
 </style>
 	  	
 	
@@ -835,6 +851,9 @@ font-weight: 800;
               <img src="/images/lan/9.png" alt="quiz-image" class="w-100" loading="lazy">
               <!-- Quiz Image -->
             </div>
+            <button id="challengeBTN" class=" " onclick="startChallegeFunc()" >Start Challenge</button><br>
+
+		     
           </div>
         </div>
       </div>
@@ -842,6 +861,9 @@ font-weight: 800;
         <div class="quiz-image-container text-center">
           <img src="/images/lan/10.png" alt="quiz-image" class="w-100 d-md-block" loading="lazy">
           <!-- Quiz Image -->
+
+
+		
         </div>
 
 
@@ -1690,46 +1712,11 @@ function saveReviewDataToFirestore(quizCode, quizName, questionStatInfo, respons
 	  
 
 
-// Get the retake button element
-const retakeButton = document.getElementById("retakeButton");
-
-// Attach an event listener to the retake button
-retakeButton.addEventListener("click", function() {
-  // Retrieve the wrong questions from questionsCompleted
-
-const wrongQuestions = questionsCompleted
-  .filter(question => question.correctness === "incorrect")
-  .map(question => {
-    const questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
-    return {
-      question: questions[questionIndex].question,
-      options: questions[questionIndex].options
-    };
-  });
-
-
-
-	  
-  // Create a new quiz or quiz session with the wrong questions
-  createQuizSession(wrongQuestions);
-});
-
-	  function createQuizSession(wrongQuestions){
-		  
-          questions.push(...wrongQuestions);
-	questionsOG.push(...wrongQuestions);	
-          shuffleArray(questions);
-		  //questions = wrongQuestions;
-		  
-startQuiz();
+function startChallegeFunc(){
 
 	  }
 
-
-
-
-
-		  
+	
 
 	   var volumeSlider = document.getElementById('volumeSlider');
  var voiceDropdown = document.getElementById('voiceDropdown');
@@ -2643,7 +2630,7 @@ attemptsContainer.querySelector('.attempts-text').innerHTML = `<strong>${attempt
 	  removeOverlayWithoutTimer();
 
 	      document.getElementById("start-btn").removeAttribute("disabled");
-	 console.log("loaded ?????????????????????      "); 
+	 console.log("loaded removeOverlayWithoutTimer     "); 
 }
 
 
