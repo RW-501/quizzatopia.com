@@ -419,8 +419,23 @@ width: 20%;
   margin-bottom: 30px;
 }
 
-	
-	
+.incorrect{
+background-color: #fb505099;
+}
+.correct{
+background-color: #7afb5099;
+}
+
+.attmept1{
+    background-color: #5065fb99;
+}
+.attmept2{
+background-color: #f850fb99;
+}
+.attmept3{
+background-color: #fbe65099;
+}
+		
 	</style>
 	  	
 	
@@ -649,6 +664,7 @@ countDocumentsWithQuizCodeAndUserID(quizDoc.quizCodeDB, userInfo.firebaseId)
 
 
     }
+var quizAttemptCount = 0;
 
     // Function to display the table with quiz statistics
 function displayQuizStatsTable(reviewDataDocs, quizDoc) {
@@ -662,14 +678,44 @@ function displayQuizStatsTable(reviewDataDocs, quizDoc) {
     const questionStatInfo = reviewDataDoc.questionStatInfo;
     questionStatInfo.sort((a, b) => a.questionNumber - b.questionNumber);
 
+	  let timeStamp =0, responseTime =0;
     questionStatInfo.forEach((question) => {
+quizAttemptCount++;
+	    if(reviewDataDoc.timeStamp != timeStamp || reviewDataDoc.responseTimeTotal != responseTime){
+		    quizAttemptCount++;
+		    responseTime = reviewDataDoc.responseTimeTotal;
+		    timeStamp = reviewDataDoc.timeStamp;
+		          const rowTop = document.createElement('tr');
+  card.classList.add('card', 'quiz-summary-card', "attmept"+quizAttemptCount);
+
+      rowTop.innerHTML = `Quiz Attempt ${quizAttemptCount} `;
+		          tableBody.appendChild(rowTop);
+
+
+	    }
+
+	    if(question.correctness === "correct"{
       const questionRow = document.createElement('tr');
+	    questionRow.classList.add('correct');
       questionRow.innerHTML = `
         <td>${question.questionNumber}</td>
         <td>${formatResponseTime(question.responseTime)}</td>
         <td>${question.correctness}</td>
       `;
       tableBody.appendChild(questionRow);
+	    }else{
+      const questionRow = document.createElement('tr');
+	    questionRow.classList.add('incorrect');
+      questionRow.innerHTML = `
+        <td>${question.questionNumber}</td>
+        <td>${formatResponseTime(question.responseTime)}</td>
+        <td>${question.correctness}</td>
+      `;
+      tableBody.appendChild(questionRow);
+	    }
+
+
+		    
     });
 
     // Create and append quiz summary card
@@ -707,7 +753,7 @@ function getQuizResultSummary(reviewDataDoc) {
 const dateObject = new Date(reviewDataDoc.timeStamp.seconds * 1000); // Convert seconds to milliseconds
 const formattedDate = dateObject.toLocaleDateString();
 
-document.getElementById('bestScore').innerHTML = getBestScore(percentCorrect); 
+document.getElementById('bestScore').innerHTML = getBestScore(percentCorrect)+"%"; 
   return {
 
 	
@@ -717,14 +763,15 @@ document.getElementById('bestScore').innerHTML = getBestScore(percentCorrect);
     incorrectResponses: incorrectResponsesCount
   };
 }
-
+var quizCountSummary = 0;
 function createQuizSummaryCard(quizResult) {
+quizCountSummary++;
   const card = document.createElement('div');
-  card.classList.add('card', 'quiz-summary-card');
-
+  card.classList.add('card', 'quiz-summary-card', "attmept"+quizCountSummary);
+	
   card.innerHTML = `
     <div class="card-body">
-      <h5 class="card-title">Quiz Summary</h5>
+      <h5 class="card-title">Quiz Summary Attempt ${quizCountSummary}</h5>
       <p class="card-text">Date: ${quizResult.date}</p>
       <p class="card-text">Percent Correct: ${quizResult.percentCorrect}%</p>
       <p class="card-text">Correct Responses: ${quizResult.correctResponses}</p>
