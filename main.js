@@ -398,7 +398,7 @@ function fetchAndInsertContent() {
       initializeNavbarToggler();
     });
 }
-
+let uID ;
 // Function to initialize the navbar toggler and update user-related elements
 function initializeNavbarToggler() {
   const loggedInDiv = document.getElementById('navLoggedin');
@@ -410,7 +410,7 @@ function initializeNavbarToggler() {
   // Set user profile picture and log the Firebase ID to the console
   document.getElementById('profile-pic').src = userInfo.userProfilePic;
   console.log('userInfo firebaseId:', userInfo.firebaseId);
-let uID = userInfo.firebaseId;
+ uID = userInfo.firebaseId;
 	
   // Update the navigation bar elements based on login status
   updateNavBar();
