@@ -1364,6 +1364,14 @@ font-weight: 800;
 
 	
   <script>
+	function startChallegeFunc(){
+		
+  window.location.href =  `https://quizzatopia.com/challenge/?${quizCode}&start`;
+
+	  }
+
+
+
 	  
 function loadQuestionsCompleted(quizCode) {
   const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
@@ -1712,9 +1720,7 @@ function saveReviewDataToFirestore(quizCode, quizName, questionStatInfo, respons
 	  
 
 
-function startChallegeFunc(){
 
-	  }
 
 	
 
@@ -2778,7 +2784,7 @@ function setShareableLink(quizCode, challengeID) {
   const userInfo = getUserInfo();
 let uID = userInfo.firebaseId;
 	  
-  return `https://quizzatopia.com/challenge/?${quizCode}&start`;
+  return `https://quizzatopia.com/challenge/?${quizCode}&${uID}`;
 }
 
 
