@@ -1491,39 +1491,9 @@ function closeReviewPopup(){
 }
 	  
 
-function sortReview(sortBy) {
-  var correctList = document.getElementById("correctList");
-  var incorrectList = document.getElementById("incorrectList");
-
-	correctList.innerHTML = "";
-	incorrectList.innerHTML = "";
-	
-  if (sortBy === "lastAdded") {
-    sortQuestionsByLastAdded(correctList);
-    sortQuestionsByLastAdded(incorrectList);
-  } else if (sortBy === "responseTime") {
-    sortQuestionsByResponseTime(correctList);
-    sortQuestionsByResponseTime(incorrectList);
-  }
-  
-  // Add more sorting criteria if needed
-  
-  // Example sort functions:
-  function sortQuestionsByLastAdded(list) {
-    Array.from(list.children)
-      .sort((a, b) => a.dataset.questionNumber - b.dataset.questionNumber)
-      .forEach(item => list.appendChild(item));
-  }
-  
-  function sortQuestionsByResponseTime(list) {
-    Array.from(list.children)
-      .sort((a, b) => a.dataset.responseTime - b.dataset.responseTime)
-      .forEach(item => list.appendChild(item));
-  }
 
 
 	  
-}
 function checkVarForValueFunc(questionIndex) {
   if (questionIndex < 0 || questionIndex === '' || questionIndex === null || questionIndex === undefined) {
     return false; // Indicates that the condition is true
@@ -1535,164 +1505,124 @@ function checkVarForValueFunc(questionIndex) {
 	  var responseTimeTotal = 0;
 // Open the review popup
 function openReviewFunc(save) {
-	  var resultCount = 0;
+  var resultCount = 0;
 
+  // Retrieve quiz information from local storage
   const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
   const quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
-	
-	
-var correctTab = document.getElementById("correctTab");
-var incorrectTab = document.getElementById("incorrectTab");
 
-incorrectTab.innerHTML = "<h3>Incorrect Answers</h3><div id='incorrectList'></div>";
-correctTab.innerHTML = "<h3>Correct Answers</h3><div id='correctList'></div>";
+  // Get elements for tabs
+  var correctTab = document.getElementById("correctTab");
+  var incorrectTab = document.getElementById("incorrectTab");
 
-	document.getElementById("quizReviewName").innerHTML = quizInfo.quizName;
+  // Set up tab content
+  incorrectTab.innerHTML = "<h3>Incorrect Answers</h3><div id='incorrectList'></div>";
+  correctTab.innerHTML = "<h3>Correct Answers</h3><div id='correctList'></div>";
 
+  // Display quiz name
+  document.getElementById("quizReviewName").innerHTML = quizInfo.quizName;
+
+  // Load completed questions
   questionsCompleted = loadQuestionsCompleted(quizCode);
 
-	let questionStatInfo = [];
+  let questionStatInfo = [];
 
-  let correctQuestionNumbers = [];
-  let incorrectQuestionNumbers = [];
-let responseTimeA = [];
   questionsCompleted.forEach(function (question) {
     var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
 
+    // Check if question index is valid
     let questionIndexBool = checkVarForValueFunc(questionIndex);
     if (questionIndexBool) {
       var questionDiv = document.createElement("div");
       questionDiv.classList.add("quiz-result-item");
 
-
       let questionNumber = questionIndex + 1;
+      let questionResponseTime = questionsCompleted[resultCount].responseTime;
 
-    console.log("1349?????? resultCount:", resultCount);
-	  let questionResponseTime = questionsCompleted[resultCount].responseTime;
-	    
       if (question.correctness === "correct") {
         questionDiv.classList.add("correct");
-       // correctQuestionNumbers.push(questionIndex + 1); // Add 1 to adjust to actual question number
-let correctness = "correct";
-questionStatInfo.push({ questionNumber: questionNumber, responseTime: questionResponseTime, correctness:correctness });
-
+        let correctness = "correct";
+        questionStatInfo.push({ questionNumber: questionNumber, responseTime: questionResponseTime, correctness: correctness });
       } else if (question.correctness === "incorrect") {
         questionDiv.classList.add("incorrect");
-       // incorrectQuestionNumbers.push(questionIndex + 1); // Add 1 to adjust to actual question number
-let correctness = "incorrect";
-questionStatInfo.push({ questionNumber: questionNumber, responseTime: questionResponseTime, correctness:correctness });
+        let correctness = "incorrect";
+        questionStatInfo.push({ questionNumber: questionNumber, responseTime: questionResponseTime, correctness: correctness });
       }
 
+      // Add click event to open question popup
+      (function (resultCount) {
+        questionDiv.addEventListener("click", function () {
+          openQuestionPopup(questionIndex, resultCount);
+        });
+      })(resultCount);
 
+      // Process response time
+      responseTimeA.push(questionsCompleted[resultCount].responseTime);
 
- (function(resultCount) { // Use an IIFE to create a new scope for resultCount
-      questionDiv.addEventListener("click", function() {
-      //  console.log("sending ???????????????    " + questionIndex + "   ??????? count:", resultCount);
+      let minutes = Math.floor(questionResponseTime / 60000);
+      let seconds = Math.floor((questionResponseTime % 60000) / 1000);
+      let responseTimeText = `${minutes} mins ${seconds} secs`;
 
-        // Handle click event for each question
-        openQuestionPopup(questionIndex, resultCount);
-      });
-    })(resultCount); // Pass result count as an argument to the IIFE
+      // Create and append elements for review
+      let reviewQuestionNumber = document.createElement("span");
+      reviewQuestionNumber.classList.add("question-number");
+      reviewQuestionNumber.innerHTML = "<b>Question:</b> " + (questionIndex + 1) + "  <b>Response Time:</b> " + responseTimeText;
 
-   responseTimeA.push(questionsCompleted[resultCount].responseTime);
+      let reviewQuestionText = document.createElement("span");
+      reviewQuestionText.classList.add("question-text");
+      if (QuizFromDB === true) {
+        reviewQuestionText.textContent = questionsOG[resultCount].question;
+      } else {
+        reviewQuestionText.textContent = questionsOG[questionIndex].question;
+      }
 
-	    
-   // console.log("count:", resultCount);
-   // console.log("questionIndex:", questionIndex);
+      questionDiv.appendChild(reviewQuestionNumber);
+      questionDiv.appendChild(reviewQuestionText);
 
-	    
-    let minutes = Math.floor(questionResponseTime / 60000); // Convert milliseconds to minutes
-    let seconds = Math.floor((questionResponseTime % 60000) / 1000); // Convert remaining milliseconds to seconds
-
-    // Display the timeElapsed in minutes and seconds format
-    let responseTimeText = `${minutes} mins ${seconds} secs`;
-
-    let reviewQuestionNumber = document.createElement("span");
-    reviewQuestionNumber.classList.add("question-number");
-    reviewQuestionNumber.innerHTML = "<b>Question:</b> " + (questionIndex + 1) + "  <b>Response Time:</b> " + responseTimeText;
-
-    let reviewQuestionResponse = document.createElement("br");
-   // console.log("questionsOG:", questionsOG);
-  //  console.log("questions:", questions);
- //   console.log("questionsCompleted:", questionsCompleted);
-	    
-	      console.log("QuizFromDB  :", QuizFromDB);
-	      console.log("questionsOG:   ", questionsOG[resultCount].quizTags);
-	      console.log("questions:   ", questions[resultCount].quizTags);
-
-
-
-	  
-    let reviewQuestionText = document.createElement("span");
-    reviewQuestionText.classList.add("question-text");
-if(QuizFromDB === true){
-reviewQuestionText.textContent = questionsOG[resultCount].question;
-//    console.log("QuizFromDB === true [questionIndex].question:", questions[resultCount].question);
-  //  console.log("QuizFromDB === true [questionIndex].question:", questionsOG[resultCount].question);
-}else{
-reviewQuestionText.textContent = questionsOG[questionIndex].question;
- //   console.log("questionsOG[questionIndex].question:", questionsOG[questionIndex].question);
-
-}
-	  
-	  
-
-    questionDiv.appendChild(reviewQuestionNumber);
-    questionDiv.appendChild(reviewQuestionResponse);
-    questionDiv.appendChild(reviewQuestionText);
-
-    if (question.correctness === "correct") {
-      const parentElement = document.getElementById("correctList");
-      const firstChild = parentElement.firstChild;
-      parentElement.insertBefore(questionDiv, firstChild);
-    } else if (question.correctness === "incorrect") {
-      const parentElement = document.getElementById("incorrectList");
-      const firstChild = parentElement.firstChild;
-      parentElement.insertBefore(questionDiv, firstChild);
+      // Insert question div into correct or incorrect list
+      if (question.correctness === "correct") {
+        const parentElement = document.getElementById("correctList");
+        const firstChild = parentElement.firstChild;
+        parentElement.insertBefore(questionDiv, firstChild);
+      } else if (question.correctness === "incorrect") {
+        const parentElement = document.getElementById("incorrectList");
+        const firstChild = parentElement.firstChild;
+        parentElement.insertBefore(questionDiv, firstChild);
+      }
+      resultCount++; // Increment resultCount here
+    } else {
+      incorrectTab.innerHTML = "<h3>No Results</h3>";
+      correctTab.innerHTML = "";
     }
-    resultCount++; // Increment resultCount here
+  });
 
-  } else {
-    console.log("1426?????? no resultCount:", resultCount);
-	    
-    incorrectTab.innerHTML = "<h3>No Results</h3>";
-    correctTab.innerHTML = "";
+  if (save === true && quizStarted === false) {
+    // Calculate total response time and save review data
+    responseTimeTotal = getArraySum(responseTimeA);
+    saveReviewDataToFirestore(quizCode, quizInfo.quizName, questionStatInfo, responseTimeTotal);
   }
 
-});
-if(save === true && quizStarted === false){
+  // Count incorrect and correct answers
+  let incorrect = questionStatInfo.filter(question => question.correctness === 'incorrect').length;
+  let correct = questionStatInfo.filter(question => question.correctness === 'correct').length;
 
-
-	 console.log("responseTime:", responseTime);
-	responseTimeTotal =  getArraySum(responseTime);
-      saveReviewDataToFirestore(quizCode, quizInfo.quizName, questionStatInfo, responseTimeTotal);
-	  }
-
-	let incorrect = questionStatInfo.filter(question => question.correctness === 'incorrect').length;
-	let correct = 	 questionStatInfo.filter(question => question.correctness === 'correct').length;
-	
-  // Calculate the percent done and current score
+  // Calculate and display statistics
   const totalQuestions = questionsCompleted.length;
   const percentDone = (questionsCompleted.length / questions.length) * 100;
-	
-  const currentScore =  (correct / questions.length) * 100;
-	
-        // Update the HTML display with the calculated values
-        document.getElementById('totalQuestions').textContent = totalQuestions;
-        document.getElementById('percentDone').textContent =  Math.round(percentDone);
-        document.getElementById('currentScore').textContent =  Math.round(currentScore); 
-  
-	
-	  
-// Remove resultCount++ from here
-if(save === false){
-slideIn("reviewPopupBox");
+  const currentScore = (correct / questions.length) * 100;
 
-document.getElementById("reviewPopup").style.display = "block";
-	  }
+  // Update the HTML display with the calculated values
+  document.getElementById('totalQuestions').textContent = totalQuestions;
+  document.getElementById('percentDone').textContent = Math.round(percentDone);
+  document.getElementById('currentScore').textContent = Math.round(currentScore);
 
-
+  // Display review popup if save is false
+  if (save === false) {
+    slideIn("reviewPopupBox");
+    document.getElementById("reviewPopup").style.display = "block";
+  }
 }
+
 	  
 function getArraySum(arr) {
   let sum = 0;
