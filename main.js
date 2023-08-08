@@ -354,17 +354,17 @@ console.log('userInfo main: ', userInfo);
 let pointsRewards;
 var userDashboard;
 let navbarPath, footerPath;
-var currentPagePath = window.location.pathname;
+const currentPagePath = window.location.pathname;
 console.log("currentPagePath:", currentPagePath);
 
 
-const restrictedPaths = ['user', 'backend', 'friend', 'challenge', 'user/', 'backend/', 'friend/', 'challenge/', '/user/', 'backend/', '/friend/', '/challenge/'];
+const restrictedPathsRegex = /^(\/user\/|\/backend\/|\/friend\/|\/challenge\/)/;
 
-
-
-if (!loggedIn && restrictedPaths.includes(currentPagePath)) {
+if (!loggedIn && restrictedPathsRegex.test(currentPagePath)) {
+  console.log('Redirecting to homepage...');
   window.location.href = '/';
-}
+} 
+
 
 function isQuizURL(url) {
   const pattern = /quizzatopia\.com\/quiz\/.*/;
