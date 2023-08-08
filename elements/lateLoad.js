@@ -18,7 +18,6 @@ function lateLoad() {
   mainFooter.id = 'mainFooter';
 
 
-   currentPagePath = window.location.pathname;
 
 
   if (currentPagePath === '/' || currentPagePath === '/index.html') {
@@ -386,50 +385,50 @@ const badges = [
 
 
 
-
-   function openPopup(xxx){
-
-if(document.getElementById('loginPopup')){
-slideIn("loginPopupBody");
-  document.getElementById('loginPopup').classList.remove('d-none');
-
-}else{
-let authIndex;
-  if (currentPagePath === '/' || currentPagePath === '/index.html') {
-    authIndex = './auth/index.html';
+function openPopup(xxx) {
+  // Check if the loginPopup element already exists
+  if (document.getElementById('loginPopup')) {
+    // If the popup exists, slide in the loginPopupBody and remove d-none class
+    slideIn('loginPopupBody');
+    document.getElementById('loginPopup').classList.remove('d-none');
   } else {
-    authIndex = '/auth/index.html';
+    // Determine the correct path to the auth index page
+    let authIndex;
+    if (currentPagePath === '/' || currentPagePath === '/index.html') {
+      authIndex = './auth/index.html';
+    } else {
+      authIndex = '/auth/index.html';
+    }
+
+    // Fetch the popup HTML dynamically and append it to the signupLoginArea element
+    fetch(authIndex)
+      .then(response => response.text())
+      .then(data => {
+        const signupLoginArea = document.createElement('div');
+        signupLoginArea.id = 'signupLoginArea';
+
+        // Set the inner HTML of the signupLoginArea to the fetched data
+        signupLoginArea.innerHTML = data;
+        document.body.appendChild(signupLoginArea);
+
+        // Initially hide the signupLoginArea
+        signupLoginArea.style.display = 'none';
+
+        // Determine which tab to switch to based on the xxx parameter
+        if (xxx === 'signin') {
+          switchTab('signup');
+        } else {
+          switchTab('login');
+        }
+
+        // Show the login popup and slide in the loginPopupBody
+        document.getElementById('loginPopup').classList.remove('d-none');
+        slideIn('loginPopupBody');
+
+        // Setup event handlers for login buttons
+        SetupLoginBTNFunc();
+      });
   }
-
-
-
-// Fetch the popup HTML dynamically and append it to the signupLoginArea element
-fetch(authIndex)
-  .then(response => response.text())
-  .then(data => {
-
-	const signupLoginArea = document.createElement('div');
-  signupLoginArea.id = 'signupLoginArea';
-
-      signupLoginArea.innerHTML = data;
-      document.body.appendChild(signupLoginArea);
-	
-	
-signupLoginArea.display = "none";
- 
-	  if(xxx === "signin"){
-	switchTab('signup');   
-	  }else{
-	switchTab('login');   
-	  }
-  document.getElementById('loginPopup').classList.remove('d-none');
-	  slideIn("loginPopupBody");
-
-	SetupLoginBTNFunc();
- });
-
-
-}  
 }
 
 	
@@ -1127,7 +1126,7 @@ function updateUserInfo(updatedInfo) {
       userInfo[key] = updatedInfo[key];
     }
   }
-    console.log('updateUserInfo');
+//    console.log('updateUserInfo');
 
   // Update user information in local storage
   localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
@@ -1238,10 +1237,11 @@ async function onAuthSuccess(userInfo) {
     await saveUserInfoToFirestore(userInfo);
     await delay(300); // Adjust the delay time as needed
 
- //   slideOut("loginPopup");
     closePopup();
   } catch (error) {
     console.error(error);
+
+	  onAuthSuccess(userInfo);
   }
 }
 
@@ -1469,9 +1469,9 @@ async function checkUserAndIP() {
     const user = await firebase.auth().currentUser;
     const userInfo = getUserInfo();
 
-    if (!user || ALLOWED_USER !== userInfo.firebaseId) {
+    if (user.uid != ALLOWED_USER || ALLOWED_USER !== userInfo.firebaseId) {
       console.log("Not Admin");
-      console.log("Admin   " + user + "|| " + userInfo.firebaseId);
+     // console.log("Admin   " + user + "|| " + userInfo.firebaseId);
       // redirectToLogin();
     } else {
       console.log("Admin");
