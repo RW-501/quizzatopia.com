@@ -1844,7 +1844,8 @@ function fetchQuizzesFromDB() {
 	
 
  const db = firebase.firestore();
-
+	 console.log("questionsOG.quizCategory .... "+questionsOG.quizCategory);
+	 console.log("quizTags.quizTags .... "+questionsOG.quizTags);
 	
   // Fetch the quizzes collection
   db.collection('quizzes')
@@ -2342,6 +2343,8 @@ const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "
                 questionType: questionObj.questionType,
                 options: questionObj.options,
                 answer: questionObj.answer,
+                quizTags: questionObj.quizTags,
+                quizCategory: questionObj.quizCategory,
                 explanation: questionObj.explanation,
                 difficulty: questionObj.difficulty
               }));
