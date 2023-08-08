@@ -595,6 +595,7 @@ window.location.href = quizLink;
 
   // Get reference to Firestore database
   const db = firebase.firestore();
+      var reviewDataDocs = [];
 		  
     // Function to fetch quiz review data
 function getQuizReviewData(quizCode, userID) {
@@ -610,7 +611,6 @@ function getQuizReviewData(quizCode, userID) {
         return [];
       }
       // Array to store multiple reviewDataDocs
-      const reviewDataDocs = [];
       querySnapshot.forEach(doc => {
         reviewDataDocs.push(doc.data());
     console.log("reviewDataDocs:", reviewDataDocs);
