@@ -427,13 +427,13 @@ background-color: #7afb5099;
 }
 
 .attempt1{
-    background-color: #5065fb99;
+    background-color: #5065fb99  !important;
 }
 .attempt2{
-background-color: #f850fb99;
+background-color: #f850fb99  !important;
 }
 .attempt3{
-background-color: #fbe65099;
+background-color: #fbe65099 !important;
 }
 		
 	</style>
@@ -680,13 +680,12 @@ function displayQuizStatsTable(reviewDataDocs, quizDoc) {
 
 	  let timeStamp =0, responseTime =0;
     questionStatInfo.forEach((question) => {
-quizAttemptCount++;
 	    if(reviewDataDoc.timeStamp != timeStamp || reviewDataDoc.responseTimeTotal != responseTime){
 		    quizAttemptCount++;
 		    responseTime = reviewDataDoc.responseTimeTotal;
 		    timeStamp = reviewDataDoc.timeStamp;
 		          const rowTop = document.createElement('tr');
-  rowTop.classList.add('card', 'quiz-summary-card', "attempt"+quizAttemptCount);
+  rowTop.classList.add( 'quiz-summary-card', "attempt"+quizAttemptCount);
 
       rowTop.innerHTML = `Quiz Attempt ${quizAttemptCount} `;
 		          tableBody.appendChild(rowTop);
