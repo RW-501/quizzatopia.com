@@ -706,7 +706,7 @@ fetch(jsonURL)
     console.log('JSON data:', jsonData);
     console.log('JSON questions:', jsonData.questions);
 questions = jsonData.questions;
-	displayQuizStatsTableHTML(reviewDataDoc, questions)  
+	displayQuizStatsTableHTML(reviewDataDocs, questions)  
   })
   .catch(error => {
     console.error('Error fetching JSON:', error);
