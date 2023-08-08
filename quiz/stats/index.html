@@ -497,7 +497,7 @@ width: 20%;
       <p><strong>Best Score:</strong> <span id="bestScore"></span></p>
 
     </div>
-	    <div class="retakeBtn">Take Quiz</div>    
+	    <div class="retakeBtn" onclick="takeQuiz()";>Take Quiz</div>    
     </div>
 
     <div class="stats">
@@ -538,12 +538,18 @@ width: 20%;
 	  <script>
 
 	
+var quizLink;
 
 
   // Get the quiz code from the URL parameters
   const urlParams = new URLSearchParams(window.location.search);
   const quizCode = urlParams.get('q');
 
+function takeQuiz(){
+window.location.href = quizLink;
+
+}
+		  
   // Wrap the code inside the DOMContentLoaded event listener
   document.addEventListener('DOMContentLoaded', function() {
     if (quizCode) {
@@ -611,7 +617,6 @@ function getQuizReviewData(quizCode, userID) {
 
 
 
-
     // Function to display quiz information and statistics
     function displayQuizStats(quizDoc, reviewDataDoc) {
       // Populate the quiz information in the page
@@ -619,8 +624,8 @@ function getQuizReviewData(quizCode, userID) {
       document.getElementById('quizCode').textContent = quizDoc.quizCodeDB;
       document.getElementById('numQuestions').textContent = quizDoc.numberOfQuestionsDB;
       // Add other quiz information here
-
-      // Perform calculations and display statistics
+quizLink = quizDoc.quizLinkDB;
+      // Perform calculat = ions and display statistics
       const totalQuestions = quizDoc.numberOfQuestionsDB;
       const correctQuestionNumbers = reviewDataDoc ? reviewDataDoc.correctQuestionNumbers : [];
       const incorrectQuestionNumbers = reviewDataDoc ? reviewDataDoc.incorrectQuestionNumbers : [];
