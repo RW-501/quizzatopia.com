@@ -681,10 +681,10 @@ countDocumentsWithQuizCodeAndUserID(quizDoc.quizCodeDB, userInfo.firebaseId)
 
     }
 var quizAttemptCount = 0;
+  var tableBody = document.getElementById('questionTableBody');
 
     // Function to display the table with quiz statistics
 function displayQuizStatsTable(reviewDataDocs, quizDoc) {
-  const tableBody = document.getElementById('questionTableBody');
 
   const quizSummaryContainer = document.querySelector('.quiz-summary');
   quizSummaryContainer.innerHTML = ''; // Clear previous quiz summary cards
