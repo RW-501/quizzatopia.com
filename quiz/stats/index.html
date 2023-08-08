@@ -366,8 +366,39 @@ width: 20%;
 		#bMC_link img{
 		width: 100%;
 		}
+
 		
-</style>
+/* Add some styling for the quiz summary cards */
+.quiz-summary-card {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-summary-card h5 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.quiz-summary-card p {
+  margin-bottom: 5px;
+}
+
+.quiz-summary-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Additional styling for the table if needed */
+.table {
+  margin-bottom: 30px;
+}
+
+	
+	
+	</style>
 	  	
 	
 	
@@ -448,23 +479,23 @@ width: 20%;
 
       <div class="row">
 
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>Question Number</th>
-                <th>Response Time</th>
-                <th>Correctness</th>
-              </tr>
-            </thead>
-            <tbody id="questionTableBody">
-              <!-- This table will be populated dynamically using JavaScript         
-		    <div class="col-md-6">
-          <canvas id="scoreChart"></canvas>
-        </div>
-        <div class="col-md-6"> </div>
-		    -->
-            </tbody>
-          </table>
+     <div class="quiz-summary">
+  <!-- Quiz summary cards will be dynamically added here -->
+</div>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Question Number</th>
+      <th>Response Time</th>
+      <th>Correctness</th>
+    </tr>
+  </thead>
+  <tbody id="questionTableBody">
+    <!-- This table will be populated dynamically using JavaScript -->
+  </tbody>
+</table>
+
         </div>
      
     </div>
@@ -519,6 +550,8 @@ function getQuizReviewData(quizCode, userID) {
       const reviewDataDocs = [];
       querySnapshot.forEach(doc => {
         reviewDataDocs.push(doc.data());
+    console.log("reviewDataDocs:", reviewDataDocs);
+
       });
       return reviewDataDocs;
     })
@@ -603,18 +636,36 @@ countDocumentsWithQuizCodeAndUserID(quizDoc.quizCodeDB, userInfo.firebaseId)
     }
 
     // Function to display the table with quiz statistics
-function displayQuizStatsTable(reviewDataDoc, quizDoc) {
+function displayQuizStatsTable(reviewDataDocs, quizDoc) {
   const tableBody = document.getElementById('questionTableBody');
-  let questionStatInfo = reviewDataDoc[0].questionStatInfo;
-	
-  console.log("reviewDataDoc:", reviewDataDoc);
-  console.log("questionStatInfo:", questionStatInfo);
 
-  let timeStamp = reviewDataDoc.timeStamp;
-  let responseTime = reviewDataDoc.responseTimeTotal;
-  console.log("timeStamp:", timeStamp);
+  const quizSummaryContainer = document.querySelector('.quiz-summary');
+  quizSummaryContainer.innerHTML = ''; // Clear previous quiz summary cards
 
-  const counts = questionStatInfo.reduce((accumulator, current) => {
+  reviewDataDocs.forEach((reviewDataDoc) => {
+    const quizResult = getQuizResultSummary(reviewDataDoc);
+    const questionStatInfo = reviewDataDoc.questionStatInfo;
+    questionStatInfo.sort((a, b) => a.questionNumber - b.questionNumber);
+
+    questionStatInfo.forEach((question) => {
+      const questionRow = document.createElement('tr');
+      questionRow.innerHTML = `
+        <td>${question.questionNumber}</td>
+        <td>${formatResponseTime(question.responseTime)}</td>
+        <td>${question.correctness}</td>
+      `;
+      tableBody.appendChild(questionRow);
+    });
+
+    // Create and append quiz summary card
+    const quizSummaryCard = createQuizSummaryCard(quizResult);
+    quizSummaryContainer.appendChild(quizSummaryCard);
+  });
+}
+
+function getQuizResultSummary(reviewDataDoc) {
+  const totalQuestions = reviewDataDoc.questionStatInfo.length;
+  const counts = reviewDataDoc.questionStatInfo.reduce((accumulator, current) => {
     if (current.correctness === 'correct') {
       accumulator.correct++;
     } else if (current.correctness === 'incorrect') {
@@ -623,27 +674,33 @@ function displayQuizStatsTable(reviewDataDoc, quizDoc) {
     return accumulator;
   }, { correct: 0, incorrect: 0 });
 
-
   const correctResponsesCount = counts.correct;
   const incorrectResponsesCount = counts.incorrect;
-	
-  questionStatInfo.sort((a, b) => a.questionNumber - b.questionNumber);
+  const percentCorrect = (correctResponsesCount / totalQuestions) * 100;
 
-  questionStatInfo.forEach(question => {
-    if (timeStamp != question.timeStamp) {
-      timeStamp = question.timeStamp;
-      responseTime = question.responseTimeTotal;
-    }
+  return {
+    date: reviewDataDoc.timeStamp,
+    percentCorrect: percentCorrect.toFixed(2),
+    correctResponses: correctResponsesCount,
+    incorrectResponses: incorrectResponsesCount
+  };
+}
 
-    const questionRow = document.createElement('tr');
-    questionRow.innerHTML = `
-      <td>${question.questionNumber}</td>
-      <td>${formatResponseTime(question.responseTime)}</td>
-      <td>${question.correctness}</td>
-    `;
+function createQuizSummaryCard(quizResult) {
+  const card = document.createElement('div');
+  card.classList.add('card', 'quiz-summary-card');
 
-    tableBody.appendChild(questionRow);
-  });
+  card.innerHTML = `
+    <div class="card-body">
+      <h5 class="card-title">Quiz Summary</h5>
+      <p class="card-text">Date: ${quizResult.date}</p>
+      <p class="card-text">Percent Correct: ${quizResult.percentCorrect}%</p>
+      <p class="card-text">Correct Responses: ${quizResult.correctResponses}</p>
+      <p class="card-text">Incorrect Responses: ${quizResult.incorrectResponses}</p>
+    </div>
+  `;
+
+  return card;
 }
 
 
