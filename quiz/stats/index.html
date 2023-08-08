@@ -746,7 +746,14 @@ questions = jsonData.questions;
  //   console.log('JSON questions: ', questions[0]);
    // console.log('xx questions: ', questions[0].questions);
 
-		  
+if (reviewDataDocs.length === 0) {
+  const questionRow = document.createElement('tr');
+  questionRow.classList.add('non');
+  questionRow.innerHTML = `
+    <td class='num2' colspan="3">No Results</td>
+  `;
+  tableBody.appendChild(questionRow);
+} else {
 		  
   reviewDataDocs.forEach((reviewDataDoc) => {
     const quizResult = getQuizResultSummary(reviewDataDoc);
@@ -799,6 +806,7 @@ questions = jsonData.questions;
     const quizSummaryCard = createQuizSummaryCard(quizResult);
     quizSummaryContainer.appendChild(quizSummaryCard);
   });
+	}
 }
 
   let bestScore = 0;
