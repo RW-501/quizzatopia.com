@@ -67,8 +67,6 @@ function createActionButton(label, clickHandler) {
   return button;
 }
 
-// Call the function to populate the user table
-populateUserTable();
 
 
 function deactivateUser(userId) {
