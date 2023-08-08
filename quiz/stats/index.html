@@ -744,7 +744,7 @@ questions = jsonData.questions;
 	    questionRow.classList.add('correct');
       questionRow.innerHTML = `
         <td class='num1'>${quest.questionNumber}</td>
-        <td  class='num2'>${questions[quest.questionNumber -1].question}</td>
+        <td  class='num2'>${questions[quest.questionNumber].question}</td>
         <td class='num3'>${formatResponseTime(quest.responseTime)}</td>
         <td class='num4'>${quest.correctness}</td>
       `;
@@ -754,7 +754,7 @@ questions = jsonData.questions;
 	    questionRow.classList.add('incorrect');
       questionRow.innerHTML = `
         <td>${quest.questionNumber}</td>
-        <td>${questions[quest.questionNumber -1].question}</td>
+        <td>${questions[quest.questionNumber].question}</td>
 	<td>${formatResponseTime(quest.responseTime)}</td>
         <td>${quest.correctness}</td>
       `;
