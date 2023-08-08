@@ -1535,7 +1535,7 @@ function checkVarForValueFunc(questionIndex) {
 	  var responseTimeTotal = 0;
 // Open the review popup
 function openReviewFunc(save) {
-	  var resultCount = 0;
+	  var resultCount = [];
 
   const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
   const quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
@@ -1555,7 +1555,7 @@ correctTab.innerHTML = "<h3>Correct Answers</h3><div id='correctList'></div>";
 
   let correctQuestionNumbers = [];
   let incorrectQuestionNumbers = [];
-let responseTime =[];
+let responseTime = [];
   questionsCompleted.forEach(function (question) {
     var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
 
@@ -1566,7 +1566,6 @@ let responseTime =[];
 
 
       let questionNumber = questionIndex + 1;
-let questionResponseTime = questionsCompleted[resultCount].responseTime;
 
 
       if (question.correctness === "correct") {
@@ -1583,7 +1582,8 @@ questionStatInfo.push({ questionNumber: questionNumber, responseTime: questionRe
       }
 
     console.log("1349?????? resultCount:", resultCount);
-	  
+	  let questionResponseTime = questionsCompleted[resultCount].responseTime;
+
  (function(resultCount) { // Use an IIFE to create a new scope for resultCount
       questionDiv.addEventListener("click", function() {
       //  console.log("sending ???????????????    " + questionIndex + "   ??????? count:", resultCount);
@@ -1600,8 +1600,8 @@ questionStatInfo.push({ questionNumber: questionNumber, responseTime: questionRe
    // console.log("questionIndex:", questionIndex);
 
 	    
-    let minutes = Math.floor(responseTime / 60000); // Convert milliseconds to minutes
-    let seconds = Math.floor((responseTime % 60000) / 1000); // Convert remaining milliseconds to seconds
+    let minutes = Math.floor(questionResponseTime / 60000); // Convert milliseconds to minutes
+    let seconds = Math.floor((questionResponseTime % 60000) / 1000); // Convert remaining milliseconds to seconds
 
     // Display the timeElapsed in minutes and seconds format
     let responseTimeText = `${minutes} mins ${seconds} secs`;
@@ -1666,12 +1666,14 @@ if(save === true && quizStarted === false){
       saveReviewDataToFirestore(quizCode, quizInfo.quizName, questionStatInfo, responseTimeTotal);
 	  }
 
+	let incorrect = questionStatInfo.filter(question => question.correctness === 'incorrect').length;
+	let correct = 	 questionStatInfo.filter(question => question.correctness === 'correct').length;
 	
   // Calculate the percent done and current score
   const totalQuestions = questionsCompleted.length;
   const percentDone = (questionsCompleted.length / questions.length) * 100;
 	
-  const currentScore =  (correctQuestionNumbers.length / questions.length) * 100;
+  const currentScore =  (correct / questions.length) * 100;
 	
         // Update the HTML display with the calculated values
         document.getElementById('totalQuestions').textContent = totalQuestions;
