@@ -2606,7 +2606,7 @@ attemptsContainer.querySelector('.attempts-text').innerHTML = `${attemptsMade}/$
         <p><strong>Number of Questions:</strong> ${quizInfo.numberOfQuestions}</p>
         <p><strong>Question Correct:</strong> ${score}</p>
         <p><strong>Best Score:</strong> ${percentage.toFixed(0)}%</p>
-	<div class="attempts-container"   onclick="viewStatsFunc(${quizInfo.quizCode})" >
+	<div class="attempts-container"   onclick="viewStatsFunc('${quizInfo.quizCode}')" >
    <div class="attempts-text"></div>
   <div class="stars"></div>
 </div>
