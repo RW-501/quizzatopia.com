@@ -254,16 +254,19 @@ if (cookieValue === 'true') {
   console.log('User is not logged in');
   loggedIn = false;
 }
-/*
+
 const currentURL = window.location.href;
 const currentURLEXT = currentURL.split('/').pop();
 const restrictedPaths = ['user', 'backend', 'friend', 'challenge', 'user/', 'backend/', 'friend/', 'challenge/'];
 
+console.log("currentURLEXT   "+currentURLEXT);
+
+/*
 if (!loggedIn && restrictedPaths.includes(currentURLEXT)) {
   window.location.href = '/';
 }
-*/
 
+*/
 
 // Function to convert images to low resolution
 function convertImagesToLowResolution() {
