@@ -918,8 +918,8 @@ async function countDocumentsWithQuizCodeAndUserID(quizCode, userID) {
 	  const userInfo = getUserInfo();
     Promise.all([getQuizData(quizCode), getQuizReviewData(quizCode, userInfo.firebaseId)])
       .then(([quizDoc, reviewDataDoc]) => {
-        if (quizDoc && reviewDataDoc) {
-          displayQuizStats(quizDoc, reviewDataDoc);
+        if (quizDoc && reviewDataDocs) {
+          displayQuizStats(quizDoc, reviewDataDocs);
           displayQuizStatsTable(reviewDataDoc, quizDoc);
       /*    displayScoreChart(
             reviewDataDoc.correctQuestionNumbers,
