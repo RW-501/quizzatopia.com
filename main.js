@@ -169,17 +169,6 @@ function removeOverlayWithoutTimer() {
 	
 loadScreenFunc();
 
-function isQuizURL(url) {
-  const pattern = /quizzatopia\.com\/quiz\/.*/;
-  return pattern.test(url);
-}
-const currentURL = window.location.href;
-
-if(isQuizURL(currentURL)){
-removeOverlayWithoutTimer();	
-}else{
-removeOverlayWithTimer();
-}
 
 
 // Function to revert images back to normal resolution
@@ -253,17 +242,6 @@ if (cookieValue === 'true') {
   // User is not logged in
   console.log('User is not logged in');
   loggedIn = false;
-}
-
-//const currentURL = window.location.href;
-const currentURLEXT = currentURL.split('/').pop();
-const restrictedPaths = ['user', 'backend', 'friend', 'challenge', 'user/', 'backend/', 'friend/', 'challenge/'];
-
-console.log("currentURLEXT   "+currentURLEXT);
-
-
-if (!loggedIn && restrictedPaths.includes(currentURLEXT)) {
-  window.location.href = '/';
 }
 
 
@@ -375,10 +353,33 @@ console.log('userInfo main: ', userInfo);
 // Global variables
 let pointsRewards;
 var userDashboard;
+let navbarPath, footerPath;
 var currentPagePath = window.location.pathname;
 console.log("currentPagePath:", currentPagePath);
 
-let navbarPath, footerPath;
+
+const restrictedPaths = ['user', 'backend', 'friend', 'challenge', 'user/', 'backend/', 'friend/', 'challenge/', '/user/', 'backend/', '/friend/', '/challenge/'];
+
+
+
+if (!loggedIn && restrictedPaths.includes(currentPagePath)) {
+  window.location.href = '/';
+}
+
+function isQuizURL(url) {
+  const pattern = /quizzatopia\.com\/quiz\/.*/;
+  return pattern.test(url);
+}
+const currentURL = window.location.href;
+
+if(isQuizURL(currentURL)){
+removeOverlayWithoutTimer();	
+}else{
+removeOverlayWithTimer();
+}
+
+
+
 
 // Function to fetch and insert HTML based on the page level
 function fetchAndInsertContent() {
