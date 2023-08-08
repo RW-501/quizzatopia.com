@@ -627,12 +627,7 @@ countDocumentsWithQuizCodeAndUserID(quizDoc.quizCodeDB, userInfo.firebaseId)
   });
 
 
-		  
-      let averageScore;// = calculateAverageScore(correctQuestionNumbers, totalQuestions);
-      let bestScore;// = calculateBestScore(correctQuestionNumbers, totalQuestions);
 
-   //   document.getElementById('averageScore').textContent = averageScore.toFixed(2) + '%';
-     // document.getElementById('bestScore').textContent = bestScore.toFixed(2) + '%';
     }
 
     // Function to display the table with quiz statistics
@@ -663,6 +658,20 @@ function displayQuizStatsTable(reviewDataDocs, quizDoc) {
   });
 }
 
+
+		  function getBestScore(quizResults) {
+  let bestScore = 0;
+
+  quizResults.forEach((reviewDataDoc) => {
+    const quizResult = getQuizResultSummary(reviewDataDoc);
+    if (quizResult.percentCorrect > bestScore) {
+      bestScore = quizResult.percentCorrect;
+    }
+  });
+
+  return bestScore;
+}
+
 function getQuizResultSummary(reviewDataDoc) {
   const totalQuestions = reviewDataDoc.questionStatInfo.length;
   const counts = reviewDataDoc.questionStatInfo.reduce((accumulator, current) => {
@@ -677,10 +686,14 @@ function getQuizResultSummary(reviewDataDoc) {
   const correctResponsesCount = counts.correct;
   const incorrectResponsesCount = counts.incorrect;
   const percentCorrect = (correctResponsesCount / totalQuestions) * 100;
-
+	
+ document.getElementById('bestScore').innerHTML = getBestScore(percentCorrect); 
   return {
-    date: reviewDataDoc.timeStamp,
-    percentCorrect: percentCorrect.toFixed(2),
+	  const dateObject = new Date(reviewDataDoc.timeStamp.seconds * 1000); // Convert seconds to milliseconds
+const formattedDate = dateObject.toLocaleDateString();
+	
+    date: formattedDate,
+    percentCorrect: percentCorrect.toFixed(0),
     correctResponses: correctResponsesCount,
     incorrectResponses: incorrectResponsesCount
   };
