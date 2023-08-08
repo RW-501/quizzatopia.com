@@ -1,6 +1,9 @@
 
 // Function to fetch user data and populate the user table
 function populateUserTable() {
+
+
+  
   const usersRef = firebase.firestore().collection('users');
   const userTableBody = document.querySelector('#userTable tbody');
 
@@ -114,7 +117,7 @@ function getTotalUsers() {
 }
 
 
-window.addEventListener("load", function() {
+document.addEventListener('DOMContentLoaded', function() {
 
 populateUserTable();
 getTotalUsers();
