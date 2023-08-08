@@ -1841,11 +1841,13 @@ timeSoFarElement.innerHTML = `${minutes} mins ${seconds} secs`;
 function fetchQuizzesFromDB() {
   console.log("Fetching quizzes from the database...");
 // Initialize your Firebase app
-	
+	var quizTags, quizCategory;
+
 
  const db = firebase.firestore();
 	 console.log("questionsOG.quizCategory .... "+questionsOG.quizCategory);
 	 console.log("quizTags.quizTags .... "+questionsOG.quizTags);
+	 console.log(" quizTags, quizCategory .... "+ quizTags+"  ==       "+quizCategory);
 	
   // Fetch the quizzes collection
   db.collection('quizzes')
@@ -2292,7 +2294,7 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImag
 
 
 
-
+var quizTags, quizCategory;
 	  
 function fetchData(q, e) {
   // Initialize Firebase app
@@ -2345,7 +2347,7 @@ const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "
                 answer: questionObj.answer,
                 quizTags: questionObj.quizTags,
                 quizCategory: questionObj.quizCategory,
-                explanation: questionObj.explanation,
+		      explanation: questionObj.explanation,
                 difficulty: questionObj.difficulty
               }));
       displayTestInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
@@ -2404,7 +2406,9 @@ const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "
             ? data.map(questionObj => ({
                 question: questionObj.question,
                 answer: questionObj.answer,
-                options: questionObj.options,
+                quizTags: questionObj.quizTags,
+                quizCategory: questionObj.quizCategory,
+		    options: questionObj.options,
                 difficulty: questionObj.difficulty,
                 imageURL: questionObj.imageURL,
                 questionType: questionObj.questionType,
@@ -2414,7 +2418,9 @@ const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "
             : data.questions.map(questionObj => ({
                 question: questionObj.question,
                 answer: questionObj.answer,
-                options: questionObj.options,
+                quizTags: questionObj.quizTags,
+                quizCategory: questionObj.quizCategory,
+		    options: questionObj.options,
                 difficulty: questionObj.difficulty,
                 imageURL: questionObj.imageURL,
                 questionType: questionObj.questionType,
@@ -2424,6 +2430,8 @@ const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "
 
           // Update quizCode, quizName, numberOfQuestions
           quizCode = isOldJSONStructure ? "" : data.quizCode;
+          quizCategory = isOldJSONStructure ? "" : data.quizCategory;
+          quizTags = isOldJSONStructure ? "" : data.quizTags;
           quizName = isOldJSONStructure ? "" : data.quizName;
           numberOfQuestions = isOldJSONStructure ? data.length : data.numberOfQuestions || "";
           quizImageURL = isOldJSONStructure ? "" : data.quizImageURL;
