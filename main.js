@@ -255,10 +255,13 @@ if (cookieValue === 'true') {
   loggedIn = false;
 }
 
-// console.log('loggedIn:', loggedIn);
+const currentURL = window.location.href;
+const currentURLEXT = currentURL.split('/').pop();
+const restrictedPaths = ['user', 'backend', 'friend', 'challenge', 'user/', 'backend/', 'friend/', 'challenge/'];
 
-
-
+if (!loggedIn && restrictedPaths.includes(currentURLEXT)) {
+  window.location.href = '/';
+}
 
 
 
