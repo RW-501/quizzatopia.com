@@ -705,8 +705,6 @@ fetch(jsonURL)
   .then(jsonData => {
     console.log('JSON data:', jsonData);
     console.log('JSON questions:', jsonData.questions);
-    console.log('JSON questions:1 ', jsonData.questions[0]);
-    console.log('JSON questions:2 ', jsonData.questions[3]);
 questions = jsonData.questions;
   })
   .catch(error => {
@@ -717,6 +715,8 @@ questions = jsonData.questions;
 
 
 }
+    console.log('JSON questions: ', questions[0]);
+    console.log('xx questions: ', questions[0].questions);
 
 		  
   reviewDataDocs.forEach((reviewDataDoc) => {
