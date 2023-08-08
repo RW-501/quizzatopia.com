@@ -528,6 +528,7 @@ background-color: #fbe65099 !important;
   <thead>
     <tr>
       <th>Question Number</th>
+      <th>Question</th>
       <th>Response Time</th>
       <th>Correctness</th>
     </tr>
@@ -689,6 +690,8 @@ fetch(jsonURL)
   .then(jsonData => {
     console.log('JSON data:', jsonData);
     console.log('JSON questions:', jsonData.questions);
+    console.log('JSON questions:1 ', jsonData.questions[0]);
+    console.log('JSON questions:2 ', jsonData.questions[3]);
 questions = jsonData.questions;
   })
   .catch(error => {
