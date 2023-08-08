@@ -608,15 +608,19 @@ word-wrap: break-word;
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 	  <script>
-const closePopupButton = document.getElementById('closePopup');
-const popupContainer = document.getElementById('popupContainer');
-const popupContent = document.querySelector('.popup-content');
+
 		  
-closePopupButton.addEventListener('click', () => {
-  // Hide the popup
+	// Assuming you have a popupContainer and popupContent in your HTML
+const popupContainer = document.getElementById('popupContainer');
+const popupContent = document.getElementById('popupContent');
+
+// Close button functionality for the popup
+const closeButton = document.getElementById('closeButton');
+closeButton.addEventListener('click', () => {
   popupContainer.style.display = 'none';
 });
-	
+
+		  
 var quizLink;
 
 
@@ -825,39 +829,40 @@ if (reviewDataDocs.length === 0) {
 
 
 	    }
+// Assuming you have defined the necessary variables and elements
+const questionRow = document.createElement('tr');
 
-	    if(quest.correctness === "correct"){
-      const questionRow = document.createElement('tr');
+if (quest.correctness === "correct") {
+  questionRow.classList.add('correct');
+  questionRow.innerHTML = `
+    <td class='num1'>${quest.questionNumber}</td>
+    <td class='num2'>${questions[quest.questionNumber - 1].question}</td>
+    <td class='num3'>${formatResponseTime(quest.responseTime)}</td>
+    <td class='num4'>${quest.correctness}</td>
+  `;
+} else {
+  questionRow.classList.add('incorrect');
+  questionRow.innerHTML = `
+    <td>${quest.questionNumber}</td>
+    <td>${questions[quest.questionNumber - 1].question}</td>
+    <td>${formatResponseTime(quest.responseTime)}</td>
+    <td>${quest.correctness}</td>
+  `;
+}
+
+// Append the click event listener to each question row
 questionRow.addEventListener('click', () => {
   // Populate the popup content with answers
   popupContent.innerHTML = '';
 
-    const answerElement = document.createElement('p');
-    answerElement.textContent = `Question ${questionNumber}: ${questions[quest.questionNumber -1].answer}`;
-    popupContent.appendChild(answerElement);
+  const answerElement = document.createElement('p');
+  answerElement.textContent = `Question ${quest.questionNumber} Answer: ${questions[quest.questionNumber - 1].answer}`;
+  popupContent.appendChild(answerElement);
+
   // Show the popup
   popupContainer.style.display = 'flex';
 });
-		  
-	    questionRow.classList.add('correct');
-      questionRow.innerHTML = `
-        <td class='num1'>${quest.questionNumber}</td>
-        <td  class='num2'>${questions[quest.questionNumber -1].question}</td>
-        <td class='num3'>${formatResponseTime(quest.responseTime)}</td>
-        <td class='num4'>${quest.correctness}</td>
-      `;
-      tableBody.appendChild(questionRow);
-	    }else{
-      const questionRow = document.createElement('tr');
-	    questionRow.classList.add('incorrect');
-      questionRow.innerHTML = `
-        <td>${quest.questionNumber}</td>
-        <td>${questions[quest.questionNumber -1].question}</td>
-	<td>${formatResponseTime(quest.responseTime)}</td>
-        <td>${quest.correctness}</td>
-      `;
-      tableBody.appendChild(questionRow);
-	    }
+
 
 
 		    
