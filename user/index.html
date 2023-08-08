@@ -610,15 +610,37 @@ ele.style.display = 'none';
       const quizInfoContainer = document.getElementById('quizInfoContainer');
       quizInfoContainer.innerHTML = '';
 
-      for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-        if (key.startsWith('quizInfo_')) {
-          const quizInfo = JSON.parse(localStorage.getItem(key));
-          const quizCode = quizInfo.quizCode;
-          const quizName = quizInfo.quizName;
-          const questionCorrect = quizInfo.questionCorrect;
-          const numberOfQuestions = quizInfo.numberOfQuestions;
-          const quizTime = quizInfo.startTime;
+
+let localStorageArray = localStorage;
+
+// Filter and sort the quiz information objects
+let quizInfoArray = [];
+for (let i = 0; i < localStorageArray.length; i++) {
+  const key = localStorageArray.key(i);
+  if (key.startsWith('quizInfo_')) {
+    const quizInfo = JSON.parse(localStorage.getItem(key));
+    quizInfoArray.push(quizInfo);
+  }
+}
+
+// Sort the quizInfoArray based on quizTime and then quizName
+quizInfoArray.sort((a, b) => {
+  if (a.quizTime !== b.quizTime) {
+    return a.quizTime - b.quizTime;
+  } else {
+    return a.quizName.localeCompare(b.quizName);
+  }
+});
+
+// Now quizInfoArray is sorted by quizTime and quizName
+for (const quizInfo of quizInfoArray) {
+  const quizCode = quizInfo.quizCode;
+  const quizName = quizInfo.quizName;
+  const questionCorrect = quizInfo.questionCorrect;
+  const numberOfQuestions = quizInfo.numberOfQuestions;
+  const quizTime = quizInfo.startTime;
+
+
 
           const quizInfoElement = document.createElement('div');
           quizInfoElement.classList.add('quiz-infop');
