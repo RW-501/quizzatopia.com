@@ -689,11 +689,13 @@ function getQuizResultSummary(reviewDataDoc) {
   const correctResponsesCount = counts.correct;
   const incorrectResponsesCount = counts.incorrect;
   const percentCorrect = (correctResponsesCount / totalQuestions) * 100;
-	
- document.getElementById('bestScore').innerHTML = getBestScore(percentCorrect); 
-  return {
-	  const dateObject = new Date(reviewDataDoc.timeStamp.seconds * 1000); // Convert seconds to milliseconds
+	 
+const dateObject = new Date(reviewDataDoc.timeStamp.seconds * 1000); // Convert seconds to milliseconds
 const formattedDate = dateObject.toLocaleDateString();
+
+document.getElementById('bestScore').innerHTML = getBestScore(percentCorrect); 
+  return {
+
 	
     date: formattedDate,
     percentCorrect: percentCorrect.toFixed(0),
