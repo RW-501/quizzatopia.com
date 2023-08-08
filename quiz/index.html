@@ -719,7 +719,16 @@ font-weight: 800;
     box-shadow: 3px 3px 0rem 3px #b98c03 !important;
     cursor: pointer;
 	text-align: center;
-}		
+}
+.topTitles{
+	text-align: center;
+    font-size: calc(1rem + 2vw);
+    font-weight: 600;
+    background-color: #fd7e14;
+    width: 100%;
+    padding: 2%;
+
+}
 </style>
 	  	
 	
@@ -1061,7 +1070,8 @@ font-weight: 800;
 <!-- Popover content for sharing -->
 <div id="popoverContent" class="popup">
   <div id="chell_list" class="optionspopup">
-    <ul class="nav nav-tabs" role="tablist">
+  <div class="topTitles" >Start Challenge</div>
+	  <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" id="linkTab" href="#linkSection" role="tab" aria-controls="linkSection" aria-selected="true" onclick="shareSwitchTab('linkTab')">Share with a Link</a>
       </li>
