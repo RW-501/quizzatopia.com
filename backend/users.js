@@ -1,6 +1,5 @@
 
 // Function to fetch user data and populate the user table
-// Function to fetch user data and populate the user table
 function populateUserTable() {
   const usersRef = firebase.firestore().collection('users');
   const userTableBody = document.querySelector('#userTable tbody');
@@ -16,19 +15,22 @@ function populateUserTable() {
         const userEmail = user.userEmail;
 
         const newRow = document.createElement('tr');
+        newRow.classList.add('user-row');
 
-        const idCell = document.createElement('td');
-        idCell.textContent = userJoinedDate;
-
-        const nameCell = document.createElement('td');
-        nameCell.textContent = userName;
-
-        const emailCell = document.createElement('td');
-        emailCell.textContent = userEmail;
+        const idCell = createTableCell(userJoinedDate);
+        const nameCell = createTableCell(userName);
+        const emailCell = createTableCell(userEmail);
 
         const actionsCell = document.createElement('td');
-        const deactivateButton = createActionButton('Deactivate', () => deactivateUser(doc.id));
-        const removeButton = createActionButton('Remove', () => removeUser(doc.id));
+        actionsCell.classList.add('actions-cell');
+
+        const deactivateButton = createActionButton('Deactivate', () => {
+          deactivateUser(doc.id);
+        });
+
+        const removeButton = createActionButton('Remove', () => {
+          removeUser(doc.id);
+        });
 
         actionsCell.appendChild(deactivateButton);
         actionsCell.appendChild(removeButton);
@@ -46,37 +48,25 @@ function populateUserTable() {
     });
 }
 
-// Function to create action buttons
-function createActionButton(text, onClick) {
+// Helper function to create a table cell
+function createTableCell(content) {
+  const cell = document.createElement('td');
+  cell.textContent = content;
+  return cell;
+}
+
+// Helper function to create an action button
+function createActionButton(label, clickHandler) {
   const button = document.createElement('button');
-  button.textContent = text;
-  button.addEventListener('click', onClick);
+  button.textContent = label;
+  button.classList.add('action-button');
+  button.addEventListener('click', clickHandler);
   return button;
 }
 
+// Call the function to populate the user table
+populateUserTable();
 
-        const removeButton = document.createElement('button');
-        removeButton.textContent = 'Remove';
-        removeButton.addEventListener('click', () => {
-          removeUser(doc.id); // Call the removeUser function with the document ID
-        });
-
-        // Append cells and buttons to the new row
-        newRow.appendChild(idCell);
-        newRow.appendChild(nameCell);
-        newRow.appendChild(emailCell);
-        newRow.appendChild(deactivateButton);
-        newRow.appendChild(removeButton);
-
-        // Append the new row to the table body
-        userTableBody.appendChild(newRow);
-      });
-    })
-    .catch((error) => {
-      // Handle error fetching user data
-      console.error('Error fetching user data:', error);
-    });
-}
 
 function deactivateUser(userId) {
   // Reference to the 'users' collection in Firebase Firestore
