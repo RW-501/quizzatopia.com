@@ -702,6 +702,7 @@ font-weight: 800;
 		.attempts-container {
     display: block;
     font-size: 1.5em;
+			cursor: pointer;
 }
 </style>
 	  	
@@ -2301,7 +2302,7 @@ function shuffleArray(array) {
 }
 	  
 	  
- console.log('2 ???????????????????????????Start ???????    '+currentTimeInMillis);
+// console.log('2 ???????????????????????????Start ???????    '+currentTimeInMillis);
 
 	  
 
@@ -2364,7 +2365,7 @@ function fetchData(q, e) {
     let stringEnt;
     if (e) {
       if (e === "user") {
-        console.log(' load DB ???????????????????????????Start ???????    ' + currentTimeInMillis);
+       // console.log(' load DB ???????????????????????????Start ???????    ' + currentTimeInMillis);
         console.log("DB JSON structure");
         if (QuizFromDB) {
           // If data is already fetched, resolve the promise and return early
@@ -2532,7 +2533,10 @@ const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "
 }
 
 // Rest of the code remains the same...
-
+function viewStatsFunc(xxx){
+	
+window.location.href = "https://www.quizzatopia.com/quiz/stats/?q" + xxx;
+	  }
 
 
 function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageURL_NS, quizDifficultyNS) {
@@ -2602,7 +2606,7 @@ attemptsContainer.querySelector('.attempts-text').innerHTML = `${attemptsMade}/$
         <p><strong>Number of Questions:</strong> ${quizInfo.numberOfQuestions}</p>
         <p><strong>Question Correct:</strong> ${score}</p>
         <p><strong>Best Score:</strong> ${percentage.toFixed(0)}%</p>
-	<div class="attempts-container">
+	<div class="attempts-container"   onclick="viewStatsFunc(${quizInfo.quizCode})" >
    <div class="attempts-text"></div>
   <div class="stars"></div>
 </div>
