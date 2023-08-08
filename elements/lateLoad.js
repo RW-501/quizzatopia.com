@@ -1466,12 +1466,20 @@ const BACKEND_URL_PATTERN = /^\/backend(\/|$)/;
 
 async function checkUserAndIP() {
   try {
-    const user = await firebase.auth().currentUser;
+    const user = firebase.auth().currentUser;
+
+    if (!user) {
+      // No authenticated user, handle accordingly (e.g., redirect to login page)
+      console.log("No authenticated user");
+      // redirectToLogin();
+      return;
+    }
+
     const userInfo = getUserInfo();
 
-    if (user.uid != ALLOWED_USER || ALLOWED_USER !== userInfo.firebaseId) {
+    if (user.uid !== ALLOWED_USER || ALLOWED_USER !== userInfo.firebaseId) {
       console.log("Not Admin");
-     // console.log("Admin   " + user + "|| " + userInfo.firebaseId);
+      // console.log("Admin   " + user + "|| " + userInfo.firebaseId);
       // redirectToLogin();
     } else {
       console.log("Admin");
