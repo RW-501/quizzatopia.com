@@ -1838,14 +1838,14 @@ const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
  quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
 
 // Update the quiz information
-quizCodeElement.textContent = quizInfo.quizCode || "";
-timeSoFarElement.textContent = quizInfo.quizTime || "";
-quizURLElement.textContent = quizInfo.quizLink || "";
-quizNameElement.textContent = quizInfo.quizName || "";
+quizCodeElement.innerHTML = quizInfo.quizCode || "";
+timeSoFarElement.innerHTML = quizInfo.quizTime || "";
+quizURLElement.innerHTML = quizInfo.quizLink || "";
+quizNameElement.innerHTML = quizInfo.quizName || "";
 
 
 
-questionsCompletedElement.textContent = quizInfo.questionsCompleted.length || 0;
+questionsCompletedElement.innerHTML = quizInfo.questionsCompleted.length || 0;
 
 
 	
@@ -1857,15 +1857,15 @@ let qCompleted = quizInfo.questionsCompleted.length || 0;
 
 let totalQuestions = quizInfo.numberOfQuestions || 0;
 
-questionCorrectElement.textContent = qCorrect || 0;
-questionIncorrectElement.textContent = qIncorrect || 0;
-totalQuestionsElement.textContent = totalQuestions || 0;
+questionCorrectElement.innerHTML = qCorrect || 0;
+questionIncorrectElement.innerHTML = qIncorrect || 0;
+totalQuestionsElement.innerHTML = totalQuestions || 0;
 
 let percentCompleted = (qCompleted / totalQuestions) * 100;
 let scorePercentage = (qCorrect / (qCorrect + qIncorrect)) * 100;
 
-percetCopletedElement.textContent = percentCompleted ? percentCompleted.toFixed(1) + "%" : "0%";
-scorePercentegeElement.textContent = scorePercentage ? scorePercentage.toFixed(1) + "%" : "0%";
+percetCopletedElement.innerHTML = percentCompleted ? percentCompleted.toFixed(1) + "%" : "0%";
+scorePercentegeElement.innerHTML = scorePercentage ? scorePercentage.toFixed(1) + "%" : "0%";
 
 
 let currentTime = new Date();
@@ -1876,7 +1876,7 @@ let minutes = Math.floor(timeElapsed / 60000); // Convert milliseconds to minute
 let seconds = Math.floor((timeElapsed % 60000) / 1000); // Convert remaining milliseconds to seconds
 
 // Display the timeElapsed in minutes and seconds format
-timeSoFarElement.textContent = `${minutes} mins ${seconds} secs`;
+timeSoFarElement.innerHTML = `${minutes} mins ${seconds} secs`;
 
 
 
