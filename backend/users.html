@@ -48,7 +48,52 @@
   <script  src="/main.js" defer></script> 
   <link rel="stylesheet" href="style.css">
 </head>
+<style>
 
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+#userTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#userTable th,
+#userTable td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#userTable th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  text-align: left;
+}
+
+#userTable td {
+  text-align: left;
+}
+
+#userTable button {
+  padding: 5px 10px;
+  background-color: #d9534f;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#userTable button:hover {
+  background-color: #c9302c;
+}
+
+
+
+	
+</style>
 <body>
   <header>
     <!-- Header content -->
@@ -80,20 +125,26 @@
       <h2>Welcome to the Dashboard</h2>
 
 	          <!-- Add your charts, tables, or other components here -->
-      <div id="userStatsChart"></div>
-      <table id="userTable">
-        <thead>
-          <tr>
-            <th>User ID</th>
-            <th>Name</th>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Dynamically populate the user table using JavaScript -->
-        </tbody>
-      </table>
-    </div>
+<div id="userStatsChart"></div>
+<div class="table-container">
+  <table id="userTable">
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Dynamically populate the user table using JavaScript -->
+    </tbody>
+  </table>
+</div>
+
+
+
+	  
   </div>
 </main>
 
