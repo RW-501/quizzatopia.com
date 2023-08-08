@@ -706,6 +706,7 @@ fetch(jsonURL)
     console.log('JSON data:', jsonData);
     console.log('JSON questions:', jsonData.questions);
 questions = jsonData.questions;
+	displayQuizStatsTableHTML(reviewDataDoc, questions)  
   })
   .catch(error => {
     console.error('Error fetching JSON:', error);
@@ -715,9 +716,16 @@ questions = jsonData.questions;
 
 
 }
+
+}
+		  
+	function  displayQuizStatsTableHTML(reviewDataDoc, questions){
+
+		
     console.log('JSON questions: ', questions[0]);
     console.log('xx questions: ', questions[0].questions);
 
+		  
 		  
   reviewDataDocs.forEach((reviewDataDoc) => {
     const quizResult = getQuizResultSummary(reviewDataDoc);
