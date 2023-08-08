@@ -410,11 +410,13 @@ function initializeNavbarToggler() {
   // Set user profile picture and log the Firebase ID to the console
   document.getElementById('profile-pic').src = userInfo.userProfilePic;
   console.log('userInfo firebaseId:', userInfo.firebaseId);
-
+let uID = userInfo.firebaseId;
+	
   // Update the navigation bar elements based on login status
   updateNavBar();
   displayUserInfo();
 }
+const userID = uID;
 
 // Function to display user information fetched from local storage
 function displayUserInfo() {
