@@ -1921,7 +1921,6 @@ openPopup();
   }
 			  	    //  console.log("loggedIn 2.... "+loggedIn);
 // Call the function to fetch and populate the quiz data
- fetchQuizzesFromDB();
 });
 	</script>
 	
@@ -2591,6 +2590,7 @@ attemptsContainer.querySelector('.attempts-text').innerHTML = `<strong>${attempt
 
   }
 	  removeOverlayWithoutTimer();
+ fetchQuizzesFromDB();
 
 	      document.getElementById("start-btn").removeAttribute("disabled");
 	 console.log("loaded removeOverlayWithoutTimer     "); 
