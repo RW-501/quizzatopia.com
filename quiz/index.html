@@ -1848,21 +1848,21 @@ function fetchRecommendedQuizzesFromDB(quizTagsArray, quizCategory) {
     .then((querySnapshot) => {
       const documents = querySnapshot.docs;
       const recommendedDocuments = [];
-      const limit = 20;
+      const limit = 10;
 
       // Iterate through the documents
       documents.forEach((doc) => {
         const quizData = doc.data();
 
         // Check if quizCategory matches
-        if (quizData.quizCategory === quizCategory) {
-          recommendedDocuments.push(doc);
-        } else if (quizData.quizTags) { // Check if quizTags is defined
+        if (quizData.quizTags) { // Check if quizTags is defined
           // Check if any quizTag matches
           const matchingTags = quizData.quizTags.filter(tag => quizTagsArray.includes(tag));
           if (matchingTags.length > 0) {
             recommendedDocuments.push(doc);
-          }
+          }else   if (quizData.quizCategory === quizCategory) {
+          recommendedDocuments.push(doc);
+        } 
         }
 
         // Stop when reaching the limit
