@@ -2349,6 +2349,8 @@ const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "
 		      explanation: questionObj.explanation,
                 difficulty: questionObj.difficulty
               }));
+
+		    
       displayTestInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
 
               questions.push(...questionData);
@@ -2436,6 +2438,11 @@ const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "
           quizImageURL = isOldJSONStructure ? "" : data.quizImageURL;
           quizDifficulty = isOldJSONStructure ? "" : data.quizDifficulty || "";
 
+		console.log("questionData:", questionData);
+		console.log("quizTags:", quizTags);
+
+				console.log(" data.quizTags:",  data.quizTags);
+
           // Check quiz code and retrieve or save quiz info
           const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
       displayTestInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
@@ -2501,11 +2508,11 @@ countDocumentsWithQuizCodeAndUserID(quizCodeNS, userInfo.firebaseId)
 	  attemptsMade = attemptsMade;
     console.log("attemptsMade:", attemptsMade);
 
-	  if(attemptsMade >= 3){
+
+const totalAttempts = 3;
+	  if(attemptsMade >= totalAttempts){
 document.getElementById('start-btn').style.display = "none";
 	  }
-const totalAttempts = 3;
-
 // Get the attempts container element
 const attemptsContainer = document.querySelector('.attempts-container');
 
@@ -2594,7 +2601,6 @@ quizCategory= quizInfo.quizCategory;
 
   }
 	  removeOverlayWithoutTimer();
- fetchQuizzesFromDB();
 
 	      document.getElementById("start-btn").removeAttribute("disabled");
 	 console.log("loaded removeOverlayWithoutTimer     "); 
@@ -2609,7 +2615,8 @@ window.addEventListener("load", function() {
   fetchData(q, e)
     .then(() => {
       // Data is fetched and processed, call displayTestInfo here
-	    	  	
+	    	   fetchQuizzesFromDB();
+	
 
     })
     .catch(error => {
