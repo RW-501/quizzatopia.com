@@ -1832,48 +1832,48 @@ timeSoFarElement.innerHTML = `${minutes} mins ${seconds} secs`;
 
 }
 
-	var quizTagsVar, quizCategoryVar;
+var quizTagsVar, quizCategoryVar;
 
-	  
+// Function to fetch quizzes from the database
 function fetchQuizzesFromDB() {
   console.log("Fetching quizzes from the database...");
-// Initialize your Firebase app
-	
 
+  // Initialize your Firebase app
+  const db = firebase.firestore();
 
- const db = firebase.firestore();
+  console.log("quizTags, quizCategory .... " + quizTagsVar + "  ==       " + quizCategoryVar);
 
-		 console.log(" quizTags, quizCategory .... "+ quizTagsVar+"  ==       "+quizCategoryVar);
+  db.collection('quizzes')
+    .limit(20)
+    .get()
+    .then((querySnapshot) => {
+      const documents = querySnapshot.docs;
+      const randomDocuments = [];
+      const limit = 20;
 
-db.collection('quizzes')
-  .limit(20)
-  .get()
-  .then((querySnapshot) => {
-    const documents = querySnapshot.docs;
-    const randomDocuments = [];
-    const limit = 20;
+      // Iterate through the documents
+      documents.forEach((doc) => {
+        const quizData = doc.data();
 
-    // Iterate through the documents
-    documents.forEach((doc) => {
-      const quizData = doc.data();
+        // Check if quizCategory matches or any quizTag matches
+        const matchingTags = quizData.quizTags.filter(tag => quizTagsVar.includes(tag));
+        if (quizData.quizCategory === quizCategoryVar || matchingTags.length > 0) {
+          randomDocuments.push(doc);
+        }
 
-      // Check if quizCategory matches or any quizTag matches
-      const matchingTags = quizData.quizTags.filter(tag => quizTagsVar.includes(tag));
-      if (quizData.quizCategory === quizCategoryVar || matchingTags.length > 0) {
-        randomDocuments.push(doc);
+        // Stop when reaching the limit
+        if (randomDocuments.length >= limit) {
+          return;
+        }
+      });
+
+      // Randomly select documents
+      while (randomDocuments.length < limit && documents.length > 0) {
+        const randomIndex = Math.floor(Math.random() * documents.length);
+        const randomDocument = documents.splice(randomIndex, 1)[0];
+        randomDocuments.push(randomDocument);
       }
 
-      // Stop when reaching the limit
-      if (randomDocuments.length >= limit) {
-        return;
-      }
-
-    // Randomly select documents
-    while (randomDocuments.length < limit && documents.length > 0) {
-      const randomIndex = Math.floor(Math.random() * documents.length);
-      const randomDocument = documents.splice(randomIndex, 1)[0];
-      randomDocuments.push(randomDocument);
-    }
       // Get the reference to the HTML container
       const quizContainer = document.getElementById('otherQuizzes');
 
@@ -1881,7 +1881,7 @@ db.collection('quizzes')
       let html = '<h3>Other Quizzes</h3><hr><div class="otherQuizzes-column"><ul>';
 
       // Iterate over each quiz document
-      querySnapshot.forEach((doc) => {
+      randomDocuments.forEach((doc) => {
         const quizData = doc.data();
 
         // Generate the HTML for each quiz
