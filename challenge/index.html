@@ -323,7 +323,6 @@ function sendChallengeToFriend(quizCode,challengeURL, challengerID) {
   // Define challenge data
   const challengeNumber = generateUniqueChallengeNumber(); // Generate a unique challenge number
   const requestDate = new Date();
-  const challengerID = "yourChallengerID"; // Replace with actual challenger ID
 
   // Fetch additional quiz information from the quizzes collection
   db.collection("quizzes")
