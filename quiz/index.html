@@ -2487,7 +2487,8 @@ function viewStatsFunc(){
 window.location.href = "https://www.quizzatopia.com/quiz/stats/?q=" + quizCode;
 	  }
 
-
+var quizTags, quizCategory;
+	  
 function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageURL_NS, quizDifficultyNS) {
   const storedQuizInfo = localStorage.getItem(`quizInfo_${quizCodeNS}`);
   const testInfoDiv = document.getElementById('testInfo');
@@ -2540,7 +2541,10 @@ attemptsContainer.querySelector('.attempts-text').innerHTML = `<strong>${attempt
 
       let descriptionArea = quizInfo.quizDescription ? `<p><strong>Quiz Description:</strong> ${quizInfo.quizDescription}</p>` : "";
       let categoryArea = quizInfo.quizCategory ? `<p><strong>Quiz Category:</strong> ${quizInfo.quizCategory}</p>` : "";
-      
+
+quizTags = quizInfo.quizTags;
+quizCategory= quizInfo.quizCategory;
+	    
       if (score > 0) {
         // Show the pie chart for correct and incorrect answers
         showPieChartFront(score, ansWrong);
