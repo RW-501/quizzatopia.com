@@ -1844,7 +1844,6 @@ function fetchRecommendedQuizzesFromDB(quizTagsArray, quizCategory) {
   console.log("Quiz category:", quizCategory);
 
   db.collection('quizzes')
-    .limit(20)
     .get()
     .then((querySnapshot) => {
       const documents = querySnapshot.docs;
@@ -1879,7 +1878,36 @@ function fetchRecommendedQuizzesFromDB(quizTagsArray, quizCategory) {
         recommendedDocuments.push(randomDocument);
       }
 
-      // ... Rest of the code remains the same ...
+   // Get the reference to the HTML container
+      const recommendedQuizContainer = document.getElementById('recommendedQuizzes');
+
+      // Initialize the HTML string
+      let html = '<h3>Recommended Quizzes</h3><hr><div class="recommendedQuizzes-column"><ul>';
+
+      // Iterate over each recommended quiz document
+      recommendedDocuments.forEach((doc) => {
+        const quizData = doc.data();
+
+        // Generate the HTML for each recommended quiz
+        const quizHtml = `
+          <li>
+            <a href="${quizData.quizLinkDB}">
+              ${quizData.quizNameDB}
+            </a>
+          </li>
+        `;
+
+        // Append the recommended quiz HTML to the overall HTML string
+        html += quizHtml;
+      });
+
+      // Close the unordered list and the column div
+      html += '</ul></div>';
+
+      // Update the recommendedQuizContainer with the generated HTML
+      recommendedQuizContainer.innerHTML = html;
+
+      console.log("Recommended quizzes fetched and HTML updated successfully.");
     })
     .catch((error) => {
       console.error("Error fetching recommended quizzes:", error);
