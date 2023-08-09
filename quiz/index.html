@@ -2293,7 +2293,6 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImag
 
 
 
-var quizTags, quizCategory;
 	  
 function fetchData(q, e) {
   // Initialize Firebase app
@@ -2332,6 +2331,7 @@ const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "
               quizImageURL = parsedQuizDataDB.imageURL;
               quizDifficulty = parsedQuizDataDB.quizDifficulty || "";
               quizCategory = parsedQuizDataDB.quizCategory || "";
+              quizTags = parsedQuizDataDB.quizTags || "";
 
               console.log('Fetched quiz data from DB:', parsedQuizDataDB);
 
