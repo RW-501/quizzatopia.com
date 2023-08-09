@@ -595,7 +595,7 @@ word-wrap: break-word;
 
 	
 <div id="popupContainer" class="popup-container">
-	<div class="popup-content">
+	<div id='popC' class="popup-content">
   <div id="popupContent" >
     <!-- Content of the popup, answers will go here -->
   </div>
@@ -620,7 +620,7 @@ const popupContent = document.getElementById('popupContent');
 const closeButton = document.getElementById('closeButton');
 closeButton.addEventListener('click', () => {
 
-	 slideIn("popupContent");
+	 slideOut("popC");
   popupContainer.style.display = 'none';
 });
 
@@ -864,7 +864,7 @@ const popupContent = document.getElementById('popupContent');
   answerElement.textContent = `Question ${quest.questionNumber} Answer: ${questions[quest.questionNumber - 1].answer}`;
   popupContent.appendChild(answerElement);
 	
- slideIn("popupContent");
+ slideIn("popC");
   // Show the popup
   popupContainer.style.display = 'flex';
 });
