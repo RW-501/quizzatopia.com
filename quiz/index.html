@@ -2497,6 +2497,7 @@ descriptionLink.setAttribute("content", data.quizDescription+" "+q);
 
 		quizTagsVar = data.quizTags;
 quizCategoryVar = data.quizCategory;
+  		console.log(" data.quizTags:",  data.quizTags);
 
 	
           // Check quiz code and retrieve or save quiz info
@@ -2677,8 +2678,7 @@ attemptsContainer.querySelector('.attempts-text').innerHTML = `<strong>${attempt
 window.addEventListener("load", function() {
   fetchData(q, e)
     .then(() => {
-      // Data is fetched and processed, call displayTestInfo here
-  		console.log(" data.quizTags:",  data.quizTags);
+
 // Call the fetchRecommendedQuizzesFromDB function with quizTagsVar and quizCategoryVar
 fetchRecommendedQuizzesFromDB(quizTagsVar, quizCategoryVar);
 		
