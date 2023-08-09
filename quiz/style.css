@@ -2,13 +2,12 @@
 main_section {
     width: 100vw !important;
     height: 90vh !important;
-    overflow: hidden;
     /* scroll-behavior: smooth; */
     /* scroll-snap-type: block; */
     /* scroll-snap-align: center; */
     /* scroll-snap-stop: always; */
     display: contents;
-
+overflow-y: hidden;
 
     box-sizing: border-box;
 }
