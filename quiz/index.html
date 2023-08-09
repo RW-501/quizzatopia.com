@@ -742,14 +742,8 @@ font-weight: 800;
     margin: 1%;
 
 }
-#otherQuizzes{
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
 
 
-}
 
 
 .option_ad{
@@ -2503,9 +2497,7 @@ descriptionLink.setAttribute("content", data.quizDescription+" "+q);
 
 		quizTagsVar = data.quizTags;
 quizCategoryVar = data.quizCategory;
-	    		console.log(" data.quizTags:",  data.quizTags);
-// Call the fetchRecommendedQuizzesFromDB function with quizTagsVar and quizCategoryVar
-fetchRecommendedQuizzesFromDB(quizTagsVar, quizCategoryVar);
+
 	
           // Check quiz code and retrieve or save quiz info
           const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
@@ -2531,11 +2523,14 @@ fetchRecommendedQuizzesFromDB(quizTagsVar, quizCategoryVar);
             quizDifficultyX: quizDifficulty ? quizDifficulty : "",
           };
 
-          console.log("quizZZ:", quizZZ);
-
+	    		console.log(" data.quizTags:",  data.quizTags);
+// Call the fetchRecommendedQuizzesFromDB function with quizTagsVar and quizCategoryVar
+fetchRecommendedQuizzesFromDB(quizTagsVar, quizCategoryVar);
+		
           if (e === null || e === "") {} else {
             saveQuizToDB(quizZZ);
           }
+          console.log("quizZZ:", quizZZ);
 
           // Resolve the promise since data is fetched
           resolve();
