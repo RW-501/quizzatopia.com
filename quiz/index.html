@@ -2553,10 +2553,20 @@ fetchRecommendedQuizzesFromDB(quizTagsVar, quizCategoryVar);
 }
 
 // Rest of the code remains the same...
-function viewStatsFunc(){
-	
-window.location.href = "https://www.quizzatopia.com/quiz/stats/?q=" + quizCode;
-	  }
+function viewStatsFunc() {
+  try {
+    // Ensure quizCode is defined and not empty
+    if (quizCode) {
+      const statsURL = "https://www.quizzatopia.com/quiz/stats/?q=" + quizCode;
+      window.location.href = statsURL;
+    } else {
+      console.error("quizCode is not defined or empty.");
+    }
+  } catch (error) {
+    console.error("Error navigating to stats page:", error);
+  }
+}
+
 
 	  
 function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageURL_NS, quizDifficultyNS) {
