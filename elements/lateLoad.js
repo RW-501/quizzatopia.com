@@ -419,7 +419,9 @@ function openPopup(xxx) {
 
     // Setup event handlers for login buttons
     SetupLoginBTNFunc();
-
+    console.log("  Wait for the popupContainer :");
+	  
+      setTimeout(() => {
     // Wait for the popupContainer to be fully loaded before showing it
     popupContainer.onload = () => {
       console.log("Popup container fully loaded.");
@@ -427,7 +429,10 @@ function openPopup(xxx) {
       slideIn('loginPopupBody');
       popupContainer.classList.remove('d-none');
     };
-  })
+      }, 500);
+
+      
+      })
   .catch(error => {
     console.error('Error fetching popup HTML:', error);
   });
