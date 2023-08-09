@@ -2122,9 +2122,6 @@ if (q === null) {
 
 
 
-var descriptionLink = document.querySelector('meta[name="description"]');
-descriptionLink.setAttribute("content", "Discover a world of quizzes like never before, ranging from fun trivia to professional exam preparation. "+q);
-
 
 
 	
@@ -2448,6 +2445,7 @@ const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "
               }));
 
           // Update quizCode, quizName, numberOfQuestions
+          quizDescription = isOldJSONStructure ? "" : data.quizDescription;
           quizCode = isOldJSONStructure ? "" : data.quizCode;
           quizCategory = isOldJSONStructure ? "" : data.quizCategory;
           quizTags = isOldJSONStructure ? "" : data.quizTags;
@@ -2457,6 +2455,9 @@ const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "
           quizDifficulty = isOldJSONStructure ? "" : data.quizDifficulty || "";
 
 	
+
+var descriptionLink = document.querySelector('meta[name="description"]');
+descriptionLink.setAttribute("content", data.quizDescription+" "+q);
 
 		quizTagsVar = data.quizTags;
 quizCategoryVar = data.quizCategory;
