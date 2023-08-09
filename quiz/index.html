@@ -1832,17 +1832,19 @@ timeSoFarElement.innerHTML = `${minutes} mins ${seconds} secs`;
 
 }
 
+	var quizTagsVar, quizCategoryVar;
+
 	  
 function fetchQuizzesFromDB() {
   console.log("Fetching quizzes from the database...");
 // Initialize your Firebase app
-	var quizTags, quizCategory;
+	
 
 
  const db = firebase.firestore();
 
-	 console.log(" quizTags, quizCategory .... "+ quizTags+"  ==       "+quizCategory);
-	
+		 console.log(" quizTags, quizCategory .... "+ quizTagsVar+"  ==       "+quizCategoryVar);
+
   // Fetch the quizzes collection
   db.collection('quizzes')
  .limit(20)
@@ -2286,8 +2288,6 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImag
 
 
 
-var quizTags, quizCategory;
-
 	  
 function fetchData(q, e) {
   // Initialize Firebase app
@@ -2435,8 +2435,8 @@ const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "
 
 	
 
-		quizTags = data.quizTags;
-quizCategory= data.quizCategory;
+		quizTagsVar = data.quizTags;
+quizCategoryVar = data.quizCategory;
 	    		console.log(" data.quizTags:",  data.quizTags);
 
           // Check quiz code and retrieve or save quiz info
