@@ -136,38 +136,44 @@ a:hover {
 
 
 
-  
-</style>
-
-
+    .sent-cell {
+      background-color: lightblue;
+    }
+    .received-cell {
+      background-color: lightgreen;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid #ddd;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
 
     
   </head>
 <body>
   <!-- Add your HTML content here -->
   <h1>Quiz Challenge Page</h1>
-  <div id="challengeNumber">Challenge Number: </div>
-  <div id="challengeResult">Result: </div>
-  <button id="shareButton">Share</button>
-  <button id="statsButton">Stats</button>
 
-  <!-- Popover -->
-  <div id="popoverContainer" style="display: none;">
-    <div id="popoverContent">
-      <button id="closeButton">&times;</button>
-      <ul>
-        <li><a href="#">Share with a link</a></li>
-        <li><a href="#">Share with friends</a></li>
-        <li><a href="#">Share on Facebook</a></li>
-      </ul>
-    </div>
-  </div>
+ <h1>Quiz Challenge Details</h1>
+  <p>Quiz Code: <span id="quizCode"></span></p>
+  <p>Challenge Number: <span id="challengeNumber"></span></p>
+
+<h1>Challenge Requests</h1>
+  <div id="challengesContainer"></div>
+
+	
 
   <script>
 
-	  //2715     start `https://quizzatopia.com/challenge/?${quizCode}&start`;
+	  //start `https://quizzatopia.com/challenge/?${quizCode}&start`;
 
-	/// request   return `https://quizzatopia.com/challenge/?${quizCode}&${uID}`;
+	/// request    `https://quizzatopia.com/challenge/?${quizCode}&${uID}`;
 
 
   // Function to read URL parameters
@@ -192,59 +198,162 @@ const challengeNumber = url.substring(endIndex + 1);
 console.log("quizCode:", quizCode);
 console.log("challengeNumber:", challengeNumber);
 });
-/*
-	document.addEventListener('DOMContentLoaded', () => {
-
-    // Display challenge number and quiz code in the HTML elements
-    document.getElementById('challengeNumber').innerText = challengeNumber;
-    document.getElementById('quizCode').innerText = quizCode;
-
-    // Get the user ID using the getUserInfo function (assuming you have implemented it)
-    const userInfo = getUserInfo();
-    const uID = userInfo.firebaseId;
-
-    // Log the values for testing
- 
-    console.log('User ID: ' + uID);
-
-   
 
 
+// Function to fetch and display challenge requests
+function fetchAndDisplayChallenges(userID) {
+  // Assuming you have a Firebase Firestore instance initialized
+  const db = firebase.firestore();
 
+  // Get a reference to the container where challenges will be displayed
+  const challengesContainer = document.getElementById("challengesContainer");
 
+  // Fetch challenge requests for the current user
+  db.collection("challenges")
+    .where("challengerID", "==", userID)
+    .where("requesterID", "==", userID)
+    .get()
+    .then((querySnapshot) => {
+      if (querySnapshot.empty) {
+        // If no requests are displayed, start a challenge
+        startChallenge(userID);
+        return;
+      }
 
-	
-  // Check if the URL parameters have #share or #stats
-  if (window.location.hash === '#share') {
-    // Do something if URL has #share
-    console.log('Share mode activated');
-    // Show the popover when the Share button is clicked
-    document.getElementById('shareButton').addEventListener('click', () => {
-      document.getElementById('popoverContainer').style.display = 'block';
+      // Create an HTML table for the challenges
+      let challengesTable = '<table>';
+      challengesTable += '<thead><tr><th>Quiz Name</th><th>Request Date</th><th>Challenger</th><th>Actions</th></tr></thead><tbody>';
+
+      // Iterate through the challenge requests
+      querySnapshot.forEach((doc) => {
+        const challengeData = doc.data();
+        const challengeID = doc.id;
+
+        // Define styles based on requester or challenger
+        const cellStyle = challengeData.requesterID === userID ? "sent-cell" : "received-cell";
+
+        // Add a row to the table
+        challengesTable += `
+          <tr class="${cellStyle}">
+            <td>${challengeData.quizName}</td>
+            <td>${challengeData.requestDate.toDate().toLocaleString()}</td>
+            <td>${challengeData.challengerID}</td>
+            <td><button onclick="acceptChallenge('${challengeID}','${challengeData.quizCode}')">Accept</button></td>
+          </tr>`;
+      });
+
+      challengesTable += '</tbody></table>';
+
+      // Update the challenges container with the table
+      challengesContainer.innerHTML = challengesTable;
+    })
+    .catch((error) => {
+      console.error("Error fetching challenges:", error);
     });
-  }
+}
 
-  if (window.location.hash === '#stats') {
-    // Do something if URL has #stats
-    console.log('Stats mode activated');
-    // Show the popover when the Stats button is clicked
-    document.getElementById('statsButton').addEventListener('click', () => {
-      document.getElementById('popoverContainer').style.display = 'block';
-    });
-  }
 
-  // Add event listener for the close button
-  document.getElementById('closeButton').addEventListener('click', () => {
-    // Hide the popover when the close button is clicked
-    document.getElementById('popoverContainer').style.display = 'none';
+
+// Function to accept a challenge
+function acceptChallenge(challengeID,quizCode) {
+  // Accept the challenge
+  // Add your logic here to accept a challenge or display a message
+}
+
+
+
+
+
+
+
+
+
+
+
+
+	  
+
+
+
+// Function to generate a challenge URL
+function generateChallengeURL(quizCode, challengeNumber) {
+  return `https://quizzatopia.com/challenge/?quizCode=${quizCode}&challengeNumber=${challengeNumber}`;
+}
+
+// When the user selects friends and submits the form
+document.getElementById("sendChallengeForm").addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  // Get selected friends and other data from the form
+  const selectedFriends = getSelectedFriends();
+  const quizCode = "yourQuizCode"; // Replace with actual quiz code
+  const challengeNumber = generateUniqueChallengeNumber(); // Generate a unique challenge number
+
+  // Generate URLs for each friend and send them
+  selectedFriends.forEach(friend => {
+    const challengeURL = generateChallengeURL(quizCode, challengeNumber);
+    sendChallengeToFriend(challengeURL, friend);
   });
 
-							  
+  // Display success message or update UI
 });
-*/
 
 
-    
+
+
+// Function to send a challenge URL to a friend
+function sendChallengeToFriend(quizCode,challengeURL, challengerID) {
+  // Assuming you have a Firebase Firestore instance initialized
+  const db = firebase.firestore();
+
+  // Define challenge data
+  const quizCode = "yourQuizCode"; // Replace with actual quiz code
+  const challengeNumber = generateUniqueChallengeNumber(); // Generate a unique challenge number
+  const requestDate = new Date();
+  const challengerID = "yourChallengerID"; // Replace with actual challenger ID
+
+  // Fetch additional quiz information from the quizzes collection
+  db.collection("quizzes")
+    .doc(quizCode)
+    .get()
+    .then((quizDoc) => {
+      if (quizDoc.exists) {
+        const quizData = quizDoc.data();
+        const quizName = quizData.quizName;
+        const questionCount = quizData.numberOfQuestionsDB; // Assuming questions is an array in quizData
+
+        // Add challenge data to the challenges collection
+        db.collection("challenges").add({
+          quizCode:quizCode,
+          quizName:quizName,
+          challengeNumber:challengeNumber,
+          requestDate:requestDate,
+          requesterID:uID,
+	challengeStarted: false,	
+          challengerID:challengerID,
+          challengeDone: false, // Initial challenge status
+          questionCount:questionCount, // Number of questions in the quiz
+          // Add more relevant fields as needed
+        })
+        .then(() => {
+          console.log("Challenge sent to friend successfully!");
+        })
+        .catch((error) => {
+          console.error("Error sending challenge:", error);
+        });
+      } else {
+        console.error("Quiz not found.");
+      }
+    })
+    .catch((error) => {
+      console.error("Error fetching quiz data:", error);
+    });
+}
+
+
+
+fetchAndDisplayChallenges(userID);
+	  
   </script>
 </body>
 </html>
