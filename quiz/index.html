@@ -1845,14 +1845,28 @@ function fetchQuizzesFromDB() {
 
 		 console.log(" quizTags, quizCategory .... "+ quizTagsVar+"  ==       "+quizCategoryVar);
 
-  // Fetch the quizzes collection
-  db.collection('quizzes')
- .limit(20)
-    .get()
-    .then((querySnapshot) => {
+db.collection('quizzes')
+  .limit(20)
+  .get()
+  .then((querySnapshot) => {
     const documents = querySnapshot.docs;
     const randomDocuments = [];
     const limit = 20;
+
+    // Iterate through the documents
+    documents.forEach((doc) => {
+      const quizData = doc.data();
+
+      // Check if quizCategory matches or any quizTag matches
+      const matchingTags = quizData.quizTags.filter(tag => quizTagsVar.includes(tag));
+      if (quizData.quizCategory === quizCategoryVar || matchingTags.length > 0) {
+        randomDocuments.push(doc);
+      }
+
+      // Stop when reaching the limit
+      if (randomDocuments.length >= limit) {
+        return;
+      }
 
     // Randomly select documents
     while (randomDocuments.length < limit && documents.length > 0) {
