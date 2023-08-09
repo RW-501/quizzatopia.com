@@ -135,7 +135,15 @@ a:hover {
 }
 
 
+.recommendedQuizzes-column li {
+    color: #636669;
+    text-decoration: none !important;
+    font-size: 1.2em;
+    font-weight: 800;
+    padding: 1%;
+    margin: 1%;
 
+}
 
   
 </style>
@@ -166,9 +174,10 @@ a:hover {
 
   <script>
 
-	  //2715     return `https://quizzatopia.com/challenge/?${quizCode}&start`;
+	  //2715     start `https://quizzatopia.com/challenge/?${quizCode}&start`;
 
-	
+	/// request   return `https://quizzatopia.com/challenge/?${quizCode}&${uID}`;
+
 
   // Function to read URL parameters
   function getURLParams() {
