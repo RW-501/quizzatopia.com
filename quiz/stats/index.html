@@ -619,6 +619,8 @@ const popupContent = document.getElementById('popupContent');
 // Close button functionality for the popup
 const closeButton = document.getElementById('closeButton');
 closeButton.addEventListener('click', () => {
+
+	 slideIn("popupContent");
   popupContainer.style.display = 'none';
 });
 
@@ -861,7 +863,8 @@ const popupContent = document.getElementById('popupContent');
   const answerElement = document.createElement('p');
   answerElement.textContent = `Question ${quest.questionNumber} Answer: ${questions[quest.questionNumber - 1].answer}`;
   popupContent.appendChild(answerElement);
-
+	
+ slideIn("popupContent");
   // Show the popup
   popupContainer.style.display = 'flex';
 });
