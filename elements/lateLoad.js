@@ -424,7 +424,7 @@ function openPopup(xxx) {
       setTimeout(() => {
     // Wait for the popupContainer to be fully loaded before showing it
       console.log("Popup container fully loaded.");
-      // Slide in the loginPopupBody and remove d-none class
+  const loginPopup = document.getElementById('loginPopup');
     loginPopup.classList.remove('d-none');
     slideIn('loginPopupBody');
 
