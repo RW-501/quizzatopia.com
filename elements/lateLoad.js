@@ -387,32 +387,29 @@ const badges = [
 
 function openPopup(xxx) {
   // Check if the loginPopup element already exists
-  if (document.getElementById('loginPopup')) {
-    // If the popup exists, slide in the loginPopupBody and remove d-none class
+  const loginPopup = document.getElementById('loginPopup');
+  if (loginPopup) {
+    // If the popup exists, show it and slide in the loginPopupBody
+    loginPopup.classList.remove('d-none');
     slideIn('loginPopupBody');
-    document.getElementById('loginPopup').classList.remove('d-none');
   } else {
     // Determine the correct path to the auth index page
-    let authIndex;
-    if (currentPagePath === '/' || currentPagePath === '/index.html') {
-      authIndex = './auth/index.html';
-    } else {
-      authIndex = '/auth/index.html';
-    }
+    const authIndex = currentPagePath.includes('index.html') ? './auth/index.html' : '/auth/index.html';
 
-    // Fetch the popup HTML dynamically and append it to the signupLoginArea element
+    // Fetch the popup HTML dynamically
     fetch(authIndex)
       .then(response => response.text())
       .then(data => {
-        const signupLoginArea = document.createElement('div');
-        signupLoginArea.id = 'signupLoginArea';
+        // Create a div to hold the popup content
+        const popupContainer = document.createElement('div');
+        popupContainer.id = 'loginPopup';
+        popupContainer.innerHTML = data;
 
-        // Set the inner HTML of the signupLoginArea to the fetched data
-        signupLoginArea.innerHTML = data;
-        document.body.appendChild(signupLoginArea);
+        // Initially hide the popup
+        popupContainer.style.display = 'none';
 
-        // Initially hide the signupLoginArea
-        signupLoginArea.style.display = 'none';
+        // Append the popup to the body
+        document.body.appendChild(popupContainer);
 
         // Determine which tab to switch to based on the xxx parameter
         if (xxx === 'signin') {
@@ -421,12 +418,15 @@ function openPopup(xxx) {
           switchTab('login');
         }
 
-        // Show the login popup and slide in the loginPopupBody
-        document.getElementById('loginPopup').classList.remove('d-none');
+        // Show the popup and slide in the loginPopupBody
+        popupContainer.classList.remove('d-none');
         slideIn('loginPopupBody');
 
         // Setup event handlers for login buttons
         SetupLoginBTNFunc();
+      })
+      .catch(error => {
+        console.error('Error fetching popup HTML:', error);
       });
   }
 }
