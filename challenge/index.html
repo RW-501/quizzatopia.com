@@ -135,15 +135,6 @@ a:hover {
 }
 
 
-.recommendedQuizzes-column li {
-    color: #636669;
-    text-decoration: none !important;
-    font-size: 1.2em;
-    font-weight: 800;
-    padding: 1%;
-    margin: 1%;
-
-}
 
   
 </style>
@@ -184,6 +175,7 @@ a:hover {
   const urlParams = window.location.href;
     return urlParams;
   }
+document.addEventListener("DOMContentLoaded", function () {
 
     // Get the challenge number and quiz code from URL parameters
     const url = getURLParams();
@@ -199,7 +191,7 @@ const challengeNumber = url.substring(endIndex + 1);
 
 console.log("quizCode:", quizCode);
 console.log("challengeNumber:", challengeNumber);
-
+});
 /*
 	document.addEventListener('DOMContentLoaded', () => {
 
