@@ -400,14 +400,8 @@ function openPopup(xxx) {
     fetch(authIndex)
       .then(response => response.text())
       .then(data => {
-     /*   // Create a div to hold the popup content
-        const popupContainer = document.createElement('div');
-        popupContainer.id = 'loginPopup';
-        popupContainer.innerHTML = data;
-
-        // Initially hide the popup
-        popupContainer.style.display = 'none';
-*/  const footer_XL = document.getElementById('footer_XL');
+    
+	       const footer_XL = document.getElementById('footer_XL');
         const popupContainer = document.createElement('div');
         popupContainer.innerHTML = data;
 
@@ -424,6 +418,7 @@ function openPopup(xxx) {
         slideIn('loginPopupBody');
         // Show the popup and slide in the loginPopupBody
         popupContainer.classList.remove('d-none');
+    console.log("test slideIn('loginPopupBody');:");
 
         // Setup event handlers for login buttons
         SetupLoginBTNFunc();
@@ -460,7 +455,7 @@ function viewDashboard() {
   if (loggedIn === true) {
     window.location.href = '/user/'; // Redirect to the user dashboard
   } else {
-    console.log("test viewDashboard:");
+    console.log(" viewDashboard:");
 
     // Show the login popup or switch to the login tab in the popup
     openPopup();
