@@ -388,6 +388,9 @@ const badges = [
 function openPopup(xxx) {
   // Check if the loginPopup element already exists
   const loginPopup = document.getElementById('loginPopup');
+    console.log(" openPopup:");
+
+	
   if (loginPopup) {
     // If the popup exists, show it and slide in the loginPopupBody
     loginPopup.classList.remove('d-none');
@@ -397,35 +400,38 @@ function openPopup(xxx) {
     const authIndex = currentPagePath.includes('index.html') ? './auth/index.html' : '/auth/index.html';
 
     // Fetch the popup HTML dynamically
-    fetch(authIndex)
-      .then(response => response.text())
-      .then(data => {
-    
-	       const footer_XL = document.getElementById('footer_XL');
-        const popupContainer = document.createElement('div');
-        popupContainer.innerHTML = data;
+   fetch(authIndex)
+  .then(response => response.text())
+  .then(data => {
+    const footer_XL = document.getElementById('footer_XL');
+    const popupContainer = document.createElement('div');
+    popupContainer.innerHTML = data;
 
-        // Append the popup to the body
-        footer_XL.appendChild(popupContainer);
+    // Append the popup to the body
+    footer_XL.appendChild(popupContainer);
 
-        // Determine which tab to switch to based on the xxx parameter
-        if (xxx === 'signin') {
-          switchTab('signup');
-        } else {
-          switchTab('login');
-        }
-	      
-        slideIn('loginPopupBody');
-        // Show the popup and slide in the loginPopupBody
-        popupContainer.classList.remove('d-none');
-    console.log("test slideIn('loginPopupBody');:");
+    // Determine which tab to switch to based on the xxx parameter
+    if (xxx === 'signin') {
+      switchTab('signup');
+    } else {
+      switchTab('login');
+    }
 
-        // Setup event handlers for login buttons
-        SetupLoginBTNFunc();
-      })
-      .catch(error => {
-        console.error('Error fetching popup HTML:', error);
-      });
+    // Setup event handlers for login buttons
+    SetupLoginBTNFunc();
+
+    // Wait for the popupContainer to be fully loaded before showing it
+    popupContainer.onload = () => {
+      console.log("Popup container fully loaded.");
+      // Slide in the loginPopupBody and remove d-none class
+      slideIn('loginPopupBody');
+      popupContainer.classList.remove('d-none');
+    };
+  })
+  .catch(error => {
+    console.error('Error fetching popup HTML:', error);
+  });
+
   }
 }
 
