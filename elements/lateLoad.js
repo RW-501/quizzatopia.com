@@ -423,12 +423,11 @@ function openPopup(xxx) {
 	  
       setTimeout(() => {
     // Wait for the popupContainer to be fully loaded before showing it
-    popupContainer.onload = () => {
       console.log("Popup container fully loaded.");
       // Slide in the loginPopupBody and remove d-none class
-      slideIn('loginPopupBody');
-      popupContainer.classList.remove('d-none');
-    };
+    loginPopup.classList.remove('d-none');
+    slideIn('loginPopupBody');
+
       }, 500);
 
       
