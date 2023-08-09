@@ -46,73 +46,56 @@
 -->
   <script  src="/main.js" ></script> 
 <style>
-
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
+header {
   text-align: center;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
 }
 
-#challengeNumber,
-#challengeResult {
-  text-align: center;
-  margin-bottom: 20px;
+section {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-#shareButton,
-#statsButton {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 20px;
+h2 {
+  margin-top: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+button {
   background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 5px;
+  padding: 10px 20px;
   cursor: pointer;
 }
 
-#shareButton:hover,
-#statsButton:hover {
+button:hover {
   background-color: #0056b3;
-}
-
-/* Popover Styling */
-#popoverContainer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#popoverContent {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
-  position: relative;
-  max-width: 300px;
-}
-
-#closeButton {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  font-size: 20px;
-  color: #333;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-#closeButton:hover {
-  color: #777;
 }
 
 ul {
@@ -134,24 +117,6 @@ a:hover {
   color: #0056b3;
 }
 
-
-
-    .sent-cell {
-      background-color: lightblue;
-    }
-    .received-cell {
-      background-color: lightgreen;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      border: 1px solid #ddd;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: left;
-    }
   </style>
 
     
@@ -160,12 +125,44 @@ a:hover {
   <!-- Add your HTML content here -->
   <h1>Quiz Challenge Page</h1>
 
- <h1>Quiz Challenge Details</h1>
-  <p>Quiz Code: <span id="quizCode"></span></p>
-  <p>Challenge Number: <span id="challengeNumber"></span></p>
 
-<h1>Challenge Requests</h1>
-  <div id="challengesContainer"></div>
+  <section id="challengeDetails">
+    <h2>Quiz Challenge Details</h2>
+    <p>Quiz Code: <span id="quizCode"></span></p>
+    <p>Challenge Number: <span id="challengeNumber"></span></p>
+    <!-- Display more challenge details here -->
+  </section>
+
+  <section id="challengeResults">
+    <h2>Quiz Challenge Results</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Question</th>
+          <th>Your Answer</th>
+          <th>Correct Answer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Display challenge results rows here -->
+      </tbody>
+    </table>
+  </section>
+
+  <section id="challengeRequests">
+    <h2>Challenge Requests</h2>
+    <ul id="requestsList">
+      <!-- Display challenge requests as list items here -->
+    </ul>
+  </section>
+
+  <section id="sendChallenge">
+    <h2>Send Challenge</h2>
+    <form id="sendChallengeForm">
+      <!-- Display friend list and other form elements here -->
+      <button type="submit">Send Challenge</button>
+    </form>
+  </section>
 
 	
 
