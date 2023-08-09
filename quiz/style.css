@@ -696,8 +696,12 @@ display: flex;
   border-top: 1px solid #ddd;
   font-family: Arial, sans-serif;
 margin-top: 10%;
-width: 100%;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 90%;
+    box-sizing: border-box;
 }
+
 
 #otherQuizzes h3 {
   color: #666;
@@ -738,4 +742,6 @@ width: 100%;
 
 .otherQuizzes-column a:hover {
   text-decoration: none;
+	  color: black;
+
 }
