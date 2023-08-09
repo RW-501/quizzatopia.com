@@ -188,7 +188,14 @@
     return urlParams;
   }
 document.addEventListener("DOMContentLoaded", function () {
+});
 
+
+var quizCode;
+var challengeNumber
+	  
+// Function to fetch and display challenge requests
+function fetchAndDisplayChallenges(userID) {
     // Get the challenge number and quiz code from URL parameters
     const url = getURLParams();
 console.log("url:", url);
@@ -196,23 +203,25 @@ console.log("url:", url);
 	
 const startIndex = url.indexOf('?') + 1; // Find the index of '?' character
 const endIndex = url.indexOf('&', startIndex); // Find the index of '&' character after '?'
-const quizCode = url.substring(startIndex, endIndex);
+	
+ quizCode = url.substring(startIndex, endIndex);
+ challengeNumber = url.substring(endIndex + 1);
 
-// Extract the challengeNumber
-const challengeNumber = url.substring(endIndex + 1);
+console.log("quizCode ?:", quizCode);
+console.log("challengeNumber &:", challengeNumber);
 
-console.log("quizCode:", quizCode);
-console.log("challengeNumber:", challengeNumber);
-});
+   document.getElementById("quizCode").innerHTML = quizCode;
+   document.getElementById("challengeNumber").innerHTML = challengeNumber;
 
 
-// Function to fetch and display challenge requests
-function fetchAndDisplayChallenges(userID) {
+
+
+	
   // Assuming you have a Firebase Firestore instance initialized
   const db = firebase.firestore();
 
   // Get a reference to the container where challenges will be displayed
-  const challengesContainer = document.getElementById("challengesContainer");
+  const challengesContainer = document.getElementById("requestsList");
 
   // Fetch challenge requests for the current user
   db.collection("challenges")
@@ -292,7 +301,6 @@ document.getElementById("sendChallengeForm").addEventListener("submit", (event) 
 
   // Get selected friends and other data from the form
   const selectedFriends = getSelectedFriends();
-  const quizCode = "yourQuizCode"; // Replace with actual quiz code
   const challengeNumber = generateUniqueChallengeNumber(); // Generate a unique challenge number
 
   // Generate URLs for each friend and send them
@@ -313,7 +321,6 @@ function sendChallengeToFriend(quizCode,challengeURL, challengerID) {
   const db = firebase.firestore();
 
   // Define challenge data
-  const quizCode = "yourQuizCode"; // Replace with actual quiz code
   const challengeNumber = generateUniqueChallengeNumber(); // Generate a unique challenge number
   const requestDate = new Date();
   const challengerID = "yourChallengerID"; // Replace with actual challenger ID
