@@ -1886,8 +1886,7 @@ function fetchRecommendedQuizzesFromDB(quizTagsArray, quizCategory) {
     });
 }
 
-// Call the fetchRecommendedQuizzesFromDB function with quizTagsVar and quizCategoryVar
-fetchRecommendedQuizzesFromDB(quizTagsVar, quizCategoryVar);
+
 
 
 
@@ -2434,7 +2433,9 @@ const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "
 		quizTagsVar = data.quizTags;
 quizCategoryVar = data.quizCategory;
 	    		console.log(" data.quizTags:",  data.quizTags);
-
+// Call the fetchRecommendedQuizzesFromDB function with quizTagsVar and quizCategoryVar
+fetchRecommendedQuizzesFromDB(quizTagsVar, quizCategoryVar);
+	
           // Check quiz code and retrieve or save quiz info
           const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
       displayTestInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
@@ -2604,9 +2605,6 @@ window.addEventListener("load", function() {
   fetchData(q, e)
     .then(() => {
       // Data is fetched and processed, call displayTestInfo here
-// Call the fetchRecommendedQuizzesFromDB function with quizTagsVar and quizCategoryVar
-fetchRecommendedQuizzesFromDB(quizTagsVar, quizCategoryVar);
-	
 
     })
     .catch(error => {
