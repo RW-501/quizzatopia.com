@@ -1832,23 +1832,22 @@ timeSoFarElement.innerHTML = `${minutes} mins ${seconds} secs`;
 
 }
 
-var quizTagsVar, quizCategoryVar;
-
-// Function to fetch quizzes from the database
-function fetchQuizzesFromDB() {
-  console.log("Fetching quizzes from the database...");
+// Function to fetch recommended quizzes from the database
+function fetchRecommendedQuizzesFromDB(quizTagsArray, quizCategory) {
+  console.log("Fetching recommended quizzes from the database...");
 
   // Initialize your Firebase app
   const db = firebase.firestore();
 
-  console.log("quizTags, quizCategory .... " + quizTagsVar + "  ==       " + quizCategoryVar);
+  console.log("Quiz tags:", quizTagsArray);
+  console.log("Quiz category:", quizCategory);
 
   db.collection('quizzes')
     .limit(20)
     .get()
     .then((querySnapshot) => {
       const documents = querySnapshot.docs;
-      const randomDocuments = [];
+      const recommendedDocuments = [];
       const limit = 20;
 
       // Iterate through the documents
@@ -1856,35 +1855,35 @@ function fetchQuizzesFromDB() {
         const quizData = doc.data();
 
         // Check if quizCategory matches or any quizTag matches
-        const matchingTags = quizData.quizTags.filter(tag => quizTagsVar.includes(tag));
-        if (quizData.quizCategory === quizCategoryVar || matchingTags.length > 0) {
-          randomDocuments.push(doc);
+        const matchingTags = quizData.quizTags.filter(tag => quizTagsArray.includes(tag));
+        if (quizData.quizCategory === quizCategory || matchingTags.length > 0) {
+          recommendedDocuments.push(doc);
         }
 
         // Stop when reaching the limit
-        if (randomDocuments.length >= limit) {
+        if (recommendedDocuments.length >= limit) {
           return;
         }
       });
 
       // Randomly select documents
-      while (randomDocuments.length < limit && documents.length > 0) {
+      while (recommendedDocuments.length < limit && documents.length > 0) {
         const randomIndex = Math.floor(Math.random() * documents.length);
         const randomDocument = documents.splice(randomIndex, 1)[0];
-        randomDocuments.push(randomDocument);
+        recommendedDocuments.push(randomDocument);
       }
 
       // Get the reference to the HTML container
-      const quizContainer = document.getElementById('otherQuizzes');
+      const recommendedQuizContainer = document.getElementById('recommendedQuizzes');
 
       // Initialize the HTML string
-      let html = '<h3>Other Quizzes</h3><hr><div class="otherQuizzes-column"><ul>';
+      let html = '<h3>Recommended Quizzes</h3><hr><div class="recommendedQuizzes-column"><ul>';
 
-      // Iterate over each quiz document
-      randomDocuments.forEach((doc) => {
+      // Iterate over each recommended quiz document
+      recommendedDocuments.forEach((doc) => {
         const quizData = doc.data();
 
-        // Generate the HTML for each quiz
+        // Generate the HTML for each recommended quiz
         const quizHtml = `
           <li>
             <a href="${quizData.quizLinkDB}">
@@ -1893,22 +1892,24 @@ function fetchQuizzesFromDB() {
           </li>
         `;
 
-        // Append the quiz HTML to the overall HTML string
+        // Append the recommended quiz HTML to the overall HTML string
         html += quizHtml;
       });
 
       // Close the unordered list and the column div
       html += '</ul></div>';
 
-      // Update the quizContainer with the generated HTML
-      quizContainer.innerHTML = html;
+      // Update the recommendedQuizContainer with the generated HTML
+      recommendedQuizContainer.innerHTML = html;
 
-      console.log("Quizzes fetched and HTML updated successfully.");
+      console.log("Recommended quizzes fetched and HTML updated successfully.");
     })
     .catch((error) => {
-      console.error("Error fetching quizzes:", error);
+      console.error("Error fetching recommended quizzes:", error);
     });
 }
+
+
 
 
 	  
@@ -2622,7 +2623,8 @@ window.addEventListener("load", function() {
   fetchData(q, e)
     .then(() => {
       // Data is fetched and processed, call displayTestInfo here
-	    	   fetchQuizzesFromDB();
+// Call the fetchRecommendedQuizzesFromDB function with quizTagsVar and quizCategoryVar
+fetchRecommendedQuizzesFromDB(quizTagsVar, quizCategoryVar);
 	
 
     })
