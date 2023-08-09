@@ -400,16 +400,16 @@ function openPopup(xxx) {
     fetch(authIndex)
       .then(response => response.text())
       .then(data => {
-        // Create a div to hold the popup content
+     /*   // Create a div to hold the popup content
         const popupContainer = document.createElement('div');
         popupContainer.id = 'loginPopup';
         popupContainer.innerHTML = data;
 
         // Initially hide the popup
         popupContainer.style.display = 'none';
-
+*/
         // Append the popup to the body
-        document.body.appendChild(popupContainer);
+        document.body.appendChild(data);
 
         // Determine which tab to switch to based on the xxx parameter
         if (xxx === 'signin') {
