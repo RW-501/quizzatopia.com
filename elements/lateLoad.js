@@ -420,10 +420,10 @@ function openPopup(xxx) {
         } else {
           switchTab('login');
         }
-
+	      
+        slideIn('loginPopupBody');
         // Show the popup and slide in the loginPopupBody
         popupContainer.classList.remove('d-none');
-        slideIn('loginPopupBody');
 
         // Setup event handlers for login buttons
         SetupLoginBTNFunc();
