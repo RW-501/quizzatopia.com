@@ -47,10 +47,10 @@
       <div id="searchResults"></div>
     </form>
     <!-- Profile pic and name area -->
-    <div class="profile-area"  onclick="viewDashboard();">
+    <button class="profile-area"  onclick="viewDashboard();">
       <img id="profile-pic" src="/images/blank.png" alt="Profile Picture" class="profile-pic" loading="lazy">
       <div id="user-dashboard" class="" >Dashboard</div>
-    </div>
+    </button>
 
   </div>
 </nav>
@@ -148,8 +148,9 @@ margin-left: 5%;
     display: flex; /* Use flexbox to align the profile picture and name horizontally */
     align-items: center; /* Center align vertically */
     width: 25%;
-
-  }
+    border: none;
+    background-color: transparent;
+}
   
   #user-dashboard {
     width: 80px; /* Adjust the width as needed */
