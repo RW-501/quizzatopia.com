@@ -1410,11 +1410,6 @@ function openQuestionPopup(questionIndex, Count) {
 	questionsCompleted = loadQuestionsCompleted(quizCode);
 
 
-console.log("count:", Count);
-console.log("questionsCompleted:", questionsCompleted);
-console.log("questionIndex:", questionIndex);
-
-// Access the responseTime of a specific question
 //let questionIndex = 0; // Replace with the desired question index
 let newResponseTime = questionsCompleted[Count].responseTime;
 
@@ -1845,8 +1840,7 @@ function fetchQuizzesFromDB() {
 
 
  const db = firebase.firestore();
-	 console.log("questionsOG.quizCategory .... "+questionsOG.quizCategory);
-	 console.log("quizTags.quizTags .... "+questionsOG.quizTags);
+
 	 console.log(" quizTags, quizCategory .... "+ quizTags+"  ==       "+quizCategory);
 	
   // Fetch the quizzes collection
@@ -2292,6 +2286,7 @@ function checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImag
 
 
 
+var quizTags, quizCategory;
 
 	  
 function fetchData(q, e) {
@@ -2438,10 +2433,11 @@ const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "
           quizImageURL = isOldJSONStructure ? "" : data.quizImageURL;
           quizDifficulty = isOldJSONStructure ? "" : data.quizDifficulty || "";
 
-		console.log("questionData:", questionData);
-		console.log("quizTags:", quizTags);
+	
 
-				console.log(" data.quizTags:",  data.quizTags);
+		quizTags = data.quizTags;
+quizCategory= data.quizCategory;
+	    		console.log(" data.quizTags:",  data.quizTags);
 
           // Check quiz code and retrieve or save quiz info
           const quizInfo = checkQuizCodeAndGetInfo(quizCode, quizName, numberOfQuestions, quizImageURL, quizDifficulty);
@@ -2494,7 +2490,6 @@ function viewStatsFunc(){
 window.location.href = "https://www.quizzatopia.com/quiz/stats/?q=" + quizCode;
 	  }
 
-var quizTags, quizCategory;
 	  
 function displayTestInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS, quizImageURL_NS, quizDifficultyNS) {
   const storedQuizInfo = localStorage.getItem(`quizInfo_${quizCodeNS}`);
@@ -2549,9 +2544,7 @@ attemptsContainer.querySelector('.attempts-text').innerHTML = `<strong>${attempt
       let descriptionArea = quizInfo.quizDescription ? `<p><strong>Quiz Description:</strong> ${quizInfo.quizDescription}</p>` : "";
       let categoryArea = quizInfo.quizCategory ? `<p><strong>Quiz Category:</strong> ${quizInfo.quizCategory}</p>` : "";
 
-quizTags = quizInfo.quizTags;
-quizCategory= quizInfo.quizCategory;
-	    
+
       if (score > 0) {
         // Show the pie chart for correct and incorrect answers
         showPieChartFront(score, ansWrong);
