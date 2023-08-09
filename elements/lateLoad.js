@@ -407,9 +407,12 @@ function openPopup(xxx) {
 
         // Initially hide the popup
         popupContainer.style.display = 'none';
-*/
+*/  const footer_XL = document.getElementById('footer_XL');
+        const popupContainer = document.createElement('div');
+        popupContainer.innerHTML = data;
+
         // Append the popup to the body
-        document.body.appendChild(data);
+        footer_XL.appendChild(popupContainer);
 
         // Determine which tab to switch to based on the xxx parameter
         if (xxx === 'signin') {
