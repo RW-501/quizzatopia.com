@@ -287,6 +287,7 @@ function removeInvalidCookies() {
 
   for (const cookie of cookies) {
     const [name, value] = cookie.split('=');
+        console.log(`name: ${name} cookie with path ${document.location.pathname}`);
 
     if (name === 'loggedIn') {
       if (document.location.pathname !== '/') {
