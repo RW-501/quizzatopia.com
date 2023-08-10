@@ -388,7 +388,6 @@ const badges = [
 function openPopup(xxx) {
   // Check if the loginPopup element already exists
   const loginPopup = document.getElementById('loginPopup');
-    console.log(" openPopup:");
 
 	
   if (loginPopup) {
@@ -419,7 +418,6 @@ function openPopup(xxx) {
 
     // Setup event handlers for login buttons
     SetupLoginBTNFunc();
-    console.log("  Wait for the popupContainer :");
 	  
       setTimeout(() => {
     // Wait for the popupContainer to be fully loaded before showing it
@@ -1301,14 +1299,16 @@ function logOutFunction() {
     updateNavBar();
 
     displayUserInfo();
+    console.log(" openPopup:");
 
     const cookieValue = getCookieValue('loggedIn');
+    console.log(" cookieValue: "+cookieValue);
 
     if (cookieValue === 'false') {
-      console.log("User logged out.");
       // Add a timeout before redirecting
       setTimeout(function() {
-        window.location.href = '/';
+      console.log("User logged out.");
+        //window.location.href = '/';
       }, 1000); // Adjust the delay time as needed
     }
   }).catch(function(error) {
