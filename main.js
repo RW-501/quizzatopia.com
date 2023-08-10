@@ -397,7 +397,7 @@ const restrictedPathsRegex = /^(\/user\/|\/backend\/|\/friend\/|\/challenge\/)/;
 
 if (loggedIn === false && restrictedPathsRegex.test(currentPagePath)) {
   console.log('Redirecting to homepage...');
- window.location.href = '/';
+// window.location.href = '/';
 } 
 
 
