@@ -219,20 +219,28 @@ function fetchAndDisplayChallenges(userID) {
     // Hide elements if necessary
     if (quizCode === "") {
         document.getElementById("challengeDetails").style.display = "none";
+	    	    console.log("challengeDetails:");
+
     }
     
     if (challengeNumber === "") {
         document.getElementById("challengeResults").style.display = "none";
-    }
+      console.log("challengeResults:");
+}
 
     if (quizCode === "" && challengeNumber === "") {
         document.getElementById("challengeResults").style.display = "none";
         document.getElementById("sendChallenge").style.display = "none";
+	    			    console.log("quizCode  && challengeNumber:");
+
     } else {
         document.getElementById("quizCode").innerHTML = quizCode;
         document.getElementById("challengeNumber").innerHTML = challengeNumber;
     }
 
+
+
+	
     // Assuming you have a Firebase Firestore instance initialized
     const db = firebase.firestore();
     const challengesContainer = document.getElementById("requestsList");
@@ -244,15 +252,40 @@ function fetchAndDisplayChallenges(userID) {
             .where("requesterID", "==", userID)
             .get()
             .then((querySnapshot) => {
-                if (querySnapshot.empty) {
-                    // If no requests are displayed, start a challenge
-                    startChallenge(userID);
-                    return;
-                }
+                  if (querySnapshot.empty) {
+        // If no requests are displayed, start a challenge
+        startChallenge(userID);
+        return;
+      }
 
-                // ... (rest of your code for displaying challenges)
-            })
-            .catch((error) => {
+      // Create an HTML table for the challenges
+      let challengesTable = '<table>';
+      challengesTable += '<thead><tr><th>Quiz Name</th><th>Request Date</th><th>Challenger</th><th>Actions</th></tr></thead><tbody>';
+
+      // Iterate through the challenge requests
+      querySnapshot.forEach((doc) => {
+        const challengeData = doc.data();
+        const challengeID = doc.id;
+
+        // Define styles based on requester or challenger
+        const cellStyle = challengeData.requesterID === userID ? "sent-cell" : "received-cell";
+
+        // Add a row to the table
+        challengesTable += `
+          <tr class="${cellStyle}">
+            <td>${challengeData.quizName}</td>
+            <td>${challengeData.requestDate.toDate().toLocaleString()}</td>
+            <td>${challengeData.challengerID}</td>
+            <td><button onclick="acceptChallenge('${challengeID}','${challengeData.quizCode}')">Accept</button></td>
+          </tr>`;
+      });
+
+      challengesTable += '</tbody></table>';
+
+      // Update the challenges container with the table
+      challengesContainer.innerHTML = challengesTable;
+    })
+    .catch((error) => {
                 console.error("Error fetching challenges:", error);
             });
     }
