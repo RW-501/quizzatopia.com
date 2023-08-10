@@ -190,15 +190,15 @@
         }
 
 	  
-	  //start `https://quizzatopia.com/challenge/?52jki52&start`;
+	  //start https://www.quizzatopia.com/challenge/?SPORTS2023&start;
 
 	// request    `https://quizzatopia.com/challenge/?$52jki52&$5215kjjk`;
 
 //https://www.quizzatopia.com/challenge/?ARE_Quiz_Medium_2023&start
   // Function to read URL parameters pathname
   function getURLParams() {
-  const urlParams = window.location.href;
-    return urlParams;
+  const pathname = window.location.pathname;
+    return pathname;
   }
 document.addEventListener("DOMContentLoaded", function () {
 });
@@ -209,13 +209,56 @@ document.addEventListener("DOMContentLoaded", function () {
 	  
 // Function to fetch and display challenge requests
 function fetchAndDisplayChallenges(userID) {
-    const url = getURLParams();
+    const pathname = getURLParams();
 
-    // Extract quizCode and challengeNumber from the URL
-    const params = new URLSearchParams(url);
-    const quizCode = params.get("quizCode") || "";
-    const challengeNumber = params.get("challengeNumber") || "";
+ 
+    const startIndex = url.indexOf('?') + 1;
 
+    if (startIndex === 0) {
+        // If '?' character is not found, set variables to empty strings
+         quizCode = "";
+         challengeNumber = "";
+    } else {
+        // Find the index of '&' character after '?'
+        const endIndex = url.indexOf('&', startIndex);
+
+        if (endIndex === -1) {
+            // If '&' character is not found after '?', set variables to empty strings
+         quizCode = "";
+         challengeNumber = "";
+        } else {
+            // Extract quizCode between '?' and '&'
+            var quizCode = pathname.substring(startIndex, endIndex);
+
+            // Find the index of '&' character after the first '&'
+            const lastAmpersandIndex = pathname.indexOf('&', endIndex + 1);
+
+            if (lastAmpersandIndex === -1) {
+                // If second '&' character is not found, set challengeNumber to empty string
+                var challengeNumber = "";
+            } else {
+                // Extract challengeNumber between the two '&' characters
+                var challengeNumber = pathname.substring(endIndex + 1, lastAmpersandIndex);
+            }
+        }
+    }
+
+    console.log("quizCode:", quizCode);
+    console.log("challengeNumber:", challengeNumber);
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
     // Hide elements if necessary
     if (quizCode === "") {
         document.getElementById("challengeDetails").style.display = "none";
