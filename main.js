@@ -234,16 +234,18 @@ const cookieValue = getCookieValue('loggedIn');
 // console.log(cookieValue);
 
 var loggedIn;
-if (cookieValue === 'true') {
-  // User is logged in
-  console.log('User is logged in');
-  loggedIn = true;
-} else {
-  // User is not logged in
-  console.log('User is not logged in');
-  loggedIn = false;
-}
-
+// Wait for the cookie value to be retrieved
+cookieValue.then((value) => {
+  if (value === 'true') {
+    // User is logged in
+    console.log('User is logged in');
+    loggedIn = true;
+  } else {
+    // User is not logged in
+    console.log('User is not logged in');
+    loggedIn = false;
+  }
+});
 
 
 // Function to convert images to low resolution
@@ -362,9 +364,7 @@ const restrictedPathsRegex = /^(\/user\/|\/backend\/|\/friend\/|\/challenge\/)/;
 
 if (loggedIn === false && restrictedPathsRegex.test(currentPagePath)) {
   console.log('Redirecting to homepage...');
- 
-	
-	//window.location.href = '/';
+ window.location.href = '/';
 } 
 
 
