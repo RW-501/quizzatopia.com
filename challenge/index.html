@@ -201,12 +201,12 @@ function fetchAndDisplayChallenges(userID) {
 console.log("url:", url);
 
 	
-const startIndex = url.indexOf('?') + 1; // Find the index of '?' character
-const endIndex = url.indexOf('&', startIndex); // Find the index of '&' character after '?'
+var startIndex = url.indexOf('?') + 1; // Find the index of '?' character
+var endIndex = url.indexOf('&', startIndex); // Find the index of '&' character after '?'
 	
  quizCode = url.substring(startIndex, endIndex);
 
-const lastSlashIndex = url.lastIndexOf('/'); // Find the index of the last '/' character
+var lastSlashIndex = url.lastIndexOf('/'); // Find the index of the last '/' character
  challengeNumber = url.substring(endIndex + 1);
 	
 console.log("quizCode ?:", quizCode);
@@ -215,8 +215,8 @@ console.log("challengeNumber &:", challengeNumber);
 
 	
  lastSlashIndex = url.lastIndexOf('&'); // Find the index of the last '/' character
-quizCode2 = url.substring(lastSlashIndex + 1); // Extract quizCode
-challengeNumber2 = url.substring(1, lastSlashIndex);
+var quizCode2 = url.substring(lastSlashIndex + 1); // Extract quizCode
+var challengeNumber2 = url.substring(1, lastSlashIndex);
 
 
 	
