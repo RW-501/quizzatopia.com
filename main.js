@@ -393,6 +393,27 @@ const currentPagePath = window.location.pathname;
 console.log("currentPagePath:", currentPagePath);
 
 
+
+
+
+
+// Function to remove a cookie by setting an expired date
+function removeCookie(cookieName, path = '/') {
+  document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=${path}`;
+}
+
+// Example usage:
+const loggedInCookie = 'loggedIn';
+
+
+// Remove the loggedIn cookie with a custom path
+removeCookie(loggedInCookie, currentPagePath);
+
+
+
+
+
+
 const restrictedPathsRegex = /^(\/user\/|\/backend\/|\/friend\/|\/challenge\/)/;
   setTimeout(function() {
 if (loggedIn === false && restrictedPathsRegex.test(currentPagePath)) {
