@@ -397,19 +397,24 @@ console.log("currentPagePath:", currentPagePath);
 
 
 
-// Function to remove a cookie by setting an expired date
-function removeCookie(cookieName, path = '/') {
-  document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=${path}`;
+function removeInvalidCookies() {
+  const cookies = document.cookie.split('; ');
+
+  for (const cookie of cookies) {
+    const [name, value] = cookie.split('=');
+
+    if (name === 'loggedIn') {
+      if (document.location.pathname !== '/') {
+        // Remove the cookie with a different path
+        document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
+        console.log(`Removed ${name} cookie with path ${document.location.pathname}`);
+      }
+    }
+  }
 }
 
-// Example usage:
-const loggedInCookie = 'loggedIn';
-
-
-// Remove the loggedIn cookie with a custom path
-removeCookie(loggedInCookie, currentPagePath);
-
-
+// Call the function to remove invalid cookies
+removeInvalidCookies();
 
 
 
