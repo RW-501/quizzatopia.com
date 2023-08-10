@@ -243,7 +243,7 @@ getCookieValue('loggedIn', (cookieValue) => {
   } else {
     // User is not logged in
     console.log('User is not logged in');
-    loggedIn = false;
+  //  loggedIn = false;
   }
 });
 
