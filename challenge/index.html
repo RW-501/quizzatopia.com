@@ -212,6 +212,10 @@ console.log("challengeNumber &:", challengeNumber);
 
 if(quizCode == null || quizCode === ''){
    document.getElementById("challengeDetails").display = "none";
+if(quizCode == null || quizCode === ''){
+   document.getElementById("challengeResults").display = "none";
+}
+	  
 }else{
    document.getElementById("quizCode").innerHTML = quizCode;
    document.getElementById("challengeNumber").innerHTML = challengeNumber;
