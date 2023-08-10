@@ -208,16 +208,17 @@ const endIndex = url.indexOf('&', startIndex); // Find the index of '&' characte
 
 const lastSlashIndex = url.lastIndexOf('/'); // Find the index of the last '/' character
  challengeNumber = url.substring(endIndex + 1);
-
-//	quizCode = url.substring(lastSlashIndex + 1); // Extract quizCode
-//challengeNumber = url.substring(1, lastSlashInde
-const lastSlashIndex = url.lastIndexOf('&'); // Find the index of the last '/' character
-quizCode2 = url.substring(lastSlashIndex + 1); // Extract quizCode
-challengeNumber2 = url.substring(1, lastSlashInde
-
 	
 console.log("quizCode ?:", quizCode);
 console.log("challengeNumber &:", challengeNumber);
+
+
+	
+ lastSlashIndex = url.lastIndexOf('&'); // Find the index of the last '/' character
+quizCode2 = url.substring(lastSlashIndex + 1); // Extract quizCode
+challengeNumber2 = url.substring(1, lastSlashInde
+
+
 	
 	console.log("quizCode2 ?:", quizCode2);
 console.log("challengeNumber2 &:", challengeNumber2);
