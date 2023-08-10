@@ -1288,37 +1288,6 @@ function hideStatusBar() {
 }
 
 
-// Log out function
-function logOutFunction() {
-  firebase.auth().signOut().then(function() {
-    document.cookie = 'loggedIn=false';
-    loggedIn = false;
-
-    var navbarNav = document.querySelector('#navbarNav');
-    navbarNav.classList.toggle('collapse');
-    updateNavBar();
-
-    displayUserInfo();
-    console.log(" openPopup:");
-
-    const cookieValue = getCookieValue('loggedIn');
-    console.log(" cookieValue: "+cookieValue);
-
-    if (cookieValue === 'false') {
-      // Add a timeout before redirecting
-      setTimeout(function() {
-      console.log("User logged out.");
-        //window.location.href = '/';
-      }, 3000); // Adjust the delay time as needed
-    }
-  }).catch(function(error) {
-    // An error occurred
-    console.log("Error logging out:", error);
-  });
-}
-
-
-
 
 
 function logVisitorInformation() {
