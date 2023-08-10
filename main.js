@@ -219,21 +219,7 @@ function setLoggedInCookie() {
 
 
 
-
-// Check the value of the loggedIn cookie
-const cookieValue = getCookieValue('loggedIn', (value) => {
-  if (value === 'true') {
-    // User is logged in
-    console.log('User is logged in');
-    loggedIn = true;
-  } else {
-    // User is not logged in
-    console.log('User is not logged in');
-    loggedIn = false;
-  }
-});
-
-// getCookieValue function with a callback
+// Function to fetch the value of a cookie using a callback
 function getCookieValue(cookieName, callback) {
   const cookies = document.cookie.split('; ');
 
@@ -245,7 +231,52 @@ function getCookieValue(cookieName, callback) {
     }
   }
 
-  callback(null);
+  callback(null); // Call the callback with null if cookie not found
+}
+
+// Example usage of getCookieValue with a callback
+getCookieValue('loggedIn', (cookieValue) => {
+  if (cookieValue === 'true') {
+    // User is logged in
+    console.log('User is logged in');
+    loggedIn = true;
+  } else {
+    // User is not logged in
+    console.log('User is not logged in');
+    loggedIn = false;
+  }
+});
+
+
+
+
+
+function logOutFunction() {
+  firebase.auth().signOut().then(function() {
+    document.cookie = 'loggedIn=false';
+    loggedIn = false;
+
+    var navbarNav = document.querySelector('#navbarNav');
+    navbarNav.classList.toggle('collapse');
+    updateNavBar();
+
+    displayUserInfo();
+    console.log(" openPopup:");
+
+    const cookieValue = getCookieValue('loggedIn');
+    console.log(" cookieValue: "+cookieValue);
+
+    if (cookieValue === 'false') {
+      // Add a timeout before redirecting
+      setTimeout(function() {
+      console.log("User logged out.");
+        //window.location.href = '/';
+      }, 3000); // Adjust the delay time as needed
+    }
+  }).catch(function(error) {
+    // An error occurred
+    console.log("Error logging out:", error);
+  });
 }
 
 
