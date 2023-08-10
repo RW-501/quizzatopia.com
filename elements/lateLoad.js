@@ -1293,23 +1293,29 @@ function hideStatusBar() {
 // Log out function
 function logOutFunction() {
   firebase.auth().signOut().then(function() {
-    // Log out successful
-      // Set the logged-in cookie
-      document.cookie = 'loggedIn=false';
-	  loggedIn = false;
-	  console.log("User logged out.");
-	  updateNavBar();
-	  
-	   var navbarNav = document.querySelector('#navbarNav');
-//  navbarNav.classList.toggle('collapse');
-	  
-	  displayUserInfo();
-	window.location.href = '/';
-  
+    document.cookie = 'loggedIn=false';
+    loggedIn = false;
+
+    var navbarNav = document.querySelector('#navbarNav');
+    navbarNav.classList.toggle('collapse');
+    updateNavBar();
+
+    displayUserInfo();
+
+    const cookieValue = getCookieValue('loggedIn');
+
+    if (cookieValue === 'false') {
+      console.log("User logged out.");
+      // Add a timeout before redirecting
+      setTimeout(function() {
+        window.location.href = '/';
+      }, 1000); // Adjust the delay time as needed
+    }
   }).catch(function(error) {
     // An error occurred
     console.log("Error logging out:", error);
   });
+}
 
 
 }
