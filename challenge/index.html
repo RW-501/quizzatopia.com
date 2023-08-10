@@ -177,51 +177,64 @@
 
   <script>
 
-	  //start `https://quizzatopia.com/challenge/?${quizCode}&start`;
+	  //start `https://quizzatopia.com/challenge/?52jki52&start`;
 
-	/// request    `https://quizzatopia.com/challenge/?${quizCode}&${uID}`;
+	// request    `https://quizzatopia.com/challenge/?$52jki52&$5215kjjk`;
 
 //https://www.quizzatopia.com/challenge/?ARE_Quiz_Medium_2023&start
-  // Function to read URL parameters
+  // Function to read URL parameters pathname
   function getURLParams() {
-  const urlParams = window.location.pathname;
+  const urlParams = window.location.href;
     return urlParams;
   }
 document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-var quizCode;
-var challengeNumber
+        var quizCode = "";
+        var challengeNumber = "";
 	  
 // Function to fetch and display challenge requests
 function fetchAndDisplayChallenges(userID) {
-    // Get the challenge number and quiz code from URL parameters
+    // Replace this URL with the actual URL you are working with
     const url = getURLParams();
-console.log("url:", url);
 
+    // Find the index of '?' character
+    const startIndex = url.indexOf('?') + 1;
+
+    if (startIndex === 0) {
+        // If '?' character is not found, set variables to empty strings
+        var quizCode = "";
+        var challengeNumber = "";
+    } else {
+        // Find the index of '&' character after '?'
+        const endIndex = url.indexOf('&', startIndex);
+
+        if (endIndex === -1) {
+            // If '&' character is not found after '?', set variables to empty strings
+            var quizCode = "";
+            var challengeNumber = "";
+        } else {
+            // Extract quizCode between '?' and '&'
+            var quizCode = url.substring(startIndex, endIndex);
+
+            // Find the index of '&' character after the first '&'
+            const lastAmpersandIndex = url.indexOf('&', endIndex + 1);
+
+            if (lastAmpersandIndex === -1) {
+                // If second '&' character is not found, set challengeNumber to empty string
+                var challengeNumber = "";
+            } else {
+                // Extract challengeNumber between the two '&' characters
+                var challengeNumber = url.substring(endIndex + 1, lastAmpersandIndex);
+            }
+        }
+    }
+
+    console.log("quizCode:", quizCode);
+    console.log("challengeNumber:", challengeNumber);
 	
-var startIndex = url.indexOf('?') + 1; // Find the index of '?' character
-var endIndex = url.indexOf('&', startIndex); // Find the index of '&' character after '?'
-	
- quizCode = url.substring(startIndex, endIndex);
 
-var lastSlashIndex = url.lastIndexOf('/'); // Find the index of the last '/' character
- challengeNumber = url.substring(endIndex + 1);
-	
-console.log("quizCode ?:", quizCode);
-console.log("challengeNumber &:", challengeNumber);
-
-
-	
- lastSlashIndex = url.lastIndexOf('&'); // Find the index of the last '/' character
-var quizCode2 = url.substring(lastSlashIndex + 1); // Extract quizCode
-var challengeNumber2 = url.substring(1, lastSlashIndex);
-
-
-	
-	console.log("quizCode2 ?:", quizCode2);
-console.log("challengeNumber2 &:", challengeNumber2);
 
 if(quizCode == null || quizCode === ''){
    document.getElementById("challengeDetails").display = "none";
