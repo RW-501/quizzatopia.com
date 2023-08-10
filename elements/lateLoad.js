@@ -1309,7 +1309,7 @@ function logOutFunction() {
       setTimeout(function() {
       console.log("User logged out.");
         //window.location.href = '/';
-      }, 1000); // Adjust the delay time as needed
+      }, 3000); // Adjust the delay time as needed
     }
   }).catch(function(error) {
     // An error occurred
