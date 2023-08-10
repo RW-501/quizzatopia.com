@@ -1318,7 +1318,7 @@ function logOutFunction() {
 }
 
 
-}
+
 
 
 function logVisitorInformation() {
