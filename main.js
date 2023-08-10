@@ -217,25 +217,11 @@ function setLoggedInCookie() {
   document.cookie = "loggedIn=true; expires=" + expirationDate.toUTCString() + "; path=/";
 }
 
-// Function to get the value of a cookie by its name
-function getCookieValue(cookieName) {
-  const cookies = document.cookie.split(';');
-  for (let i = 0; i < cookies.length; i++) {
-    const cookie = cookies[i].trim();
-    if (cookie.startsWith(cookieName + '=')) {
-      return cookie.substring(cookieName.length + 1);
-    }
-  }
-  return null;
-}
+
+
 
 // Check the value of the loggedIn cookie
-const cookieValue = getCookieValue('loggedIn');
-// console.log(cookieValue);
-
-var loggedIn;
-// Wait for the cookie value to be retrieved
-cookieValue.then((value) => {
+const cookieValue = getCookieValue('loggedIn', (value) => {
   if (value === 'true') {
     // User is logged in
     console.log('User is logged in');
@@ -246,6 +232,22 @@ cookieValue.then((value) => {
     loggedIn = false;
   }
 });
+
+// getCookieValue function with a callback
+function getCookieValue(cookieName, callback) {
+  const cookies = document.cookie.split('; ');
+
+  for (const cookie of cookies) {
+    const [name, value] = cookie.split('=');
+    if (name === cookieName) {
+      callback(value);
+      return;
+    }
+  }
+
+  callback(null);
+}
+
 
 
 // Function to convert images to low resolution
