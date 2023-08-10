@@ -504,7 +504,9 @@ window.signInAnonymously = function() {
                 saveUserInfoToLocalStorage(userInfo);
 
                 // Set the logged-in cookie
-                document.cookie = 'loggedIn=true';
+setLoggedInCookie():
+  loggedIn = true;
+
 
 
                 updateUserInfo(userInfo);
@@ -546,7 +548,9 @@ window.signInAnonymously = function() {
                 saveUserInfoToLocalStorage(userInfo);
 
                 // Set the logged-in cookie
-                document.cookie = 'loggedIn=true';
+setLoggedInCookie():
+  loggedIn = true;
+
 
 
 
@@ -654,8 +658,10 @@ window.createUserWithEmailAndPassword = function () {
       };
       saveUserInfoToFirestore(userInfo); // Save user info to Firestore
 
-      // Set the logged-in cookie
-      document.cookie = 'loggedIn=true';
+                // Set the logged-in cookie
+setLoggedInCookie():
+  loggedIn = true;
+
 
 
       updateUserInfo(userInfo);
@@ -751,7 +757,10 @@ window.signInWithEmailAndPassword = function() {
             createUserInFirestore(userInfo)
               .then(() => {
                 saveUserInfoToLocalStorage(userInfo);
-                document.cookie = 'loggedIn=true';
+                // Set the logged-in cookie
+setLoggedInCookie():
+  loggedIn = true;
+
                 updateUserInfo(userInfo);
                 checkUserInfoChanges();
                 onAuthSuccess(userInfo);
@@ -804,9 +813,9 @@ window.signInWithFacebook = function () {
                 saveUserInfoToLocalStorage(userInfo);
 
                 // Set the logged-in cookie
-                document.cookie = 'loggedIn=true';
+setLoggedInCookie():
+  loggedIn = true;
 
-                loggedIn = true;
 
                 updateUserInfo(userInfo);
 
@@ -847,9 +856,9 @@ window.signInWithFacebook = function () {
                 saveUserInfoToLocalStorage(userInfo);
 
                 // Set the logged-in cookie
-                document.cookie = 'loggedIn=true';
+setLoggedInCookie():
+  loggedIn = true;
 
-                loggedIn = true;
 
                 updateUserInfo(userInfo);
 
@@ -917,9 +926,9 @@ window.signInWithGoogle = function () {
                 saveUserInfoToLocalStorage(userInfo);
 
                 // Set the logged-in cookie
-                document.cookie = 'loggedIn=true';
-
+setLoggedInCookie():
   loggedIn = true;
+
 
 
                 updateUserInfo(userInfo);
@@ -961,8 +970,7 @@ window.signInWithGoogle = function () {
                 saveUserInfoToLocalStorage(userInfo);
 
                 // Set the logged-in cookie
-                document.cookie = 'loggedIn=true';
-
+setLoggedInCookie():
   loggedIn = true;
 
                 updateUserInfo(userInfo);
