@@ -504,7 +504,7 @@ window.signInAnonymously = function() {
                 saveUserInfoToLocalStorage(userInfo);
 
                 // Set the logged-in cookie
-setLoggedInCookie():
+setLoggedInCookie();
   loggedIn = true;
 
 
@@ -548,7 +548,7 @@ setLoggedInCookie():
                 saveUserInfoToLocalStorage(userInfo);
 
                 // Set the logged-in cookie
-setLoggedInCookie():
+setLoggedInCookie();
   loggedIn = true;
 
 
@@ -659,7 +659,7 @@ window.createUserWithEmailAndPassword = function () {
       saveUserInfoToFirestore(userInfo); // Save user info to Firestore
 
                 // Set the logged-in cookie
-setLoggedInCookie():
+setLoggedInCookie();
   loggedIn = true;
 
 
@@ -758,7 +758,7 @@ window.signInWithEmailAndPassword = function() {
               .then(() => {
                 saveUserInfoToLocalStorage(userInfo);
                 // Set the logged-in cookie
-setLoggedInCookie():
+setLoggedInCookie();
   loggedIn = true;
 
                 updateUserInfo(userInfo);
@@ -813,7 +813,7 @@ window.signInWithFacebook = function () {
                 saveUserInfoToLocalStorage(userInfo);
 
                 // Set the logged-in cookie
-setLoggedInCookie():
+setLoggedInCookie();
   loggedIn = true;
 
 
@@ -856,7 +856,7 @@ setLoggedInCookie():
                 saveUserInfoToLocalStorage(userInfo);
 
                 // Set the logged-in cookie
-setLoggedInCookie():
+setLoggedInCookie();
   loggedIn = true;
 
 
@@ -926,7 +926,7 @@ window.signInWithGoogle = function () {
                 saveUserInfoToLocalStorage(userInfo);
 
                 // Set the logged-in cookie
-setLoggedInCookie():
+setLoggedInCookie();
   loggedIn = true;
 
 
@@ -970,7 +970,7 @@ setLoggedInCookie():
                 saveUserInfoToLocalStorage(userInfo);
 
                 // Set the logged-in cookie
-setLoggedInCookie():
+setLoggedInCookie();
   loggedIn = true;
 
                 updateUserInfo(userInfo);
