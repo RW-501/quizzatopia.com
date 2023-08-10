@@ -270,7 +270,7 @@ function logOutFunction() {
       // Add a timeout before redirecting
       setTimeout(function() {
       console.log("User logged out.");
-        //window.location.href = '/';
+        window.location.href = '/';
       }, 3000); // Adjust the delay time as needed
     }
   }).catch(function(error) {
