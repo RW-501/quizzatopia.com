@@ -210,77 +210,6 @@ setTimeout(function() {
 
 
 
-// Function to set the loggedIn cookie with a 3-day expiration date
-function setLoggedInCookie() {
-  var expirationDate = new Date();
-  expirationDate.setDate(expirationDate.getDate() + 3);
-  document.cookie = "loggedIn=true; expires=" + expirationDate.toUTCString() + "; path=/";
-}
-
-
-
-// Function to fetch the value of a cookie using a callback
-function getCookieValue(cookieName, callback) {
-  const cookies = document.cookie.split('; ');
-
-  for (const cookie of cookies) {
-    const [name, value] = cookie.split('=');
-    if (name === cookieName) {
-      callback(value);
-      return;
-    }
-  }
-
-  callback(null); // Call the callback with null if cookie not found
-}
-
-// Example usage of getCookieValue with a callback
-getCookieValue('loggedIn', (cookieValue) => {
-  if (cookieValue === 'true') {
-    // User is logged in
-    console.log('User is logged in');
-    loggedIn = true;
-  } else {
-    // User is not logged in
-    console.log('User is not logged in');
-  //  loggedIn = false;
-  }
-});
-
-
-
-
-
-function logOutFunction() {
-  firebase.auth().signOut().then(function() {
-    document.cookie = 'loggedIn=false';
-    loggedIn = false;
-
-    var navbarNav = document.querySelector('#navbarNav');
-    navbarNav.classList.toggle('collapse');
-    updateNavBar();
-
-    displayUserInfo();
-    console.log(" openPopup:");
-
-    const cookieValue = getCookieValue('loggedIn');
-    console.log(" cookieValue: "+cookieValue);
-
-    if (cookieValue === 'false') {
-      // Add a timeout before redirecting
-      setTimeout(function() {
-      console.log("User logged out.");
-        window.location.href = '/';
-      }, 3000); // Adjust the delay time as needed
-    }
-  }).catch(function(error) {
-    // An error occurred
-    console.log("Error logging out:", error);
-  });
-}
-
-
-
 // Function to convert images to low resolution
 function convertImagesToLowResolution() {
   // Select all <img> elements on the page
@@ -342,6 +271,103 @@ function revertImagesToNormalResolution() {
 
 
 
+// Function to set the loggedIn cookie with a 3-day expiration date
+function setLoggedInCookie() {
+  var expirationDate = new Date();
+  expirationDate.setDate(expirationDate.getDate() + 3);
+  document.cookie = "loggedIn=true; expires=" + expirationDate.toUTCString() + "; path=/";
+}
+
+
+
+
+
+function removeInvalidCookies() {
+  const cookies = document.cookie.split('; ');
+
+  for (const cookie of cookies) {
+    const [name, value] = cookie.split('=');
+
+    if (name === 'loggedIn') {
+      if (document.location.pathname !== '/') {
+        // Remove the cookie with a different path
+        document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
+        console.log(`Removed ${name} cookie with path ${document.location.pathname}`);
+      }
+    }
+  }
+}
+
+// Call the function to remove invalid cookies
+removeInvalidCookies();
+
+
+
+
+
+// Function to fetch the value of a cookie using a callback
+function getCookieValue(cookieName, callback) {
+  const cookies = document.cookie.split('; ');
+
+  for (const cookie of cookies) {
+    const [name, value] = cookie.split('=');
+    if (name === cookieName) {
+      callback(value);
+      return;
+    }
+  }
+
+  callback(null); // Call the callback with null if cookie not found
+}
+
+var loggedIn = false;
+// Example usage of getCookieValue with a callback
+getCookieValue('loggedIn', (cookieValue) => {
+  if (cookieValue === 'true') {
+    // User is logged in
+    console.log('User is logged in');
+    loggedIn = true;
+  } else {
+    // User is not logged in
+    console.log('User is not logged in');
+  //  loggedIn = false;
+  }
+});
+
+
+
+
+
+function logOutFunction() {
+  firebase.auth().signOut().then(function() {
+    document.cookie = 'loggedIn=false';
+    loggedIn = false;
+
+    var navbarNav = document.querySelector('#navbarNav');
+    navbarNav.classList.toggle('collapse');
+    updateNavBar();
+
+    displayUserInfo();
+    console.log(" openPopup:");
+
+    const cookieValue = getCookieValue('loggedIn');
+    console.log(" cookieValue: "+cookieValue);
+
+    if (cookieValue === 'false') {
+      // Add a timeout before redirecting
+      setTimeout(function() {
+      console.log("User logged out.");
+        window.location.href = '/';
+      }, 3000); // Adjust the delay time as needed
+    }
+  }).catch(function(error) {
+    // An error occurred
+    console.log("Error logging out:", error);
+  });
+}
+
+
+
 
 
 
@@ -395,26 +421,6 @@ console.log("currentPagePath:", currentPagePath);
 
 
 
-
-
-function removeInvalidCookies() {
-  const cookies = document.cookie.split('; ');
-
-  for (const cookie of cookies) {
-    const [name, value] = cookie.split('=');
-
-    if (name === 'loggedIn') {
-      if (document.location.pathname !== '/') {
-        // Remove the cookie with a different path
-        document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
-        console.log(`Removed ${name} cookie with path ${document.location.pathname}`);
-      }
-    }
-  }
-}
-
-// Call the function to remove invalid cookies
-removeInvalidCookies();
 
 
 
