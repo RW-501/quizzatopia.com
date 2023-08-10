@@ -238,8 +238,11 @@ function fetchAndDisplayChallenges(userID) {
 
 if(quizCode == null || quizCode === ''){
    document.getElementById("challengeDetails").display = "none";
-if(quizCode == null || quizCode === ''){
+	    console.log("challengeDetails:");
+
+if(challengeNumber == null || challengeNumber === ''){
    document.getElementById("challengeResults").display = "none";
+		    console.log("challengeResults:");
 }
 	  
 }else{
@@ -248,9 +251,10 @@ if(quizCode == null || quizCode === ''){
 }
 	  
 
-if(quizCode  && challengeNumber){
+if(quizCode === "" && challengeNumber === ""){
    document.getElementById("challengeResults").display = "none";
    document.getElementById("sendChallenge").display = "none";
+			    console.log("quizCode  && challengeNumber:");
 
 	
   // Assuming you have a Firebase Firestore instance initialized
