@@ -210,11 +210,17 @@ const endIndex = url.indexOf('&', startIndex); // Find the index of '&' characte
 console.log("quizCode ?:", quizCode);
 console.log("challengeNumber &:", challengeNumber);
 
+if(quizCode == null || quizCode === ''){
+   document.getElementById("challengeDetails").display = "none";
+}else{
    document.getElementById("quizCode").innerHTML = quizCode;
    document.getElementById("challengeNumber").innerHTML = challengeNumber;
+}
+	  
 
-
-
+if(quizCode  && challengeNumber){
+   document.getElementById("challengeResults").display = "none";
+   document.getElementById("sendChallenge").display = "none";
 
 	
   // Assuming you have a Firebase Firestore instance initialized
@@ -225,7 +231,7 @@ console.log("challengeNumber &:", challengeNumber);
 
   // Fetch challenge requests for the current user
   db.collection("challenges")
-    .where("challengerID", "==", userID)
+    .where("challengeNumber", "==", challengeNumber)
     .where("requesterID", "==", userID)
     .get()
     .then((querySnapshot) => {
@@ -267,8 +273,10 @@ console.log("challengeNumber &:", challengeNumber);
     });
 }
 
+}
 
 
+	  
 // Function to accept a challenge
 function acceptChallenge(challengeID,quizCode) {
   // Accept the challenge
