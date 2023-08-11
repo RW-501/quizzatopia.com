@@ -457,26 +457,38 @@ position: absolute;
     background-color: ##000000d1;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow: hidden;
     z-index: 500;
     position: fixed;
 }
+#imageContainer{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 90%;
+      overflow-y: scroll;
+    height: 80%;
+  margin: auto%;
+  border-radius: 5px;
+}
 
-.popup-container::-webkit-scrollbar {
+
+
+#imageContainer::-webkit-scrollbar {
   width: 8px;
 }
 
-.popup-container::-webkit-scrollbar-thumb {
+#imageContainer::-webkit-scrollbar-thumb {
   background-color: #888;
   border-radius: 4px;
 }
 
-.popup-container::-webkit-scrollbar-thumb:hover {
+#imageContainer::-webkit-scrollbar-thumb:hover {
   background-color: #555;
 }
 
-.popup-container img {
+#imageContainer img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -485,7 +497,7 @@ position: absolute;
   transition: transform 0.2s ease;
 }
 
-.popup-container img:hover {
+#imageContainer img:hover {
   transform: scale(1.1);
 }
 
