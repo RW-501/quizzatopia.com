@@ -477,9 +477,9 @@ function acceptChallenge(challengeID,quizCode) {
 
 
 
-async function getUserFriends() {
+async function getUserFriends(userID) {
   try {
-    const { friends, friendData } = await getUserFriendsWithUserData(uID);
+    const { friends, friendData } = await getUserFriendsWithUserData(userID);
 	  
 
 
@@ -650,9 +650,14 @@ async function getUserFriendsWithUserData(firebaseId) {
   }
 }
 
+window.addEventListener('load', async () => {
+  // Get the user ID using the getUserInfo function (assuming you have implemented it)
+ // const userInfo = getUserInfo();
+//  const uID = userInfo.firebaseId;
 
 fetchAndDisplayChallenges(userID);
-	getUserFriends();  
+	getUserFriends(userID);  
+	)};
   </script>
 </body>
 </html>
