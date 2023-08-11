@@ -273,7 +273,7 @@ const existingFriendship = await friendsCollectionRef
 if (!existingFriendship.empty) {
   // Friendship already exists, show an error message
   const messageDiv = document.getElementById("message");
-  messageDiv.innerText = `<div class='share' onclick="shareFriendCodeFunc('${uID}')">Friendship already exists. <br> Send Your Link to Your Friends</div>;`
+  messageDiv.innerHTML = `<div class='share' onclick="shareFriendCodeFunc('${uID}')">Friendship already exists. <br> Send Your Link to Your Friends</div>;`
   return;
 }
 
@@ -335,6 +335,9 @@ const friendID = urlParams.substring(startIndex); // Get the portion after the '
 async function generateFriendsList() {
   try {
     const { friends, userData } = await getUserFriendsWithUserData(userInfo.firebaseId);
+	  
+  console.log("Friend :", friends);
+  console.log("userData :", userData);
 
  // Clear previous list items
 document.getElementById("friendsList").innerHTML = '';
@@ -473,7 +476,7 @@ async function getUserFriendsWithUserData(firebaseId) {
     // Fetch the user's friends from Firebase (replace this with your actual Firebase code)
     const friendsSnapshot = await firebase.firestore()
       .collection('friends')
-      .where('user2', '==', firebaseId)
+      .where('user1', '==', firebaseId)
       .get();
 
     // Fetch the user's data from the users collection
