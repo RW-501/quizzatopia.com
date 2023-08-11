@@ -291,7 +291,7 @@ console.log("challengeNumberXXXXX:", challengeNumber);
     // Fetch challenge requests for the current user
     if (quizCode !== "" && challengeNumber !== "") {
         db.collection("challenges")
-            .where("challengeNumber", "==", parseInt(challengeNumber)) // Parse challengeNumber as an integer
+            .where("challengeNumber", "==", challengeNumber) 
             .where("requesterID", "==", userID)
             .get()
             .then((querySnapshot) => {
