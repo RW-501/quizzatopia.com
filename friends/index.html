@@ -360,9 +360,14 @@ const friendID = urlParams.substring(startIndex); // Get the portion after the '
   // Add friend
   await addFriend(input(uID), input(friendID));
 });
-function ensureDomainInUrl(url, domain) {
+
+
+	    
+function ensureDomainInUrl(url) {
+  // Check if the URL contains 'http://' or 'https://'
   if (!url.includes('http://') && !url.includes('https://')) {
-    return domain + url;
+    // Add 'https://' protocol and the domain to the URL
+    url = 'https://www.quizzatopia.com' + url;
   }
   return url;
 }
@@ -389,8 +394,7 @@ document.getElementById("friendsList").innerHTML = '';
   const friendFirebaseId = friendData.firebaseId;
 
 
-const domain = 'https://www.quizzatopia.com';
- friendPicture = ensureDomainInUrl(friendPicture, domain);
+ friendPicture = ensureDomainInUrl(friendPicture);
 	    
       // Create an image element with its source set to the friend's picture
       const imgElement = `<img src="${friendPicture}" alt="${friendName}" width="40" height="40">`;
