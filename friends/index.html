@@ -375,13 +375,13 @@ document.getElementById("friendsList").innerHTML = '';
     friends.forEach((friend , friendData) => {
       // Assuming userData contains properties 'userName', 'userProfilePic', and 'userPoints'
   const friendName = friendData.userName;
-  const friendPicture = friendData.userProfilePic;
+  let friendPicture = friendData.userProfilePic;
   const friendPoints = friendData.userPoints;
   const friendFirebaseId = friendData.firebaseId;
 
 
 const domain = 'https://www.quizzatopia.com';
-const friendPicture = ensureDomainInUrl(friendPicture, domain);
+ friendPicture = ensureDomainInUrl(friendPicture, domain);
 	    
       // Create an image element with its source set to the friend's picture
       const imgElement = `<img src="${friendPicture}" alt="${friendName}" width="40" height="40">`;
