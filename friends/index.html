@@ -387,15 +387,15 @@ document.getElementById("friendsList").innerHTML = '';
 
     // Generate list items for each friend
       let friendsHTML = "";
-friends.forEach((friend) => {
-  // Find the friend's data based on the firebaseId
-  const friendData = friendData.find(data => data.firebaseId === friend);
+  friends.forEach((friendFirebaseId) => {
+    // Find the friend's data based on the firebaseId
+    const friendInfo = friendData.find(data => data.firebaseId === friendFirebaseId);
+
 	
-      // Assuming userData contains properties 'userName', 'userProfilePic', and 'userPoints'
-  const friendName = friendData.userName;
-  let friendPicture = friendData.userProfilePic;
-  const friendPoints = friendData.userPoints;
-  const friendFirebaseId = friendData.firebaseId;
+  const friendName = friendInfo.userName;
+  let friendPicture = friendInfo.userProfilePic;
+  const friendPoints = friendInfo.userPoints;
+  const friendFirebaseId = friendInfo.firebaseId;
 
   console.log("friendPicture :", friendPicture);
 
