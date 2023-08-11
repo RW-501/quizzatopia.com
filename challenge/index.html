@@ -492,13 +492,14 @@ document.getElementById("friendsChallengeList").innerHTML = '';
     // Find the friend's data based on the firebaseId
     const friendInfo = friendData.find(data => data.firebaseId === friendFirebaseId);
 
-	
+	  console.log("friendInfo :", friendInfo);
+
   const friendName = friendInfo.userName;
   let friendPicture = friendInfo.userProfilePic;
   const friendPoints = friendInfo.userPoints;
 //  const friendFirebaseId = friendInfo.firebaseId;
 
-//  console.log("friendPicture :", friendPicture);
+  console.log("friendPicture :", friendPicture);
 
  friendPicture = ensureDomainInUrl(friendPicture);
 	    
@@ -622,6 +623,9 @@ function sendChallengeToFriend(quizCode,challengeURL, challengerID) {
 
 async function getUserFriendsWithUserData(firebaseId) {
   try {
+
+	  	  console.log("firebaseId :", firebaseId);
+
     // Fetch the user's friends from Firebase (replace this with your actual Firebase code)
     const friendsSnapshot = await firebase.firestore()
       .collection('friends')
