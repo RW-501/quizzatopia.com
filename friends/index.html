@@ -316,11 +316,7 @@ async function generateFriendsList() {
 
  // Clear previous list items
 document.getElementById("friendsList").innerHTML = '';
-	  
-const newDiv = document.createElement('div');
-newDiv.innerHTML = `<div class='points' onclick="shareFriendCodeFunc('${uID}')">Send Your Link to Your Friends</div>`;
-	
-  document.getElementById("friendsList").appendChild(newDiv);
+
 	
 
     // Generate list items for each friend
@@ -358,6 +354,12 @@ newDiv.innerHTML = `<div class='points' onclick="shareFriendCodeFunc('${uID}')">
 
     // Set the innerHTML of friendsList with the generated HTML
 	  document.getElementById("friendsList").innerHTML = friendsHTML;
+	  
+const newDiv = document.createElement('div');
+newDiv.innerHTML = `<div class='points' onclick="shareFriendCodeFunc('${uID}')">Send Your Link to Your Friends</div>`;
+	
+  document.getElementById("friendsList").appendChild(newDiv);
+	  
   } catch (error) {
     console.error('Error fetching friends and user data:', error);
   }
