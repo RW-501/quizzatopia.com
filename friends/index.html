@@ -299,9 +299,10 @@ window.addEventListener('load', async () => {
     return urlParams;
   }
 
+	    
   // Get the challenge number and friend ID from URL parameters
   const urlParams = getURLParams();
-  const friendID = urlParams.get('friend');
+const friendID = urlParams.substring(1); // Exclude the leading '?' character
 
   // Log the values for testing
   console.log('friendID:', friendID);
