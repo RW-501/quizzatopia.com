@@ -180,6 +180,13 @@ font-size: 1.5em;
     width: 100%;
     height: 100%;
 }
+
+	  #uID{
+font-size: 1.5em;
+    font-weight: 200;
+    color: #fff;
+
+	  }
   </style>
 </head>
 
@@ -192,6 +199,7 @@ font-size: 1.5em;
       <input type="text" id="friendIdInput" placeholder="Enter friend's ID" />
  
     <button onclick="addFriendFromInput()">Add Friend</button>
+	    <div id="uID"></div>
    </div>
 	
 
@@ -243,8 +251,8 @@ async function addFriend(currentUserFirebaseIdxx, friendFirebaseIdxx) {
 let currentUserFirebaseId = input(currentUserFirebaseIdxx);
 let friendFirebaseId = input(friendFirebaseIdxx);
 
-	  // Check if the friendship already exists
-
+	    console.log('friendFirebaseId:', friendFirebaseId);
+  console.log('window.location.href:', window.location.href);
 
     if (friendFirebaseId === currentUserFirebaseId) {
       // Friendship already exists, show an error message
@@ -252,15 +260,7 @@ let friendFirebaseId = input(friendFirebaseIdxx);
       messageDiv.innerText = "Oh No!";
       return;
     }
-	    console.log('friendFirebaseId:', friendFirebaseId);
-  console.log('window.location.href:', window.location.href);
 
-if (friendFirebaseId === "" ) {
-	
-  const messageDiv = document.getElementById("message");
-  messageDiv.innerHTML = `<div class='share' onclick="shareFriendCodeFunc('${friendFirebaseId}')"> Send Your Link to Your Friends</div>`;
-  return;
-}
 
 	  
 const existingUser = await firebase.firestore().collection("users")
@@ -341,7 +341,7 @@ window.addEventListener('load', async () => {
   const userInfo = getUserInfo();
   const uID = userInfo.firebaseId;
 
-
+ document.getElementById("uID").innerHTML = "ID: "+uID;
 	    
   // Get the challenge number and friend ID from URL parameters
   const urlParams = getURLParams();
@@ -354,6 +354,10 @@ const friendID = urlParams.substring(startIndex); // Get the portion after the '
 
   if (friendID === '' || friendID === null || friendID === undefined) {
     console.log('No friend ID in the URL, skipping database check.');
+	
+  const messageDiv = document.getElementById("message");
+  messageDiv.innerHTML = `<div class='share' onclick="shareFriendCodeFunc('${friendFirebaseId}')"> Send Your Link to Your Friends</div>`;
+
     return;
   }
 
