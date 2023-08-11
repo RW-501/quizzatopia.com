@@ -323,10 +323,10 @@ if (friends.length === 0) {
       let friendsHTML = "";
     friends.forEach((friend) => {
       // Assuming userData contains properties 'userName', 'userProfilePic', and 'userPoints'
-  const friendName = friend.userName;
-  const friendPicture = friend.userProfilePic;
-  const friendPoints = friend.userPoints;
-  const friendFirebaseId = friend.firebaseId;
+  const friendName = userData.userName;
+  const friendPicture = userData.userProfilePic;
+  const friendPoints = userData.userPoints;
+  const friendFirebaseId = userData.firebaseId;
 
       // Create an image element with its source set to the friend's picture
       const imgElement = `<img src="${friendPicture}" alt="${friendName}" width="40" height="40">`;
