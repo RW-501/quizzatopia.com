@@ -252,7 +252,11 @@ let friendFirebaseId = input(friendFirebaseIdxx);
       messageDiv.innerText = "Oh No!";
       return;
     }
+	    console.log('currentUserFirebaseId:', currentUserFirebaseId);
+  console.log('window.location.href:', window.location.href);
+
 if (currentUserFirebaseId === window.location.href ) {
+	
   const messageDiv = document.getElementById("message");
   messageDiv.innerHTML = `<div class='share' onclick="shareFriendCodeFunc('${friendFirebaseId}')"> Send Your Link to Your Friends</div>`;
   return;
