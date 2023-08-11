@@ -279,7 +279,7 @@ await friendsCollectionRef.add({
 
 
   function getURLParams() {
-    const urlParams = new URLSearchParams(window.location.search);
+    const urlParams = window.location.href;
     return urlParams;
   }
 	     
@@ -292,7 +292,8 @@ window.addEventListener('load', async () => {
 	    
   // Get the challenge number and friend ID from URL parameters
   const urlParams = getURLParams();
-const friendID = urlParams.substring(1); // Exclude the leading '?' character
+const startIndex = urlParams.indexOf('?') + 1; // Find the index of '?' character
+const friendID = urlParams.substring(startIndex); // Get the portion after the '?'
 
   // Log the values for testing
   console.log('friendID:', friendID);
