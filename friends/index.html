@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Add Friend</title>
-	
+<meta name="description" content="Join the ultimate trivia experience at Quizzatopia. Explore diverse categories, challenge friends, and share your own quizzes. Connect, compete, and have fun!" />
+
 
 
   <!-- Bootstrap CSS -->
@@ -315,10 +316,13 @@ async function generateFriendsList() {
 
  // Clear previous list items
 document.getElementById("friendsList").innerHTML = '';
+	  
+const newDiv = document.createElement('div');
+newDiv.innerHTML = `<div class='points' onclick="shareFriendCodeFunc('${uID}')">Send Your Link to Your Friends</div>`;
+	
+  document.getElementById("friendsList").appendChild(newDiv);
+	
 
-if (friends.length === 0) {
-  document.getElementById("friendsList").innerHTML = `<div class='points'>Send Your Link to Your Friends</div>`;
-}
     // Generate list items for each friend
       let friendsHTML = "";
     friends.forEach((friend) => {
@@ -359,7 +363,35 @@ if (friends.length === 0) {
   }
 }
 
+	    function shareFriendCodeFunc(uID){
 
+const shareLink = `https://www.quizzatopia.com/friends/?${friendFirebaseId}`; // Replace with your actual link
+
+// Check if the navigator.share() API is available
+if (navigator.share) {
+  const shareData = {
+    title: 'Join Quizzatopia - Connect and Compete with Friends through Quizzes!',
+    text: 'Explore, challenge, and connect with friends through quizzes on Quizzatopia. Join now for a fun trivia adventure!',
+    url: shareLink,
+  };
+
+  // Call the navigator.share() method
+  navigator.share(shareData)
+    .then(() => console.log('Shared successfully'))
+    .catch((error) => console.error('Error sharing:', error));
+} else {
+  // Fallback behavior for browsers that do not support navigator.share()
+  console.log('navigator.share() API is not supported in this browser');
+  // You can provide alternative sharing options here
+  // For example, showing a social media sharing dialog
+}
+	    }
+
+
+
+
+
+	    
 function handleFriendClick(friendName, friendfirebaseId) {
   // Add your logic to handle the click event here
   console.log("Friend clicked:", friendName);
