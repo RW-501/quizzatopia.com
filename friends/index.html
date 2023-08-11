@@ -337,10 +337,10 @@ const friendID = urlParams.substring(startIndex); // Get the portion after the '
 
 async function generateFriendsList() {
   try {
-    const { friends, userData } = await getUserFriendsWithUserData(userInfo.firebaseId);
+    const { friends, friendData } = await getUserFriendsWithUserData(userInfo.firebaseId);
 	  
   console.log("Friend :", friends);
-  console.log("userData :", userData);
+  console.log("userData :", friendData);
 
  // Clear previous list items
 document.getElementById("friendsList").innerHTML = '';
@@ -351,10 +351,10 @@ document.getElementById("friendsList").innerHTML = '';
       let friendsHTML = "";
     friends.forEach((friend) => {
       // Assuming userData contains properties 'userName', 'userProfilePic', and 'userPoints'
-  const friendName = userData.userName;
-  const friendPicture = userData.userProfilePic;
-  const friendPoints = userData.userPoints;
-  const friendFirebaseId = userData.firebaseId;
+  const friendName = friendData.userName;
+  const friendPicture = friendData.userProfilePic;
+  const friendPoints = friendData.userPoints;
+  const friendFirebaseId = friendData.firebaseId;
 
       // Create an image element with its source set to the friend's picture
       const imgElement = `<img src="${friendPicture}" alt="${friendName}" width="40" height="40">`;
@@ -490,8 +490,8 @@ async function getUserFriendsWithUserData(firebaseId) {
       .get();
 
     const friends = friendsSnapshot.docs.map((doc) => doc.data().user2);
-    const userData = userSnapshot.data(); // User's data from the users collection
-
+    const friendData = userSnapshot.data(); // User's data from the users collection
+  console.log("friendData :", friendData);
     return { friends, userData };
   } catch (error) {
     console.error('Error getting user\'s friends and data:', error);
