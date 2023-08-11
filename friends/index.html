@@ -278,18 +278,16 @@ await friendsCollectionRef.add({
 }
 
 
-
+  function getURLParams() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams;
+  }
 	     
 window.addEventListener('load', async () => {
   // Get the user ID using the getUserInfo function (assuming you have implemented it)
   const userInfo = getUserInfo();
   const uID = userInfo.firebaseId;
 
-  // Function to read URL parameters
-  function getURLParams() {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams;
-  }
 
 	    
   // Get the challenge number and friend ID from URL parameters
@@ -314,20 +312,20 @@ async function generateFriendsList() {
   try {
     const { friends, userData } = await getUserFriendsWithUserData(userInfo.firebaseId);
 
-    // Clear previous list items
-	  document.getElementById("friendsList").innerHTML = '';
-if(friends.length === 0){
-	  document.getElementById("friendsList").innerHTML = `<div class='points'>Send Your Link to your Friends</div>`;
+ // Clear previous list items
+document.getElementById("friendsList").innerHTML = '';
 
+if (friends.length === 0) {
+  document.getElementById("friendsList").innerHTML = `<div class='points'>Send Your Link to Your Friends</div>`;
 }
     // Generate list items for each friend
       let friendsHTML = "";
     friends.forEach((friend) => {
       // Assuming userData contains properties 'userName', 'userProfilePic', and 'userPoints'
-      const friendName = userData.userName;
-      const friendPicture = userData.userProfilePic;
-      const friendPoints = userData.userPoints;
-      const friendfirebaseId = userData.firebaseId;
+  const friendName = friend.userName;
+  const friendPicture = friend.userProfilePic;
+  const friendPoints = friend.userPoints;
+  const friendFirebaseId = friend.firebaseId;
 
       // Create an image element with its source set to the friend's picture
       const imgElement = `<img src="${friendPicture}" alt="${friendName}" width="40" height="40">`;
