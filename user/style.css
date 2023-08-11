@@ -454,7 +454,7 @@ position: absolute;
     bottom: 0;
     right: 0;
     width: 100%;
-    background-color: ##000000d1;
+    background-color: #000000d1;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -471,6 +471,8 @@ position: absolute;
     height: 80%;
   margin: auto%;
   border-radius: 5px;
+      background-color: #d8dadb;
+
 }
 
 
