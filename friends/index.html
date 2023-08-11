@@ -362,7 +362,7 @@ const friendID = urlParams.substring(startIndex); // Get the portion after the '
     console.log('No friend ID in the URL, skipping database check.');
 	
   const messageDiv = document.getElementById("message");
-  messageDiv.innerHTML = `<div class='share' onclick="shareFriendCodeFunc('${friendFirebaseId}')"> Send Your Link to Your Friends</div>`;
+  messageDiv.innerHTML = `<div class='share' onclick="shareFriendCodeFunc('${uID}')"> Send Your Link to Your Friends</div>`;
 
     return;
   }
