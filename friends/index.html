@@ -492,10 +492,10 @@ async function getUserFriendsWithUserData(firebaseId) {
     const friends = friendsSnapshot.docs.map((doc) => doc.data().user2);
     const friendData = userSnapshot.data(); // User's data from the users collection
   console.log("friendData :", friendData);
-    return { friends, userData };
+    return { friends, friendData };
   } catch (error) {
     console.error('Error getting user\'s friends and data:', error);
-    return { friends: [], userData: null }; // Return empty array and null user data in case of an error
+    return { friends: [], friendData: null }; // Return empty array and null user data in case of an error
   }
 }
 
