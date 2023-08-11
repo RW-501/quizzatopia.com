@@ -349,8 +349,8 @@ const startIndex = urlParams.indexOf('?') + 1; // Find the index of '?' characte
 const friendID = urlParams.substring(startIndex); // Get the portion after the '?'
 
   // Log the values for testing
-  console.log('friendID:', friendID);
-  console.log('User ID:', uID);
+//  console.log('friendID:', friendID);
+//  console.log('User ID:', uID);
 
   if (friendID === '' || friendID === null || friendID === undefined) {
     console.log('No friend ID in the URL, skipping database check.');
@@ -364,7 +364,7 @@ const friendID = urlParams.substring(startIndex); // Get the portion after the '
 
 	    
 function ensureDomainInUrl(url) {
-	  console.log("url :", url);
+	//  console.log("url :", url);
 
   // Check if the URL contains 'http://' or 'https://'
   if (!url.includes('http://') && !url.includes('https://')) {
@@ -377,8 +377,8 @@ async function generateFriendsList() {
   try {
     const { friends, friendData } = await getUserFriendsWithUserData(userInfo.firebaseId);
 	  
-  console.log("Friend :", friends);
-  console.log("friendData :", friendData);
+//  console.log("Friend :", friends);
+ // console.log("friendData :", friendData);
 
  // Clear previous list items
 document.getElementById("friendsList").innerHTML = '';
@@ -397,7 +397,7 @@ document.getElementById("friendsList").innerHTML = '';
   const friendPoints = friendInfo.userPoints;
 //  const friendFirebaseId = friendInfo.firebaseId;
 
-  console.log("friendPicture :", friendPicture);
+//  console.log("friendPicture :", friendPicture);
 
  friendPicture = ensureDomainInUrl(friendPicture);
 	    
