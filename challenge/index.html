@@ -209,44 +209,33 @@ document.addEventListener("DOMContentLoaded", function () {
 	  
 // Function to fetch and display challenge requests
 function fetchAndDisplayChallenges(userID) {
-    const pathname = getURLParams();
-
  
-    const startIndex = url.indexOf('?') + 1;
+const pathname = getURLParams();
+const startIndex = pathname.indexOf('?') + 1;
 
-    if (startIndex === 0) {
-        // If '?' character is not found, set variables to empty strings
-         quizCode = "";
-         challengeNumber = "";
+let quizCode = "";
+let challengeNumber = "";
+
+if (startIndex > 0) {
+    const endIndex = pathname.indexOf('&', startIndex);
+
+    if (endIndex === -1) {
+        quizCode = pathname.substring(startIndex);
     } else {
-        // Find the index of '&' character after '?'
-        const endIndex = url.indexOf('&', startIndex);
+        quizCode = pathname.substring(startIndex, endIndex);
+        
+        const lastAmpersandIndex = pathname.indexOf('&', endIndex + 1);
 
-        if (endIndex === -1) {
-            // If '&' character is not found after '?', set variables to empty strings
-         quizCode = "";
-         challengeNumber = "";
+        if (lastAmpersandIndex === -1) {
+            challengeNumber = pathname.substring(endIndex + 1);
         } else {
-            // Extract quizCode between '?' and '&'
-            var quizCode = pathname.substring(startIndex, endIndex);
-
-            // Find the index of '&' character after the first '&'
-            const lastAmpersandIndex = pathname.indexOf('&', endIndex + 1);
-
-            if (lastAmpersandIndex === -1) {
-                // If second '&' character is not found, set challengeNumber to empty string
-                var challengeNumber = "";
-            } else {
-                // Extract challengeNumber between the two '&' characters
-                var challengeNumber = pathname.substring(endIndex + 1, lastAmpersandIndex);
-            }
+            challengeNumber = pathname.substring(endIndex + 1, lastAmpersandIndex);
         }
     }
+}
 
-    console.log("quizCode:", quizCode);
-    console.log("challengeNumber:", challengeNumber);
-
-
+console.log("quizCode:", quizCode);
+console.log("challengeNumber:", challengeNumber);
 
 
 
