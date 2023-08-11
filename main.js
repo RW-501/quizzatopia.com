@@ -426,7 +426,7 @@ console.log("currentPagePath:", currentPagePath);
 
 
 
-const restrictedPathsRegex = /^(\/user\/|\/backend\/|\/friend\/|\/challenge\/)/;
+const restrictedPathsRegex = /^(\/user\/|\/backend\/|\/friends\/|\/challenge\/)/;
   setTimeout(function() {
 if (loggedIn === false && restrictedPathsRegex.test(currentPagePath)) {
   console.log('Redirecting to homepage...');
