@@ -281,6 +281,17 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+	    
+function ensureDomainInUrl(url) {
+	//  console.log("url :", url);
+
+  // Check if the URL contains 'http://' or 'https://'
+  if (!url.includes('http://') && !url.includes('https://')) {
+    url = 'https://www.quizzatopia.com' + url;
+  }
+  return url;
+}
+
         var quizCode = "";
         var challengeNumber = "";
 	  
