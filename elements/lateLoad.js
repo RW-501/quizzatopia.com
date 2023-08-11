@@ -712,8 +712,12 @@ window.signInWithEmailAndPassword = function() {
       const user = userCredential.user;
 
       // Get the user's display name and Firebase ID
-      const displayName = user.displayName;
-      const firebaseId = user.uid;
+      const name = user.displayName;
+	    const nameArray = name.split(" ");
+// Get the first name (assuming it's the first word)
+const displayName = nameArray[0];
+	    
+	    const firebaseId = user.uid;
 
       // Example: Show a success message and user info
       showStatusMessage('Sign-in successful', 'success');
@@ -794,7 +798,11 @@ window.signInWithFacebook = function () {
       const user = result.user;
 
       // Get the user's display name and Firebase ID
-      const displayName = user.displayName;
+          const name = user.displayName;
+	    const nameArray = name.split(" ");
+// Get the first name (assuming it's the first word)
+const displayName = nameArray[0];
+	    
       const firebaseId = user.uid;
 
       // Example: Show a success message and user info
@@ -907,7 +915,11 @@ window.signInWithGoogle = function () {
       const user = result.user;
 
       // Get the user's display name and Firebase ID
-      const displayName = user.displayName;
+      const name = user.displayName;
+	    const nameArray = name.split(" ");
+// Get the first name (assuming it's the first word)
+const displayName = nameArray[0];
+	    
       const firebaseId = user.uid;
 
       // Example: Show a success message and user info
