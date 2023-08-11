@@ -338,12 +338,12 @@ if (friends.length === 0) {
       // Create the list item HTML with the friend's name, picture, and points
       const listItemHTML = `
         <li class='friends' ><div  class='bg'> 
-        <div  class='picWrap' onclick="handleFriendClick('${friendName}', '${friendfirebaseId}')"> 
+        <div  class='picWrap' onclick="handleFriendClick('${friendName}', '${friendFirebaseId}')"> 
 	<div class='picArea'> ${imgElement}</div>
          <div> ${name}</div></div>
          <div> </div>
          <div class='points'> ${points} Points</div>
-         <div class='remove ' onclick=" removeFriend('${friendfirebaseId}');"> Remove</div>
+         <div class='remove ' onclick=" removeFriend('${friendFirebaseId}');"> Remove</div>
 	 </div>
         </li>
       `;
