@@ -348,6 +348,29 @@ console.log("challengeNumberXXXXX:", challengeNumber);
     }
 }
 
+	    function shareFriendCodeFunc(uID){
+
+const shareLink = `https://www.quizzatopia.com/friends/?${uID}`; // Replace with your actual link
+
+// Check if the navigator.share() API is available
+if (navigator.share) {
+  const shareData = {
+    title: 'Join Quizzatopia - Connect and Compete with Friends through Quizzes!',
+    text: 'Explore, challenge, and connect with friends through quizzes on Quizzatopia. Join now for a fun trivia adventure!',
+    url: shareLink,
+  };
+
+  // Call the navigator.share() method
+  navigator.share(shareData)
+    .then(() => console.log('Shared successfully'))
+    .catch((error) => console.error('Error sharing:', error));
+} else {
+  // Fallback behavior for browsers that do not support navigator.share()
+  console.log('navigator.share() API is not supported in this browser');
+  // You can provide alternative sharing options here
+  // For example, showing a social media sharing dialog
+}
+	    }
 
 
 
