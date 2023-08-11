@@ -181,6 +181,15 @@
 	
 
   <script>
+
+function generateUniqueChallengeNumber() {
+    const timestamp = new Date().getTime();
+    const randomSuffix = Math.floor(Math.random() * 10000); // Generate a random number between 0 and 9999
+    return `challenge_${timestamp}_${randomSuffix}`;
+}
+
+
+	  
         function openTab(tabId) {
             const tabContents = document.getElementsByClassName('challengeTab');
             for (const content of tabContents) {
@@ -375,7 +384,6 @@ document.getElementById("sendChallengeForm").addEventListener("submit", (event) 
 
   // Get selected friends and other data from the form
   const selectedFriends = getSelectedFriends();
-  const challengeNumber = generateUniqueChallengeNumber(); // Generate a unique challenge number
 
   // Generate URLs for each friend and send them
   selectedFriends.forEach(friend => {
