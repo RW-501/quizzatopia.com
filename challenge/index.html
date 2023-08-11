@@ -276,7 +276,12 @@ console.log("challengeNumberXXXXX:", challengeNumber);
         document.getElementById("challengeNumber").innerHTML = challengeNumber;
     }
 
+    if (quizCode && challengeNumber === "start") {
+        document.getElementById("challengeResults").style.display = "none";
+        document.getElementById("challengeRequests").style.display = "none";
+	    			    console.log("challengeResults  && challengeRequests:");
 
+    } 
 
 	
     // Assuming you have a Firebase Firestore instance initialized
