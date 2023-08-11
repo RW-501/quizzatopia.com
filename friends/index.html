@@ -410,12 +410,12 @@ document.getElementById("friendsList").innerHTML = '';
 
       // Create the list item HTML with the friend's name, picture, and points
       const listItemHTML = `
-        <li class='friends' ><div  class='bg'> 
-        <div  class='picWrap' onclick="handleFriendClick('${friendName}', '${friendFirebaseId}')"> 
+        <li class='friends' ><div  class='bg' onclick="handleFriendClick('${friendName}', '${friendFirebaseId}')"> 
+        <div  class='picWrap' >
 	<div class='picArea'> ${imgElement}</div>
          <div> ${name}</div></div>
          <div> </div>
-         <div class='points'onclick="handleFriendClick('${friendName}', '${friendFirebaseId}')">  ${points} Points</div>
+         <div class='points'>  ${points} Points</div>
          <div class='remove ' onclick=" removeFriend('${friendFirebaseId}');"> Remove</div>
 	 </div>
         </li>
