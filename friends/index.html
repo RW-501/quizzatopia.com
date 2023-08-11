@@ -252,6 +252,18 @@ let friendFirebaseId = input(friendFirebaseIdxx);
       messageDiv.innerText = "Oh No!";
       return;
     }
+	  
+const existingUser = await db.collection("users")
+  .where("firebaseId", "==", friendFirebaseId)
+  .get();
+	  
+if (!existingUser.empty) {
+  const messageDiv = document.getElementById("message");
+  messageDiv.innerHTML = `<div class='share' onclick="shareFriendCodeFunc('${friendFirebaseId}')"> Send Your Link to Your Friends</div>`;
+  return;
+}
+
+	  
 const today = new Date();
 today.setHours(0, 0, 0, 0); // Set time to midnight for the current day
 
@@ -482,20 +494,26 @@ async function getUserFriendsWithUserData(firebaseId) {
       .collection('friends')
       .where('user1', '==', firebaseId)
       .get();
-
-    // Fetch the user's data from the users collection
-    const userSnapshot = await firebase.firestore()
-      .collection('users')
-      .doc(firebaseId)
-      .get();
-
+	  
     const friends = friendsSnapshot.docs.map((doc) => doc.data().user2);
-    const friendData = userSnapshot.data(); // User's data from the users collection
-  console.log("friendData :", friendData);
-    return { friends, friendData };
+
+    // Fetch the user's data from the users collection for each friend
+    const friendDataPromises = friends.map(async (friendId) => {
+      const userSnapshot = await firebase.firestore()
+        .collection('users')
+        .doc(friendId)
+        .get();
+      return userSnapshot.data();
+    });
+
+    // Wait for all friend data to be fetched
+    const friendDataArray = await Promise.all(friendDataPromises);
+
+    console.log("friendDataArray :", friendDataArray);
+    return { friends, friendData: friendDataArray };
   } catch (error) {
     console.error('Error getting user\'s friends and data:', error);
-    return { friends: [], friendData: null }; // Return empty array and null user data in case of an error
+    return { friends: [], friendData: [] }; // Return empty array in case of an error
   }
 }
 
