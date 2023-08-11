@@ -364,9 +364,10 @@ const friendID = urlParams.substring(startIndex); // Get the portion after the '
 
 	    
 function ensureDomainInUrl(url) {
+	  console.log("url :", url);
+
   // Check if the URL contains 'http://' or 'https://'
   if (!url.includes('http://') && !url.includes('https://')) {
-    // Add 'https://' protocol and the domain to the URL
     url = 'https://www.quizzatopia.com' + url;
   }
   return url;
@@ -393,6 +394,7 @@ document.getElementById("friendsList").innerHTML = '';
   const friendPoints = friendData.userPoints;
   const friendFirebaseId = friendData.firebaseId;
 
+  console.log("friendPicture :", friendPicture);
 
  friendPicture = ensureDomainInUrl(friendPicture);
 	    
