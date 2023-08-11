@@ -245,7 +245,7 @@ const existingFriendship = await friendsCollectionRef
 if (!existingFriendship.empty) {
   // Friendship already exists, show an error message
   const messageDiv = document.getElementById("message");
-  messageDiv.innerText = "Send Your Link To A Friend!";
+  messageDiv.innerText = `<div class='share' onclick="shareFriendCodeFunc('${uID}')">Friendship already exists. <br> Send Your Link to Your Friends</div>;`
   return;
 }
 
@@ -258,13 +258,7 @@ await friendsCollectionRef.add({
 
 
 
-	  
-    if (!existingFriendship.empty) {
-      // Friendship already exists, show an error message
-      const messageDiv = document.getElementById("message");
-      messageDiv.innerText = "Friendship already exists.";
-      return;
-    }
+
 
     // Show a success message
     const messageDiv = document.getElementById("message");
@@ -356,7 +350,7 @@ document.getElementById("friendsList").innerHTML = '';
 	  document.getElementById("friendsList").innerHTML = friendsHTML;
 	  
 const newDiv = document.createElement('div');
-newDiv.innerHTML = `<div class='points' onclick="shareFriendCodeFunc('${uID}')">Send Your Link to Your Friends</div>`;
+newDiv.innerHTML = `<div class='share2' onclick="shareFriendCodeFunc('${uID}')">Send Your Link to Your Friends</div>`;
 	
   document.getElementById("friendsList").appendChild(newDiv);
 	  
