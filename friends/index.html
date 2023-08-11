@@ -365,7 +365,7 @@ newDiv.innerHTML = `<div class='points' onclick="shareFriendCodeFunc('${uID}')">
 
 	    function shareFriendCodeFunc(uID){
 
-const shareLink = `https://www.quizzatopia.com/friends/?${friendFirebaseId}`; // Replace with your actual link
+const shareLink = `https://www.quizzatopia.com/friends/?${uID}`; // Replace with your actual link
 
 // Check if the navigator.share() API is available
 if (navigator.share) {
