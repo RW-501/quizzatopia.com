@@ -451,7 +451,7 @@ async function getUserFriendsWithUserData(firebaseId) {
     // Fetch the user's friends from Firebase (replace this with your actual Firebase code)
     const friendsSnapshot = await firebase.firestore()
       .collection('friends')
-      .where('user1', '==', firebaseId)
+      .where('user2', '==', firebaseId)
       .get();
 
     // Fetch the user's data from the users collection
