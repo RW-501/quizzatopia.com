@@ -370,7 +370,7 @@ document.getElementById("friendsList").innerHTML = '';
 	<div class='picArea'> ${imgElement}</div>
          <div> ${name}</div></div>
          <div> </div>
-         <div class='points'> ${points} Points</div>
+         <div class='points'onclick="handleFriendClick('${friendName}', '${friendFirebaseId}')">  ${points} Points</div>
          <div class='remove ' onclick=" removeFriend('${friendFirebaseId}');"> Remove</div>
 	 </div>
         </li>
