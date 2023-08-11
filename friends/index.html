@@ -253,7 +253,7 @@ let friendFirebaseId = input(friendFirebaseIdxx);
       return;
     }
 	  
-const existingUser = await db.collection("users")
+const existingUser = await firebase.firestore().collection("users")
   .where("firebaseId", "==", friendFirebaseId)
   .get();
 	  
@@ -345,14 +345,19 @@ const friendID = urlParams.substring(startIndex); // Get the portion after the '
   // Add friend
   await addFriend(input(uID), input(friendID));
 });
-
+function ensureDomainInUrl(url, domain) {
+  if (!url.includes('http://') && !url.includes('https://')) {
+    return domain + url;
+  }
+  return url;
+}
 
 async function generateFriendsList() {
   try {
     const { friends, friendData } = await getUserFriendsWithUserData(userInfo.firebaseId);
 	  
   console.log("Friend :", friends);
-  console.log("userData :", friendData);
+  console.log("friendData :", friendData);
 
  // Clear previous list items
 document.getElementById("friendsList").innerHTML = '';
@@ -361,13 +366,17 @@ document.getElementById("friendsList").innerHTML = '';
 
     // Generate list items for each friend
       let friendsHTML = "";
-    friends.forEach((friend) => {
+    friends.forEach((friend , friendData) => {
       // Assuming userData contains properties 'userName', 'userProfilePic', and 'userPoints'
   const friendName = friendData.userName;
   const friendPicture = friendData.userProfilePic;
   const friendPoints = friendData.userPoints;
   const friendFirebaseId = friendData.firebaseId;
 
+
+const domain = 'https://www.quizzatopia.com';
+const friendPicture = ensureDomainInUrl(friendPicture, domain);
+	    
       // Create an image element with its source set to the friend's picture
       const imgElement = `<img src="${friendPicture}" alt="${friendName}" width="40" height="40">`;
 
