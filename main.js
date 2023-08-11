@@ -354,7 +354,7 @@ function logOutFunction() {
     const cookieValue = getCookieValue('loggedIn');
     console.log(" cookieValue: "+cookieValue);
 
-    if (cookieValue === 'false') {
+    if (cookieValue === false) {
       // Add a timeout before redirecting
       setTimeout(function() {
       console.log("User logged out.");
