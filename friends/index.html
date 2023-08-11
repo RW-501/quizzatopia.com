@@ -255,7 +255,7 @@ let friendFirebaseId = input(friendFirebaseIdxx);
 	    console.log('friendFirebaseId:', friendFirebaseId);
   console.log('window.location.href:', window.location.href);
 
-if (friendFirebaseId === window.location.href ) {
+if (friendFirebaseId === "" ) {
 	
   const messageDiv = document.getElementById("message");
   messageDiv.innerHTML = `<div class='share' onclick="shareFriendCodeFunc('${friendFirebaseId}')"> Send Your Link to Your Friends</div>`;
@@ -328,7 +328,12 @@ await friendsCollectionRef.add({
 
   function getURLParams() {
     const urlParams = window.location.href;
+if (urlParams.indexOf('?') === -1) {
+  // Return an empty string
+  return "";
+}else{
     return urlParams;
+}
   }
 	     
 window.addEventListener('load', async () => {
