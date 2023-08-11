@@ -354,12 +354,16 @@ function logOutFunction() {
     const cookieValue = getCookieValue('loggedIn');
     console.log(" cookieValue: "+cookieValue);
 
-    if (cookieValue === false) {
+    if (cookieValue === 'false') {
       // Add a timeout before redirecting
       setTimeout(function() {
       console.log("User logged out.");
         window.location.href = '/';
       }, 3000); // Adjust the delay time as needed
+    }else{
+
+logOutFunction();
+
     }
   }).catch(function(error) {
     // An error occurred
@@ -430,7 +434,7 @@ const restrictedPathsRegex = /^(\/user\/|\/backend\/|\/friends\/|\/challenge\/)/
   setTimeout(function() {
 if (loggedIn === false && restrictedPathsRegex.test(currentPagePath)) {
   console.log('Redirecting to homepage...');
- window.location.href = '/';
+// window.location.href = '/';
 } 
       }, 3000); // Adjust the delay time as needed
 
