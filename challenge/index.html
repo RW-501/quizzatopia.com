@@ -279,6 +279,11 @@ console.log("challengeNumberXXXXX:", challengeNumber);
     if (quizCode && challengeNumber === "start") {
         document.getElementById("challengeResults").style.display = "none";
         document.getElementById("challengeRequests").style.display = "none";
+	      
+	    challengeNumber = generateUniqueChallengeNumber(); // Generate a unique challenge number
+
+        document.getElementById("challengeNumber").innerHTML = challengeNumber;
+	    
 	    			    console.log("challengeResults  && challengeRequests:");
 
     } 
@@ -390,7 +395,6 @@ function sendChallengeToFriend(quizCode,challengeURL, challengerID) {
   const db = firebase.firestore();
 
   // Define challenge data
-  const challengeNumber = generateUniqueChallengeNumber(); // Generate a unique challenge number
   const requestDate = new Date();
 
   // Fetch additional quiz information from the quizzes collection
