@@ -260,7 +260,12 @@ let friendFirebaseId = input(friendFirebaseIdxx);
       messageDiv.innerText = "Oh No!";
       return;
     }
-
+    if (friendFirebaseId === "") {
+      // Friendship already exists, show an error message
+      const messageDiv = document.getElementById("message");
+  messageDiv.innerHTML = `<div class='share' onclick="shareFriendCodeFunc('${friendFirebaseId}')"> Send Your Link to Your Friends</div>`;
+      return;
+    }
 
 	  
 const existingUser = await firebase.firestore().collection("users")
