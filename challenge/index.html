@@ -127,7 +127,23 @@
       color: #0056b3;
     }
 
+	  .share2{
+cursor: pointer;
+font-size: 1.5em;
+    font-weight: 500;
 
+    color: #000;
+    display: block;
+    border: 1px solid #ebebeb;
+    border-radius: 1em;
+    background-color: #f5f5f5;
+    margin: 1%;
+    width: 95%;
+    display: flex;
+    padding: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		      justify-content: space-evenly;
+	  }
 
 	  
 .friends{
@@ -523,13 +539,13 @@ document.getElementById("friendsChallengeList").innerHTML = '';
 
       // Create the list item HTML with the friend's name, picture, and points
       const listItemHTML = `
-        <li class='friends' ><div  class='bg' onclick="generateChallengeURL(quizCode, challengeNumber)"> 
+        <li class='friends' ><div  class='bg' onclick="handleFriendClick('${friendName}', '${friendFirebaseId}')"> 
         <div  class='picWrap' >
 	<div class='picArea'> ${imgElement}</div>
          <div> ${name}</div></div>
          <div> </div>
          <div class='points'>  ${points} Points</div>
-         <div class='remove ' onclick=" removeFriend('${friendFirebaseId}');"> &#128465;</div>
+         <div class='btnMain '  onclick="generateChallengeURL(quizCode, challengeNumber)"> Challenge</div>
 	 </div>
         </li>
       `;
@@ -554,7 +570,13 @@ newDiv.innerHTML = `<div class='share2' onclick="shareFriendCodeFunc('${uID}')">
 
 
 
-	  
+		    
+function handleFriendClick(friendName, friendfirebaseId) {
+  // Add your logic to handle the click event here
+  console.log("Friend clicked:", friendName);
+  // For example, you can display more details about the friend or perform some action.
+ 
+}  
 
 
 
