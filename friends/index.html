@@ -554,7 +554,9 @@ async function getUserFriendsWithUserData(firebaseId) {
     return { friends: [], friendData: [] }; // Return empty array in case of an error
   }
 }
-window.addEventListener('load', async () => {
+//window.addEventListener('load', async () => {
+document.addEventListener("DOMContentLoaded", function () {
+//});
 
 	    generateFriendsList();
 });
