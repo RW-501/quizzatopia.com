@@ -388,63 +388,53 @@ function ensureDomainInUrl(url) {
 async function generateFriendsList() {
   try {
     const { friends, friendData } = await getUserFriendsWithUserData(userInfo.firebaseId);
-	  
-//  console.log("Friend :", friends);
- // console.log("friendData :", friendData);
 
- // Clear previous list items
-document.getElementById("friendsList").innerHTML = '';
-
-	
+    // Clear previous list items
+    const friendsList = document.getElementById("friendsList");
+    friendsList.innerHTML = '';
 
     // Generate list items for each friend
-      let friendsHTML = "";
-  friends.forEach((friendFirebaseId) => {
-    // Find the friend's data based on the firebaseId
-    const friendInfo = friendData.find(data => data.firebaseId === friendFirebaseId);
+    let friendsHTML = '';
+    for (const friendFirebaseId of friends) {
+      const friendInfo = friendData.find(data => data.firebaseId === friendFirebaseId);
 
-	
-  const friendName = friendInfo.userName;
-  let friendPicture = friendInfo.userProfilePic;
-  const friendPoints = friendInfo.userPoints;
-//  const friendFirebaseId = friendInfo.firebaseId;
+      const friendName = friendInfo.userName;
+      let friendPicture = friendInfo.userProfilePic;
+      const friendPoints = friendInfo.userPoints;
 
-//  console.log("friendPicture :", friendPicture);
+      friendPicture = ensureDomainInUrl(friendPicture);
 
- friendPicture = ensureDomainInUrl(friendPicture);
-	    
-      // Create an image element with its source set to the friend's picture
       const imgElement = `<img src="${friendPicture}" alt="${friendName}" width="40" height="40">`;
-
-      // Create a span element for the friend's points
       const name = `<span>${friendName}</span>`;
       const points = `<span>${friendPoints}</span>`;
 
-      // Create the list item HTML with the friend's name, picture, and points
       const listItemHTML = `
-        <li class='friends' ><div  class='bg' onclick="handleFriendClick('${friendName}', '${friendFirebaseId}')"> 
-        <div  class='picWrap' >
-	<div class='picArea'> ${imgElement}</div>
-         <div> ${name}</div></div>
-         <div> </div>
-         <div class='points'>  ${points} Points</div>
-         <div class='remove ' onclick=" removeFriend('${friendFirebaseId}');"> &#128465;</div>
-	 </div>
+        <li class='friends' >
+          <div class='bg' onclick="handleFriendClick('${friendName}', '${friendFirebaseId}')"> 
+            <div class='picWrap'>
+              <div class='picArea'> ${imgElement}</div>
+              <div>${name}</div>
+            </div>
+            <div></div>
+            <div class='points'>${points} Points</div>
+            <div class='remove' onclick="removeFriend('${friendFirebaseId}');"> &#128465;</div>
+          </div>
         </li>
       `;
 
-      // Concatenate the HTML for each friend
       friendsHTML += listItemHTML;
-    });
+    }
 
     // Set the innerHTML of friendsList with the generated HTML
-	  document.getElementById("friendsList").innerHTML = friendsHTML;
-	  
-const newDiv = document.createElement('div');
-newDiv.innerHTML = `<div class='share2' onclick="shareFriendCodeFunc('${uID}')">Send Your Link to Your Friends</div>`;
-	
-  document.getElementById("friendsList").appendChild(newDiv);
-	  
+    friendsList.innerHTML = friendsHTML;
+
+    // Append the "Send Your Link to Your Friends" div
+    const newDiv = document.createElement('div');
+    newDiv.className = 'share2';
+    newDiv.textContent = "Send Your Link to Your Friends";
+    newDiv.onclick = () => shareFriendCodeFunc(uID);
+
+    friendsList.appendChild(newDiv);
   } catch (error) {
     console.error('Error fetching friends and user data:', error);
   }
