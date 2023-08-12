@@ -544,7 +544,7 @@ document.getElementById("friendsChallengeList").innerHTML = '';
          <div> ${name}</div></div>
          <div> </div>
          <div class='points'>  ${points} Points</div>
-         <div class='btnMain '  onclick="generateChallengeURL(quizCode, challengeNumber)"> Challenge</div>
+         <div class='btnMain '  onclick="sendChallengeFunc(quizCode, challengeNumber)"> Challenge</div>
 	 </div>
         </li>
       `;
@@ -588,10 +588,7 @@ function generateChallengeURL(quizCode, challengeNumber) {
   return `https://quizzatopia.com/challenge/?quizCode=${quizCode}&challengeNumber=${challengeNumber}`;
 }
 
-// When the user selects friends and submits the form
-document.getElementById("sendChallengeForm").addEventListener("submit", (event) => {
-  event.preventDefault();
-
+function sendChallengeFunc(){
   // Get selected friends and other data from the form
   const selectedFriends = getSelectedFriends();
 
@@ -601,9 +598,8 @@ document.getElementById("sendChallengeForm").addEventListener("submit", (event) 
     sendChallengeToFriend(challengeURL, friend);
   });
 
-  // Display success message or update UI
-});
-
+ 
+}
 
 
 
