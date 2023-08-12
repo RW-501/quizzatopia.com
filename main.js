@@ -300,7 +300,7 @@ function removeInvalidCookies() {
 }
 
 // Call the function to remove invalid cookies
-// removeInvalidCookies();
+ removeInvalidCookies();
 
 
 
