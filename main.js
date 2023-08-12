@@ -287,9 +287,9 @@ function removeInvalidCookies() {
 
   for (const cookie of cookies) {
     const [name, value] = cookie.split('=');
-        console.log(`name: ${name} cookie with path ${document.location.pathname}`);
+    console.log(`name: ${name} cookie with path ${document.location.pathname}`);
 
-    if (name === 'loggedIn') {
+    if (name.trim() === 'loggedIn') {
       if (document.location.pathname !== '/') {
         // Remove the cookie with a different path
         document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
@@ -298,6 +298,7 @@ function removeInvalidCookies() {
     }
   }
 }
+
 
 // Call the function to remove invalid cookies
  removeInvalidCookies();
