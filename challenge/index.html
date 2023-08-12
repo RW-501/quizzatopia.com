@@ -292,8 +292,6 @@ function generateUniqueChallengeNumber() {
   const pathname = window.location.href;
     return pathname;
   }
-document.addEventListener("DOMContentLoaded", function () {
-});
 
 
 	    
@@ -682,10 +680,8 @@ async function getUserFriendsWithUserData(firebaseId) {
   }
 }
 
-window.addEventListener('load', async () => {
-  // Get the user ID using the getUserInfo function (assuming you have implemented it)
- // const userInfo = getUserInfo();
-//  const uID = userInfo.firebaseId;
+document.addEventListener("DOMContentLoaded", function () {
+
 	
     console.log("uID :", uID);
 fetchAndDisplayChallenges(uID);
