@@ -289,15 +289,20 @@ function removeInvalidCookies() {
     const [name, value] = cookie.split('=');
     console.log(`name: ${name} cookie with path ${document.location.pathname}`);
 
-    if (name.trim() === 'loggedIn') {
+    if (name === 'loggedIn') {
       if (document.location.pathname !== '/') {
         // Remove the cookie with a different path
         document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
         console.log(`Removed ${name} cookie with path ${document.location.pathname}`);
       }
+    } else {
+      // Remove cookies with session expiration
+      document.cookie = `${name}=; path=/`; // No explicit expiration date
+      console.log(`Removed ${name} cookie with path ${document.location.pathname}`);
     }
   }
 }
+
 
 
 // Call the function to remove invalid cookies
