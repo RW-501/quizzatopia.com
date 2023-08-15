@@ -481,105 +481,51 @@ function viewDashboard() {
   // Load in Info....
 
 
-window.signInAnonymously = function() {
-  firebase.auth().signInAnonymously()
-    .then((userCredential) => {
-      const user = userCredential.user;
+window.signInAnonymously = async function() {
+  try {
+    const userCredential = await firebase.auth().signInAnonymously();
+    const user = userCredential.user;
+    const firebaseId = user.uid;
 
-      // Get the user's Firebase ID
-      const firebaseId = user.uid;
+    showStatusMessage('Sign-in successful', 'success');
+    console.log('Firebase ID:', firebaseId);
 
-      // Example: Show a success message and user info
-      showStatusMessage('Sign-in successful', 'success');
-      console.log('Firebase ID:', firebaseId);
+    const exists = await checkUserExistence(firebaseId);
+    let userInfo;
 
-      // Check if the user already exists in the Firestore database
-      checkUserExistence(firebaseId)
-        .then((exists) => {
-          if (exists) {
-            // Existing user
-            retrieveUserInfoFromFirestore(firebaseId)
-              .then((userInfo) => {
-                // Save database info to local storage
-                saveUserInfoToLocalStorage(userInfo);
+    if (exists) {
+      userInfo = await retrieveUserInfoFromFirestore(firebaseId);
+    } else {
+      userInfo = {
+        userName: 'Anonymous',
+        userEmail: '',
+        userProfilePic: '/images/avatar/w1.png',
+        userTagLine: 'Unlock Your Knowledge Potential!',
+        userRank: 'Beginner',
+        userPoints: 0,
+        userQuizzesTaken: 0,
+        userCountry: '',
+        userState: '',
+        animationEnabled: true,
+        userIP: ipAddress,
+        userLatitude: 0,
+        userLongitude: 0,
+        firebaseId: firebaseId,
+        lastUpdated: new Date().getTime(),
+      };
+      await saveUserInfoToFirestore(userInfo);
+    }
 
-                // Set the logged-in cookie
-setLoggedInCookie();
-  loggedIn = true;
-
-
-
-                updateUserInfo(userInfo);
-
-                // Check if user info changes
-                checkUserInfoChanges();
-
-		                      // Sign-in successful
-                onAuthSuccess(userInfo);
-
-              })
-              .catch((error) => {
-                // Handle error retrieving user info
-                showStatusMessage('Error retrieving user info', 'error');
-              });
-          } else {
-            // New user
-            const userInfo = {
-              userName: 'Anonymous',
-              userEmail: '',
-              userProfilePic: '/images/avatar/w1.png',
-              userTagLine: 'Unlock Your Knowledge Potential!',
-              userRank: 'Beginner',
-              userPoints: 0,
-              userQuizzesTaken: 0,
-              userCountry: '',
-              userState: '',
-              animationEnabled: true,
-              userIP:  ipAddress,
-              userLatitude: 0,
-              userLongitude: 0,
-              firebaseId: firebaseId,
-              lastUpdated: new Date().getTime(),
-            };
-            // Save user info to Firestore
-            saveUserInfoToFirestore(userInfo)
-              .then(() => {
-                // Save database info to local storage
-                saveUserInfoToLocalStorage(userInfo);
-
-                // Set the logged-in cookie
-setLoggedInCookie();
-  loggedIn = true;
-
-
-
-
-                updateUserInfo(userInfo);
-
-                // Check if user info changes
-                checkUserInfoChanges();
-
-                // Sign-in successful
-                onAuthSuccess(userInfo);
-	      })
-              .catch((error) => {
-                // Handle error saving user info
-                showStatusMessage('Error saving user info', 'error');
-              });
-          }
-        })
-        .catch((error) => {
-          // Handle error checking user existence
-          showStatusMessage('Error checking user existence', 'error');
-        });
-    })
-    .catch((error) => {
-      // Handle error signing in anonymously
-      showStatusMessage('Error signing in anonymously', 'error');
-    });
-}
-
-
+    saveUserInfoToLocalStorage(userInfo);
+    setLoggedInCookie();
+    loggedIn = true;
+    updateUserInfo(userInfo);
+    checkUserInfoChanges();
+    onAuthSuccess(userInfo);
+  } catch (error) {
+    handleSignInError(error);
+  }
+};
 
 
 
@@ -905,113 +851,57 @@ setLoggedInCookie();
 
 
 
+window.signInWithGoogle = async function () {
+  try {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    const result = await firebase.auth().signInWithPopup(provider);
+    const user = result.user;
 
-window.signInWithGoogle = function () {
-  const provider = new firebase.auth.GoogleAuthProvider();
+    const nameArray = user.displayName.split(" ");
+    const displayName = nameArray[0];
+    const firebaseId = user.uid;
 
-  firebase.auth()
-    .signInWithPopup(provider)
-    .then((result) => {
-      const user = result.user;
+    showStatusMessage('Sign-in successful', 'success');
+    console.log('User display name:', displayName);
+    console.log('Firebase ID:', firebaseId);
 
-      // Get the user's display name and Firebase ID
-      const name = user.displayName;
-	    const nameArray = name.split(" ");
-// Get the first name (assuming it's the first word)
-const displayName = nameArray[0];
-	    
-      const firebaseId = user.uid;
+    const exists = await checkUserExistence(firebaseId);
+    let userInfo;
 
-      // Example: Show a success message and user info
-      showStatusMessage('Sign-in successful', 'success');
-      console.log('User display name:', displayName);
-      console.log('Firebase ID:', firebaseId);
+    if (exists) {
+      userInfo = await retrieveUserInfoFromFirestore(firebaseId);
+    } else {
+      userInfo = {
+        userName: displayName,
+        userEmail: user.email,
+        userProfilePic: user.photoURL,
+        userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+        userRank: 'Beginner',
+        userPoints: 0,
+        userQuizzesTaken: 0,
+        userCountry: '',
+        userState: '',
+        animationEnabled: true,
+        userIP: ipAddress,
+        userLatitude: 0,
+        userLongitude: 0,
+        firebaseId: firebaseId,
+        lastUpdated: new Date().getTime(),
+      };
+      await saveUserInfoToFirestore(userInfo);
+    }
 
-      // Check if the user already exists in the Firestore database
-      checkUserExistence(firebaseId)
-        .then((exists) => {
-          if (exists) {
-            // Existing user
-            retrieveUserInfoFromFirestore(firebaseId)
-              .then((userInfo) => {
-                // Save database info to local storage
-                saveUserInfoToLocalStorage(userInfo);
-
-                // Set the logged-in cookie
-setLoggedInCookie();
-  loggedIn = true;
-
-
-
-                updateUserInfo(userInfo);
-
-                // Check if user info changes
-                checkUserInfoChanges();
-		      
-                // Sign-in successful
-                onAuthSuccess(userInfo);
-              })
-              .catch((error) => {
-                // Handle error retrieving user info
-                showStatusMessage('Error retrieving user info', 'error');
-              });
-          } else {
-            // New user
-            const userInfo = {
-              userName: displayName,
-              userEmail: user.email,
-              userProfilePic: user.photoURL,
-              userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-              userRank: 'Beginner',
-              userPoints: 0,
-              userQuizzesTaken: 0,
-              userCountry: '',
-              userState: '',
-              animationEnabled: true,
-              userIP:  ipAddress,
-		    userLatitude: 0,
-              userLongitude: 0,
-              firebaseId: firebaseId,
-              lastUpdated: new Date().getTime(),
-            };
-
-            // Save local storage info to Firestore database
-            saveUserInfoToFirestore(userInfo)
-              .then(() => {
-                // Save user info to local storage
-                saveUserInfoToLocalStorage(userInfo);
-
-                // Set the logged-in cookie
-setLoggedInCookie();
-  loggedIn = true;
-
-                updateUserInfo(userInfo);
-
-                // Check if user info changes
-                checkUserInfoChanges();
-
-                // Sign-in successful
-                onAuthSuccess(userInfo);
-              })
-              .catch((error) => {
-                // Handle error saving user info to Firestore
-                showStatusMessage('Error saving user info', 'error');
-              });
-          }
-        })
-        .catch((error) => {
-          // Handle error checking user existence
-          showStatusMessage('Error checking user existence', 'error');
-        });
-    })
-    .catch((error) => {
-      // Handle any errors that occurred during sign-in
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      showStatusMessage(errorMessage, 'error');
-      document.cookie = 'loggedIn=false';
-    });
+    saveUserInfoToLocalStorage(userInfo);
+    setLoggedInCookie();
+    loggedIn = true;
+    updateUserInfo(userInfo);
+    checkUserInfoChanges();
+    onAuthSuccess(userInfo);
+  } catch (error) {
+    handleSignInError(error);
+  }
 };
+
 
 // Function to check if the user exists in Firestore
 function checkUserExistence(firebaseId) {
@@ -1205,29 +1095,6 @@ function SetupLoginBTNFunc(){
   const signupButton = document.getElementById('signupButton');
   const googleButton = document.getElementById('googleButtonC');
   const facebookButton = document.getElementById('facebookButtonC');
-/*
-  // Add event listeners to the buttons
-  loginButton.addEventListener('click', (event) => {
-    event.preventDefault();
-    signInWithEmailAndPassword(event);
-  });
-
-  signupButton.addEventListener('click', (event) => {
-    event.preventDefault();
-    createUserWithEmailAndPassword(event);
-  });
-
-  googleButton.addEventListener('click', () => {
-    signInWithGoogle();
-  });
-
-  facebookButton.addEventListener('click', () => {
-    signInWithFacebook();
-  });
-*/
-  document.addEventListener('DOMContentLoaded', function () {
-    displayUserInfo();
-  });
 
 
 }
@@ -1289,17 +1156,29 @@ async function resetPassword() {
   }
 }
 
-		
-	// Function to show the status message in the status bar
+
+// Handle sign-in errors
+function handleSignInError(error) {
+  showStatusMessage(error.message, 'error');
+  document.cookie = 'loggedIn=false';
+  console.error('Error signing in:', error);
+}
+
+// Display status message
 function showStatusMessage(message, status) {
   const statusBar = document.getElementById('statusBar');
   const statusMessage = document.getElementById('statusMessage');
   statusMessage.textContent = message;
-  statusBar.classList.remove('d-none');
-  statusBar.classList.remove('success');
-  statusBar.classList.remove('error');
+  statusBar.classList.remove('d-none', 'success', 'error');
   statusBar.classList.add(status);
 }
+
+// Clear status message
+function clearStatusMessage() {
+  const statusBar = document.getElementById('statusBar');
+  statusBar.classList.add('d-none');
+}
+
 
 // Function to hide the status bar
 function hideStatusBar() {
@@ -1307,6 +1186,11 @@ function hideStatusBar() {
   statusBar.classList.add('d-none');
 }
 
+// Initialization
+document.addEventListener('DOMContentLoaded', function () {
+  displayUserInfo();
+  SetupLoginBTNFunc(); // Call the setup function here
+});
 
 
 
