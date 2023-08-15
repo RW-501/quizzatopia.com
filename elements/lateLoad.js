@@ -503,9 +503,7 @@ window.signInAnonymously = function() {
                 // Save database info to local storage
                 saveUserInfoToLocalStorage(userInfo);
 
-                // Set the logged-in cookie
-setLoggedInCookie();
-  loggedIn = true;
+
 
 
 
@@ -547,9 +545,7 @@ setLoggedInCookie();
                 // Save database info to local storage
                 saveUserInfoToLocalStorage(userInfo);
 
-                // Set the logged-in cookie
-setLoggedInCookie();
-  loggedIn = true;
+
 
 
 
@@ -658,9 +654,6 @@ window.createUserWithEmailAndPassword = function () {
       };
       saveUserInfoToFirestore(userInfo); // Save user info to Firestore
 
-                // Set the logged-in cookie
-setLoggedInCookie();
-  loggedIn = true;
 
 
 
@@ -730,7 +723,6 @@ const displayName = nameArray[0];
             retrieveUserInfoFromFirestore(firebaseId)
               .then((userInfo) => {
                 saveUserInfoToLocalStorage(userInfo);
-                document.cookie = 'loggedIn=true';
                 onAuthSuccess(userInfo);
                 updateUserInfo(userInfo);
                 checkUserInfoChanges();
@@ -761,9 +753,7 @@ const displayName = nameArray[0];
             createUserInFirestore(userInfo)
               .then(() => {
                 saveUserInfoToLocalStorage(userInfo);
-                // Set the logged-in cookie
-setLoggedInCookie();
-  loggedIn = true;
+ 
 
                 updateUserInfo(userInfo);
                 checkUserInfoChanges();
@@ -820,9 +810,7 @@ const displayName = nameArray[0];
                 // Save database info to local storage
                 saveUserInfoToLocalStorage(userInfo);
 
-                // Set the logged-in cookie
-setLoggedInCookie();
-  loggedIn = true;
+
 
 
                 updateUserInfo(userInfo);
@@ -863,9 +851,6 @@ setLoggedInCookie();
                 // Save user info to local storage
                 saveUserInfoToLocalStorage(userInfo);
 
-                // Set the logged-in cookie
-setLoggedInCookie();
-  loggedIn = true;
 
 
                 updateUserInfo(userInfo);
@@ -937,9 +922,7 @@ const displayName = nameArray[0];
                 // Save database info to local storage
                 saveUserInfoToLocalStorage(userInfo);
 
-                // Set the logged-in cookie
-setLoggedInCookie();
-  loggedIn = true;
+
 
 
 
@@ -981,9 +964,7 @@ setLoggedInCookie();
                 // Save user info to local storage
                 saveUserInfoToLocalStorage(userInfo);
 
-                // Set the logged-in cookie
-setLoggedInCookie();
-  loggedIn = true;
+  
 
                 updateUserInfo(userInfo);
 
