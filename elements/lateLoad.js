@@ -1230,12 +1230,14 @@ async function onAuthSuccess(userInfo) {
 
     updateNavBar();
     displayUserInfo();
+    console.log('displayUserInfo, !');
 
     // Add a delay using a promise
     const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
     await saveUserInfoToFirestore(userInfo);
     await delay(300); // Adjust the delay time as needed
+    console.log('closePopup, !');
 
     closePopup();
   } catch (error) {
