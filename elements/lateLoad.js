@@ -1220,7 +1220,7 @@ function SetupLoginBTNFunc(){
 	
 		
 	
-async function onAuthSuccess(userInfo) {
+async function onAuthSuccess(userInfo, retryCount = 3) {
   try {
     checkUserInfoChanges();
     loggedIn = true;
@@ -1232,10 +1232,10 @@ async function onAuthSuccess(userInfo) {
     displayUserInfo();
     console.log('displayUserInfo, !');
 
+    await saveUserInfoToFirestore(userInfo);
+
     // Add a delay using a promise
     const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
-
-    await saveUserInfoToFirestore(userInfo);
     await delay(300); // Adjust the delay time as needed
     console.log('closePopup, !');
 
@@ -1243,7 +1243,14 @@ async function onAuthSuccess(userInfo) {
   } catch (error) {
     console.error(error);
 
-	  onAuthSuccess(userInfo);
+    if (retryCount > 0) {
+      console.log('Retrying...');
+      await delay(1000); // Wait before retrying
+      onAuthSuccess(userInfo, retryCount - 1);
+    } else {
+      console.error('Exceeded retry limit. Unable to complete onAuthSuccess.');
+      // Handle the error or notify the user
+    }
   }
 }
 
