@@ -255,7 +255,7 @@ let currentUserFirebaseId = input(currentUserFirebaseIdxx);
 let friendFirebaseId = input(friendFirebaseIdxx);
 
 	    console.log('friendFirebaseId:', friendFirebaseId);
-  console.log('window.location.href:', window.location.href);
+//  console.log('window.location.href:', window.location.href);
 
     if (friendFirebaseId === currentUserFirebaseId) {
       // Friendship already exists, show an error message
@@ -274,8 +274,9 @@ let friendFirebaseId = input(friendFirebaseIdxx);
 const existingUser = await firebase.firestore().collection("users")
   .where("firebaseId", "==", friendFirebaseId)
   .get();
-	  
-if (!existingUser.empty) {
+	    console.log('existingUser.empty:', existingUser.empty);
+
+if (existingUser.empty) {
   const messageDiv = document.getElementById("message");
   messageDiv.innerHTML = `<div class='share' onclick="shareFriendCodeFunc('${friendFirebaseId}')"> Send Your Link to Your Friends</div>`;
   return;
