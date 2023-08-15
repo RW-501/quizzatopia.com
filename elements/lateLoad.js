@@ -870,6 +870,8 @@ window.signInWithGoogle = async function () {
 
     if (exists) {
       userInfo = await retrieveUserInfoFromFirestore(firebaseId);
+    console.log('userInfo ID:', userInfo);
+
     } else {
       userInfo = {
         userName: displayName,
@@ -890,7 +892,7 @@ window.signInWithGoogle = async function () {
       };
       await saveUserInfoToFirestore(userInfo);
     }
-
+  console.log('saveUserInfoToLocalStorage');
     saveUserInfoToLocalStorage(userInfo);
     setLoggedInCookie();
     loggedIn = true;
@@ -1123,10 +1125,18 @@ async function onAuthSuccess(userInfo) {
     closePopup();
   } catch (error) {
     console.error(error);
-
-	  onAuthSuccess(userInfo);
   }
 }
+
+// Call onAuthSuccess(userInfo) with a timeout
+setTimeout(async () => {
+  try {
+    await onAuthSuccess(userInfo); // Pass the appropriate userInfo object here
+  } catch (error) {
+    console.error(error);
+  }
+}, 0); // Use a very short timeout, like 0, to ensure the code runs asynchronously
+
 
 
 
