@@ -863,13 +863,15 @@ const displayName = nameArray[0];
               })
               .catch((error) => {
                 // Handle error saving user info to Firestore
-                showStatusMessage('Error saving user info', 'error');
+                 showStatusMessage('Error saving user info', 'error');
+                console.error('Error saving user info to Firestore:', error);
               });
           }
         })
         .catch((error) => {
           // Handle error checking user existence
           showStatusMessage('Error checking user existence', 'error');
+          console.error('Error checking user existence:', error);
         });
     })
     .catch((error) => {
@@ -877,7 +879,8 @@ const displayName = nameArray[0];
       const errorCode = error.code;
       const errorMessage = error.message;
       showStatusMessage(errorMessage, 'error');
-      document.cookie = 'loggedIn=false';
+       document.cookie = 'loggedIn=false';
+      console.error('Error signing in with Facebook:', error);
     });
 };
 
