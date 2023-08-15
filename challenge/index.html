@@ -91,19 +91,19 @@
     }
 
     .btnMain {
-      background-color: #fd7e14;
-      color: white;
-      border: none;
-      border-radius: 1em;
-      padding: 2%;
-      font-size: calc(1rem + 2vw);
-      font-weight: 600;
-      margin-top: 20px;
-      margin-bottom: 15%;
-      text-shadow: -4px 2px 0px #6b6a6a;
-      box-shadow: 3px 3px 0rem 3px #b98c03 !important;
-      cursor: pointer;
-      text-align: center;
+ background-color: #fd7e14;
+    color: white;
+    border: none;
+    border-radius: 1em;
+    padding: 2%;
+    font-size: calc(1rem + 2vw);
+    font-weight: 600;
+    text-shadow: -4px 2px 0px #6b6a6a;
+    box-shadow: 3px 3px 0rem 3px #b98c03 !important;
+    cursor: pointer;
+    text-align: center;
+    height: fit-content;
+    margin: auto;
     }
 
     button:hover {
@@ -295,6 +295,7 @@ function generateUniqueChallengeNumber() {
     return pathname;
   }
 
+//  return `https://quizzatopia.com/challenge/?challengeNumber=${challengeNumber}`;
 
 	    
 function ensureDomainInUrl(url) {
@@ -544,7 +545,7 @@ document.getElementById("friendsChallengeList").innerHTML = '';
          <div> ${name}</div></div>
          <div> </div>
          <div class='points'>  ${points} Points</div>
-         <div class='btnMain '  onclick="sendChallengeFunc(quizCode, challengeNumber)"> Challenge</div>
+         <div class='btnMain '  onclick="sendChallengeFunc('${quizCode}', '${challengeNumber}' )"> Challenge</div>
 	 </div>
         </li>
       `;
@@ -585,17 +586,17 @@ function handleFriendClick(friendName, friendfirebaseId) {
 
 // Function to generate a challenge URL
 function generateChallengeURL(quizCode, challengeNumber) {
-  return `https://quizzatopia.com/challenge/?quizCode=${quizCode}&challengeNumber=${challengeNumber}`;
+  return `https://quizzatopia.com/challenge/?challengeNumber=${challengeNumber}`;
 }
 
-function sendChallengeFunc(){
+function sendChallengeFunc(quizCode, challengeNumber){
   // Get selected friends and other data from the form
   const selectedFriends = getSelectedFriends();
 
   // Generate URLs for each friend and send them
   selectedFriends.forEach(friend => {
     const challengeURL = generateChallengeURL(quizCode, challengeNumber);
-    sendChallengeToFriend(challengeURL, friend);
+    sendChallengeToFriend(quizCode, challengeURL, friend);
   });
 
  
