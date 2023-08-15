@@ -276,7 +276,7 @@ const existingUser = await firebase.firestore().collection("users")
   .get();
 	    console.log('existingUser.empty:', existingUser.empty);
 
-if (existingUser.empty) {
+if (existingUser.empty === true) {
   const messageDiv = document.getElementById("message");
   messageDiv.innerHTML = `<div class='share' onclick="shareFriendCodeFunc('${friendFirebaseId}')"> Send Your Link to Your Friends</div>`;
   return;
