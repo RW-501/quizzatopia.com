@@ -294,11 +294,12 @@ function removeInvalidCookies() {
         // Remove the cookie with a different path
         document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
         console.log(`Removed ${name} cookie with path ${document.location.pathname}`);
-      }
+     
     } else {
       // Remove cookies with session expiration
-      document.cookie = `${name}=; path=/`; // No explicit expiration date
-      console.log(`Removed ${name} cookie with path ${document.location.pathname}`);
+    //  document.cookie = `${name}=; path=/`; // No explicit expiration date
+    //  console.log(`Removed ${name} cookie with path ${document.location.pathname}`);
+    }
     }
   }
 }
