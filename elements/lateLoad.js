@@ -512,8 +512,10 @@ window.signInAnonymously = function() {
                 // Check if user info changes
                 checkUserInfoChanges();
 
-		                      // Sign-in successful
+                   setTimeout(() => {
+   // Sign-in successful
                 onAuthSuccess(userInfo);
+      }, 500);
 
               })
               .catch((error) => {
@@ -555,8 +557,10 @@ window.signInAnonymously = function() {
                 // Check if user info changes
                 checkUserInfoChanges();
 
-                // Sign-in successful
+                        setTimeout(() => {
+   // Sign-in successful
                 onAuthSuccess(userInfo);
+      }, 500);
 	      })
               .catch((error) => {
                 // Handle error saving user info
@@ -662,8 +666,10 @@ window.createUserWithEmailAndPassword = function () {
       // Check if user info changes
       checkUserInfoChanges();
 
-      // Sign-up successful
-      onAuthSuccess(userInfo);
+                   setTimeout(() => {
+   // Sign-in successful
+                onAuthSuccess(userInfo);
+      }, 500);
 
     })
     .catch((error) => {
@@ -723,8 +729,11 @@ const displayName = nameArray[0];
             retrieveUserInfoFromFirestore(firebaseId)
               .then((userInfo) => {
                 saveUserInfoToLocalStorage(userInfo);
+                   setTimeout(() => {
+   // Sign-in successful
                 onAuthSuccess(userInfo);
-                updateUserInfo(userInfo);
+      }, 500);
+		      updateUserInfo(userInfo);
                 checkUserInfoChanges();
               })
               .catch((error) => {
@@ -757,7 +766,10 @@ const displayName = nameArray[0];
 
                 updateUserInfo(userInfo);
                 checkUserInfoChanges();
+                       setTimeout(() => {
+   // Sign-in successful
                 onAuthSuccess(userInfo);
+      }, 500);
 
               })
               .catch((error) => {
@@ -818,8 +830,10 @@ const displayName = nameArray[0];
                 // Check if user info changes
                 checkUserInfoChanges();
 
-                // Sign-in successful
+                    setTimeout(() => {
+   // Sign-in successful
                 onAuthSuccess(userInfo);
+      }, 500);
               })
               .catch((error) => {
                 // Handle error retrieving user info
@@ -857,9 +871,10 @@ const displayName = nameArray[0];
 
                 // Check if user info changes
                 checkUserInfoChanges();
-
-                // Sign-in successful
+                   setTimeout(() => {
+   // Sign-in successful
                 onAuthSuccess(userInfo);
+      }, 500);
               })
               .catch((error) => {
                 // Handle error saving user info to Firestore
@@ -934,8 +949,10 @@ const displayName = nameArray[0];
                 // Check if user info changes
                 checkUserInfoChanges();
 		      
-                // Sign-in successful
+                   setTimeout(() => {
+   // Sign-in successful
                 onAuthSuccess(userInfo);
+      }, 500);
               })
               .catch((error) => {
                 // Handle error retrieving user info
@@ -974,8 +991,11 @@ const displayName = nameArray[0];
                 // Check if user info changes
                 checkUserInfoChanges();
 
-                // Sign-in successful
+                   setTimeout(() => {
+   // Sign-in successful
                 onAuthSuccess(userInfo);
+      }, 500);
+			   
               })
               .catch((error) => {
                 // Handle error saving user info to Firestore
