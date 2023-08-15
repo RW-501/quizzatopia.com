@@ -480,728 +480,399 @@ function viewDashboard() {
 
   // Load in Info....
 
+window.signInAnonymously = async function () {
+  try {
+    const userCredential = await firebase.auth().signInAnonymously();
+    const user = userCredential.user;
+    const firebaseId = user.uid;
 
-window.signInAnonymously = function() {
-  firebase.auth().signInAnonymously()
-    .then((userCredential) => {
-      const user = userCredential.user;
+    showStatusMessage('Sign-in successful', 'success');
+    console.log('Firebase ID:', firebaseId);
 
-      // Get the user's Firebase ID
-      const firebaseId = user.uid;
+    const exists = await checkUserExistence(firebaseId);
 
-      // Example: Show a success message and user info
-      showStatusMessage('Sign-in successful', 'success');
-      console.log('Firebase ID:', firebaseId);
-
-      // Check if the user already exists in the Firestore database
-      checkUserExistence(firebaseId)
-        .then((exists) => {
-          if (exists) {
-            // Existing user
-            retrieveUserInfoFromFirestore(firebaseId)
-              .then((userInfo) => {
-                // Save database info to local storage
-                saveUserInfoToLocalStorage(userInfo);
-
-
-
-
-
-                updateUserInfo(userInfo);
-
-                // Check if user info changes
-                checkUserInfoChanges();
-
-                   setTimeout(() => {
-   // Sign-in successful
-                onAuthSuccess(userInfo);
-      }, 500);
-
-              })
-              .catch((error) => {
-                // Handle error retrieving user info
-                showStatusMessage('Error retrieving user info', 'error');
-              });
-          } else {
-            // New user
-            const userInfo = {
-              userName: 'Anonymous',
-              userEmail: '',
-              userProfilePic: '/images/avatar/w1.png',
-              userTagLine: 'Unlock Your Knowledge Potential!',
-              userRank: 'Beginner',
-              userPoints: 0,
-              userQuizzesTaken: 0,
-              userCountry: '',
-              userState: '',
-              animationEnabled: true,
-              userIP:  ipAddress,
-              userLatitude: 0,
-              userLongitude: 0,
-              firebaseId: firebaseId,
-              lastUpdated: new Date().getTime(),
-            };
-            // Save user info to Firestore
-            saveUserInfoToFirestore(userInfo)
-              .then(() => {
-                // Save database info to local storage
-                saveUserInfoToLocalStorage(userInfo);
-
-
-
-
-
-
-                updateUserInfo(userInfo);
-
-                // Check if user info changes
-                checkUserInfoChanges();
-
-                        setTimeout(() => {
-   // Sign-in successful
-                onAuthSuccess(userInfo);
-      }, 500);
-	      })
-              .catch((error) => {
-                // Handle error saving user info
-                showStatusMessage('Error saving user info', 'error');
-              });
-          }
-        })
-        .catch((error) => {
-          // Handle error checking user existence
-          showStatusMessage('Error checking user existence', 'error');
-        });
-    })
-    .catch((error) => {
-      // Handle error signing in anonymously
-      showStatusMessage('Error signing in anonymously', 'error');
-    });
-}
-
-
-
-
-
-
-
-
-
-
-
-
-// Helper function to check if the input is a valid email address
-function isValidEmail(email) {
-  // Use a simple regular expression to validate the email format
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-// Update the createUserWithEmailAndPassword function
-window.createUserWithEmailAndPassword = function () {
- const username = document.getElementById('susername').value;
- const email = document.getElementById('semail').value;
-  const password = document.getElementById('spassword').value;
-
-	
-   // Check if email is provided and is a string
-  if ( !validateFields(username, email, password)) {
-    return;
-  }
-
-
-
-	const auth = firebase.auth();
-
-  auth
-    .createUserWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      const user = userCredential.user;
-
-      // Get the user's email and Firebase ID
-      const userEmail = user.email;
-      const firebaseId = user.uid;
-
-      // Example: Show a success message and user info
-      showStatusMessage('Signup successful', 'success');
-      console.log('User email:', userEmail);
-      console.log('Firebase ID:', firebaseId);
-
-      // Save user info to Firestore database
-      const userInfo = {
-        userName: username,
-        userEmail: userEmail,
+    let userInfo;
+    if (exists) {
+      userInfo = await retrieveUserInfoFromFirestore(firebaseId);
+    } else {
+      userInfo = {
+        userName: 'Anonymous',
+        userEmail: '',
         userProfilePic: '/images/avatar/w1.png',
+        userTagLine: 'Unlock Your Knowledge Potential!',
+        userRank: 'Beginner',
+        userPoints: 0,
+        userQuizzesTaken: 0,
+        userCountry: '',
+        userState: '',
+        animationEnabled: true,
+        userIP: ipAddress,
+        userLatitude: 0,
+        userLongitude: 0,
+        firebaseId: firebaseId,
+        lastUpdated: new Date().getTime(),
+      };
+
+      await saveUserInfoToFirestore(userInfo);
+    }
+
+    saveUserInfoToLocalStorage(userInfo);
+    updateUserInfo(userInfo);
+    checkUserInfoChanges();
+
+    setTimeout(() => {
+      onAuthSuccess(userInfo);
+    }, 500);
+  } catch (error) {
+    handleSignInError(error);
+  }
+};
+
+window.createUserWithEmailAndPassword = async function () {
+  try {
+    const username = document.getElementById('susername').value;
+    const email = document.getElementById('semail').value;
+    const password = document.getElementById('spassword').value;
+
+    if (!validateFields(username, email, password)) {
+      return;
+    }
+
+    const auth = firebase.auth();
+    const userCredential = await auth.createUserWithEmailAndPassword(email, password);
+    const user = userCredential.user;
+    const userEmail = user.email;
+    const firebaseId = user.uid;
+
+    showStatusMessage('Signup successful', 'success');
+    console.log('User email:', userEmail);
+    console.log('Firebase ID:', firebaseId);
+
+    const userInfo = {
+      userName: username,
+      userEmail: userEmail,
+      userProfilePic: '/images/avatar/w1.png',
+      userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+      userRank: 'Beginner',
+      userPoints: 0,
+      userQuizzesTaken: 0,
+      userCountry: '',
+      userState: '',
+      userLatitude: 0,
+      animationEnabled: true,
+      userIP: ipAddress,
+      userLongitude: 0,
+      firebaseId: firebaseId,
+      lastUpdated: new Date().getTime(),
+    };
+
+    await saveUserInfoToFirestore(userInfo);
+    updateUserInfo(userInfo);
+    checkUserInfoChanges();
+
+    setTimeout(() => {
+      onAuthSuccess(userInfo);
+    }, 500);
+  } catch (error) {
+    handleSignUpError(error);
+  }
+};
+
+window.signInWithEmailAndPassword = async function () {
+  try {
+    const emailOG = document.getElementById('lemail').value;
+    const password = document.getElementById('lpassword').value;
+
+    if (typeof emailOG !== 'string' || emailOG.trim() === '') {
+      showStatusMessage('Please enter a valid email address.', 'error');
+      return;
+    }
+
+    const email = emailOG.trim();
+
+    if (!isValidEmail(email)) {
+      showStatusMessage('Invalid email address.', 'error');
+      return;
+    }
+
+    const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password);
+    const user = userCredential.user;
+    const firebaseId = user.uid;
+
+    showStatusMessage('Sign-in successful', 'success');
+    console.log('Firebase ID:', firebaseId);
+
+    const exists = await checkUserExistence(firebaseId);
+
+    let userInfo;
+    if (exists) {
+      userInfo = await retrieveUserInfoFromFirestore(firebaseId);
+    } else {
+      const displayName = user.displayName.split(' ')[0];
+      userInfo = {
+        userName: displayName,
+        userEmail: user.email,
+        userProfilePic: user.photoURL,
         userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
         userRank: 'Beginner',
         userPoints: 0,
         userQuizzesTaken: 0,
         userCountry: '',
         userState: '',
+        animationEnabled: true,
+        userIP: ipAddress,
         userLatitude: 0,
-              animationEnabled: true,
-              userIP:  ipAddress,
-	      userLongitude: 0,
+        userLongitude: 0,
         firebaseId: firebaseId,
         lastUpdated: new Date().getTime(),
       };
-      saveUserInfoToFirestore(userInfo); // Save user info to Firestore
 
+      await saveUserInfoToFirestore(userInfo);
+    }
 
+    saveUserInfoToLocalStorage(userInfo);
+    updateUserInfo(userInfo);
+    checkUserInfoChanges();
 
-
-      updateUserInfo(userInfo);
-
-      // Check if user info changes
-      checkUserInfoChanges();
-
-                   setTimeout(() => {
-   // Sign-in successful
-                onAuthSuccess(userInfo);
-      }, 500);
-
-    })
-    .catch((error) => {
-      // Handle any errors that occurred during sign-up
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      showStatusMessage(errorMessage, 'error');
-      document.cookie = 'loggedIn=false';
-    });
-};
-	
-
-
-
-
-
-
-
-window.signInWithEmailAndPassword = function() {
-  const emailOG = document.getElementById('lemail').value;
-  const password = document.getElementById('lpassword').value;
-
-  if (typeof emailOG !== 'string' || emailOG.trim() === '') {
-    showStatusMessage('Please enter a valid email address.', 'error');
-    return;
+    setTimeout(() => {
+      onAuthSuccess(userInfo);
+    }, 500);
+  } catch (error) {
+    handleSignInError(error);
   }
+};
 
-  // Trim the email to remove leading/trailing whitespaces
-  const email = emailOG.trim();
+window.signInWithFacebook = async function () {
+  try {
+    const provider = new firebase.auth.FacebookAuthProvider();
+    const result = await firebase.auth().signInWithPopup(provider);
+    const user = result.user;
+    const displayName = user.displayName.split(' ')[0];
+    const firebaseId = user.uid;
 
-  // Check if the email is a valid email address
-  if (!isValidEmail(email)) {
-    showStatusMessage('Invalid email address.', 'error');
-    return;
+    showStatusMessage('Sign-in successful', 'success');
+    console.log('User display name:', displayName);
+    console.log('Firebase ID:', firebaseId);
+
+    const exists = await checkUserExistence(firebaseId);
+
+    let userInfo;
+    if (exists) {
+      userInfo = await retrieveUserInfoFromFirestore(firebaseId);
+    } else {
+      userInfo = {
+        userName: displayName,
+        userEmail: user.email,
+        userProfilePic: user.photoURL,
+        userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+        userRank: 'Beginner',
+        userPoints: 0,
+        userQuizzesTaken: 0,
+        userCountry: '',
+        userState: '',
+        animationEnabled: true,
+        userIP: ipAddress,
+        userLatitude: 0,
+        userLongitude: 0,
+        firebaseId: firebaseId,
+        lastUpdated: new Date().getTime(),
+      };
+
+      await saveUserInfoToFirestore(userInfo);
+    }
+
+    saveUserInfoToLocalStorage(userInfo);
+    updateUserInfo(userInfo);
+    checkUserInfoChanges();
+
+    setTimeout(() => {
+      onAuthSuccess(userInfo);
+    }, 500);
+  } catch (error) {
+    handleSignInError(error);
   }
-	
-  firebase.auth().signInWithEmailAndPassword(email, password)
-    .then((userCredential) => {
-      const user = userCredential.user;
-
-      // Get the user's display name and Firebase ID
-      const name = user.displayName;
-	    const nameArray = name.split(" ");
-// Get the first name (assuming it's the first word)
-const displayName = nameArray[0];
-	    
-	    const firebaseId = user.uid;
-
-      // Example: Show a success message and user info
-      showStatusMessage('Sign-in successful', 'success');
-      console.log('User display name:', displayName);
-      console.log('Firebase ID:', firebaseId);
-
-      checkUserExistence(firebaseId)
-        .then((exists) => {
-          if (exists) {
-            retrieveUserInfoFromFirestore(firebaseId)
-              .then((userInfo) => {
-                saveUserInfoToLocalStorage(userInfo);
-                   setTimeout(() => {
-   // Sign-in successful
-                onAuthSuccess(userInfo);
-      }, 500);
-		      updateUserInfo(userInfo);
-                checkUserInfoChanges();
-              })
-              .catch((error) => {
-                showStatusMessage('Error retrieving user info', 'error');
-              });
-          } else {
-            const userInfo = {
-              userName: displayName,
-              userEmail: user.email,
-              userProfilePic: user.photoURL,
-              userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-              userRank: 'Beginner',
-              userPoints: 0,
-              userQuizzesTaken: 0,
-              userCountry: '',
-              userState: '',
- animationEnabled: true,
-              userIP: ipAddress,
-		    userLatitude: 0,
-              userLongitude: 0,
-              firebaseId: firebaseId,
-              lastUpdated: new Date().getTime(),
-            };
-
-            // Create a new user in the Firestore database
-            createUserInFirestore(userInfo)
-              .then(() => {
-                saveUserInfoToLocalStorage(userInfo);
- 
-
-                updateUserInfo(userInfo);
-                checkUserInfoChanges();
-                       setTimeout(() => {
-   // Sign-in successful
-                onAuthSuccess(userInfo);
-      }, 500);
-
-              })
-              .catch((error) => {
-                showStatusMessage('Error creating user', 'error');
-              });
-          }
-        })
-        .catch((error) => {
-          showStatusMessage('Error checking user existence', 'error');
-        });
-    })
-    .catch((error) => {
-      showStatusMessage('Error signing in', 'error');
-      console.error('Sign-in error:', error);
-    });
-}
-
-
-
-
-
-window.signInWithFacebook = function () {
-  const provider = new firebase.auth.FacebookAuthProvider();
-
-  firebase.auth()
-    .signInWithPopup(provider)
-    .then((result) => {
-      const user = result.user;
-
-      // Get the user's display name and Firebase ID
-          const name = user.displayName;
-	    const nameArray = name.split(" ");
-// Get the first name (assuming it's the first word)
-const displayName = nameArray[0];
-	    
-      const firebaseId = user.uid;
-
-      // Example: Show a success message and user info
-      showStatusMessage('Sign-in successful', 'success');
-      console.log('User display name:', displayName);
-      console.log('Firebase ID:', firebaseId);
-
-      // Check if the user already exists in the Firestore database
-      checkUserExistence(firebaseId)
-        .then((exists) => {
-          if (exists) {
-            // Existing user
-            retrieveUserInfoFromFirestore(firebaseId)
-              .then((userInfo) => {
-                // Save database info to local storage
-                saveUserInfoToLocalStorage(userInfo);
-
-
-
-
-                updateUserInfo(userInfo);
-
-                // Check if user info changes
-                checkUserInfoChanges();
-
-                    setTimeout(() => {
-   // Sign-in successful
-                onAuthSuccess(userInfo);
-      }, 500);
-              })
-              .catch((error) => {
-                // Handle error retrieving user info
-                showStatusMessage('Error retrieving user info', 'error');
-              });
-          } else {
-            // New user
-            const userInfo = {
-              userName: displayName,
-              userEmail: user.email,
-              userProfilePic: user.photoURL,
-              userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-              userRank: 'Beginner',
-              userPoints: 0,
-              userQuizzesTaken: 0,
-              userCountry: '',
-              userState: '',
-              animationEnabled: true,
-              userIP: ipAddress,
-              userLatitude: 0,
-              userLongitude: 0,
-              firebaseId: firebaseId,
-              lastUpdated: new Date().getTime(),
-            };
-
-            // Save local storage info to Firestore database
-            saveUserInfoToFirestore(userInfo)
-              .then(() => {
-                // Save user info to local storage
-                saveUserInfoToLocalStorage(userInfo);
-
-
-
-                updateUserInfo(userInfo);
-
-                // Check if user info changes
-                checkUserInfoChanges();
-                   setTimeout(() => {
-   // Sign-in successful
-                onAuthSuccess(userInfo);
-      }, 500);
-              })
-              .catch((error) => {
-                // Handle error saving user info to Firestore
-                 showStatusMessage('Error saving user info', 'error');
-                console.error('Error saving user info to Firestore:', error);
-              });
-          }
-        })
-        .catch((error) => {
-          // Handle error checking user existence
-          showStatusMessage('Error checking user existence', 'error');
-          console.error('Error checking user existence:', error);
-        });
-    })
-    .catch((error) => {
-      // Handle any errors that occurred during sign-in
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      showStatusMessage(errorMessage, 'error');
-       document.cookie = 'loggedIn=false';
-      console.error('Error signing in with Facebook:', error);
-    });
 };
 
+// ... (Rest of the code remains the same)
 
 
 
 
 
+window.signInWithGoogle = async function () {
+  try {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    const result = await firebase.auth().signInWithPopup(provider);
+    const user = result.user;
+    const displayName = user.displayName.split(' ')[0];
+    const firebaseId = user.uid;
 
+    showStatusMessage('Sign-in successful', 'success');
+    console.log('User display name:', displayName);
+    console.log('Firebase ID:', firebaseId);
 
+    const exists = await checkUserExistence(firebaseId);
 
+    let userInfo;
+    if (exists) {
+      userInfo = await retrieveUserInfoFromFirestore(firebaseId);
+    } else {
+      userInfo = {
+        userName: displayName,
+        userEmail: user.email,
+        userProfilePic: user.photoURL,
+        userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+        userRank: 'Beginner',
+        userPoints: 0,
+        userQuizzesTaken: 0,
+        userCountry: '',
+        userState: '',
+        animationEnabled: true,
+        userIP: ipAddress,
+        userLatitude: 0,
+        userLongitude: 0,
+        firebaseId: firebaseId,
+        lastUpdated: new Date().getTime(),
+      };
 
+      await saveUserInfoToFirestore(userInfo);
+    }
 
-window.signInWithGoogle = function () {
-  const provider = new firebase.auth.GoogleAuthProvider();
+    saveUserInfoToLocalStorage(userInfo);
+    updateUserInfo(userInfo);
+    checkUserInfoChanges();
 
-  firebase.auth()
-    .signInWithPopup(provider)
-    .then((result) => {
-      const user = result.user;
-
-      // Get the user's display name and Firebase ID
-      const name = user.displayName;
-	    const nameArray = name.split(" ");
-// Get the first name (assuming it's the first word)
-const displayName = nameArray[0];
-	    
-      const firebaseId = user.uid;
-
-      // Example: Show a success message and user info
-      showStatusMessage('Sign-in successful', 'success');
-      console.log('User display name:', displayName);
-      console.log('Firebase ID:', firebaseId);
-
-      // Check if the user already exists in the Firestore database
-      checkUserExistence(firebaseId)
-        .then((exists) => {
-          if (exists) {
-            // Existing user
-            retrieveUserInfoFromFirestore(firebaseId)
-              .then((userInfo) => {
-                // Save database info to local storage
-                saveUserInfoToLocalStorage(userInfo);
-
-
-
-
-
-                updateUserInfo(userInfo);
-
-                // Check if user info changes
-                checkUserInfoChanges();
-		      
-                   setTimeout(() => {
-   // Sign-in successful
-                onAuthSuccess(userInfo);
-      }, 500);
-              })
-              .catch((error) => {
-                // Handle error retrieving user info
-                showStatusMessage('Error retrieving user info', 'error');
-              });
-          } else {
-            // New user
-            const userInfo = {
-              userName: displayName,
-              userEmail: user.email,
-              userProfilePic: user.photoURL,
-              userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-              userRank: 'Beginner',
-              userPoints: 0,
-              userQuizzesTaken: 0,
-              userCountry: '',
-              userState: '',
-              animationEnabled: true,
-              userIP:  ipAddress,
-		    userLatitude: 0,
-              userLongitude: 0,
-              firebaseId: firebaseId,
-              lastUpdated: new Date().getTime(),
-            };
-
-            // Save local storage info to Firestore database
-            saveUserInfoToFirestore(userInfo)
-              .then(() => {
-                // Save user info to local storage
-                saveUserInfoToLocalStorage(userInfo);
-
-  
-
-                updateUserInfo(userInfo);
-
-                // Check if user info changes
-                checkUserInfoChanges();
-
-                   setTimeout(() => {
-   // Sign-in successful
-                onAuthSuccess(userInfo);
-      }, 500);
-			   
-              })
-              .catch((error) => {
-                // Handle error saving user info to Firestore
-                showStatusMessage('Error saving user info', 'error');
-              });
-          }
-        })
-        .catch((error) => {
-          // Handle error checking user existence
-          showStatusMessage('Error checking user existence', 'error');
-        });
-    })
-    .catch((error) => {
-      // Handle any errors that occurred during sign-in
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      showStatusMessage(errorMessage, 'error');
-      document.cookie = 'loggedIn=false';
-    });
+    setTimeout(() => {
+      onAuthSuccess(userInfo);
+    }, 500);
+  } catch (error) {
+    handleSignInError(error);
+  }
 };
 
-// Function to check if the user exists in Firestore
-function checkUserExistence(firebaseId) {
-  return new Promise((resolve, reject) => {
-    // Implement the logic to check user existence in Firestore
-    // Example code:
-    firebase.firestore()
-      .collection('users')
-      .doc(firebaseId)
-      .get()
-      .then((doc) => {
-        resolve(doc.exists);
-      })
-      .catch((error) => {
-        reject(error);
-      });
-  });
+async function onAuthSuccess(userInfo, retryCount = 3) {
+  try {
+    checkUserInfoChanges();
+    loggedIn = true;
+    setLoggedInCookie();
+
+    console.log(`Welcome, ${userInfo.userName}!`);
+
+    updateNavBar();
+    displayUserInfo();
+
+    await saveUserInfoToFirestore(userInfo);
+
+    await delay(300); // Adjust the delay time as needed
+    console.log('closePopup, !');
+    closePopup();
+  } catch (error) {
+    console.error(error);
+
+    if (retryCount > 0) {
+      console.log('Retrying...');
+      await delay(1000); // Wait before retrying
+      onAuthSuccess(userInfo, retryCount - 1);
+    } else {
+      console.error('Exceeded retry limit. Unable to complete onAuthSuccess.');
+      // Handle the error or notify the user
+    }
+  }
 }
 
-// Function to retrieve user info from Firestore
-function retrieveUserInfoFromFirestore(firebaseId) {
-  return new Promise((resolve, reject) => {
-    // Implement the logic to retrieve user info from Firestore
-    // Example code:
-    firebase.firestore()
-      .collection('users')
-      .doc(firebaseId)
-      .get()
-      .then((doc) => {
-        if (doc.exists) {
-          resolve(doc.data());
-        } else {
-          reject(new Error('User info not found'));
-        }
-      })
-      .catch((error) => {
-        reject(error);
-      });
-  });
+async function checkUserExistence(firebaseId) {
+  try {
+    const doc = await firebase.firestore().collection('users').doc(firebaseId).get();
+    return doc.exists;
+  } catch (error) {
+    throw error;
+  }
 }
 
-
-
-// Function to save user info to Firestore
-function saveUserInfoToFirestore(userInfo) {
-  return new Promise((resolve, reject) => {
-	      console.log(userInfo); // Log userInfo to the console
-
-    firebase.firestore()
-      .collection('users')
-      .doc(userInfo.firebaseId)
-      .set(userInfo)
-      .then(() => {
-        resolve();
-      })
-      .catch((error) => {
-        reject(error);
-      });
-  });
+async function retrieveUserInfoFromFirestore(firebaseId) {
+  try {
+    const doc = await firebase.firestore().collection('users').doc(firebaseId).get();
+    if (doc.exists) {
+      return doc.data();
+    } else {
+      throw new Error('User info not found');
+    }
+  } catch (error) {
+    throw error;
+  }
 }
 
+async function saveUserInfoToFirestore(userInfo) {
+  try {
+    console.log(userInfo); // Log userInfo to the console
+    await firebase.firestore().collection('users').doc(userInfo.firebaseId).set(userInfo);
+  } catch (error) {
+    throw error;
+  }
+}
 
-
-
-
-
-// Function to save user info to local storage
 function saveUserInfoToLocalStorage(userInfo) {
-  // Implement the logic to save user info to local storage
-  // Example code:
-    console.log('saveUserInfoToLocalStorage');
-
-  // Retrieve existing user info from local storage if it exists
-  const existingUserInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY));
-
-  // Merge the existing user info with the new user info
+  const existingUserInfo = JSON.parse(localStorage.getItem(USER_INFO_KEY)) || {};
   const mergedUserInfo = { ...existingUserInfo, ...userInfo };
-
-  // Save the merged user info to local storage
   localStorage.setItem(USER_INFO_KEY, JSON.stringify(mergedUserInfo));
 }
 
-
-
-
-
-
-
-
-// Function to check if user info changes
 function checkUserInfoChanges() {
-  // Implement the logic to check if user info changes
-  // Example code:
+  const currentUserInfo = JSON.parse(localStorage.getItem('userInfo')) || {};
+  const previousUserInfo = JSON.parse(localStorage.getItem('previousUserInfo')) || {};
 
-  // Retrieve the current user info from local storage
-  const currentUserInfo = JSON.parse(localStorage.getItem("userInfo"));
-  const previousUserInfo = JSON.parse(localStorage.getItem("previousUserInfo"));
-
-
-
-  // Compare the current user info with the previous user info
-  const hasUserInfoChanged = JSON.stringify(currentUserInfo) !== JSON.stringify(currentUserInfo);
+  const hasUserInfoChanged = JSON.stringify(currentUserInfo) !== JSON.stringify(previousUserInfo);
 
   if (hasUserInfoChanged) {
-    // User info has changed
     console.log('User info has changed');
-	  saveUserInfoToFirestore(currentUserInfo); 
-
-	previousUserInfo  = currentUserInfo;
-	    localStorage.setItem("previousUserInfo", JSON.stringify(previousUserInfo));
+    saveUserInfoToFirestore(currentUserInfo);
+    localStorage.setItem('previousUserInfo', JSON.stringify(currentUserInfo));
   } else {
-    // User info has not changed
     console.log('User info has not changed');
-	  
-	  
-	  
   }
 }
 
-
-// Function to update user information in local storage and Firestore Database
 function updateUserInfo(updatedInfo) {
   const userInfo = getUserInfo();
-  const updatedKeys = Object.keys(updatedInfo);
-
-  for (const key of updatedKeys) {
+  Object.keys(updatedInfo).forEach(key => {
     if (userInfo[key] !== updatedInfo[key]) {
       userInfo[key] = updatedInfo[key];
     }
-  }
-//    console.log('updateUserInfo');
+  });
 
-  // Update user information in local storage
   localStorage.setItem(USER_INFO_KEY, JSON.stringify(userInfo));
-
-  // Save updated user information to Firebase
   saveUserInfoToFirestore(userInfo);
-
-  // Display updated user information
   displayUserInfo();
 }
 
-
-
-
-
-
-
-
-
-
-
-
-	// Function to validate the username, email, and password fields
 function validateFields(username, email, password) {
-  if (username.trim() === '' || email.trim() === '' || password.trim() === '') {
-    // Display an error message for empty fields
+  if (!username.trim() || !email.trim() || !password.trim()) {
     showStatusMessage('Please fill in all the fields', 'error');
     return false;
   }
 
-  // Validate email format using a regular expression
   const emailRegex = /^\S+@\S+\.\S+$/;
   if (!emailRegex.test(email)) {
-    // Display an error message for invalid email format
     showStatusMessage('Invalid email format', 'error');
     return false;
   }
 
-  // Validate password strength (e.g., minimum length, required characters)
   const passwordMinLength = 8;
   if (password.length < passwordMinLength) {
-    // Display an error message for weak password
-    showStatusMessage('Password should be at least ' + passwordMinLength + ' characters long', 'error');
+    showStatusMessage(`Password should be at least ${passwordMinLength} characters long`, 'error');
     return false;
   }
 
-  // You can add more password strength validation logic based on your requirements
-
-  // All validations passed
   return true;
 }
 
+function handleSignInError(error) {
+  const errorCode = error.code;
+  const errorMessage = error.message;
+  showStatusMessage(errorMessage, 'error');
+  document.cookie = 'loggedIn=false';
+}
 
-		
-	
 function SetupLoginBTNFunc(){
 	
   // Get references to the buttons
@@ -1239,41 +910,6 @@ function SetupLoginBTNFunc(){
 		
 	
 		
-	
-async function onAuthSuccess(userInfo, retryCount = 3) {
-  try {
-    checkUserInfoChanges();
-    loggedIn = true;
-    setLoggedInCookie();
-
-    console.log('Welcome, ' + userInfo.userName + '!');
-
-    updateNavBar();
-    displayUserInfo();
-    console.log('displayUserInfo, !');
-
-    await saveUserInfoToFirestore(userInfo);
-
-    // Add a delay using a promise
-    const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
-    await delay(300); // Adjust the delay time as needed
-    console.log('closePopup, !');
-
-    closePopup();
-  } catch (error) {
-    console.error(error);
-
-    if (retryCount > 0) {
-      console.log('Retrying...');
-      await delay(1000); // Wait before retrying
-      onAuthSuccess(userInfo, retryCount - 1);
-    } else {
-      console.error('Exceeded retry limit. Unable to complete onAuthSuccess.');
-      // Handle the error or notify the user
-    }
-  }
-}
-
 
 
 // Cache DOM elements for reuse
