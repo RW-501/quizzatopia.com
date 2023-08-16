@@ -757,6 +757,7 @@ async function getUserFriendsWithUserData(uID) {
     const friendsSnapshot = await firebase.firestore()
       .collection('friends')
       .where('user1', '==', uID)
+      .where("user2", "==", uID)	    
       .get();
 	  
     const friends = friendsSnapshot.docs.map((doc) => doc.data().user2);
