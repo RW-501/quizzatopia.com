@@ -222,15 +222,13 @@ cursor: pointer;
 .popup {
   display: none;
   position: fixed;
+	  background-color: #00000096;
   top: 0%;
   left: 0%;
   top: 0%;
   bottom: 0%;
     width: 100%;
     margin: auto;
-	  background-color: white;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   z-index: 999;
 }
 
@@ -238,11 +236,26 @@ cursor: pointer;
   display: block;
   margin: 10px auto;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #fd7e14;
   color: white;
   border: none;
   cursor: pointer;
+	    font-weight: 700;
 }
+
+.popupContent{
+  top: 0%;
+  left: 0%;
+  top: 0%;
+  bottom: 0%;
+    width: fit-content;
+    margin: auto;
+	  background-color: #f5f5f5;
+  padding: 5%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+}
+	 
   </style>
 
     
@@ -302,6 +315,7 @@ cursor: pointer;
   </section>
 
 	<div id="popup" class="popup">
+	<div id="" class="popupContent">
   <div class="challenge-info">
     <!-- Placeholder for quiz challenge info -->
     <h2>Quiz Challenge Info</h2>
@@ -318,6 +332,7 @@ cursor: pointer;
   </div>
   <button id="removeChallengeBtn">Remove Challenge</button>
   <button id="startChallengeBtn">Start Challenge</button>
+</div>
 </div>
 
 
