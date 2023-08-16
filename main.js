@@ -273,65 +273,26 @@ function revertImagesToNormalResolution() {
 
 // Function to set the loggedIn cookie with a 3-day expiration date
 function setLoggedInCookie() {
-  var expirationDate = new Date();
-  expirationDate.setDate(expirationDate.getDate() + 3);
-  document.cookie = "loggedIn=true; expires=" + expirationDate.toUTCString() + "; path=/";
+    localStorage.setItem('loggedIn', 'true'); // Set the authentication status in local storage
+    loggedIn = true;
 }
 
 
 
 
-
-function removeInvalidCookies() {
-  const cookies = document.cookie.split('; ');
-
-  for (const cookie of cookies) {
-    const [name, value] = cookie.split('=');
-  //  console.log(`name: ${name} cookie with path ${document.location.pathname}`);
-
-    if (name === 'loggedIn') {
-      if (document.location.pathname !== '/') {
-        // Remove the cookie with a different path
-        document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
-        console.log(`Removed ${name} cookie with path ${document.location.pathname}`);
-     
-    } else {
-      // Remove cookies with session expiration
-    //  document.cookie = `${name}=; path=/`; // No explicit expiration date
-    //  console.log(`Removed ${name} cookie with path ${document.location.pathname}`);
-    }
-    }
-  }
+function isLoggedIn() {
+  const loggedInStatus = localStorage.getItem('loggedIn');
+  return loggedInStatus;
 }
 
 
-
-// Call the function to remove invalid cookies
- removeInvalidCookies();
-
-
-
-
-
-// Function to fetch the value of a cookie using a callback
-function getCookieValue(cookieName, callback) {
-  const cookies = document.cookie.split('; ');
-
-  for (const cookie of cookies) {
-    const [name, value] = cookie.split('=');
-    if (name === cookieName) {
-      callback(value);
-      return;
-    }
-  }
-
-  callback(null); // Call the callback with null if cookie not found
-}
 
 var loggedIn = false;
 // Example usage of getCookieValue with a callback
-getCookieValue('loggedIn', (cookieValue) => {
-  if (cookieValue === 'true') {
+
+var cookieValue = localStorage.getItem('loggedIn');
+	
+if (cookieValue === 'true') {
     // User is logged in
     console.log('User is logged in');
     loggedIn = true;
@@ -340,7 +301,7 @@ getCookieValue('loggedIn', (cookieValue) => {
     console.log('User is not logged in');
     loggedIn = false;
   }
-});
+
 
 
 
@@ -348,7 +309,7 @@ getCookieValue('loggedIn', (cookieValue) => {
 
 function logOutFunction() {
   firebase.auth().signOut().then(function() {
-    document.cookie = 'loggedIn=false';
+    localStorage.setItem('loggedIn', 'false'); // Set the authentication status in local storage
     loggedIn = false;
 
     var navbarNav = document.querySelector('#navbarNav');
