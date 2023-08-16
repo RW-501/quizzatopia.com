@@ -328,62 +328,67 @@ window.location.href = '/quizzes';
 }
 
 
-function getRequestsList(userID, ){	
-			    console.log(" getRequestsList;",userID);
+async function getRequestsList(userID) {
+    console.log("getRequestsList;", userID);
 
     // Assuming you have a Firebase Firestore instance initialized
     const db = firebase.firestore();
+
     const challengesContainer = document.getElementById("requestsList");
 
-    // Fetch challenge requests for the current user
-        db.collection("challenges")
+    try {
+        // Fetch challenge requests for the current user where they are either the challenger or the requester
+        const challengesSnapshot = await db.collection('challenges')
             .where("challengerID", "==", userID)
+            .get();
+
+        const challengesSnapshot2 = await db.collection('challenges')
             .where("requesterID", "==", userID)
-            .get()
-            .then((querySnapshot) => {
-                  if (querySnapshot.empty) {
-        // If no requests are displayed, start a challenge
-       
-		    console.log(" startChallenge(userID);");
+            .get();
 
-        return;
-      }
+        // Combine the two snapshots
+        const challengesSnapshotArray = [...challengesSnapshot.docs, ...challengesSnapshot2.docs];
 
-      // Create an HTML table for the challenges
-      let challengesTable = '<table>';
-      challengesTable += '<thead><tr><th>Quiz Name</th><th>Request Date</th><th>Challenger</th><th>Result</th></tr></thead><tbody>';
+        if (challengesSnapshotArray.length === 0) {
+            // If no requests are displayed, start a challenge
+            console.log("No challenge requests found. Starting a challenge...");
+            // Call your startChallenge function here
+            return;
+        }
 
-      // Iterate through the challenge requests
-      querySnapshot.forEach((doc) => {
-        const challengeData = doc.data();
-        const challengeID = doc.id;
+        // Create an HTML table for the challenges
+        let challengesTable = '<table>';
+        challengesTable += '<thead><tr><th>Quiz Name</th><th>Request Date</th><th>Challenger</th><th>Result</th></tr></thead><tbody>';
 
-        // Define styles based on requester or challenger
-        const cellStyle = challengeData.requesterID === userID ? "sent-cell" : "received-cell";
+        // Iterate through the challenge requests
+        challengesSnapshotArray.forEach((doc) => {
+            const challengeData = doc.data();
+            const challengeID = doc.id;
 
-        // Add a row to the table
-        challengesTable += `
-          <tr class="${cellStyle}"  onclick="viewChallenge('${challengeID}','${challengeData}')">>
-            <td>${challengeData.quizName}</td>
-            <td>${challengeData.requestDate.toDate().toLocaleString()}</td>
-            <td>${challengeData.requesterUname}</td>
-            <td class="${cellStyle}">${challengeData.Result}</td>
-      <!--      <td><button onclick="acceptChallenge('${challengeID}','${challengeData}')">Accept</button></td> -->
-          </tr>`;
-      });
+            // Define styles based on requester or challenger
+            const cellStyle = challengeData.requesterID === userID ? "sent-cell" : "received-cell";
 
-      challengesTable += '</tbody></table>';
+            // Add a row to the table
+            challengesTable += `
+                <tr class="${cellStyle}" onclick="viewChallenge('${challengeID}','${challengeData}')">
+                    <td>${challengeData.quizName}</td>
+                    <td>${challengeData.requestDate.toDate().toLocaleString()}</td>
+                    <td>${challengeData.requesterUname}</td>
+                    <td class="${cellStyle}">${challengeData.Result}</td>
+                </tr>`;
+        });
 
-      // Update the challenges container with the table
-      challengesContainer.innerHTML = challengesTable;
-    })
-    .catch((error) => {
-                console.error("Error fetching challenges:", error);
-            });
-    
+        challengesTable += '</tbody></table>';
 
+        // Update the challenges container with the table
+        challengesContainer.innerHTML = challengesTable;
+    } catch (error) {
+        console.error("Error getting challenge requests:", error);
+    }
 }
-	
+
+
+
 	  
 	  const popup = document.getElementById("popup");
 const removeChallengeBtn = document.getElementById("removeChallengeBtn");
