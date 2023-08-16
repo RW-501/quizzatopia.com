@@ -443,12 +443,15 @@ function fetchAndInsertContent() {
     });
 }
 let uID ;
+
+
 // Function to initialize the navbar toggler and update user-related elements
 function initializeNavbarToggler() {
   const loggedInDiv = document.getElementById('navLoggedin');
   const navbarNav = document.querySelector('#navbarNav');
   navbarNav.classList.add('collapse');
 
+if(loggedIn === true){	
   const userInfo = getUserInfo();
 
   // Set user profile picture and log the Firebase ID to the console
@@ -459,6 +462,8 @@ function initializeNavbarToggler() {
   // Update the navigation bar elements based on login status
   updateNavBar();
   displayUserInfo();
+}
+	
 }
 const userID = uID;
 
