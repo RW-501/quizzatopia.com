@@ -646,7 +646,7 @@ if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function')
   const createUserWithEmailAndPassword = firebase.auth().createUserWithEmailAndPassword;
   const signInWithPopup = firebase.auth().signInWithPopup;
 	
-
+/*
  // Enable Firestore offline persistence
     if (firebase.firestore().enablePersistence) {
       firebase.firestore().enablePersistence({ synchronizeTabs: false })
@@ -654,7 +654,7 @@ if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function')
           console.error("Error enabling Firestore offline persistence:", err);
         });
     }
-	
+*/	
 } else {
   // The Firebase scripts are not loaded
   // Handle the situation accordingly
