@@ -519,14 +519,29 @@ const friendsCollectionRef = firebase.firestore().collection("friends");
 
 async function getUserFriendsWithUserData(firebaseId) {
   try {
-    // Fetch the user's friends from Firebase (replace this with your actual Firebase code)
-    const friendsSnapshot = await firebase.firestore()
+    // Fetch the user's friends where the user is in the "user1" field
+    const user1FriendsSnapshot = await firebase.firestore()
       .collection('friends')
       .where('user1', '==', firebaseId)
-      .where("user2", "==", firebaseId)
       .get();
-	  
-    const friends = friendsSnapshot.docs.map((doc) => doc.data().user2);
+
+    // Fetch the user's friends where the user is in the "user2" field
+    const user2FriendsSnapshot = await firebase.firestore()
+      .collection('friends')
+      .where('user2', '==', firebaseId)
+      .get();
+
+    // Combine the snapshots from both queries
+    const friendsSnapshot = user1FriendsSnapshot.docs.concat(user2FriendsSnapshot.docs);
+
+    // Extract friend IDs from the combined snapshot
+    const friends = friendsSnapshot.map((doc) => {
+      if (doc.data().user1 === firebaseId) {
+        return doc.data().user2;
+      } else {
+        return doc.data().user1;
+      }
+    });
 
     // Fetch the user's data from the users collection for each friend
     const friendDataPromises = friends.map(async (friendId) => {
@@ -544,9 +559,10 @@ async function getUserFriendsWithUserData(firebaseId) {
     return { friends, friendData: friendDataArray };
   } catch (error) {
     console.error('Error getting user\'s friends and data:', error);
-    return { friends: [], friendData: [] }; // Return empty array in case of an error
+    return { friends: [], friendData: [] }; // Return empty arrays in case of an error
   }
 }
+
 // document.addEventListener('DOMContentLoaded', function() {
 	    
 //window.addEventListener('load', async () => {
