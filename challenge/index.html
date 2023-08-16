@@ -393,7 +393,7 @@ if(challengeData.challengeDone === false){
             challengesTable += `
                 <tr class="${cellStyle}" onclick="viewChallenge('${challengeID}','${challengeData}','start')">
                     <td>${challengeData.quizName}</td>
-                    <td>${challengeData.requestDate}</td>
+                    <td>${challengeData.requestDate.toDate().toLocaleString()}</td>
                     <td>${challengeData.requesterUname}</td>
                     <td class=" ">Start</td>
                 </tr>`;
@@ -402,7 +402,7 @@ if(challengeData.challengeDone === false){
             challengesTable += `
                 <tr class="${cellStyle}" onclick="viewChallenge('${challengeID}','${challengeData}','done')">
                     <td>${challengeData.quizName}</td>
-                    <td>${challengeData.requestDate}</td>
+                    <td>${challengeData.requestDate.toDate().toLocaleString()}</td>
                     <td>${challengeData.requesterUname}</td>
                     <td class=" ">${challengeData.Result}</td>
                 </tr>`;
@@ -949,10 +949,10 @@ async function getUserFriendsWithUserData(uID) {
 function loadPage(){
     console.log("uID :", uID);
 fetchAndDisplayChallenges(uID);
-	//getUserFriends(uID);  
 if(uID === '' || uID === null || uID === undefined){
+	
   setTimeout(() => {
-loadPage();
+loadPage();  
     }, 3000);
 }
 	
