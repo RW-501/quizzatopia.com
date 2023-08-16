@@ -219,7 +219,30 @@ cursor: pointer;
     margin: 0;
     padding: 0;
 }
-	 
+.popup {
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  top: 0%;
+  bottom: 0%;
+    width: 100%;
+    margin: auto;
+	  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.popup button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
   </style>
 
     
@@ -278,7 +301,25 @@ cursor: pointer;
     </div>
   </section>
 
-	
+	<div id="popup" class="popup">
+  <div class="challenge-info">
+    <!-- Placeholder for quiz challenge info -->
+    <h2>Quiz Challenge Info</h2>
+    <p>Challenge Title: <span id="challengeTitle"></span></p>
+    <p>Challenge Description: <span id="challengeDescription"></span></p>
+    <!-- Add more info fields as needed -->
+  </div>
+  <div class="quiz-results">
+    <!-- Placeholder for quiz results -->
+    <h2>Quiz Results</h2>
+    <p>Score: <span id="quizScore"></span></p>
+    <p>Correct Answers: <span id="correctAnswers"></span></p>
+    <!-- Add more result fields as needed -->
+  </div>
+  <button id="removeChallengeBtn">Remove Challenge</button>
+  <button id="startChallengeBtn">Start Challenge</button>
+</div>
+
 
   <script>
 function openQuizzes(){
@@ -287,7 +328,7 @@ window.location.href = '/quizzes';
 }
 
 
-function getRequestsList(userID){	
+function getRequestsList(userID, ){	
 			    console.log(" getRequestsList;",userID);
 
     // Assuming you have a Firebase Firestore instance initialized
@@ -297,6 +338,7 @@ function getRequestsList(userID){
     // Fetch challenge requests for the current user
         db.collection("challenges")
             .where("challengerID", "==", userID)
+            .where("requesterID", "==", userID)
             .get()
             .then((querySnapshot) => {
                   if (querySnapshot.empty) {
@@ -309,7 +351,7 @@ function getRequestsList(userID){
 
       // Create an HTML table for the challenges
       let challengesTable = '<table>';
-      challengesTable += '<thead><tr><th>Quiz Name</th><th>Request Date</th><th>Challenger</th><th>Actions</th></tr></thead><tbody>';
+      challengesTable += '<thead><tr><th>Quiz Name</th><th>Request Date</th><th>Challenger</th><th>Result</th></tr></thead><tbody>';
 
       // Iterate through the challenge requests
       querySnapshot.forEach((doc) => {
@@ -321,11 +363,12 @@ function getRequestsList(userID){
 
         // Add a row to the table
         challengesTable += `
-          <tr class="${cellStyle}">
+          <tr class="${cellStyle}"  onclick="viewChallenge('${challengeID}','${challengeData}')">>
             <td>${challengeData.quizName}</td>
             <td>${challengeData.requestDate.toDate().toLocaleString()}</td>
             <td>${challengeData.requesterUname}</td>
-            <td><button onclick="acceptChallenge('${challengeID}','${challengeData.quizCode}')">Accept</button></td>
+            <td class="${cellStyle}">${challengeData.Result}</td>
+      <!--      <td><button onclick="acceptChallenge('${challengeID}','${challengeData}')">Accept</button></td> -->
           </tr>`;
       });
 
@@ -340,9 +383,47 @@ function getRequestsList(userID){
     
 
 }
-	 // 
+	
 	  
-	  
+	  const popup = document.getElementById("popup");
+const removeChallengeBtn = document.getElementById("removeChallengeBtn");
+const startChallengeBtn = document.getElementById("startChallengeBtn");
+
+// Function to open the popup with options
+function  viewChallenge(challengeID, challengeData) {
+
+  // Update placeholders with quiz challenge info and quiz results
+  document.getElementById("challengeTitle").textContent = "Quiz Challenge Title";
+  document.getElementById("challengeDescription").textContent = "Challenge Description";
+  // Update more challenge info fields as needed
+
+  document.getElementById("quizScore").textContent = "80%";
+  document.getElementById("correctAnswers").textContent = "7/10";
+
+	
+  popup.style.display = "block";
+}
+
+// Function to close the popup
+function closePopup() {
+  popup.style.display = "none";
+}
+
+
+
+// Event listeners for the buttons
+removeChallengeBtn.addEventListener("click", function() {
+  // Handle remove challenge action
+  console.log("Remove Challenge clicked");
+  closePopup();
+});
+
+startChallengeBtn.addEventListener("click", function() {
+  // Handle start challenge action
+  console.log("Start Challenge clicked");
+  closePopup();
+});
+
 // Function to accept a challenge
 function acceptChallenge(challengeID,quizCode) {
   // Accept the challenge
