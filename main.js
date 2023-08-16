@@ -402,7 +402,7 @@ const restrictedPathsRegex = /^(\/user\/|\/backend\/|\/friends\/|\/challenge\/)/
   setTimeout(function() {
 if (loggedIn === false && restrictedPathsRegex.test(currentPagePath)) {
   console.log('Redirecting to homepage...');
-// window.location.href = '/';
+ window.location.href = '/';
 } 
       }, 3000); // Adjust the delay time as needed
 
