@@ -985,6 +985,8 @@ const userName = userInfo.userName;
         })
         .then(() => {
           console.log("Challenge sent to friend successfully!");
+getRequestsList(userID);
+	  openTab('challengeRequests');
         })
         .catch((error) => {
           console.error("Error sending challenge:", error);
