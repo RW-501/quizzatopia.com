@@ -544,6 +544,8 @@ async function removeChallenge(uID, challengeID) {
     try {
         // Assuming you have a Firebase Firestore instance initialized
         const db = firebase.firestore();
+	    console.log("challengeID;  ", challengeID);
+	    console.log("uID;  ", uID);
 
         // Fetch the challenge document
         const challengeDoc = await db.collection('challenges').doc(challengeID).get();
@@ -572,7 +574,9 @@ async function removeChallenge(uID, challengeID) {
 // Function to accept a challenge
 function acceptChallenge(challengeID,quizCode, quizLink) {
   // Accept the challenge
-  // Add your logic here to accept a challenge or display a message
+	    console.log("challengeID;  ", challengeID);
+	    console.log("uID;  ", uID);
+
 }
 
 
