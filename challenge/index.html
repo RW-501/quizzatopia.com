@@ -288,7 +288,7 @@ window.location.href = '/quizzes';
 
 
 function getRequestsList(userID){	
-			    console.log(" getRequestsList;");
+			    console.log(" getRequestsList;",userID);
 
     // Assuming you have a Firebase Firestore instance initialized
     const db = firebase.firestore();
@@ -580,7 +580,10 @@ console.log("challengeNumberXXXXX:", challengeNumber);
         document.getElementById("challengeRequests").style.display = "none";
         document.getElementById("startChallenge").style.display = "none";
 	*/
- openTab('startChallenge')
+ openTab('startChallenge');
+        document.getElementById("challengeRequests").style.display = "block";
+
+getRequestsList(uID);
 
     } else {
         document.getElementById("quizCode").innerHTML = quizCode;
@@ -610,7 +613,6 @@ console.log("challengeNumberXXXXX:", challengeNumber);
         document.getElementById("challengeNumber").innerHTML = challengeNumber;
 	    	    			    console.log("hallengeRequests: START XXXXXXX");
 
-getRequestsList(uID);
     }
 
 
