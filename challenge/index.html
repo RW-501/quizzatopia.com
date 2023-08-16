@@ -383,29 +383,29 @@ async function getRequestsList(userID) {
 
         // Iterate through the challenge requests
         challengesSnapshotArray.forEach((doc) => {
-            const challengeData = doc.data();
-            const challengeID = doc.id;
-          let quizName =challengeData.quizName;
-                 let requestDate = challengeData.requestDate.toDate().toLocaleString();
-                   let requesterUname = challengeData.requesterUname;
-                    let Result = challengeData.Result;
-	let quizLink = challengeData.quizLink;
+    const challengeData = doc.data();
+    const challengeID = doc.id;
+    let quizName = challengeData.quizName;
+    let requestDate = challengeData.requestDate.toDate().toLocaleString();
+    let requesterUname = challengeData.requesterUname;
+    let Result = challengeData.Result;
+    let quizLink = challengeData.quizLink;
 
-            // Define styles based on requester or challenger
-            const cellStyle = challengeData.requesterID === userID ? "sent-cell" : "received-cell";
-		
-if(challengeData.challengeDone === false){
-            challengesTable += `
-                <tr class="${cellStyle}" onclick="viewChallenge('${challengeID}','${challengeData}','start')">
-        <td><a href="${quizLink}">${quizName}</a></td>
-                    <td>${requestDate}</td>
-                    <td>${requesterUname}</td>
-                    <td class=" ">Start</td>
-                </tr>`;
+    // Define styles based on requester or challenger
+    const cellStyle = challengeData.requesterID === userID ? "sent-cell" : "received-cell";
+
+    if (challengeData.challengeDone === false) {
+        challengesTable += `
+            <tr class="${cellStyle}" onclick="viewChallenge('${challengeID}', '${encodeURIComponent(JSON.stringify(challengeData))}', 'start')">
+                <td><a href="${quizLink}">${quizName}</a></td>
+                <td>${requestDate}</td>
+                <td>${requesterUname}</td>
+                <td class=" ">Start</td>
+            </tr>`;
 }else{
             // Add a row to the table
             challengesTable += `
-                <tr class="${cellStyle}" onclick="viewChallenge('${challengeID}','${challengeData}','done')">
+            <tr class="${cellStyle}" onclick="viewChallenge('${challengeID}', '${encodeURIComponent(JSON.stringify(challengeData))}', 'start')">
                     <td>${quizName}</td>
                     <td>${requestDate}</td>
                     <td>${requesterUname}</td>
