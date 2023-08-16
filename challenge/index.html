@@ -451,7 +451,7 @@ function  viewChallenge(challengeID, challengeDataX,xxx) {
 	if(xxx === "start"){
   // Update placeholders with quiz challenge info and quiz results
   document.getElementById("challengeHeader").textContent = "Quiz Challenge Info";
-  document.getElementById("challengeTitle").textContent = `<td><a href="${quizLink}">${quizName}</a></td>`;
+  document.getElementById("challengeTitle").innerHTML = `<a href="${quizLink}">${quizName}</a>`;
   document.getElementById("challengerName").textContent = requesterUname;
 		
   document.getElementById("info").innerHTML = `Question Count:<span>${questionCount}</span>`;
@@ -488,6 +488,7 @@ seeChallengeResults(challengeID,quizCode, quizLink);
 // Function to close the popup
 function closePopup() {
 	  const popup = document.getElementById("popup");
+  console.log("closePopup");
 
   popup.style.display = "none";
 }
