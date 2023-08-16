@@ -295,7 +295,7 @@ function generateUniqueChallengeNumber() {
     return pathname;
   }
 
-//  return `https://quizzatopia.com/challenge/?challengeNumber=${challengeNumber}`;
+//  return `https://quizzatopia.com/challenge/?challengeNumber&${challengeNumber}`;
 
 	    
 function ensureDomainInUrl(url) {
@@ -389,10 +389,23 @@ console.log("challengeNumberXXXXX:", challengeNumber);
         document.getElementById("challengeNumber").innerHTML = challengeNumber;
 	    
 	    			    console.log("challengeResults  && challengeRequests:");
-
+//?challengeNumber&${challengeNumber}
     } 
 
+    if (quizCode === "challengeNumber" && challengeNumber) {
+        document.getElementById("challengeRequests").style.display = "block";
+        document.getElementById("challengeResults").style.display = "none";
+        document.getElementById("challengeNumber").innerHTML = challengeNumber;
+	    
+	    			    console.log("challengeNumber:",challengeNumber);
+
+    }
+
+
+
+
 	
+function getRequestsList(){	
     // Assuming you have a Firebase Firestore instance initialized
     const db = firebase.firestore();
     const challengesContainer = document.getElementById("requestsList");
@@ -406,7 +419,9 @@ console.log("challengeNumberXXXXX:", challengeNumber);
             .then((querySnapshot) => {
                   if (querySnapshot.empty) {
         // If no requests are displayed, start a challenge
-        startChallenge(userID);
+       
+		    console.log(" startChallenge(userID);");
+
         return;
       }
 
@@ -442,7 +457,8 @@ console.log("challengeNumberXXXXX:", challengeNumber);
             });
     }
 }
-
+}
+	  
 	    function shareFriendCodeFunc(uID){
 
 const shareLink = `https://www.quizzatopia.com/friends/?${uID}`; // Replace with your actual link
@@ -685,7 +701,8 @@ async function getUserFriendsWithUserData(uID) {
 
 //document.addEventListener("DOMContentLoaded", function () {
 
-	
+		  getRequestsList();
+
 
   setTimeout(() => {
     console.log("uID :", uID);
