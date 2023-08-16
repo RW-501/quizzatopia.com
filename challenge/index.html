@@ -297,8 +297,7 @@ function getRequestsList(userID){
     // Fetch challenge requests for the current user
     if (quizCode !== "" && challengeNumber !== "") {
         db.collection("challenges")
-            .where("challengeNumber", "==", challengeNumber) 
-            .where("requesterID", "==", userID)
+            .where("challengerID", "==", userID)
             .get()
             .then((querySnapshot) => {
                   if (querySnapshot.empty) {
