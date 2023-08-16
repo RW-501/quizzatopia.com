@@ -405,7 +405,12 @@ async function getRequestsList(userID) {
 
     // Define styles based on requester or challenger
     const cellStyle = challengeData.requesterID === userID ? "sent-cell" : "received-cell";
-    const cellUserName = challengeData.challengerID === userID ? requesterUname : challengerName;
+	if(challengeData.requesterID === userID){
+ let cellUserName = challengerName;
+	}else{
+ let cellUserName = requesterUname;
+	}
+		
 		
     console.log("challengeData.requesterID;", challengeData.requesterID);
     console.log("userID;", userID);
@@ -469,8 +474,11 @@ function  viewChallenge(challengeID, challengeDataX,xxx) {
 	let challengeNumber = challengeData.challengeNumber;
                  let requestDate = challengeData.requestDate; //.toDate().toLocaleString();
 	
-    const cellUserName = requesterID === uID ? requesterUname : challengerName;
-
+	if(challengeData.requesterID === userID){
+ let cellUserName = challengerName;
+	}else{
+ let cellUserName = requesterUname;
+	}
 	if(xxx === "start"){
   // Update placeholders with quiz challenge info and quiz results
   document.getElementById("challengeHeader").textContent = "Quiz Challenge Info";
