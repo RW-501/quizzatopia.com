@@ -347,7 +347,7 @@ display:flex;
   <button id="removeChallengeBtn">Remove Challenge</button>
   <button id="actionBtn">Start Challenge</button>
 </div>
-<button class="closeBTN"  onclick="closePopup()">close</button>
+<button class="closeBTN"  onclick="closeChallengePopup()">close</button>
 
 </div>
 </div>
@@ -443,6 +443,7 @@ const startChallengeBtn = document.getElementById("startChallengeBtn");
 // Function to open the popup with options
 function  viewChallenge(challengeID, challengeDataX,xxx) {
 
+	
 
 	  const challengeData = JSON.parse(decodeURIComponent(challengeDataX));
 	
@@ -457,6 +458,9 @@ function  viewChallenge(challengeID, challengeDataX,xxx) {
 	let requesterID = challengeData.requesterID;
 	let quizCode = challengeData.quizCode;
 	let questionCount = challengeData.questionCount;
+	let challengerRemoved = challengeData.challengerRemoved;
+	let requesterRemove = challengeData.requesterRemove;
+	let challengeNumber = challengeData.challengeNumber;
                  let requestDate = challengeData.requestDate; //.toDate().toLocaleString();
 
 	if(xxx === "start"){
@@ -466,13 +470,14 @@ function  viewChallenge(challengeID, challengeDataX,xxx) {
   document.getElementById("challengerName").textContent = requesterUname;
 		
   document.getElementById("info").innerHTML = `Question Count:<span>${questionCount}</span>`;
+		
 
 	  document.getElementById("actionBtn").textContent = "Accept Challenge";
 	 document.getElementById("actionBtn").addEventListener("click", function() {
   // Handle remove challenge action
   console.log(" Challenge clicked");
 		 
-acceptChallenge(challengeID,quizCode, quizLink);
+acceptChallenge(challengeNumber,quizCode, quizLink);
 	 
 	 });
 	}else{
@@ -481,14 +486,29 @@ acceptChallenge(challengeID,quizCode, quizLink);
   document.getElementById("challengerName").textContent = requesterUname;
 		
   document.getElementById("info").innerHTML = `Question Count:<span>${questionCount}</span> Results:<span>${Result}</span>`;
-		
+
+
+	  
   document.getElementById("actionBtn").textContent = "See Results";
 	 document.getElementById("actionBtn").addEventListener("click", function() {
   // Handle remove challenge action
   console.log(" see Challenge results");
-seeChallengeResults(challengeID,quizCode, quizLink);
+seeChallengeResults(challengeNumber,quizCode, quizLink);
 	 
 	 });
+
+
+// Event listeners for the buttons
+	 document.getElementById("removeChallengeBtn").addEventListener("click", function() {
+  console.log("Remove Challenge clicked");
+  closeChallengePopup();
+	
+removeChallenge(uID ,challengeNumber);
+	
+});
+
+
+	  
 	}
 	
 	  const popup = document.getElementById("popup");
@@ -497,7 +517,7 @@ seeChallengeResults(challengeID,quizCode, quizLink);
 }
 
 // Function to close the popup
-function closePopup() {
+function closeChallengePopup() {
 	  const popup = document.getElementById("popup");
   console.log("closePopup");
 
@@ -505,25 +525,32 @@ function closePopup() {
 }
 
 
-
-// Event listeners for the buttons
-removeChallengeBtn.addEventListener("click", function() {
-async function removeChallenge(challengeID) {
+/*
+          challengeNumber:challengeNumber,
+          quizLink:quizLinkDB,
+          requestDate:requestDate,
+          requesterID:uID,
+          requesterRemove:false,
+          requesterUname:userName,
+	challengeStarted: false,	
+          challengerID:challengerID,
+          challengerRemoved:false,
+	  */
+	
+async function removeChallenge(uID, challengeID) {
     try {
         // Assuming you have a Firebase Firestore instance initialized
         const db = firebase.firestore();
 
         // Remove the challenge document from the "challenges" collection
-        await db.collection('challenges').doc(challengeID).delete();
+        await db.collection('challenges').doc(requesterID).delete();
 
         console.log('Challenge removed successfully.');
     } catch (error) {
         console.error('Error removing challenge:', error);
     }
+	
 }
-  console.log("Remove Challenge clicked");
-  closePopup();
-});
 
 // Function to accept a challenge
 function acceptChallenge(challengeID,quizCode, quizLink) {
@@ -884,7 +911,7 @@ function sendChallengeFunc(quizCode, challengeNumber, friendFirebaseId){
   // Generate URLs for each friend and send them
 //  selectedFriends.forEach(friend => {
     const challengeURL = generateChallengeURL(quizCode, challengeNumber);
-    sendChallengeToFriend(quizCode, challengeURL, friendFirebaseId);
+    sendChallengeToFriend(quizCode, challengeURL, friendFirebaseId,challengeNumber);
   //});
 
  
@@ -893,7 +920,7 @@ function sendChallengeFunc(quizCode, challengeNumber, friendFirebaseId){
 
 
 // Function to send a challenge URL to a friend
-function sendChallengeToFriend(quizCode,challengeURL, challengerID) {
+function sendChallengeToFriend(quizCode,challengeURL, challengerID,challengeNumber) {
   // Assuming you have a Firebase Firestore instance initialized
   const db = firebase.firestore();
   const userInfo = getUserInfo();
@@ -916,12 +943,15 @@ const userName = userInfo.userName;
         db.collection("challenges").add({
           quizCode:quizCode,
           quizName:quizNameDB,
+          challengeNumber:challengeNumber,
           quizLink:quizLinkDB,
           requestDate:requestDate,
           requesterID:uID,
+          requesterRemove:false,
           requesterUname:userName,
 	challengeStarted: false,	
           challengerID:challengerID,
+          challengerRemoved:false,
           challengeDone: false, // Initial challenge status
           questionCount:questionCount, // Number of questions in the quiz
           // Add more relevant fields as needed
