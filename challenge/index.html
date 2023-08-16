@@ -478,7 +478,8 @@ function  viewChallenge(challengeID, challengeDataX,xxx) {
   console.log(" Challenge clicked");
 		 
 acceptChallenge(challengeNumber,quizCode, quizLink);
-	 
+	  closeChallengePopup();
+ 
 	 });
 	}else{
   document.getElementById("challengeHeader").textContent = "Quiz Challenge Results";
@@ -493,8 +494,10 @@ acceptChallenge(challengeNumber,quizCode, quizLink);
 	 document.getElementById("actionBtn").addEventListener("click", function() {
   // Handle remove challenge action
   console.log(" see Challenge results");
-seeChallengeResults(challengeNumber,quizCode, quizLink);
 	 
+seeChallengeResults(challengeNumber,quizCode, quizLink);
+	  closeChallengePopup();
+
 	 });
 
 
@@ -542,14 +545,28 @@ async function removeChallenge(uID, challengeID) {
         // Assuming you have a Firebase Firestore instance initialized
         const db = firebase.firestore();
 
-        // Remove the challenge document from the "challenges" collection
-        await db.collection('challenges').doc(requesterID).delete();
+        // Fetch the challenge document
+        const challengeDoc = await db.collection('challenges').doc(challengeID).get();
 
-        console.log('Challenge removed successfully.');
+        if (challengeDoc.exists) {
+            const challengeData = challengeDoc.data();
+            
+            // Update the appropriate field based on uID, challengerID, and requesterID
+            if (challengeData.challengerID === uID) {
+                await db.collection('challenges').doc(challengeID).update({ challengerRemoved: true });
+            } else if (challengeData.requesterID === uID) {
+                await db.collection('challenges').doc(challengeID).update({ requesterRemoved: true });
+            } else {
+                console.log('User is not the challenger or requester of this challenge.');
+            }
+            
+            console.log('Challenge removed successfully.');
+        } else {
+            console.log('Challenge not found.');
+        }
     } catch (error) {
         console.error('Error removing challenge:', error);
     }
-	
 }
 
 // Function to accept a challenge
