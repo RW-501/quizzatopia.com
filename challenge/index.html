@@ -437,8 +437,14 @@ function  viewChallenge(challengeID, challengeData,xxx) {
 		
   document.getElementById("info").innerHTML = `Question Count:<span>${questionCount}</span>`;
 
-	  document.getElementById("actionBtn").textContent = "Start Challenge";
-	
+	  document.getElementById("actionBtn").textContent = "Accept Challenge";
+	 document.getElementById("actionBtn").addEventListener("click", function() {
+  // Handle remove challenge action
+  console.log(" Challenge clicked");
+		 
+acceptChallenge(challengeID,quizCode, quizLink);
+	 
+	 });
 	}else{
   document.getElementById("challengeHeader").textContent = "Quiz Challenge Results";
   document.getElementById("challengeTitle").textContent = quizName;
@@ -447,7 +453,12 @@ function  viewChallenge(challengeID, challengeData,xxx) {
   document.getElementById("info").innerHTML = `Question Count:<span>${questionCount}</span> Results:<span>${Result}</span>`;
 		
   document.getElementById("actionBtn").textContent = "See Results";
-		
+	 document.getElementById("actionBtn").addEventListener("click", function() {
+  // Handle remove challenge action
+  console.log(" see Challenge results");
+seeChallengeResults(challengeID,quizCode, quizLink);
+	 
+	 });
 	}
 	
 	  const popup = document.getElementById("popup");
@@ -471,16 +482,19 @@ removeChallengeBtn.addEventListener("click", function() {
   closePopup();
 });
 
-startChallengeBtn.addEventListener("click", function() {
-  // Handle start challenge action
-  console.log("Start Challenge clicked");
-  closePopup();
-});
-
 // Function to accept a challenge
-function acceptChallenge(challengeID,quizCode) {
+function acceptChallenge(challengeID,quizCode, quizLink) {
   // Accept the challenge
   // Add your logic here to accept a challenge or display a message
+}
+
+
+// Function to accept a challenge
+function seeChallengeResults(challengeID,quizCode, quizLink) {
+  // Accept the challenge
+  // Add your logic here to accept a challenge or display a message
+	openTab('challengeResults')
+
 }
 
 
