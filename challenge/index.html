@@ -950,7 +950,7 @@ function loadPage(){
     console.log("uID :", uID);
 fetchAndDisplayChallenges(uID);
 	//getUserFriends(uID);  
-if(uID === '' || uID === null){
+if(uID === '' || uID === null || uID === undefined){
   setTimeout(() => {
 loadPage();
     }, 3000);
