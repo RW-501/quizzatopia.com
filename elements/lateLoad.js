@@ -1103,8 +1103,6 @@ function SetupLoginBTNFunc(){
 
 		
 	
-		
-	
 async function onAuthSuccess(userInfo) {
   try {
     checkUserInfoChanges();
@@ -1112,6 +1110,7 @@ async function onAuthSuccess(userInfo) {
     setLoggedInCookie();
 
     console.log('Welcome, ' + userInfo.userName + '!');
+    showStatusMessage('Welcome, ' + userInfo.userName + '!');
 
     updateNavBar();
     displayUserInfo();
@@ -1125,17 +1124,10 @@ async function onAuthSuccess(userInfo) {
     closePopup();
   } catch (error) {
     console.error(error);
+
   }
 }
 
-// Call onAuthSuccess(userInfo) with a timeout
-setTimeout(async () => {
-  try {
-    await onAuthSuccess(userInfo); // Pass the appropriate userInfo object here
-  } catch (error) {
-    console.error(error);
-  }
-}, 0); // Use a very short timeout, like 0, to ensure the code runs asynchronously
 
 
 
