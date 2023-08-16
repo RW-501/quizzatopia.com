@@ -406,6 +406,8 @@ console.log("challengeNumberXXXXX:", challengeNumber);
 
 	
 function getRequestsList(){	
+			    console.log(" getRequestsList;");
+
     // Assuming you have a Firebase Firestore instance initialized
     const db = firebase.firestore();
     const challengesContainer = document.getElementById("requestsList");
@@ -458,6 +460,7 @@ function getRequestsList(){
     }
 }
 }
+	  getRequestsList();
 	  
 	    function shareFriendCodeFunc(uID){
 
@@ -701,7 +704,6 @@ async function getUserFriendsWithUserData(uID) {
 
 //document.addEventListener("DOMContentLoaded", function () {
 
-		  getRequestsList();
 
 
   setTimeout(() => {
