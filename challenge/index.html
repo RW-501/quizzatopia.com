@@ -406,6 +406,9 @@ async function getRequestsList(userID) {
     // Define styles based on requester or challenger
     const cellStyle = challengeData.requesterID === userID ? "sent-cell" : "received-cell";
     const cellUserName = challengeData.requesterID === userID ? requesterUname : challengerName;
+		
+    console.log("challengeData.requesterID;", challengeData.requesterID);
+    console.log("userID;", userID);
 
     if (challengeData.challengeDone === false) {
         challengesTable += `
@@ -424,7 +427,6 @@ async function getRequestsList(userID) {
                     <td>${cellUserName}</td>
                     <td class=" ">${challengeData.Result}</td>
                 </tr>`;
-      
     }
 	  });
         challengesTable += '</tbody></table>';
