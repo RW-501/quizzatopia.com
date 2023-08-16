@@ -616,7 +616,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
+function loadDB(){
 
 
 const firebaseConfig = {
@@ -672,11 +672,15 @@ firebase.firestore().enablePersistence({ synchronizeTabs: true })
   document.head.appendChild(firebaseAuthScript);
 
 
+	loadDB();
 
 
 }
 
-	
+
+}
+	loadDB();
+
       var userRegion ="";
       var userCountry ="";
 
