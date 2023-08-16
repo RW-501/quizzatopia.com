@@ -241,6 +241,9 @@ cursor: pointer;
   border: none;
   cursor: pointer;
 	    font-weight: 700;
+
+      border: 1px solid #ddd;
+      border-radius: 5px;
 }
 
 .popupContent{
@@ -265,8 +268,12 @@ cursor: pointer;
 display:flex;
     width: fit-content;
     margin: auto;
+	/*  margin: 10px auto;*/
+
 }
-	 
+	 .closeBTN{
+
+	 }
   </style>
 
     
@@ -336,11 +343,11 @@ display:flex;
     <p id="info"></p>
     <!-- Add more result fields as needed -->
   </div>
-		<div  class='centerDivs>
+		<div  class='centerDivs'>
   <button id="removeChallengeBtn">Remove Challenge</button>
   <button id="actionBtn">Start Challenge</button>
 </div>
-<button class=""  onclick="closePopup()">close</button>
+<button class="closeBTN"  onclick="closePopup()">close</button>
 
 </div>
 </div>
@@ -501,7 +508,19 @@ function closePopup() {
 
 // Event listeners for the buttons
 removeChallengeBtn.addEventListener("click", function() {
-  // Handle remove challenge action
+async function removeChallenge(challengeID) {
+    try {
+        // Assuming you have a Firebase Firestore instance initialized
+        const db = firebase.firestore();
+
+        // Remove the challenge document from the "challenges" collection
+        await db.collection('challenges').doc(challengeID).delete();
+
+        console.log('Challenge removed successfully.');
+    } catch (error) {
+        console.error('Error removing challenge:', error);
+    }
+}
   console.log("Remove Challenge clicked");
   closePopup();
 });
