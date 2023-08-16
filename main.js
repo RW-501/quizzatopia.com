@@ -649,7 +649,7 @@ if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function')
 
  // Enable Firestore offline persistence
     if (firebase.firestore().enablePersistence) {
-      firebase.firestore().enablePersistence({ synchronizeTabs: true })
+      firebase.firestore().enablePersistence({ synchronizeTabs: false })
         .catch((err) => {
           console.error("Error enabling Firestore offline persistence:", err);
         });
