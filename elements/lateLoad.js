@@ -676,8 +676,9 @@ const displayName = nameArray[0];
             retrieveUserInfoFromFirestore(firebaseId)
               .then((userInfo) => {
                 saveUserInfoToLocalStorage(userInfo);
-                document.cookie = 'loggedIn=true';
-                onAuthSuccess(userInfo);
+setLoggedInCookie();
+  loggedIn = true;
+		      onAuthSuccess(userInfo);
                 updateUserInfo(userInfo);
                 checkUserInfoChanges();
               })
@@ -1162,7 +1163,7 @@ async function resetPassword() {
 // Handle sign-in errors
 function handleSignInError(error) {
   showStatusMessage(error.message, 'error');
-  document.cookie = 'loggedIn=false';
+    localStorage.setItem('loggedIn', 'false'); // Set the authentication status in local storage
   console.error('Error signing in:', error);
 }
 
