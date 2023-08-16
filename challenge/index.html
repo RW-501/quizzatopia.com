@@ -287,7 +287,7 @@ window.location.href = '/quizzes';
 }
 
 
-function getRequestsList(){	
+function getRequestsList(userID){	
 			    console.log(" getRequestsList;");
 
     // Assuming you have a Firebase Firestore instance initialized
@@ -610,7 +610,7 @@ console.log("challengeNumberXXXXX:", challengeNumber);
         document.getElementById("challengeNumber").innerHTML = challengeNumber;
 	    	    			    console.log("hallengeRequests: START XXXXXXX");
 
-getRequestsList();
+getRequestsList(uID);
     }
 
 
