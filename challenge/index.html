@@ -333,7 +333,7 @@ cursor: pointer;
   <button id="removeChallengeBtn">Remove Challenge</button>
   <button id="startChallengeBtn">Start Challenge</button>
 
-<button class=""  onclick="viewChallenge(closePopup)close</button>
+<button class=""  onclick="closePopup()">close</button>
 
 </div>
 </div>
@@ -385,17 +385,26 @@ async function getRequestsList(userID) {
 
             // Define styles based on requester or challenger
             const cellStyle = challengeData.requesterID === userID ? "sent-cell" : "received-cell";
-
+if(challengeData.challengeDone === false){
+            challengesTable += `
+                <tr class="${cellStyle}" onclick="viewChallenge('${challengeID}','${challengeData}')">
+                    <td>${challengeData.quizName}</td>
+                    <td>${challengeData.requestDate.toDate().toLocaleString()}</td>
+                    <td>${challengeData.requesterUname}</td>
+                    <td class=" ">Start</td>
+                </tr>`;
+        });
+}else{
             // Add a row to the table
             challengesTable += `
                 <tr class="${cellStyle}" onclick="viewChallenge('${challengeID}','${challengeData}')">
                     <td>${challengeData.quizName}</td>
                     <td>${challengeData.requestDate.toDate().toLocaleString()}</td>
                     <td>${challengeData.requesterUname}</td>
-                    <td class="${cellStyle}">${challengeData.Result}</td>
+                    <td class=" ">${challengeData.Result}</td>
                 </tr>`;
         });
-
+    }
         challengesTable += '</tbody></table>';
 
         // Update the challenges container with the table
