@@ -624,7 +624,7 @@ setLoggedInCookie();
       const errorCode = error.code;
       const errorMessage = error.message;
       showStatusMessage(errorMessage, 'error');
-      document.cookie = 'loggedIn=false';
+    localStorage.setItem('loggedIn', 'false'); // Set the authentication status in local storage
     });
 };
 	
@@ -839,7 +839,7 @@ setLoggedInCookie();
       const errorCode = error.code;
       const errorMessage = error.message;
       showStatusMessage(errorMessage, 'error');
-      document.cookie = 'loggedIn=false';
+    localStorage.setItem('loggedIn', 'false'); // Set the authentication status in local storage
     });
 };
 
