@@ -357,7 +357,7 @@ function handleFriendClick(friendName, friendfirebaseId) {
 
 
 
-async function getUserFriends(uID) {
+async function getUserFriends(uID, quizCode, challengeNumber) {
   try {
     const { friends, friendData } = await getUserFriendsWithUserData(uID);
 	  
@@ -398,7 +398,7 @@ document.getElementById("friendsChallengeList").innerHTML = '';
          <div> ${name}</div></div>
          <div> </div>
          <div class='points'>  ${points} Points</div>
-         <div class='btnMain '  onclick="sendChallengeFunc('${quizCode}', '${challengeNumber}' )"> Challenge</div>
+         <div class='btnMain '  onclick="sendChallengeFunc('${quizCode}', '${challengeNumber}', '${friendFirebaseId}' )"> Challenge</div>
 	 </div>
         </li>
       `;
@@ -546,8 +546,8 @@ console.log("challengeNumberXXXXX:", challengeNumber);
         document.getElementById("challengeNumber").innerHTML = challengeNumber;
 	    
 	    			    console.log("START XXXXXXX");
-//?challengeNumber&${challengeNumber}
-	    getUserFriends(uID);
+
+	     getUserFriends(uID, quizCode, challengeNumber);
     } 
 
     if (quizCode === "challengeNumber" && challengeNumber) {
@@ -633,15 +633,15 @@ function generateChallengeURL(quizCode, challengeNumber) {
   return `https://quizzatopia.com/challenge/?challengeNumber=${challengeNumber}`;
 }
 
-function sendChallengeFunc(quizCode, challengeNumber){
+function sendChallengeFunc(quizCode, challengeNumber, friendFirebaseId){
   // Get selected friends and other data from the form
-  const selectedFriends = getSelectedFriends();
+//  const selectedFriends = getSelectedFriends();
 
   // Generate URLs for each friend and send them
-  selectedFriends.forEach(friend => {
+//  selectedFriends.forEach(friend => {
     const challengeURL = generateChallengeURL(quizCode, challengeNumber);
-    sendChallengeToFriend(quizCode, challengeURL, friend);
-  });
+    sendChallengeToFriend(quizCode, challengeURL, friendFirebaseId);
+  //});
 
  
 }
