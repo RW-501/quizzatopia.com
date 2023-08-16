@@ -267,6 +267,164 @@ font-size: 1.5em;
 
   <script>
 
+
+
+function getRequestsList(){	
+			    console.log(" getRequestsList;");
+
+    // Assuming you have a Firebase Firestore instance initialized
+    const db = firebase.firestore();
+    const challengesContainer = document.getElementById("requestsList");
+
+    // Fetch challenge requests for the current user
+    if (quizCode !== "" && challengeNumber !== "") {
+        db.collection("challenges")
+            .where("challengeNumber", "==", challengeNumber) 
+            .where("requesterID", "==", userID)
+            .get()
+            .then((querySnapshot) => {
+                  if (querySnapshot.empty) {
+        // If no requests are displayed, start a challenge
+       
+		    console.log(" startChallenge(userID);");
+
+        return;
+      }
+
+      // Create an HTML table for the challenges
+      let challengesTable = '<table>';
+      challengesTable += '<thead><tr><th>Quiz Name</th><th>Request Date</th><th>Challenger</th><th>Actions</th></tr></thead><tbody>';
+
+      // Iterate through the challenge requests
+      querySnapshot.forEach((doc) => {
+        const challengeData = doc.data();
+        const challengeID = doc.id;
+
+        // Define styles based on requester or challenger
+        const cellStyle = challengeData.requesterID === userID ? "sent-cell" : "received-cell";
+
+        // Add a row to the table
+        challengesTable += `
+          <tr class="${cellStyle}">
+            <td>${challengeData.quizName}</td>
+            <td>${challengeData.requestDate.toDate().toLocaleString()}</td>
+            <td>${challengeData.challengerID}</td>
+            <td><button onclick="acceptChallenge('${challengeID}','${challengeData.quizCode}')">Accept</button></td>
+          </tr>`;
+      });
+
+      challengesTable += '</tbody></table>';
+
+      // Update the challenges container with the table
+      challengesContainer.innerHTML = challengesTable;
+    })
+    .catch((error) => {
+                console.error("Error fetching challenges:", error);
+            });
+    }
+
+}
+	 // 
+	  
+	  
+// Function to accept a challenge
+function acceptChallenge(challengeID,quizCode) {
+  // Accept the challenge
+  // Add your logic here to accept a challenge or display a message
+}
+
+
+
+		    
+function handleFriendClick(friendName, friendfirebaseId) {
+  // Add your logic to handle the click event here
+  console.log("Friend clicked:", friendName);
+  // For example, you can display more details about the friend or perform some action.
+ 
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function getUserFriends(uID) {
+  try {
+    const { friends, friendData } = await getUserFriendsWithUserData(uID);
+	  
+
+
+ // Clear previous list items
+document.getElementById("friendsChallengeList").innerHTML = '';
+
+    // Generate list items for each friend
+      let friendsHTML = "";
+  friends.forEach((friendFirebaseId) => {
+    // Find the friend's data based on the firebaseId
+    const friendInfo = friendData.find(data => data.firebaseId === friendFirebaseId);
+
+	  console.log("friendInfo :", friendInfo);
+
+  const friendName = friendInfo.userName;
+  let friendPicture = friendInfo.userProfilePic;
+  const friendPoints = friendInfo.userPoints;
+//  const friendFirebaseId = friendInfo.firebaseId;
+
+  console.log("friendPicture :", friendPicture);
+
+ friendPicture = ensureDomainInUrl(friendPicture);
+	    
+      // Create an image element with its source set to the friend's picture
+      const imgElement = `<img src="${friendPicture}" alt="${friendName}" width="40" height="40">`;
+
+      // Create a span element for the friend's points
+      const name = `<span>${friendName}</span>`;
+      const points = `<span>${friendPoints}</span>`;
+
+      // Create the list item HTML with the friend's name, picture, and points
+      const listItemHTML = `
+        <li class='friends' ><div  class='bg' onclick="handleFriendClick('${friendName}', '${friendFirebaseId}')"> 
+        <div  class='picWrap' >
+	<div class='picArea'> ${imgElement}</div>
+         <div> ${name}</div></div>
+         <div> </div>
+         <div class='points'>  ${points} Points</div>
+         <div class='btnMain '  onclick="sendChallengeFunc('${quizCode}', '${challengeNumber}' )"> Challenge</div>
+	 </div>
+        </li>
+      `;
+
+      // Concatenate the HTML for each friend
+      friendsHTML += listItemHTML;
+    });
+
+    // Set the innerHTML of friendsList with the generated HTML
+	  document.getElementById("friendsChallengeList").innerHTML = friendsHTML;
+	  
+const newDiv = document.createElement('div');
+newDiv.innerHTML = `<div class='share2' onclick="shareFriendCodeFunc('${uID}')">Send Your Link to Your Friends</div>`;
+	
+  document.getElementById("friendsChallengeList").appendChild(newDiv);
+	  
+  } catch (error) {
+    console.error('Error fetching friends and user data:', error);
+  }
+}
+
+
+
+
+
+	  
 function generateUniqueChallengeNumber() {
     const timestamp = new Date().getTime();
     const randomSuffix = Math.floor(Math.random() * 10000); // Generate a random number between 0 and 9999
@@ -390,6 +548,7 @@ console.log("challengeNumberXXXXX:", challengeNumber);
 	    
 	    			    console.log("challengeResults  && challengeRequests:");
 //?challengeNumber&${challengeNumber}
+	    getUserFriends(uID);
     } 
 
     if (quizCode === "challengeNumber" && challengeNumber) {
@@ -398,70 +557,14 @@ console.log("challengeNumberXXXXX:", challengeNumber);
         document.getElementById("challengeNumber").innerHTML = challengeNumber;
 	    
 	    			    console.log("challengeNumber:",challengeNumber);
-
+getRequestsList();
     }
 
 
 
 
 	
-function getRequestsList(){	
-			    console.log(" getRequestsList;");
 
-    // Assuming you have a Firebase Firestore instance initialized
-    const db = firebase.firestore();
-    const challengesContainer = document.getElementById("requestsList");
-
-    // Fetch challenge requests for the current user
-    if (quizCode !== "" && challengeNumber !== "") {
-        db.collection("challenges")
-            .where("challengeNumber", "==", challengeNumber) 
-            .where("requesterID", "==", userID)
-            .get()
-            .then((querySnapshot) => {
-                  if (querySnapshot.empty) {
-        // If no requests are displayed, start a challenge
-       
-		    console.log(" startChallenge(userID);");
-
-        return;
-      }
-
-      // Create an HTML table for the challenges
-      let challengesTable = '<table>';
-      challengesTable += '<thead><tr><th>Quiz Name</th><th>Request Date</th><th>Challenger</th><th>Actions</th></tr></thead><tbody>';
-
-      // Iterate through the challenge requests
-      querySnapshot.forEach((doc) => {
-        const challengeData = doc.data();
-        const challengeID = doc.id;
-
-        // Define styles based on requester or challenger
-        const cellStyle = challengeData.requesterID === userID ? "sent-cell" : "received-cell";
-
-        // Add a row to the table
-        challengesTable += `
-          <tr class="${cellStyle}">
-            <td>${challengeData.quizName}</td>
-            <td>${challengeData.requestDate.toDate().toLocaleString()}</td>
-            <td>${challengeData.challengerID}</td>
-            <td><button onclick="acceptChallenge('${challengeID}','${challengeData.quizCode}')">Accept</button></td>
-          </tr>`;
-      });
-
-      challengesTable += '</tbody></table>';
-
-      // Update the challenges container with the table
-      challengesContainer.innerHTML = challengesTable;
-    })
-    .catch((error) => {
-                console.error("Error fetching challenges:", error);
-            });
-    }
-
-}
-	 // getRequestsList();
-	  
 	    function shareFriendCodeFunc(uID){
 
 const shareLink = `https://www.quizzatopia.com/friends/?${uID}`; // Replace with your actual link
@@ -488,12 +591,6 @@ if (navigator.share) {
 
 
 
-	  
-// Function to accept a challenge
-function acceptChallenge(challengeID,quizCode) {
-  // Accept the challenge
-  // Add your logic here to accept a challenge or display a message
-}
 
 
 
@@ -523,79 +620,6 @@ function acceptChallenge(challengeID,quizCode) {
 
 
 
-async function getUserFriends(uID) {
-  try {
-    const { friends, friendData } = await getUserFriendsWithUserData(uID);
-	  
-
-
- // Clear previous list items
-document.getElementById("friendsChallengeList").innerHTML = '';
-
-    // Generate list items for each friend
-      let friendsHTML = "";
-  friends.forEach((friendFirebaseId) => {
-    // Find the friend's data based on the firebaseId
-    const friendInfo = friendData.find(data => data.firebaseId === friendFirebaseId);
-
-	  console.log("friendInfo :", friendInfo);
-
-  const friendName = friendInfo.userName;
-  let friendPicture = friendInfo.userProfilePic;
-  const friendPoints = friendInfo.userPoints;
-//  const friendFirebaseId = friendInfo.firebaseId;
-
-  console.log("friendPicture :", friendPicture);
-
- friendPicture = ensureDomainInUrl(friendPicture);
-	    
-      // Create an image element with its source set to the friend's picture
-      const imgElement = `<img src="${friendPicture}" alt="${friendName}" width="40" height="40">`;
-
-      // Create a span element for the friend's points
-      const name = `<span>${friendName}</span>`;
-      const points = `<span>${friendPoints}</span>`;
-
-      // Create the list item HTML with the friend's name, picture, and points
-      const listItemHTML = `
-        <li class='friends' ><div  class='bg' onclick="handleFriendClick('${friendName}', '${friendFirebaseId}')"> 
-        <div  class='picWrap' >
-	<div class='picArea'> ${imgElement}</div>
-         <div> ${name}</div></div>
-         <div> </div>
-         <div class='points'>  ${points} Points</div>
-         <div class='btnMain '  onclick="sendChallengeFunc('${quizCode}', '${challengeNumber}' )"> Challenge</div>
-	 </div>
-        </li>
-      `;
-
-      // Concatenate the HTML for each friend
-      friendsHTML += listItemHTML;
-    });
-
-    // Set the innerHTML of friendsList with the generated HTML
-	  document.getElementById("friendsChallengeList").innerHTML = friendsHTML;
-	  
-const newDiv = document.createElement('div');
-newDiv.innerHTML = `<div class='share2' onclick="shareFriendCodeFunc('${uID}')">Send Your Link to Your Friends</div>`;
-	
-  document.getElementById("friendsChallengeList").appendChild(newDiv);
-	  
-  } catch (error) {
-    console.error('Error fetching friends and user data:', error);
-  }
-}
-
-
-
-
-		    
-function handleFriendClick(friendName, friendfirebaseId) {
-  // Add your logic to handle the click event here
-  console.log("Friend clicked:", friendName);
-  // For example, you can display more details about the friend or perform some action.
- 
-}  
 
 
 
@@ -709,7 +733,7 @@ async function getUserFriendsWithUserData(uID) {
   setTimeout(() => {
     console.log("uID :", uID);
 fetchAndDisplayChallenges(uID);
-	getUserFriends(uID);  
+	//getUserFriends(uID);  
     }, 1000);
 	  
   </script>
