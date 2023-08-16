@@ -940,13 +940,21 @@ async function getUserFriendsWithUserData(uID) {
 
 //document.addEventListener("DOMContentLoaded", function () {
 
-
-
-  setTimeout(() => {
+function loadPage(){
     console.log("uID :", uID);
 fetchAndDisplayChallenges(uID);
 	//getUserFriends(uID);  
-    }, 1000);
+if(uID === '' || uID === null){
+  setTimeout(() => {
+loadPage();
+    }, 3000);
+}
+	
+}
+
+	loadPage();
+  
+
 	  
   </script>
 </body>
