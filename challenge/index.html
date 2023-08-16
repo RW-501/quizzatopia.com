@@ -385,25 +385,32 @@ async function getRequestsList(userID) {
         challengesSnapshotArray.forEach((doc) => {
             const challengeData = doc.data();
             const challengeID = doc.id;
-
+          let quizName =challengeData.quizName;
+                 let requestDate = challengeData.requestDate.toDate().toLocaleString();
+                   let requesterUname = challengeData.requesterUname;
+                    let Result = challengeData.Result;
+	let quizLink = challengeData.quizLink;
+	let requesterID = challengeData.requesterID;
+	let quizCode = challengeData.quizCode;
+	let questionCount = challengeData.questionCount;
             // Define styles based on requester or challenger
             const cellStyle = challengeData.requesterID === userID ? "sent-cell" : "received-cell";
 		
 if(challengeData.challengeDone === false){
             challengesTable += `
                 <tr class="${cellStyle}" onclick="viewChallenge('${challengeID}','${challengeData}','start')">
-                    <td>${challengeData.quizName}</td>
-                    <td>${challengeData.requestDate.toDate().toLocaleString()}</td>
-                    <td>${challengeData.requesterUname}</td>
+                    <td>${quizName}</td>
+                    <td>${requestDate}</td>
+                    <td>${requesterUname}</td>
                     <td class=" ">Start</td>
                 </tr>`;
 }else{
             // Add a row to the table
             challengesTable += `
                 <tr class="${cellStyle}" onclick="viewChallenge('${challengeID}','${challengeData}','done')">
-                    <td>${challengeData.quizName}</td>
-                    <td>${challengeData.requestDate.toDate().toLocaleString()}</td>
-                    <td>${challengeData.requesterUname}</td>
+                    <td>${quizName}</td>
+                    <td>${requestDate}</td>
+                    <td>${requesterUname}</td>
                     <td class=" ">${challengeData.Result}</td>
                 </tr>`;
       
