@@ -458,19 +458,22 @@ if(loggedIn === true){
   document.getElementById('profile-pic').src = userInfo.userProfilePic;
   console.log('userInfo firebaseId:', userInfo.firebaseId);
  uID = userInfo.firebaseId;
-	
+}	
   // Update the navigation bar elements based on login status
   updateNavBar();
   displayUserInfo();
-}
-	
+
 }
 const userID = uID;
 
 // Function to display user information fetched from local storage
 function displayUserInfo() {
+	
   const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+ userDashboard = document.getElementById("user-dashboard");
 
+  if (loggedIn === true && userDashboard !== null) {
+	  
   const profilePicElement = document.getElementById('profile-pic');
   if (profilePicElement) {
     profilePicElement.src = userInfo.userProfilePic;
@@ -481,9 +484,7 @@ function displayUserInfo() {
     taglineElement.textContent = userInfo.userTagLine;
   }
 
-  userDashboard = document.getElementById("user-dashboard");
-
-  if (loggedIn === true && userDashboard !== null) {
+ 
     userDashboard.innerHTML = "Dashboard"; // Clear previous content and set to "Dashboard"
   } else {
     if (userDashboard !== null) {
