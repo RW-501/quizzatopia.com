@@ -664,13 +664,15 @@ function sendChallengeToFriend(quizCode,challengeURL, challengerID) {
     .then((quizDoc) => {
       if (quizDoc.exists) {
         const quizData = quizDoc.data();
-        const quizName = quizData.quizName;
+        const quizNameDB = quizData.quizNameDB;
+        const quizLinkDB = quizData.quizLinkDB;
         const questionCount = quizData.numberOfQuestionsDB; // Assuming questions is an array in quizData
 
         // Add challenge data to the challenges collection
         db.collection("challenges").add({
           quizCode:quizCode,
-          quizName:quizName,
+          quizName:quizNameDB,
+          quizLink:quizLinkDB,
           challengeNumber:challengeNumber,
           requestDate:requestDate,
           requesterID:uID,
