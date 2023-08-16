@@ -224,7 +224,11 @@ font-size: 1.5em;
         <button class="tab-button" onclick="openTab('challengeResults')">Challenge Results</button>
         <button class="tab-button" onclick="openTab('sendChallenge')">Send Challenge</button>
     </div>
+  <section id="startChallenge" class='challengeTab'>
+    <h2>Start Challenge</h2>
 
+  </section>
+	
   <section id="challengeDetails" class='challengeTab'>
     <h2>Quiz Challenge Details</h2>
     <p>Quiz Code: <span id="quizCode"></span></p>
@@ -529,9 +533,13 @@ console.log("challengeNumberXXXXX:", challengeNumber);
 }
 
     if (quizCode === "" && challengeNumber === "") {
+	    /*
         document.getElementById("challengeResults").style.display = "none";
         document.getElementById("sendChallenge").style.display = "none";
-	    			    console.log("quizCode  && challengeNumber:");
+        document.getElementById("challengeRequests").style.display = "none";
+        document.getElementById("startChallenge").style.display = "none";
+	*/
+ openTab('startChallenge')
 
     } else {
         document.getElementById("quizCode").innerHTML = quizCode;
@@ -539,8 +547,8 @@ console.log("challengeNumberXXXXX:", challengeNumber);
     }
 
     if (quizCode && challengeNumber === "start") {
-        document.getElementById("challengeResults").style.display = "none";
-        document.getElementById("challengeRequests").style.display = "none";
+     openTab('sendChallenge')
+
 	      
 	    challengeNumber = generateUniqueChallengeNumber(); // Generate a unique challenge number
 
@@ -552,12 +560,15 @@ console.log("challengeNumberXXXXX:", challengeNumber);
     } 
 
     if (quizCode === "challengeNumber" && challengeNumber) {
+	    /*
         document.getElementById("challengeRequests").style.display = "block";
         document.getElementById("challengeResults").style.display = "none";
+*/
+      openTab('challengeRequests')
+
         document.getElementById("challengeNumber").innerHTML = challengeNumber;
 	    	    			    console.log("hallengeRequests: START XXXXXXX");
 
-	    			    console.log("challengeNumber:",challengeNumber);
 getRequestsList();
     }
 
