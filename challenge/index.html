@@ -396,6 +396,7 @@ async function getRequestsList(userID) {
         challengesSnapshotArray.forEach((doc) => {
     const challengeData = doc.data();
     const challengeID = doc.id;
+    let challengerName = challengeData.challengerName;
     let quizName = challengeData.quizName;
     let requestDate = challengeData.requestDate.toDate().toLocaleString();
     let requesterUname = challengeData.requesterUname;
@@ -404,13 +405,14 @@ async function getRequestsList(userID) {
 
     // Define styles based on requester or challenger
     const cellStyle = challengeData.requesterID === userID ? "sent-cell" : "received-cell";
+    const cellUserName = challengeData.requesterID === userID ? requesterUname : challengerName;
 
     if (challengeData.challengeDone === false) {
         challengesTable += `
             <tr class="${cellStyle}" onclick="viewChallenge('${challengeID}', '${encodeURIComponent(JSON.stringify(challengeData))}', 'start')">
                 <td><a href="${quizLink}">${quizName}</a></td>
                 <td>${requestDate}</td>
-                <td>${requesterUname}</td>
+                <td>${cellUserName}</td>
                 <td class=" ">Start</td>
             </tr>`;
 }else{
@@ -419,7 +421,7 @@ async function getRequestsList(userID) {
             <tr class="${cellStyle}" onclick="viewChallenge('${challengeID}', '${encodeURIComponent(JSON.stringify(challengeData))}', 'start')">
                     <td>${quizName}</td>
                     <td>${requestDate}</td>
-                    <td>${requesterUname}</td>
+                    <td>${cellUserName}</td>
                     <td class=" ">${challengeData.Result}</td>
                 </tr>`;
       
@@ -456,18 +458,21 @@ function  viewChallenge(challengeID, challengeDataX,xxx) {
                     let Result = challengeData.Result;
 	let quizLink = challengeData.quizLink;
 	let requesterID = challengeData.requesterID;
+	let challengerName = challengeData.challengerName;
 	let quizCode = challengeData.quizCode;
 	let questionCount = challengeData.questionCount;
 	let challengerRemoved = challengeData.challengerRemoved;
 	let requesterRemove = challengeData.requesterRemove;
 	let challengeNumber = challengeData.challengeNumber;
                  let requestDate = challengeData.requestDate; //.toDate().toLocaleString();
+	
+    const cellUserName = requesterID === uID ? requesterUname : challengerName;
 
 	if(xxx === "start"){
   // Update placeholders with quiz challenge info and quiz results
   document.getElementById("challengeHeader").textContent = "Quiz Challenge Info";
   document.getElementById("challengeTitle").innerHTML = `<a href="${quizLink}">${quizName}</a>`;
-  document.getElementById("challengerName").textContent = requesterUname;
+  document.getElementById("challengerName").textContent = cellUserName;
 		
   document.getElementById("info").innerHTML = `Question Count:<span>${questionCount}</span>`;
 		
@@ -484,7 +489,7 @@ acceptChallenge(challengeNumber,quizCode, quizLink);
 	}else{
   document.getElementById("challengeHeader").textContent = "Quiz Challenge Results";
   document.getElementById("challengeTitle").textContent = `<td><a href="${quizLink}">${quizName}</a></td>`;
-  document.getElementById("challengerName").textContent = requesterUname;
+  document.getElementById("challengerName").textContent = cellUserName;
 		
   document.getElementById("info").innerHTML = `Question Count:<span>${questionCount}</span> Results:<span>${Result}</span>`;
 
@@ -681,7 +686,7 @@ document.getElementById("friendsChallengeList").innerHTML = '';
          <div> ${name}</div></div>
          <div> </div>
          <div class='points'>  ${points} Points</div>
-         <div class='btnMain '  onclick="sendChallengeFunc('${quizCode}', '${challengeNumber}', '${friendFirebaseId}' )"> Challenge</div>
+         <div class='btnMain '  onclick="sendChallengeFunc('${quizCode}', '${challengeNumber}', '${friendFirebaseId}','${name}' )"> Challenge</div>
 	 </div>
         </li>
       `;
@@ -925,14 +930,14 @@ function generateChallengeURL(quizCode, challengeNumber) {
   return `https://quizzatopia.com/challenge/?challengeNumber=${challengeNumber}`;
 }
 
-function sendChallengeFunc(quizCode, challengeNumber, friendFirebaseId){
+function sendChallengeFunc(quizCode, challengeNumber, friendFirebaseId, name){
   // Get selected friends and other data from the form
 //  const selectedFriends = getSelectedFriends();
 
   // Generate URLs for each friend and send them
 //  selectedFriends.forEach(friend => {
     const challengeURL = generateChallengeURL(quizCode, challengeNumber);
-    sendChallengeToFriend(quizCode, challengeURL, friendFirebaseId,challengeNumber);
+    sendChallengeToFriend(quizCode, challengeURL, friendFirebaseId,challengeNumber, name);
   //});
 
  
@@ -941,7 +946,7 @@ function sendChallengeFunc(quizCode, challengeNumber, friendFirebaseId){
 
 
 // Function to send a challenge URL to a friend
-function sendChallengeToFriend(quizCode,challengeURL, challengerID,challengeNumber) {
+function sendChallengeToFriend(quizCode,challengeURL, challengerID,challengeNumber, name) {
   // Assuming you have a Firebase Firestore instance initialized
   const db = firebase.firestore();
   const userInfo = getUserInfo();
@@ -972,6 +977,7 @@ const userName = userInfo.userName;
           requesterUname:userName,
 	challengeStarted: false,	
           challengerID:challengerID,
+          challengerName:name,
           challengerRemoved:false,
           challengeDone: false, // Initial challenge status
           questionCount:questionCount, // Number of questions in the quiz
