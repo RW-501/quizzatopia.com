@@ -431,14 +431,16 @@ const startChallengeBtn = document.getElementById("startChallengeBtn");
 
 // Function to open the popup with options
 function  viewChallenge(challengeID, challengeData,xxx) {
-               let quizName =challengeData.quizName;
-                 let requestDate = challengeData.requestDate.toDate().toLocaleString();
+               let quizName = challengeData.quizName;
+	    console.log("quizName;  ", quizName);
+
                    let requesterUname = challengeData.requesterUname;
                     let Result = challengeData.Result;
 	let quizLink = challengeData.quizLink;
 	let requesterID = challengeData.requesterID;
 	let quizCode = challengeData.quizCode;
 	let questionCount = challengeData.questionCount;
+                 let requestDate = challengeData.requestDate.toDate().toLocaleString();
 
 	if(xxx === "start"){
   // Update placeholders with quiz challenge info and quiz results
