@@ -750,17 +750,22 @@ function sendChallengeToFriend(quizCode,challengeURL, challengerID) {
 
 async function getUserFriendsWithUserData(uID) {
   try {
+    console.log("firebaseId :", uID);
 
-	  	  console.log("firebaseId :", uID);
-
-    // Fetch the user's friends from Firebase (replace this with your actual Firebase code)
+    // Fetch the user's friends from Firebase
     const friendsSnapshot = await firebase.firestore()
       .collection('friends')
       .where('user1', '==', uID)
-      .where("user2", "==", uID)	    
       .get();
-	  
-    const friends = friendsSnapshot.docs.map((doc) => doc.data().user2);
+
+    const friendsSnapshot2 = await firebase.firestore()
+      .collection('friends')
+      .where('user2', '==', uID)
+      .get();
+
+    // Combine the two snapshots
+    const friendsSnapshotArray = [...friendsSnapshot.docs, ...friendsSnapshot2.docs];
+    const friends = friendsSnapshotArray.map((doc) => doc.data().user1 === uID ? doc.data().user2 : doc.data().user1);
 
     // Fetch the user's data from the users collection for each friend
     const friendDataPromises = friends.map(async (friendId) => {
@@ -778,9 +783,10 @@ async function getUserFriendsWithUserData(uID) {
     return { friends, friendData: friendDataArray };
   } catch (error) {
     console.error('Error getting user\'s friends and data:', error);
-    return { friends: [], friendData: [] }; // Return empty array in case of an error
+    return { friends: [], friendData: [] };
   }
 }
+
 
 //document.addEventListener("DOMContentLoaded", function () {
 
