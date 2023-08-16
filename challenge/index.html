@@ -390,16 +390,14 @@ async function getRequestsList(userID) {
                    let requesterUname = challengeData.requesterUname;
                     let Result = challengeData.Result;
 	let quizLink = challengeData.quizLink;
-	let requesterID = challengeData.requesterID;
-	let quizCode = challengeData.quizCode;
-	let questionCount = challengeData.questionCount;
+
             // Define styles based on requester or challenger
             const cellStyle = challengeData.requesterID === userID ? "sent-cell" : "received-cell";
 		
 if(challengeData.challengeDone === false){
             challengesTable += `
                 <tr class="${cellStyle}" onclick="viewChallenge('${challengeID}','${challengeData}','start')">
-                    <td>${quizName}</td>
+        <td><a href="${quizLink}">${quizName}</a></td>
                     <td>${requestDate}</td>
                     <td>${requesterUname}</td>
                     <td class=" ">Start</td>
@@ -445,7 +443,7 @@ function  viewChallenge(challengeID, challengeData,xxx) {
 	if(xxx === "start"){
   // Update placeholders with quiz challenge info and quiz results
   document.getElementById("challengeHeader").textContent = "Quiz Challenge Info";
-  document.getElementById("challengeTitle").textContent = quizName;
+  document.getElementById("challengeTitle").textContent = `<td><a href="${quizLink}">${quizName}</a></td>`;
   document.getElementById("challengerName").textContent = requesterUname;
 		
   document.getElementById("info").innerHTML = `Question Count:<span>${questionCount}</span>`;
@@ -460,7 +458,7 @@ acceptChallenge(challengeID,quizCode, quizLink);
 	 });
 	}else{
   document.getElementById("challengeHeader").textContent = "Quiz Challenge Results";
-  document.getElementById("challengeTitle").textContent = quizName;
+  document.getElementById("challengeTitle").textContent = `<td><a href="${quizLink}">${quizName}</a></td>`;
   document.getElementById("challengerName").textContent = requesterUname;
 		
   document.getElementById("info").innerHTML = `Question Count:<span>${questionCount}</span> Results:<span>${Result}</span>`;
