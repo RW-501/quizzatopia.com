@@ -849,8 +849,6 @@ setLoggedInCookie();
 
 
 
-
-
 window.signInWithGoogle = async function () {
   try {
     const provider = new firebase.auth.GoogleAuthProvider();
@@ -865,34 +863,10 @@ window.signInWithGoogle = async function () {
     console.log('User display name:', displayName);
     console.log('Firebase ID:', firebaseId);
 
-    const exists = await checkUserExistence(firebaseId);
-    let userInfo;
+    let userInfo = await checkAndRetrieveUserInfo(firebaseId, displayName, user.email, user.photoURL);
 
-    if (exists) {
-      userInfo = await retrieveUserInfoFromFirestore(firebaseId);
     console.log('userInfo ID:', userInfo);
 
-    } else {
-      userInfo = {
-        userName: displayName,
-        userEmail: user.email,
-        userProfilePic: user.photoURL,
-        userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
-        userRank: 'Beginner',
-        userPoints: 0,
-        userQuizzesTaken: 0,
-        userCountry: '',
-        userState: '',
-        animationEnabled: true,
-        userIP: ipAddress,
-        userLatitude: 0,
-        userLongitude: 0,
-        firebaseId: firebaseId,
-        lastUpdated: new Date().getTime(),
-      };
-      await saveUserInfoToFirestore(userInfo);
-    }
-  console.log('saveUserInfoToLocalStorage');
     saveUserInfoToLocalStorage(userInfo);
     setLoggedInCookie();
     loggedIn = true;
@@ -904,6 +878,32 @@ window.signInWithGoogle = async function () {
   }
 };
 
+async function checkAndRetrieveUserInfo(firebaseId, displayName, userEmail, userProfilePic) {
+  const exists = await checkUserExistence(firebaseId);
+  console.log('exists ID:', exists);
+
+  if (exists) {
+    return retrieveUserInfoFromFirestore(firebaseId);
+  } else {
+    return {
+      userName: displayName,
+      userEmail: userEmail,
+      userProfilePic: userProfilePic,
+      userTagLine: 'Unlock Your Knowledge Potential with Quizzatopia!',
+      userRank: 'Beginner',
+      userPoints: 0,
+      userQuizzesTaken: 0,
+      userCountry: '',
+      userState: '',
+      animationEnabled: true,
+      userIP: ipAddress,
+      userLatitude: 0,
+      userLongitude: 0,
+      firebaseId: firebaseId,
+      lastUpdated: new Date().getTime(),
+    };
+  }
+}
 
 // Function to check if the user exists in Firestore
 function checkUserExistence(firebaseId) {
