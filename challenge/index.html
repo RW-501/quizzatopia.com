@@ -224,7 +224,7 @@ font-size: 1.5em;
         <button class="tab-button" onclick="openTab('challengeResults')">Challenge Results</button>
         <button class="tab-button" onclick="openTab('sendChallenge')">Send Challenge</button>
     </div>
-  <section id="startChallenge" class='challengeTab'>
+  <section id="startChallenge" class='challengeTab' onclick="openQuizzes()">
     <h2>Start Challenge</h2>
 
   </section>
@@ -271,7 +271,10 @@ font-size: 1.5em;
 	
 
   <script>
+function openQuizzes(){
+window.location.href = '/quizzes';
 
+}
 
 
 function getRequestsList(){	
