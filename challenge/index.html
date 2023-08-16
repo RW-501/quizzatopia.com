@@ -446,7 +446,7 @@ function  viewChallenge(challengeID, challengeDataX,xxx) {
 	let requesterID = challengeData.requesterID;
 	let quizCode = challengeData.quizCode;
 	let questionCount = challengeData.questionCount;
-                 let requestDate = challengeData.requestDate.toDate().toLocaleString();
+                 let requestDate = challengeData.requestDate; //.toDate().toLocaleString();
 
 	if(xxx === "start"){
   // Update placeholders with quiz challenge info and quiz results
