@@ -244,16 +244,18 @@ cursor: pointer;
 }
 
 .popupContent{
-  top: 0%;
-  left: 0%;
-  top: 0%;
-  bottom: 0%;
+    top: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: fit-content;
+    bottom: 0;
     width: fit-content;
     margin: auto;
-	  background-color: #f5f5f5;
-  padding: 5%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-
+    background-color: #f5f5f5;
+    padding: 5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
 }
 	 
   </style>
@@ -318,21 +320,17 @@ cursor: pointer;
 	<div id="" class="popupContent">
   <div class="challenge-info">
     <!-- Placeholder for quiz challenge info -->
-    <h2>Quiz Challenge Info</h2>
+    <h2 id="challengeHeader" >Loading</h2>
     <p>Challenge Title: <span id="challengeTitle"></span></p>
-    <p>Challenge Description: <span id="challengeDescription"></span></p>
-    <!-- Add more info fields as needed -->
-  </div>
-  <div class="quiz-results">
-    <!-- Placeholder for quiz results -->
-    <h2>Quiz Results</h2>
-    <p>Score: <span id="quizScore"></span></p>
-    <p>Correct Answers: <span id="correctAnswers"></span></p>
+    <p>Challenger Name: <span id="challengerName"></span></p>
+
+    <p id="info"></p>
     <!-- Add more result fields as needed -->
   </div>
+		<div>
   <button id="removeChallengeBtn">Remove Challenge</button>
-  <button id="startChallengeBtn">Start Challenge</button>
-
+  <button id="actionBtn">Start Challenge</button>
+</div>
 <button class=""  onclick="closePopup()">close</button>
 
 </div>
@@ -418,27 +416,50 @@ if(challengeData.challengeDone === false){
 
 
 	  
-	  const popup = document.getElementById("popup");
 const removeChallengeBtn = document.getElementById("removeChallengeBtn");
 const startChallengeBtn = document.getElementById("startChallengeBtn");
 
 // Function to open the popup with options
-function  viewChallenge(challengeID, challengeData) {
+function  viewChallenge(challengeID, challengeData,xxx) {
+               let quizName =challengeData.quizName;
+                 let requestDate = challengeData.requestDate.toDate().toLocaleString();
+                   let requesterUname = challengeData.requesterUname;
+                    let Result = challengeData.Result;
+	let quizLink = challengeData.quizLink;
+	let requesterID = challengeData.requesterID;
+	let quizCode = challengeData.quizCode;
+	let questionCount = challengeData.questionCount;
 
+	if(xxx === "start"){
   // Update placeholders with quiz challenge info and quiz results
-  document.getElementById("challengeTitle").textContent = "Quiz Challenge Title";
-  document.getElementById("challengeDescription").textContent = "Challenge Description";
-  // Update more challenge info fields as needed
+  document.getElementById("challengeHeader").textContent = "Quiz Challenge Info";
+  document.getElementById("challengeTitle").textContent = quizName;
+  document.getElementById("challengerName").textContent = requesterUname;
+		
+  document.getElementById("info").innerHTML = `Question Count:<span>${questionCount}</span>`;
 
-  document.getElementById("quizScore").textContent = "80%";
-  document.getElementById("correctAnswers").textContent = "7/10";
-
+	  document.getElementById("actionBtn").textContent = "Start Challenge;
 	
+	}else{
+  document.getElementById("challengeHeader").textContent = "Quiz Challenge Results";
+  document.getElementById("challengeTitle").textContent = quizName;
+  document.getElementById("challengerName").textContent = requesterUname;
+		
+  document.getElementById("info").innerHTML = `Question Count:<span>${questionCount}</span> Results:<span>${Result}</span>`;
+		
+  document.getElementById("actionBtn").textContent = "See Results;
+		
+	}
+	
+	  const popup = document.getElementById("popup");
+
   popup.style.display = "block";
 }
 
 // Function to close the popup
 function closePopup() {
+	  const popup = document.getElementById("popup");
+
   popup.style.display = "none";
 }
 
