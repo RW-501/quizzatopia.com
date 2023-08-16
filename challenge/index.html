@@ -295,7 +295,6 @@ function getRequestsList(userID){
     const challengesContainer = document.getElementById("requestsList");
 
     // Fetch challenge requests for the current user
-    if (quizCode !== "" && challengeNumber !== "") {
         db.collection("challenges")
             .where("challengerID", "==", userID)
             .get()
@@ -325,7 +324,7 @@ function getRequestsList(userID){
           <tr class="${cellStyle}">
             <td>${challengeData.quizName}</td>
             <td>${challengeData.requestDate.toDate().toLocaleString()}</td>
-            <td>${challengeData.challengerID}</td>
+            <td>${challengeData.requesterUname}</td>
             <td><button onclick="acceptChallenge('${challengeID}','${challengeData.quizCode}')">Accept</button></td>
           </tr>`;
       });
@@ -338,7 +337,7 @@ function getRequestsList(userID){
     .catch((error) => {
                 console.error("Error fetching challenges:", error);
             });
-    }
+    
 
 }
 	 // 
@@ -706,7 +705,8 @@ function sendChallengeFunc(quizCode, challengeNumber, friendFirebaseId){
 function sendChallengeToFriend(quizCode,challengeURL, challengerID) {
   // Assuming you have a Firebase Firestore instance initialized
   const db = firebase.firestore();
-
+  const userInfo = getUserInfo();
+const userName = userInfo.userName;
   // Define challenge data
   const requestDate = new Date();
 
@@ -728,6 +728,7 @@ function sendChallengeToFriend(quizCode,challengeURL, challengerID) {
           quizLink:quizLinkDB,
           requestDate:requestDate,
           requesterID:uID,
+          requesterUname:userName,
 	challengeStarted: false,	
           challengerID:challengerID,
           challengeDone: false, // Initial challenge status
