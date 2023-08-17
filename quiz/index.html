@@ -1636,16 +1636,17 @@ function openReviewFunc(save) {
     }
   });
 
-  if (save === true && quizStarted === false) {
-    // Calculate total response time and save review data
-    responseTimeTotal = getArraySum(responseTimeA);
-    saveReviewDataToFirestore(quizCode, quizInfo.quizName, questionStatInfo, responseTimeTotal);
-  }
+
 
   // Count incorrect and correct answers
   let incorrect = questionStatInfo.filter(question => question.correctness === 'incorrect').length;
   let correct = questionStatInfo.filter(question => question.correctness === 'correct').length;
-
+	
+  if (save === true && quizStarted === false) {
+    // Calculate total response time and save review data
+    responseTimeTotal = getArraySum(responseTimeA);
+    saveReviewDataToFirestore(quizCode, quizInfo.quizName, questionStatInfo, responseTimeTotal, correct);
+  }
   // Calculate and display statistics
   const totalQuestions = questionsCompleted.length;
   const percentDone = (questionsCompleted.length / questions.length) * 100;
@@ -1674,7 +1675,7 @@ function getArraySum(arr) {
   return sum;
 }
 
-function saveReviewDataToFirestore(quizCode, quizName, questionStatInfo, responseTimeTotal) {
+function saveReviewDataToFirestore(quizCode, quizName, questionStatInfo, responseTimeTotal, correct) {
 	  const userInfo = getUserInfo();
   // Get reference to Firestore database
   const db = firebase.firestore();
@@ -1716,9 +1717,11 @@ if (challengeSnapshot.exists) {
 
         // Determine the review field and value
         const reviewField = uID === challengerID ? 'challengerReview' : 'requesterReview';
+   const correctFields = uID === challengerID ? 'challengerCorrect' : 'requesterCorrect';
 
+	    
         // Update the review field with the appropriate value
-        await challengeRef.update({ [reviewField]: docRef.id });
+        await challengeRef.update({ [reviewField]: docRef.id,[correctFields]: correct });
 	    
       localStorage.removeItem('challengeNumber');
         localStorage.removeItem('startTime');
@@ -2240,8 +2243,13 @@ challengesCollection
       const challengeDoc = querySnapshot.docs[0];
       const challengeData = challengeDoc.data();
 
+      document.getElementById("optionContainer").classList.add("d-none");
 
-let cellUserName = '';
+      // Hide the MessageBoard info
+      document.getElementById("otherQuizzes").classList.add("d-none");
+	    
+	    
+	    let cellUserName = '';
                    let requesterUname = challengeData.requesterUname;
 	let challengerName = challengeData.challengerName;
 	let quizLink = challengeData.quizLink;
@@ -2333,10 +2341,7 @@ userExitNotificationBool = false;
       numberOfQuestions = quizInfo.numberOfQuestions;
 
 
-      document.getElementById("optionContainer").classList.add("d-none");
 
-      // Hide the MessageBoard info
-      document.getElementById("otherQuizzes").classList.add("d-none");
 
 
  var numAd;
