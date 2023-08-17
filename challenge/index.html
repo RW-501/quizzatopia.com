@@ -569,6 +569,7 @@ async function removeChallenge(uID, challengeNumber) {
             // Check if the uID matches either challengerID or requesterID
             if (uID === challengerID || uID === requesterID) {
                 const updateField = uID === challengerID ? 'challengerRemoved' : 'requesterRemoved';
+	    console.log("updateField;  ", updateField);
 
                 // Update the appropriate field
                 await db.collection('challenges').doc(challengeID).update({ [updateField]: true });
