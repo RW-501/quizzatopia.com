@@ -854,9 +854,10 @@ getRequestsList(uID);
 
         document.getElementById("challengeNumber").innerHTML = challengeNumber;
 	    
-	    			    console.log("START XXXXXXX");
+if (uID !== '' && uID !== null && uID !== undefined) {
+    getUserFriends(uID, quizCode, challengeNumber);
+}
 
-	     getUserFriends(uID, quizCode, challengeNumber);
     } 
 
     if (quizCode === "challengeNumber" && challengeNumber) {
