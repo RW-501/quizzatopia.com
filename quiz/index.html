@@ -1643,6 +1643,47 @@ function getArraySum(arr) {
   return sum;
 }
 
+
+async function updateChallengeWithReview(uID, challengeNumber, startTime, docRef, correct) {
+    // Assuming you have a Firebase Firestore instance initialized
+    const db = firebase.firestore();
+
+    // Fetch the challenge document with the matching challenge number and uID/requesterID
+    const challengeRef = db.collection('challenges').doc(challengeNumber);
+    const challengeSnapshot = await challengeRef.get();
+
+    if (challengeSnapshot.exists) {
+        const challengeData = challengeSnapshot.data();
+        const { challengerID, requesterID } = challengeData;
+
+        // Check if the uID matches challengerID or requesterID
+        if (uID === challengerID || uID === requesterID) {
+            // Update the start time
+            await challengeRef.update({ startTime: startTime });
+
+            // Determine the review field and value
+            const reviewField = uID === challengerID ? 'challengerReview' : 'requesterReview';
+            const correctField = uID === challengerID ? 'challengerCorrect' : 'requesterCorrect';
+
+            // Update the review field with the appropriate value
+            await challengeRef.update({ [reviewField]: docRef.id, [correctField]: correct });
+
+            localStorage.removeItem('challengeNumber');
+            localStorage.removeItem('startTime');
+
+            console.log(`Challenge ${challengeNumber} updated successfully.`);
+        } else {
+            console.log('User is not the challenger or requester of this challenge.');
+        }
+    } else {
+        console.log('Challenge not found.');
+    }
+}
+
+
+
+
+	  
 async function saveReviewDataToFirestore(quizCode, quizName, questionStatInfo, responseTimeTotal, correct) {
 	  const userInfo = getUserInfo();
   // Get reference to Firestore database
@@ -1663,45 +1704,7 @@ async function saveReviewDataToFirestore(quizCode, quizName, questionStatInfo, r
     .then(docRef => {
       console.log("Review data saved successfully. Document ID:", docRef.id);
 
-// Retrieve challenge number and start time from local storage
-const challengeNumber = localStorage.getItem('challengeNumber');
-const startTime = parseInt(localStorage.getItem('startTime'));
-
-// Assuming you have a Firebase Firestore instance initialized
-const db = firebase.firestore();
-
-// Fetch the challenge document with the matching challenge number and uID/requesterID
-const challengeRef = db.collection('challenges').doc(challengeNumber);
-const challengeSnapshot = await challengeRef.get();
-
-if (challengeSnapshot.exists) {
-    const challengeData = challengeSnapshot.data();
-    const { challengerID, requesterID } = challengeData;
-
-    // Check if the uID matches challengerID or requesterID
-    if (uID === challengerID || uID === requesterID) {
-        // Update the start time
-        await challengeRef.update({ startTime: startTime });
-
-        // Determine the review field and value
-        const reviewField = uID === challengerID ? 'challengerReview' : 'requesterReview';
-   const correctFields = uID === challengerID ? 'challengerCorrect' : 'requesterCorrect';
-
-	    
-        // Update the review field with the appropriate value
-        await challengeRef.update({ [reviewField]: docRef.id,[correctFields]: correct });
-	    
-      localStorage.removeItem('challengeNumber');
-        localStorage.removeItem('startTime');
-	    
-        console.log(`Challenge ${challengeNumber} updated successfully.`);
-    } else {
-        console.log('User is not the challenger or requester of this challenge.');
-    }
-} else {
-    console.log('Challenge not found.');
-}
-
+await updateChallengeWithReview(uID, challengeNumber, startTime, docRef.id, correct);
 
 	    
     })
