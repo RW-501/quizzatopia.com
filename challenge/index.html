@@ -570,7 +570,7 @@ async function removeChallenge(uID, challengeNumber) {
         // Iterate through the challenges with the specified challengeNumber
         challengesSnapshot.forEach(async (challengeDoc) => {
             const challengeData = challengeDoc.data();
-            const { challengeNumber, requesterID, challengeID } = challengeData;
+            const { challengeNumber, requesterID, challengerID } = challengeData;
 
             // Check if the uID matches either challengerID or requesterID
             if (uID === challengerID || uID === requesterID) {
