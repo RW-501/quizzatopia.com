@@ -573,6 +573,9 @@ challengesSnapshot.forEach(async (challengeDoc) => {
     const challengeData = challengeDoc.data();
     const { challengeNumber, requesterID, challengerID, challengeID } = challengeData;
 
+    console.log("Current challengeNumber:", challengeNumber);
+    console.log("Current challengeID:", challengeID);
+
     // Check if the uID matches either challengerID or requesterID
     if (uID === challengerID || uID === requesterID) {
         const updateField = uID === challengerID ? 'challengerRemoved' : 'requesterRemoved';
