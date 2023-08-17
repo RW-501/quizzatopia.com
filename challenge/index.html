@@ -550,25 +550,7 @@ function closeChallengePopup() {
 
 
 
-	  
 async function removeChallenge(uID, challengeNumber) {
-    try {
-        // Assuming you have a Firebase Firestore instance initialized
-        const db = firebase.firestore();
-	    console.log("challengeNumber;  ", challengeNumber);
-
-        // Fetch the challenge document
-        const challengesSnapshot = await db.collection('challenges')
-            .where("challengeNumber", "==", challengeNumber)
-            .get();
-
-        if (challengesSnapshot.empty) {
-            console.log('Challenge not found.');
-            return;
-        }
-
-        // Iterate through the challenges with the specified challengeNumber
- async function removeChallenge(uID, challengeNumber) {
     try {
         // Assuming you have a Firebase Firestore instance initialized
         const db = firebase.firestore();
@@ -599,6 +581,7 @@ async function removeChallenge(uID, challengeNumber) {
         console.error('Error removing challenge:', error);
     }
 }
+
 
 
 
