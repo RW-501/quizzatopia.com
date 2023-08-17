@@ -770,13 +770,18 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   margin: auto;
 }
 		#challengeInfo p{
-	    padding: 2%;
+	    padding: 1%;
 
 		}
-		.wrap{
- margin: auto;
-	margin-top: 5%;
-		}
+.wrap {
+    margin: auto;
+    margin-top: 5%;
+    overflow-y: scroll;
+    margin-right: 3%;
+    height: inherit;
+		    padding: 2%;
+
+}
 		.box{
     width: 100%;
     display: flex;
@@ -799,11 +804,7 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 		}
 
 .challenge-details {
-  background-color: #f8f8f8;
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+
 }
 
 .challenge-title {
@@ -1413,9 +1414,7 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   <div id="" class="optionspopup">
     <div class="wrap">
       <div id="challengeInfo"></div>
-      <div class="box">
-        <button id="startChallengeBtn" onclick="startChallenge()">Start Challenge</button>
-      </div>
+
     </div>
     <span class="close BottomCloseOptionsButton" onclick="closeChallengePopup()">Close</span>
   </div>
@@ -2299,6 +2298,9 @@ challengeInfoElement.innerHTML = `
       <p><span class="meta-label">Requester:</span> ${challengeData.requesterUname}</p>
       <p><span class="meta-label">Challenge Number:</span> ${challengeData.challengeNumber}</p>
     </div>
+    <div class="box">
+      <button id="startChallengeBtn" class="btn-main" onclick="startChallenge()">Start Challenge</button>
+    </div>
     <hr class="divider">
     <div class="challenge-description">
       <p>
@@ -2309,6 +2311,7 @@ challengeInfoElement.innerHTML = `
     </div>
   </div>
 `;
+
 
     } else {
       console.log("No matching challenge found.");
