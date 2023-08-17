@@ -570,7 +570,7 @@ async function removeChallenge(uID, challengeNumber) {
         // Iterate through the challenges with the specified challengeNumber
         challengesSnapshot.forEach(async (challengeDoc) => {
             const challengeData = challengeDoc.data();
-            const { challengerID, requesterID, challengeID } = challengeData;
+            const { challengeNumber, requesterID, challengeID } = challengeData;
 
             // Check if the uID matches either challengerID or requesterID
             if (uID === challengerID || uID === requesterID) {
@@ -592,16 +592,16 @@ async function removeChallenge(uID, challengeNumber) {
 
 
 // Function to accept a challenge
-function acceptChallenge(challengeID,quizCode, quizLink) {
+function acceptChallenge(challengeNumber,quizCode, quizLink) {
   // Accept the challenge
-	    console.log("challengeID;  ", challengeID);
+	    console.log("challengeNumber;  ", challengeNumber);
 	    console.log("uID;  ", uID);
 
 }
 
 
 // Function to accept a challenge
-function seeChallengeResults(challengeID,quizCode, quizLink) {
+function seeChallengeResults(challengeNumber,quizCode, quizLink) {
   // Accept the challenge
   // Add your logic here to accept a challenge or display a message
 	openTab('challengeResults')
