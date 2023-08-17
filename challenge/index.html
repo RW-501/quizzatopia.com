@@ -568,31 +568,38 @@ async function removeChallenge(uID, challengeNumber) {
         }
 
         // Iterate through the challenges with the specified challengeNumber
-       // Iterate through the challenges with the specified challengeNumber
-challengesSnapshot.forEach(async (challengeDoc) => {
-    const challengeData = challengeDoc.data();
-    const { challengeNumber, requesterID, challengerID, challengeID } = challengeData;
+ async function removeChallenge(uID, challengeNumber) {
+    try {
+        // Assuming you have a Firebase Firestore instance initialized
+        const db = firebase.firestore();
+        console.log("challengeNumber: ", challengeNumber);
 
-    console.log("Current challengeNumber:", challengeNumber);
-    console.log("Current challengeID:", challengeID);
+        // Fetch the challenge documents with the specified challengeNumber
+        const challengesSnapshot = await db.collection('challenges')
+            .where("challengeNumber", "==", challengeNumber)
+            .get();
 
-    // Check if the uID matches either challengerID or requesterID
-    if (uID === challengerID || uID === requesterID) {
-        const updateField = uID === challengerID ? 'challengerRemoved' : 'requesterRemoved';
+        if (challengesSnapshot.empty) {
+            console.log('Challenge not found.');
+            return;
+        }
 
-        // Update the appropriate field
-        await db.collection('challenges').doc(challengeID).update({ [updateField]: true });
+        // Iterate through the challenges with the specified challengeNumber
+        challengesSnapshot.forEach(async (challengeDoc) => {
+            try {
+                // Update the appropriate field
+                await challengeDoc.ref.update({ challengerRemoved: true, requesterRemoved: true });
 
-        console.log(`Challenge ${challengeNumber} removed successfully.`);
-    } else {
-        console.log('User is not the challenger or requester of this challenge.');
-    }
-});
-
+                console.log(`Challenge ${challengeNumber} removed successfully.`);
+            } catch (error) {
+                console.error('Error removing challenge:', error);
+            }
+        });
     } catch (error) {
         console.error('Error removing challenge:', error);
     }
 }
+
 
 
 // Function to accept a challenge
