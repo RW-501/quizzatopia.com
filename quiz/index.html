@@ -2223,7 +2223,7 @@ if (q === null) {
 
 
 
-
+function getChallengeFunc(){
 
 // Get the query parameters from the URL
 //const queryParams = new URLSearchParams(window.location.search);
@@ -2289,9 +2289,11 @@ challengesCollection
     console.error("Error getting challenge:", error);
   });
 
-
+	  }
 	  }
 
+getChallengeFunc();
+	  
 function closeChallengePopup(){
 
     window.location.href = `/challenge`;
