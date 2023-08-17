@@ -1798,6 +1798,7 @@ animationCheckbox.addEventListener('change', toggleAnimation);
 
 // Function to update the volume
 function updateVolume() {
+	if(volumeSlider){
   const volume = parseFloat(volumeSlider.value);
   // Update the volume value
   // Your logic for handling the volume change goes here
@@ -1808,7 +1809,7 @@ function updateVolume() {
 
   // Save the volume value to local storage
 saveSettings('volume', volume);
-
+	}
 }
 
 // Function to update the voice
