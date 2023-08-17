@@ -402,13 +402,13 @@ async function getRequestsList(userID) {
     let requesterUname = challengeData.requesterUname;
     let Result = challengeData.Result;
     let quizLink = challengeData.quizLink;
-
+let cellUserName = "";
     // Define styles based on requester or challenger
     const cellStyle = challengeData.requesterID === userID ? "sent-cell" : "received-cell";
 	if(challengeData.requesterID === userID){
- let cellUserName = challengerName;
+  cellUserName = challengerName;
 	}else{
- let cellUserName = requesterUname;
+  cellUserName = requesterUname;
 	}
 		
 		
