@@ -778,9 +778,12 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	margin-top: 5%;
 		}
 		.box{
-		    width: 100%;
-		}
+    width: 100%;
+    display: flex;
+}
 		#startChallengeBtn{
+    margin: auto;
+    width: fit-content;
     margin-top: 20px;
     background-color: #fd7e14;
     border: none;
@@ -795,6 +798,41 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 		}
 
+.challenge-details {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.challenge-title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.challenge-meta {
+  margin-top: 10px;
+}
+
+.meta-label {
+  font-weight: bold;
+  color: #777;
+}
+
+.divider {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.challenge-description {
+  color: #444;
+  font-size: 16px;
+}
+
+/* You can further style the buttons, fonts, and layout as per your design */
 
 
 		
@@ -2251,13 +2289,27 @@ console.log("Parameter e: " + e);
 	    
       // Display the challenge data on the page
       // For example, update HTML elements with the challenge information
-      const challengeInfoElement = document.getElementById("challengeInfo");
-      challengeInfoElement.innerHTML = `
-        <p>Challenger: ${challengeData.challengerID}</p>
-        <p>Requester: ${challengeData.requesterID}</p>
-        <p>Quiz Name: ${challengeData.quizName}</p>
-        <!-- Other challenge information -->
-      `;
+const challengeInfoElement = document.getElementById("challengeInfo");
+challengeInfoElement.innerHTML = `
+  <div class="challenge-details">
+    <h2 class="challenge-title">${challengeData.quizName}</h2>
+    <div class="challenge-meta">
+      <p><span class="meta-label">Question Count:</span> ${challengeData.questionCount}</p>
+      <p><span class="meta-label">Challenger:</span> ${challengeData.challengerName}</p>
+      <p><span class="meta-label">Requester:</span> ${challengeData.requesterUname}</p>
+      <p><span class="meta-label">Challenge Number:</span> ${challengeData.challengeNumber}</p>
+    </div>
+    <hr class="divider">
+    <div class="challenge-description">
+      <p>
+        You are about to take part in a challenge against ${challengeData.challengerName}.
+        This challenge was requested by ${challengeData.requesterUname}. The quiz consists of
+        ${challengeData.questionCount} questions. Are you ready to compete and prove your knowledge?
+      </p>
+    </div>
+  </div>
+`;
+
     } else {
       console.log("No matching challenge found.");
     }
