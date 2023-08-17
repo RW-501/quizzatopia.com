@@ -1742,7 +1742,7 @@ async function saveReviewDataToFirestore(quizCode, quizName, questionStatInfo, r
     .then(docRef => {
       console.log("Review data saved successfully. Document ID:", docRef.id);
 
-await updateChallengeWithReview(uID, challengeNumber, startTime, docRef.id, correct);
+ updateChallengeWithReview(uID, challengeNumber, startTime, docRef.id, correct);
 
 	    
     })
