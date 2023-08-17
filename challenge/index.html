@@ -505,10 +505,10 @@ acceptChallenge(challengeNumber,quizCode, quizLink);
   document.getElementById("info").innerHTML = `Question Count:<span>${questionCount}</span> Results:<span>${Result}</span>`;
 
 
-	  
+	  let popupDiv = document.getElementById("popup");
+		
   document.getElementById("actionBtn").textContent = "See Results";
-	 document.getElementById("actionBtn").addEventListener("click", function() {
-  // Handle remove challenge action
+	 popupDiv.getElementById("actionBtn").addEventListener("click", function() {
   console.log(" see Challenge results");
 	 
 seeChallengeResults(challengeNumber,quizCode, quizLink);
@@ -518,11 +518,11 @@ seeChallengeResults(challengeNumber,quizCode, quizLink);
 
 
 // Event listeners for the buttons
-	 document.getElementById("removeChallengeBtn").addEventListener("click", function() {
+	 popupDiv.getElementById("removeChallengeBtn").addEventListener("click", function() {
   console.log("Remove Challenge clicked");
   closeChallengePopup();
 	
-removeChallenge(uID ,challengeNumber);
+//removeChallenge(uID ,challengeNumber);
 	
 });
 
@@ -544,23 +544,13 @@ function closeChallengePopup() {
 }
 
 
-/*
-          challengeNumber:challengeNumber,
-          quizLink:quizLinkDB,
-          requestDate:requestDate,
-          requesterID:uID,
-          requesterRemove:false,
-          requesterUname:userName,
-	challengeStarted: false,	
-          challengerID:challengerID,
-          challengerRemoved:false,
-	  */
-	
+
+	  
 async function removeChallenge(uID, challengeID) {
     try {
         // Assuming you have a Firebase Firestore instance initialized
         const db = firebase.firestore();
-	    console.log("challengeID;  ", challengeID);
+	    console.log("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZz  challengeID;  ", challengeID);
 	    console.log("uID;  ", uID);
 
         // Fetch the challenge document
