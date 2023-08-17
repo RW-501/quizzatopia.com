@@ -407,6 +407,7 @@ async function getRequestsList(userID) {
 let cellUserName = "";
     // Define styles based on requester or challenger
     const cellStyle = challengeData.requesterID === userID ? "sent-cell" : "received-cell";
+    const choice = challengeData.requesterID === userID ? "Sent" : "Received";
 	if(challengeData.requesterID === userID){
   cellUserName = challengerName;
 	}else{
@@ -425,7 +426,7 @@ let cellUserName = "";
                 <td><a href="${quizLink}">${quizName}</a></td>
                 <td>${requestDate}</td>
                 <td>${cellUserName}</td>
-                <td class=" ">Start</td>
+                <td class=" ">${choice}</td>
             </tr>`;
 }else{
             // Add a row to the table
