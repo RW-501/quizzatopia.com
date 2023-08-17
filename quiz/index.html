@@ -2108,7 +2108,6 @@ function calculateScore(quizInfo) {
 
 	  
 	function saveQuizInfo(quizCode, quizInfo, q) {
-//  console.log('???????????????????????????saveQuizInfo???????????????????????????????????????????????//');
 if(quizStarted == true){
   const savedQuizInfo = JSON.parse(localStorage.getItem(`quizInfo_${quizCode}`)) || {};
   const savedScore = savedQuizInfo.questionCorrect || 0;
@@ -2121,7 +2120,7 @@ if(quizStarted == true){
 
 	
 
-	   console.log(quizCode+'  saveQuizInfo Quiz Info:' + quizInfo);
+	   console.log('  saveQuizInfo Quiz Info Local:' + quizInfo);
 	
     // Update the quiz information for the specific quiz code
   localStorage.setItem(`quizInfo_${quizCode}`, JSON.stringify(quizInfo));
@@ -2173,19 +2172,13 @@ var quizLinkURL = '';
 
 var  quizType = '';	  
     
+
+
+
+
 // Get the current URL and parse its search parameters
-const urlParams = new URLSearchParams(window.location.search);
+var urlParams = new URLSearchParams(window.location.search);
 	//  console.log("1 urlParams     "+urlParams); 
-quizLinkURL = 	"/quiz/?"+urlParams;
-	  
-// Find the <link rel="canonical"> element
-var canonicalLink = document.querySelector('link[rel="canonical"]');
-
-// Update the href attribute of the <link rel="canonical"> tag
-canonicalLink.href = "https://www.quizzatopia.com"+quizLinkURL;
-
-
-
 
 
 
@@ -2267,12 +2260,26 @@ challengesCollection
 let quizLink = challengeData.quizLink;
 console.log("E quizLink: " + quizLink);
 
-const urlParams = new URLSearchParams(quizLink);
- q = urlParams.get('q');
- e = urlParams.get('e');
+// Extract the parameters q and e
+const queryParams = quizLink.split('?')[1]; // Get the portion after the ?
+const queryParamsArray = queryParams.split('&'); // Split into an array of individual parameters
+
+let q = null;
+let e = null;
+
+// Loop through the parameters array and extract q and e
+for (const param of queryParamsArray) {
+  const [paramName, paramValue] = param.split('=');
+  if (paramName === 'q') {
+    q = paramValue;
+  } else if (paramName === 'e') {
+    e = paramValue;
+  }
+}
 
 console.log("Parameter q: " + q);
 console.log("Parameter e: " + e);
+
 	if(challengeData.requesterID === userID){
   cellUserName = challengerName;
 	}else{
@@ -2283,7 +2290,6 @@ console.log("Parameter e: " + e);
 
 
 
-      console.log("???????");
 
 	    
       // Display the challenge data on the page
@@ -2325,6 +2331,9 @@ challengeInfoElement.innerHTML = `
 	  }
 
 getChallengeFunc();
+
+
+
 	  
 function closeChallengePopup(){
 
@@ -2422,7 +2431,13 @@ userExitNotificationBool = false;
 
 
 
+quizLinkURL = 	"/quiz/?"+urlParams;
+	  
+// Find the <link rel="canonical"> element
+var canonicalLink = document.querySelector('link[rel="canonical"]');
 
+// Update the href attribute of the <link rel="canonical"> tag
+canonicalLink.href = "https://www.quizzatopia.com"+quizLinkURL;
 
 
 
