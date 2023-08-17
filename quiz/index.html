@@ -2258,28 +2258,18 @@ challengesCollection
 	    let cellUserName = '';
                    let requesterUname = challengeData.requesterUname;
 	let challengerName = challengeData.challengerName;
+
+	    
 let quizLink = challengeData.quizLink;
 console.log("E quizLink: " + quizLink);
 
-// Extract the parameters q and e
-const queryParams = quizLink.split('?')[1]; // Get the portion after the ?
-const queryParamsArray = queryParams.split('&'); // Split into an array of individual parameters
-
-let q = null;
-let e = null;
-
-// Loop through the parameters array and extract q and e
-for (const param of queryParamsArray) {
-  const [paramName, paramValue] = param.split('=');
-  if (paramName === 'q') {
-    q = paramValue;
-  } else if (paramName === 'e') {
-    e = paramValue;
-  }
-}
+ urlParams = new URLSearchParams(quizLink);
+ q = urlParams.get('q');
+ e = urlParams.get('e');
 
 console.log("Parameter q: " + q);
 console.log("Parameter e: " + e);
+
 
 	if(challengeData.requesterID === userID){
   cellUserName = challengerName;
