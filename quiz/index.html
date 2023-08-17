@@ -1287,6 +1287,16 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	
 
 
+<div id="challengePopup" class="PopupWrap">
+<div id="" class="optionspopup">
+    <div id="challengeInfo"></div>
+	<div class="box">
+    <button id="startChallengeBtn" onclick="startChallenge()">Start Challenge</button>
+	</div>	    
+    <span class="close BottomCloseOptionsButton" onclick="closeChallengePopup()">Close</span>
+
+</div>
+</div>
 
 
 
@@ -1336,7 +1346,6 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 </div>
 	
 </div>
-
 
 
 
@@ -2125,14 +2134,20 @@ var canonicalLink = document.querySelector('link[rel="canonical"]');
 canonicalLink.href = "https://www.quizzatopia.com"+quizLinkURL;
 
 
+
+
+
+
+	  
+
 	  
 // Get the values of the "q" and "e" parameters
 var q = urlParams.get('q');
 var e = urlParams.get('e');
 	  
 console.log("E urlParams     "+e); 
-	  
-	  
+
+
 if (q === null) {
   const files = [
     "q_101_",
@@ -2152,38 +2167,197 @@ if (q === null) {
 }
   
 	  
-	  
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Get the query parameters from the URL
+//const queryParams = new URLSearchParams(window.location.search);
+let userID = urlParams.get("userID");
+var challengeNumber = urlParams.get("challengeNumber");
+
+	  if(challengeNumber){
+// Reference to Firestore collection
+const db = firebase.firestore();
+const challengesCollection = db.collection("challenges");
+
+// Query the challenges collection for the challenge with the specified challengeNumber
+challengesCollection
+  .where("challengeNumber", "==", challengeNumber)
+  .get()
+  .then((querySnapshot) => {
+    if (!querySnapshot.empty) {
+      // Get the challenge document
+      const challengeDoc = querySnapshot.docs[0];
+      const challengeData = challengeDoc.data();
+
+
+let cellUserName = '';
+                   let requesterUname = challengeData.requesterUname;
+	let challengerName = challengeData.challengerName;
+	let quizLink = challengeData.quizLink;
+	    
+ q = quizLink.get('q');
+ e = quizLink.get('e');
+	
+	if(challengeData.requesterID === userID){
+  cellUserName = challengerName;
+	}else{
+  cellUserName = requesterUname;
+	}
+	    
+      // Display the challenge data on the page
+      // For example, update HTML elements with the challenge information
+      const challengeInfoElement = document.getElementById("challengeInfo");
+      challengeInfoElement.innerHTML = `
+        <p>Challenger: ${challengeData.challengerID}</p>
+        <p>Requester: ${challengeData.requesterID}</p>
+        <p>Quiz Name: ${challengeData.quizName}</p>
+        <!-- Other challenge information -->
+      `;
+    } else {
+      console.log("No matching challenge found.");
+    }
+  })
+  .catch((error) => {
+    console.error("Error getting challenge:", error);
+  });
+
+
+	  }
+
+function closeChallengePopup(){
+
+    window.location.href = `/challenge`;
+  }
+
+
+async function startChallenge() {
+  loadScreenFunc();
+	    const startTime = new Date().getTime();
+
+    // Add challenge number and start time to local storage
+    localStorage.setItem('challengeNumber', challengeNumber);
+    localStorage.setItem('startTime', startTime);
+	
+userExitNotificationBool = false;
+	
+  const divElement = document.getElementById("testInfo");
+  // Call the function when needed, e.g., after completing a quiz
+  showLoginPopupIfNeeded();
+
+  if (newQuizCount > QUIZ_COUNT_THRESHOLD && loggedIn == false) {
+    // Show the login popup
+    openPopup();
+    switchTab('login');
+  } else {
+    if (q === null || q === '') {
+      location.reload();
+    } else {
+      questionTime = 0; // seconds
+      currentQuestion = 0;
+
+      quizStarted = false;
+      timer = 0;
+	//    questionsCompleted = [];
+      countdownPerQuestion = false; // set to true if the countdown should happen for each question
+      totalTime = 0; // seconds
+      totalQuestions = questions.length;
+      timerEnabled = false;
+
+      quizStarted = true;
+      updatePointsAndRank();
+      const animations = ["right", ""];
+      const randomIndex = Math.floor(Math.random() * animations.length);
+      const selectedAnimation = animations[randomIndex];
+
+      slideIn("quiz-container", selectedAnimation);
+
+      document.getElementById("quiz-container").classList.remove("d-none");
+      totalQuestions = questions.length;
+
+      // Retrieve the quizInfo from the array quiz
+      const quizInfo = setUpandSaveQuizInfo(quizCode, quizName, numberOfQuestions);
+
+      quizCode = quizInfo.quizCode;
+      quizName = quizInfo.quizName;
+      numberOfQuestions = quizInfo.numberOfQuestions;
+
+
+      document.getElementById("optionContainer").classList.add("d-none");
+
+      // Hide the MessageBoard info
+      document.getElementById("otherQuizzes").classList.add("d-none");
+
+
+ var numAd;
+
+  if (totalQuestions <= 15) {
+    numAds = 2;
+      if (totalQuestions <= 5) {
+            numAds = 1;
+      }
+  } else {
+    numAds = totalQuestions / 5;
+  }
+
+  var intvalue = Math.round(numAds);
+
+  quizAdPattern = generateQuizAdPattern(totalQuestions, intvalue);
+  adQuestionNumbers = quizAdPattern;
+
+//console.log(quizAdPattern+'  quizAdPattern.userName ????????????intvalue '+ intvalue);
+	    
+  // Array to store the question numbers where the ad should be shown
+//  adQuestionNumbers = quizAdPattern; // Example: Show ad after questions 3, 7, and 11
+
+  setQuizTime();
+   updateQuestionNumber();
+
+  updateProgressBar(currentQuestion);
+    showQuestion();
+  
+	          await updateQuizStartedCount(quizCode);
+
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		    
 	  let str = q;
 
-
-
-
-
-	
-
-    //  var newStr = q.replace(/_/g, " ");
-	  
-	  
-	  
-
-	  
-//document.getElementById("msg_quiz_name").innerHTML = newStr;
-//document.getElementById("optionsQuizName").innerHTML = newStr;
-	  
 document.getElementById("social_fb").href = "https://www.facebook.com/sharer/sharer.php?u=https://quizzatopia.com/quiz/?q="+q;
 document.getElementById("social_tw").href = "https://twitter.com/intent/tweet?url=https://quizzatopia.com/quiz/?q="+q;
 document.getElementById("social_ln").href = "ttps://www.linkedin.com/shareArticle?url=https://quizzatopia.com/quiz/?q="+q;
 document.getElementById("social_red").href = "https://www.reddit.com/submit?url=https://quizzatopia.com/quiz/?q="+q;
     
 	  
+	    
 	  
-	  
-  
-	  
-	  
-	  
-	  
-
+/*
 	  function removeTF(q) {
 
 // Use the value of "q"
@@ -2196,7 +2370,7 @@ if (str.startsWith("TF")) {
 	  
 	  
 	  }
-	  
+	*/  
 	
 
 	  
@@ -2805,10 +2979,6 @@ isAnimationEnabled = userInfo.animationEnabled;
 
 
 
-// Function to generate a random challenge ID (you may use a better approach for production)
-function generateChallengeID() {
-  return Math.random().toString(36).substr(2, 9);
-}
 
 // Function to generate the share link with the challenge ID
 function setShareableLink(quizCode, challengeID) {
