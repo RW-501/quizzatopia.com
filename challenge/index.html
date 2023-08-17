@@ -415,6 +415,7 @@ let cellUserName = "";
     console.log("challengeData.requesterID;", challengeData.requesterID);
     console.log("userID;", userID);
     console.log("XXXXXX; ????????????????????????????????????????????????????????????????????");
+    if (challengeData.challengerRemoved === false || challengeData.requesterRemove === false) {
 
     if (challengeData.challengeDone === false) {
         challengesTable += `
@@ -433,6 +434,8 @@ let cellUserName = "";
                     <td>${cellUserName}</td>
                     <td class=" ">${challengeData.Result}</td>
                 </tr>`;
+    }
+
     }
 	  });
         challengesTable += '</tbody></table>';
