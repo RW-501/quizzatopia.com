@@ -2348,8 +2348,11 @@ function closeChallengePopup(){
 
 
 async function startChallenge() {
+		        console.log("Passed ");
+
   loadScreenFunc();
 	    const startTime = new Date().getTime();
+		        console.log("Passed 0");
 
     // Add challenge number and start time to local storage
     localStorage.setItem('challengeNumber', challengeNumber);
@@ -2358,14 +2361,15 @@ async function startChallenge() {
 userExitNotificationBool = false;
 	
   const divElement = document.getElementById("testInfo");
-  // Call the function when needed, e.g., after completing a quiz
-  showLoginPopupIfNeeded();
 
-  if (newQuizCount > QUIZ_COUNT_THRESHOLD && loggedIn == false) {
+	
+  if (loggedIn == false) {
     // Show the login popup
     openPopup();
     switchTab('login');
   } else {
+	        console.log("Passed 1");
+
     if (q === null || q === '') {
       location.reload();
     } else {
@@ -2385,6 +2389,7 @@ userExitNotificationBool = false;
       const animations = ["right", ""];
       const randomIndex = Math.floor(Math.random() * animations.length);
       const selectedAnimation = animations[randomIndex];
+	        console.log("Passed 2");
 
       slideIn("quiz-container", selectedAnimation);
 
