@@ -1643,7 +1643,7 @@ function getArraySum(arr) {
   return sum;
 }
 
-function saveReviewDataToFirestore(quizCode, quizName, questionStatInfo, responseTimeTotal, correct) {
+async function saveReviewDataToFirestore(quizCode, quizName, questionStatInfo, responseTimeTotal, correct) {
 	  const userInfo = getUserInfo();
   // Get reference to Firestore database
   const db = firebase.firestore();
