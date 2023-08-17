@@ -1389,7 +1389,7 @@ function saveVoiceSettings() {
 // Load voice settings from local storage
 function loadVoiceSettings() {
   var voiceSettings = JSON.parse(localStorage.getItem('voiceSettings'));
-  if (voiceSettings) {
+  if (voiceSettings && document.getElementById('rateSlider')) {
     var rateSlider = document.getElementById('rateSlider');
     var voiceDropdown = document.getElementById('voiceDropdown');
     
@@ -1397,6 +1397,7 @@ function loadVoiceSettings() {
     voiceDropdown.value = voiceSettings.voice;
   }
 }
+  if ( document.getElementById('rateSlider')) {
 
 // Event listeners for saving and loading voice settings
 var rateSlider = document.getElementById('rateSlider');
@@ -1404,6 +1405,7 @@ var voiceDropdown = document.getElementById('voiceDropdown');
 
 rateSlider.addEventListener('input', saveVoiceSettings);
 voiceDropdown.addEventListener('change', saveVoiceSettings);
+  }
 
 // Populate the voice dropdown on page load
 window.addEventListener('load', function() {
