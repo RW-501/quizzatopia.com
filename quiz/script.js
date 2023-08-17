@@ -692,6 +692,8 @@ function updateQuestionNumber() {
 
   updateProgressBar(currentQuestionNumber);
 }
+   userInfo = getUserInfo();
+
 const userStartPoints = userInfo.userPoints;
 const initialPoints = userStartPoints;
 
