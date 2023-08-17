@@ -461,7 +461,7 @@ function  viewChallenge(challengeID, challengeDataX,xxx) {
 
                let quizName = challengeData.quizName;
 	    console.log("quizName;  ", quizName);
-
+let cellUserName = '';
                    let requesterUname = challengeData.requesterUname;
                     let Result = challengeData.Result;
 	let quizLink = challengeData.quizLink;
@@ -475,9 +475,9 @@ function  viewChallenge(challengeID, challengeDataX,xxx) {
                  let requestDate = challengeData.requestDate; //.toDate().toLocaleString();
 	
 	if(challengeData.requesterID === userID){
- let cellUserName = challengerName;
+  cellUserName = challengerName;
 	}else{
- let cellUserName = requesterUname;
+  cellUserName = requesterUname;
 	}
 	if(xxx === "start"){
   // Update placeholders with quiz challenge info and quiz results
