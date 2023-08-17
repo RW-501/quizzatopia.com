@@ -1260,48 +1260,41 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 	  
 	
 	
-	
-  <div id="otherQuizzes" class="container">
+<!-- Other Quizzes Container -->
+<div id="otherQuizzes" class="container">
+  <!-- Other Quizzes Content Goes Here -->
+</div>
 
-  </div>
-
-
+<!-- Review Popup -->
 <div id="reviewPopup" class="popup">
   <div id="reviewPopupBox" class="popup-content">
-	   <h2 id="quizReviewName"></h2>
+    <h2 id="quizReviewName"></h2>
     <div id="reviewTop">
-        <p><strong>Total Questions:</strong> <span id="totalQuestions"></span></p>
-        <p><strong>Percent Done:</strong> <span id="percentDone"></span>%</p>
-        <p><strong>Current Score:</strong> <span id="currentScore"></span>%</p>
+      <p><strong>Total Questions:</strong> <span id="totalQuestions"></span></p>
+      <p><strong>Percent Done:</strong> <span id="percentDone"></span>%</p>
+      <p><strong>Current Score:</strong> <span id="currentScore"></span>%</p>
     </div>
-	  
     <div class="tab">
-		   
-	    <button id="sortByAdded" class="sort-button">Last Added</button>
-<button id="sortByResponseTime" class="sort-button">Response Time</button>
-
+      <button id="sortByAdded" class="sort-button">Last Added</button>
+      <button id="sortByResponseTime" class="sort-button">Response Time</button>
     </div>
-
-		  <hr>
-	  <div class="scroll" >
-
-	  
-<div id="correctTab" class="tab-content">
-  <h3>Correct Answers</h3>
-  <div id="correctList"></div>
-</div>
-<br>
-<div id="incorrectTab" class="tab-content">
-  <h3>Incorrect Answers</h3>
-  <div id="incorrectList"></div>
-</div>
-</div>
-
-    <button id="closeReviewButton " class="BottomCloseOptionsButton"  onclick="closeReviewPopup()" >Close</button>
+    <hr>
+    <div class="scroll">
+      <div id="correctTab" class="tab-content">
+        <h3>Correct Answers</h3>
+        <div id="correctList"></div>
+      </div>
+      <br>
+      <div id="incorrectTab" class="tab-content">
+        <h3>Incorrect Answers</h3>
+        <div id="incorrectList"></div>
+      </div>
+    </div>
+    <button id="closeReviewButton" class="BottomCloseOptionsButton" onclick="closeReviewPopup()">Close</button>
   </div>
 </div>
 
- 
+<!-- Question Popup -->
 <div id="questionPopup" class="popup">
   <div class="popup-content">
     <h3>Question</h3>
@@ -1318,143 +1311,88 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   </div>
 </div>
 
-	
-
-
-
-
-	
-	
-	<div id="statsPopup" class="PopupWrap ">
-  <!-- Options content goes here -->
-		<div id="statsPopupBox" class="optionspopup">
-		<div  class="scrollWrap">
-<div id="quizInfoPopup">
-  <h3>Quiz Stats</h3>
-
-	<div class="center block"><p>Quiz Code: <span id="quizCodePopup"></span></p>
-  <p>Quiz Name:  <span id="quizName"></span></p></div>
-<hr>
-
-<div class=" block">
-  <p>Number of Questions: <span id="totalQuestions"></span></p>
-  <p>Questons Completed: <span id="questionsCompleted"></span></p>
-  <p>Percet Completed: <span id="percetCopleted"></span></p>
-</div>
-	
- <div class="center block">
-	 <p>Score Percent: <span id="scorePercent"></span></p>
-  <p>Score: <span id="bestScore"></span></p>
-</div>
-
-<div class=" block">
-  <p>Question Correct: <span id="questionCorrect"></span></p>
-  <p>Question Incorrect: <span id="questionIncorrect"></span></p>
-</div>
-	
-<div class="center block">	 
-  <p>Time so far: <span id="timeSoFar"></span></p>
-  <p>Quiz URL: <span id="quizURL"></span></p>
-</div>
-
-	
-</div>
-
-
-
-	
-</div>
-  <button id="closeStatsButton " class="close BottomCloseOptionsButton"  onclick="closeStatsPopup()" >Close</button>
-
-</div>
-	
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<div id="optionsPopup" class="PopupWrap ">
-  <!-- Options content goes here -->
-		<div id="optionsPopupBox" class="optionspopup">
-		<div  class="scrollWrap">
-<div id="quizInfoPopup">
-
-
-<div id="optionsMenu">
-  <h3>Options</h3>
-
-<div class=" block">
-  <div class="form-check ">
-    <label for="audioButton">Audio:</label>
-    <button id="audioButton">On</button>
+<!-- Stats Popup -->
+<div id="statsPopup" class="PopupWrap">
+  <div id="statsPopupBox" class="optionspopup">
+    <div class="scrollWrap">
+      <div id="quizInfoPopup">
+        <h3>Quiz Stats</h3>
+        <div class="center block">
+          <p>Quiz Code: <span id="quizCodePopup"></span></p>
+          <p>Quiz Name: <span id="quizName"></span></p>
+        </div>
+        <hr>
+        <div class="block">
+          <p>Number of Questions: <span id="totalQuestions"></span></p>
+          <p>Questons Completed: <span id="questionsCompleted"></span></p>
+          <p>Percet Completed: <span id="percetCopleted"></span></p>
+        </div>
+        <div class="center block">
+          <p>Score Percent: <span id="scorePercent"></span></p>
+          <p>Score: <span id="bestScore"></span></p>
+        </div>
+        <div class="block">
+          <p>Question Correct: <span id="questionCorrect"></span></p>
+          <p>Question Incorrect: <span id="questionIncorrect"></span></p>
+        </div>
+        <div class="center block">
+          <p>Time so far: <span id="timeSoFar"></span></p>
+          <p>Quiz URL: <span id="quizURL"></span></p>
+        </div>
+      </div>
+    </div>
+    <button id="closeStatsButton" class="close BottomCloseOptionsButton" onclick="closeStatsPopup()">Close</button>
   </div>
 </div>
 
-<div class=" block">
-  <div class="form-check">
-    <label for="volumeSlider">Speech Volume:</label>
-    <input type="range" id="volumeSlider" min="0" max="1" step="0.2">
+<!-- Options Popup -->
+<div id="optionsPopup" class="PopupWrap">
+  <div id="optionsPopupBox" class="optionspopup">
+    <div class="scrollWrap">
+      <div id="quizInfoPopup">
+        <div id="optionsMenu">
+          <h3>Options</h3>
+          <div class="block">
+            <div class="form-check">
+              <label for="audioButton">Audio:</label>
+              <button id="audioButton">On</button>
+            </div>
+          </div>
+          <div class="block">
+            <div class="form-check">
+              <label for="volumeSlider">Speech Volume:</label>
+              <input type="range" id="volumeSlider" min="0" max="1" step="0.2">
+            </div>
+            <!-- More form-checks for audio options -->
+          </div>
+          <div class="block">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="animation-quiz">
+              <label class="form-check-label" for="animation-quiz">
+                Animate Quiz
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="closeOptionsButton" class="close BottomCloseOptionsButton" onclick="closeOptions()">Close</button>
   </div>
-
-  <div class="form-check">
-    <label for="voiceDropdown">Voice:</label>
-    <select id="voiceDropdown"></select>
-  </div>
-
-  <div class="form-check">
-    <label for="rateSlider">Speech Rate:</label>
-    <input type="range" id="rateSlider" min="0.1" max="2" step="0.2">
-  </div>
 </div>
 
-<div class=" block">
-  <div class="form-check">
-    <input class="form-check-input" type="checkbox" id="animation-quiz">
-    <label class="form-check-label" for="animation-quiz">
-      Animate Quiz
-    </label>
-  </div>
-</div>
-</div>
-
-	
-</div>
-  <button id="closeOptionsButton " class="close BottomCloseOptionsButton"  onclick="closeOptions()" >Close</button>
-
-</div>
-	
-</div>
-
-
-
-
-
-
-
-		
+<!-- Challenge Popup -->
 <div id="challengePopup" class="PopupWrap">
-<div id="" class="optionspopup">
-	<div class="wrap">
-    <div id="challengeInfo"></div>
-	<div class="box">
-    <button id="startChallengeBtn" onclick="startChallenge()">Start Challenge</button>
-	</div>	    
-	</div>
+  <div id="" class="optionspopup">
+    <div class="wrap">
+      <div id="challengeInfo"></div>
+      <div class="box">
+        <button id="startChallengeBtn" onclick="startChallenge()">Start Challenge</button>
+      </div>
+    </div>
     <span class="close BottomCloseOptionsButton" onclick="closeChallengePopup()">Close</span>
+  </div>
+</div>
 
-</div>
-</div>
 
 	
 
