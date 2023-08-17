@@ -76,50 +76,7 @@ width: 100% !important;
   }
 }
 
-.loading-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #f5f5f5;
-}
 
-.loading {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 10px solid transparent;
-  border-top-color: #3498db;
-  animation: rotate 1.5s linear infinite;
-}
-
-.loading-bar {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, #3498db, transparent);
-  animation: progress 1.5s linear infinite;
-  transform: rotate(45deg);
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes progress {
-  0%, 100% {
-    background: linear-gradient(45deg, #3498db, transparent);
-  }
-  50% {
-    background: linear-gradient(45deg, transparent, #3498db);
-  }
-}
 
 
 
