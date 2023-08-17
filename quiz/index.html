@@ -2229,7 +2229,7 @@ if (q === null) {
 
 
 
-
+var challengeNumber = '';
 
 
 function getChallengeFunc(){
@@ -2238,7 +2238,7 @@ function getChallengeFunc(){
 // Get the query parameters from the URL
 const queryParams = new URLSearchParams(window.location.search);
 let userID = queryParams.get("userID");
-var challengeNumber = queryParams.get("challengeNumber");
+ challengeNumber = queryParams.get("challengeNumber");
 
       console.log("?userID   ",userID);
       console.log("?challengeNumber   ",challengeNumber);
@@ -2279,6 +2279,7 @@ console.log("E quizLink: " + quizLink);
 console.log("Parameter q: " + q);
 console.log("Parameter e: " + e);
 
+  fetchData(q, e);
 
 	if(challengeData.requesterID === userID){
   cellUserName = challengerName;
@@ -2952,6 +2953,7 @@ attemptsContainer.querySelector('.attempts-text').innerHTML = `<strong>${attempt
 
 	  
 window.addEventListener("load", function() {
+	if(challengeNumber !== ""){
   fetchData(q, e)
     .then(() => {
 
@@ -2963,6 +2965,7 @@ fetchRecommendedQuizzesFromDB(quizTagsVar, quizCategoryVar);
       // Handle any errors that occurred during fetchData
       console.error("Error fetching data:", error);
     });
+	}
 });
 
 	  
