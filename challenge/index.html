@@ -402,6 +402,8 @@ async function getRequestsList(userID) {
     let requesterUname = challengeData.requesterUname;
     let Result = challengeData.Result;
     let quizLink = challengeData.quizLink;
+	let challengerRemoved = challengeData.challengerRemoved;
+	let requesterRemoved = challengeData.requesterRemoved;
 let cellUserName = "";
     // Define styles based on requester or challenger
     const cellStyle = challengeData.requesterID === userID ? "sent-cell" : "received-cell";
@@ -415,7 +417,7 @@ let cellUserName = "";
     console.log("challengeData.requesterID;", challengeData.requesterID);
     console.log("userID;", userID);
     console.log("XXXXXX; ????????????????????????????????????????????????????????????????????");
-    if (challengeData.challengerRemoved === false || challengeData.requesterRemove === false) {
+    if (challengeData.challengerRemoved === false || challengeData.requesterRemoved === false) {
 
     if (challengeData.challengeDone === false) {
         challengesTable += `
@@ -473,7 +475,7 @@ let cellUserName = '';
 	let quizCode = challengeData.quizCode;
 	let questionCount = challengeData.questionCount;
 	let challengerRemoved = challengeData.challengerRemoved;
-	let requesterRemove = challengeData.requesterRemove;
+	let requesterRemoved = challengeData.requesterRemoved;
 	let challengeNumber = challengeData.challengeNumber;
                  let requestDate = challengeData.requestDate; //.toDate().toLocaleString();
 	
@@ -985,7 +987,7 @@ const userName = userInfo.userName;
           quizLink:quizLinkDB,
           requestDate:requestDate,
           requesterID:uID,
-          requesterRemove:false,
+          requesterRemoved:false,
           requesterUname:userName,
 	challengeStarted: false,	
           challengerID:challengerID,
