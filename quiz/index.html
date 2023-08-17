@@ -1585,7 +1585,7 @@ function openReviewFunc(save) {
   questionsCompleted = loadQuestionsCompleted(quizCode);
 
   let questionStatInfo = [];
-
+var responseTimeA = [];
   questionsCompleted.forEach(function (question) {
     var questionIndex = question.questionNumber - 1; // Adjust index by subtracting 1
 
