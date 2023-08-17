@@ -2391,8 +2391,12 @@ userExitNotificationBool = false;
       const selectedAnimation = animations[randomIndex];
 	        console.log("Passed 2");
 
-      slideIn("quiz-container", selectedAnimation);
-
+      document.getElementById("optionContainer").classList.add("d-none");
+	    
+	    slideOut("challengePopup", selectedAnimation);
+      document.getElementById("challengePopup").classList.add("d-none");
+	    
+	    slideIn("quiz-container", selectedAnimation);
       document.getElementById("quiz-container").classList.remove("d-none");
       totalQuestions = questions.length;
 
