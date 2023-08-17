@@ -91,15 +91,22 @@
       "answer": "Kanye West",
       "explanation": "Jay-Z and Kanye West collaborated on the album 'Watch the Throne,' released in 2011, which received critical acclaim."
     },
-    {
-      "questionNumber": 7,
-      "question": "Which Jay-Z song features the iconic line 'I got 99 problems, but a ___ ain't one'?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "bitch",
-      "explanation": "The song '99 Problems' by Jay-Z features the memorable line 'I got 99 problems, but a bitch ain't one.'"
-    },
+{
+  "questionNumber": 7,
+  "question": "What was the title of Jay-Z's debut studio album, released in 1996?",
+  "imageURL": "",
+  "questionType": "Multiple Choice",
+  "options": [
+    "Reasonable Doubt",
+    "The Blueprint",
+    "The Black Album",
+    "Magna Carta Holy Grail"
+  ],
+  "answer": "Reasonable Doubt",
+  "explanation": "Jay-Z's debut studio album, released in 1996, was titled 'Reasonable Doubt.' The album is widely regarded as a classic and helped establish Jay-Z's presence in the hip-hop scene.",
+  "difficulty": "Medium"
+},
+
     {
       "questionNumber": 8,
       "question": "Jay-Z is known for his entrepreneurial ventures. Which luxury champagne brand did he acquire in 2014?",
