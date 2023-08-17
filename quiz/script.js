@@ -48,8 +48,8 @@ saveQuizInfo(quizCode,quizInfo);
 
 
 
-console.log('questionCorrect ', questionCorrect);
-console.log('questionIncorrect ', questionIncorrect);
+//console.log('questionCorrect ', questionCorrect);
+//console.log('questionIncorrect ', questionIncorrect);
 
 
 
@@ -269,16 +269,15 @@ function generateQuizAdPattern(numQuestions, numAds) {
 
 let adDuration;
  let adCount;
-  let userInfo = getUserInfo();
 
 	 //  console.log('userInfo.userName ????????????????? ', userInfo.userName);
 
-if (userInfo.userName === "admin" || userInfo.userName === "Admin" ) {
-  console.log("   ???????no ads???"); // Output: 
+if (uID === "fM2CtVN59wNwrZeQZrSqlp4rUcr2"  ) {
+  console.log("No Ads"); // Output: 
   adDuration = 0; // Duration of each ad in seconds
   adCount = 0; // Counter for the number of ads shown 
 } else {
-  console.log("   ???????view ads???"); // Output: 
+  console.log("Ads"); // Output: 
   adDuration = 10; // Duration of each ad in seconds
   adCount = 0; // Counter for the number of ads shown
 }
@@ -456,7 +455,7 @@ function checkAnswer() {
   const questionObj = questions[currentQuestion];
   const options = optionContainers[currentQuestion]?.children;
 
-  console.log('questionStartTime ????????????????? ', questionStartTime);
+ // console.log('questionStartTime ????????????????? ', questionStartTime);
 
 		// Update the end time and calculate the response time for the completed question
 let questionEndTime = new Date();
