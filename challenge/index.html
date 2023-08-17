@@ -494,20 +494,21 @@ async function getRequestsList(userID) {
     let requesterUname = challengeData.requesterUname;
     let Result = challengeData.Result;
     let quizLink = challengeData.quizLink;
+    let requesterID = challengeData.requesterID;
 	let challengerRemoved = challengeData.challengerRemoved;
 	let requesterRemoved = challengeData.requesterRemoved;
 let cellUserName = "";
     // Define styles based on requester or challenger
     const cellStyle = challengeData.requesterID === userID ? "sent-cell" : "received-cell";
     const choice = challengeData.requesterID === userID ? "Sent" : "Received";
-	if(challengeData.requesterID === userID){
+	if(requesterID === userID){
   cellUserName = challengerName;
 	}else{
   cellUserName = requesterUname;
 	}
 		
 		
-    console.log("userID;", userID);
+    console.log("requesterID;", requesterID);
  
     if (challengeData.challengerRemoved === false || challengeData.requesterRemoved === false) {
 
@@ -571,11 +572,15 @@ let cellUserName = '';
 	let challengeNumber = challengeData.challengeNumber;
                  let requestDate = challengeData.requestDate; //.toDate().toLocaleString();
 	
-	if(challengeData.requesterID === uID){
+	if(requesterID === uID){
   cellUserName = challengerName;
 	}else{
   cellUserName = requesterUname;
 	}
+	        console.log("challengerName: ", challengerName);
+        console.log("requesterUname: ", requesterUname);
+        console.log("challengeNumber: ", challengeNumber);
+
 	if(xxx === "start"){
   // Update placeholders with quiz challenge info and quiz results
   document.getElementById("challengeHeader").textContent = "Quiz Challenge Info";
