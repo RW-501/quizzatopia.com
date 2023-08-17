@@ -2323,6 +2323,7 @@ challengeInfoElement.innerHTML = `
   </div>
 `;
 
+	      document.getElementById("otherQuizzes").classList.add("d-none");
 
     } else {
       console.log("No matching challenge found.");
@@ -2351,7 +2352,7 @@ async function startChallenge() {
 
   loadScreenFunc();
 	    const startTime = new Date().getTime();
-		        console.log("Passed 0");
+		   //     console.log("Passed 0");
 
     // Add challenge number and start time to local storage
     localStorage.setItem('challengeNumber', challengeNumber);
@@ -2361,13 +2362,12 @@ userExitNotificationBool = false;
 	
   const divElement = document.getElementById("testInfo");
 
-	
+
   if (loggedIn == false) {
     // Show the login popup
     openPopup();
     switchTab('login');
   } else {
-	        console.log("Passed 1");
 
     if (q === null || q === '') {
       location.reload();
@@ -2408,6 +2408,7 @@ userExitNotificationBool = false;
 
 
 
+	      document.getElementById("otherQuizzes").classList.add("d-none");
 
 
  var numAd;
