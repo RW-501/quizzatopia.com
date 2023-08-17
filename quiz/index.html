@@ -2197,7 +2197,11 @@ const queryParams = new URLSearchParams(window.location.search);
 let userID = queryParams.get("userID");
 var challengeNumber = queryParams.get("challengeNumber");
 
-	  if(challengeNumber){
+      console.log("?userID   ",userID);
+      console.log("?challengeNumber   ",challengeNumber);
+
+	
+	if(challengeNumber){
 // Reference to Firestore collection
 const db = firebase.firestore();
 const challengesCollection = db.collection("challenges");
@@ -2212,8 +2216,7 @@ challengesCollection
       const challengeDoc = querySnapshot.docs[0];
       const challengeData = challengeDoc.data();
 
-   //   document.getElementById("optionContainer").classList.add("d-none");
-
+      console.log("?challengeData.requesterUname   ",challengeData.requesterUname);
       // Hide the MessageBoard info
       document.getElementById("otherQuizzes").classList.add("d-none");
 	    
