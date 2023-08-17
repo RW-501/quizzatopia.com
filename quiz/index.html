@@ -180,51 +180,42 @@
 
 	<style>
 
-
 .loading-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f5f5f5;
 }
 
-.loading {
+.loading-spinner {
   position: relative;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 10px solid transparent;
-  border-top-color: #3498db;
-  animation: rotate 1.5s linear infinite;
+  width: 50px;
+  height: 50px;
 }
 
-.loading-bar {
+.loading-circle {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, #3498db, transparent);
-  animation: progress 1.5s linear infinite;
-  transform: rotate(45deg);
+  border: 3px solid transparent;
+  border-top-color: #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.loading-text {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #3498db;
+  font-weight: bold;
 }
 
-@keyframes progress {
-  0%, 100% {
-    background: linear-gradient(45deg, #3498db, transparent);
-  }
-  50% {
-    background: linear-gradient(45deg, transparent, #3498db);
-  }
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
+
 
 
 
@@ -1471,10 +1462,12 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       <div id="challengeInfo">
 	      
 <div class="loading-container">
-  <div class="loading">
-    <div class="loading-bar"></div>
+  <div class="loading-spinner">
+    <div class="loading-circle"></div>
   </div>
+  <p class="loading-text">Loading</p>
 </div>
+
 	      
 </div>
 
