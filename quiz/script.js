@@ -1361,13 +1361,14 @@ function populateVoiceDropdown() {
   // Wait for the 'voiceschanged' event
   speechSynthesis.addEventListener('voiceschanged', function() {
     var voices = speechSynthesis.getVoices();
-  
+  if(voiceDropdown){
     voices.forEach(function(voice) {
       var option = document.createElement('option');
       option.value = voice.voiceURI;
       option.textContent = voice.name;
       voiceDropdown.appendChild(option);
     });
+  } 
   });
 }
 
