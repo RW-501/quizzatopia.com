@@ -591,6 +591,11 @@ function acceptChallenge(challengeNumber,quizCode, quizLink) {
 	    console.log("challengeNumber;  ", challengeNumber);
 	    console.log("uID;  ", uID);
 
+const newURL = `/quiz/?userID=${uID}&challengeNumber=${challengeNumber}`;
+window.location.href = newURL;
+
+
+	
 }
 
 
@@ -600,6 +605,9 @@ function seeChallengeResults(challengeNumber,quizCode, quizLink) {
   // Add your logic here to accept a challenge or display a message
 	openTab('challengeResults')
 
+
+
+	  
 }
 
 
