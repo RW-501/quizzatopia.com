@@ -568,23 +568,24 @@ async function removeChallenge(uID, challengeNumber) {
         }
 
         // Iterate through the challenges with the specified challengeNumber
-        challengesSnapshot.forEach(async (challengeDoc) => {
-            const challengeData = challengeDoc.data();
-            const { challengeNumber, requesterID, challengerID } = challengeData;
+       // Iterate through the challenges with the specified challengeNumber
+challengesSnapshot.forEach(async (challengeDoc) => {
+    const challengeData = challengeDoc.data();
+    const { challengeNumber, requesterID, challengerID, challengeID } = challengeData;
 
-            // Check if the uID matches either challengerID or requesterID
-            if (uID === challengerID || uID === requesterID) {
-                const updateField = uID === challengerID ? 'challengerRemoved' : 'requesterRemoved';
-	    console.log("updateField;  ", updateField);
+    // Check if the uID matches either challengerID or requesterID
+    if (uID === challengerID || uID === requesterID) {
+        const updateField = uID === challengerID ? 'challengerRemoved' : 'requesterRemoved';
 
-                // Update the appropriate field
-                await db.collection('challenges').doc().update({ [updateField]: true });
+        // Update the appropriate field
+        await db.collection('challenges').doc(challengeID).update({ [updateField]: true });
 
-                console.log(`Challenge ${challengeNumber} removed successfully.`);
-            } else {
-                console.log('User is not the challenger or requester of this challenge.');
-            }
-        });
+        console.log(`Challenge ${challengeNumber} removed successfully.`);
+    } else {
+        console.log('User is not the challenger or requester of this challenge.');
+    }
+});
+
     } catch (error) {
         console.error('Error removing challenge:', error);
     }
