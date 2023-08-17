@@ -50,16 +50,16 @@
       "explanation": "True. Dwight Schrute, portrayed by Rainn Wilson, owns and operates a bed-and-breakfast farm called 'Schrute Farms' in his spare time.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 4,
-      "question": "What is the name of the paper company where the characters work?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Dunder Mifflin",
-      "explanation": "The characters in 'The Office' work at the paper company called 'Dunder Mifflin,' known for its humorous and quirky employees.",
-      "difficulty": "Medium"
-    },
+  {
+    "questionNumber": 4,
+    "question": "What is the name of the paper company where the characters work?",
+    "imageURL": "",
+    "questionType": "Fill in the Blank",
+    "options": ["Dunder Mifflin"],
+    "answer": "Dunder Mifflin",
+    "explanation": "The characters in 'The Office' work at the paper company called 'Dunder Mifflin,' known for its humorous and quirky employees.",
+    "difficulty": "Medium"
+  },
     {
       "questionNumber": 5,
       "question": "In the show 'The Office,' who is known for their unusual and offbeat statements and behaviors?",
