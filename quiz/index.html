@@ -2190,11 +2190,12 @@ if (q === null) {
 
 
 function getChallengeFunc(){
+      console.log("getChallenge  Func???????");
 
 // Get the query parameters from the URL
-//const queryParams = new URLSearchParams(window.location.search);
-let userID = urlParams.get("userID");
-var challengeNumber = urlParams.get("challengeNumber");
+const queryParams = new URLSearchParams(window.location.search);
+let userID = queryParams.get("userID");
+var challengeNumber = queryParams.get("challengeNumber");
 
 	  if(challengeNumber){
 // Reference to Firestore collection
