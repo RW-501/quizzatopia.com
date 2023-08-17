@@ -1418,7 +1418,7 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 </div>
 
 <!-- Challenge Popup -->
-<div id="challengePopup" class="PopupWrap">
+<div id="challengePopup" class="PopupWrap d-none">
   <div id="" class="optionspopup">
     <div class="wrap">
       <div id="challengeInfo">
@@ -2180,7 +2180,7 @@ var currentTime = Date.now();
 var formattedTime = formatTime(currentTime);
 	  
 	  var currentTimeInMillis = formattedTime;
- console.log(' 1 ???????????????????????????Start ???????    '+currentTimeInMillis);
+// console.log(' currentTimeInMillis    '+currentTimeInMillis);
 
 	  
 var quizLinkURL = '';
@@ -2204,7 +2204,7 @@ var urlParams = new URLSearchParams(window.location.search);
 var q = urlParams.get('q');
 var e = urlParams.get('e');
 	  
-console.log("E urlParams     "+e); 
+//console.log("E urlParams     "+e); 
 
 
 if (q === null) {
@@ -2238,18 +2238,17 @@ var challengeNumber = '';
 
 
 function getChallengeFunc(){
-      console.log("getChallenge  Func???????");
 
 // Get the query parameters from the URL
 const queryParams = new URLSearchParams(window.location.search);
 let userID = queryParams.get("userID");
  challengeNumber = queryParams.get("challengeNumber");
 
-      console.log("?userID   ",userID);
-      console.log("?challengeNumber   ",challengeNumber);
+	if(challengeNumber){
+
+      document.getElementById("challengePopup").classList.remove("d-none");
 
 	
-	if(challengeNumber){
 // Reference to Firestore collection
 const db = firebase.firestore();
 const challengesCollection = db.collection("challenges");
@@ -2264,16 +2263,16 @@ challengesCollection
       const challengeDoc = querySnapshot.docs[0];
       const challengeData = challengeDoc.data();
 
-      console.log("?challengeData.requesterUname   ",challengeData.requesterUname);
       // Hide the MessageBoard info
-      document.getElementById("otherQuizzes").classList.add("d-none");
+   //   document.getElementById("otherQuizzes").classList.add("d-none");
 	    
 	    
 	    let cellUserName = '';
                    let requesterUname = challengeData.requesterUname;
 	let challengerName = challengeData.challengerName;
 
-	    
+	  
+		    
 let quizLink = challengeData.quizLink;
 console.log("E quizLink: " + quizLink);
 
@@ -2293,7 +2292,7 @@ console.log("Parameter e: " + e);
 	}
 
 
-
+	
 
 
 
@@ -3059,7 +3058,7 @@ if (  q === null || q === '') {
 
   location.reload();
 }else{
-          console.log("Q:   "+q);
+console.log("Viewed:   "+q);
 	
 }
 
