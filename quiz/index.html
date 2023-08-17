@@ -1693,6 +1693,46 @@ function saveReviewDataToFirestore(quizCode, quizName, questionStatInfo, respons
   })
     .then(docRef => {
       console.log("Review data saved successfully. Document ID:", docRef.id);
+
+// Retrieve challenge number and start time from local storage
+const challengeNumber = localStorage.getItem('challengeNumber');
+const startTime = parseInt(localStorage.getItem('startTime'));
+
+// Assuming you have a Firebase Firestore instance initialized
+const db = firebase.firestore();
+
+// Fetch the challenge document with the matching challenge number and uID/requesterID
+const challengeRef = db.collection('challenges').doc(challengeNumber);
+const challengeSnapshot = await challengeRef.get();
+
+if (challengeSnapshot.exists) {
+    const challengeData = challengeSnapshot.data();
+    const { challengerID, requesterID } = challengeData;
+
+    // Check if the uID matches challengerID or requesterID
+    if (uID === challengerID || uID === requesterID) {
+        // Update the start time
+        await challengeRef.update({ startTime: startTime });
+
+        // Determine the review field and value
+        const reviewField = uID === challengerID ? 'challengerReview' : 'requesterReview';
+
+        // Update the review field with the appropriate value
+        await challengeRef.update({ [reviewField]: docRef.id });
+	    
+      localStorage.removeItem('challengeNumber');
+        localStorage.removeItem('startTime');
+	    
+        console.log(`Challenge ${challengeNumber} updated successfully.`);
+    } else {
+        console.log('User is not the challenger or requester of this challenge.');
+    }
+} else {
+    console.log('Challenge not found.');
+}
+
+
+	    
     })
     .catch(error => {
       console.error("Error saving review data:", error);
