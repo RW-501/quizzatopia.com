@@ -486,6 +486,7 @@ async function getRequestsList(userID) {
         // Iterate through the challenge requests
         challengesSnapshotArray.forEach((doc) => {
     const challengeData = doc.data();
+		
     const challengeID = doc.id;
     let challengerName = challengeData.challengerName;
     let quizName = challengeData.quizName;
@@ -513,7 +514,7 @@ let cellUserName = "";
     if (challengeData.challengeDone === false) {
         challengesTable += `
             <tr class="${cellStyle}" onclick="viewChallenge('${challengeID}', '${encodeURIComponent(JSON.stringify(challengeData))}', 'start')">
-                <td><a href="${quizLink}">${quizName}</a></td>
+                <td><span>${quizName}</span></td>
                 <td>${requestDate}</td>
                 <td>${cellUserName}</td>
                 <td class=" ">${choice}</td>
@@ -522,7 +523,7 @@ let cellUserName = "";
             // Add a row to the table
             challengesTable += `
             <tr class="${cellStyle}" onclick="viewChallenge('${challengeID}', '${encodeURIComponent(JSON.stringify(challengeData))}', 'start')">
-                    <td>${quizName}</td>
+                <td><span>${quizName}</span></td>
                     <td>${requestDate}</td>
                     <td>${cellUserName}</td>
                     <td class=" ">${challengeData.Result}</td>
@@ -570,7 +571,7 @@ let cellUserName = '';
 	let challengeNumber = challengeData.challengeNumber;
                  let requestDate = challengeData.requestDate; //.toDate().toLocaleString();
 	
-	if(challengeData.requesterID === userID){
+	if(challengeData.requesterID === uID){
   cellUserName = challengerName;
 	}else{
   cellUserName = requesterUname;
@@ -578,7 +579,7 @@ let cellUserName = '';
 	if(xxx === "start"){
   // Update placeholders with quiz challenge info and quiz results
   document.getElementById("challengeHeader").textContent = "Quiz Challenge Info";
-  document.getElementById("challengeTitle").innerHTML = `<a href="${quizLink}">${quizName}</a>`;
+  document.getElementById("challengeTitle").innerHTML = `<span><a href="${quizLink}">${quizName}</a></span>`;
   document.getElementById("challengerName").textContent = cellUserName;
 		
   document.getElementById("info").innerHTML = `Question Count:<span>${questionCount}</span>`;
@@ -595,7 +596,7 @@ acceptChallenge(challengeNumber,quizCode, quizLink);
 	 });
 	}else{
   document.getElementById("challengeHeader").textContent = "Quiz Challenge Results";
-  document.getElementById("challengeTitle").textContent = `<td><a href="${quizLink}">${quizName}</a></td>`;
+  document.getElementById("challengeTitle").innerHTML = `<span><a href="${quizLink}">${quizName}</a></span>`;
   document.getElementById("challengerName").textContent = cellUserName;
 		
   document.getElementById("info").innerHTML = `Question Count:<span>${questionCount}</span> Results:<span>${Result}</span>`;
