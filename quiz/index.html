@@ -185,7 +185,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
 .loading-spinner {
@@ -195,20 +194,19 @@
 }
 
 .loading-circle {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 3px solid transparent;
-  border-top-color: #3498db;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-top-color: #fd7e14;
+    border-radius: 50%;
+    animation: spin 1s ease-in-out infinite;
 }
 
 .loading-text {
-  margin-top: 10px;
-  font-size: 18px;
-  color: #3498db;
-  font-weight: bold;
+    font-size: 1.5em;
+    color: #fd7e14;
+    font-weight: 800;
 }
 
 @keyframes spin {
@@ -1462,11 +1460,11 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       <div id="challengeInfo">
 	      
 <div class="loading-container">
+    <p class="loading-text">Quizzatopia</p>
   <div class="loading-spinner">
-    <div class="loading-circle"></div>
+    <div class="loading-circle">
+    </div>
   </div>
-  <p class="loading-text">Loading</p>
-</div>
 
 	      
 </div>
