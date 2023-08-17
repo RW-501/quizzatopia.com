@@ -505,10 +505,10 @@ acceptChallenge(challengeNumber,quizCode, quizLink);
   document.getElementById("info").innerHTML = `Question Count:<span>${questionCount}</span> Results:<span>${Result}</span>`;
 
 
-	  let popupDiv = document.getElementById("popup");
+	//  let popupDiv = document.getElementById("popup");
 		
   document.getElementById("actionBtn").textContent = "See Results";
-	 popupDiv.getElementById("actionBtn").addEventListener("click", function() {
+	 document.getElementById("actionBtn").addEventListener("click", function() {
   console.log(" see Challenge results");
 	 
 seeChallengeResults(challengeNumber,quizCode, quizLink);
@@ -516,19 +516,18 @@ seeChallengeResults(challengeNumber,quizCode, quizLink);
 
 	 });
 
-
-// Event listeners for the buttons
-	 popupDiv.getElementById("removeChallengeBtn").addEventListener("click", function() {
+  
+	}
+	 document.getElementById("removeChallengeBtn").addEventListener("click", function() {
   console.log("Remove Challenge clicked");
   closeChallengePopup();
 	
-//removeChallenge(uID ,challengeNumber);
+removeChallenge(uID ,challengeNumber);
 	
 });
 
 
-	  
-	}
+	
 	
 	  const popup = document.getElementById("popup");
 
