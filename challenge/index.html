@@ -274,6 +274,56 @@ display:flex;
 	 .closeBTN{
 
 	 }
+
+
+
+
+
+.result-container {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.result-heading {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.result-section {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+.result-subheading {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.result-info {
+  font-size: 16px;
+}
+
+/* Style links */
+.result-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.result-info a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+	 
   </style>
 
     
@@ -301,7 +351,7 @@ display:flex;
   </section>
 
   <section id="challengeResults" class='challengeTab'>
-    <h2>Quiz Challenge Results</h2>
+  <!--  <h2>Quiz Challenge Results</h2>
     <table>
       <thead>
         <tr>
@@ -311,9 +361,35 @@ display:flex;
         </tr>
       </thead>
       <tbody>
-        <!-- Display challenge results rows here -->
       </tbody>
-    </table>
+    </table>  -->
+<div id="resultArea" class="result-container">
+  <h2>Challenge Results</h2>
+
+  <div class="result-section">
+    <h3>Challenger</h3>
+    <p>Name: <span id="challengerName"></span></p>
+    <p>Quiz Name: <span id="challengerQuizName"></span></p>
+    <p>Start Time: <span id="challengerStartTime"></span></p>
+    <p>End Time: <span id="challengerEndTime"></span></p>
+    <p>Total Correct: <span id="challengerTotalCorrect"></span></p>
+    <p>Percent Correct: <span id="challengerPercentCorrect"></span></p>
+  </div>
+
+  <div class="result-section">
+    <h3>Requester</h3>
+    <p>Name: <span id="requesterName"></span></p>
+    <p>Quiz Name: <span id="requesterQuizName"></span></p>
+    <p>Start Time: <span id="requesterStartTime"></span></p>
+    <p>End Time: <span id="requesterEndTime"></span></p>
+    <p>Total Correct: <span id="requesterTotalCorrect"></span></p>
+    <p>Percent Correct: <span id="requesterPercentCorrect"></span></p>
+  </div>
+
+  <p>Winner: <span id="winner"></span></p>
+</div>
+
+	  
   </section>
 
   <section id="challengeRequests" class='challengeTab'>
@@ -600,15 +676,63 @@ window.location.href = newURL;
 
 
 // Function to accept a challenge
-function seeChallengeResults(challengeNumber,quizCode, quizLink) {
-  // Accept the challenge
-  // Add your logic here to accept a challenge or display a message
-	openTab('challengeResults')
+async function seeChallengeResults(challengeNumber, quizCode, quizLink) {
+  // Assuming you have a Firebase Firestore instance initialized
+  const db = firebase.firestore();
 
+  // Fetch the challenge document using the challenge number
+  const challengeRef = db.collection('challenges').doc(challengeNumber);
+  const challengeSnapshot = await challengeRef.get();
 
+  if (challengeSnapshot.exists) {
+    const challengeData = challengeSnapshot.data();
+    let requesterID = challengeData.requesterID;
+    let challengerName = challengeData.challengerName;
+    let requesterName = challengeData.requesterUname;
+    let challengerID = challengeData.challengerID;
+    let questionCount = challengeData.questionCount;
+    let requestDate = challengeData.requestDate;
 
-	  
+    // Calculate percentage correct for both participants
+    const challengerPercentCorrect = (challengeData.challengerTotalCorrect / questionCount) * 100;
+    const requesterPercentCorrect = (challengeData.requesterTotalCorrect / questionCount) * 100;
+
+    // Determine the winner based on percentage correct
+    let winner = 'Tie';
+    if (challengerPercentCorrect > requesterPercentCorrect) {
+      winner = challengerName;
+    } else if (requesterPercentCorrect > challengerPercentCorrect) {
+      winner = requesterName;
+    }
+
+    // Populate the challenger result details
+    document.getElementById('challengerQuizName').textContent = challengeData.quizName;
+    document.getElementById('challengerStartTime').textContent = new Date(challengeData.startTime).toLocaleString();
+    document.getElementById('challengerEndTime').textContent = new Date(challengeData.endTime).toLocaleString();
+    document.getElementById('challengerTotalCorrect').textContent = challengeData.challengerTotalCorrect;
+    document.getElementById('challengerPercentCorrect').textContent = challengerPercentCorrect.toFixed(2) + '%';
+    document.getElementById('challengerName').textContent = challengerName;
+
+    // Populate the requester result details
+    document.getElementById('requesterQuizName').textContent = challengeData.quizName;
+    document.getElementById('requesterStartTime').textContent = new Date(challengeData.startTime).toLocaleString();
+    document.getElementById('requesterEndTime').textContent = new Date(challengeData.endTime).toLocaleString();
+    document.getElementById('requesterTotalCorrect').textContent = challengeData.requesterTotalCorrect;
+    document.getElementById('requesterPercentCorrect').textContent = requesterPercentCorrect.toFixed(2) + '%';
+    document.getElementById('requesterName').textContent = requesterName;
+
+    // Display the winner
+    document.getElementById('winner').textContent = winner;
+
+    // Display the result area
+    document.getElementById('resultArea').style.display = 'block';
+  } else {
+    console.log('Challenge not found.');
+  }
+
+  openTab('challengeResults');
 }
+
 
 
 
