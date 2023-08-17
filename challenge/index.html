@@ -549,6 +549,7 @@ async function removeChallenge(uID, challengeNumber) {
     try {
         // Assuming you have a Firebase Firestore instance initialized
         const db = firebase.firestore();
+	    console.log("challengeNumber;  ", challengeNumber);
 
         // Fetch the challenge document
         const challengesSnapshot = await db.collection('challenges')
