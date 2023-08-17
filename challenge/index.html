@@ -578,7 +578,7 @@ async function removeChallenge(uID, challengeNumber) {
 	    console.log("updateField;  ", updateField);
 
                 // Update the appropriate field
-                await db.collection('challenges').doc(challengeID).update({ [updateField]: true });
+                await db.collection('challenges').doc().update({ [updateField]: true });
 
                 console.log(`Challenge ${challengeNumber} removed successfully.`);
             } else {
