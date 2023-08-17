@@ -1946,7 +1946,7 @@ timeSoFarElement.innerHTML = `${minutes} mins ${seconds} secs`;
 // Function to fetch recommended quizzes from the database
 // Function to fetch recommended quizzes from the database
 function fetchRecommendedQuizzesFromDB(quizTagsArray, quizCategory) {
-  console.log("Fetching recommended quizzes from the database...");
+//  console.log("Fetching recommended quizzes from the database...");
 
   // Initialize your Firebase app
   const db = firebase.firestore();
@@ -2787,7 +2787,7 @@ descriptionLink.setAttribute("content", data.quizDescription+" "+q);
 
 		quizTagsVar = data.quizTags;
 quizCategoryVar = data.quizCategory;
-  		console.log(" data.quizTags:",  data.quizTags);
+  		//console.log(" data.quizTags:",  data.quizTags);
 
 	
           // Check quiz code and retrieve or save quiz info
@@ -2818,7 +2818,7 @@ quizCategoryVar = data.quizCategory;
           if (e === null || e === "") {} else {
             saveQuizToDB(quizZZ);
           }
-          console.log("quizZZ:", quizZZ);
+       //   console.log("quizZZ:", quizZZ);
 
           // Resolve the promise since data is fetched
           resolve();
