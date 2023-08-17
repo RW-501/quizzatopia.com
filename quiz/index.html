@@ -2227,11 +2227,15 @@ challengesCollection
 	    let cellUserName = '';
                    let requesterUname = challengeData.requesterUname;
 	let challengerName = challengeData.challengerName;
-	let quizLink = challengeData.quizLink;
-	    
- q = quizLink.get('q');
- e = quizLink.get('e');
-	
+let quizLink = challengeData.quizLink;
+console.log("E quizLink: " + quizLink);
+
+const urlParams = new URLSearchParams(quizLink);
+ q = urlParams.get('q');
+ e = urlParams.get('e');
+
+console.log("Parameter q: " + q);
+console.log("Parameter e: " + e);
 	if(challengeData.requesterID === userID){
   cellUserName = challengerName;
 	}else{
