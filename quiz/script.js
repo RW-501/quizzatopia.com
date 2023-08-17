@@ -1594,8 +1594,8 @@ window.addEventListener('beforeunload', function(event) {
 
 	stopSpeaking(); 
 });
-
 var userExitNotificationBool = false;
+
 
 window.addEventListener('resize', function () {
   if (document.visibilityState === 'hidden' && window.innerWidth === 0 && window.innerHeight === 0) {
