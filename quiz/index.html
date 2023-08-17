@@ -920,7 +920,7 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         <div class="quiz-options">
           <div class="form-check">
             <div id="optionsQuizNameWrap">
-              <div id="optionsQuizName" class="text-center mb-4"><h1><div class="loading_Main XL">Loading...</div>
+              <div id="optionsQuizName" class="text-center mb-4"><h1><div class="loading_Main ">Loading...</div>
 </h1></div>
               <!-- Quiz Name -->
             </div>
@@ -2018,7 +2018,7 @@ function fetchRecommendedQuizzesFromDB(quizTagsArray, quizCategory) {
       // Update the recommendedQuizContainer with the generated HTML
       recommendedQuizContainer.innerHTML = html;
 
-      console.log("Recommended quizzes fetched and HTML updated successfully.");
+     // console.log("Recommended quizzes fetched and HTML updated successfully.");
     })
     .catch((error) => {
       console.error("Error fetching recommended quizzes:", error);
@@ -2280,8 +2280,8 @@ console.log("E quizLink: " + quizLink);
  q = urlParams.get('q');
  e = urlParams.get('e');
 
-console.log("Parameter q: " + q);
-console.log("Parameter e: " + e);
+//console.log("Parameter q: " + q);
+//console.log("Parameter e: " + e);
 
   fetchData(q, e);
 
