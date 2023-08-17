@@ -415,9 +415,8 @@ let cellUserName = "";
 	}
 		
 		
-    console.log("challengeData.requesterID;", challengeData.requesterID);
     console.log("userID;", userID);
-    console.log("XXXXXX; ????????????????????????????????????????????????????????????????????");
+ 
     if (challengeData.challengerRemoved === false || challengeData.requesterRemoved === false) {
 
     if (challengeData.challengeDone === false) {
@@ -572,7 +571,8 @@ async function removeChallenge(uID, challengeNumber) {
                 // Update the appropriate field
                 await challengeDoc.ref.update({ challengerRemoved: true, requesterRemoved: true });
 
-                console.log(`Challenge ${challengeNumber} removed successfully.`);
+                console.log(`Challenge ${challengeNumber} updated successfully.`);
+		    getRequestsList(userID);
             } catch (error) {
                 console.error('Error removing challenge:', error);
             }
