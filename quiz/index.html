@@ -1706,6 +1706,7 @@ async function updateChallengeWithReview(uID, challengeNumber, startTime, docRef
             console.log('Challenge not found.');
             return;
         }
+ console.log(' docRef.id    '+docRef);
 
         const challengeDoc = challengeQuerySnapshot.docs[0];
         const challengeData = challengeDoc.data();
@@ -1717,11 +1718,11 @@ async function updateChallengeWithReview(uID, challengeNumber, startTime, docRef
             };
 
             if (uID === challengerID) {
-                updateData.challengerReview = docRef.id;
+                updateData.challengerReview = docRef;
                 updateData.challengerCorrect = correct;
                 updateData.challengerDone = 'Done';
             } else {
-                updateData.requesterReview = docRef.id;
+                updateData.requesterReview = docRef;
                 updateData.requesterCorrect = correct;
                 updateData.requesterDone = 'Done';
             }
