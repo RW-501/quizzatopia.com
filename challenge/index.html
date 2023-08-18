@@ -743,15 +743,21 @@ async function seeChallengeResults(challengeNumber, quizCode, quizLink) {
   // Assuming you have a Firebase Firestore instance initialized
   const db = firebase.firestore();
 
-    const challengeSnapshot = await db.collection('challenges')
-      .where('challengeNumber', '==', "challenge_1692306071195_210")
-      .get();
+ const challengeQuerySnapshot = await db.collection('challenges')
+  .where('challengeNumber', '==', "challenge_1692306071195_210")
+  .get();
+
+
   console.log("seeChallengeResults challengeNumber  ",challengeNumber);
 
-  if (challengeSnapshot.exists) {
-    const challengeData = challengeSnapshot.data();
-
+if (!challengeQuerySnapshot.empty) {
+  challengeQuerySnapshot.forEach(challengeDoc => {
+    const challengeData = challengeDoc.data();
+	      // Rest of your code for processing challenge data
+  });
     const quizName = challengeData.quizName;
+
+
     const requesterUname = challengeData.requesterUname;
     const Result = challengeData.Result;
     const challengerName = challengeData.challengerName;
