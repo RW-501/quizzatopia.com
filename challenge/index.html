@@ -520,7 +520,7 @@ const requesterRemoved = challengeData.requesterRemoved;
     const choice = challengeData.requesterID === userID ? "Sent" : "Received";
 
 		
-	if(isRequester){
+	if(!isRequester){
   cellUserName = challengerName;
 	}else{
   cellUserName = requesterUname;
@@ -602,12 +602,14 @@ const challengerRemoved = challengeData.challengerRemoved;
 const requesterRemoved = challengeData.requesterRemoved;
 
 	
-	if(isRequester){
+	if(!isRequester){
   cellUserName = challengerName;
 	}else{
   cellUserName = requesterUname;
 	}
-	   
+	   	    console.log("challengeDone;  ", challengeDone);
+	   	    console.log("quizName;  ", quizName);
+
 
 	if(challengeDone !== "Done"){
   // Update placeholders with quiz challenge info and quiz results
