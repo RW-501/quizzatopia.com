@@ -752,9 +752,8 @@ async function seeChallengeResults(challengeNumber, quizCode, quizLink) {
 
 if (!challengeQuerySnapshot.empty) {
   challengeQuerySnapshot.forEach(challengeDoc => {
-    const challengeData = challengeDoc.data();
-	      // Rest of your code for processing challenge data
-  });
+  const challengeData = challengeQuerySnapshot.docs[0].data();
+
     const quizName = challengeData.quizName;
 
 
