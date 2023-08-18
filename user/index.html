@@ -609,94 +609,64 @@ ele.style.display = 'none';
 	  
     // Quiz information related functions
     function getQuizInfo() {
-      const quizInfoContainer = document.getElementById('quizInfoContainer');
-      quizInfoContainer.innerHTML = '';
+  const quizInfoContainer = document.getElementById('quizInfoContainer');
+  quizInfoContainer.innerHTML = '';
 
+  // Assuming you have a Firebase Firestore instance initialized
+  const db = firebase.firestore();
+  const quizReviewDataRef = db.collection('quizReviewData');
 
-let localStorageArray = localStorage;
+  quizReviewDataRef
+    .where('userID', '==', uID)
+    .orderBy('timeStamp', 'desc')
+    .limit(5)
+    .get()
+    .then(querySnapshot => {
+      const latestQuizReviews = [];
 
-// Filter and sort the quiz information objects
-let quizInfoArray = [];
-for (let i = 0; i < localStorageArray.length; i++) {
-  const key = localStorageArray.key(i);
-  if (key.startsWith('quizInfo_')) {
-    const quizInfo = JSON.parse(localStorage.getItem(key));
-    quizInfoArray.push(quizInfo);
-  }
-}
+      querySnapshot.forEach(doc => {
+        const reviewData = doc.data();
+        latestQuizReviews.push(reviewData);
+      });
 
-// Sort the quizInfoArray based on startTime in descending order
-quizInfoArray.sort((a, b) => b.startTime - a.startTime);
+      // Reusing the statsButton element
+      const statsButton = document.createElement('button');
+      statsButton.innerText = 'Stats';
+      statsButton.classList.add('stats-button');
 
-// Keep only the latest 5 quizzes and remove any others
-if (quizInfoArray.length > 5) {
-  const quizzesToRemove = quizInfoArray.slice(5);
-  for (const quizToRemove of quizzesToRemove) {
-    const quizCode = quizToRemove.quizCode;
-    localStorage.removeItem(`quizInfo_${quizCode}`);
-  }
-}
+      for (const reviewData of latestQuizReviews) {
+        const quizName = reviewData.quizName;
+        const quizCode = reviewData.quizCode;
+        const quizTime = reviewData.timeStamp;
+        const questionStatInfo = reviewData.questionStatInfo;
+        const numberOfQuestions = questionStatInfo.length;
+        const correctCount = questionStatInfo.filter(item => item.correctness === 'correct').length;
 
-// Assuming you have a Firebase Firestore instance initialized
-const db = firebase.firestore();
+        const quizInfoElement = document.createElement('div');
+        quizInfoElement.classList.add('quiz-infop');
+        quizInfoElement.innerHTML = `
+          <a href="/quiz/stats/?q=${quizCode}" class="quiz-link"><h4>${quizName}</h4></a>
+          <p>Quiz Taken: ${quizTime}</p>
+          <p>Scored: ${correctCount}/${numberOfQuestions} Questions</p>
+        `;
 
-// Reference to the 'quizReviewData' collection
-const quizReviewDataRef = db.collection('quizReviewData');
+        // Clone the statsButton for each quiz and update its attributes and event listener
+        const clonedButton = statsButton.cloneNode(true);
+        clonedButton.addEventListener('click', function () {
+          viewStatsFunc(quizCode);
+        });
 
-// Query to retrieve the latest 5 quiz review data records for the specified userID
-quizReviewDataRef
-  .where('userID', '==', uID)
-  .orderBy('timeStamp', 'desc')
-  .limit(5)
-  .get()
-  .then(querySnapshot => {
-    const latestQuizReviews = [];
+        // Append the cloned button to the quiz info element
+        quizInfoElement.appendChild(clonedButton);
 
-    querySnapshot.forEach(doc => {
-      const reviewData = doc.data();
-      latestQuizReviews.push(reviewData);
+        // Append the quiz info element to the container
+        quizInfoContainer.appendChild(quizInfoElement);
+      }
+    })
+    .catch(error => {
+      console.error('Error retrieving latest quizzes:', error);
     });
-
-    // Now you can use latestQuizReviews to display the latest 5 quiz review data records
-    for (const reviewData of latestQuizReviews) {
-      const quizName = reviewData.quizName;
-      const quizCode = reviewData.quizCode;
-      const quizTime = reviewData.timeStamp;
-      const questionStatInfo = reviewData.questionStatInfo;
-      const numberOfQuestions = reviewData.questionStatInfo.lenght;
-      const correctCount = questionStatInfo.filter(item => item.correctness === 'correct').length;
-
- 
-
-
-
-          const quizInfoElement = document.createElement('div');
-          quizInfoElement.classList.add('quiz-infop');
-          quizInfoElement.innerHTML = `
-            <a href="/quiz/stats/?q=${quizCode}" class=""><h4>${quizName}</h4></a>
-            <p>Quiz Taken: ${quizTime}</p>
-            <p>Scored: ${correctCount}/${numberOfQuestions} Questions</p>
-          `;
-
-   
-       const statsButton = document.createElement('button');
-          statsButton.innerText = 'Stats';
-          statsButton.classList.add('stats-button');
-          statsButton.addEventListener('click', function () {
-            viewStatsFunc(quizCode);
-          });
-
-		
-          quizInfoElement.appendChild(statsButton);
-          quizInfoElement.appendChild(removeButton);
-          quizInfoContainer.appendChild(quizInfoElement);
-        
-    }
-  })
-  .catch(error => {
-    console.error('Error retrieving latest quizzes:', error);
-  });
-
+}
 
 
     // Local Storage usage related functions
