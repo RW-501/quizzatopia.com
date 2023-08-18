@@ -625,29 +625,21 @@ for (let i = 0; i < localStorageArray.length; i++) {
   }
 }
 
-// Sort the quizInfoArray based on quizTime and then quizName
-quizInfoArray.sort((a, b) => {
-  if (a.quizTime !== b.quizTime) {
-    return a.quizTime - b.quizTime;
-  } else {
-    return a.quizName.localeCompare(b.quizName);
-  }
-});
+// Sort the quizInfoArray based on startTime in descending order
+quizInfoArray.sort((a, b) => b.startTime - a.startTime);
 
-// Now quizInfoArray is sorted by quizTime and quizName
-for (const quizInfo of quizInfoArray) {
-  const quizCode = quizInfo.quizCode;
-  const quizName = quizInfo.quizName;
-  const questionCorrect = quizInfo.questionCorrect;
-  const numberOfQuestions = quizInfo.numberOfQuestions;
-  const quizTime = quizInfo.startTime;
-
+// Keep only the latest 5 quizzes and remove any others
+if (quizInfoArray.length > 5) {
+  const quizzesToRemove = quizInfoArray.slice(5);
+  for (const quizToRemove of quizzesToRemove) {
+    const quizCode = quizToRemove.quizCode;
+    localStorage.removeItem(`quizInfo_${quizCode}`);
 
 
           const quizInfoElement = document.createElement('div');
           quizInfoElement.classList.add('quiz-infop');
           quizInfoElement.innerHTML = `
-            <a href="/quiz/?q=${quizCode}" class=""><h4>${quizName}</h4></a>
+            <a href="/quiz/?q=${quizLink}" class=""><h4>${quizName}</h4></a>
             <p>Quiz Taken: ${quizTime}</p>
             <p>Scored: ${questionCorrect}/${numberOfQuestions} Questions</p>
           `;
