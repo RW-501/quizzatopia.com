@@ -1,3 +1,5 @@
+
+
 function loadScreenFunc(){
 // Create the <style> element
 var styleElement = document.createElement("style");
@@ -398,14 +400,58 @@ const currentPagePath = window.location.pathname;
 
 
 
+const RESTRICTED_PATHS_REGEX = /^(\/user\/|\/backend\/|\/friends\/|\/challenge\/)/;
+const FRIENDS_PATH_REGEX = /^(\/friends\/)/;
+const HOMEPAGE_PATH = '/';
 
-const restrictedPathsRegex = /^(\/user\/|\/backend\/|\/friends\/|\/challenge\/)/;
-  setTimeout(function() {
-if (loggedIn === false && restrictedPathsRegex.test(currentPagePath)) {
-  console.log('Redirecting to homepage...');
- window.location.href = '/';
-} 
-      }, 3000); // Adjust the delay time as needed
+setTimeout(() => {
+  if (!loggedIn && RESTRICTED_PATHS_REGEX.test(currentPath)) {
+    if (FRIENDS_PATH_REGEX.test(currentPath)) {
+      const friendCode = currentPath.split('?')[1];
+      const redirectUrl = `/?f=${friendCode}`;
+      window.location.href = redirectUrl;
+    } else {
+      console.log('Redirecting to homepage...');
+      window.location.href = HOMEPAGE_PATH;
+    }
+  }
+}, 3000);
+
+
+// Check if the URL contains the friend code parameter
+if (window.location.search.includes('?f=')) {
+  const friendCode = window.location.search.split('?f=')[1];
+  localStorage.setItem('friendCode', friendCode);
+
+  // Check if the user is logged in
+  if (!loggedIn) {
+    openPopup();
+  } else {
+    // User is logged in, get the friend permission ("f") and navigate to /friends/ URL
+    const friendPermission = getFriendPermission(); // Replace with your permission retrieval logic
+    const friendUrl = `/friends/?${friendPermission}`;
+    window.location.href = friendUrl;
+  }
+}
+
+
+
+function getFriendPermission() {
+  // Retrieve friend code from localStorage
+  const friendCode = localStorage.getItem('friendCode');
+
+  if (friendCode) {
+    // Remove the friend code from localStorage
+    localStorage.removeItem('friendCode');
+    return friendCode;
+  } else {
+    // Friend code not found
+    console.log('Friend code not found in localStorage');
+    return null; // Or handle the case in your desired way
+  }
+}
+
+
 
 
 
