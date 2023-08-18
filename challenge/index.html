@@ -781,17 +781,17 @@ if (challengerPercentCorrect > requesterPercentCorrect) {
 
 	
     document.getElementById('challengerQuizName').textContent = quizName;
-    document.getElementById('challengerStartTime').textContent = new Date(challengeData.challengerEndTime).toLocaleString();
-    document.getElementById('challengerEndTime').textContent = new Date(challengeData.endTime).toLocaleString();
-    document.getElementById('challengerTotalCorrect').textContent = challengerTotalCorrect;
-    document.getElementById('challengerPercentCorrect').textContent = isNaN(challengerPercentCorrect) ? "" : challengerPercentCorrect.toFixed(2) + '%';
+    document.getElementById('challengerStartTime').textContent = new Date(challengeData.startTime).toLocaleString();
+    document.getElementById('challengerEndTime').textContent = new Date(challengeData.challengerEndTime).toLocaleString();
+    document.getElementById('challengerTotalCorrect').textContent = challengerTotalCorrect || 0;
+    document.getElementById('challengerPercentCorrect').textContent = isNaN(challengerPercentCorrect) ? "0%" : challengerPercentCorrect.toFixed(2) + '%';
     document.getElementById('challengerName').textContent = challengerName;
 
     document.getElementById('requesterQuizName').textContent = quizName;
     document.getElementById('requesterStartTime').textContent = new Date(challengeData.startTime).toLocaleString();
     document.getElementById('requesterEndTime').textContent = new Date(challengeData.requesterEndTime).toLocaleString();
-    document.getElementById('requesterTotalCorrect').textContent = requesterTotalCorrect;
-    document.getElementById('requesterPercentCorrect').textContent = isNaN(requesterPercentCorrect) ? "" : requesterPercentCorrect.toFixed(2) + '%';
+    document.getElementById('requesterTotalCorrect').textContent = requesterTotalCorrect || 0;
+    document.getElementById('requesterPercentCorrect').textContent = isNaN(requesterPercentCorrect) ? "0%" : requesterPercentCorrect.toFixed(2) + '%';
     document.getElementById('requesterName').textContent = requesterUname;
 
     document.getElementById('winner').textContent = winner;
