@@ -500,14 +500,27 @@ async function getRequestsList(userID) {
     let requesterUname = challengeData.requesterUname;
     let Result = challengeData.Result;
     let quizLink = challengeData.quizLink;
-    let requesterID = challengeData.requesterID;
-	let challengerRemoved = challengeData.challengerRemoved;
-	let requesterRemoved = challengeData.requesterRemoved;
+		
+
 let cellUserName = "";
+		
+const isRequester = challengeData.requesterID === uID;
+const challengeCorrectness = isRequester ? challengeData.requesterCorrect : challengeData.challengerCorrect;
+const challengeDoc = isRequester ? challengeData.requesterReview : challengeData.challengerReview;
+const challengeDone = isRequester ? challengeData.requesterDone : challengeData.challengerDone;
+const endTime = isRequester ? challengeData.requesterEndTime : challengeData.challengerEndTime;
+
+const challengerID = challengeData.challengerID;
+const requesterID = challengeData.requesterID;
+const challengerRemoved = challengeData.challengerRemoved;
+const requesterRemoved = challengeData.requesterRemoved;
+		
     // Define styles based on requester or challenger
     const cellStyle = challengeData.requesterID === userID ? "sent-cell" : "received-cell";
     const choice = challengeData.requesterID === userID ? "Sent" : "Received";
-	if(requesterID === userID){
+
+		
+	if(isRequester){
   cellUserName = challengerName;
 	}else{
   cellUserName = requesterUname;
@@ -567,28 +580,36 @@ function  viewChallenge(challengeID, challengeDataX,xxx) {
 	    console.log("quizName;  ", quizName);
 let cellUserName ;
                    let requesterUname = challengeData.requesterUname;
-                    let Result = challengeData.Result;
 	let quizLink = challengeData.quizLink;
-	let requesterID = challengeData.requesterID;
 	let challengerName = challengeData.challengerName;
 	let quizCode = challengeData.quizCode;
 	let questionCount = challengeData.questionCount;
-	let challengerRemoved = challengeData.challengerRemoved;
-	let requesterRemoved = challengeData.requesterRemoved;
+	let requestDate = challengeData.requestDate; //.toDate().toLocaleString();
 	let challengeNumber = challengeData.challengeNumber;
-                 let requestDate = challengeData.requestDate; //.toDate().toLocaleString();
+
+const isRequester = challengeData.requesterID === uID;
+const challengeDoc = isRequester ? challengeData.requesterReview : challengeData.challengerReview;
+const challengeDone = isRequester ? challengeData.requesterDone : challengeData.challengerDone;
+const endTime = isRequester ? challengeData.requesterEndTime : challengeData.challengerEndTime;
+const challengeCorrectness = isRequester ? challengeData.requesterCorrect : challengeData.challengerCorrect;
+
+	const percentageCorrect = (challengeCorrectness / questionCount) * 100;
+
 	
-	if(requesterID === uID){
+const challengerID = challengeData.challengerID;
+const requesterID = challengeData.requesterID;
+const challengerRemoved = challengeData.challengerRemoved;
+const requesterRemoved = challengeData.requesterRemoved;
+
+	
+	if(isRequester){
   cellUserName = challengerName;
 	}else{
   cellUserName = requesterUname;
 	}
-	        console.log("challengerName: ", challengerName);
-        console.log("requesterUname: ", requesterUname);
-        console.log("challengerName: ", challengerName);
-        console.log("cellUserName: ", cellUserName);
+	   
 
-	if(xxx === "start"){
+	if(challengeDone !== "Done"){
   // Update placeholders with quiz challenge info and quiz results
   document.getElementById("challengeHeader").textContent = "Quiz Challenge Info";
   document.getElementById("challengeTitle").innerHTML = `<span><a href="${quizLink}">${quizName}</a></span>`;
@@ -611,7 +632,7 @@ acceptChallenge(challengeNumber,quizCode, quizLink);
   document.getElementById("challengeTitle").innerHTML = `<span><a href="${quizLink}">${quizName}</a></span>`;
   document.getElementById("challengerNameX").textContent = cellUserName;
 		
-  document.getElementById("info").innerHTML = `Question Count:<span>${questionCount}</span> Results:<span>${Result}</span>`;
+  document.getElementById("info").innerHTML = `Question Count:<span>${questionCount}<br></span> Results: <span> ${percentageCorrect}%</span>`;
 
 
 	//  let popupDiv = document.getElementById("popup");
@@ -691,9 +712,7 @@ async function removeChallenge(uID, challengeNumber) {
 
 // Function to accept a challenge
 function acceptChallenge(challengeNumber,quizCode, quizLink) {
-  // Accept the challenge
-	    console.log("challengeNumber;  ", challengeNumber);
-	    console.log("uID;  ", uID);
+
 
 const newURL = `/quiz/?userID=${uID}&challengeNumber=${challengeNumber}`;
 window.location.href = newURL;
@@ -714,45 +733,44 @@ async function seeChallengeResults(challengeNumber, quizCode, quizLink) {
 
   if (challengeSnapshot.exists) {
     const challengeData = challengeSnapshot.data();
-    let requesterID = challengeData.requesterID;
-    let challengerName = challengeData.challengerName;
-    let requesterName = challengeData.requesterUname;
-    let challengerID = challengeData.challengerID;
-    let questionCount = challengeData.questionCount;
-    let requestDate = challengeData.requestDate;
 
-    // Calculate percentage correct for both participants
-    const challengerPercentCorrect = (challengeData.challengerTotalCorrect / questionCount) * 100;
-    const requesterPercentCorrect = (challengeData.requesterTotalCorrect / questionCount) * 100;
+    const quizName = challengeData.quizName;
+    const requesterUname = challengeData.requesterUname;
+    const Result = challengeData.Result;
+    const challengerName = challengeData.challengerName;
+    const questionCount = challengeData.questionCount;
+    const requestDate = challengeData.requestDate; //.toDate().toLocaleString();
 
-    // Determine the winner based on percentage correct
+    const isRequester = challengeData.requesterID === uID;
+    const challengerTotalCorrect = challengeData.challengerTotalCorrect;
+    const requesterTotalCorrect = challengeData.requesterTotalCorrect;
+
+    const challengerPercentCorrect = (challengerTotalCorrect / questionCount) * 100;
+    const requesterPercentCorrect = (requesterTotalCorrect / questionCount) * 100;
+
     let winner = 'Tie';
     if (challengerPercentCorrect > requesterPercentCorrect) {
       winner = challengerName;
     } else if (requesterPercentCorrect > challengerPercentCorrect) {
-      winner = requesterName;
+      winner = requesterUname;
     }
 
-    // Populate the challenger result details
-    document.getElementById('challengerQuizName').textContent = challengeData.quizName;
+    document.getElementById('challengerQuizName').textContent = quizName;
     document.getElementById('challengerStartTime').textContent = new Date(challengeData.startTime).toLocaleString();
     document.getElementById('challengerEndTime').textContent = new Date(challengeData.endTime).toLocaleString();
-    document.getElementById('challengerTotalCorrect').textContent = challengeData.challengerTotalCorrect;
+    document.getElementById('challengerTotalCorrect').textContent = challengerTotalCorrect;
     document.getElementById('challengerPercentCorrect').textContent = challengerPercentCorrect.toFixed(2) + '%';
     document.getElementById('challengerName').textContent = challengerName;
 
-    // Populate the requester result details
-    document.getElementById('requesterQuizName').textContent = challengeData.quizName;
+    document.getElementById('requesterQuizName').textContent = quizName;
     document.getElementById('requesterStartTime').textContent = new Date(challengeData.startTime).toLocaleString();
     document.getElementById('requesterEndTime').textContent = new Date(challengeData.endTime).toLocaleString();
-    document.getElementById('requesterTotalCorrect').textContent = challengeData.requesterTotalCorrect;
+    document.getElementById('requesterTotalCorrect').textContent = requesterTotalCorrect;
     document.getElementById('requesterPercentCorrect').textContent = requesterPercentCorrect.toFixed(2) + '%';
-    document.getElementById('requesterName').textContent = requesterName;
+    document.getElementById('requesterName').textContent = requesterUname;
 
-    // Display the winner
     document.getElementById('winner').textContent = winner;
 
-    // Display the result area
     document.getElementById('resultArea').style.display = 'block';
   } else {
     console.log('Challenge not found.');
@@ -760,7 +778,6 @@ async function seeChallengeResults(challengeNumber, quizCode, quizLink) {
 
   openTab('challengeResults');
 }
-
 
 
 
