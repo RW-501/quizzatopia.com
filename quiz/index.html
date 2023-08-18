@@ -1721,10 +1721,12 @@ async function updateChallengeWithReview(uID, challengeNumber, startTime, docRef
                 updateData.challengerReview = docRef;
                 updateData.challengerCorrect = correct;
                 updateData.challengerDone = 'Done';
+                updateData.challengerEndTime = new Date();
             } else {
                 updateData.requesterReview = docRef;
                 updateData.requesterCorrect = correct;
                 updateData.requesterDone = 'Done';
+                updateData.requesterEndTime = new Date();
             }
 
             // Use set with merge: true to add fields if they don't exist
