@@ -5,16 +5,22 @@
   "quizCategory": "Personality",
   "numberOfQuestions": 10,
   "questions": [
-    {
-      "questionNumber": 1,
-      "question": "How would you describe your approach to challenges?",
-      "imageURL": "",
-      "questionType": "Multiple Choice",
-      "options": [],
-      "answer": "I embrace challenges and see them as opportunities for growth.",
-      "explanation": "Embracing challenges and seeing them as opportunities for growth shows a positive and resilient attitude towards overcoming obstacles.",
-      "difficulty": "Medium"
-    },
+{
+  "questionNumber": 1,
+  "question": "How would you describe your approach to challenges?",
+  "imageURL": "",
+  "questionType": "Multiple Choice",
+  "options": [
+    "I embrace challenges and see them as opportunities for growth.",
+    "I avoid challenges whenever possible.",
+    "Challenges frustrate me and hinder my progress.",
+    "I tackle challenges reluctantly but eventually overcome them."
+  ],
+  "answer": "I embrace challenges and see them as opportunities for growth.",
+  "explanation": "Embracing challenges and seeing them as opportunities for growth shows a positive and resilient attitude towards overcoming obstacles.",
+  "difficulty": "Medium"
+},
+
     {
       "questionNumber": 2,
       "question": "How do you typically handle conflicts or disagreements?",
