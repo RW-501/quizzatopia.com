@@ -615,6 +615,7 @@ ele.style.display = 'none';
   // Assuming you have a Firebase Firestore instance initialized
   const db = firebase.firestore();
   const quizReviewDataRef = db.collection('quizReviewData');
+      console.log('uID:', uID); // Log the retrieved quiz reviews
 
   quizReviewDataRef
     .where('userID', '==', uID)
