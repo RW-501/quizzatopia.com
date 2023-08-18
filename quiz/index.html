@@ -2220,32 +2220,37 @@ var urlParams = new URLSearchParams(window.location.search);
 
 	  
 
+
+// Example usage
 	  
 // Get the values of the "q" and "e" parameters
 var q = urlParams.get('q');
 var e = urlParams.get('e');
 	  
-//console.log("E urlParams     "+e); 
+
+function getRandomNumber() {
+    return Math.floor(Math.random() * 301); // Generates a number between 0 and 300 (inclusive)
+}
+
+
+	  function getRandomFile(files) {
+		  const randomNumber = getRandomNumber();
+
+    return   q = "q_"+randomNumber+_";
+
+  }
+
 
 
 if (q === null) {
-  const files = [
-    "q_101_",
-    "q_201_",
-    "q_301_",
-    "q_151_",
-    "q_251_",
-    "q_301_"
-  ];
-//console.log("1 random     "+q);
-	
-	  function getRandomFile(files) {
-    return files[Math.floor(Math.random() * files.length)];
-  }
 
-  q = getRandomFile(files);
+   q = getRandomFile(files);
 }
   
+	  
+	
+
+ 
 	  
 
 
