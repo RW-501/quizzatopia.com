@@ -143,7 +143,7 @@ const startButton = document.getElementById('startButton');
 const stopButton = document.getElementById('stopButton');
 let logHistory = "";
 let errorLogHistory = "";
-
+var stopBool = true;
 // Function to fetch JSON files and process data
 async function startFetching() {
   startButton.disabled = true;
@@ -152,10 +152,15 @@ async function startFetching() {
   errorLogTextarea.value = '';
   clearInterval(fetchInterval);
   fetchInterval = setInterval(fetchNextJSON, 1000);
+	stopBool = false;
 }
 
 // Fetch the next JSON file
 async function fetchNextJSON() {
+	if(stopBool === true){
+
+return;
+	}else{
   counterLabel.textContent = counter;
 
   const url = `https://www.quizzatopia.com/q/New/q_${counter}_.json`;
@@ -182,20 +187,21 @@ async function fetchNextJSON() {
       let missingTagsLogs = [];
       let stringValues = "";
       // Loop through each JSON file URL
+	   
       quizQuestions.forEach(question => {
-        const requiredTags = ['quizName', 'quizCode', 'quizDifficulty', 'quizCategory', 'quizDescription', 'quizTags', 'numberOfQuestions', 'questions'];
+      //  const requiredTags = ['quizName', 'quizCode', 'quizDifficulty', 'quizCategory', 'quizDescription', 'quizTags', 'numberOfQuestions', 'questions'];
+        const requiredTags = ['questionNumber', 'question', 'questionType', 'options', 'answer', 'explanation'];
         const missingTags = requiredTags.filter(tag => !(tag in question));
 
-        if (missingTags.length > 0) {
-          const questionNumber = question.questionNumber || 'N/A';
-          const missingTagsText = missingTags.join(', ');
-          const logText = `Missing tags (${quizCode} - ${quizName}, Question ${questionNumber}): ${missingTagsText}\n`;
+       
+  if (missingTags.length > 0) {
+    const questionNumber = question.questionNumber || 'N/A';
+    const missingTagsText = missingTags.join(', ');
+    const logText = `(${quizCode} Question ${questionNumber}: Missing tags: ${missingTagsText}\n`;
 
-          missingTagsLogs.push(logText);
-        }
-
-        stringValues = missingTagsLogs.join('');
-      });
+    missingTagsLogs.push(logText);
+  }
+});
 
       // Update logHistory with the new log at the top
       logHistory = `JSON ${counter}: ${stringValues}\n${logHistory}`;
@@ -265,6 +271,7 @@ async function fetchNextJSON() {
     stopFetching();
     counter++;
   }
+	}
 }
 
 // Stop fetching JSON files
@@ -275,6 +282,7 @@ function stopFetching() {
 
   logHistory = "Stopped \n " + logHistory;
   logTextarea.value = logHistory;
+	stopBool = true;
 }
 
 
