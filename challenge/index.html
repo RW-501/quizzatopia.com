@@ -763,8 +763,8 @@ if (!challengeQuerySnapshot.empty) {
     const requestDate = challengeData.requestDate; //.toDate().toLocaleString();
 
     const isRequester = challengeData.requesterID === uID;
-    const challengerTotalCorrect = challengeData.challengerTotalCorrect;
-    const requesterTotalCorrect = challengeData.requesterTotalCorrect;
+    const challengerTotalCorrect = challengeData.challengerCorrect;
+    const requesterTotalCorrect = challengeData.requesterCorrect;
 
     const challengerPercentCorrect = (challengerTotalCorrect / questionCount) * 100;
     const requesterPercentCorrect = (requesterTotalCorrect / questionCount) * 100;
@@ -775,19 +775,19 @@ if (!challengeQuerySnapshot.empty) {
     } else if (requesterPercentCorrect > challengerPercentCorrect) {
       winner = requesterUname;
     }
-
+	
     document.getElementById('challengerQuizName').textContent = quizName;
-    document.getElementById('challengerStartTime').textContent = new Date(challengeData.startTime).toLocaleString();
+    document.getElementById('challengerStartTime').textContent = new Date(challengeData.challengerEndTime).toLocaleString();
     document.getElementById('challengerEndTime').textContent = new Date(challengeData.endTime).toLocaleString();
     document.getElementById('challengerTotalCorrect').textContent = challengerTotalCorrect;
-    document.getElementById('challengerPercentCorrect').textContent = challengerPercentCorrect.toFixed(2) + '%';
+    document.getElementById('challengerPercentCorrect').textContent = isNaN(challengerPercentCorrect) ? "" : challengerPercentCorrect.toFixed(2) + '%';
     document.getElementById('challengerName').textContent = challengerName;
 
     document.getElementById('requesterQuizName').textContent = quizName;
     document.getElementById('requesterStartTime').textContent = new Date(challengeData.startTime).toLocaleString();
-    document.getElementById('requesterEndTime').textContent = new Date(challengeData.endTime).toLocaleString();
+    document.getElementById('requesterEndTime').textContent = new Date(challengeData.requesterEndTime).toLocaleString();
     document.getElementById('requesterTotalCorrect').textContent = requesterTotalCorrect;
-    document.getElementById('requesterPercentCorrect').textContent = requesterPercentCorrect.toFixed(2) + '%';
+    document.getElementById('requesterPercentCorrect').textContent = isNaN(requesterPercentCorrect) ? "" : requesterPercentCorrect.toFixed(2) + '%';
     document.getElementById('requesterName').textContent = requesterUname;
 
     document.getElementById('winner').textContent = winner;
