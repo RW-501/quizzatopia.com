@@ -608,7 +608,7 @@ ele.style.display = 'none';
 	  
 	  
     // Quiz information related functions
-    function getQuizInfo() {
+   function getQuizInfo() {
   const quizInfoContainer = document.getElementById('quizInfoContainer');
   quizInfoContainer.innerHTML = '';
 
@@ -629,6 +629,8 @@ ele.style.display = 'none';
         latestQuizReviews.push(reviewData);
       });
 
+      console.log('latestQuizReviews:', latestQuizReviews); // Log the retrieved quiz reviews
+
       // Reusing the statsButton element
       const statsButton = document.createElement('button');
       statsButton.innerText = 'Stats';
@@ -641,6 +643,8 @@ ele.style.display = 'none';
         const questionStatInfo = reviewData.questionStatInfo;
         const numberOfQuestions = questionStatInfo.length;
         const correctCount = questionStatInfo.filter(item => item.correctness === 'correct').length;
+
+        console.log('Review Data:', reviewData); // Log the details of each review data
 
         const quizInfoElement = document.createElement('div');
         quizInfoElement.classList.add('quiz-infop');
@@ -667,7 +671,6 @@ ele.style.display = 'none';
       console.error('Error retrieving latest quizzes:', error);
     });
 }
-
 
     // Local Storage usage related functions
     function formatBytes(bytes, decimals = 2) {
