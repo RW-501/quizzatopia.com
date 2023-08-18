@@ -622,7 +622,8 @@ for (let i = 0; i < localStorageArray.length; i++) {
   if (key.startsWith('quizInfo_')) {
     const quizInfo = JSON.parse(localStorage.getItem(key));
     quizInfoArray.push(quizInfo);
-
+  }
+}
 
 // Sort the quizInfoArray based on startTime in descending order
 quizInfoArray.sort((a, b) => b.startTime - a.startTime);
@@ -636,21 +637,48 @@ if (quizInfoArray.length > 5) {
   }
 }
 
+// Assuming you have a Firebase Firestore instance initialized
+const db = firebase.firestore();
+
+// Reference to the 'quizReviewData' collection
+const quizReviewDataRef = db.collection('quizReviewData');
+
+// Query to retrieve the latest 5 quiz review data records for the specified userID
+quizReviewDataRef
+  .where('userID', '==', uID)
+  .orderBy('timeStamp', 'desc')
+  .limit(5)
+  .get()
+  .then(querySnapshot => {
+    const latestQuizReviews = [];
+
+    querySnapshot.forEach(doc => {
+      const reviewData = doc.data();
+      latestQuizReviews.push(reviewData);
+    });
+
+    // Now you can use latestQuizReviews to display the latest 5 quiz review data records
+    for (const reviewData of latestQuizReviews) {
+      const quizName = reviewData.quizName;
+      const quizCode = reviewData.quizCode;
+      const quizTime = reviewData.timeStamp;
+      const questionStatInfo = reviewData.questionStatInfo;
+      const numberOfQuestions = reviewData.questionStatInfo.lenght;
+      const correctCount = questionStatInfo.filter(item => item.correctness === 'correct').length;
+
+ 
+
+
+
           const quizInfoElement = document.createElement('div');
           quizInfoElement.classList.add('quiz-infop');
           quizInfoElement.innerHTML = `
-            <a href="/quiz/?q=${quizLink}" class=""><h4>${quizName}</h4></a>
+            <a href="/quiz/stats/?q=${quizCode}" class=""><h4>${quizName}</h4></a>
             <p>Quiz Taken: ${quizTime}</p>
-            <p>Scored: ${questionCorrect}/${numberOfQuestions} Questions</p>
+            <p>Scored: ${correctCount}/${numberOfQuestions} Questions</p>
           `;
 
-          const removeButton = document.createElement('button');
-          removeButton.innerText = 'Remove';
-          removeButton.classList.add('remove-button');
-          removeButton.addEventListener('click', function () {
-            removeQuiz(key);
-          });
-
+   
        const statsButton = document.createElement('button');
           statsButton.innerText = 'Stats';
           statsButton.classList.add('stats-button');
@@ -663,15 +691,13 @@ if (quizInfoArray.length > 5) {
           quizInfoElement.appendChild(removeButton);
           quizInfoContainer.appendChild(quizInfoElement);
         
-      }
     }
+  })
+  .catch(error => {
+    console.error('Error retrieving latest quizzes:', error);
+  });
 
-    function removeQuiz(key) {
-      localStorage.removeItem(key);
-	getLocalStorageUsage();
-      getQuizInfo();
-	    
-    }
+
 
     // Local Storage usage related functions
     function formatBytes(bytes, decimals = 2) {
