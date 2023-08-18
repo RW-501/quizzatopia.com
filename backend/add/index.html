@@ -152,7 +152,10 @@ function addWordsToDistinctList(words) {
     if (!distinctWords.includes(word)) {
       distinctWords.push(word);
       console.log(`Added new word: ${word}`);
+
     }
+	  	          stopFetching();
+
   });
 
   localStorage.setItem('distinctWords', JSON.stringify(distinctWords));
@@ -171,7 +174,7 @@ function matchTagsWithDistinctList(quizTags) {
 
   return matchedWords;
 }
-
+var matchedWords = [];
 let counter = 0;
 let fetchInterval;
 const logTextarea = document.getElementById('log');
@@ -215,7 +218,17 @@ async function fetchNextJSON() {
       const quizDifficulty = quizInfo.quizDifficulty;
       const quizDescription = quizInfo.quizDescription;
       const quizTags = quizInfo.quizTags;
+      let TheQuestions = quizInfo.questions;
+	    
+          if (quizTags.length > 0) {
+addWordsToDistinctList(quizTags);
+}else{
+ matchedWords = matchTagsWithDistinctList(TheQuestions);
 
+}
+
+
+	    
       const quizQuestions = quizInfo.questions;
 
       const db = firebase.firestore();
@@ -254,7 +267,7 @@ async function fetchNextJSON() {
         stringValues = missingTagsLogs.join('');
 
         // Update logHistory with the new log at the top
-        logHistory = `JSON ${counter}: ${stringValues}\n${logHistory}`;
+        logHistory = `Page ${counter}: ${stringValues}\n${logHistory}`;
 
         // Update the textarea with the entire log history
         logTextarea.value = logHistory;
@@ -278,7 +291,7 @@ async function fetchNextJSON() {
           imageURLDB: "https://www.quizzatopia.com/images/sq/_.png",
           quizJsonDB: `/q/New/q_${counter}_.json`,
           numberOfQuestionsDB: numberOfQuestions,
-          quizTagsDB: quizTags || "",
+          quizTagsDB: quizTags || matchedWords,
           quizDescriptionDB: quizDescription || "",
           quizLinkDB: `/quiz/?e=New&q=q_${counter}_`,
           quizCategoryDB: quizCategory,
@@ -310,7 +323,7 @@ async function fetchNextJSON() {
       const stringValues = `JSON ${counter}: Fetch failed\n`;
 
       // Update errorLogHistory with the new log at the top
-      errorLogHistory = `JSON ${counter}: Adding: ${stringValues}\n${errorLogHistory}`;
+      errorLogHistory = `Page ${counter}: Adding: ${stringValues}\n${errorLogHistory}`;
 
       // Update the error log textarea with the entire log history
       errorLogTextarea.value = errorLogHistory;
