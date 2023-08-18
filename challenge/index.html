@@ -681,9 +681,10 @@ function closeChallengePopup() {
   console.log("closePopup");
 
   popup.style.display = "none";
-const actionBtn = document.getElementById('actionBtn');
 
-actionBtn.removeEventListener('click', handleActionClick);
+const originalElement = document.getElementById('actionBtn');
+const clonedElement = originalElement.cloneNode(true);
+originalElement.parentNode.replaceChild(clonedElement, originalElement);
 
 }
 
