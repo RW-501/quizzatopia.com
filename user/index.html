@@ -622,8 +622,7 @@ for (let i = 0; i < localStorageArray.length; i++) {
   if (key.startsWith('quizInfo_')) {
     const quizInfo = JSON.parse(localStorage.getItem(key));
     quizInfoArray.push(quizInfo);
-  }
-}
+
 
 // Sort the quizInfoArray based on startTime in descending order
 quizInfoArray.sort((a, b) => b.startTime - a.startTime);
@@ -634,7 +633,8 @@ if (quizInfoArray.length > 5) {
   for (const quizToRemove of quizzesToRemove) {
     const quizCode = quizToRemove.quizCode;
     localStorage.removeItem(`quizInfo_${quizCode}`);
-
+  }
+}
 
           const quizInfoElement = document.createElement('div');
           quizInfoElement.classList.add('quiz-infop');
