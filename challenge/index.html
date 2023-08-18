@@ -707,7 +707,7 @@ async function removeChallenge(uID, challengeNumber) {
                 await challengeDoc.ref.update({ challengerRemoved: true, requesterRemoved: true });
 
                 console.log(`Challenge ${challengeNumber} updated successfully.`);
-		    getRequestsList(userID);
+		    getRequestsList(uID);
             } catch (error) {
                 console.error('Error removing challenge:', error);
             }
