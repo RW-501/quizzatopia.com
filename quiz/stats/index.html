@@ -551,7 +551,7 @@ word-wrap: break-word;
     <div class="quiz-info">
     <div class="box">
       <h2>Quiz Information</h2>
-      <p><strong>Quiz Name:</strong> <span id="quizName"><div class="loading_Main ">Loading...</div></span></p>
+      <p><strong>Quiz Name:</strong> <span id="quizName"><div id="xx" class="loading_Main ">Loading...</div></span></p>
       <p><strong>Quiz Code:</strong> <span id="quizCode"></span></p>
       <p><strong>Number of Questions:</strong> <span id="numQuestions"></span></p>
       <p><strong>Total Attempts:</strong> <span id="totalAttempts"></span></p>
@@ -718,6 +718,7 @@ function getQuizReviewData(quizCode, userID) {
     function displayQuizStats(quizDoc, reviewDataDoc) {
       // Populate the quiz information in the page
       document.getElementById('quizName').innerHTML = quizDoc.quizNameDB;
+      document.getElementById('xx').innerHTML = "";
       document.getElementById('quizCode').textContent = quizDoc.quizCodeDB;
       document.getElementById('numQuestions').textContent = quizDoc.numberOfQuestionsDB;
       // Add other quiz information here
