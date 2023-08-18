@@ -198,10 +198,14 @@ let stringValues = "";
           const logText = `Missing tags (${quizCode} - ${quizName}, Question ${questionNumber}): ${missingTagsText}\n`;
 
           missingTagsLogs.push(logText);
-        })
+        }
 
 
   stringValues = missingTagsLogs.join('');
+  })
+
+
+	  
   }else{
 stringValues = `Quiz with code ${quizCode} already saved.\n`;
     }
