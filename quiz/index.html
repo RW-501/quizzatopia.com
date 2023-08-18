@@ -3131,9 +3131,8 @@ isAnimationEnabled = userInfo.animationEnabled;
 
 
 // Function to generate the share link with the challenge ID
-function setShareableLink(quizCode, challengeID) {
-  const userInfo = getUserInfo();
-let uID = userInfo.firebaseId;
+function setShareableLink(quizCode) {
+
 	  
   return `https://www.quizzatopia.com/challenge/?${quizCode}&${uID}`;
 }
@@ -3146,11 +3145,9 @@ function showSharePopover() {
 	// console.log("showSharePopover      "); 
 
 	  
- // Get the challenge ID (you may generate it based on your logic)
-  const challengeID = generateChallengeID();
   
   // Generate the share link with the challenge ID
-  const shareLink = setShareableLink(quizCode, challengeID);
+  const shareLink = setShareableLink(quizCode);
   
   // Populate the input field with the share link
   $("#shareLink").val(shareLink);
