@@ -569,12 +569,11 @@ word-wrap: break-word;
       <h2>Quiz Statistics</h2>
 
       <div class="row">
-<hr>
+
      <div class="quiz-summary">
 	     <div class="loading_Main ">Loading...</div>
   <!-- Quiz summary cards will be dynamically added here -->
 </div>
-
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -718,7 +717,7 @@ function getQuizReviewData(quizCode, userID) {
     // Function to display quiz information and statistics
     function displayQuizStats(quizDoc, reviewDataDoc) {
       // Populate the quiz information in the page
-      document.getElementById('quizName').textContent = quizDoc.quizNameDB;
+      document.getElementById('quizName').innerHTML = quizDoc.quizNameDB;
       document.getElementById('quizCode').textContent = quizDoc.quizCodeDB;
       document.getElementById('numQuestions').textContent = quizDoc.numberOfQuestionsDB;
       // Add other quiz information here
