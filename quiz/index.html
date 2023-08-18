@@ -1699,19 +1699,21 @@ async function updateChallengeWithReview(uID, challengeNumber, startTime, docRef
     try {
         const db = firebase.firestore();
 
-        const challengeRef = db.collection('challenges').doc(challengeNumber);
-        const challengeSnapshot = await challengeRef.get();
+        const challengeQuerySnapshot = await db.collection('challenges')
+            .where('challengeNumber', '==', challengeNumber)
+            .get();
 
-        if (!challengeSnapshot.exists) {
+        if (challengeQuerySnapshot.empty) {
             console.log('Challenge not found.');
             return;
         }
 
-        const challengeData = challengeSnapshot.data();
+        const challengeDoc = challengeQuerySnapshot.docs[0];
+        const challengeData = challengeDoc.data();
         const { challengerID, requesterID } = challengeData;
 
         if (uID === challengerID || uID === requesterID) {
-            await challengeRef.update({
+            await challengeDoc.ref.update({
                 startTime: startTime,
                 [uID === challengerID ? 'challengerReview' : 'requesterReview']: docRef.id,
                 [uID === challengerID ? 'challengerCorrect' : 'requesterCorrect']: correct,
