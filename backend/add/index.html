@@ -200,8 +200,14 @@ return;
     const logText = `(${quizCode} Question ${questionNumber}: Missing tags: ${missingTagsText}\n`;
 
     missingTagsLogs.push(logText);
+  }else{
+
+    const logText = `(${quizCode} QuizNName: ${quizName}\n`;
+
   }
 });
+	      stringValues = missingTagsLogs.join('');
+
 
       // Update logHistory with the new log at the top
       logHistory = `JSON ${counter}: ${stringValues}\n${logHistory}`;
