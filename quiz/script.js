@@ -1600,6 +1600,15 @@ window.addEventListener('beforeunload', function(event) {
 });
 var userExitNotificationBool = false;
 
+window.addEventListener('beforeunload', function (event) {
+  // Show exit notification or confirmation message here
+  if (quizStarted === true) {
+    event.returnValue = "Are you sure you want to leave? Your progress in the quiz will be lost.";
+  }
+});
+
+
+
 
 window.addEventListener('resize', function () {
   if (document.visibilityState === 'hidden' && window.innerWidth === 0 && window.innerHeight === 0) {
