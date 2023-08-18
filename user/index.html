@@ -641,7 +641,7 @@ ele.style.display = 'none';
       for (const reviewData of latestQuizReviews) {
         const quizName = reviewData.quizName;
         const quizCode = reviewData.quizCode;
-        const quizTime = reviewData.timeStamp;
+        const quizTime = new Date(reviewData.timeStamp.seconds * 1000); // Convert to Date object
         const questionStatInfo = reviewData.questionStatInfo;
         const numberOfQuestions = questionStatInfo.length;
         const correctCount = questionStatInfo.filter(item => item.correctness === 'correct').length;
