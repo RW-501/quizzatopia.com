@@ -1805,8 +1805,9 @@ const quizNameElement = document.getElementById('quizName');
 
 volumeSlider.addEventListener('input', updateVolume);
 
+		  if(voiceDropdown){
 voiceDropdown.addEventListener('change', updateVoice);
-
+		  }
 rateSlider.addEventListener('input', updateRate);
 
 animationCheckbox.addEventListener('change', toggleAnimation);
