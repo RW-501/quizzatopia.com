@@ -117,29 +117,37 @@
 </nav>
 
 	  
-  <div>
-    <label for="counterLabel">Counter:</label>
-    <span id="counterLabel">0</span>
-  </div>
+<div>
+  <label for="counterLabel">Counter:</label>
+  <span id="counterLabel">0</span>
+</div>
 
-  <button id="startButton" onclick="startFetching()">Start</button>
-  <button id="stopButton" onclick="stopFetching()" disabled>Stop</button>
-  <textarea id="log" rows="10" cols="50" readonly></textarea>
+<button id="startButton" onclick="startFetching()">Start</button>
+<button id="stopButton" onclick="stopFetching()" disabled>Stop</button>
 
-  <script>
+<!-- First textarea for regular logs -->
+<textarea id="log" rows="10" cols="50" readonly></textarea>
+
+<!-- Second textarea for error logs -->
+<textarea id="errorLog" rows="10" cols="50" readonly></textarea>
+
+<script>
 let counter = 0;
 let fetchInterval;
 const logTextarea = document.getElementById('log');
+const errorLogTextarea = document.getElementById('errorLog');
 const counterLabel = document.getElementById('counterLabel');
 const startButton = document.getElementById('startButton');
 const stopButton = document.getElementById('stopButton');
 let logHistory = "";
+let errorLogHistory = "";
 
 // Function to fetch JSON files and process data
 async function startFetching() {
   startButton.disabled = true;
   stopButton.disabled = false;
   logTextarea.value = '';
+  errorLogTextarea.value = '';
   clearInterval(fetchInterval);
   fetchInterval = setInterval(fetchNextJSON, 1000);
 }
@@ -195,17 +203,6 @@ let stringValues = "";
   }else{
 stringValues = `Quiz with code ${quizCode} already saved.\n`;
     }
-
-
-
-
-
-
-
-
-
-
-	    
 
 
 
@@ -265,26 +262,23 @@ stringValues = `Quiz with code ${quizCode} already saved.\n`;
       fetchInterval = setInterval(fetchNextJSON, 1000);
 
     }
-  } else {
+ } else {
+    const stringValues = `JSON ${counter}: Fetch failed\n`;
 
-      const stringValues = `JSON ${counter}: Fetch failed\n`;
+    // Update errorLogHistory with the new log at the top
+    errorLogHistory = `JSON ${counter}: Adding: ${stringValues}\n${errorLogHistory}`;
 
-  
-  // Update logHistory with the new log at the top
-  logHistory = `JSON ${counter}: Adding: ${stringValues}\n${logHistory}`;
+    // Update the error log textarea with the entire log history
+    errorLogTextarea.value = errorLogHistory;
 
-  // Update the textarea with the entire log history
-  logTextarea.value = logHistory;
+    // Scroll to the top of the error log textarea
+    errorLogTextarea.scrollTop = 0;
 
-  // Scroll to the top of the textarea
-  logTextarea.scrollTop = 0;
-
-	  
-	  
     stopFetching();
     counter++;
   }
 }
+
 
 // Stop fetching JSON files
 function stopFetching() {
@@ -292,10 +286,10 @@ function stopFetching() {
   startButton.disabled = false;
   stopButton.disabled = true;
 
-	logHistory = "Stopped \n " +logHistory;
-	  logTextarea.value = logHistory;
-
+  logHistory = "Stopped \n " + logHistory;
+  logTextarea.value = logHistory;
 }
+
 
   </script>
     
