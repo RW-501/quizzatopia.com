@@ -194,9 +194,9 @@ return;
   const missingTags = [];
 
 requiredTags.forEach(tag => {
-  if (!(tag in exampleQuestion) || (typeof exampleQuestion[tag] === 'string' && exampleQuestion[tag].trim() === '')) {
+  if (!(tag in question) || (typeof question[tag] === 'string' && question[tag].trim() === '')) {
     missingTagsLogs.push(tag);
-  } else if (tag === 'options' && Array.isArray(exampleQuestion[tag]) && exampleQuestion[tag].length === 0) {
+  } else if (tag === 'options' && Array.isArray(question[tag]) && question[tag].length === 0) {
     missingTagsLogs.push(tag);
   }
 });
