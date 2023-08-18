@@ -159,7 +159,9 @@ async function fetchNextJSON() {
     const quizCategory = quizInfo.quizCategory;
     const quizDifficulty = quizInfo.quizDifficulty;
     const quizDescription = quizInfo.quizDescription;
-    const quizTags = quizInfo.quizTags;
+const quizTags = quizInfo.quizTags;
+
+	  const quizQuestions = quizInfo.questions;
 
     const db = firebase.firestore();
 
@@ -168,12 +170,47 @@ async function fetchNextJSON() {
 
     if (!querySnapshot.empty) {
 
-	          const stringValues = `Quiz with code ${quizCode} already saved.\n`;
+let missingTagsLogs = [];
+let stringValues = "";
+  // Loop through each JSON file URL
+  quizQuestions.forEach(question => {
+ 
+        const requiredTags = ['quizName', 'quizCode', 'quizDifficulty', 'quizCategory', 'quizDescription', 'quizTags', 'numberOfQuestions', 'questions'];
+
+        const missingTags = requiredTags.filter(tag => !(tag in data));
+
+        if (missingTags.length > 0) {
+          const questionNumber = data.questions[0]?.questionNumber || 'N/A';
+          const quizCode = data.quizCode || 'N/A';
+          const quizName = data.quizName || 'N/A';
+
+          const missingTagsText = missingTags.join(', ');
+          const logText = `Missing tags (${quizCode} - ${quizName}, Question ${questionNumber}): ${missingTagsText}\n`;
+
+          missingTagsLogs.push(logText);
+        }
+
+
+  stringValues = missingTagsLogs.join('');
+  }else{
+stringValues = `Quiz with code ${quizCode} already saved.\n`;
+    }
+
+
+
+
+
+
+
+
+
+
+	    
 
 
 
   // Update logHistory with the new log at the top
-  logHistory = `JSON ${counter}: Adding: ${stringValues} ${logHistory}`;
+  logHistory = `JSON ${counter}:  ${stringValues} ${logHistory}`;
 
   // Update the textarea with the entire log history
   logTextarea.value = logHistory;
