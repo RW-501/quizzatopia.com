@@ -650,6 +650,8 @@ if (percentageCorrect > 70) {
   document.getElementById("actionBtn").textContent = "See Results";
 	 document.getElementById("actionBtn").addEventListener("click", function() {
   console.log(" see Challenge results");
+  console.log("quizCode  "quizCode);
+  console.log("challengeNumber  ",challengeNumber);
 	 
 seeChallengeResults(challengeNumber,quizCode, quizLink);
 	  closeChallengePopup();
@@ -738,8 +740,9 @@ async function seeChallengeResults(challengeNumber, quizCode, quizLink) {
   const db = firebase.firestore();
 
   // Fetch the challenge document using the challenge number
-  const challengeRef = db.collection('challenges').doc(challengeNumber);
-  const challengeSnapshot = await challengeRef.get();
+    const challengeQuerySnapshot = await db.collection('challenges')
+      .where('challengeNumber', '==', challengeNumber)
+      .get();
 
   if (challengeSnapshot.exists) {
     const challengeData = challengeSnapshot.data();
