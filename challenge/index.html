@@ -630,11 +630,19 @@ acceptChallenge(challengeNumber,quizCode, quizLink);
  
 	 });
 	}else{
+
+let message = "";
+if (percentageCorrect > 70) {
+  message = 'Congratulations! You performed excellently on the challenge.';
+} else {
+  message = 'Keep practicing to improve your performance.';
+}
+	  
   document.getElementById("challengeHeader").textContent = "Quiz Challenge Results";
   document.getElementById("challengeTitle").innerHTML = `<span><a href="${quizLink}">${quizName}</a></span>`;
   document.getElementById("challengerNameX").textContent = cellUserName;
 		
-  document.getElementById("info").innerHTML = `Question Count:<span>${questionCount}<br></span> Results: <span> ${percentageCorrect}%</span>`;
+  document.getElementById("info").innerHTML = `Question Count:${questionCount}<br><center>${message} </center><br> <center><span>Results: ${percentageCorrect}%</span></center>`;
 
 
 	//  let popupDiv = document.getElementById("popup");
