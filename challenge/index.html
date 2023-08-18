@@ -457,8 +457,8 @@ window.location.href = '/quizzes';
 }
 
 
-async function getRequestsList(userID) {
-    console.log("getRequestsList;", userID);
+async function getRequestsList(uID) {
+    console.log("getRequestsList;", uID);
 
     // Assuming you have a Firebase Firestore instance initialized
     const db = firebase.firestore();
@@ -468,11 +468,11 @@ async function getRequestsList(userID) {
     try {
         // Fetch challenge requests for the current user where they are either the challenger or the requester
         const challengesSnapshot = await db.collection('challenges')
-            .where("challengerID", "==", userID)
+            .where("challengerID", "==", uID)
             .get();
 
         const challengesSnapshot2 = await db.collection('challenges')
-            .where("requesterID", "==", userID)
+            .where("requesterID", "==", uID)
             .get();
 
         // Combine the two snapshots
@@ -516,8 +516,8 @@ const challengerRemoved = challengeData.challengerRemoved;
 const requesterRemoved = challengeData.requesterRemoved;
 		
     // Define styles based on requester or challenger
-    const cellStyle = challengeData.requesterID === userID ? "sent-cell" : "received-cell";
-    const choice = challengeData.requesterID === userID ? "Sent" : "Received";
+    const cellStyle = challengeData.requesterID === uID ? "sent-cell" : "received-cell";
+    const choice = challengeData.requesterID === uID ? "Sent" : "Received";
 
 		
 	if(isRequester){
