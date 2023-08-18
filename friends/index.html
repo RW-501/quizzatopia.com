@@ -298,7 +298,7 @@ let friendFirebaseId = input(friendFirebaseIdxx);
     if (friendFirebaseId === "") {
       // Friendship already exists, show an error message
       const messageDiv = document.getElementById("message");
-  messageDiv.innerHTML = `<div class='share' onclick="shareFriendCodeFunc('${friendFirebaseId}')"> Send Your Link to Your Friends</div>`;
+  messageDiv.innerHTML = `<div class='' onclick="shareFriendCodeFunc('${friendFirebaseId}')"> Send Your Link to Your Friends</div>`;
       return;
     }
 
@@ -339,7 +339,7 @@ const existingFriendship = await friendsCollectionRef
 if (!existingFriendship.empty) {
   // Friendship already exists, show an error message
   const messageDiv = document.getElementById("message");
-  messageDiv.innerHTML = `<div class='share' onclick="shareFriendCodeFunc('${uID}')">Friendship already exists. <br> Send Your Link to Your Friends</div>`;
+  messageDiv.innerHTML = `<div class='' onclick="shareFriendCodeFunc('${uID}')">Friendship already exists. <br> Send Your Link to Your Friends</div>`;
   return;
 }
 
