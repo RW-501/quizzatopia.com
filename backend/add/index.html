@@ -193,11 +193,14 @@ return;
         const requiredTags = ['questionNumber', 'question', 'questionType', 'options', 'answer', 'explanation'];
   const missingTags = [];
 
-  requiredTags.forEach(tag => {
-    if (!(tag in question) || (typeof question[tag] === 'string' && question[tag].trim() === '')) {
-      missingTags.push(tag);
-    }
-  });
+requiredTags.forEach(tag => {
+  if (!(tag in exampleQuestion) || (typeof exampleQuestion[tag] === 'string' && exampleQuestion[tag].trim() === '')) {
+    missingTagsLogs.push(tag);
+  } else if (tag === 'options' && Array.isArray(exampleQuestion[tag]) && exampleQuestion[tag].length === 0) {
+    missingTagsLogs.push(tag);
+  }
+});
+
 
 
   if (missingTags.length > 0) {
