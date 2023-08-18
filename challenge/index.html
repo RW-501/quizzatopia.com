@@ -682,6 +682,10 @@ function closeChallengePopup() {
   console.log("closePopup");
 
   popup.style.display = "none";
+const actionBtn = document.getElementById('actionBtn');
+
+actionBtn.removeEventListener('click', handleActionClick);
+
 }
 
 
