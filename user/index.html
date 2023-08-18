@@ -355,7 +355,7 @@ function openCreateQuizFunc() {
   const userInfo = getUserInfo();
   var userPoints = userInfo.userPoints;
 
-  if (userPoints > 100) {
+  if (userPoints > 200) {
     // Assuming you have initialized your Firebase app and authenticated the user.
     // Get a reference to the Firestore database
     if (loggedIn === false) {
@@ -396,7 +396,7 @@ function openCreateQuizFunc() {
         });
     }
   } else {
-    alert("User needs 100 Points first");
+    alert("User needs 200 Points first");
   }
 }
 
