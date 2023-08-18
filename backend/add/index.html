@@ -191,9 +191,15 @@ return;
       quizQuestions.forEach(question => {
       //  const requiredTags = ['quizName', 'quizCode', 'quizDifficulty', 'quizCategory', 'quizDescription', 'quizTags', 'numberOfQuestions', 'questions'];
         const requiredTags = ['questionNumber', 'question', 'questionType', 'options', 'answer', 'explanation'];
-        const missingTags = requiredTags.filter(tag => !(tag in question));
+  const missingTags = [];
 
-       
+  requiredTags.forEach(tag => {
+    if (!(tag in question) || (typeof question[tag] === 'string' && question[tag].trim() === '')) {
+      missingTags.push(tag);
+    }
+  });
+
+
   if (missingTags.length > 0) {
     const questionNumber = question.questionNumber || 'N/A';
     const missingTagsText = missingTags.join(', ');
@@ -202,7 +208,7 @@ return;
     missingTagsLogs.push(logText);
   }else{
 
-    const logText = `(${quizCode} QuizNName: ${quizName}\n`;
+    const logText = `${quizCode} QuizNName: ${quizName}\n`;
 
   }
 });
