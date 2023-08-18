@@ -209,7 +209,9 @@ justify-content: space-between;
 button:hover {
     background-color: #fd7e14;
 }
-	  
+	.input-wrapper h2{
+text-align: left;
+				 }
 
   </style>
 </head>
@@ -306,7 +308,7 @@ const existingUser = await firebase.firestore().collection("users")
 
 if (existingUser.empty === true) {
   const messageDiv = document.getElementById("message");
-  messageDiv.innerHTML = `<div class='share' onclick="shareFriendCodeFunc('${friendFirebaseId}')"> Send Your Link to Your Friends</div>`;
+  messageDiv.innerHTML = `<div class='' onclick="shareFriendCodeFunc('${friendFirebaseId}')"> Send Your Link to Your Friends</div>`;
   return;
 }
 
