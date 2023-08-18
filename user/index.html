@@ -616,9 +616,10 @@ ele.style.display = 'none';
   const db = firebase.firestore();
   const quizReviewDataRef = db.collection('quizReviewData');
       console.log('uID:', uID); // Log the retrieved quiz reviews
-
+    const userInfo = getUserInfo();
+    const userId = userInfo.firebaseId;
   quizReviewDataRef
-    .where('userID', '==', uID)
+    .where('userID', '==', uID || userId)
     .orderBy('timeStamp', 'desc')
     .limit(5)
     .get()
