@@ -223,8 +223,7 @@ h1 {
     margin-bottom: 15%;
     font-size: 1.5em;
     font-weight: 700;
-    padding: 3%;
-    color: white;
+    padding: 3% 6%;    color: white;
     text-align: center;
     border-radius: 1em;
     /* text-shadow: -4px 2px 0px #6b6a6a; */
@@ -252,8 +251,13 @@ footer {
   padding: 1rem;
 }
 
-/* Add any additional styling as needed */
-
+.box strong{
+}
+	.box span{
+font-weight: 800;
+    font-size: 1.5em;
+}
+		
 
 
 
@@ -547,7 +551,7 @@ word-wrap: break-word;
     <div class="quiz-info">
     <div class="box">
       <h2>Quiz Information</h2>
-      <p><strong>Quiz Name:</strong> <span id="quizName"></span></p>
+      <p><strong>Quiz Name:</strong> <span id="quizName"><div class="loading_Main ">Loading...</div></span></p>
       <p><strong>Quiz Code:</strong> <span id="quizCode"></span></p>
       <p><strong>Number of Questions:</strong> <span id="numQuestions"></span></p>
       <p><strong>Total Attempts:</strong> <span id="totalAttempts"></span></p>
@@ -567,6 +571,7 @@ word-wrap: break-word;
       <div class="row">
 
      <div class="quiz-summary">
+	     <div class="loading_Main ">Loading...</div>
   <!-- Quiz summary cards will be dynamically added here -->
 </div>
 
