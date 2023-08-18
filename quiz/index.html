@@ -1694,7 +1694,6 @@ function getArraySum(arr) {
   return sum;
 }
 
-
 async function updateChallengeWithReview(uID, challengeNumber, startTime, docRef, correct) {
     try {
         const db = firebase.firestore();
@@ -1713,12 +1712,15 @@ async function updateChallengeWithReview(uID, challengeNumber, startTime, docRef
         const { challengerID, requesterID } = challengeData;
 
         if (uID === challengerID || uID === requesterID) {
-            await challengeDoc.ref.update({
+            const updateData = {
                 startTime: startTime,
                 [uID === challengerID ? 'challengerReview' : 'requesterReview']: docRef.id,
                 [uID === challengerID ? 'challengerCorrect' : 'requesterCorrect']: correct,
                 [uID === challengerID ? 'challengerDone' : 'requesterDone']: 'Done'
-            });
+            };
+
+            // Use set with merge: true to add fields if they don't exist
+            await challengeDoc.ref.set(updateData, { merge: true });
 
             localStorage.removeItem('challengeNumber');
             localStorage.removeItem('startTime');
@@ -1731,8 +1733,6 @@ async function updateChallengeWithReview(uID, challengeNumber, startTime, docRef
         console.error('Error updating challenge:', error);
     }
 }
-
-
 
 
 
