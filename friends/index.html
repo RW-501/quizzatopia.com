@@ -86,6 +86,7 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+	        font-weight: 700;
     }
 
     #message {
@@ -206,7 +207,7 @@ justify-content: space-between;
     padding: 2% 4%;
 }
 button:hover {
-    background-color: #f25900;
+    background-color: ##fd7e14;
 }
 	  
 
@@ -219,10 +220,13 @@ button:hover {
 
 	
 	    <div class="input-wrapper">
-    <div id="message"></div>
+		    	        <h2>Add a friend</h2>
+	  <hr>
+    <div class='share2' id="message"></div>
  </div>
 	
     <div class="input-wrapper">
+
       <input type="text" id="friendIdInput" placeholder="Enter friend's ID" />
  
     <button onclick="addFriendFromInput()">Add Friend</button>
