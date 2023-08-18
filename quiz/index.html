@@ -1810,10 +1810,12 @@ volumeSlider.addEventListener('input', updateVolume);
 		  if(voiceDropdown){
 voiceDropdown.addEventListener('change', updateVoice);
 		  }
+if(rateSlider){		  
 rateSlider.addEventListener('input', updateRate);
-
+}
+if(animationCheckbox){		  
 animationCheckbox.addEventListener('change', toggleAnimation);
-
+}
 	  });
 
 // Function to update the volume
