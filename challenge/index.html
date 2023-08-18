@@ -747,6 +747,7 @@ async function seeChallengeResults(challengeNumber, quizCode, quizLink) {
     const challengeSnapshot = await db.collection('challenges')
       .where('challengeNumber', '==', challengeNumber)
       .get();
+  console.log("seeChallengeResults challengeNumber  ",challengeNumber);
 
   if (challengeSnapshot.exists) {
     const challengeData = challengeSnapshot.data();
