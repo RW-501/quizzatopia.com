@@ -2230,13 +2230,11 @@ var q = urlParams.get('q');
 var e = urlParams.get('e');
 	  
 
-function getRandomNumber() {
-    return Math.floor(Math.random() * 301); // Generates a number between 0 and 300 (inclusive)
-}
 
 
-	  function getRandomFile(files) {
-		  const randomNumber = getRandomNumber();
+
+	  function getRandomFile() {
+		  const randomNumber = Math.floor(Math.random() * 301); 
 
     return   q = "q_"+randomNumber+"_";
 
@@ -2246,7 +2244,7 @@ function getRandomNumber() {
 
 if (q === null) {
 
-   q = getRandomFile(files);
+   q = getRandomFile();
 }
   
 	  
