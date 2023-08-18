@@ -520,7 +520,7 @@ const requesterRemoved = challengeData.requesterRemoved;
     const choice = challengeData.requesterID === userID ? "Sent" : "Received";
 
 		
-	if(!isRequester){
+	if(isRequester){
   cellUserName = challengerName;
 	}else{
   cellUserName = requesterUname;
@@ -602,7 +602,7 @@ const challengerRemoved = challengeData.challengerRemoved;
 const requesterRemoved = challengeData.requesterRemoved;
 
 	
-	if(!isRequester){
+	if(isRequester){
   cellUserName = challengerName;
 	}else{
   cellUserName = requesterUname;
@@ -620,7 +620,7 @@ const requesterRemoved = challengeData.requesterRemoved;
   document.getElementById("info").innerHTML = `Question Count:<span>${questionCount}</span>`;
 		
 
-	  document.getElementById("actionBtn").textContent = "Accept Challenge";
+	  document.getElementById("actionBtn").textContent = "Start Challenge";
 	 document.getElementById("actionBtn").addEventListener("click", function() {
   // Handle remove challenge action
   console.log(" Challenge clicked");
