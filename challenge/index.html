@@ -743,9 +743,8 @@ async function seeChallengeResults(challengeNumber, quizCode, quizLink) {
   // Assuming you have a Firebase Firestore instance initialized
   const db = firebase.firestore();
 
-  // Fetch the challenge document using the challenge number
     const challengeSnapshot = await db.collection('challenges')
-      .where('challengeNumber', '==', challengeNumber)
+      .where('challengeNumber', '==', "challenge_1692306071195_210")
       .get();
   console.log("seeChallengeResults challengeNumber  ",challengeNumber);
 
