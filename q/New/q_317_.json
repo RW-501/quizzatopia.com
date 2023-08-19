@@ -1,0 +1,141 @@
+{
+  "quizName": "Self-Help Quiz - Part 3",
+  "quizCode": "SHQ003",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Self-Help",
+  "quizDescription": "Test your knowledge of self-help concepts and practices with this quiz.",
+  "quizTags": ["Self-Help", "Personal Development", "Wellness"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does 'Resilience' refer to?",
+      "options": [
+        "The ability to bend without breaking",
+        "The ability to avoid challenges",
+        "The ability to be inflexible",
+        "The ability to be completely stress-free"
+      ],
+      "answer": "The ability to bend without breaking",
+      "explanation": "'Resilience' refers to the ability to adapt and bounce back in the face of adversity, like a flexible tree that can bend without breaking in strong winds.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is 'Positive Affirmation'?",
+      "options": [
+        "Repeating negative thoughts",
+        "Repeating neutral statements",
+        "Repeating positive statements to boost self-esteem and confidence",
+        "Ignoring self-talk"
+      ],
+      "answer": "Repeating positive statements to boost self-esteem and confidence",
+      "explanation": "'Positive Affirmation' involves repeating positive statements to oneself, which can help boost self-esteem, confidence, and a positive mindset.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is 'Mindfulness'?",
+      "options": [
+        "Being mindless and unaware",
+        "A state of deep sleep",
+        "The practice of being fully present and aware in the moment without judgment",
+        "Constantly thinking about the past"
+      ],
+      "answer": "The practice of being fully present and aware in the moment without judgment",
+      "explanation": "'Mindfulness' is the practice of being fully present and aware in the moment, without judgment or distraction, which can reduce stress and enhance well-being.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is 'Gratitude'?",
+      "options": [
+        "A form of complaining",
+        "A feeling of dissatisfaction",
+        "A sense of entitlement",
+        "A state of being thankful and appreciative"
+      ],
+      "answer": "A state of being thankful and appreciative",
+      "explanation": "'Gratitude' is a state of being thankful and appreciative for the positive aspects of life, which can promote happiness and well-being.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is 'Empowerment'?",
+      "options": [
+        "Making others feel powerless",
+        "Taking control and responsibility for one's own life and decisions",
+        "Controlling others",
+        "Ignoring personal growth"
+      ],
+      "answer": "Taking control and responsibility for one's own life and decisions",
+      "explanation": "'Empowerment' is the process of taking control and responsibility for one's own life, choices, and actions, leading to personal growth and self-efficacy.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is 'Visualization'?",
+      "options": [
+        "Blindness",
+        "A mental practice of imagining specific goals or outcomes",
+        "A type of meditation",
+        "A form of self-deception"
+      ],
+      "answer": "A mental practice of imagining specific goals or outcomes",
+      "explanation": "'Visualization' is a mental practice of imagining specific goals or outcomes in detail, which can enhance motivation and goal achievement.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What does 'Hydration' involve?",
+      "options": [
+        "Avoiding all fluids",
+        "Drinking plenty of water to maintain proper bodily functions",
+        "Drinking only carbonated beverages",
+        "Drinking coffee excessively"
+      ],
+      "answer": "Drinking plenty of water to maintain proper bodily functions",
+      "explanation": "'Hydration' involves drinking plenty of water to maintain proper bodily functions, which is essential for overall health and well-being.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is 'Self-Care'?",
+      "options": [
+        "Ignoring one's own needs",
+        "Taking deliberate actions to preserve or improve one's own health and well-being",
+        "Being self-centered",
+        "Never taking a break"
+      ],
+      "answer": "Taking deliberate actions to preserve or improve one's own health and well-being",
+      "explanation": "'Self-Care' involves taking deliberate actions to preserve or improve one's own health and well-being, both physically and mentally.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What does 'Balance' refer to in self-help and well-being?",
+      "options": [
+        "Having no stability or equilibrium",
+        "Having extreme habits",
+        "Finding harmony and moderation in various aspects of life",
+        "Being overly rigid and inflexible"
+      ],
+      "answer": "Finding harmony and moderation in various aspects of life",
+      "explanation": "'Balance' in self-help and well-being refers to finding harmony and moderation in various aspects of life, avoiding extremes, and promoting overall health and happiness.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is 'Self-Compassion'?",
+      "options": [
+        "Being overly critical of oneself",
+        "Showing compassion and kindness to oneself in times of suffering or failure",
+        "Ignoring one's own suffering",
+        "Avoiding all self-reflection"
+      ],
+      "answer": "Showing compassion and kindness to oneself in times of suffering or failure",
+      "explanation": "'Self-Compassion' involves showing compassion and kindness to oneself, especially in times of suffering or failure, and treating oneself with the same care and understanding as one would offer to others.",
+      "difficulty": "Medium"
+    }
+  ]
+}
