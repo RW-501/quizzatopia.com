@@ -1,0 +1,141 @@
+{
+  "quizName": "Animal Trivia Challenge",
+  "quizCode": "ATC004",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Fun",
+  "quizDescription": "Put your knowledge of the animal kingdom to the test with this challenging animal trivia quiz.",
+  "quizTags": ["Animals", "Trivia", "Fun"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the largest species of shark?",
+      "options": [
+        "Great White Shark",
+        "Hammerhead Shark",
+        "Whale Shark",
+        "Tiger Shark"
+      ],
+      "answer": "Whale Shark",
+      "explanation": "The largest species of shark is the Whale Shark, which can grow to be the largest of all fish species.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which animal is known as the 'king of the jungle'?",
+      "options": [
+        "Tiger",
+        "Lion",
+        "Leopard",
+        "Cheetah"
+      ],
+      "answer": "Lion",
+      "explanation": "The Lion is often referred to as the 'king of the jungle' due to its position as a top predator in its habitat.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the national bird of the United States?",
+      "options": [
+        "Eagle",
+        "Hawk",
+        "Falcon",
+        "Osprey"
+      ],
+      "answer": "Eagle",
+      "explanation": "The national bird of the United States is the Bald Eagle, a symbol of freedom and strength.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which mammal is capable of true flight?",
+      "options": [
+        "Bat",
+        "Flying Squirrel",
+        "Flying Lemur",
+        "Flying Fox"
+      ],
+      "answer": "Bat",
+      "explanation": "Bats are the only mammals capable of sustained and true flight, thanks to their flexible wings.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the largest species of penguin?",
+      "options": [
+        "Emperor Penguin",
+        "King Penguin",
+        "Adélie Penguin",
+        "Galápagos Penguin"
+      ],
+      "answer": "Emperor Penguin",
+      "explanation": "The Emperor Penguin is the largest species of penguin and can be found in Antarctica.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "How many legs does a spider typically have?",
+      "options": [
+        "6",
+        "8",
+        "10",
+        "12"
+      ],
+      "answer": "8",
+      "explanation": "Spiders typically have 8 legs, which distinguishes them from insects that have 6 legs.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which animal is known as the 'ship of the desert'?",
+      "options": [
+        "Camel",
+        "Horse",
+        "Donkey",
+        "Elephant"
+      ],
+      "answer": "Camel",
+      "explanation": "The Camel is often called the 'ship of the desert' because of its ability to travel long distances in arid regions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the world's smallest mammal?",
+      "options": [
+        "Mouse",
+        "Squirrel",
+        "Bumblebee Bat",
+        "Shrew"
+      ],
+      "answer": "Bumblebee Bat",
+      "explanation": "The Bumblebee Bat holds the title of the world's smallest mammal, with a wingspan of just a few inches.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which bird is known for its beautiful, iridescent plumage and is often associated with tropical rainforests?",
+      "options": [
+        "Penguin",
+        "Crow",
+        "Peacock",
+        "Pigeon"
+      ],
+      "answer": "Peacock",
+      "explanation": "The Peacock is known for its stunning iridescent plumage and is often associated with tropical rainforests.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the world's largest land mammal?",
+      "options": [
+        "African Elephant",
+        "Rhinoceros",
+        "Hippopotamus",
+        "Giraffe"
+      ],
+      "answer": "African Elephant",
+      "explanation": "The African Elephant holds the title of the world's largest land mammal, known for its immense size and strength.",
+      "difficulty": "Medium"
+    }
+  ]
+}
