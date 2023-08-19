@@ -355,8 +355,8 @@ display: block;
 
 
 const urlParams = new URLSearchParams(window.location.search);
-const categoryName = urlParams.get('category');
 
+const categoryName = decodeURIComponent(urlParams.split('?')[1]);
 
 	  
 //const categoryName = decodeURIComponent(urlParams.toString().split('?')[1]);
