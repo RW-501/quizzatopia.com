@@ -6,163 +6,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Control Panel</title>
   <!-- Include CSS and JavaScript dependencies -->
-
-	
   <!-- Chart.js library -->
-  <script  src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
-
   <!-- Custom CSS -->
- <!--  <link rel="stylesheet" href="/style.css">-->
-
+  <link rel="stylesheet" href="style.css">
   <!-- Import navbar and footer components -->
   <link rel="import" href="/elements/navbar.html">
   <link rel="import" href="/elements/footer.html">
-
-  <div id="navbar"></div>
-  <!-- Rest of the page content -->
-  <div id="signupLoginArea"><div>
-
-  <!-- JavaScript dependencies async -->
-
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  crossorigin="anonymous">
-
-
-  <script  defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
-
-  <script  defer src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
-
-	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
-	  <script  defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
-
-  <!-- Firebase SDK -->
-  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-
-  <!-- Custom scripts -->
-  <script  src="/main.js" defer></script> 
-  <link rel="stylesheet" href="style.css">
 </head>
+
 <style>
-/* Style for the user table */
-.table-container {
-  width: 100%;
-  overflow-x: auto;
-  margin-top: 20px;
-}
+  /* Style for the user table */
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+  }
 
-#userTable {
-  width: 100%;
-  border-collapse: collapse;
-  border: 1px solid #ddd;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
+  #userTable {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
 
-#userTable th,
-#userTable td {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
+  #userTable th,
+  #userTable td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
 
-#userTable th {
-  background-color: #f0f0f0;
-  font-weight: bold;
-  text-align: left;
-}
+  #userTable th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    text-align: left;
+  }
 
-#userTable td {
-  text-align: left;
-}
+  #userTable td {
+    text-align: left;
+  }
 
-#userTable button {
-  padding: 5px 10px;
-  background-color: #d9534f;
-  border: none;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+  #userTable button {
+    padding: 5px 10px;
+    background-color: #d9534f;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
 
-#userTable button:hover {
-  background-color: #c9302c;
-}
+  #userTable button:hover {
+    background-color: #c9302c;
+  }
 
-/* Style for the sorting buttons */
-.sort-buttons {
-  margin-bottom: 20px;
-}
+  /* Style for the sorting buttons */
+  .sort-buttons {
+    margin-bottom: 20px;
+  }
 
-.sort-buttons button {
-  margin-right: 10px;
-  padding: 5px 10px;
-  background-color: #007bff;
-  border: none;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+  .sort-buttons button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
 
-.sort-buttons button:hover {
-  background-color: #0056b3;
-}
+  .sort-buttons button:hover {
+    background-color: #0056b3;
+  }
 
-/* Style for the user row actions */
-.actions-cell button {
-  margin-right: 5px;
-}
+  /* Style for the user row actions */
+  .actions-cell button {
+    margin-right: 5px;
+  }
 
-/* Optional: Style for the header and main content area */
-header {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
+  /* Optional: Style for the header and main content area */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
 
-main {
-  padding: 20px;
-}
+  main {
+    padding: 20px;
+  }
 
-h2 {
-  color: #333;
-}
+  h2 {
+    color: #333;
+  }
 
-/* Add more custom styles as needed */
-
-/* Add more custom styles as needed */
-
-	
+  /* Add more custom styles as needed */
 </style>
+
 <body>
   <header>
     <!-- Header content -->
   </header>
 
- <!-- ... -->
-<nav class="navbar">
-  <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link" href="index.html">Dashboard</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="users.html">Users</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="quizzes.html">Quizzes</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="../backend/guest">Guest Log</a>
-    </li>
-	  <!-- Add more navigation items -->
-  </ul>
-</nav>
+  <!-- ... -->
+  <nav class="navbar">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="users.html">Users</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="quizzes.html">Quizzes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../backend/guest">Guest Log</a>
+      </li>
+      <!-- Add more navigation items -->
+    </ul>
+  </nav>
 
- <main class="container">
+  <main class="container">
     <div class="row">
       <div class="col-md-12">
         <!-- Main content area -->
@@ -199,8 +166,15 @@ h2 {
   </main>
 
   <!-- Include JavaScript dependencies -->
-
-  <script src="users.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="/main.js" defer></script>
 </body>
 
 </html>
