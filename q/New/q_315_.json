@@ -1,0 +1,141 @@
+{
+  "quizName": "Self-Help Quiz - Part 1",
+  "quizCode": "SHQ001",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Self-Help",
+  "quizDescription": "Test your knowledge of self-help concepts and practices.",
+  "quizTags": ["Self-Help", "Personal Development", "Wellness"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is 'Mindfulness'?",
+      "options": [
+        "A type of meditation",
+        "A mental state of focused awareness on the present moment",
+        "A self-help book",
+        "A form of exercise"
+      ],
+      "answer": "A mental state of focused awareness on the present moment",
+      "explanation": "'Mindfulness' is a mental state of focused awareness on the present moment, often achieved through meditation practices.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is 'Positive Affirmation'?",
+      "options": [
+        "A type of criticism",
+        "A form of complaining",
+        "A statement of encouragement and self-belief",
+        "A type of meditation"
+      ],
+      "answer": "A statement of encouragement and self-belief",
+      "explanation": "'Positive Affirmation' is a statement of encouragement and self-belief, often used to boost confidence and motivation.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What does 'Visualization' involve in self-help?",
+      "options": [
+        "Seeing a therapist",
+        "Creating mental images of desired outcomes",
+        "Reading self-help books",
+        "Attending self-help seminars"
+      ],
+      "answer": "Creating mental images of desired outcomes",
+      "explanation": "'Visualization' in self-help involves creating mental images of desired outcomes to enhance motivation and goal achievement.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the 'Law of Attraction'?",
+      "options": [
+        "A legal principle",
+        "A social etiquette",
+        "The belief that positive or negative thoughts bring positive or negative experiences into a person's life",
+        "A religious doctrine"
+      ],
+      "answer": "The belief that positive or negative thoughts bring positive or negative experiences into a person's life",
+      "explanation": "The 'Law of Attraction' is the belief that positive or negative thoughts and feelings bring positive or negative experiences into a person's life.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is 'Self-Care'?",
+      "options": [
+        "Taking care of others",
+        "Ignoring one's own needs",
+        "Engaging in activities that promote physical and mental well-being",
+        "Being self-centered"
+      ],
+      "answer": "Engaging in activities that promote physical and mental well-being",
+      "explanation": "'Self-Care' involves engaging in activities that promote physical and mental well-being, reducing stress and improving overall health.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What does 'Journaling' typically involve in self-help practices?",
+      "options": [
+        "Writing a diary of daily events",
+        "Taking notes during meetings",
+        "Creating to-do lists",
+        "Reading magazines"
+      ],
+      "answer": "Writing a diary of daily events",
+      "explanation": "'Journaling' in self-help typically involves writing a diary or journal of daily events, thoughts, and feelings to gain insight and self-awareness.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is 'Resilience' in the context of personal development?",
+      "options": [
+        "The ability to withstand extreme physical pain",
+        "The ability to bounce back from adversity and maintain well-being",
+        "The ability to build strong muscles",
+        "The ability to perform under pressure"
+      ],
+      "answer": "The ability to bounce back from adversity and maintain well-being",
+      "explanation": "'Resilience' in personal development refers to the ability to bounce back from adversity, maintain well-being, and adapt positively to challenges.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is 'Self-Compassion'?",
+      "options": [
+        "Being overly critical of oneself",
+        "Showing compassion to others",
+        "Being indifferent to one's own feelings",
+        "Showing kindness and understanding to oneself"
+      ],
+      "answer": "Showing kindness and understanding to oneself",
+      "explanation": "'Self-Compassion' is the practice of showing kindness and understanding to oneself, especially during times of difficulty or failure.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What does 'Empowerment' mean in the context of self-help?",
+      "options": [
+        "Feeling disempowered and helpless",
+        "The process of gaining control and confidence to make choices and take action",
+        "The act of disempowering others",
+        "A form of therapy"
+      ],
+      "answer": "The process of gaining control and confidence to make choices and take action",
+      "explanation": "'Empowerment' in self-help refers to the process of gaining control and confidence to make choices and take action in one's life.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is 'Gratitude' in self-help practices?",
+      "options": [
+        "A form of complaining",
+        "A feeling of discontent",
+        "A practice of acknowledging and appreciating the good things in one's life",
+        "A type of meditation"
+      ],
+      "answer": "A practice of acknowledging and appreciating the good things in one's life",
+      "explanation": "'Gratitude' in self-help practices involves acknowledging and appreciating the good things in one's life, which can enhance well-being and happiness.",
+      "difficulty": "Medium"
+    }
+  ]
+}
