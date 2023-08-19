@@ -529,108 +529,13 @@ cards.forEach(card => {
 	    
 	    
 	      <div class="row justify-content-center mb-4 catList">
-    <div class="col-md-4">
-      <div class="list-group">
-  <a href="#healthcare" class="list-group-item list-group-item-action btn-primary">Healthcare</a>
-    <a href="#gaming" class="list-group-item list-group-item-action btn-primary">Gaming</a>
-    <a href="#business" class="list-group-item list-group-item-action btn-primary">Business</a>
-    <a href="#driving" class="list-group-item list-group-item-action btn-primary">Driving</a>
-    <a href="#tv" class="list-group-item list-group-item-action btn-primary">TV</a>
-    <a href="#architecture" class="list-group-item list-group-item-action btn-primary">Architecture</a>
-    <a href="#technology" class="list-group-item list-group-item-action btn-primary">Technology</a>
-    
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="list-group">
-  <a href="#music" class="list-group-item list-group-item-action btn-primary">Music</a>
-    <a href="#entertainment" class="list-group-item list-group-item-action btn-primary">Entertainment</a>
-    <a href="#marketing" class="list-group-item list-group-item-action btn-primary">Marketing</a>
-    <a href="#geography" class="list-group-item list-group-item-action btn-primary">Geography</a>
-    <a href="#e-commerce" class="list-group-item list-group-item-action btn-primary">E-Commerce</a>
-    <a href="#science" class="list-group-item list-group-item-action btn-primary">Science</a>
-    <a href="#personality" class="list-group-item list-group-item-action btn-primary">Personality</a>
-    <a href="#real-estate" class="list-group-item list-group-item-action btn-primary">Real Estate</a>
 
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="list-group">
-  <a href="#professional-certification" class="list-group-item list-group-item-action btn-primary">Professional Certification</a>
-    <a href="#finance" class="list-group-item list-group-item-action btn-primary">Finance</a>
-    <a href="#history" class="list-group-item list-group-item-action btn-primary">History</a>
-    <a href="#language" class="list-group-item list-group-item-action btn-primary">Language</a>
-    <a href="#self-help" class="list-group-item list-group-item-action btn-primary">Self-Help</a>
-    <a href="#job-interview" class="list-group-item list-group-item-action btn-primary">Job Interview</a>
-    <a href="#sports" class="list-group-item list-group-item-action btn-primary">Sports</a>
-    
-      </div>
-    </div>
-  </div>
 </div>
-
-
-<style>
-.category-buttons-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.category-button {
-  background-color: #f2f2f2;
-  border: none;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.category-button img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-.category-button h3 {
-  margin: 0;
-}
-
-.category-button p {
-  font-size: 14px;
-  text-align: center;
-}
-
-.category-button:hover {
-  background-color: #d9d9d9;
-}
-
-
-	</style>
-
-
-	
-<section>
-
-
-
-<div id="categoryButtonsContainer" class="category-buttons-container"></div>
-
-
-	
-</section>
-
-
 
 
 
 <script>
-const categories = [
+	const categories = [
   {
     name: 'Healthcare',
     imageUrl: '/images/sq/19.png',
@@ -753,51 +658,84 @@ const categories = [
   },
 ];
 
+	// Assuming you have a container element to append the buttons to
+const categoryContainer = document.querySelector('.catList');
 
-const categoryButtonsContainer = document.getElementById('categoryButtonsContainer');
-
+// Iterate over the categories array and create buttons
 categories.forEach(category => {
-  const categoryButton = document.createElement('button');
-  categoryButton.classList.add('category-button');
-  categoryButton.innerHTML = `
-    <img src="${category.imageUrl}" alt="${category.name} Category">
-    <h3>${category.name}</h3>
-    <p>${category.description}</p>
-  `;
-  
-  categoryButton.addEventListener('click', () => {
-    // Redirect to the category page with the selected category name
-    window.location.href = `/category/?${category.name}`;
-  });
+  const button = document.createElement('a');
+  button.href = `#${category.name}`;
+  button.classList.add('list-group-item', 'list-group-item-action', 'btn-primary');
+  button.textContent = category.name;
 
-  categoryButtonsContainer.appendChild(categoryButton);
+  // Append the button to the container
+  categoryContainer.appendChild(button);
 });
-
-
 
 </script>
 
 
 
 
+	
+
+<style>
+.category-buttons-container {
+  display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.category-button {
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.category-button img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.category-button h3 {
+  margin: 0;
+}
+
+.category-button p {
+  font-size: 14px;
+  text-align: center;
+}
+
+.category-button:hover {
+  background-color: #d9d9d9;
+}
+section {
+    padding: 5%;
+}
+
+	</style>
+
+
+	
+<section>
 
 
 
+<div id="categoryButtonsContainer" class="category-buttons-container"></div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
+</section>
 
 
 
@@ -896,54 +834,51 @@ function openCreateQuizFunc() {
 	
 </script>
 
-	<!----
-<style>
-  .list-unstyled li a {
-    text-decoration: none;
-    color: #000;
-	      margin: 5%;
-    display: block;
-  }
-</style>
-<div id="TF_area" class="container w-100">
-  <div class="col-md-4" style="
-    display: flex;
-    margin: auto;
-    width: 100%;
-    text-align: center;
-    font-weight: 500;
-  ">
-    <div class="row w-50">
-      <div class="col-md-4 w-100">
-        <ul class="list-unstyled">
-          <li><a href="/quiz/?q=TF_traffic_safety_quiz">Traffic Safety Quiz</a></li>
-          <li><a href="/quiz/?q=TF_general_knowledge">General Knowledge</a></li>
-          <li><a href="/quiz/?q=TF_job_interviews">Job Interviews</a></li>
-          <li><a href="/quiz/?q=TF_self_health_quiz">Self Health Quiz</a></li>
-          <li><a href="/quiz/?q=TF_toxicity_scale_quiz">Toxic Individuals Quiz</a></li>
-          <li><a href="/quiz/?q=TF_buying_a_house_quiz">Buying A House Quiz</a></li>
-          <li><a href="/quiz/?q=TF_marvel_cinematic_universe">Marvel Cinematic Universe</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="row w-50">
-      <div class="col-md-4 w-100">
-        <ul class="list-unstyled">
-          <li><a href="/quiz/?q=TF_nclex_exam">NCLEX Exam</a></li>
-          <li><a href="/quiz/?q=TF_architect_registration_examination">Architect Registration Examination</a></li>
-          <li><a href="/quiz/?q=TF_movies">Movies</a></li>
-          <li><a href="/quiz/?q=TF_project_management_professional">Project Management Professional</a></li>
-          <li><a href="/quiz/?q=TF_pop_culture">Pop Culture</a></li>
-          <li><a href="/quiz/?q=TF_cooking_quiz">Cooking Quiz</a></li>
-          <li><a href="/quiz/?q=TF_servsafe_food_protection_manager_certification_exam">ServSafe Food Protection Manager Certification Exam</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
 
 
------>
+<script>
+
+
+const categoryButtonsContainer = document.getElementById('categoryButtonsContainer');
+
+categories.forEach(category => {
+  const categoryButton = document.createElement('button');
+  categoryButton.classList.add('category-button');
+  categoryButton.innerHTML = `
+    <img src="${category.imageUrl}" alt="${category.name} Category">
+    <h3>${category.name}</h3>
+    <p>${category.description}</p>
+  `;
+  
+  categoryButton.addEventListener('click', () => {
+    // Redirect to the category page with the selected category name
+    window.location.href = `/category/?${category.name}`;
+  });
+
+  categoryButtonsContainer.appendChild(categoryButton);
+});
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <style>
