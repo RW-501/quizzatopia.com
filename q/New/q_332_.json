@@ -1,0 +1,91 @@
+{
+  "quizName": "Riddle Quiz 5",
+  "quizCode": "RDLQZ5",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Riddles",
+  "quizDescription": "Test your wit with these challenging riddles that will make you think outside the box.",
+  "quizTags": ["Fun","Riddles", "Brain Teasers", "Puzzles"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?",
+      "options": ["An echo", "A ghost", "A dream", "A shadow"],
+      "answer": "An echo",
+      "explanation": "An echo is a sound that is heard when sound waves bounce off a surface and return to the listener. It 'speaks' but has no mouth and 'hears' without ears.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "I have keys but open no locks. I have space, but no room. You can enter, but you can't go inside. What am I?",
+      "options": ["A computer keyboard", "A house", "A car", "A treasure chest"],
+      "answer": "A computer keyboard",
+      "explanation": "A computer keyboard has keys (letters/characters) but doesn't open locks. It has space between keys but no physical room you can enter.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "I'm always hungry, I must always be fed. The finger I touch will soon turn red. What am I?",
+      "options": ["Fire", "A dragon", "A monster", "A vampire"],
+      "answer": "Fire",
+      "explanation": "Fire is always hungry for fuel (such as wood or paper), and when it touches something, it can cause it to burn and turn red.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "I'm not alive, but I can grow. I don't have lungs, but I need air. What am I?",
+      "options": ["A tree", "A cloud", "A volcano", "A balloon"],
+      "answer": "A balloon",
+      "explanation": "A balloon can grow in size when filled with air, but it's not a living thing and doesn't have lungs.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "I can be cracked, made, told, and played. What am I?",
+      "options": ["A riddle", "A joke", "A song", "A game"],
+      "answer": "A joke",
+      "explanation": "A joke can be 'cracked' (told), 'made' (created), 'told' (shared), and 'played' (used for humor).",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "I'm a word of letters three, add two and fewer there will be. What am I?",
+      "options": ["A few", "Three", "Five", "Letters"],
+      "answer": "Few",
+      "explanation": "The word 'few' has three letters. When you add 'two' (the word 'two' itself), you get 'fewer,' which means there are fewer letters.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "I'm not alive, but I can die. What am I?",
+      "options": ["A battery", "A rock", "A river", "A cloud"],
+      "answer": "A battery",
+      "explanation": "A battery provides power, but it can 'die' when it runs out of energy. It is not a living thing.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "I'm full of keys but can't open any locks. What am I?",
+      "options": ["A piano", "A keyboard", "A car", "A treasure chest"],
+      "answer": "A piano",
+      "explanation": "A piano has keys (musical keys) but can't open locks. It's a musical instrument.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "I'm tall when I'm young and short when I'm old. What am I?",
+      "options": ["A candle", "A tree", "A person", "A book"],
+      "answer": "A candle",
+      "explanation": "A candle is tall when it's newly lit (young) and becomes shorter as it burns (old).",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "I'm black and white and loved all over the world. What am I?",
+      "options": ["A zebra", "A panda", "A penguin", "A soccer ball"],
+      "answer": "A soccer ball",
+      "explanation": "A soccer ball is typically black and white, and the sport of soccer is loved and played all over the world.",
+      "difficulty": "Medium"
+    }
+  ]
+}
