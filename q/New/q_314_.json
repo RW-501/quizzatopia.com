@@ -1,0 +1,141 @@
+{
+  "quizName": "Help and Support Quiz - Part 3",
+  "quizCode": "HSQ003",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Help and Support",
+  "quizDescription": "Continue testing your knowledge of help and support concepts and resources.",
+  "quizTags": ["Help", "Support", "Assistance"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the purpose of 'Live Chat Support' in online customer service?",
+      "options": [
+        "To schedule appointments with customers",
+        "To provide automated responses to common questions",
+        "To allow customers to interact with support agents in real-time via chat",
+        "To send newsletters to customers"
+      ],
+      "answer": "To allow customers to interact with support agents in real-time via chat",
+      "explanation": "'Live Chat Support' enables customers to have real-time text-based conversations with support agents for immediate assistance.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What does 'CRM' stand for in the context of customer support?",
+      "options": [
+        "Customer Relationship Management",
+        "Customer Resource Management",
+        "Customer Response Management",
+        "Customer Review Management"
+      ],
+      "answer": "Customer Relationship Management",
+      "explanation": "'CRM' stands for Customer Relationship Management, a strategy and technology for managing interactions and relationships with customers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the primary goal of 'Customer Advocacy' programs in a company?",
+      "options": [
+        "To reduce customer complaints",
+        "To promote products and services",
+        "To turn customers into advocates who promote the company",
+        "To provide financial support to customers"
+      ],
+      "answer": "To turn customers into advocates who promote the company",
+      "explanation": "Customer Advocacy programs aim to turn satisfied customers into advocates who promote the company to others.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is 'Self-Service Support' in the context of customer service?",
+      "options": [
+        "Support provided by customers to each other",
+        "Support provided only during business hours",
+        "Support provided through video tutorials",
+        "Support that allows customers to find answers on their own through resources like FAQs and guides"
+      ],
+      "answer": "Support that allows customers to find answers on their own through resources like FAQs and guides",
+      "explanation": "'Self-Service Support' allows customers to access resources such as FAQs and guides to find answers to their questions without direct assistance from support agents.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the purpose of 'Customer Onboarding' in a company's support process?",
+      "options": [
+        "To teach support agents how to assist customers",
+        "To welcome new customers and help them get started with a product or service",
+        "To handle billing inquiries from customers",
+        "To manage customer feedback"
+      ],
+      "answer": "To welcome new customers and help them get started with a product or service",
+      "explanation": "'Customer Onboarding' is designed to welcome new customers and guide them through the initial steps of using a product or service.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is 'Service Recovery' in customer support?",
+      "options": [
+        "A process for deleting customer records",
+        "A strategy for increasing customer wait times",
+        "A process for recovering lost customer data",
+        "A strategy for addressing and resolving customer complaints and issues"
+      ],
+      "answer": "A strategy for addressing and resolving customer complaints and issues",
+      "explanation": "'Service Recovery' involves strategies and processes for addressing and resolving customer complaints and issues to restore customer satisfaction.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is 'AHT' (Average Handling Time) in customer support?",
+      "options": [
+        "The time it takes for a customer to handle a support ticket",
+        "The time it takes for a support agent to resolve a customer issue",
+        "The time it takes for a customer to answer a survey",
+        "The time it takes for a customer to purchase a product"
+      ],
+      "answer": "The time it takes for a support agent to resolve a customer issue",
+      "explanation": "'AHT' (Average Handling Time) measures the average time it takes for a support agent to resolve a customer issue.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is 'Upselling' in the context of customer support?",
+      "options": [
+        "A strategy for selling products to customers with lower prices",
+        "A strategy for selling products to existing customers at a higher price",
+        "A strategy for offering free products to customers",
+        "A strategy for extending customer support hours"
+      ],
+      "answer": "A strategy for selling products to existing customers at a higher price",
+      "explanation": "'Upselling' involves offering existing customers more expensive or upgraded products or services to increase revenue.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What does 'CSAT' (Customer Satisfaction) measure in customer support?",
+      "options": [
+        "The average response time of support agents",
+        "The number of support tickets opened by customers",
+        "The level of customer satisfaction with the support received",
+        "The number of support agents available"
+      ],
+      "answer": "The level of customer satisfaction with the support received",
+      "explanation": "'CSAT' (Customer Satisfaction) is a metric that measures the level of customer satisfaction with the support they have received.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is 'First Call Resolution' in customer support?",
+      "options": [
+        "A strategy for avoiding customer calls",
+        "A strategy for resolving customer issues during the first interaction with a support agent",
+        "A strategy for increasing the number of customer calls",
+        "A strategy for transferring customer calls to other departments"
+      ],
+      "answer": "A strategy for resolving customer issues during the first interaction with a support agent",
+      "explanation": "'First Call Resolution' is a strategy aimed at resolving customer issues during the initial interaction with a support agent, eliminating the need for follow-up calls.",
+      "difficulty": "Medium"
+    }
+  ]
+}
