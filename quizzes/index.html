@@ -610,6 +610,7 @@ cardBody.onclick = function() {
     imageUrl: '/images/bmc.png',
     description: 'Not Safe For Work quizzes.',
 url: 'https://www.buymeacoffee.com/Quizzatopia',
+	  class: 'contain',
   },
 ];
 /*48.png */
@@ -805,17 +806,21 @@ section {
 const categoryButtonsContainer = document.getElementById('categoryButtonsContainer');
 
 categories.forEach(category => {
+	
   const categoryButton = document.createElement('button');
   categoryButton.classList.add('category-button');
   categoryButton.innerHTML = `
-    <img src="${category.imageUrl}" alt="${category.name} Category">
+    <img src="${category.imageUrl}" alt="${category.name} Category" style="object-fit: ${category.class}; ">
     <h3>${category.name}</h3>
     <p>${category.description}</p>
   `;
   
   categoryButton.addEventListener('click', () => {
-    // Redirect to the category page with the selected category name
-    window.location.href = `/category/?${category.name}`;
+	if(category.url){
+ window.location.href = `${category.url}`;
+	}else{
+ window.location.href = `/category/?${category.name}`;
+	}   
   });
 
   categoryButtonsContainer.appendChild(categoryButton);
