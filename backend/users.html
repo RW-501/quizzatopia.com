@@ -91,6 +91,91 @@
 }
 
 
+/* Style for the user table */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+#userTable {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#userTable th,
+#userTable td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#userTable th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  text-align: left;
+}
+
+#userTable td {
+  text-align: left;
+}
+
+#userTable button {
+  padding: 5px 10px;
+  background-color: #d9534f;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#userTable button:hover {
+  background-color: #c9302c;
+}
+
+/* Style for the sorting buttons */
+.sort-buttons {
+  margin-bottom: 20px;
+}
+
+.sort-buttons button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sort-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the user row actions */
+.actions-cell button {
+  margin-right: 5px;
+}
+
+/* Optional: Style for the header and main content area */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+/* Add more custom styles as needed */
 
 	
 </style>
@@ -118,35 +203,41 @@
   </ul>
 </nav>
 
-<main class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <!-- Main content area -->
-      <h2>Welcome to the Dashboard</h2>
+ <main class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Main content area -->
+        <h2>Welcome to the Dashboard</h2>
 
-	          <!-- Add your charts, tables, or other components here -->
-<div id="userStatsChart"></div>
-<div class="table-container">
-  <table id="userTable">
-    <thead>
-      <tr>
-        <th>User ID</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Dynamically populate the user table using JavaScript -->
-    </tbody>
-  </table>
-</div>
+        <!-- Sort buttons for the user table -->
+        <div class="sort-buttons">
+          <button onclick="sortTable('userName')">Sort by Name</button>
+          <button onclick="sortTable('lastUpdated')">Sort by Last Updated</button>
+          <button onclick="sortTable('userQuizzesTaken')">Sort by Quizzes Taken</button>
+          <button onclick="sortTable('userPoints')">Sort by Points</button>
+        </div>
 
-
-
-	  
-  </div>
-</main>
+        <!-- User table -->
+        <div class="table-container">
+          <table id="userTable">
+            <thead>
+              <tr>
+                <th>User ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Quizzes Taken</th>
+                <th>Points</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Dynamically populate the user table using JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
 
   <!-- Include JavaScript dependencies -->
 
