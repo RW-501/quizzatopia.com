@@ -547,7 +547,16 @@ function generateQuizHTML(quizList, page) {
       // Join the tag elements to create the tagsUI
       tagsUI = tagsElements.join('');
     }
-    
+
+    if (count === 10) {
+
+const buttonString = `
+<button type="button" class="btn btn-primary btn-lg back-to-top" onclick="scrollToDiv()"><i class="fas fa-chevron-up"></i></button>
+`;
+
+      html += buttonString;
+    }
+	  
     if (count === 6) {
       const htmlString = `
         <div class="bMC_link">
