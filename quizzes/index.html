@@ -283,240 +283,180 @@ min-width: 255px !important;
 
 		
 	</style>
+   <div id="c_wrap"></div>
 
-<div id="c_wrap">
-	<div id="card_container" class=" mt-4 number-div active">
-  <h1>Explore the World of Quizzatopia</h1>
-  <div id="card_row" class="row">
-    <div class="col-md-4 mb-4">
-      <div class="card_Q">
-        <img src="/images/sq/16.png" class="card-img-top" alt="Quiz Image" loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title">CompTIA A+, Network+, and Security+</h5>
-          <p class="card-text">Boost your IT career with these respected certifications covering hardware, networking, and cybersecurity fundamentals.</p>
-          <a href="/quiz/?e=New&q=q_112_" class="btn btn-primary">Start Quiz</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-4">
-      <div class="card_Q">
-        <img src="/images/sq/19.png" class="card-img-top" alt="Quiz Image" loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title">National Council Licensure Examination (NCLEX)</h5>
-          <p class="card-text">Aspiring nurses must pass this comprehensive exam to become licensed professionals and provide compassionate care to patients.</p>
-          <a href="/quiz/?e=NCLEX&q=nclex_exam" class="btn btn-primary">Start Quiz</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-4">
-      <div class="card_Q">
-        <img src="/images/sq/20.png" class="card-img-top" alt="Quiz Image" loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title">Strength Training Quiz</h5>
-          <p class="card-text">Fitness enthusiasts can test their knowledge of strength training techniques and principles with this quiz.</p>
-          <a href="/quiz/?e=New&q=q_114_" class="btn btn-primary">Start Quiz</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+    <script>
+        // Data for card containers and buttons
+       const categories = [
+    {
+        title: 'Explore the World of Quizzatopia',
+        quizzes: [
+            {
+                imageUrl: '/images/sq/16.png',
+                title: 'CompTIA A+, Network+, and Security+',
+                description: 'Boost your IT career with these respected certifications covering hardware, networking, and cybersecurity fundamentals.',
+                quizLink: '/quiz/?e=New&q=q_112_',
+            },
+            {
+                imageUrl: '/images/sq/19.png',
+                title: 'National Council Licensure Examination (NCLEX)',
+                description: 'Aspiring nurses must pass this comprehensive exam to become licensed professionals and provide compassionate care to patients.',
+                quizLink: '/quiz/?e=NCLEX&q=nclex_exam',
+            },
+            {
+                imageUrl: '/images/sq/20.png',
+                title: 'Strength Training Quiz',
+                description: 'Fitness enthusiasts can test their knowledge of strength training techniques and principles with this quiz.',
+                quizLink: '/quiz/?e=New&q=q_114_',
+            },
+        ],
+    },
+    {
+        title: 'Unleash Your Inner Quiz Master',
+        quizzes: [
+            {
+                imageUrl: '/images/sq/32.png',
+                title: 'ServSafe Food Protection Manager Certification Exam',
+                description: 'Ensure food safety and sanitation in the restaurant and foodservice industry by earning a widely recognized certification in food protection management.',
+                quizLink: '/quiz/?e=New&q=q_266_',
+            },
+            {
+                imageUrl: '/images/sq/14.png',
+                title: 'Law School Admission Test (LSAT)',
+                description: 'LSAT: Essential for a legal career. Get quizzed on your analytical and reasoning skills for law school admission.',
+                quizLink: '/quiz/?q=law_school_admission_test',
+            },
+            {
+                imageUrl: '/images/sq/13.png',
+                title: 'Project Management Professional (PMP) certification',
+                description: 'Advance your project management career with PMI\'s Project Management Professional (PMP) certification, showcasing your mastery of essential skills.',
+                quizLink: '/quiz/?q=project_management_professional',
+            },
+            // Add more quizzes in this category
+        ],
+    },
+    {
+        title: 'Embark on a Journey of Learning and Discovery',
+        quizzes: [
+            {
+                imageUrl: '/images/sq/10.png',
+                title: 'Architect Registration Examination (ARE)',
+                description: 'Prepare for the Architect Registration Examination (ARE) and excel in your architectural career with our comprehensive quizzes covering all exam divisions.',
+                quizLink: '/quiz/?e=New&q=q_294_',
+            },
+            {
+                imageUrl: '/images/sq/28.png',
+                title: 'Six Sigma certification',
+                description: 'Achieve Six Sigma certification to drive continuous improvement and eliminate defects in your organization\'s business processes.',
+                quizLink: '/quiz/?q=six_sigma_certification',
+            },
+            {
+                imageUrl: '/images/sq/18.png',
+                title: 'Real Estate License Exam',
+                description: 'Unlock the door to a career in the real estate industry by passing the Real Estate License Exam and becoming a licensed real estate agent or broker.',
+                quizLink: '/quiz/?e=New&q=q_252_',
+            },
+            // Add more quizzes in this category
+        ],
+    },
+    {
+        title: 'Test Your Skills and Challenge Yourself',
+        quizzes: [
+            {
+                imageUrl: '/images/sq/22.png',
+                title: 'Middle School Math Quiz',
+                description: 'Test your knowledge of basic math concepts typically taught in middle school.',
+                quizLink: '/quiz/?q=middle_school_math',
+            },
+            {
+                imageUrl: '/images/sq/11.png',
+                title: 'Chemistry Quiz',
+                description: 'Put your knowledge of chemical elements and reactions to the test with this quiz.',
+                quizLink: '/quiz/?e=New&q=q_277_',
+            }, {
+                imageUrl: '/images/bmc.png',
+                title: 'Buy Me A Coffee',
+                description: 'Help Keep Us Free',
+                quizLink: 'https://www.buymeacoffee.com/Quizzatopia',
+            },
+            // Add more quizzes in this category
+        ],
+    },
+    // Add more categories and quizzes here
+];
+function navigateToQuiz(quizLink) {
+    window.location.href = quizLink;
+}
+        // Function to generate the HTML for a card container
+        function generateCardContainer(title, quizzes) {
+            const container = document.createElement('div');
+            container.id = 'card_container';
+            container.className = 'mt-4 number-div';
+
+            const header = document.createElement('h1');
+            header.textContent = title;
+            container.appendChild(header);
+
+            const row = document.createElement('div');
+            row.id = 'card_row';
+            row.className = 'row';
+
+            quizzes.forEach(quiz => {
+                const col = document.createElement('div');
+                col.className = 'col-md-4 mb-4';
+
+                const card = document.createElement('div');
+                card.className = 'card_Q';
+
+                const img = document.createElement('img');
+                img.src = quiz.imageUrl;
+                img.className = 'card-img-top';
+                img.alt = 'Quiz Image';
+                img.setAttribute('loading', 'lazy');
+                card.appendChild(img);
+
+                const cardBody = document.createElement('div');
+                cardBody.className = 'card-body';
+cardBody.onclick = function() {
+    navigateToQuiz(quiz.quizLink);
+};
+                const cardTitle = document.createElement('h5');
+                cardTitle.className = 'card-title';
+                cardTitle.textContent = quiz.title;
+                cardBody.appendChild(cardTitle);
+
+                const cardText = document.createElement('p');
+                cardText.className = 'card-text';
+                cardText.textContent = quiz.description;
+                cardBody.appendChild(cardText);
+
+                const quizLink = document.createElement('a');
+                quizLink.href = quiz.quizLink;
+                quizLink.className = 'btn btn-primary';
+                quizLink.textContent = 'Start Quiz';
+                cardBody.appendChild(quizLink);
+
+                card.appendChild(cardBody);
+                col.appendChild(card);
+                row.appendChild(col);
+            });
+
+            container.appendChild(row);
+            return container;
+        }
+
+        // Get the element where you want to insert the generated content
+        const containerElement = document.getElementById('c_wrap');
+
+        // Generate and append card containers for each category
+        categories.forEach(category => {
+            const cardContainer = generateCardContainer(category.title, category.quizzes);
+            containerElement.appendChild(cardContainer);
+        });
+    </script>
 
 
-<div id="card_container" class=" mt-4 number-div">
-  <h1>Unleash Your Inner Quiz Master</h1>
-  <div id="card_row" class="row">
-    <div class="col-md-4 mb-4">
-      <div class="card_Q">
-        <img src="/images/sq/32.png" class="card-img-top" alt="Quiz Image" loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title">ServSafe Food Protection Manager Certification Exam</h5>
-          <p class="card-text">Ensure food safety and sanitation in the restaurant and foodservice industry by earning a widely recognized certification in food protection management.</p>
-          <a href="/quiz/?e=New&q=q_266_" class="btn btn-primary">Start Quiz</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-4">
-      <div class="card_Q">
-        <img src="/images/sq/14.png" class="card-img-top" alt="Quiz Image" loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title">Law School Admission Test (LSAT)</h5>
-          <p class="card-text">LSAT: Essential for a legal career. Get quizzed on your analytical and reasoning skills for law school admission.</p>
-          <a href="/quiz/?q=law_school_admission_test" class="btn btn-primary">Start Quiz</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-4">
-      <div class="card_Q">
-        <img src="/images/sq/13.png" class="card-img-top" alt="Quiz Image" loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title">Project Management Professional (PMP) certification</h5>
-          <p class="card-text">Advance your project management career with PMI's Project Management Professional (PMP) certification, showcasing your mastery of essential skills.</p>
-          <a href="/quiz/?q=project_management_professional" class="btn btn-primary">Start Quiz</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-	<div id="card_container" class=" mt-4 number-div">
-  <h1>Embark on a Journey of Learning and Discovery</h1>
-  <div id="card_row" class="row">
-    <div class="col-md-4 mb-4">
-      <div class="card_Q">
-        <img src="/images/sq/10.png" class="card-img-top" alt="Quiz Image"  loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title">Architect Registration Examination (ARE)</h5>
-          <p class="card-text">Prepare for the Architect Registration Examination (ARE) and excel in your architectural career with our comprehensive quizzes covering all exam divisions.</p>
-          <a href="/quiz/?e=New&q=q_294_" class="btn btn-primary">Start Quiz</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-4">
-      <div class="card_Q">
-        <img src="/images/sq/28.png" class="card-img-top" alt="Quiz Image"  loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title">Six Sigma certification</h5>
-          <p class="card-text">Achieve Six Sigma certification to drive continuous improvement and eliminate defects in your organization's business processes.</p>
-          <a href="/quiz/?q=six_sigma_certification" class="btn btn-primary">Start Quiz</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4 mb-4">
-      <div class="card_Q">
-        <img src="/images/sq/18.png" class="card-img-top" alt="Quiz Image"  loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title">Real Estate License Exam</h5>
-          <p class="card-text">Unlock the door to a career in the real estate industry by passing the Real Estate License Exam and becoming a licensed real estate agent or broker.</p>
-          <a href="/quiz/?e=New&q=q_252_" class="btn btn-primary">Start Quiz</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="card_container" class=" mt-4 number-div">
-  <h1>Test Your Skills and Challenge Yourself</h1>
-	
-  <div id="card_row" class="row">
-    <div class="col-md-4 mb-4">
-      <div class="card_Q">
-        <img src="/images/sq/22.png" class="card-img-top" alt="Quiz Image"  loading="lazy">
-        <div class="card-body">
-          <h5 class="card-title">Middle School Math Quiz</h5>
-          <p class="card-text">Test your knowledge of basic math concepts typically taught in middle school.</p>
-          <a href="/quiz/?q=middle_school_math" class="btn btn-primary">Start Quiz</a>
-        </div>
-      </div>
-    </div>
-   
-  
-            <div class="col-md-4 mb-4">
-        <div class="card_Q">
-        <img src="/images/sq/11.png" class="card-img-top" alt="Quiz Image"  loading="lazy">
-          <div class="card-body">
-            <h5 class="card-title">Chemistry Quiz</h5>
-            <p class="card-text">Put your knowledge of chemical elements and reactions to the test with this quiz.</p>
-            <a href="/quiz/?e=New&q=q_277_" class="btn btn-primary">Start Quiz</a>
-          </div>
-        </div>
-      </div>
-	  
-
-
-<!-- container -->
-
-	  
-	  
-      <div class="col-md-4 mb-4">
-      <div class="card_Q"  ">
-          <!-- ads -->
-
-	      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 500 500">
-  <style>
-    .background {
-      fill: #0d6efd;
-    }
-    .text {
-      font-family: Arial, sans-serif;
-      font-size: 36px;
-      fill: #fff;
-      text-anchor: middle;
-    }
-    .subtext {
-      font-family: Arial, sans-serif;
-      font-size: 20px;
-      fill: #fff;
-      text-anchor: middle;
-    }
-  </style>
-  <rect class="background" width="100%" height="100%"/>
-  <text class="text" x="50%" y="50%" dominant-baseline="middle">Advertainment</text>
-  <text class="subtext" x="50%" y="60%" dominant-baseline="middle">Coming Soon</text>
-</svg>
-
-	      
-	      
-	      
-	      
-     </div>
-      </div>	  
-	  
-	  
-	  
-      </div>
-	       </div>
- 
-	  
-	  
-	  		<div id="card_container" class=" mt-4 number-div">
-
-    <h1>Explore the World of Quizzatopia</h1>
-  <div id="card_row" class="row">
-      <div class="col-md-4 mb-4">
-        <div class="card_Q">
-        <img src="/images/sq/4.png" class="card-img-top" alt="Quiz Image"  loading="lazy">
-          <div class="card-body">
-            <h5 class="card-title">Pop Culture Quiz</h5>
-            <p class="card-text">Test your knowledge of the latest trends and celebrity news in popular culture.</p>
-            <a href="/quiz/?q=pop_culture" class="btn btn-primary">Start Quiz</a>
-          </div>
-        </div>
-      </div>
-    <div class="col-md-4 mb-4">
-        <div class="card_Q">
-        <img src="/images/sq/2.png" class="card-img-top" alt="Quiz Image"  loading="lazy">
-          <div class="card-body">
-            <h5 class="card-title">Marvel Cinematic Universe (MCU) Quiz</h5>
-            <p class="card-text">Prove your knowledge of the most popular superhero movie franchise of all time.</p>
-            <a href="/quiz/?q=marvel_cinematic_universe" class="btn btn-primary">Start Quiz</a>
-          </div>
-        </div>
-      </div>
-  
-            <div class="col-md-4 mb-4">
-        <div class="card_Q">
-        <img src="/images/sq/12.png" class="card-img-top" alt="Quiz Image"  loading="lazy">
-          <div class="card-body">
-            <h5 class="card-title">Job Interviews Quiz</h5>
-            <p class="card-text">Get ready for your next job interview with this quiz that covers common questions and best practices.</p>
-            <a href="/quiz/?q=job_interviews" class="btn btn-primary">Start Quiz</a>
-          </div>
-        </div>
-      </div>
-</div>
-</div>
-
-	  
-	  
-	  
-	  
-             </div>
-
-      </div>
-		
-		      </div>
-		
-		
 		
 	    <script>
 		    // Get all the card elements
@@ -665,16 +605,29 @@ cards.forEach(card => {
     name: 'NSFW',
     imageUrl: '/images/sq/60.png',
     description: 'Not Safe For Work quizzes.',
+  },  {
+    name: 'Buy Me A Coffee',
+    imageUrl: '/images/bmc.png',
+    description: 'Not Safe For Work quizzes.',
+url: 'https://www.buymeacoffee.com/Quizzatopia',
   },
 ];
 /*48.png */
+
+	
+
 	// Assuming you have a container element to append the buttons to
 const categoryContainer = document.querySelector('.catList');
 
 // Iterate over the categories array and create buttons
 categories.forEach(category => {
   const button = document.createElement('a');
+	if(category.url){
+  button.href = `${category.url}`;
+
+	}else{
   button.href = `#${category.name}`;
+	}
   button.classList.add('list-group-item', 'list-group-item-action', 'btn-primary');
   button.textContent = category.name;
 
