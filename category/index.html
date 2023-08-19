@@ -366,12 +366,27 @@ display: block;
         text-anchor: middle;
         dominant-baseline: middle;
       }
+
+	    	    section {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	        display: flex;
+    justify-content: space-between;
+    }
+    section h2 {
+    cursor: pointer;
+
+    }
     </style>
 	
 
 <section>
- <div><h1 id="back" class="list-catergory" onclick="backButton()">Back</h1>  </div> 
-	<div><h1 id="title" class="list-catergory"></div></h1></div>
+ <div><h2 id="back" class="list-catergory" onclick="backButton()">Back</h2>  </div> 
+	<div><h2 id="title" class="list-catergory"></div></h2></div>
 	
     <div class="container  justify-content-center" id="quiz_list">
   <div id="updated_Quizzez" class="container">
