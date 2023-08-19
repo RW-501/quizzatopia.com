@@ -1,0 +1,46 @@
+{
+  "quizName": "Emoji Quiz 1",
+  "quizCode": "EMJQZ1",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Emojis",
+  "quizDescription": "Test your knowledge of emojis and their meanings.",
+  "quizTags": ["Fun","Emojis", "Symbols", "Emoji Meanings"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does this emoji represent? 😁",
+      "options": ["Happiness", "Anger", "Sadness", "Confusion"],
+      "answer": "Happiness",
+      "explanation": "This emoji represents happiness or a cheerful expression."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What does this emoji represent? 🌧️",
+      "options": ["Rainy Weather", "Sunny Weather", "Snowy Weather", "Windy Weather"],
+      "answer": "Rainy Weather",
+      "explanation": "This emoji represents rainy weather with a rain cloud."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What does this emoji represent? 🍕",
+      "options": ["Pizza", "Burger", "Taco", "Hot Dog"],
+      "answer": "Pizza",
+      "explanation": "This emoji represents a slice of pizza."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What does this emoji represent? 🐱",
+      "options": ["Dog", "Cat", "Mouse", "Lion"],
+      "answer": "Cat",
+      "explanation": "This emoji represents a cat."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What does this emoji represent? 🚗",
+      "options": ["Bicycle", "Car", "Bus", "Train"],
+      "answer": "Car",
+      "explanation": "This emoji represents a car."
+    }
+  ]
+}
