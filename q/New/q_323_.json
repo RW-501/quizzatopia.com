@@ -1,0 +1,141 @@
+{
+  "quizName": "Movie Quotes Challenge",
+  "quizCode": "MQC003",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Fun",
+  "quizDescription": "Test your knowledge of famous movie quotes and see if you can identify which movie they're from.",
+  "quizTags": ["Movies", "Quotes", "Fun"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which movie features the famous line, 'Here's looking at you, kid.'?",
+      "options": [
+        "Gone with the Wind",
+        "Casablanca",
+        "The Godfather",
+        "Titanic"
+      ],
+      "answer": "Casablanca",
+      "explanation": "The iconic line 'Here's looking at you, kid.' is from the movie 'Casablanca' starring Humphrey Bogart and Ingrid Bergman.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "In which film do you hear the quote, 'You can't handle the truth!'?",
+      "options": [
+        "A Few Good Men",
+        "The Shawshank Redemption",
+        "Jurassic Park",
+        "Gladiator"
+      ],
+      "answer": "A Few Good Men",
+      "explanation": "'You can't handle the truth!' is a famous line delivered by Jack Nicholson in the movie 'A Few Good Men.'",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which animated movie features the quote, 'To infinity and beyond!'?",
+      "options": [
+        "Toy Story",
+        "Finding Nemo",
+        "The Lion King",
+        "Frozen"
+      ],
+      "answer": "Toy Story",
+      "explanation": "'To infinity and beyond!' is the catchphrase of Buzz Lightyear in the animated film 'Toy Story.'",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 4,
+      "question": "In which classic film is the line, 'There's no place like home.'?",
+      "options": [
+        "Gone with the Wind",
+        "The Wizard of Oz",
+        "Citizen Kane",
+        "The Sound of Music"
+      ],
+      "answer": "The Wizard of Oz",
+      "explanation": "'There's no place like home.' is famously uttered by Dorothy in 'The Wizard of Oz.'",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which action movie includes the quote, 'Yippee-ki-yay, motherf*****!'?",
+      "options": [
+        "Die Hard",
+        "Lethal Weapon",
+        "Mad Max: Fury Road",
+        "Die Another Day"
+      ],
+      "answer": "Die Hard",
+      "explanation": "'Yippee-ki-yay, motherf*****!' is a memorable line spoken by Bruce Willis in the action-packed film 'Die Hard.'",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 6,
+      "question": "In which movie is the quote, 'I feel the need - the need for speed.'?",
+      "options": [
+        "Top Gun",
+        "Fast & Furious",
+        "Speed",
+        "Mad Max"
+      ],
+      "answer": "Top Gun",
+      "explanation": "'I feel the need - the need for speed.' is a famous line from the movie 'Top Gun' starring Tom Cruise.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which romantic comedy includes the quote, 'I'm just a girl, standing in front of a boy, asking him to love her.'?",
+      "options": [
+        "When Harry Met Sally",
+        "Pretty Woman",
+        "Notting Hill",
+        "Love Actually"
+      ],
+      "answer": "Notting Hill",
+      "explanation": "'I'm just a girl, standing in front of a boy, asking him to love her.' is a memorable line from the romantic comedy 'Notting Hill.'",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which science fiction movie features the quote, 'May the Force be with you.'?",
+      "options": [
+        "Star Wars",
+        "Star Trek",
+        "Guardians of the Galaxy",
+        "Interstellar"
+      ],
+      "answer": "Star Wars",
+      "explanation": "'May the Force be with you.' is a famous line from the epic 'Star Wars' franchise.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 9,
+      "question": "In which film do you hear the quote, 'Here's Johnny!'?",
+      "options": [
+        "The Shining",
+        "Psycho",
+        "A Nightmare on Elm Street",
+        "The Exorcist"
+      ],
+      "answer": "The Shining",
+      "explanation": "'Here's Johnny!' is a chilling line from the horror classic 'The Shining,' starring Jack Nicholson.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which fantasy film includes the quote, 'You shall not pass!'?",
+      "options": [
+        "The Lord of the Rings: The Fellowship of the Ring",
+        "Harry Potter and the Sorcerer's Stone",
+        "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+        "Pan's Labyrinth"
+      ],
+      "answer": "The Lord of the Rings: The Fellowship of the Ring",
+      "explanation": "'You shall not pass!' is a famous line from 'The Lord of the Rings: The Fellowship of the Ring' when Gandalf confronts the Balrog.",
+      "difficulty": "Easy"
+    }
+  ]
+}
