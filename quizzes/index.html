@@ -384,14 +384,21 @@ min-width: 255px !important;
     },
     // Add more categories and quizzes here
 ];
+
+
+	    
 function navigateToQuiz(quizLink) {
     window.location.href = quizLink;
 }
+
+
+
+	    
         // Function to generate the HTML for a card container
         function generateCardContainer(title, quizzes) {
             const container = document.createElement('div');
             container.id = 'card_container';
-            container.className = 'mt-4 number-div';
+            container.className = 'mt-4 number-div active';
 
             const header = document.createElement('h1');
             header.textContent = title;
@@ -458,29 +465,9 @@ cardBody.onclick = function() {
 
 
 		
-	    <script>
-		    // Get all the card elements
-const cards = document.querySelectorAll('.card_Q');
-
-// Attach a click event listener to each card
-cards.forEach(card => {
-  card.addEventListener('click', function() {
-    // Get the href value of the clicked card's link
-    const link = this.querySelector('a').getAttribute('href');
-    
-    // Open the link background-image: url('/images/lan/39.png'); background-size: cover; background-position: center; background-repeat: no-repeat;
-    window.location.href = link;
-  });
-});
-
-
-
-		    </script>
+	
 	    
-	    
-	      <div class=" catList">
-
-</div>
+	      <div class=" catList"></div>
 
 
 
