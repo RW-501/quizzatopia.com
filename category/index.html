@@ -332,7 +332,7 @@ display: block;
 	
 
 <section>
- 
+ <h1 id="title">mmm</h1>
     <div class="container  justify-content-center" id="quiz_list">
   <div id="updated_Quizzez" class="container">
 	  
@@ -362,6 +362,7 @@ const categoryName = decodeURIComponent(urlParams.split('?')[1]);
 //const categoryName = decodeURIComponent(urlParams.toString().split('?')[1]);
 
 console.log("categoryName: ", categoryName);
+document.getElementById('title').innerHTML = categoryName;
 
 
 if (categoryName) {
