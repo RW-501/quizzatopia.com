@@ -512,7 +512,6 @@ function generateQuizHTML(quizList, page) {
   let html2 = '';
   const startNum = (page - 1) * 20 + 1;
   let currentCatergory = ''; // Variable to keep track of the current category
-  let catergoryName = ''; // Variable to store the category HTML
   let count = 0;
   // Iterate over each quiz item in the combined dataset
   quizList.forEach((quizData, index) => {
@@ -548,40 +547,28 @@ function generateQuizHTML(quizList, page) {
       // Join the tag elements to create the tagsUI
       tagsUI = tagsElements.join('');
     }
-    if (count === 6) {
-
-const htmlString = `
-<div class="bMC_link">
-  <a href="https://www.buymeacoffee.com/Quizzatopia" target="_blank"><img src="/images/bmc.png" alt="Buy Me A Coffee" id="adPic"></a>
-</div>
-`;
-
-
-
-
     
-      catergoryName = htmlString;
+    if (count === 6) {
+      const htmlString = `
+        <div class="bMC_link">
+          <a href="https://www.buymeacoffee.com/Quizzatopia" target="_blank"><img src="/images/bmc.png" alt="Buy Me A Coffee" id="adPic"></a>
+        </div>
+      `;
+      html += htmlString;
     }
 
-
-
-
-	  
     if (count === 4) {
       // Add the svgString on the 4th output
-const svgString = `
-<div class="container" onclick="openCreateQuizFunc()">
-  <svg xmlns="http://www.w3.org/2000/svg" width="85%" height="300px" viewBox="0 0 1000 300" style="display: block; margin: auto;">
-
-    <rect class="banner" width="100%" height="100%" />
-    <text class="button" x="50%" y="50%">Create a Quiz Today</text>
-    <!-- <text class="text" x="50%" y="60%">New True False Quizzes!</text> -->
-  </svg>
-</div>
-`;
-
-	    
-      catergoryName = svgString;
+      const svgString = `
+        <div class="container" onclick="openCreateQuizFunc()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="85%" height="300px" viewBox="0 0 1000 300" style="display: block; margin: auto;">
+            <rect class="banner" width="100%" height="100%" />
+            <text class="button" x="50%" y="50%">Create a Quiz Today</text>
+            <!-- <text class="text" x="50%" y="60%">New True False Quizzes!</text> -->
+          </svg>
+        </div>
+      `;
+      html += svgString;
     }
 
     /*
@@ -626,13 +613,12 @@ const svgString = `
       </div>
     `;
 
-    catergoryName += quizHtml;
-
-    html += catergoryName;
+    html += quizHtml;
   });
 
   return html;
 }
+
 
 
 const quizzesContainer = document.querySelector('body');
