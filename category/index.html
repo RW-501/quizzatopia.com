@@ -355,10 +355,11 @@ display: block;
   <script>
 //https://www.quizzatopia.com/category/?Professional%20Certification
 
-const urlParams = new URLSearchParams(window.location.href);
+const urlParams = window.location.href;
+//const urlParams = new URLSearchParams(window.location.href);
 console.log("urlParams: ", urlParams);
-//const startIndex = urlParams.indexOf('?') + 1;
-  // var      categoryName = urlParams.substring(startIndex);
+const startIndex = urlParams.indexOf('?') + 1;
+   var      categoryName = urlParams.substring(startIndex);
 
 const categoryName3 = decodeURIComponent(urlParams.split('?')[-1]);
 
