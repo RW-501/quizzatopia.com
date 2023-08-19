@@ -842,7 +842,13 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
 /* You can further style the buttons, fonts, and layout as per your design */
 
+	.list-catergory{
+    font-weight: 800;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fd7e14;
 
+	}
 		
 </style>
 	  	
@@ -904,6 +910,13 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     gtag('config', 'G-9VG78SV9KZ');
 	  
 	//  console.log('page loading??/ mmmmm???????????????????????????????:');
+
+function backButton(){
+  window.history.back();
+
+}
+
+
 	  
   </script>
 
@@ -915,6 +928,10 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   <!-- Rest of the page content -->
 
   <div id="optionContainer" >
+	<section>
+ <div><h1 id="back" class="list-catergory" onclick="backButton()">Back</h1>  </div> 
+	<div><h1 id="title" class="list-catergory"></div></h1></div>
+</section>  
     <div class="row" style="padding: 2%;">
       <div class="col-md-6">
         <div class="quiz-options">
