@@ -332,7 +332,8 @@ display: block;
 	
 
 <section>
- <h1 id="title">mmm</h1>
+ <h1 id="title">	    <div class="loading_Main ">Loading...</div>
+</h1>
     <div class="container  justify-content-center" id="quiz_list">
   <div id="updated_Quizzez" class="container">
 	  
@@ -355,12 +356,14 @@ display: block;
 
 
 const urlParams = new URLSearchParams(window.location.search);
+console.log("urlParams: ", urlParams);
 
-const categoryName = decodeURIComponent(urlParams.split('?')[1]);
+const categoryName = decodeURIComponent(urlParams.split('?')[-1]);
 
 	  
-//const categoryName = decodeURIComponent(urlParams.toString().split('?')[1]);
+const categoryName2 = decodeURIComponent(urlParams.toString().split('?')[1]);
 
+console.log("categoryName2: ", categoryName2);
 console.log("categoryName: ", categoryName);
 document.getElementById('title').innerHTML = categoryName;
 
