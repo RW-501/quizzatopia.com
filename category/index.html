@@ -704,7 +704,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <script>
+  function scrollToDiv() {
 
+    window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+	  
+  }
+  
 function openCreateQuizFunc() {
   const userInfo = getUserInfo();
   var userPoints = userInfo.userPoints;
