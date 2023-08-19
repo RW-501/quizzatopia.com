@@ -498,11 +498,11 @@ display: block;
 
 
     
-// Step 1: Get the category name from the URL
 const urlParams = new URLSearchParams(window.location.search);
-const categoryName = urlParams.get('categoryName');
+const categoryName = decodeURIComponent(urlParams.toString().split('?')[1]);
 
 console.log("categoryName: ", categoryName);
+
 
 	// Function to convert the rating to star symbols
 const ratingToStars = (rating) => {
