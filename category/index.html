@@ -332,7 +332,7 @@ display: block;
 	
 
 <section>
- <h1 id="title">	    <div class="loading_Main ">Loading...</div>
+ <h1 id="title" class="list-catergory">	    <div class="loading_Main ">Loading...</div>
 </h1>
     <div class="container  justify-content-center" id="quiz_list">
   <div id="updated_Quizzez" class="container">
@@ -515,7 +515,8 @@ var difficultyDisplay = '';
       // Join the tag elements to create the tagsUI
       tagsUI = tagsElements.join('');
     }
-let upBTN ='';
+/*
+	  let upBTN ='';
 if (quizData.quizCategoryDB !== currentCatergory) {
   currentCatergory = quizData.quizCategoryDB; // Update the current category
 	if(count > 1){
@@ -529,7 +530,7 @@ const stringWithHyphens = lowercaseString.replace(/ /g, "-");
 } else {
   catergoryName = ''; // If it's the same category, leave it empty
 }
-
+*/
 if (quizData.quizDifficultyDB || quizData.quizDifficulty === undefined || quizData.quizDifficulty === null || quizData.quizDifficulty === '') {
   difficultyDisplay = "";
 } else {
