@@ -1,0 +1,91 @@
+{
+  "quizName": "Riddle Quiz 3",
+  "quizCode": "RDLQZ3",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Riddles",
+  "quizDescription": "Challenge your mind with these intriguing riddles.",
+  "quizTags": ["Fun","Riddles", "Brain Teasers", "Puzzles"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?",
+      "options": ["An echo", "A ghost", "A mountain", "A whisper"],
+      "answer": "An echo",
+      "explanation": "An echo is a sound that is reflected off surfaces, creating the illusion of speech and hearing without a physical form.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "I'm taken from a mine, and shut up in a wooden case, from which I'm never released, and yet I am used by almost every person. What am I?",
+      "options": ["A pencil lead", "A diamond", "A rock", "A coin"],
+      "answer": "A pencil lead",
+      "explanation": "A pencil lead (graphite) is mined, encased in wood, and used for writing, but it is never truly released from the pencil.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "I'm not alive, but I can grow. I don't have lungs, but I need air. What am I?",
+      "options": ["A fire", "A cloud", "A book", "A mountain"],
+      "answer": "A fire",
+      "explanation": "A fire consumes fuel and 'grows' as it spreads, but it is not a living entity and doesn't have lungs.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "I can fly without wings. I can cry without eyes. Wherever I go, darkness follows me. What am I?",
+      "options": ["A cloud", "A bat", "A bird", "A ghost"],
+      "answer": "A cloud",
+      "explanation": "A cloud can 'fly' across the sky, 'cry' by releasing rain, and it often obscures the sun, creating darkness.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What has keys but can't open locks?",
+      "options": ["A keyboard", "A treasure chest", "A car", "A safe"],
+      "answer": "A keyboard",
+      "explanation": "A keyboard has keys (letters/characters) but doesn't open locks. It's used for typing and input.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "I have keys but open no locks. I have space but no room. You can enter, but you can't go inside. What am I?",
+      "options": ["A keyboard", "A car", "A house", "A box"],
+      "answer": "A keyboard",
+      "explanation": "A keyboard has keys (letters/characters) but doesn't open locks. It has space between keys but no physical room you can enter.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "I'm full of holes, but still hold water. What am I?",
+      "options": ["A sponge", "A cloud", "A bucket", "A pool"],
+      "answer": "A sponge",
+      "explanation": "A sponge has many holes or pores, but it can still absorb and hold water.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "I'm a word of letters three, add two and fewer there will be. What am I?",
+      "options": ["The word 'few'", "The word 'more'", "The word 'less'", "The word 'many'"],
+      "answer": "The word 'few'",
+      "explanation": "The word 'few' has three letters. When you add two letters ('er'), you get 'fewer,' which means a smaller quantity.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "I'm black and white and loved all over the world. What am I?",
+      "options": ["A panda", "A zebra", "A penguin", "A newspaper"],
+      "answer": "A panda",
+      "explanation": "Pandas are black and white bears that are popular and loved worldwide.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "I'm not alive, but I can die. What am I?",
+      "options": ["A battery", "A rock", "A river", "A cloud"],
+      "answer": "A battery",
+      "explanation": "A battery provides power, but it can 'die' when it runs out of energy. It is not a living thing.",
+      "difficulty": "Medium"
+    }
+  ]
+}
