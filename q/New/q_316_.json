@@ -1,0 +1,141 @@
+{
+  "quizName": "Self-Help Quiz - Part 2",
+  "quizCode": "SHQ002",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Self-Help",
+  "quizDescription": "Continue testing your knowledge of self-help concepts and practices.",
+  "quizTags": ["Self-Help", "Personal Development", "Wellness"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is 'Procrastination'?",
+      "options": [
+        "A type of meditation",
+        "The act of delaying or postponing tasks",
+        "A form of self-care",
+        "A state of mindfulness"
+      ],
+      "answer": "The act of delaying or postponing tasks",
+      "explanation": "'Procrastination' is the act of delaying or postponing tasks, often due to avoidance or lack of motivation.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What does 'Self-Esteem' refer to?",
+      "options": [
+        "The esteem or regard others have for you",
+        "The ability to esteem others",
+        "The positive or negative evaluation of one's own worth and capabilities",
+        "The esteem of one's family"
+      ],
+      "answer": "The positive or negative evaluation of one's own worth and capabilities",
+      "explanation": "'Self-Esteem' refers to the positive or negative evaluation of one's own worth and capabilities, which can greatly impact self-confidence and mental well-being.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is 'Stress Management'?",
+      "options": [
+        "Creating stress in one's life intentionally",
+        "Avoiding all stressful situations",
+        "The practice of reducing and coping with stress in a healthy way",
+        "Ignoring stress completely"
+      ],
+      "answer": "The practice of reducing and coping with stress in a healthy way",
+      "explanation": "'Stress Management' is the practice of reducing and coping with stress in a healthy way, often through relaxation techniques and problem-solving strategies.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is 'Personal Development'?",
+      "options": [
+        "The development of personal relationships",
+        "The development of physical fitness",
+        "The process of improving oneself through activities and experiences that enhance personal growth and potential",
+        "The development of professional skills"
+      ],
+      "answer": "The process of improving oneself through activities and experiences that enhance personal growth and potential",
+      "explanation": "'Personal Development' is the process of improving oneself through activities and experiences that enhance personal growth, potential, and well-being.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is 'Coping Mechanism'?",
+      "options": [
+        "A mechanical device",
+        "A set of strategies or actions used to deal with stress, adversity, or difficult emotions",
+        "A form of self-indulgence",
+        "A type of physical exercise"
+      ],
+      "answer": "A set of strategies or actions used to deal with stress, adversity, or difficult emotions",
+      "explanation": "'Coping Mechanism' refers to a set of strategies or actions used to deal with stress, adversity, or difficult emotions in a healthy and adaptive way.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is 'Empathy'?",
+      "options": [
+        "The ability to understand and share the feelings of others",
+        "The ability to ignore others' feelings",
+        "The ability to criticize others",
+        "The ability to be completely self-centered"
+      ],
+      "answer": "The ability to understand and share the feelings of others",
+      "explanation": "'Empathy' is the ability to understand and share the feelings of others, often characterized by compassion and emotional connection.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What does 'Self-Reflection' involve?",
+      "options": [
+        "Looking at your reflection in a mirror",
+        "Thinking deeply about one's thoughts, actions, and experiences",
+        "Ignoring one's thoughts and experiences",
+        "Engaging in group reflection"
+      ],
+      "answer": "Thinking deeply about one's thoughts, actions, and experiences",
+      "explanation": "'Self-Reflection' involves thinking deeply about one's thoughts, actions, and experiences to gain insight and self-awareness.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is 'Assertiveness'?",
+      "options": [
+        "Being passive and submissive",
+        "Being overly aggressive and confrontational",
+        "Expressing one's needs, wants, and opinions in a respectful and direct manner",
+        "Being indifferent to others' needs"
+      ],
+      "answer": "Expressing one's needs, wants, and opinions in a respectful and direct manner",
+      "explanation": "'Assertiveness' is the quality of expressing one's needs, wants, and opinions in a respectful and direct manner, balancing between passivity and aggressiveness.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is 'Meditation'?",
+      "options": [
+        "A form of exercise",
+        "A type of sleep",
+        "A practice of focused attention and relaxation to achieve mental clarity and inner calm",
+        "A form of self-indulgence"
+      ],
+      "answer": "A practice of focused attention and relaxation to achieve mental clarity and inner calm",
+      "explanation": "'Meditation' is a practice of focused attention and relaxation aimed at achieving mental clarity, inner calm, and stress reduction.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is 'Goal Setting'?",
+      "options": [
+        "Setting goals for others",
+        "Setting unrealistic goals",
+        "The process of identifying and planning to achieve specific objectives",
+        "Avoiding setting any goals"
+      ],
+      "answer": "The process of identifying and planning to achieve specific objectives",
+      "explanation": "'Goal Setting' is the process of identifying and planning to achieve specific objectives, providing direction and motivation for personal growth.",
+      "difficulty": "Medium"
+    }
+  ]
+}
