@@ -281,10 +281,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
 
   <!-- Custom CSS -->
- <!--  <link rel="stylesheet" href="/style.css">-->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="indexOptions.css?21">
-  <link rel="stylesheet" href="popupsCSS.css">
+
 
   <!-- Import navbar and footer components -->
   <link rel="import" href="/elements/navbar.html">
@@ -503,10 +500,9 @@ display: block;
     
 // Step 1: Get the category name from the URL
 const urlParams = new URLSearchParams(window.location.search);
-const categoryName = urlParams.indexOf('?') + 1;
+const categoryName = urlParams.get('categoryName');
 
-  console.log("categoryName  ",categoryName);
-
+console.log("categoryName: ", categoryName);
 
 	// Function to convert the rating to star symbols
 const ratingToStars = (rating) => {
