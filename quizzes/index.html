@@ -276,9 +276,9 @@ width: 30%;
 		}
 .card_Q img, .card_Q svg{
 min-width: 255px !important;
-	    margin: auto;
-
-
+    margin: auto;
+    min-height: 255px;
+    object-fit: contain;
 }
 
 		
@@ -287,7 +287,7 @@ min-width: 255px !important;
 
     <script>
         // Data for card containers and buttons
-       const categories = [
+       const quizzes = [
     {
         title: 'Explore the World of Quizzatopia',
         quizzes: [
@@ -386,6 +386,7 @@ min-width: 255px !important;
 ];
 
 
+	    let count =0;
 	    
 function navigateToQuiz(quizLink) {
     window.location.href = quizLink;
@@ -396,10 +397,22 @@ function navigateToQuiz(quizLink) {
 	    
         // Function to generate the HTML for a card container
         function generateCardContainer(title, quizzes) {
+		count++;
+		
+		if(count > 1){
+
+		}else{
+
+		}
             const container = document.createElement('div');
             container.id = 'card_container';
+		if(count > 1){
+            container.className = 'mt-4 number-div ';
+
+		}else{
             container.className = 'mt-4 number-div active';
 
+		}
             const header = document.createElement('h1');
             header.textContent = title;
             container.appendChild(header);
@@ -456,7 +469,7 @@ cardBody.onclick = function() {
         const containerElement = document.getElementById('c_wrap');
 
         // Generate and append card containers for each category
-        categories.forEach(category => {
+        quizzes.forEach(category => {
             const cardContainer = generateCardContainer(category.title, category.quizzes);
             containerElement.appendChild(cardContainer);
         });
