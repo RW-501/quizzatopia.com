@@ -1,0 +1,141 @@
+{
+  "quizName": "Self-Help Quiz - Part 5",
+  "quizCode": "SHQ005",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Self-Help",
+  "quizDescription": "Continue testing your knowledge of self-help concepts and practices with this quiz.",
+  "quizTags": ["Self-Help", "Personal Development", "Wellness"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is 'Mindfulness'?",
+      "options": [
+        "Being forgetful and absent-minded",
+        "Paying attention to the present moment without judgment",
+        "Always thinking about the future",
+        "Ignoring thoughts and feelings"
+      ],
+      "answer": "Paying attention to the present moment without judgment",
+      "explanation": "'Mindfulness' is the practice of paying attention to the present moment without judgment, helping individuals reduce stress and improve their mental well-being.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What does 'Resilience' mean?",
+      "options": [
+        "Being rigid and inflexible",
+        "The ability to adapt and bounce back from adversity",
+        "Avoiding challenges and difficulties",
+        "Ignoring one's own emotions"
+      ],
+      "answer": "The ability to adapt and bounce back from adversity",
+      "explanation": "'Resilience' refers to the ability to adapt and bounce back from adversity, challenges, and difficult situations, often leading to personal growth.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is 'Gratitude'?",
+      "options": [
+        "A feeling of entitlement",
+        "A sense of dissatisfaction",
+        "A positive emotion and thankfulness for what one has",
+        "A desire for more possessions"
+      ],
+      "answer": "A positive emotion and thankfulness for what one has",
+      "explanation": "'Gratitude' is a positive emotion and the practice of being thankful for what one has, promoting mental and emotional well-being.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What does 'Self-Care' involve?",
+      "options": [
+        "Ignoring one's well-being",
+        "Taking deliberate actions to prioritize and care for one's own physical and mental health",
+        "Indulging in unhealthy habits",
+        "Neglecting responsibilities"
+      ],
+      "answer": "Taking deliberate actions to prioritize and care for one's own physical and mental health",
+      "explanation": "'Self-Care' involves taking deliberate actions to prioritize and care for one's own physical and mental health, reducing stress and improving overall well-being.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is 'Positive Affirmation'?",
+      "options": [
+        "Constant self-criticism",
+        "Repeating negative thoughts",
+        "Repeating positive statements to boost self-esteem",
+        "Ignoring self-talk"
+      ],
+      "answer": "Repeating positive statements to boost self-esteem",
+      "explanation": "'Positive Affirmation' involves repeating positive statements to boost self-esteem, challenge negative self-talk, and promote a positive self-image.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What does 'Boundaries' mean in self-help and personal development?",
+      "options": [
+        "Isolating oneself from others",
+        "Having rigid rules and restrictions",
+        "Setting and maintaining limits to protect one's well-being",
+        "Ignoring personal space"
+      ],
+      "answer": "Setting and maintaining limits to protect one's well-being",
+      "explanation": "'Boundaries' in self-help and personal development refer to setting and maintaining limits to protect one's well-being, both emotionally and physically.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is 'Visualization'?",
+      "options": [
+        "A technique to make things disappear",
+        "A technique to focus on negative outcomes",
+        "A technique to imagine and create positive outcomes in one's mind",
+        "A form of daydreaming"
+      ],
+      "answer": "A technique to imagine and create positive outcomes in one's mind",
+      "explanation": "'Visualization' is a technique where individuals imagine and create positive outcomes in their minds, often used to enhance motivation and goal achievement.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is 'Assertiveness'?",
+      "options": [
+        "Being passive and submissive",
+        "Being overly aggressive",
+        "Expressing one's needs and opinions respectfully and directly",
+        "Avoiding all forms of communication"
+      ],
+      "answer": "Expressing one's needs and opinions respectfully and directly",
+      "explanation": "'Assertiveness' is the practice of expressing one's needs and opinions respectfully and directly, promoting effective communication and self-advocacy.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What does 'Self-Compassion' involve?",
+      "options": [
+        "Being overly critical of oneself",
+        "Having unrealistic self-confidence",
+        "Treating oneself with kindness and understanding in times of failure or difficulty",
+        "Ignoring one's own emotions"
+      ],
+      "answer": "Treating oneself with kindness and understanding in times of failure or difficulty",
+      "explanation": "'Self-Compassion' involves treating oneself with kindness and understanding, especially in times of failure or difficulty, promoting emotional well-being.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What does 'Mentorship' mean in personal development?",
+      "options": [
+        "Ignoring guidance from others",
+        "Seeking advice from unqualified individuals",
+        "Receiving guidance and support from a more experienced person",
+        "Taking on the role of a mentor without experience"
+      ],
+      "answer": "Receiving guidance and support from a more experienced person",
+      "explanation": "'Mentorship' in personal development involves receiving guidance and support from a more experienced person, often with the aim of personal and professional growth.",
+      "difficulty": "Medium"
+    }
+  ]
+}
