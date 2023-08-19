@@ -849,7 +849,22 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     color: #fd7e14;
 
 	}
-		
+
+
+		    section {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	        display: flex;
+    justify-content: space-between;
+    }
+    section h2 {
+    cursor: pointer;
+
+    }
 </style>
 	  	
 	
@@ -930,8 +945,8 @@ function backButton(){
   <div id="optionContainer" >
 	<section>
  <div><h1 id="back" class="list-catergory" onclick="backButton()">Back</h1>  </div> 
-	<div><h1 id="title" class="list-catergory"></div></h1></div>
-</section>  
+
+	</section>  
     <div class="row" style="padding: 2%;">
       <div class="col-md-6">
         <div class="quiz-options">
