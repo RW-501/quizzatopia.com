@@ -1,0 +1,147 @@
+{
+  "quizCode": "QZ06420",
+  "quizName": "Driver's Safety True or False Quiz Part 4",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Driver's Safety",
+  "quizDescription": "Test your knowledge of driver's safety with this True or False quiz. Learn essential rules and practices for safe driving.",
+  "quizTags": "Driver's Safety, Safe Driving, Traffic Rules",
+  "numberOfQuestions": 15,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "A steady yellow traffic light means you should stop immediately.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "A steady yellow traffic light means that the light is about to turn red. Drivers should slow down and prepare to stop unless it is unsafe to do so.",
+      "difficulty": "Easy"
+    },
+    {
+      "questionNumber": 2,
+      "question": "If your brakes fail, you should use the parking brake.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "If your brakes fail, the first thing you should do is try to slow the vehicle down by shifting into a lower gear and pumping the brakes rapidly. If this does not work, use the parking brake to bring the vehicle to a stop.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What does this sign indicate?",
+      "imageURL": "https://www.gbw.law/images/blog/iStock-1297659529.2108271223550.jpg",
+      "questionType": "Multiple Choice",
+      "options": [
+        "School zone ahead",
+        "Playground ahead",
+        "Residential area ahead",
+        "No stopping allowed"
+      ],
+      "answer": "School zone ahead",
+      "explanation": "This sign indicates that there is a school zone ahead. Drivers should reduce speed and be prepared to comply with lower speed limits and additional safety regulations in the school zone.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What does this sign indicate?",
+      "imageURL": "https://s3.amazonaws.com/cdn.dmv-permit-test.com/images/road-signs/medium/57.jpg",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Slippery road surface ahead",
+        "Construction zone ahead",
+        "Road closed ahead",
+        "No entry allowed"
+      ],
+      "answer": "Slippery road surface ahead",
+      "explanation": "This sign indicates that there is a slippery road surface ahead. Drivers should reduce speed and use caution to maintain control of their vehicle on the slippery surface.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "True or False: This sign indicates a winding road ahead.",
+      "imageURL": "",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "This sign does not indicate a winding road ahead. It is important to read and interpret signs correctly to ensure safe and lawful driving.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What does this sign indicate?",
+      "imageURL": "https://s.driving-tests.org/wp-content/uploads/2020/07/no-passing-zone-sign.jpg",
+      "questionType": "Multiple Choice",
+      "options": [
+        "No-passing zone ahead",
+        "No U-turns allowed",
+        "No parking allowed",
+        "No stopping allowed"
+      ],
+      "answer": "No-passing zone ahead",
+      "explanation": "This sign indicates that there is a no-passing zone ahead. Drivers should not attempt to pass other vehicles in this area.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "True or False: This sign indicates a steep hill ahead.",
+      "imageURL": "https://sgi.sk.ca/documents/37148/138145/4-9-hill.jpg.svg/aa3696cf-d0cf-4edc-a12c-acc7551a9529",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "True",
+      "explanation": "This sign indicates that there is a steep hill ahead. Drivers should reduce speed and be prepared for changes in grade and potential hazards on the road.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What does this sign indicate?",
+      "imageURL": "https://upload.wikimedia.org/wikipedia/commons/7/74/Detour_Ahead.png?20170101144208",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Construction zone ahead",
+        "Detour ahead",
+        "No entry allowed",
+        "No parking allowed"
+      ],
+      "answer": "Detour ahead",
+      "explanation": "This sign indicates that there is a detour ahead. Drivers should follow the designated alternate route indicated by the sign.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What does this sign indicate?",
+      "imageURL": "https://www.puedomanejar.com/en/wp-content/uploads/2020/12/merge-296x300.png",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Divided highway begins ahead",
+        "Merge with traffic from the right",
+        "No turns allowed",
+        "No entry allowed"
+      ],
+      "answer": "Merge with traffic from the right",
+      "explanation": "This sign indicates that drivers should be prepared to merge with traffic coming from the right. They should yield to vehicles already on the main road.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "True or False: This sign indicates a stop sign ahead.",
+      "imageURL": "https://worksafetci.com/wp-content/uploads/yield.jpg",
+      "questionType": "True/False",
+      "options": [
+        "True",
+        "False"
+      ],
+      "answer": "False",
+      "explanation": "This sign does not indicate a stop sign ahead. It is important to read and interpret signs correctly to ensure safe and lawful driving.",
+      "difficulty": "Medium"
+    }
+  ]
+}
