@@ -627,7 +627,7 @@ categories.forEach(category => {
   button.href = `${category.url}`;
 
 	}else{
-  button.href = `#${category.name}`;
+  button.href = `/category/?${category.name}`;
 	}
   button.classList.add('list-group-item', 'list-group-item-action', 'btn-primary');
   button.textContent = category.name;
