@@ -570,7 +570,238 @@ cards.forEach(card => {
 </div>
 
 
+<style>
+.category-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.category-button {
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.category-button img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.category-button h3 {
+  margin: 0;
+}
+
+.category-button p {
+  font-size: 14px;
+  text-align: center;
+}
+
+.category-button:hover {
+  background-color: #d9d9d9;
+}
+
+
+	</style>
+
+
+	
+<section>
+
+
+
+<div id="categoryButtonsContainer" class="category-buttons-container"></div>
+
+
+	
+</section>
+
+
+
+
+
+<script>
+const categories = [
+  {
+    name: 'Healthcare',
+    imageUrl: '/images/sq/19.png',
+    description: 'Explore quizzes related to healthcare and medical topics.',
+  },
+  {
+    name: 'Gaming',
+    imageUrl: '/images/sq/15.png',
+    description: 'Test your gaming knowledge with quizzes about video games.',
+  },
+  {
+    name: 'Business',
+    imageUrl: '/images/sq/29.png',
+    description: 'Quizzes about various business and entrepreneurship topics.',
+  },
+  {
+    name: 'Driving',
+    imageUrl: '/images/lan/14.png',
+    description: 'Test your knowledge of driving rules and road safety.',
+  },
+  {
+    name: 'TV',
+    imageUrl: '/images/sq/tv.png',
+    description: 'Quizzes about television shows, series, and characters.',
+  },
+  {
+    name: 'Architecture',
+    imageUrl: '/images/sq/10.png',
+    description: 'Explore architecture-related quizzes and design concepts.',
+  },
+  {
+    name: 'Technology',
+    imageUrl: '/images/sq/16.png',
+    description: 'Stay up-to-date with technology quizzes and innovations.',
+  },
+  {
+    name: 'Music',
+    imageUrl: '/images/sq/1.png',
+    description: 'Test your musical knowledge with quizzes about genres and artists.',
+  },
+  {
+    name: 'Entertainment',
+    imageUrl: '/images/sq/2.png',
+    description: 'Explore quizzes related to the world of entertainment and celebrities.',
+  },
+  {
+    name: 'Marketing',
+    imageUrl: '/images/sq/9.png',
+    description: 'Quizzes about marketing strategies, branding, and advertising.',
+  },
+  {
+    name: 'Geography',
+    imageUrl: '/images/sq/33.png',
+    description: 'Test your geography knowledge with quizzes about countries and landmarks.',
+  },
+  {
+    name: 'E-Commerce',
+    imageUrl: '/images/sq/e-commerce.png',
+    description: 'Explore quizzes about online shopping and e-commerce trends.',
+  },
+  {
+    name: 'Science',
+    imageUrl: '/images/sq/11.png',
+    description: 'Quizzes about various scientific disciplines and discoveries.',
+  },
+  {
+    name: 'Personality',
+    imageUrl: '/images/sq/personality.png',
+    description: 'Discover quizzes that reveal your personality traits and characteristics.',
+  },
+  {
+    name: 'Real Estate',
+    imageUrl: '/images/sq/30.png',
+    description: 'Explore quizzes related to real estate and property investments.',
+  },
+  {
+    name: 'Professional Certification',
+    imageUrl: '/images/sq/28.png',
+    description: 'Quizzes to prepare for professional certification exams and assessments.',
+  },
+  {
+    name: 'Finance',
+    imageUrl: '/images/sq/18.png',
+    description: 'Test your knowledge of financial concepts, investments, and economics.',
+  },
+  {
+    name: 'History',
+    imageUrl: '/images/sq/history.png',
+    description: 'Explore historical events, figures, and important milestones through quizzes.',
+  },
+  {
+    name: 'Language',
+    imageUrl: '/images/sq/language.png',
+    description: 'Quizzes to test your language skills and vocabulary.',
+  },
+  {
+    name: 'Self-Help',
+    imageUrl: '/images/sq/self-help.png',
+    description: 'Discover self-help quizzes and personal development resources.',
+  },
+  {
+    name: 'Job Interview',
+    imageUrl: '/images/sq/12.png',
+    description: 'Prepare for job interviews with quizzes about common interview questions.',
+  },
+  {
+    name: 'Sports',
+    imageUrl: '/images/sq/sports.png',
+    description: 'Explore quizzes about various sports and athletic events.',
+  },
+  {
+    name: 'Fun',
+    imageUrl: '/images/sq/fun.png',
+    description: 'Quizzes for pure fun and entertainment!',
+  },
+  {
+    name: 'NSFW',
+    imageUrl: '/images/sq/nsfw.png',
+    description: 'Not Safe For Work quizzes.',
+  },
+];
+
+
+const categoryButtonsContainer = document.getElementById('categoryButtonsContainer');
+
+categories.forEach(category => {
+  const categoryButton = document.createElement('button');
+  categoryButton.classList.add('category-button');
+  categoryButton.innerHTML = `
+    <img src="${category.imageUrl}" alt="${category.name} Category">
+    <h3>${category.name}</h3>
+    <p>${category.description}</p>
+  `;
+  
+  categoryButton.addEventListener('click', () => {
+    // Redirect to the category page with the selected category name
+    window.location.href = `/category/?${category.name}`;
+  });
+
+  categoryButtonsContainer.appendChild(categoryButton);
+});
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 
 
 	<div class="container"  onclick="openCreateQuizFunc()">
