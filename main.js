@@ -627,6 +627,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+var loadCount = 0;
 
 
 
@@ -687,10 +688,11 @@ if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function')
   document.head.appendChild(firebaseAppScript);
   document.head.appendChild(firestoreScript);
   document.head.appendChild(firebaseAuthScript);
+loadCount++;
 
-
+	if(loadCount < 2){
 	loadDB();
-
+	}
 
 }
 
