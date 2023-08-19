@@ -1606,10 +1606,23 @@ window.location.href = "https://www.quizzatopia.com/quiz/?e=user&q=" + quizCodeD
 
 
 
+function checkUser(){
+	    const userInfo = getUserInfo();
+  var userPoints = userInfo.userPoints;
 
-	  
-	  
-	  
+  if (userPoints > 200) {
+    // Assuming you have initialized your Firebase app and authenticated the user.
+    // Get a reference to the Firestore database
+    if (loggedIn === false) {
+      openPopup();
+    } 
+
+  }else{
+window.location.href = "/";
+
+  }
+
+}
     </script>
 	  <script src="script.js" defer></script>
  </body>
