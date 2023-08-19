@@ -1,13 +1,9 @@
-
 // Function to fetch user data and populate the user table
-function populateUserTable() {
-
-
-  
+function populateUserTable(sortField) {
   const usersRef = firebase.firestore().collection('users');
   const userTableBody = document.querySelector('#userTable tbody');
 
-  usersRef.get()
+  usersRef.orderBy(sortField).get()
     .then((querySnapshot) => {
       userTableBody.innerHTML = '';
 
@@ -16,6 +12,8 @@ function populateUserTable() {
         const userJoinedDate = doc.get('userJoinedDate');
         const userName = user.userName;
         const userEmail = user.userEmail;
+        const userQuizzesTaken = user.userQuizzesTaken || 0;
+        const userPoints = user.userPoints || 0;
 
         const newRow = document.createElement('tr');
         newRow.classList.add('user-row');
@@ -23,6 +21,8 @@ function populateUserTable() {
         const idCell = createTableCell(userJoinedDate);
         const nameCell = createTableCell(userName);
         const emailCell = createTableCell(userEmail);
+        const quizzesTakenCell = createTableCell(userQuizzesTaken);
+        const pointsCell = createTableCell(userPoints);
 
         const actionsCell = document.createElement('td');
         actionsCell.classList.add('actions-cell');
@@ -41,6 +41,8 @@ function populateUserTable() {
         newRow.appendChild(idCell);
         newRow.appendChild(nameCell);
         newRow.appendChild(emailCell);
+        newRow.appendChild(quizzesTakenCell);
+        newRow.appendChild(pointsCell);
         newRow.appendChild(actionsCell);
 
         userTableBody.appendChild(newRow);
@@ -67,58 +69,11 @@ function createActionButton(label, clickHandler) {
   return button;
 }
 
-
-
-function deactivateUser(userId) {
-  // Reference to the 'users' collection in Firebase Firestore
-  const usersRef = firebase.firestore().collection('users');
-
-  // Update the user document with the provided userId
-  usersRef.doc(userId).update({
-    isActive: false // Set the 'isActive' field to false
-  })
-    .then(() => {
-      console.log('User deactivated successfully');
-    })
-    .catch((error) => {
-      console.error('Error deactivating user:', error);
-    });
+function sortTable(sortField) {
+  populateUserTable(sortField);
 }
-
-function removeUser(userId) {
-  // Reference to the 'users' collection in Firebase Firestore
-  const usersRef = firebase.firestore().collection('users');
-
-  // Remove the user document with the provided userId
-  usersRef.doc(userId).delete()
-    .then(() => {
-      console.log('User removed successfully');
-    })
-    .catch((error) => {
-      console.error('Error removing user:', error);
-    });
-}
-
-function getTotalUsers() {
-  // Reference to the 'users' collection in Firebase Firestore
-  const usersRef = firebase.firestore().collection('users');
-
-  // Fetch all user documents and count the number of documents
-  usersRef.get()
-    .then((querySnapshot) => {
-      const totalUsers = querySnapshot.size;
-      console.log('Total users:', totalUsers);
-    })
-    .catch((error) => {
-      console.error('Error fetching user data:', error);
-    });
-}
-
 
 document.addEventListener('DOMContentLoaded', function() {
-
-populateUserTable();
-getTotalUsers();
-
+  // Populate the table with default sorting by userName
+  populateUserTable('userName');
 });
-
