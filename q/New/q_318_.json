@@ -1,0 +1,141 @@
+{
+  "quizName": "Self-Help Quiz - Part 4",
+  "quizCode": "SHQ004",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Self-Help",
+  "quizDescription": "Continue testing your knowledge of self-help concepts and practices with this quiz.",
+  "quizTags": ["Self-Help", "Personal Development", "Wellness"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is 'Procrastination'?",
+      "options": [
+        "A productive time management strategy",
+        "A habit of delaying tasks and activities",
+        "A state of constant productivity",
+        "A form of relaxation"
+      ],
+      "answer": "A habit of delaying tasks and activities",
+      "explanation": "'Procrastination' is a habit where individuals delay or postpone tasks and activities, often due to avoidance or lack of motivation.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is 'Stress Management'?",
+      "options": [
+        "Creating more stress in one's life",
+        "Ignoring stress altogether",
+        "Taking steps to reduce and cope with stress",
+        "Increasing stress intentionally"
+      ],
+      "answer": "Taking steps to reduce and cope with stress",
+      "explanation": "'Stress Management' involves taking deliberate steps to reduce and cope with stress, which can include relaxation techniques, time management, and self-care strategies.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What does 'Empathy' mean?",
+      "options": [
+        "Lack of understanding or concern for others' feelings",
+        "Understanding and sharing the feelings of others",
+        "Ignoring others' emotions",
+        "Manipulating others' emotions"
+      ],
+      "answer": "Understanding and sharing the feelings of others",
+      "explanation": "'Empathy' means understanding and sharing the feelings of others, often accompanied by a desire to help and support them.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is 'Self-Discipline'?",
+      "options": [
+        "Avoiding all responsibilities",
+        "The ability to control one's actions and behavior",
+        "Being excessively strict with oneself",
+        "Ignoring personal growth"
+      ],
+      "answer": "The ability to control one's actions and behavior",
+      "explanation": "'Self-Discipline' is the ability to control one's actions, behavior, and impulses to achieve specific goals or maintain a particular lifestyle.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is 'Goal Setting'?",
+      "options": [
+        "Never setting any goals in life",
+        "Setting vague and undefined objectives",
+        "Setting clear and specific objectives to work towards",
+        "Ignoring personal aspirations"
+      ],
+      "answer": "Setting clear and specific objectives to work towards",
+      "explanation": "'Goal Setting' involves setting clear and specific objectives that individuals can work towards, providing direction and motivation in various areas of life.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is 'Self-Esteem'?",
+      "options": [
+        "A measure of arrogance",
+        "A measure of one's own worth and value",
+        "A measure of selfishness",
+        "A measure of competitiveness"
+      ],
+      "answer": "A measure of one's own worth and value",
+      "explanation": "'Self-Esteem' is a measure of one's own worth and value, encompassing how individuals perceive and value themselves.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is 'Coping Mechanism'?",
+      "options": [
+        "A form of denial",
+        "A strategy or action used to handle stress or difficult situations",
+        "A way to ignore problems",
+        "A type of avoidance"
+      ],
+      "answer": "A strategy or action used to handle stress or difficult situations",
+      "explanation": "'Coping Mechanism' refers to a strategy or action that individuals use to handle stress or difficult situations, promoting emotional well-being.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is 'Time Management'?",
+      "options": [
+        "Constantly being late for appointments",
+        "Wasting time intentionally",
+        "Using time efficiently and effectively",
+        "Ignoring one's schedule"
+      ],
+      "answer": "Using time efficiently and effectively",
+      "explanation": "'Time Management' involves using time efficiently and effectively to prioritize tasks, achieve goals, and reduce stress related to time pressures.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is 'Self-Reflection'?",
+      "options": [
+        "Avoiding all forms of self-awareness",
+        "Taking time to think about and evaluate one's thoughts, feelings, and actions",
+        "Ignoring personal growth",
+        "Being overly critical of oneself"
+      ],
+      "answer": "Taking time to think about and evaluate one's thoughts, feelings, and actions",
+      "explanation": "'Self-Reflection' involves taking time to think about and evaluate one's thoughts, feelings, and actions, promoting self-awareness and personal growth.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What does 'Compassion Fatigue' refer to?",
+      "options": [
+        "Feeling too much compassion for others",
+        "A state of physical exhaustion",
+        "Becoming indifferent to the suffering of others due to constant exposure to it",
+        "Experiencing empathy without burnout"
+      ],
+      "answer": "Becoming indifferent to the suffering of others due to constant exposure to it",
+      "explanation": "'Compassion Fatigue' refers to the state of becoming indifferent to the suffering of others, often experienced by individuals who are constantly exposed to the suffering of others, such as healthcare professionals.",
+      "difficulty": "Medium"
+    }
+  ]
+}
