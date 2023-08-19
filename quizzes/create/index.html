@@ -434,6 +434,24 @@ margin: auto;
 	    padding: 2%;
 
 		}
+
+
+		    section {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	        display: flex;
+    justify-content: space-between;
+    }
+    section h2 {
+    cursor: pointer;
+
+    }
+
+		
 </style>
 	  	
 	
@@ -488,7 +506,12 @@ margin: auto;
     gtag('config', 'G-9VG78SV9KZ');
 	  
 	//  console.log('page loading??/ mmmmm???????????????????????????????:');
-	  
+	  function backButton(){
+  window.history.back();
+
+}
+
+
   </script>
 
   <!-- Google AdSense -->
@@ -496,7 +519,10 @@ margin: auto;
 	
 <body>
 	<form class="quizForm">
+	<section>
+ <div><h2 id="back" class="list-catergory" onclick="backButton()">Back</h2>  </div> 
 
+	</section> 
   <div class="mainSection" id="area-1">
 <h1>Create Quiz</h1>
 
