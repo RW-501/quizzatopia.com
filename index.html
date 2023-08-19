@@ -1054,6 +1054,7 @@ function getQuizLink() {
   // Get the value entered in the quizCodeX input box
 const quizCodeX = document.getElementById('quizCodeInput').value;
 console.log(`quizCodeX: ${quizCodeX}`);
+const db = firebase.firestore();
 
 // Retrieve the quizLinkX based on the quizCodeX from the database
 db.collection('quizzes').where('quizCodeDB', '==', quizCodeX).get()
