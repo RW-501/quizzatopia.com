@@ -503,7 +503,7 @@ display: block;
     
 // Step 1: Get the category name from the URL
 const urlParams = new URLSearchParams(window.location.search);
-const categoryName = urlParams.get('categoryName');
+const categoryName = urlParams.indexOf('?') + 1;
 
   console.log("categoryName  ",categoryName);
 
