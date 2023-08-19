@@ -1,0 +1,141 @@
+{
+  "quizName": "Music Trivia Challenge",
+  "quizCode": "MTC003",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Fun",
+  "quizDescription": "Are you a music enthusiast? Test your knowledge of music history, artists, and songs with this entertaining trivia quiz.",
+  "quizTags": ["Music", "Trivia", "Entertainment", "Fun"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which British rock band released the album 'The Dark Side of the Moon' in 1973?",
+      "options": [
+        "The Rolling Stones",
+        "Led Zeppelin",
+        "Pink Floyd",
+        "The Beatles"
+      ],
+      "answer": "Pink Floyd",
+      "explanation": "The album 'The Dark Side of the Moon' was released by the British rock band Pink Floyd in 1973.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Who is known as the 'King of Pop'?",
+      "options": [
+        "Elvis Presley",
+        "Michael Jackson",
+        "Prince",
+        "David Bowie"
+      ],
+      "answer": "Michael Jackson",
+      "explanation": "Michael Jackson is known as the 'King of Pop' for his significant contributions to the genre.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which artist released the hit single 'Shape of You' in 2017?",
+      "options": [
+        "Adele",
+        "Ed Sheeran",
+        "Taylor Swift",
+        "Justin Bieber"
+      ],
+      "answer": "Ed Sheeran",
+      "explanation": "The hit single 'Shape of You' was released by the artist Ed Sheeran in 2017.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which musical genre is often associated with New Orleans and features brass bands?",
+      "options": [
+        "Jazz",
+        "Country",
+        "Reggae",
+        "Hip-Hop"
+      ],
+      "answer": "Jazz",
+      "explanation": "Jazz is often associated with New Orleans and is known for its brass band traditions.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What famous rock festival took place in 1969 and featured iconic performances by Jimi Hendrix and Janis Joplin?",
+      "options": [
+        "Woodstock",
+        "Lollapalooza",
+        "Coachella",
+        "Glastonbury"
+      ],
+      "answer": "Woodstock",
+      "explanation": "The famous rock festival in 1969 was Woodstock, featuring iconic performances by Jimi Hendrix and Janis Joplin.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "Which legendary artist released the album 'Purple Rain' in 1984?",
+      "options": [
+        "Prince",
+        "Michael Jackson",
+        "Elton John",
+        "David Bowie"
+      ],
+      "answer": "Prince",
+      "explanation": "The legendary artist Prince released the album 'Purple Rain' in 1984.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Who is known for the hit single 'Rolling in the Deep'?",
+      "options": [
+        "Adele",
+        "Taylor Swift",
+        "Beyoncé",
+        "Rihanna"
+      ],
+      "answer": "Adele",
+      "explanation": "The hit single 'Rolling in the Deep' is known for being sung by Adele.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which famous rock band released the album 'Hotel California' in 1976?",
+      "options": [
+        "The Rolling Stones",
+        "The Eagles",
+        "Led Zeppelin",
+        "The Who"
+      ],
+      "answer": "The Eagles",
+      "explanation": "The famous rock band The Eagles released the album 'Hotel California' in 1976.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Who sang the song 'Bohemian Rhapsody'?",
+      "options": [
+        "The Rolling Stones",
+        "Queen",
+        "The Beatles",
+        "Led Zeppelin"
+      ],
+      "answer": "Queen",
+      "explanation": "The song 'Bohemian Rhapsody' was performed by the band Queen.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which female artist released the album '1989' in 2014?",
+      "options": [
+        "Taylor Swift",
+        "Adele",
+        "Beyoncé",
+        "Rihanna"
+      ],
+      "answer": "Taylor Swift",
+      "explanation": "The album '1989' was released by the female artist Taylor Swift in 2014.",
+      "difficulty": "Medium"
+    }
+  ]
+}
