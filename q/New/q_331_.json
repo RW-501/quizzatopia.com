@@ -1,0 +1,91 @@
+{
+  "quizName": "Riddle Quiz 4",
+  "quizCode": "RDLQZ4",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Riddles",
+  "quizDescription": "Put your thinking cap on and solve these mind-bending riddles.",
+  "quizTags": ["Fun","Riddles", "Brain Teasers", "Puzzles"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What comes once in a minute, twice in a moment, but never in a thousand years?",
+      "options": ["The letter 'M'", "A shooting star", "A clock's chime", "A birthday"],
+      "answer": "The letter 'M'",
+      "explanation": "The letter 'M' appears once in the word 'minute,' twice in the word 'moment,' but not at all in 'a thousand years.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "I'm tall when I'm young and short when I'm old. What am I?",
+      "options": ["A candle", "A tree", "A person", "A book"],
+      "answer": "A candle",
+      "explanation": "A candle is tall when it's newly lit (young) and becomes shorter as it burns (old).",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "I'm found in socks, scarves, and mittens, but never in a river. What am I?",
+      "options": ["The letter 'R'", "Wool", "A snowflake", "A glove"],
+      "answer": "The letter 'R'",
+      "explanation": "The letter 'R' is found in 'socks,' 'scarves,' and 'mittens' but not in the word 'river.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "I have keys but can't open locks. I have space but no room. You can enter, but you can't go inside. What am I?",
+      "options": ["A keyboard", "A car", "A house", "A box"],
+      "answer": "A keyboard",
+      "explanation": "A keyboard has keys (letters/characters) but doesn't open locks. It has space between keys but no physical room you can enter.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "I can be cracked, made, told, and played. What am I?",
+      "options": ["A joke", "A song", "A game", "A book"],
+      "answer": "A joke",
+      "explanation": "A joke can be 'cracked' (told), 'made' (created), 'told' (shared), and 'played' (used for humor).",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "I'm not alive, but I can die. What am I?",
+      "options": ["A battery", "A rock", "A river", "A cloud"],
+      "answer": "A battery",
+      "explanation": "A battery provides power, but it can 'die' when it runs out of energy. It is not a living thing.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "What has keys but can't open locks?",
+      "options": ["A keyboard", "A treasure chest", "A car", "A safe"],
+      "answer": "A keyboard",
+      "explanation": "A keyboard has keys (letters/characters) but doesn't open locks. It's used for typing and input.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "The more you take, the more you leave behind. What am I?",
+      "options": ["Footsteps", "Memories", "Money", "A trail"],
+      "answer": "Footsteps",
+      "explanation": "The more footsteps you take, the more footprints or marks you leave behind.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "I'm an odd number. Take away a letter, and I become even. What am I?",
+      "options": ["Seven", "Nine", "Eleven", "Three"],
+      "answer": "Seven",
+      "explanation": "Seven is an odd number. When you take away the 's,' it becomes 'even.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "I have keys but can't open locks. I have a space but no room. You can enter, but you can't go inside. What am I?",
+      "options": ["A computer keyboard", "A car", "A house", "A box"],
+      "answer": "A computer keyboard",
+      "explanation": "A computer keyboard has keys (letters/characters) but doesn't open locks. It has space between keys but no physical room you can enter.",
+      "difficulty": "Medium"
+    }
+  ]
+}
