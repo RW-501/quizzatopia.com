@@ -548,7 +548,7 @@ function generateQuizHTML(quizList, page) {
       tagsUI = tagsElements.join('');
     }
 
-    if (count === 10) {
+if (count % 10 === 0) {
 
 const buttonString = `
 <button type="button" class="btn btn-primary btn-lg back-to-top" onclick="scrollToDiv()"><i class="fas fa-chevron-up"></i></button>
@@ -557,7 +557,7 @@ const buttonString = `
       html += buttonString;
     }
 	  
-    if (count === 6) {
+if (count % 10 === 4) {
       const htmlString = `
         <div class="bMC_link">
           <a href="https://www.buymeacoffee.com/Quizzatopia" target="_blank"><img src="/images/bmc.png" alt="Buy Me A Coffee" id="adPic"></a>
@@ -566,7 +566,7 @@ const buttonString = `
       html += htmlString;
     }
 
-    if (count === 4) {
+if (count % 10 === 7) {
       // Add the svgString on the 4th output
       const svgString = `
         <div class="container" onclick="openCreateQuizFunc()">
