@@ -356,19 +356,7 @@ display: block;
 //https://www.quizzatopia.com/category/?Professional%20Certification
 
 const urlParams = window.location.href;
-//const urlParams = new URLSearchParams(window.location.href);
-console.log("urlParams: ", urlParams);
-const startIndex = urlParams.indexOf('?') + 1;
-   var      categoryName = urlParams.substring(startIndex);
-
-const categoryName3 = decodeURIComponent(urlParams.split('?')[-1]);
-
-	  
-const categoryName2 = decodeURIComponent(urlParams.toString().split('?')[1]);
-
-console.log("startIndex: ", startIndex);
-console.log("categoryName2: ", categoryName2);
-console.log("categoryName3: ", categoryName3);
+const categoryName = decodeURIComponent(urlParams.toString().split('?')[1]);
 console.log("categoryName: ", categoryName);
 document.getElementById('title').innerHTML = categoryName;
 
