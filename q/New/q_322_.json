@@ -1,0 +1,141 @@
+{
+  "quizName": "Famous Landmarks Quiz",
+  "quizCode": "FLW002",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Fun",
+  "quizDescription": "Explore your knowledge of iconic landmarks from various countries.",
+  "quizTags": ["Landmarks", "Travel", "Fun"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which landmark is located in India and is one of the Seven Wonders of the World?",
+      "options": [
+        "Eiffel Tower",
+        "Great Wall of China",
+        "Machu Picchu",
+        "Taj Mahal"
+      ],
+      "answer": "Taj Mahal",
+      "explanation": "The Taj Mahal, located in Agra, India, is one of the Seven Wonders of the World and is renowned for its stunning architecture and history.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "This ancient wonder is a colossal stone statue located on Easter Island. What is it called?",
+      "options": [
+        "The Great Sphinx of Giza",
+        "The Colosseum",
+        "Stonehenge",
+        "Moai statues"
+      ],
+      "answer": "Moai statues",
+      "explanation": "The Moai statues, located on Easter Island in the South Pacific Ocean, are famous for their mysterious origins and massive stone figures.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which iconic landmark is often called the 'City of Love' and is located in Paris, France?",
+      "options": [
+        "Sydney Opera House",
+        "Statue of Liberty",
+        "Eiffel Tower",
+        "Tower Bridge"
+      ],
+      "answer": "Eiffel Tower",
+      "explanation": "The Eiffel Tower in Paris, France, is often referred to as the 'City of Love' and is a symbol of romance and French culture.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "This famous landmark, located in New York Harbor, is a symbol of freedom and democracy. What is it?",
+      "options": [
+        "Sydney Opera House",
+        "Statue of Liberty",
+        "Eiffel Tower",
+        "Tower Bridge"
+      ],
+      "answer": "Statue of Liberty",
+      "explanation": "The Statue of Liberty in New York Harbor is a symbol of freedom and democracy and is a gift from France to the United States.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which ancient wonder is a massive stone circle located in England and believed to have been constructed for astronomical purposes?",
+      "options": [
+        "The Great Sphinx of Giza",
+        "The Colosseum",
+        "Stonehenge",
+        "Moai statues"
+      ],
+      "answer": "Stonehenge",
+      "explanation": "Stonehenge, located in England, is an ancient stone circle that has puzzled researchers for centuries and is believed to have had astronomical significance.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "This stunning landmark is situated in Sydney, Australia, and is known for its distinctive architecture. What is it?",
+      "options": [
+        "Eiffel Tower",
+        "Great Wall of China",
+        "Sydney Opera House",
+        "Taj Mahal"
+      ],
+      "answer": "Sydney Opera House",
+      "explanation": "The Sydney Opera House in Australia is renowned for its unique and innovative design and is a famous performing arts venue.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which landmark is a massive amphitheater located in Rome, Italy, known for its historical significance?",
+      "options": [
+        "The Great Sphinx of Giza",
+        "The Colosseum",
+        "Stonehenge",
+        "Moai statues"
+      ],
+      "answer": "The Colosseum",
+      "explanation": "The Colosseum in Rome, Italy, is a massive ancient amphitheater and is famous for its historical events and gladiator battles.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "This landmark is a historic bridge located in London, England, and is often mistaken for the London Bridge. What is it called?",
+      "options": [
+        "Sydney Opera House",
+        "Statue of Liberty",
+        "Eiffel Tower",
+        "Tower Bridge"
+      ],
+      "answer": "Tower Bridge",
+      "explanation": "Tower Bridge in London, England, is often confused with the London Bridge and is known for its distinctive twin towers.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which landmark is a section of a historic wall located in northern China, built to protect against invasions?",
+      "options": [
+        "Eiffel Tower",
+        "Great Wall of China",
+        "Sydney Opera House",
+        "Taj Mahal"
+      ],
+      "answer": "Great Wall of China",
+      "explanation": "The Great Wall of China is a historic defensive wall built in northern China and is one of the most iconic symbols of China.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which famous landmark is a mountain citadel located in the Andes Mountains of Peru?",
+      "options": [
+        "Eiffel Tower",
+        "Great Wall of China",
+        "Machu Picchu",
+        "Taj Mahal"
+      ],
+      "answer": "Machu Picchu",
+      "explanation": "Machu Picchu is an ancient Inca citadel situated in the Andes Mountains of Peru and is known for its breathtaking views and archaeological significance.",
+      "difficulty": "Medium"
+    }
+  ]
+}
