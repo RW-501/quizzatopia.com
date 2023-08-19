@@ -1,0 +1,141 @@
+{
+  "quizName": "Movie Quotes Challenge",
+  "quizCode": "MQC002",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Fun",
+  "quizDescription": "Think you know your favorite movie quotes? Test your knowledge with this quiz filled with iconic lines from famous films.",
+  "quizTags": ["Movies", "Quotes", "Trivia", "Fun"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Complete this famous movie quote: 'May the Force be ____.'",
+      "options": [
+        "with you",
+        "strong",
+        "ever in your favor",
+        "live long and prosper"
+      ],
+      "answer": "with you",
+      "explanation": "This famous quote is from Star Wars, and it's 'May the Force be with you.'",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which movie features the quote: 'Here's looking at you, kid.'?",
+      "options": [
+        "Casablanca",
+        "The Godfather",
+        "Gone with the Wind",
+        "Titanic"
+      ],
+      "answer": "Casablanca",
+      "explanation": "The quote 'Here's looking at you, kid.' is from the movie Casablanca.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "In which film does a character say: 'There's no place like home.'?",
+      "options": [
+        "Forrest Gump",
+        "The Shining",
+        "The Wizard of Oz",
+        "The Shawshank Redemption"
+      ],
+      "answer": "The Wizard of Oz",
+      "explanation": "The famous line 'There's no place like home.' is from The Wizard of Oz.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which movie includes the quote: 'You can't handle the truth!'?",
+      "options": [
+        "A Few Good Men",
+        "Goodfellas",
+        "The Departed",
+        "Scent of a Woman"
+      ],
+      "answer": "A Few Good Men",
+      "explanation": "The quote 'You can't handle the truth!' is from the movie A Few Good Men.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which classic film features the quote: 'Here's Johnny!'?",
+      "options": [
+        "The Shining",
+        "Psycho",
+        "The Silence of the Lambs",
+        "Misery"
+      ],
+      "answer": "The Shining",
+      "explanation": "The famous line 'Here's Johnny!' is from the movie The Shining.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "In which movie is the line: 'Life is like a box of chocolates; you never know what you're gonna get.'?",
+      "options": [
+        "Forrest Gump",
+        "Pulp Fiction",
+        "The Godfather",
+        "Fight Club"
+      ],
+      "answer": "Forrest Gump",
+      "explanation": "The quote 'Life is like a box of chocolates; you never know what you're gonna get.' is from Forrest Gump.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which film features the line: 'I'll be back.'?",
+      "options": [
+        "Die Hard",
+        "Terminator 2: Judgment Day",
+        "Predator",
+        "Total Recall"
+      ],
+      "answer": "The Terminator",
+      "explanation": "The iconic line 'I'll be back.' is from the movie The Terminator.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "In which movie does a character say: 'Houston, we have a problem.'?",
+      "options": [
+        "Interstellar",
+        "The Martian",
+        "Apollo 13",
+        "Gravity"
+      ],
+      "answer": "Apollo 13",
+      "explanation": "The line 'Houston, we have a problem.' is from the movie Apollo 13.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which film includes the quote: 'You talking to me?'?",
+      "options": [
+        "Heat",
+        "Goodfellas",
+        "Taxi Driver",
+        "Scarface"
+      ],
+      "answer": "Taxi Driver",
+      "explanation": "The quote 'You talking to me?' is from the movie Taxi Driver.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which movie features the quote: 'To infinity and beyond!'?",
+      "options": [
+        "The Incredibles",
+        "Toy Story",
+        "Finding Nemo",
+        "WALL-E"
+      ],
+      "answer": "Toy Story",
+      "explanation": "The quote 'To infinity and beyond!' is from the movie Toy Story.",
+      "difficulty": "Medium"
+    }
+  ]
+}
