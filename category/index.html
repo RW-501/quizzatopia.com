@@ -365,8 +365,9 @@ display: block;
 	
 
 <section>
- <h1 id="title" class="list-catergory">	    <div class="loading_Main ">Loading...</div>
-</h1>
+ <h1 id="back" class="list-catergory" onclick="backButton()">Back</h1>   
+	<h1 id="title" class="list-catergory"></div></h1>
+	
     <div class="container  justify-content-center" id="quiz_list">
   <div id="updated_Quizzez" class="container">
 	  
@@ -386,8 +387,12 @@ display: block;
 
 
   <script>
-//https://www.quizzatopia.com/category/?Professional%20Certification
+function backButton(){
+  window.history.back();
 
+}
+
+	  
 const urlParams = window.location.href;
 const categoryName = decodeURIComponent(urlParams.toString().split('?')[1]);
 console.log("categoryName: ", categoryName);
