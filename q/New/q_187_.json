@@ -35,15 +35,15 @@
       "answer": "Federal Reserve (the Fed)",
       "explanation": "The Federal Reserve, often referred to as 'the Fed,' is the central banking system of the United States, responsible for conducting monetary policy and regulating the country's financial system."
     },
-    {
-      "questionNumber": 3,
-      "question": "What is the term for the interest rate at which the Federal Reserve lends money to commercial banks?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Federal funds rate",
-      "explanation": "The Federal funds rate is the interest rate at which the Federal Reserve lends money to commercial banks on an overnight basis to meet reserve requirements."
-    },
+{
+  "questionNumber": 3,
+  "question": "What is the term for the interest rate at which the Federal Reserve lends money to commercial banks?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": ["Prime rate", "Discount rate", "Federal funds rate", "Libor rate"],
+  "answer": "Federal funds rate",
+  "explanation": "The Federal funds rate is the interest rate at which the Federal Reserve lends money to commercial banks on an overnight basis to meet reserve requirements."
+},
     {
       "questionNumber": 4,
       "question": "How many Federal Reserve banks are there in the United States?",
@@ -72,15 +72,15 @@
       "answer": "Chair of the Federal Reserve Board",
       "explanation": "The Chair of the Federal Reserve Board is responsible for setting the monetary policy and is considered one of the most influential economic policymakers in the United States."
     },
-    {
-      "questionNumber": 6,
-      "question": "What is the term for the actions taken by the Federal Reserve to influence the money supply and interest rates?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Open market operations",
-      "explanation": "Open market operations refer to the buying and selling of government securities by the Federal Reserve to influence the money supply and interest rates in the economy."
-    },
+{
+  "questionNumber": 6,
+  "question": "What is the term for the actions taken by the Federal Reserve to influence the money supply and interest rates?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": ["Quantitative easing", "Monetary policy", "Federal funds rate", "Open market operations"],
+  "answer": "Open market operations",
+  "explanation": "Open market operations refer to the buying and selling of government securities by the Federal Reserve to influence the money supply and interest rates in the economy."
+},
     {
       "questionNumber": 7,
       "question": "Which of the following is a tool used by the Federal Reserve to control the money supply?",
@@ -95,15 +95,15 @@
       "answer": "Discount window lending",
       "explanation": "Discount window lending is a tool used by the Federal Reserve to control the money supply by providing short-term loans to commercial banks at the discount rate."
     },
-    {
-      "questionNumber": 8,
-      "question": "What is the term for the rate at which banks can borrow funds directly from the Federal Reserve?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Discount rate",
-      "explanation": "The discount rate is the rate at which banks can borrow funds directly from the Federal Reserve to meet short-term liquidity needs."
-    },
+{
+  "questionNumber": 8,
+  "question": "What is the term for the rate at which banks can borrow funds directly from the Federal Reserve?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": ["Prime rate", "Federal funds rate", "Interest rate", "Discount rate"],
+  "answer": "Discount rate",
+  "explanation": "The discount rate is the rate at which banks can borrow funds directly from the Federal Reserve to meet short-term liquidity needs."
+},
     {
       "questionNumber": 9,
       "question": "Which of the following is a dual mandate of the Federal Reserve?",
@@ -132,15 +132,15 @@
       "answer": "Regulating commercial banks",
       "explanation": "The Federal Reserve has regulatory responsibilities over commercial banks to ensure they operate safely, maintain sufficient reserves, and comply with banking laws and regulations."
     },
-    {
-      "questionNumber": 11,
-      "question": "What is the term for the percentage of deposits that banks must hold as reserves?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Reserve ratio",
-      "explanation": "The reserve ratio is the percentage of deposits that banks must hold as reserves, as mandated by the Federal Reserve. It is used to control the money supply and influence lending."
-    },
+{
+  "questionNumber": 11,
+  "question": "What is the term for the percentage of deposits that banks must hold as reserves?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": ["Interest rate", "Reserve requirement", "Fractional reserve", "Reserve ratio"],
+  "answer": "Reserve ratio",
+  "explanation": "The reserve ratio is the percentage of deposits that banks must hold as reserves, as mandated by the Federal Reserve. It is used to control the money supply and influence lending."
+},
     {
       "questionNumber": 12,
       "question": "Which of the following is an example of expansionary monetary policy?",
