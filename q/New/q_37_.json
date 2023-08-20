@@ -10,7 +10,10 @@
       "question": "The Great Wall of China is the longest man-made structure in the world.",
       "imageURL": "",
       "questionType": "True or False",
-      "options": [],
+      "options": [
+        "True",
+        "False"
+      ],     
       "answer": "True",
       "explanation": "The Great Wall of China is indeed the longest man-made structure in the world, stretching over 13,000 miles.",
       "difficulty": "Medium"
@@ -65,7 +68,10 @@
       "question": "The human body has four chambers in the heart.",
       "imageURL": "",
       "questionType": "True or False",
-      "options": [],
+      "options": [
+        "True",
+        "False"
+      ],   
       "answer": "True",
       "explanation": "The human heart has four chambers: two atria and two ventricles, which work together to pump blood throughout the body.",
       "difficulty": "Medium"
