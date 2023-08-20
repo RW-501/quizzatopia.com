@@ -180,16 +180,19 @@
       "explanation": "The Marshall Space Flight Center, located in Huntsville, Alabama, is one of NASA's major space flight centers.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 13,
-      "question": "True or False: The famous civil rights activist Rosa Parks was born in Alabama.",
-      "imageURL": "",
-      "questionType": "True or False",
-      "options": [],
-      "answer": "True",
-      "explanation": "True. Rosa Parks, known for her pivotal role in the Montgomery Bus Boycott, was born in Tuskegee, Alabama.",
-      "difficulty": "Medium"
-    },
+{
+  "questionNumber": 13,
+  "question": "The famous civil rights activist Rosa Parks was born in Alabama.",
+  "imageURL": "",
+  "questionType": "True or False",
+  "options": [
+    "True",
+    "False"
+  ],
+  "answer": "True",
+  "explanation": "True. Rosa Parks, known for her pivotal role in the Montgomery Bus Boycott, was born in Tuskegee, Alabama.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 14,
       "question": "Which U.S. space agency operates the U.S. Space & Rocket Center, a popular space museum and attraction in Alabama?",
