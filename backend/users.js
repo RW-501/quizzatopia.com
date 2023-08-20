@@ -3,7 +3,7 @@ function populateUserTable(sortField) {
   const usersRef = firebase.firestore().collection('users');
   const userTableBody = document.querySelector('#userTable tbody');
 
-querySnapshot.orderBy(sortField, 'asc').get()
+usersRef.orderBy(sortField,  'desc').limit(10).get()
     .then((querySnapshot) => {
       userTableBody.innerHTML = '';
 
