@@ -743,8 +743,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	  function scrollToBottomDiv() {
   console.log(`scrollToBottomDiv: `);
 
-    window.scrollTo({
-    bottom: 0,
+ window.scrollTo({
+    top: document.documentElement.scrollHeight,
     behavior: "smooth"
   });
 	  
