@@ -140,16 +140,16 @@
       "explanation": "Bob Marley, a legendary musician and songwriter from Jamaica, is often referred to as the 'King of Reggae' and is known for popularizing reggae music worldwide.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 10,
-      "question": "True or False: The Hawaiian Islands are located in the Pacific Ring of Fire, an area known for frequent earthquakes and volcanic eruptions.",
-      "imageURL": "",
-      "questionType": "True or False",
-      "options": [],
-      "answer": "True",
-      "explanation": "True. The Hawaiian Islands are situated in the Pacific Ring of Fire, which is characterized by frequent seismic and volcanic activity.",
-      "difficulty": "Medium"
-    },
+  {
+  "questionNumber": 10,
+  "question": "True or False: The Hawaiian Islands are located in the Pacific Ring of Fire, an area known for frequent earthquakes and volcanic eruptions.",
+  "imageURL": "",
+  "questionType": "True or False",
+  "options": ["True", "False"],
+  "answer": "True",
+  "explanation": "True. The Hawaiian Islands are situated in the Pacific Ring of Fire, which is characterized by frequent seismic and volcanic activity.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 11,
       "question": "Which famous beach on the island of Oahu is known for its large waves, making it a popular spot for surfing competitions?",
