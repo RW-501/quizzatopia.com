@@ -16,7 +16,6 @@
 
   <!-- Custom CSS -->
  <!--  <link rel="stylesheet" href="/style.css">-->
-  <link rel="stylesheet" href="style.css">
 
   <!-- Import navbar and footer components -->
   <link rel="import" href="/elements/navbar.html">
@@ -72,57 +71,43 @@
   </ul>
 </nav>
 
-<main class="container">
+ <main class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Main content area -->
+        <h2>Guest Log</h2>
 
- <header>
-    <h1>Visitor Analytics</h1>
-  </header>
+        <!-- Sort buttons for the guest log table -->
+        <div class="sort-buttons">
+          <button onclick="sortTable('firstVisitTime')">Sort by First Visit Time</button>
+          <button onclick="sortTable('lastVisitTime')">Sort by Last Visit Time</button>
+          <button onclick="sortTable('userVisitCount')">Sort by Visit Count</button>
+        </div>
 
-  <section class="visitor-info">
-  <h2>Visitor Information</h2>
-  <div class="visitor-details">
-    <!-- Display visitor details dynamically using JavaScript -->
-  </div>
-</section>
-
-<section class="charts">
-  <h2>Charts</h2>
-  <div class="chart-container">
-    <canvas id="chart"></canvas>
-  </div>
-</section>
-
-<section class="data-table">
-  <h2>Data Table</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>IP Address</th>
-        <th>First Visit</th>
-        <th>Last Visit</th>
-        <th>Referral Page</th>
-        <th>User Agent</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Populate table rows dynamically using JavaScript -->
-    </tbody>
-  </table>
-</section>
-
-<section class="visit-duration">
-  <h2>Visit Duration</h2>
-  <div class="counter">
-    <h3>Total Visit Duration</h3>
-    <span id="total-duration"></span>
-  </div>
-  <div class="counter">
-    <h3>Average Visit Duration</h3>
-    <span id="average-duration"></span>
-  </div>
-</section>
-
-	</main>
+        <!-- Guest log table -->
+        <div class="table-container">
+          <table id="guestLogTable">
+            <thead>
+              <tr>
+                <th>Banned</th>
+                <th>Browser</th>
+                <th>Device</th>
+                <th>First Visit Page</th>
+                <th>First Visit Time</th>
+                <th>Last Visit Page</th>
+                <th>Last Visit Time</th>
+                <th>Referral Page</th>
+                <th>Visit Count</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Dynamically populate the guest log table using JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
 
 
 	
