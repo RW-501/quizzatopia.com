@@ -63,15 +63,15 @@
       "answer": "Marvin Gaye",
       "explanation": "Marvin Gaye recorded the iconic song 'What's Going On,' which addressed social issues and advocated for peace and understanding during a turbulent time in the United States."
     },
-    {
-      "questionNumber": 5,
-      "question": "The Supremes, one of Motown's most successful acts, consisted of members Diana Ross, Florence Ballard, and __________.",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Mary Wilson",
-      "explanation": "The Supremes, one of Motown's most successful acts, consisted of members Diana Ross, Florence Ballard, and Mary Wilson. They achieved numerous chart-topping hits."
-    },
+{
+  "questionNumber": 5,
+  "question": "The Supremes, one of Motown's most successful acts, consisted of members Diana Ross, Florence Ballard, and __________.",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": ["Mary Wilson", "Smokey Robinson", "Marvin Gaye", "Stevie Wonder"],
+  "answer": "Mary Wilson",
+  "explanation": "The Supremes, one of Motown's most successful acts, consisted of members Diana Ross, Florence Ballard, and Mary Wilson. They achieved numerous chart-topping hits."
+},
     {
       "questionNumber": 6,
       "question": "Which Motown artist is known for hits like 'Superstition' and 'I Just Called to Say I Love You'?",
