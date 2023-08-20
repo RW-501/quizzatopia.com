@@ -172,15 +172,17 @@ function addWordsToDistinctList(words) {
 	  
 	      tagsD.innerHTML = ` ${wordArray}`;
 
-    wordArray.forEach(word => {
+ wordArray.forEach(word => {
+
       if (!distinctWords.includes(word)) {
-	      wordsTextarea.innerHTML += ` ${word}\n`;
 
         distinctWords.push(word);
         console.log(`Added new word: ${word}`);
+	      	      wordsTextarea.innerHTML = ` ${distinctWords}`;
+    stopFetching();
       }
     });
-    stopFetching();
+
   } else {
     console.error("Words is not an array.");
     console.log("Type of 'words':", typeof words);
@@ -191,6 +193,7 @@ function addWordsToDistinctList(words) {
 }
 
 
+	      	      wordsTextarea.innerHTML = ` ${distinctWords}`;
 
 
 
