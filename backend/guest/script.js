@@ -3,7 +3,7 @@ function populateGuestLogTable(sortField) {
   const guestLogRef = firebase.firestore().collection('guestLog');
   const guestLogTableBody = document.querySelector('#guestLogTable tbody');
 
-  guestLogRef.orderBy(sortField).get()
+guestLogRef.orderBy(sortField, 'asc').get()
     .then((querySnapshot) => {
       guestLogTableBody.innerHTML = '';
 
