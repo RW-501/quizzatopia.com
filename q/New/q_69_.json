@@ -22,16 +22,19 @@
       "explanation": "New York is often referred to as the Empire State, a nickname that symbolizes its economic prowess and historical significance.",
       "difficulty": "Easy"
     },
-    {
-      "questionNumber": 2,
-      "question": "True or False: New York City is the capital of New York.",
-      "imageURL": "",
-      "questionType": "True or False",
-      "options": [],
-      "answer": "False",
-      "explanation": "False. While New York City is the largest city in New York and one of the most populous cities in the United States, the capital of New York State is Albany.",
-      "difficulty": "Easy"
-    },
+{
+  "questionNumber": 2,
+  "question": "New York City is the capital of New York.",
+  "imageURL": "",
+  "questionType": "True or False",
+  "options": [
+    "True",
+    "False"
+  ],
+  "answer": "False",
+  "explanation": "False. While New York City is the largest city in New York and one of the most populous cities in the United States, the capital of New York State is Albany.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 3,
       "question": "What is the capital city of New York?",
