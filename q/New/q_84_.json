@@ -22,16 +22,19 @@
       "explanation": "The capital city of Washington is Olympia, known for its scenic beauty, the State Capitol building, and its location on the southern end of Puget Sound.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 2,
-      "question": "True or False: Washington is known as the 'Evergreen State.'",
-      "imageURL": "",
-      "questionType": "True or False",
-      "options": [],
-      "answer": "True",
-      "explanation": "True. Washington is often referred to as the 'Evergreen State' due to its lush forests and abundant greenery.",
-      "difficulty": "Easy"
-    },
+{
+  "questionNumber": 2,
+  "question": "Washington is known as the 'Evergreen State.'",
+  "imageURL": "",
+  "questionType": "True or False",
+  "options": [
+    "True",
+    "False"
+  ],
+  "answer": "True",
+  "explanation": "True. Washington is often referred to as the 'Evergreen State' due to its lush forests and abundant greenery.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 3,
       "question": "What is the nickname of Washington?",
