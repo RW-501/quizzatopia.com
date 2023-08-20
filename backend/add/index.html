@@ -145,6 +145,7 @@ if (!localStorage.getItem('distinctWords')) {
 }
 
 // Add words to the local storage array
+  
   function addWordsToDistinctList(words) {
     const distinctWords = JSON.parse(localStorage.getItem('distinctWords')) || [];
 
@@ -162,9 +163,13 @@ if (!localStorage.getItem('distinctWords')) {
 
     localStorage.setItem('distinctWords', JSON.stringify(distinctWords));
   }
-}
 
-	
+
+
+
+
+
+
 
 
 
