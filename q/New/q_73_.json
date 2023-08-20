@@ -22,16 +22,19 @@
       "explanation": "The capital city of Oklahoma is Oklahoma City, known for its vibrant arts and culture scene, as well as its cowboy heritage.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 2,
-      "question": "True or False: Oklahoma is known as the 'Sooner State.'",
-      "imageURL": "",
-      "questionType": "True or False",
-      "options": [],
-      "answer": "True",
-      "explanation": "True. Oklahoma is known as the 'Sooner State' because of the settlers who staked their claims on the land sooner than they were supposed to during the Land Run of 1889.",
-      "difficulty": "Easy"
-    },
+{
+  "questionNumber": 2,
+  "question": "Oklahoma is known as the 'Sooner State.'",
+  "imageURL": "",
+  "questionType": "True or False",
+  "options": [
+    "True",
+    "False"
+  ],
+  "answer": "True",
+  "explanation": "True. Oklahoma is known as the 'Sooner State' because of the settlers who staked their claims on the land sooner than they were supposed to during the Land Run of 1889.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 3,
       "question": "What is the nickname of Oklahoma?",
