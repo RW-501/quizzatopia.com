@@ -139,6 +139,23 @@
 
 
 <script>
+
+
+	var matchedWords = [];
+let counter = 0;
+let fetchInterval;
+const logTextarea = document.getElementById('log');
+const errorLogTextarea = document.getElementById('errorLog');
+const counterLabel = document.getElementById('counterLabel');
+const startButton = document.getElementById('startButton');
+const stopButton = document.getElementById('stopButton');
+const wordsTextarea = document.getElementById('wordsTextarea');
+const updateWordsButton = document.getElementById('updateWordsButton');
+let logHistory = "";
+let errorLogHistory = "";
+var stopBool = true;
+
+	
 // Initialize local storage array if it doesn't exist
 if (!localStorage.getItem('distinctWords')) {
   localStorage.setItem('distinctWords', JSON.stringify([]));
@@ -151,14 +168,16 @@ function addWordsToDistinctList(words) {
   if (typeof words === 'string') {
     // Split the string into an array using commas as the separator
     const wordArray = words.split(',').map(word => word.trim());
+	  
 
     wordArray.forEach(word => {
       if (!distinctWords.includes(word)) {
+	      wordsTextarea.innerHTML += ` ${word}\n`;
+
         distinctWords.push(word);
         console.log(`Added new word: ${word}`);
       }
     });
-
     stopFetching();
   } else {
     console.error("Words is not an array.");
@@ -192,19 +211,7 @@ function matchTagsWithDistinctList(quizTags) {
 
   return matchedWords;
 }
-var matchedWords = [];
-let counter = 0;
-let fetchInterval;
-const logTextarea = document.getElementById('log');
-const errorLogTextarea = document.getElementById('errorLog');
-const counterLabel = document.getElementById('counterLabel');
-const startButton = document.getElementById('startButton');
-const stopButton = document.getElementById('stopButton');
-const wordsTextarea = document.getElementById('wordsTextarea');
-const updateWordsButton = document.getElementById('updateWordsButton');
-let logHistory = "";
-let errorLogHistory = "";
-var stopBool = true;
+
 
 // Function to fetch JSON files and process data
 async function startFetching() {
