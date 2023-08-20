@@ -100,15 +100,15 @@
       "answer": "Form Schedule C",
       "explanation": "A self-employed individual should use 'Form Schedule C' to report their business income and expenses as part of their personal income tax return."
     },
-    {
-      "questionNumber": 8,
-      "question": "What is the name of the form that employers use to report wages and salaries paid to employees?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Form W-2",
-      "explanation": "Employers use 'Form W-2' to report wages and salaries paid to their employees to the IRS and provide a copy to the employees for tax filing purposes."
-    },
+{
+  "questionNumber": 8,
+  "question": "What is the name of the form that employers use to report wages and salaries paid to employees?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": ["Form I-9", "Form 1099", "Form W-4", "Form W-2"],
+  "answer": "Form W-2",
+  "explanation": "Employers use 'Form W-2' to report wages and salaries paid to their employees to the IRS and provide a copy to the employees for tax filing purposes."
+},
     {
       "questionNumber": 9,
       "question": "What is the term for the money that an employer withholds from an employee's paycheck for income taxes?",
@@ -165,15 +165,15 @@
       "answer": "10% of the withdrawn amount",
       "explanation": "Early withdrawal from a retirement account before the age of 59½ typically incurs a 10% penalty on the withdrawn amount, in addition to regular income tax on the distribution."
     },
-    {
-      "questionNumber": 13,
-      "question": "What is the name of the form that businesses use to report their annual income and expenses to the IRS?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Form 1120",
-      "explanation": "Businesses use 'Form 1120' to report their annual income and expenses to the IRS. It is used for corporate tax returns."
-    },
+{
+  "questionNumber": 13,
+  "question": "What is the name of the form that businesses use to report their annual income and expenses to the IRS?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": ["Form 1040", "Form 1120", "Form W-2", "Form 1099"],
+  "answer": "Form 1120",
+  "explanation": "Businesses use 'Form 1120' to report their annual income and expenses to the IRS. It is used for corporate tax returns."
+},
     {
       "questionNumber": 14,
       "question": "What is the penalty for underreporting income on a tax return?",
