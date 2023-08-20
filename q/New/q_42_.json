@@ -22,16 +22,19 @@
       "explanation": "California is known as the Golden State, a nickname inspired by the California Gold Rush and the state's golden poppy flowers.",
       "difficulty": "Easy"
     },
-    {
-      "questionNumber": 2,
-      "question": "True or False: California is the largest state in the United States by population.",
-      "imageURL": "",
-      "questionType": "True or False",
-      "options": [],
-      "answer": "True",
-      "explanation": "True. California is the most populous state in the United States.",
-      "difficulty": "Easy"
-    },
+{
+  "questionNumber": 2,
+  "question": "California is the largest state in the United States by population.",
+  "imageURL": "",
+  "questionType": "Multiple Choice",
+  "options": [
+    "True",
+    "False"
+  ],
+  "answer": "True",
+  "explanation": "True. California is the most populous state in the United States.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 3,
       "question": "What is the capital city of California?",
