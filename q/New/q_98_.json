@@ -125,16 +125,17 @@
       "explanation": "Primary research involves collecting new data directly from respondents or sources for a specific research project.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 9,
-      "question": "What does ROI stand for in finance?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Return on Investment",
-      "explanation": "ROI stands for Return on Investment, a financial metric used to evaluate the profitability of an investment.",
-      "difficulty": "Medium"
-    },
+ {
+  "questionNumber": 9,
+  "question": "What does ROI stand for in finance?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": ["Return on Investment", "Rate of Investment", "Risk of Investment", "Revenue on Investment"],
+  "answer": "Return on Investment",
+  "explanation": "ROI stands for Return on Investment, a financial metric used to evaluate the profitability of an investment.",
+  "difficulty": "Medium"
+}
+,
     {
       "questionNumber": 10,
       "question": "Which concept refers to the process of converting inputs into outputs effectively?",
