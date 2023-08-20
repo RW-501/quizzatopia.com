@@ -126,7 +126,7 @@
 <button id="stopButton" onclick="stopFetching()" disabled>Stop</button>
 
 <!-- First textarea for regular logs -->
-	  <h2>Log</h2>
+	  <h2>Log <div id="tagsD" ></div></div></h2>
 <textarea id="log" rows="10" cols="50" readonly></textarea>
 
 <!-- Second textarea for error logs -->
@@ -145,6 +145,7 @@
 let counter = 0;
 let fetchInterval;
 const logTextarea = document.getElementById('log');
+const tagsD = document.getElementById('tagsD');
 const errorLogTextarea = document.getElementById('errorLog');
 const counterLabel = document.getElementById('counterLabel');
 const startButton = document.getElementById('startButton');
@@ -169,6 +170,7 @@ function addWordsToDistinctList(words) {
     // Split the string into an array using commas as the separator
     const wordArray = words.split(',').map(word => word.trim());
 	  
+	      tagsD.innerHTML = ` ${wordArray}`;
 
     wordArray.forEach(word => {
       if (!distinctWords.includes(word)) {
