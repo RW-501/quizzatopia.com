@@ -23,16 +23,19 @@
       "explanation": "Michigan is known as the Great Lakes State because it is bordered by four of the five Great Lakes: Superior, Michigan, Huron, and Erie.",
       "difficulty": "Easy"
     },
-    {
-      "questionNumber": 2,
-      "question": "True or False: Michigan is the only U.S. state made up entirely of islands.",
-      "imageURL": "",
-      "questionType": "True or False",
-      "options": [],
-      "answer": "False",
-      "explanation": "False. Michigan is not the only U.S. state made up entirely of islands. It is a part of the continental United States and has a mix of mainland and islands.",
-      "difficulty": "Easy"
-    },
+{
+  "questionNumber": 2,
+  "question": "Michigan is the only U.S. state made up entirely of islands.",
+  "imageURL": "",
+  "questionType": "Multiple Choice",
+  "options": [
+    "True",
+    "False"
+  ],
+  "answer": "False",
+  "explanation": "False. Michigan is not the only U.S. state made up entirely of islands. It is a part of the continental United States and has a mix of mainland and islands.",
+  "difficulty": "Easy"
+},
     {
       "questionNumber": 3,
       "question": "What is the capital city of Michigan?",
