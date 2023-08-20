@@ -145,21 +145,31 @@ if (!localStorage.getItem('distinctWords')) {
 }
 
 // Add words to the local storage array
-function addWordsToDistinctList(words) {
-  const distinctWords = JSON.parse(localStorage.getItem('distinctWords'));
+  function addWordsToDistinctList(words) {
+    const distinctWords = JSON.parse(localStorage.getItem('distinctWords')) || [];
 
-  words.forEach(word => {
-    if (!distinctWords.includes(word)) {
-      distinctWords.push(word);
-      console.log(`Added new word: ${word}`);
-
+    if (Array.isArray(words)) { // Check if words is an array
+      words.forEach(word => {
+        if (!distinctWords.includes(word)) {
+          distinctWords.push(word);
+          console.log(`Added new word: ${word}`);
+        }
+      });
+      stopFetching();
+    } else {
+      console.error("Words is not an array.");
     }
-	  	          stopFetching();
 
-  });
-
-  localStorage.setItem('distinctWords', JSON.stringify(distinctWords));
+    localStorage.setItem('distinctWords', JSON.stringify(distinctWords));
+  }
 }
+
+	
+
+
+
+
+
 
 // Match quiz tags with local storage words
 function matchTagsWithDistinctList(quizTags) {
@@ -220,14 +230,12 @@ async function fetchNextJSON() {
       const quizTags = quizInfo.quizTags;
       let TheQuestions = quizInfo.questions;
 	    
-          if (quizTags) {
-		        console.log(`quizTags: ${quizTags}`);
-
-addWordsToDistinctList(quizTags);
-}else{
- matchedWords = matchTagsWithDistinctList(TheQuestions);
-
-}
+    if (quizTags) {
+    console.log(`quizTags: ${quizTags}`);
+    addWordsToDistinctList(quizTags);
+  } else {
+    matchedWords = matchTagsWithDistinctList(TheQuestions);
+  }
 
 
 	    
