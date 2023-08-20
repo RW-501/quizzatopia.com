@@ -22,16 +22,21 @@
       "explanation": "'Nosedive' is the episode that portrays a society where individuals rate each other using a smartphone app, influencing their social status.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 2,
-      "question": "What is the name of the theme park that allows visitors to experience nostalgic simulations of different time periods?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "San Junipero",
-      "explanation": "San Junipero is the name of the virtual reality-based theme park where visitors can experience different time periods and even choose to live there permanently after death.",
-      "difficulty": "Medium"
-    },
+{
+  "questionNumber": 2,
+  "question": "What is the name of the theme park that allows visitors to experience nostalgic simulations of different time periods?",
+  "imageURL": "",
+  "questionType": "Multiple Choice",
+  "options": [
+    "San Junipero",
+    "TimeWarp Park",
+    "Nostalgia World",
+    "Time Traveler's Haven"
+  ],
+  "answer": "San Junipero",
+  "explanation": "San Junipero is the name of the virtual reality-based theme park where visitors can experience different time periods and even choose to live there permanently after death.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 3,
       "question": "True or False: The episode 'White Christmas' features an advanced AI assistant named 'Ashley Too.'",
