@@ -140,16 +140,16 @@
       "explanation": "The Frank Church-River of No Return Wilderness in central Idaho is renowned for its vast and rugged backcountry, making it a popular destination for outdoor enthusiasts.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 10,
-      "question": "True or False: Craters of the Moon National Monument and Preserve in Idaho is a volcanic area known for its otherworldly landscapes.",
-      "imageURL": "",
-      "questionType": "True or False",
-      "options": [],
-      "answer": "True",
-      "explanation": "True. Craters of the Moon National Monument and Preserve in Idaho features volcanic formations and landscapes that resemble the surface of the moon.",
-      "difficulty": "Medium"
-    },
+{
+  "questionNumber": 10,
+  "question": "True or False: Craters of the Moon National Monument and Preserve in Idaho is a volcanic area known for its otherworldly landscapes.",
+  "imageURL": "",
+  "questionType": "True or False",
+  "options": ["True", "False"],
+  "answer": "True",
+  "explanation": "True. Craters of the Moon National Monument and Preserve in Idaho features volcanic formations and landscapes that resemble the surface of the moon.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 11,
       "question": "Which famous ski resort, located in northern Idaho, is known for its deep powder and challenging terrain, attracting winter sports enthusiasts?",
