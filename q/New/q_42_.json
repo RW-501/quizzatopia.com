@@ -140,16 +140,16 @@
       "explanation": "Silicon Valley in California is renowned for its concentration of technology companies and innovation centers.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 10,
-      "question": "True or False: Death Valley, located in California, is the hottest and driest national park in the United States.",
-      "imageURL": "",
-      "questionType": "True or False",
-      "options": [],
-      "answer": "True",
-      "explanation": "True. Death Valley in California holds the record for the highest temperature ever recorded on Earth.",
-      "difficulty": "Medium"
-    },
+{
+  "questionNumber": 10,
+  "question": "True or False: Death Valley, located in California, is the hottest and driest national park in the United States.",
+  "imageURL": "",
+  "questionType": "True or False",
+  "options": ["True", "False"],
+  "answer": "True",
+  "explanation": "True. Death Valley in California holds the record for the highest temperature ever recorded on Earth.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 11,
       "question": "What is the official state flower of California?",
