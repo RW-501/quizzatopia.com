@@ -184,16 +184,22 @@
       "explanation": "Mendenhall Glacier is often referred to as the 'blue ice' due to its stunning blue appearance.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 13,
-      "question": "What is the Alaska state motto?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "North to the Future",
-      "explanation": "The Alaska state motto is 'North to the Future.'",
-      "difficulty": "Easy"
-    },
+ {
+  "questionNumber": 13,
+  "question": "What is the Alaska state motto?",
+  "imageURL": "",
+  "questionType": "Multiple Choice",
+  "options": [
+    "The Last Frontier",
+    "North to the Future",
+    "Land of the Midnight Sun",
+    "The Great Land"
+  ],
+  "answer": "North to the Future",
+  "explanation": "The Alaska state motto is 'North to the Future.'",
+  "difficulty": "Easy"
+}
+,
     {
       "questionNumber": 14,
       "question": "Which animal is commonly associated with Alaska and is often depicted on souvenirs and artwork?",
