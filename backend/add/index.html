@@ -145,17 +145,20 @@ if (!localStorage.getItem('distinctWords')) {
 }
 
 // Add words to the local storage array
-  
 function addWordsToDistinctList(words) {
   const distinctWords = JSON.parse(localStorage.getItem('distinctWords')) || [];
 
-  if (Array.isArray(words)) { // Check if words is an array
-    words.forEach(word => {
+  if (typeof words === 'string') {
+    // Split the string into an array using commas as the separator
+    const wordArray = words.split(',').map(word => word.trim());
+
+    wordArray.forEach(word => {
       if (!distinctWords.includes(word)) {
         distinctWords.push(word);
         console.log(`Added new word: ${word}`);
       }
     });
+
     stopFetching();
   } else {
     console.error("Words is not an array.");
@@ -165,7 +168,6 @@ function addWordsToDistinctList(words) {
 
   localStorage.setItem('distinctWords', JSON.stringify(distinctWords));
 }
-
 
 
 
