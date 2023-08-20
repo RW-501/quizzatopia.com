@@ -98,16 +98,21 @@
       "explanation": "Teamwork is vital in a fast-food restaurant to ensure a harmonious work environment, promote effective communication, and improve service efficiency. When employees work together as a team, they can handle orders more efficiently and provide better customer service.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 7,
-      "question": "What steps do you take to ensure food safety in a fast-food restaurant?",
-      "imageURL": "",
-      "questionType": "Open Text",
-      "options": [],
-      "answer": "The answer should demonstrate the ability to follow food safety protocols and maintain hygiene standards. For example, 'To ensure food safety, I would adhere to strict hygiene practices, such as washing hands frequently, using clean utensils, and wearing appropriate food handling gloves. I would also monitor food temperatures regularly, ensure proper storage of ingredients, and follow cooking and holding times. Additionally, I would follow the restaurant's food safety guidelines and report any issues related to food safety immediately.'",
-      "explanation": "",
-      "difficulty": "Medium"
-    },
+{
+  "questionNumber": 7,
+  "question": "To ensure food safety in a fast-food restaurant, one should adhere to strict hygiene practices, such as washing hands frequently, using clean utensils, and wearing appropriate food handling gloves. Additionally, monitoring food temperatures regularly, ensuring proper storage of ingredients, and following cooking and holding times are crucial. Moreover, it's essential to follow the restaurant's food safety guidelines and report any issues related to food safety immediately. Fill in the blank: 'To ensure food safety, I would ________________.'",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": [
+    "adhere to strict hygiene practices",
+    "monitor food temperatures regularly",
+    "follow cooking and holding times",
+    "wear appropriate food handling gloves"
+  ],
+  "answer": "adhere to strict hygiene practices, such as washing hands frequently, using clean utensils, and wearing appropriate food handling gloves. Additionally, monitoring food temperatures regularly, ensuring proper storage of ingredients, and following cooking and holding times are crucial. Moreover, it's essential to follow the restaurant's food safety guidelines and report any issues related to food safety immediately.",
+  "explanation": "This question emphasizes the importance of adhering to food safety protocols in a fast-food restaurant. The provided answer completes the sentence by listing specific actions that contribute to food safety, including hygiene practices, temperature monitoring, ingredient storage, and adherence to guidelines. These measures are essential to prevent foodborne illnesses and ensure the safety of both employees and customers.",
+  "difficulty": "Medium"
+},
  {
   "questionNumber": 8,
   "question": "How do you handle a situation where the restaurant experiences a sudden rush of customers?",
