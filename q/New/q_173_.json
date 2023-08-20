@@ -77,15 +77,15 @@
       "answer": "Cash inflows and outflows from issuing or repurchasing company stock.",
       "explanation": "The 'Financing Activities' section of the Cash Flow Statement reports cash inflows and outflows from activities related to the company's capital structure, such as issuing or repurchasing company stock and borrowing or repaying loans."
     },
-    {
-      "questionNumber": 6,
-      "question": "What is the formula to calculate 'Net Cash Flow' on the Cash Flow Statement?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Net Cash Flow = Cash inflows - Cash outflows",
-      "explanation": "The formula to calculate 'Net Cash Flow' on the Cash Flow Statement is: Net Cash Flow = Cash inflows - Cash outflows. It represents the net increase or decrease in cash during a specific period."
-    },
+{
+  "questionNumber": 6,
+  "question": "What is the formula to calculate 'Net Cash Flow' on the Cash Flow Statement?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": ["Net Cash Flow = Total Revenue - Total Expenses", "Net Cash Flow = Operating Cash Flow - Investing Cash Flow", "Net Cash Flow = Cash inflows - Cash outflows", "Net Cash Flow = Beginning Cash Balance + Cash In - Cash Out"],
+  "answer": "Net Cash Flow = Cash inflows - Cash outflows",
+  "explanation": "The formula to calculate 'Net Cash Flow' on the Cash Flow Statement is: Net Cash Flow = Cash inflows - Cash outflows. It represents the net increase or decrease in cash during a specific period."
+},
     {
       "questionNumber": 7,
       "question": "True or False: The Cash Flow Statement only includes cash transactions and does not consider non-cash items.",
