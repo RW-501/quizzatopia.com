@@ -35,16 +35,21 @@
       "explanation": "True. Dale Carnegie was born in Maryville, Missouri, in the United States.",
       "difficulty": "Medium"
     },
-    {
-      "questionNumber": 3,
-      "question": "What is the core principle of Dale Carnegie's book 'How to Win Friends and Influence People'?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Building Positive Relationships",
-      "explanation": "The core principle of 'How to Win Friends and Influence People' is building positive relationships and effective communication with others.",
-      "difficulty": "Medium"
-    },
+{
+  "questionNumber": 3,
+  "question": "What is the core principle of Dale Carnegie's book 'How to Win Friends and Influence People'?",
+  "imageURL": "",
+  "questionType": "Multiple Choice",
+  "options": [
+    "Building Positive Relationships",
+    "Achieving Personal Success",
+    "Mastering Persuasion Techniques",
+    "Winning Business Strategies"
+  ],
+  "answer": "Building Positive Relationships",
+  "explanation": "The core principle of 'How to Win Friends and Influence People' is building positive relationships and effective communication with others.",
+  "difficulty": "Medium"
+},
     {
       "questionNumber": 4,
       "question": "In 'How to Win Friends and Influence People,' Dale Carnegie emphasizes the importance of remembering and using people's names. Why is this important?",
