@@ -708,6 +708,8 @@ async function getTag(tag) {
 
     document.getElementById('updated_Quizzez').innerHTML += generatedHtmlTag;
     quizContainer.scrollTop = 0;
+
+	  scrollToBottomDiv();
   } 
 }
 
@@ -733,6 +735,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.scrollTo({
     top: 0,
+    behavior: "smooth"
+  });
+	  
+  }
+
+	  function scrollToBottomDiv() {
+
+    window.scrollTo({
+    bottom: 0,
     behavior: "smooth"
   });
 	  
