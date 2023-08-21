@@ -17,9 +17,10 @@ function populateGuestLogTable(sortField) {
       guestLogTableBody.innerHTML = '';
 
       querySnapshot.forEach((doc) => {
+        const guest = doc.data();
+
         let fv = guest.firstVisitPage;
         let lv = guest.lastVisitPage;
-        const guest = doc.data();
         const banned = guest.banned;
         const browser = guest.browser;
         const device = guest.device;
