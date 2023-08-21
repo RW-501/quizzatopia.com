@@ -20,7 +20,7 @@ function populateGuestLogTable(sortField) {
         const userVisitCount = guest.userVisitCount || 0;
 
         // Update the total visit count
-        totalVisitCount += userVisitCount;
+totalVisitCount += parseInt(userVisitCount);
 
         const newRow = document.createElement('tr');
         newRow.classList.add('guest-row');
@@ -49,7 +49,7 @@ function populateGuestLogTable(sortField) {
       });
 
       // Update the total visit count in your HTML
-      document.getElementById('totalVisitCount').textContent = totalVisitCount;
+      document.getElementById('totalVisitCount').innerHTML = totalVisitCount;
     })
     .catch((error) => {
       console.error('Error fetching guest log data:', error);
