@@ -25,7 +25,7 @@ function populateGuestLogTable(sortField) {
         const device = guest.device;
         const firstVisitPage = fv.slice(0, 30) + '...';
         const firstVisitTime = new Date(guest.firstVisitTime.toDate()).toLocaleString();
-        const lastVisitPage = lv.slice(0, maxLength) + '...';
+        const lastVisitPage = lv.slice(0, 30) + '...';
         const lastVisitTime = new Date(guest.lastVisitTime.toDate()).toLocaleString();
         const referralPage = guest.referralPage;
         const userVisitCount = guest.userVisitCount || 0;
