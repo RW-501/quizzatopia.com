@@ -30,6 +30,11 @@ function populateGuestLogTable(sortField) {
         const lastVisitTime = new Date(guest.lastVisitTime.toDate()).toLocaleString();
         const referralPage = guest.referralPage;
         const userVisitCount = guest.userVisitCount || 0;
+const currentDateTime = new Date().toLocaleString();
+
+        const elps = calculateTimeElapsed(currentDateTime, lastVisitTime);
+        
+        const passedTime = calculateTimeElapsed(firstVisitTime, lastVisitTime);
 
         // Update the total visit count
 totalVisitCount += parseInt(userVisitCount);
@@ -46,16 +51,20 @@ totalVisitCount += parseInt(userVisitCount);
         const lastVisitTimeCell = createTableCell(lastVisitTime);
         const referralPageCell = createTableCell(referralPage);
         const userVisitCountCell = createTableCell(userVisitCount);
+        const elpsCell = createTableCell(elps);
+        const passedTimeCell = createTableCell(passedTime);
 
         newRow.appendChild(bannedCell);
         newRow.appendChild(browserCell);
         newRow.appendChild(deviceCell);
         newRow.appendChild(firstVisitPageCell);
-        newRow.appendChild(firstVisitTimeCell);
+        newRow.appendChild(passedTimeCell);
+     //   newRow.appendChild(firstVisitTimeCell);
         newRow.appendChild(lastVisitPageCell);
         newRow.appendChild(lastVisitTimeCell);
         newRow.appendChild(referralPageCell);
         newRow.appendChild(userVisitCountCell);
+        newRow.appendChild(elpsCell);
 
         guestLogTableBody.appendChild(newRow);
       });
