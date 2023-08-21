@@ -173,7 +173,7 @@
         if (!distinctWords.includes(word) || word === "") {
           distinctWords.push(word);
           console.log(`Added new word: ${word}`);
-          wordsTextarea.innerHTML = ` ${distinctWords}`;
+       //   wordsTextarea.innerHTML = ` ${distinctWords}`;
 		    if (word !== "") {
     //  stopFetching();
     }
@@ -186,6 +186,8 @@
     }
 
     localStorage.setItem('distinctWords', JSON.stringify(distinctWords));
+	    loadWords();
+
   }
 
   function loadWords() {
