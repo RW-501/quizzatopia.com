@@ -1,9 +1,12 @@
 // Function to fetch user data and populate the user table
 let sortOrder = 'asc';
   // Define the date format function
-  function formatDate(timestamp) {
-    const now = new Date();
-    const date = timestamp.toDate();
+function formatDate(timestamp) {
+  const now = new Date();
+  
+  // Check if timestamp is a valid date object
+  if (timestamp instanceof Date) {
+    const date = timestamp;
     const diffInMinutes = Math.floor((now - date) / (1000 * 60));
     
     if (diffInMinutes < 60) {
@@ -15,7 +18,11 @@ let sortOrder = 'asc';
       const diffInDays = Math.floor(diffInMinutes / 1440);
       return `${diffInDays} day${diffInDays > 1 ? 's' : ''} ago`;
     }
+  } else {
+    return 'Invalid Date'; // Handle the case where timestamp is not a valid date
   }
+}
+
 
 function populateUserTable(sortField, sortOrder) {
   const usersRef = firebase.firestore().collection('users');
