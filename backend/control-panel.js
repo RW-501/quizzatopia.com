@@ -202,7 +202,7 @@ getBadWords();
 renderUserStatsChart();
 getTotalUsers();
 getTotalGuest();
-	getQuizzezTaken();
+	getQuizzesTaken();
 });
 
 
