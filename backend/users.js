@@ -1,11 +1,5 @@
 // Function to fetch user data and populate the user table
 let sortOrder = 'asc';
-
-function populateUserTable(sortField, sortOrder) {
-  const usersRef = firebase.firestore().collection('users');
-  const userTableBody = document.querySelector('#userTable tbody');
-  const userCountElement = document.querySelector('#userCount');
-
   // Define the date format function
   function formatDate(timestamp) {
     const now = new Date();
@@ -22,6 +16,12 @@ function populateUserTable(sortField, sortOrder) {
       return `${diffInDays} day${diffInDays > 1 ? 's' : ''} ago`;
     }
   }
+
+function populateUserTable(sortField, sortOrder) {
+  const usersRef = firebase.firestore().collection('users');
+  const userTableBody = document.querySelector('#userTable tbody');
+  const userCountElement = document.querySelector('#userCount');
+
 
   usersRef.orderBy(sortField, sortOrder).limit(10).get()
     .then((querySnapshot) => {
