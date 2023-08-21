@@ -193,8 +193,6 @@ function getQuizzesTaken() {
     });
 }
 
-// Call the function to get the counts when needed
-getQuizzesTaken();
 
 
 window.addEventListener("load", function() {
