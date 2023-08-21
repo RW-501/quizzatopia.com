@@ -192,10 +192,12 @@ function addWordsToDistinctList(words) {
   localStorage.setItem('distinctWords', JSON.stringify(distinctWords));
 }
 
+function loadWords(){
+	  const distinctWords = JSON.parse(localStorage.getItem('distinctWords')) || [];
 
 	      	      wordsTextarea.innerHTML = ` ${distinctWords}`;
 
-
+}
 
 
 
