@@ -160,6 +160,43 @@ function getTotalGuest() {
     });
 }
 
+function getQuizzesTaken() {
+  // Reference to the 'quizzes' collection in Firebase Firestore
+  const quizzesRef = firebase.firestore().collection('quizzes');
+
+  // Initialize variables to count started and finished quizzes
+  let totalStarted = 0;
+  let totalFinished = 0;
+
+  // Fetch all quiz documents
+  quizzesRef.get()
+    .then((querySnapshot) => {
+      // Loop through each quiz document
+      querySnapshot.forEach((doc) => {
+        const quizData = doc.data();
+        
+        // Check if the quiz has a 'quizStartedCount' and 'quizFinishedCount' field
+        if (quizData.quizStartedCount) {
+          totalStarted += quizData.quizStartedCount;
+        }
+        if (quizData.quizFinishedCount) {
+          totalFinished += quizData.quizFinishedCount;
+        }
+      });
+
+      // Update the HTML elements with the totals
+      document.getElementById('totalStarted').innerHTML = totalStarted;
+      document.getElementById('totalFinished').innerHTML = totalFinished;
+    })
+    .catch((error) => {
+      console.error('Error fetching quiz data:', error);
+    });
+}
+
+// Call the function to get the counts when needed
+getQuizzesTaken();
+
+
 window.addEventListener("load", function() {
 // Call the getBadWords function
 getBadWords();
@@ -167,6 +204,7 @@ getBadWords();
 renderUserStatsChart();
 getTotalUsers();
 getTotalGuest();
+	getQuizzezTaken();
 });
 
 
