@@ -17,13 +17,15 @@ function populateGuestLogTable(sortField) {
       guestLogTableBody.innerHTML = '';
 
       querySnapshot.forEach((doc) => {
+        let fv = guest.firstVisitPage;
+        let lv = guest.lastVisitPage;
         const guest = doc.data();
         const banned = guest.banned;
         const browser = guest.browser;
         const device = guest.device;
-        const firstVisitPage = guest.firstVisitPage.slice(0, 30) + '...';
+        const firstVisitPage = fv.slice(0, 30) + '...';
         const firstVisitTime = new Date(guest.firstVisitTime.toDate()).toLocaleString();
-        const lastVisitPage = guest.lastVisitPage.slice(0, maxLength) + '...';
+        const lastVisitPage = lv.slice(0, maxLength) + '...';
         const lastVisitTime = new Date(guest.lastVisitTime.toDate()).toLocaleString();
         const referralPage = guest.referralPage;
         const userVisitCount = guest.userVisitCount || 0;
