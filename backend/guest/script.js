@@ -1,9 +1,18 @@
+
+let sortDirection = "desc"; // Initially set to descending
+
+// Function to toggle sorting direction
+function toggleSortDirection() {
+  sortDirection = sortDirection === "desc" ? "asc" : "desc";
+}
+
 // Function to fetch guest log data and populate the guest log table
 function populateGuestLogTable(sortField) {
   const guestLogRef = firebase.firestore().collection('guestLog');
   const guestLogTableBody = document.querySelector('#guestLogTable tbody');
 
-  guestLogRef.orderBy(sortField, 'desc').limit(20).get()
+
+  guestLogRef.orderBy(sortField, sortDirection).limit(20).get()
     .then((querySnapshot) => {
       guestLogTableBody.innerHTML = '';
 
