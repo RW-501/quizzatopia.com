@@ -32,9 +32,9 @@ function populateGuestLogTable(sortField) {
         const userVisitCount = guest.userVisitCount || 0;
 const currentDateTime = new Date().toLocaleString();
 
-        const elps = calculateTimeElapsed(currentDateTime, lastVisitTime);
-        
-        const passedTime = calculateTimeElapsed(firstVisitTime, lastVisitTime);
+const elps = calculateTimeElapsed(guest.lastVisitTime, currentDateTime);
+const passedTime = calculateTimeElapsed(guest.firstVisitTime, guest.lastVisitTime);
+
 
         // Update the total visit count
 totalVisitCount += parseInt(userVisitCount);
@@ -85,10 +85,10 @@ function createTableCell(content) {
 }
 
 // Helper function to calculate time elapsed between two dates
-function calculateTimeElapsed(currentTime, lastVisitTime) {
-  const timeDifference = currentTime - lastVisitTime;
+function calculateTimeElapsed(startTime, endTime) {
+  const timeDifference = new Date(endTime) - new Date(startTime);
   const seconds = Math.floor((timeDifference / 1000) % 60);
-  const minutes = Math.floor((timeDifference / 1000 / 60) % 60);
+  const minutes = Math.floor((timeDifference / (1000 * 60)) % 60);
   const hours = Math.floor((timeDifference / (1000 * 60 * 60)) % 24);
   const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 
@@ -98,7 +98,7 @@ function calculateTimeElapsed(currentTime, lastVisitTime) {
   if (minutes > 0) timeElapsed += `${minutes}m `;
   if (seconds > 0) timeElapsed += `${seconds}s`;
 
-  return timeElapsed;
+  return timeElapsed.trim(); // Remove any leading/trailing whitespace
 }
 
 function sortTable(sortField) {
