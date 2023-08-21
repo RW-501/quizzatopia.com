@@ -37,11 +37,12 @@ function populateUserTable(sortField, sortOrder) {
 
       querySnapshot.forEach((doc) => {
         const user = doc.data();
-        const userJoinedDate = formatDate(doc.get('userJoinedDate'));
+        let userJoinedDate = doc.get('userJoinedDate');
         const userName = user.userName || 'Anonymous';
         const userEmail = user.userEmail || 'Anonymous';
         const userQuizzesTaken = user.userQuizzesTaken || 0;
         const userPoints = user.userPoints || 0;
+        const userJoinedDate = formatDate(userJoinedDate);
 
        // Create table row and cells
         const newRow = document.createElement('tr');
