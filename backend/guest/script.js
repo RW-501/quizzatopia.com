@@ -19,10 +19,8 @@ function populateGuestLogTable(sortField) {
         const referralPage = guest.referralPage;
         const userVisitCount = guest.userVisitCount || 0;
 
-        // Calculate the time elapsed since the last visit
-        const currentTime = new Date();
-        const lastVisitDateTime = new Date(guest.lastVisitTime.toDate());
-        const timeElapsed = calculateTimeElapsed(currentTime, lastVisitDateTime);
+        // Update the total visit count
+        totalVisitCount += userVisitCount;
 
         const newRow = document.createElement('tr');
         newRow.classList.add('guest-row');
@@ -34,10 +32,6 @@ function populateGuestLogTable(sortField) {
         const firstVisitTimeCell = createTableCell(firstVisitTime);
         const lastVisitPageCell = createTableCell(lastVisitPage);
         const lastVisitTimeCell = createTableCell(lastVisitTime);
-
-        // Create a cell for time elapsed since last visit
-        const timeElapsedCell = createTableCell(timeElapsed);
-
         const referralPageCell = createTableCell(referralPage);
         const userVisitCountCell = createTableCell(userVisitCount);
 
@@ -48,12 +42,14 @@ function populateGuestLogTable(sortField) {
         newRow.appendChild(firstVisitTimeCell);
         newRow.appendChild(lastVisitPageCell);
         newRow.appendChild(lastVisitTimeCell);
-        newRow.appendChild(timeElapsedCell); // Add the time elapsed cell
         newRow.appendChild(referralPageCell);
         newRow.appendChild(userVisitCountCell);
 
         guestLogTableBody.appendChild(newRow);
       });
+
+      // Update the total visit count in your HTML
+      document.getElementById('totalVisitCount').textContent = totalVisitCount;
     })
     .catch((error) => {
       console.error('Error fetching guest log data:', error);
@@ -87,6 +83,10 @@ function calculateTimeElapsed(currentTime, lastVisitTime) {
 function sortTable(sortField) {
   populateGuestLogTable(sortField);
 }
+// Call populateGuestLogTable every minute (60,000 milliseconds)
+setInterval(() => {
+  populateGuestLogTable('firstVisitTime');
+}, 60000); // 60000 milliseconds = 1 minute
 
 document.addEventListener('DOMContentLoaded', function() {
   // Populate the table with default sorting by firstVisitTime
