@@ -1,4 +1,6 @@
 // Function to fetch user data and populate the user table
+let sortOrder = 'asc';
+
 function populateUserTable(sortField, sortOrder) {
   const usersRef = firebase.firestore().collection('users');
   const userTableBody = document.querySelector('#userTable tbody');
@@ -94,7 +96,7 @@ function createActionButton(label, clickHandler) {
 
 // Function to toggle sorting direction
 function toggleSortDirection() {
-  const sortOrder = sortOrder === 'asc' ? 'desc' : 'asc';
+  sortOrder = sortOrder === 'asc' ? 'desc' : 'asc';
   return sortOrder;
 }
 
