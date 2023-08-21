@@ -97,6 +97,17 @@ setInterval(() => {
   populateGuestLogTable('firstVisitTime');
 }, 60000); // 60000 milliseconds = 1 minute
 
+
+// Add an event listener to the toggleSortButton to toggle sorting direction
+const toggleSortButton = document.getElementById('toggleSortButton');
+toggleSortButton.addEventListener('click', () => {
+  toggleSortDirection();
+  // Call populateGuestLogTable with the current sorting field
+  const currentSortingField = getCurrentSortingField(); // Define this function to get the current sorting field
+  populateGuestLogTable(currentSortingField);
+});
+
+                                                  
 document.addEventListener('DOMContentLoaded', function() {
   // Populate the table with default sorting by firstVisitTime
   populateGuestLogTable('firstVisitTime');
