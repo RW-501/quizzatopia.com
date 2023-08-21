@@ -192,23 +192,24 @@ tbody, td, tfoot, th, thead, tr {
         </div>
 
         <!-- User table -->
-        <div class="table-container">
-          <table id="userTable">
-            <thead>
-              <tr>
-                <th>Joined</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Quizzes Taken</th>
-                <th>Points</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Dynamically populate the user table using JavaScript -->
-            </tbody>
-          </table>
-        </div>
+      <div class="table-container">
+  <table id="userTable">
+    <thead>
+      <tr>
+        <th class="sort-button" data-sort-field="userJoinedDate">Joined</th>
+        <th class="sort-button" data-sort-field="userName">Name</th>
+        <th>Email</th>
+        <th>Quizzes Taken</th>
+        <th>Points</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Dynamically populate the user table using JavaScript -->
+    </tbody>
+  </table>
+</div>
+
       </div>
     </div>
   </main>
