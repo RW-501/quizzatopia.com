@@ -36,17 +36,17 @@ function populateUserTable(sortField, sortOrder) {
         const userQuizzesTaken = user.userQuizzesTaken || 0;
         const userPoints = user.userPoints || 0;
 
+       // Create table row and cells
         const newRow = document.createElement('tr');
         newRow.classList.add('user-row');
-
         const idCell = createTableCell(userJoinedDate);
         const nameCell = createTableCell(userName);
         const emailCell = createTableCell(userEmail);
         const quizzesTakenCell = createTableCell(userQuizzesTaken);
         const pointsCell = createTableCell(userPoints);
-
         const actionsCell = document.createElement('td');
         actionsCell.classList.add('actions-cell');
+
 
         const deactivateButton = createActionButton('Deactivate', () => {
           deactivateUser(doc.id);
