@@ -252,11 +252,14 @@ async function fetchNextJSON() {
       const quizTags = quizInfo.quizTags;
       let TheQuestions = quizInfo.questions;
 	    
-    if (quizTags) {
+if (quizTags && !quizTags.includes("States")) {
     console.log(`quizTags: ${quizTags}`);
     addWordsToDistinctList(quizTags);
   } else {
+	if (!quizTags.includes("States")) {
+
     matchedWords = matchTagsWithDistinctList(TheQuestions);
+	}
   }
 
 
