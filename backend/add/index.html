@@ -170,11 +170,13 @@
       tagsD.innerHTML = ` ${wordArray}`;
 
       wordArray.forEach(word => {
-        if (!distinctWords.includes(word)) {
+        if (!distinctWords.includes(word) || word === "") {
           distinctWords.push(word);
           console.log(`Added new word: ${word}`);
           wordsTextarea.innerHTML = ` ${distinctWords}`;
-          stopFetching();
+		    if (word !== "") {
+      stopFetching();
+    }
         }
       });
     } else {
