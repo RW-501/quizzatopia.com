@@ -145,6 +145,20 @@ function getTotalUsers() {
     });
 }
 
+function getTotalGuest() {
+  // Reference to the 'users' collection in Firebase Firestore
+  const usersRef = firebase.firestore().collection('guestLog');
+
+  // Fetch all user documents and count the number of documents
+  usersRef.get()
+    .then((querySnapshot) => {
+      const totalUsers = querySnapshot.size;
+ document.getElementById('totalGuest').innerHTML = totalUsers;
+    })
+    .catch((error) => {
+      console.error('Error fetching user data:', error);
+    });
+}
 
 window.addEventListener("load", function() {
 // Call the getBadWords function
@@ -152,7 +166,7 @@ getBadWords();
 	// Call the functions to populate the components when the page loads or as needed
 renderUserStatsChart();
 getTotalUsers();
-
+getTotalGuest();
 });
 
 
