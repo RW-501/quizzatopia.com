@@ -264,6 +264,7 @@ function displayProfileInfo() {
     function closeImagePopup() {
       const popup = document.getElementById("imagePopup");
 	    	    slideOut("imagePopup");
+    const userInfo = getUserInfo();
 
       popup.style.display = "none";
       document.getElementById('profile-pic').src = userInfo.userProfilePic;
