@@ -72,14 +72,7 @@ a{
   }
 
 
-  .quiz-description {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 0;
-      text-decoration: none; /* Remove underline */
-
-  }
-
+ 
 
 
 
@@ -144,7 +137,12 @@ a{
 
 .quiz-description {
   margin-top: 10px;
-}
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 0;
+      text-decoration: none; /* Remove underline */
+text-align: center;
+  }
 
 
 /* CSS comments for the hero section */
