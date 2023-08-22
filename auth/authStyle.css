@@ -1,5 +1,14 @@
 
+.login-image-container{
+    display: block;
 
+}
+
+.login-image{
+    width: 100%;
+    display: block;
+
+}
 
   /* Styling for the login/signup popup */
   .popup {
