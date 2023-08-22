@@ -700,15 +700,80 @@ img {
 }
 
 	</style>
-    
-	    <!-- HTML for Weekly Category Companion Banner -->
+
+	<script>
+
+
+		function getRandomCategory() {
+  const categories = [
+    'Healthcare',
+    'Gaming',
+    'Business',
+    'Driving',
+    'TV',
+    'Architecture',
+    'Technology',
+    'Music',
+    'Entertainment',
+    'Marketing',
+    'Geography',
+    'E-Commerce',
+    'Science',
+    'Personality',
+    'Real Estate',
+    'Professional Certification',
+    'Finance',
+    'History',
+    'Language',
+    'Self-Help',
+    'Job Interview',
+    'Sports',
+    'Fun'
+  ];
+
+  // Generate a random index within the length of the categories array
+  const randomIndex = Math.floor(Math.random() * categories.length);
+
+  // Return the random category
+  return categories[randomIndex];
+}
+
+// Function to update the weekly category companion banner
+function updateWeeklyCompanion() {
+  const companionCategory = document.getElementById('companionCategory');
+  const companionCategoryPlural = document.getElementById('companionCategoryPlural');
+  const companionCategoryTitle = document.getElementById('companionCategoryTitle');
+  const companionLink = document.getElementById('companionLink');
+
+  // Get a random category
+  const randomCategory = getRandomCategory();
+
+  // Set the content of the banner
+  companionCategory.textContent = randomCategory;
+  companionCategoryPlural.textContent = `${randomCategory}s`; // Plural form
+  companionCategoryTitle.textContent = randomCategory;
+  companionLink.href = `https://www.quizzatopia.com/category/?${randomCategory}`;
+
+  // You can also set the link text if needed
+  // companionLink.textContent = `Explore ${randomCategory} Quizzes`;
+}
+
+// Call the function to update the banner when needed
+updateWeeklyCompanion();
+
+
+	</script>
+<!-- HTML for Weekly Category Companion Banner -->
 <div class="weekly-companion-banner">
-  <p>🌟 Weekly Category Companion: Science 🌟</p>
-  <p>Discover our Science quizzes and challenge your knowledge!</p>
-  <a href="https://yourquizwebsite.com/science" class="btn btn-primary">Explore Science Quizzes</a>
+<div id="weeklyCompanion">
+  <p>🌟 Weekly Category Companion: <span id="companionCategory"></span> 🌟</p>
+  <p>Discover our <span id="companionCategoryPlural"></span> quizzes and challenge your knowledge!</p>
+  <a href="#" id="companionLink" class="btn btn-primary">Explore <span id="companionCategoryTitle"></span> Quizzes</a>
+</div>
+
   <p>Enjoying Quizzatopia? Support us:</p>
   <a href="https://www.buymeacoffee.com/Quizzatopia" target="_blank">
-    <img src="buymeacoffee.png" alt="Buy Me a Coffee" />
+    <img src="/images/bmc.png" alt="Buy Me a Coffee" />
   </a>
 </div>
 
