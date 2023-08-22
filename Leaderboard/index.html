@@ -108,6 +108,7 @@
     width: 25%;
     display: grid;
     text-align: center;
+	font-weight: 600;
 }
 
 .leftBox img{
@@ -221,7 +222,7 @@ function updateWeeklyCompanion() {
 		          <div class="row">
 <div >
 		 <div class="card"  onclick="viewUserProfile('${userName}')">
-<h5 class="card-title">Profile Info</h5>
+<h5 class="card-title" class="card-header">Profile Info</h5>
 <div class="flex">
 			 <div class="leftBox" >
     <div>
@@ -229,7 +230,7 @@ function updateWeeklyCompanion() {
     </div>
     <div class="card-body">
       <div class="text-right" id="uPoints"></div>
-    <div id="uRank" class="card-header"></div>
+    <div id="uRank" ></div>
 
     </div>
 			 </div>
