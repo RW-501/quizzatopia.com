@@ -354,9 +354,10 @@ document.getElementById('uPic').src = lbUserInfo.userProfilePic;
 updateWeeklyCompanion();
 
 // Get a reference to the Firestore instance
-var firestore = firebase.firestore();
 
 function loadLeaderboard(loc) {
+	var firestore = firebase.firestore();
+
   // Reference to the users collection in Firestore
   var usersCollection = firestore.collection('users');
   console.log('Users collection reference created.');
