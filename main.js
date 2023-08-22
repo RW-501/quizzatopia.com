@@ -612,7 +612,7 @@ var exitCount = 0;
         const exitPopup = document.getElementById("exit-popup");
         const exitPopupClose = document.getElementById("exit-popup-close");
 	    
-	  if (loggedIn === false || exitCount === 1) {
+	  if (loggedIn === false && exitCount === 1) {
     
      const animations = ["right", ""];
       const randomIndex = Math.floor(Math.random() * animations.length);
