@@ -401,32 +401,30 @@ function loadLeaderboard(loc) {
         if (userInfo.userName !== 'New User' && userInfo.userName !== 'Anonymous') {
           var rank = userInfo.userRank;
           var userPicture = userInfo.userProfilePic;
-        var userName = userInfo.userName;
-        var points = userInfo.userPoints;
-if(userName != "New User" || userName != "Anonymous"){
-        // Construct the row HTML
-        var rowHtml = `
-          <tr onclick="viewUserProfile('${userName}')" style="cursor: pointer; background-color: #f7f7f7;">
-            <td style="padding: 10px; font-size: 18px; color: #555;">${rank}</td>
-            <td style="padding: 10px;">
-              <div style="display: flex; align-items: center;">
-                <div style="width: 75px; height: 75px; overflow: hidden; border-radius: 50%; margin-right: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-                  <img src="${userPicture}" alt="${userName}" style="width: 100%; height: 100%; object-fit: cover;">
+          // Construct the row HTML
+          var rowHtml = `
+            <tr onclick="viewUserProfile('${userInfo.userName}')" style="cursor: pointer; background-color: #f7f7f7;">
+              <td style="padding: 10px; font-size: 18px; color: #555;">${rank}</td>
+              <td style="padding: 10px;">
+                <div style="display: flex; align-items: center;">
+                  <div style="width: 75px; height: 75px; overflow: hidden; border-radius: 50%; margin-right: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+                    <img src="${userPicture}" alt="${userInfo.userName}" style="width: 100%; height: 100%; object-fit: cover;">
+                  </div>
+                  <div style="font-size: 16px; color: #333; font-weight: bold;">${userInfo.userName}</div>
                 </div>
-                <div style="font-size: 16px; color: #333; font-weight: bold;">${userName}</div>
-              </div>
-            </td>
-            <td class="text-right" style="padding: 10px; font-size: 18px; color: #555;">${points}</td>
-          </tr>`;
-}
-        // Append the row to the leaderboard table body
-        $('#leaderboardBody').append(rowHtml);
+              </td>
+              <td class="text-right" style="padding: 10px; font-size: 18px; color: #555;">${userInfo.userPoints}</td>
+            </tr>`;
+          // Append the row to the leaderboard table body
+          $('#leaderboardBody').append(rowHtml);
+        }
       });
     })
     .catch(function(error) {
       console.error('Error loading leaderboard:', error);
     });
 }
+
 
 
 
