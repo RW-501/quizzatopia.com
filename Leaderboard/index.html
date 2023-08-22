@@ -365,33 +365,42 @@ updateWeeklyCompanion();
 // Get a reference to the Firestore instance
 
 function loadLeaderboard(loc) {
-	var firestore = firebase.firestore();
+  var firestore = firebase.firestore();
 
   // Reference to the users collection in Firestore
   var usersCollection = firestore.collection('users');
   console.log('Users collection reference created.');
 
-  // Query to retrieve the top 10 users sorted by points
-var query = usersCollection
+  // Query to retrieve the top 10 users excluding "New User" and "Anonymous" sorted by points
+  var query = usersCollection
     .where('userName', 'not-in', ['New User', 'Anonymous']) // Exclude "New User" and "Anonymous"
     .orderBy('userPoints', 'desc') // Order by userPoints in descending order
     .limit(10);
 
-
-
-
-
-// Retrieve the sorted data
-query.get()
+  // Retrieve the sorted data
+  query.get()
     .then(function(querySnapshot) {
       console.log('Query executed successfully.');
 
-   
-      // Loop through the retrieved data and add rows to the leaderboard table
+      // Array to store user data
+      var usersData = [];
+
+      // Loop through the retrieved data and add user data to the array
       querySnapshot.forEach(function(doc) {
-        var userInfo = doc.data();
-        var rank = userInfo.userRank;
-        var userPicture = userInfo.userProfilePic;
+        var userData = doc.data();
+        usersData.push(userData);
+      });
+
+      // Sort the data by userPoints in descending order
+      usersData.sort(function(a, b) {
+        return b.userPoints - a.userPoints;
+      });
+
+      // Loop through the sorted data and construct rows for the leaderboard table
+      usersData.forEach(function(userInfo) {
+        if (userInfo.userName !== 'New User' && userInfo.userName !== 'Anonymous') {
+          var rank = userInfo.userRank;
+          var userPicture = userInfo.userProfilePic;
         var userName = userInfo.userName;
         var points = userInfo.userPoints;
 if(userName != "New User" || userName != "Anonymous"){
