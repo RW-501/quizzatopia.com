@@ -1,4 +1,3 @@
-
 {
   "quizName": "Job Interviews Quiz",
   "quizCode": "JOBINT2023",
@@ -11,6 +10,7 @@
     {
       "questionNumber": 1,
       "question": "It is acceptable to arrive late for a job interview.",
+      "questionType": "Multiple Choice",
       "options": [
         "True",
         "False"
@@ -22,6 +22,7 @@
     {
       "questionNumber": 2,
       "question": "It is important to research the company before a job interview.",
+      "questionType": "Multiple Choice",
       "options": [
         "True",
         "False"
@@ -33,6 +34,7 @@
     {
       "questionNumber": 3,
       "question": "It is recommended to bring a copy of your resume to a job interview.",
+      "questionType": "Multiple Choice",
       "options": [
         "True",
         "False"
@@ -44,6 +46,7 @@
     {
       "questionNumber": 4,
       "question": "It is appropriate to ask about the salary and benefits during the initial job interview.",
+      "questionType": "Multiple Choice",
       "options": [
         "True",
         "False"
@@ -55,6 +58,7 @@
     {
       "questionNumber": 5,
       "question": "Dressing professionally is important for a job interview.",
+      "questionType": "Multiple Choice",
       "options": [
         "True",
         "False"
@@ -66,6 +70,7 @@
     {
       "questionNumber": 6,
       "question": "It is acceptable to badmouth previous employers during a job interview.",
+      "questionType": "Multiple Choice",
       "options": [
         "True",
         "False"
@@ -77,6 +82,7 @@
     {
       "questionNumber": 7,
       "question": "Non-verbal communication, such as maintaining eye contact and good posture, is important during a job interview.",
+      "questionType": "Multiple Choice",
       "options": [
         "True",
         "False"
@@ -88,6 +94,7 @@
     {
       "questionNumber": 8,
       "question": "It is acceptable to ask questions about the company culture and work-life balance during a job interview.",
+      "questionType": "Multiple Choice",
       "options": [
         "True",
         "False"
@@ -99,6 +106,7 @@
     {
       "questionNumber": 9,
       "question": "Following up with a thank-you note or email after a job interview is unnecessary.",
+      "questionType": "Multiple Choice",
       "options": [
         "True",
         "False"
@@ -110,6 +118,7 @@
     {
       "questionNumber": 10,
       "question": "It is acceptable to ask about the next steps in the hiring process at the end of a job interview.",
+      "questionType": "Multiple Choice",
       "options": [
         "True",
         "False"
