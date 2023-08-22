@@ -283,6 +283,16 @@ color: #fff;
   font-weight: 700;
   margin-bottom: 2rem;
 }
+.quiz-categories
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.quiz-categories
+.col {
+  flex: 1;
+  margin-right: 15px; /* Adjust the margin as needed */
+}
 
 .category-card {
   border-radius: 0.5rem;
@@ -290,11 +300,22 @@ color: #fff;
   margin-bottom: 2.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+  display: flex; /* Add this */
+  flex-direction: column; /* Add this */
 }
 
-.category-card:hover {
-  transform: translateY(-5px);
+.category-link {
+  display: flex; /* Add this */
+  flex-direction: column; /* Add this */
+  height: 100%; /* Add this */
 }
+
+.category-image {
+  max-width: 100%;
+  height: auto;
+  flex: 1; /* Add this */
+}
+
 
 .category-image {
   width: 100%;
