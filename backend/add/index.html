@@ -223,120 +223,122 @@
   }
 
   // Fetch the next JSON file
-  async function fetchNextJSON() {
+async function fetchNextJSON() {
     if (stopBool === true) {
-      return;
+        return;
     } else {
-      counterLabel.textContent = counter;
+        counterLabel.textContent = counter;
 
-      const url = `https://www.quizzatopia.com/q/New/q_${counter}_.json`;
-      const response = await fetch(url);
+        const url = `https://www.quizzatopia.com/q/New/q_${counter}_.json`;
 
-      if (response.ok) {
-        const quizInfo = await response.json();
-        const { quizName, quizCode, numberOfQuestions, quizCategory, quizDifficulty, quizDescription, quizTags } = quizInfo;
-        let TheQuestions = quizInfo.questions;
+        try { // Add a try block here
+            const response = await fetch(url);
 
-        if (quizTags) {
-          if (!quizTags.includes("States")) {
-            console.log(`quizTags: ${quizTags}`);
-            addWordsToDistinctList(quizTags);
-          }
-        } else {
-          matchedWords = "";
-          matchedWords = matchTagsWithDistinctList(TheQuestions);
-        }
+            if (response.ok) {
+                const quizInfo = await response.json();
+                const { quizName, quizCode, numberOfQuestions, quizCategory, quizDifficulty, quizDescription, quizTags } = quizInfo;
+                let TheQuestions = quizInfo.questions;
 
-        const quizQuestions = quizInfo.questions;
-        const db = firebase.firestore();
+                if (quizTags) {
+                    if (!quizTags.includes("States")) {
+                        console.log(`quizTags: ${quizTags}`);
+                        addWordsToDistinctList(quizTags);
+                    }
+                } else {
+                    matchedWords = "";
+                    matchedWords = matchTagsWithDistinctList(TheQuestions);
+                }
 
-        // Check if quiz already exists in Firestore
-        const querySnapshot = await db.collection('quizzes').where('quizCodeDB', '==', quizCode).get();
+                const quizQuestions = quizInfo.questions;
+                const db = firebase.firestore();
 
-        if (!querySnapshot.empty) {
-          let missingTagsLogs = [];
-          let stringValues = "";
+                // Check if quiz already exists in Firestore
+                const querySnapshot = await db.collection('quizzes').where('quizCodeDB', '==', quizCode).get();
 
-          // Loop through each JSON file URL
-          quizQuestions.forEach(question => {
-            const requiredTags = ['questionNumber', 'question', 'questionType', 'options', 'answer', 'explanation'];
-            const missingTags = [];
+                if (!querySnapshot.empty) {
+                    let missingTagsLogs = [];
+                    let stringValues = "";
 
-            requiredTags.forEach(tag => {
-              if (!(tag in question) || (typeof question[tag] === 'string' && question[tag].trim() === '')) {
-                missingTags.push(tag);
-              } else if (tag === 'options' && Array.isArray(question[tag]) && question[tag].length === 0) {
-                missingTags.push(tag);
-              }
-            });
+                    // Loop through each JSON file URL
+                    quizQuestions.forEach(question => {
+                        const requiredTags = ['questionNumber', 'question', 'questionType', 'options', 'answer', 'explanation'];
+                        const missingTags = [];
 
-            if (missingTags.length > 0) {
-              const questionNumber = question.questionNumber || 'N/A';
-              const missingTagsText = missingTags.join(', ');
-              const logText = `(${quizCode} Question ${questionNumber}: Missing tags: ${missingTagsText}\n`;
+                        requiredTags.forEach(tag => {
+                            if (!(tag in question) || (typeof question[tag] === 'string' && question[tag].trim() === '')) {
+                                missingTags.push(tag);
+                            } else if (tag === 'options' && Array.isArray(question[tag]) && question[tag].length === 0) {
+                                missingTags.push(tag);
+                            }
+                        });
 
-              missingTagsLogs.push(logText);
+                        if (missingTags.length > 0) {
+                            const questionNumber = question.questionNumber || 'N/A';
+                            const missingTagsText = missingTags.join(', ');
+                            const logText = `(${quizCode} Question ${questionNumber}: Missing tags: ${missingTagsText}\n`;
+
+                            missingTagsLogs.push(logText);
+                        } else {
+                            const logText = `${quizCode} Quiz Name: ${quizName}\n`; // This line was missing in your original code
+                        }
+                    });
+
+                    stringValues = missingTagsLogs.join('');
+
+                    // Update logHistory with the new log at the top
+                    logHistory = `Page ${counter}: ${stringValues}\n${logHistory}`;
+
+                    // Update the textarea with the entire log history
+                    logTextarea.value = logHistory;
+
+                    // Scroll to the top of the textarea
+                    logTextarea.scrollTop = 0;
+
+                    console.log("Skipped");
+                    counter++;
+                    clearInterval(fetchInterval);
+                    fetchInterval = setInterval(fetchNextJSON, 1000);
+                } else {
+                    let updateDate = new Date().toLocaleString();
+
+                    // Save quiz information to Firestore with an automatically generated document ID
+                    await db.collection('quizzes').doc(quizCode).set({
+                        quizCodeDB: quizCode,
+                        quizNameDB: quizName,
+                        quizCreatedByDB: "Quizzatopia",
+                        quizRatingDB: 0,
+                        imageURLDB: "https://www.quizzatopia.com/images/sq/_.png",
+                        quizJsonDB: `/q/New/q_${counter}_.json`,
+                        numberOfQuestionsDB: numberOfQuestions,
+                        quizTagsDB: quizTags || matchedWords,
+                        quizDescriptionDB: quizDescription || "",
+                        quizLinkDB: `/quiz/?e=New&q=q_${counter}_`,
+                        quizCategoryDB: quizCategory,
+                        quizCreatedDateDB: updateDate,
+                        quizDifficultyDB: quizDifficulty,
+                        quizFinishedCount: 0,
+                        quizStartedCount: 0 // Initialize the quizStartedCount to 0
+                    });
+
+                    console.log("Quiz data successfully saved with quiz code:", quizCode);
+
+                    const stringValues = `Quiz Name: ${quizName}\nQuiz Code: ${quizCode}\nNumber of Questions: ${numberOfQuestions}\nQuiz Category: ${quizCategory}\nQuiz Difficulty: ${quizDifficulty}`;
+
+                    // Update logHistory with the new log at the top
+                    logHistory = `JSON ${counter}: Adding: ${stringValues}\n${logHistory}`;
+
+                    // Update the textarea with the entire log history
+                    logTextarea.value = logHistory;
+
+                    // Scroll to the top of the textarea
+                    logTextarea.scrollTop = 0;
+
+                    // Increment the counter
+                    counter++;
+                    clearInterval(fetchInterval);
+                    fetchInterval = setInterval(fetchNextJSON, 1000);
+                }
             } else {
-              const logText = `${quizCode} Quiz Name: ${quizName}\n`;
-            }
-          });
-
-          stringValues = missingTagsLogs.join('');
-
-          // Update logHistory with the new log at the top
-          logHistory = `Page ${counter}: ${stringValues}\n${logHistory}`;
-
-          // Update the textarea with the entire log history
-          logTextarea.value = logHistory;
-
-          // Scroll to the top of the textarea
-          logTextarea.scrollTop = 0;
-
-          console.log("Skipped");
-          counter++;
-          clearInterval(fetchInterval);
-          fetchInterval = setInterval(fetchNextJSON, 1000);
-        } else {
-          let updateDate = new Date().toLocaleString();
-
-          // Save quiz information to Firestore with an automatically generated document ID
-          await db.collection('quizzes').doc(quizCode).set({
-            quizCodeDB: quizCode,
-            quizNameDB: quizName,
-            quizCreatedByDB: "Quizzatopia",
-            quizRatingDB: 0,
-            imageURLDB: "https://www.quizzatopia.com/images/sq/_.png",
-            quizJsonDB: `/q/New/q_${counter}_.json`,
-            numberOfQuestionsDB: numberOfQuestions,
-            quizTagsDB: quizTags || matchedWords,
-            quizDescriptionDB: quizDescription || "",
-            quizLinkDB: `/quiz/?e=New&q=q_${counter}_`,
-            quizCategoryDB: quizCategory,
-            quizCreatedDateDB: updateDate,
-            quizDifficultyDB: quizDifficulty,
-            quizFinishedCount: 0,
-            quizStartedCount: 0 // Initialize the quizStartedCount to 0
-          });
-
-          console.log("Quiz data successfully saved with quiz code:", quizCode);
-
-          const stringValues = `Quiz Name: ${quizName}\nQuiz Code: ${quizCode}\nNumber of Questions: ${numberOfQuestions}\nQuiz Category: ${quizCategory}\nQuiz Difficulty: ${quizDifficulty}`;
-
-          // Update logHistory with the new log at the top
-          logHistory = `JSON ${counter}: Adding: ${stringValues}\n${logHistory}`;
-
-          // Update the textarea with the entire log history
-          logTextarea.value = logHistory;
-
-          // Scroll to the top of the textarea
-          logTextarea.scrollTop = 0;
-
-          // Increment the counter
-          counter++;
-          clearInterval(fetchInterval);
-          fetchInterval = setInterval(fetchNextJSON, 1000);
-        }
-      } else {
                 const stringValues = `JSON ${counter}: Fetch failed\n`;
 
                 // Update errorLogHistory with the new log at the top
