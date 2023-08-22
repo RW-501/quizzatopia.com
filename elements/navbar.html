@@ -56,7 +56,16 @@
 <div id="search-results" class="container mt-4"></div>
 
 
-
+    <div id="exit-popup" class="exit-popup">
+        <div class="exit-popup-content">
+            <span class="exit-popup-close" id="exit-popup-close">X</span>
+            <p>Before you go, follow us on:</p>
+            <div class="exit-popup-buttons">
+                <a href="https://www.reddit.com/r/Quizzatopia/" target="_blank" class="exit-popup-button reddit-button">Reddit</a>
+                <a href="https://www.facebook.com/Quizzatopia" target="_blank" class="exit-popup-button facebook-button">Facebook</a>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -150,6 +159,92 @@ function performSearchLogic(searchQuery, jsonData) {
 
 <style>
 
+/* Styling for the sticky header */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.site-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.site-header nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.site-header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Styling for the exit popup */
+.exit-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.exit-popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.exit-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.exit-popup-buttons {
+    margin-top: 20px;
+}
+
+.exit-popup-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.exit-popup-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+	
 
 #bMC_link  {
     width: 30%;
