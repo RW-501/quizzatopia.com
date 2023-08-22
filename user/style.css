@@ -471,7 +471,7 @@ position: absolute;
     width: 90%;
       overflow: hidden;
 
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 80%;
     margin: auto;
     border-radius: 5px;
