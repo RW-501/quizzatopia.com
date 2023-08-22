@@ -602,6 +602,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+var exitCount = 0;
+
 
 
 (function () {
@@ -610,7 +612,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const exitPopup = document.getElementById("exit-popup");
         const exitPopupClose = document.getElementById("exit-popup-close");
 	    
-	  if (loggedIn === false) {
+	  if (loggedIn === false || exitCount === 1) {
     
      const animations = ["right", ""];
       const randomIndex = Math.floor(Math.random() * animations.length);
@@ -622,6 +624,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Close the popup when the close button is clicked
         exitPopupClose.addEventListener("click", function () {
             exitPopup.style.display = "none";
+		
         });
     }
 
@@ -629,6 +632,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener("mouseleave", function (e) {
         if (e.clientY < 0) {
             // User's cursor moved above the viewport (likely exiting the page)
+		exitCount++;
             showExitPopup();
         }
     });
