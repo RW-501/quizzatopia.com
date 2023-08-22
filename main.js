@@ -604,8 +604,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+(function () {
+    // Function to show the popup
+    function showExitPopup() {
+        const exitPopup = document.getElementById("exit-popup");
+        const exitPopupClose = document.getElementById("exit-popup-close");
 
+        exitPopup.style.display = "block";
 
+        // Close the popup when the close button is clicked
+        exitPopupClose.addEventListener("click", function () {
+            exitPopup.style.display = "none";
+        });
+    }
+
+    // Add event listener for mouseleave to trigger the exit popup
+    document.addEventListener("mouseleave", function (e) {
+        if (e.clientY < 0) {
+            // User's cursor moved above the viewport (likely exiting the page)
+            showExitPopup();
+        }
+    });
+})();
 
 
 
