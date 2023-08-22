@@ -609,9 +609,16 @@ document.addEventListener('DOMContentLoaded', function() {
     function showExitPopup() {
         const exitPopup = document.getElementById("exit-popup");
         const exitPopupClose = document.getElementById("exit-popup-close");
+	    
+	  if (loggedIn === false) {
+    
+     const animations = ["right", ""];
+      const randomIndex = Math.floor(Math.random() * animations.length);
+      const selectedAnimation = animations[randomIndex];
 
+      slideIn("exit-popup_content", selectedAnimation);
         exitPopup.style.display = "block";
-
+	  }
         // Close the popup when the close button is clicked
         exitPopupClose.addEventListener("click", function () {
             exitPopup.style.display = "none";
