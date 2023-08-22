@@ -602,7 +602,7 @@ display:none;
 </section>
 
 	  
-	    <section>	
+	    <section id="searchCode">	
     <div class="group">
 <button id="mainSignupBtn" class="signup-button" onclick="openPopup('signup'); "><span>Sign Up</span></button>
  
@@ -1185,6 +1185,10 @@ font-size: 30px;
 
 <script>
 	
+  if (loggedIn === true) {
+	 document.getElementById('searchCode').syle.display = "none";
+
+  }
 	
 function getQuizLink() {
   // Get the value entered in the quizCodeX input box
