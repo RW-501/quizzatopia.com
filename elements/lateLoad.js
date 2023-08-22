@@ -383,7 +383,7 @@ const badges = [
   }
 ];
 
-
+var loginPopupDisplayed = false;
 
 function openPopup(xxx) {
   // Check if the loginPopup element already exists
@@ -425,7 +425,7 @@ function openPopup(xxx) {
   const loginPopup = document.getElementById('loginPopup');
     loginPopup.classList.remove('d-none');
     slideIn('loginPopupBody');
-
+loginPopupDisplayed = true;
       }, 500);
 
       
@@ -1337,6 +1337,16 @@ logVisitorInformation();
 
 	
 
+window.addEventListener('beforeunload', function(event) {
+
+if(loggedIn === true){
+    // Check if user info changes
+                checkUserInfoChanges();
+}else{
+	 // Call the logVisitorInformation function whenever you want to log the visitor's information
+logVisitorInformation();
+}
+});
 
 
 
