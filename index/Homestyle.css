@@ -112,12 +112,20 @@ a{
   margin-top: 50px; /* Adjust the margin-top as needed */
 }
 
+.carousel_top {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Stretch items vertically to equal height */
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
 .quiz-card_top {
   background-color: white;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
- flex: 1;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  list-style: gujarati;
+  border-radius: 4px;
+  flex: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 20px;
   padding: 20px;
   position: relative;
@@ -127,6 +135,7 @@ a{
 
 .quiz-card:hover {
   transform: translateY(-10px); /* Adjust the hover effect as needed */
+      
 }
 
 .quiz-image {
