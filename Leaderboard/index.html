@@ -371,7 +371,7 @@ function loadLeaderboard(loc) {
         var userPicture = userInfo.userProfilePic;
         var userName = userInfo.userName;
         var points = userInfo.userPoints;
-
+if(userName != "New User" || userName != "Anonymous"){
         // Construct the row HTML
         var rowHtml = `
           <tr onclick="viewUserProfile('${userName}')" style="cursor: pointer; background-color: #f7f7f7;">
@@ -386,7 +386,7 @@ function loadLeaderboard(loc) {
             </td>
             <td class="text-right" style="padding: 10px; font-size: 18px; color: #555;">${points}</td>
           </tr>`;
-
+}
         // Append the row to the leaderboard table body
         $('#leaderboardBody').append(rowHtml);
       });
