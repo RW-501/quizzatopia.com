@@ -63,15 +63,15 @@
       "answer": "Expenses incurred to generate revenue.",
       "explanation": "The 'Expenses' section of the Income Statement includes the expenses incurred to generate revenue, such as the cost of goods sold, operating expenses, and other expenses."
     },
-    {
-      "questionNumber": 5,
-      "question": "What is the formula to calculate 'Net Income' on the Income Statement?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Net Income = Total Revenue - Total Expenses",
-      "explanation": "The formula to calculate 'Net Income' on the Income Statement is: Net Income = Total Revenue - Total Expenses. It represents the company's profit after deducting all expenses from the total revenue."
-    },
+ {
+  "questionNumber": 5,
+  "question": "What is the formula to calculate 'Net Income' on the Income Statement?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": ["Net Income = Gross Profit - Operating Expenses", "Net Income = Total Revenue - Total Expenses", "Net Income = Total Assets - Total Liabilities", "Net Income = Revenue - Taxes"],
+  "answer": "Net Income = Total Revenue - Total Expenses",
+  "explanation": "The formula to calculate 'Net Income' on the Income Statement is: Net Income = Total Revenue - Total Expenses. It represents the company's profit after deducting all expenses from the total revenue."
+},
     {
       "questionNumber": 6,
       "question": "True or False: The Income Statement is a financial snapshot of a company's financial position at a specific point in time.",
