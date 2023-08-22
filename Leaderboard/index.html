@@ -54,9 +54,13 @@
 
 
 
+.rightBox {
+    width: 50%;
+}
 
-
-
+.flex {
+    display: flex;
+}
 
 /* CSS for Weekly Category Companion Banner */
 .weekly-companion-banner {
@@ -90,8 +94,7 @@
 .btn:hover {
   background-color: #0056b3;
 }
-.weekly-companion-banner 
-img {
+.picBMC {
   max-width: 90%;
   height: auto;
 	  margin: auto;
@@ -213,7 +216,7 @@ function updateWeeklyCompanion() {
       <div class="text-right" id="uPoints"></div>
     </div>
 			 </div>
-      <div class="row">
+      <div class="rightBox">
 <!-- HTML for Weekly Category Companion Banner -->
 <div class="weekly-companion-banner">
 <div id="weeklyCompanion">
@@ -226,7 +229,7 @@ function updateWeeklyCompanion() {
 
   <p>Enjoying Quizzatopia? Support us:</p>
   <a href="https://www.buymeacoffee.com/Quizzatopia" target="_blank">
-    <img src="/images/bmc.png" alt="Buy Me a Coffee" />
+    <img class="picBMC" src="/images/bmc.png" alt="Buy Me a Coffee" />
   </a>
 </div>
 			 
