@@ -24,40 +24,7 @@
   padding: 1.2rem 2.5rem;
 }
 
-/* Quiz Categories Section */
-.quiz-categories {
-  padding: 4rem 0;
-  text-align: center;
-}
 
-.quiz-categories h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-}
-
-.category-card {
-  border-radius: 0.5rem;
-  overflow: hidden;
-  margin-bottom: 2.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.category-card:hover {
-  transform: translateY(-5px);
-}
-
-.category-image {
-  width: 100%;
-  height: auto;
-}
-
-.category-card h3 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  padding: 1.5rem 0;
-}
 
 /* Quiz Recommendations Section */
 .quiz-recommendations {
