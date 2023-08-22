@@ -764,8 +764,6 @@ function updateWeeklyCompanion() {
   // companionLink.textContent = `Explore ${randomCategory} Quizzes`;
 }
 
-// Call the function to update the banner when needed
-updateWeeklyCompanion();
 
 
 	</script>
@@ -1254,7 +1252,9 @@ db.collection('quizzes').where('quizCodeDB', '==', quizCodeX).get()
 		
 		
 		
-	
+	// Call the function to update the banner when needed
+updateWeeklyCompanion();
+
 	
 		
 
