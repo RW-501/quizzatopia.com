@@ -36,7 +36,7 @@
   
 
     .leaderboard-title {
-      color: #fd7e14;
+      color: #f7f7f8;
       font-size: 24px;
       font-weight: bold;
       margin-bottom: 20px;
@@ -368,10 +368,12 @@ function loadLeaderboard(loc) {
 
   // Query to retrieve the top 10 users sorted by points
 var query = usersCollection
-    .orderBy('userPoints', 'desc')
+    .orderBy('userName') // Order by userName first
+    .orderBy('userPoints', 'desc') // Then order by userPoints in descending order
     .where('userName', '!=', 'New User')
     .where('userName', '!=', 'Anonymous')
     .limit(10);
+
 
 // Retrieve the sorted data
 query.get()
