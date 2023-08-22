@@ -355,11 +355,14 @@ function loadLeaderboard(loc) {
   console.log('Users collection reference created.');
 
   // Query to retrieve the top 10 users sorted by points
-  var query = usersCollection.orderBy('userPoints', 'desc').limit(10);
-  console.log('Query created:', query);
+var query = usersCollection
+    .orderBy('userPoints', 'desc')
+    .where('userName', '!=', 'New User')
+    .where('userName', '!=', 'Anonymous')
+    .limit(10);
 
-  // Retrieve the sorted data
-  query.get()
+// Retrieve the sorted data
+query.get()
     .then(function(querySnapshot) {
       console.log('Query executed successfully.');
 
