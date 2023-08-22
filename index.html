@@ -683,7 +683,7 @@ display:none;
 .btn {
   display: inline-block;
   padding: 8px 20px;
-  background-color: #007bff;
+  background-color: #fd7e14;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -757,7 +757,7 @@ function updateWeeklyCompanion() {
   const randomCategory = getRandomCategory();
 
   // Set the content of the banner
-  companionCategory.textContent = randomCategory;
+//  companionCategory.textContent = randomCategory;
   companionCategoryPlural.textContent = `${randomCategory}s`; // Plural form
   companionCategoryTitle.textContent = randomCategory;
   companionLink.href = `https://www.quizzatopia.com/category/?${randomCategory}`;
@@ -772,7 +772,7 @@ function updateWeeklyCompanion() {
 <!-- HTML for Weekly Category Companion Banner -->
 <div class="weekly-companion-banner">
 <div id="weeklyCompanion">
-  <p>🌟 Weekly Category Companion: <span id="companionCategory"></span> 🌟</p>
+  <p>🌟 Weekly Category Companion Coming Soon! 🌟</p>
   <p>Discover our <span id="companionCategoryPlural"></span> quizzes and challenge your knowledge!</p>
   <a href="#" id="companionLink" class="btn btn-primary">Explore <span id="companionCategoryTitle"></span> Quizzes</a>
 </div>
