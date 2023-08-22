@@ -71,9 +71,9 @@ display:flex;
 
 	      
         <!-- User tagline -->
-<input id="userNameQ" type="text" class="user-name mt-3" placeholder="username" onblur="showSaveMessage();" spellcheck="false" autocomplete="off">
+<input id="userNameQ" type="text" class="user-name mt-3" placeholder="username" onblur="" spellcheck="false" autocomplete="off">
 <hr>
-<textarea id="userTagLine" class="text-muted" placeholder="tagline" onblur="showSaveMessage();" style="min-height: 100px; width: 75%; overflow: auto;" spellcheck="false" autocomplete="off"></textarea>
+<textarea id="userTagLine" class="text-muted" placeholder="tagline" onblur="" style="min-height: 100px; width: 75%; overflow: auto;" spellcheck="false" autocomplete="off"></textarea>
 
 <p id="savedMessage" style="display: none;">Changes saved!</p>
 
@@ -214,30 +214,6 @@ function redirectToFriends(){
 }
 function redirectToCommunity(){
 	window.location.href = '/community';	
-}
-	  
-var timerId;
-
-// Profile related functions
-function showSaveMessage() {
-
-  timerId = setTimeout(function() {
-    // Call your function here
-    removeSaveMessage();
-  }, 5000); // 5000 milliseconds = 5 seconds
-
-  var savedMessage = document.getElementById("savedMessage");
-  savedMessage.style.display = "block";
-}
-
-function removeSaveMessage() {
-
-	var savedMessage = document.getElementById("savedMessage");
-  savedMessage.style.display = "none";
-  clearTimeout(timerId);
-	  saveChanges();
-
-	displayProfileInfo();
 }
 
 function saveChanges() {
@@ -767,6 +743,10 @@ removeLoginCookie();
 
 	    
 	  
+window.addEventListener('beforeunload', function(event) {
+
+	  saveChanges();
+});
 	  
 	  
     function closeQPopup() {
