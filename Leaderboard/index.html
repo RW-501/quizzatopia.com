@@ -106,6 +106,8 @@
 
 .leftBox {
     width: 25%;
+    display: grid;
+    text-align: center;
 }
 
 .leftBox img{
@@ -214,12 +216,12 @@ function updateWeeklyCompanion() {
         <!-- Profile Info -->
         <div class="card mb-4">
           <div class="card-body">
-            <h5 class="card-title">Profile Info</h5>
+            
             <!-- Your profile content goes here -->
 		          <div class="row">
 <div >
 		 <div class="card"  onclick="viewUserProfile('${userName}')">
-    <div id="uRank" class="card-header"></div>
+<h5 class="card-title">Profile Info</h5>
 <div class="flex">
 			 <div class="leftBox" >
     <div>
@@ -227,6 +229,8 @@ function updateWeeklyCompanion() {
     </div>
     <div class="card-body">
       <div class="text-right" id="uPoints"></div>
+    <div id="uRank" class="card-header"></div>
+
     </div>
 			 </div>
       <div class="rightBox">
