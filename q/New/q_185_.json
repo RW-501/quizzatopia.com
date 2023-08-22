@@ -63,15 +63,15 @@
       "answer": "Department of the Treasury",
       "explanation": "The Department of the Treasury oversees the Securities and Exchange Commission (SEC) and plays a role in shaping financial policy and regulation in the United States."
     },
-    {
-      "questionNumber": 5,
-      "question": "What is the name of the electronic data gathering, analysis, and retrieval system used by the SEC for accessing corporate filings?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "EDGAR",
-      "explanation": "EDGAR (Electronic Data Gathering, Analysis, and Retrieval) is the electronic filing system used by the SEC for accessing and analyzing corporate filings required by the agency."
-    },
+{
+  "questionNumber": 5,
+  "question": "What is the name of the electronic data gathering, analysis, and retrieval system used by the SEC for accessing corporate filings?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": ["EDGAR", "FORMS", "RETSEC", "CORPINFO", "SECURETRAK"],
+  "answer": "EDGAR",
+  "explanation": "EDGAR (Electronic Data Gathering, Analysis, and Retrieval) is the electronic filing system used by the SEC for accessing and analyzing corporate filings required by the agency."
+},
     {
       "questionNumber": 6,
       "question": "Which of the following is an example of a security regulated by the SEC?",
@@ -86,15 +86,15 @@
       "answer": "Government Bonds",
       "explanation": "Government Bonds are an example of a security regulated by the SEC. A security is a financial instrument that represents ownership or a creditor relationship with a corporation, municipality, or the U.S. government."
     },
-    {
-      "questionNumber": 7,
-      "question": "What is the term for the document that companies file with the SEC to register their securities offering before it is sold to the public?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Prospectus",
-      "explanation": "Companies file a 'Prospectus' with the SEC to register their securities offering before it is sold to the public. The Prospectus provides detailed information about the offering to potential investors."
-    },
+  {
+  "questionNumber": 7,
+  "question": "What is the term for the document that companies file with the SEC to register their securities offering before it is sold to the public?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": ["Prospectus", "Offering Memorandum", "Registration Statement", "Private Placement Memorandum", "Disclosure Document"],
+  "answer": "Prospectus",
+  "explanation": "Companies file a 'Prospectus' with the SEC to register their securities offering before it is sold to the public. The Prospectus provides detailed information about the offering to potential investors."
+},
     {
       "questionNumber": 8,
       "question": "Which of the following is an example of insider trading?",
@@ -123,15 +123,15 @@
       "answer": "Strengthen corporate governance and financial reporting",
       "explanation": "The 'Sarbanes-Oxley Act' was passed in response to accounting scandals to strengthen corporate governance and financial reporting, aiming to enhance transparency and protect investors."
     },
-    {
-      "questionNumber": 10,
-      "question": "What is the term for the practice of spreading investments across different securities and asset classes to reduce risk?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Diversification",
-      "explanation": "Diversification is the practice of spreading investments across different securities and asset classes to reduce risk and avoid significant losses from the poor performance of a single investment."
-    },
+{
+  "questionNumber": 10,
+  "question": "What is the term for the practice of spreading investments across different securities and asset classes to reduce risk?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": ["Diversification", "Asset Allocation", "Risk Mitigation", "Concentration", "Portfolio Optimization"],
+  "answer": "Diversification",
+  "explanation": "Diversification is the practice of spreading investments across different securities and asset classes to reduce risk and avoid significant losses from the poor performance of a single investment."
+},
     {
       "questionNumber": 11,
       "question": "Which of the following individuals is most likely to be subject to SEC regulations?",
