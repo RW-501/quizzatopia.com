@@ -6,21 +6,20 @@
   "quizDescription": "Test your knowledge about the iconic Motown group, The Supremes, and their chart-topping hits!",
   "quizTags": "The Supremes, Motown, Music, R&B, Soul",
   "numberOfQuestions": 10,
-  "questions": [
-    "options": [],
- {
-      "questionNumber": 2,
-      "question": "The Supremes achieved their first number one hit on the Billboard Hot 100 chart with the song ________.",
+"questions": [
+    {
+      "questionNumber": 1,  // Corrected question number
+      "question": "Which member of The Supremes was the lead vocalist and the only member to remain with the group throughout its entire existence?",
       "imageURL": "",
       "questionType": "Multiple Choice",
       "options": [
-        "Stop! In the Name of Love",
-        "You Can't Hurry Love",
-        "Where Did Our Love Go",
-        "Baby Love"
+        "Diana Ross",
+        "Mary Wilson",
+        "Florence Ballard",
+        "Cindy Birdsong"
       ],
-      "answer": "Where Did Our Love Go",
-      "explanation": "The Supremes achieved their first number one hit on the Billboard Hot 100 chart with the song 'Where Did Our Love Go.' It marked the beginning of their successful chart-topping streak."
+      "answer": "Diana Ross",
+      "explanation": "Diana Ross was the lead vocalist of The Supremes and remained with the group throughout its entire existence."
     },
     {
       "questionNumber": 3,
