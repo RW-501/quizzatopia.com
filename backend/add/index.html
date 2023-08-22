@@ -337,22 +337,38 @@
           fetchInterval = setInterval(fetchNextJSON, 1000);
         }
       } else {
-        const stringValues = `JSON ${counter}: Fetch failed\n`;
+                const stringValues = `JSON ${counter}: Fetch failed\n`;
 
-        // Update errorLogHistory with the new log at the top
-        errorLogHistory = `Page ${counter}: Adding: ${stringValues}\n${errorLogHistory}`;
+                // Update errorLogHistory with the new log at the top
+                errorLogHistory = `Page ${counter}: Adding: ${stringValues}\n${errorLogHistory}`;
 
-        // Update the error log textarea with the entire log history
-        errorLogTextarea.value = errorLogHistory;
+                // Update the error log textarea with the entire log history
+                errorLogTextarea.value = errorLogHistory;
 
-        // Scroll to the top of the error log textarea
-        errorLogTextarea.scrollTop = 0;
+                // Scroll to the top of the error log textarea
+                errorLogTextarea.scrollTop = 0;
 
-        stopFetching();
-        counter++;
-      }
+                stopFetching();
+                counter++;
+            }
+        } catch (error) {
+            // Catch any other errors that might occur during the fetch
+            const errorText = `JSON ${counter}: Fetch error - ${error.message}\n`;
+
+            // Update errorLogHistory with the new error log at the top
+            errorLogHistory = `Page ${counter}: Adding: ${errorText}\n${errorLogHistory}`;
+
+            // Update the error log textarea with the entire log history
+            errorLogTextarea.value = errorLogHistory;
+
+            // Scroll to the top of the error log textarea
+            errorLogTextarea.scrollTop = 0;
+
+            stopFetching();
+            counter++;
+        }
     }
-  }
+}
 
   // Stop fetching JSON files
   function stopFetching() {
