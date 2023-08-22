@@ -55,12 +55,12 @@
 
 
 .rightBox {
-    width: 75%;
+    width: 100%;
 	    display: grid;
 }
 
-.flex {
-    display: flex;
+.grid {
+    display: grid;
 }
 
 /* CSS for Weekly Category Companion Banner */
@@ -105,10 +105,12 @@ display: block;
 
 
 .leftBox {
-    width: 25%;
-    display: grid;
+    width: 100%;
+    display: flex;
     text-align: center;
-	font-weight: 600;
+    font-weight: 600;
+    margin: auto;
+    justify-content: space-evenly;
 }
 
 .leftBox img{
@@ -118,7 +120,11 @@ display: block;
 
 }
 
-
+.leaderboard-table span {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
 
 		   
 		   
@@ -223,7 +229,7 @@ function updateWeeklyCompanion() {
 <div >
 		 <div class="card"  onclick="viewUserProfile('${userName}')">
 <h5 class="card-title" class="card-header">Profile Info</h5>
-<div class="flex">
+<div class="grid">
 			 <div class="leftBox" >
     <div>
       <img src="" alt="" class="card-img-top rounded-circle mx-auto mt-3" style="width: 100px; height: 100px;" id="uPic">
