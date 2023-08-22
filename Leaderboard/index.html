@@ -120,12 +120,16 @@ display: block;
 
 }
 
-.leaderboard-table span {
+.leaderboard-table > span {
     width: 100%;
     display: block;
     text-align: center;
 }
-
+.card-title {
+    margin-bottom: 0.5rem;
+    background-color: #fd7e14;
+    padding: 2%;
+}
 		   
 		   
   </style>
@@ -234,7 +238,7 @@ function updateWeeklyCompanion() {
     <div>
       <img src="" alt="" class="card-img-top rounded-circle mx-auto mt-3" style="width: 100px; height: 100px;" id="uPic">
     </div>
-    <div class="card-body">
+    <div class="">
       <div class="text-right" id="uPoints"></div>
     <div id="uRank" ></div>
 
