@@ -372,10 +372,14 @@ function loadLeaderboard(loc) {
   console.log('Users collection reference created.');
 
   // Query to retrieve the top 10 users excluding "New User" and "Anonymous" sorted by points
-  var query = usersCollection
-    .where('userName', 'not-in', ['New User', 'Anonymous']) // Exclude "New User" and "Anonymous"
-    .orderBy('userPoints', 'desc') // Order by userPoints in descending order
-    .limit(10);
+// Query to retrieve the top 10 users excluding "New User" and "Anonymous" sorted by points
+var query = usersCollection
+  .orderBy('userName') // Order by userName first
+  .orderBy('userPoints', 'desc') // Then order by userPoints in descending order
+  .startAt('') // Start the query at the beginning (an empty string)
+  .where('userName', 'not-in', ['New User', 'Anonymous']) // Exclude "New User" and "Anonymous"
+  .limit(10);
+
 
   // Retrieve the sorted data
   query.get()
