@@ -1,176 +1,186 @@
 {
-  "quizCode": "QZ06420",
-  "quizName": "Driver's Safety True or False Quiz Part 4",
+  "quizName": "Job Interviews Quiz",
+  "quizCode": "JOBINT2023",
   "quizDifficulty": "Medium",
-  "quizCategory": "Driver's Safety",
-  "quizDescription": "Test your knowledge of driver's safety with this True or False quiz. Learn essential rules and practices for safe driving.",
-  "quizTags": "Driver's Safety, Safe Driving, Traffic Rules",
+  "quizCategory": "Job Interviews",
+  "quizDescription": "Test your knowledge about job interviews and improve your chances of landing your dream job!",
+  "quizTags": ["Job Interviews", "Interview Tips", "Job Application", "Professionalism"],
   "numberOfQuestions": 15,
   "questions": [
     {
       "questionNumber": 1,
-      "question": "A steady yellow traffic light means you should stop immediately.",
+      "question": "Is it acceptable to arrive late for a job interview?",
+      "questionType": "Multiple Choice",
       "options": [
-        "True",
-        "False"
+        "Yes",
+        "No"
       ],
-      "answer": "False",
-      "explanation": "A steady yellow traffic light means that the light is about to turn red. Drivers should slow down and prepare to stop unless it is unsafe to do so.",
-      "difficulty": "Easy"
+      "answer": "No",
+      "explanation": "It is highly important to arrive on time for a job interview to make a good impression and show respect for the interviewer's time."
     },
     {
       "questionNumber": 2,
-      "question": "If your brakes fail, you should use the parking brake.",
+      "question": "Is it important to research the company before a job interview?",
+      "questionType": "Multiple Choice",
       "options": [
-        "True",
-        "False"
+        "Yes",
+        "No"
       ],
-      "answer": "True",
-      "explanation": "If your brakes fail, the first thing you should do is try to slow the vehicle down by shifting into a lower gear and pumping the brakes rapidly. If this does not work, use the parking brake to bring the vehicle to a stop.",
-      "difficulty": "Medium"
+      "answer": "Yes",
+      "explanation": "Researching the company prior to a job interview demonstrates your interest, preparation, and understanding of the organization, which can impress the interviewer."
     },
     {
       "questionNumber": 3,
-      "question": "What is the most common cause of traffic crashes?",
+      "question": "Is it recommended to bring a copy of your resume to a job interview?",
+      "questionType": "Multiple Choice",
       "options": [
-        "Speeding",
-        "Weather conditions",
-        "Driver distraction",
-        "Vehicle malfunctions"
+        "Yes",
+        "No"
       ],
-      "answer": "Driver distraction",
-      "explanation": "Driver distraction is the most common cause of traffic crashes. Examples of driver distraction include texting while driving, eating while driving, and talking on the phone while driving.",
-      "difficulty": "Easy"
+      "answer": "Yes",
+      "explanation": "Bringing a copy of your resume allows you to refer to it during the interview and provide additional copies if needed."
     },
     {
       "questionNumber": 4,
-      "question": "When should you use your headlights?",
+      "question": "Is it appropriate to ask about the salary and benefits during the initial job interview?",
+      "questionType": "Multiple Choice",
       "options": [
-        "Only at night",
-        "Only in fog or rain",
-        "At any time you have trouble seeing other cars",
-        "Never"
+        "Yes",
+        "No"
       ],
-      "answer": "At any time you have trouble seeing other cars",
-      "explanation": "You should use your headlights any time you have trouble seeing other cars, including during the day in heavy rain or fog.",
-      "difficulty": "Easy"
+      "answer": "No",
+      "explanation": "Salary and benefits discussions are typically reserved for later stages of the interview process, such as after receiving a job offer."
     },
     {
       "questionNumber": 5,
-      "question": "What is the maximum speed limit on interstate highways in most states?",
+      "question": "Is dressing professionally important for a job interview?",
+      "questionType": "Multiple Choice",
       "options": [
-        "50 mph",
-        "55 mph",
-        "65 mph",
-        "70 mph"
+        "Yes",
+        "No"
       ],
-      "answer": "70 mph",
-      "explanation": "The maximum speed limit on interstate highways in most states is 70 mph.",
-      "difficulty": "Easy"
+      "answer": "Yes",
+      "explanation": "Dressing professionally demonstrates your respect for the opportunity and helps create a positive impression with the interviewer."
     },
     {
       "questionNumber": 6,
-      "question": "What is the purpose of a crosswalk?",
+      "question": "Is it acceptable to badmouth previous employers during a job interview?",
+      "questionType": "Multiple Choice",
       "options": [
-        "To give pedestrians the right-of-way",
-        "To indicate a parking area",
-        "To mark the center of a road",
-        "To designate a bike lane"
+        "Yes",
+        "No"
       ],
-      "answer": "To give pedestrians the right-of-way",
-      "explanation": "A crosswalk is a designated area for pedestrians to cross the road. Drivers are required to stop for pedestrians in a crosswalk and give them the right-of-way.",
-      "difficulty": "Easy"
+      "answer": "No",
+      "explanation": "Speaking negatively about previous employers can raise red flags and reflect poorly on your professionalism and attitude. It's best to focus on positive experiences and lessons learned."
     },
     {
       "questionNumber": 7,
-      "question": "When should you use your turn signal?",
+      "question": "Is non-verbal communication, such as maintaining eye contact and good posture, important during a job interview?",
+      "questionType": "Multiple Choice",
       "options": [
-        "Only when changing lanes",
-        "Only when turning",
-        "Whenever you change direction",
-        "Never"
+        "Yes",
+        "No"
       ],
-      "answer": "Whenever you change direction",
-      "explanation": "You should use your turn signal whenever you change direction, including when turning, changing lanes, and entering or exiting a highway.",
-      "difficulty": "Easy"
+      "answer": "Yes",
+      "explanation": "Non-verbal communication plays a significant role in how you are perceived during a job interview. Maintaining eye contact and good posture conveys confidence and attentiveness."
     },
     {
       "questionNumber": 8,
-      "question": "What does a yellow diamond-shaped sign indicate?",
+      "question": "Is it acceptable to ask questions about the company culture and work-life balance during a job interview?",
+      "questionType": "Multiple Choice",
       "options": [
-        "A yield sign",
-        "A stop sign",
-        "A warning sign",
-        "A speed limit sign"
+        "Yes",
+        "No"
       ],
-      "answer": "A warning sign",
-      "explanation": "A yellow diamond-shaped sign indicates a warning. These signs are used to alert drivers of upcoming hazards or dangerous conditions, such as sharp turns, school zones, or construction zones.",
-      "difficulty": "Easy"
+      "answer": "Yes",
+      "explanation": "Asking about company culture and work-life balance shows your interest in finding a good fit and understanding the overall environment in which you would be working."
     },
     {
       "questionNumber": 9,
-      "question": "What is the speed limit in a residential area unless otherwise posted?",
+      "question": "Is following up with a thank-you note or email after a job interview unnecessary?",
+      "questionType": "Multiple Choice",
       "options": [
-        "20 mph",
-        "25 mph",
-        "30 mph",
-        "35 mph"
+        "Yes",
+        "No"
       ],
-      "answer": "25 mph",
-      "explanation": "The speed limit in a residential area unless otherwise posted is generally 25 mph. However, it's important to always check for posted speed limit signs and adjust your speed accordingly.",
-      "difficulty": "Easy"
+      "answer": "No",
+      "explanation": "Sending a thank-you note or email after a job interview is considered a professional courtesy and provides an opportunity to express gratitude and reiterate your interest in the position."
     },
     {
       "questionNumber": 10,
-      "question": "What is the proper way to enter a freeway?",
+      "question": "Is it acceptable to ask about the next steps in the hiring process at the end of a job interview?",
+      "questionType": "Multiple Choice",
       "options": [
-        "Stop at the end of the on-ramp and wait for an opening",
-        "Accelerate to the speed of traffic and merge smoothly into the lane",
-        "Drive in the emergency lane until a gap appears in traffic",
-        "Slow down and wait for a gap in traffic before merging"
+        "Yes",
+        "No"
       ],
-      "answer": "Accelerate to the speed of traffic and merge smoothly into the lane",
-      "explanation": "The proper way to enter a freeway is to use the on-ramp to accelerate to the speed of traffic and then merge smoothly into the lane. You should always check your blind spots and use your turn signal to signal your intention to merge.",
-      "difficulty": "Medium"
+      "answer": "Yes",
+      "explanation": "Asking about the next steps in the hiring process demonstrates your eagerness and proactive approach to the position. It also gives you an idea of the timeline for potential follow-up."
     },
     {
       "questionNumber": 11,
-      "question": "What should you do if you miss your exit on a freeway?",
+      "question": "What type of questions can be asked during a job interview to demonstrate interest in the company?",
+      "questionType": "Multiple Choice",
       "options": [
-        "Continue driving and exit at the next available off-ramp",
-        "Make a U-turn and try again",
-        "Stop on the freeway and wait for traffic to clear",
-        "Back up to the previous exit"
+        "Questions about the company's history and achievements.",
+        "Questions about the interviewer's personal life.",
+        "Questions about political views.",
+        "Questions about the company's financial status."
       ],
-      "answer": "Continue driving and exit at the next available off-ramp",
-      "explanation": "If you miss your exit on a freeway, you should continue driving and exit at the next available off-ramp. It's unsafe and illegal to back up or make a U-turn on a freeway.",
-      "difficulty": "Medium"
+      "answer": "Questions about the company's history and achievements.",
+      "explanation": "Asking about the company's history and achievements shows that you have researched the organization and are genuinely interested in its background and success."
     },
     {
       "questionNumber": 12,
-      "question": "What is the proper hand position on the steering wheel?",
+      "question": "During a job interview, how should you respond to behavioral questions?",
+      "questionType": "Multiple Choice",
       "options": [
-        "9 and 3 o'clock",
-        "10 and 2 o'clock",
-        "11 and 5 o'clock",
-        "12 and 6 o'clock"
+        "By providing vague and generic answers.",
+        "By avoiding the question altogether.",
+        "By using the STAR method (Situation, Task, Action, Result) to structure your response.",
+        "By making up fictional stories."
       ],
-      "answer": "9 and 3 o'clock",
-      "explanation": "The proper hand position on the steering wheel is at the 9 and 3 o'clock positions. This position allows for the greatest control and maneuverability of the vehicle.",
-      "difficulty": "Easy"
+      "answer": "By using the STAR method (Situation, Task, Action, Result) to structure your response.",
+      "explanation": "Using the STAR method helps you provide clear and structured responses to behavioral questions, highlighting your relevant skills and experiences."
     },
     {
       "questionNumber": 13,
-      "question": "What is the penalty for driving under the influence (DUI) of alcohol or drugs?",
+      "question": "What is the best way to prepare for commonly asked interview questions?",
+      "questionType": "Multiple Choice",
       "options": [
-        "A warning",
-        "A fine",
-        "License suspension or revocation",
-        "Community service"
+        "By memorizing scripted answers.",
+        "By practicing with a friend or in front of a mirror.",
+        "By making up answers on the spot.",
+        "By avoiding preparation altogether."
       ],
-      "answer": "License suspension or revocation",
-      "explanation": "The penalty for driving under the influence (DUI) of alcohol or drugs can vary depending on the state, but typically involves license suspension or revocation, fines, and possible jail time.",
-      "difficulty": "Medium"
+      "answer": "By practicing with a friend or in front of a mirror.",
+      "explanation": "Practicing your responses to common interview questions with a friend or in front of a mirror helps you become more comfortable and articulate during the actual interview."
+    },
+    {
+      "questionNumber": 14,
+      "question": "What should you do if you don't know the answer to a question during a job interview?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Make up an answer to impress the interviewer.",
+        "Panic and admit that you don't know the answer.",
+        "Ask the interviewer to skip the question.",
+        "Remain calm and honest, expressing your willingness to learn and find the answer."
+      ],
+      "answer": "Remain calm and honest, expressing your willingness to learn and find the answer.",
+      "explanation": "It's okay not to have all the answers. Remaining calm and honest shows integrity, and expressing your willingness to learn demonstrates your proactive and positive attitude."
+    },
+    {
+      "questionNumber": 15,
+      "question": "Why is it essential to ask questions at the end of a job interview?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To waste time and prolong the interview.",
+        "To demonstrate that you are not interested in the position.",
+        "To gain a deeper understanding of the role and company.",
+        "To challenge the interviewer's knowledge."
+      ],
+      "answer": "To gain a deeper understanding of the role and company.",
+      "explanation": "Asking thoughtful questions at the end of the interview shows your genuine interest in the position and allows you to gather more information about the role, company culture, and expectations."
     }
   ]
 }
