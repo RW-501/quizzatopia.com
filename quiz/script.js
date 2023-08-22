@@ -1600,6 +1600,15 @@ window.addEventListener('beforeunload', function(event) {
 });
 var userExitNotificationBool = false;
 
+window.addEventListener('beforeunload', function (event) {
+  if (quizStarted === true) {
+    event.preventDefault(); // Modern browsers ignore the custom message, so we use preventDefault instead
+    event.returnValue = ''; // Required for some older browsers (not displayed to the user)
+    return "Are you sure you want to leave? Your progress in the quiz will be lost.";
+  }
+});
+
+
 
 
 
