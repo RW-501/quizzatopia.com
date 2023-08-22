@@ -56,7 +56,16 @@
 </nav>
 <div id="search-results" class="container mt-4"></div>
 
-
+    <div id="exit-popup" class="exit-popup">
+        <div class="exit-popup-content">
+            <span class="exit-popup-close" id="exit-popup-close">X</span>
+            <p>Thank you for visiting! Explore our extensive collection of quizzes and discover new ones every day. Before you leave, stay connected with us on:</p>
+            <div class="exit-popup-buttons">
+                <a href="https://www.reddit.com/r/Quizzatopia/" target="_blank" class="exit-popup-button reddit-button">Reddit</a>
+                <a href="https://www.facebook.com/Quizzatopia" target="_blank" class="exit-popup-button facebook-button">Facebook</a>
+            </div>
+        </div>
+    </div>
 <script>
 
 
@@ -65,6 +74,79 @@
 </script>
 
 <style>
+/* Styling for the exit popup */
+.exit-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.exit-popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    right: 0;
+    left: 0;
+    height: fit-content;
+	    font-weight: 900;
+}
+
+.exit-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.exit-popup-buttons {
+    margin-top: 20px;
+}
+
+.exit-popup-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+. reddit-button{
+    background-color: #b53b5d;
+
+}
+.facebook-button{
+    background-color: #433bb5;
+
+}
+.exit-popup-button:hover {
+    background-color: #fd7e14;
+    color: #fff;
+
+}
+
+
+
+
+
+
+	
 #bMC_link  {
     width: 30%;
     margin: 2% auto;
