@@ -108,15 +108,13 @@ function toggleSortDirection() {
   return sortOrder;
 }
 
-// Event listener for sorting buttons
-const sortButtons = document.querySelectorAll('.sort-button');
-sortButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const sortField = button.dataset.sortField;
+
+// Function to sort the table based on a specified field
+function sortTable(sortField) {
     sortOrder = toggleSortDirection();
-    populateUserTable(sortField, sortOrder);
-  });
-});
+
+  populateUserTable(sortField, sortOrder);
+}
 
 document.addEventListener('DOMContentLoaded', function () {
   // Populate the table with default sorting by userName and ascending order
