@@ -78,7 +78,17 @@
 
 <style>
 /* Styling for the exit popup */
-/* Styling for the exit popup */
+
+.login-image-container{
+    display: block;
+margin-bottom: 1rem;
+}
+
+.login-image{
+    display: block;
+
+}
+	
 .exit-popup {
     display: none;
     position: fixed;
@@ -98,7 +108,7 @@
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 90%;
+    width: min-content;
     margin: auto;
     top: 0;
     bottom: 0;
@@ -106,7 +116,7 @@
     right: 0;
     left: 0;
     height: fit-content;
-	    font-weight: 700;
+    font-weight: 700;
 }
 
 .exit-popup-close {
@@ -122,7 +132,6 @@
 }
 
 .exit-popup-button {
-    display: inline-block;
     padding: 10px 20px;
     color: #fff;
     text-decoration: none;
@@ -130,6 +139,8 @@
     margin: 0 10px;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    display: grid;
+grid-gap: 10px;
 }
 .reddit-button{
     background-color: #b53b5d;
