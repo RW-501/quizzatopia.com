@@ -183,13 +183,14 @@ tbody, td, tfoot, th, thead, tr {
         <h2>Welcome to the Dashboard</h2>
 
         <!-- Sort buttons for the user table -->
-        <div class="sort-buttons">
-<button id="toggleSortDirection">Toggle Sorting Direction</button>
-          <button onclick="sortTable('userName')">Sort by Name</button>
-          <button onclick="sortTable('lastUpdated')">Sort by Last Updated</button>
-          <button onclick="sortTable('userQuizzesTaken')">Sort by Quizzes Taken</button>
-          <button onclick="sortTable('userPoints')">Sort by Points</button>
-        </div>
+   <div class="sort-buttons">
+  <button id="toggleSortDirection" onclick="toggleSortDirection()">Toggle Sorting Direction</button>
+  <button onclick="sortTable('userName')">Sort by Name</button>
+  <button onclick="sortTable('lastUpdated')">Sort by Last Updated</button>
+  <button onclick="sortTable('userQuizzesTaken')">Sort by Quizzes Taken</button>
+  <button onclick="sortTable('userPoints')">Sort by Points</button>
+</div>
+
 
         <!-- User table -->
       <div class="table-container">
