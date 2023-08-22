@@ -58,14 +58,7 @@ a{
 
 }
 
- .quiz-card_top {
-  text-decoration: none; /* Remove underline */
 
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 20px;
-
-  }
 .quiz-card_top a {
   text-decoration: none;
 
