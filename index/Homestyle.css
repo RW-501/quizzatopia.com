@@ -71,14 +71,6 @@ a{
     margin-bottom: 10px;
   }
 
-  .quiz-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-      text-decoration: none; /* Remove underline */
-
-  }
 
   .quiz-description {
     font-size: 16px;
@@ -141,7 +133,14 @@ a{
 .quiz-title {
   font-size: 1.5rem;
   margin-top: 10px;
-}
+
+     text-align: center;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+      text-decoration: none; /* Remove underline */
+
+  }
 
 .quiz-description {
   margin-top: 10px;
