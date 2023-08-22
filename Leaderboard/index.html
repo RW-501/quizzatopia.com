@@ -370,8 +370,8 @@ function loadLeaderboard(loc) {
 // Query to retrieve the top 10 users sorted by points
 var query = usersCollection
     .orderBy('userPoints', 'desc') // Then order by userPoints in descending order
-    .orderBy('userName') // Order by userName first
     .where('userName', 'not-in', ['New User', 'Anonymous']) // Use 'not-in' to filter out specific values
+
     .limit(10);
 
 
