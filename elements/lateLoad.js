@@ -1199,7 +1199,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-function logVisitorInformation() {
+function logVisitorInformation(scrollInfo) {
   const currentTimestamp = new Date();
   const referralPage = document.referrer;
   const userAgentString = navigator.userAgent;
@@ -1230,10 +1230,13 @@ if (typeof db === 'undefined' || db === null || db === '' ) {
         if (doc.exists) {
           const lastVisitTime = currentTimestamp;
           const lastVisitPage = getCurrentPage();
+	const scrollDepth = scrollInfo;
+
 
           db.collection('guestLog').doc(visitorIp).update({
             lastVisitTime,
-            lastVisitPage
+            lastVisitPage,
+		scrollDepth  
           })
             .catch(error => {
               console.error('Error updating guest log:', error);
@@ -1275,6 +1278,7 @@ if (typeof db === 'undefined' || db === null || db === '' ) {
             lastVisitTime,
             firstVisitPage,
             lastVisitPage,
+            scrollDepth,
             referralPage,
             userVisitCount,
             banned,
@@ -1335,21 +1339,58 @@ if(loggedIn === true){
 logVisitorInformation();
 }
 
-	
+	const scrollDepth = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
 
 window.addEventListener('beforeunload', function(event) {
+
+	
 
 if(loggedIn === true){
     // Check if user info changes
                 checkUserInfoChanges();
 }else{
-	 // Call the logVisitorInformation function whenever you want to log the visitor's information
-logVisitorInformation();
+let scrollInfo = getScrollDepthlogVisitor();
+logVisitorInformation(scrollInfo);
 }
 });
 
 
+function getScrollDepth(){
+// Define scroll depth thresholds
+const fullPageThreshold = 100;
+const halfPageThreshold = 50;
+const quarterPageThreshold = 25;
 
+// Attach a scroll event listener to the window
+window.addEventListener('scroll', () => {
+  // Calculate the scroll depth
+  const scrollDepth = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+  // Determine the readable format
+  let readableDepth;
+
+  if (scrollDepth >= fullPageThreshold) {
+    readableDepth = 'Full Page';
+  } else if (scrollDepth >= halfPageThreshold) {
+    readableDepth = 'Half Page';
+  } else if (scrollDepth >= quarterPageThreshold) {
+    readableDepth = 'Quarter Page';
+  } else {
+    readableDepth = 'Not Scrolled Much';
+  }
+
+  // Display the scroll depth in your UI
+  console.log('Scroll Depth:', scrollDepth.toFixed(2) + '% (' + readableDepth + ')'); 
+
+	return readableDepth;
+});
+
+
+
+
+
+}
 
 
 
