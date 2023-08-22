@@ -77,15 +77,15 @@
       "answer": "Interest on taxes owed",
       "explanation": "Failure to file a tax return or pay taxes owed by the deadline results in interest being charged on the unpaid taxes. Additionally, there may be penalties for late filing and late payment."
     },
-    {
-      "questionNumber": 6,
-      "question": "What is the term for the form that individuals use to file their federal income tax returns?",
-      "imageURL": "",
-      "questionType": "Fill in the Blank",
-      "options": [],
-      "answer": "Form 1040",
-      "explanation": "Individuals use 'Form 1040' to file their federal income tax returns with the IRS."
-    },
+{
+  "questionNumber": 6,
+  "question": "What is the term for the form that individuals use to file their federal income tax returns?",
+  "imageURL": "",
+  "questionType": "Fill in the Blank",
+  "options": ["Form W-2", "Form 1099", "Form 1040", "Form 4868", "Form 8938"],
+  "answer": "Form 1040",
+  "explanation": "Individuals use 'Form 1040' to file their federal income tax returns with the IRS."
+},
     {
       "questionNumber": 7,
       "question": "Which form should a self-employed individual use to report their business income and expenses to the IRS?",
