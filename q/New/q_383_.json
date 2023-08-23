@@ -1,0 +1,51 @@
+{
+  "quizName": "Movie Emoji Challenge",
+  "quizCode": "FM105",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Fun",
+  "quizDescription": "Decode these emoji riddles to reveal popular movie titles!",
+  "quizTags": ["Fun", "Movies", "Emoji"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "🌍🦁👑 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["The Lion King", "Jungle Book", "Madagascar", "Planet of the Apes"],
+      "answer": "The Lion King",
+      "explanation": "🌍🦁👑 = 'The Lion King,' the classic animated movie!"
+    },
+    {
+      "questionNumber": 2,
+      "question": "🚴🌲🛴 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Forrest Gump", "E.T. the Extra-Terrestrial", "Jurassic Park", "The Terminator"],
+      "answer": "Forrest Gump",
+      "explanation": "🚴🌲🛴 = 'Forrest Gump,' the heartwarming tale of a man with a unique journey!"
+    },
+    {
+      "questionNumber": 3,
+      "question": "👽🚲 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Close Encounters of the Third Kind", "E.T. the Extra-Terrestrial", "The Day the Earth Stood Still", "Independence Day"],
+      "answer": "E.T. the Extra-Terrestrial",
+      "explanation": "👽🚲 = 'E.T. the Extra-Terrestrial,' the iconic story of an alien and a boy's friendship!"
+    },
+    {
+      "questionNumber": 4,
+      "question": "🏡🎈 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Up", "Home Alone", "The Conjuring", "Poltergeist"],
+      "answer": "Up",
+      "explanation": "🏡🎈 = 'Up,' the heartwarming animated adventure that takes you on a journey!"
+    },
+    {
+      "questionNumber": 5,
+      "question": "🍫🏆 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Chocolat", "The Grand Budapest Hotel", "Charlie and the Chocolate Factory", "Willy Wonka & the Chocolate Factory"],
+      "answer": "Charlie and the Chocolate Factory",
+      "explanation": "🍫🏆 = 'Charlie and the Chocolate Factory,' where a golden ticket leads to sweet surprises!"
+    }
+  ]
+}
