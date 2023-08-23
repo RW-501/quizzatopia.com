@@ -570,7 +570,7 @@ function getCategoriesOrderedByViewCount() {
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         const categoryData = doc.data();
-        console.log('Category:', categoryData.name);
+     //   console.log('Category:', categoryData.name);
 
         categories.push({
           name: categoryData.name,
