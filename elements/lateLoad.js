@@ -1415,7 +1415,6 @@ const BACKEND_URL_PATTERN = /^\/backend(\/|$)/;
 async function checkUserAndIP() {
   try {
     const user = userInfo.firebaseId;
-    const userInfo = getUserInfo();
 	  
  console.log("Admin   " + user );
     if (!user || loggedIn === false) {
@@ -1428,11 +1427,11 @@ async function checkUserAndIP() {
     }
 
 
-if (user === ALLOWED_USER || ALLOWED_USER == userInfo.firebaseId || uID === ALLOWED_USER) {
+if (user === ALLOWED_USER || uID === ALLOWED_USER) {
   console.log("Admin");
 } else {
 	          console.log("Not Admin");
-       console.log("Admin   " + user + "|| " + userInfo.firebaseId);
+       console.log("Admin   " + user + "|| " + uID);
      //   window.location.href = '/';
     }
   } catch (error) {
