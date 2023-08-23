@@ -549,7 +549,7 @@ function convertSnapshotToQuizList(querySnapshot) {
     };
     quizList.push(quizItem);
   });
-if(quizData.private === true){
+if(quizItem.private === true){
 	return ;
 }else{
   return quizList;
