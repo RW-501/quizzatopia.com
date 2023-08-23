@@ -1208,6 +1208,9 @@ function logVisitorInformation(scrollInfo) {
   const browserName = browserMatch[1];
   const browserVersion = browserMatch[2];
 
+	          const firstVisitPage = getCurrentPage();
+          const lastVisitPage = getCurrentPage();
+	
   // Extract device information using regular expressions
   const deviceMatch = userAgentString.match(/\(([^)]+)\)/);
   const deviceInfo = deviceMatch[1].split(';').map(part => part.trim());
@@ -1229,7 +1232,7 @@ if (typeof db === 'undefined' || db === null || db === '' ) {
       .then(doc => {
         if (doc.exists) {
           const lastVisitTime = currentTimestamp;
-          const lastVisitPage = getCurrentPage();
+        //  const lastVisitPage = getCurrentPage();
 	const scrollDepth = scrollInfo;
 
 
@@ -1268,8 +1271,7 @@ if (typeof db === 'undefined' || db === null || db === '' ) {
           // Create a new visitor log entry
           const firstVisitTime = currentTimestamp;
           const lastVisitTime = currentTimestamp;
-          const firstVisitPage = getCurrentPage();
-          const lastVisitPage = getCurrentPage();
+
           const banned = 'NO';
           const userVisitCount = 1;
 
@@ -1313,7 +1315,7 @@ function getCurrentPage() {
   const currentPage = afterDotCom.startsWith('/') ? afterDotCom.slice(1) : afterDotCom;
 
   // Return the current page
-  return currentPage;
+  return currentPage || "Home";
 }
 
 
