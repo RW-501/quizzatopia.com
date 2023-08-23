@@ -1,0 +1,51 @@
+{
+  "quizName": "Advanced Investment Mastery Quiz",
+  "quizCode": "AIM202",
+  "quizDifficulty": "Hard",
+  "quizCategory": "Investing",
+  "quizDescription": "Put your advanced investment knowledge to the test with this challenging quiz on financial markets and strategies.",
+  "quizTags": ["Investing", "Finance", "Wealth"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What term describes an investment strategy where an investor borrows money to buy more shares than they can afford?",
+      "questionType": "Multiple Choice",
+      "options": ["Leveraging", "Short Selling", "Diversification", "Hedging"],
+      "answer": "Leveraging",
+      "explanation": "Leveraging involves borrowing capital to invest in assets with the goal of amplifying potential returns."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the term for a financial instrument that derives its value from an underlying asset and can be used for risk management or speculation?",
+      "questionType": "Multiple Choice",
+      "options": ["Stock", "Derivative", "Bond", "Mutual Fund"],
+      "answer": "Derivative",
+      "explanation": "A derivative is a financial instrument with a value linked to an underlying asset, often used for hedging or speculation."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the formula for calculating the compound annual growth rate (CAGR) of an investment?",
+      "questionType": "Fill in the Blank",
+      "options": ["(Ending Value / Beginning Value) * 100", "(Ending Value - Beginning Value) / Beginning Value", "Log(Ending Value / Beginning Value) / Number of Years", "(Ending Value - Beginning Value) * 100 / Number of Years"],
+      "answer": "(Ending Value / Beginning Value)^(1 / Number of Years) - 1",
+      "explanation": "The formula for calculating the compound annual growth rate (CAGR) is (Ending Value / Beginning Value)^(1 / Number of Years) - 1."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which type of investment analysis involves evaluating a company's financial statements and fundamentals to determine its intrinsic value?",
+      "questionType": "Multiple Choice",
+      "options": ["Technical Analysis", "Quantitative Analysis", "Fundamental Analysis", "Behavioral Analysis"],
+      "answer": "Fundamental Analysis",
+      "explanation": "Fundamental analysis involves assessing a company's financial health and performance to determine its intrinsic value."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the term for a sudden, severe decline in the overall stock market or a significant segment of it?",
+      "questionType": "Multiple Choice",
+      "options": ["Bull Market", "Correction", "Bear Market", "Recession"],
+      "answer": "Bear Market",
+      "explanation": "A bear market is characterized by a significant and prolonged decline in stock prices, often due to pessimism and economic downturns."
+    }
+  ]
+}
