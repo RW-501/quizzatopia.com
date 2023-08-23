@@ -1,0 +1,51 @@
+{
+  "quizName": "Movie Mashup Madness",
+  "quizCode": "FM108",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Fun",
+  "quizDescription": "Combine famous movie titles and guess the hilarious mashup titles!",
+  "quizTags": ["Fun", "Movies", "Humor"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Jurassic Park + The Terminator = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Jurassic World", "The Parkinator", "Terrorassic Park", "Jurassic Terminator"],
+      "answer": "The Parkinator",
+      "explanation": "When you combine 'Jurassic Park' and 'The Terminator,' you get 'The Parkinator'!"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Forrest Gump + The Matrix = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Matrix Gump", "Forrest Matrix", "Gump Reloaded", "The Forrest"],
+      "answer": "Forrest Matrix",
+      "explanation": "The mashup of 'Forrest Gump' and 'The Matrix' is 'Forrest Matrix'!"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Pirates of the Caribbean + Star Wars = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Star Pirates", "Pirates of the Galaxy", "Caribbean Wars", "Pirate Jedi"],
+      "answer": "Pirates of the Galaxy",
+      "explanation": "When pirates sail into 'Star Wars,' you get 'Pirates of the Galaxy'!"
+    },
+    {
+      "questionNumber": 4,
+      "question": "The Lord of the Rings + Harry Potter = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Harry Rings", "The Potter of the Rings", "The Ring Wizard", "Lord Potter"],
+      "answer": "The Potter of the Rings",
+      "explanation": "When you mix 'The Lord of the Rings' and 'Harry Potter,' you get 'The Potter of the Rings'!"
+    },
+    {
+      "questionNumber": 5,
+      "question": "The Dark Knight + Finding Nemo = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["The Nemo Knight", "Dark Nemo", "Finding Knight", "The Dark Fish"],
+      "answer": "The Dark Fish",
+      "explanation": "When Batman goes underwater, you get 'The Dark Fish' instead of 'The Dark Knight'!"
+    }
+  ]
+}
