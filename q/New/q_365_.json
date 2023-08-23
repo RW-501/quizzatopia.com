@@ -1,0 +1,51 @@
+{
+  "quizName": "Movie Recommendation Quiz",
+  "quizCode": "MR101",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Movie/TV Show Recommendation",
+  "quizDescription": "Discover your next favorite movie or TV show based on your preferences.",
+  "quizTags": ["Entertainment", "Movies", "Recommendation"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What genre do you enjoy the most?",
+      "questionType": "Multiple Choice",
+      "options": ["Action", "Romance", "Science Fiction", "Comedy"],
+      "answer": "Action",
+      "explanation": "If you love excitement and adventure, action movies might be your top choice."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which setting do you prefer for a movie?",
+      "questionType": "Multiple Choice",
+      "options": ["Historical", "Contemporary", "Futuristic", "Fantasy"],
+      "answer": "Contemporary",
+      "explanation": "If you like relatable settings, contemporary movies may be more appealing."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What mood are you in for a movie night?",
+      "questionType": "Multiple Choice",
+      "options": ["Excitement and thrills", "Love and romance", "Imagination and wonder", "Laughter and humor"],
+      "answer": "Love and romance",
+      "explanation": "For a romantic mood, consider watching movies that explore love and relationships."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What's your favorite type of storyline?",
+      "questionType": "Multiple Choice",
+      "options": ["Epic battles", "Love stories", "Interstellar adventures", "Hilarious escapades"],
+      "answer": "Hilarious escapades",
+      "explanation": "If you're in the mood for laughter, opt for movies with comedic and hilarious storylines."
+    },
+    {
+      "questionNumber": 5,
+      "question": "How do you feel about subtitles?",
+      "questionType": "Multiple Choice",
+      "options": ["I don't mind them", "Prefer movies in my language", "Subtitles are fine", "I enjoy foreign films"],
+      "answer": "I don't mind them",
+      "explanation": "If you don't mind subtitles, you can explore a wide range of foreign and international films."
+    }
+  ]
+}
