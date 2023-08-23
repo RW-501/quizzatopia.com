@@ -570,7 +570,7 @@ cards.forEach(card => {
 function displayCategories(){
 	// Assuming you have a container element to append the buttons to
 const categoryContainer = document.querySelector('.catList');
-
+categoryContainer.innerHTML = "";
 // Iterate over the categories array and create buttons
 categories.forEach(category => {
   const button = document.createElement('a');
