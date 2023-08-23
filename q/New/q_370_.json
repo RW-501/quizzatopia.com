@@ -1,0 +1,51 @@
+{
+  "quizName": "Space Exploration Quiz",
+  "quizCode": "SE101",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Science",
+  "quizDescription": "Test your knowledge of space exploration and the cosmos with this informative quiz.",
+  "quizTags": ["Space", "Science", "Astronomy"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which space agency was the first to successfully land humans on the Moon?",
+      "questionType": "Multiple Choice",
+      "options": ["NASA", "ESA", "Roscosmos", "CNSA"],
+      "answer": "NASA",
+      "explanation": "NASA, the United States' space agency, achieved the historic Apollo 11 Moon landing in 1969."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the largest planet in our solar system?",
+      "questionType": "Multiple Choice",
+      "options": ["Earth", "Mars", "Jupiter", "Saturn"],
+      "answer": "Jupiter",
+      "explanation": "Jupiter is the largest planet in our solar system, known for its immense size and colorful bands."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which space telescope has provided stunning images of distant galaxies and nebulae?",
+      "questionType": "Multiple Choice",
+      "options": ["Hubble Space Telescope", "James Webb Space Telescope", "Kepler Space Telescope", "Spitzer Space Telescope"],
+      "answer": "Hubble Space Telescope",
+      "explanation": "The Hubble Space Telescope has captured breathtaking images of the cosmos since its launch."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the name of the first artificial satellite launched into space?",
+      "questionType": "Multiple Choice",
+      "options": ["Vostok 1", "Sputnik 1", "Apollo 11", "Explorer 1"],
+      "answer": "Sputnik 1",
+      "explanation": "Sputnik 1, launched by the Soviet Union in 1957, was the world's first artificial satellite."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the term for the sudden release of energy on the Sun's surface?",
+      "questionType": "Multiple Choice",
+      "options": ["Solar flare", "Asteroid impact", "Solar eclipse", "Coronal mass ejection"],
+      "answer": "Solar flare",
+      "explanation": "A solar flare is a sudden and intense release of energy on the Sun's surface, often accompanied by radiation."
+    }
+  ]
+}
