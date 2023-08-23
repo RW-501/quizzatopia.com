@@ -99,7 +99,10 @@
 
  <h1>Blocked Guests</h1>
     <ul id="blocked-guests-list"></ul>
-
+<hr>
+ <h1>Users with More than 100 Reads</h1>
+    <textarea id="userList" rows="10" cols="40"></textarea>
+<hr>
 
 
 
@@ -119,6 +122,11 @@
       <p>Total Guest:<div id="totalGuest"></div></p>
   <p>Total Quizzes Started: <span id="totalStarted">Loading...</span></p>
     <p>Total Quizzes Finished: <span id="totalFinished">Loading...</span></p>
+
+  <h1>Realtime Database Usage Data</h1>
+    <p id="usageData"></p>
+
+	    
     </div>
   </div>
 </main>
@@ -142,39 +150,86 @@
 
   <!-- Include JavaScript dependencies -->
 <script>
+function fetchBlockedGuests() {
+    // Initialize Firebase Firestore
+    const db = firebase.firestore();
 
-// Initialize Firebase Firestore
-const db = firebase.firestore();
+    // Reference the 'questLog' collection
+    const questLogRef = db.collection('questLog');
 
-// Reference the 'questLog' collection
-const questLogRef = db.collection('questLog');
+    // Reference the <ul> element in the HTML for displaying blocked guests
+    const blockedGuestsList = document.getElementById('blocked-guests-list');
 
-// Reference the <ul> element in the HTML for displaying blocked guests
-const blockedGuestsList = document.getElementById('blocked-guests-list');
+    // Query the 'questLog' collection for blocked guests
+    questLogRef.where('userVisitCount', '>', 1)
+        .orWhere('banned', '==', 'YES')
+        .get()
+        .then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                const guestData = doc.data();
+                const guestIP = doc.id;
 
-// Query the 'questLog' collection for blocked guests
-questLogRef.where('userVisitCount', '>', 1)
-           .orWhere('banned', '==', 'YES')
-           .get()
-           .then((querySnapshot) => {
-               querySnapshot.forEach((doc) => {
-                   const guestData = doc.data();
-                   const guestIP = doc.id;
+                // Create a list item for each blocked guest
+                const listItem = document.createElement('li');
+                listItem.textContent = `IP Address: ${guestIP}, User Visit Count: ${guestData.userVisitCount}, Banned: ${guestData.banned}`;
 
-                   // Create a list item for each blocked guest
-                   const listItem = document.createElement('li');
-                   listItem.textContent = `IP Address: ${guestIP}, User Visit Count: ${guestData.userVisitCount}, Banned: ${guestData.banned}`;
-                   
-                   // Append the list item to the <ul> element
-                   blockedGuestsList.appendChild(listItem);
-               });
-           })
-           .catch((error) => {
-               console.error('Error getting blocked guests:', error);
-           });
+                // Append the list item to the <ul> element
+                blockedGuestsList.appendChild(listItem);
+            });
+        })
+        .catch((error) => {
+            console.error('Error getting blocked guests:', error);
+        });
+}
 
+function fetchRealtimeDatabaseUsage() {
+    // Firebase Realtime Database code to fetch usage data
+    const db = firebase.database();
+    const statsRef = db.ref('.info/usage');
 
-	
+    statsRef.once('value')
+        .then((snapshot) => {
+            const usageData = snapshot.val();
+            const usageDataElement = document.getElementById('usageData');
+
+            // Update the content of the HTML element with the fetched data
+            usageDataElement.textContent = JSON.stringify(usageData, null, 2);
+        })
+        .catch((error) => {
+            console.error('Error fetching Realtime Database usage data:', error);
+        });
+}
+
+function fetchUsersWithMoreThan100Reads() {
+    const db = firebase.database();
+    const usersRef = db.ref('users');
+    const userListTextarea = document.getElementById('userList');
+
+    usersRef.orderByChild('readCount').startAt(100).once('value')
+        .then((snapshot) => {
+            let userList = '';
+
+            // Loop through the results to get users with more than 100 reads
+            snapshot.forEach((childSnapshot) => {
+                const user = childSnapshot.key;
+                const readCount = childSnapshot.val().readCount;
+
+                userList += `User: ${user}, Read Count: ${readCount}\n`;
+            });
+
+            // Set the value of the textarea to the user list
+            userListTextarea.value = userList;
+        })
+        .catch((error) => {
+            console.error('Error fetching users with more than 100 reads:', error);
+        });
+}
+
+// Call the functions when needed
+fetchBlockedGuests();
+fetchRealtimeDatabaseUsage();
+fetchUsersWithMoreThan100Reads();
+
 </script>
   <script src="control-panel.js"></script>
 </body>
