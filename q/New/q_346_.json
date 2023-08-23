@@ -1,0 +1,91 @@
+{
+  "quizName": "Culinary Delights Quiz",
+  "quizCode": "CD789",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Cooking",
+  "quizDescription": "Test your knowledge of culinary arts and cooking techniques with this quiz.",
+  "quizTags": ["Cooking", "Culinary Arts", "Food"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the primary ingredient in traditional Italian pesto sauce?",
+      "questionType": "Multiple Choice",
+      "options": ["Tomatoes", "Basil", "Cheese", "Garlic"],
+      "answer": "Basil",
+      "explanation": "The primary ingredient in traditional Italian pesto sauce is fresh basil leaves."
+    },
+    {
+      "questionNumber": 2,
+      "question": "In cooking, what does 'al dente' mean?",
+      "questionType": "Multiple Choice",
+      "options": ["Undercooked", "Overcooked", "Perfectly cooked", "Flavorful"],
+      "answer": "Perfectly cooked",
+      "explanation": "'Al dente' means pasta or vegetables are cooked to a point where they are tender but still firm when bitten."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the main ingredient in the classic French dish 'Bouillabaisse'?",
+      "questionType": "Multiple Choice",
+      "options": ["Beef", "Chicken", "Fish", "Lamb"],
+      "answer": "Fish",
+      "explanation": "The main ingredient in the classic French dish 'Bouillabaisse' is fish, typically a variety of seafood."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which fruit is known as the 'king of fruits' and has a strong, distinctive odor?",
+      "questionType": "Multiple Choice",
+      "options": ["Banana", "Apple", "Mango", "Pineapple"],
+      "answer": "Mango",
+      "explanation": "The mango is often referred to as the 'king of fruits' and is known for its sweet flavor and distinctive odor."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What type of pastry is used to make a classic 'éclair' dessert?",
+      "questionType": "Multiple Choice",
+      "options": ["Puff pastry", "Shortcrust pastry", "Choux pastry", "Filo pastry"],
+      "answer": "Choux pastry",
+      "explanation": "A classic 'éclair' dessert is made using choux pastry, which puffs up during baking."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the primary ingredient in traditional Japanese miso soup?",
+      "questionType": "Multiple Choice",
+      "options": ["Tofu", "Seaweed", "Fish", "Miso paste"],
+      "answer": "Miso paste",
+      "explanation": "The primary ingredient in traditional Japanese miso soup is miso paste, a fermented soybean paste."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which cooking method involves cooking food slowly in a vacuum-sealed bag in a water bath?",
+      "questionType": "Multiple Choice",
+      "options": ["Grilling", "Frying", "Sous-vide", "Boiling"],
+      "answer": "Sous-vide",
+      "explanation": "Sous-vide is a cooking method that involves cooking food slowly in a vacuum-sealed bag in a water bath at a precise temperature."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the main ingredient in the Indian dish 'Paneer Tikka'?",
+      "questionType": "Multiple Choice",
+      "options": ["Chicken", "Beef", "Fish", "Paneer (Indian cheese)"],
+      "answer": "Paneer (Indian cheese)",
+      "explanation": "The main ingredient in the Indian dish 'Paneer Tikka' is paneer, a type of Indian cheese."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the primary flavoring agent in the Chinese dish 'Kung Pao Chicken'?",
+      "questionType": "Multiple Choice",
+      "options": ["Soy sauce", "Sesame oil", "Peanuts", "Chili peppers"],
+      "answer": "Chili peppers",
+      "explanation": "The primary flavoring agent in the Chinese dish 'Kung Pao Chicken' is chili peppers, which give it a spicy kick."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What type of rice is commonly used in Japanese sushi?",
+      "questionType": "Multiple Choice",
+      "options": ["Jasmine rice", "Basmati rice", "Arborio rice", "Sushi rice"],
+      "answer": "Sushi rice",
+      "explanation": "Japanese sushi is commonly made with sushi rice, a short-grain rice that is seasoned with vinegar, sugar, and salt."
+    }
+  ]
+}
