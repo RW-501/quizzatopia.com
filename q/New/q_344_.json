@@ -1,0 +1,91 @@
+{
+  "quizName": "Teen Trivia Quiz",
+  "quizCode": "TT123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Teens",
+  "quizDescription": "Test your knowledge and have fun with this trivia quiz designed for teenagers.",
+  "quizTags": ["Teens", "Trivia", "Youth"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which planet is known as the 'Red Planet'?",
+      "questionType": "Multiple Choice",
+      "options": ["Earth", "Mars", "Jupiter", "Venus"],
+      "answer": "Mars",
+      "explanation": "Mars is often referred to as the 'Red Planet' due to its reddish appearance caused by iron oxide (rust) on its surface."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the largest mammal on Earth?",
+      "questionType": "Multiple Choice",
+      "options": ["African Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+      "answer": "Blue Whale",
+      "explanation": "The blue whale is the largest mammal on Earth, and it is also the largest animal ever known to have existed on our planet."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which fictional wizard attends Hogwarts School of Witchcraft and Wizardry?",
+      "questionType": "Multiple Choice",
+      "options": ["Gandalf", "Merlin", "Dumbledore", "Harry Potter"],
+      "answer": "Harry Potter",
+      "explanation": "Harry Potter, the titular character of the popular book and film series, attends Hogwarts School of Witchcraft and Wizardry."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the main ingredient in traditional Japanese miso soup?",
+      "questionType": "Multiple Choice",
+      "options": ["Tofu", "Seaweed", "Fish", "Miso paste"],
+      "answer": "Miso paste",
+      "explanation": "The main ingredient in traditional Japanese miso soup is miso paste, a fermented soybean paste."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which iconic video game character eats dots while being chased by ghosts?",
+      "questionType": "Multiple Choice",
+      "options": ["Sonic the Hedgehog", "Mario", "Pac-Man", "Donkey Kong"],
+      "answer": "Pac-Man",
+      "explanation": "Pac-Man is the iconic video game character known for eating dots while being chased by ghosts in the classic arcade game."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the largest planet in our solar system?",
+      "questionType": "Multiple Choice",
+      "options": ["Earth", "Mars", "Jupiter", "Saturn"],
+      "answer": "Jupiter",
+      "explanation": "Jupiter is the largest planet in our solar system, known for its immense size and colorful bands of clouds."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What does 'DNA' stand for in biology?",
+      "questionType": "Multiple Choice",
+      "options": ["Deoxyribonucleic Acid", "Digital Network Analysis", "Dynamic Nucleic Acid", "Double-Stranded Nucleotide Assembly"],
+      "answer": "Deoxyribonucleic Acid",
+      "explanation": "DNA stands for Deoxyribonucleic Acid, a molecule that carries genetic information in living organisms."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which gas do plants absorb from the atmosphere during photosynthesis?",
+      "questionType": "Multiple Choice",
+      "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+      "answer": "Carbon Dioxide",
+      "explanation": "Plants absorb carbon dioxide from the atmosphere during photosynthesis, using it to produce oxygen and glucose."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the capital city of France?",
+      "questionType": "Multiple Choice",
+      "options": ["London", "Berlin", "Madrid", "Paris"],
+      "answer": "Paris",
+      "explanation": "The capital city of France is Paris, known for its art, culture, and iconic landmarks like the Eiffel Tower."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the largest ocean on Earth?",
+      "questionType": "Multiple Choice",
+      "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+      "answer": "Pacific Ocean",
+      "explanation": "The Pacific Ocean is the largest and deepest ocean on Earth, covering more area than any other ocean."
+    }
+  ]
+}
