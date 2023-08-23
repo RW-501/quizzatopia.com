@@ -551,7 +551,7 @@ cards.forEach(card => {
 
 	 
 	    
-	      <div class=" catList"></div>
+	      <div class=" catList"><div class="loading_Main ">Loading...</div></div>
 
 
 
@@ -758,6 +758,8 @@ section {
 
 function makeCategoriesList(){
 const categoryButtonsContainer = document.getElementById('categoryButtonsContainer');
+	
+categories.sort((a, b) => a.name.localeCompare(b.name));
 
 categories.forEach(category => {
 	
