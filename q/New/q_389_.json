@@ -1,0 +1,51 @@
+{
+  "quizName": "Famous Landmarks Emoji Challenge",
+  "quizCode": "EL204",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Guess the famous landmarks represented by emoji!",
+  "quizTags": ["Geography", "Emoji", "Landmarks"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "🗽🍎 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Statue of Liberty", "Empire State Building", "Central Park", "New York City"],
+      "answer": "Statue of Liberty",
+      "explanation": "🗽🍎 = 'Statue of Liberty,' one of New York City's most iconic landmarks!"
+    },
+    {
+      "questionNumber": 2,
+      "question": "🕌🇮🇳 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Taj Mahal", "Eiffel Tower", "Great Wall of China", "Sydney Opera House"],
+      "answer": "Taj Mahal",
+      "explanation": "🕌🇮🇳 = 'Taj Mahal,' the breathtaking monument in India!"
+    },
+    {
+      "questionNumber": 3,
+      "question": "🗼🗾 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Tokyo Tower", "Mount Fuji", "Great Wall of China", "The Louvre"],
+      "answer": "Tokyo Tower",
+      "explanation": "🗼🗾 = 'Tokyo Tower,' an iconic symbol of Japan!"
+    },
+    {
+      "questionNumber": 4,
+      "question": "🌍🐘 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["African Safari", "Great Wall of China", "Sydney Opera House", "Santorini"],
+      "answer": "African Safari",
+      "explanation": "🌍🐘 = 'African Safari,' where you can encounter elephants and other wildlife!"
+    },
+    {
+      "questionNumber": 5,
+      "question": "🏰🏴󠁧󠁢󠁥󠁮󠁧󠁿 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Neuschwanstein Castle", "Edinburgh Castle", "Windsor Castle", "Buckingham Palace"],
+      "answer": "Windsor Castle",
+      "explanation": "🏰🏴󠁧󠁢󠁥󠁮󠁧󠁿 = 'Windsor Castle,' a royal residence in England!"
+    }
+  ]
+}
