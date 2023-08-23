@@ -1,0 +1,51 @@
+{
+  "quizName": "Cuisine Around the World Emoji Challenge",
+  "quizCode": "CW206",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Food",
+  "quizDescription": "Guess international dishes represented by emoji!",
+  "quizTags": ["Food", "Emoji", "Cuisine"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "🍣🍱 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Sushi", "Pizza", "Taco", "Burger"],
+      "answer": "Sushi",
+      "explanation": "🍣🍱 = 'Sushi,' a delicious Japanese dish!"
+    },
+    {
+      "questionNumber": 2,
+      "question": "🌮🇲🇽 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Pasta", "Taco", "Sushi", "Curry"],
+      "answer": "Taco",
+      "explanation": "🌮🇲🇽 = 'Taco,' a popular Mexican street food!"
+    },
+    {
+      "questionNumber": 3,
+      "question": "🍝🍕 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Burger", "Pizza", "Sushi", "Pasta"],
+      "answer": "Pasta",
+      "explanation": "🍝🍕 = 'Pasta,' an Italian favorite!"
+    },
+    {
+      "questionNumber": 4,
+      "question": "🍛🍚 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Curry", "Taco", "Sushi", "Pizza"],
+      "answer": "Curry",
+      "explanation": "🍛🍚 = 'Curry,' a flavorful dish enjoyed in various cultures!"
+    },
+    {
+      "questionNumber": 5,
+      "question": "🍔🍟 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Pizza", "Burger", "Pasta", "Curry"],
+      "answer": "Burger",
+      "explanation": "🍔🍟 = 'Burger and Fries,' a classic American meal!"
+    }
+  ]
+}
