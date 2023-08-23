@@ -1,0 +1,51 @@
+{
+  "quizName": "Emoji Self-Improvement Quiz",
+  "quizCode": "SH305",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Self-Help",
+  "quizDescription": "Decode self-improvement tips and advice using emojis!",
+  "quizTags": ["Self-Help", "Emoji", "Self-Improvement"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "🧘‍♂️💤🍏 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Meditation", "Healthy Eating", "Exercise", "Stress Management"],
+      "answer": "Healthy Eating",
+      "explanation": "🧘‍♂️💤🍏 = 'Healthy Eating,' a key to well-being!"
+    },
+    {
+      "questionNumber": 2,
+      "question": "💪📅🤝 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Exercise", "Time Management", "Self-Care", "Stress Management"],
+      "answer": "Time Management",
+      "explanation": "💪📅🤝 = 'Time Management,' for increased productivity!"
+    },
+    {
+      "questionNumber": 3,
+      "question": "🧠🌿🍃 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Mental Health", "Exercise", "Healthy Eating", "Stress Management"],
+      "answer": "Mental Health",
+      "explanation": "🧠🌿🍃 = 'Mental Health,' a focus on well-being!"
+    },
+    {
+      "questionNumber": 4,
+      "question": "😌🌄🏞️ = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Stress Management", "Meditation", "Self-Care", "Healthy Eating"],
+      "answer": "Self-Care",
+      "explanation": "😌🌄🏞️ = 'Self-Care,' essential for relaxation!"
+    },
+    {
+      "questionNumber": 5,
+      "question": "👥💬😄 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Healthy Relationships", "Self-Confidence", "Communication Skills", "Mindfulness"],
+      "answer": "Communication Skills",
+      "explanation": "👥💬😄 = 'Communication Skills,' key to positive interactions!"
+    }
+  ]
+}
