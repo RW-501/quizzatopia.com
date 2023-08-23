@@ -405,9 +405,9 @@ const HOMEPAGE_PATH = '/';
 //var currentPath ="";
 
 setTimeout(() => {
-  if (!loggedIn && RESTRICTED_PATHS_REGEX.test(currentPath)) {
-    if (FRIENDS_PATH_REGEX.test(currentPath)) {
-      const friendCode = currentPath.split('?')[1];
+  if (!loggedIn && RESTRICTED_PATHS_REGEX.test(currentPagePath)) {
+    if (FRIENDS_PATH_REGEX.test(currentPagePath)) {
+      const friendCode = currentPagePath.split('?')[1];
       const redirectUrl = `/?f=${friendCode}`;
       window.location.href = redirectUrl;
     } else {
