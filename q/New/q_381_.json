@@ -1,0 +1,46 @@
+{
+  "quizName": "The Emoji Riddle Challenge",
+  "quizCode": "FE103",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Fun",
+  "quizDescription": "Decode these emoji riddles and test your emoji-translation skills!",
+  "quizTags": ["Fun", "Emoji", "Riddles"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "🌞 + 🏝️ = ?",
+      "questionType": "Fill in the Blank",
+      "answer": "Sunset",
+      "explanation": "🌞 + 🏝️ = 'Sunset'! When the sun sets behind the island."
+    },
+    {
+      "questionNumber": 2,
+      "question": "🐶 + 📅 = ?",
+      "questionType": "Fill in the Blank",
+      "answer": "Dog Days",
+      "explanation": "🐶 + 📅 = 'Dog Days,' which are the hottest days of summer!"
+    },
+    {
+      "questionNumber": 3,
+      "question": "🌧️ + ☔ = ?",
+      "questionType": "Fill in the Blank",
+      "answer": "Rain Shower",
+      "explanation": "🌧️ + ☔ = 'Rain Shower,' when it rains a bit."
+    },
+    {
+      "questionNumber": 4,
+      "question": "🍕 + 🍔 + 🍟 = ?",
+      "questionType": "Fill in the Blank",
+      "answer": "Fast Food",
+      "explanation": "🍕 + 🍔 + 🍟 = 'Fast Food,' your favorite quick bites!"
+    },
+    {
+      "questionNumber": 5,
+      "question": "🎈 + 🐘 = ?",
+      "questionType": "Fill in the Blank",
+      "answer": "Elephant in the Room",
+      "explanation": "🎈 + 🐘 = 'Elephant in the Room,' addressing the obvious issue!"
+    }
+  ]
+}
