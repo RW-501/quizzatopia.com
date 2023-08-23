@@ -1,0 +1,51 @@
+{
+  "quizName": "Self-Help Insights Quiz",
+  "quizCode": "SH321",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Self-Help",
+  "quizDescription": "Explore self-help concepts and strategies with this insightful quiz.",
+  "quizTags": ["Self-Help", "Personal Development", "Wellness"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What term describes the practice of setting specific, measurable, achievable, relevant, and time-bound goals?",
+      "questionType": "Multiple Choice",
+      "options": ["Daydreaming", "Visualization", "Meditation", "SMART Goal Setting"],
+      "answer": "SMART Goal Setting",
+      "explanation": "SMART Goal Setting involves setting goals that are Specific, Measurable, Achievable, Relevant, and Time-bound."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which of the following is a relaxation technique that involves tensing and relaxing different muscle groups in your body?",
+      "questionType": "Multiple Choice",
+      "options": ["Meditation", "Visualization", "Progressive Muscle Relaxation", "Mindfulness"],
+      "answer": "Progressive Muscle Relaxation",
+      "explanation": "Progressive Muscle Relaxation is a relaxation technique that involves systematically tensing and relaxing muscle groups to reduce tension."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the term for the practice of focusing on the present moment without judgment?",
+      "questionType": "Multiple Choice",
+      "options": ["Daydreaming", "Visualization", "Mindfulness", "Affirmations"],
+      "answer": "Mindfulness",
+      "explanation": "Mindfulness is the practice of being fully present in the moment, observing thoughts and feelings without judgment."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which self-help concept emphasizes the importance of self-care, including physical, mental, and emotional well-being?",
+      "questionType": "Multiple Choice",
+      "options": ["Self-Compassion", "Self-Awareness", "Self-Esteem", "Self-Care"],
+      "answer": "Self-Care",
+      "explanation": "Self-Care emphasizes taking care of one's physical, mental, and emotional health as a key aspect of well-being."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the term for the process of changing one's thoughts, beliefs, or behaviors to achieve personal growth?",
+      "questionType": "Multiple Choice",
+      "options": ["Resilience", "Transformation", "Self-Improvement", "Introspection"],
+      "answer": "Self-Improvement",
+      "explanation": "Self-Improvement involves the process of changing thoughts, beliefs, or behaviors to achieve personal growth and development."
+    }
+  ]
+}
