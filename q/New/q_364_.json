@@ -39,12 +39,19 @@
       "answer": "Meditation",
       "explanation": "Meditation is a proven practice for reducing stress and enhancing mental health."
     },
-    {
-      "questionNumber": 5,
-      "question": "What is a balanced diet?",
-      "questionType": "Fill in the Blank",
-      "answer": "A diet that includes a variety of foods from all food groups",
-      "explanation": "A balanced diet consists of a variety of foods from different food groups to meet nutritional needs."
-    }
+ {
+  "questionNumber": 5,
+  "question": "What is a balanced diet?",
+  "questionType": "Multiple Choice",
+  "options": [
+    "A diet that includes a variety of foods from all food groups",
+    "A diet that excludes carbohydrates",
+    "A diet that focuses only on vegetables",
+    "A diet that includes excessive amounts of sugar"
+  ],
+  "answer": "A diet that includes a variety of foods from all food groups",
+  "explanation": "A balanced diet consists of a variety of foods from different food groups to meet nutritional needs."
+}
+
   ]
 }
