@@ -498,16 +498,11 @@ async function fetchQuizzesFromDB(page = 1) {
 
   // Build the query to fetch quizzes with ordering
 let query = db.collection('quizzes')
-    .where('private', 'in', [false, null]) // Include documents where 'private' is false or missing.
+    //.where('private', 'in', [false, null]) // Include documents where 'private' is false or missing.
     .where('quizCategoryDB', '==', categoryName);
 
-	  /*
-    .orderBy('quizRatingDB', 'desc')
-    .orderBy('quizFinishedCount', 'desc')
-    .orderBy('quizStartedCount', 'desc')
-    .orderBy('quizNameDB', 'asc')
-    .limit(quizzesPerPage);
-*/
+	 
+	
   if (lastVisibleDoc && page > 1) {
     // Use startAfter() to get quizzes after the last visible document from the previous page
     query = query.startAfter(lastVisibleDoc);
