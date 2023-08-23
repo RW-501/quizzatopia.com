@@ -1,0 +1,51 @@
+{
+  "quizName": "Keyboard Shortcuts for Beginners",
+  "quizCode": "KS101",
+  "quizDifficulty": "Beginner",
+  "quizCategory": "Computer Shortcuts",
+  "quizDescription": "Test your knowledge of basic keyboard shortcuts for improved computer productivity.",
+  "quizTags": ["Keyboard Shortcuts", "Productivity", "Computers"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What keyboard shortcut is commonly used to copy selected text or files?",
+      "questionType": "Multiple Choice",
+      "options": ["Ctrl + C", "Ctrl + X", "Ctrl + V", "Alt + F4"],
+      "answer": "Ctrl + C",
+      "explanation": "Ctrl + C is used to copy selected items to the clipboard."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which keyboard shortcut is used to undo the last action in many applications?",
+      "questionType": "Multiple Choice",
+      "options": ["Ctrl + Z", "Ctrl + X", "Ctrl + S", "Alt + F4"],
+      "answer": "Ctrl + Z",
+      "explanation": "Ctrl + Z is the standard keyboard shortcut for undoing the last action."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What keyboard shortcut is used to open the 'Find' dialog in web browsers and text editors?",
+      "questionType": "Multiple Choice",
+      "options": ["Ctrl + F", "Ctrl + P", "Ctrl + S", "Alt + F4"],
+      "answer": "Ctrl + F",
+      "explanation": "Ctrl + F is commonly used to open the 'Find' dialog for searching within documents."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which keyboard shortcut is used to close the current window or tab in most applications?",
+      "questionType": "Multiple Choice",
+      "options": ["Ctrl + W", "Ctrl + C", "Ctrl + P", "Alt + F4"],
+      "answer": "Ctrl + W",
+      "explanation": "Ctrl + W is used to close the current window or tab."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What keyboard shortcut is used to paste the contents of the clipboard in many applications?",
+      "questionType": "Multiple Choice",
+      "options": ["Ctrl + V", "Ctrl + X", "Ctrl + S", "Alt + F4"],
+      "answer": "Ctrl + V",
+      "explanation": "Ctrl + V is used to paste the contents of the clipboard."
+    }
+  ]
+}
