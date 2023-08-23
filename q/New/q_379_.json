@@ -1,0 +1,51 @@
+{
+  "quizName": "The Silly Socks Challenge",
+  "quizCode": "FS101",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Fun",
+  "quizDescription": "Put your sock knowledge to the test with this hilariously quirky sock-themed quiz!",
+  "quizTags": ["Fun", "Socks", "Humor"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What do you call socks that are afraid of the dark?",
+      "questionType": "Multiple Choice",
+      "options": ["Scaredy Socks", "Nocturnal Knits", "Glow-in-the-Socks", "Sock-thropes"],
+      "answer": "Scaredy Socks",
+      "explanation": "Scaredy Socks are socks that are afraid of the dark. They might need a nightlight!"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Why did the sock go to therapy?",
+      "questionType": "Multiple Choice",
+      "options": ["To talk about its feelings", "To work on its toe issues", "To find its sole mate", "To solve its sock-rates"],
+      "answer": "To work on its toe issues",
+      "explanation": "The sock went to therapy to work on its toe issues. It had a lot of 'toe-rrifying' problems!"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What did one sock say to the other sock on laundry day?",
+      "questionType": "Multiple Choice",
+      "options": ["'Let's roll!'", "'You're sock-tacular!'", "'Sock it to me!'", "'We make a great pair!'"],
+      "answer": "'We make a great pair!'",
+      "explanation": "One sock said to the other, 'We make a great pair!' They sure do!"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What do you call a sock that tells jokes?",
+      "questionType": "Multiple Choice",
+      "options": ["A laugh sock", "A jokester sock", "A funny sock", "A sock-comedian"],
+      "answer": "A laugh sock",
+      "explanation": "A sock that tells jokes is a 'laugh sock.' It's all about those socky punchlines!"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What's a sock's favorite dance move?",
+      "questionType": "Multiple Choice",
+      "options": ["The Sock Hop", "The Sock Shuffle", "The Toe Tapper", "The Sock Spin"],
+      "answer": "The Sock Hop",
+      "explanation": "A sock's favorite dance move is 'The Sock Hop'! It really knows how to boogie!"
+    }
+  ]
+}
