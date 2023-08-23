@@ -1,0 +1,51 @@
+{
+  "quizName": "Investment Insights Quiz",
+  "quizCode": "II456",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Investing",
+  "quizDescription": "Test your knowledge of investment strategies, financial markets, and wealth management with this informative quiz.",
+  "quizTags": ["Investing", "Finance", "Wealth"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the term for a diversified investment portfolio that automatically adjusts based on your risk tolerance and retirement timeline?",
+      "questionType": "Multiple Choice",
+      "options": ["Mutual Fund", "401(k)", "Stock Market", "Target-Date Fund"],
+      "answer": "Target-Date Fund",
+      "explanation": "A Target-Date Fund is a diversified investment portfolio designed to adjust automatically based on the investor's target retirement date."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What financial instrument represents a loan made by an investor to a borrower, typically a corporation or government?",
+      "questionType": "Multiple Choice",
+      "options": ["Stock", "Bond", "Savings Account", "Mutual Fund"],
+      "answer": "Bond",
+      "explanation": "A bond represents a loan made by an investor to a borrower, and it pays periodic interest until the maturity date."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What term describes the practice of spreading investments across a variety of asset classes to reduce risk?",
+      "questionType": "Multiple Choice",
+      "options": ["Diversification", "Leveraging", "Day Trading", "Short Selling"],
+      "answer": "Diversification",
+      "explanation": "Diversification is the practice of spreading investments across different asset classes to reduce the risk associated with any one investment."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which stock market index represents 30 of the largest and most widely held public companies in the United States?",
+      "questionType": "Multiple Choice",
+      "options": ["S&P 500", "NASDAQ", "Dow Jones Industrial Average", "Russell 2000"],
+      "answer": "Dow Jones Industrial Average",
+      "explanation": "The Dow Jones Industrial Average (DJIA) represents 30 large and well-known companies traded on the NYSE and NASDAQ."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the term for the potential for loss of an investment's value due to market fluctuations?",
+      "questionType": "Multiple Choice",
+      "options": ["Liquidity Risk", "Inflation Risk", "Market Risk", "Interest Rate Risk"],
+      "answer": "Market Risk",
+      "explanation": "Market risk refers to the potential for loss of an investment's value due to changes in market conditions and investor sentiment."
+    }
+  ]
+}
