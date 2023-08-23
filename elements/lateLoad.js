@@ -1401,10 +1401,12 @@ async function checkUserAndIP() {
   try {
     const user = firebase.auth().currentUser;
 
-    if (!user) {
+    if (!user || loggedIn === false) {
       // No authenticated user, handle accordingly (e.g., redirect to login page)
       console.log("No authenticated user");
       // redirectToLogin();
+	 window.location.href = '/';
+
       return;
     }
 
@@ -1413,7 +1415,7 @@ async function checkUserAndIP() {
     if (user.uid !== ALLOWED_USER || ALLOWED_USER !== userInfo.firebaseId) {
       console.log("Not Admin");
       // console.log("Admin   " + user + "|| " + userInfo.firebaseId);
-      // redirectToLogin();
+        window.location.href = '/';
     } else {
       console.log("Admin");
     }
