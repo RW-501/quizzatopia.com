@@ -224,11 +224,13 @@ function fetchUsersWithMoreThan100Reads() {
             console.error('Error fetching users with more than 100 reads:', error);
         });
 }
+document.addEventListener('DOMContentLoaded', function() {
 
 // Call the functions when needed
 fetchBlockedGuests();
 fetchRealtimeDatabaseUsage();
 fetchUsersWithMoreThan100Reads();
+});
 
 </script>
   <script src="control-panel.js"></script>
