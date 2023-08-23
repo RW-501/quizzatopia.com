@@ -1,0 +1,51 @@
+{
+  "quizName": "Classic Cartoon Quiz",
+  "quizCode": "FC109",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Fun",
+  "quizDescription": "Test your knowledge of classic cartoons and animated characters!",
+  "quizTags": ["Fun", "Cartoons", "Nostalgia"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who lives in a pineapple under the sea?",
+      "questionType": "Fill in the Blank",
+      "options": ["SpongeBob SquarePants", "Sandy Cheeks", "Patrick Star", "Squidward Tentacles"],
+      "answer": "SpongeBob SquarePants",
+      "explanation": "'Who lives in a pineapple under the sea?' It's none other than 'SpongeBob SquarePants'!"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the name of Mickey Mouse's dog?",
+      "questionType": "Fill in the Blank",
+      "options": ["Goofy", "Pluto", "Max", "Daisy"],
+      "answer": "Pluto",
+      "explanation": "Mickey Mouse's loyal companion is named 'Pluto'!"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Who is known for saying, 'What's up, Doc?'",
+      "questionType": "Fill in the Blank",
+      "options": ["Bugs Bunny", "Daffy Duck", "Elmer Fudd", "Tweety Bird"],
+      "answer": "Bugs Bunny",
+      "explanation": "The famous catchphrase 'What's up, Doc?' is associated with 'Bugs Bunny'!"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which cartoon character is known for his love of spinach?",
+      "questionType": "Fill in the Blank",
+      "options": ["Popeye", "Bluto", "Olive Oyl", "Wimpy"],
+      "answer": "Popeye",
+      "explanation": "The spinach-loving sailor is none other than 'Popeye the Sailor Man'!"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the name of the pink, dimwitted cat who often chases a clever mouse?",
+      "questionType": "Fill in the Blank",
+      "options": ["Tom", "Spike", "Butch", "Jerry"],
+      "answer": "Tom",
+      "explanation": "The pink cat who can't catch a break is named 'Tom,' and he's always after 'Jerry'!"
+    }
+  ]
+}
