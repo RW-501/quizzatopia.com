@@ -561,55 +561,13 @@ cards.forEach(card => {
 
 	
 
-function getCategoriesOrderedByViewCount() {
-  const db = firebase.firestore();
-  const categoriesRef = db.collection('quizCategory');
-  const categories = [];
-
-  return categoriesRef.orderBy('viewCount', 'desc').get()
-    .then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        const categoryData = doc.data();
-     //   console.log('Category:', categoryData.name);
-
-        categories.push({
-          name: categoryData.name,
-          imageUrl: categoryData.imageUrl,
-          description: categoryData.description,
-          viewCount: categoryData.viewCount,
-          class: categoryData.class,
-          addBy: categoryData.addBy,
-          // Add other fields as needed
-        });
-      });
-
-      return categories; // Resolve the Promise with the categories array
-    })
-    .catch((error) => {
-      console.error('Error getting categories ordered by viewCount:', error);
-      throw error; // Re-throw the error for proper error handling
-    });
-}
-var categories = [];
-// Call the function to retrieve categories ordered by viewCount
-getCategoriesOrderedByViewCount()
-  .then((retrievedCategories) => {
-    // Assign the retrieved categories to the outer 'categories' variable
-    categories = retrievedCategories;
-    console.log('Categories:', categories);
-  })
-  .catch((error) => {
-    // Handle any errors here
-    console.error('Error:', error);
-  });
-
 
 	
 
 
 
 
-function displayHeader(){
+function displayCategories(){
 	// Assuming you have a container element to append the buttons to
 const categoryContainer = document.querySelector('.catList');
 
@@ -630,7 +588,6 @@ categories.forEach(category => {
 });
 
 }
-displayHeader();
 
 	
 </script>
@@ -799,7 +756,7 @@ section {
 
 <script>
 
-
+function makeCategoriesList(){
 const categoryButtonsContainer = document.getElementById('categoryButtonsContainer');
 
 categories.forEach(category => {
@@ -823,7 +780,69 @@ categories.forEach(category => {
   categoryButtonsContainer.appendChild(categoryButton);
 });
 
+	}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+function getCategoriesOrderedByViewCount() {
+  const db = firebase.firestore();
+  const categoriesRef = db.collection('quizCategory');
+  const categories = [];
+
+  return categoriesRef.orderBy('viewCount', 'desc').get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        const categoryData = doc.data();
+     //   console.log('Category:', categoryData.name);
+
+        categories.push({
+          name: categoryData.name,
+          imageUrl: categoryData.imageUrl,
+          description: categoryData.description,
+          viewCount: categoryData.viewCount,
+          class: categoryData.class,
+          addBy: categoryData.addBy,
+          // Add other fields as needed
+        });
+      });
+
+      return categories; // Resolve the Promise with the categories array
+    })
+    .catch((error) => {
+      console.error('Error getting categories ordered by viewCount:', error);
+      throw error; // Re-throw the error for proper error handling
+    });
+}
+var categories = [];
+// Call the function to retrieve categories ordered by viewCount
+getCategoriesOrderedByViewCount()
+  .then((retrievedCategories) => {
+    // Assign the retrieved categories to the outer 'categories' variable
+    categories = retrievedCategories;
+    console.log('Categories:', categories);
+
+	  displayCategories();
+	  makeCategoriesList();
+
+  })
+  .catch((error) => {
+    // Handle any errors here
+    console.error('Error:', error);
+  });
+
+
+	
 
 </script>
 
