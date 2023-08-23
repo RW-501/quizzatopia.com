@@ -1,0 +1,61 @@
+{
+  "quizName": "Silly Science Challenge",
+  "quizCode": "FS106",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Fun",
+  "quizDescription": "Explore the lighter side of science with these quirky questions!",
+  "quizTags": ["Fun", "Science", "Humor"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What do you call a clown scientist?",
+      "questionType": "Fill in the Blank",
+      "options": ["Silly Scientist", "Mad Scientist", "Circus Chemist", "Bozo the Scientist"],
+      "answer": "Bozo the Scientist",
+      "explanation": "A clown scientist is 'Bozo the Scientist'—ready to perform scientific tricks!"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Why did the microbiologist become a gardener?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Because they wanted to study plant cells",
+        "Because they were allergic to microorganisms",
+        "Because they had a green thumb",
+        "Because they couldn't find any good petri dishes"
+      ],
+      "answer": "Because they had a green thumb",
+      "explanation": "The microbiologist became a gardener 'because they had a green thumb' and loved growing things!"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What's a physicist's favorite snack?",
+      "questionType": "Fill in the Blank",
+      "options": ["Quantum Chips", "Particle Popcorn", "Relatively Small Sandwich", "Einstein's Apples"],
+      "answer": "Quantum Chips",
+      "explanation": "A physicist's favorite snack is 'Quantum Chips,' the crispiest particles!"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Why did the computer apply for a job?",
+      "questionType": "Fill in the Blank",
+      "options": ["It wanted a byte of the action", "It needed more RAM", "It was tired of being a motherboard", "It wanted a CPU"],
+      "answer": "It wanted a byte of the action",
+      "explanation": "The computer applied for a job 'because it wanted a byte of the action' in the workforce!"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What did the biologist wear to impress the microscope?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A lab coat",
+        "A DNA tie",
+        "A cellular phone",
+        "A petri dish hat"
+      ],
+      "answer": "A DNA tie",
+      "explanation": "The biologist wore 'A DNA tie' to impress the microscope with a fashionable twist!"
+    }
+  ]
+}
