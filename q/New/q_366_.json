@@ -1,0 +1,51 @@
+{
+  "quizName": "Weekly Trivia Challenge",
+  "quizCode": "TC101",
+  "quizDifficulty": "Hard",
+  "quizCategory": "Competition",
+  "quizDescription": "Join our weekly trivia challenge and compete for the top score!",
+  "quizTags": ["Trivia", "Competition", "Weekly Challenge"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which planet is known as the 'Morning Star'?",
+      "questionType": "Multiple Choice",
+      "options": ["Mercury", "Venus", "Mars", "Jupiter"],
+      "answer": "Venus",
+      "explanation": "Venus is often referred to as the 'Morning Star' or the 'Evening Star' because it is visible during those times."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the world's largest ocean?",
+      "questionType": "Multiple Choice",
+      "options": ["Atlantic Ocean", "Arctic Ocean", "Indian Ocean", "Pacific Ocean"],
+      "answer": "Pacific Ocean",
+      "explanation": "The Pacific Ocean is the largest and deepest ocean on Earth."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which famous scientist developed the theory of general relativity?",
+      "questionType": "Multiple Choice",
+      "options": ["Isaac Newton", "Marie Curie", "Albert Einstein", "Galileo Galilei"],
+      "answer": "Albert Einstein",
+      "explanation": "Albert Einstein is known for his groundbreaking theory of general relativity."
+    },
+    {
+      "questionNumber": 4,
+      "question": "In which year did Christopher Columbus reach the Americas?",
+      "questionType": "Multiple Choice",
+      "options": ["1492", "1510", "1607", "1776"],
+      "answer": "1492",
+      "explanation": "Christopher Columbus reached the Americas in 1492 during his first voyage."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the chemical symbol for iron?",
+      "questionType": "Multiple Choice",
+      "options": ["Ir", "In", "Fe", "Fr"],
+      "answer": "Fe",
+      "explanation": "The chemical symbol for iron is 'Fe' from the Latin 'ferrum.'"
+    }
+  ]
+}
