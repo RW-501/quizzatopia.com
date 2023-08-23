@@ -402,7 +402,7 @@ const currentPagePath = window.location.pathname;
 const RESTRICTED_PATHS_REGEX = /^(\/user\/|\/backend\/|\/friends\/|\/challenge\/)/;
 const FRIENDS_PATH_REGEX = /^(\/friends\/)/;
 const HOMEPAGE_PATH = '/';
-var currentPath ="";
+//var currentPath ="";
 
 setTimeout(() => {
   if (!loggedIn && RESTRICTED_PATHS_REGEX.test(currentPath)) {
