@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
   <!-- Page title -->
-  <title>Quizzes | Quizzatopia - Explore a World of Quizzes</title>
+  <title>Quizzes Categories | Quizzatopia - Explore a World of Quizzes</title>
 
   <!-- Metadata for search engines -->
   <meta name="description" content="Welcome to Quizzatopia - the ultimate destination for all your quizzing needs. Discover a world of quizzes like never before, ranging from fun trivia to professional exam preparation. Join now to compete, earn points, and unlock achievements. Sign up, log in, and embark on your quizzing journey today!">
@@ -564,45 +564,52 @@ cards.forEach(card => {
 function getCategoriesOrderedByViewCount() {
   const db = firebase.firestore();
   const categoriesRef = db.collection('quizCategory');
-  const categories = []; // Initialize an empty array to store category objects
+  const categories = [];
 
-  // Query Firestore to retrieve categories ordered by viewCount in descending order
-  categoriesRef.orderBy('viewCount', 'desc').get()
+  return categoriesRef.orderBy('viewCount', 'desc').get()
     .then((querySnapshot) => {
-      // Iterate through the query results
       querySnapshot.forEach((doc) => {
-        // Access each category document and its data
         const categoryData = doc.data();
         console.log('Category:', categoryData.name);
-   
+
         categories.push({
           name: categoryData.name,
           imageUrl: categoryData.imageUrl,
           description: categoryData.description,
-          viewCount: categoryData.viewCount, // Optionally add viewCount
-          class: categoryData.class, // Optionally add addBy
-          addBy: categoryData.addBy, // Optionally add addBy
+          viewCount: categoryData.viewCount,
+          class: categoryData.class,
+          addBy: categoryData.addBy,
           // Add other fields as needed
         });
-
-
-	      
-return categories;
       });
+
+      return categories; // Resolve the Promise with the categories array
     })
     .catch((error) => {
       console.error('Error getting categories ordered by viewCount:', error);
+      throw error; // Re-throw the error for proper error handling
     });
 }
-
+var categories = [];
 // Call the function to retrieve categories ordered by viewCount
-	var categories = getCategoriesOrderedByViewCount();
+getCategoriesOrderedByViewCount()
+  .then((categories) => {
+
+	  categories = categories;
+	  console.log('Categories:', categories);
+  })
+  .catch((error) => {
+    // Handle any errors here
+    console.error('Error:', error);
+  });
+
+
+	
 
 
 
 
-
-
+function displayHeader(){
 	// Assuming you have a container element to append the buttons to
 const categoryContainer = document.querySelector('.catList');
 
@@ -622,6 +629,10 @@ categories.forEach(category => {
   categoryContainer.appendChild(button);
 });
 
+}
+displayHeader();
+
+	
 </script>
 
 
