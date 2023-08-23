@@ -1,0 +1,91 @@
+{
+  "quizName": "Personality Traits Quiz",
+  "quizCode": "PT567",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Personality",
+  "quizDescription": "Discover more about your personality traits with this quiz.",
+  "quizTags": ["Personality", "Traits", "Psychology"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "How would you describe your typical approach to social situations?",
+      "questionType": "Multiple Choice",
+      "options": ["Extroverted (outgoing)", "Introverted (reserved)", "Balanced (depends on the situation)"],
+      "answer": "Balanced (depends on the situation)",
+      "explanation": "Your approach to social situations may vary depending on the context, making it a balanced approach."
+    },
+    {
+      "questionNumber": 2,
+      "question": "When faced with a challenge, how do you tend to react?",
+      "questionType": "Multiple Choice",
+      "options": ["Confidently and head-on", "Cautiously and thoughtfully", "Anxiously and with hesitation"],
+      "answer": "Cautiously and thoughtfully",
+      "explanation": "Your tendency to react cautiously and thoughtfully suggests a careful approach to challenges."
+    },
+    {
+      "questionNumber": 3,
+      "question": "In a group project, what role do you often take on?",
+      "questionType": "Multiple Choice",
+      "options": ["Leader or organizer", "Contributor or team player", "Observer or independent worker"],
+      "answer": "Contributor or team player",
+      "explanation": "You typically take on the role of a contributor or team player in group projects."
+    },
+    {
+      "questionNumber": 4,
+      "question": "How do you usually handle unexpected changes in your plans?",
+      "questionType": "Multiple Choice",
+      "options": ["Adapt quickly and embrace change", "Feel uneasy but adapt eventually", "Struggle to adapt and prefer routine"],
+      "answer": "Feel uneasy but adapt eventually",
+      "explanation": "You tend to feel uneasy when plans change but can adapt to them over time."
+    },
+    {
+      "questionNumber": 5,
+      "question": "When making decisions, what factors do you rely on most?",
+      "questionType": "Multiple Choice",
+      "options": ["Logic and reason", "Emotions and intuition", "A combination of both"],
+      "answer": "A combination of both",
+      "explanation": "You consider a combination of both logic and emotions when making decisions."
+    },
+    {
+      "questionNumber": 6,
+      "question": "In your free time, what activities do you enjoy the most?",
+      "questionType": "Multiple Choice",
+      "options": ["Socializing with friends", "Reading or solo hobbies", "A mix of social and solitary activities"],
+      "answer": "A mix of social and solitary activities",
+      "explanation": "You enjoy a mix of socializing with friends and engaging in solitary activities during your free time."
+    },
+    {
+      "questionNumber": 7,
+      "question": "How do you handle stress and pressure?",
+      "questionType": "Multiple Choice",
+      "options": ["Stay calm and composed", "Seek support and guidance", "Feel overwhelmed and anxious"],
+      "answer": "Seek support and guidance",
+      "explanation": "You tend to seek support and guidance when dealing with stress and pressure."
+    },
+    {
+      "questionNumber": 8,
+      "question": "When meeting new people, what is your initial attitude or approach?",
+      "questionType": "Multiple Choice",
+      "options": ["Open and welcoming", "Cautious and observant", "Reserved and reserved"],
+      "answer": "Cautious and observant",
+      "explanation": "Your initial approach when meeting new people is cautious and observant."
+    },
+    {
+      "questionNumber": 9,
+      "question": "How do you handle criticism or feedback?",
+      "questionType": "Multiple Choice",
+      "options": ["Accept it openly and use it to improve", "Consider it but may be defensive", "Feel hurt and defensive"],
+      "answer": "Consider it but may be defensive",
+      "explanation": "You tend to consider criticism but may have a defensive reaction to it initially."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is your attitude toward change in your life?",
+      "questionType": "Multiple Choice",
+      "options": ["Embrace it and seek new experiences", "Adapt to it with some hesitation", "Prefer stability and avoid change"],
+      "answer": "Adapt to it with some hesitation",
+      "explanation": "Your attitude toward change involves adapting to it with some hesitation."
+    }
+  ]
+}
