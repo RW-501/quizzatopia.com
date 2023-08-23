@@ -1,0 +1,51 @@
+{
+  "quizName": "Culinary Delights Quiz",
+  "quizCode": "CC789",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Cooking",
+  "quizDescription": "Test your knowledge of cooking techniques, ingredients, and culinary trivia with this delightful quiz.",
+  "quizTags": ["Cooking", "Cuisine", "Food"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the primary ingredient in traditional Italian pesto sauce?",
+      "questionType": "Multiple Choice",
+      "options": ["Tomatoes", "Basil", "Garlic", "Olive Oil"],
+      "answer": "Basil",
+      "explanation": "The primary ingredient in traditional Italian pesto sauce is fresh basil leaves."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which cooking method involves simmering food in a sealed airtight bag at a precise temperature?",
+      "questionType": "Multiple Choice",
+      "options": ["Grilling", "Baking", "Sous-vide", "Frying"],
+      "answer": "Sous-vide",
+      "explanation": "Sous-vide is a cooking method where food is sealed in a bag and cooked at a precise temperature in a water bath."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the main ingredient in traditional Japanese miso soup?",
+      "questionType": "Multiple Choice",
+      "options": ["Seaweed", "Soy Sauce", "Rice", "Miso Paste"],
+      "answer": "Miso Paste",
+      "explanation": "The main ingredient in traditional Japanese miso soup is miso paste made from fermented soybeans."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which famous dessert consists of layers of sponge cake, chocolate, and cream, often served in a rectangular shape?",
+      "questionType": "Multiple Choice",
+      "options": ["Tiramisu", "Pavlova", "Cheesecake", "Black Forest Cake"],
+      "answer": "Black Forest Cake",
+      "explanation": "Black Forest Cake is a popular dessert made with layers of chocolate sponge cake, cherries, and whipped cream."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What type of pasta is shaped like small rice grains and is often used in soups?",
+      "questionType": "Multiple Choice",
+      "options": ["Spaghetti", "Fettuccine", "Orzo", "Penne"],
+      "answer": "Orzo",
+      "explanation": "Orzo is a type of pasta that is shaped like small rice grains and is commonly used in soups and salads."
+    }
+  ]
+}
