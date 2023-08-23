@@ -1,0 +1,46 @@
+{
+  "quizName": "Emoji Recipe Challenge",
+  "quizCode": "EC401",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Cooking",
+  "quizDescription": "Guess the dish based on the emojis that represent its ingredients!",
+  "quizTags": ["Cooking", "Food", "Emoji"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "🍝🍅🍴 = ______",
+      "questionType": "Fill in the Blank",
+      "answer": "Spaghetti Bolognese",
+      "explanation": "🍝🍅🍴 = 'Spaghetti Bolognese,' a classic Italian pasta dish!"
+    },
+    {
+      "questionNumber": 2,
+      "question": "🍔🥓🧀🍟 = ______",
+      "questionType": "Fill in the Blank",
+      "answer": "Burger and Fries",
+      "explanation": "🍔🥓🧀🍟 = 'Burger and Fries,' a classic American meal combo!"
+    },
+    {
+      "questionNumber": 3,
+      "question": "🍣🥑🍱 = ______",
+      "questionType": "Fill in the Blank",
+      "answer": "Sushi",
+      "explanation": "🍣🥑🍱 = 'Sushi,' a popular Japanese dish!"
+    },
+    {
+      "questionNumber": 4,
+      "question": "🍕🧀🍅 = ______",
+      "questionType": "Fill in the Blank",
+      "answer": "Pizza",
+      "explanation": "🍕🧀🍅 = 'Pizza,' a beloved Italian creation!"
+    },
+    {
+      "questionNumber": 5,
+      "question": "🥗🥬🍅🥕 = ______",
+      "questionType": "Fill in the Blank",
+      "answer": "Salad",
+      "explanation": "🥗🥬🍅🥕 = 'Salad,' a healthy and refreshing dish!"
+    }
+  ]
+}
