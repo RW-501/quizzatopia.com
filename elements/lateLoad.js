@@ -1208,10 +1208,8 @@ function logVisitorInformation(scrollInfo) {
   const browserName = browserMatch ? browserMatch[1] : 'Unknown Browser';
   const browserVersion = browserMatch ? browserMatch[2] : 'Unknown Version';
 
-  const firstVisitPage = getCurrentPage();
-  const lastVisitPage = getCurrentPage();
+  const currentPage = getCurrentPage();
 
-  // Extract device information using regular expressions
   const deviceMatch = userAgentString.match(/\(([^)]+)\)/);
   const deviceInfo = deviceMatch
     ? deviceMatch[1].split(';').map(part => part.trim())
@@ -1231,20 +1229,21 @@ function logVisitorInformation(scrollInfo) {
   visitorIpPromise
     .then(visitorIp => {
       // Check if the visitor's IP is already logged in the "guestLog" collection
-      db.collection('guestLog')
-        .doc(visitorIp)
+      const guestLogRef = db.collection('guestLog').doc(visitorIp);
+
+      guestLogRef
         .get()
         .then(doc => {
+          const lastVisitTime = currentTimestamp;
+
+          const scrollDepth = scrollInfo || 0;
+
           if (doc.exists) {
-            const lastVisitTime = currentTimestamp;
-
-            const scrollDepth = scrollInfo || 0; // Ensure scrollInfo has a valid value
-
-            db.collection('guestLog')
-              .doc(visitorIp)
+            // Guest already exists
+            guestLogRef
               .update({
                 lastVisitTime,
-                lastVisitPage,
+                lastVisitPage: currentPage,
                 scrollDepth,
               })
               .catch(error => {
@@ -1252,56 +1251,41 @@ function logVisitorInformation(scrollInfo) {
               });
 
             // Increment the user visit count
-            const userVisitCountRef = db.collection('guestLog')
-              .doc(visitorIp)
-              .collection('userVisitCount')
-              .doc('count');
-
+            const userVisitCountRef = guestLogRef.collection('userVisitCount').doc('count');
             userVisitCountRef
               .get()
               .then(doc => {
-                if (doc.exists) {
-                  const previousCount = doc.data().count;
-                  const updatedCount = previousCount + 1;
-                  userVisitCountRef
-                    .update({ count: updatedCount })
-                    .catch(error => {
-                      console.error('Error updating user visit count:', error);
-                    });
-                } else {
-                  // Initialize the user visit count if it doesn't exist
-                  userVisitCountRef
-                    .set({ count: 1 })
-                    .catch(error => {
-                      console.error('Error initializing user visit count:', error);
-                    });
-                }
+                const previousCount = doc.exists ? doc.data().count : 0;
+                const updatedCount = previousCount + 1;
+
+                userVisitCountRef
+                  .set({ count: updatedCount })
+                  .catch(error => {
+                    console.error('Error updating user visit count:', error);
+                  });
               })
               .catch(error => {
                 console.error('Error retrieving user visit count:', error);
               });
           } else {
-            // Create a new visitor log entry
+            // Create a new guest log entry
             const firstVisitTime = currentTimestamp;
-            const lastVisitTime = currentTimestamp;
 
-            const banned = 'NO';
-            const userVisitCount = 1;
+            const guestData = {
+              firstVisitTime,
+              lastVisitTime,
+              firstVisitPage: currentPage,
+              lastVisitPage: currentPage,
+              scrollDepth,
+              referralPage,
+              userVisitCount: 1,
+              banned: 'NO',
+              device,
+              browser,
+            };
 
-            db.collection('guestLog')
-              .doc(visitorIp)
-              .set({
-                firstVisitTime,
-                lastVisitTime,
-                firstVisitPage,
-                lastVisitPage,
-                scrollDepth,
-                referralPage,
-                userVisitCount,
-                banned,
-                device,
-                browser,
-              })
+            guestLogRef
+              .set(guestData)
               .catch(error => {
                 console.error('Error creating guest log:', error);
               });
