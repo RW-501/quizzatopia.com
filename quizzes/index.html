@@ -556,250 +556,52 @@ cards.forEach(card => {
 
 
 <script>
-	const categories = [
-  {
-    name: 'Healthcare',
-    imageUrl: '/images/sq/19.png',
-    description: 'Explore quizzes related to healthcare and medical topics.',
-  },
-  {
-    name: 'Gaming',
-    imageUrl: '/images/sq/5.png',
-    description: 'Test your gaming knowledge with quizzes about video games.',
-  },
-  {
-    name: 'Business',
-    imageUrl: '/images/sq/29.png',
-    description: 'Quizzes about various business and entrepreneurship topics.',
-  },
-  {
-    name: 'Driving',
-    imageUrl: '/images/lan/14.png',
-    description: 'Test your knowledge of driving rules and road safety.',
-  },
-  {
-    name: 'TV',
-    imageUrl: '/images/sq/53.png',
-    description: 'Quizzes about television shows, series, and characters.',
-  },
-  {
-    name: 'Architecture',
-    imageUrl: '/images/sq/10.png',
-    description: 'Explore architecture-related quizzes and design concepts.',
-  },
-  {
-    name: 'Technology',
-    imageUrl: '/images/sq/16.png',
-    description: 'Stay up-to-date with technology quizzes and innovations.',
-  },
-  {
-    name: 'Music',
-    imageUrl: '/images/sq/1.png',
-    description: 'Test your musical knowledge with quizzes about genres and artists.',
-  },
-  {
-    name: 'Entertainment',
-    imageUrl: '/images/sq/2.png',
-    description: 'Explore quizzes related to the world of entertainment and celebrities.',
-  },
-  {
-    name: 'Marketing',
-    imageUrl: '/images/sq/9.png',
-    description: 'Quizzes about marketing strategies, branding, and advertising.',
-  },
-  {
-    name: 'Geography',
-    imageUrl: '/images/sq/33.png',
-    description: 'Test your geography knowledge with quizzes about countries and landmarks.',
-  },
-  {
-    name: 'E-Commerce',
-    imageUrl: '/images/sq/59.png',
-    description: 'Explore quizzes about online shopping and e-commerce trends.',
-  },
-  {
-    name: 'Science',
-    imageUrl: '/images/sq/11.png',
-    description: 'Quizzes about various scientific disciplines and discoveries.',
-  },
-  {
-    name: 'Personality',
-    imageUrl: '/images/sq/6.png',
-    description: 'Discover quizzes that reveal your personality traits and characteristics.',
-  },
-  {
-    name: 'Real Estate',
-    imageUrl: '/images/sq/18.png',
-    description: 'Explore quizzes related to real estate and property investments.',
-  },
-  {
-    name: 'Professional Certification',
-    imageUrl: '/images/sq/28.png',
-    description: 'Quizzes to prepare for professional certification exams and assessments.',
-  },
-  {
-    name: 'Finance',
-    imageUrl: '/images/sq/36.png',
-    description: 'Test your knowledge of financial concepts, investments, and economics.',
-  },
-  {
-    name: 'History',
-    imageUrl: '/images/sq/39.png',
-    description: 'Explore historical events, figures, and important milestones through quizzes.',
-  },
-  {
-    name: 'Language',
-    imageUrl: '/images/sq/49.png',
-    description: 'Quizzes to test your language skills and vocabulary.',
-  },
-  {
-    name: 'Self-Help',
-    imageUrl: '/images/sq/54.png',
-    description: 'Discover self-help quizzes and personal development resources.',
-  },
-  {
-    name: 'Job Interview',
-    imageUrl: '/images/sq/12.png',
-    description: 'Prepare for job interviews with quizzes about common interview questions.',
-  },
-  {
-    name: 'Sports',
-    imageUrl: '/images/sq/52.png',
-    description: 'Explore quizzes about various sports and athletic events.',
-  },
-  {
-    name: 'Fun',
-    imageUrl: '/images/sq/4.png',
-    description: 'Quizzes for pure fun and entertainment!',
-  },
- {
-    name: 'Buy Me A Coffee',
-    imageUrl: '/images/bmc.png',
-    description: 'Help Keep This Website Free.',
-url: 'https://www.buymeacoffee.com/Quizzatopia',
-	  class: 'contain',
-  },{
-    name: 'Relationships',
-    imageUrl: '/images/sq/44.png',
-    description: 'Explore quizzes that delve into the dynamics of human relationships and connections.'
-},
-{
-    name: 'Sales',
-    imageUrl: '/images/sq/56.png',
-    description: 'Test your knowledge of sales techniques, strategies, and customer relations with these quizzes.'
-},
-{
-    name: 'Fitness',
-    imageUrl: '/images/sq/55.png',
-    description: 'Discover quizzes related to fitness, workouts, and health to help you stay active and in shape.'
-},
-{
-    name: 'Software Development',
-    imageUrl: '/images/sq/57.png',
-    description: 'Stay updated with quizzes about software development, coding, and programming languages.'
-},
-{
-    name: 'Business Strategy',
-    imageUrl: '/images/sq/47.png',
-    description: 'Explore quizzes that cover business strategy, planning, and decision-making in the corporate world.'
-},
-{
-    name: 'USA Economics',
-    imageUrl: '/images/sq/37.png',
-    description: 'Test your knowledge of the economic landscape of the United States with these informative quizzes.'
-},
-{
-    name: 'History & Politics',
-    imageUrl: '/images/sq/60.png',
-    description: 'Delve into the world of history and politics with quizzes covering key events, figures, and ideologies.'
-},
-{
-    name: 'Game Development',
-    imageUrl: '/images/sq/15.png',
-    description: 'Get insights into the world of game development, from game design to programming, with these quizzes.'
-},
-{
-    name: 'Web Development',
-    imageUrl: '/images/sq/45.png',
-    description: 'Stay informed about the latest trends and technologies in web development through these quizzes.'
-},
-{
-    name: 'World Economics',
-    imageUrl: '/images/sq/33.png',
-    description: 'Explore the global economic landscape and international markets with these informative quizzes.'
-},
-{
-    name: 'Literature',
-    imageUrl: '/images/lan/36.png',
-    description: 'Dive into the world of literature and explore classic and contemporary works with these quizzes.'
-},
-{
-    name: 'Business Economics',
-    imageUrl: '/images/lan/26.png',
-    description: 'Discover the economic principles and concepts that drive business decisions and strategies.'
-},
-{
-    name: 'Business & Management',
-    imageUrl: '/images/sq/25.png',
-    description: 'Explore quizzes about business management, leadership, and organizational strategies.'
-},
-{
-    name: 'Quotes',
-    imageUrl: '/images/sq/4.png',
-    description: 'Test your knowledge of famous quotes from literature, movies, and historical figures.'
-},
-{
-    name: 'Riddles',
-    imageUrl: '/images/lan/33.png',
-    description: 'Challenge your mind with a collection of entertaining riddles and brain teasers.'
-},
-{
-    name: 'Cooking',
-    imageUrl: '/images/sq/32.png',
-    description: 'Embark on a culinary journey with quizzes that explore cooking techniques, cuisines, and delicious recipes.'
-},
-{
-    name: 'Military',
-    imageUrl: '/images/sq/31.png',
-    description: 'Dive into the world of military history, strategy, and technology with quizzes that explore armed forces, conflicts, and more.'
-},
-		
-
-];
-/*48.png  {
-    name: 'NSFW',
-    imageUrl: '/images/sq/60.png',
-    description: 'Not Safe For Work quizzes.',
-  }, */
-function addCategoriesToFirestore(categories) {
-  const db = firebase.firestore();
-  const categoriesRef = db.collection('quizCategory');
-
-  // Iterate through the categories array and add each category to Firestore
-  categories.forEach((category) => {
-    // Use the category name as the document ID
-    const categoryName = category.name;
-
-    // Add the category data to Firestore, including the 'addBy' field
-    categoriesRef.doc(categoryName).set({
-      ...category, // Include the existing category properties
-      addBy: 'Admin', // Add the 'addBy' field with the value 'Admin'
-      viewCount: 0 // Add the 'addBy' field with the value 'Admin'
-    })
-      .then(() => {
-        console.log(`Category "${categoryName}" added to Firestore`);
-      })
-      .catch((error) => {
-        console.error(`Error adding category "${categoryName}" to Firestore:`, error);
-      });
-  });
-}
 
 
-// Call the function to add categories to Firestore
-addCategoriesToFirestore(categories);
 
 	
+
+function getCategoriesOrderedByViewCount() {
+  const db = firebase.firestore();
+  const categoriesRef = db.collection('quizCategory');
+  const categories = []; // Initialize an empty array to store category objects
+
+  // Query Firestore to retrieve categories ordered by viewCount in descending order
+  categoriesRef.orderBy('viewCount', 'desc').get()
+    .then((querySnapshot) => {
+      // Iterate through the query results
+      querySnapshot.forEach((doc) => {
+        // Access each category document and its data
+        const categoryData = doc.data();
+        console.log('Category:', categoryData.name);
+   
+        categories.push({
+          name: categoryData.name,
+          imageUrl: categoryData.imageUrl,
+          description: categoryData.description,
+          viewCount: categoryData.viewCount, // Optionally add viewCount
+          class: categoryData.class, // Optionally add addBy
+          addBy: categoryData.addBy, // Optionally add addBy
+          // Add other fields as needed
+        });
+
+
+	      
+return categories;
+      });
+    })
+    .catch((error) => {
+      console.error('Error getting categories ordered by viewCount:', error);
+    });
+}
+
+// Call the function to retrieve categories ordered by viewCount
+	var categories = getCategoriesOrderedByViewCount();
+
+
+
+
+
 
 	// Assuming you have a container element to append the buttons to
 const categoryContainer = document.querySelector('.catList');
