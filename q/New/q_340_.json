@@ -1,0 +1,91 @@
+{
+  "quizName": "Fun and Trivia Quiz",
+  "quizCode": "FT789",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Fun",
+  "quizDescription": "Enjoy some fun and trivia questions with this quiz!",
+  "quizTags": ["Fun", "Trivia", "Entertainment"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which planet in our solar system is known as the 'Red Planet'?",
+      "questionType": "Multiple Choice",
+      "options": ["Earth", "Mars", "Jupiter", "Venus"],
+      "answer": "Mars",
+      "explanation": "Mars is often referred to as the 'Red Planet' due to its reddish appearance caused by iron oxide (rust) on its surface."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the largest mammal on Earth?",
+      "questionType": "Multiple Choice",
+      "options": ["African Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+      "answer": "Blue Whale",
+      "explanation": "The blue whale is the largest mammal on Earth, and it is also the largest animal ever known to have existed on our planet."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which famous fictional wizard attends Hogwarts School of Witchcraft and Wizardry?",
+      "questionType": "Multiple Choice",
+      "options": ["Gandalf", "Merlin", "Dumbledore", "Harry Potter"],
+      "answer": "Harry Potter",
+      "explanation": "Harry Potter, the titular character of the popular book and film series, attends Hogwarts School of Witchcraft and Wizardry."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the main ingredient in traditional Japanese miso soup?",
+      "questionType": "Multiple Choice",
+      "options": ["Tofu", "Seaweed", "Fish", "Miso paste"],
+      "answer": "Miso paste",
+      "explanation": "The main ingredient in traditional Japanese miso soup is miso paste, a fermented soybean paste."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which iconic video game character is known for eating dots while being chased by ghosts?",
+      "questionType": "Multiple Choice",
+      "options": ["Sonic the Hedgehog", "Mario", "Pac-Man", "Donkey Kong"],
+      "answer": "Pac-Man",
+      "explanation": "Pac-Man is the iconic video game character known for eating dots while being chased by ghosts in the classic arcade game."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the highest-grossing film of all time (as of my last knowledge update in September 2021)?",
+      "questionType": "Multiple Choice",
+      "options": ["Titanic", "Avatar", "Avengers: Endgame", "Jurassic World"],
+      "answer": "Avatar",
+      "explanation": "As of September 2021, 'Avatar' was the highest-grossing film of all time, directed by James Cameron."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which element is represented by the chemical symbol 'H' on the periodic table?",
+      "questionType": "Multiple Choice",
+      "options": ["Hydrogen", "Helium", "Oxygen", "Carbon"],
+      "answer": "Hydrogen",
+      "explanation": "The chemical symbol 'H' on the periodic table represents the element hydrogen, the lightest and most abundant element in the universe."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the largest planet in our solar system?",
+      "questionType": "Multiple Choice",
+      "options": ["Earth", "Mars", "Jupiter", "Saturn"],
+      "answer": "Jupiter",
+      "explanation": "Jupiter is the largest planet in our solar system, known for its immense size and colorful bands of clouds."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the capital city of Australia?",
+      "questionType": "Multiple Choice",
+      "options": ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+      "answer": "Canberra",
+      "explanation": "The capital city of Australia is Canberra, where the Australian government is located."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the tallest mountain in the world?",
+      "questionType": "Multiple Choice",
+      "options": ["Mount Kilimanjaro", "Mount Fuji", "Mount Everest", "Mount McKinley"],
+      "answer": "Mount Everest",
+      "explanation": "Mount Everest is the tallest mountain in the world, located in the Himalayas on the border between Nepal and China."
+    }
+  ]
+}
