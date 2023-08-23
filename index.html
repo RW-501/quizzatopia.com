@@ -1131,65 +1131,7 @@ viewDashboard();
 
 	</div>
     
-       <style>
-        /* Styling for the inline banner */
-        .inline-banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #007bff;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            z-index: 9999;
-            display: none; /* Initially hidden */
-        }
 
-        .inline-banner a {
-            color: #fff;
-            text-decoration: underline;
-            font-weight: bold;
-        }
-
-        /* Styling for the close button */
-        .close-button {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 10px;
-            cursor: pointer;
-        }
-    </style>
-	    <!-- Inline banner -->
-    <div class="inline-banner" id="inlineBanner">
-        <span>Save Quizzatopia.com to your device for quick access. </span>
-        <a href="https://www.quizzatopia.com/" id="saveButton">Save Now</a>
-        <span class="close-button" id="closeButton">X</span>
-    </div>
-
-    <script>
-        const inlineBanner = document.getElementById('inlineBanner');
-        const saveButton = document.getElementById('saveButton');
-        const closeButton = document.getElementById('closeButton');
-
-        // Show the inline banner when the page loads
-        window.addEventListener('load', function () {
-            inlineBanner.style.display = 'block';
-        });
-
-        // Handle the "Save Now" button click
-        saveButton.addEventListener('click', function (event) {
-            event.preventDefault(); // Prevent the default behavior of the link (change URL)
-            // You can add code here to prompt the user to save the website to their device
-            alert('Please use your browser\'s save feature to add Quizzatopia.com to your home screen.');
-        });
-
-        // Close the inline banner
-        closeButton.addEventListener('click', function () {
-            inlineBanner.style.display = 'none';
-        });
-    </script>
 	
 	
 	
