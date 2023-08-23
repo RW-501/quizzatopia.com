@@ -50,16 +50,26 @@
       padding: 10px;
     }
 
-    section {
-      margin: 20px;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      background-color: #f9f9f9;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-	        display: flex;
-    justify-content: space-between;
-    }
+/* Default styles for larger screens */
+section {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Styles for smaller screens (e.g., mobile devices) */
+@media (max-width: 768px) {
+  section {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: center; /* Center-align content */
+  }
+}
+
     section h2 {
     cursor: pointer;
 
