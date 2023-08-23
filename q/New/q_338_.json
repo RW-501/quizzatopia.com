@@ -1,0 +1,91 @@
+{
+  "quizName": "Self-Help and Personal Development Quiz",
+  "quizCode": "SH123",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Self-Help",
+  "quizDescription": "Test your knowledge of self-help and personal development concepts with this quiz.",
+  "quizTags": ["Self-Help", "Personal Development", "Wellness"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What term describes the practice of focusing one's attention on the present moment and accepting it without judgment?",
+      "questionType": "Multiple Choice",
+      "options": ["Procrastination", "Mindfulness", "Perfectionism", "Distraction"],
+      "answer": "Mindfulness",
+      "explanation": "Mindfulness is the practice of focusing one's attention on the present moment and accepting it without judgment."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which term describes the ability to bounce back from adversity and develop resilience?",
+      "questionType": "Multiple Choice",
+      "options": ["Empathy", "Perseverance", "Grit", "Resilience"],
+      "answer": "Resilience",
+      "explanation": "Resilience is the ability to bounce back from adversity and develop strength in the face of challenges."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What term refers to the process of setting specific, achievable goals and working towards them?",
+      "questionType": "Multiple Choice",
+      "options": ["Dreaming", "Visualization", "Goal Setting", "Daydreaming"],
+      "answer": "Goal Setting",
+      "explanation": "Goal setting is the process of setting specific, achievable goals and working towards them, often used in personal development."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the term for the practice of deliberately thinking positive thoughts to improve one's well-being?",
+      "questionType": "Multiple Choice",
+      "options": ["Optimism", "Pessimism", "Realism", "Negativity"],
+      "answer": "Optimism",
+      "explanation": "Optimism is the practice of deliberately thinking positive thoughts to improve one's well-being and outlook on life."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which term describes the ability to understand and manage one's own emotions and the emotions of others?",
+      "questionType": "Multiple Choice",
+      "options": ["Emotional Intelligence", "Emotional Suppression", "Emotional Detachment", "Emotional Instability"],
+      "answer": "Emotional Intelligence",
+      "explanation": "Emotional intelligence is the ability to understand and manage one's own emotions and the emotions of others."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What term refers to the practice of simplifying one's life by decluttering and reducing possessions?",
+      "questionType": "Multiple Choice",
+      "options": ["Materialism", "Consumerism", "Minimalism", "Hedonism"],
+      "answer": "Minimalism",
+      "explanation": "Minimalism is the practice of simplifying one's life by decluttering and reducing possessions, often to focus on what truly matters."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What term describes the act of deliberately exposing oneself to challenging situations to promote personal growth?",
+      "questionType": "Multiple Choice",
+      "options": ["Comfort Zone", "Regression", "Self-Sabotage", "Stretch Zone"],
+      "answer": "Stretch Zone",
+      "explanation": "The stretch zone is the act of deliberately exposing oneself to challenging situations to promote personal growth and development."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which term refers to the ability to make decisions and take action without being hindered by fear or self-doubt?",
+      "questionType": "Multiple Choice",
+      "options": ["Courage", "Recklessness", "Timidity", "Hesitation"],
+      "answer": "Courage",
+      "explanation": "Courage is the ability to make decisions and take action without being hindered by fear or self-doubt."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What term describes the practice of setting aside dedicated time for self-reflection and introspection?",
+      "questionType": "Multiple Choice",
+      "options": ["Procrastination", "Meditation", "Contemplation", "Distraction"],
+      "answer": "Contemplation",
+      "explanation": "Contemplation is the practice of setting aside dedicated time for self-reflection and introspection to gain insight and clarity."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which term describes the process of identifying and challenging irrational or negative thought patterns?",
+      "questionType": "Multiple Choice",
+      "options": ["Cognition", "Mindfulness", "Cognitive Behavioral Therapy", "Perfectionism"],
+      "answer": "Cognitive Behavioral Therapy",
+      "explanation": "Cognitive Behavioral Therapy (CBT) is the process of identifying and challenging irrational or negative thought patterns to promote positive mental health."
+    }
+  ]
+}
