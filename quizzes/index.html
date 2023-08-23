@@ -593,10 +593,10 @@ function getCategoriesOrderedByViewCount() {
 var categories = [];
 // Call the function to retrieve categories ordered by viewCount
 getCategoriesOrderedByViewCount()
-  .then((categories) => {
-
-	  categories = categories;
-	  console.log('Categories:', categories);
+  .then((retrievedCategories) => {
+    // Assign the retrieved categories to the outer 'categories' variable
+    categories = retrievedCategories;
+    console.log('Categories:', categories);
   })
   .catch((error) => {
     // Handle any errors here
