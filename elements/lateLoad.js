@@ -1407,15 +1407,16 @@ logVisitorInformation(scrollInfo);
 }
 });
 
-    const user = firebase.auth().currentUser;
-    const userInfo = getUserInfo();
+
 
 const ALLOWED_USER = "fM2CtVN59wNwrZeQZrSqlp4rUcr2";
 const BACKEND_URL_PATTERN = /^\/backend(\/|$)/;
 
 async function checkUserAndIP() {
   try {
-
+    const user = firebase.auth().currentUser;
+    const userInfo = getUserInfo();
+	  
  console.log("Admin   " + user );
     if (!user || loggedIn === false) {
       // No authenticated user, handle accordingly (e.g., redirect to login page)
