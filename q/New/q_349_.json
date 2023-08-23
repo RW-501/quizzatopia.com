@@ -1,0 +1,51 @@
+{
+  "quizName": "Challenging Legal Quiz",
+  "quizCode": "CL987",
+  "quizDifficulty": "Hard",
+  "quizCategory": "Law",
+  "quizDescription": "Test your knowledge with these challenging legal questions.",
+  "quizTags": ["Law", "Challenging", "Legal Concepts"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "The Latin term 'Habeas Corpus' translates to 'You shall have the _______.",
+      "questionType": "Fill in the Blank",
+      "options": ["Justice", "Evidence", "Body", "Freedom"],
+      "answer": "Body",
+      "explanation": "The Latin term 'Habeas Corpus' translates to 'You shall have the body,' referring to the right to challenge unlawful detention."
+    },
+    {
+      "questionNumber": 2,
+      "question": "In criminal law, 'Mens Rea' refers to the _______ element of a crime.",
+      "questionType": "Fill in the Blank",
+      "options": ["Actus Reus", "Intent", "Defendant", "Jury"],
+      "answer": "Intent",
+      "explanation": "'Mens Rea' is the mental element of a crime, indicating the defendant's intent or knowledge of wrongdoing."
+    },
+    {
+      "questionNumber": 3,
+      "question": "The term 'Ex post facto' refers to laws that are applied _______ their enactment.",
+      "questionType": "Fill in the Blank",
+      "options": ["Before", "During", "After", "Without"],
+      "answer": "After",
+      "explanation": "'Ex post facto' laws are applied after their enactment and retroactively change the legal consequences of actions taken before the law's passage."
+    },
+    {
+      "questionNumber": 4,
+      "question": "The doctrine of 'Sovereign Immunity' protects governments from _______ lawsuits.",
+      "questionType": "Fill in the Blank",
+      "options": ["Criminal", "Civil", "Class-action", "Malpractice"],
+      "answer": "Civil",
+      "explanation": "Sovereign Immunity protects governments from civil lawsuits, limiting liability for certain actions."
+    },
+    {
+      "questionNumber": 5,
+      "question": "A 'Writ of Certiorari' is a legal order issued by a higher court to review a case from a _______ court.",
+      "questionType": "Fill in the Blank",
+      "options": ["Higher", "Supreme", "Lower", "Appellate"],
+      "answer": "Lower",
+      "explanation": "A 'Writ of Certiorari' is issued by a higher court to review a case from a lower court, often in the context of appellate review."
+    }
+  ]
+}
