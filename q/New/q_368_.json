@@ -1,0 +1,51 @@
+{
+  "quizName": "World War II History Quiz",
+  "quizCode": "WWII101",
+  "quizDifficulty": "Medium",
+  "quizCategory": "History",
+  "quizDescription": "Test your knowledge of World War II history with this informative quiz.",
+  "quizTags": ["History", "World War II", "Military History"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which event marked the beginning of World War II?",
+      "questionType": "Multiple Choice",
+      "options": ["The attack on Pearl Harbor", "The signing of the Treaty of Versailles", "The invasion of Poland", "The bombing of Hiroshima"],
+      "answer": "The invasion of Poland",
+      "explanation": "The invasion of Poland by Germany on September 1, 1939, marked the start of World War II."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Who was the leader of Nazi Germany during World War II?",
+      "questionType": "Multiple Choice",
+      "options": ["Joseph Stalin", "Winston Churchill", "Benito Mussolini", "Adolf Hitler"],
+      "answer": "Adolf Hitler",
+      "explanation": "Adolf Hitler was the leader of Nazi Germany and a key figure in World War II."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which country dropped atomic bombs on Hiroshima and Nagasaki in 1945?",
+      "questionType": "Multiple Choice",
+      "options": ["United States", "United Kingdom", "Soviet Union", "Japan"],
+      "answer": "United States",
+      "explanation": "The United States dropped atomic bombs on Hiroshima and Nagasaki, leading to Japan's surrender in 1945."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What was the code name for the Allied invasion of Normandy on June 6, 1944?",
+      "questionType": "Multiple Choice",
+      "options": ["Operation Desert Storm", "Operation Market Garden", "Operation Overlord", "Operation Barbarossa"],
+      "answer": "Operation Overlord",
+      "explanation": "The Allied invasion of Normandy on June 6, 1944, was codenamed 'Operation Overlord.'"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which conference among the Allied leaders determined the post-war division of Germany?",
+      "questionType": "Multiple Choice",
+      "options": ["Yalta Conference", "Potsdam Conference", "Tehran Conference", "Cairo Conference"],
+      "answer": "Potsdam Conference",
+      "explanation": "The Potsdam Conference held in 1945 determined the division of Germany and other post-war arrangements."
+    }
+  ]
+}
