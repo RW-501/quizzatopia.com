@@ -1,0 +1,51 @@
+{
+  "quizName": "Science Quiz",
+  "quizCode": "SC101",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Educational",
+  "quizDescription": "Challenge your knowledge of various scientific topics with this educational quiz.",
+  "quizTags": ["Science", "Education", "Quiz"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the chemical symbol for gold?",
+      "questionType": "Multiple Choice",
+      "options": ["Go", "Au", "Gl", "Gd"],
+      "answer": "Au",
+      "explanation": "The chemical symbol for gold is 'Au' from the Latin 'aurum.'"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which planet is known as the 'Red Planet'?",
+      "questionType": "Multiple Choice",
+      "options": ["Venus", "Earth", "Mars", "Jupiter"],
+      "answer": "Mars",
+      "explanation": "Mars is often called the 'Red Planet' due to its reddish appearance."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What gas makes up the majority of Earth's atmosphere?",
+      "questionType": "Multiple Choice",
+      "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+      "answer": "Nitrogen",
+      "explanation": "Nitrogen constitutes about 78% of Earth's atmosphere."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the smallest bone in the human body?",
+      "questionType": "Multiple Choice",
+      "options": ["Femur", "Stapes", "Tibia", "Radius"],
+      "answer": "Stapes",
+      "explanation": "The stapes bone in the human ear is the smallest bone."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the chemical formula for water?",
+      "questionType": "Multiple Choice",
+      "options": ["H2O2", "CO2", "H2O", "O2"],
+      "answer": "H2O",
+      "explanation": "The chemical formula for water is 'H2O,' indicating two hydrogen atoms and one oxygen atom."
+    }
+  ]
+}
