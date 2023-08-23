@@ -1,0 +1,91 @@
+{
+  "quizName": "Military History Quiz",
+  "quizCode": "MH789",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Military",
+  "quizDescription": "Test your knowledge of military history with this quiz.",
+  "quizTags": ["Military", "History", "Warfare"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In which war did the Battle of Gettysburg take place?",
+      "questionType": "Multiple Choice",
+      "options": ["World War I", "Vietnam War", "American Civil War", "Korean War"],
+      "answer": "American Civil War",
+      "explanation": "The Battle of Gettysburg took place during the American Civil War."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What was the code name for the Allied invasion of Normandy during World War II?",
+      "questionType": "Multiple Choice",
+      "options": ["Operation Overlord", "Operation Desert Storm", "Operation Barbarossa", "Operation Market Garden"],
+      "answer": "Operation Overlord",
+      "explanation": "The code name for the Allied invasion of Normandy during World War II was Operation Overlord."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Who was the commander of the Confederate Army during the American Civil War?",
+      "questionType": "Multiple Choice",
+      "options": ["George Washington", "Robert E. Lee", "Ulysses S. Grant", "Douglas MacArthur"],
+      "answer": "Robert E. Lee",
+      "explanation": "Robert E. Lee served as the commander of the Confederate Army during the American Civil War."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which ancient military leader is known for his tactical and strategic brilliance in the Punic Wars?",
+      "questionType": "Multiple Choice",
+      "options": ["Alexander the Great", "Julius Caesar", "Hannibal Barca", "Genghis Khan"],
+      "answer": "Hannibal Barca",
+      "explanation": "Hannibal Barca is known for his tactical and strategic brilliance in the Punic Wars, particularly the Second Punic War."
+    },
+    {
+      "questionNumber": 5,
+      "question": "During which conflict did the Battle of Stalingrad occur?",
+      "questionType": "Multiple Choice",
+      "options": ["World War I", "World War II", "Korean War", "Vietnam War"],
+      "answer": "World War II",
+      "explanation": "The Battle of Stalingrad occurred during World War II and is considered one of the largest and bloodiest battles in history."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What was the main theater of operations in the Pacific during World War II?",
+      "questionType": "Multiple Choice",
+      "options": ["North Africa", "Europe", "Asia", "Middle East"],
+      "answer": "Asia",
+      "explanation": "The main theater of operations in the Pacific during World War II was in Asia, where major battles were fought against Japan."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which military leader is known for the phrase 'I shall return' after being forced to retreat in the Philippines during World War II?",
+      "questionType": "Multiple Choice",
+      "options": ["George Patton", "Dwight D. Eisenhower", "Douglas MacArthur", "Chester Nimitz"],
+      "answer": "Douglas MacArthur",
+      "explanation": "Douglas MacArthur is known for the phrase 'I shall return' after being ordered to retreat from the Philippines during World War II."
+    },
+    {
+      "questionNumber": 8,
+      "question": "In which war did the Battle of Yorktown, a decisive American victory, take place?",
+      "questionType": "Multiple Choice",
+      "options": ["American Revolution", "War of 1812", "Mexican-American War", "Spanish-American War"],
+      "answer": "American Revolution",
+      "explanation": "The Battle of Yorktown, a decisive American victory, took place during the American Revolution."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Who was the famous military commander known as 'The Desert Fox'?",
+      "questionType": "Multiple Choice",
+      "options": ["George Patton", "Erwin Rommel", "Bernard Montgomery", "Dwight D. Eisenhower"],
+      "answer": "Erwin Rommel",
+      "explanation": "Erwin Rommel, a German general, was famously known as 'The Desert Fox' for his leadership in North Africa during World War II."
+    },
+    {
+      "questionNumber": 10,
+      "question": "Which country is credited with developing and using the first tanks in World War I?",
+      "questionType": "Multiple Choice",
+      "options": ["United States", "Germany", "United Kingdom", "Russia"],
+      "answer": "United Kingdom",
+      "explanation": "The United Kingdom is credited with developing and using the first tanks in World War I."
+    }
+  ]
+}
