@@ -1,0 +1,51 @@
+{
+  "quizName": "Olympic Games History",
+  "quizCode": "OGH101",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Sports",
+  "quizDescription": "Test your knowledge of the history of the Olympic Games with this sports quiz.",
+  "quizTags": ["Sports", "Olympics", "Athletics"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In which year were the first modern Olympic Games held?",
+      "questionType": "Multiple Choice",
+      "options": ["1896", "1900", "1924", "1936"],
+      "answer": "1896",
+      "explanation": "The first modern Olympic Games were held in Athens, Greece, in 1896."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which city hosted the 1980 Summer Olympics, which were boycotted by several countries?",
+      "questionType": "Multiple Choice",
+      "options": ["Los Angeles", "Moscow", "Sydney", "Barcelona"],
+      "answer": "Moscow",
+      "explanation": "The 1980 Summer Olympics were hosted by Moscow, but they saw a boycott by several countries in protest."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Who is the legendary sprinter known as 'The Fastest Man on Earth'?",
+      "questionType": "Multiple Choice",
+      "options": ["Jesse Owens", "Carl Lewis", "Usain Bolt", "Florence Griffith-Joyner"],
+      "answer": "Usain Bolt",
+      "explanation": "Usain Bolt from Jamaica is known as 'The Fastest Man on Earth' for his remarkable sprinting achievements."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which country has won the most medals in the history of the Winter Olympics?",
+      "questionType": "Multiple Choice",
+      "options": ["Norway", "Canada", "United States", "Germany"],
+      "answer": "Norway",
+      "explanation": "Norway is the country with the most medals in the history of the Winter Olympics."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which sport is not part of the Summer Olympics?",
+      "questionType": "Multiple Choice",
+      "options": ["Basketball", "Cycling", "Figure Skating", "Swimming"],
+      "answer": "Figure Skating",
+      "explanation": "Figure skating is a sport in the Winter Olympics, not the Summer Olympics."
+    }
+  ]
+}
