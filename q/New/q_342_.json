@@ -1,0 +1,91 @@
+{
+  "quizName": "Certification Exam Prep Quiz",
+  "quizCode": "CP345",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Professional Certification",
+  "quizDescription": "Test your knowledge in preparation for a professional certification exam.",
+  "quizTags": ["Certification", "Exam Prep", "Professional"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does CPU stand for in the context of computing?",
+      "questionType": "Multiple Choice",
+      "options": ["Central Processing Unit", "Computer Power Unit", "Central Power Unit", "Computer Processing Unit"],
+      "answer": "Central Processing Unit",
+      "explanation": "CPU stands for Central Processing Unit, which is the primary component of a computer responsible for executing instructions."
+    },
+    {
+      "questionNumber": 2,
+      "question": "In project management, what does the acronym 'PM' typically stand for?",
+      "questionType": "Multiple Choice",
+      "options": ["Professional Manager", "Project Manager", "Performance Measurement", "Product Management"],
+      "answer": "Project Manager",
+      "explanation": "In project management, 'PM' typically stands for Project Manager, the person responsible for planning and executing a project."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the purpose of a SWOT analysis in business?",
+      "questionType": "Multiple Choice",
+      "options": ["Software Optimization", "Strategic Planning", "Market Research", "Product Development"],
+      "answer": "Strategic Planning",
+      "explanation": "A SWOT analysis is used for strategic planning in business to assess Strengths, Weaknesses, Opportunities, and Threats."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which programming language is commonly used for web development and design?",
+      "questionType": "Multiple Choice",
+      "options": ["Java", "C++", "Python", "HTML/CSS"],
+      "answer": "HTML/CSS",
+      "explanation": "HTML (Hypertext Markup Language) and CSS (Cascading Style Sheets) are commonly used for web development and design."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What does 'API' stand for in the context of software development?",
+      "questionType": "Multiple Choice",
+      "options": ["Advanced Programming Interface", "Application Programming Interface", "Automated Processing Integration", "Application Performance Interface"],
+      "answer": "Application Programming Interface",
+      "explanation": "API stands for Application Programming Interface, which allows different software applications to communicate and interact with each other."
+    },
+    {
+      "questionNumber": 6,
+      "question": "In finance, what term is used to describe the total value of a company's outstanding shares of stock?",
+      "questionType": "Multiple Choice",
+      "options": ["Revenue", "Profit", "Equity", "Market Capitalization"],
+      "answer": "Market Capitalization",
+      "explanation": "Market Capitalization, often referred to as 'Market Cap,' is the total value of a company's outstanding shares of stock."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What does 'CPR' stand for in the context of emergency medical care?",
+      "questionType": "Multiple Choice",
+      "options": ["Cardiac Pulmonary Resuscitation", "Critical Patient Recovery", "Cardiovascular Procedure", "Clinical Paramedic Response"],
+      "answer": "Cardiac Pulmonary Resuscitation",
+      "explanation": "CPR stands for Cardiac Pulmonary Resuscitation, a life-saving technique used in emergency situations to revive a person whose heart has stopped beating or who has stopped breathing."
+    },
+    {
+      "questionNumber": 8,
+      "question": "Which of the following is a widely recognized project management framework often used in IT projects?",
+      "questionType": "Multiple Choice",
+      "options": ["SCRUM", "LEAN", "KANBAN", "Six Sigma"],
+      "answer": "SCRUM",
+      "explanation": "SCRUM is a widely recognized project management framework, especially popular in IT and software development projects."
+    },
+    {
+      "questionNumber": 9,
+      "question": "In the context of networking, what does 'LAN' stand for?",
+      "questionType": "Multiple Choice",
+      "options": ["Local Area Network", "Large Area Network", "Linked Access Network", "Logical Area Network"],
+      "answer": "Local Area Network",
+      "explanation": "LAN stands for Local Area Network, which is a network of interconnected devices within a limited geographic area."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What does 'CRM' typically stand for in business and sales?",
+      "questionType": "Multiple Choice",
+      "options": ["Customer Relationship Management", "Customer Response Model", "Corporate Resource Management", "Communication and Relationship Metrics"],
+      "answer": "Customer Relationship Management",
+      "explanation": "CRM typically stands for Customer Relationship Management, a strategy and software system used to manage interactions with customers and potential customers."
+    }
+  ]
+}
