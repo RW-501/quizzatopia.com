@@ -1,0 +1,91 @@
+{
+  "quizName": "Real Estate Essentials Quiz",
+  "quizCode": "RE901",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Real Estate",
+  "quizDescription": "Test your knowledge of real estate fundamentals with this quiz.",
+  "quizTags": ["Real Estate", "Property", "Housing"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the term for the legal document that specifies the transfer of real property from one person to another?",
+      "questionType": "Multiple Choice",
+      "options": ["Title", "Deed", "Mortgage", "Lease"],
+      "answer": "Deed",
+      "explanation": "A deed is the legal document that specifies the transfer of real property from one person to another."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What type of mortgage loan requires the borrower to make fixed monthly payments for the life of the loan?",
+      "questionType": "Multiple Choice",
+      "options": ["Adjustable-rate mortgage", "Interest-only mortgage", "Fixed-rate mortgage", "Balloon mortgage"],
+      "answer": "Fixed-rate mortgage",
+      "explanation": "A fixed-rate mortgage loan requires the borrower to make fixed monthly payments with a constant interest rate throughout the loan's life."
+    },
+    {
+      "questionNumber": 3,
+      "question": "In real estate, what does 'MLS' typically stand for?",
+      "questionType": "Multiple Choice",
+      "options": ["Maximum Listing Service", "Mortgage Lending System", "Multiple Listing Service", "Market Listing Standard"],
+      "answer": "Multiple Listing Service",
+      "explanation": "MLS stands for Multiple Listing Service, a database used by real estate professionals to share information about properties for sale."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the process of estimating the value of a property, often conducted by a licensed appraiser?",
+      "questionType": "Multiple Choice",
+      "options": ["Assessment", "Inspection", "Appraisal", "Evaluation"],
+      "answer": "Appraisal",
+      "explanation": "Appraisal is the process of estimating the value of a property, typically conducted by a licensed appraiser."
+    },
+    {
+      "questionNumber": 5,
+      "question": "In real estate, what is the 'closing' of a property sale also known as?",
+      "questionType": "Multiple Choice",
+      "options": ["Sealing", "Completion", "Finalization", "Settlement"],
+      "answer": "Settlement",
+      "explanation": "The 'closing' of a property sale in real estate is also known as 'settlement,' where the legal transfer of ownership occurs."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the term for a loan that is larger than the conforming loan limits set by government-sponsored entities like Fannie Mae and Freddie Mac?",
+      "questionType": "Multiple Choice",
+      "options": ["Subprime loan", "Jumbo loan", "FHA loan", "VA loan"],
+      "answer": "Jumbo loan",
+      "explanation": "A jumbo loan is a loan that exceeds the conforming loan limits established by government-sponsored entities."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the purpose of a 'home inspection' in the real estate buying process?",
+      "questionType": "Multiple Choice",
+      "options": ["To assess property value", "To negotiate a lower price", "To check for structural issues", "To finalize the mortgage"],
+      "answer": "To check for structural issues",
+      "explanation": "A home inspection is conducted to check for structural and safety issues in a property, helping buyers make informed decisions."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What term is used to describe a real estate investment strategy where properties are purchased, renovated, and sold for a profit?",
+      "questionType": "Multiple Choice",
+      "options": ["Rental income strategy", "Flipping", "Buy and hold", "Foreclosure investing"],
+      "answer": "Flipping",
+      "explanation": "Flipping is a real estate investment strategy involving the purchase, renovation, and sale of properties to make a profit."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is a 'real estate agent' primarily responsible for in a property transaction?",
+      "questionType": "Multiple Choice",
+      "options": ["Property appraisal", "Mortgage approval", "Marketing the property", "Legal representation"],
+      "answer": "Marketing the property",
+      "explanation": "A real estate agent is primarily responsible for marketing the property, finding buyers, and facilitating property transactions."
+    },
+    {
+      "questionNumber": 10,
+      "question": "In real estate, what does 'ROI' stand for?",
+      "questionType": "Multiple Choice",
+      "options": ["Real Opportunity Investment", "Return on Investment", "Real Ownership Interest", "Rate of Interest"],
+      "answer": "Return on Investment",
+      "explanation": "ROI stands for Return on Investment, which measures the profitability of a real estate investment."
+    }
+  ]
+}
