@@ -1,0 +1,51 @@
+{
+  "quizName": "Emoji Legal Cases Quiz",
+  "quizCode": "LL303",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Law",
+  "quizDescription": "Decipher famous legal cases using emojis as clues!",
+  "quizTags": ["Law", "Emoji", "Legal Cases"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "⚖️🌴🐕 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["The People vs. O.J. Simpson", "Legally Blonde", "A Few Good Men", "To Kill a Mockingbird"],
+      "answer": "To Kill a Mockingbird",
+      "explanation": "⚖️🌴🐕 = 'To Kill a Mockingbird,' a classic courtroom drama!"
+    },
+    {
+      "questionNumber": 2,
+      "question": "🚓🚁🏙️ = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["The Fugitive", "Law Abiding Citizen", "Minority Report", "The Firm"],
+      "answer": "Minority Report",
+      "explanation": "🚓🚁🏙️ = 'Minority Report,' a futuristic legal thriller!"
+    },
+    {
+      "questionNumber": 3,
+      "question": "📚🔥🔒 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Burning Books", "The Pelican Brief", "The Firm", "Fahrenheit 451"],
+      "answer": "Fahrenheit 451",
+      "explanation": "📚🔥🔒 = 'Fahrenheit 451,' a dystopian tale of book censorship!"
+    },
+    {
+      "questionNumber": 4,
+      "question": "🧑‍⚖️🏛️⚖️ = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["The Lincoln Lawyer", "My Cousin Vinny", "A Time to Kill", "Legally Blonde"],
+      "answer": "The Lincoln Lawyer",
+      "explanation": "🧑‍⚖️🏛️⚖️ = 'The Lincoln Lawyer,' a legal thriller!"
+    },
+    {
+      "questionNumber": 5,
+      "question": "🦁🐆⚖️ = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Jurassic Park", "Ace Attorney", "The Jungle Book", "The Lion King"],
+      "answer": "Ace Attorney",
+      "explanation": "🦁🐆⚖️ = 'Ace Attorney,' a video game and anime series about courtroom drama!"
+    }
+  ]
+}
