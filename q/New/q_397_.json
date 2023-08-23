@@ -1,0 +1,51 @@
+{
+  "quizName": "Emoji Fitness Challenge Quiz",
+  "quizCode": "FF306",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Fitness",
+  "quizDescription": "Guess the fitness activities represented by emojis!",
+  "quizTags": ["Fitness", "Exercise", "Emoji"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "🏋️‍♀️🏃‍♂️🏊‍♀️ = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Running", "Swimming", "Triathlon", "Weightlifting"],
+      "answer": "Triathlon",
+      "explanation": "🏋️‍♀️🏃‍♂️🏊‍♀️ = 'Triathlon,' a multisport endurance challenge!"
+    },
+    {
+      "questionNumber": 2,
+      "question": "🚴‍♀️🧘‍♂️🏃‍♀️ = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Yoga", "Cycling", "Running", "Pilates"],
+      "answer": "Triathlon",
+      "explanation": "🚴‍♀️🧘‍♂️🏃‍♀️ = 'Triathlon,' a multisport endurance challenge!"
+    },
+    {
+      "questionNumber": 3,
+      "question": "🏋️‍♂️🏋️‍♀️🏋️‍♂️ = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["CrossFit", "Yoga", "Weightlifting", "Pilates"],
+      "answer": "CrossFit",
+      "explanation": "🏋️‍♂️🏋️‍♀️🏋️‍♂️ = 'CrossFit,' a high-intensity fitness program!"
+    },
+    {
+      "questionNumber": 4,
+      "question": "🧘‍♀️🧘‍♂️ = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Yoga", "Cycling", "Running", "Pilates"],
+      "answer": "Yoga",
+      "explanation": "🧘‍♀️🧘‍♂️ = 'Yoga,' a practice for physical and mental well-being!"
+    },
+    {
+      "questionNumber": 5,
+      "question": "🚣‍♂️🏋️‍♀️🏃‍♀️ = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Rowing", "Weightlifting", "Running", "Cycling"],
+      "answer": "Rowing",
+      "explanation": "🚣‍♂️🏋️‍♀️🏃‍♀️ = 'Rowing,' a full-body workout on the water!"
+    }
+  ]
+}
