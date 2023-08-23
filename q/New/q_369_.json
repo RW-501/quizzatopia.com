@@ -1,0 +1,51 @@
+{
+  "quizName": "Leadership Style Quiz",
+  "quizCode": "LS101",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Personality",
+  "quizDescription": "Find out your leadership style and learn how to harness it effectively.",
+  "quizTags": ["Leadership", "Personality", "Management"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "How do you handle conflicts in your team?",
+      "questionType": "Multiple Choice",
+      "options": ["Avoid conflicts at all costs", "Address conflicts openly and find resolutions", "Let team members handle conflicts themselves", "Take charge and impose a solution"],
+      "answer": "Address conflicts openly and find resolutions",
+      "explanation": "Effective leaders often address conflicts openly and work with their team to find solutions."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What motivates you as a leader?",
+      "questionType": "Multiple Choice",
+      "options": ["Achieving personal success", "Seeing your team succeed", "Gaining recognition and power", "Challenging the status quo"],
+      "answer": "Seeing your team succeed",
+      "explanation": "Leaders who are motivated by their team's success often focus on mentorship and development."
+    },
+    {
+      "questionNumber": 3,
+      "question": "How do you make decisions in a team setting?",
+      "questionType": "Multiple Choice",
+      "options": ["Make decisions unilaterally", "Seek input from team members and make collaborative decisions", "Delegate decision-making to team members", "Avoid making decisions altogether"],
+      "answer": "Seek input from team members and make collaborative decisions",
+      "explanation": "Collaborative decision-making can lead to well-rounded choices and empower team members."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What's your approach to setting goals for your team?",
+      "questionType": "Multiple Choice",
+      "options": ["Set strict and challenging goals", "Let the team set their own goals", "Set flexible goals and adjust as needed", "Avoid setting goals altogether"],
+      "answer": "Set flexible goals and adjust as needed",
+      "explanation": "Flexible goal-setting allows leaders to adapt to changing circumstances and team dynamics."
+    },
+    {
+      "questionNumber": 5,
+      "question": "How do you handle failure or setbacks as a leader?",
+      "questionType": "Multiple Choice",
+      "options": ["Blame others for the failure", "Learn from the failure and adapt", "Ignore the failure and move on", "Avoid taking responsibility for failures"],
+      "answer": "Learn from the failure and adapt",
+      "explanation": "Effective leaders use setbacks as opportunities for growth and improvement."
+    }
+  ]
+}
