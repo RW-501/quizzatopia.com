@@ -1,0 +1,51 @@
+{
+  "quizName": "Intermediate Keyboard Shortcuts",
+  "quizCode": "KS102",
+  "quizDifficulty": "Intermediate",
+  "quizCategory": "Computer Shortcuts",
+  "quizDescription": "Test your knowledge of intermediate-level keyboard shortcuts for computer efficiency.",
+  "quizTags": ["Keyboard Shortcuts", "Productivity", "Computers"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What keyboard shortcut is used to switch between open applications or windows?",
+      "questionType": "Multiple Choice",
+      "options": ["Alt + Tab", "Ctrl + C", "Ctrl + V", "Alt + F4"],
+      "answer": "Alt + Tab",
+      "explanation": "Alt + Tab allows you to cycle through open applications."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which keyboard shortcut is used to open the Task Manager in Windows?",
+      "questionType": "Multiple Choice",
+      "options": ["Ctrl + Shift + Esc", "Ctrl + Alt + Delete", "Alt + F4", "Ctrl + W"],
+      "answer": "Ctrl + Shift + Esc",
+      "explanation": "Ctrl + Shift + Esc opens the Task Manager directly."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What keyboard shortcut is used to take a screenshot of the entire screen in Windows?",
+      "questionType": "Multiple Choice",
+      "options": ["PrtScn", "Alt + F4", "Ctrl + S", "Alt + Print Screen"],
+      "answer": "PrtScn",
+      "explanation": "PrtScn captures a screenshot of the entire screen to the clipboard."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which keyboard shortcut is used to open a new incognito/private window in web browsers?",
+      "questionType": "Multiple Choice",
+      "options": ["Ctrl + Shift + N", "Ctrl + N", "Ctrl + T", "Ctrl + P"],
+      "answer": "Ctrl + Shift + N",
+      "explanation": "Ctrl + Shift + N is the shortcut for opening an incognito/private window."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What keyboard shortcut is used to save a document or file in most applications?",
+      "questionType": "Multiple Choice",
+      "options": ["Ctrl + S", "Ctrl + C", "Ctrl + V", "Alt + F4"],
+      "answer": "Ctrl + S",
+      "explanation": "Ctrl + S is the standard shortcut for saving a document or file."
+    }
+  ]
+}
