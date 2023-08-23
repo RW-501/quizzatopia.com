@@ -1,0 +1,61 @@
+{
+  "quizName": "Animal Puns Challenge",
+  "quizCode": "FA104",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Fun",
+  "quizDescription": "Test your sense of humor with these pun-tastic animal-themed questions!",
+  "quizTags": ["Fun", "Animals", "Puns"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What do you call a bear with no teeth?",
+      "questionType": "Fill in the Blank",
+      "options": ["Bear Hug", "Gummy Bear", "Bear Claw", "Polar Bear"],
+      "answer": "Gummy Bear",
+      "explanation": "A bear with no teeth is 'Gummy Bear.' It can't chew much!"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Why don't seagulls fly over the bay?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Because they don't like water",
+        "Because they're too lazy",
+        "Because then they'd be called bagels",
+        "Because it's against seagull laws"
+      ],
+      "answer": "Because then they'd be called bagels",
+      "explanation": "Seagulls don't fly over the bay because 'then they'd be called bagels' instead of seagulls!"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What do you get when you cross a snowman and a vampire?",
+      "questionType": "Fill in the Blank",
+      "options": ["Frostbite", "Count Snowcula", "Cold Bite", "Frosty Fangs"],
+      "answer": "Frostbite",
+      "explanation": "When you cross a snowman and a vampire, you get 'Frostbite'!"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Why did the chicken join a band?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Because it wanted to lay down some beats",
+        "Because it had a great cluck-tion of songs",
+        "Because it lost its job as a fry cook",
+        "Because it needed the 'egg-citement'"
+      ],
+      "answer": "Because it wanted to lay down some beats",
+      "explanation": "The chicken joined a band 'because it wanted to lay down some beats' and become a 'rockin' rooster'!"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Why don't oysters donate to charity?",
+      "questionType": "Fill in the Blank",
+      "options": ["Shellfish", "Stingy", "No money", "They do donate"],
+      "answer": "Shellfish",
+      "explanation": "Oysters don't donate to charity because they're 'shellfish' and keep their pearls to themselves!"
+    }
+  ]
+}
