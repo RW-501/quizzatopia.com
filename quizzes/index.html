@@ -780,8 +780,12 @@ function addCategoriesToFirestore(categories) {
     // Use the category name as the document ID
     const categoryName = category.name;
 
-    // Add the category data to Firestore
-    categoriesRef.doc(categoryName).set(category)
+    // Add the category data to Firestore, including the 'addBy' field
+    categoriesRef.doc(categoryName).set({
+      ...category, // Include the existing category properties
+      addBy: 'Admin', // Add the 'addBy' field with the value 'Admin'
+      viewCount: 0 // Add the 'addBy' field with the value 'Admin'
+    })
       .then(() => {
         console.log(`Category "${categoryName}" added to Firestore`);
       })
