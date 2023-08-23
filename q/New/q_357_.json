@@ -1,0 +1,51 @@
+{
+  "quizName": "Culinary Master Quiz",
+  "quizCode": "CM101",
+  "quizDifficulty": "Hard",
+  "quizCategory": "Cooking",
+  "quizDescription": "Challenge your culinary knowledge with this advanced cooking quiz covering diverse cuisines and techniques.",
+  "quizTags": ["Cooking", "Cuisine", "Gourmet"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In French cuisine, what is the term for the technique of finely dicing vegetables and herbs to use as a base for sauces and soups?",
+      "questionType": "Multiple Choice",
+      "options": ["Julienne", "Brunoise", "Mirepoix", "Chiffonade"],
+      "answer": "Mirepoix",
+      "explanation": "Mirepoix is the technique of finely dicing vegetables and herbs, often consisting of onions, carrots, and celery."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the primary ingredient in the traditional Japanese dish 'Tempura'?",
+      "questionType": "Multiple Choice",
+      "options": ["Sushi Rice", "Noodles", "Batter-Fried Seafood or Vegetables", "Miso Soup"],
+      "answer": "Batter-Fried Seafood or Vegetables",
+      "explanation": "Tempura is a Japanese dish consisting of seafood or vegetables battered and deep-fried to a light, crispy texture."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the main protein used in the classic Italian dish 'Osso Buco'?",
+      "questionType": "Multiple Choice",
+      "options": ["Lamb", "Chicken", "Veal", "Pork"],
+      "answer": "Veal",
+      "explanation": "Osso Buco is a classic Italian dish made with braised veal shanks, often served with gremolata."
+    },
+    {
+      "questionNumber": 4,
+      "question": "In molecular gastronomy, what gas is commonly used to create foams and bubbles in dishes?",
+      "questionType": "Multiple Choice",
+      "options": ["Oxygen", "Nitrogen", "Carbon Dioxide", "Helium"],
+      "answer": "Nitrogen",
+      "explanation": "Nitrogen gas is often used in molecular gastronomy to create foams, froths, and bubbles in innovative dishes."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which French dessert consists of caramelized sugar on top of a creamy custard?",
+      "questionType": "Multiple Choice",
+      "options": ["Crème Brûlée", "Eclair", "Tarte Tatin", "Panna Cotta"],
+      "answer": "Crème Brûlée",
+      "explanation": "Crème Brûlée is a French dessert featuring a creamy custard base topped with a layer of caramelized sugar."
+    }
+  ]
+}
