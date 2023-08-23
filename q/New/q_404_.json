@@ -1,0 +1,51 @@
+{
+  "quizName": "Who Did It? Riddle Quiz (Hard)",
+  "quizCode": "WDI503",
+  "quizDifficulty": "Hard",
+  "quizCategory": "Who Did It? Riddles",
+  "quizDescription": "Challenge your detective skills with these difficult 'Who Did It?' riddles!",
+  "quizTags": ["Riddles", "Mystery", "Detective"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "A man was found murdered in a round room. There are no windows or doors. The only items in the room are a mirror and a table. How did he die?",
+      "questionType": "Multiple Choice",
+      "options": ["He was poisoned.", "He was stabbed.", "He died of natural causes.", "It's an unsolved mystery."],
+      "answer": "He died of natural causes.",
+      "explanation": "He died of natural causes. The round room, mirror, and table are distractions; there's no foul play involved."
+    },
+    {
+      "questionNumber": 2,
+      "question": "A man is found murdered in his car with two bullet holes in the driver's seat and no other damage to the car. How did he die?",
+      "questionType": "Multiple Choice",
+      "options": ["He was shot by someone outside the car.", "He shot himself.", "The bullets came from the back seat.", "It's an unsolved mystery."],
+      "answer": "He shot himself.",
+      "explanation": "The two bullet holes in the driver's seat suggest he shot himself twice."
+    },
+    {
+      "questionNumber": 3,
+      "question": "A man was found murdered one Sunday morning. His wife called the police. The police questioned the wife and staff and was given the following alibis: The wife said she was sleeping, the cook said he was cooking breakfast, the gardener said he was planting seeds, the maid said she was getting the mail, and the butler said he was polishing the silverware. The police instantly knew who the murderer was. Can you deduce who it was?",
+      "questionType": "Multiple Choice",
+      "options": ["The Maid", "The Wife", "The Cook", "The Gardener"],
+      "answer": "The Wife",
+      "explanation": "The murder happened on Sunday morning. The wife claimed she was sleeping, but there was no mention of her husband waking her up or her hearing anything unusual."
+    },
+    {
+      "questionNumber": 4,
+      "question": "A man is found murdered in a locked room with no windows. The only other thing in the room is a hammer. There are no visible marks on his body. How did he die?",
+      "questionType": "Multiple Choice",
+      "options": ["He was hit with the hammer.", "He was poisoned.", "He had a heart attack.", "It's an unsolved mystery."],
+      "answer": "He had a heart attack.",
+      "explanation": "He died of a heart attack, and the hammer and locked room are unrelated."
+    },
+    {
+      "questionNumber": 5,
+      "question": "A man is found murdered in his office with a calendar on his desk. The calendar shows the date, but all the entries are in code. The only clues are the numbers 8, 5, 1, and 11 written in blood on the calendar. Who is the killer?",
+      "questionType": "Multiple Choice",
+      "options": ["The Secretary", "The Janitor", "The Boss", "The Receptionist"],
+      "answer": "The Receptionist",
+      "explanation": "The numbers represent the letters 'H,' 'E,' 'A,' and 'K.' When unscrambled, they spell 'HEAK,' which is the receptionist's name."
+    }
+  ]
+}
