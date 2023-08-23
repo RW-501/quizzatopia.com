@@ -1,0 +1,51 @@
+{
+  "quizName": "Crime Riddle Quiz (Hard)",
+  "quizCode": "CR503",
+  "quizDifficulty": "Hard",
+  "quizCategory": "Crime Riddles",
+  "quizDescription": "Challenge your detective skills with these difficult crime riddles!",
+  "quizTags": ["Crime", "Riddles", "Detective"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "I have keys but never locks, space but no room, and you can enter, but you can't go inside. What am I?",
+      "questionType": "Multiple Choice",
+      "options": ["A Keyboard", "A Car", "A House", "A Website"],
+      "answer": "A Website",
+      "explanation": "A website has 'keys' (keyboard keys) for input, 'space' for content, and you can 'enter' it but can't physically go inside."
+    },
+    {
+      "questionNumber": 2,
+      "question": "I can be cracked, made, told, and played. What am I?",
+      "questionType": "Multiple Choice",
+      "options": ["A Joke", "A Song", "A Code", "An Instrument"],
+      "answer": "A Joke",
+      "explanation": "A joke can be 'cracked' (told), 'made' (created), 'told' (shared), and 'played' (used for humor)."
+    },
+    {
+      "questionNumber": 3,
+      "question": "I'm tall when I'm young, and short when I'm old. What am I?",
+      "questionType": "Multiple Choice",
+      "options": ["A Tree", "A Candle", "A Human", "A Giraffe"],
+      "answer": "A Candle",
+      "explanation": "A candle is tall when it's newly lit and becomes shorter as it burns."
+    },
+    {
+      "questionNumber": 4,
+      "question": "I have keys but no locks, and I have space but no room. What am I?",
+      "questionType": "Multiple Choice",
+      "options": ["A Keyboard", "A Piano", "A Library", "A Calculator"],
+      "answer": "A Keyboard",
+      "explanation": "A keyboard has keys for typing but no locks, and it has space between the keys but no physical room."
+    },
+    {
+      "questionNumber": 5,
+      "question": "I have cities but no houses, forests but no trees, and rivers but no water. What am I?",
+      "questionType": "Multiple Choice",
+      "options": ["A Map", "A Globe", "An Encyclopedia", "A Dream"],
+      "answer": "A Map",
+      "explanation": "A map shows cities, forests, and rivers but doesn't contain actual houses, trees, or water."
+    }
+  ]
+}
