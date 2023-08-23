@@ -1,0 +1,51 @@
+{
+  "quizName": "Rock 'n' Roll Legends Quiz",
+  "quizCode": "RL101",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Music",
+  "quizDescription": "Test your knowledge of rock 'n' roll legends and iconic bands with this music quiz.",
+  "quizTags": ["Music", "Rock 'n' Roll", "Legends"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which rock band is known for their hit songs 'Bohemian Rhapsody' and 'We Will Rock You'?",
+      "questionType": "Multiple Choice",
+      "options": ["The Rolling Stones", "Led Zeppelin", "Queen", "The Beatles"],
+      "answer": "Queen",
+      "explanation": "Queen, led by Freddie Mercury, is famous for their iconic songs like 'Bohemian Rhapsody' and 'We Will Rock You.'"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Who is often referred to as the 'King of Rock 'n' Roll'?",
+      "questionType": "Multiple Choice",
+      "options": ["Chuck Berry", "Elvis Presley", "Buddy Holly", "Little Richard"],
+      "answer": "Elvis Presley",
+      "explanation": "Elvis Presley is commonly known as the 'King of Rock 'n' Roll' for his influence on the genre."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which rock band released the legendary album 'The Dark Side of the Moon'?",
+      "questionType": "Multiple Choice",
+      "options": ["Pink Floyd", "The Who", "The Doors", "The Eagles"],
+      "answer": "Pink Floyd",
+      "explanation": "Pink Floyd's 'The Dark Side of the Moon' is considered one of the greatest rock albums of all time."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What instrument did Jimi Hendrix famously play?",
+      "questionType": "Multiple Choice",
+      "options": ["Drums", "Guitar", "Bass", "Keyboards"],
+      "answer": "Guitar",
+      "explanation": "Jimi Hendrix was an iconic guitarist known for his groundbreaking guitar-playing skills."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which female rock artist released the album 'Jagged Little Pill' in the 1990s?",
+      "questionType": "Multiple Choice",
+      "options": ["Madonna", "Alanis Morissette", "Sheryl Crow", "No Doubt"],
+      "answer": "Alanis Morissette",
+      "explanation": "Alanis Morissette gained fame with her album 'Jagged Little Pill,' featuring hits like 'You Oughta Know.'"
+    }
+  ]
+}
