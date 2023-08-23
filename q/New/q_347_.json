@@ -1,0 +1,91 @@
+{
+  "quizName": "Relationship Insights Quiz",
+  "quizCode": "RI567",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Relationships",
+  "quizDescription": "Explore questions about different aspects of relationships in this quiz.",
+  "quizTags": ["Relationships", "Communication", "Emotions"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the foundation of a healthy romantic relationship?",
+      "questionType": "Multiple Choice",
+      "options": ["Physical attraction", "Frequent gifts", "Trust and communication", "Shared hobbies"],
+      "answer": "Trust and communication",
+      "explanation": "Trust and communication are fundamental to a healthy romantic relationship, fostering understanding and connection."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What term describes the emotional bond or connection between parents and their child, often formed in the early stages of life?",
+      "questionType": "Multiple Choice",
+      "options": ["Infatuation", "Attachment", "Attraction", "Admiration"],
+      "answer": "Attachment",
+      "explanation": "Attachment refers to the emotional bond between parents and their child, formed in infancy and early childhood."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the term for the process of ending a romantic relationship?",
+      "questionType": "Multiple Choice",
+      "options": ["Commitment", "Honeymoon phase", "Breakup", "Compromise"],
+      "answer": "Breakup",
+      "explanation": "A 'breakup' is the process of ending a romantic relationship, often involving emotional adjustments and changes."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the practice of openly discussing problems and disagreements in a relationship, aiming to find solutions?",
+      "questionType": "Multiple Choice",
+      "options": ["Avoidance", "Compromise", "Conflict resolution", "Silent treatment"],
+      "answer": "Conflict resolution",
+      "explanation": "Conflict resolution is the practice of openly discussing and addressing problems in a relationship to find solutions."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the term for a close, platonic friendship between two people of different genders?",
+      "questionType": "Multiple Choice",
+      "options": ["Romantic relationship", "Soulmate connection", "Opposite-sex friendship", "Heterosocial friendship"],
+      "answer": "Opposite-sex friendship",
+      "explanation": "An opposite-sex friendship refers to a close, platonic relationship between two people of different genders."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the term for the emotional and psychological state characterized by the desire for a romantic relationship?",
+      "questionType": "Multiple Choice",
+      "options": ["Contentment", "Solitude", "Loneliness", "Singlehood"],
+      "answer": "Loneliness",
+      "explanation": "Loneliness is the emotional state characterized by a desire for a romantic relationship or companionship."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the process of adjusting and accommodating each other's needs and preferences in a relationship?",
+      "questionType": "Multiple Choice",
+      "options": ["Compromise", "Dominance", "Competition", "Separation"],
+      "answer": "Compromise",
+      "explanation": "Compromise is the process of adjusting and accommodating each other's needs and preferences in a relationship to reach mutually satisfactory solutions."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What term describes the practice of ending communication with someone abruptly and without explanation, typically in a dating context?",
+      "questionType": "Multiple Choice",
+      "options": ["Commitment", "Ghosting", "Intimacy", "Attachment"],
+      "answer": "Ghosting",
+      "explanation": "Ghosting is the practice of ending communication with someone abruptly and without explanation, often in dating or relationship contexts."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the term for a strong emotional bond or connection between two people of the same gender, often characterized by mutual support?",
+      "questionType": "Multiple Choice",
+      "options": ["Soulmate connection", "Sibling bond", "Friendship", "Homosocial friendship"],
+      "answer": "Friendship",
+      "explanation": "Friendship is a strong emotional bond or connection between two people, often characterized by mutual support and trust."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the term for the deep emotional and romantic connection between two people often described as 'meant to be'?",
+      "questionType": "Multiple Choice",
+      "options": ["Casual relationship", "Soulmate connection", "Acquaintance", "Platonic friendship"],
+      "answer": "Soulmate connection",
+      "explanation": "A 'soulmate connection' describes a deep emotional and romantic bond between two people often seen as destined for each other."
+    }
+  ]
+}
