@@ -1,0 +1,51 @@
+{
+  "quizName": "Military Knowledge Quiz",
+  "quizCode": "MK789",
+  "quizDifficulty": "Hard",
+  "quizCategory": "Military",
+  "quizDescription": "Test your knowledge of military history and concepts with this challenging quiz.",
+  "quizTags": ["Military", "History", "Strategy"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "During which war did the Battle of Gettysburg take place?",
+      "questionType": "Multiple Choice",
+      "options": ["World War I", "Civil War", "World War II", "Vietnam War"],
+      "answer": "Civil War",
+      "explanation": "The Battle of Gettysburg took place during the American Civil War, specifically in July 1863."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the highest rank in the United States Army?",
+      "questionType": "Multiple Choice",
+      "options": ["Major General", "General", "Lieutenant Colonel", "Colonel"],
+      "answer": "General",
+      "explanation": "The highest rank in the United States Army is 'General,' typically referred to as 'General of the Army.'"
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which military strategy involves attacking the enemy's supply lines and communication networks?",
+      "questionType": "Multiple Choice",
+      "options": ["Blitzkrieg", "Guerrilla Warfare", "Scorched Earth", "Logistics"],
+      "answer": "Logistics",
+      "explanation": "Attacking the enemy's supply lines and communication networks is a part of military logistics, a key strategy in warfare."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the NATO phonetic alphabet word for 'C'?",
+      "questionType": "Multiple Choice",
+      "options": ["Charlie", "Delta", "Bravo", "Foxtrot"],
+      "answer": "Charlie",
+      "explanation": "In the NATO phonetic alphabet, 'C' is represented by the word 'Charlie.'"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Who is often considered the father of modern guerrilla warfare?",
+      "questionType": "Multiple Choice",
+      "options": ["Napoleon Bonaparte", "George Washington", "Che Guevara", "Sun Tzu"],
+      "answer": "Che Guevara",
+      "explanation": "Che Guevara is often considered one of the key figures in the development of modern guerrilla warfare tactics."
+    }
+  ]
+}
