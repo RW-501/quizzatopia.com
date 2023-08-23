@@ -1,0 +1,51 @@
+{
+  "quizName": "Emoji Military History Quiz",
+  "quizCode": "ML304",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Military",
+  "quizDescription": "Explore military history through emojis and guess the events!",
+  "quizTags": ["Military", "Emoji", "History"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "🌊🚢🇺🇸 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["D-Day", "Battle of Midway", "Pearl Harbor", "Operation Desert Storm"],
+      "answer": "Pearl Harbor",
+      "explanation": "🌊🚢🇺🇸 = 'Pearl Harbor,' a pivotal event in World War II!"
+    },
+    {
+      "questionNumber": 2,
+      "question": "⛏️🧨🏰 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Civil War", "World War I", "The Crusades", "American Revolution"],
+      "answer": "The Crusades",
+      "explanation": "⛏️🧨🏰 = 'The Crusades,' a series of medieval religious wars!"
+    },
+    {
+      "questionNumber": 3,
+      "question": "🏞️🚁🇻🇳 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Battle of Stalingrad", "Korean War", "Vietnam War", "Gulf War"],
+      "answer": "Vietnam War",
+      "explanation": "🏞️🚁🇻🇳 = 'Vietnam War,' a conflict during the Cold War era!"
+    },
+    {
+      "questionNumber": 4,
+      "question": "🐎🏹🏴󠁧󠁢󠁥󠁮󠁧󠁿 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["The Napoleonic Wars", "The Hundred Years' War", "The Crusades", "The American Revolution"],
+      "answer": "The Hundred Years' War",
+      "explanation": "🐎🏹🏴󠁧󠁢󠁥󠁮󠁧󠁿 = 'The Hundred Years' War,' a long-running medieval conflict!"
+    },
+    {
+      "questionNumber": 5,
+      "question": "🏔️⚔️🐴 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["The American Revolution", "The Crusades", "The Napoleonic Wars", "The Mongol Invasions"],
+      "answer": "The Mongol Invasions",
+      "explanation": "🏔️⚔️🐴 = 'The Mongol Invasions,' a series of conquests by the Mongol Empire!"
+    }
+  ]
+}
