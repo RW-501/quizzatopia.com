@@ -562,13 +562,12 @@ display:none;
 	    
 	    
 	
-	   
+	/*   
 
-	    
-	</style>
+	   
     
 	
-	<section class="quiz-categories">
+	<section id="quiz-categories-container" class="quiz-categories">
   <div class="container">
     <div class="row">
       <div class="col">
@@ -601,6 +600,19 @@ display:none;
 		   <a href="https://www.quizzatopia.com/quizzes/" target="_blank"> <h2>See all our Categories</h2></a>
 
 </section>
+*/
+	   
+	</style>
+
+	<section id="quiz-categories-container" class="quiz-categories">
+	</section>
+
+
+
+
+
+
+
 
 	  
 	    <section id="searchCode">	
@@ -711,6 +723,74 @@ display:none;
 	</style>
 
 	<script>
+// Function to get 3 random categories (excluding "Buy Me A Coffee")
+function getRandomCategories() {
+  const db = firebase.firestore();
+  const categoriesRef = db.collection('quizCategory');
+  const excludedCategory = 'Buy Me A Coffee'; // The category to exclude
+
+  return categoriesRef
+    .where('name', '!=', excludedCategory) // Exclude the specified category
+    .get()
+    .then((querySnapshot) => {
+      const categories = [];
+      querySnapshot.forEach((doc) => {
+        categories.push(doc.data()); // Push category data to the array
+      });
+
+      // Shuffle the categories array to get random categories
+      const shuffledCategories = shuffleArray(categories);
+
+      // Return the first 3 categories (or less if there are fewer)
+      return shuffledCategories.slice(0, 3);
+    });
+}
+
+// Function to shuffle an array
+function shuffleArray(array) {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+// Function to generate HTML for the categories
+function generateCategoryHTML(categories) {
+  const categoryContainer = document.getElementById('quiz-categories-container');
+  const categoryHTML = categories.map((category) => {
+    return `
+      <div class="col">
+        <a href="https://www.quizzatopia.com/category/?${category.name}" class="category-link">
+          <div class="category-card">
+            <img src="${category.imageUrl}" alt="${category.name} Category" class="category-image">
+            <h3>${category.name}</h3>
+          </div>
+        </a>
+      </div>
+    `;
+  });
+
+  // Append the generated HTML to the container
+  categoryContainer.innerHTML = categoryHTML.join('');
+
+  // Add a link to see all categories
+  const seeAllCategoriesLink = document.createElement('a');
+  seeAllCategoriesLink.href = 'https://www.quizzatopia.com/quizzes/';
+  seeAllCategoriesLink.target = '_blank';
+  seeAllCategoriesLink.innerHTML = '<h2>See all our Categories</h2>';
+  categoryContainer.appendChild(seeAllCategoriesLink);
+}
+
+// Usage: Get random categories and generate HTML
+getRandomCategories()
+  .then((categories) => {
+    generateCategoryHTML(categories);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
 
 
 		function getRandomCategory() {
