@@ -498,7 +498,7 @@ async function fetchQuizzesFromDB(page = 1) {
 
   // Build the query to fetch quizzes with ordering
 let query = db.collection('quizzes')
-    .where('private', 'in', [false, undefined]) // Include documents where 'private' is false or missing.
+    .where('private', 'in', [false, null]) // Include documents where 'private' is false or missing.
     .where('quizCategoryDB', '==', categoryName);
 
 	  /*
