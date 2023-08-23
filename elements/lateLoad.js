@@ -1427,10 +1427,9 @@ async function checkUserAndIP() {
     }
 
 
-    if (user.uid == ALLOWED_USER || ALLOWED_USER == userInfo.firebaseId || uID = ALLOWED_USER) {
-      console.log("Admin");
-
-    } else {
+if (user.uid == ALLOWED_USER || ALLOWED_USER == userInfo.firebaseId || uID === ALLOWED_USER) {
+  console.log("Admin");
+} else {
 	          console.log("Not Admin");
        console.log("Admin   " + user + "|| " + userInfo.firebaseId);
      //   window.location.href = '/';
