@@ -1455,6 +1455,61 @@ if (user === ALLOWED_USER || uID === ALLOWED_USER) {
 
 
 
+if (!loggedIn) {
+
+  // Function to get the current date in YYYY-MM-DD format
+  function getCurrentDate() {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const day = String(now.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+
+  // Check if the user's IP address is available in local storage
+  getIPAddress().then((userIP) => {
+    const currentDate = getCurrentDate();
+    const storedData = JSON.parse(localStorage.getItem(ipAddress)) || { date: '', count: 0 };
+
+    // If the stored date is not the same as the current date, reset the count
+    if (storedData.date !== currentDate) {
+      storedData.date = currentDate;
+      storedData.count = 1;
+    } else {
+      storedData.count += 1;
+    }
+
+    // Store the updated count in local storage
+    localStorage.setItem(ipAddress, JSON.stringify(storedData));
+
+
+
+// Initialize Firebase Firestore
+const db = firebase.firestore();
+
+// Reference the 'questLog' collection and the document with the user's IP address
+const questLogRef = db.collection('questLog').doc(ipAddress);
+
+// Update the 'banned' field to 'YES'
+questLogRef.update({
+  banned: 'YES'
+})
+.then(() => {
+  console.log('Document updated successfully.');
+})
+.catch((error) => {
+  console.error('Error updating document:', error);
+});
+
+	  
+    // Check if the count exceeds 100 and redirect if needed
+    if (storedData.count > 50) {
+      window.location.href = 'https://www.google.com';
+    }
+  });
+}
+
+
 
 
 function getBadWords() {
