@@ -1,0 +1,91 @@
+{
+  "quizName": "Cooking Basics Quiz",
+  "quizCode": "CB123",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Cooking",
+  "quizDescription": "Test your knowledge of cooking basics with this quiz.",
+  "quizTags": ["Cooking", "Food Preparation", "Kitchen Skills"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the boiling point of water in Fahrenheit?",
+      "questionType": "Multiple Choice",
+      "options": ["212°F", "100°F", "32°F", "0°F"],
+      "answer": "212°F",
+      "explanation": "Water boils at 212°F (100°C) at standard atmospheric pressure."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What ingredient is known for adding flavor to dishes and is commonly referred to as the 'king of spices'?",
+      "questionType": "Multiple Choice",
+      "options": ["Salt", "Pepper", "Cumin", "Paprika"],
+      "answer": "Pepper",
+      "explanation": "Pepper is often called the 'king of spices' for its widespread use in seasoning dishes."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the primary ingredient in traditional Italian pasta sauce?",
+      "questionType": "Multiple Choice",
+      "options": ["Tomatoes", "Cream", "Butter", "Olive Oil"],
+      "answer": "Tomatoes",
+      "explanation": "Traditional Italian pasta sauce is primarily made from tomatoes."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the process of cooking food by submerging it in hot oil called?",
+      "questionType": "Multiple Choice",
+      "options": ["Grilling", "Roasting", "Frying", "Baking"],
+      "answer": "Frying",
+      "explanation": "Frying is the process of cooking food in hot oil."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What cooking technique involves cooking food quickly in a small amount of hot oil while stirring continuously?",
+      "questionType": "Multiple Choice",
+      "options": ["Sautéing", "Braising", "Steaming", "Boiling"],
+      "answer": "Sautéing",
+      "explanation": "Sautéing involves cooking food quickly in a small amount of hot oil while stirring continuously."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the term for the process of breaking down protein in meat with an acidic marinade?",
+      "questionType": "Multiple Choice",
+      "options": ["Marinating", "Tenderizing", "Basting", "Brining"],
+      "answer": "Tenderizing",
+      "explanation": "Tenderizing is the process of breaking down protein in meat with an acidic marinade to make it more tender."
+    },
+    {
+      "questionNumber": 7,
+      "question": "Which knife is typically used for slicing bread?",
+      "questionType": "Multiple Choice",
+      "options": ["Chef's Knife", "Paring Knife", "Serrated Knife", "Utility Knife"],
+      "answer": "Serrated Knife",
+      "explanation": "A serrated knife is commonly used for slicing bread because its serrated edge cuts through crusts easily."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the main ingredient in guacamole?",
+      "questionType": "Multiple Choice",
+      "options": ["Tomatoes", "Onions", "Avocado", "Cilantro"],
+      "answer": "Avocado",
+      "explanation": "Avocado is the main ingredient in guacamole."
+    },
+    {
+      "questionNumber": 9,
+      "question": "Which cooking method involves cooking food slowly in liquid at a low temperature?",
+      "questionType": "Multiple Choice",
+      "options": ["Searing", "Grilling", "Poaching", "Broiling"],
+      "answer": "Poaching",
+      "explanation": "Poaching involves cooking food slowly in liquid at a low temperature."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the term for the process of quickly plunging blanched vegetables into ice water to stop the cooking process?",
+      "questionType": "Multiple Choice",
+      "options": ["Braising", "Steaming", "Blanching", "Shock"],
+      "answer": "Shock",
+      "explanation": "The process of quickly plunging blanched vegetables into ice water to stop the cooking process is called 'shocking.'"
+    }
+  ]
+}
