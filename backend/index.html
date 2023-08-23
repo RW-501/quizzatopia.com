@@ -141,7 +141,41 @@
   </footer>
 
   <!-- Include JavaScript dependencies -->
+<script>
 
+// Initialize Firebase Firestore
+const db = firebase.firestore();
+
+// Reference the 'questLog' collection
+const questLogRef = db.collection('questLog');
+
+// Reference the <ul> element in the HTML for displaying blocked guests
+const blockedGuestsList = document.getElementById('blocked-guests-list');
+
+// Query the 'questLog' collection for blocked guests
+questLogRef.where('userVisitCount', '>', 1)
+           .orWhere('banned', '==', 'YES')
+           .get()
+           .then((querySnapshot) => {
+               querySnapshot.forEach((doc) => {
+                   const guestData = doc.data();
+                   const guestIP = doc.id;
+
+                   // Create a list item for each blocked guest
+                   const listItem = document.createElement('li');
+                   listItem.textContent = `IP Address: ${guestIP}, User Visit Count: ${guestData.userVisitCount}, Banned: ${guestData.banned}`;
+                   
+                   // Append the list item to the <ul> element
+                   blockedGuestsList.appendChild(listItem);
+               });
+           })
+           .catch((error) => {
+               console.error('Error getting blocked guests:', error);
+           });
+
+
+	
+</script>
   <script src="control-panel.js"></script>
 </body>
 
