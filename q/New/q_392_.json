@@ -1,0 +1,51 @@
+{
+  "quizName": "Emoji Recipe Challenge",
+  "quizCode": "EC301",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Cooking",
+  "quizDescription": "Guess the dish based on the emojis that represent its ingredients!",
+  "quizTags": ["Cooking", "Food", "Emoji"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "🍝🍅🍴 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Spaghetti Bolognese", "Taco", "Sushi", "Pizza"],
+      "answer": "Spaghetti Bolognese",
+      "explanation": "🍝🍅🍴 = 'Spaghetti Bolognese,' a classic Italian pasta dish!"
+    },
+    {
+      "questionNumber": 2,
+      "question": "🍔🥓🧀🍟 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Burrito", "Sushi", "Burger and Fries", "Taco"],
+      "answer": "Burger and Fries",
+      "explanation": "🍔🥓🧀🍟 = 'Burger and Fries,' a classic American meal combo!"
+    },
+    {
+      "questionNumber": 3,
+      "question": "🍣🥑🍱 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Pasta", "Taco", "Sushi", "Guacamole"],
+      "answer": "Sushi",
+      "explanation": "🍣🥑🍱 = 'Sushi,' a popular Japanese dish!"
+    },
+    {
+      "questionNumber": 4,
+      "question": "🍕🧀🍅 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Pizza", "Burger", "Sushi", "Taco"],
+      "answer": "Pizza",
+      "explanation": "🍕🧀🍅 = 'Pizza,' a beloved Italian creation!"
+    },
+    {
+      "questionNumber": 5,
+      "question": "🥗🥬🍅🥕 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Salad", "Curry", "Burger and Fries", "Taco"],
+      "answer": "Salad",
+      "explanation": "🥗🥬🍅🥕 = 'Salad,' a healthy and refreshing dish!"
+    }
+  ]
+}
