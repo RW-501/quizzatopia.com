@@ -1,0 +1,51 @@
+{
+  "quizName": "Who Did It? Riddle Quiz (Medium)",
+  "quizCode": "WDI502",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Who Did It? Riddles",
+  "quizDescription": "Solve these medium-level 'Who Did It?' riddles and test your detective instincts!",
+  "quizTags": ["Riddles", "Mystery", "Detective"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "A wealthy man was murdered in his mansion. The suspects are his wife, the cook, the maid, and the butler. The wife said she was sleeping, the cook said he was cooking breakfast, the maid said she was getting the mail, and the butler said he was polishing the silverware. Who is the murderer?",
+      "questionType": "Multiple Choice",
+      "options": ["The Wife", "The Cook", "The Maid", "The Butler"],
+      "answer": "The Maid",
+      "explanation": "The maid is the only one telling the truth. She said she was getting the mail, which is plausible."
+    },
+    {
+      "questionNumber": 2,
+      "question": "A man was found dead in a cabin in the woods. The cabin's windows were shut, the door was locked from the inside, and there was no way in or out of the cabin. The only other living thing in the cabin was a cat. How did the man die?",
+      "questionType": "Multiple Choice",
+      "options": ["He was murdered by the cat.", "He died of natural causes.", "He was bitten by a poisonous snake.", "It's an unsolved mystery."],
+      "answer": "He died of natural causes.",
+      "explanation": "The man died of natural causes, and the cat had nothing to do with it."
+    },
+    {
+      "questionNumber": 3,
+      "question": "A man was found murdered one Sunday morning. The detective arrived, questioned the wife, and staff, and was given the following alibis: The wife said she was sleeping, the cook said he was cooking breakfast, the gardener said he was planting seeds, the maid said she was getting the mail, and the butler said he was polishing the silverware. The detective instantly knew who the murderer was. Can you deduce who it was?",
+      "questionType": "Multiple Choice",
+      "options": ["The Maid", "The Wife", "The Cook", "The Gardener"],
+      "answer": "The Wife",
+      "explanation": "The murder happened on Sunday morning. The wife claimed she was sleeping, but there was no mention of her husband waking her up or her hearing anything unusual."
+    },
+    {
+      "questionNumber": 4,
+      "question": "A man is found murdered on a Sunday morning. His wife calls the police. The police question the wife and staff, and their alibis are: The wife says she was sleeping, the cook says he was cooking breakfast, the gardener says he was planting seeds, the maid says she was getting the mail, and the butler says he was polishing the silverware. Who is the murderer?",
+      "questionType": "Multiple Choice",
+      "options": ["The Wife", "The Cook", "The Gardener", "The Maid"],
+      "answer": "The Maid",
+      "explanation": "The maid's alibi is plausible; she said she was getting the mail, which is something one might do on a Sunday morning."
+    },
+    {
+      "questionNumber": 5,
+      "question": "A man was found murdered in his office. The suspects are Peter, Julia, Max, and Emma. The numbers 6, 4, 9, and 10 are written on the calendar with blood. Who is the killer?",
+      "questionType": "Multiple Choice",
+      "options": ["Peter", "Julia", "Max", "Emma"],
+      "answer": "Julia",
+      "explanation": "The numbers represent the months: June (6), April (4), September (9), and October (10). The first letter of each month spells 'JASON,' which is Julia's son's name."
+    }
+  ]
+}
