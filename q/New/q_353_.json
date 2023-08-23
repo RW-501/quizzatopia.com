@@ -1,0 +1,51 @@
+{
+  "quizName": "Fitness Challenge Quiz",
+  "quizCode": "FC456",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Fitness",
+  "quizDescription": "Test your knowledge of fitness and exercise with this informative quiz.",
+  "quizTags": ["Fitness", "Exercise", "Health"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which type of exercise is focused on improving cardiovascular fitness and involves activities like running and cycling?",
+      "questionType": "Multiple Choice",
+      "options": ["Strength Training", "Yoga", "Aerobic Exercise", "Pilates"],
+      "answer": "Aerobic Exercise",
+      "explanation": "Aerobic exercise focuses on improving cardiovascular fitness through activities that increase your heart rate and breathing."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the term for the number of calories burned during a specific exercise or activity?",
+      "questionType": "Multiple Choice",
+      "options": ["Heart Rate", "Resting Metabolic Rate", "Caloric Intake", "Caloric Expenditure"],
+      "answer": "Caloric Expenditure",
+      "explanation": "Caloric Expenditure refers to the number of calories burned during exercise or physical activity."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which nutrient is often considered the body's primary source of energy for exercise?",
+      "questionType": "Multiple Choice",
+      "options": ["Vitamins", "Proteins", "Carbohydrates", "Fats"],
+      "answer": "Carbohydrates",
+      "explanation": "Carbohydrates are the body's primary source of energy for exercise, especially during high-intensity activities."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the term for the maximum amount of force a muscle or group of muscles can generate during a single contraction?",
+      "questionType": "Multiple Choice",
+      "options": ["Strength", "Endurance", "Flexibility", "Balance"],
+      "answer": "Strength",
+      "explanation": "Strength refers to the maximum force a muscle or group of muscles can generate during a single contraction."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which type of exercise focuses on improving flexibility and often involves stretching and holding positions?",
+      "questionType": "Multiple Choice",
+      "options": ["Strength Training", "Cardiovascular Exercise", "Yoga", "High-Intensity Interval Training (HIIT)"],
+      "answer": "Yoga",
+      "explanation": "Yoga is a form of exercise that emphasizes flexibility, balance, and mindfulness through various poses and stretches."
+    }
+  ]
+}
