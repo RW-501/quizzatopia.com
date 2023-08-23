@@ -1,0 +1,91 @@
+{
+  "quizName": "Basic Legal Concepts Quiz",
+  "quizCode": "LC456",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Law",
+  "quizDescription": "Test your knowledge of basic legal concepts with this quiz.",
+  "quizTags": ["Law", "Legal System", "Legal Terminology"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the highest court in the United States?",
+      "questionType": "Multiple Choice",
+      "options": ["Supreme Court", "District Court", "Appellate Court", "Federal Court"],
+      "answer": "Supreme Court",
+      "explanation": "The Supreme Court is the highest court in the United States, with the authority to make final decisions on legal matters."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the term for a legally binding order issued by a court?",
+      "questionType": "Multiple Choice",
+      "options": ["Warrant", "Decree", "Subpoena", "Mandate"],
+      "answer": "Decree",
+      "explanation": "A decree is a legally binding order issued by a court, often used in family law matters."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the principle that a person cannot be tried twice for the same crime?",
+      "questionType": "Multiple Choice",
+      "options": ["Double jeopardy", "Habeas corpus", "Alibi", "Subpoena"],
+      "answer": "Double jeopardy",
+      "explanation": "Double jeopardy is the legal principle that protects individuals from being tried twice for the same crime after an acquittal or conviction."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What type of law deals with disputes between individuals or organizations?",
+      "questionType": "Multiple Choice",
+      "options": ["Criminal law", "Civil law", "Constitutional law", "Administrative law"],
+      "answer": "Civil law",
+      "explanation": "Civil law deals with disputes between individuals or organizations, while criminal law deals with offenses against the state."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is a legal document that provides instructions on how a person's property and assets should be distributed after their death?",
+      "questionType": "Multiple Choice",
+      "options": ["Warrant", "Decree", "Subpoena", "Will"],
+      "answer": "Will",
+      "explanation": "A will is a legal document that outlines how a person's property and assets should be distributed after their death."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the term for a formal accusation of a serious crime, typically issued by a grand jury?",
+      "questionType": "Multiple Choice",
+      "options": ["Misdemeanor", "Felony", "Indictment", "Summons"],
+      "answer": "Indictment",
+      "explanation": "An indictment is a formal accusation of a serious crime, typically issued by a grand jury."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What legal concept ensures that a person detained by authorities is brought before a court or judge to determine the lawfulness of their detention?",
+      "questionType": "Multiple Choice",
+      "options": ["Alibi", "Habeas corpus", "Double jeopardy", "Subpoena"],
+      "answer": "Habeas corpus",
+      "explanation": "Habeas corpus is a legal concept that ensures a person detained by authorities is brought before a court or judge to determine the lawfulness of their detention."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the term for a legal claim or right to property as security for a debt or obligation?",
+      "questionType": "Multiple Choice",
+      "options": ["Lien", "Warrant", "Injunction", "Summons"],
+      "answer": "Lien",
+      "explanation": "A lien is a legal claim or right to property as security for a debt or obligation."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What legal doctrine allows individuals to use force in self-defense when faced with imminent harm?",
+      "questionType": "Multiple Choice",
+      "options": ["Double jeopardy", "Habeas corpus", "Stand your ground", "Alibi"],
+      "answer": "Stand your ground",
+      "explanation": "The 'stand your ground' doctrine allows individuals to use force in self-defense when faced with imminent harm, without a duty to retreat."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the term for a legal order requiring a person to appear in court or produce evidence?",
+      "questionType": "Multiple Choice",
+      "options": ["Warrant", "Decree", "Subpoena", "Mandate"],
+      "answer": "Subpoena",
+      "explanation": "A subpoena is a legal order requiring a person to appear in court or produce evidence."
+    }
+  ]
+}
