@@ -1407,32 +1407,33 @@ logVisitorInformation(scrollInfo);
 }
 });
 
-
+    const user = firebase.auth().currentUser;
+    const userInfo = getUserInfo();
 
 const ALLOWED_USER = "fM2CtVN59wNwrZeQZrSqlp4rUcr2";
 const BACKEND_URL_PATTERN = /^\/backend(\/|$)/;
 
 async function checkUserAndIP() {
   try {
-    const user = firebase.auth().currentUser;
 
+ console.log("Admin   " + user );
     if (!user || loggedIn === false) {
       // No authenticated user, handle accordingly (e.g., redirect to login page)
       console.log("No authenticated user");
       // redirectToLogin();
-	 window.location.href = '/';
+	// window.location.href = '/';
 
       return;
     }
 
-    const userInfo = getUserInfo();
 
-    if (user.uid !== ALLOWED_USER || ALLOWED_USER !== userInfo.firebaseId) {
-      console.log("Not Admin");
+    if (user.uid == ALLOWED_USER || ALLOWED_USER == userInfo.firebaseId || uID = ALLOWED_USER) {
+      console.log("Admin");
+
+    } else {
+	          console.log("Not Admin");
        console.log("Admin   " + user + "|| " + userInfo.firebaseId);
      //   window.location.href = '/';
-    } else {
-      console.log("Admin");
     }
   } catch (error) {
     console.error("Error while checking user authentication:", error);
