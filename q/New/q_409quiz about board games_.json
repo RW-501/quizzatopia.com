@@ -1,0 +1,51 @@
+{
+  "quizName": "Board Games Trivia",
+  "quizCode": "BG101",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Board Games",
+  "quizDescription": "Test your knowledge of popular board games and their rules.",
+  "quizTags": ["Board Games", "Trivia", "Games"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In the game of Monopoly, what is the name of the most expensive property on the board?",
+      "questionType": "Multiple Choice",
+      "options": ["Park Place", "Boardwalk", "Ventnor Avenue", "Marvin Gardens"],
+      "answer": "Boardwalk",
+      "explanation": "Boardwalk is the most expensive property in Monopoly."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which board game involves solving a murder mystery using deduction and logic?",
+      "questionType": "Multiple Choice",
+      "options": ["Candy Land", "Clue", "Risk", "Connect Four"],
+      "answer": "Clue",
+      "explanation": "Clue, also known as Cluedo, is a classic murder mystery game."
+    },
+    {
+      "questionNumber": 3,
+      "question": "In chess, what is the term for a move where the king and rook are moved simultaneously?",
+      "questionType": "Multiple Choice",
+      "options": ["Checkmate", "En passant", "Castling", "Stalemate"],
+      "answer": "Castling",
+      "explanation": "Castling is the move where the king and rook are moved simultaneously for safety."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which board game involves building and expanding settlements on an island while trading and collecting resources?",
+      "questionType": "Multiple Choice",
+      "options": ["Risk", "Catan (formerly The Settlers of Catan)", "Monopoly", "Sorry!"],
+      "answer": "Catan (formerly The Settlers of Catan)",
+      "explanation": "Catan, also known as The Settlers of Catan, is a popular strategy board game."
+    },
+    {
+      "questionNumber": 5,
+      "question": "In the game Scrabble, how many tiles are in the starting rack of a player?",
+      "questionType": "Multiple Choice",
+      "options": ["4", "5", "6", "7"],
+      "answer": "7",
+      "explanation": "Players start with 7 letter tiles in the game of Scrabble."
+    }
+  ]
+}
