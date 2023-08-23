@@ -1,0 +1,51 @@
+{
+  "quizName": "Advanced Keyboard Shortcuts",
+  "quizCode": "KS103",
+  "quizDifficulty": "Advanced",
+  "quizCategory": "Computer Shortcuts",
+  "quizDescription": "Test your expertise with advanced keyboard shortcuts for maximum computer efficiency.",
+  "quizTags": ["Keyboard Shortcuts", "Productivity", "Computers"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What keyboard shortcut is used to switch between open tabs in most web browsers?",
+      "questionType": "Multiple Choice",
+      "options": ["Ctrl + Tab", "Alt + Tab", "Ctrl + Shift + Tab", "Ctrl + T"],
+      "answer": "Ctrl + Tab",
+      "explanation": "Ctrl + Tab allows you to cycle through open tabs within a web browser."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which keyboard shortcut is used to rename a selected file or folder in Windows Explorer/File Explorer?",
+      "questionType": "Multiple Choice",
+      "options": ["F2", "Ctrl + R", "Alt + F4", "Shift + Delete"],
+      "answer": "F2",
+      "explanation": "F2 activates the file/folder rename function in Windows Explorer/File Explorer."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What keyboard shortcut is used to open the Run dialog in Windows?",
+      "questionType": "Multiple Choice",
+      "options": ["Win + R", "Ctrl + R", "Alt + F4", "Shift + Delete"],
+      "answer": "Win + R",
+      "explanation": "Win + R opens the Run dialog for running commands and applications."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which keyboard shortcut is used to quickly lock your computer in Windows?",
+      "questionType": "Multiple Choice",
+      "options": ["Win + L", "Ctrl + Alt + Delete", "Alt + F4", "Shift + Delete"],
+      "answer": "Win + L",
+      "explanation": "Win + L locks your computer and requires a password to unlock."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What keyboard shortcut is used to force quit an application on macOS?",
+      "questionType": "Multiple Choice",
+      "options": ["Option + Command + Esc", "Ctrl + Alt + Delete", "Alt + F4", "Shift + Delete"],
+      "answer": "Option + Command + Esc",
+      "explanation": "Option + Command + Esc opens the Force Quit Applications dialog on macOS."
+    }
+  ]
+}
