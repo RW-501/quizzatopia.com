@@ -547,13 +547,14 @@ function convertSnapshotToQuizList(querySnapshot) {
       quizDescriptionDB: quizData.quizDescriptionDB,
       quizCodeDB: quizData.quizCodeDB,
     };
-    quizList.push(quizItem);
-  });
 if(quizItem.private === true){
-	return ;
 }else{
+    quizList.push(quizItem);
+	  }
+  });
+
   return quizList;
-}
+
 }
 
 // Function to generate HTML for quizzes
