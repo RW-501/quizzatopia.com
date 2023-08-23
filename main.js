@@ -322,10 +322,9 @@ function logOutFunction() {
     displayUserInfo();
     console.log(" openPopup:");
 
-    const cookieValue = getCookieValue('loggedIn');
     console.log(" cookieValue: "+cookieValue);
 
-    if (cookieValue === 'false') {
+    if (loggedIn === false) {
       // Add a timeout before redirecting
       setTimeout(function() {
       console.log("User logged out.");
