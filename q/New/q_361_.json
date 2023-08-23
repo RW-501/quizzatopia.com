@@ -1,0 +1,51 @@
+{
+  "quizName": "Vacation Destination Quiz",
+  "quizCode": "VD101",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Personality",
+  "quizDescription": "Discover your ideal vacation spot based on your personality and preferences!",
+  "quizTags": ["Travel", "Personality", "Vacation"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "How do you prefer to spend your free time?",
+      "questionType": "Multiple Choice",
+      "options": ["Exploring new cities", "Relaxing on a beach", "Hiking in nature", "Visiting cultural landmarks"],
+      "answer": "Exploring new cities",
+      "explanation": "If you enjoy exploring new places and experiencing urban life, you might love vacationing in vibrant cities."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What's your ideal weather for a vacation?",
+      "questionType": "Multiple Choice",
+      "options": ["Sunny and warm", "Cool and breezy", "Hot and humid", "Mild and pleasant"],
+      "answer": "Sunny and warm",
+      "explanation": "If you prefer sunny and warm weather, a beach destination could be your perfect vacation spot."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What type of cuisine do you most enjoy?",
+      "questionType": "Multiple Choice",
+      "options": ["Seafood", "Italian", "Barbecue", "Local delicacies"],
+      "answer": "Local delicacies",
+      "explanation": "If you're a fan of local cuisine, you'll likely appreciate exploring destinations with diverse culinary traditions."
+    },
+    {
+      "questionNumber": 4,
+      "question": "How do you feel about adventure activities?",
+      "questionType": "Multiple Choice",
+      "options": ["Love them!", "Prefer a few adventures", "Not a fan", "I'd rather relax"],
+      "answer": "Love them!",
+      "explanation": "If you're an adventure enthusiast, consider destinations that offer thrilling activities like hiking and water sports."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What's your dream vacation duration?",
+      "questionType": "Multiple Choice",
+      "options": ["A weekend getaway", "One week", "Two weeks or more", "I can't decide"],
+      "answer": "Two weeks or more",
+      "explanation": "For a longer escape, destinations with a rich culture and diverse experiences could be ideal."
+    }
+  ]
+}
