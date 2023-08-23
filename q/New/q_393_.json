@@ -1,0 +1,51 @@
+{
+  "quizName": "Emoji Love Story Quiz",
+  "quizCode": "RL302",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Relationships",
+  "quizDescription": "Decode the love story told through emojis!",
+  "quizTags": ["Relationships", "Love", "Emoji"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "❤️👫💑🌹 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["First Date", "Breakup", "Wedding", "Valentine's Day"],
+      "answer": "Wedding",
+      "explanation": "❤️👫💑🌹 = 'Wedding,' a celebration of love!"
+    },
+    {
+      "questionNumber": 2,
+      "question": "💌💏🎁 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Marriage Proposal", "Friendship", "Secret Admirer", "Anniversary"],
+      "answer": "Marriage Proposal",
+      "explanation": "💌💏🎁 = 'Marriage Proposal,' a romantic gesture!"
+    },
+    {
+      "questionNumber": 3,
+      "question": "💔😢📱 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Breakup Text", "Love Letter", "First Date", "Valentine's Day"],
+      "answer": "Breakup Text",
+      "explanation": "💔😢📱 = 'Breakup Text,' a difficult message to send or receive."
+    },
+    {
+      "questionNumber": 4,
+      "question": "💖🌟🚀 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Long-Distance Relationship", "Wedding", "First Date", "Friendship"],
+      "answer": "Long-Distance Relationship",
+      "explanation": "💖🌟🚀 = 'Long-Distance Relationship,' love that transcends miles."
+    },
+    {
+      "questionNumber": 5,
+      "question": "🍕🎬🌙 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Date Night", "Breakup", "Wedding", "Valentine's Day"],
+      "answer": "Date Night",
+      "explanation": "🍕🎬🌙 = 'Date Night,' a classic romantic outing!"
+    }
+  ]
+}
