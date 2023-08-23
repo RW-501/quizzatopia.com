@@ -94,7 +94,7 @@ const quizContent = `
 
 
 
-
+/*
 
 
 	function scheduleNotification() {
@@ -129,7 +129,7 @@ const quizContent = `
 
 // Call the function to schedule the notification
 scheduleNotification();
-
+*/
 	
 	
 	
