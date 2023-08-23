@@ -1,0 +1,51 @@
+{
+  "quizName": "Tech Gadgets Trivia",
+  "quizCode": "TG101",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Technology",
+  "quizDescription": "Test your knowledge of the latest tech gadgets and innovations with this fun quiz.",
+  "quizTags": ["Technology", "Gadgets", "Innovations"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which company introduced the iPhone in 2007?",
+      "questionType": "Multiple Choice",
+      "options": ["Samsung", "Google", "Apple", "Microsoft"],
+      "answer": "Apple",
+      "explanation": "Apple revolutionized the smartphone industry with the introduction of the iPhone in 2007."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the name of the virtual assistant developed by Amazon?",
+      "questionType": "Multiple Choice",
+      "options": ["Cortana", "Siri", "Alexa", "Google Assistant"],
+      "answer": "Alexa",
+      "explanation": "Amazon's virtual assistant is known as Alexa and is used in various smart devices."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Which gaming console is produced by Sony and known for its exclusive game titles?",
+      "questionType": "Multiple Choice",
+      "options": ["Xbox", "Nintendo Switch", "PlayStation", "PC"],
+      "answer": "PlayStation",
+      "explanation": "Sony's PlayStation is known for its exclusive game titles and is a popular gaming console."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the name of Elon Musk's company focused on space exploration and colonization?",
+      "questionType": "Multiple Choice",
+      "options": ["Tesla", "SpaceX", "SolarCity", "Neuralink"],
+      "answer": "SpaceX",
+      "explanation": "SpaceX, founded by Elon Musk, is dedicated to advancing space exploration and making life multiplanetary."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What does 'www' stand for in a website address?",
+      "questionType": "Multiple Choice",
+      "options": ["World Wide Web", "Web Warrior World", "Website Widget Warehouse", "Wild Wacky Web"],
+      "answer": "World Wide Web",
+      "explanation": "'www' stands for 'World Wide Web' and is commonly used in website addresses."
+    }
+  ]
+}
