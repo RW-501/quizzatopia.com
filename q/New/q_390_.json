@@ -1,0 +1,51 @@
+{
+  "quizName": "World Capitals Emoji Challenge",
+  "quizCode": "WC205",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Decode emoji representations of world capitals!",
+  "quizTags": ["Geography", "Emoji", "Capitals"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "🗽🚖 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Paris", "New York", "London", "Tokyo"],
+      "answer": "New York",
+      "explanation": "🗽🚖 = 'New York,' the capital of the world's bustling metropolis!"
+    },
+    {
+      "questionNumber": 2,
+      "question": "🌉🌁 = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Sydney", "San Francisco", "Rio de Janeiro", "Istanbul"],
+      "answer": "San Francisco",
+      "explanation": "🌉🌁 = 'San Francisco,' known for its iconic Golden Gate Bridge!"
+    },
+    {
+      "questionNumber": 3,
+      "question": "🍁🏛️ = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Brussels", "Ottawa", "Dublin", "Athens"],
+      "answer": "Ottawa",
+      "explanation": "🍁🏛️ = 'Ottawa,' the capital of Canada, represented by the maple leaf!"
+    },
+    {
+      "questionNumber": 4,
+      "question": "🐨🏙️ = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Wellington", "Canberra", "Madrid", "Stockholm"],
+      "answer": "Canberra",
+      "explanation": "🐨🏙️ = 'Canberra,' the capital of Australia!"
+    },
+    {
+      "questionNumber": 5,
+      "question": "🇮🇹🏛️ = ?",
+      "questionType": "Fill in the Blank",
+      "options": ["Rome", "Vienna", "Athens", "Cairo"],
+      "answer": "Rome",
+      "explanation": "🇮🇹🏛️ = 'Rome,' the capital of Italy, home to famous landmarks!"
+    }
+  ]
+}
