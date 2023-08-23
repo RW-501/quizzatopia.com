@@ -296,13 +296,13 @@ padding: 5%;
 
   .list-title {
     font-weight: 700;
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 10px;
     color: #fd7e14 !important;
   }
 
   .list-description {
-    font-size: 1.5em;
+    font-size: 1.8em;
     color: #5f6368;
   }
 
@@ -346,7 +346,7 @@ display: block;
     padding: 2% 3%;
     cursor: pointer;
 	
-    font-size: clamp(18px, 2vw, 24px);
+    font-size: clamp(1.5em, 2vw, 2.5em);
     box-sizing: content-box;
     width: fit-content;
     height: fit-content;
@@ -664,7 +664,7 @@ if (count % 10 === 7) {
           <a href="${quizData.quizLinkDB}">
             <h5 class="list-title">${quizData.quizNameDB}</h5>
             <div class="stars">${stars}</div>
-            <p><b>${quizData.quizDescriptionDB || ''}</b></p>
+            <p><b class="list-description">${quizData.quizDescriptionDB || ''}</b></p>
             <div class="quiz-info">
               <p><b>CreatedBy:</b> ${quizData.quizCreatedByDB || ''}</p>
               ${difficultyDisplay}
