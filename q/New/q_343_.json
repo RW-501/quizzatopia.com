@@ -1,0 +1,91 @@
+{
+  "quizName": "Love and Relationships Quiz",
+  "quizCode": "LR678",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Love",
+  "quizDescription": "Explore questions about love and relationships in this quiz.",
+  "quizTags": ["Love", "Relationships", "Romance"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is often considered the symbol of love?",
+      "questionType": "Multiple Choice",
+      "options": ["Red rose", "Diamond ring", "Chocolate", "Love letter"],
+      "answer": "Red rose",
+      "explanation": "The red rose is often considered a symbol of love and is commonly associated with romantic gestures."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the term for a strong emotional bond or connection between two people?",
+      "questionType": "Multiple Choice",
+      "options": ["Attachment", "Attraction", "Affection", "Admiration"],
+      "answer": "Attachment",
+      "explanation": "Attachment refers to a strong emotional bond or connection between individuals, often seen in close relationships."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the traditional gift for a 25th wedding anniversary?",
+      "questionType": "Multiple Choice",
+      "options": ["Silver", "Gold", "Diamond", "Ruby"],
+      "answer": "Silver",
+      "explanation": "The traditional gift for a 25th wedding anniversary is silver, symbolizing the enduring nature of the marriage."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What hormone is often called the 'love hormone' because it's associated with bonding and affection?",
+      "questionType": "Multiple Choice",
+      "options": ["Adrenaline", "Dopamine", "Oxytocin", "Serotonin"],
+      "answer": "Oxytocin",
+      "explanation": "Oxytocin is often called the 'love hormone' because it plays a role in bonding, social attachment, and affectionate behaviors."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the term for a romantic partner with whom you live but are not married?",
+      "questionType": "Multiple Choice",
+      "options": ["Fiancé", "Spouse", "Partner", "Boyfriend/Girlfriend"],
+      "answer": "Partner",
+      "explanation": "A romantic partner with whom you live but are not married is commonly referred to as your 'partner.'"
+    },
+    {
+      "questionNumber": 6,
+      "question": "In psychology, what term describes the emotional state characterized by intense longing for someone?",
+      "questionType": "Multiple Choice",
+      "options": ["Enamorment", "Infatuation", "Obsession", "Passion"],
+      "answer": "Infatuation",
+      "explanation": "Infatuation is the emotional state characterized by intense longing or obsession with someone, often in the early stages of romantic attraction."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What is the term for the legal dissolution of a marriage?",
+      "questionType": "Multiple Choice",
+      "options": ["Annulment", "Separation", "Divorce", "Remarriage"],
+      "answer": "Divorce",
+      "explanation": "Divorce is the legal dissolution of a marriage, ending the marital relationship."
+    },
+    {
+      "questionNumber": 8,
+      "question": "In the context of dating and relationships, what does 'ghosting' refer to?",
+      "questionType": "Multiple Choice",
+      "options": ["Meeting in person", "Ignoring messages", "Exclusivity", "Public displays of affection"],
+      "answer": "Ignoring messages",
+      "explanation": "Ghosting refers to the practice of suddenly and without explanation ignoring messages and cutting off communication with someone in a dating or relationship context."
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is often considered the most important factor for a successful long-term relationship?",
+      "questionType": "Multiple Choice",
+      "options": ["Physical attraction", "Communication", "Shared hobbies", "Gift-giving"],
+      "answer": "Communication",
+      "explanation": "Communication is often considered the most important factor for a successful long-term relationship, as it fosters understanding and problem-solving."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the term for a romantic relationship between two people from different cultural backgrounds?",
+      "questionType": "Multiple Choice",
+      "options": ["Multicultural love", "Intercultural love", "Universal love", "Global love"],
+      "answer": "Intercultural love",
+      "explanation": "A romantic relationship between two people from different cultural backgrounds is often referred to as 'intercultural love.'"
+    }
+  ]
+}
