@@ -1205,101 +1205,117 @@ function logVisitorInformation(scrollInfo) {
   const userAgentString = navigator.userAgent;
 
   const browserMatch = userAgentString.match(/(chrome|safari|firefox|msie|trident(?=\/))\/?\s*([\d\.]+)/i);
-  const browserName = browserMatch[1];
-  const browserVersion = browserMatch[2];
+  const browserName = browserMatch ? browserMatch[1] : 'Unknown Browser';
+  const browserVersion = browserMatch ? browserMatch[2] : 'Unknown Version';
 
-	          const firstVisitPage = getCurrentPage();
-          const lastVisitPage = getCurrentPage();
-	
+  const firstVisitPage = getCurrentPage();
+  const lastVisitPage = getCurrentPage();
+
   // Extract device information using regular expressions
   const deviceMatch = userAgentString.match(/\(([^)]+)\)/);
-  const deviceInfo = deviceMatch[1].split(';').map(part => part.trim());
+  const deviceInfo = deviceMatch
+    ? deviceMatch[1].split(';').map(part => part.trim())
+    : ['Unknown Device', 'Unknown Browser'];
+
   const device = deviceInfo[0];
   const browser = deviceInfo[1];
 
   const visitorIpPromise = getIPAddress(); // Retrieve the visitor's IP address as a promise
 
-	let db;
-	
-if (typeof db === 'undefined' || db === null || db === '' ) {
-	 db = firebase.firestore();
+  let db;
 
-} 
-	
-  visitorIpPromise.then(visitorIp => {
-    // Check if the visitor's IP is already logged in the "guestLog" collection
-    db.collection('guestLog').doc(visitorIp).get()
-      .then(doc => {
-        if (doc.exists) {
-          const lastVisitTime = currentTimestamp;
-        //  const lastVisitPage = getCurrentPage();
-	const scrollDepth = scrollInfo;
+  if (typeof db === 'undefined' || db === null || db === '') {
+    db = firebase.firestore();
+  }
 
+  visitorIpPromise
+    .then(visitorIp => {
+      // Check if the visitor's IP is already logged in the "guestLog" collection
+      db.collection('guestLog')
+        .doc(visitorIp)
+        .get()
+        .then(doc => {
+          if (doc.exists) {
+            const lastVisitTime = currentTimestamp;
 
-          db.collection('guestLog').doc(visitorIp).update({
-            lastVisitTime,
-            lastVisitPage,
-		scrollDepth  
-          })
-            .catch(error => {
-              console.error('Error updating guest log:', error);
-            });
+            const scrollDepth = scrollInfo || 0; // Ensure scrollInfo has a valid value
 
-          // Increment the user visit count
-          const userVisitCountRef = db.collection('guestLog').doc(visitorIp).collection('userVisitCount').doc('count');
-          userVisitCountRef.get()
-            .then(doc => {
-              if (doc.exists) {
-                const previousCount = doc.data().count;
-                const updatedCount = previousCount + 1;
-                userVisitCountRef.update({ count: updatedCount })
-                  .catch(error => {
-                    console.error('Error updating user visit count:', error);
-                  });
-              } else {
-                // Initialize the user visit count if it doesn't exist
-                userVisitCountRef.set({ count: 1 })
-                  .catch(error => {
-                    console.error('Error initializing user visit count:', error);
-                  });
-              }
-            })
-            .catch(error => {
-              console.error('Error retrieving user visit count:', error);
-            });
-        } else {
-          // Create a new visitor log entry
-          const firstVisitTime = currentTimestamp;
-          const lastVisitTime = currentTimestamp;
+            db.collection('guestLog')
+              .doc(visitorIp)
+              .update({
+                lastVisitTime,
+                lastVisitPage,
+                scrollDepth,
+              })
+              .catch(error => {
+                console.error('Error updating guest log:', error);
+              });
 
-          const banned = 'NO';
-          const userVisitCount = 1;
+            // Increment the user visit count
+            const userVisitCountRef = db.collection('guestLog')
+              .doc(visitorIp)
+              .collection('userVisitCount')
+              .doc('count');
 
-          db.collection('guestLog').doc(visitorIp).set({
-            firstVisitTime,
-            lastVisitTime,
-            firstVisitPage,
-            lastVisitPage,
-            scrollDepth,
-            referralPage,
-            userVisitCount,
-            banned,
-            device,
-            browser
-          })
-            .catch(error => {
-              console.error('Error creating guest log:', error);
-            });
-        }
-      })
-      .catch(error => {
-        console.error('Error checking guest log:', error);
-      });
-  })
-  .catch(error => {
-    console.error('Error retrieving visitor IP address:', error);
-  });
+            userVisitCountRef
+              .get()
+              .then(doc => {
+                if (doc.exists) {
+                  const previousCount = doc.data().count;
+                  const updatedCount = previousCount + 1;
+                  userVisitCountRef
+                    .update({ count: updatedCount })
+                    .catch(error => {
+                      console.error('Error updating user visit count:', error);
+                    });
+                } else {
+                  // Initialize the user visit count if it doesn't exist
+                  userVisitCountRef
+                    .set({ count: 1 })
+                    .catch(error => {
+                      console.error('Error initializing user visit count:', error);
+                    });
+                }
+              })
+              .catch(error => {
+                console.error('Error retrieving user visit count:', error);
+              });
+          } else {
+            // Create a new visitor log entry
+            const firstVisitTime = currentTimestamp;
+            const lastVisitTime = currentTimestamp;
+
+            const banned = 'NO';
+            const userVisitCount = 1;
+
+            db.collection('guestLog')
+              .doc(visitorIp)
+              .set({
+                firstVisitTime,
+                lastVisitTime,
+                firstVisitPage,
+                lastVisitPage,
+                scrollDepth,
+                referralPage,
+                userVisitCount,
+                banned,
+                device,
+                browser,
+              })
+              .catch(error => {
+                console.error('Error creating guest log:', error);
+              });
+          }
+        })
+        .catch(error => {
+          console.error('Error checking guest log:', error);
+        });
+    })
+    .catch(error => {
+      console.error('Error retrieving visitor IP address:', error);
+    });
 }
+
 
 
 
@@ -1413,8 +1429,8 @@ async function checkUserAndIP() {
 
     if (user.uid !== ALLOWED_USER || ALLOWED_USER !== userInfo.firebaseId) {
       console.log("Not Admin");
-      // console.log("Admin   " + user + "|| " + userInfo.firebaseId);
-        window.location.href = '/';
+       console.log("Admin   " + user + "|| " + userInfo.firebaseId);
+     //   window.location.href = '/';
     } else {
       console.log("Admin");
     }
