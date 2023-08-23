@@ -1,0 +1,51 @@
+{
+  "quizName": "Fun Trivia Quiz",
+  "quizCode": "FT123",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Fun",
+  "quizDescription": "Enjoy some lighthearted trivia with this fun quiz.",
+  "quizTags": ["Fun", "Trivia", "Entertainment"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the name of the fictional wizarding school in the Harry Potter series?",
+      "questionType": "Multiple Choice",
+      "options": ["Hogwarts", "Durmstrang", "Beauxbatons", "Ilvermorny"],
+      "answer": "Hogwarts",
+      "explanation": "The fictional wizarding school in the Harry Potter series is called 'Hogwarts School of Witchcraft and Wizardry.'"
+    },
+    {
+      "questionNumber": 2,
+      "question": "In which city did the famous 'Woodstock' music festival take place in 1969?",
+      "questionType": "Multiple Choice",
+      "options": ["New York City", "San Francisco", "Chicago", "Bethel"],
+      "answer": "Bethel",
+      "explanation": "The famous 'Woodstock' music festival took place in Bethel, New York, in 1969."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the highest-grossing animated film of all time (as of my knowledge cutoff date in September 2021)?",
+      "questionType": "Multiple Choice",
+      "options": ["The Lion King", "Frozen II", "Toy Story 4", "Avatar"],
+      "answer": "The Lion King",
+      "explanation": "As of September 2021, 'The Lion King' was the highest-grossing animated film of all time."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which planet in our solar system is known as the 'Red Planet'?",
+      "questionType": "Multiple Choice",
+      "options": ["Earth", "Venus", "Mars", "Jupiter"],
+      "answer": "Mars",
+      "explanation": "Mars is often referred to as the 'Red Planet' due to its reddish appearance."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the famous shipwreck that sank on its maiden voyage in 1912?",
+      "questionType": "Multiple Choice",
+      "options": ["The Titanic", "The Lusitania", "The Britannic", "The Queen Mary"],
+      "answer": "The Titanic",
+      "explanation": "The famous shipwreck that sank on its maiden voyage in 1912 was 'The Titanic.'"
+    }
+  ]
+}
