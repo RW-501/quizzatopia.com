@@ -1,0 +1,66 @@
+{
+  "quizName": "Jokester Jokes Challenge",
+  "quizCode": "FJ107",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Fun",
+  "quizDescription": "Put your joke knowledge to the test with these punny and hilarious jokes!",
+  "quizTags": ["Fun", "Jokes", "Humor"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Why did the scarecrow win an award?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Because it was outstanding in its field",
+        "Because it had the best costume",
+        "Because it told the funniest jokes",
+        "Because it knew all the birds"
+      ],
+      "answer": "Because it was outstanding in its field",
+      "explanation": "The scarecrow won an award 'because it was outstanding in its field' at scaring away crows!"
+    },
+    {
+      "questionNumber": 2,
+      "question": "How do you organize a space party?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "You planet",
+        "You call NASA",
+        "You invite astronauts",
+        "You bring moon cheese"
+      ],
+      "answer": "You planet",
+      "explanation": "To organize a space party, 'You planet'! It's truly out of this world."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What do you call a fish with no eyes?",
+      "questionType": "Fill in the Blank",
+      "options": ["Fishless", "Blind Fish", "Fsh", "Eyeless Fish"],
+      "answer": "Fsh",
+      "explanation": "A fish with no eyes is simply 'Fsh'! It's all about the fin-tastic wordplay."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What's orange and sounds like a parrot?",
+      "questionType": "Fill in the Blank",
+      "options": ["An orange parrot", "A carrot", "A parrotfish", "A squawking pumpkin"],
+      "answer": "A carrot",
+      "explanation": "Something that's orange and sounds like a parrot is 'A carrot'!"
+    },
+    {
+      "questionNumber": 5,
+      "question": "Why did the math book look sad?",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Because it had too many problems",
+        "Because it lost its cover",
+        "Because it was outdated",
+        "Because math is hard"
+      ],
+      "answer": "Because it had too many problems",
+      "explanation": "The math book looked sad 'because it had too many problems' to solve!"
+    }
+  ]
+}
