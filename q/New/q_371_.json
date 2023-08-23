@@ -1,0 +1,51 @@
+{
+  "quizName": "Nutrition Knowledge Quiz",
+  "quizCode": "NK101",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Health & Wellness",
+  "quizDescription": "Test your knowledge of nutrition and healthy eating habits with this quiz.",
+  "quizTags": ["Nutrition", "Health", "Wellness"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which nutrient is the primary source of energy for the body?",
+      "questionType": "Multiple Choice",
+      "options": ["Protein", "Carbohydrates", "Fat", "Vitamins"],
+      "answer": "Carbohydrates",
+      "explanation": "Carbohydrates are the body's primary source of energy, providing fuel for daily activities."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What vitamin is commonly known as the 'sunshine vitamin'?",
+      "questionType": "Multiple Choice",
+      "options": ["Vitamin A", "Vitamin C", "Vitamin D", "Vitamin K"],
+      "answer": "Vitamin D",
+      "explanation": "Vitamin D is often called the 'sunshine vitamin' because the body can produce it when exposed to sunlight."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What mineral is essential for maintaining healthy bones and teeth?",
+      "questionType": "Multiple Choice",
+      "options": ["Potassium", "Sodium", "Calcium", "Iron"],
+      "answer": "Calcium",
+      "explanation": "Calcium is crucial for bone and teeth health, and it plays a role in muscle function and blood clotting."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which food group is a good source of fiber and aids in digestion?",
+      "questionType": "Multiple Choice",
+      "options": ["Fruits and vegetables", "Dairy products", "Meat and poultry", "Sugary snacks"],
+      "answer": "Fruits and vegetables",
+      "explanation": "Fruits and vegetables are rich in fiber, which promotes healthy digestion and regular bowel movements."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the recommended daily intake of water for adults?",
+      "questionType": "Multiple Choice",
+      "options": ["2 cups", "4 cups", "8 cups", "12 cups"],
+      "answer": "8 cups",
+      "explanation": "The general recommendation is to drink at least 8 cups (64 ounces) of water per day to stay properly hydrated."
+    }
+  ]
+}
