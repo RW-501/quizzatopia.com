@@ -771,6 +771,29 @@ url: 'https://www.buymeacoffee.com/Quizzatopia',
     imageUrl: '/images/sq/60.png',
     description: 'Not Safe For Work quizzes.',
   }, */
+function addCategoriesToFirestore(categories) {
+  const db = firebase.firestore();
+  const categoriesRef = db.collection('quizCategory');
+
+  // Iterate through the categories array and add each category to Firestore
+  categories.forEach((category) => {
+    // Use the category name as the document ID
+    const categoryName = category.name;
+
+    // Add the category data to Firestore
+    categoriesRef.doc(categoryName).set(category)
+      .then(() => {
+        console.log(`Category "${categoryName}" added to Firestore`);
+      })
+      .catch((error) => {
+        console.error(`Error adding category "${categoryName}" to Firestore:`, error);
+      });
+  });
+}
+
+
+// Call the function to add categories to Firestore
+addCategoriesToFirestore(categories);
 
 	
 
