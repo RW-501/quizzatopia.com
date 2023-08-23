@@ -1,0 +1,51 @@
+{
+  "quizName": "Crime Riddle Quiz (Medium)",
+  "quizCode": "CR502",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Crime Riddles",
+  "quizDescription": "Solve these medium-level crime riddles and test your detective instincts!",
+  "quizTags": ["Crime", "Riddles", "Detective"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "I have cities but no houses, forests but no trees, and rivers but no water. What am I?",
+      "questionType": "Multiple Choice",
+      "options": ["Map", "Globe", "Internet", "Sky"],
+      "answer": "Map",
+      "explanation": "A map shows cities, forests, and rivers but doesn't contain actual houses, trees, or water."
+    },
+    {
+      "questionNumber": 2,
+      "question": "I'm not alive, but I can grow; I don't have lungs, but I need air; I don't have a mouth, but water kills me. What am I?",
+      "questionType": "Multiple Choice",
+      "options": ["Plant", "Fire", "Ice", "Balloon"],
+      "answer": "Fire",
+      "explanation": "Fire can 'grow' by spreading, 'breathe' by consuming oxygen, and be extinguished by water."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What has keys but can't open locks, and space but no room? What is it?",
+      "questionType": "Multiple Choice",
+      "options": ["Keyboard", "Piano", "Locksmith", "Computer"],
+      "answer": "Keyboard",
+      "explanation": "A keyboard has keys for typing, but they don't open locks. It has space between keys but no physical room."
+    },
+    {
+      "questionNumber": 4,
+      "question": "I can fly without wings. I can cry without eyes. Wherever I go, darkness follows me. What am I?",
+      "questionType": "Multiple Choice",
+      "options": ["Thunder", "Ghost", "Night", "Shadow"],
+      "answer": "Shadow",
+      "explanation": "A shadow 'flies' when you move, 'cries' darkness, and is always present when there's light."
+    },
+    {
+      "questionNumber": 5,
+      "question": "I'm not a plant, but I have leaves. I'm not living, but I have a spine. What am I?",
+      "questionType": "Multiple Choice",
+      "options": ["A Book", "A Tree", "A Car", "A Snake"],
+      "answer": "A Book",
+      "explanation": "A book has pages that can be likened to leaves, and it has a spine holding those pages together."
+    }
+  ]
+}
