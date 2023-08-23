@@ -1,0 +1,50 @@
+{
+  "quizName": "Spanish Vocabulary Challenge",
+  "quizCode": "SV101",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Language",
+  "quizDescription": "Test your knowledge of Spanish vocabulary with this language quiz.",
+  "quizTags": ["Language", "Spanish", "Vocabulary"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does 'amigo' mean in Spanish?",
+      "questionType": "Multiple Choice",
+      "options": ["Friend", "Enemy", "Hello", "Goodbye"],
+      "answer": "Friend",
+      "explanation": "'Amigo' is the Spanish word for 'friend.'"
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which Spanish word translates to 'house' in English?",
+      "questionType": "Multiple Choice",
+      "options": ["Casa", "Perro", "Libro", "Playa"],
+      "answer": "Casa",
+      "explanation": "'Casa' means 'house' in Spanish."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the Spanish word for 'water'?",
+      "questionType": "Multiple Choice",
+      "options": ["Fuego", "Tierra", "Aire", "Agua"],
+      "answer": "Agua",
+      "explanation": "'Agua' is the Spanish word for 'water.'"
+    },
+    {
+      "questionNumber": 4,
+      "question": "Translate 'hola' to English.",
+      "questionType": "Fill in the Blank",
+      "answer": "Hello",
+      "explanation": "'Hola' is a common Spanish greeting that means 'hello' in English."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What does 'rojo' mean in Spanish?",
+      "questionType": "Multiple Choice",
+      "options": ["Blue", "Green", "Yellow", "Red"],
+      "answer": "Red",
+      "explanation": "'Rojo' is the Spanish word for 'red.'"
+    }
+  ]
+}
