@@ -1,0 +1,51 @@
+{
+  "quizName": "Ancient Civilizations Trivia",
+  "quizCode": "AC101",
+  "quizDifficulty": "Medium",
+  "quizCategory": "History",
+  "quizDescription": "Test your knowledge of ancient civilizations and their achievements with this history quiz.",
+  "quizTags": ["History", "Ancient Civilizations", "World History"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Which ancient civilization is known for building the pyramids at Giza?",
+      "questionType": "Multiple Choice",
+      "options": ["Mesopotamia", "Inca Empire", "Egyptian Empire", "Greek Civilization"],
+      "answer": "Egyptian Empire",
+      "explanation": "The ancient Egyptian Empire is famous for constructing the pyramids at Giza, including the Great Pyramid."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which ancient civilization developed the concept of democracy in Athens?",
+      "questionType": "Multiple Choice",
+      "options": ["Roman Empire", "Persian Empire", "Chinese Empire", "Greek Civilization"],
+      "answer": "Greek Civilization",
+      "explanation": "The Greek civilization, particularly in Athens, contributed to the development of democracy as a form of governance."
+    },
+    {
+      "questionNumber": 3,
+      "question": "The ancient Silk Road facilitated trade between which regions?",
+      "questionType": "Multiple Choice",
+      "options": ["Europe and Africa", "Asia and the Americas", "Africa and the Middle East", "Asia and Europe"],
+      "answer": "Asia and Europe",
+      "explanation": "The ancient Silk Road was a network of trade routes connecting Asia and Europe, facilitating cultural exchange and commerce."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which ancient civilization was responsible for the construction of the Great Wall of China?",
+      "questionType": "Multiple Choice",
+      "options": ["Mongol Empire", "Indian Civilization", "Chinese Empire", "Japanese Empire"],
+      "answer": "Chinese Empire",
+      "explanation": "The Chinese Empire is credited with building the Great Wall of China as a defensive structure."
+    },
+    {
+      "questionNumber": 5,
+      "question": "In which ancient city was the Hanging Gardens believed to have been located?",
+      "questionType": "Multiple Choice",
+      "options": ["Rome", "Babylon", "Carthage", "Thebes"],
+      "answer": "Babylon",
+      "explanation": "The Hanging Gardens of Babylon are considered one of the Seven Wonders of the Ancient World, and they were believed to be in Babylon."
+    }
+  ]
+}
