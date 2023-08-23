@@ -1,0 +1,51 @@
+{
+  "quizName": "World Capitals Challenge",
+  "quizCode": "WC101",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Geography",
+  "quizDescription": "Test your knowledge of world capitals with this geography quiz.",
+  "quizTags": ["Geography", "World Capitals", "Countries"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the capital of France?",
+      "questionType": "Multiple Choice",
+      "options": ["London", "Berlin", "Madrid", "Paris"],
+      "answer": "Paris",
+      "explanation": "Paris is the capital of France, known for its iconic landmarks like the Eiffel Tower."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which city serves as the capital of Australia?",
+      "questionType": "Multiple Choice",
+      "options": ["Melbourne", "Sydney", "Canberra", "Perth"],
+      "answer": "Canberra",
+      "explanation": "Canberra is the capital of Australia, where the country's government is headquartered."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the capital of Brazil?",
+      "questionType": "Multiple Choice",
+      "options": ["Sao Paulo", "Brasilia", "Rio de Janeiro", "Salvador"],
+      "answer": "Brasilia",
+      "explanation": "Brasilia is the capital of Brazil, known for its modernist architecture."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which city is the capital of Japan?",
+      "questionType": "Multiple Choice",
+      "options": ["Osaka", "Kyoto", "Tokyo", "Nagoya"],
+      "answer": "Tokyo",
+      "explanation": "Tokyo is the capital of Japan, a bustling metropolis with a rich cultural heritage."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the capital of South Africa?",
+      "questionType": "Multiple Choice",
+      "options": ["Johannesburg", "Pretoria", "Durban", "Cape Town"],
+      "answer": "Pretoria",
+      "explanation": "Pretoria is one of the three capitals of South Africa, serving as the executive capital."
+    }
+  ]
+}
