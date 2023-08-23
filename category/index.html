@@ -542,14 +542,18 @@ function convertSnapshotToQuizList(querySnapshot) {
       quizStartedCount: quizData.quizStartedCount,
       quizFinishedCount: quizData.quizFinishedCount,
       quizCategoryDB: quizData.quizCategoryDB,
+      private: quizData.private,
       numberOfQuestionsDB: quizData.numberOfQuestionsDB,
       quizDescriptionDB: quizData.quizDescriptionDB,
       quizCodeDB: quizData.quizCodeDB,
     };
     quizList.push(quizItem);
   });
-
+if(quizData.private === true){
+	return ;
+}else{
   return quizList;
+}
 }
 
 // Function to generate HTML for quizzes
