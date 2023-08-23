@@ -1,0 +1,91 @@
+{
+  "quizName": "Legal Knowledge Quiz",
+  "quizCode": "LK345",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Law",
+  "quizDescription": "Test your knowledge of legal principles and concepts with this quiz.",
+  "quizTags": ["Law", "Legal Principles", "Justice"],
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the Latin term for 'a legal action or suit'?",
+      "questionType": "Multiple Choice",
+      "options": ["Habeas corpus", "Pro bono", "Amicus curiae", "Lawsuit"],
+      "answer": "Lawsuit",
+      "explanation": "The Latin term for 'a legal action or suit' is 'Lawsuit.'"
+    },
+    {
+      "questionNumber": 2,
+      "question": "What is the highest court in the United States?",
+      "questionType": "Multiple Choice",
+      "options": ["Court of Appeals", "Supreme Court", "Federal District Court", "State Supreme Court"],
+      "answer": "Supreme Court",
+      "explanation": "The highest court in the United States is the 'Supreme Court,' which has the authority to make final decisions on legal cases."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the term for the legal process of reviewing and potentially changing a lower court's decision?",
+      "questionType": "Multiple Choice",
+      "options": ["Appeal", "Lawsuit", "Injunction", "Subpoena"],
+      "answer": "Appeal",
+      "explanation": "The legal process of reviewing and potentially changing a lower court's decision is called an 'Appeal.'"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the constitutional amendment that guarantees the right to a fair and speedy trial in criminal cases?",
+      "questionType": "Multiple Choice",
+      "options": ["First Amendment", "Fifth Amendment", "Sixth Amendment", "Tenth Amendment"],
+      "answer": "Sixth Amendment",
+      "explanation": "The Sixth Amendment to the U.S. Constitution guarantees the right to a fair and speedy trial in criminal cases."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What legal doctrine states that prior court decisions should guide subsequent cases of a similar nature?",
+      "questionType": "Multiple Choice",
+      "options": ["Common law", "Stare decisis", "Habeas corpus", "Ex post facto"],
+      "answer": "Stare decisis",
+      "explanation": "The legal doctrine of 'Stare decisis' dictates that prior court decisions should guide subsequent cases of a similar nature."
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the term for a legal order requiring a person to appear in court or produce certain documents?",
+      "questionType": "Multiple Choice",
+      "options": ["Subpoena", "Warrant", "Indictment", "Affidavit"],
+      "answer": "Subpoena",
+      "explanation": "A 'Subpoena' is a legal order requiring a person to appear in court or produce certain documents as evidence."
+    },
+    {
+      "questionNumber": 7,
+      "question": "What crime involves the unlawful killing of another person without premeditation or malice aforethought?",
+      "questionType": "Multiple Choice",
+      "options": ["Manslaughter", "Homicide", "Assault", "Murder"],
+      "answer": "Manslaughter",
+      "explanation": "Manslaughter is a crime that involves the unlawful killing of another person without premeditation or malice aforethought."
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the legal principle that individuals are presumed innocent until proven guilty in a court of law?",
+      "questionType": "Multiple Choice",
+      "options": ["Presumption of guilt", "Burden of proof", "Presumption of innocence", "Statute of limitations"],
+      "answer": "Presumption of innocence",
+      "explanation": "The legal principle that individuals are presumed innocent until proven guilty in a court of law is the 'Presumption of innocence.'"
+    },
+    {
+      "questionNumber": 9,
+      "question": "What is the term for a legal action that prevents a person from doing a specific act or compels them to do a specific act?",
+      "questionType": "Multiple Choice",
+      "options": ["Injunction", "Deed", "Easement", "Affidavit"],
+      "answer": "Injunction",
+      "explanation": "An 'Injunction' is a legal action that prevents a person from doing a specific act or compels them to do a specific act."
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the legal term for a written statement made under oath and signed by a notary public?",
+      "questionType": "Multiple Choice",
+      "options": ["Deposition", "Testimony", "Affidavit", "Indictment"],
+      "answer": "Affidavit",
+      "explanation": "An 'Affidavit' is a written statement made under oath and signed by a notary public, often used as evidence in legal proceedings."
+    }
+  ]
+}
