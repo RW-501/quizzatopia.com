@@ -1,0 +1,51 @@
+{
+  "quizName": "Punny Puns Challenge",
+  "quizCode": "FP102",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Fun",
+  "quizDescription": "Test your pun-tastic humor with these groan-worthy puns and riddles!",
+  "quizTags": ["Fun", "Puns", "Humor"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What do you call a fish with no eyes?",
+      "questionType": "Multiple Choice",
+      "options": ["A blind fish", "Fsh", "Eyeless fish", "Fishy McFishface"],
+      "answer": "Fsh",
+      "explanation": "A fish with no eyes is simply 'Fsh'! It's all about the fin-tastic wordplay."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Why did the bicycle fall over?",
+      "questionType": "Multiple Choice",
+      "options": ["It was tired", "It had no kickstand", "It saw a scary movie", "It wanted to take a nap"],
+      "answer": "It was tired",
+      "explanation": "The bicycle fell over because 'It was tired' of standing up all day!"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What do you call cheese that isn't yours?",
+      "questionType": "Multiple Choice",
+      "options": ["Nacho cheese", "Stolen cheese", "Cheeseburger", "Cheddar"],
+      "answer": "Nacho cheese",
+      "explanation": "Cheese that isn't yours is 'Nacho cheese'! It belongs to someone else."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Why did the scarecrow win an award?",
+      "questionType": "Multiple Choice",
+      "options": ["It was outstanding in its field", "It was really scary", "It solved a mystery", "It had the best costume"],
+      "answer": "It was outstanding in its field",
+      "explanation": "The scarecrow won an award because 'It was outstanding in its field' at scaring away crows!"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What do you call a bear with no teeth?",
+      "questionType": "Multiple Choice",
+      "options": ["A gummy bear", "A toothless bear", "A bear cub", "A hungry bear"],
+      "answer": "A gummy bear",
+      "explanation": "A bear with no teeth is 'A gummy bear.' It can't chew much!"
+    }
+  ]
+}
