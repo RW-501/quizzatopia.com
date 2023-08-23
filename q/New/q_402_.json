@@ -1,0 +1,51 @@
+{
+  "quizName": "Who Did It? Riddle Quiz (Easy)",
+  "quizCode": "WDI501",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Who Did It? Riddles",
+  "quizDescription": "Solve these easy 'Who Did It?' riddles and sharpen your detective skills!",
+  "quizTags": ["Riddles", "Mystery", "Detective"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "In a one-story pink house, there was a pink person, a pink cat, a pink fish, a pink computer, a pink chair, a pink table, a pink telephone, a pink shower—everything was pink! What color were the stairs?",
+      "questionType": "Multiple Choice",
+      "options": ["There were no stairs.", "Pink", "White", "Purple"],
+      "answer": "There were no stairs.",
+      "explanation": "It's a one-story house, so there are no stairs."
+    },
+    {
+      "questionNumber": 2,
+      "question": "A man was found murdered one Sunday morning. His wife immediately called the police. The police questioned the wife and staff and was given the following alibis: The wife said she was sleeping, the cook said he was cooking breakfast, the gardener said he was planting seeds, the maid said she was getting the mail, and the butler said he was polishing the silverware. The police instantly knew who the murderer was. Can you deduce who it was?",
+      "questionType": "Multiple Choice",
+      "options": ["The Maid", "The Wife", "The Cook", "The Gardener"],
+      "answer": "The Wife",
+      "explanation": "The murder happened on Sunday morning. The wife claimed she was sleeping, but there was no mention of her husband waking her up or her hearing anything unusual."
+    },
+    {
+      "questionNumber": 3,
+      "question": "A man is pushing his car along a road when he comes to a hotel. He shouts, 'I'm bankrupt!' Why?",
+      "questionType": "Multiple Choice",
+      "options": ["He lost all his money at the hotel's casino.", "His car broke down.", "He's mentally unstable.", "He's out of gas."],
+      "answer": "He lost all his money at the hotel's casino.",
+      "explanation": "He was pushing his car because he had no money left after gambling at the hotel's casino."
+    },
+    {
+      "questionNumber": 4,
+      "question": "A plane crashes on the border between the United States and Canada. Where do they bury the survivors?",
+      "questionType": "Multiple Choice",
+      "options": ["Nowhere", "In the United States", "In Canada", "At the crash site"],
+      "answer": "Nowhere",
+      "explanation": "Survivors are not buried; they are alive."
+    },
+    {
+      "questionNumber": 5,
+      "question": "A man is found hanging in an empty locked room with a puddle of water under his feet. What happened?",
+      "questionType": "Multiple Choice",
+      "options": ["He committed suicide.", "He was murdered.", "He slipped and fell.", "It's an unsolved mystery."],
+      "answer": "He committed suicide.",
+      "explanation": "The man stood on a block of ice to hang himself. As the ice melted, there was a puddle of water under his feet."
+    }
+  ]
+}
