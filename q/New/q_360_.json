@@ -1,0 +1,51 @@
+{
+  "quizName": "Investment Basics Quiz",
+  "quizCode": "IB101",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Investing",
+  "quizDescription": "Test your knowledge of fundamental investment concepts and terms with this beginner-friendly quiz.",
+  "quizTags": ["Investing", "Finance", "Wealth"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the term for the act of spreading your investments across different asset classes to reduce risk?",
+      "questionType": "Multiple Choice",
+      "options": ["Diversification", "Leveraging", "Day Trading", "Short Selling"],
+      "answer": "Diversification",
+      "explanation": "Diversification involves spreading investments across different assets to reduce risk."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What financial instrument represents ownership in a company and typically entitles the shareholder to vote at shareholder meetings?",
+      "questionType": "Multiple Choice",
+      "options": ["Bond", "Mutual Fund", "Stock", "Certificate of Deposit (CD)"],
+      "answer": "Stock",
+      "explanation": "Stock represents ownership in a company and often includes voting rights at shareholder meetings."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the term for the practice of buying and holding investments for the long term, often regardless of short-term market fluctuations?",
+      "questionType": "Multiple Choice",
+      "options": ["Day Trading", "Scalping", "Swing Trading", "Buy and Hold"],
+      "answer": "Buy and Hold",
+      "explanation": "Buy and Hold is an investment strategy where investors purchase assets with the intention of holding them for the long term."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What type of investment typically pays periodic interest and returns the principal amount at maturity?",
+      "questionType": "Multiple Choice",
+      "options": ["Stock", "Derivative", "Savings Account", "Bond"],
+      "answer": "Bond",
+      "explanation": "Bonds are investments that pay periodic interest and return the principal amount at maturity."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What term describes the increase in the general price level of goods and services over time?",
+      "questionType": "Multiple Choice",
+      "options": ["Deflation", "Inflation", "Stagflation", "Recession"],
+      "answer": "Inflation",
+      "explanation": "Inflation is the term for the increase in the general price level of goods and services over time."
+    }
+  ]
+}
