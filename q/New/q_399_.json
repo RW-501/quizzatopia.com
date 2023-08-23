@@ -1,0 +1,51 @@
+{
+  "quizName": "Crime Riddle Quiz (Easy)",
+  "quizCode": "CR501",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Crime Riddles",
+  "quizDescription": "Solve these easy crime riddles and sharpen your detective skills!",
+  "quizTags": ["Crime", "Riddles", "Detective"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "I am taken from a mine, and shut up in a wooden case, from which I am never released, and yet I am used by almost every person. What am I?",
+      "questionType": "Multiple Choice",
+      "options": ["Gold", "Diamond", "Lead", "Pencil Graphite"],
+      "answer": "Pencil Graphite",
+      "explanation": "Pencil graphite is mined, encased in wood, and used by many people to write or draw."
+    },
+    {
+      "questionNumber": 2,
+      "question": "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?",
+      "questionType": "Multiple Choice",
+      "options": ["Ghost", "Whistle", "Echo", "Radio"],
+      "answer": "Echo",
+      "explanation": "An echo 'speaks' when it reflects sound, and it seems to 'come alive' with the wind carrying sound waves."
+    },
+    {
+      "questionNumber": 3,
+      "question": "I am not alive, but I can grow; I don't have lungs, but I need air; I don't have a mouth, but water kills me. What am I?",
+      "questionType": "Multiple Choice",
+      "options": ["Plant", "Fire", "Ice", "Balloon"],
+      "answer": "Fire",
+      "explanation": "Fire can 'grow' by spreading, 'breathe' by consuming oxygen, and be extinguished by water."
+    },
+    {
+      "questionNumber": 4,
+      "question": "I have keys but open no locks, I have space but no room, you can enter, but you can't go inside. What am I?",
+      "questionType": "Multiple Choice",
+      "options": ["Car", "Keyboard", "Garden", "Computer"],
+      "answer": "Keyboard",
+      "explanation": "A keyboard has keys for typing, but they don't open locks. It has space between keys, but you can't go inside it."
+    },
+    {
+      "questionNumber": 5,
+      "question": "I am a word of letters three, add two, and fewer there will be. What am I?",
+      "questionType": "Multiple Choice",
+      "options": ["Few", "More", "Less", "Word"],
+      "answer": "Few",
+      "explanation": "The word 'few' has three letters. When you add two letters ('er'), you get 'fewer,' which means a smaller quantity."
+    }
+  ]
+}
