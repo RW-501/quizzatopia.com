@@ -1326,38 +1326,6 @@ function getCurrentPage() {
 
 
 
-
-
-
-
-
-
-	
-if(loggedIn === true){
-    // Check if user info changes
-                checkUserInfoChanges();
-}else{
-	 // Call the logVisitorInformation function whenever you want to log the visitor's information
-logVisitorInformation();
-}
-
-	const scrollDepth = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-
-
-window.addEventListener('beforeunload', function(event) {
-
-	
-
-if(loggedIn === true){
-    // Check if user info changes
-                checkUserInfoChanges();
-}else{
-let scrollInfo = getScrollDepthlogVisitor();
-logVisitorInformation(scrollInfo);
-}
-});
-
-
 function getScrollDepth(){
 // Define scroll depth thresholds
 const fullPageThreshold = 100;
@@ -1389,10 +1357,39 @@ window.addEventListener('scroll', () => {
 });
 
 
-
-
-
 }
+
+
+
+
+
+
+
+
+	
+if(loggedIn === true){
+    // Check if user info changes
+                checkUserInfoChanges();
+}else{
+	 // Call the logVisitorInformation function whenever you want to log the visitor's information
+logVisitorInformation();
+}
+
+	const scrollDepth = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+
+window.addEventListener('beforeunload', function(event) {
+
+	
+
+if(loggedIn === true){
+    // Check if user info changes
+                checkUserInfoChanges();
+}else{
+let scrollInfo = getScrollDepthlogVisitor();
+logVisitorInformation(scrollInfo);
+}
+});
 
 
 
