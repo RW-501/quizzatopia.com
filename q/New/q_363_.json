@@ -10,35 +10,40 @@
     {
       "questionNumber": 1,
       "question": "How do you say 'Hello' in Spanish?",
-      "questionType": "Fill in the Blank",
+      "questionType": "Multiple Choice",
+      "options": ["Hola", "Adiós", "Gracias", "Sí"],
       "answer": "Hola",
       "explanation": "In Spanish, 'Hello' is 'Hola.'"
     },
     {
       "questionNumber": 2,
       "question": "What is the Spanish word for 'Goodbye'?",
-      "questionType": "Fill in the Blank",
+      "questionType": "Multiple Choice",
+      "options": ["Hola", "Adiós", "Gracias", "Sí"],
       "answer": "Adiós",
       "explanation": "'Goodbye' in Spanish is 'Adiós.'"
     },
     {
       "questionNumber": 3,
       "question": "Translate 'Thank you' into Spanish.",
-      "questionType": "Fill in the Blank",
+      "questionType": "Multiple Choice",
+      "options": ["Hola", "Adiós", "Gracias", "Sí"],
       "answer": "Gracias",
       "explanation": "The Spanish translation of 'Thank you' is 'Gracias.'"
     },
     {
       "questionNumber": 4,
       "question": "How do you say 'Yes' in Spanish?",
-      "questionType": "Fill in the Blank",
+      "questionType": "Multiple Choice",
+      "options": ["Hola", "Adiós", "Gracias", "Sí"],
       "answer": "Sí",
       "explanation": "In Spanish, 'Yes' is 'Sí.'"
     },
     {
       "questionNumber": 5,
       "question": "What is the Spanish word for 'No'?",
-      "questionType": "Fill in the Blank",
+      "questionType": "Multiple Choice",
+      "options": ["Hola", "Adiós", "Gracias", "Sí"],
       "answer": "No",
       "explanation": "'No' in Spanish is also 'No.'"
     }
