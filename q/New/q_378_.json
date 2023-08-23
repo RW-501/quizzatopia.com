@@ -1,0 +1,51 @@
+{
+  "quizName": "Famous Inventions and Inventors",
+  "quizCode": "II101",
+  "quizDifficulty": "Medium",
+  "quizCategory": "General Knowledge",
+  "quizDescription": "Test your knowledge of famous inventions and their inventors with this general knowledge quiz.",
+  "quizTags": ["General Knowledge", "Inventions", "Inventors"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "Who is credited with inventing the telephone?",
+      "questionType": "Multiple Choice",
+      "options": ["Thomas Edison", "Alexander Graham Bell", "Nikola Tesla", "Albert Einstein"],
+      "answer": "Alexander Graham Bell",
+      "explanation": "Alexander Graham Bell is known for inventing the telephone."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What invention is Thomas Edison most famous for?",
+      "questionType": "Multiple Choice",
+      "options": ["Light bulb", "Automobile", "Telephone", "Computer"],
+      "answer": "Light bulb",
+      "explanation": "Thomas Edison is renowned for inventing the practical electric light bulb."
+    },
+    {
+      "questionNumber": 3,
+      "question": "Who developed the World Wide Web (WWW) in 1989?",
+      "questionType": "Multiple Choice",
+      "options": ["Bill Gates", "Steve Jobs", "Tim Berners-Lee", "Larry Page"],
+      "answer": "Tim Berners-Lee",
+      "explanation": "Tim Berners-Lee is credited with developing the World Wide Web (WWW) in 1989."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which inventor is associated with the development of the first practical airplane?",
+      "questionType": "Multiple Choice",
+      "options": ["Nikola Tesla", "Leonardo da Vinci", "Wright Brothers", "Galileo Galilei"],
+      "answer": "Wright Brothers",
+      "explanation": "The Wright Brothers, Orville and Wilbur Wright, are known for developing the first practical airplane."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Who invented the computer programming language known as COBOL?",
+      "questionType": "Multiple Choice",
+      "options": ["Grace Hopper", "Alan Turing", "Ada Lovelace", "John von Neumann"],
+      "answer": "Grace Hopper",
+      "explanation": "Grace Hopper is credited with the development of the COBOL programming language."
+    }
+  ]
+}
