@@ -1238,31 +1238,6 @@ viewDashboard();
 
 
 
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service-worker.js')
-      .then(function(registration) {
-        console.log('Service Worker registered with scope:', registration.scope);
-      })
-      .catch(function(error) {
-        console.error('Service Worker registration failed:', error);
-      });
-  }
-
-
-if ('Notification' in window) {
-  Notification.requestPermission().then(function(permission) {
-    if (permission === 'granted') {
-      // User has granted permission
-      // Subscribe the user to push notifications here
-    }
-  });
-}
-</script>
-
-
-
-
 
 
 
@@ -1288,35 +1263,6 @@ if ('Notification' in window) {
 
 
 	
-	    <style>
-        /* Style your notification here */
-        .notification {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
-</div>
-   <div id="notification" class="notification" style="display: none;">
-        <p>Don't forget to come back in 2 days and explore more quizzes!</p>
-        <button onclick="closeNotification()">Close</button>
-    </div>
-
-    <script>
-        // Check if the notification was shown in the last 2 days
-        const notificationShownTimestamp = localStorage.getItem('notificationTimestamp');
-        if (!notificationShownTimestamp || Date.now() - parseInt(notificationShownTimestamp) >= 2 * 24 * 60 * 60 * 1000) {
-            // Show the notification if it hasn't been shown in the last 2 days
-            document.getElementById('notification').style.display = 'block';
-        }
-
-        // Function to close the notification and store the timestamp
-        function closeNotification() {
-            document.getElementById('notification').style.display = 'none';
-            localStorage.setItem('notificationTimestamp', Date.now().toString());
-        }
-    </script>
 <script>
 	
   if (loggedIn === true) {
