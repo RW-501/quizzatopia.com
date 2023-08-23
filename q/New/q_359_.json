@@ -1,0 +1,51 @@
+{
+  "quizName": "Cooking Basics Quiz",
+  "quizCode": "CB101",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Cooking",
+  "quizDescription": "Test your knowledge of fundamental cooking techniques and ingredients with this beginner-friendly quiz.",
+  "quizTags": ["Cooking", "Cuisine", "Food"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What is the primary ingredient in a classic Margherita pizza?",
+      "questionType": "Multiple Choice",
+      "options": ["Pepperoni", "Mushrooms", "Tomato Sauce", "Fresh Basil"],
+      "answer": "Fresh Basil",
+      "explanation": "A classic Margherita pizza features fresh basil leaves, tomato sauce, mozzarella cheese, and olive oil."
+    },
+    {
+      "questionNumber": 2,
+      "question": "What cooking technique involves cooking food in a small amount of oil over high heat while stirring continuously?",
+      "questionType": "Multiple Choice",
+      "options": ["Roasting", "Baking", "Sautéing", "Boiling"],
+      "answer": "Sautéing",
+      "explanation": "Sautéing is a cooking technique where food is cooked in a small amount of oil over high heat while being stirred."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the primary ingredient in guacamole?",
+      "questionType": "Multiple Choice",
+      "options": ["Lettuce", "Avocado", "Pineapple", "Cucumber"],
+      "answer": "Avocado",
+      "explanation": "The primary ingredient in guacamole is ripe avocado, often mashed and combined with other ingredients."
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the key ingredient in traditional hummus?",
+      "questionType": "Multiple Choice",
+      "options": ["Tomatoes", "Chickpeas", "Eggplant", "Lentils"],
+      "answer": "Chickpeas",
+      "explanation": "Traditional hummus is made from chickpeas (garbanzo beans), tahini, lemon juice, and garlic."
+    },
+    {
+      "questionNumber": 5,
+      "question": "Which type of pasta is shaped like long, thin strings and is often served with tomato sauce and meatballs?",
+      "questionType": "Multiple Choice",
+      "options": ["Fettuccine", "Rigatoni", "Spaghetti", "Lasagna"],
+      "answer": "Spaghetti",
+      "explanation": "Spaghetti is a type of pasta that is long, thin, and commonly served with tomato sauce and meatballs."
+    }
+  ]
+}
