@@ -1,0 +1,50 @@
+{
+  "quizName": "Healthy Habits Quiz",
+  "quizCode": "HH101",
+  "quizDifficulty": "Easy",
+  "quizCategory": "Health and Wellness",
+  "quizDescription": "Test your knowledge of healthy lifestyle habits with this informative quiz.",
+  "quizTags": ["Health", "Wellness", "Lifestyle"],
+  "numberOfQuestions": 5,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "How many hours of sleep are recommended for adults each night?",
+      "questionType": "Multiple Choice",
+      "options": ["4 hours", "6-7 hours", "8-9 hours", "10 hours or more"],
+      "answer": "6-7 hours",
+      "explanation": "Adults are generally advised to get 6-7 hours of sleep per night for optimal health."
+    },
+    {
+      "questionNumber": 2,
+      "question": "Which of the following is a good source of vitamin C?",
+      "questionType": "Multiple Choice",
+      "options": ["Beef", "Broccoli", "Butter", "Bread"],
+      "answer": "Broccoli",
+      "explanation": "Broccoli is a nutritious source of vitamin C, which is important for immune health."
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the recommended daily water intake for adults?",
+      "questionType": "Multiple Choice",
+      "options": ["1 cup", "4 cups", "8 cups (64 ounces)", "12 cups"],
+      "answer": "8 cups (64 ounces)",
+      "explanation": "Adults are generally advised to drink at least 8 cups or 64 ounces of water daily."
+    },
+    {
+      "questionNumber": 4,
+      "question": "Which activity is beneficial for reducing stress and improving mental well-being?",
+      "questionType": "Multiple Choice",
+      "options": ["Watching TV", "Meditation", "Eating fast food", "Sleeping"],
+      "answer": "Meditation",
+      "explanation": "Meditation is a proven practice for reducing stress and enhancing mental health."
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is a balanced diet?",
+      "questionType": "Fill in the Blank",
+      "answer": "A diet that includes a variety of foods from all food groups",
+      "explanation": "A balanced diet consists of a variety of foods from different food groups to meet nutritional needs."
+    }
+  ]
+}
