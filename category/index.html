@@ -444,7 +444,13 @@ function backButton(){
 
 	  
 function updateCategoryViewCount(category) {
-  const db = firebase.firestore();
+const db = firebase.firestore();
+const auth = firebase.auth();
+
+// Check if the user is authenticated
+auth.onAuthStateChanged((user) => {
+	
+ // const db = firebase.firestore();
   const categoryRef = db.collection('quizCategory').doc(category);
 
   // Check if the document exists
@@ -481,7 +487,7 @@ function updateCategoryViewCount(category) {
       console.error(`Error checking category ${category}:`, error);
     });
 }
-
+			});
 	  
 const urlParams = window.location.href;
 const categoryName = decodeURIComponent(urlParams.toString().split('?')[1]);
