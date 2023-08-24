@@ -281,7 +281,6 @@ color: #fff;
 .quiz-categories
 .col {
   flex: 1;
-  margin-right: 15px; /* Adjust the margin as needed */
 }
 
 .category-card {
