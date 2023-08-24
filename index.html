@@ -566,7 +566,7 @@ display:none;
 
         @keyframes funAnimation {
             0% {
-                transform: translateY(-100%);
+                transform: translateY(-10%);
             }
             50% {
                 transform: translateY(0%);
@@ -595,77 +595,69 @@ display:none;
     <script>
 
 	// Function to update the banner with exciting news
-function updateBannerWithExcitingNews(bannerElement) {
-  const excitingNews = [
-    '🚀 Exciting News! 🎉',
-    'Our Site is Buzzing with Activity:',
-    '🏆 New Challenge Completed!',
-    '🌟 Awesome Quiz Rating Received!',
-    '🧠 Quizmaster Just Finished a Quiz!',
-  ];
-  let currentIndex = 0;
-
-  setInterval(() => {
-    bannerElement.textContent = excitingNews[currentIndex];
-    currentIndex = (currentIndex + 1) % excitingNews.length;
-  }, 3000); // Change the news every 3 seconds
-}
-
-// Function to retrieve and update the latest actions
 function updateBannerWithLatestActions(bannerElement) {
   const db = firebase.firestore();
   const challengesRef = db.collection('challenges');
   const quizFeedbackRef = db.collection('quizFeedback');
   const quizReviewDataRef = db.collection('quizReviewData');
 
-  // Query challenges collection for the latest challengeDone action
+  // Arrays to store the latest 5 items from each collection
+  const latestChallenges = [];
+  const latestQuizFeedback = [];
+  const latestQuizReviews = [];
+
+  // Query challenges collection for the latest challengeDone actions
   challengesRef
     .where('challengeDone', '==', true)
     .orderBy('requestDate', 'desc')
-    .limit(1)
+    .limit(5) // Retrieve the latest 5
     .onSnapshot((snapshot) => {
-      if (!snapshot.empty) {
-        const challenge = snapshot.docs[0].data();
-        bannerElement.textContent = `Latest Challenge Done by ${challenge.challengerName}`;
-      }
+      latestChallenges.length = 0; // Clear the array
+      snapshot.forEach((doc) => {
+        const challenge = doc.data();
+        latestChallenges.push(`Latest Challenge Done by ${challenge.challengerName}`);
+      });
+      // Update the banner with the latest challenges
+      bannerElement.textContent = latestChallenges.join(' ');
     });
 
-  // Query quizFeedback collection for the latest rating action
+  // Query quizFeedback collection for the latest rating actions
   quizFeedbackRef
     .orderBy('date', 'desc')
-    .limit(1)
+    .limit(5) // Retrieve the latest 5
     .onSnapshot((snapshot) => {
-      if (!snapshot.empty) {
-        const rating = snapshot.docs[0].data();
-        bannerElement.textContent = `Latest Quiz Rating: ${rating.rating}`;
-      }
+      latestQuizFeedback.length = 0; // Clear the array
+      snapshot.forEach((doc) => {
+        const rating = doc.data();
+        latestQuizFeedback.push(`Latest Quiz Rating: ${rating.rating}`);
+      });
+      // Update the banner with the latest quiz feedback
+      bannerElement.textContent = latestQuizFeedback.join(' ');
     });
 
-  // Query quizReviewData collection for the latest finished quiz action
+  // Query quizReviewData collection for the latest finished quiz actions
   quizReviewDataRef
     .where('correctness', '==', 'correct')
     .orderBy('timeStamp', 'desc')
-    .limit(1)
+    .limit(5) // Retrieve the latest 5
     .onSnapshot((snapshot) => {
-      if (!snapshot.empty) {
-        const quizReview = snapshot.docs[0].data();
-        bannerElement.textContent = `Latest Finished Quiz: ${quizReview.quizName}`;
-      }
+      latestQuizReviews.length = 0; // Clear the array
+      snapshot.forEach((doc) => {
+        const quizReview = doc.data();
+        latestQuizReviews.push(`Latest Finished Quiz: ${quizReview.quizName}`);
+      });
+      // Update the banner with the latest quiz reviews
+      bannerElement.textContent = latestQuizReviews.join(' ');
     });
 }
 
 // HTML Element for the Banner
 const banner = document.getElementById('bannerAction');
 
-// Call the functions to start updating the banners
-updateBannerWithExcitingNews(banner);
+// Call the function to start updating the banners
 updateBannerWithLatestActions(banner);
 
 
-
-
-	    
-  
         // Call the function to start updating the banner
         updateBannerWithExcitingNews();
     </script>
