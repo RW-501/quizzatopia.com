@@ -445,10 +445,7 @@ function backButton(){
 	  
 function updateCategoryViewCount(category) {
 const db = firebase.firestore();
-const auth = firebase.auth();
 
-// Check if the user is authenticated
-auth.onAuthStateChanged((user) => {
 	
  // const db = firebase.firestore();
   const categoryRef = db.collection('quizCategory').doc(category);
