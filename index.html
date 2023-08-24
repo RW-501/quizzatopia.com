@@ -593,26 +593,79 @@ display:none;
     <!-- Include Firebase SDK and initialize it -->
 
     <script>
-        // Firebase configuration and initialization code here
 
-        // Function to update the banner with exciting news
-        function updateBannerWithExcitingNews() {
-            const banner = document.getElementById('bannerAction');
-            const excitingNews = [
-                '🚀 Exciting News! 🎉',
-                'Our Site is Buzzing with Activity:',
-                '🏆 New Challenge Completed!',
-                '🌟 Awesome Quiz Rating Received!',
-                '🧠 Quizmaster  Just Finished a Quiz!'
-            ];
-            let currentIndex = 0;
+	// Function to update the banner with exciting news
+function updateBannerWithExcitingNews(bannerElement) {
+  const excitingNews = [
+    '🚀 Exciting News! 🎉',
+    'Our Site is Buzzing with Activity:',
+    '🏆 New Challenge Completed!',
+    '🌟 Awesome Quiz Rating Received!',
+    '🧠 Quizmaster Just Finished a Quiz!',
+  ];
+  let currentIndex = 0;
 
-            setInterval(() => {
-                banner.textContent = excitingNews[currentIndex];
-                currentIndex = (currentIndex + 1) % excitingNews.length;
-            }, 3000); // Change the news every 3 seconds
-        }
+  setInterval(() => {
+    bannerElement.textContent = excitingNews[currentIndex];
+    currentIndex = (currentIndex + 1) % excitingNews.length;
+  }, 3000); // Change the news every 3 seconds
+}
 
+// Function to retrieve and update the latest actions
+function updateBannerWithLatestActions(bannerElement) {
+  const db = firebase.firestore();
+  const challengesRef = db.collection('challenges');
+  const quizFeedbackRef = db.collection('quizFeedback');
+  const quizReviewDataRef = db.collection('quizReviewData');
+
+  // Query challenges collection for the latest challengeDone action
+  challengesRef
+    .where('challengeDone', '==', true)
+    .orderBy('requestDate', 'desc')
+    .limit(1)
+    .onSnapshot((snapshot) => {
+      if (!snapshot.empty) {
+        const challenge = snapshot.docs[0].data();
+        bannerElement.textContent = `Latest Challenge Done by ${challenge.challengerName}`;
+      }
+    });
+
+  // Query quizFeedback collection for the latest rating action
+  quizFeedbackRef
+    .orderBy('date', 'desc')
+    .limit(1)
+    .onSnapshot((snapshot) => {
+      if (!snapshot.empty) {
+        const rating = snapshot.docs[0].data();
+        bannerElement.textContent = `Latest Quiz Rating: ${rating.rating}`;
+      }
+    });
+
+  // Query quizReviewData collection for the latest finished quiz action
+  quizReviewDataRef
+    .where('correctness', '==', 'correct')
+    .orderBy('timeStamp', 'desc')
+    .limit(1)
+    .onSnapshot((snapshot) => {
+      if (!snapshot.empty) {
+        const quizReview = snapshot.docs[0].data();
+        bannerElement.textContent = `Latest Finished Quiz: ${quizReview.quizName}`;
+      }
+    });
+}
+
+// HTML Element for the Banner
+const banner = document.getElementById('bannerAction');
+
+// Call the functions to start updating the banners
+updateBannerWithExcitingNews(banner);
+updateBannerWithLatestActions(banner);
+
+
+
+
+	    
+  
         // Call the function to start updating the banner
         updateBannerWithExcitingNews();
     </script>
