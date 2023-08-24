@@ -1539,7 +1539,7 @@ function honeypotListener() {
 
 // Add an event listener to check for bots when the document is ready
 document.addEventListener("DOMContentLoaded", () => {
-    checkForBot(); // Check for bots on page load
+  //  checkForBot(); // Check for bots on page load
     createHoneypotInput(); // Create the honeypot input field
     honeypotListener(); // Add listener for honeypot input
 });
