@@ -1398,6 +1398,9 @@ const BACKEND_URL_PATTERN = /^\/backend(\/|$)/;
 
 async function checkUserAndIP() {
   try {
+
+	    const userInfo = getUserInfo();
+
     const user = userInfo.firebaseId;
 	  
  console.log("Admin   " + user );
