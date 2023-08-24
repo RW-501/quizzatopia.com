@@ -485,10 +485,10 @@ auth.onAuthStateChanged((user) => {
     })
     .catch((error) => {
       console.error(`Error checking category ${category}:`, error);
-}
+
 			});
-});
-	  
+
+	}  
 	  
 const urlParams = window.location.href;
 const categoryName = decodeURIComponent(urlParams.toString().split('?')[1]);
