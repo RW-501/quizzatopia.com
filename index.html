@@ -553,7 +553,7 @@ display:none;
 	  
 	    <style>
         /* Styling for the banner */
-        #banner {
+        #bannerAction {
             background-color: #ffcc00;
             color: #333;
             padding: 10px;
@@ -566,19 +566,19 @@ display:none;
 
         @keyframes funAnimation {
             0% {
-                transform: translateX(-100%);
+                transform: translateY(-100%);
             }
             50% {
-                transform: translateX(0%);
+                transform: translateY(0%);
             }
             100% {
-                transform: translateX(-100%);
+                transform: translateY(-100%);
             }
         }
     </style>
 </head>
 <body>
-    <div id="banner">
+    <div id="bannerAction">
         <span>🚀 Exciting News! 🎉</span>
         <br>
         <span>Our Site is Buzzing with Activity:</span>
@@ -597,7 +597,7 @@ display:none;
 
         // Function to update the banner with exciting news
         function updateBannerWithExcitingNews() {
-            const banner = document.getElementById('banner');
+            const banner = document.getElementById('bannerAction');
             const excitingNews = [
                 '🚀 Exciting News! 🎉',
                 'Our Site is Buzzing with Activity:',
