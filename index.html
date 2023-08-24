@@ -551,7 +551,71 @@ display:none;
   </div>	  
 </section>
 	  
-	 
+	    <style>
+        /* Styling for the banner */
+        #banner {
+            background-color: #ffcc00;
+            color: #333;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom: 2px solid #333;
+            animation: funAnimation 2s infinite;
+        }
+
+        @keyframes funAnimation {
+            0% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="banner">
+        <span>🚀 Exciting News! 🎉</span>
+        <br>
+        <span>Our Site is Buzzing with Activity:</span>
+        <br>
+        <span>🏆 New Challenge Completed!</span>
+        <br>
+        <span>🌟 Awesome Quiz Rating Received!</span>
+        <br>
+        <span>🧠 Quizmaster Ron Just Finished a Quiz!</span>
+    </div>
+
+    <!-- Include Firebase SDK and initialize it -->
+
+    <script>
+        // Firebase configuration and initialization code here
+
+        // Function to update the banner with exciting news
+        function updateBannerWithExcitingNews() {
+            const banner = document.getElementById('banner');
+            const excitingNews = [
+                '🚀 Exciting News! 🎉',
+                'Our Site is Buzzing with Activity:',
+                '🏆 New Challenge Completed!',
+                '🌟 Awesome Quiz Rating Received!',
+                '🧠 Quizmaster Ron Just Finished a Quiz!'
+            ];
+            let currentIndex = 0;
+
+            setInterval(() => {
+                banner.textContent = excitingNews[currentIndex];
+                currentIndex = (currentIndex + 1) % excitingNews.length;
+            }, 3000); // Change the news every 3 seconds
+        }
+
+        // Call the function to start updating the banner
+        updateBannerWithExcitingNews();
+    </script>
 	    
 	<style>
     .container a{
