@@ -1499,6 +1499,57 @@ questLogRef.update({
 
 
 
+
+
+
+
+
+
+
+// Check if it's a bot and redirect to "/blocked"
+function checkForBot() {
+    const isBot = isBotUser(); // Implement your bot detection logic here
+
+    if (isBot) {
+      window.location.href = 'https://www.google.com';
+    }
+}
+
+// Function to create a honeypot input field
+function createHoneypotInput() {
+    const honeypotInput = document.createElement("input");
+    honeypotInput.type = "text";
+    honeypotInput.name = "email"; // Use a name that bots may interact with
+    honeypotInput.style.display = "none"; // Hide the input field using CSS
+    honeypotInput.id = "honeypot"; // Add an ID to the honeypot input
+
+    // Add the honeypot input to the body
+    document.body.appendChild(honeypotInput);
+}
+
+// Event listener for the honeypot input
+function honeypotListener() {
+    const honeypotInput = document.getElementById("honeypot");
+
+    honeypotInput.addEventListener("input", () => {
+        // If the honeypot input receives any input, it's likely a bot
+      window.location.href = 'https://www.google.com';
+    });
+}
+
+// Add an event listener to check for bots when the document is ready
+document.addEventListener("DOMContentLoaded", () => {
+    checkForBot(); // Check for bots on page load
+    createHoneypotInput(); // Create the honeypot input field
+    honeypotListener(); // Add listener for honeypot input
+});
+
+
+
+
+
+
+
 function getBadWords() {
   const db = firebase.firestore();
   const settingsRef = db.collection('settings').doc('general');
