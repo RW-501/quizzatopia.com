@@ -677,7 +677,30 @@ updateBannerWithLatestActions(banner);
     }
 	    
 	    
-	    
+	.quiz-categories .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.quiz-categories .col {
+  margin-right: 15px;
+  flex: 1;
+}
+
+/* Ensure equal height for all category-cards */
+.category-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-card .category-image {
+  flex: 1;
+}
+
+.category-card h3 {
+  margin: 10px 0;
+}
+    
 	
 	/*   
 
