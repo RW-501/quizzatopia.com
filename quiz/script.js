@@ -1080,7 +1080,7 @@ function submitReview() {
     if (isAnimationEnabled) {
       submitReviewBtn.classList.add('shake-animation');
     }
-    alert('Please enter your review or feedback.');
+    showMainMessage('Please enter your review or feedback.');
     return;
   }
 
@@ -1105,7 +1105,8 @@ function submitReview() {
   if (sendFeedbackToDBFunc(feedbackData)) {
     console.log('Review:', feedback);
     closeModalWindow(); // Close the modal after submitting
-    alert('Thank you for your review!');
+    showMainMessage('Thank you for your review!');
+
   }
 }
 
@@ -1140,7 +1141,7 @@ query.get().then((querySnapshot) => {
     .then(() => {
 	    ratedBool = true;
       console.log(`Document with name '${nameToMatch}' has been updated.`);
-	        alert('Thank you for your feedback!');
+	        showMainMessage('Thank you for your feedback!');
 
     })
     .catch((error) => {
