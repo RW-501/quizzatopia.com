@@ -659,11 +659,7 @@ function updateBannerWithLatestActions() {
 
 
 
-latestChallenges = latestChallenges.filter(item => item !== undefined);
-	//console.log('latestChallenges: 1 ', latestChallenges);
- shuffleArray(latestChallenges);
-	    
-    console.log('latestChallenges:', latestChallenges);
+
 //      bannerElement.innerHTML = latestChallenges.join(' ');
     });
 
@@ -737,7 +733,11 @@ quizReviewDataRef
 	    
  });
 
+	    latestChallenges = latestChallenges.filter(item => item !== undefined);
+	console.log('latestChallenges: 1 ', latestChallenges);
+ shuffleArray(latestChallenges);
 	    
+    console.log('latestChallenges:', latestChallenges);
 updateBannerWithExcitingNews(latestChallenges);
 
 }
