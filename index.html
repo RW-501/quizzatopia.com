@@ -678,9 +678,9 @@ function updateBannerWithLatestActions() {
 let starRating = rating.rating;
 
 if (starRating >= 3) {
-  latestChallenges.push(`User Rated Quiz <a href="quiz/stats/?q=${rating.quizCode}">${rating.quizCode}</a><br>  ${starRating} stars - Great rating!`);
+  latestChallenges.push(`User Rated Quiz <a href="quiz/stats/?q=${rating.quizCode}">${rating.quizCode}</a><br>  ${starRating} stars - Must be Good!`);
 } else {
-  latestChallenges.push(`User Rated Quiz <a href="quiz/stats/?q=${rating.quizCode}">${rating.quizCode}</a><br>  ${starRating} stars - Keep improving!`);
+  latestChallenges.push(`User Rated Quiz <a href="quiz/stats/?q=${rating.quizCode}">${rating.quizCode}</a><br>  ${starRating} stars - Let's check it out`);
 }
 
       });
@@ -728,7 +728,7 @@ let challengeMessage = '';
 if (percentageCorrect >= 70) {
   challengeMessage = `Incredible! Someone just passed <br><a href="quiz/stats/?q=${quizReview.quizCode}">${quizReview.quizName}</a> <br>with a score of <span class="percentage">${percentageCorrect.toFixed()}%</span>!`;
 } else {
-  challengeMessage = `Oh no! Someone just attempted <br><a href="quiz/stats/?q=${quizReview.quizCode}">${quizReview.quizName}</a> <br>but scored only <span class="percentage">${percentageCorrect.toFixed()}%</span>. Keep trying!`;
+  challengeMessage = `Oh no! Someone just attempted <br><a href="quiz/stats/?q=${quizReview.quizCode}">${quizReview.quizName}</a> <br>but scored only <span class="percentage">${percentageCorrect.toFixed()}%</span>.<br> See if you can do better!`;
 }
 
 latestChallenges.push(challengeMessage);
