@@ -157,6 +157,9 @@ text-align: center;
 
 .hero p {
   color: #000; /* Adjust the text color as needed */
+    font-weight: 600;
+
+      
 }
 
 .hero .btn-primary {
