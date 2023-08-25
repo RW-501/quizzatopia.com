@@ -569,10 +569,10 @@ display:none;
                 transform: translateY(0%);
             }
             50% {
-                transform: translateY(-50%);
+                transform: translateY(50%);
             }
             100% {
-                transform: translateY(-100%);
+                transform: translateY(100%);
             }
         }
     </style>
@@ -625,16 +625,7 @@ function updateBannerWithLatestActions(bannerElement) {
 const totalCorrect = 0;
 const totalIncorrect = 0;
 
-function updateBannerWithLatestActions(bannerElement) {
-  const db = firebase.firestore();
-  const challengesRef = db.collection('challenges');
-  const quizFeedbackRef = db.collection('quizFeedback');
-  const quizReviewDataRef = db.collection('quizReviewData');
 
-  // Arrays to store the latest 5 items from each collection
-  const latestChallenges = [];
-  const latestQuizFeedback = [];
-  const latestQuizReviews = [];
 
   // Query challenges collection for the latest challengeDone actions
   challengesRef
