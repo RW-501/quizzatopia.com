@@ -673,7 +673,7 @@ function updateBannerWithLatestActions() {
       latestQuizCategory.length = 0; // Clear the array
       snapshot.forEach((doc) => {
         const category = doc.data();
-        latestChallenges.push(`A lot of user are checking out the <a href="https://www.quizzatopia.com/category/?${category.name}">${category.name}  Category</a> `);
+        latestChallenges.push(`A lot of user are checking out the <br><a href="https://www.quizzatopia.com/category/?${category.name}">${category.name}  Category</a> `);
       });
       // Update the banner with the latest challenges
 
@@ -791,10 +791,13 @@ latestChallenges.push(challengeMessage);
  });
 
 	    latestChallenges = latestChallenges.filter(item => item !== undefined);
+// After you've populated the latestChallenges array
+console.log('latestChallenges: 1 ', latestChallenges);
+
 // Shuffle the latestChallenges array and update it with the shuffled result
 latestChallenges = shuffleArray(latestChallenges);
 
-console.log('latestChallenges:', latestChallenges);
+console.log('shuffleArray latestChallenges:', latestChallenges);
 updateBannerWithExcitingNews(latestChallenges);
 
 }
