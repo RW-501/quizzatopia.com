@@ -94,19 +94,6 @@ quizName = quizNameNS;
 
 
 
-function testRating(){
-	showMainMessage(`    <label id="quizRating" for="rating">Quiz Rating:</label>
-    <div id="ratingStars" class="rating">
-  <span class="star" onclick="rateQuiz(1)">&#9734;</span>
-  <span class="star" onclick="rateQuiz(2)">&#9734;</span>
-  <span class="star" onclick="rateQuiz(3)">&#9734;</span>
-  <span class="star" onclick="rateQuiz(4)">&#9734;</span>
-  <span class="star" onclick="rateQuiz(5)">&#9734;</span>
-</div>   `);
-
-}
-var button = document.getElementById("myButton");
-button.addEventListener("click", testRating);
 
 
 //  
