@@ -608,9 +608,9 @@ function disableAnswerButtons() {
 function enableAnswerButtons() {
   const answerButtons = document.getElementsByClassName("answer-option");
   for (let i = 0; i < answerButtons.length; i++) {
+	 answerButtons[i].innerHTML = "";  
     answerButtons[i].addEventListener("click", checkAnswer);
     answerButtons[i].classList.remove("disabled", "correct", "incorrect", "missed", "shake-animation", "pulse-animation");
-	 answerButtons[i].innerHTML = "";  
   }
 }
 var timeoutId;
@@ -1029,6 +1029,19 @@ let ratedBool = false;
 // Rating stars functionality
 let rating = 0;
 
+var quizLink = "";
+function getQuizLink(){
+const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
+ quizInfo = quizInfoStored ? JSON.parse(quizInfoStored) : {};
+ quizLink = quizInfo.quizLink || "";
+
+	
+}
+
+
+getQuizLink();
+
+
 function rateQuiz(stars) {
   rating = stars;
 
@@ -1053,7 +1066,7 @@ function rateQuiz(stars) {
 
   const feedbackData = {
     rating: rating,
-    quizURL: urlParams,
+    quizURL: quizLink,
       quizName: quizName,
     quizCode: quizCode,
     userID: uID,
@@ -1092,7 +1105,7 @@ function submitReview() {
   const feedbackData = {
     rating: rating,
     feedback: feedback,
-    quizURL: urlParams,
+    quizURL: quizLink,
       quizName: quizName,
     quizCode: quizCode,
     userID: uID,
@@ -1125,7 +1138,7 @@ function submitReport(reportType, xxx){
     const feedbackData = {
       feedback: reportDetails,
       feedbackType: reportType,
-    quizURL: urlParams,
+    quizURL: quizLink,
       quizName: quizName,
     userID: uID,
     uIP: ipAddress,
@@ -1140,11 +1153,11 @@ function submitReport(reportType, xxx){
   	  
     console.log('Report:', feedback);
     closeReport(); // Close the modal after submitting
-    alert('Thank you for your feedback!');
+    showMainMessage('Thank you for your feedback!');
       })
       .catch(error => {
         console.error('Error Reporting Quiz:', error);
-        alert('Failed Reporting Quiz. Please try again.');
+        showMainMessage('Failed Reporting Quiz. Please try again.');
       });
   
 
