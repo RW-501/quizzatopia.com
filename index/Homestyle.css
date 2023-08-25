@@ -9,7 +9,18 @@ display: none !important;
 }
 
 
+#quiz-news {
+    background-color: #0d6efd;
+    padding: 10%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+z-index: 10;
+}
+#quiz-news h3 {
 
+  color: #FFF;
+
+}
 
 .welcomeMain {
     display: grid;
