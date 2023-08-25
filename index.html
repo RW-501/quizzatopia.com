@@ -608,9 +608,6 @@ function shuffleArray(array) {
 
 	      let currentIndex = 0;
 function updateBannerWithExcitingNews(latestChallenges) {
-latestChallenges = latestChallenges.filter(item => item !== undefined);
-	console.log('latestChallenges: 1 ', latestChallenges);
- shuffleArray(latestChallenges);
 
 	    console.log('latestChallenges: 2 ', latestChallenges);
   setInterval(() => {
@@ -624,7 +621,7 @@ latestChallenges = latestChallenges.filter(item => item !== undefined);
    // console.log('currentIndex:', currentIndex);
  //   console.log('latestChallenges:', latestChallenges);
   }, 3000); // Change the news every 3 seconds
-	console.log('latestChallenges: 3 ', latestChallenges);
+	//console.log('latestChallenges: 3 ', latestChallenges);
 }
 
 
@@ -659,6 +656,13 @@ function updateBannerWithLatestActions() {
         latestChallenges.push(`${challenge.challengerName} finish <a href="${challenge.quizLink} " class="challengeNof">${challenge.quizName} challenge</a> `);
       });
       // Update the banner with the latest challenges
+
+
+
+latestChallenges = latestChallenges.filter(item => item !== undefined);
+	//console.log('latestChallenges: 1 ', latestChallenges);
+ shuffleArray(latestChallenges);
+	    
     console.log('latestChallenges:', latestChallenges);
 //      bannerElement.innerHTML = latestChallenges.join(' ');
     });
