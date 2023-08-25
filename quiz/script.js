@@ -1112,6 +1112,89 @@ function submitReview() {
 
 
 
+const reportForm = document.getElementById('reportForm');
+
+	
+function submitReport(reportType, xxx){
+
+  const reportDetails = document.getElementById('reportDetails').value;
+
+  if (reportType) {
+    // Perform the necessary actions to store the feedback in Firestore
+
+    const feedbackData = {
+      feedback: reportDetails,
+      feedbackType: reportType,
+    quizURL: urlParams,
+      quizName: quizNameNS,
+    userID: uID,
+    uIP: ipAddress,
+      questionNumber: realQuestionNumber,
+      date: new Date(),
+      quizCode: quizCode // Replace with the actual quiz code
+    };
+ const db = firebase.firestore();
+    // Add the feedback to the 'quizFeedback' collection
+    db.collection('quizFeedback').add(feedbackData)
+      .then(() => {
+  	  
+    console.log('Report:', feedback);
+    closeReport(); // Close the modal after submitting
+    alert('Thank you for your feedback!');
+      })
+      .catch(error => {
+        console.error('Error Reporting Quiz:', error);
+        alert('Failed Reporting Quiz. Please try again.');
+      });
+  
+
+
+
+  } else {
+	  if (isAnimationEnabled) {
+submitReviewBtn.classList.add('shake-animation');
+}
+  }
+
+
+
+
+	  }
+
+
+
+
+	    
+// Function to open the modal
+function openReport() {
+	  slideIn("reportContainer");
+
+  reportForm.style.display = 'block';
+	 console.log("openModal      "); 
+
+
+
+}
+
+// Function to close the modal
+function closeReport() {
+	  slideOut("reportContainer");
+  reportForm.style.display = 'none';
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
