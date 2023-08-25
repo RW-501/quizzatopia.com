@@ -76,7 +76,61 @@
 
 </script>
 
+
+  
+</script>
+<div class="mainMessage-box" id="mainMessageBox">
+  <div class="mainMessage-content">
+    <p id="mainMessageText">Your message here</p>
+    <button id="mainCloseButton">Close</button>
+  </div>
+</div>
+
+
 <style>
+/* Styling for the message box */
+.mainMessage-box {
+  position: fixed;
+  top: -100px; /* Initially hidden above the viewport */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  transition: top 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+.mainMessage-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#mainMessageText {
+  margin: 10px 0;
+}
+
+/* Styling for the close button */
+#mainCloseButton {
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#mainCloseButton:hover {
+  background-color: #d84315;
+}
+
+
+
+
 /* Styling for the exit popup */
 
 .login-image-container{
