@@ -594,11 +594,15 @@ display:none;
     <!-- Include Firebase SDK and initialize it -->
 
     <script>
+
+const shuffleArray = array => array.sort(() => Math.random() - 0.5);
 	      let latestChallenges = [];
 
 	      let currentIndex = 0;
 function updateBannerWithExcitingNews(latestChallenges) {
 latestChallenges = latestChallenges.filter(item => item !== undefined);
+	
+latestChallenges = shuffleArray(latestChallenges);
 
 	    
   setInterval(() => {
