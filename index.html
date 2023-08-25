@@ -634,10 +634,12 @@ function updateBannerWithLatestActions() {
   const challengesRef = db.collection('challenges');
   const quizFeedbackRef = db.collection('quizFeedback');
   const quizReviewDataRef = db.collection('quizReviewData');
+  const quizCategoryDataRef = db.collection('quizCategory');
 
   // Arrays to store the latest 5 items from each collection
   const latestQuizFeedback = [];
   const latestQuizReviews = [];
+  const latestQuizCategory = [];
 
 
 
@@ -663,6 +665,20 @@ function updateBannerWithLatestActions() {
 //      bannerElement.innerHTML = latestChallenges.join(' ');
     });
 
+  quizCategoryDataRef
+    .where('addBy', '==', Admin)
+    .orderBy('viewCount', 'desc')
+    .limit(5) // Retrieve the latest 5
+    .onSnapshot((snapshot) => {
+      latestQuizCategory.length = 0; // Clear the array
+      snapshot.forEach((doc) => {
+        const category = doc.data();
+        latestChallenges.push(`A lot of user are checking out the <a href="https://www.quizzatopia.com/category/?${category.name}">${category.name}  Category</a> `);
+      });
+      // Update the banner with the latest challenges
+
+//      bannerElement.innerHTML = latestChallenges.join(' ');
+    });
 
 
 
@@ -797,7 +813,7 @@ flex: auto;
     object-fit: cover;
     min-height: 200px;
 }
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 801px) {
   /* Your CSS styles here */
  .category-card .category-image {
 	    min-width: 49%;
