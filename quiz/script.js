@@ -1083,6 +1083,7 @@ feedbackType: "stars",
 
 function quickFeedback(xxx) {
   reviewTextArea.value = xxx;
+	submitReview();
 }
 
 // Submit the review
@@ -1128,6 +1129,13 @@ getQuizLink();
 
 const reportForm = document.getElementById('reportForm');
 
+
+function quickReport(xxx) {
+  const reportDetails = document.getElementById('reportDetails');
+
+  reportDetails.value = xxx;
+	submitReport(xxx);
+}
 	
 function submitReport(reportType, xxx){
 
@@ -1139,7 +1147,7 @@ getQuizLink();
 
     const feedbackData = {
       feedback: reportDetails,
-      feedbackType: reportType,
+      feedbackType: "Report",
     quizURL: quizLink,
       quizName: quizName,
     userID: uID,
