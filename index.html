@@ -666,7 +666,7 @@ function updateBannerWithLatestActions() {
     });
 
   quizCategoryDataRef
-    .where('addBy', '==', Admin)
+    .where('addBy', '==', "Admin")
     .orderBy('viewCount', 'desc')
     .limit(5) // Retrieve the latest 5
     .onSnapshot((snapshot) => {
