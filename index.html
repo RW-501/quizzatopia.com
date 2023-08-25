@@ -609,6 +609,7 @@ function shuffleArray(array) {
 
 	      let currentIndex = 0;
 function updateBannerWithExcitingNews(latestChallenges) {
+ shuffleArray(latestChallenges);
 
 	   // console.log('latestChallenges: 2 ', latestChallenges);
   setInterval(() => {
@@ -692,13 +693,29 @@ function updateBannerWithLatestActions() {
       snapshot.forEach((doc) => {
         const rating = doc.data();
 let starRating = rating.rating;
+let rateURL = "";
+let rateName = "";
+	      
+if(rating.quizName !== ""){
+rateName = rating.quizCode;
+}else{
+rateName = rating.quizName;
+	    }
+if(rating.quizURL !== ""){
+rateURL = rating.quizCode;
 
+}else{
+rateURL = rating.quizURL;
+	}
+	 	    
 if (starRating >= 3) {
-  latestChallenges.push(`User Rated Quiz <a href="quiz/stats/?q=${rating.quizCode}">${rating.quizCode}</a><br>  ${starRating} stars - Must be Good!`);
+  latestChallenges.push(`User Rated Quiz <a href="quiz/stats/?q=${rateURL}">${rateName}</a><br>  ${starRating} stars - Must be Good!`);
 } else {
-  latestChallenges.push(`User Rated Quiz <a href="quiz/stats/?q=${rating.quizCode}">${rating.quizCode}</a><br>  ${starRating} stars - Let's check it out`);
+  latestChallenges.push(`User Rated Quiz <a href="quiz/stats/?q=${rateURL}">${rateName}</a><br>  ${starRating} stars - Let's check it out`);
 }
 
+
+	      
       });
 	        //console.log('latestQuizFeedback:', latestQuizFeedback);
 
@@ -741,10 +758,19 @@ quizReviewDataRef
 
 let challengeMessage = '';
 
+	    let reviewURL = "";
+if(quizReview.quizURL !== ""){
+reviewURL = quizReview.quizCode;
+
+}else{
+reviewURL = quizReview.quizURL;
+	}
+
+	    
 if (percentageCorrect >= 70) {
-  challengeMessage = `Incredible! Someone just passed <br><a href="quiz/stats/?q=${quizReview.quizCode}">${quizReview.quizName}</a> <br>with a score of <span class="percentage">${percentageCorrect.toFixed()}%</span>!`;
+  challengeMessage = `Incredible! Someone just passed <br><a href="quiz/stats/?q=${reviewURL}">${quizReview.quizName}</a> <br>with a score of <span class="percentage">${percentageCorrect.toFixed()}%</span>!`;
 } else {
-  challengeMessage = `Oh no! Someone just attempted <br><a href="quiz/stats/?q=${quizReview.quizCode}">${quizReview.quizName}</a> <br>but scored only <span class="percentage">${percentageCorrect.toFixed()}%</span>.<br> See if you can do better!`;
+  challengeMessage = `Oh no! Someone just attempted <br><a href="quiz/stats/?q=${reviewURL}">${quizReview.quizName}</a> <br>but scored only <span class="percentage">${percentageCorrect.toFixed()}%</span>.<br> See if you can do better!`;
 }
 
 latestChallenges.push(challengeMessage);
@@ -813,7 +839,7 @@ flex: auto;
     object-fit: cover;
     min-height: 200px;
 }
-@media (max-width: 768px)  {
+@media (min-width: 768px)  {
   /* Your CSS styles here */
  .category-card .category-image {
 	    min-width: 49%;
@@ -1046,14 +1072,6 @@ function generateCategoryHTML(categories) {
   categoryContainer.appendChild(seeAllCategoriesLink);
 }
 
-// Usage: Get random categories and generate HTML
-getRandomCategories()
-  .then((categories) => {
-    generateCategoryHTML(categories);
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
 
 
 		function getRandomCategory() {
@@ -1090,6 +1108,22 @@ getRandomCategories()
   return categories[randomIndex];
 }
 
+function setCatagories() {
+
+// Usage: Get random categories and generate HTML
+getRandomCategories()
+  .then((categories) => {
+    generateCategoryHTML(categories);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+
+		}
+
+var intervalId = setInterval(setCatagories, 8000);
+
+		
 // Function to update the weekly category companion banner
 function updateWeeklyCompanion() {
   const companionCategory = document.getElementById('companionCategory');
