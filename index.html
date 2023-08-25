@@ -556,7 +556,7 @@ display:none;
         #bannerAction {
             background-color: #0d6efd;
             color: #333;
-    padding: 10% 0;
+    padding: 10% ;
     margin: -5% 0;
 		text-align: center;
             font-size: 24px;
@@ -564,6 +564,11 @@ display:none;
             border-bottom: 2px solid #333;
             animation: funAnimation 2s infinite;
         }
+		            #bannerAction a {
+color: #fd7e14;
+    font-weight: 900 !important;
+    text-shadow: -1px 1px black;
+		    }
 
         @keyframes funAnimation {
             0% {
@@ -675,7 +680,7 @@ function updateBannerWithLatestActions() {
       latestQuizFeedback.length = 0; // Clear the array
       snapshot.forEach((doc) => {
         const rating = doc.data();
-     latestChallenges.push(`User Rated Quiz <a href="quiz/stats/?q=${rating.quizCode}">${rating.quizCode}</a>  ${rating.rating} stars`);
+     latestChallenges.push(`User Rated Quiz <a href="quiz/stats/?q=${rating.quizCode}">${rating.quizCode}</a><br>  ${rating.rating} stars`);
 
       });
 	        //console.log('latestQuizFeedback:', latestQuizFeedback);
@@ -721,7 +726,7 @@ quizReviewDataRef
 //    console.log('Percentage Incorrect:', percentageIncorrect.toFixed(2) + '%');
 
     // Update the banner or display as needed
-    latestChallenges.push(`User just scored ${percentageCorrect.toFixed()}% on <a href="quiz/stats/?q=${quizReview.quizCode}">${quizReview.quizName}</a>`);
+    latestChallenges.push(`User just scored ${percentageCorrect.toFixed()}% on<br> <a href="quiz/stats/?q=${quizReview.quizCode}">${quizReview.quizName}</a>`);
 
     });
 
