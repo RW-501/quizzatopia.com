@@ -145,13 +145,16 @@ function showMainMessage(message) {
   messageText.textContent = message;
 
   // Show the message box by setting 'top' to 0
+      messageBox.style.display = 'block'; 
   messageBox.style.top = '0';
 
   // Add a click event listener to the close button
   const closeButton = document.getElementById('mainCloseButton');
   closeButton.addEventListener('click', () => {
     // Hide the message box by moving it back above the viewport
-    messageBox.style.top = '-100px';
+    messageBox.style.top = '-300px';
+      messageBox.style.display = 'none'; 
+
   });
 }
 
