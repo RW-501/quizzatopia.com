@@ -102,7 +102,10 @@
 display: block;
   margin-top: 10px;
 }
+.table {
+display: block;
 
+}
 
 .leftBox {
     width: 100%;
@@ -397,6 +400,10 @@ var query = usersCollection
         return b.userPoints - a.userPoints;
       });
 
+
+ usersData = usersData.sort((a, b) => b.userPoints - a.userPoints).slice(0, 10);
+
+	  
       // Loop through the sorted data and construct rows for the leaderboard table
       usersData.forEach(function(userInfo) {
         if (userInfo.userName !== 'New User' && userInfo.userName !== 'Anonymous') {
