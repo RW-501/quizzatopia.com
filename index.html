@@ -567,13 +567,13 @@ display:none;
 
         @keyframes funAnimation {
             0% {
-                transform: translateY(-20%);
+                transform: translateY(-5%);
             }
             50% {
-                transform: translateY(15%);
+                transform: translateY(5%);
             }
             100% {
-                transform: translateY(-5%);
+                transform: translateY(-0%);
             }
         }
     </style>
@@ -596,35 +596,29 @@ display:none;
     <script>
 	      const latestChallenges = [];
 
-	    
+	      let currentIndex = 0;
+
 function updateBannerWithExcitingNews(latestChallenges) {
-  const excitingNews = [
-    '🚀 Exciting News! 🎉',
-    'Our Site is Buzzing with Activity:',
-    '🏆 New Challenge Completed!',
-    '🌟 Awesome Quiz Rating Received!',
-    '🧠 Quizmaster Just Finished a Quiz!',
-  ];
-
 
 
 	    
-  let currentIndex = 0;
+    document.getElementById('bannerAction').innerHTML = latestChallenges[currentIndex];
 
   setInterval(() => {
-    document.getElementById('bannerAction').innerHTML = latestChallenges[currentIndex];
+
     currentIndex = (currentIndex + 1) % latestChallenges.length;
 	      console.log('currentIndex:', currentIndex);
     console.log('latestChallenges:', latestChallenges);
 
   }, 3000); // Change the news every 3 seconds
+	
 }
 
 
 
 	    
 	// Function to update the banner with exciting news
-function updateBannerWithLatestActions(bannerElement) {
+function updateBannerWithLatestActions() {
   const db = firebase.firestore();
   const challengesRef = db.collection('challenges');
   const quizFeedbackRef = db.collection('quizFeedback');
@@ -669,7 +663,7 @@ function updateBannerWithLatestActions(bannerElement) {
      latestChallenges.push(`User Rated Quiz <a href="quiz/stats/?q=${rating.quizCode}" class="ratingNof">${rating.quizCode}</a>  ${rating.rating} stars`);
 
       });
-	        console.log('latestQuizFeedback:', latestQuizFeedback);
+	        //console.log('latestQuizFeedback:', latestQuizFeedback);
 
       // Update the banner with the latest quiz feedback
    //   bannerElement.innerHTML = latestQuizFeedback.join(' ');
@@ -716,7 +710,7 @@ quizReviewDataRef
 
     });
 
-    console.log('latestQuizReviews:', latestQuizReviews);
+  //  console.log('latestQuizReviews:', latestQuizReviews);
 
 
    //   bannerElement.innerHTML = latestQuizReviews.join(' ');
