@@ -696,7 +696,6 @@ quizReviewDataRef
           totalIncorrect++;
         }
       });
-    });
 
     // Calculate percentages
     const totalResponses = totalCorrect + totalIncorrect;
@@ -708,9 +707,18 @@ quizReviewDataRef
     console.log('Percentage Incorrect:', percentageIncorrect.toFixed(2) + '%');
 
     // Update the banner or display as needed
-    bannerElement.textContent = `User just scored ${percentageCorrect.toFixed(2)}%, on <a href="quiz/stats/?q=${quizReview.quizCode}" class="reviewNof">${quizReview.quizName}</a>`;
+    latestQuizReviews.push(`User just scored ${percentageCorrect.toFixed(2)}%, on <a href="quiz/stats/?q=${quizReview.quizCode}" class="reviewNof">${quizReview.quizName}</a>`);
+
+    });
 
 
+
+      bannerElement.textContent = latestQuizReviews.join(' ');
+
+	    
+ });
+
+	    
 updateBannerWithExcitingNews(bannerElement);
 
 }
