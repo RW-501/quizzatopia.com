@@ -375,10 +375,7 @@ function loadLeaderboard(loc) {
 // Query to retrieve the top 10 users excluding "New User" and "Anonymous" sorted by points
 var query = usersCollection
   .orderBy('userName') // Order by userName first
-  .orderBy('userPoints', 'desc') // Then order by userPoints in descending order
-  .startAt('') // Start the query at the beginning (an empty string)
-  .where('userName', 'not-in', ['New User', 'Anonymous']) // Exclude "New User" and "Anonymous"
-  .limit(10);
+  .where('userName', 'not-in', ['New User', 'Anonymous']);
 
 
   // Retrieve the sorted data
