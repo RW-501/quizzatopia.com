@@ -1787,6 +1787,7 @@ async function saveReviewDataToFirestore(quizCode, quizName, questionStatInfo, r
 	  const userInfo = getUserInfo();
   // Get reference to Firestore database
   const db = firebase.firestore();
+getQuizLink();
 
   // Reference to the 'quizReviewData' collection
   const quizReviewDataRef = db.collection('quizReviewData');
@@ -1796,8 +1797,9 @@ async function saveReviewDataToFirestore(quizCode, quizName, questionStatInfo, r
     userID:  userInfo.firebaseId,
     timeStamp: new Date(),
     quizCode: quizCode,
-    quizName: quizName,
-    questionStatInfo: questionStatInfo,
+    quizURL: quizLink,
+      quizName: quizName,
+	  questionStatInfo: questionStatInfo,
     responseTimeTotal: responseTimeTotal,
   })
     .then(docRef => {
