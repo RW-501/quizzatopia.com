@@ -596,7 +596,7 @@ display:none;
 	      const latestChallenges = [];
 
 	    
-function updateBannerWithExcitingNews(bannerElement) {
+function updateBannerWithExcitingNews(latestChallenges) {
   const excitingNews = [
     '🚀 Exciting News! 🎉',
     'Our Site is Buzzing with Activity:',
@@ -613,8 +613,15 @@ function updateBannerWithExcitingNews(bannerElement) {
   setInterval(() => {
     bannerElement.innerHTML = latestChallenges[currentIndex];
     currentIndex = (currentIndex + 1) % latestChallenges.length;
+	      console.log('currentIndex:', currentIndex);
+    console.log('latestChallenges:', latestChallenges);
+
   }, 3000); // Change the news every 3 seconds
 }
+
+
+
+	    
 	// Function to update the banner with exciting news
 function updateBannerWithLatestActions(bannerElement) {
   const db = firebase.firestore();
@@ -717,13 +724,12 @@ quizReviewDataRef
  });
 
 	    
-updateBannerWithExcitingNews(bannerElement);
+updateBannerWithExcitingNews(latestChallenges);
 
 }
 
 // HTML Element for the Banner
 const banner = document.getElementById('bannerAction');
-
 // Call the function to start updating the banners
 updateBannerWithLatestActions(banner);
 
