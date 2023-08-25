@@ -566,10 +566,10 @@ display:none;
 
         @keyframes funAnimation {
             0% {
-                transform: translateY(-10%);
+                transform: translateY(-5%);
             }
             50% {
-                transform: translateY(0%);
+                transform: translateY(-50%);
             }
             100% {
                 transform: translateY(-100%);
@@ -615,40 +615,50 @@ function updateBannerWithLatestActions(bannerElement) {
       latestChallenges.length = 0; // Clear the array
       snapshot.forEach((doc) => {
         const challenge = doc.data();
-        latestChallenges.push(`Latest Challenge Done by ${challenge.challengerName}`);
+        latestChallenges.push(`${challenge.challengerName} finish <a href="${challenge.quizLink} " class="challengeNof">${challenge.quizName} challenge</a> `);
       });
       // Update the banner with the latest challenges
       bannerElement.textContent = latestChallenges.join(' ');
     });
 
   // Query quizFeedback collection for the latest rating actions
-  quizFeedbackRef
-    .orderBy('date', 'desc')
-    .limit(5) // Retrieve the latest 5
-    .onSnapshot((snapshot) => {
-      latestQuizFeedback.length = 0; // Clear the array
-      snapshot.forEach((doc) => {
-        const rating = doc.data();
-        latestQuizFeedback.push(`Latest Quiz Rating: ${rating.rating}`);
+const totalCorrect = 0;
+const totalIncorrect = 0;
+
+quizReviewDataRef
+  .orderBy('timeStamp', 'desc')
+  .limit(5)
+  .onSnapshot((snapshot) => {
+    totalCorrect = 0; // Reset the total correct count
+    totalIncorrect = 0; // Reset the total incorrect count
+
+    snapshot.forEach((doc) => {
+      const quizReview = doc.data();
+      
+      // Check the correctness of each question and update counts
+      quizReview.questionStatInfo.forEach((question) => {
+        if (question.correctness === 'correct') {
+          totalCorrect++;
+        } else if (question.correctness === 'incorrect') {
+          totalIncorrect++;
+        }
       });
-      // Update the banner with the latest quiz feedback
-      bannerElement.textContent = latestQuizFeedback.join(' ');
     });
 
-  // Query quizReviewData collection for the latest finished quiz actions
-  quizReviewDataRef
-    .where('correctness', '==', 'correct')
-    .orderBy('timeStamp', 'desc')
-    .limit(5) // Retrieve the latest 5
-    .onSnapshot((snapshot) => {
-      latestQuizReviews.length = 0; // Clear the array
-      snapshot.forEach((doc) => {
-        const quizReview = doc.data();
-        latestQuizReviews.push(`Latest Finished Quiz: ${quizReview.quizName}`);
-      });
-      // Update the banner with the latest quiz reviews
-      bannerElement.textContent = latestQuizReviews.join(' ');
-    });
+    // Calculate percentages
+    const totalResponses = totalCorrect + totalIncorrect;
+    const percentageCorrect = (totalCorrect / totalResponses) * 100;
+    const percentageIncorrect = (totalIncorrect / totalResponses) * 100;
+
+    // Display percentages
+    console.log('Percentage Correct:', percentageCorrect.toFixed(2) + '%');
+    console.log('Percentage Incorrect:', percentageIncorrect.toFixed(2) + '%');
+
+    // Update the banner or display as needed
+    bannerElement.textContent = `User just scored ${percentageCorrect.toFixed(2)}%, on <a href="quiz/stats/?q=${quizReview.quizCode}" class="ratingNof">${quizReview.quizName}</a>`;
+  });
+
+
 }
 
 // HTML Element for the Banner
