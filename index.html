@@ -609,7 +609,6 @@ function shuffleArray(array) {
 
 	      let currentIndex = 0;
 function updateBannerWithExcitingNews(latestChallenges) {
- shuffleArray(latestChallenges);
 
 	   // console.log('latestChallenges: 2 ', latestChallenges);
   setInterval(() => {
@@ -792,10 +791,10 @@ latestChallenges.push(challengeMessage);
  });
 
 	    latestChallenges = latestChallenges.filter(item => item !== undefined);
-	console.log('latestChallenges: 1 ', latestChallenges);
- shuffleArray(latestChallenges);
-	    
-    console.log('latestChallenges:', latestChallenges);
+// Shuffle the latestChallenges array and update it with the shuffled result
+latestChallenges = shuffleArray(latestChallenges);
+
+console.log('latestChallenges:', latestChallenges);
 updateBannerWithExcitingNews(latestChallenges);
 
 }
