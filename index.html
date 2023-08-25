@@ -582,18 +582,13 @@ color: #fd7e14;
             }
         }
     </style>
-</head>
-<body>
+<!--b</head>
+<body>n -->
+	      <h3>QuizzaTopia News</h3><hr>
+
     <div id="bannerAction">
-        <span>🚀 Exciting News! 🎉</span>
-        <br>
-        <span>Our Site is Buzzing with Activity:</span>
-        <br>
-        <span>🏆 New Challenge Completed!</span>
-        <br>
-        <span>🌟 Awesome Quiz Rating Received!</span>
-        <br>
-        <span>🧠 Quizmaster  Just Finished a Quiz!</span>
+        <span>Loading</span>
+
     </div>
 
     <!-- Include Firebase SDK and initialize it -->
@@ -614,17 +609,16 @@ function shuffleArray(array) {
 	      let currentIndex = 0;
 function updateBannerWithExcitingNews(latestChallenges) {
 
-	    console.log('latestChallenges: 2 ', latestChallenges);
+	   // console.log('latestChallenges: 2 ', latestChallenges);
   setInterval(() => {
-    document.getElementById('bannerAction').innerHTML = latestChallenges[currentIndex];
 
     currentIndex++;
     if (currentIndex >= latestChallenges.length) {
       currentIndex = 0;
     }
 
-   // console.log('currentIndex:', currentIndex);
- //   console.log('latestChallenges:', latestChallenges);
+    document.getElementById('bannerAction').innerHTML = latestChallenges[currentIndex];
+
   }, 3000); // Change the news every 3 seconds
 	//console.log('latestChallenges: 3 ', latestChallenges);
 }
@@ -680,7 +674,13 @@ function updateBannerWithLatestActions() {
       latestQuizFeedback.length = 0; // Clear the array
       snapshot.forEach((doc) => {
         const rating = doc.data();
-     latestChallenges.push(`User Rated Quiz <a href="quiz/stats/?q=${rating.quizCode}">${rating.quizCode}</a><br>  ${rating.rating} stars`);
+let starRating = rating.rating;
+
+if (starRating >= 3) {
+  latestChallenges.push(`User Rated Quiz <a href="quiz/stats/?q=${rating.quizCode}">${rating.quizCode}</a><br>  ${starRating} stars - Great rating!`);
+} else {
+  latestChallenges.push(`User Rated Quiz <a href="quiz/stats/?q=${rating.quizCode}">${rating.quizCode}</a><br>  ${starRating} stars - Keep improving!`);
+}
 
       });
 	        //console.log('latestQuizFeedback:', latestQuizFeedback);
@@ -721,12 +721,22 @@ quizReviewDataRef
     const percentageCorrect = (totalCorrect / totalResponses) * 100;
     const percentageIncorrect = (totalIncorrect / totalResponses) * 100;
 
-    // Display percentages
-  //  console.log('Percentage Correct:', percentageCorrect.toFixed(2) + '%');
-//    console.log('Percentage Incorrect:', percentageIncorrect.toFixed(2) + '%');
 
-    // Update the banner or display as needed
-    latestChallenges.push(`User just scored ${percentageCorrect.toFixed()}% on<br> <a href="quiz/stats/?q=${quizReview.quizCode}">${quizReview.quizName}</a>`);
+let challengeMessage = '';
+
+if (percentageCorrect >= 70) {
+  challengeMessage = `Incredible! Someone just passed <a href="quiz/stats/?q=${quizReview.quizCode}">${quizReview.quizName}</a> <br>with a score of <span class="percentage">${percentageCorrect.toFixed()}%</span>!`;
+} else {
+  challengeMessage = `Oh no! Someone just attempted <a href="quiz/stats/?q=${quizReview.quizCode}">${quizReview.quizName}</a> <br>but scored only <span class="percentage">${percentageCorrect.toFixed()}%</span>. Keep trying!`;
+}
+
+latestChallenges.push(challengeMessage);
+
+
+
+
+
+
 
     });
 
