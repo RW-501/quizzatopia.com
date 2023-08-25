@@ -142,7 +142,7 @@ function showMainMessage(message) {
   const messageBox = document.getElementById('mainMessageBox');
   const messageText = document.getElementById('mainMessageText');
 
-  messageText.textContent = message;
+  messageText.innerHTML = message;
 
   // Show the message box by setting 'top' to 0
       messageBox.style.display = 'block'; 
