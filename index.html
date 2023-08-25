@@ -606,7 +606,12 @@ function updateBannerWithExcitingNews(latestChallenges) {
   setInterval(() => {
     document.getElementById('bannerAction').innerHTML = latestChallenges[currentIndex];
 
-    currentIndex = (currentIndex + 1) % latestChallenges.length;
+    currentIndex++;
+if(currentIndex > latestChallenges.length){
+currentIndex = 0
+	    }
+	  
+
 	      console.log('currentIndex:', currentIndex);
     console.log('latestChallenges:', latestChallenges);
 
