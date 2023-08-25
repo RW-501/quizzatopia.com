@@ -138,6 +138,29 @@ document.body.appendChild(overlay);
 }
 
 
+function showMainMessage(message) {
+  const messageBox = document.getElementById('mainMessageBox');
+  const messageText = document.getElementById('mainMessageText');
+
+  messageText.textContent = message;
+
+  // Show the message box by setting 'top' to 0
+  messageBox.style.top = '0';
+
+  // Add a click event listener to the close button
+  const closeButton = document.getElementById('mainCloseButton');
+  closeButton.addEventListener('click', () => {
+    // Hide the message box by moving it back above the viewport
+    messageBox.style.top = '-100px';
+  });
+}
+
+// Example usage:
+//showMainMessage("Thank you for rating the quiz!");
+
+
+
+
 
 
 	
