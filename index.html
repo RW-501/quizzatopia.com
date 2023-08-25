@@ -609,10 +609,10 @@ function shuffleArray(array) {
 	      let currentIndex = 0;
 function updateBannerWithExcitingNews(latestChallenges) {
 latestChallenges = latestChallenges.filter(item => item !== undefined);
-	
+	console.log('latestChallenges: 1 ', latestChallenges);
  shuffleArray(latestChallenges);
 
-	    
+	    console.log('latestChallenges: 2 ', latestChallenges);
   setInterval(() => {
     document.getElementById('bannerAction').innerHTML = latestChallenges[currentIndex];
 
@@ -624,6 +624,7 @@ latestChallenges = latestChallenges.filter(item => item !== undefined);
    // console.log('currentIndex:', currentIndex);
  //   console.log('latestChallenges:', latestChallenges);
   }, 3000); // Change the news every 3 seconds
+	console.log('latestChallenges: 3 ', latestChallenges);
 }
 
 
