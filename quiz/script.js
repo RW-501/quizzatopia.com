@@ -1025,7 +1025,7 @@ function closeModalWindow() {
 }
 
 
-
+let ratedBool = false;
 // Rating stars functionality
 let rating = 0;
 
@@ -1049,14 +1049,16 @@ function rateQuiz(stars) {
   }
 
   let uID = userInfo.firebaseId;
-  if (uID === '' || uID === null || uID === undefined) {
-    uID = ipAddress; /// getIPAddress();
-  }
+
 
   const feedbackData = {
     rating: rating,
+    quizURL: urlParams,
+      quizName: quizNameNS,
+    quizCode: quizCode,
     userID: uID,
-    feedbackType: "stars",
+    uIP: ipAddress,
+feedbackType: "stars",
     date: new Date(),
     quizCode: quizCode // Replace with the actual quiz code
   };
@@ -1090,8 +1092,12 @@ function submitReview() {
   const feedbackData = {
     rating: rating,
     feedback: feedback,
+    quizURL: urlParams,
+      quizName: quizNameNS,
+    quizCode: quizCode,
     userID: uID,
-    feedbackType: "feedback",
+    uIP: ipAddress,
+	  feedbackType: "feedback",
     date: new Date(),
     quizCode: quizCode // Replace with the actual quiz code
   };
@@ -1132,6 +1138,7 @@ query.get().then((querySnapshot) => {
     const docRef = firebase.firestore().collection(collectionName).doc(doc.id);
     docRef.update(fieldsToUpdate)
     .then(() => {
+	    ratedBool = true;
       console.log(`Document with name '${nameToMatch}' has been updated.`);
 	        alert('Thank you for your feedback!');
 
