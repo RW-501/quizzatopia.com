@@ -94,8 +94,19 @@ quizName = quizNameNS;
 
 
 
+function testRating(){
+	showMainMessage(`    <label id="quizRating" for="rating">Quiz Rating:</label>
+    <div id="ratingStars" class="rating">
+  <span class="star" onclick="rateQuiz(1)">&#9734;</span>
+  <span class="star" onclick="rateQuiz(2)">&#9734;</span>
+  <span class="star" onclick="rateQuiz(3)">&#9734;</span>
+  <span class="star" onclick="rateQuiz(4)">&#9734;</span>
+  <span class="star" onclick="rateQuiz(5)">&#9734;</span>
+</div>   `);
 
-
+}
+var button = document.getElementById("myButton");
+button.addEventListener("click", testRating);
 
 
 //  
@@ -779,10 +790,12 @@ async function updatequizDB() {
     console.log(quizCode + " was updated: " + quizId);
   }
 }
+var quizEnded = false;
 
 function endQuiz() {
   quizStarted = false;
-
+quizEnded = true;
+	
   clearTimeout(timeoutId);
 	
  openReviewFunc(true);
@@ -1714,6 +1727,19 @@ window.addEventListener('beforeunload', function(event) {
 var userExitNotificationBool = false;
 
 window.addEventListener('beforeunload', function (event) {
+
+if(ratedBool === false && quizEnded === true){
+	showMainMessage(`    <label id="quizRating" for="rating">Quiz Rating:</label>
+    <div id="ratingStars" class="rating">
+  <span class="star" onclick="rateQuiz(1)">&#9734;</span>
+  <span class="star" onclick="rateQuiz(2)">&#9734;</span>
+  <span class="star" onclick="rateQuiz(3)">&#9734;</span>
+  <span class="star" onclick="rateQuiz(4)">&#9734;</span>
+  <span class="star" onclick="rateQuiz(5)">&#9734;</span>
+</div>   `);
+
+}
+	
   if (quizStarted === true) {
     event.preventDefault(); // Modern browsers ignore the custom message, so we use preventDefault instead
     event.returnValue = ''; // Required for some older browsers (not displayed to the user)
