@@ -597,27 +597,23 @@ display:none;
 	      let latestChallenges = [];
 
 	      let currentIndex = 0;
-
 function updateBannerWithExcitingNews(latestChallenges) {
-
+latestChallenges = latestChallenges.filter(item => item !== undefined);
 
 	    
-
   setInterval(() => {
     document.getElementById('bannerAction').innerHTML = latestChallenges[currentIndex];
 
     currentIndex++;
-if(currentIndex > latestChallenges.length){
-currentIndex = 0
-	    }
-	  
+    if (currentIndex >= latestChallenges.length) {
+      currentIndex = 0;
+    }
 
-	      console.log('currentIndex:', currentIndex);
-    console.log('latestChallenges:', latestChallenges);
-
+   // console.log('currentIndex:', currentIndex);
+ //   console.log('latestChallenges:', latestChallenges);
   }, 3000); // Change the news every 3 seconds
-	
 }
+
 
 
 
@@ -659,13 +655,14 @@ function updateBannerWithLatestActions() {
 
   // Query quizFeedback collection for the latest rating actions
   quizFeedbackRef
+    .where('feedbackType', '==', 'stars')
     .orderBy('date', 'desc')
     .limit(5) // Retrieve the latest 5
     .onSnapshot((snapshot) => {
       latestQuizFeedback.length = 0; // Clear the array
       snapshot.forEach((doc) => {
         const rating = doc.data();
-     latestChallenges.push(`User Rated Quiz <a href="quiz/stats/?q=${rating.quizCode}" class="ratingNof">${rating.quizCode}</a>  ${rating.rating} stars`);
+     latestChallenges.push(`User Rated Quiz <a href="quiz/stats/?q=${rating.quizCode}">${rating.quizCode}</a>  ${rating.rating} stars`);
 
       });
 	        //console.log('latestQuizFeedback:', latestQuizFeedback);
@@ -711,7 +708,7 @@ quizReviewDataRef
 //    console.log('Percentage Incorrect:', percentageIncorrect.toFixed(2) + '%');
 
     // Update the banner or display as needed
-    latestChallenges.push(`User just scored ${percentageCorrect.toFixed()}%, on <a href="quiz/stats/?q=${quizReview.quizCode}" class="reviewNof">${quizReview.quizName}</a>`);
+    latestChallenges.push(`User just scored ${percentageCorrect.toFixed()}% on <a href="quiz/stats/?q=${quizReview.quizCode}">${quizReview.quizName}</a>`);
 
     });
 
@@ -739,6 +736,8 @@ updateBannerWithLatestActions();
     .container a{
 	        color: #fd7e14;
     text-decoration: none;
+
+	font-weight: 700;    
     }
 	    
 	    
