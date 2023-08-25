@@ -566,13 +566,13 @@ display:none;
 
         @keyframes funAnimation {
             0% {
-                transform: translateY(0%);
+                transform: translateY(-2%);
             }
             50% {
-                transform: translateY(50%);
+                transform: translateY(0%);
             }
             100% {
-                transform: translateY(100%);
+                transform: translateY(2%);
             }
         }
     </style>
@@ -621,9 +621,7 @@ function updateBannerWithLatestActions(bannerElement) {
   const latestQuizReviews = [];
 
 
-  // Query quizFeedback collection for the latest rating actions
-const totalCorrect = 0;
-const totalIncorrect = 0;
+
 
 
 
@@ -666,8 +664,8 @@ const totalIncorrect = 0;
 
 	    
   // Query quizFeedback collection for the latest rating actions
-const totalCorrect = 0;
-const totalIncorrect = 0;
+let totalCorrect = 0;
+let totalIncorrect = 0;
 
 quizReviewDataRef
   .orderBy('timeStamp', 'desc')
