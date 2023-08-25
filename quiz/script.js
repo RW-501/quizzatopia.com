@@ -1729,7 +1729,7 @@ var userExitNotificationBool = false;
 window.addEventListener('beforeunload', function (event) {
 
 if(ratedBool === false && quizEnded === true){
-	showMainMessage(`    <label id="quizRating" for="rating">Quiz Rating:</label>
+	showMainMessage(`    <label id="quizRating" for="rating">Please don't forget to<br> Rate the Quiz:</label>
     <div id="ratingStars" class="rating">
   <span class="star" onclick="rateQuiz(1)">&#9734;</span>
   <span class="star" onclick="rateQuiz(2)">&#9734;</span>
