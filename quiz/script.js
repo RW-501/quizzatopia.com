@@ -1039,11 +1039,11 @@ const quizInfoStored = localStorage.getItem(`quizInfo_${quizCode}`);
 }
 
 
-getQuizLink();
 
 
 function rateQuiz(stars) {
   rating = stars;
+getQuizLink();
 
   const starElements = document.querySelectorAll('.star');
   starElements.forEach((star, index) => {
@@ -1088,6 +1088,7 @@ function quickFeedback(xxx) {
 // Submit the review
 function submitReview() {
   const feedback = reviewTextArea.value;
+getQuizLink();
 
   if (!feedback) {
     if (isAnimationEnabled) {
@@ -1131,6 +1132,7 @@ const reportForm = document.getElementById('reportForm');
 function submitReport(reportType, xxx){
 
   const reportDetails = document.getElementById('reportDetails').value;
+getQuizLink();
 
   if (reportType) {
     // Perform the necessary actions to store the feedback in Firestore
