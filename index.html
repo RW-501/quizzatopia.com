@@ -566,13 +566,13 @@ display:none;
 
         @keyframes funAnimation {
             0% {
-                transform: translateY(-2%);
+                transform: translateY(-20%);
             }
             50% {
                 transform: translateY(0%);
             }
             100% {
-                transform: translateY(2%);
+                transform: translateY(20%);
             }
         }
     </style>
@@ -593,6 +593,9 @@ display:none;
     <!-- Include Firebase SDK and initialize it -->
 
     <script>
+	      const latestChallenges = [];
+
+	    
 function updateBannerWithExcitingNews(bannerElement) {
   const excitingNews = [
     '🚀 Exciting News! 🎉',
@@ -620,7 +623,6 @@ function updateBannerWithLatestActions(bannerElement) {
   const quizReviewDataRef = db.collection('quizReviewData');
 
   // Arrays to store the latest 5 items from each collection
-  const latestChallenges = [];
   const latestQuizFeedback = [];
   const latestQuizReviews = [];
 
@@ -702,7 +704,7 @@ quizReviewDataRef
 //    console.log('Percentage Incorrect:', percentageIncorrect.toFixed(2) + '%');
 
     // Update the banner or display as needed
-    latestChallenges.push(`User just scored ${percentageCorrect.toFixed(2)}%, on <a href="quiz/stats/?q=${quizReview.quizCode}" class="reviewNof">${quizReview.quizName}</a>`);
+    latestChallenges.push(`User just scored ${percentageCorrect.toFixed()}%, on <a href="quiz/stats/?q=${quizReview.quizCode}" class="reviewNof">${quizReview.quizName}</a>`);
 
     });
 
