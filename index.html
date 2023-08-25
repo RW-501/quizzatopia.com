@@ -593,8 +593,38 @@ display:none;
     <!-- Include Firebase SDK and initialize it -->
 
     <script>
+function updateBannerWithExcitingNews(bannerElement) {
+  const excitingNews = [
+    '🚀 Exciting News! 🎉',
+    'Our Site is Buzzing with Activity:',
+    '🏆 New Challenge Completed!',
+    '🌟 Awesome Quiz Rating Received!',
+    '🧠 Quizmaster Just Finished a Quiz!',
+  ];
+  let currentIndex = 0;
 
+  setInterval(() => {
+    bannerElement.textContent = excitingNews[currentIndex];
+    currentIndex = (currentIndex + 1) % excitingNews.length;
+  }, 3000); // Change the news every 3 seconds
+}
 	// Function to update the banner with exciting news
+function updateBannerWithLatestActions(bannerElement) {
+  const db = firebase.firestore();
+  const challengesRef = db.collection('challenges');
+  const quizFeedbackRef = db.collection('quizFeedback');
+  const quizReviewDataRef = db.collection('quizReviewData');
+
+  // Arrays to store the latest 5 items from each collection
+  const latestChallenges = [];
+  const latestQuizFeedback = [];
+  const latestQuizReviews = [];
+
+
+  // Query quizFeedback collection for the latest rating actions
+const totalCorrect = 0;
+const totalIncorrect = 0;
+
 function updateBannerWithLatestActions(bannerElement) {
   const db = firebase.firestore();
   const challengesRef = db.collection('challenges');
@@ -618,9 +648,32 @@ function updateBannerWithLatestActions(bannerElement) {
         latestChallenges.push(`${challenge.challengerName} finish <a href="${challenge.quizLink} " class="challengeNof">${challenge.quizName} challenge</a> `);
       });
       // Update the banner with the latest challenges
+    console.log('latestChallenges:', latestChallenges);
       bannerElement.textContent = latestChallenges.join(' ');
     });
 
+
+
+
+  // Query quizFeedback collection for the latest rating actions
+  quizFeedbackRef
+    .orderBy('date', 'desc')
+    .limit(5) // Retrieve the latest 5
+    .onSnapshot((snapshot) => {
+      latestQuizFeedback.length = 0; // Clear the array
+      snapshot.forEach((doc) => {
+        const rating = doc.data();
+     latestQuizFeedback.push(`User Rated Quiz <a href="quiz/stats/?q=${rating.quizCode}" class="ratingNof">${rating.quizCode}</a>  ${rating.rating} stars`);
+
+      });
+      // Update the banner with the latest quiz feedback
+      bannerElement.textContent = latestQuizFeedback.join(' ');
+    });
+
+
+
+
+	    
   // Query quizFeedback collection for the latest rating actions
 const totalCorrect = 0;
 const totalIncorrect = 0;
@@ -655,9 +708,10 @@ quizReviewDataRef
     console.log('Percentage Incorrect:', percentageIncorrect.toFixed(2) + '%');
 
     // Update the banner or display as needed
-    bannerElement.textContent = `User just scored ${percentageCorrect.toFixed(2)}%, on <a href="quiz/stats/?q=${quizReview.quizCode}" class="ratingNof">${quizReview.quizName}</a>`;
+    bannerElement.textContent = `User just scored ${percentageCorrect.toFixed(2)}%, on <a href="quiz/stats/?q=${quizReview.quizCode}" class="reviewNof">${quizReview.quizName}</a>`;
   });
 
+updateBannerWithExcitingNews(bannerElement);
 
 }
 
@@ -667,9 +721,6 @@ const banner = document.getElementById('bannerAction');
 // Call the function to start updating the banners
 updateBannerWithLatestActions(banner);
 
-
-        // Call the function to start updating the banner
-        updateBannerWithExcitingNews();
     </script>
 	    
 	<style>
