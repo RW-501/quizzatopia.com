@@ -252,7 +252,6 @@ countdownCheckbox.addEventListener("change", function () {
 
 
 // Function to generate a random pattern with ads placed between questions
-// Function to generate a random pattern with ads placed between questions
 function generateQuizAdPattern(numQuestions, numAds) {
   const adInterval = Math.floor(numQuestions / (numAds + 1));
   const pattern = [];
