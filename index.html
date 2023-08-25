@@ -601,11 +601,15 @@ function updateBannerWithExcitingNews(bannerElement) {
     '🌟 Awesome Quiz Rating Received!',
     '🧠 Quizmaster Just Finished a Quiz!',
   ];
+
+
+
+	    
   let currentIndex = 0;
 
   setInterval(() => {
-    bannerElement.textContent = excitingNews[currentIndex];
-    currentIndex = (currentIndex + 1) % excitingNews.length;
+    bannerElement.innerHTML = latestChallenges[currentIndex];
+    currentIndex = (currentIndex + 1) % latestChallenges.length;
   }, 3000); // Change the news every 3 seconds
 }
 	// Function to update the banner with exciting news
@@ -638,7 +642,7 @@ function updateBannerWithLatestActions(bannerElement) {
       });
       // Update the banner with the latest challenges
     console.log('latestChallenges:', latestChallenges);
-      bannerElement.textContent = latestChallenges.join(' ');
+//      bannerElement.innerHTML = latestChallenges.join(' ');
     });
 
 
@@ -652,11 +656,13 @@ function updateBannerWithLatestActions(bannerElement) {
       latestQuizFeedback.length = 0; // Clear the array
       snapshot.forEach((doc) => {
         const rating = doc.data();
-     latestQuizFeedback.push(`User Rated Quiz <a href="quiz/stats/?q=${rating.quizCode}" class="ratingNof">${rating.quizCode}</a>  ${rating.rating} stars`);
+     latestChallenges.push(`User Rated Quiz <a href="quiz/stats/?q=${rating.quizCode}" class="ratingNof">${rating.quizCode}</a>  ${rating.rating} stars`);
 
       });
+	        console.log('latestQuizFeedback:', latestQuizFeedback);
+
       // Update the banner with the latest quiz feedback
-      bannerElement.textContent = latestQuizFeedback.join(' ');
+   //   bannerElement.innerHTML = latestQuizFeedback.join(' ');
     });
 
 
@@ -692,17 +698,18 @@ quizReviewDataRef
     const percentageIncorrect = (totalIncorrect / totalResponses) * 100;
 
     // Display percentages
-    console.log('Percentage Correct:', percentageCorrect.toFixed(2) + '%');
-    console.log('Percentage Incorrect:', percentageIncorrect.toFixed(2) + '%');
+  //  console.log('Percentage Correct:', percentageCorrect.toFixed(2) + '%');
+//    console.log('Percentage Incorrect:', percentageIncorrect.toFixed(2) + '%');
 
     // Update the banner or display as needed
-    latestQuizReviews.push(`User just scored ${percentageCorrect.toFixed(2)}%, on <a href="quiz/stats/?q=${quizReview.quizCode}" class="reviewNof">${quizReview.quizName}</a>`);
+    latestChallenges.push(`User just scored ${percentageCorrect.toFixed(2)}%, on <a href="quiz/stats/?q=${quizReview.quizCode}" class="reviewNof">${quizReview.quizName}</a>`);
 
     });
 
+    console.log('latestQuizReviews:', latestQuizReviews);
 
 
-      bannerElement.textContent = latestQuizReviews.join(' ');
+   //   bannerElement.innerHTML = latestQuizReviews.join(' ');
 
 	    
  });
