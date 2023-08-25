@@ -618,7 +618,19 @@ function shuffleArray(array) {
 	      let currentIndex = 0;
 function updateBannerWithExcitingNews(latestChallenges) {
 
-	   // console.log('latestChallenges: 2 ', latestChallenges);
+
+	//   latestChallenges = latestChallenges.filter(item => item !== undefined);
+// After you've populated the latestChallenges array
+console.log('latestChallenges: 1 ', latestChallenges);
+
+// Shuffle the latestChallenges array and update it with the shuffled result
+latestChallenges = shuffleArray2(latestChallenges);
+
+
+
+
+	
+	    console.log('latestChallenges: 2 ', latestChallenges);
   setInterval(() => {
 
     currentIndex++;
@@ -798,12 +810,6 @@ latestChallenges.push(challengeMessage);
 	    
  });
 
-	//   latestChallenges = latestChallenges.filter(item => item !== undefined);
-// After you've populated the latestChallenges array
-console.log('latestChallenges: 1 ', latestChallenges);
-
-// Shuffle the latestChallenges array and update it with the shuffled result
-latestChallenges = shuffleArray2(latestChallenges);
 
 console.log('shuffleArray latestChallenges:', latestChallenges);
 updateBannerWithExcitingNews(latestChallenges);
