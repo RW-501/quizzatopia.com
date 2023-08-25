@@ -612,7 +612,7 @@ function updateBannerWithExcitingNews(latestChallenges) {
   let currentIndex = 0;
 
   setInterval(() => {
-    bannerElement.innerHTML = latestChallenges[currentIndex];
+    document.getElementById('bannerAction').innerHTML = latestChallenges[currentIndex];
     currentIndex = (currentIndex + 1) % latestChallenges.length;
 	      console.log('currentIndex:', currentIndex);
     console.log('latestChallenges:', latestChallenges);
@@ -730,7 +730,7 @@ updateBannerWithExcitingNews(latestChallenges);
 }
 
 // HTML Element for the Banner
-const banner = document.getElementById('bannerAction');
+//const banner = document.getElementById('bannerAction');
 // Call the function to start updating the banners
 updateBannerWithLatestActions(banner);
 
