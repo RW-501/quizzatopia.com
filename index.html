@@ -594,7 +594,7 @@ display:none;
     <!-- Include Firebase SDK and initialize it -->
 
     <script>
-	      const latestChallenges = [];
+	      let latestChallenges = [];
 
 	      let currentIndex = 0;
 
@@ -602,9 +602,9 @@ function updateBannerWithExcitingNews(latestChallenges) {
 
 
 	    
-    document.getElementById('bannerAction').innerHTML = latestChallenges[currentIndex];
 
   setInterval(() => {
+    document.getElementById('bannerAction').innerHTML = latestChallenges[currentIndex];
 
     currentIndex = (currentIndex + 1) % latestChallenges.length;
 	      console.log('currentIndex:', currentIndex);
