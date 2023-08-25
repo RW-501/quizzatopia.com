@@ -566,7 +566,7 @@ display:none;
 
         @keyframes funAnimation {
             0% {
-                transform: translateY(-5%);
+                transform: translateY(0%);
             }
             50% {
                 transform: translateY(-50%);
@@ -709,7 +709,7 @@ quizReviewDataRef
 
     // Update the banner or display as needed
     bannerElement.textContent = `User just scored ${percentageCorrect.toFixed(2)}%, on <a href="quiz/stats/?q=${quizReview.quizCode}" class="reviewNof">${quizReview.quizName}</a>`;
-  });
+
 
 updateBannerWithExcitingNews(bannerElement);
 
