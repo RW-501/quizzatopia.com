@@ -866,7 +866,7 @@ flex: auto;
  
 <div id="codeContainer">
 <input type="text" placeholder="quiz topic" value="" name="code" id="quizCodeInput">
-	<button id="quizCodeBTN" onclick="getQuizLink()">Get Quiz</button>
+	<button id="quizCodeBTN" onclick="">Get Quiz</button>
   </div>
   </div>
 </section>
@@ -986,11 +986,25 @@ function getRandomCategories() {
       // Shuffle the categories array to get random categories
       const shuffledCategories = shuffleArray(categories);
 
-      // Return the first 3 categories (or less if there are fewer)
-      return shuffledCategories.slice(0, 3);
+      // Check if each category in shuffledCategories has 1 or 2 words
+      const result = shuffledCategories.slice(0, 3).every(category => {
+        const words = category.name.split(' ');
+        return words.length === 1 || words.length === 2;
+      });
+
+      return result;
     });
 }
-
+/*
+// Example usage:
+getRandomCategories().then(result => {
+  if (result) {
+    console.log('The first 3 shuffled categories contain 1 or 2 words each.');
+  } else {
+    console.log('The first 3 shuffled categories do not contain 1 or 2 words each.');
+  }
+});
+*/
 
 
 // Function to generate HTML for the categories
