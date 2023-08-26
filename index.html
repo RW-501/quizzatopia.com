@@ -615,14 +615,8 @@ function updateBannerWithExcitingNews() {
 
 	//   latestChallenges = latestChallenges.filter(item => item !== undefined);
 
-	console.log('latestChallenges: 1 ', latestChallenges);
-
-
-
-
 
 	
-	    console.log('shuffleArray2 latestChallenges: 2 ', latestChallenges);
   setInterval(() => {
 
     currentIndex++;
@@ -630,6 +624,7 @@ function updateBannerWithExcitingNews() {
       currentIndex = 0;
     }
 latestChallenges = shuffleArray2(latestChallenges);
+console.log(' latestChallenges:', latestChallenges);
 
     document.getElementById('bannerAction').innerHTML = latestChallenges[currentIndex] || "Loading";
 
@@ -804,7 +799,6 @@ latestChallenges.push(challengeMessage);
  });
 
 
-console.log(' latestChallenges:', latestChallenges);
 updateBannerWithExcitingNews();
 
 }
