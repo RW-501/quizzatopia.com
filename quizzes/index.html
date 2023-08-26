@@ -679,7 +679,7 @@ function openCreateQuizFunc() {
         });
     }
   } else {
-    alert("User needs 200 Points first");
+    showMainMessage("User needs 200 Points first");
   }
 }
 
@@ -832,7 +832,7 @@ getCategoriesOrderedByViewCount()
   .then((retrievedCategories) => {
     // Assign the retrieved categories to the outer 'categories' variable
     categories = retrievedCategories;
-    console.log('Categories:', categories);
+  //  console.log('Categories:', categories);
 
 	  displayCategories();
 	  makeCategoriesList();
