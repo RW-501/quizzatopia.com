@@ -617,7 +617,6 @@ function updateBannerWithExcitingNews() {
 
 	console.log('latestChallenges: 1 ', latestChallenges);
 
-latestChallenges = shuffleArray2(latestChallenges);
 
 
 
@@ -630,6 +629,7 @@ latestChallenges = shuffleArray2(latestChallenges);
     if (currentIndex >= latestChallenges.length) {
       currentIndex = 0;
     }
+latestChallenges = shuffleArray2(latestChallenges);
 
     document.getElementById('bannerAction').innerHTML = latestChallenges[currentIndex] || "Loading";
 
