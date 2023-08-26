@@ -596,22 +596,16 @@ color: #fd7e14;
 
     <script>
 function shuffleArray2(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-}
-
-	    
-// Function to shuffle an array
-function shuffleArray(array) {
+  // Create a copy of the array to shuffle
   const shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
   }
-  return shuffled;
+  return shuffled; // Return the shuffled array
 }
+	    
+
 //const shuffleArray = array => array.sort(() => Math.random() - 0.5);
 	      let latestChallenges = [];
 
@@ -1038,7 +1032,15 @@ flex: auto;
 	</style>
 
 	<script>
-
+// Function to shuffle an array
+function shuffleArray(array) {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
 		function getRandomCategories() {
   const db = firebase.firestore();
   const categoriesRef = db.collection('quizCategory');
