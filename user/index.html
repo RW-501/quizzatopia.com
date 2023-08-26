@@ -290,7 +290,7 @@ async function getMatchingQuizzes() {
     // Get the user document with the specified firebaseID
     const userDoc = await firebase.firestore().collection('users').doc(userId).get();
     const qnArray = userDoc.data()?.quizCreated || [];
-    console.log('qnArray: ', qnArray);
+   // console.log('qnArray: ', qnArray);
 
     // Check if qnArray is not empty before executing the query
     if (qnArray.length === 0) {
@@ -359,7 +359,7 @@ function openCreateQuizFunc() {
 
             // Check if the user has more than 3 quizzes created
             if (quizCreatedArray && quizCreatedArray.length > 3) {
-              alert("User has more than 3 quizzes created.");
+              showMainMessage("User has created over 3 quizzes");
             } else {
               // console.log("User has 3 or fewer quizzes created.");
               window.location.href = "/quizzes/create/";
@@ -374,7 +374,7 @@ function openCreateQuizFunc() {
         });
     }
   } else {
-    alert("User needs 200 Points first");
+    showMainMessage("User must accumulate at least 200 Points first");
   }
 }
 
@@ -391,7 +391,7 @@ async function updateQuizPrivacy(isPrivate,quizCode) {
 
     // Show a confirmation message to the user
     if (isPrivate) {
-      alert('Quiz is now private. ');
+      showMainMessage('Quiz is now private. ');
     } else {
       alert('Quiz is now public.');
     }
