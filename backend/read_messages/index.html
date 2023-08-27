@@ -47,7 +47,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="messageModalLabel">Message Details</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeModalButton">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -87,6 +87,13 @@
 
         // Call the function to display messages
         displayMessages();
+
+        // Close the modal when the Close button is clicked
+        const closeModalButton = document.getElementById("closeModalButton");
+        closeModalButton.addEventListener("click", () => {
+            $('#messageModal').modal('hide');
+        });
     </script>
 </body>
+
 </html>
