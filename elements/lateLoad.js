@@ -9,6 +9,7 @@ function lateLoad() {
   // Code that doesn't need to be called immediately
   // ...
 
+	  	  console.log('LateLoad');
 
 
 
