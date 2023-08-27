@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Messages</title>
+    <!-- Add Firebase scripts here (make sure Firebase is initialized properly) -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <h1>Messages</h1>
+    <ul id="messages-list"></ul>
+
+    <script>
+        // Initialize Firebase (add your config here)
+
+        const db = firebase.firestore();
+
+        // Reference to the "contact" collection
+        const contactRef = db.collection("contact");
+
+        // Function to display messages
+        function displayMessages() {
+            const messagesList = document.getElementById("messages-list");
+       const db = firebase.firestore();
+
+        // Reference to the "contact" collection
+        const contactRef = db.collection("contact");
+            // Get all messages from the collection
+            contactRef.get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    const data = doc.data();
+                    const listItem = document.createElement("li");
+                    listItem.textContent = `Name: ${data.name}, Email: ${data.email}, Subject: ${data.subject}, Message: ${data.message}`;
+                    messagesList.appendChild(listItem);
+                });
+            });
+        }
+
+        // Call the function to display messages
+        displayMessages();
+    </script>
+</body>
+</html>
