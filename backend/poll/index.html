@@ -50,6 +50,61 @@
     <h2>Polls</h2>
     <ul id="poll-list"></ul>
 
-    <script src="main.js"></script>
+    <script>
+
+
+
+const pollForm = document.getElementById("poll-form");
+const questionInput = document.getElementById("question");
+const pollList = document.getElementById("poll-list");
+
+// Event listener for submitting the poll
+pollForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const question = questionInput.value;
+    const db = firebase.firestore();
+
+// Reference to the "polls" collection
+const pollRef = db.collection("polls");
+    // Add the question to the "polls" collection
+    pollRef.add({
+        question: question,
+        options: [],
+    })
+    .then(() => {
+        console.log("Poll created successfully.");
+        questionInput.value = "";
+    })
+    .catch((error) => {
+        console.error("Error creating poll: ", error);
+    });
+});
+
+// Function to display polls
+function displayPolls() {
+    pollList.innerHTML = "";
+    const db = firebase.firestore();
+
+// Reference to the "polls" collection
+const pollRef = db.collection("polls");
+    // Get all polls from the "polls" collection
+    pollRef.get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            const data = doc.data();
+            const pollItem = document.createElement("li");
+            pollItem.innerHTML = `<strong>${data.question}</strong> <a href="results.html?pollId=${doc.id}">View Results</a>`;
+            pollList.appendChild(pollItem);
+        });
+    });
+}
+
+// Call the function to display polls
+displayPolls();
+
+
+
+
+	    
+    </script>
 </body>
 </html>
