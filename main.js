@@ -935,8 +935,11 @@ document.addEventListener('DOMContentLoaded', function() {
   document.head.appendChild(script);
 
   script.onload = function() {
-  //  lateLoad();
-	  		//    console.log("  ?????????     Next    ??????????999        ");
+
+	  	  console.log('Next');
+
+	  
+    lateLoad();
 
   };
 });
