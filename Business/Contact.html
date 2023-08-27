@@ -86,12 +86,12 @@
                 timestamp: firebase.firestore.FieldValue.serverTimestamp()
             })
             .then(() => {
-                alert('Thank you! Your message has been submitted.');
+                showMainMessage('Thank you! Your message has been submitted.');
                 clearForm();
             })
             .catch(error => {
                 console.error('Error submitting form:', error);
-                alert('Oops! Something went wrong. Please try again later.');
+                showMainMessage('Oops! Something went wrong. Please try again later.');
             });
         }
 
