@@ -68,7 +68,6 @@
 
     <script>
 
-        const db = firebase.firestore();
 
         // Function to submit the form data to Firebase Firestore
         function submitForm() {
@@ -81,7 +80,8 @@ const name = input(name1);
             const email = input(email1);
             const subject = input(subject1);
             const message =input(message1);
-		
+		        const db = firebase.firestore();
+
             // Add form data to Firestore collection
             db.collection('contact').add({
                 name: name,
