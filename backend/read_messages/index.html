@@ -1,38 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  <!-- Import navbar and footer components -->
+  <link rel="import" href="/elements/navbar.html">
+  <link rel="import" href="/elements/footer.html">
+
+  <div id="navbar"></div>
+  <!-- Rest of the page content -->
+  <div id="signupLoginArea"><div>
+
+
+<!-- Add this in the <head> section of your HTML -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Firebase SDK -->
+  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+  <!-- Custom scripts   <script  src="/main.js" defer></script> 
+-->
+  <script  src="/main.js" ></script> 
+	
+
+
+
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Read Messages</title>
-    <!-- Add Firebase scripts here (make sure Firebase is initialized properly) -->
-    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js"></script>
+
 </head>
 <body>
-    <h1>Messages</h1>
-    <ul id="messages-list"></ul>
+    <div class="container mt-5">
+        <h1 class="mb-4">Messages</h1>
+        <ul class="list-group" id="messages-list"></ul>
+    </div>
+
+    <!-- Modal to display message details -->
+    <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="messageModalLabel">Message Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="messageDetails"></div>
+            </div>
+        </div>
+    </div>
 
     <script>
-        // Initialize Firebase (add your config here)
+
+        // Function to display messages
+        function displayMessages() {
+            const messagesList = document.getElementById("messages-list");
 
         const db = firebase.firestore();
 
         // Reference to the "contact" collection
         const contactRef = db.collection("contact");
 
-        // Function to display messages
-        function displayMessages() {
-            const messagesList = document.getElementById("messages-list");
-       const db = firebase.firestore();
-
-        // Reference to the "contact" collection
-        const contactRef = db.collection("contact");
             // Get all messages from the collection
             contactRef.get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
                     const data = doc.data();
                     const listItem = document.createElement("li");
-                    listItem.textContent = `Name: ${data.name}, Email: ${data.email}, Subject: ${data.subject}, Message: ${data.message}`;
+                    listItem.className = "list-group-item clickable";
+                    listItem.textContent = `Name: ${data.name}, Email: ${data.email}, Subject: ${data.subject}`;
+                    listItem.addEventListener("click", () => {
+                        // Show message details in the modal when clicked
+                        const messageDetails = document.getElementById("messageDetails");
+                        messageDetails.innerHTML = `Name: ${data.name}<br>Email: ${data.email}<br>Subject: ${data.subject}<br>Message: ${data.message}`;
+                        $('#messageModal').modal('show');
+                    });
                     messagesList.appendChild(listItem);
                 });
             });
