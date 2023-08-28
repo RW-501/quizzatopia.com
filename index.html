@@ -562,7 +562,8 @@ margin: -10% 0 10% 0;
             font-size: 24px;
             font-weight: bold;
             border-bottom: 2px solid #333;
-            animation: funAnimation 2s infinite;
+            animation: funAnimation 10s infinite;
+	    z-index: -1;	
         }
 		            #bannerAction a {
 color: #fd7e14;
@@ -572,13 +573,13 @@ color: #fd7e14;
 
         @keyframes funAnimation {
             0% {
-                transform: translateY(-5%);
+                transform: translateY(-50%);
             }
             50% {
                 transform: translateY(5%);
             }
             100% {
-                transform: translateY(-0%);
+                transform: translateY(-50%);
             }
         }
     </style>
