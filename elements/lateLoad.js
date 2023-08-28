@@ -1302,7 +1302,13 @@ function logVisitorInformation(scrollInfo) {
 }
 
 
-
+/*
+// Access different components of the URL
+const protocol = currentUrl.protocol; // e.g., "https:"
+const host = currentUrl.host; // e.g., "www.example.com"
+const pathname = currentUrl.pathname; // e.g., "/path/to/resource"
+const searchParams = currentUrl.searchParams; // Access query parameters/
+*/
 
 // Function to get current page URL (example implementation, you may need to customize this)
 function getCurrentPage() {
@@ -1531,9 +1537,12 @@ window.addEventListener("load", () => {
 		    const userInfo = getUserInfo();
 
     const firebaseId = userInfo.firebaseId;
-    const currentUrl = window.location.href;
+    const currentUrl = input(window.location.href);
+	
+if (user !== ALLOWED_USER || uID !== ALLOWED_USER) {
 
     logUserMovement(ipAddress, firebaseId, currentUrl);
+}
 });
 
 
@@ -1614,7 +1623,7 @@ function getBadWords() {
 
 // Import a list of bad words and profanity filter
 //const badWords = getBadWords();
-  const badWords = ['shit', 's h i t', 'queer', 'q u e e r', 'gay', 'pussy', 'dick', 'nigger', 'n i g g e r', 'nigga', 'damn', 'd a m n', 'God damn', 'fucking','fuck', 'f u c k', 'b i t c h', 'bitch', '.com', 'cum'];
+  const badWords = ['shit', 's h i t', 'queer', 'q u e e r', 'gay', 'pussy', 'dick', 'nigger', 'n i g g e r', 'nigga', 'damn', 'd a m n', 'God damn', 'fucking','fuck', 'f u c k', 'b i t c h', 'bitch', 'cum'];
 
 function filterContent(content) {
   if (content == null) {
@@ -1640,6 +1649,8 @@ let  trimmedStr = String(content);
   // Replace contact information with asterisks
   content = content.replace(contactInfoRegex, '***');
 
+content = sanitizeHTMLscript(content);
+
   // Sanitize HTML content to remove potentially harmful elements and attributes
   content = sanitizeHTML(content);
 
@@ -1653,6 +1664,15 @@ function sanitizeHTML(content) {
   const sanitizedContent = doc.body.textContent || doc.body.innerText;
   return content;
 }
+function sanitizeHTMLscript(html) {
+  const cleanHTML = DOMPurify.sanitize(html);
+  return cleanHTML;
+}
+/*
+// Example usage:
+const dirtyHTML = "<script>alert('XSS attack!')</script>";
+console.log(sanitizedHTML);
+*/
 
 // Helper function to escape special characters in the word
 function escapeRegExp(word) {
