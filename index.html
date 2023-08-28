@@ -1677,15 +1677,13 @@ function getActivePollQuestion() {
 
             const pollData = pollDoc.data();
              pollDocID = pollDoc.id;
-      console.log(`pollId1 ${pollDocID} `);
+   //   console.log(`pollId1 ${pollDocID} `);
 
             showMainMessage(`<div id="poll-container">
                 <h3>Poll Question:</h3>
                 <p id="poll-question">${pollData.question}</p>
                 <button id="yes-button" onclick="answerPoll('${pollDocID}', 'yes')">Yes</button>
                 <button id="no-button" onclick="answerPoll('${pollDocID}', 'no')">No</button>
-                <p>Yes Count: <span id="yes-count">0</span></p>
-                <p>No Count: <span id="no-count">0</span></p>
             </div>`);
     //  console.log(`question ${pollData.question} `);
 // Start listening for changes to the active poll question
@@ -1714,7 +1712,7 @@ function updatePollUI(pollData) {
  
 
 // Function to answer the poll and update the database
-function answerPoll(answer) {
+function answerPoll(pollDocID, answer) {
 	      console.log(`answer ${answer} `);
 
     const db = firebase.firestore();
