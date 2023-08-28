@@ -69,7 +69,12 @@ const pollRef = db.collection("polls");
     // Add the question to the "polls" collection
     pollRef.add({
         question: question,
-        options: [],
+        options: [
+"options1",
+"options2",
+"options3",
+"options4"		
+	],
     })
     .then(() => {
         console.log("Poll created successfully.");
@@ -92,7 +97,7 @@ const pollRef = db.collection("polls");
         querySnapshot.forEach((doc) => {
             const data = doc.data();
             const pollItem = document.createElement("li");
-            pollItem.innerHTML = `<strong>${data.question}</strong> <a href="results.html?pollId=${doc.id}">View Results</a>`;
+            pollItem.innerHTML = `<strong>${data.question}</strong><BR><strong>${data.options[0]}</strong><strong>${data.options.[1]}</strong> `;
             pollList.appendChild(pollItem);
         });
     });
