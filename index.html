@@ -1667,27 +1667,26 @@ function getActivePollQuestion() {
                 return null; // No active polls found
             }
 
-            const questions = [];
-            querySnapshot.forEach((doc) => {
-                questions.push(doc.data());
-            });
+            const pollDocs = querySnapshot.docs; // Get an array of poll documents
+            const randomIndex = Math.floor(Math.random() * pollDocs.length);
+            const pollDoc = pollDocs[randomIndex]; // Choose a random poll document
 
-            // Choose a random active poll question
-            const randomIndex = Math.floor(Math.random() * questions.length);
+            const pollData = pollDoc.data();
+            const pollId = pollDoc.id;
 
-	showMainMessage(`<div id="poll-container">
-    <h3>Poll Question:</h3>
-    <p id="poll-question">${questions[randomIndex]}</p>
-    <button id="yes-button" onclick="answerPoll('yes')">Yes</button>
-    <button id="no-button" onclick="answerPoll('no')">No</button>
-    <p>Yes Count: <span id="yes-count">0</span></p>
-    <p>No Count: <span id="no-count">0</span></p>
-</div>`);
+            showMainMessage(`<div id="poll-container">
+                <h3>Poll Question:</h3>
+                <p id="poll-question">${pollData.question}</p>
+                <button id="yes-button" onclick="answerPoll('${pollId}', 'yes')">Yes</button>
+                <button id="no-button" onclick="answerPoll('${pollId}', 'no')">No</button>
+                <p>Yes Count: <span id="yes-count">0</span></p>
+                <p>No Count: <span id="no-count">0</span></p>
+            </div>`);
 
-		        });
-
-	return doc.id;
+            return pollId; // Return the ID of the chosen poll
+        });
 }
+
 
 
 // Function to update the poll question and answer counts
