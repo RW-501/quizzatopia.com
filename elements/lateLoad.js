@@ -1539,7 +1539,7 @@ window.addEventListener("load", () => {
     const firebaseId = userInfo.firebaseId;
     const currentUrl = input(window.location.href);
 	
-if (user !== ALLOWED_USER || uID !== ALLOWED_USER) {
+if (!firebaseId || uID !== ALLOWED_USER) {
 
     logUserMovement(ipAddress, firebaseId, currentUrl);
 }
