@@ -1498,7 +1498,7 @@ questLogRef.update({
 }
 if (!loggedIn) {
 
-function checkGuestUser();{
+function checkGuestUser();
 }
 
 
