@@ -76,7 +76,7 @@
 <main class="container">
   <h1>User Review and Removal</h1>
   <button onclick="getUsersWithoutFirebaseId()">Get Users without Firebase ID</button>
-<div id="userList"></div>
+<div id="userList2"></div>
 
   <script>
 
@@ -94,7 +94,7 @@ var count = 0;
     .where("userAds", "==", "")
     .get()
     .then((querySnapshot) => {
-          const userListDiv = document.getElementById("userList");
+          const userListDiv = document.getElementById("userList2");
           userListDiv.innerHTML = "";
 	          querySnapshot.forEach((doc) => {
 			  count++;
