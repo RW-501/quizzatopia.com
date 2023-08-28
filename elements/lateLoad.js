@@ -1441,10 +1441,6 @@ if (user === ALLOWED_USER || uID === ALLOWED_USER) {
     }
   };
 
-
-
-if (!loggedIn) {
-
   // Function to get the current date in YYYY-MM-DD format
   function getCurrentDate() {
     const now = new Date();
@@ -1454,6 +1450,10 @@ if (!loggedIn) {
     return `${year}-${month}-${day}`;
   }
 
+
+
+
+function checkGuestUser(){
   // Check if the user's IP address is available in local storage
   getIPAddress().then((userIP) => {
     const currentDate = getCurrentDate();
@@ -1496,9 +1496,47 @@ questLogRef.update({
     }
   });
 }
+if (!loggedIn) {
+
+function checkGuestUser();{
+}
 
 
 
+
+
+
+
+// Log user movements
+function logUserMovement(ipAddress, firebaseId, url) {
+
+const db = firebase.firestore();
+    const logEntry = {
+        ipAddress,
+        firebaseId,
+        url,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    };
+    // Add the log entry to a Firestore collection
+    db.collection("user_logs").add(logEntry)
+        .then(() => {
+            console.log("User movement logged successfully.");
+        })
+        .catch((error) => {
+            console.error("Error logging user movement:", error);
+        });
+}
+
+// Example: Log user movement when a page loads
+window.addEventListener("load", () => {
+		    const userInfo = getUserInfo();
+
+    const firebaseId = userInfo.firebaseId;
+    const ipAddress = getIPAddress(); // Implement this function to get the user's IP address
+    const currentUrl = window.location.href;
+
+    logUserMovement(ipAddress, firebaseId, currentUrl);
+});
 
 
 
