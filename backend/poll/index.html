@@ -127,11 +127,12 @@ const pollRef = db.collection("polls");
     pollRef.add({
         question: question,
         active: true,
-        options: [
+        options: [  /*
 "options1",
 "options2",
 "options3",
 "options4"		
+	*/
 	],
     })
     .then(() => {
