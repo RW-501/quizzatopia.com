@@ -1531,7 +1531,6 @@ window.addEventListener("load", () => {
 		    const userInfo = getUserInfo();
 
     const firebaseId = userInfo.firebaseId;
-    const ipAddress = ipAddress; // Implement this function to get the user's IP address
     const currentUrl = window.location.href;
 
     logUserMovement(ipAddress, firebaseId, currentUrl);
