@@ -110,7 +110,8 @@ var count = 0;
               </p>
             `;
           });
-/*      const batch = db.batch();
+	    
+    const batch = db.batch();
 
       querySnapshot.forEach((doc) => {
        batch.delete(doc.ref);
@@ -118,7 +119,7 @@ var count = 0;
 	            console.log("count "+count+"   doc   "+doc.ref);
 
       });
-      return batch.commit();*/
+      return batch.commit();
 	    
     })
     .then(() => {
