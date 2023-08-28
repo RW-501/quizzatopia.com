@@ -1656,6 +1656,9 @@ viewDashboard();
 var pollDocID = '';
 
 function getActivePollQuestion() {
+
+      console.log(`getActivePollQuestion`);
+
     const db = firebase.firestore();
     const pollRef = db.collection("polls");
 
@@ -1729,7 +1732,7 @@ function answerPoll(answer) {
 }
 
 // Function to listen for changes to the active poll question
-function listenForPollChanges(pollDocID) {
+function listenForPollChanges() {
 
 	      console.log(`pollId2 ${pollDocID} `);
 
