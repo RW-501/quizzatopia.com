@@ -1652,6 +1652,92 @@ viewDashboard();
 
 	
 <script>
+
+function getActivePollQuestion() {
+    const db = firebase.firestore();
+    const pollRef = db.collection("polls");
+
+    // Query for active poll questions
+    return pollRef
+        .where("active", "==", true)
+        .get()
+        .then((querySnapshot) => {
+            if (querySnapshot.empty) {
+                return null; // No active polls found
+            }
+
+            const questions = [];
+            querySnapshot.forEach((doc) => {
+                questions.push(doc.data());
+            });
+
+            // Choose a random active poll question
+            const randomIndex = Math.floor(Math.random() * questions.length);
+
+	showMainMessage(`<div id="poll-container">
+    <h3>Poll Question:</h3>
+    <p id="poll-question">${questions[randomIndex]}</p>
+    <button id="yes-button" onclick="answerPoll('yes')">Yes</button>
+    <button id="no-button" onclick="answerPoll('no')">No</button>
+    <p>Yes Count: <span id="yes-count">0</span></p>
+    <p>No Count: <span id="no-count">0</span></p>
+</div>`);
+
+		        });
+
+	return doc.id;
+}
+
+
+// Function to update the poll question and answer counts
+function updatePollUI(pollData) {
+    const pollQuestionElement = document.getElementById("poll-question");
+    const yesCountElement = document.getElementById("yes-count");
+    const noCountElement = document.getElementById("no-count");
+
+    if (pollData) {
+        pollQuestionElement.textContent = pollData.question;
+        yesCountElement.textContent = pollData.answers.filter(answer => answer === "yes").length;
+        noCountElement.textContent = pollData.answers.filter(answer => answer === "no").length;
+    } else {
+        pollQuestionElement.textContent = "No active poll question.";
+        yesCountElement.textContent = "0";
+        noCountElement.textContent = "0";
+    }
+}
+
+// Function to answer the poll and update the database
+function answerPoll(answer) {
+    const db = firebase.firestore();
+    const pollRef = db.collection("polls").doc("your_poll_id"); // Replace with your poll document ID
+
+    // Update the poll question with the user's answer
+    pollRef.update({
+        answers: firebase.firestore.FieldValue.arrayUnion(answer),
+    });
+}
+
+// Function to listen for changes to the active poll question
+function listenForPollChanges(docID) {
+    const db = firebase.firestore();
+    const pollRef = db.collection("polls").doc(docID); // Replace with your poll document ID
+
+    pollRef.onSnapshot((doc) => {
+        const pollData = doc.data();
+        updatePollUI(pollData);
+    });
+}
+// Wrap your poll setup code in a setTimeout function
+setTimeout(() => {
+    let docID = getActivePollQuestion();
+
+    // Start listening for changes to the active poll question
+    listenForPollChanges(docID);
+}, 10000); // 10000 milliseconds (10 seconds) delay
+
+
+
+
 	
   if (loggedIn === true) {
 document.getElementById('searchCode').style.display = "none";
