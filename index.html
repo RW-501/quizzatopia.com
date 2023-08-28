@@ -1653,6 +1653,7 @@ viewDashboard();
 
 	
 <script>
+var pollDocID = '';
 
 function getActivePollQuestion() {
     const db = firebase.firestore();
@@ -1672,7 +1673,8 @@ function getActivePollQuestion() {
             const pollDoc = pollDocs[randomIndex]; // Choose a random poll document
 
             const pollData = pollDoc.data();
-            const pollId = pollDoc.id;
+             pollDocID = pollDoc.id;
+      console.log(`pollId1 ${pollDocID} `);
 
             showMainMessage(`<div id="poll-container">
                 <h3>Poll Question:</h3>
@@ -1682,8 +1684,8 @@ function getActivePollQuestion() {
                 <p>Yes Count: <span id="yes-count">0</span></p>
                 <p>No Count: <span id="no-count">0</span></p>
             </div>`);
+      console.log(`question ${pollData.question} `);
 
-            return pollId; // Return the ID of the chosen poll
         });
 }
 
@@ -1706,10 +1708,11 @@ function updatePollUI(pollData) {
     }
 }
  
-let pollDocID = '';
 
 // Function to answer the poll and update the database
 function answerPoll(answer) {
+	      console.log(`answer ${answer} `);
+
     const db = firebase.firestore();
     const pollRef = db.collection("polls").doc(pollDocID); // Replace with your poll document ID
 
@@ -1727,6 +1730,9 @@ function answerPoll(answer) {
 
 // Function to listen for changes to the active poll question
 function listenForPollChanges(pollDocID) {
+
+	      console.log(`pollId2 ${pollDocID} `);
+
     const db = firebase.firestore();
     const pollRef = db.collection("polls").doc(pollDocID); // Replace with your poll document ID
 
@@ -1743,7 +1749,7 @@ function listenForPollChanges(pollDocID) {
 
 // Wrap your poll setup code in a setTimeout function
 setTimeout(() => {
-     pollDocID = getActivePollQuestion();
+    getActivePollQuestion();
 
     // Start listening for changes to the active poll question
     listenForPollChanges(pollDocID);
