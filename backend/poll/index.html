@@ -126,6 +126,7 @@ const pollRef = db.collection("polls");
     // Add the question to the "polls" collection
     pollRef.add({
         question: question,
+        active: true,
         options: [
 "options1",
 "options2",
