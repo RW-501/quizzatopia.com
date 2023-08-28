@@ -1593,7 +1593,15 @@ viewDashboard();
   outline: none;
 }
 
-	
+.pollBTNs{
+  background-color: #d1d1d1;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+		}
 	
 	
 	</style>
@@ -1682,8 +1690,8 @@ function getActivePollQuestion() {
             showMainMessage(`<div id="poll-container">
                 <h3>Poll Question:</h3>
                 <p id="poll-question">${pollData.question}</p>
-                <button id="yes-button" onclick="answerPoll('${pollDocID}', 'yes')">Yes</button>
-                <button id="no-button" onclick="answerPoll('${pollDocID}', 'no')">No</button>
+                <button class="pollBTNs" id="yes-button" onclick="answerPoll('${pollDocID}', 'yes')">Yes</button>
+                <button class="pollBTNs" id="no-button" onclick="answerPoll('${pollDocID}', 'no')">No</button>
             </div>`);
     //  console.log(`question ${pollData.question} `);
 // Start listening for changes to the active poll question
