@@ -1620,6 +1620,13 @@ function getBadWords() {
 }
 
 
+var script = document.createElement('script');
+
+// Set the script source to the DOMPurify CDN URL
+script.src = 'https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.3/purify.min.js';
+
+// Append the script element to the document's head
+document.head.appendChild(script);
 
 // Import a list of bad words and profanity filter
 //const badWords = getBadWords();
