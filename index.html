@@ -1705,7 +1705,9 @@ function updatePollUI(pollData) {
         noCountElement.textContent = "0";
     }
 }
- let pollDocID = '';
+ 
+let pollDocID = '';
+
 // Function to answer the poll and update the database
 function answerPoll(answer) {
     const db = firebase.firestore();
@@ -1714,6 +1716,12 @@ function answerPoll(answer) {
     // Update the poll question with the user's answer
     pollRef.update({
         answers: firebase.firestore.FieldValue.arrayUnion(answer),
+    })
+    .then(() => {
+        showMainMessage("Poll answer successfully updated!");
+    })
+    .catch((error) => {
+        showMainMessage("Error updating poll answer:", error);
     });
 }
 
@@ -1724,9 +1732,15 @@ function listenForPollChanges(pollDocID) {
 
     pollRef.onSnapshot((doc) => {
         const pollData = doc.data();
+        console.log("Poll data:", pollData);
         updatePollUI(pollData, pollDocID);
+    }, (error) => {
+        console.error("Error listening for poll changes:", error);
     });
 }
+
+
+
 // Wrap your poll setup code in a setTimeout function
 setTimeout(() => {
      pollDocID = getActivePollQuestion();
@@ -1734,8 +1748,6 @@ setTimeout(() => {
     // Start listening for changes to the active poll question
     listenForPollChanges(pollDocID);
 }, 10000); // 10000 milliseconds (10 seconds) delay
-
-
 
 
 	
