@@ -1709,7 +1709,7 @@ function answerPoll(pollDocID, answer) {
 
     const db = firebase.firestore();
     const pollRef = db.collection("polls").doc(pollDocID); // Replace with your poll document ID
-    const countsRef = pollRef.collection("counts"); // Subcollection for counts
+    const countsRef = pollRef.collection("counts"); // Subcollection for counts /
 
     // Start a Firestore transaction
     return db.runTransaction((transaction) => {
