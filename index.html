@@ -1687,8 +1687,9 @@ function getActivePollQuestion() {
                 <p>Yes Count: <span id="yes-count">0</span></p>
                 <p>No Count: <span id="no-count">0</span></p>
             </div>`);
-      console.log(`question ${pollData.question} `);
-
+    //  console.log(`question ${pollData.question} `);
+// Start listening for changes to the active poll question
+    listenForPollChanges(pollDocID);
         });
 }
 
@@ -1754,8 +1755,7 @@ function listenForPollChanges(pollDocID) {
 setTimeout(() => {
     getActivePollQuestion();
 
-    // Start listening for changes to the active poll question
-    listenForPollChanges(pollDocID);
+    
 }, 10000); // 10000 milliseconds (10 seconds) delay
 
 
