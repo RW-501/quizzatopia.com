@@ -181,7 +181,8 @@ tbody, td, tfoot, th, thead, tr {
       <div class="col-md-12">
         <!-- Main content area -->
         <h2>Welcome to the Dashboard</h2>
-
+<button id="uploadButton">Upload User Info</button>
+<br>
         <!-- Sort buttons for the user table -->
    <div class="sort-buttons">
   <button id="toggleSortDirection" onclick="toggleSortDirection()">Toggle Sorting Direction</button>
@@ -218,7 +219,148 @@ tbody, td, tfoot, th, thead, tr {
   <!-- Include JavaScript dependencies -->
 
     <script src="users.js"></script>
+<script>
 
+document.getElementById('uploadButton').addEventListener('click', () => {
+
+	const db = firebase.firestore();
+
+  // Define the user data in JSON format
+  const userData = [
+    {
+        "Email": "aaishaa.hussain@gmail.com",
+        "Name": "Aishath",
+        "firebaseId": "1YrUWx9E0nQaOd9ZcGm4S87h0dB2",
+        "userPoints": 10
+    },
+    {
+        "Email": "wootae2730@gmail.com",
+        "Name": "Daisy",
+        "firebaseId": "3w0H8UykGNfOlKkUtUJNXkgHgvE3",
+        "userPoints": 23
+    },
+    {
+        "Email": "kmapp13@gmail.com",
+        "Name": "kirstian mapp",
+        "firebaseId": "77ZBmP2anZX2HXK5LMSPAWpvDu22",
+        "userPoints": 18
+    },
+    {
+        "Email": "jkook0615@gmail.com",
+        "Name": "Kool",
+        "firebaseId": "85oNklLmegW8P3y8dj0dCbLvt7v1",
+        "userPoints": 14
+    },
+    {
+        "Email": "malanjaindl@gmail.com",
+        "Name": "Michael J",
+        "firebaseId": "BA30FIjN5JUqMiF5nDUWefKwFnD2",
+        "userPoints": 48
+    },
+    {
+        "Email": "empress.asher20@gmail.com",
+        "Name": "wendy",
+        "firebaseId": "CTawX0XW7GftKUiunQsoMJmZRiG2",
+        "userPoints": 34
+    },
+    {
+        "Email": "rannelshannel89@gmail.com",
+        "Name": "Shalonda",
+        "firebaseId": "GHdTpgtRkLRFmn8pn1eTUNEJFN42",
+        "userPoints": 8
+    },
+    {
+        "Email": "sloliver8@gmail.com",
+        "Name": "Shenika Oliver",
+        "firebaseId": "GgWHLfKn2BUDq1GxaL5d64KpFpA3",
+        "userPoints": 22
+    },
+    {
+        "Email": "mayuwhite10@gmail.com",
+        "Name": "Mayu White",
+        "firebaseId": "IBalFxb9e7Nf5idSsDctOKUKQm33",
+        "userPoints": 67
+    },
+    {
+        "Email": "iarthu07@gmail.com",
+        "Name": "Aathu",
+        "firebaseId": "OSeVEoGqJnNXsNtz5S10X0uui5J3",
+        "userPoints": 20
+    },
+    {
+        "Email": "jamied2258@gmail.com",
+        "Name": "Jamie D",
+        "firebaseId": "PE78V402rWbJqhsY6WWR3ohXNWm1",
+        "userPoints": 0
+    },
+    {
+        "Email": "arguellesjohncris@gmail.com",
+        "Name": "John",
+        "firebaseId": "ar4hdGbIDIUwoeKUaPnmw8NQ9tk2",
+        "userPoints": 16
+    },
+    {
+        "Email": "crystal.corral@gmail.com",
+        "Name": "Cee Cee (CC)",
+        "firebaseId": "e0AW4iVUU5el6jV0DIIH1tHwKJr2",
+        "userPoints": 15
+    },
+    {
+        "Email": "1988lrp@gmail.com",
+        "Name": "Ron",
+        "firebaseId": "fM2CtVN59wNwrZeQZrSqlp4rUcr2",
+        "userPoints": 466
+    },
+    {
+        "Email": "toryeller@yahoo.com",
+        "Name": "SleezyT82",
+        "firebaseId": "teDEagIn8gZQuiyKHcfBO9VQWYm1",
+        "userPoints": 34
+    },
+    {
+        "Email": "ladyj1037thebeat@gmail.com",
+        "Name": "J Jones",
+        "firebaseId": "kokaQ46tSnYNavNLBrdH7VtPJFZ2",
+        "userPoints": 16
+    },
+    {
+        "Email": "syntaxattire@gmail.com",
+        "Name": "Maria Garcia",
+        "firebaseId": "lmC5bI2fk0SE1HU6l0hvUcgvmg72",
+        "userPoints": 267
+    },
+    {
+        "Email": "raenthebox@gmail.com",
+        "Name": "razaina jean",
+        "firebaseId": "oK31l6LLF9Vga0ti3XI3pY0Cca43",
+        "userPoints": 0
+    },
+    {
+        "Email": "sarah.holzhausen@gmail.com",
+        "Name": "Sarah Holzhausen",
+        "firebaseId": "pmbw4ZVabBcYfiVNGbgQ3ziC13m1",
+        "userPoints": 0
+    }
+];
+
+  // Loop through the userData array and add each user to the Firestore collection
+  userData.forEach((user) => {
+    // Add the user data to a Firestore collection (e.g., 'users')
+    db.collection('users')
+      .add(user)
+      .then((docRef) => {
+        console.log('User added with ID: ', docRef.id);
+      })
+      .catch((error) => {
+        console.error('Error adding user: ', error);
+      });
+  });
+});
+
+
+
+	
+</script>
 </body>
 
 </html>
