@@ -1709,43 +1709,43 @@ function answerPoll(pollDocID, answer) {
     const pollRef = db.collection("polls").doc(pollDocID);
     const countsRef = pollRef.collection("counts");
 
-    return db.runTransaction((transaction) => {
-        // First, perform a read operation
-        return transaction.get(pollRef).then((pollDoc) => {
-            const data = pollDoc.data();
+    let currentYesCount = 0;
+    let currentNoCount = 0;
 
-            // Now, perform a read operation for counts
-            return transaction.get(countsRef.doc(answer)).then((countDoc) => {
-                let count = 0;
+    return countsRef.doc("yes").get()
+        .then((countDoc) => {
+            if (countDoc.exists) {
+                currentYesCount = countDoc.data().count || 0;
+            }
 
-                if (countDoc.exists) {
-                    count = countDoc.data().count;
-                }
+            return countsRef.doc("no").get();
+        })
+        .then((countDoc) => {
+            if (countDoc.exists) {
+                currentNoCount = countDoc.data().count || 0;
+            }
 
-                count++;
+            // Increment the count based on the answer
+            if (answer === "yes") {
+                currentYesCount++;
+            } else if (answer === "no") {
+                currentNoCount++;
+            }
 
-                transaction.set(countsRef.doc(answer), { count });
-
-                if (data.options && Array.isArray(data.options)) {
-                    const updatedOptions = [...data.options];
-                    const optionIndex = updatedOptions.indexOf(answer);
-                    if (optionIndex !== -1) {
-                        updatedOptions[optionIndex] = `${answer} (${count})`;
-
-                        // Finally, perform the write operation
-                        transaction.update(pollRef, { options: updatedOptions });
-                    }
-                }
-            });
+            // Update the counts in Firestore
+            return Promise.all([
+                countsRef.doc("yes").set({ count: currentYesCount }),
+                countsRef.doc("no").set({ count: currentNoCount }),
+            ]);
+        })
+        .then(() => {
+            showMainMessage(`Poll answer successfully updated!`);
+        })
+        .catch((error) => {
+            console.error("Error updating poll answer:", error);
         });
-    })
-    .then(() => {
-        showMainMessage(`Poll answer successfully updated!`);
-    })
-    .catch((error) => {
-        console.error("Error updating poll answer:", error);
-    });
 }
+
 
 
 // Function to listen for changes to the active poll question
