@@ -1722,21 +1722,26 @@ function answerPoll(pollDocID, answer) {
 
             transaction.set(countsRef.doc(answer), { count });
 
-            transaction.update(pollRef, {
-                answers: firebase.firestore.FieldValue.arrayUnion(answer),
+            return transaction.get(pollRef).then((pollDoc) => {
+                const data = pollDoc.data();
+                if (data.options && Array.isArray(data.options)) {
+                    const updatedOptions = [...data.options];
+                    const optionIndex = updatedOptions.indexOf(answer);
+                    if (optionIndex !== -1) {
+                        updatedOptions[optionIndex] = `${answer} (${count})`;
+                        transaction.update(pollRef, { options: updatedOptions });
+                    }
+                }
             });
-
-            return count;
         });
     })
-    .then((count) => {
+    .then(() => {
         showMainMessage(`Poll answer successfully updated!`);
     })
     .catch((error) => {
         console.error("Error updating poll answer:", error);
     });
 }
-
 
 
 // Function to listen for changes to the active poll question
