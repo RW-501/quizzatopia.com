@@ -1703,32 +1703,25 @@ function getActivePollQuestion() {
 
 	
 
-// Function to answer the poll and update the database
 function answerPoll(pollDocID, answer) {
-    console.log(`answer ${answer}`);
+    console.log(`Answering poll: ${pollDocID}, Answer: ${answer}`);
 
     const db = firebase.firestore();
-    const pollRef = db.collection("polls").doc(pollDocID); // Replace with your poll document ID
-    const countsRef = pollRef.collection("counts"); // Subcollection for counts /
+    const pollRef = db.collection("polls").doc(pollDocID);
+    const countsRef = pollRef.collection("counts");
 
-    // Start a Firestore transaction
     return db.runTransaction((transaction) => {
-        // Get the current count
         return transaction.get(countsRef.doc(answer)).then((countDoc) => {
             let count = 0;
 
             if (countDoc.exists) {
-                // If the count document exists, get the current count value
                 count = countDoc.data().count;
             }
 
-            // Increment the count by 1
             count++;
 
-            // Update the count in Firestore
             transaction.set(countsRef.doc(answer), { count });
 
-            // Update the poll question with the user's answer
             transaction.update(pollRef, {
                 answers: firebase.firestore.FieldValue.arrayUnion(answer),
             });
@@ -1740,9 +1733,10 @@ function answerPoll(pollDocID, answer) {
         showMainMessage(`Poll answer successfully updated!`);
     })
     .catch((error) => {
-        showMainMessage("Error updating poll answer:", error);
+        console.error("Error updating poll answer:", error);
     });
 }
+
 
 
 // Function to listen for changes to the active poll question
