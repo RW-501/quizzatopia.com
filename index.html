@@ -1702,7 +1702,6 @@ function getActivePollQuestion() {
 
 
 	
-
 function answerPoll(pollDocID, answer) {
     console.log(`Answering poll: ${pollDocID}, Answer: ${answer}`);
 
@@ -1711,24 +1710,29 @@ function answerPoll(pollDocID, answer) {
     const countsRef = pollRef.collection("counts");
 
     return db.runTransaction((transaction) => {
-        return transaction.get(countsRef.doc(answer)).then((countDoc) => {
-            let count = 0;
+        // First, perform a read operation
+        return transaction.get(pollRef).then((pollDoc) => {
+            const data = pollDoc.data();
 
-            if (countDoc.exists) {
-                count = countDoc.data().count;
-            }
+            // Now, perform a read operation for counts
+            return transaction.get(countsRef.doc(answer)).then((countDoc) => {
+                let count = 0;
 
-            count++;
+                if (countDoc.exists) {
+                    count = countDoc.data().count;
+                }
 
-            transaction.set(countsRef.doc(answer), { count });
+                count++;
 
-            return transaction.get(pollRef).then((pollDoc) => {
-                const data = pollDoc.data();
+                transaction.set(countsRef.doc(answer), { count });
+
                 if (data.options && Array.isArray(data.options)) {
                     const updatedOptions = [...data.options];
                     const optionIndex = updatedOptions.indexOf(answer);
                     if (optionIndex !== -1) {
                         updatedOptions[optionIndex] = `${answer} (${count})`;
+
+                        // Finally, perform the write operation
                         transaction.update(pollRef, { options: updatedOptions });
                     }
                 }
