@@ -1701,50 +1701,48 @@ function getActivePollQuestion() {
 
 
 
-	
 function answerPoll(pollDocID, answer) {
     console.log(`Answering poll: ${pollDocID}, Answer: ${answer}`);
 
     const db = firebase.firestore();
     const pollRef = db.collection("polls").doc(pollDocID);
-    const countsRef = pollRef.collection("counts");
 
-    let currentYesCount = 0;
-    let currentNoCount = 0;
+    return db.runTransaction((transaction) => {
+        return transaction.get(pollRef).then((pollDoc) => {
+            const pollData = pollDoc.data();
 
-    return countsRef.doc("yes").get()
-        .then((countDoc) => {
-            if (countDoc.exists) {
-                currentYesCount = countDoc.data().count || 0;
+            // Initialize counts if they don't exist
+            if (!pollData.counts) {
+                pollData.counts = {
+                    yes: 0,
+                    no: 0,
+                };
             }
 
-            return countsRef.doc("no").get();
-        })
-        .then((countDoc) => {
-            if (countDoc.exists) {
-                currentNoCount = countDoc.data().count || 0;
-            }
-
-            // Increment the count based on the answer
+            // Update counts based on the user's answer
             if (answer === "yes") {
-                currentYesCount++;
+                pollData.counts.yes++;
             } else if (answer === "no") {
-                currentNoCount++;
+                pollData.counts.no++;
             }
 
-            // Update the counts in Firestore
-            return Promise.all([
-                countsRef.doc("yes").set({ count: currentYesCount }),
-                countsRef.doc("no").set({ count: currentNoCount }),
-            ]);
-        })
-        .then(() => {
-            showMainMessage(`Poll answer successfully updated!`);
-        })
-        .catch((error) => {
-            console.error("Error updating poll answer:", error);
+            // Update the poll document
+            transaction.update(pollRef, {
+                counts: pollData.counts,
+                answers: firebase.firestore.FieldValue.arrayUnion(answer),
+            });
+
+            return pollData.counts;
         });
+    })
+    .then((counts) => {
+        showMainMessage(`Poll answer successfully updated!`);
+    })
+    .catch((error) => {
+        console.error("Error updating poll answer:", error);
+    });
 }
+
 
 
 
