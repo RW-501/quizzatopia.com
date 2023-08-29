@@ -156,7 +156,7 @@ const pollRef = db.collection("polls");
         querySnapshot.forEach((doc) => {
             const data = doc.data();
             const pollItem = document.createElement("li");
-            pollItem.innerHTML = `<strong>${data.question}</strong><BR><strong>${data.options[0]}</strong><strong>${data.options.[1]}</strong> `;
+            pollItem.innerHTML = `<strong>${data.question}</strong><BR> `;
             pollList.appendChild(pollItem);
         });
     });
