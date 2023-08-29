@@ -1685,8 +1685,11 @@ function getActivePollQuestion() {
 
             const pollData = pollDoc.data();
              pollDocID = pollDoc.id;
-   //   console.log(`pollId1 ${pollDocID} `);
+const poll = localStorage.getItem('poll');
 
+if (poll === pollDocID) {
+return;
+	}else{
             showMainMessage(`<div id="poll-container">
                 <h3>Poll Question:</h3>
                 <p id="poll-question">${pollData.question}</p>
@@ -1696,13 +1699,15 @@ function getActivePollQuestion() {
     //  console.log(`question ${pollData.question} `);
 // Start listening for changes to the active poll question
     listenForPollChanges(pollDocID);
+	}
         });
 }
 
 
 
 function answerPoll(pollDocID, answer) {
-    console.log(`Answering poll: ${pollDocID}, Answer: ${answer}`);
+	
+localStorage.setItem('poll', '${pollDocID}');
 
     const db = firebase.firestore();
     const pollRef = db.collection("polls").doc(pollDocID);
