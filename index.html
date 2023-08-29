@@ -1686,7 +1686,7 @@ function getActivePollQuestion() {
             const pollData = pollDoc.data();
              pollDocID = pollDoc.id;
 const poll = localStorage.getItem('poll');
-
+ console.log(`getItem ${poll} `);
 if (poll === pollDocID) {
 return;
 	}else{
@@ -1707,8 +1707,9 @@ return;
 
 function answerPoll(pollDocID, answer) {
 	
-localStorage.setItem('poll', '${pollDocID}');
-
+localStorage.setItem('poll', pollDocID);
+ console.log(`setItem poll ${pollDocID} `);
+	
     const db = firebase.firestore();
     const pollRef = db.collection("polls").doc(pollDocID);
 
