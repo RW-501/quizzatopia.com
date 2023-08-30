@@ -919,7 +919,8 @@ const rank = userInfo.userRank;
 const userPic = userInfo.userProfilePic;
 
 updateWeeklyCompanionList(userId, username, points, rank, userPic);
-userPicture
+
+		  
 document.getElementById("score").innerHTML += `<p>Weekly Category Competition: ${category} <br>You earned <span>+${points}</span> points.</p>	`;
 
 		  
