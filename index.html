@@ -1157,31 +1157,28 @@ var intervalId = setInterval(setCatagories, 8000);
 
 // Function to get the weekly category if the user is logged in
 function getWeeklyCategoryIfLoggedIn() {
-  return new Promise((resolve, reject) => {
-    // Check if the user is logged in
-  //  const user = firebase.auth().currentUser;
-    //if (user) {
-      const db = firebase.firestore();
-      const weeklyChallengeRef = db.collection("quizCategory").doc("weeklyChallenge");
+ const db = firebase.firestore();
+  const quizCategoryRef = db.collection("quizCategory");
 
-      // Retrieve the weekly category data
-      weeklyChallengeRef.get().then((doc) => {
-        if (doc.exists) {
-          const data = doc.data();
-          const categoryName = data.name; // Assuming the name field contains the category name
-
-          // Resolve with the weekly category
-          resolve(categoryName);
-        } else {
-          reject(new Error("Weekly category not found in the database."));
-        }
-      }).catch((error) => {
-        reject(error);
-      });
-   /* } else {
-      reject(new Error("User is not logged in."));
-    }*/
-  });
+  // Query for the category where weeklyChallenge is equal to "Active"
+  return quizCategoryRef
+    .where("weeklyChallenge", "==", "Active")
+    .get()
+    .then((querySnapshot) => {
+      if (querySnapshot.docs.length > 0) {
+        // Assuming there's only one such category, so we take the first one
+        const categoryDoc = querySnapshot.docs[0];
+        const categoryData = categoryDoc.data();
+        return categoryData; // Return the category data
+      } else {
+        console.log("No active weekly challenge category found.");
+        return null; // No active category found
+      }
+    })
+    .catch((error) => {
+      console.error("Error fetching active weekly challenge category:", error);
+      return null; // Handle the error gracefully
+    });
 }
 
 
@@ -1267,7 +1264,7 @@ function getTop5UsersAndDisplayTable() {
 	  if (loggedIn  === true) {
 	console.log("getWeeklyCategoryIfLoggedIn:");
 
-	getWeeklyCategoryIfLoggedIn()
+	getWeeklyCategory()
   .then((category) => {
    console.log(`Weekly Category: ${category}`);
     // You can use the category as needed here
