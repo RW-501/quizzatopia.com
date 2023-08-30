@@ -1209,8 +1209,8 @@ function getWeeklyCategoryIfLoggedIn() {
 	 
 <script>
 
-function redirectToLeaderboard() {
-    window.location.href = '/Leaderboard';
+function redirectToLeaderboard(category) {
+    window.location.href = `/Leaderboard/?category=${category}`;
 }
 
 
@@ -1218,15 +1218,15 @@ function redirectToLeaderboard() {
 function getTop5UsersAndDisplayTable() {
   const db = firebase.firestore();
   const weeklyChallengeRef = db.collection("weeklyChallenge");
-
+let count = 0;
   // Query the top 5 users based on some criteria, e.g., score
   weeklyChallengeRef
     .orderBy("score", "desc") // Assuming there's a "score" field for ranking users
-    .limit(5)
+    .limit(3)
     .get()
     .then((querySnapshot) => {
       const weeklyCompanionList = document.getElementById("weeklyCompanionList");
-
+count++;
       // Create an HTML table to display the user info
       const table = document.createElement("table");
       table.classList.add("table"); // Add Bootstrap table styling
@@ -1248,6 +1248,7 @@ function getTop5UsersAndDisplayTable() {
       querySnapshot.forEach((doc) => {
         const userData = doc.data();
 const tr = document.createElement("tr");
+tr.classList.add("top_"count);
 tr.innerHTML = `
   <th scope="row">${rank}</th>
   <td>
@@ -1282,7 +1283,7 @@ tr.innerHTML = `
 let weeklyChallegeDiv =  document.getElementById('weeklyCompanion');
 weeklyChallegeDiv = ` <p>🌟The Weekly Category Challenge is🌟</p>
 <a href="#" id="companionLink" class="btn btn-primary"> <span>${category}</span> </a>
-<div id="weeklyCompanionList"><div class="loading_Main" onclick="redirectToLeaderboard()">Loading...</div>
+<div id="weeklyCompanionList"><div class="loading_Main" onclick="redirectToLeaderboard(${category})">Loading...</div>
 </div> 		  
      `; 	
 
