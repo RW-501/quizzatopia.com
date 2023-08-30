@@ -124,6 +124,12 @@
             const selectedCategory = document.getElementById("category").value;
             const db = firebase.firestore();
             const challengeRef = db.collection("quizCategory").doc(selectedCategory);
+// Usage example:
+deactivateOtherActiveCategories()
+  .then(() => {
+    // You can now add your new category as active
+  
+
 
             // Check if the "weeklyChallenge" field exists, if not, add it
             challengeRef.get().then((doc) => {
@@ -141,12 +147,60 @@
                     console.error("Selected category not found in Firestore.");
                 }
             }).then(() => {
-                console.log("Weekly challenge created successfully.");
+                showMainMessage("Weekly challenge created successfully.");
             }).catch((error) => {
                 console.error("Error creating weekly challenge: ", error);
             });
+
+})
+  .catch((error) => {
+    console.error("Error while managing categories:", error);
+  });
+
+	  
         });
 
+function deactivateOtherActiveCategories() {
+  // Reference to the Firestore database
+  const db = firebase.firestore();
+
+  // Reference to the "weeklyCategoryChallenge" collection
+  const categoryRef = db.collection("weeklyCategoryChallenge");
+
+  // Check if there are any active categories
+  return categoryRef
+    .where("active", "==", true)
+    .get()
+    .then((querySnapshot) => {
+      const deactivatePromises = [];
+
+      // Iterate through the active categories
+      querySnapshot.forEach((doc) => {
+        // Get the data of the active category
+        const categoryData = doc.data();
+
+        // Update the category to set "active" to false
+        const deactivatePromise = categoryRef.doc(doc.id).update({ active: false });
+        deactivatePromises.push(deactivatePromise);
+      });
+
+      // Return a Promise that resolves when all deactivation promises are complete
+      return Promise.all(deactivatePromises);
+    })
+    .then(() => {
+      console.log("Deactivated other active categories.");
+    })
+    .catch((error) => {
+      console.error("Error deactivating other active categories:", error);
+    });
+}
+
+
+
+
+
+
+	    
         // Fetch quiz categories when the page loads
         fetchQuizCategories();
     </script>
