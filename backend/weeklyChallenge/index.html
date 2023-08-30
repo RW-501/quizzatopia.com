@@ -1,1 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Poll</title>
 
+  <!-- Import navbar and footer components -->
+  <link rel="import" href="/elements/navbar.html">
+  <link rel="import" href="/elements/footer.html">
+
+  <div id="navbar"></div>
+  <!-- Rest of the page content -->
+  <div id="signupLoginArea"><div>
+
+  <!-- JavaScript dependencies async -->
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  crossorigin="anonymous">
+
+
+  <script  defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+
+  <script  defer src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+	  <script  defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"></script>
+
+<!-- Add this in the <head> section of your HTML -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Firebase SDK -->
+  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script  src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+  <!-- Custom scripts   <script  src="/main.js" defer></script> 
+-->
+  <script  src="/main.js" ></script> 
+<style>
+/* Styles for poll creation */
+  body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    h1 {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    form {
+        text-align: center;
+        margin: 20px auto;
+        max-width: 400px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    select, button {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    button[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+	
+</style>
+  </head>
+<body>
+    <h1>Create a New Weekly Category Challenge</h1>
+    <form id="weekly-challenge-form">
+        <label for="category">Select a Quiz Category:</label>
+        <select id="category" required></select>
+        <button type="submit">Create Weekly Challenge</button>
+    </form>
+
+    <script>
+        // Firebase configuration and initialization here
+
+        // Function to fetch quiz categories from Firestore
+        function fetchQuizCategories() {
+            const db = firebase.firestore();
+            const categoriesRef = db.collection("quizCategory");
+
+            categoriesRef.get().then((querySnapshot) => {
+                const categorySelect = document.getElementById("category");
+
+                querySnapshot.forEach((doc) => {
+                    const category = doc.data();
+                    const option = document.createElement("option");
+                    option.value = category.name;
+                    option.textContent = category.name;
+                    categorySelect.appendChild(option);
+                });
+            });
+        }
+
+        // Event listener for submitting the weekly challenge
+        const weeklyChallengeForm = document.getElementById("weekly-challenge-form");
+        weeklyChallengeForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const selectedCategory = document.getElementById("category").value;
+            const db = firebase.firestore();
+            const challengeRef = db.collection("quizCategory").doc(selectedCategory);
+
+            // Check if the "weeklyChallenge" field exists, if not, add it
+            challengeRef.get().then((doc) => {
+                if (doc.exists) {
+                    const categoryData = doc.data();
+
+                    if (!categoryData.hasOwnProperty("weeklyChallenge")) {
+                        // If "weeklyChallenge" doesn't exist, add it with "Active" value
+                        return challengeRef.update({
+                            weeklyChallenge: "Active"
+                        });
+                    }
+                } else {
+                    // Handle the case where the category doesn't exist
+                    console.error("Selected category not found in Firestore.");
+                }
+            }).then(() => {
+                console.log("Weekly challenge created successfully.");
+            }).catch((error) => {
+                console.error("Error creating weekly challenge: ", error);
+            });
+        });
+
+        // Fetch quiz categories when the page loads
+        fetchQuizCategories();
+    </script>
+</body>
+</html>
