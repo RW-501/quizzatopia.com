@@ -1208,6 +1208,13 @@ function getWeeklyCategoryIfLoggedIn() {
 
 	 
 <script>
+
+function redirectToLeaderboard() {
+    window.location.href = '/Leaderboard';
+}
+
+
+	  
 function getTop5UsersAndDisplayTable() {
   const db = firebase.firestore();
   const weeklyChallengeRef = db.collection("weeklyChallenge");
@@ -1240,12 +1247,16 @@ function getTop5UsersAndDisplayTable() {
       let rank = 1;
       querySnapshot.forEach((doc) => {
         const userData = doc.data();
-        const tr = document.createElement("tr");
-        tr.innerHTML = `
-          <th scope="row">${rank}</th>
-          <td>${userData.username}</td> <!-- Adjust the field based on your data structure -->
-          <td>${userData.score}</td>
-        `;
+const tr = document.createElement("tr");
+tr.innerHTML = `
+  <th scope="row">${rank}</th>
+  <td>
+    <img src="${userData.userPictureURL}" alt="User Picture" style="max-width: 50px; max-height: 50px;">
+    ${userData.username}
+  </td>
+  <td>${userData.score}</td>
+`;
+
         tbody.appendChild(tr);
         rank++;
       });
@@ -1271,7 +1282,8 @@ function getTop5UsersAndDisplayTable() {
 let weeklyChallegeDiv =  document.getElementById('weeklyCompanion');
 weeklyChallegeDiv = ` <p>🌟The Weekly Category Challenge is🌟</p>
 <a href="#" id="companionLink" class="btn btn-primary"> <span>${category}</span> </a>
-<div id="weeklyCompanionList"><div class="loading_Main ">Loading...</div></div> 		  
+<div id="weeklyCompanionList"><div class="loading_Main" onclick="redirectToLeaderboard()">Loading...</div>
+</div> 		  
      `; 	
 
 // Call the function to fetch and display the top 5 users
