@@ -117,8 +117,15 @@
             });
         }
 
+
+
+
+	    
         // Event listener for submitting the weekly challenge
         const weeklyChallengeForm = document.getElementById("weekly-challenge-form");
+
+
+	    
         weeklyChallengeForm.addEventListener("submit", (e) => {
             e.preventDefault();
             const selectedCategory = document.getElementById("category").value;
@@ -141,7 +148,11 @@ deactivateOtherActiveCategories()
                         return challengeRef.update({
                             weeklyChallenge: "Active"
                         });
-                    }
+                    }else{
+		challengeRef.update({ active: false });
+		    }
+
+			
                 } else {
                     // Handle the case where the category doesn't exist
                     console.error("Selected category not found in Firestore.");
@@ -178,12 +189,7 @@ function deactivateOtherActiveCategories() {
       querySnapshot.forEach((doc) => {
         // Get the data of the active category
         const categoryData = doc.data();
-   if (!categoryData.hasOwnProperty("weeklyChallenge")) {
-                        // If "weeklyChallenge" doesn't exist, add it with "Active" value
-                        return challengeRef.update({
-                            weeklyChallenge: "Active"
-                        });
-                    }
+
         // Update the category to set "active" to false
         const deactivatePromise = categoryRef.doc(doc.id).update({ active: false });
         deactivatePromises.push(deactivatePromise);
