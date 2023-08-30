@@ -1264,10 +1264,11 @@ function getTop5UsersAndDisplayTable() {
 
 
 	if(loggedIn === true){
-	
+	console.log("getWeeklyCategoryIfLoggedIn:");
+
 	getWeeklyCategoryIfLoggedIn()
   .then((category) => {
-//    console.log(`Weekly Category: ${category}`);
+   console.log(`Weekly Category: ${category}`);
     // You can use the category as needed here
 let weeklyChallegeDiv =  document.getElementById('weeklyCompanion');
 weeklyChallegeDiv = ` <p>🌟The Weekly Category Challenge is🌟</p>
