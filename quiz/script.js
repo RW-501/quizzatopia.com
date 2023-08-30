@@ -777,6 +777,12 @@ async function updatequizDB() {
     console.log(quizCode + " was updated: " + quizId);
   }
 }
+
+    console.log("781 endQuiz : " + questionData.quizCategory);
+
+
+
+
 var quizEnded = false;
 
 function endQuiz() {
