@@ -1213,9 +1213,60 @@ function getWeeklyCategoryIfLoggedIn() {
 
 	 
 <script>
+function getTop5UsersAndDisplayTable() {
+  const db = firebase.firestore();
+  const weeklyChallengeRef = db.collection("weeklyChallenge");
+
+  // Query the top 5 users based on some criteria, e.g., score
+  weeklyChallengeRef
+    .orderBy("score", "desc") // Assuming there's a "score" field for ranking users
+    .limit(5)
+    .get()
+    .then((querySnapshot) => {
+      const weeklyCompanionList = document.getElementById("weeklyCompanionList");
+
+      // Create an HTML table to display the user info
+      const table = document.createElement("table");
+      table.classList.add("table"); // Add Bootstrap table styling
+
+      // Create the table header
+      const thead = document.createElement("thead");
+      thead.innerHTML = `
+        <tr>
+          <th scope="col">Rank</th>
+          <th scope="col">User</th>
+          <th scope="col">Score</th>
+        </tr>
+      `;
+      table.appendChild(thead);
+
+      // Create the table body
+      const tbody = document.createElement("tbody");
+      let rank = 1;
+      querySnapshot.forEach((doc) => {
+        const userData = doc.data();
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <th scope="row">${rank}</th>
+          <td>${userData.username}</td> <!-- Adjust the field based on your data structure -->
+          <td>${userData.score}</td>
+        `;
+        tbody.appendChild(tr);
+        rank++;
+      });
+
+      table.appendChild(tbody);
+      weeklyCompanionList.appendChild(table);
+    })
+    .catch((error) => {
+      console.error("Error fetching top users:", error);
+    });
+}
 
 
-	if(LoggedIn === true){
+
+
+	if(loggedIn === true){
 	
 	getWeeklyCategoryIfLoggedIn()
   .then((category) => {
@@ -1223,7 +1274,12 @@ function getWeeklyCategoryIfLoggedIn() {
     // You can use the category as needed here
 let weeklyChallegeDiv =  document.getElementById('weeklyCompanion');
 weeklyChallegeDiv = ` <p>🌟The Weekly Category Challenge is🌟</p>
-<a href="#" id="companionLink" class="btn btn-primary"> <span>${category}</span> </a><div id="weeklyCompanionList">Loading...</div>  `; 	
+<a href="#" id="companionLink" class="btn btn-primary"> <span>${category}</span> </a>
+<div id="weeklyCompanionList">Loading...</div> 		  
+     `; 	
+
+// Call the function to fetch and display the top 5 users
+getTop5UsersAndDisplayTable();	
   })
   .catch((error) => {
     console.error(error.message);
