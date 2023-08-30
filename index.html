@@ -1133,9 +1133,6 @@ getRandomCategories()
 
 		}
 
-var intervalId = setInterval(setCatagories, 8000);
-
-		
 // Function to update the weekly category companion banner
 function updateWeeklyCompanion() {
   const companionCategory = document.getElementById('companionCategory');
@@ -1285,7 +1282,12 @@ getTop5UsersAndDisplayTable();
     console.error(error.message);
   });
 
-}
+}else{
+
+var intervalId = setInterval(setCatagories, 8000);
+
+		
+	}
 
 </script>
 
