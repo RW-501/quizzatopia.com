@@ -778,7 +778,91 @@ async function updatequizDB() {
   }
 }
 
-    console.log("781 endQuiz : " + questionData.quizCategory);
+
+function updateWeeklyCompanionList(userId, username, points, rank, userPic ) {
+  const db = firebase.firestore();
+  const weeklyChallengeRef = db.collection("weeklyChallenge");
+
+  // Assuming you have a document for the weekly challenge
+  const weeklyChallengeDoc = weeklyChallengeRef.doc("your_weekly_challenge_doc_id");
+
+  // Check if the user exists in the weeklyCompanionList
+  weeklyChallengeDoc
+    .get()
+    .then((doc) => {
+      if (doc.exists) {
+        const weeklyChallengeData = doc.data();
+        const weeklyCompanionList = weeklyChallengeData.weeklyCompanionList || [];
+
+        // Check if the user ID is already in the list
+        const userIndex = weeklyCompanionList.findIndex((user) => user.userId === userId);
+
+        if (userIndex === -1) {
+          // User is not in the list, add them
+          weeklyCompanionList.push({
+            userId: userId,
+            username: username,
+	userPicture:userPic,  
+            rank: 0, // Set the initial rank as needed
+            score: 0, // Set the initial score as needed
+          });
+
+          // Update the weeklyCompanionList in Firestore
+          return weeklyChallengeDoc.update({
+            weeklyCompanionList: weeklyCompanionList,
+          });
+        } else {
+          // User is already in the list, update their score
+          const user = weeklyCompanionList[userIndex];
+          user.score += points;
+          user.rank = rank;
+
+          // Update the weeklyCompanionList in Firestore
+          return weeklyChallengeDoc.update({
+            weeklyCompanionList: weeklyCompanionList,
+          });
+        }
+      } else {
+        console.log("Weekly challenge document not found.");
+        return null;
+      }
+    })
+    .catch((error) => {
+      console.error("Error updating weekly companion list:", error);
+    });
+}
+
+
+// Function to get the weekly category if the user is logged in
+function getWeeklyCategory() {
+  return new Promise((resolve, reject) => {
+    // Check if the user is logged in
+    const user = firebase.auth().currentUser;
+    if (user) {
+      const db = firebase.firestore();
+      const weeklyChallengeRef = db.collection("quizCategory").doc("weeklyChallenge");
+
+      // Retrieve the weekly category data
+      weeklyChallengeRef.get().then((doc) => {
+        if (doc.exists) {
+          const data = doc.data();
+          const categoryName = data.name; // Assuming the name field contains the category name
+
+          // Resolve with the weekly category
+          resolve(categoryName);
+        } else {
+          reject(new Error("Weekly category not found in the database."));
+        }
+      }).catch((error) => {
+        reject(error);
+      });
+    } else {
+      reject(new Error("User is not logged in."));
+    }
+  });
+}
+
+
 
 
 
@@ -820,6 +904,38 @@ quizEnded = true;
     updatePoints(allRightBonus);
   }
 
+
+
+// Example usage:
+getWeeklyCategory()
+  .then((category) => {
+
+	  if(questionData.quizCategory == category && loggedIn === true){
+// Usage example
+const userId = uID; 
+const username = userInfo.userName;
+const points = questionCorrect * 5;
+const rank = userInfo.userRank;
+const userPic = userInfo.userProfilePic;
+
+updateWeeklyCompanionList(userId, username, points, rank, userPic);
+userPicture
+document.getElementById("score").innerHTML += `<p>Weekly Category Competition: ${category} <br>You earned <span>+${points}</span> points.</p>	`;
+
+		  
+	  }
+  })
+  .catch((error) => {
+    console.error(error.message);
+  });
+
+
+	
+
+
+
+
+	
   updateQuizzesTaken(1);
   checkTier();
   rewardPointsForReturningDays();
