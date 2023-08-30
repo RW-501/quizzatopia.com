@@ -433,6 +433,62 @@ var query = usersCollection
     });
 }
 
+function getTop5UsersAndDisplayTable() {
+  const db = firebase.firestore();
+  const weeklyChallengeRef = db.collection("weeklyChallenge");
+let count = 0;
+
+  // Query the top 5 users based on some criteria, e.g., score
+  weeklyChallengeRef
+    .orderBy("score", "desc") // Assuming there's a "score" field for ranking users
+    .limit(20)
+    .get()
+    .then((querySnapshot) => {
+      const weeklyCompanionList = document.getElementById("weeklyCompanionList");
+count++;
+
+      // Create an HTML table to display the user info
+      const table = document.createElement("table");
+      table.classList.add("table"); // Add Bootstrap table styling
+
+      // Create the table header
+      const thead = document.createElement("thead");
+      thead.innerHTML = `
+        <tr>
+          <th scope="col">Rank</th>
+          <th scope="col">User</th>
+          <th scope="col">Score</th>
+        </tr>
+      `;
+      table.appendChild(thead);
+
+      // Create the table body
+      const tbody = document.createElement("tbody");
+      let rank = 1;
+      querySnapshot.forEach((doc) => {
+        const userData = doc.data();
+const tr = document.createElement("tr");
+tr.classList.add("top_"count);
+	      tr.innerHTML = `
+  <th scope="row">${rank}</th>
+  <td>
+    <img src="${userData.userPictureURL}" alt="User Picture" style="max-width: 50px; max-height: 50px;">
+    ${userData.username}
+  </td>
+  <td>${userData.score}</td>
+`;
+
+        tbody.appendChild(tr);
+        rank++;
+      });
+
+      table.appendChild(tbody);
+      weeklyCompanionList.appendChild(table);
+    })
+    .catch((error) => {
+      console.error("Error fetching top users:", error);
+    });
+}
 
 
 
@@ -444,12 +500,19 @@ var query = usersCollection
     }
 	  
 	  
+function getUrlParameter(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+}
 
+const category = getUrlParameter('category');
+if(category){
 
-	
+getTop5UsersAndDisplayTable(category);
+}else{
 	  
 	loadLeaderboard();
-  
+}
   </script>
 
       
