@@ -1157,12 +1157,43 @@ function updateWeeklyCompanion() {
 }
 
 
+// Function to get the weekly category if the user is logged in
+function getWeeklyCategoryIfLoggedIn() {
+  return new Promise((resolve, reject) => {
+    // Check if the user is logged in
+    const user = firebase.auth().currentUser;
+    if (user) {
+      const db = firebase.firestore();
+      const weeklyChallengeRef = db.collection("quizCategory").doc("weeklyChallenge");
+
+      // Retrieve the weekly category data
+      weeklyChallengeRef.get().then((doc) => {
+        if (doc.exists) {
+          const data = doc.data();
+          const categoryName = data.name; // Assuming the name field contains the category name
+
+          // Resolve with the weekly category
+          resolve(categoryName);
+        } else {
+          reject(new Error("Weekly category not found in the database."));
+        }
+      }).catch((error) => {
+        reject(error);
+      });
+    } else {
+      reject(new Error("User is not logged in."));
+    }
+  });
+}
+
+
+	
 
 	</script>
 <!-- HTML for Weekly Category Challenge Banner -->
 <div class="weekly-companion-banner">
 <div id="weeklyCompanion">
-  <p>🌟 Weekly Category Challenge Coming Soon! 🌟</p>
+  <p>🌟 Login and join in with our Weekly Category Challenge! 🌟</p>
   <p>Discover our <span id="companionCategoryPlural"></span> quizzes and challenge your knowledge!</p>
   <a href="#" id="companionLink" class="btn btn-primary">Explore <span id="companionCategoryTitle"></span> Quizzes</a>
 </div>
@@ -1181,7 +1212,26 @@ function updateWeeklyCompanion() {
 	
 
 	 
-	  
+<script>
+
+
+	if(LoggedIn === true){
+	
+	getWeeklyCategoryIfLoggedIn()
+  .then((category) => {
+//    console.log(`Weekly Category: ${category}`);
+    // You can use the category as needed here
+let weeklyChallegeDiv =  document.getElementById('weeklyCompanion');
+weeklyChallegeDiv = ` <p>🌟The Weekly Category Challenge is🌟</p>
+<a href="#" id="companionLink" class="btn btn-primary"> <span>${category}</span> </a><div id="weeklyCompanionList">Loading...</div>  `; 	
+  })
+  .catch((error) => {
+    console.error(error.message);
+  });
+
+}
+
+</script>
 
 
 	  
@@ -1665,7 +1715,7 @@ var pollDocID = '';
 
 function getActivePollQuestion() {
 
-      console.log(`getActivePollQuestion`);
+//      console.log(`getActivePollQuestion`);
 
     const db = firebase.firestore();
     const pollRef = db.collection("polls");
@@ -1787,7 +1837,7 @@ document.getElementById('searchCode').style.display = "none";
 function getQuizLink() {
   // Get the value entered in the quizCodeX input box
 const quizCodeX = document.getElementById('quizCodeInput').value;
-console.log(`quizCodeX: ${quizCodeX}`);
+//console.log(`quizCodeX: ${quizCodeX}`);
 const db = firebase.firestore();
 
 // Retrieve the quizLinkX based on the quizCodeX from the database
