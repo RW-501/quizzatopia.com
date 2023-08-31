@@ -468,7 +468,7 @@ count++;
       querySnapshot.forEach((doc) => {
         const userData = doc.data();
 const tr = document.createElement("tr");
-tr.classList.add("top_"count);
+tr.classList.add("top_"+count);
 	      tr.innerHTML = `
   <th scope="row">${rank}</th>
   <td>
