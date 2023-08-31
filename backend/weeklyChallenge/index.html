@@ -146,10 +146,10 @@ deactivateOtherActiveCategories()
                     if (!categoryData.hasOwnProperty("weeklyChallenge")) {
                         // If "weeklyChallenge" doesn't exist, add it with "Active" value
                         return challengeRef.update({
-                            weeklyChallenge: "Active"
+                            weeklyChallenge: true
                         });
                     }else{
-		challengeRef.update({ active: false });
+		challengeRef.update({ weeklyChallenge: false });
 		    }
 
 			
@@ -180,7 +180,7 @@ function deactivateOtherActiveCategories() {
 
   // Check if there are any active categories
   return categoryRef
-    .where("active", "==", true)
+    .where("weeklyChallenge", "==", true)
     .get()
     .then((querySnapshot) => {
       const deactivatePromises = [];
@@ -191,7 +191,7 @@ function deactivateOtherActiveCategories() {
         const categoryData = doc.data();
 
         // Update the category to set "active" to false
-        const deactivatePromise = categoryRef.doc(doc.id).update({ active: false });
+        const deactivatePromise = categoryRef.doc(doc.id).update({ weeklyChallenge: false });
         deactivatePromises.push(deactivatePromise);
       });
 
