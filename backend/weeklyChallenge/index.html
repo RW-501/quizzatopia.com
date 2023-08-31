@@ -190,7 +190,9 @@ function deactivateOtherActiveCategories() {
         // Get the data of the active category
         const categoryData = doc.data();
 
-
+        // Update the category to set "active" to false
+        const deactivatePromise = categoryRef.doc(doc.id).update({ weeklyChallenge: false });
+        deactivatePromises.push(deactivatePromise);
       });
 
       // Return a Promise that resolves when all deactivation promises are complete
