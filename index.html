@@ -1166,6 +1166,7 @@ function getWeeklyCategory() {
   // Query for the category where weeklyChallenge is equal to "Active"
   return quizCategoryRef
     .where("weeklyChallenge", "==", true)
+.limit(1)
     .get()
     .then((querySnapshot) => {
       if (querySnapshot.docs.length > 0) {
