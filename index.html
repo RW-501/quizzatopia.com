@@ -1142,7 +1142,7 @@ function updateWeeklyCompanion() {
 
   // Get a random category
   const randomCategory = getRandomCategory();
-
+getWeeklyChallegeInfo();
   // Set the content of the banner
 //  companionCategory.textContent = randomCategory;
   companionCategoryPlural.textContent = `${randomCategory}s`; // Plural form
@@ -1248,7 +1248,7 @@ count++;
       querySnapshot.forEach((doc) => {
         const userData = doc.data();
 const tr = document.createElement("tr");
-tr.classList.add("top_"count);
+tr.classList.add("top_"+count);
 tr.innerHTML = `
   <th scope="row">${rank}</th>
   <td>
@@ -1272,7 +1272,7 @@ tr.innerHTML = `
 
 
 
-
+function getWeeklyChallegeInfo(){
 	  if (loggedIn  === true) {
 	console.log("getWeeklyCategoryIfLoggedIn:");
 
@@ -1294,14 +1294,13 @@ getTop5UsersAndDisplayTable();
     console.error(error.message);
   });
 
-}else{
-
-		
+}else{	
 	// Call the function to update the banner when needed
 updateWeeklyCompanion();
 		
 	}
-
+}
+	
 </script>
 
 
