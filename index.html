@@ -1125,6 +1125,7 @@ function setCatagories() {
 // Usage: Get random categories and generate HTML
 getRandomCategories()
   .then((categories) => {
+	  console.log('setCatagories categories: ', categories);
     generateCategoryHTML(categories);
   })
   .catch((error) => {
@@ -1142,7 +1143,9 @@ function updateWeeklyCompanion() {
 
   // Get a random category
   const randomCategory = getRandomCategory();
+	
 getWeeklyChallegeInfo();
+	
   // Set the content of the banner
 //  companionCategory.textContent = randomCategory;
   companionCategoryPlural.textContent = `${randomCategory}s`; // Plural form
@@ -1273,6 +1276,8 @@ tr.innerHTML = `
 
 
 function getWeeklyChallegeInfo(){
+		  console.log('getWeeklyChallegeInfo: ', loggedIn);
+
 	  if (loggedIn  === true) {
 	console.log("getWeeklyCategoryIfLoggedIn:");
 
