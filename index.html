@@ -1159,7 +1159,7 @@ var intervalId = setInterval(setCatagories, 8000);
 
 
 // Function to get the weekly category if the user is logged in
-function getWeeklyCategoryIfLoggedIn() {
+function getWeeklyCategory() {
  const db = firebase.firestore();
   const quizCategoryRef = db.collection("quizCategory");
 
@@ -1275,14 +1275,14 @@ tr.innerHTML = `
 
 
 
-function getWeeklyChallegeInfo(){
-		  console.log('getWeeklyChallegeInfo: ', loggedIn);
 
-	  if (loggedIn  === true) {
-	console.log("getWeeklyCategoryIfLoggedIn:");
-
+	
 	getWeeklyCategory()
   .then((category) => {
+		  console.log('getWeeklyChallegeInfo: ', loggedIn);
+  if (loggedIn  === true) {
+	console.log("getWeeklyCategoryIfLoggedIn:");
+
    console.log(`Weekly Category: ${category}`);
     // You can use the category as needed here
 let weeklyChallegeDiv =  document.getElementById('weeklyCompanion');
@@ -1294,17 +1294,22 @@ weeklyChallegeDiv = ` <p>🌟The Weekly Category Challenge is🌟</p>
 
 // Call the function to fetch and display the top 5 users
 getTop5UsersAndDisplayTable();	
-  })
-  .catch((error) => {
-    console.error(error.message);
-  });
 
 }else{	
 	// Call the function to update the banner when needed
 updateWeeklyCompanion();
 		
-	}
-}
+	}      
+  })
+  .catch((error) => {
+    console.error(error.message);
+  });
+
+  if (loggedIn  === false) {
+updateWeeklyCompanion();
+		
+	}  
+
 	
 </script>
 
