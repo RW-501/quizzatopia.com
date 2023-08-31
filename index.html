@@ -1160,16 +1160,16 @@ var intervalId = setInterval(setCatagories, 8000);
 
 // Function to get the weekly category if the user is logged in
 function getWeeklyCategory() {
- const db = firebase.firestore();
+  const db = firebase.firestore();
   const quizCategoryRef = db.collection("quizCategory");
 
   // Query for the category where weeklyChallenge is equal to "Active"
   return quizCategoryRef
     .where("weeklyChallenge", "==", true)
-.limit(1)
+    .limit(1)
     .get()
     .then((querySnapshot) => {
-      if (querySnapshot.docs.length > 0) {
+      if (!querySnapshot.empty) {
         // Assuming there's only one such category, so we take the first one
         const categoryDoc = querySnapshot.docs[0];
         const categoryData = categoryDoc.data();
