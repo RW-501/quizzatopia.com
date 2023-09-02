@@ -897,7 +897,7 @@ function slideOut(xxx,zzz) {
 }
 
 
-  var  QUIZ_COUNT_THRESHOLD = 2;
+  var  QUIZ_COUNT_THRESHOLD = 3;
  var newQuizCount = 0
   var  quizCount = localStorage.getItem('quizCount');
 
