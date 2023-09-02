@@ -104,10 +104,9 @@ async function startQuiz() {
 
   const divElement = document.getElementById("testInfo");
   // Call the function when needed, e.g., after completing a quiz
-  showLoginPopupIfNeeded();
 
   if (newQuizCount > QUIZ_COUNT_THRESHOLD && loggedIn == false) {
-	  
+  
 const elementToRemove = document.getElementById("overlay");
 if (elementToRemove) {
   elementToRemove.remove();
@@ -120,6 +119,7 @@ if (elementToRemove) {
     if (q === null || q === '') {
       location.reload();
     } else {
+		  logQuizStartFunc();    
       questionTime = 0; // seconds
       currentQuestion = 0;
 
