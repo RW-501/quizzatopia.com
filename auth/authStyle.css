@@ -40,7 +40,7 @@ width: 100%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 width: 80%;
 max-height: 90%;
-    overflow: scroll;
+    overflow-y: scroll;
   }
 
   .close-btn {
@@ -51,8 +51,9 @@ max-height: 90%;
     border: none;
     background-color: transparent;
     color: #666;
-    font-size: 20px;
+    font-size: 2em;
     cursor: pointer;
+    font-weight: 700;
   }
 
   .close-btn button:hover {
