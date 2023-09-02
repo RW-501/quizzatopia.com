@@ -107,13 +107,13 @@ async function startQuiz() {
   showLoginPopupIfNeeded();
 
   if (newQuizCount > QUIZ_COUNT_THRESHOLD && loggedIn == false) {
-    // Show the login popup
-    openPopup();
-    switchTab('login');
 const elementToRemove = document.getElementById("overlay");
 if (elementToRemove) {
   elementToRemove.remove();
-}
+}  
+  // Show the login popup
+    openPopup();
+    switchTab('login');
 
   } else {
     if (q === null || q === '') {
