@@ -1482,7 +1482,7 @@ function checkGuestUser(){
 const db = firebase.firestore();
 
 // Reference the 'questLog' collection and the document with the user's IP address
-const questLogRef = db.collection('questLog').doc(ipAddress);
+const questLogRef = db.collection('guestLog').doc(ipAddress);
 
 // Update the 'banned' field to 'YES'
 questLogRef.update({
