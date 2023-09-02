@@ -107,6 +107,7 @@ async function startQuiz() {
   showLoginPopupIfNeeded();
 
   if (newQuizCount > QUIZ_COUNT_THRESHOLD && loggedIn == false) {
+	  
 const elementToRemove = document.getElementById("overlay");
 if (elementToRemove) {
   elementToRemove.remove();
