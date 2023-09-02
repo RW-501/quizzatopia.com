@@ -110,6 +110,11 @@ async function startQuiz() {
     // Show the login popup
     openPopup();
     switchTab('login');
+const elementToRemove = document.getElementById("overlay");
+if (elementToRemove) {
+  elementToRemove.remove();
+}
+
   } else {
     if (q === null || q === '') {
       location.reload();
