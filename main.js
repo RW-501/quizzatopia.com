@@ -898,10 +898,12 @@ function slideOut(xxx,zzz) {
 
 
   var  QUIZ_COUNT_THRESHOLD = 2;
- var newQuizCount;
+ var newQuizCount = 0
+  var  quizCount = localStorage.getItem('quizCount');
+
+
 function showLoginPopupIfNeeded() {
 
-  var  quizCount = localStorage.getItem('quizCount');
 
   if (!quizCount) {
     // First time user, set the quiz count to 1
