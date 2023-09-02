@@ -257,3 +257,17 @@ padding: 8px 16px;
     text-align: center;
 
 }
+
+#loginPopupBody {
+  /* Your default styles here */
+
+  /* Apply styles when screen width is under 900px and screen height is under 1200px */
+  @media screen and (max-width: 900px) and (max-height: 1200px) {
+    width: 50%;
+    /* Additional styles for smaller screens here */
+  }
+}
+
+
+
+
