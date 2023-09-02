@@ -38,7 +38,7 @@ width: 100%;
     padding: 20px;
     border-radius: 8px;
 width: 80%;
-max-height: 90%;
+height: 90%;
     margin: auto;
     overflow: hidden;
     box-shadow: inset 0px 1px 0rem 14px #fd7e14 !important;
@@ -47,6 +47,7 @@ max-height: 90%;
     overflow-y: scroll;
 width: 100%;
 height: 100%;
+    display: block;
 
 }
 
