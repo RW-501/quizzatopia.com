@@ -902,7 +902,7 @@ function slideOut(xxx,zzz) {
   var  quizCount = localStorage.getItem('quizCount');
 
 
-function showLoginPopupIfNeeded() {
+function logQuizStartFunc() {
 
 
   if (!quizCount) {
