@@ -1275,7 +1275,7 @@ tr.innerHTML = `
       });
 
       table.appendChild(tbody);
-      weeklyCompanionList.appendChild(table);
+      weeklyCompanionList.innerHTML = table;
     })
     .catch((error) => {
       console.error("Error fetching Leaderboard:", error);
@@ -1294,8 +1294,8 @@ getWeeklyCategory()
       let weeklyChallegeDiv = document.getElementById('weeklyCompanion');
       weeklyChallegeDiv.innerHTML = ` 
         <p>🌟The Weekly Category Challenge is🌟</p>
-        <a href="#" id="companionLink" class="btn btn-primary"> <span>${category}</span> </a>
-        <div id="weeklyCompanionList"><div class="loading_Main" onclick="redirectToLeaderboard('${category}')">Loading...</div>
+        <a href="#" id="companionLink" class="btn btn-primary"  onclick="redirectToLeaderboard('${category}')"> <span>${category}</span> </a>
+        <div id="weeklyCompanionList"><div class="loading_Main">Loading...</div>
         </div>		  
       `;
       console.log(`updated Weekly Category: ${category}`);
