@@ -494,7 +494,12 @@ const db = firebase.firestore();
 	}  
 	  
 const urlParams = window.location.href;
-const categoryName = decodeURIComponent(urlParams.toString().split('?')[1]);
+const categoryName1 = decodeURIComponent(urlParams.toString().split('&')[1]);
+console.log("categoryName1: ", categoryName1);
+
+const categoryName0 = categoryName1.toString().split('?')[1];
+console.log("categoryName0: ", categoryName0);
+const categoryName = input(categoryName0);	  
 console.log("categoryName: ", categoryName);
 document.getElementById('title').innerHTML = categoryName;
 	  
@@ -859,7 +864,7 @@ function openCreateQuizFunc() {
 
             // Check if the user has more than 3 quizzes created
             if (quizCreatedArray && quizCreatedArray.length > 3) {
-              alert("User has more than 3 quizzes created.");
+              showMainMessage("User has more than 3 quizzes created.");
             } else {
               // console.log("User has 3 or fewer quizzes created.");
               window.location.href = "/quizzes/create/";
@@ -874,7 +879,7 @@ function openCreateQuizFunc() {
         });
     }
   } else {
-    alert("User needs 200 Points first");
+    showMainMessage("User needs 200 Points first");
   }
 }
 
