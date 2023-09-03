@@ -1286,35 +1286,33 @@ tr.innerHTML = `
 
 
 	
-	getWeeklyCategory()
+getWeeklyCategory()
   .then((category) => {
-		  console.log('getWeeklyCategory: ', loggedIn);
-  if (loggedIn  === true && category != null) {
+    console.log('getWeeklyCategory: ', loggedIn);
+    if (loggedIn === true && category != null) {
+      // You can use the category as needed here
+      let weeklyChallegeDiv = document.getElementById('weeklyCompanion');
+      weeklyChallegeDiv.innerHTML = ` 
+        <p>🌟The Weekly Category Challenge is🌟</p>
+        <a href="#" id="companionLink" class="btn btn-primary"> <span>${category}</span> </a>
+        <div id="weeklyCompanionList"><div class="loading_Main" onclick="redirectToLeaderboard('${category}')">Loading...</div>
+        </div>		  
+      `;
+      console.log(`updated Weekly Category: ${category}`);
 
-    // You can use the category as needed here
-let weeklyChallegeDiv =  document.getElementById('weeklyCompanion');
-weeklyChallegeDiv = ` <p>🌟The Weekly Category Challenge is🌟</p>
-<a href="#" id="companionLink" class="btn btn-primary"> <span>${category}</span> </a>
-<div id="weeklyCompanionList"><div class="loading_Main" onclick="redirectToLeaderboard(${category})">Loading...</div>
-</div> 		  
-     `; 	
-   console.log(`weeklyChallegeDiv: ${weeklyChallegeDiv.innerHTML}`);
-   console.log(`updated Weekly Category: ${category}`);
-
-// Call the function to fetch and display the top 5 users
-getTop5UsersAndDisplayTable();	
-
-}else{	
-	// Call the function to update the banner when needed
-updateWeeklyCompanion();
-		
-	}      
+      // Call the function to fetch and display the top 5 users
+      getTop5UsersAndDisplayTable();
+    } else {
+      // Call the function to update the banner when needed
+      updateWeeklyCompanion();
+    }
   })
   .catch((error) => {
     console.error(error.message);
   });
 
-  if (loggedIn  === false) {
+	
+if (loggedIn  === false) {
 updateWeeklyCompanion();
 		
 	}  
