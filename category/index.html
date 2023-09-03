@@ -505,7 +505,8 @@ console.log("categoryName0: ", categoryName0);
 const categoryName0 = categoryName1;
 }
 
-	  
+document.addEventListener("DOMContentLoaded", function() {
+
 const categoryName = input(categoryName0);	  
 console.log("categoryName: ", categoryName);
 document.getElementById('title').innerHTML = categoryName;
@@ -525,6 +526,10 @@ updateCategoryViewCount(categoryName);
         );
     }
 }
+	});
+
+	  
+
 
     document.getElementById('updated_Quizzez').innerHTML = "";
 
