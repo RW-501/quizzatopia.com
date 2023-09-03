@@ -529,6 +529,8 @@ updateCategoryViewCount(categoryName);
         );
     }
 }
+
+	fetchQuizzesFromDB();
 	};
 
 	  
@@ -553,7 +555,6 @@ const ratingToStars = (rating) => {
 
   return filledStars + emptyStars;
 };
-
 
     
 let countQ = 0;
@@ -811,7 +812,7 @@ async function getTag(tag) {
 	  scrollToBottomDiv();
   } 
 }
-
+/*
 // Load quizzes on window load
 document.addEventListener('DOMContentLoaded', function() {
   console.log(`fetchQuizzesFromDB: `);
@@ -819,7 +820,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Call the function to fetch and populate the quiz data for the first page
   fetchQuizzesFromDB();
 });
-
+*/
 		    
 		    
 	    </script>
