@@ -176,7 +176,7 @@ function deactivateOtherActiveCategories() {
     const db = firebase.firestore();
 
     // Reference to the "weeklyCategoryChallenge" collection
-    const categoryRef = db.collection("weeklyCategoryChallenge");
+    const categoryRef = db.collection("quizCategory");
 
     // Query for documents where "weeklyChallenge" is true
     return categoryRef
