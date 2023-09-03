@@ -508,7 +508,6 @@ console.log("categoryName0: ", categoryName0);
 
 }
 
-window.onload = function() {
 
  categoryName = input(categoryName0);	  
 console.log("categoryName: ", categoryName);
@@ -530,8 +529,6 @@ updateCategoryViewCount(categoryName);
     }
 }
 
-	fetchQuizzesFromDB();
-	};
 
 	  
 
@@ -821,7 +818,10 @@ document.addEventListener('DOMContentLoaded', function() {
   fetchQuizzesFromDB();
 });
 */
-		    
+window.onload = function() {
+
+  fetchQuizzesFromDB();
+	};		    
 		    
 	    </script>
 		    
