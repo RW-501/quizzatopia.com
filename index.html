@@ -1178,12 +1178,12 @@ function getWeeklyCategory() {
 		console.log('(index):1178 Weekly Category: ', JSON.stringify(categoryData, null, 2));
 
 	console.log('categoryDoc: ', categoryDoc);
-	console.log('categoryData: ', categoryData);
+	console.log('categoryData: ', categoryData.name);
 
 
 
 		
-        return categoryData; // Return the category data
+        return categoryData.name; // Return the category data
       } else {
         console.log("No active weekly challenge category found.");
         return null; // No active category found
