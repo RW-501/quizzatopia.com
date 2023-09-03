@@ -1173,6 +1173,16 @@ function getWeeklyCategory() {
         // Assuming there's only one such category, so we take the first one
         const categoryDoc = querySnapshot.docs[0];
         const categoryData = categoryDoc.data();
+
+
+		console.log('(index):1178 Weekly Category: ', JSON.stringify(categoryData, null, 2));
+
+	console.log('categoryDoc: ', categoryDoc);
+	console.log('categoryData: ', categoryData);
+
+
+
+		
         return categoryData; // Return the category data
       } else {
         console.log("No active weekly challenge category found.");
