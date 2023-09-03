@@ -492,6 +492,7 @@ const db = firebase.firestore();
 			});
 
 	}  
+var categoryName = "";
 	  
 const urlParams = window.location.href;
 const categoryName1 = decodeURIComponent(urlParams.toString().split('?')[1]);
@@ -503,11 +504,13 @@ const categoryName0 = categoryName1.toString().split('&')[1];
 console.log("categoryName0: ", categoryName0);
 } else {
 const categoryName0 = categoryName1;
+console.log("categoryName0: ", categoryName0);
+
 }
 
 window.onload = function() {
 
-const categoryName = input(categoryName0);	  
+ categoryName = input(categoryName0);	  
 console.log("categoryName: ", categoryName);
 document.getElementById('title').innerHTML = categoryName;
 	  
