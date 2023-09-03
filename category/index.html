@@ -585,7 +585,7 @@ let query = db.collection('quizzes')
   }
 
   // Execute the query
-  const querySnapshot = await query.get();
+  const querySnapshot =  query.get();
 
   const quizList = convertSnapshotToQuizList(querySnapshot);
 
