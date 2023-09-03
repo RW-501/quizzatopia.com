@@ -1175,9 +1175,7 @@ function getWeeklyCategory() {
         const categoryData = categoryDoc.data();
 
 
-		console.log('(index):1178 Weekly Category: ', JSON.stringify(categoryData, null, 2));
 
-	console.log('categoryDoc: ', categoryDoc);
 	console.log('categoryData: ', categoryData.name);
 
 
@@ -1293,8 +1291,6 @@ tr.innerHTML = `
 		  console.log('getWeeklyCategory: ', loggedIn);
   if (loggedIn  === true && category != null) {
 
-   console.log(`Weekly Category: ${category}`);
-  // console.log(`Weekly Category:1 ${category.[0]}`);
     // You can use the category as needed here
 let weeklyChallegeDiv =  document.getElementById('weeklyCompanion');
 weeklyChallegeDiv = ` <p>🌟The Weekly Category Challenge is🌟</p>
@@ -1302,6 +1298,7 @@ weeklyChallegeDiv = ` <p>🌟The Weekly Category Challenge is🌟</p>
 <div id="weeklyCompanionList"><div class="loading_Main" onclick="redirectToLeaderboard(${category})">Loading...</div>
 </div> 		  
      `; 	
+   console.log(`updated Weekly Category: ${category}`);
 
 // Call the function to fetch and display the top 5 users
 getTop5UsersAndDisplayTable();	
