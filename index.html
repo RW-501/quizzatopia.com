@@ -1281,10 +1281,10 @@ tr.innerHTML = `
 	getWeeklyCategory()
   .then((category) => {
 		  console.log('getWeeklyCategory: ', loggedIn);
-  if (loggedIn  === true) {
+  if (loggedIn  === true && category != null) {
 
    console.log(`Weekly Category: ${category}`);
-   console.log(`Weekly Category:1 ${category[0]}`);
+  // console.log(`Weekly Category:1 ${category.[0]}`);
     // You can use the category as needed here
 let weeklyChallegeDiv =  document.getElementById('weeklyCompanion');
 weeklyChallegeDiv = ` <p>🌟The Weekly Category Challenge is🌟</p>
