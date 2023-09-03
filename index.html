@@ -1225,6 +1225,10 @@ function redirectToLeaderboard(category) {
     window.location.href = `/Leaderboard/?category=${category}`;
 }
 
+function redirectToCategory(category) {
+    window.location.href = `/category/?${category}`;
+}
+
 
 	  
 function getTop5UsersAndDisplayTable() {
@@ -1294,9 +1298,11 @@ getWeeklyCategory()
       let weeklyChallegeDiv = document.getElementById('weeklyCompanion');
       weeklyChallegeDiv.innerHTML = ` 
         <p>🌟The Weekly Category Challenge is🌟</p>
-        <a href="#" id="companionLink" class="btn btn-primary"  onclick="redirectToLeaderboard('${category}')"> <span>${category}</span> </a>
-        <div id="weeklyCompanionList">
-        </div>		  
+<div id="companionLink" class="btn btn-primary"  onclick="redirectToCategory('${category}')">
+	<span>${category}</span> </div>
+ <div id="weeklyCompanionList"></div>	
+      <div id="companionLink" class="btn btn-primary"  onclick="redirectToLeaderboard('${category}')">
+	<span>View ${category} Challenge Leaderboard</span> </div>	        
       `;
       console.log(`updated Weekly Category: ${category}`);
 
