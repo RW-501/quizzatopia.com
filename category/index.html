@@ -505,7 +505,7 @@ console.log("categoryName0: ", categoryName0);
 const categoryName0 = categoryName1;
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+window.onload = function() {
 
 const categoryName = input(categoryName0);	  
 console.log("categoryName: ", categoryName);
@@ -526,7 +526,7 @@ updateCategoryViewCount(categoryName);
         );
     }
 }
-	});
+	};
 
 	  
 
