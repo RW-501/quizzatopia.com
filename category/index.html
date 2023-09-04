@@ -567,7 +567,7 @@ let currentPage = 1;
   const quizzesPerPage = 20; // Number of quizzes to fetch per page
 
 
-  console.log(`categoryName: `);
+	  console.log(`570 categoryName: ` + categoryName);
 	
   // Build the query to fetch quizzes with ordering
 let query = db.collection('quizzes')
@@ -632,6 +632,7 @@ if(quizItem.private === true){
 
 // Function to generate HTML for quizzes
 function generateQuizHTML(quizList, page) {
+
   let html = '';
   let html2 = '';
   const startNum = (page - 1) * 20 + 1;
@@ -823,7 +824,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 window.onload = function() {
   console.log(`fetchQuizzesFromDB: `);
- categoryName = input(categoryName);	  
+// categoryName = input(categoryName);	  
+  console.log(`827 categoryName: ` + categoryName);
 
   fetchQuizzesFromDB(categoryName);
 	};	
