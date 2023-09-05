@@ -560,7 +560,7 @@ let lastVisibleDoc = null; // To keep track of the last visible document
 let currentPage = 1;
 	
 // Function to fetch quiz data from Firestore and update the HTML
- function fetchQuizzesFromDB(categoryName, page = 1) {
+async function fetchQuizzesFromDB(categoryName, page = 1) {
   const quizzesPerPage = 20; // Number of quizzes to fetch per page
 
 
@@ -579,7 +579,7 @@ let query = db.collection('quizzes')
   }
 
   // Execute the query
-  const querySnapshot =  query.get();
+  const querySnapshot = await query.get();
 
   const quizList = convertSnapshotToQuizList(querySnapshot);
 
@@ -595,7 +595,7 @@ let query = db.collection('quizzes')
   
 }
 
-// Function to convert Firestore query snapshot to quizList
+
 function convertSnapshotToQuizList(querySnapshot) {
   const quizList = [];
 	  console.log(`601 querySnapshot: ` + querySnapshot);
@@ -618,10 +618,12 @@ function convertSnapshotToQuizList(querySnapshot) {
       quizDescriptionDB: quizData.quizDescriptionDB,
       quizCodeDB: quizData.quizCodeDB,
     };
+	  
 if(quizItem.private === true){
 }else{
     quizList.push(quizItem);
-	  }
+}
+	  
   });
 
   return quizList;
