@@ -762,6 +762,16 @@ function retakeQuizFunc() {
   location.reload();
 }
 
+
+
+
+console.log('quizCategoryVar:', quizCategoryVar);
+console.log('questionData:', questionData);
+console.log('questionData.quizCategory:', questionData.quizCategory);
+
+
+
+
 // Function to update quiz count in the database
 async function updatequizDB() {
     console.log("updatequizDB  ");
