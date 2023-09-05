@@ -849,8 +849,6 @@ function getWeeklyCategory() {
 
   return new Promise((resolve, reject) => {
     // Check if the user is logged in
-    const user = firebase.auth().currentUser;
-    if (user) {
       const db = firebase.firestore();
       const weeklyChallengeRef = db.collection("quizCategory").doc("weeklyChallenge");
 
@@ -869,9 +867,7 @@ function getWeeklyCategory() {
       }).catch((error) => {
         reject(error);
       });
-    } else {
-      reject(new Error("User is not logged in."));
-    }
+   
   });
 }
 
