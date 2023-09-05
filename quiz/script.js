@@ -860,7 +860,8 @@ function getWeeklyCategory() {
           const data = doc.data();
           const categoryName = data.name; // Assuming the name field contains the category name
 
-          // Resolve with the weekly category
+	    console.log("categoryName  "+categoryName);
+		
           resolve(categoryName);
         } else {
           reject(new Error("Weekly category not found in the database."));
