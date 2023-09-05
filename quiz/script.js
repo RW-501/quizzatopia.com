@@ -765,7 +765,7 @@ function retakeQuizFunc() {
 
 
 
-console.log('quizCategoryVar:', quizCategoryVar);
+//console.log('quizCategoryVar:', quizCategoryVar);
 console.log('questionData:', questionData);
 console.log('questionData.quizCategory:', questionData.quizCategory);
 
