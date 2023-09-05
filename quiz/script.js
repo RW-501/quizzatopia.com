@@ -788,6 +788,8 @@ async function updatequizDB() {
 
 
 function updateWeeklyCompanionList(userId, username, points, rank, userPic ) {
+	    console.log("updateWeeklyCompanionList  ");
+
   const db = firebase.firestore();
   const weeklyChallengeRef = db.collection("weeklyCategoryChallenge");
 
@@ -843,6 +845,8 @@ function updateWeeklyCompanionList(userId, username, points, rank, userPic ) {
 
 // Function to get the weekly category if the user is logged in
 function getWeeklyCategory() {
+		    console.log("getWeeklyCategory  ");
+
   return new Promise((resolve, reject) => {
     // Check if the user is logged in
     const user = firebase.auth().currentUser;
@@ -912,6 +916,7 @@ quizEnded = true;
     updatePoints(allRightBonus);
   }
 
+		    console.log("endQuiz  ");
 
 
 // Example usage:
