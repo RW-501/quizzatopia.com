@@ -764,6 +764,8 @@ function retakeQuizFunc() {
 
 // Function to update quiz count in the database
 async function updatequizDB() {
+    console.log("updatequizDB  ");
+	
   const db2 = firebase.firestore();
 
   // Check if quiz already exists in Firestore
