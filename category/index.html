@@ -463,6 +463,8 @@ const db = firebase.firestore();
           .update({ viewCount: updatedViewCount })
           .then(() => {
             console.log(`View count for category ${category} incremented to ${updatedViewCount}`);
+  console.log(` categoryName: ` + categoryName);
+  fetchQuizzesFromDB(categoryName); 
           })
           .catch((error) => {
             console.error(`Error updating view count for category ${category}:`, error);
@@ -814,7 +816,7 @@ async function getTag(tag) {
 }
 
 
-
+/*
 	  
 window.onload = function() {
  categoryName = input(categoryName);	  
@@ -831,7 +833,7 @@ window.addEventListener("load", function() {
 };
 
 
-
+*/
 	  
 	    </script>
 		    
