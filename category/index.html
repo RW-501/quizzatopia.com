@@ -817,8 +817,7 @@ async function getTag(tag) {
 
 	  
 // Load quizzes on window load
-document.addEventListener('DOMContentLoaded', function() {
-
+window.onload = function() {
 
 
  categoryName = input(categoryName);	  
@@ -827,8 +826,7 @@ document.addEventListener('DOMContentLoaded', function() {
   fetchQuizzesFromDB(categoryName);
 	
 
-});
-
+};
 
 
 
