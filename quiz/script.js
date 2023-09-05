@@ -783,6 +783,36 @@ async function updatequizDB() {
     });
 
     console.log(quizCode + " was updated: " + quizId);
+
+
+// Example usage:
+getWeeklyCategory()
+  .then((category) => {
+console.log('loggedIn:', loggedIn);
+console.log('category:', category);
+console.log('questionData.quizCategory:', questionData.quizCategory);
+	  if(questionData.quizCategory == category && loggedIn === true){
+// Usage example
+const userId = uID; 
+const username = userInfo.userName;
+const points = questionCorrect * 5;
+const rank = userInfo.userRank;
+const userPic = userInfo.userProfilePic;
+
+updateWeeklyCompanionList(userId, username, points, rank, userPic);
+
+		  
+document.getElementById("score").innerHTML += `<p>Weekly Category Competition: ${category} <br>You earned <span>+${points}</span> points.</p>	`;
+
+		  
+	  }
+  })
+  .catch((error) => {
+    console.error(error.message);
+  });
+
+
+	  
   }
 }
 
@@ -845,29 +875,30 @@ function updateWeeklyCompanionList(userId, username, points, rank, userPic ) {
 
 // Function to get the weekly category if the user is logged in
 function getWeeklyCategory() {
-		    console.log("getWeeklyCategory  ");
+  console.log("getWeeklyCategory");
 
   return new Promise((resolve, reject) => {
     // Check if the user is logged in
-      const db = firebase.firestore();
-      const weeklyChallengeRef = db.collection("quizCategory").doc("weeklyChallenge");
+    const db = firebase.firestore();
+    const weeklyChallengeRef = db.collection("quizCategory");
 
-      // Retrieve the weekly category data
-      weeklyChallengeRef.get().then((doc) => {
-        if (doc.exists) {
-          const data = doc.data();
-          const categoryName = data.name; // Assuming the name field contains the category name
+    // Use a query to find the document where weeklyChallenge is true
+    weeklyChallengeRef.where("weeklyChallenge", "==", true).get().then((querySnapshot) => {
+      if (!querySnapshot.empty) {
+        // Assuming you want the first matching document
+        const doc = querySnapshot.docs[0];
+        const data = doc.data();
+        const categoryName = data.name; // Assuming the name field contains the category name
 
-	    console.log("categoryName  "+categoryName);
-		
-          resolve(categoryName);
-        } else {
-          reject(new Error("Weekly category not found in the database."));
-        }
-      }).catch((error) => {
-        reject(error);
-      });
-   
+        console.log("categoryName " + categoryName);
+
+        resolve(categoryName);
+      } else {
+        reject(new Error("Weekly category not found in the database."));
+      }
+    }).catch((error) => {
+      reject(error);
+    });
   });
 }
 
@@ -914,33 +945,6 @@ quizEnded = true;
   }
 
 		    console.log("endQuiz  ");
-
-
-// Example usage:
-getWeeklyCategory()
-  .then((category) => {
-console.log('loggedIn:', loggedIn);
-console.log('category:', category);
-console.log('questionData.quizCategory:', questionData.quizCategory);
-	  if(questionData.quizCategory == category && loggedIn === true){
-// Usage example
-const userId = uID; 
-const username = userInfo.userName;
-const points = questionCorrect * 5;
-const rank = userInfo.userRank;
-const userPic = userInfo.userProfilePic;
-
-updateWeeklyCompanionList(userId, username, points, rank, userPic);
-
-		  
-document.getElementById("score").innerHTML += `<p>Weekly Category Competition: ${category} <br>You earned <span>+${points}</span> points.</p>	`;
-
-		  
-	  }
-  })
-  .catch((error) => {
-    console.error(error.message);
-  });
 
 
 	
