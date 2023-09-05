@@ -915,7 +915,9 @@ quizEnded = true;
 // Example usage:
 getWeeklyCategory()
   .then((category) => {
-
+console.log('loggedIn:', loggedIn);
+console.log('category:', category);
+console.log('questionData.quizCategory:', questionData.quizCategory);
 	  if(questionData.quizCategory == category && loggedIn === true){
 // Usage example
 const userId = uID; 
