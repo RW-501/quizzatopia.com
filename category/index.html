@@ -36,6 +36,8 @@
             "url": "https://www.quizzatopia.com/category/?Professional%20Certification"
         }
     </script>
+
+	
 	<style>
     body {
       font-family: Arial, sans-serif;
@@ -334,8 +336,7 @@ padding: 5%;
     width: 100%;
     padding: 1%;
     /*justify-content: space-evenly;*/
-	    overflow: hidden;
-
+ overflow: hidden;
 }
 
 .tagEl {
@@ -360,13 +361,12 @@ display: block;
 }
 
 
-	.list-catergory{
+.list-catergory{
     font-weight: 800;
     font-size: 1.5em;
     margin-bottom: 10px;
     color: #fd7e14;
-
-	}
+}
 
 
 	
@@ -598,7 +598,7 @@ let query = db.collection('quizzes')
 // Function to convert Firestore query snapshot to quizList
 function convertSnapshotToQuizList(querySnapshot) {
   const quizList = [];
-	  console.log(`604 querySnapshot: ` + querySnapshot);
+	  console.log(`601 querySnapshot: ` + querySnapshot);
 
   querySnapshot.forEach((doc) => {
     const quizData = doc.data();
