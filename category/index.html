@@ -503,10 +503,8 @@ const hasAmpersand = regex.test(categoryName1);
 	  
 if (hasAmpersand) {
  categoryName = categoryName1.toString().split('&')[1];
-console.log("505 categoryName: ", categoryName);
 } else {
 categoryName = categoryName1;
-console.log("508 categoryName: ", categoryName);
 
 }
 
@@ -568,7 +566,6 @@ async function fetchQuizzesFromDB(categoryName, page = 1) {
   const quizzesPerPage = 20; // Number of quizzes to fetch per page
 
 
-	  console.log(`570 categoryName: ` + categoryName);
 	
   // Build the query to fetch quizzes with ordering
 let query = db.collection('quizzes')
