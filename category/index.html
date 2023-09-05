@@ -465,6 +465,8 @@ const db = firebase.firestore();
             console.log(`View count for category ${category} incremented to ${updatedViewCount}`);
   console.log(` categoryName: ` + categoryName);
   fetchQuizzesFromDB(categoryName); 
+
+		  
           })
           .catch((error) => {
             console.error(`Error updating view count for category ${category}:`, error);
