@@ -2628,7 +2628,7 @@ function showPopup(message) {
 	  
 	  
 
-	  
+	  let questionData  = [];
  
 let questionsOG = [];
 let questions = [];
@@ -2748,7 +2748,7 @@ const quizRef = firebase.firestore().collection("quizzes").where("quizCodeDB", "
 
               // Parse the quizDataDB.quizDataDB string to a JSON object
               // Use the parsedQuizDataDB.questions array to populate questionData
-              const questionData = parsedQuizDataDB.questions.map(questionObj => ({
+               questionData = parsedQuizDataDB.questions.map(questionObj => ({
                 questionNumber: questionObj.questionNumber,
                 question: questionObj.question,
                 imageURL: questionObj.imageURL,
