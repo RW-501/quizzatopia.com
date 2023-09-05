@@ -816,15 +816,17 @@ async function getTag(tag) {
 
 
 	  
-// Load quizzes on window load
 window.onload = function() {
-
-
  categoryName = input(categoryName);	  
   console.log(`827 categoryName: ` + categoryName);
+window.addEventListener("load", function() {
 
   fetchQuizzesFromDB(categoryName);
-	
+	  console.log("The page has finished loading.");
+});
+
+
+
 
 };
 
