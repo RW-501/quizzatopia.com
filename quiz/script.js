@@ -782,7 +782,6 @@ async function updatequizDB() {
       quizFinishedCount: firebase.firestore.FieldValue.increment(1)
     });
 
-    console.log(quizCode + " was updated: " + quizId);
 
 
 // Example usage:
@@ -790,6 +789,8 @@ getWeeklyCategory()
   .then((category) => {
 console.log('loggedIn:', loggedIn);
 console.log('category:', category);
+
+	  
 console.log('questionData.quizCategory:', questionData.quizCategory);
 	  if(questionData.quizCategory == category && loggedIn === true){
 // Usage example
