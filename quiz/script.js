@@ -787,10 +787,10 @@ async function updatequizDB() {
 
 function updateWeeklyCompanionList(userId, username, points, rank, userPic ) {
   const db = firebase.firestore();
-  const weeklyChallengeRef = db.collection("weeklyChallenge");
+  const weeklyChallengeRef = db.collection("weeklyCategoryChallenge");
 
   // Assuming you have a document for the weekly challenge
-  const weeklyChallengeDoc = weeklyChallengeRef.doc("your_weekly_challenge_doc_id");
+  const weeklyChallengeDoc = weeklyChallengeRef.doc(userId);
 
   // Check if the user exists in the weeklyCompanionList
   weeklyChallengeDoc
