@@ -504,10 +504,10 @@ const hasAmpersand = regex.test(inputString);
 if (hasAmpersand) {
 const parts = inputString.split('&'); 
 const wordBeforeAmpersand = parts[0];
-categoryName = wordBeforeAmpersand;
+categoryName = input(wordBeforeAmpersand);
 
 } else {
-categoryName = inputString;
+categoryName = input(inputString);
 
 }
 
