@@ -801,8 +801,8 @@ console.log('loggedIn:', loggedIn);
 console.log('category:', category);
 
 	  
-console.log('questionData.quizCategory:', questionData.quizCategory);
-	  if(questionData.quizCategory == category && loggedIn === true){
+console.log('quizMainCategory:', quizMainCategory);
+	  if(quizMainCategory.includes(category)  && loggedIn === true){
 // Usage example
 const userId = uID; 
 const username = userInfo.userName;
