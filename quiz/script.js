@@ -844,9 +844,9 @@ document.getElementById("score").innerHTML += `<p>Weekly Category Competition: $
 
 
 async function updateWeeklyCompanionList(userId, username, points, rank, userPic) {
-  const docRef = weeklyChallengeRef.doc(userId);
 const db = firebase.firestore();
 const weeklyChallengeRef = db.collection("weeklyCategoryChallenge");
+  const docRef = weeklyChallengeRef.doc(userId);
 
   try {
     const docSnapshot = await docRef.get();
