@@ -765,13 +765,24 @@ function retakeQuizFunc() {
 
 
 
-//console.log('quizCategoryVar:', quizCategoryVar);
-console.log('questionData:', questionData);
-console.log('questionData.quizCategory:', questionData.quizCategory);
 
 
+getWeeklyCategory()
+  .then((category) => {
+if (quizMainCategory.includes(category)) {
+  console.log("String contains the word.",category);
+} else {
+  console.log("String does not contain the word.",category);
+}
+
+	  }
+  })
+  .catch((error) => {
+    console.error(error.message);
+  });
 
 
+	  
 // Function to update quiz count in the database
 async function updatequizDB() {
     console.log("updatequizDB  ");
