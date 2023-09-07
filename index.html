@@ -1247,7 +1247,6 @@ let count = 0;
     .get()
     .then((querySnapshot) => {
       const weeklyCompanionList = document.getElementById("weeklyCompanionList");
-count++;
       // Create an HTML table to display the user info
       const table = document.createElement("table");
       table.classList.add("table"); // Add Bootstrap table styling
@@ -1268,6 +1267,8 @@ count++;
       let rank = 0;
       querySnapshot.forEach((doc) => {
 	      rank ++;
+	      count++;
+
         const userData = doc.data();
 const tr = document.createElement("tr");
 tr.classList.add("top_"+count);
@@ -1281,7 +1282,6 @@ tr.innerHTML = `
 `;
 
         tbody.appendChild(tr);
-        rank++;
       });
 
       table.appendChild(tbody);
