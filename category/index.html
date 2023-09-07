@@ -493,6 +493,9 @@ const db = firebase.firestore();
 			});
 
 	}  
+
+window.onload = function() {
+
 var categoryName = "";
 	  
 const urlParams = window.location.href;
@@ -511,7 +514,8 @@ categoryName = input(inputString);
 
 }
 
-
+};
+	  
 console.log("513 categoryName: ", categoryName);
 document.getElementById('title').innerHTML = categoryName;
 	  
