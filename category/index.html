@@ -514,8 +514,7 @@ categoryName = input(inputString);
 
 }
 
-};
-	  
+  
 console.log("513 categoryName: ", categoryName);
 document.getElementById('title').innerHTML = categoryName;
 	  
@@ -541,7 +540,8 @@ updateCategoryViewCount(categoryName);
 
 
     document.getElementById('updated_Quizzez').innerHTML = "";
-
+};
+	
 
 	// Function to convert the rating to star symbols
 const ratingToStars = (rating) => {
@@ -560,7 +560,6 @@ const ratingToStars = (rating) => {
   return filledStars + emptyStars;
 };
 
-    
 let countQ = 0;
 // Global variables
 const db = firebase.firestore();
