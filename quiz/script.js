@@ -765,7 +765,7 @@ function retakeQuizFunc() {
 
 
 
-
+/*
 
 getWeeklyCategory()
   .then((category) => {
@@ -781,7 +781,7 @@ if (quizMainCategory.includes(category)) {
     console.error(error.message);
   });
 
-
+*/
 	  
 // Function to update quiz count in the database
 async function updatequizDB() {
@@ -839,17 +839,14 @@ document.getElementById("score").innerHTML += `<p>Weekly Category Competition: $
 }
 
 
-function updateWeeklyCompanionList(userId, username, points, rank, userPic ) {
-	    console.log("updateWeeklyCompanionList  ");
 
+function updateWeeklyCompanionList(userId, username, points, rank, userPic) {
   const db = firebase.firestore();
   const weeklyChallengeRef = db.collection("weeklyCategoryChallenge");
-
-  // Assuming you have a document for the weekly challenge
   const weeklyChallengeDoc = weeklyChallengeRef.doc(userId);
 
   // Check if the user exists in the weeklyCompanionList
-  weeklyChallengeDoc
+  return weeklyChallengeDoc
     .get()
     .then((doc) => {
       if (doc.exists) {
@@ -864,26 +861,21 @@ function updateWeeklyCompanionList(userId, username, points, rank, userPic ) {
           weeklyCompanionList.push({
             userId: userId,
             username: username,
-	userPicture:userPic,  
-            rank: 0, // Set the initial rank as needed
-            score: 0, // Set the initial score as needed
-          });
-
-          // Update the weeklyCompanionList in Firestore
-          return weeklyChallengeDoc.update({
-            weeklyCompanionList: weeklyCompanionList,
+            userPicture: userPic,
+            rank: rank,
+            score: points,
           });
         } else {
           // User is already in the list, update their score
           const user = weeklyCompanionList[userIndex];
           user.score += points;
           user.rank = rank;
-
-          // Update the weeklyCompanionList in Firestore
-          return weeklyChallengeDoc.update({
-            weeklyCompanionList: weeklyCompanionList,
-          });
         }
+
+        // Update the weeklyCompanionList in Firestore
+        return weeklyChallengeDoc.update({
+          weeklyCompanionList: weeklyCompanionList,
+        });
       } else {
         console.log("Weekly challenge document not found.");
         return null;
