@@ -1265,8 +1265,9 @@ count++;
 
       // Create the table body
       const tbody = document.createElement("tbody");
-      let rank = 1;
+      let rank = 0;
       querySnapshot.forEach((doc) => {
+	      rank ++;
         const userData = doc.data();
 const tr = document.createElement("tr");
 tr.classList.add("top_"+count);
