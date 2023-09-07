@@ -822,6 +822,8 @@ const rank = userInfo.userRank;
 const userPic = userInfo.userProfilePic;
 
 updateWeeklyCompanionList(userId, username, points, rank, userPic);
+// Example usage:
+//updateWeeklyCompanionList("12345", "John Doe", 10, "Gold", "user-pic-url");
 
 		  
 document.getElementById("score").innerHTML += `<p>Weekly Category Competition: ${category} <br>You earned <span>+${points}</span> points.</p>	`;
@@ -874,8 +876,6 @@ const weeklyChallengeRef = db.collection("weeklyCategoryChallenge");
   }
 }
 
-// Example usage:
-updateWeeklyCompanionList("12345", "John Doe", 10, "Gold", "user-pic-url");
 
 
 
