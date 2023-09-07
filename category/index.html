@@ -494,7 +494,17 @@ const db = firebase.firestore();
 
 	}  
 
+
+
 window.onload = function() {
+
+console.log("??????????????: ");
+
+getQuizzesCategory();
+};
+
+	  
+ function getQuizzesCategory() {
 
 var categoryName = "";
 	  
@@ -540,7 +550,7 @@ updateCategoryViewCount(categoryName);
 
 
     document.getElementById('updated_Quizzez').innerHTML = "";
-};
+}
 	
 
 	// Function to convert the rating to star symbols
