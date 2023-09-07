@@ -333,14 +333,15 @@ function updateWeeklyCompanion() {
 	
 	  <script>
 		  function loadLeaderboardGet(xxx){
-
+      let weeklyCompanionList = document.getElementById("leaderboardBody");
+weeklyCompanionList.innerHTML = "";
 
 			  if(xxx == 'userRank'){
 loadLeaderboard('userRank');
 			  }else  if(xxx == 'category'){
 getTop5UsersAndDisplayTable(category);
 			  }else  if(xxx == 'friends'){
-      const weeklyCompanionList = document.getElementById("leaderboardBody");
+       weeklyCompanionList = document.getElementById("leaderboardBody");
 weeklyCompanionList.innerHTML = "Coming Soon!";
 			  }
 
@@ -465,7 +466,8 @@ count++;
       const table = document.createElement("table");
       table.classList.add("table"); // Add Bootstrap table styling
 
-      // Create the table header
+     /*
+     // Create the table header
       const thead = document.createElement("thead");
       thead.innerHTML = `
         <tr>
@@ -475,11 +477,12 @@ count++;
         </tr>
       `;
       table.appendChild(thead);
-
+*/
       // Create the table body
       const tbody = document.createElement("tbody");
-      let rank = 1;
+      let rank = 0;
       querySnapshot.forEach((doc) => {
+	      rank ++;
         const userData = doc.data();
 const tr = document.createElement("tr");
 tr.classList.add("top_"+count);
