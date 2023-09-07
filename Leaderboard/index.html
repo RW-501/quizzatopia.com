@@ -138,9 +138,7 @@ display: block;
     margin-bottom: 0 !important;
 
 }
-	    .table td{
-			    display:grid;
-		    }		   
+	   
   </style>
     </head>
 
@@ -289,9 +287,9 @@ function updateWeeklyCompanion() {
             <h5 class="card-title leaderboard-title">Leaderboard</h5>
             <!-- Buttons to switch leaderboards -->
             <div class="btn-group w-100 mb-3">
-              <button class="btn btn-primary" onclick="loadLeaderboard('userRank')">Global</button>
-              <button class="btn btn-primary" onclick="loadLeaderboardGet('userState')">Local</button>
-              <button class="btn btn-primary" onclick="loadLeaderboardGet('userCity')">Area</button>
+              <button class="btn btn-primary" onclick="loadLeaderboardGet('userRank')">Global</button>
+              <button class="btn btn-primary" onclick="loadLeaderboardGet('category')">Category</button>
+              <button class="btn btn-primary" onclick="loadLeaderboardGet('friends')">Friends</button>
             </div>
             <!-- Leaderboard table -->
             <table class="table leaderboard-table w-100 ">
@@ -334,6 +332,21 @@ function updateWeeklyCompanion() {
 	
 	
 	  <script>
+		  function loadLeaderboardGet(xxx){
+
+
+			  if(xxx == 'userRank'){
+loadLeaderboard('userRank');
+			  }else  if(xxx == 'category'){
+getTop5UsersAndDisplayTable(category);
+			  }else  if(xxx == 'friends'){
+      const weeklyCompanionList = document.getElementById("leaderboardBody");
+weeklyCompanionList.innerHTML = "Coming Soon!";
+			  }
+
+
+		  }
+
 		  
 		  var lbUserInfo ;
    lbUserInfo = JSON.parse(localStorage.getItem("userInfo"));
@@ -445,7 +458,7 @@ let count = 0;
     .limit(20)
     .get()
     .then((querySnapshot) => {
-      const weeklyCompanionList = document.getElementById("weeklyCompanionList");
+      const weeklyCompanionList = document.getElementById("leaderboardBody");
 count++;
 
       // Create an HTML table to display the user info
@@ -507,6 +520,9 @@ function getUrlParameter(name) {
 }
 
 const category = getUrlParameter('category');
+	  
+      console.log("Viewing category: " + category);
+	  
 if(category){
 
 getTop5UsersAndDisplayTable(category);
