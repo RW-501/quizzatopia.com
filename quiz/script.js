@@ -840,51 +840,43 @@ document.getElementById("score").innerHTML += `<p>Weekly Category Competition: $
 
 
 
-function updateWeeklyCompanionList(userId, username, points, rank, userPic) {
-  const db = firebase.firestore();
-  const weeklyChallengeRef = db.collection("weeklyCategoryChallenge");
-  const weeklyChallengeDoc = weeklyChallengeRef.doc(userId);
 
-  // Check if the user exists in the weeklyCompanionList
-  return weeklyChallengeDoc
-    .get()
-    .then((doc) => {
-      if (doc.exists) {
-        const weeklyChallengeData = doc.data();
-        const weeklyCompanionList = weeklyChallengeData.weeklyCompanionList || [];
+async function updateWeeklyCompanionList(userId, username, points, rank, userPic) {
+  const docRef = weeklyChallengeRef.doc(userId);
+const db = firebase.firestore();
+const weeklyChallengeRef = db.collection("weeklyCategoryChallenge");
 
-        // Check if the user ID is already in the list
-        const userIndex = weeklyCompanionList.findIndex((user) => user.userId === userId);
+  try {
+    const docSnapshot = await docRef.get();
 
-        if (userIndex === -1) {
-          // User is not in the list, add them
-          weeklyCompanionList.push({
-            userId: userId,
-            username: username,
-            userPicture: userPic,
-            rank: rank,
-            score: points,
-          });
-        } else {
-          // User is already in the list, update their score
-          const user = weeklyCompanionList[userIndex];
-          user.score += points;
-          user.rank = rank;
-        }
+    if (docSnapshot.exists) {
+      // Document exists; update the points
+      const currentPoints = docSnapshot.data().score || 0;
+      const newPoints = currentPoints + points;
 
-        // Update the weeklyCompanionList in Firestore
-        return weeklyChallengeDoc.update({
-          weeklyCompanionList: weeklyCompanionList,
-        });
-      } else {
-        console.log("Weekly challenge document not found.");
-        return null;
-      }
-    })
-    .catch((error) => {
-      console.error("Error updating weekly companion list:", error);
-    });
+      await docRef.update({
+        score: newPoints
+      });
+      console.log(`Updated points for user ${userId} to ${newPoints}`);
+    } else {
+      // Document does not exist; create a new document
+      await docRef.set({
+        userId: userId,
+        username: username,
+        userPicture: userPic,
+        rank: rank,
+        score: points
+      });
+      console.log(`Created new document for user ${userId}`);
+    }
+  } catch (error) {
+    console.error("Error updating/comparing document:", error);
+  }
 }
+
+// Example usage:
+updateWeeklyCompanionList("12345", "John Doe", 10, "Gold", "user-pic-url");
+
 
 
 // Function to get the weekly category if the user is logged in
