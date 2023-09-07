@@ -496,15 +496,18 @@ const db = firebase.firestore();
 var categoryName = "";
 	  
 const urlParams = window.location.href;
-const categoryName1 = decodeURIComponent(urlParams.toString().split('?')[1]);
-console.log("categoryName1: ", categoryName1);
+const inputString = decodeURIComponent(urlParams.toString().split('?')[1]);
+console.log("categoryName1: ", inputString);
 const regex = /&/;
-const hasAmpersand = regex.test(categoryName1);
+const hasAmpersand = regex.test(inputString);
 	  
 if (hasAmpersand) {
- categoryName = categoryName1.toString().split('&')[1];
+const parts = inputString.split('&'); 
+const wordBeforeAmpersand = parts[0];
+categoryName = wordBeforeAmpersand;
+
 } else {
-categoryName = categoryName1;
+categoryName = inputString;
 
 }
 
