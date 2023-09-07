@@ -459,25 +459,10 @@ let count = 0;
     .limit(20)
     .get()
     .then((querySnapshot) => {
-      const weeklyCompanionList = document.getElementById("leaderboardBody");
+      const tbody = document.getElementById("leaderboardBody");
 count++;
 
-      // Create an HTML table to display the user info
-      const table = document.createElement("table");
-      table.classList.add("table"); // Add Bootstrap table styling
-
-     /*
-     // Create the table header
-      const thead = document.createElement("thead");
-      thead.innerHTML = `
-        <tr>
-          <th scope="col">Rank</th>
-          <th scope="col">User</th>
-          <th scope="col">Score</th>
-        </tr>
-      `;
-      table.appendChild(thead);
-*/
+ 
       // Create the table body
       const tbody = document.createElement("tbody");
       let rank = 0;
