@@ -435,7 +435,7 @@ var query = usersCollection
 
 function getTop5UsersAndDisplayTable() {
   const db = firebase.firestore();
-  const weeklyChallengeRef = db.collection("weeklyChallenge");
+  const weeklyChallengeRef = db.collection("weeklyCategoryChallenge");
 let count = 0;
 
   // Query the top 5 users based on some criteria, e.g., score
