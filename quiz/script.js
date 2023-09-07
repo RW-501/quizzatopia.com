@@ -775,7 +775,7 @@ if (quizMainCategory.includes(category)) {
   console.log("String does not contain the word.",category);
 }
 
-	  }
+	
   })
   .catch((error) => {
     console.error(error.message);
