@@ -460,13 +460,13 @@ let count = 0;
     .get()
     .then((querySnapshot) => {
       const tbody = document.getElementById("leaderboardBody");
-count++;
 
  
       // Create the table body
       let rank = 0;
       querySnapshot.forEach((doc) => {
 	      rank ++;
+	      count++;
         const userData = doc.data();
 const tr = document.createElement("tr");
 tr.classList.add("top_"+count);
@@ -480,7 +480,6 @@ tr.classList.add("top_"+count);
 `;
 
         tbody.appendChild(tr);
-        rank++;
       });
 
      // table.appendChild(tbody);
