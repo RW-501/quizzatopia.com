@@ -422,6 +422,13 @@ display: block;
 	  
 	    <div class="loading_Main ">Loading...</div>
   </div>
+
+<div id="contact-section">
+  <p>Did you find what you were looking for?</p>
+  <button onclick="contactUs()">No, Contact Us</button>
+</div>
+
+	    
 </div>
 
 </section>
@@ -440,7 +447,10 @@ function backButton(){
   window.history.back();
 
 }
-
+  function contactUs() {
+    // Add your logic to handle contacting us, for example redirecting to a contact page
+    window.location.href = "/Business/Contact"; // Replace with the appropriate URL
+  }
 	  
 function updateCategoryViewCount(category) {
 const db = firebase.firestore();
