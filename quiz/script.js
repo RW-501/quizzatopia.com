@@ -419,7 +419,7 @@ for (let i = 0; i < Math.min(shuffledOptions.length, answerButtons.length); i++)
   answerButtons[i].innerHTML = shuffledOptions[i] || "";
   answerButtons[i].addEventListener("click", checkAnswer);
 }
-//removeOverlayWithoutTimer();	
+removeOverlayWithoutTimer();	
 
 	
   const quizContainer = document.getElementById('quizContainer');
