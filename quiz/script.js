@@ -368,7 +368,7 @@ function showQuestion() {
   slideIn("quizContainer", selectedAnimation);
 
   if (adQuestionNumbers.includes(currentQuestion)) {
-console.log(adQuestionNumbers+'  adQuestionNumbers.userName ????????????currentQuestion '+ currentQuestion);
+//console.log(adQuestionNumbers+'  adQuestionNumbers.userName ????????????currentQuestion '+ currentQuestion);
 
     const index = adQuestionNumbers.indexOf(currentQuestion);
     if (index !== -1) {
@@ -379,7 +379,7 @@ console.log(adQuestionNumbers+'  adQuestionNumbers.userName ????????????currentQ
   }
 
   const questionObj = questions[currentQuestion];
-	console.log(questionObj+' questionsCompleted '+currentQuestion);
+//	console.log(questionObj+' questionsCompleted '+currentQuestion);
   document.getElementById("question").innerHTML = questionObj.question;
 
   if (questionObj.imageURL === "" || questionObj.imageURL === null || questionObj.imageURL === undefined) {
