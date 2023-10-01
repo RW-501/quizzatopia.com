@@ -1,4 +1,15 @@
-	
+	body {
+  overscroll-behavior: none;
+  touch-action: pan-y; /* Allow vertical scrolling only */
+}
+
+ .layer-1 {
+
+
+    scroll-snap-align: center;
+    scroll-behavior: unset;
+    scroll-snap-stop: always;
+  }
 main_section {
     width: 100vw !important;
     height: 90vh !important;
@@ -139,6 +150,8 @@ padding: 2% 4% 2% 4%;
     border: 1px solid #CED4DA;
     border-radius: 4px;
     padding: 20px;
+
+
   }
 
   .layer-2 {
