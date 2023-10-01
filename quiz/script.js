@@ -51,11 +51,7 @@ saveQuizInfo(quizCode,quizInfo);
 //console.log('questionCorrect ', questionCorrect);
 //console.log('questionIncorrect ', questionIncorrect);
 
-window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
+
 
 // Check if quizCode matches and retrieve or save quiz info
 function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS,questionsCompleted) {
@@ -404,7 +400,7 @@ document.getElementById("realQustionNum").innerHTML =  ('# '+ questionObj.questi
 
 		//console.log('questionObj.questionNumber ', questionObj.questionNumber);
 		//console.log('questionsCompleted ', questionsCompleted);
-		console.log('realQuestionNumber ', realQuestionNumber);
+		//console.log('realQuestionNumber ', realQuestionNumber);
 	
   const answerButtons = document.getElementsByClassName("answer-option");
 
@@ -424,7 +420,12 @@ for (let i = 0; i < Math.min(shuffledOptions.length, answerButtons.length); i++)
   answerButtons[i].addEventListener("click", checkAnswer);
 }
 removeOverlayWithoutTimer();	
-
+  let quizContainer = document.getElementById("quizContainer");
+quizContainer.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
   document.getElementById("explanation").innerHTML = "";
 
   if (countdownPerQuestion && timerEnabled) {
