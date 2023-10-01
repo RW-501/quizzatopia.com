@@ -1537,8 +1537,6 @@ audioButton.addEventListener('click', toggleAudio);
 updateAudioButton();
 
 
-
-
 // Get the volume slider element
 var volumeSlider = document.getElementById('volumeSlider');
 
@@ -1701,6 +1699,8 @@ window.addEventListener('load', function() {
 
 
 function readQuizFunc() {
+isAudioEnabled = true;
+updateAudioButton();
 
 var currentQuestion =   document.getElementById("question").innerHTML;
 
