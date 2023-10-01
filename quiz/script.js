@@ -51,14 +51,7 @@ saveQuizInfo(quizCode,quizInfo);
 //console.log('questionCorrect ', questionCorrect);
 //console.log('questionIncorrect ', questionIncorrect);
 
-window.onscroll = () => {
-  // Show or hide the scroll-to-top button based on scroll position
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollToTopButton.style.display = 'block';
-  } else {
-    scrollToTopButton.style.display = 'none';
-  }
-};
+
 
 // Check if quizCode matches and retrieve or save quiz info
 function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS,questionsCompleted) {
