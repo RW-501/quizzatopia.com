@@ -51,7 +51,11 @@ saveQuizInfo(quizCode,quizInfo);
 //console.log('questionCorrect ', questionCorrect);
 //console.log('questionIncorrect ', questionIncorrect);
 
-
+window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
 
 // Check if quizCode matches and retrieve or save quiz info
 function setUpandSaveQuizInfo(quizCodeNS, quizNameNS, numberOfQuestionsNS,questionsCompleted) {
