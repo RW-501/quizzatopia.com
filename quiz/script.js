@@ -426,6 +426,9 @@ removeOverlayWithoutTimer();
 
   // Scroll to the top of the quizContainer
   quizContainer.scrollTop = 0;
+console.log('quizContainer '+quizContainer.scrollTop);
+
+
 	
   document.getElementById("explanation").innerHTML = "";
 
