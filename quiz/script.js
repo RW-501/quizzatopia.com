@@ -422,12 +422,6 @@ for (let i = 0; i < Math.min(shuffledOptions.length, answerButtons.length); i++)
 removeOverlayWithoutTimer();	
 
 	
-  const quizContainer = document.getElementById('quizContainer');
-
-  // Scroll to the top of the quizContainer
-  quizContainer.scrollTop = 0;
-console.log('quizContainer '+quizContainer.scrollTop);
-
 
 	
   document.getElementById("explanation").innerHTML = "";
@@ -443,6 +437,26 @@ const skipNextBtn = document.getElementById('skip-next-btn');
 skipNextBtn.innerHTML = questionCorrect > currentQuestion ? 'Next' : 'Skip';
 
 
+  const quizContainer = document.getElementById('quizContainer');
+const containerRect = quizContainer.getBoundingClientRect();
+
+console.log('Quiz Container Location:');
+console.log('Top:', containerRect.top);
+console.log('Left:', containerRect.left);
+console.log('Bottom:', containerRect.bottom);
+console.log('Right:', containerRect.right);
+
+	
+  // Scroll to the top of the quizContainer
+ // quizContainer.scrollTop = 0;
+console.log('quizContainer '+quizContainer.scrollTop);
+  window.scrollTo({
+    top: containerRect.top,
+    behavior: 'smooth'
+  });
+
+
+	
 }
 
 // Function to update the progress bar
