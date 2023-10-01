@@ -425,7 +425,7 @@ quizContainer.scrollTo({
     top: 0,
     behavior: 'smooth'
   });
-});
+
   document.getElementById("explanation").innerHTML = "";
 
   if (countdownPerQuestion && timerEnabled) {
