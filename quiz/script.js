@@ -423,7 +423,7 @@ removeOverlayWithoutTimer();
 
 	
   const quizContainer = document.getElementById('quizContainer');
-  quizContainer.style.position = 'absolute'; // Set position to absolute
+  quizContainer.style.position = 'inherit'; // Set position to absolute
   quizContainer.scrollTo({
     top: 0,
     behavior: 'smooth'
