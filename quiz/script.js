@@ -419,13 +419,16 @@ for (let i = 0; i < Math.min(shuffledOptions.length, answerButtons.length); i++)
   answerButtons[i].innerHTML = shuffledOptions[i] || "";
   answerButtons[i].addEventListener("click", checkAnswer);
 }
-removeOverlayWithoutTimer();	
-  let quizContainer = document.getElementById("quizContainer");
-quizContainer.scrollTo({
+//removeOverlayWithoutTimer();	
+
+	
+  const quizContainer = document.getElementById('quizContainer');
+  quizContainer.style.position = 'absolute'; // Set position to absolute
+  quizContainer.scrollTo({
     top: 0,
     behavior: 'smooth'
   });
-
+	
   document.getElementById("explanation").innerHTML = "";
 
   if (countdownPerQuestion && timerEnabled) {
