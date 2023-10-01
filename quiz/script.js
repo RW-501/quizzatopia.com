@@ -439,13 +439,13 @@ skipNextBtn.innerHTML = questionCorrect > currentQuestion ? 'Next' : 'Skip';
 
   const quizContainer = document.getElementById('quizContainer');
 const containerRect = quizContainer.getBoundingClientRect();
-
+/*
 console.log('Quiz Container Location:');
 console.log('Top:', containerRect.top);
 console.log('Left:', containerRect.left);
 console.log('Bottom:', containerRect.bottom);
 console.log('Right:', containerRect.right);
-
+*/
 	
   // Scroll to the top of the quizContainer
  // quizContainer.scrollTop = 0;
