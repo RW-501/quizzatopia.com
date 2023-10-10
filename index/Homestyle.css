@@ -913,6 +913,124 @@ main_section{
 
 
 
+.min-w{
+	    min-width: 800px !important;
+	}
+		  
+  /* Styling for the creative "Sign Up" button */
+  .signup-button {
+    margin: auto;
+    position: relative;
+    display: inline-block;
+    background-color: #ff8c00;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+    width: 100%;
+}
+
+  .signup-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff8c00;
+    opacity: 0.2;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .signup-button:hover {
+    background-color: #f96800;
+  }
+
+  .signup-button:hover:before {
+    transform: translateY(0);
+  }
+
+  .signup-button span {
+    position: relative;
+    z-index: 1;
+  }
+
+  .signup-button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-image: radial-gradient(#fff, transparent);
+    transform: scale(1.4);
+    opacity: 0.15;
+    pointer-events: none;
+  }
+	.group {
+display: grid;
+    align-items: center;
+    width: 70%;
+    padding: 5%;
+    margin: auto;
+}
+	  
+#codeContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 25px auto;
+}
+
+#quizCodeInput {
+width: 750%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#quizCodeBTN {
+	width: 25%;
+	  flex: 0 0 auto;
+  padding: 10px;
+  background-color: #4267B2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#quizCodeBTN:hover {
+  background-color: #3b5998;
+}
+#reviewModal button{
+    margin: 1%;
+}
+
+#codeContainer{
+display:none;
+}
+
+#weeklyCompanionList .table td {
+white-space: pre;
+
+}
+#weeklyCompanionList .table img{
+    max-width: 10em;
+    max-height: 10em;
+    border-radius: 50%;
+    overflow: hidden;
+
+		  }
 
 
 
