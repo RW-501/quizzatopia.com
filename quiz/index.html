@@ -2100,6 +2100,13 @@ quizMainCategory = quizCategory;
       console.log("adsbygoogle");
 	         (adsbygoogle = window.adsbygoogle || []).push({});	
 
+ 
+    })
+    .catch((error) => {
+      console.error("Error fetching recommended quizzes:", error);
+    });
+}
+
  const adElement = document.getElementById('myAd');
 
   // Listen for changes in the ad status
@@ -2115,20 +2122,6 @@ quizMainCategory = quizCategory;
 	  
     }
   });
-
-	  
-
-
-
-
-       
-	    
-    })
-    .catch((error) => {
-      console.error("Error fetching recommended quizzes:", error);
-    });
-}
-
 
 
 
