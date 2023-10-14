@@ -286,7 +286,7 @@ color: #fff;
 
 /* CSS comments for the quiz categories section */
 .quiz-categories {
-  padding: 4rem 0;
+ /* padding: 4rem 0;*/
   text-align: center;
 }
 
