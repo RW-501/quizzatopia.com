@@ -1068,7 +1068,7 @@ function backButton(){
             <p><a href="https://www.buymeacoffee.com/Quizzatopia" target="_blank"><img src="/images/bmc.png" alt="Buy Me A Coffee"  id="adPic" ></a></p>-->
             <div id='ad-view' style="min-width:255px">
             <!--    -->
-<!-- frontpage_bottom_1 
+<!-- frontpage_bottom_1 -->
 <ins id="myAd"
  class="adsbygoogle"
      style="display:block; width:100%; height: auto;  "
@@ -1079,7 +1079,7 @@ function backButton(){
      data-adsbygoogle-status=""
      data-ad-status="">
 </ins>
-		-->
+		
 <!-- frontpage_bottom_1 
 
 <ins class="In_Quiz_Ad"
@@ -2109,11 +2109,13 @@ quizMainCategory = quizCategory;
     });
 }
 
- const adElement = document.getElementById('myAd');
+const adElement = document.querySelector('.adsbygoogle[data-ad-status]');
 
-  // Listen for changes in the ad status
-  adElement.addEventListener('adsbygoogle-status-changed', function (event) {
-    const adStatus = event.detail.e[0].getAttribute('data-adsbygoogle-status');
+  if (adElement) {
+    adElement.addEventListener('adsbygoogle-status-changed', function (event) {
+      const adStatus = event.detail.e[0].getAttribute('data-adsbygoogle-status');
+
+
 
     if (adStatus === 'filled') {
       console.log('Ad is filled!');
@@ -2125,7 +2127,7 @@ quizMainCategory = quizCategory;
     }
   });
 
-
+  }
 
 
 
