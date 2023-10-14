@@ -2113,7 +2113,7 @@ const adElement = document.querySelector('.adsbygoogle ');
 
   if (adElement) {
     adElement.addEventListener('data-adsbygoogle-status', function (event) {
-      const adStatus = event.[0].getAttribute('data-adsbygoogle-status');
+      const adStatus = event.getAttribute('data-adsbygoogle-status');
 
 
 
