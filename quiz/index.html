@@ -2112,8 +2112,8 @@ quizMainCategory = quizCategory;
 const adElement = document.querySelector('.adsbygoogle ');
 
   if (adElement) {
-    adElement.addEventListener('adsbygoogle-status-changed', function (event) {
-      const adStatus = event.detail.e[0].getAttribute('data-adsbygoogle-status');
+    adElement.addEventListener('data-adsbygoogle-status', function (event) {
+      const adStatus = event.[0].getAttribute('data-adsbygoogle-status');
 
 
 
