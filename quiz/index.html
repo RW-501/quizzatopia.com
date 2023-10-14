@@ -962,24 +962,7 @@ function backButton(){
 
 
 
-<!-- frontpage_bottom_1 -->
-<ins class="adsbygoogle"
-     style="display:block; width:100%; height: auto;  "
-     data-ad-client="ca-pub-4968673576211489"
-     data-ad-slot="4063180774"
-     data-ad-format="video"
-     data-full-width-responsive="true"></ins> 
 
-		
-<!-- frontpage_bottom_1 
-
-<ins class="In_Quiz_Ad"
-     style="display:block; width:100%; height: auto;  "
-     data-ad-format="video"
-     data-ad-layout-key="-6t+ed+2i-1n-4w"
-     data-ad-client="ca-pub-4968673576211489"
-     data-ad-slot="5743816421"></ins>
--->
 		
 
 		
@@ -1082,14 +1065,28 @@ function backButton(){
           <!-- Ad Container -->
           <div id="ad-box">
           <!--     
-            <p>
-		  
-<a href="https://www.buymeacoffee.com/Quizzatopia" target="_blank"><img src="/images/bmc.png" alt="Buy Me A Coffee"  id="adPic" ></a>
-
-            </p>-->
+            <p><a href="https://www.buymeacoffee.com/Quizzatopia" target="_blank"><img src="/images/bmc.png" alt="Buy Me A Coffee"  id="adPic" ></a></p>-->
             <div id='ad-view' style="min-width:255px">
             <!--    -->
+<!-- frontpage_bottom_1 -->
+<ins id="myAd"
+ class="adsbygoogle"
+     style="display:block; width:100%; height: auto;  "
+     data-ad-client="ca-pub-4968673576211489"
+     data-ad-slot="4063180774"
+     data-ad-format="video"
+     data-full-width-responsive="true"></ins> 
 
+		
+<!-- frontpage_bottom_1 
+
+<ins class="In_Quiz_Ad"
+     style="display:block; width:100%; height: auto;  "
+     data-ad-format="video"
+     data-ad-layout-key="-6t+ed+2i-1n-4w"
+     data-ad-client="ca-pub-4968673576211489"
+     data-ad-slot="5743816421"></ins>
+-->
 
 <span id='ad-text'></span>
 		    
@@ -2100,7 +2097,32 @@ quizMainCategory = quizCategory;
       // Update the recommendedQuizContainer with the generated HTML
       recommendedQuizContainer.innerHTML = html;
 
-     // console.log("Recommended quizzes fetched and HTML updated successfully.");
+      console.log("adsbygoogle");
+	         (adsbygoogle = window.adsbygoogle || []).push({});	
+
+ const adElement = document.getElementById('myAd');
+
+  // Listen for changes in the ad status
+  adElement.addEventListener('adsbygoogle-status-changed', function (event) {
+    const adStatus = event.detail.e[0].getAttribute('data-adsbygoogle-status');
+
+    if (adStatus === 'filled') {
+      console.log('Ad is filled!');
+    } else if (adStatus === 'unfilled') {
+      console.log('Ad is unfilled.');
+ const adBox = document.getElementById('ad-box');
+      adBox.innerHTML = `<p><a href="https://www.buymeacoffee.com/Quizzatopia" target="_blank"><img src="/images/bmc.png" alt="Buy Me A Coffee"  id="adPic" ></a></p>`;
+	  
+    }
+  });
+
+	  
+
+
+
+
+       
+	    
     })
     .catch((error) => {
       console.error("Error fetching recommended quizzes:", error);
@@ -3064,7 +3086,6 @@ window.addEventListener("load", function() {
 // Call the fetchRecommendedQuizzesFromDB function with quizTagsVar and quizCategoryVar
 fetchRecommendedQuizzesFromDB(quizTagsVar, quizCategoryVar);
 	
-     (adsbygoogle = window.adsbygoogle || []).push({});	
     })
     .catch(error => {
       // Handle any errors that occurred during fetchData
