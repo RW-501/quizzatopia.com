@@ -1514,14 +1514,38 @@ const db = firebase.firestore();
         url,
         timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     };
-    // Add the log entry to a Firestore collection
-    db.collection("user_logs").add(logEntry)
-        .then(() => {
-            console.log("User movement logged successfully.");
-        })
-        .catch((error) => {
-            console.error("Error logging user movement:", error);
-        });
+   
+
+    const guestLogRef = db.collection('users').doc(firebaseId);
+
+      guestLogRef
+        .get()
+        .then(doc => {
+          if (doc.exists) {
+            // Guest already exists
+          const existingViewed = doc.data().viewed || [];
+            existingViewed.push(logEntry);
+
+            guestLogRef.update({
+              viewed: existingViewed
+            })
+
+
+
+		    
+            .then(() => {
+              console.log("Page view logged successfully.");
+            })
+            .catch(error => {
+              console.error("Error logging page view:", error);
+            });
+          }
+
+	}
+
+
+	
+
 }
 
 // Example: Log user movement when a page loads
