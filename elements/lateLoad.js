@@ -1219,6 +1219,14 @@ function logVisitorInformation(scrollInfo, location) {
   const device = deviceInfo[0];
   const browser = deviceInfo[1];
 
+  const visitorIpPromise = getIPAddress(); // Retrieve the visitor's IP address as a promise
+
+  let db;
+
+  if (typeof db === 'undefined' || db === null || db === '') {
+    db = firebase.firestore();
+  }
+
    visitorIpPromise
     .then(visitorIp => {
       // Check if the visitor's IP is already logged in the "guestLog" collection
