@@ -1506,12 +1506,14 @@ if (!loggedIn) {
 
 // Log user movements
 function logUserMovement(ipAddress, firebaseId, url) {
+    const now = new Date();
+
   const db = firebase.firestore();
   const logEntry = {
     ipAddress,
     firebaseId,
     url,
-    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    timestamp: now,
   };
 
   const usersRef = db.collection('users').doc(firebaseId);
