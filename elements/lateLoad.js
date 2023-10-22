@@ -1248,7 +1248,7 @@ function logVisitorInformation(scrollInfo, location) {
         .then(doc => {
           if (doc.exists) {
             // Guest already exists
-            const existingViewed = [];
+          const existingViewed = doc.data().viewed || [];
             existingViewed.push(logEntry);
 
             guestLogRef.update({
