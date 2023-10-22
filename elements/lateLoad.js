@@ -735,10 +735,9 @@ setLoggedInCookie();
 
 
 
-
-
 window.signInWithFacebook = function () {
   const provider = new firebase.auth.FacebookAuthProvider();
+      console.log('provider ID:', provider);
 
   firebase.auth()
     .signInWithPopup(provider)
@@ -784,6 +783,8 @@ setLoggedInCookie();
               .catch((error) => {
                 // Handle error retrieving user info
                 showStatusMessage('Error retrieving user info', 'error');
+		        console.error('0 Firebase Auth Error:', error.code, error.message);
+
               });
           } else {
             // New user
@@ -828,16 +829,22 @@ setLoggedInCookie();
               .catch((error) => {
                 // Handle error saving user info to Firestore
                 showStatusMessage('Error saving user info', 'error');
+		        console.error('1 Firebase Auth Error:', error.code, error.message);
+
               });
           }
         })
         .catch((error) => {
           // Handle error checking user existence
           showStatusMessage('Error checking user existence', 'error');
+		  console.error('2 Firebase Auth Error:', error.code, error.message);
+
         });
     })
     .catch((error) => {
       // Handle any errors that occurred during sign-in
+	     console.error('3 Firebase Auth Error:', error.code, error.message);
+ 
       const errorCode = error.code;
       const errorMessage = error.message;
       showStatusMessage(errorMessage, 'error');
@@ -879,7 +886,6 @@ window.signInWithGoogle = async function () {
   } catch (error) {
     handleSignInError(error);
 
-  console.error('Firebase Auth Error:', error.code, error.message);
 	  
   }
 };
