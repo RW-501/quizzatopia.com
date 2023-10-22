@@ -1231,48 +1231,34 @@ function logVisitorInformation(scrollInfo, location) {
     .then(visitorIp => {
       // Check if the visitor's IP is already logged in the "guestLog" collection
       const guestLogRef = db.collection('guestLog').doc(visitorIp);
+      const lastVisitTime = currentTimestamp;
+      const scrollDepth = scrollInfo || 0;
+
+      const logEntry = {
+        lastVisitTime,
+        lastVisitPage: currentPage,
+        scrollDepth,
+        location,
+        timestamp: firebase.firestore.Timestamp.fromDate(new Date())
+      };
 
       guestLogRef
         .get()
         .then(doc => {
-          const lastVisitTime = currentTimestamp;
-
-          const scrollDepth = scrollInfo || 0;
-
-
-
-const logEntry = {
-       lastVisitTime,
-                lastVisitPage: currentPage,
-                scrollDepth,
-		      location,  timestamp: firebase.firestore.Timestamp.fromDate(new Date())
-};
-
-		
           if (doc.exists) {
             // Guest already exists
+            const existingViewed = doc.data().viewed || [];
+            existingViewed.push(logEntry);
 
-   const existingViewed = doc.data().viewed || [];
-          existingViewed.push(logEntry);
-
-          docRef.update({
-            viewed: existingViewed
-          })
-          .then(() => {
-            console.log("Page view logged successfully.");
-          })
-          .catch(error => {
-            console.error("Error logging page view:", error);
-          });
-        } else {
-          console.error("Document does not exist");
-        }
-      }).catch(error => {
-        console.error("Error getting document:", error);
-      });
-
-
-		  
+            guestLogRef.update({
+              viewed: existingViewed
+            })
+            .then(() => {
+              console.log("Page view logged successfully.");
+            })
+            .catch(error => {
+              console.error("Error logging page view:", error);
+            });
           } else {
             // Create a new guest log entry
             const firstVisitTime = currentTimestamp;
@@ -1284,11 +1270,14 @@ const logEntry = {
               banned: 'NO',
               device,
               browser,
-        viewed: [logEntry],
+              viewed: [logEntry],
             };
 
             guestLogRef
               .set(guestData)
+              .then(() => {
+                console.log('New guest log created.');
+              })
               .catch(error => {
                 console.error('Error creating guest log:', error);
               });
