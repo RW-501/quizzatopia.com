@@ -1261,10 +1261,10 @@ function logVisitorInformation(scrollInfo, location) {
             });
           } else {
             // Create a new guest log entry
-            const firstVisitTime = currentTimestamp;
+          //  const firstVisitTime = currentTimestamp;
 
             const guestData = {
-              firstVisitTime,
+              firstVisitTime:currentTimestamp,
               firstVisitPage: currentPage,
               referralPage,
               banned: 'NO',
@@ -1281,6 +1281,8 @@ function logVisitorInformation(scrollInfo, location) {
               .catch(error => {
                 console.error('Error creating guest log:', error);
               });
+
+		  
           }
         })
         .catch(error => {
