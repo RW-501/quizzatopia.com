@@ -1209,7 +1209,7 @@ function logVisitorInformation(scrollInfo, location) {
   const browserName = browserMatch ? browserMatch[1] : 'Unknown Browser';
   const browserVersion = browserMatch ? browserMatch[2] : 'Unknown Version';
 
-  const currentPage = getCurrentPage();
+  //const currentPage = getCurrentPage();
 
   const deviceMatch = userAgentString.match(/\(([^)]+)\)/);
   const deviceInfo = deviceMatch
@@ -1237,7 +1237,7 @@ function logVisitorInformation(scrollInfo, location) {
 
       const logEntry = {
         lastVisitTime,
-        lastVisitPage: getCurrentPage(),
+        lastVisitPage: currentPage,
         scrollDepth,
         location,
         timestamp: firebase.firestore.Timestamp.fromDate(new Date())
@@ -1266,7 +1266,7 @@ function logVisitorInformation(scrollInfo, location) {
 
             const guestData = {
               firstVisitTime,
-              firstVisitPage: getCurrentPage(),
+           //   firstVisitPage: currentPage,
               referralPage,
               banned: 'NO',
               device,
