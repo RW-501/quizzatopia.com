@@ -1247,7 +1247,7 @@ function logVisitorInformation(scrollInfo, location) {
         .then(doc => {
           if (doc.exists) {
             // Guest already exists
-            const existingViewed = doc.data().viewed || [];
+            const existingViewed =  [];
             existingViewed.push(logEntry);
 
             guestLogRef.update({
@@ -1270,7 +1270,7 @@ function logVisitorInformation(scrollInfo, location) {
               banned: 'NO',
               device,
               browser,
-             // viewed: [logEntry],
+             viewed: [logEntry],
             };
 
             guestLogRef
