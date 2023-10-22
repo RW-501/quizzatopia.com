@@ -1237,7 +1237,7 @@ function logVisitorInformation(scrollInfo, location) {
 
       const logEntry = {
         lastVisitTime,
-        lastVisitPage: currentPage,
+       // lastVisitPage: currentPage,
         scrollDepth,
         location,
         timestamp: firebase.firestore.Timestamp.fromDate(new Date())
