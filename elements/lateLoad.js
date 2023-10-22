@@ -1209,7 +1209,7 @@ function logVisitorInformation(scrollInfo, location) {
   const browserName = browserMatch ? browserMatch[1] : 'Unknown Browser';
   const browserVersion = browserMatch ? browserMatch[2] : 'Unknown Version';
 
-  //const currentPage = getCurrentPage();
+  const currentPage = getCurrentPage();
 
   const deviceMatch = userAgentString.match(/\(([^)]+)\)/);
   const deviceInfo = deviceMatch
@@ -1218,7 +1218,8 @@ function logVisitorInformation(scrollInfo, location) {
 
   const device = deviceInfo[0];
   const browser = deviceInfo[1];
-
+      const lastVisitTime = currentTimestamp;
+      const scrollDepth = scrollInfo || 0;
   const visitorIpPromise = getIPAddress(); // Retrieve the visitor's IP address as a promise
 
   let db;
@@ -1232,14 +1233,13 @@ function logVisitorInformation(scrollInfo, location) {
       // Check if the visitor's IP is already logged in the "guestLog" collection
       const guestLogRef = db.collection('guestLog').doc(visitorIp);
 
-      const lastVisitTime = currentTimestamp;
-      const scrollDepth = scrollInfo || 0;
+
 
       const logEntry = {
         lastVisitTime,
-       // lastVisitPage: currentPage,
+        currentPage: currentPage,
         scrollDepth,
-        location,
+        location:location || "",
         timestamp: firebase.firestore.Timestamp.fromDate(new Date())
       };
 
@@ -1248,7 +1248,7 @@ function logVisitorInformation(scrollInfo, location) {
         .then(doc => {
           if (doc.exists) {
             // Guest already exists
-            const existingViewed = doc.data().viewed || [];
+            const existingViewed =|| [];
             existingViewed.push(logEntry);
 
             guestLogRef.update({
@@ -1266,7 +1266,7 @@ function logVisitorInformation(scrollInfo, location) {
 
             const guestData = {
               firstVisitTime,
-           //   firstVisitPage: currentPage,
+              firstVisitPage: currentPage,
               referralPage,
               banned: 'NO',
               device,
