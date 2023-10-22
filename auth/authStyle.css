@@ -270,7 +270,7 @@ padding: 8px 16px;
 
 #loginPopupBody {
   /* Your default styles here */
-
+    max-width: 500px;
   /* Apply styles when screen width is under 900px and screen height is under 1200px */
   @media screen and (min-width: 900px) and (min-height: 1200px) {
     width: 50%;
