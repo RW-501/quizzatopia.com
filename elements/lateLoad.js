@@ -1219,24 +1219,17 @@ function logVisitorInformation(scrollInfo, location) {
   const device = deviceInfo[0];
   const browser = deviceInfo[1];
 
-  const visitorIpPromise = getIPAddress(); // Retrieve the visitor's IP address as a promise
-
-  let db;
-
-  if (typeof db === 'undefined' || db === null || db === '') {
-    db = firebase.firestore();
-  }
-
-  visitorIpPromise
+   visitorIpPromise
     .then(visitorIp => {
       // Check if the visitor's IP is already logged in the "guestLog" collection
       const guestLogRef = db.collection('guestLog').doc(visitorIp);
+
       const lastVisitTime = currentTimestamp;
       const scrollDepth = scrollInfo || 0;
 
       const logEntry = {
-  //      lastVisitTime,
-    //    lastVisitPage: currentPage,
+        lastVisitTime,
+        lastVisitPage: getCurrentPage(),
         scrollDepth,
         location,
         timestamp: firebase.firestore.Timestamp.fromDate(new Date())
@@ -1247,7 +1240,7 @@ function logVisitorInformation(scrollInfo, location) {
         .then(doc => {
           if (doc.exists) {
             // Guest already exists
-            const existingViewed =  [];
+            const existingViewed = doc.data().viewed || [];
             existingViewed.push(logEntry);
 
             guestLogRef.update({
@@ -1261,16 +1254,16 @@ function logVisitorInformation(scrollInfo, location) {
             });
           } else {
             // Create a new guest log entry
-          //  const firstVisitTime = currentTimestamp;
+            const firstVisitTime = currentTimestamp;
 
             const guestData = {
-              firstVisitTime:currentTimestamp,
-              firstVisitPage: currentPage,
+              firstVisitTime,
+              firstVisitPage: getCurrentPage(),
               referralPage,
               banned: 'NO',
               device,
               browser,
-             viewed: [logEntry],
+              viewed: [logEntry],
             };
 
             guestLogRef
@@ -1281,8 +1274,6 @@ function logVisitorInformation(scrollInfo, location) {
               .catch(error => {
                 console.error('Error creating guest log:', error);
               });
-
-		  
           }
         })
         .catch(error => {
