@@ -735,14 +735,16 @@ setLoggedInCookie();
 
 
 
+
 window.signInWithFacebook = function () {
   const provider = new firebase.auth.FacebookAuthProvider();
-      console.log('provider ID:', provider);
+      console.log('provider:', provider);
 
   firebase.auth()
     .signInWithPopup(provider)
     .then((result) => {
       const user = result.user;
+      console.log('user:', user);
 
       // Get the user's display name and Firebase ID
           const name = user.displayName;
