@@ -1270,7 +1270,7 @@ function logVisitorInformation(scrollInfo, location) {
               banned: 'NO',
               device,
               browser,
-              viewed: [logEntry],
+             // viewed: [logEntry],
             };
 
             guestLogRef
