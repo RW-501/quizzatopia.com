@@ -1507,11 +1507,10 @@ if (!loggedIn) {
 // Log user movements
 function logUserMovement(ipAddress, firebaseId, url) {
     const now = new Date();
+if (typeof firebase !== 'undefined' && typeof firebase.firestore === 'function') {
 
   const db = firebase.firestore();
   const logEntry = {
-    ipAddress,
-    firebaseId,
     url,
     timestamp: now,
   };
@@ -1552,6 +1551,7 @@ function logUserMovement(ipAddress, firebaseId, url) {
     .catch(error => {
       console.error('Error checking user entry:', error);
     });
+}
 }
 
 
