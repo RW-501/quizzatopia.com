@@ -1200,7 +1200,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-function logVisitorInformation(scrollInfo) {
+function logVisitorInformation(scrollInfo, location) {
   const currentTimestamp = new Date();
   const referralPage = document.referrer;
   const userAgentString = navigator.userAgent;
@@ -1219,48 +1219,52 @@ function logVisitorInformation(scrollInfo) {
   const device = deviceInfo[0];
   const browser = deviceInfo[1];
 
-  const visitorIpPromise = getIPAddress(); // Retrieve the visitor's IP address as a promise
+  const visitorIpPromise = getIPAddress();
 
   let db;
-
   if (typeof db === 'undefined' || db === null || db === '') {
     db = firebase.firestore();
   }
 
   visitorIpPromise
     .then(visitorIp => {
-      // Check if the visitor's IP is already logged in the "guestLog" collection
       const guestLogRef = db.collection('guestLog').doc(visitorIp);
 
       guestLogRef
         .get()
         .then(doc => {
           const lastVisitTime = currentTimestamp;
-
           const scrollDepth = scrollInfo || 0;
+
+          const visitData = {
+            visitTime: lastVisitTime,
+            visitPage: currentPage,
+            scrollDepth: scrollDepth,
+            location: location,
+          };
 
           if (doc.exists) {
             // Guest already exists
-            guestLogRef
-              .update({
+            guestLogRef.collection('visits').add(visitData).then(() => {
+              // Update the main document with the latest information
+              guestLogRef.update({
                 lastVisitTime,
                 lastVisitPage: currentPage,
-                scrollDepth,
-              })
-              .catch(error => {
+              }).catch(error => {
                 console.error('Error updating guest log:', error);
               });
+            }).catch(error => {
+              console.error('Error adding visit data:', error);
+            });
 
             // Increment the user visit count
             const userVisitCountRef = guestLogRef.collection('userVisitCount').doc('count');
-            userVisitCountRef
-              .get()
+            userVisitCountRef.get()
               .then(doc => {
                 const previousCount = doc.exists ? doc.data().count : 0;
                 const updatedCount = previousCount + 1;
 
-                userVisitCountRef
-                  .set({ count: updatedCount })
+                userVisitCountRef.set({ count: updatedCount })
                   .catch(error => {
                     console.error('Error updating user visit count:', error);
                   });
@@ -1285,8 +1289,14 @@ function logVisitorInformation(scrollInfo) {
               browser,
             };
 
-            guestLogRef
-              .set(guestData)
+            guestLogRef.set(guestData)
+              .then(() => {
+                // Add the first visit data to the subcollection
+                guestLogRef.collection('visits').add(visitData)
+                  .catch(error => {
+                    console.error('Error adding visit data:', error);
+                  });
+              })
               .catch(error => {
                 console.error('Error creating guest log:', error);
               });
