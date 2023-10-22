@@ -1470,7 +1470,7 @@ function checkGuestUser(){
     localStorage.setItem(ipAddress, JSON.stringify(storedData));
 
 
-
+if(storedData.count > 100){
 // Initialize Firebase Firestore
 const db = firebase.firestore();
 
@@ -1479,7 +1479,7 @@ const questLogRef = db.collection('guestLog').doc(ipAddress);
 
 // Update the 'banned' field to 'YES'
 questLogRef.update({
-  banned: 'YES'
+ banned: 'YES'
 })
 .then(() => {
   console.log('Document updated successfully.');
@@ -1487,10 +1487,10 @@ questLogRef.update({
 .catch((error) => {
   console.error('Error updating document:', error);
 });
-
+}
 	  
     // Check if the count exceeds 100 and redirect if needed
-    if (storedData.count > 50) {
+    if (storedData.count > 100) {
       window.location.href = 'https://www.google.com';
     }
   });
