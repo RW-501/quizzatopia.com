@@ -1506,47 +1506,52 @@ if (!loggedIn) {
 
 // Log user movements
 function logUserMovement(ipAddress, firebaseId, url) {
+  const db = firebase.firestore();
+  const logEntry = {
+    ipAddress,
+    firebaseId,
+    url,
+    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+  };
 
-const db = firebase.firestore();
-    const logEntry = {
-        ipAddress,
-        firebaseId,
-        url,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-    };
-   
+  const usersRef = db.collection('users').doc(firebaseId);
 
-    const guestLogRef = db.collection('users').doc(firebaseId);
+  usersRef.get()
+    .then(doc => {
+      if (doc.exists) {
+        // User already exists
+        const existingViewed = doc.data().viewed || [];
+        existingViewed.push(logEntry);
 
-      guestLogRef
-        .get()
-        .then(doc => {
-          if (doc.exists) {
-            // Guest already exists
-          const existingViewed = doc.data().viewed || [];
-            existingViewed.push(logEntry);
+        usersRef.update({
+          viewed: existingViewed
+        })
+        .then(() => {
+          console.log("User movement logged successfully.");
+        })
+        .catch(error => {
+          console.error("Error logging user movement:", error);
+        });
+      } else {
+        // Create a new user entry
+        const userData = {
+          viewed: [logEntry]
+        };
 
-            guestLogRef.update({
-              viewed: existingViewed
-            })
-
-
-
-		    
-            .then(() => {
-              console.log("Page view logged successfully.");
-            })
-            .catch(error => {
-              console.error("Error logging page view:", error);
-            });
-          }
-
-	}
-
-
-	
-
+        usersRef.set(userData)
+          .then(() => {
+            console.log('New user entry created.');
+          })
+          .catch(error => {
+            console.error('Error creating user entry:', error);
+          });
+      }
+    })
+    .catch(error => {
+      console.error('Error checking user entry:', error);
+    });
 }
+
 
 // Example: Log user movement when a page loads
 window.addEventListener("load", () => {
