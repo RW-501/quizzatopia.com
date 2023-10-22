@@ -878,6 +878,9 @@ window.signInWithGoogle = async function () {
     onAuthSuccess(userInfo);
   } catch (error) {
     handleSignInError(error);
+
+  console.error('Firebase Auth Error:', error.code, error.message);
+	  
   }
 };
 
