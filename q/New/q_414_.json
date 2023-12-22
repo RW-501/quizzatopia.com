@@ -1,0 +1,163 @@
+{
+  "quizName": "Pay-Per-Click (PPC) Advertising Quiz",
+  "quizCode": "PPC2023-1",
+  "quizDifficulty": "Medium",
+  "quizCategory": "Digital Marketing",
+  "quizDescription": "Test your knowledge of fundamental concepts in Pay-Per-Click (PPC) Advertising!",
+  "quizTags": "PPC, Online Advertising, Google Ads, Campaign Optimization",
+  "numberOfQuestions": 10,
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "What does PPC stand for in digital marketing?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Pay-Per-Click",
+        "Publicity, Promotion, Conversion",
+        "Page Position Control",
+        "Product Placement Count"
+      ],
+      "answer": "Pay-Per-Click",
+      "explanation": "PPC stands for 'Pay-Per-Click,' a digital advertising model where advertisers pay a fee each time their ad is clicked.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 2,
+      "question": "How does the bidding system work in PPC advertising?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "The highest bid always wins the top ad position",
+        "The lowest bid always wins the top ad position",
+        "Bids are irrelevant in PPC advertising",
+        "Ad position is determined by a combination of bid amount and ad quality"
+      ],
+      "answer": "Ad position is determined by a combination of bid amount and ad quality",
+      "explanation": "In PPC advertising, ad position is determined by a combination of bid amount and ad quality, ensuring that users see relevant and high-quality ads.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 3,
+      "question": "What is the purpose of a landing page in a PPC campaign?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To confuse website visitors",
+        "To decrease website loading speed",
+        "To provide a distraction from the main message",
+        "To encourage users to take a specific action after clicking the ad"
+      ],
+      "answer": "To encourage users to take a specific action after clicking the ad",
+      "explanation": "The purpose of a landing page in a PPC campaign is to encourage users to take a specific action, such as making a purchase or filling out a form, after clicking the ad.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 4,
+      "question": "What is the Quality Score in Google Ads?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "A score given by users to rate the ad's quality",
+        "A score given by competitors to rate the ad's quality",
+        "A score assigned by search engines to measure the relevance and quality of ads",
+        "A score that reflects the ad's budget"
+      ],
+      "answer": "A score assigned by search engines to measure the relevance and quality of ads",
+      "explanation": "Quality Score in Google Ads is a score assigned by search engines to measure the relevance and quality of ads, impacting ad position and cost-per-click.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 5,
+      "question": "What is the benefit of using ad extensions in PPC advertising?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ad extensions have no impact on ad performance",
+        "Ad extensions increase the cost of ads",
+        "Ad extensions provide additional information and encourage clicks",
+        "Ad extensions decrease the visibility of ads"
+      ],
+      "answer": "Ad extensions provide additional information and encourage clicks",
+      "explanation": "Ad extensions in PPC advertising provide additional information and encourage clicks by offering more details about the business, products, or services within the ad.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 6,
+      "question": "What is the purpose of remarketing in PPC advertising?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To display ads only to new users",
+        "To show ads to users who have previously visited the website",
+        "To limit ad exposure to a specific audience",
+        "To decrease website traffic"
+      ],
+      "answer": "To show ads to users who have previously visited the website",
+      "explanation": "Remarketing in PPC advertising involves showing ads to users who have previously visited the website, reminding them of products or services and encouraging return visits.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 7,
+      "question": "
+
+What is the role of negative keywords in a PPC campaign?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To decrease ad visibility",
+        "To confuse search engines",
+        "To improve website aesthetics",
+        "To prevent ads from showing for irrelevant searches"
+      ],
+      "answer": "To prevent ads from showing for irrelevant searches",
+      "explanation": "Negative keywords in a PPC campaign are used to prevent ads from showing for irrelevant searches, ensuring that the ad budget is spent on relevant and valuable clicks.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 8,
+      "question": "What is the difference between PPC and SEO?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "PPC and SEO are the same thing",
+        "PPC is focused on paid advertising, while SEO is focused on organic search optimization",
+        "SEO is only for local businesses",
+        "PPC is a strategy used only by small businesses"
+      ],
+      "answer": "PPC is focused on paid advertising, while SEO is focused on organic search optimization",
+      "explanation": "PPC (Pay-Per-Click) is focused on paid advertising, where advertisers pay for each click, while SEO (Search Engine Optimization) is focused on optimizing a website to improve organic search visibility without direct payment for clicks.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 9,
+      "question": "How can ad scheduling enhance a PPC campaign?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "Ad scheduling has no impact on PPC campaigns",
+        "Ad scheduling can only decrease ad performance",
+        "Ad scheduling allows advertisers to control when their ads are shown, targeting specific days and times",
+        "Ad scheduling only affects the ad budget"
+      ],
+      "answer": "Ad scheduling allows advertisers to control when their ads are shown, targeting specific days and times",
+      "explanation": "Ad scheduling in PPC campaigns allows advertisers to control when their ads are shown, targeting specific days and times to reach their audience more effectively.",
+      "difficulty": "Medium"
+    },
+    {
+      "questionNumber": 10,
+      "question": "What is the role of conversion tracking in PPC advertising?",
+      "imageURL": "",
+      "questionType": "Multiple Choice",
+      "options": [
+        "To decrease website conversions",
+        "To confuse search engines",
+        "To improve website aesthetics",
+        "To measure and analyze the effectiveness of ad campaigns by tracking desired actions"
+      ],
+      "answer": "To measure and analyze the effectiveness of ad campaigns by tracking desired actions",
+      "explanation": "Conversion tracking in PPC advertising is used to measure and analyze the effectiveness of ad campaigns by tracking desired actions, such as form submissions or product purchases.",
+      "difficulty": "Medium"
+    }
+  ]
+}
