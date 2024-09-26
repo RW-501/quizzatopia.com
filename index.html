@@ -2053,3 +2053,39 @@ db.collection('quizzes').where('quizCodeDB', '==', quizCodeX).get()
       	    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="Quizzatopia" data-description="Support me on Buy me a coffee!" data-message="Thank you for visiting our website! We appreciate your time and hope you had a great experience. If you have any feedback or questions, feel free to reach out to us. We look forward to seeing you again soon!" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
 
 </html>
+	<script>
+		// Define the old and new base URLs
+const oldBaseUrl = "https://rw-501.github.io/";
+const newBaseUrl = "https://rw-501.github.io/quizzatopia.com/";
+
+// Function to update links
+function updateLinks() {
+    // Update <a> tags
+    const anchorTags = document.querySelectorAll('a');
+    anchorTags.forEach(anchor => {
+        if (anchor.href.startsWith(oldBaseUrl)) {
+            anchor.href = anchor.href.replace(oldBaseUrl, newBaseUrl);
+        }
+    });
+
+    // Update <img> tags
+    const imgTags = document.querySelectorAll('img');
+    imgTags.forEach(img => {
+        if (img.src.startsWith(oldBaseUrl)) {
+            img.src = img.src.replace(oldBaseUrl, newBaseUrl);
+        }
+    });
+
+    // Update any other elements as needed
+    const otherTags = document.querySelectorAll('[data-link]');
+    otherTags.forEach(element => {
+        if (element.getAttribute('data-link').startsWith(oldBaseUrl)) {
+            element.setAttribute('data-link', element.getAttribute('data-link').replace(oldBaseUrl, newBaseUrl));
+        }
+    });
+}
+
+// Call the updateLinks function when the document is loaded
+document.addEventListener('DOMContentLoaded', updateLinks);
+
+	</script>
